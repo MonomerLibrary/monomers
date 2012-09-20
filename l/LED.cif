@@ -1,0 +1,189 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LED      LED '(4R)-5-OXO-L-LEUCINE                ' peptide            20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LED
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LED           N      N    NH2       0.000      0.000    0.000    0.000
+ LED           HN1    H    H         0.000      0.328   -0.415    0.864
+ LED           HN2    H    H         0.000      0.505   -0.177   -0.860
+ LED           CA     C    CH1       0.000     -1.196    0.850   -0.005
+ LED           HA     H    H         0.000     -0.913    1.884   -0.246
+ LED           CB     C    CH2       0.000     -2.204    0.333   -1.043
+ LED           HBC1   H    H         0.000     -3.067    0.999   -0.978
+ LED           HBC2   H    H         0.000     -2.490   -0.666   -0.708
+ LED           CG     C    CH1       0.000     -1.715    0.265   -2.502
+ LED           HG     H    H         0.000     -0.765   -0.288   -2.488
+ LED           CD1    C    CH3       0.000     -2.655   -0.512   -3.416
+ LED           HD13   H    H         0.000     -3.475   -0.875   -2.852
+ LED           HD12   H    H         0.000     -3.010    0.127   -4.183
+ LED           HD11   H    H         0.000     -2.135   -1.327   -3.847
+ LED           CD2    C    C1        0.000     -1.401    1.648   -3.043
+ LED           HD2    H    H         0.000     -0.977    1.715   -4.031
+ LED           OE     O    O         0.000     -1.596    2.694   -2.433
+ LED           C      C    C         0.000     -1.751    0.788    1.406
+ LED           O      O    OC       -0.500     -1.295    0.064    2.319
+ LED           OXT    O    OC       -0.500     -2.741    1.535    1.569
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LED      N      n/a    CA     START
+ LED      HN1    N      .      .
+ LED      HN2    N      .      .
+ LED      CA     N      C      .
+ LED      HA     CA     .      .
+ LED      CB     CA     CG     .
+ LED      HBC1   CB     .      .
+ LED      HBC2   CB     .      .
+ LED      CG     CB     CD2    .
+ LED      HG     CG     .      .
+ LED      CD1    CG     HD11   .
+ LED      HD13   CD1    .      .
+ LED      HD12   CD1    .      .
+ LED      HD11   CD1    .      .
+ LED      CD2    CG     OE     .
+ LED      HD2    CD2    .      .
+ LED      OE     CD2    .      .
+ LED      C      CA     .      END
+ LED      O      C      .      .
+ LED      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LED      CA     N         single      1.450    0.020
+ LED      CB     CA        single      1.524    0.020
+ LED      C      CA        single      1.500    0.020
+ LED      HA     CA        single      1.099    0.020
+ LED      CG     CB        single      1.524    0.020
+ LED      HBC1   CB        single      1.092    0.020
+ LED      HBC2   CB        single      1.092    0.020
+ LED      CD1    CG        single      1.524    0.020
+ LED      CD2    CG        single      1.510    0.020
+ LED      HG     CG        single      1.099    0.020
+ LED      HD11   CD1       single      1.059    0.020
+ LED      HD12   CD1       single      1.059    0.020
+ LED      HD13   CD1       single      1.059    0.020
+ LED      OE     CD2       double      1.220    0.020
+ LED      HD2    CD2       single      1.077    0.020
+ LED      O      C         deloc       1.250    0.020
+ LED      OXT    C         deloc       1.250    0.020
+ LED      HN1    N         single      1.010    0.020
+ LED      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LED      HN1    N      HN2     120.000    3.000
+ LED      HN1    N      CA      120.000    3.000
+ LED      HN2    N      CA      120.000    3.000
+ LED      N      CA     HA      109.470    3.000
+ LED      N      CA     CB      109.470    3.000
+ LED      N      CA     C       109.470    3.000
+ LED      HA     CA     CB      108.340    3.000
+ LED      HA     CA     C       108.810    3.000
+ LED      CB     CA     C       109.470    3.000
+ LED      CA     CB     HBC1    109.470    3.000
+ LED      CA     CB     HBC2    109.470    3.000
+ LED      CA     CB     CG      111.000    3.000
+ LED      HBC1   CB     HBC2    107.900    3.000
+ LED      HBC1   CB     CG      109.470    3.000
+ LED      HBC2   CB     CG      109.470    3.000
+ LED      CB     CG     HG      108.340    3.000
+ LED      CB     CG     CD1     111.000    3.000
+ LED      CB     CG     CD2     109.470    3.000
+ LED      HG     CG     CD1     108.340    3.000
+ LED      HG     CG     CD2     108.810    3.000
+ LED      CD1    CG     CD2     109.470    3.000
+ LED      CG     CD1    HD13    109.470    3.000
+ LED      CG     CD1    HD12    109.470    3.000
+ LED      CG     CD1    HD11    109.470    3.000
+ LED      HD13   CD1    HD12    109.470    3.000
+ LED      HD13   CD1    HD11    109.470    3.000
+ LED      HD12   CD1    HD11    109.470    3.000
+ LED      CG     CD2    HD2     120.000    3.000
+ LED      CG     CD2    OE      120.500    3.000
+ LED      HD2    CD2    OE      123.000    3.000
+ LED      CA     C      O       118.500    3.000
+ LED      CA     C      OXT     118.500    3.000
+ LED      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LED      var_1    HN2    N      CA     C        175.000   20.000   1
+ LED      var_2    N      CA     CB     CG       -58.946   20.000   3
+ LED      var_3    CA     CB     CG     CD2      -64.117   20.000   3
+ LED      var_4    CB     CG     CD1    HD11    -120.855   20.000   3
+ LED      var_5    CB     CG     CD2    OE        -4.666   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LED      chir_01  CA     N      CB     C         negativ
+ LED      chir_02  CG     CB     CD1    CD2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LED      plan-1    N         0.020
+ LED      plan-1    CA        0.020
+ LED      plan-1    HN1       0.020
+ LED      plan-1    HN2       0.020
+ LED      plan-2    CD2       0.020
+ LED      plan-2    CG        0.020
+ LED      plan-2    OE        0.020
+ LED      plan-2    HD2       0.020
+ LED      plan-3    C         0.020
+ LED      plan-3    CA        0.020
+ LED      plan-3    O         0.020
+ LED      plan-3    OXT       0.020
+# ------------------------------------------------------

@@ -1,0 +1,216 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TPQ      TPQ '5-(2-CARBOXY-2-AMINOETHYL)-2-HYDROXY' peptide            23  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TPQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TPQ           N      N    NH2       0.000      0.000    0.000    0.000
+ TPQ           HN1    H    H         0.000      0.748    0.559   -0.390
+ TPQ           HN2    H    H         0.000      0.220   -0.857    0.492
+ TPQ           CA     C    CH1       0.000     -1.390    0.428   -0.146
+ TPQ           HA     H    H         0.000     -1.918   -0.277   -0.803
+ TPQ           CB     C    CH2       0.000     -2.082    0.454    1.222
+ TPQ           HB2    H    H         0.000     -1.526    1.136    1.869
+ TPQ           HB3    H    H         0.000     -2.044   -0.554    1.640
+ TPQ           C1     C    CR6       0.000     -3.507    0.904    1.126
+ TPQ           C6     C    CR16      0.000     -3.877    2.180    1.286
+ TPQ           H6     H    H         0.000     -3.116    2.922    1.494
+ TPQ           C5     C    CR6       0.000     -5.287    2.611    1.190
+ TPQ           C4     C    CR6       0.000     -6.302    1.573    0.902
+ TPQ           O4     O    OH1       0.000     -7.613    1.992    0.812
+ TPQ           HO4    H    H         0.000     -7.684    2.703    0.159
+ TPQ           C3     C    CR16      0.000     -5.941    0.296    0.740
+ TPQ           H3     H    H         0.000     -6.704   -0.443    0.530
+ TPQ           C2     C    CR6       0.000     -4.530   -0.136    0.840
+ TPQ           O2     O    O         0.000     -4.232   -1.317    0.690
+ TPQ           O5     O    O         0.000     -5.594    3.788    1.345
+ TPQ           C      C    C         0.000     -1.348    1.794   -0.812
+ TPQ           O      O    OC       -0.500     -0.442    2.644   -0.659
+ TPQ           OXT    O    OC       -0.500     -2.337    1.985   -1.553
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TPQ      N      n/a    CA     START
+ TPQ      HN1    N      .      .
+ TPQ      HN2    N      .      .
+ TPQ      CA     N      C      .
+ TPQ      HA     CA     .      .
+ TPQ      CB     CA     C1     .
+ TPQ      HB2    CB     .      .
+ TPQ      HB3    CB     .      .
+ TPQ      C1     CB     C6     .
+ TPQ      C6     C1     C5     .
+ TPQ      H6     C6     .      .
+ TPQ      C5     C6     O5     .
+ TPQ      C4     C5     C3     .
+ TPQ      O4     C4     HO4    .
+ TPQ      HO4    O4     .      .
+ TPQ      C3     C4     C2     .
+ TPQ      H3     C3     .      .
+ TPQ      C2     C3     O2     .
+ TPQ      O2     C2     .      .
+ TPQ      O5     C5     .      .
+ TPQ      C      CA     .      END
+ TPQ      O      C      .      .
+ TPQ      OXT    C      .      .
+ TPQ      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TPQ      CA     N         single      1.450    0.020
+ TPQ      CB     CA        single      1.524    0.020
+ TPQ      C      CA        single      1.500    0.020
+ TPQ      HA     CA        single      1.099    0.020
+ TPQ      C1     CB        single      1.511    0.020
+ TPQ      HB2    CB        single      1.092    0.020
+ TPQ      HB3    CB        single      1.092    0.020
+ TPQ      O      C         deloc       1.250    0.020
+ TPQ      OXT    C         deloc       1.250    0.020
+ TPQ      C1     C2        single      1.487    0.020
+ TPQ      C6     C1        double      1.390    0.020
+ TPQ      O2     C2        double      1.250    0.020
+ TPQ      C2     C3        single      1.390    0.020
+ TPQ      C3     C4        double      1.390    0.020
+ TPQ      H3     C3        single      1.083    0.020
+ TPQ      O4     C4        single      1.362    0.020
+ TPQ      C4     C5        single      1.487    0.020
+ TPQ      HO4    O4        single      0.967    0.020
+ TPQ      O5     C5        double      1.250    0.020
+ TPQ      C5     C6        single      1.390    0.020
+ TPQ      H6     C6        single      1.083    0.020
+ TPQ      HN1    N         single      1.010    0.020
+ TPQ      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TPQ      HN1    N      HN2     120.000    3.000
+ TPQ      HN1    N      CA      120.000    3.000
+ TPQ      HN2    N      CA      120.000    3.000
+ TPQ      N      CA     HA      109.470    3.000
+ TPQ      N      CA     CB      109.470    3.000
+ TPQ      N      CA     C       109.470    3.000
+ TPQ      HA     CA     CB      108.340    3.000
+ TPQ      HA     CA     C       108.810    3.000
+ TPQ      CB     CA     C       109.470    3.000
+ TPQ      CA     CB     HB2     109.470    3.000
+ TPQ      CA     CB     HB3     109.470    3.000
+ TPQ      CA     CB     C1      109.470    3.000
+ TPQ      HB2    CB     HB3     107.900    3.000
+ TPQ      HB2    CB     C1      109.470    3.000
+ TPQ      HB3    CB     C1      109.470    3.000
+ TPQ      CB     C1     C6      120.000    3.000
+ TPQ      CB     C1     C2      120.000    3.000
+ TPQ      C6     C1     C2      120.000    3.000
+ TPQ      C1     C6     H6      120.000    3.000
+ TPQ      C1     C6     C5      120.000    3.000
+ TPQ      H6     C6     C5      120.000    3.000
+ TPQ      C6     C5     C4      120.000    3.000
+ TPQ      C6     C5     O5      120.000    3.000
+ TPQ      C4     C5     O5      120.000    3.000
+ TPQ      C5     C4     O4      120.000    3.000
+ TPQ      C5     C4     C3      120.000    3.000
+ TPQ      O4     C4     C3      120.000    3.000
+ TPQ      C4     O4     HO4     109.470    3.000
+ TPQ      C4     C3     H3      120.000    3.000
+ TPQ      C4     C3     C2      120.000    3.000
+ TPQ      H3     C3     C2      120.000    3.000
+ TPQ      C3     C2     O2      120.000    3.000
+ TPQ      C3     C2     C1      120.000    3.000
+ TPQ      O2     C2     C1      120.000    3.000
+ TPQ      CA     C      O       118.500    3.000
+ TPQ      CA     C      OXT     118.500    3.000
+ TPQ      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TPQ      var_1    HN2    N      CA     C        175.000   20.000   1
+ TPQ      var_2    N      CA     CB     C1       179.326   20.000   3
+ TPQ      var_3    CA     CB     C1     C6       -93.203   20.000   2
+ TPQ      CONST_1  CB     C1     C2     C3       180.000    0.000   0
+ TPQ      CONST_2  CB     C1     C6     C5       180.000    0.000   0
+ TPQ      CONST_3  C1     C6     C5     O5       180.000    0.000   0
+ TPQ      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ TPQ      var_4    C5     C4     O4     HO4       54.715   20.000   1
+ TPQ      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ TPQ      CONST_6  C4     C3     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TPQ      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TPQ      plan-1    N         0.020
+ TPQ      plan-1    CA        0.020
+ TPQ      plan-1    HN1       0.020
+ TPQ      plan-1    HN2       0.020
+ TPQ      plan-2    C         0.020
+ TPQ      plan-2    CA        0.020
+ TPQ      plan-2    O         0.020
+ TPQ      plan-2    OXT       0.020
+ TPQ      plan-3    C1        0.020
+ TPQ      plan-3    CB        0.020
+ TPQ      plan-3    C2        0.020
+ TPQ      plan-3    C6        0.020
+ TPQ      plan-3    C3        0.020
+ TPQ      plan-3    C4        0.020
+ TPQ      plan-3    C5        0.020
+ TPQ      plan-3    O2        0.020
+ TPQ      plan-3    H3        0.020
+ TPQ      plan-3    O4        0.020
+ TPQ      plan-3    O5        0.020
+ TPQ      plan-3    H6        0.020
+# ------------------------------------------------------

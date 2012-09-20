@@ -1,0 +1,219 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GDA      GDA '4-DEOXY-4-AMINO-BETA-D-GLUCOSE      ' non-polymer        25  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GDA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GDA           O1     O    OH1       0.000      0.000    0.000    0.000
+ GDA           H1     H    H         0.000      0.844    0.345   -0.321
+ GDA           C1     C    CH1       0.000     -0.534    0.891    0.977
+ GDA           HA_1   H    H         0.000      0.054    0.752    1.895
+ GDA           O5     O    O2        0.000     -0.395    2.260    0.596
+ GDA           C5     C    CH1       0.000     -1.173    2.612   -0.558
+ GDA           H5     H    H         0.000     -0.867    1.981   -1.404
+ GDA           C6     C    CH2       0.000     -0.839    4.069   -0.874
+ GDA           H6C1   H    H         0.000     -1.120    4.707   -0.034
+ GDA           H6C2   H    H         0.000     -1.379    4.389   -1.769
+ GDA           O6     O    OH1       0.000      0.554    4.170   -1.101
+ GDA           H6     H    H         0.000      1.023    4.037   -0.267
+ GDA           C4     C    CH1       0.000     -2.673    2.390   -0.282
+ GDA           HC     H    H         0.000     -2.984    3.077    0.517
+ GDA           N4     N    NH2       0.000     -3.480    2.669   -1.472
+ GDA           H4N2   H    H         0.000     -3.563    1.977   -2.206
+ GDA           H4N1   H    H         0.000     -3.959    3.557   -1.567
+ GDA           C3     C    CH1       0.000     -2.940    0.950    0.186
+ GDA           HB     H    H         0.000     -2.800    0.256   -0.654
+ GDA           O3     O    OH1       0.000     -4.286    0.868    0.660
+ GDA           H3     H    H         0.000     -4.780    0.238    0.118
+ GDA           C2     C    CH1       0.000     -1.990    0.578    1.328
+ GDA           HA     H    H         0.000     -2.267    1.163    2.216
+ GDA           O2     O    OH1       0.000     -2.104   -0.804    1.644
+ GDA           H2     H    H         0.000     -2.839   -0.933    2.258
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GDA      O1     n/a    C1     START
+ GDA      H1     O1     .      .
+ GDA      C1     O1     O5     .
+ GDA      HA_1   C1     .      .
+ GDA      O5     C1     C5     .
+ GDA      C5     O5     C4     .
+ GDA      H5     C5     .      .
+ GDA      C6     C5     O6     .
+ GDA      H6C1   C6     .      .
+ GDA      H6C2   C6     .      .
+ GDA      O6     C6     H6     .
+ GDA      H6     O6     .      .
+ GDA      C4     C5     C3     .
+ GDA      HC     C4     .      .
+ GDA      N4     C4     H4N1   .
+ GDA      H4N2   N4     .      .
+ GDA      H4N1   N4     .      .
+ GDA      C3     C4     C2     .
+ GDA      HB     C3     .      .
+ GDA      O3     C3     H3     .
+ GDA      H3     O3     .      .
+ GDA      C2     C3     O2     .
+ GDA      HA     C2     .      .
+ GDA      O2     C2     H2     .
+ GDA      H2     O2     .      END
+ GDA      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GDA      C1     C2        single      1.524    0.020
+ GDA      O5     C1        single      1.426    0.020
+ GDA      C1     O1        single      1.432    0.020
+ GDA      HA_1   C1        single      1.099    0.020
+ GDA      C2     C3        single      1.524    0.020
+ GDA      O2     C2        single      1.432    0.020
+ GDA      HA     C2        single      1.099    0.020
+ GDA      C3     C4        single      1.524    0.020
+ GDA      O3     C3        single      1.432    0.020
+ GDA      HB     C3        single      1.099    0.020
+ GDA      C4     C5        single      1.524    0.020
+ GDA      N4     C4        single      1.450    0.020
+ GDA      HC     C4        single      1.099    0.020
+ GDA      C6     C5        single      1.524    0.020
+ GDA      C5     O5        single      1.426    0.020
+ GDA      H5     C5        single      1.099    0.020
+ GDA      O6     C6        single      1.432    0.020
+ GDA      H6C1   C6        single      1.092    0.020
+ GDA      H6C2   C6        single      1.092    0.020
+ GDA      H4N1   N4        single      1.010    0.020
+ GDA      H4N2   N4        single      1.010    0.020
+ GDA      H2     O2        single      0.967    0.020
+ GDA      H3     O3        single      0.967    0.020
+ GDA      H6     O6        single      0.967    0.020
+ GDA      H1     O1        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GDA      H1     O1     C1      109.470    3.000
+ GDA      O1     C1     HA_1    109.470    3.000
+ GDA      O1     C1     O5      109.470    3.000
+ GDA      O1     C1     C2      109.470    3.000
+ GDA      HA_1   C1     O5      109.470    3.000
+ GDA      HA_1   C1     C2      108.340    3.000
+ GDA      O5     C1     C2      109.470    3.000
+ GDA      C1     O5     C5      111.800    3.000
+ GDA      O5     C5     H5      109.470    3.000
+ GDA      O5     C5     C6      109.470    3.000
+ GDA      O5     C5     C4      109.470    3.000
+ GDA      H5     C5     C6      108.340    3.000
+ GDA      H5     C5     C4      108.340    3.000
+ GDA      C6     C5     C4      111.000    3.000
+ GDA      C5     C6     H6C1    109.470    3.000
+ GDA      C5     C6     H6C2    109.470    3.000
+ GDA      C5     C6     O6      109.470    3.000
+ GDA      H6C1   C6     H6C2    107.900    3.000
+ GDA      H6C1   C6     O6      109.470    3.000
+ GDA      H6C2   C6     O6      109.470    3.000
+ GDA      C6     O6     H6      109.470    3.000
+ GDA      C5     C4     HC      108.340    3.000
+ GDA      C5     C4     N4      109.470    3.000
+ GDA      C5     C4     C3      111.000    3.000
+ GDA      HC     C4     N4      109.470    3.000
+ GDA      HC     C4     C3      108.340    3.000
+ GDA      N4     C4     C3      109.470    3.000
+ GDA      C4     N4     H4N2    120.000    3.000
+ GDA      C4     N4     H4N1    120.000    3.000
+ GDA      H4N2   N4     H4N1    120.000    3.000
+ GDA      C4     C3     HB      108.340    3.000
+ GDA      C4     C3     O3      109.470    3.000
+ GDA      C4     C3     C2      111.000    3.000
+ GDA      HB     C3     O3      109.470    3.000
+ GDA      HB     C3     C2      108.340    3.000
+ GDA      O3     C3     C2      109.470    3.000
+ GDA      C3     O3     H3      109.470    3.000
+ GDA      C3     C2     HA      108.340    3.000
+ GDA      C3     C2     O2      109.470    3.000
+ GDA      C3     C2     C1      111.000    3.000
+ GDA      HA     C2     O2      109.470    3.000
+ GDA      HA     C2     C1      108.340    3.000
+ GDA      O2     C2     C1      109.470    3.000
+ GDA      C2     O2     H2      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GDA      var_1    H1     O1     C1     O5        42.676   20.000   1
+ GDA      var_2    O1     C1     C2     C3       -60.000   20.000   3
+ GDA      var_3    O1     C1     O5     C5        60.000   20.000   1
+ GDA      var_4    C1     O5     C5     C4        60.000   20.000   1
+ GDA      var_5    O5     C5     C6     O6        58.368   20.000   3
+ GDA      var_6    C5     C6     O6     H6       -69.841   20.000   1
+ GDA      var_7    O5     C5     C4     C3       -60.000   20.000   3
+ GDA      var_8    C5     C4     N4     H4N1     -99.580   20.000   1
+ GDA      var_9    C5     C4     C3     C2        60.000   20.000   3
+ GDA      var_10   C4     C3     O3     H3       118.196   20.000   1
+ GDA      var_11   C4     C3     C2     O2       180.000   20.000   3
+ GDA      var_12   C3     C2     O2     H2       -84.606   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GDA      chir_01  C1     C2     O5     O1        positiv
+ GDA      chir_02  C2     C1     C3     O2        negativ
+ GDA      chir_03  C3     C2     C4     O3        positiv
+ GDA      chir_04  C4     C3     C5     N4        negativ
+ GDA      chir_05  C5     C4     C6     O5        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GDA      plan-1    N4        0.020
+ GDA      plan-1    C4        0.000
+ GDA      plan-1    H4N1      0.000
+ GDA      plan-1    H4N2      0.000
+# ------------------------------------------------------

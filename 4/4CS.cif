@@ -1,0 +1,195 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4CS      4CS '(4S)-2-METHYL-1,4,5,6-TETRAHYDROPYRI' non-polymer        19  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4CS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4CS           OXT    O    OC       -0.500      0.000    0.000    0.000
+ 4CS           C      C    C         0.000     -1.136   -0.469    0.232
+ 4CS           O      O    OC       -0.500     -1.261   -1.476    0.964
+ 4CS           CA     C    CH1       0.000     -2.355    0.176   -0.375
+ 4CS           HA     H    H         0.000     -2.126    0.487   -1.404
+ 4CS           N      N    N         0.000     -3.449   -0.787   -0.396
+ 4CS           CAI    C    C         0.000     -4.670   -0.489   -0.144
+ 4CS           CAA    C    CH3       0.000     -5.711   -1.577   -0.213
+ 4CS           HAA3   H    H         0.000     -5.270   -2.507    0.037
+ 4CS           HAA2   H    H         0.000     -6.493   -1.363    0.469
+ 4CS           HAA1   H    H         0.000     -6.106   -1.628   -1.195
+ 4CS           NAG    N    NH1       0.000     -5.065    0.780    0.188
+ 4CS           HNAG   H    H         0.000     -5.986    0.950    0.565
+ 4CS           CAD    C    CH2       0.000     -4.122    1.890   -0.015
+ 4CS           HAD1   H    H         0.000     -4.422    2.759    0.573
+ 4CS           HAD2   H    H         0.000     -4.077    2.165   -1.071
+ 4CS           CB     C    CH2       0.000     -2.739    1.407    0.450
+ 4CS           HB2    H    H         0.000     -2.774    1.141    1.508
+ 4CS           HB1    H    H         0.000     -1.998    2.194    0.298
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4CS      OXT    n/a    C      START
+ 4CS      C      OXT    CA     .
+ 4CS      O      C      .      .
+ 4CS      CA     C      N      .
+ 4CS      HA     CA     .      .
+ 4CS      N      CA     CAI    .
+ 4CS      CAI    N      NAG    .
+ 4CS      CAA    CAI    HAA1   .
+ 4CS      HAA3   CAA    .      .
+ 4CS      HAA2   CAA    .      .
+ 4CS      HAA1   CAA    .      .
+ 4CS      NAG    CAI    CAD    .
+ 4CS      HNAG   NAG    .      .
+ 4CS      CAD    NAG    CB     .
+ 4CS      HAD1   CAD    .      .
+ 4CS      HAD2   CAD    .      .
+ 4CS      CB     CAD    HB1    .
+ 4CS      HB2    CB     .      .
+ 4CS      HB1    CB     .      END
+ 4CS      CA     CB     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4CS      O      C         deloc       1.250    0.020
+ 4CS      C      OXT       deloc       1.250    0.020
+ 4CS      CA     C         single      1.500    0.020
+ 4CS      CA     CB        single      1.524    0.020
+ 4CS      N      CA        single      1.455    0.020
+ 4CS      HA     CA        single      1.099    0.020
+ 4CS      CB     CAD       single      1.524    0.020
+ 4CS      HB1    CB        single      1.092    0.020
+ 4CS      HB2    CB        single      1.092    0.020
+ 4CS      CAD    NAG       single      1.450    0.020
+ 4CS      HAD1   CAD       single      1.092    0.020
+ 4CS      HAD2   CAD       single      1.092    0.020
+ 4CS      NAG    CAI       single      1.330    0.020
+ 4CS      HNAG   NAG       single      1.010    0.020
+ 4CS      CAA    CAI       single      1.500    0.020
+ 4CS      CAI    N         double      1.260    0.020
+ 4CS      HAA1   CAA       single      1.059    0.020
+ 4CS      HAA2   CAA       single      1.059    0.020
+ 4CS      HAA3   CAA       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4CS      OXT    C      O       123.000    3.000
+ 4CS      OXT    C      CA      118.500    3.000
+ 4CS      O      C      CA      118.500    3.000
+ 4CS      C      CA     HA      108.810    3.000
+ 4CS      C      CA     N       111.600    3.000
+ 4CS      C      CA     CB      109.470    3.000
+ 4CS      HA     CA     N       109.470    3.000
+ 4CS      HA     CA     CB      108.340    3.000
+ 4CS      N      CA     CB      105.000    3.000
+ 4CS      CA     N      CAI     121.000    3.000
+ 4CS      N      CAI    CAA     116.500    3.000
+ 4CS      N      CAI    NAG     120.000    3.000
+ 4CS      CAA    CAI    NAG     116.500    3.000
+ 4CS      CAI    CAA    HAA3    109.470    3.000
+ 4CS      CAI    CAA    HAA2    109.470    3.000
+ 4CS      CAI    CAA    HAA1    109.470    3.000
+ 4CS      HAA3   CAA    HAA2    109.470    3.000
+ 4CS      HAA3   CAA    HAA1    109.470    3.000
+ 4CS      HAA2   CAA    HAA1    109.470    3.000
+ 4CS      CAI    NAG    HNAG    120.000    3.000
+ 4CS      CAI    NAG    CAD     121.500    3.000
+ 4CS      HNAG   NAG    CAD     118.500    3.000
+ 4CS      NAG    CAD    HAD1    109.470    3.000
+ 4CS      NAG    CAD    HAD2    109.470    3.000
+ 4CS      NAG    CAD    CB      112.000    3.000
+ 4CS      HAD1   CAD    HAD2    107.900    3.000
+ 4CS      HAD1   CAD    CB      109.470    3.000
+ 4CS      HAD2   CAD    CB      109.470    3.000
+ 4CS      CAD    CB     HB2     109.470    3.000
+ 4CS      CAD    CB     HB1     109.470    3.000
+ 4CS      CAD    CB     CA      111.000    3.000
+ 4CS      HB2    CB     HB1     107.900    3.000
+ 4CS      HB2    CB     CA      109.470    3.000
+ 4CS      HB1    CB     CA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4CS      var_1    OXT    C      CA     N        158.682   20.000   3
+ 4CS      var_2    C      CA     CB     CAD      180.000   20.000   3
+ 4CS      var_3    C      CA     N      CAI      150.000   20.000   3
+ 4CS      CONST_1  CA     N      CAI    NAG        0.000    0.000   0
+ 4CS      var_4    N      CAI    CAA    HAA1     -89.982   20.000   1
+ 4CS      CONST_2  N      CAI    NAG    CAD        0.000    0.000   0
+ 4CS      var_5    CAI    NAG    CAD    CB       -30.000   20.000   3
+ 4CS      var_6    NAG    CAD    CB     CA        60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 4CS      chir_01  CA     C      CB     N         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4CS      plan-1    C         0.020
+ 4CS      plan-1    O         0.020
+ 4CS      plan-1    OXT       0.020
+ 4CS      plan-1    CA        0.020
+ 4CS      plan-2    NAG       0.020
+ 4CS      plan-2    CAD       0.020
+ 4CS      plan-2    CAI       0.020
+ 4CS      plan-2    HNAG      0.020
+ 4CS      plan-3    CAI       0.020
+ 4CS      plan-3    NAG       0.020
+ 4CS      plan-3    CAA       0.020
+ 4CS      plan-3    N         0.020
+ 4CS      plan-3    HNAG      0.020
+ 4CS      plan-4    N         0.020
+ 4CS      plan-4    CA        0.020
+ 4CS      plan-4    CAI       0.020
+# ------------------------------------------------------

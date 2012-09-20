@@ -1,0 +1,195 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4HL      4HL '4-(HYDRAZINOMETHYL)PHENOL           ' non-polymer        20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4HL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4HL           "OH'"  O    OH1       0.000      0.000    0.000    0.000
+ 4HL           "HOH'" H    H         0.000     -0.265    0.550    0.750
+ 4HL           "C6'"  C    CR6       0.000     -1.077   -0.222   -0.801
+ 4HL           "C5'"  C    CR16      0.000     -2.359    0.100   -0.353
+ 4HL           "H5'"  H    H         0.000     -2.496    0.525    0.633
+ 4HL           "C1'"  C    CR16      0.000     -0.901   -0.770   -2.072
+ 4HL           "H1'"  H    H         0.000      0.094   -1.020   -2.420
+ 4HL           "C2'"  C    CR16      0.000     -2.005   -0.996   -2.894
+ 4HL           "H2'"  H    H         0.000     -1.867   -1.422   -3.880
+ 4HL           "C3'"  C    CR6       0.000     -3.285   -0.674   -2.445
+ 4HL           "C4'"  C    CR16      0.000     -3.462   -0.127   -1.175
+ 4HL           "H4'"  H    H         0.000     -4.457    0.123   -0.827
+ 4HL           C1     C    CH2       0.000     -4.466   -0.916   -3.324
+ 4HL           H11    H    H         0.000     -5.323   -1.139   -2.685
+ 4HL           H12    H    H         0.000     -4.247   -1.782   -3.953
+ 4HL           NX1    N    NH1       0.000     -4.770    0.220   -4.157
+ 4HL           HNX1   H    H         0.000     -4.252    1.088   -4.179
+ 4HL           NX2    N    NH2       0.000     -5.924   -0.081   -4.950
+ 4HL           HX22   H    H         0.000     -5.845   -0.195   -5.956
+ 4HL           HX21   H    H         0.000     -6.837   -0.185   -4.515
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4HL      "OH'"  n/a    "C6'"  START
+ 4HL      "HOH'" "OH'"  .      .
+ 4HL      "C6'"  "OH'"  "C1'"  .
+ 4HL      "C5'"  "C6'"  "H5'"  .
+ 4HL      "H5'"  "C5'"  .      .
+ 4HL      "C1'"  "C6'"  "C2'"  .
+ 4HL      "H1'"  "C1'"  .      .
+ 4HL      "C2'"  "C1'"  "C3'"  .
+ 4HL      "H2'"  "C2'"  .      .
+ 4HL      "C3'"  "C2'"  C1     .
+ 4HL      "C4'"  "C3'"  "H4'"  .
+ 4HL      "H4'"  "C4'"  .      .
+ 4HL      C1     "C3'"  NX1    .
+ 4HL      H11    C1     .      .
+ 4HL      H12    C1     .      .
+ 4HL      NX1    C1     NX2    .
+ 4HL      HNX1   NX1    .      .
+ 4HL      NX2    NX1    HX21   .
+ 4HL      HX22   NX2    .      .
+ 4HL      HX21   NX2    .      END
+ 4HL      "C4'"  "C5'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4HL      NX1    C1        single      1.450    0.020
+ 4HL      C1     "C3'"     single      1.511    0.020
+ 4HL      H11    C1        single      1.092    0.020
+ 4HL      H12    C1        single      1.092    0.020
+ 4HL      NX2    NX1       single      1.400    0.020
+ 4HL      HNX1   NX1       single      1.010    0.020
+ 4HL      HX21   NX2       single      1.010    0.020
+ 4HL      HX22   NX2       single      1.010    0.020
+ 4HL      "C4'"  "C5'"     double      1.390    0.020
+ 4HL      "C4'"  "C3'"     single      1.390    0.020
+ 4HL      "H4'"  "C4'"     single      1.083    0.020
+ 4HL      "C5'"  "C6'"     single      1.390    0.020
+ 4HL      "H5'"  "C5'"     single      1.083    0.020
+ 4HL      "C1'"  "C6'"     double      1.390    0.020
+ 4HL      "C6'"  "OH'"     single      1.362    0.020
+ 4HL      "C2'"  "C1'"     single      1.390    0.020
+ 4HL      "H1'"  "C1'"     single      1.083    0.020
+ 4HL      "C3'"  "C2'"     double      1.390    0.020
+ 4HL      "H2'"  "C2'"     single      1.083    0.020
+ 4HL      "HOH'" "OH'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4HL      "HOH'" "OH'"  "C6'"   109.470    3.000
+ 4HL      "OH'"  "C6'"  "C5'"   120.000    3.000
+ 4HL      "OH'"  "C6'"  "C1'"   120.000    3.000
+ 4HL      "C5'"  "C6'"  "C1'"   120.000    3.000
+ 4HL      "C6'"  "C5'"  "H5'"   120.000    3.000
+ 4HL      "C6'"  "C5'"  "C4'"   120.000    3.000
+ 4HL      "H5'"  "C5'"  "C4'"   120.000    3.000
+ 4HL      "C6'"  "C1'"  "H1'"   120.000    3.000
+ 4HL      "C6'"  "C1'"  "C2'"   120.000    3.000
+ 4HL      "H1'"  "C1'"  "C2'"   120.000    3.000
+ 4HL      "C1'"  "C2'"  "H2'"   120.000    3.000
+ 4HL      "C1'"  "C2'"  "C3'"   120.000    3.000
+ 4HL      "H2'"  "C2'"  "C3'"   120.000    3.000
+ 4HL      "C2'"  "C3'"  "C4'"   120.000    3.000
+ 4HL      "C2'"  "C3'"  C1      120.000    3.000
+ 4HL      "C4'"  "C3'"  C1      120.000    3.000
+ 4HL      "C3'"  "C4'"  "H4'"   120.000    3.000
+ 4HL      "C3'"  "C4'"  "C5'"   120.000    3.000
+ 4HL      "H4'"  "C4'"  "C5'"   120.000    3.000
+ 4HL      "C3'"  C1     H11     109.470    3.000
+ 4HL      "C3'"  C1     H12     109.470    3.000
+ 4HL      "C3'"  C1     NX1     109.500    3.000
+ 4HL      H11    C1     H12     107.900    3.000
+ 4HL      H11    C1     NX1     109.470    3.000
+ 4HL      H12    C1     NX1     109.470    3.000
+ 4HL      C1     NX1    HNX1    118.500    3.000
+ 4HL      C1     NX1    NX2     120.000    3.000
+ 4HL      HNX1   NX1    NX2     120.000    3.000
+ 4HL      NX1    NX2    HX22    120.000    3.000
+ 4HL      NX1    NX2    HX21    120.000    3.000
+ 4HL      HX22   NX2    HX21    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4HL      var_1    "HOH'" "OH'"  "C6'"  "C1'"    167.748   20.000   1
+ 4HL      CONST_1  "OH'"  "C6'"  "C5'"  "C4'"    180.000    0.000   0
+ 4HL      CONST_2  "OH'"  "C6'"  "C1'"  "C2'"    180.000    0.000   0
+ 4HL      CONST_3  "C6'"  "C1'"  "C2'"  "C3'"      0.000    0.000   0
+ 4HL      CONST_4  "C1'"  "C2'"  "C3'"  C1       180.000    0.000   0
+ 4HL      CONST_5  "C2'"  "C3'"  "C4'"  "C5'"      0.000    0.000   0
+ 4HL      CONST_6  "C3'"  "C4'"  "C5'"  "C6'"      0.000    0.000   0
+ 4HL      var_2    "C2'"  "C3'"  C1     NX1      -89.983   20.000   2
+ 4HL      var_3    "C3'"  C1     NX1    NX2     -178.953   20.000   3
+ 4HL      CONST_7  C1     NX1    NX2    HX21      68.121    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4HL      plan-1    NX1       0.020
+ 4HL      plan-1    C1        0.020
+ 4HL      plan-1    NX2       0.020
+ 4HL      plan-1    HNX1      0.020
+ 4HL      plan-1    HX22      0.020
+ 4HL      plan-1    HX21      0.020
+ 4HL      plan-2    NX2       0.020
+ 4HL      plan-2    NX1       0.020
+ 4HL      plan-2    HX21      0.020
+ 4HL      plan-2    HX22      0.020
+ 4HL      plan-2    HNX1      0.020
+ 4HL      plan-3    "C4'"     0.020
+ 4HL      plan-3    "C5'"     0.020
+ 4HL      plan-3    "C3'"     0.020
+ 4HL      plan-3    "H4'"     0.020
+ 4HL      plan-3    "C6'"     0.020
+ 4HL      plan-3    "C1'"     0.020
+ 4HL      plan-3    "C2'"     0.020
+ 4HL      plan-3    "H5'"     0.020
+ 4HL      plan-3    "OH'"     0.020
+ 4HL      plan-3    "H1'"     0.020
+ 4HL      plan-3    "H2'"     0.020
+ 4HL      plan-3    C1        0.020
+# ------------------------------------------------------

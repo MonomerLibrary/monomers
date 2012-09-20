@@ -1,0 +1,236 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+P6F      P6F '1,6-di-O-phosphono-D-fructose       ' non-polymer        30  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_P6F
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ P6F           O6P    O    OP       -0.666      0.000    0.000    0.000
+ P6F           P2     P    P         0.000     -1.280    0.722   -0.359
+ P6F           O4P    O    OP       -0.666     -1.336    0.934   -1.857
+ P6F           O5P    O    OP       -0.666     -1.316    2.063    0.341
+ P6F           O6     O    O2        0.000     -2.543   -0.161    0.106
+ P6F           C6     C    CH2       0.000     -3.895    0.201   -0.185
+ P6F           H6     H    H         0.000     -4.031    0.255   -1.267
+ P6F           H6A    H    H         0.000     -4.113    1.175    0.257
+ P6F           C5     C    CH1       0.000     -4.841   -0.850    0.397
+ P6F           H5     H    H         0.000     -4.563   -1.844    0.020
+ P6F           O5     O    OH1       0.000     -4.745   -0.839    1.823
+ P6F           HO5    H    H         0.000     -4.991    0.036    2.156
+ P6F           C4     C    CH1       0.000     -6.278   -0.531   -0.019
+ P6F           H4     H    H         0.000     -6.557    0.463    0.358
+ P6F           O4     O    OH1       0.000     -6.374   -0.542   -1.445
+ P6F           HO4    H    H         0.000     -6.129   -1.416   -1.777
+ P6F           C3     C    CH1       0.000     -7.224   -1.581    0.564
+ P6F           H3     H    H         0.000     -7.218   -1.511    1.661
+ P6F           O3     O    OH1       0.000     -6.793   -2.885    0.167
+ P6F           HO3    H    H         0.000     -6.798   -2.945   -0.798
+ P6F           C2     C    C         0.000     -8.622   -1.339    0.053
+ P6F           O2     O    O         0.000     -9.087   -2.057   -0.798
+ P6F           C1     C    CH2       0.000     -9.438   -0.199    0.607
+ P6F           H1     H    H         0.000     -8.919    0.743    0.420
+ P6F           H1A    H    H         0.000     -9.569   -0.334    1.682
+ P6F           O1     O    O2        0.000    -10.717   -0.175   -0.031
+ P6F           P1     P    P         0.000    -11.851    0.913    0.316
+ P6F           O1P    O    OP       -0.666    -12.308    0.727    1.746
+ P6F           O2P    O    OP       -0.666    -13.026    0.733   -0.619
+ P6F           O3P    O    OP       -0.666    -11.281    2.305    0.147
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ P6F      O6P    n/a    P2     START
+ P6F      P2     O6P    O6     .
+ P6F      O4P    P2     .      .
+ P6F      O5P    P2     .      .
+ P6F      O6     P2     C6     .
+ P6F      C6     O6     C5     .
+ P6F      H6     C6     .      .
+ P6F      H6A    C6     .      .
+ P6F      C5     C6     C4     .
+ P6F      H5     C5     .      .
+ P6F      O5     C5     HO5    .
+ P6F      HO5    O5     .      .
+ P6F      C4     C5     C3     .
+ P6F      H4     C4     .      .
+ P6F      O4     C4     HO4    .
+ P6F      HO4    O4     .      .
+ P6F      C3     C4     C2     .
+ P6F      H3     C3     .      .
+ P6F      O3     C3     HO3    .
+ P6F      HO3    O3     .      .
+ P6F      C2     C3     C1     .
+ P6F      O2     C2     .      .
+ P6F      C1     C2     O1     .
+ P6F      H1     C1     .      .
+ P6F      H1A    C1     .      .
+ P6F      O1     C1     P1     .
+ P6F      P1     O1     O3P    .
+ P6F      O1P    P1     .      .
+ P6F      O2P    P1     .      .
+ P6F      O3P    P1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ P6F      O3P    P1        deloc       1.510    0.020
+ P6F      O1P    P1        deloc       1.510    0.020
+ P6F      P1     O1        single      1.610    0.020
+ P6F      O2P    P1        deloc       1.510    0.020
+ P6F      O1     C1        single      1.426    0.020
+ P6F      C1     C2        single      1.510    0.020
+ P6F      H1     C1        single      1.092    0.020
+ P6F      H1A    C1        single      1.092    0.020
+ P6F      C2     C3        single      1.500    0.020
+ P6F      O2     C2        double      1.220    0.020
+ P6F      C3     C4        single      1.524    0.020
+ P6F      O3     C3        single      1.432    0.020
+ P6F      H3     C3        single      1.099    0.020
+ P6F      HO3    O3        single      0.967    0.020
+ P6F      C4     C5        single      1.524    0.020
+ P6F      O4     C4        single      1.432    0.020
+ P6F      H4     C4        single      1.099    0.020
+ P6F      HO4    O4        single      0.967    0.020
+ P6F      O5     C5        single      1.432    0.020
+ P6F      C5     C6        single      1.524    0.020
+ P6F      H5     C5        single      1.099    0.020
+ P6F      HO5    O5        single      0.967    0.020
+ P6F      C6     O6        single      1.426    0.020
+ P6F      H6     C6        single      1.092    0.020
+ P6F      H6A    C6        single      1.092    0.020
+ P6F      O6     P2        single      1.610    0.020
+ P6F      O4P    P2        deloc       1.510    0.020
+ P6F      P2     O6P       deloc       1.510    0.020
+ P6F      O5P    P2        deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ P6F      O6P    P2     O4P     119.900    3.000
+ P6F      O6P    P2     O5P     119.900    3.000
+ P6F      O6P    P2     O6      108.200    3.000
+ P6F      O4P    P2     O5P     119.900    3.000
+ P6F      O4P    P2     O6      108.200    3.000
+ P6F      O5P    P2     O6      108.200    3.000
+ P6F      P2     O6     C6      120.500    3.000
+ P6F      O6     C6     H6      109.470    3.000
+ P6F      O6     C6     H6A     109.470    3.000
+ P6F      O6     C6     C5      109.470    3.000
+ P6F      H6     C6     H6A     107.900    3.000
+ P6F      H6     C6     C5      109.470    3.000
+ P6F      H6A    C6     C5      109.470    3.000
+ P6F      C6     C5     H5      108.340    3.000
+ P6F      C6     C5     O5      109.470    3.000
+ P6F      C6     C5     C4      111.000    3.000
+ P6F      H5     C5     O5      109.470    3.000
+ P6F      H5     C5     C4      108.340    3.000
+ P6F      O5     C5     C4      109.470    3.000
+ P6F      C5     O5     HO5     109.470    3.000
+ P6F      C5     C4     H4      108.340    3.000
+ P6F      C5     C4     O4      109.470    3.000
+ P6F      C5     C4     C3      111.000    3.000
+ P6F      H4     C4     O4      109.470    3.000
+ P6F      H4     C4     C3      108.340    3.000
+ P6F      O4     C4     C3      109.470    3.000
+ P6F      C4     O4     HO4     109.470    3.000
+ P6F      C4     C3     H3      108.340    3.000
+ P6F      C4     C3     O3      109.470    3.000
+ P6F      C4     C3     C2      109.470    3.000
+ P6F      H3     C3     O3      109.470    3.000
+ P6F      H3     C3     C2      108.810    3.000
+ P6F      O3     C3     C2      109.470    3.000
+ P6F      C3     O3     HO3     109.470    3.000
+ P6F      C3     C2     O2      120.500    3.000
+ P6F      C3     C2     C1      120.000    3.000
+ P6F      O2     C2     C1      120.500    3.000
+ P6F      C2     C1     H1      109.470    3.000
+ P6F      C2     C1     H1A     109.470    3.000
+ P6F      C2     C1     O1      109.470    3.000
+ P6F      H1     C1     H1A     107.900    3.000
+ P6F      H1     C1     O1      109.470    3.000
+ P6F      H1A    C1     O1      109.470    3.000
+ P6F      C1     O1     P1      120.500    3.000
+ P6F      O1     P1     O1P     108.200    3.000
+ P6F      O1     P1     O2P     108.200    3.000
+ P6F      O1     P1     O3P     108.200    3.000
+ P6F      O1P    P1     O2P     119.900    3.000
+ P6F      O1P    P1     O3P     119.900    3.000
+ P6F      O2P    P1     O3P     119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ P6F      var_1    O6P    P2     O6     C6      -175.006   20.000   1
+ P6F      var_2    P2     O6     C6     C5       179.985   20.000   1
+ P6F      var_3    O6     C6     C5     C4      -175.002   20.000   3
+ P6F      var_4    C6     C5     O5     HO5       60.087   20.000   1
+ P6F      var_5    C6     C5     C4     C3      -179.974   20.000   3
+ P6F      var_6    C5     C4     O4     HO4       60.045   20.000   1
+ P6F      var_7    C5     C4     C3     C2      -174.966   20.000   3
+ P6F      var_8    C4     C3     O3     HO3      -59.935   20.000   1
+ P6F      var_9    C4     C3     C2     C1       -75.031   20.000   3
+ P6F      var_10   C3     C2     C1     O1       179.956   20.000   3
+ P6F      var_11   C2     C1     O1     P1       179.964   20.000   1
+ P6F      var_12   C1     O1     P1     O3P       55.045   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ P6F      chir_01  C3     C2     O3     C4        negativ
+ P6F      chir_02  C4     C3     O4     C5        positiv
+ P6F      chir_03  C5     C4     O5     C6        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ P6F      plan-1    C2        0.020
+ P6F      plan-1    C1        0.000
+ P6F      plan-1    O2        0.000
+ P6F      plan-1    C3        0.000
+# ------------------------------------------------------

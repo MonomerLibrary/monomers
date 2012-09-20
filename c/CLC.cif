@@ -1,0 +1,270 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CLC      CLC 'N-ACETYL-P-NITROPHENYLSERINOL       ' non-polymer        32  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CLC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CLC           O6     O    O         0.000      0.000    0.000    0.000
+ CLC           N4     N    N         1.000     -0.793   -0.872    0.306
+ CLC           O5     O    O        -1.000     -0.390   -1.960    0.671
+ CLC           C4     C    CR6       0.000     -2.115   -0.631    0.238
+ CLC           C3     C    CR16      0.000     -2.585    0.623   -0.184
+ CLC           H3     H    H         0.000     -1.884    1.403   -0.457
+ CLC           C2     C    CR16      0.000     -3.941    0.858   -0.250
+ CLC           HB     H    H         0.000     -4.306    1.825   -0.575
+ CLC           C5     C    CR16      0.000     -3.034   -1.634    0.589
+ CLC           H5     H    H         0.000     -2.682   -2.606    0.911
+ CLC           C6     C    CR16      0.000     -4.385   -1.376    0.521
+ CLC           H6     H    H         0.000     -5.096   -2.144    0.800
+ CLC           C1     C    CR6       0.000     -4.839   -0.137    0.098
+ CLC           C50    C    CH1       0.000     -6.319    0.132    0.023
+ CLC           H50    H    H         0.000     -6.839   -0.471    0.780
+ CLC           O4     O    OH1       0.000     -6.565    1.518    0.266
+ CLC           H4     H    H         0.000     -6.107    2.048   -0.400
+ CLC           C22    C    CH1       0.000     -6.834   -0.240   -1.368
+ CLC           H22    H    H         0.000     -6.646   -1.307   -1.555
+ CLC           C21    C    CH2       0.000     -8.338    0.032   -1.446
+ CLC           H211   H    H         0.000     -8.855   -0.568   -0.694
+ CLC           H212   H    H         0.000     -8.705   -0.235   -2.439
+ CLC           O2     O    OH1       0.000     -8.584    1.418   -1.202
+ CLC           HA     H    H         0.000     -9.534    1.589   -1.251
+ CLC           N2     N    NH1       0.000     -6.141    0.561   -2.377
+ CLC           H2     H    H         0.000     -5.814    1.489   -2.148
+ CLC           C11    C    C         0.000     -5.939    0.063   -3.613
+ CLC           O1     O    O         0.000     -6.332   -1.050   -3.889
+ CLC           C12    C    CH3       0.000     -5.225    0.888   -4.651
+ CLC           H123   H    H         0.000     -5.762    1.785   -4.822
+ CLC           H122   H    H         0.000     -4.250    1.122   -4.309
+ CLC           H121   H    H         0.000     -5.158    0.340   -5.555
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CLC      O6     n/a    N4     START
+ CLC      N4     O6     C4     .
+ CLC      O5     N4     .      .
+ CLC      C4     N4     C5     .
+ CLC      C3     C4     C2     .
+ CLC      H3     C3     .      .
+ CLC      C2     C3     HB     .
+ CLC      HB     C2     .      .
+ CLC      C5     C4     C6     .
+ CLC      H5     C5     .      .
+ CLC      C6     C5     C1     .
+ CLC      H6     C6     .      .
+ CLC      C1     C6     C50    .
+ CLC      C50    C1     C22    .
+ CLC      H50    C50    .      .
+ CLC      O4     C50    H4     .
+ CLC      H4     O4     .      .
+ CLC      C22    C50    N2     .
+ CLC      H22    C22    .      .
+ CLC      C21    C22    O2     .
+ CLC      H211   C21    .      .
+ CLC      H212   C21    .      .
+ CLC      O2     C21    HA     .
+ CLC      HA     O2     .      .
+ CLC      N2     C22    C11    .
+ CLC      H2     N2     .      .
+ CLC      C11    N2     C12    .
+ CLC      O1     C11    .      .
+ CLC      C12    C11    H121   .
+ CLC      H123   C12    .      .
+ CLC      H122   C12    .      .
+ CLC      H121   C12    .      END
+ CLC      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CLC      O1     C11       double      1.220    0.020
+ CLC      O2     C21       single      1.432    0.020
+ CLC      HA     O2        single      0.967    0.020
+ CLC      C11    N2        single      1.330    0.020
+ CLC      N2     C22       single      1.450    0.020
+ CLC      H2     N2        single      1.010    0.020
+ CLC      O4     C50       single      1.432    0.020
+ CLC      H4     O4        single      0.967    0.020
+ CLC      C12    C11       single      1.500    0.020
+ CLC      H121   C12       single      1.059    0.020
+ CLC      H122   C12       single      1.059    0.020
+ CLC      H123   C12       single      1.059    0.020
+ CLC      C21    C22       single      1.524    0.020
+ CLC      H211   C21       single      1.092    0.020
+ CLC      H212   C21       single      1.092    0.020
+ CLC      C22    C50       single      1.524    0.020
+ CLC      C50    C1        single      1.480    0.020
+ CLC      H50    C50       single      1.099    0.020
+ CLC      H22    C22       single      1.099    0.020
+ CLC      C1     C2        double      1.390    0.020
+ CLC      C1     C6        single      1.390    0.020
+ CLC      C2     C3        single      1.390    0.020
+ CLC      HB     C2        single      1.083    0.020
+ CLC      C3     C4        double      1.390    0.020
+ CLC      H3     C3        single      1.083    0.020
+ CLC      C5     C4        single      1.390    0.020
+ CLC      C4     N4        single      1.400    0.020
+ CLC      C6     C5        double      1.390    0.020
+ CLC      H5     C5        single      1.083    0.020
+ CLC      H6     C6        single      1.083    0.020
+ CLC      O5     N4        single      1.400    0.020
+ CLC      N4     O6        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CLC      O6     N4     O5      120.000    3.000
+ CLC      O6     N4     C4      120.000    3.000
+ CLC      O5     N4     C4      120.000    3.000
+ CLC      N4     C4     C3      120.000    3.000
+ CLC      N4     C4     C5      120.000    3.000
+ CLC      C3     C4     C5      120.000    3.000
+ CLC      C4     C3     H3      120.000    3.000
+ CLC      C4     C3     C2      120.000    3.000
+ CLC      H3     C3     C2      120.000    3.000
+ CLC      C3     C2     HB      120.000    3.000
+ CLC      C3     C2     C1      120.000    3.000
+ CLC      HB     C2     C1      120.000    3.000
+ CLC      C4     C5     H5      120.000    3.000
+ CLC      C4     C5     C6      120.000    3.000
+ CLC      H5     C5     C6      120.000    3.000
+ CLC      C5     C6     H6      120.000    3.000
+ CLC      C5     C6     C1      120.000    3.000
+ CLC      H6     C6     C1      120.000    3.000
+ CLC      C6     C1     C50     120.000    3.000
+ CLC      C6     C1     C2      120.000    3.000
+ CLC      C50    C1     C2      120.000    3.000
+ CLC      C1     C50    H50     109.470    3.000
+ CLC      C1     C50    O4      109.470    3.000
+ CLC      C1     C50    C22     109.470    3.000
+ CLC      H50    C50    O4      109.470    3.000
+ CLC      H50    C50    C22     108.340    3.000
+ CLC      O4     C50    C22     109.470    3.000
+ CLC      C50    O4     H4      109.470    3.000
+ CLC      C50    C22    H22     108.340    3.000
+ CLC      C50    C22    C21     111.000    3.000
+ CLC      C50    C22    N2      110.000    3.000
+ CLC      H22    C22    C21     108.340    3.000
+ CLC      H22    C22    N2      108.550    3.000
+ CLC      C21    C22    N2      110.000    3.000
+ CLC      C22    C21    H211    109.470    3.000
+ CLC      C22    C21    H212    109.470    3.000
+ CLC      C22    C21    O2      109.470    3.000
+ CLC      H211   C21    H212    107.900    3.000
+ CLC      H211   C21    O2      109.470    3.000
+ CLC      H212   C21    O2      109.470    3.000
+ CLC      C21    O2     HA      109.470    3.000
+ CLC      C22    N2     H2      118.500    3.000
+ CLC      C22    N2     C11     121.500    3.000
+ CLC      H2     N2     C11     120.000    3.000
+ CLC      N2     C11    O1      123.000    3.000
+ CLC      N2     C11    C12     116.500    3.000
+ CLC      O1     C11    C12     123.000    3.000
+ CLC      C11    C12    H123    109.470    3.000
+ CLC      C11    C12    H122    109.470    3.000
+ CLC      C11    C12    H121    109.470    3.000
+ CLC      H123   C12    H122    109.470    3.000
+ CLC      H123   C12    H121    109.470    3.000
+ CLC      H122   C12    H121    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CLC      var_1    O6     N4     C4     C5       179.967   20.000   1
+ CLC      CONST_1  N4     C4     C3     C2       180.000    0.000   0
+ CLC      CONST_2  C4     C3     C2     C1         0.000    0.000   0
+ CLC      CONST_3  N4     C4     C5     C6       180.000    0.000   0
+ CLC      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ CLC      CONST_5  C5     C6     C1     C50      180.000    0.000   0
+ CLC      CONST_6  C6     C1     C2     C3         0.000    0.000   0
+ CLC      var_2    C6     C1     C50    C22      -90.343   20.000   1
+ CLC      var_3    C1     C50    O4     H4        60.000   20.000   1
+ CLC      var_4    C1     C50    C22    N2       -59.978   20.000   3
+ CLC      var_5    C50    C22    C21    O2        59.979   20.000   3
+ CLC      var_6    C22    C21    O2     HA       179.993   20.000   1
+ CLC      var_7    C50    C22    N2     C11      149.934   20.000   3
+ CLC      CONST_7  C22    N2     C11    C12      180.000    0.000   0
+ CLC      var_8    N2     C11    C12    H121    -179.932   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CLC      chir_01  C50    O4     C22    C1        negativ
+ CLC      chir_02  C22    N2     C21    C50       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CLC      plan-1    N2        0.020
+ CLC      plan-1    C11       0.020
+ CLC      plan-1    C22       0.020
+ CLC      plan-1    H2        0.020
+ CLC      plan-2    C11       0.020
+ CLC      plan-2    O1        0.020
+ CLC      plan-2    N2        0.020
+ CLC      plan-2    C12       0.020
+ CLC      plan-2    H2        0.020
+ CLC      plan-3    C1        0.020
+ CLC      plan-3    C50       0.020
+ CLC      plan-3    C2        0.020
+ CLC      plan-3    C6        0.020
+ CLC      plan-3    C3        0.020
+ CLC      plan-3    C4        0.020
+ CLC      plan-3    C5        0.020
+ CLC      plan-3    HB        0.020
+ CLC      plan-3    H3        0.020
+ CLC      plan-3    N4        0.020
+ CLC      plan-3    H5        0.020
+ CLC      plan-3    H6        0.020
+ CLC      plan-4    N4        0.020
+ CLC      plan-4    C4        0.020
+ CLC      plan-4    O5        0.020
+ CLC      plan-4    O6        0.020
+# ------------------------------------------------------

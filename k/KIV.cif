@@ -1,0 +1,159 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+KIV      KIV '3-METHYL-2-OXOBUTANOIC ACID         ' non-polymer        15   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_KIV
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ KIV           O3     O    O         0.000      0.000    0.000    0.000
+ KIV           C2     C    C         0.000     -1.148   -0.345   -0.154
+ KIV           C1     C    C         0.000     -1.971   -0.737    1.023
+ KIV           O2     O    OC       -0.500     -3.159   -1.094    0.863
+ KIV           O1     O    OC       -0.500     -1.477   -0.707    2.172
+ KIV           C3     C    CH1       0.000     -1.743   -0.381   -1.538
+ KIV           HC31   H    H         0.000     -2.823   -0.182   -1.476
+ KIV           C5     C    CH3       0.000     -1.513   -1.760   -2.158
+ KIV           HC53   H    H         0.000     -1.975   -2.500   -1.557
+ KIV           HC52   H    H         0.000     -1.932   -1.785   -3.131
+ KIV           HC51   H    H         0.000     -0.473   -1.952   -2.217
+ KIV           C4     C    CH3       0.000     -1.078    0.686   -2.408
+ KIV           HC43   H    H         0.000     -1.237    1.642   -1.980
+ KIV           HC42   H    H         0.000     -0.037    0.496   -2.467
+ KIV           HC41   H    H         0.000     -1.497    0.662   -3.380
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ KIV      O3     n/a    C2     START
+ KIV      C2     O3     C3     .
+ KIV      C1     C2     O1     .
+ KIV      O2     C1     .      .
+ KIV      O1     C1     .      .
+ KIV      C3     C2     C4     .
+ KIV      HC31   C3     .      .
+ KIV      C5     C3     HC51   .
+ KIV      HC53   C5     .      .
+ KIV      HC52   C5     .      .
+ KIV      HC51   C5     .      .
+ KIV      C4     C3     HC41   .
+ KIV      HC43   C4     .      .
+ KIV      HC42   C4     .      .
+ KIV      HC41   C4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ KIV      O1     C1        deloc       1.250    0.020
+ KIV      O2     C1        deloc       1.250    0.020
+ KIV      C1     C2        single      1.460    0.020
+ KIV      C3     C2        single      1.500    0.020
+ KIV      C2     O3        double      1.220    0.020
+ KIV      C4     C3        single      1.524    0.020
+ KIV      C5     C3        single      1.524    0.020
+ KIV      HC31   C3        single      1.099    0.020
+ KIV      HC41   C4        single      1.059    0.020
+ KIV      HC42   C4        single      1.059    0.020
+ KIV      HC43   C4        single      1.059    0.020
+ KIV      HC51   C5        single      1.059    0.020
+ KIV      HC52   C5        single      1.059    0.020
+ KIV      HC53   C5        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ KIV      O3     C2     C1      120.500    3.000
+ KIV      O3     C2     C3      120.500    3.000
+ KIV      C1     C2     C3      120.000    3.000
+ KIV      C2     C1     O2      120.000    3.000
+ KIV      C2     C1     O1      120.000    3.000
+ KIV      O2     C1     O1      123.000    3.000
+ KIV      C2     C3     HC31    108.810    3.000
+ KIV      C2     C3     C5      109.470    3.000
+ KIV      C2     C3     C4      109.470    3.000
+ KIV      HC31   C3     C5      108.340    3.000
+ KIV      HC31   C3     C4      108.340    3.000
+ KIV      C5     C3     C4      111.000    3.000
+ KIV      C3     C5     HC53    109.470    3.000
+ KIV      C3     C5     HC52    109.470    3.000
+ KIV      C3     C5     HC51    109.470    3.000
+ KIV      HC53   C5     HC52    109.470    3.000
+ KIV      HC53   C5     HC51    109.470    3.000
+ KIV      HC52   C5     HC51    109.470    3.000
+ KIV      C3     C4     HC43    109.470    3.000
+ KIV      C3     C4     HC42    109.470    3.000
+ KIV      C3     C4     HC41    109.470    3.000
+ KIV      HC43   C4     HC42    109.470    3.000
+ KIV      HC43   C4     HC41    109.470    3.000
+ KIV      HC42   C4     HC41    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ KIV      var_1    O3     C2     C1     O1         0.111   20.000   1
+ KIV      var_2    O3     C2     C3     C4       -30.056   20.000   3
+ KIV      var_3    C2     C3     C5     HC51     -59.964   20.000   3
+ KIV      var_4    C2     C3     C4     HC41    -179.985   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ KIV      chir_01  C3     C2     C4     C5        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ KIV      plan-1    C1        0.020
+ KIV      plan-1    O1        0.020
+ KIV      plan-1    O2        0.020
+ KIV      plan-1    C2        0.020
+ KIV      plan-2    C2        0.020
+ KIV      plan-2    C1        0.020
+ KIV      plan-2    C3        0.020
+ KIV      plan-2    O3        0.020
+# ------------------------------------------------------

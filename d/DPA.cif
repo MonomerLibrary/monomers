@@ -1,0 +1,277 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DPA      DPA '.                                   ' non-polymer        34  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DPA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DPA           O8     O    O         0.000      0.000    0.000    0.000
+ DPA           C8     C    C         0.000     -0.705    0.360    0.923
+ DPA           C9     C    C         0.000     -0.099    0.704    2.222
+ DPA           O9     O    O2        0.000      1.247    0.621    2.388
+ DPA           C13    C    CH3       0.000      1.522    1.013    3.735
+ DPA           H133   H    H         0.000      1.185    2.005    3.891
+ DPA           H132   H    H         0.000      1.021    0.361    4.402
+ DPA           H131   H    H         0.000      2.566    0.963    3.912
+ DPA           C10    C    C2        0.000     -0.873    1.097    3.234
+ DPA           H102   H    H         0.000     -0.434    1.350    4.187
+ DPA           H101   H    H         0.000     -1.943    1.165    3.107
+ DPA           N7     N    NH1       0.000     -2.039    0.442    0.757
+ DPA           HN7    H    H         0.000     -2.633    0.654    1.546
+ DPA           C7     C    CR6       0.000     -2.600    0.235   -0.499
+ DPA           C2     C    CR6       0.000     -3.932   -0.202   -0.614
+ DPA           C1     C    C1        0.000     -4.736   -0.434    0.587
+ DPA           H1     H    H         0.000     -4.306   -0.278    1.562
+ DPA           O1     O    O         0.000     -5.888   -0.803    0.485
+ DPA           C6     C    CR16      0.000     -1.846    0.452   -1.640
+ DPA           H6     H    H         0.000     -0.818    0.784   -1.555
+ DPA           C5     C    CR6       0.000     -2.404    0.246   -2.892
+ DPA           O5     O    O2        0.000     -1.660    0.461   -4.007
+ DPA           C12    C    CH3       0.000     -0.368    0.886   -3.566
+ DPA           H123   H    H         0.000     -0.462    1.776   -3.000
+ DPA           H122   H    H         0.000      0.067    0.130   -2.964
+ DPA           H121   H    H         0.000      0.251    1.066   -4.407
+ DPA           C4     C    CR6       0.000     -3.729   -0.181   -3.011
+ DPA           C3     C    CR16      0.000     -4.490   -0.402   -1.885
+ DPA           H3     H    H         0.000     -5.517   -0.730   -1.981
+ DPA           O4     O    O2        0.000     -4.267   -0.382   -4.244
+ DPA           C11    C    CH3       0.000     -5.614   -0.811   -4.042
+ DPA           H113   H    H         0.000     -5.619   -1.708   -3.479
+ DPA           H112   H    H         0.000     -6.148   -0.062   -3.516
+ DPA           H111   H    H         0.000     -6.076   -0.980   -4.980
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DPA      O8     n/a    C8     START
+ DPA      C8     O8     N7     .
+ DPA      C9     C8     C10    .
+ DPA      O9     C9     C13    .
+ DPA      C13    O9     H131   .
+ DPA      H133   C13    .      .
+ DPA      H132   C13    .      .
+ DPA      H131   C13    .      .
+ DPA      C10    C9     H101   .
+ DPA      H102   C10    .      .
+ DPA      H101   C10    .      .
+ DPA      N7     C8     C7     .
+ DPA      HN7    N7     .      .
+ DPA      C7     N7     C6     .
+ DPA      C2     C7     C1     .
+ DPA      C1     C2     O1     .
+ DPA      H1     C1     .      .
+ DPA      O1     C1     .      .
+ DPA      C6     C7     C5     .
+ DPA      H6     C6     .      .
+ DPA      C5     C6     C4     .
+ DPA      O5     C5     C12    .
+ DPA      C12    O5     H121   .
+ DPA      H123   C12    .      .
+ DPA      H122   C12    .      .
+ DPA      H121   C12    .      .
+ DPA      C4     C5     O4     .
+ DPA      C3     C4     H3     .
+ DPA      H3     C3     .      .
+ DPA      O4     C4     C11    .
+ DPA      C11    O4     H111   .
+ DPA      H113   C11    .      .
+ DPA      H112   C11    .      .
+ DPA      H111   C11    .      END
+ DPA      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DPA      C1     C2        single      1.480    0.020
+ DPA      O1     C1        double      1.220    0.020
+ DPA      H1     C1        single      1.077    0.020
+ DPA      C2     C3        double      1.390    0.020
+ DPA      C2     C7        single      1.487    0.020
+ DPA      C3     C4        single      1.390    0.020
+ DPA      H3     C3        single      1.083    0.020
+ DPA      C4     C5        double      1.487    0.020
+ DPA      O4     C4        single      1.370    0.020
+ DPA      C5     C6        single      1.390    0.020
+ DPA      O5     C5        single      1.370    0.020
+ DPA      C6     C7        double      1.390    0.020
+ DPA      H6     C6        single      1.083    0.020
+ DPA      C7     N7        single      1.350    0.020
+ DPA      C9     C8        single      1.460    0.020
+ DPA      N7     C8        single      1.330    0.020
+ DPA      C8     O8        double      1.220    0.020
+ DPA      C10    C9        double      1.320    0.020
+ DPA      O9     C9        single      1.454    0.020
+ DPA      H101   C10       single      1.077    0.020
+ DPA      H102   C10       single      1.077    0.020
+ DPA      C11    O4        single      1.426    0.020
+ DPA      H111   C11       single      1.059    0.020
+ DPA      H112   C11       single      1.059    0.020
+ DPA      H113   C11       single      1.059    0.020
+ DPA      C12    O5        single      1.426    0.020
+ DPA      H121   C12       single      1.059    0.020
+ DPA      H122   C12       single      1.059    0.020
+ DPA      H123   C12       single      1.059    0.020
+ DPA      C13    O9        single      1.426    0.020
+ DPA      H131   C13       single      1.059    0.020
+ DPA      H132   C13       single      1.059    0.020
+ DPA      H133   C13       single      1.059    0.020
+ DPA      HN7    N7        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DPA      O8     C8     C9      120.500    3.000
+ DPA      O8     C8     N7      123.000    3.000
+ DPA      C9     C8     N7      120.000    3.000
+ DPA      C8     C9     O9      120.000    3.000
+ DPA      C8     C9     C10     120.000    3.000
+ DPA      O9     C9     C10     120.000    3.000
+ DPA      C9     O9     C13     120.000    3.000
+ DPA      O9     C13    H133    109.470    3.000
+ DPA      O9     C13    H132    109.470    3.000
+ DPA      O9     C13    H131    109.470    3.000
+ DPA      H133   C13    H132    109.470    3.000
+ DPA      H133   C13    H131    109.470    3.000
+ DPA      H132   C13    H131    109.470    3.000
+ DPA      C9     C10    H102    120.000    3.000
+ DPA      C9     C10    H101    120.000    3.000
+ DPA      H102   C10    H101    120.000    3.000
+ DPA      C8     N7     HN7     120.000    3.000
+ DPA      C8     N7     C7      120.000    3.000
+ DPA      HN7    N7     C7      120.000    3.000
+ DPA      N7     C7     C2      120.000    3.000
+ DPA      N7     C7     C6      120.000    3.000
+ DPA      C2     C7     C6      120.000    3.000
+ DPA      C7     C2     C1      120.000    3.000
+ DPA      C7     C2     C3      120.000    3.000
+ DPA      C1     C2     C3      120.000    3.000
+ DPA      C2     C1     H1      120.000    3.000
+ DPA      C2     C1     O1      120.000    3.000
+ DPA      H1     C1     O1      123.000    3.000
+ DPA      C7     C6     H6      120.000    3.000
+ DPA      C7     C6     C5      120.000    3.000
+ DPA      H6     C6     C5      120.000    3.000
+ DPA      C6     C5     O5      120.000    3.000
+ DPA      C6     C5     C4      120.000    3.000
+ DPA      O5     C5     C4      120.000    3.000
+ DPA      C5     O5     C12     120.000    3.000
+ DPA      O5     C12    H123    109.470    3.000
+ DPA      O5     C12    H122    109.470    3.000
+ DPA      O5     C12    H121    109.470    3.000
+ DPA      H123   C12    H122    109.470    3.000
+ DPA      H123   C12    H121    109.470    3.000
+ DPA      H122   C12    H121    109.470    3.000
+ DPA      C5     C4     C3      120.000    3.000
+ DPA      C5     C4     O4      120.000    3.000
+ DPA      C3     C4     O4      120.000    3.000
+ DPA      C4     C3     H3      120.000    3.000
+ DPA      C4     C3     C2      120.000    3.000
+ DPA      H3     C3     C2      120.000    3.000
+ DPA      C4     O4     C11     120.000    3.000
+ DPA      O4     C11    H113    109.470    3.000
+ DPA      O4     C11    H112    109.470    3.000
+ DPA      O4     C11    H111    109.470    3.000
+ DPA      H113   C11    H112    109.470    3.000
+ DPA      H113   C11    H111    109.470    3.000
+ DPA      H112   C11    H111    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DPA      var_1    O8     C8     C9     C10     -179.933   20.000   1
+ DPA      var_2    C8     C9     O9     C13      179.999   20.000   1
+ DPA      var_3    C9     O9     C13    H131     179.999   20.000   1
+ DPA      CONST_1  C8     C9     C10    H101       0.009    0.000   0
+ DPA      CONST_2  O8     C8     N7     C7         0.000    0.000   0
+ DPA      var_4    C8     N7     C7     C6       -24.788   20.000   1
+ DPA      CONST_3  N7     C7     C2     C1         0.000    0.000   0
+ DPA      CONST_4  C7     C2     C3     C4         0.000    0.000   0
+ DPA      var_5    C7     C2     C1     O1       179.499   20.000   1
+ DPA      CONST_5  N7     C7     C6     C5       180.000    0.000   0
+ DPA      CONST_6  C7     C6     C5     C4         0.000    0.000   0
+ DPA      var_6    C6     C5     O5     C12       -0.018   20.000   1
+ DPA      var_7    C5     O5     C12    H121     179.998   20.000   1
+ DPA      CONST_7  C6     C5     C4     O4       180.000    0.000   0
+ DPA      CONST_8  C5     C4     C3     C2         0.000    0.000   0
+ DPA      var_8    C5     C4     O4     C11      179.949   20.000   1
+ DPA      var_9    C4     O4     C11    H111    -179.987   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DPA      plan-1    C1        0.020
+ DPA      plan-1    C2        0.020
+ DPA      plan-1    O1        0.020
+ DPA      plan-1    H1        0.020
+ DPA      plan-2    C2        0.020
+ DPA      plan-2    C1        0.020
+ DPA      plan-2    C3        0.020
+ DPA      plan-2    C7        0.020
+ DPA      plan-2    C4        0.020
+ DPA      plan-2    C5        0.020
+ DPA      plan-2    C6        0.020
+ DPA      plan-2    H3        0.020
+ DPA      plan-2    O4        0.020
+ DPA      plan-2    O5        0.020
+ DPA      plan-2    H6        0.020
+ DPA      plan-2    N7        0.020
+ DPA      plan-2    H1        0.020
+ DPA      plan-2    HN7       0.020
+ DPA      plan-3    C8        0.020
+ DPA      plan-3    C9        0.020
+ DPA      plan-3    N7        0.020
+ DPA      plan-3    O8        0.020
+ DPA      plan-3    HN7       0.020
+ DPA      plan-4    C9        0.020
+ DPA      plan-4    C8        0.020
+ DPA      plan-4    C10       0.020
+ DPA      plan-4    O9        0.020
+ DPA      plan-4    H101      0.020
+ DPA      plan-4    H102      0.020
+ DPA      plan-5    N7        0.020
+ DPA      plan-5    C7        0.020
+ DPA      plan-5    C8        0.020
+ DPA      plan-5    HN7       0.020
+# ------------------------------------------------------

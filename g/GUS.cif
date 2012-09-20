@@ -1,0 +1,276 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GUS      GUS '(E)-N-[(5-carbamimidamido-2-hydroxyp' non-polymer        31  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GUS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GUS           OXT    O    OC       -0.500      0.000    0.000    0.000
+ GUS           C      C    C         0.000     -1.208   -0.317   -0.069
+ GUS           O      O    OC       -0.500     -1.573   -1.225   -0.849
+ GUS           CA     C    CH1       0.000     -2.223    0.390    0.791
+ GUS           HA     H    H         0.000     -2.220    1.463    0.554
+ GUS           CB     C    CH3       0.000     -1.867    0.192    2.266
+ GUS           HBB    H    H         0.000     -1.870   -0.842    2.496
+ GUS           HBA    H    H         0.000     -0.905    0.592    2.456
+ GUS           HB     H    H         0.000     -2.580    0.689    2.873
+ GUS           N      N    N         0.000     -3.555   -0.164    0.532
+ GUS           CAL    C    C1        0.000     -4.499    0.602    0.090
+ GUS           HAL    H    H         0.000     -4.307    1.647   -0.086
+ GUS           CAI    C    CR6       0.000     -5.839    0.045   -0.170
+ GUS           CAJ    C    CR6       0.000     -6.093   -1.315    0.057
+ GUS           OAK    O    OH1       0.000     -5.105   -2.123    0.521
+ GUS           HOAK   H    H         0.000     -4.621   -2.501   -0.226
+ GUS           CAF    C    CR16      0.000     -7.352   -1.832   -0.196
+ GUS           HAF    H    H         0.000     -7.548   -2.884   -0.026
+ GUS           CAE    C    CR16      0.000     -8.359   -1.013   -0.666
+ GUS           HAE    H    H         0.000     -9.342   -1.423   -0.861
+ GUS           CAH    C    CR16      0.000     -6.860    0.869   -0.647
+ GUS           HAH    H    H         0.000     -6.671    1.920   -0.825
+ GUS           CAD    C    CR6       0.000     -8.117    0.338   -0.890
+ GUS           NAC    N    NH1       0.000     -9.143    1.163   -1.367
+ GUS           HNAC   H    H         0.000     -9.841    0.789   -1.995
+ GUS           CAB    C    C         0.000     -9.201    2.483   -0.981
+ GUS           NAG    N    NH2       0.000    -10.141    3.321   -1.536
+ GUS           HNAB   H    H         0.000    -10.799    2.977   -2.233
+ GUS           HNAG   H    H         0.000    -10.195    4.299   -1.259
+ GUS           NAA    N    N         0.000     -8.367    2.938   -0.089
+ GUS           HNAA   H    H         0.000     -8.397    3.858    0.190
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GUS      OXT    n/a    C      START
+ GUS      C      OXT    CA     .
+ GUS      O      C      .      .
+ GUS      CA     C      N      .
+ GUS      HA     CA     .      .
+ GUS      CB     CA     HB     .
+ GUS      HBB    CB     .      .
+ GUS      HBA    CB     .      .
+ GUS      HB     CB     .      .
+ GUS      N      CA     CAL    .
+ GUS      CAL    N      CAI    .
+ GUS      HAL    CAL    .      .
+ GUS      CAI    CAL    CAH    .
+ GUS      CAJ    CAI    CAF    .
+ GUS      OAK    CAJ    HOAK   .
+ GUS      HOAK   OAK    .      .
+ GUS      CAF    CAJ    CAE    .
+ GUS      HAF    CAF    .      .
+ GUS      CAE    CAF    HAE    .
+ GUS      HAE    CAE    .      .
+ GUS      CAH    CAI    CAD    .
+ GUS      HAH    CAH    .      .
+ GUS      CAD    CAH    NAC    .
+ GUS      NAC    CAD    CAB    .
+ GUS      HNAC   NAC    .      .
+ GUS      CAB    NAC    NAA    .
+ GUS      NAG    CAB    HNAG   .
+ GUS      HNAB   NAG    .      .
+ GUS      HNAG   NAG    .      .
+ GUS      NAA    CAB    HNAA   .
+ GUS      HNAA   NAA    .      END
+ GUS      CAD    CAE    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GUS      O      C         deloc       1.250    0.020
+ GUS      CA     C         single      1.500    0.020
+ GUS      C      OXT       deloc       1.250    0.020
+ GUS      N      CA        single      1.455    0.020
+ GUS      CAL    N         double      1.260    0.020
+ GUS      CB     CA        single      1.524    0.020
+ GUS      NAA    CAB       double      1.260    0.020
+ GUS      CAB    NAC       single      1.330    0.020
+ GUS      NAG    CAB       single      1.332    0.020
+ GUS      NAC    CAD       single      1.350    0.020
+ GUS      CAD    CAE       double      1.390    0.020
+ GUS      CAD    CAH       single      1.390    0.020
+ GUS      CAE    CAF       single      1.390    0.020
+ GUS      CAF    CAJ       double      1.390    0.020
+ GUS      CAH    CAI       double      1.390    0.020
+ GUS      CAJ    CAI       single      1.487    0.020
+ GUS      CAI    CAL       single      1.480    0.020
+ GUS      OAK    CAJ       single      1.362    0.020
+ GUS      HA     CA        single      1.099    0.020
+ GUS      HB     CB        single      1.059    0.020
+ GUS      HBA    CB        single      1.059    0.020
+ GUS      HBB    CB        single      1.059    0.020
+ GUS      HNAA   NAA       single      0.954    0.020
+ GUS      HNAC   NAC       single      1.010    0.020
+ GUS      HAE    CAE       single      1.083    0.020
+ GUS      HAF    CAF       single      1.083    0.020
+ GUS      HNAG   NAG       single      1.010    0.020
+ GUS      HNAB   NAG       single      1.010    0.020
+ GUS      HAH    CAH       single      1.083    0.020
+ GUS      HOAK   OAK       single      0.967    0.020
+ GUS      HAL    CAL       single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GUS      OXT    C      O       123.000    3.000
+ GUS      OXT    C      CA      118.500    3.000
+ GUS      O      C      CA      118.500    3.000
+ GUS      C      CA     HA      108.810    3.000
+ GUS      C      CA     CB      109.470    3.000
+ GUS      C      CA     N       111.600    3.000
+ GUS      HA     CA     CB      108.340    3.000
+ GUS      HA     CA     N       109.470    3.000
+ GUS      CB     CA     N       109.500    3.000
+ GUS      CA     CB     HBB     109.470    3.000
+ GUS      CA     CB     HBA     109.470    3.000
+ GUS      CA     CB     HB      109.470    3.000
+ GUS      HBB    CB     HBA     109.470    3.000
+ GUS      HBB    CB     HB      109.470    3.000
+ GUS      HBA    CB     HB      109.470    3.000
+ GUS      CA     N      CAL     120.000    3.000
+ GUS      N      CAL    HAL     120.000    3.000
+ GUS      N      CAL    CAI     120.000    3.000
+ GUS      HAL    CAL    CAI     120.000    3.000
+ GUS      CAL    CAI    CAJ     120.000    3.000
+ GUS      CAL    CAI    CAH     120.000    3.000
+ GUS      CAJ    CAI    CAH     120.000    3.000
+ GUS      CAI    CAJ    OAK     120.000    3.000
+ GUS      CAI    CAJ    CAF     120.000    3.000
+ GUS      OAK    CAJ    CAF     120.000    3.000
+ GUS      CAJ    OAK    HOAK    109.470    3.000
+ GUS      CAJ    CAF    HAF     120.000    3.000
+ GUS      CAJ    CAF    CAE     120.000    3.000
+ GUS      HAF    CAF    CAE     120.000    3.000
+ GUS      CAF    CAE    HAE     120.000    3.000
+ GUS      CAF    CAE    CAD     120.000    3.000
+ GUS      HAE    CAE    CAD     120.000    3.000
+ GUS      CAI    CAH    HAH     120.000    3.000
+ GUS      CAI    CAH    CAD     120.000    3.000
+ GUS      HAH    CAH    CAD     120.000    3.000
+ GUS      CAH    CAD    NAC     120.000    3.000
+ GUS      CAH    CAD    CAE     120.000    3.000
+ GUS      NAC    CAD    CAE     120.000    3.000
+ GUS      CAD    NAC    HNAC    120.000    3.000
+ GUS      CAD    NAC    CAB     120.000    3.000
+ GUS      HNAC   NAC    CAB     120.000    3.000
+ GUS      NAC    CAB    NAG     120.000    3.000
+ GUS      NAC    CAB    NAA     120.000    3.000
+ GUS      NAG    CAB    NAA     120.000    3.000
+ GUS      CAB    NAG    HNAB    120.000    3.000
+ GUS      CAB    NAG    HNAG    120.000    3.000
+ GUS      HNAB   NAG    HNAG    120.000    3.000
+ GUS      CAB    NAA    HNAA    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GUS      var_1    OXT    C      CA     N       -179.694   20.000   3
+ GUS      var_2    C      CA     CB     HB       179.997   20.000   3
+ GUS      var_3    C      CA     N      CAL     -119.995   20.000   3
+ GUS      CONST_1  CA     N      CAL    CAI     -179.983    0.000   0
+ GUS      var_4    N      CAL    CAI    CAH     -179.987   20.000   1
+ GUS      CONST_2  CAL    CAI    CAJ    CAF      180.000    0.000   0
+ GUS      var_5    CAI    CAJ    OAK    HOAK     -89.739   20.000   1
+ GUS      CONST_3  CAI    CAJ    CAF    CAE        0.000    0.000   0
+ GUS      CONST_4  CAJ    CAF    CAE    CAD        0.000    0.000   0
+ GUS      CONST_5  CAL    CAI    CAH    CAD      180.000    0.000   0
+ GUS      CONST_6  CAI    CAH    CAD    NAC      180.000    0.000   0
+ GUS      CONST_7  CAH    CAD    CAE    CAF        0.000    0.000   0
+ GUS      var_6    CAH    CAD    NAC    CAB      -33.217   20.000   1
+ GUS      CONST_8  CAD    NAC    CAB    NAA        0.000    0.000   0
+ GUS      CONST_9  NAC    CAB    NAG    HNAG     180.000    0.000   0
+ GUS      CONST_10 NAC    CAB    NAA    HNAA     180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GUS      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GUS      plan-1    C         0.020
+ GUS      plan-1    O         0.020
+ GUS      plan-1    CA        0.020
+ GUS      plan-1    OXT       0.020
+ GUS      plan-2    N         0.020
+ GUS      plan-2    CA        0.020
+ GUS      plan-2    CAL       0.020
+ GUS      plan-2    CAI       0.020
+ GUS      plan-2    HAL       0.020
+ GUS      plan-3    NAA       0.020
+ GUS      plan-3    CAB       0.020
+ GUS      plan-3    HNAA      0.020
+ GUS      plan-3    NAC       0.020
+ GUS      plan-3    NAG       0.020
+ GUS      plan-3    HNAC      0.020
+ GUS      plan-3    HNAB      0.020
+ GUS      plan-3    HNAG      0.020
+ GUS      plan-4    NAC       0.020
+ GUS      plan-4    CAB       0.020
+ GUS      plan-4    CAD       0.020
+ GUS      plan-4    HNAC      0.020
+ GUS      plan-5    CAD       0.020
+ GUS      plan-5    NAC       0.020
+ GUS      plan-5    CAE       0.020
+ GUS      plan-5    CAH       0.020
+ GUS      plan-5    CAF       0.020
+ GUS      plan-5    CAI       0.020
+ GUS      plan-5    CAJ       0.020
+ GUS      plan-5    HAE       0.020
+ GUS      plan-5    HAF       0.020
+ GUS      plan-5    HAH       0.020
+ GUS      plan-5    CAL       0.020
+ GUS      plan-5    OAK       0.020
+ GUS      plan-5    HNAC      0.020
+ GUS      plan-5    HAL       0.020
+ GUS      plan-6    NAG       0.020
+ GUS      plan-6    CAB       0.020
+ GUS      plan-6    HNAG      0.020
+ GUS      plan-6    HNAB      0.020
+# ------------------------------------------------------

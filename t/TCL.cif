@@ -1,0 +1,222 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TCL      TCL 'TRICLOSAN                           ' non-polymer        24  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TCL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TCL           CL16   CL   CL        0.000      0.000    0.000    0.000
+ TCL           C9     C    CR6       0.000     -1.614    0.042   -0.639
+ TCL           C10    C    CR16      0.000     -1.817    0.048   -2.006
+ TCL           H101   H    H         0.000     -0.969    0.026   -2.679
+ TCL           C8     C    CR6       0.000     -2.702    0.060    0.223
+ TCL           C13    C    CR16      0.000     -3.990    0.093   -0.290
+ TCL           H131   H    H         0.000     -4.840    0.111    0.381
+ TCL           C12    C    CR16      0.000     -4.188    0.104   -1.657
+ TCL           H121   H    H         0.000     -5.194    0.131   -2.058
+ TCL           C11    C    CR6       0.000     -3.102    0.082   -2.514
+ TCL           CL15   CL   CL        0.000     -3.355    0.095   -4.232
+ TCL           O7     O    O2        0.000     -2.505    0.048    1.567
+ TCL           C5     C    CR6       0.000     -3.731   -0.072    2.143
+ TCL           C6     C    CR6       0.000     -4.489    1.062    2.413
+ TCL           O17    O    OH1       0.000     -4.008    2.294    2.097
+ TCL           H171   H    H         0.000     -3.513    2.648    2.848
+ TCL           C1     C    CR16      0.000     -5.738    0.933    3.000
+ TCL           H11    H    H         0.000     -6.332    1.815    3.208
+ TCL           C4     C    CR16      0.000     -4.224   -1.326    2.470
+ TCL           H41    H    H         0.000     -3.633   -2.210    2.267
+ TCL           C3     C    CR16      0.000     -5.470   -1.447    3.055
+ TCL           H31    H    H         0.000     -5.856   -2.427    3.306
+ TCL           C2     C    CR6       0.000     -6.226   -0.320    3.320
+ TCL           CL14   CL   CL        0.000     -7.791   -0.479    4.054
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TCL      CL16   n/a    C9     START
+ TCL      C9     CL16   C8     .
+ TCL      C10    C9     H101   .
+ TCL      H101   C10    .      .
+ TCL      C8     C9     O7     .
+ TCL      C13    C8     C12    .
+ TCL      H131   C13    .      .
+ TCL      C12    C13    C11    .
+ TCL      H121   C12    .      .
+ TCL      C11    C12    CL15   .
+ TCL      CL15   C11    .      .
+ TCL      O7     C8     C5     .
+ TCL      C5     O7     C4     .
+ TCL      C6     C5     C1     .
+ TCL      O17    C6     H171   .
+ TCL      H171   O17    .      .
+ TCL      C1     C6     H11    .
+ TCL      H11    C1     .      .
+ TCL      C4     C5     C3     .
+ TCL      H41    C4     .      .
+ TCL      C3     C4     C2     .
+ TCL      H31    C3     .      .
+ TCL      C2     C3     CL14   .
+ TCL      CL14   C2     .      END
+ TCL      C1     C2     .    ADD
+ TCL      C11    C10    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TCL      C1     C2        double      1.390    0.020
+ TCL      C1     C6        single      1.390    0.020
+ TCL      H11    C1        single      1.083    0.020
+ TCL      C2     C3        single      1.390    0.020
+ TCL      CL14   C2        single      1.795    0.020
+ TCL      C6     C5        double      1.487    0.020
+ TCL      O17    C6        single      1.362    0.020
+ TCL      C4     C5        single      1.390    0.020
+ TCL      C5     O7        single      1.370    0.020
+ TCL      C3     C4        double      1.390    0.020
+ TCL      H41    C4        single      1.083    0.020
+ TCL      H31    C3        single      1.083    0.020
+ TCL      C11    C10       double      1.390    0.020
+ TCL      C11    C12       single      1.390    0.020
+ TCL      CL15   C11       single      1.795    0.020
+ TCL      C10    C9        single      1.390    0.020
+ TCL      H101   C10       single      1.083    0.020
+ TCL      C8     C9        double      1.487    0.020
+ TCL      C9     CL16      single      1.795    0.020
+ TCL      C13    C8        single      1.390    0.020
+ TCL      O7     C8        single      1.370    0.020
+ TCL      C12    C13       double      1.390    0.020
+ TCL      H121   C12       single      1.083    0.020
+ TCL      H131   C13       single      1.083    0.020
+ TCL      H171   O17       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TCL      CL16   C9     C10     120.000    3.000
+ TCL      CL16   C9     C8      120.000    3.000
+ TCL      C10    C9     C8      120.000    3.000
+ TCL      C9     C10    H101    120.000    3.000
+ TCL      C9     C10    C11     120.000    3.000
+ TCL      H101   C10    C11     120.000    3.000
+ TCL      C9     C8     C13     120.000    3.000
+ TCL      C9     C8     O7      120.000    3.000
+ TCL      C13    C8     O7      120.000    3.000
+ TCL      C8     C13    H131    120.000    3.000
+ TCL      C8     C13    C12     120.000    3.000
+ TCL      H131   C13    C12     120.000    3.000
+ TCL      C13    C12    H121    120.000    3.000
+ TCL      C13    C12    C11     120.000    3.000
+ TCL      H121   C12    C11     120.000    3.000
+ TCL      C12    C11    CL15    120.000    3.000
+ TCL      C12    C11    C10     120.000    3.000
+ TCL      CL15   C11    C10     120.000    3.000
+ TCL      C8     O7     C5      120.000    3.000
+ TCL      O7     C5     C6      120.000    3.000
+ TCL      O7     C5     C4      120.000    3.000
+ TCL      C6     C5     C4      120.000    3.000
+ TCL      C5     C6     O17     120.000    3.000
+ TCL      C5     C6     C1      120.000    3.000
+ TCL      O17    C6     C1      120.000    3.000
+ TCL      C6     O17    H171    109.470    3.000
+ TCL      C6     C1     H11     120.000    3.000
+ TCL      C6     C1     C2      120.000    3.000
+ TCL      H11    C1     C2      120.000    3.000
+ TCL      C5     C4     H41     120.000    3.000
+ TCL      C5     C4     C3      120.000    3.000
+ TCL      H41    C4     C3      120.000    3.000
+ TCL      C4     C3     H31     120.000    3.000
+ TCL      C4     C3     C2      120.000    3.000
+ TCL      H31    C3     C2      120.000    3.000
+ TCL      C3     C2     CL14    120.000    3.000
+ TCL      C3     C2     C1      120.000    3.000
+ TCL      CL14   C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TCL      CONST_1  CL16   C9     C10    C11      180.000    0.000   0
+ TCL      CONST_2  CL16   C9     C8     O7         0.000    0.000   0
+ TCL      CONST_3  C9     C8     C13    C12        0.000    0.000   0
+ TCL      CONST_4  C8     C13    C12    C11        0.000    0.000   0
+ TCL      CONST_5  C13    C12    C11    CL15     180.000    0.000   0
+ TCL      CONST_6  C12    C11    C10    C9         0.000    0.000   0
+ TCL      var_1    C9     C8     O7     C5      -173.713   20.000   1
+ TCL      var_2    C8     O7     C5     C4        93.074   20.000   1
+ TCL      CONST_7  O7     C5     C6     C1       180.000    0.000   0
+ TCL      var_3    C5     C6     O17    H171     -90.276   20.000   1
+ TCL      CONST_8  C5     C6     C1     C2         0.000    0.000   0
+ TCL      CONST_9  C6     C1     C2     C3         0.000    0.000   0
+ TCL      CONST_10 O7     C5     C4     C3       180.000    0.000   0
+ TCL      CONST_11 C5     C4     C3     C2         0.000    0.000   0
+ TCL      CONST_12 C4     C3     C2     CL14     180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TCL      plan-1    C1        0.020
+ TCL      plan-1    C2        0.020
+ TCL      plan-1    C6        0.020
+ TCL      plan-1    H11       0.020
+ TCL      plan-1    C5        0.020
+ TCL      plan-1    C4        0.020
+ TCL      plan-1    C3        0.020
+ TCL      plan-1    CL14      0.020
+ TCL      plan-1    O17       0.020
+ TCL      plan-1    O7        0.020
+ TCL      plan-1    H41       0.020
+ TCL      plan-1    H31       0.020
+ TCL      plan-2    C11       0.020
+ TCL      plan-2    C10       0.020
+ TCL      plan-2    C12       0.020
+ TCL      plan-2    CL15      0.020
+ TCL      plan-2    C9        0.020
+ TCL      plan-2    C8        0.020
+ TCL      plan-2    C13       0.020
+ TCL      plan-2    H101      0.020
+ TCL      plan-2    CL16      0.020
+ TCL      plan-2    O7        0.020
+ TCL      plan-2    H121      0.020
+ TCL      plan-2    H131      0.020
+# ------------------------------------------------------

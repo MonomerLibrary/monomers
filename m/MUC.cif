@@ -1,0 +1,176 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MUC      MUC '[(2S)-5-oxo-2,5-dihydrofuran-2-yl]ac' non-polymer        15  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MUC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MUC           O6     O    O        -0.500      0.000    0.000    0.000
+ MUC           C6     C    C         0.000     -1.096   -0.561    0.222
+ MUC           C5     C    C1        0.000     -1.304   -2.011    0.269
+ MUC           H5     H    H         0.000     -0.539   -2.753    0.117
+ MUC           O3     O    O2       -0.500     -2.176    0.033    0.437
+ MUC           C3     C    CH1       0.000     -3.282   -0.935    0.662
+ MUC           H3     H    H         0.000     -3.702   -0.818    1.671
+ MUC           C4     C    C1        0.000     -2.584   -2.268    0.527
+ MUC           H4     H    H         0.000     -3.036   -3.241    0.622
+ MUC           C2     C    CH2       0.000     -4.378   -0.803   -0.399
+ MUC           H2     H    H         0.000     -5.058   -1.654   -0.326
+ MUC           H2A    H    H         0.000     -3.922   -0.786   -1.391
+ MUC           C1     C    C         0.000     -5.143    0.475   -0.173
+ MUC           O1     O    OC       -0.500     -6.089    0.779   -0.933
+ MUC           O2     O    OC       -0.500     -4.836    1.229    0.777
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MUC      O6     n/a    C6     START
+ MUC      C6     O6     O3     .
+ MUC      C5     C6     H5     .
+ MUC      H5     C5     .      .
+ MUC      O3     C6     C3     .
+ MUC      C3     O3     C2     .
+ MUC      H3     C3     .      .
+ MUC      C4     C3     H4     .
+ MUC      H4     C4     .      .
+ MUC      C2     C3     C1     .
+ MUC      H2     C2     .      .
+ MUC      H2A    C2     .      .
+ MUC      C1     C2     O2     .
+ MUC      O1     C1     .      .
+ MUC      O2     C1     .      END
+ MUC      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MUC      O1     C1        deloc       1.250    0.020
+ MUC      O2     C1        deloc       1.250    0.020
+ MUC      C1     C2        single      1.510    0.020
+ MUC      C4     C5        double      1.330    0.020
+ MUC      C4     C3        single      1.510    0.020
+ MUC      C5     C6        single      1.475    0.020
+ MUC      C6     O6        deloc       1.220    0.020
+ MUC      O3     C6        deloc       1.454    0.020
+ MUC      C3     O3        single      1.426    0.020
+ MUC      C2     C3        single      1.524    0.020
+ MUC      H4     C4        single      1.077    0.020
+ MUC      H5     C5        single      1.077    0.020
+ MUC      H3     C3        single      1.099    0.020
+ MUC      H2     C2        single      1.092    0.020
+ MUC      H2A    C2        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MUC      O6     C6     C5      120.500    3.000
+ MUC      O6     C6     O3      119.000    3.000
+ MUC      C5     C6     O3      120.000    3.000
+ MUC      C6     C5     H5      120.000    3.000
+ MUC      C6     C5     C4      120.000    3.000
+ MUC      H5     C5     C4      120.000    3.000
+ MUC      C6     O3     C3      111.800    3.000
+ MUC      O3     C3     H3      109.470    3.000
+ MUC      O3     C3     C4      109.500    3.000
+ MUC      O3     C3     C2      109.470    3.000
+ MUC      H3     C3     C4      108.810    3.000
+ MUC      H3     C3     C2      108.340    3.000
+ MUC      C4     C3     C2      109.470    3.000
+ MUC      C3     C4     H4      120.000    3.000
+ MUC      C3     C4     C5      120.000    3.000
+ MUC      H4     C4     C5      120.000    3.000
+ MUC      C3     C2     H2      109.470    3.000
+ MUC      C3     C2     H2A     109.470    3.000
+ MUC      C3     C2     C1      109.470    3.000
+ MUC      H2     C2     H2A     107.900    3.000
+ MUC      H2     C2     C1      109.470    3.000
+ MUC      H2A    C2     C1      109.470    3.000
+ MUC      C2     C1     O1      118.500    3.000
+ MUC      C2     C1     O2      118.500    3.000
+ MUC      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MUC      var_1    O6     C6     C5     C4       180.000   20.000   1
+ MUC      var_2    O6     C6     O3     C3       180.000   20.000   1
+ MUC      var_3    C6     O3     C3     C2      -120.000   20.000   1
+ MUC      var_4    O3     C3     C4     C5         0.000   20.000   1
+ MUC      var_5    C3     C4     C5     C6         0.000   20.000   1
+ MUC      var_6    O3     C3     C2     C1       -71.681   20.000   3
+ MUC      var_7    C3     C2     C1     O2        -0.256   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MUC      chir_01  C3     C4     O3     C2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MUC      plan-1    C1        0.020
+ MUC      plan-1    O1        0.020
+ MUC      plan-1    O2        0.020
+ MUC      plan-1    C2        0.020
+ MUC      plan-2    C4        0.020
+ MUC      plan-2    C5        0.020
+ MUC      plan-2    C3        0.020
+ MUC      plan-2    H4        0.020
+ MUC      plan-2    H5        0.020
+ MUC      plan-3    C5        0.020
+ MUC      plan-3    C4        0.020
+ MUC      plan-3    C6        0.020
+ MUC      plan-3    H5        0.020
+ MUC      plan-3    H4        0.020
+ MUC      plan-4    C6        0.020
+ MUC      plan-4    C5        0.020
+ MUC      plan-4    O6        0.020
+ MUC      plan-4    O3        0.020
+ MUC      plan-4    H5        0.020
+# ------------------------------------------------------

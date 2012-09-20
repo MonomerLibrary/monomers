@@ -1,0 +1,180 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LE1      LE1 '3-sulfanyl-L-valine                 ' peptide            19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LE1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LE1           N      N    NH2       0.000      0.000    0.000    0.000
+ LE1           HN1    H    H         0.000      0.818    0.201    0.564
+ LE1           HN2    H    H         0.000     -0.066   -0.890   -0.480
+ LE1           CA     C    CH1       0.000     -1.079    0.990   -0.121
+ LE1           HA     H    H         0.000     -1.144    1.336   -1.162
+ LE1           CB     C    CT        0.000     -2.407    0.349    0.287
+ LE1           SG     S    SH1       0.000     -2.756   -1.063   -0.798
+ LE1           HSG    H    H         0.000     -3.912   -1.625   -0.448
+ LE1           C8     C    CH3       0.000     -3.531    1.379    0.161
+ LE1           H8B    H    H         0.000     -4.451    0.936    0.443
+ LE1           H8A    H    H         0.000     -3.329    2.204    0.795
+ LE1           H8     H    H         0.000     -3.594    1.714   -0.843
+ LE1           C9     C    CH3       0.000     -2.317   -0.133    1.736
+ LE1           H9B    H    H         0.000     -3.236   -0.578    2.019
+ LE1           H9A    H    H         0.000     -1.539   -0.847    1.824
+ LE1           H9     H    H         0.000     -2.113    0.690    2.371
+ LE1           C      C    C         0.000     -0.789    2.161    0.781
+ LE1           O      O    OC       -0.500      0.010    2.034    1.735
+ LE1           OXT    O    OC       -0.500     -1.351    3.260    0.578
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LE1      N      n/a    CA     START
+ LE1      HN1    N      .      .
+ LE1      HN2    N      .      .
+ LE1      CA     N      C      .
+ LE1      HA     CA     .      .
+ LE1      CB     CA     C9     .
+ LE1      SG     CB     HSG    .
+ LE1      HSG    SG     .      .
+ LE1      C8     CB     H8     .
+ LE1      H8B    C8     .      .
+ LE1      H8A    C8     .      .
+ LE1      H8     C8     .      .
+ LE1      C9     CB     H9     .
+ LE1      H9B    C9     .      .
+ LE1      H9A    C9     .      .
+ LE1      H9     C9     .      .
+ LE1      C      CA     .      END
+ LE1      O      C      .      .
+ LE1      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LE1      O      C         deloc       1.250    0.020
+ LE1      OXT    C         deloc       1.250    0.020
+ LE1      C      CA        single      1.500    0.020
+ LE1      CB     CA        single      1.524    0.020
+ LE1      HA     CA        single      1.099    0.020
+ LE1      CA     N         single      1.450    0.020
+ LE1      C9     CB        single      1.524    0.020
+ LE1      C8     CB        single      1.524    0.020
+ LE1      H9     C9        single      1.059    0.020
+ LE1      H9A    C9        single      1.059    0.020
+ LE1      H9B    C9        single      1.059    0.020
+ LE1      H8     C8        single      1.059    0.020
+ LE1      H8A    C8        single      1.059    0.020
+ LE1      H8B    C8        single      1.059    0.020
+ LE1      SG     CB        single      1.787    0.020
+ LE1      HSG    SG        single      1.330    0.020
+ LE1      HN1    N         single      1.010    0.020
+ LE1      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LE1      HN1    N      HN2     120.000    3.000
+ LE1      HN1    N      CA      120.000    3.000
+ LE1      HN2    N      CA      120.000    3.000
+ LE1      N      CA     HA      109.470    3.000
+ LE1      N      CA     CB      109.500    3.000
+ LE1      N      CA     C       109.470    3.000
+ LE1      HA     CA     CB      108.340    3.000
+ LE1      HA     CA     C       108.810    3.000
+ LE1      CB     CA     C       109.470    3.000
+ LE1      CA     CB     SG      109.500    3.000
+ LE1      CA     CB     C8      111.000    3.000
+ LE1      CA     CB     C9      111.000    3.000
+ LE1      SG     CB     C8      109.500    3.000
+ LE1      SG     CB     C9      109.500    3.000
+ LE1      C8     CB     C9      111.000    3.000
+ LE1      CB     SG     HSG     109.500    3.000
+ LE1      CB     C8     H8B     109.470    3.000
+ LE1      CB     C8     H8A     109.470    3.000
+ LE1      CB     C8     H8      109.470    3.000
+ LE1      H8B    C8     H8A     109.470    3.000
+ LE1      H8B    C8     H8      109.470    3.000
+ LE1      H8A    C8     H8      109.470    3.000
+ LE1      CB     C9     H9B     109.470    3.000
+ LE1      CB     C9     H9A     109.470    3.000
+ LE1      CB     C9     H9      109.470    3.000
+ LE1      H9B    C9     H9A     109.470    3.000
+ LE1      H9B    C9     H9      109.470    3.000
+ LE1      H9A    C9     H9      109.470    3.000
+ LE1      CA     C      O       118.500    3.000
+ LE1      CA     C      OXT     118.500    3.000
+ LE1      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LE1      var_1    HN2    N      CA     C        175.000   20.000   1
+ LE1      var_2    N      CA     CB     C9        59.998   20.000   1
+ LE1      var_3    CA     CB     SG     HSG     -179.973   20.000   1
+ LE1      var_4    CA     CB     C8     H8        59.981   20.000   1
+ LE1      var_5    CA     CB     C9     H9        60.009   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LE1      chir_01  CA     C      N      CB        negativ
+ LE1      chir_02  CB     CA     C9     C8        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LE1      plan-1    C         0.020
+ LE1      plan-1    O         0.020
+ LE1      plan-1    CA        0.020
+ LE1      plan-1    OXT       0.020
+ LE1      plan-2    N         0.020
+ LE1      plan-2    CA        0.020
+ LE1      plan-2    HN1       0.020
+ LE1      plan-2    HN2       0.020
+# ------------------------------------------------------

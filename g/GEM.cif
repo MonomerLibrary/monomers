@@ -1,0 +1,231 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GEM      GEM '(2-GUANIDINOETHYLMERCAPTO)SUCCINIC A' non-polymer        26  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GEM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GEM           O13    O    OC       -0.500      0.000    0.000    0.000
+ GEM           C11    C    C         0.000     -1.211    0.292    0.116
+ GEM           O12    O    OC       -0.500     -1.618    0.874    1.145
+ GEM           C10    C    CH2       0.000     -2.179   -0.058   -0.984
+ GEM           H101   H    H         0.000     -2.180   -1.139   -1.137
+ GEM           H102   H    H         0.000     -1.874    0.439   -1.907
+ GEM           C8     C    CH1       0.000     -3.584    0.405   -0.593
+ GEM           HC8    H    H         0.000     -3.581    1.493   -0.440
+ GEM           C9     C    C         0.000     -4.552    0.055   -1.694
+ GEM           O15    O    OC       -0.500     -5.196    0.958   -2.271
+ GEM           O14    O    OC       -0.500     -4.710   -1.140   -2.032
+ GEM           S7     S    S2        0.000     -4.089   -0.419    0.940
+ GEM           C6     C    CH2       0.000     -5.739    0.299    1.156
+ GEM           HC61   H    H         0.000     -6.359    0.049    0.292
+ GEM           HC62   H    H         0.000     -5.654    1.384    1.240
+ GEM           C5     C    CH2       0.000     -6.380   -0.265    2.424
+ GEM           HC51   H    H         0.000     -5.758   -0.015    3.287
+ GEM           HC52   H    H         0.000     -6.462   -1.350    2.338
+ GEM           N3     N    NH1       0.000     -7.714    0.314    2.599
+ GEM           HN3    H    H         0.000     -8.067    0.980    1.926
+ GEM           C1     C    C         0.000     -8.485   -0.047    3.678
+ GEM           N2     N    N         0.000     -8.030   -0.904    4.546
+ GEM           HN21   H    H         0.000     -7.156   -1.291    4.445
+ GEM           N4     N    NH2       0.000     -9.737    0.498    3.842
+ GEM           HN42   H    H         0.000    -10.104    1.170    3.171
+ GEM           HN41   H    H         0.000    -10.318    0.239    4.636
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GEM      O13    n/a    C11    START
+ GEM      C11    O13    C10    .
+ GEM      O12    C11    .      .
+ GEM      C10    C11    C8     .
+ GEM      H101   C10    .      .
+ GEM      H102   C10    .      .
+ GEM      C8     C10    S7     .
+ GEM      HC8    C8     .      .
+ GEM      C9     C8     O14    .
+ GEM      O15    C9     .      .
+ GEM      O14    C9     .      .
+ GEM      S7     C8     C6     .
+ GEM      C6     S7     C5     .
+ GEM      HC61   C6     .      .
+ GEM      HC62   C6     .      .
+ GEM      C5     C6     N3     .
+ GEM      HC51   C5     .      .
+ GEM      HC52   C5     .      .
+ GEM      N3     C5     C1     .
+ GEM      HN3    N3     .      .
+ GEM      C1     N3     N4     .
+ GEM      N2     C1     HN21   .
+ GEM      HN21   N2     .      .
+ GEM      N4     C1     HN41   .
+ GEM      HN42   N4     .      .
+ GEM      HN41   N4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GEM      S7     C8        single      1.765    0.020
+ GEM      C9     C8        single      1.500    0.020
+ GEM      C8     C10       single      1.524    0.020
+ GEM      HC8    C8        single      1.099    0.020
+ GEM      C6     S7        single      1.762    0.020
+ GEM      C5     C6        single      1.524    0.020
+ GEM      HC61   C6        single      1.092    0.020
+ GEM      HC62   C6        single      1.092    0.020
+ GEM      N3     C5        single      1.450    0.020
+ GEM      HC51   C5        single      1.092    0.020
+ GEM      HC52   C5        single      1.092    0.020
+ GEM      C1     N3        single      1.330    0.020
+ GEM      HN3    N3        single      1.010    0.020
+ GEM      N4     C1        single      1.332    0.020
+ GEM      N2     C1        double      1.260    0.020
+ GEM      HN41   N4        single      1.010    0.020
+ GEM      HN42   N4        single      1.010    0.020
+ GEM      HN21   N2        single      0.954    0.020
+ GEM      O14    C9        deloc       1.250    0.020
+ GEM      O15    C9        deloc       1.250    0.020
+ GEM      C10    C11       single      1.510    0.020
+ GEM      H101   C10       single      1.092    0.020
+ GEM      H102   C10       single      1.092    0.020
+ GEM      O12    C11       deloc       1.250    0.020
+ GEM      C11    O13       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GEM      O13    C11    O12     123.000    3.000
+ GEM      O13    C11    C10     118.500    3.000
+ GEM      O12    C11    C10     118.500    3.000
+ GEM      C11    C10    H101    109.470    3.000
+ GEM      C11    C10    H102    109.470    3.000
+ GEM      C11    C10    C8      109.470    3.000
+ GEM      H101   C10    H102    107.900    3.000
+ GEM      H101   C10    C8      109.470    3.000
+ GEM      H102   C10    C8      109.470    3.000
+ GEM      C10    C8     HC8     108.340    3.000
+ GEM      C10    C8     C9      109.470    3.000
+ GEM      C10    C8     S7      109.500    3.000
+ GEM      HC8    C8     C9      108.810    3.000
+ GEM      HC8    C8     S7      109.500    3.000
+ GEM      C9     C8     S7      109.500    3.000
+ GEM      C8     C9     O15     118.500    3.000
+ GEM      C8     C9     O14     118.500    3.000
+ GEM      O15    C9     O14     123.000    3.000
+ GEM      C8     S7     C6      100.044    3.000
+ GEM      S7     C6     HC61    109.500    3.000
+ GEM      S7     C6     HC62    109.500    3.000
+ GEM      S7     C6     C5      109.500    3.000
+ GEM      HC61   C6     HC62    107.900    3.000
+ GEM      HC61   C6     C5      109.470    3.000
+ GEM      HC62   C6     C5      109.470    3.000
+ GEM      C6     C5     HC51    109.470    3.000
+ GEM      C6     C5     HC52    109.470    3.000
+ GEM      C6     C5     N3      112.000    3.000
+ GEM      HC51   C5     HC52    107.900    3.000
+ GEM      HC51   C5     N3      109.470    3.000
+ GEM      HC52   C5     N3      109.470    3.000
+ GEM      C5     N3     HN3     118.500    3.000
+ GEM      C5     N3     C1      121.500    3.000
+ GEM      HN3    N3     C1      120.000    3.000
+ GEM      N3     C1     N2      120.000    3.000
+ GEM      N3     C1     N4      120.000    3.000
+ GEM      N2     C1     N4      120.000    3.000
+ GEM      C1     N2     HN21    120.000    3.000
+ GEM      C1     N4     HN42    120.000    3.000
+ GEM      C1     N4     HN41    120.000    3.000
+ GEM      HN42   N4     HN41    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GEM      var_1    O13    C11    C10    C8       179.973   20.000   3
+ GEM      var_2    C11    C10    C8     S7       -59.954   20.000   3
+ GEM      var_3    C10    C8     C9     O14       60.021   20.000   3
+ GEM      var_4    C10    C8     S7     C6       179.972   20.000   1
+ GEM      var_5    C8     S7     C6     C5      -179.987   20.000   1
+ GEM      var_6    S7     C6     C5     N3      -179.986   20.000   3
+ GEM      var_7    C6     C5     N3     C1       179.950   20.000   3
+ GEM      CONST_1  C5     N3     C1     N4       180.000    0.000   0
+ GEM      CONST_2  N3     C1     N2     HN21       0.000    0.000   0
+ GEM      CONST_3  N3     C1     N4     HN41     180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GEM      chir_01  C8     S7     C9     C10       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GEM      plan-1    N3        0.020
+ GEM      plan-1    C5        0.020
+ GEM      plan-1    C1        0.020
+ GEM      plan-1    HN3       0.020
+ GEM      plan-2    C1        0.020
+ GEM      plan-2    N3        0.020
+ GEM      plan-2    N4        0.020
+ GEM      plan-2    N2        0.020
+ GEM      plan-2    HN21      0.020
+ GEM      plan-2    HN3       0.020
+ GEM      plan-2    HN42      0.020
+ GEM      plan-2    HN41      0.020
+ GEM      plan-3    N4        0.020
+ GEM      plan-3    C1        0.020
+ GEM      plan-3    HN41      0.020
+ GEM      plan-3    HN42      0.020
+ GEM      plan-4    C9        0.020
+ GEM      plan-4    C8        0.020
+ GEM      plan-4    O14       0.020
+ GEM      plan-4    O15       0.020
+ GEM      plan-5    C11       0.020
+ GEM      plan-5    C10       0.020
+ GEM      plan-5    O12       0.020
+ GEM      plan-5    O13       0.020
+# ------------------------------------------------------

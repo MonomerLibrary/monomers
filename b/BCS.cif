@@ -1,0 +1,232 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BCS      BCS 'BENZYLCYSTEINE                      ' peptide            26  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BCS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BCS           N      N    NH2       0.000      0.000    0.000    0.000
+ BCS           HN1    H    H         0.000      0.938   -0.375    0.086
+ BCS           HN2    H    H         0.000     -0.265    0.485   -0.849
+ BCS           CA     C    CH1       0.000     -0.966   -0.158    1.095
+ BCS           HA     H    H         0.000     -1.217    0.829    1.507
+ BCS           CB     C    CH2       0.000     -2.234   -0.826    0.564
+ BCS           HB2    H    H         0.000     -2.951   -0.944    1.379
+ BCS           HB3    H    H         0.000     -1.984   -1.807    0.156
+ BCS           SG     S    S2        0.000     -2.962    0.205   -0.739
+ BCS           CD     C    CH2       0.000     -4.406   -0.803   -1.170
+ BCS           HD2    H    H         0.000     -5.041   -0.923   -0.290
+ BCS           HD3    H    H         0.000     -4.074   -1.785   -1.514
+ BCS           CE     C    CR6       0.000     -5.185   -0.122   -2.266
+ BCS           CZ2    C    CR16      0.000     -6.195    0.764   -1.948
+ BCS           HZ2    H    H         0.000     -6.431    0.967   -0.911
+ BCS           CT2    C    CR16      0.000     -6.906    1.392   -2.953
+ BCS           HT2    H    H         0.000     -7.692    2.094   -2.703
+ BCS           CH     C    CR16      0.000     -6.614    1.125   -4.277
+ BCS           HH     H    H         0.000     -7.174    1.614   -5.065
+ BCS           CT1    C    CR16      0.000     -5.607    0.234   -4.595
+ BCS           HT1    H    H         0.000     -5.376    0.024   -5.632
+ BCS           CZ1    C    CR16      0.000     -4.893   -0.391   -3.589
+ BCS           HZ1    H    H         0.000     -4.105   -1.091   -3.839
+ BCS           C      C    C         0.000     -0.361   -1.014    2.177
+ BCS           O      O    OC       -0.500      0.477   -1.895    1.884
+ BCS           OXT    O    OC       -0.500     -0.699   -0.844    3.370
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BCS      N      n/a    CA     START
+ BCS      HN1    N      .      .
+ BCS      HN2    N      .      .
+ BCS      CA     N      C      .
+ BCS      HA     CA     .      .
+ BCS      CB     CA     SG     .
+ BCS      HB2    CB     .      .
+ BCS      HB3    CB     .      .
+ BCS      SG     CB     CD     .
+ BCS      CD     SG     CE     .
+ BCS      HD2    CD     .      .
+ BCS      HD3    CD     .      .
+ BCS      CE     CD     CZ2    .
+ BCS      CZ2    CE     CT2    .
+ BCS      HZ2    CZ2    .      .
+ BCS      CT2    CZ2    CH     .
+ BCS      HT2    CT2    .      .
+ BCS      CH     CT2    CT1    .
+ BCS      HH     CH     .      .
+ BCS      CT1    CH     CZ1    .
+ BCS      HT1    CT1    .      .
+ BCS      CZ1    CT1    HZ1    .
+ BCS      HZ1    CZ1    .      .
+ BCS      C      CA     .      END
+ BCS      O      C      .      .
+ BCS      OXT    C      .      .
+ BCS      CE     CZ1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BCS      CA     N         single      1.450    0.020
+ BCS      CB     CA        single      1.524    0.020
+ BCS      C      CA        single      1.500    0.020
+ BCS      HA     CA        single      1.099    0.020
+ BCS      SG     CB        single      1.762    0.020
+ BCS      HB2    CB        single      1.092    0.020
+ BCS      HB3    CB        single      1.092    0.020
+ BCS      CD     SG        single      1.762    0.020
+ BCS      CE     CD        single      1.511    0.020
+ BCS      HD2    CD        single      1.092    0.020
+ BCS      HD3    CD        single      1.092    0.020
+ BCS      CE     CZ1       double      1.390    0.020
+ BCS      CZ2    CE        single      1.390    0.020
+ BCS      CZ1    CT1       single      1.390    0.020
+ BCS      HZ1    CZ1       single      1.083    0.020
+ BCS      CT2    CZ2       double      1.390    0.020
+ BCS      HZ2    CZ2       single      1.083    0.020
+ BCS      CT1    CH        double      1.390    0.020
+ BCS      HT1    CT1       single      1.083    0.020
+ BCS      CH     CT2       single      1.390    0.020
+ BCS      HT2    CT2       single      1.083    0.020
+ BCS      HH     CH        single      1.083    0.020
+ BCS      O      C         deloc       1.250    0.020
+ BCS      OXT    C         deloc       1.250    0.020
+ BCS      HN1    N         single      1.010    0.020
+ BCS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BCS      HN1    N      HN2     120.000    3.000
+ BCS      HN1    N      CA      120.000    3.000
+ BCS      HN2    N      CA      120.000    3.000
+ BCS      N      CA     HA      109.470    3.000
+ BCS      N      CA     CB      109.470    3.000
+ BCS      N      CA     C       109.470    3.000
+ BCS      HA     CA     CB      108.340    3.000
+ BCS      HA     CA     C       108.810    3.000
+ BCS      CB     CA     C       109.470    3.000
+ BCS      CA     CB     HB2     109.470    3.000
+ BCS      CA     CB     HB3     109.470    3.000
+ BCS      CA     CB     SG      109.500    3.000
+ BCS      HB2    CB     HB3     107.900    3.000
+ BCS      HB2    CB     SG      109.500    3.000
+ BCS      HB3    CB     SG      109.500    3.000
+ BCS      CB     SG     CD      100.037    3.000
+ BCS      SG     CD     HD2     109.500    3.000
+ BCS      SG     CD     HD3     109.500    3.000
+ BCS      SG     CD     CE      109.500    3.000
+ BCS      HD2    CD     HD3     107.900    3.000
+ BCS      HD2    CD     CE      109.470    3.000
+ BCS      HD3    CD     CE      109.470    3.000
+ BCS      CD     CE     CZ2     120.000    3.000
+ BCS      CD     CE     CZ1     120.000    3.000
+ BCS      CZ2    CE     CZ1     120.000    3.000
+ BCS      CE     CZ2    HZ2     120.000    3.000
+ BCS      CE     CZ2    CT2     120.000    3.000
+ BCS      HZ2    CZ2    CT2     120.000    3.000
+ BCS      CZ2    CT2    HT2     120.000    3.000
+ BCS      CZ2    CT2    CH      120.000    3.000
+ BCS      HT2    CT2    CH      120.000    3.000
+ BCS      CT2    CH     HH      120.000    3.000
+ BCS      CT2    CH     CT1     120.000    3.000
+ BCS      HH     CH     CT1     120.000    3.000
+ BCS      CH     CT1    HT1     120.000    3.000
+ BCS      CH     CT1    CZ1     120.000    3.000
+ BCS      HT1    CT1    CZ1     120.000    3.000
+ BCS      CT1    CZ1    HZ1     120.000    3.000
+ BCS      CT1    CZ1    CE      120.000    3.000
+ BCS      HZ1    CZ1    CE      120.000    3.000
+ BCS      CA     C      O       118.500    3.000
+ BCS      CA     C      OXT     118.500    3.000
+ BCS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BCS      var_1    HN2    N      CA     C        175.000   20.000   1
+ BCS      var_2    N      CA     CB     SG       -59.980   20.000   3
+ BCS      var_3    CA     CB     SG     CD       179.981   20.000   1
+ BCS      var_4    CB     SG     CD     CE       179.968   20.000   1
+ BCS      var_5    SG     CD     CE     CZ2      -90.303   20.000   2
+ BCS      CONST_1  CD     CE     CZ1    CT1      180.000    0.000   0
+ BCS      CONST_2  CD     CE     CZ2    CT2      180.000    0.000   0
+ BCS      CONST_3  CE     CZ2    CT2    CH         0.000    0.000   0
+ BCS      CONST_4  CZ2    CT2    CH     CT1        0.000    0.000   0
+ BCS      CONST_5  CT2    CH     CT1    CZ1        0.000    0.000   0
+ BCS      CONST_6  CH     CT1    CZ1    CE         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BCS      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BCS      plan-1    N         0.020
+ BCS      plan-1    CA        0.020
+ BCS      plan-1    HN1       0.020
+ BCS      plan-1    HN2       0.020
+ BCS      plan-2    CE        0.020
+ BCS      plan-2    CD        0.020
+ BCS      plan-2    CZ1       0.020
+ BCS      plan-2    CZ2       0.020
+ BCS      plan-2    CT1       0.020
+ BCS      plan-2    CT2       0.020
+ BCS      plan-2    CH        0.020
+ BCS      plan-2    HZ1       0.020
+ BCS      plan-2    HZ2       0.020
+ BCS      plan-2    HT1       0.020
+ BCS      plan-2    HT2       0.020
+ BCS      plan-2    HH        0.020
+ BCS      plan-3    C         0.020
+ BCS      plan-3    CA        0.020
+ BCS      plan-3    O         0.020
+ BCS      plan-3    OXT       0.020
+# ------------------------------------------------------

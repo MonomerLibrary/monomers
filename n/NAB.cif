@@ -1,0 +1,288 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NAB      NAB '.                                   ' non-polymer        33  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NAB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NAB           OXT    O    OC       -0.500      0.000    0.000    0.000
+ NAB           C      C    C         0.000     -1.246    0.002   -0.107
+ NAB           O      O    OC       -0.500     -1.777    0.004   -1.240
+ NAB           C2     C    CR6       0.000     -2.091    0.001    1.102
+ NAB           C3     C    CR16      0.000     -1.503   -0.002    2.367
+ NAB           H3     H    H         0.000     -0.425   -0.003    2.464
+ NAB           C4     C    CR16      0.000     -2.298   -0.003    3.495
+ NAB           H4     H    H         0.000     -1.838   -0.004    4.476
+ NAB           C5     C    CR16      0.000     -3.679   -0.002    3.382
+ NAB           H5     H    H         0.000     -4.291   -0.003    4.276
+ NAB           C6     C    CR16      0.000     -4.280    0.000    2.142
+ NAB           H6     H    H         0.000     -5.360   -0.003    2.063
+ NAB           C1     C    CR6       0.000     -3.495    0.007    0.986
+ NAB           N1     N    N         0.000     -4.085    0.011   -0.243
+ NAB           "N1'"  N    N         0.000     -5.371    0.005   -0.343
+ NAB           "C1'"  C    CR6       0.000     -5.956    0.009   -1.567
+ NAB           C8A    C    CR66      0.000     -7.414   -0.002   -1.695
+ NAB           "C8'"  C    CR16      0.000     -8.244   -0.005   -0.569
+ NAB           "H8'"  H    H         0.000     -7.815   -0.003    0.425
+ NAB           "C7'"  C    CR16      0.000     -9.599   -0.009   -0.731
+ NAB           "H7'"  H    H         0.000    -10.241   -0.014    0.141
+ NAB           "C6'"  C    CR16      0.000    -10.167   -0.006   -2.001
+ NAB           "H6'"  H    H         0.000    -11.245   -0.010   -2.104
+ NAB           "C5'"  C    CR16      0.000     -9.386    0.000   -3.118
+ NAB           "H5'"  H    H         0.000     -9.841    0.002   -4.101
+ NAB           C4A    C    CR66      0.000     -7.989    0.005   -2.987
+ NAB           "C4'"  C    CR6       0.000     -7.148    0.014   -4.120
+ NAB           "O4'"  O    OH1       0.000     -7.691    0.015   -5.362
+ NAB           "HO4'" H    H         0.000     -7.816   -0.896   -5.659
+ NAB           "C3'"  C    CR16      0.000     -5.775    0.019   -3.972
+ NAB           "H3'"  H    H         0.000     -5.149    0.025   -4.856
+ NAB           "C2'"  C    CR16      0.000     -5.180    0.017   -2.725
+ NAB           "H2'"  H    H         0.000     -4.099    0.021   -2.646
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NAB      OXT    n/a    C      START
+ NAB      C      OXT    C2     .
+ NAB      O      C      .      .
+ NAB      C2     C      C3     .
+ NAB      C3     C2     C4     .
+ NAB      H3     C3     .      .
+ NAB      C4     C3     C5     .
+ NAB      H4     C4     .      .
+ NAB      C5     C4     C6     .
+ NAB      H5     C5     .      .
+ NAB      C6     C5     C1     .
+ NAB      H6     C6     .      .
+ NAB      C1     C6     N1     .
+ NAB      N1     C1     "N1'"  .
+ NAB      "N1'"  N1     "C1'"  .
+ NAB      "C1'"  "N1'"  C8A    .
+ NAB      C8A    "C1'"  C4A    .
+ NAB      "C8'"  C8A    "C7'"  .
+ NAB      "H8'"  "C8'"  .      .
+ NAB      "C7'"  "C8'"  "C6'"  .
+ NAB      "H7'"  "C7'"  .      .
+ NAB      "C6'"  "C7'"  "C5'"  .
+ NAB      "H6'"  "C6'"  .      .
+ NAB      "C5'"  "C6'"  "H5'"  .
+ NAB      "H5'"  "C5'"  .      .
+ NAB      C4A    C8A    "C4'"  .
+ NAB      "C4'"  C4A    "C3'"  .
+ NAB      "O4'"  "C4'"  "HO4'" .
+ NAB      "HO4'" "O4'"  .      .
+ NAB      "C3'"  "C4'"  "C2'"  .
+ NAB      "H3'"  "C3'"  .      .
+ NAB      "C2'"  "C3'"  "H2'"  .
+ NAB      "H2'"  "C2'"  .      END
+ NAB      C1     C2     .    ADD
+ NAB      "C1'"  "C2'"  .    ADD
+ NAB      C4A    "C5'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NAB      C1     C2        single      1.487    0.020
+ NAB      C1     C6        double      1.390    0.020
+ NAB      N1     C1        single      1.400    0.020
+ NAB      C3     C2        double      1.390    0.020
+ NAB      C2     C         single      1.500    0.020
+ NAB      C4     C3        single      1.390    0.020
+ NAB      H3     C3        single      1.083    0.020
+ NAB      C5     C4        double      1.390    0.020
+ NAB      H4     C4        single      1.083    0.020
+ NAB      C6     C5        single      1.390    0.020
+ NAB      H5     C5        single      1.083    0.020
+ NAB      H6     C6        single      1.083    0.020
+ NAB      "C1'"  "C2'"     single      1.390    0.020
+ NAB      C8A    "C1'"     double      1.490    0.020
+ NAB      "C1'"  "N1'"     single      1.400    0.020
+ NAB      "C2'"  "C3'"     double      1.390    0.020
+ NAB      "H2'"  "C2'"     single      1.083    0.020
+ NAB      "C3'"  "C4'"     single      1.390    0.020
+ NAB      "H3'"  "C3'"     single      1.083    0.020
+ NAB      "C4'"  C4A       double      1.490    0.020
+ NAB      "O4'"  "C4'"     single      1.362    0.020
+ NAB      C4A    "C5'"     single      1.390    0.020
+ NAB      C4A    C8A       single      1.490    0.020
+ NAB      "C5'"  "C6'"     double      1.390    0.020
+ NAB      "H5'"  "C5'"     single      1.083    0.020
+ NAB      "C6'"  "C7'"     single      1.390    0.020
+ NAB      "H6'"  "C6'"     single      1.083    0.020
+ NAB      "C7'"  "C8'"     double      1.390    0.020
+ NAB      "H7'"  "C7'"     single      1.083    0.020
+ NAB      "C8'"  C8A       single      1.390    0.020
+ NAB      "H8'"  "C8'"     single      1.083    0.020
+ NAB      O      C         deloc       1.250    0.020
+ NAB      C      OXT       deloc       1.250    0.020
+ NAB      "N1'"  N1        double      1.240    0.020
+ NAB      "HO4'" "O4'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NAB      OXT    C      O       123.000    3.000
+ NAB      OXT    C      C2      120.000    3.000
+ NAB      O      C      C2      120.000    3.000
+ NAB      C      C2     C3      120.000    3.000
+ NAB      C      C2     C1      120.000    3.000
+ NAB      C3     C2     C1      120.000    3.000
+ NAB      C2     C3     H3      120.000    3.000
+ NAB      C2     C3     C4      120.000    3.000
+ NAB      H3     C3     C4      120.000    3.000
+ NAB      C3     C4     H4      120.000    3.000
+ NAB      C3     C4     C5      120.000    3.000
+ NAB      H4     C4     C5      120.000    3.000
+ NAB      C4     C5     H5      120.000    3.000
+ NAB      C4     C5     C6      120.000    3.000
+ NAB      H5     C5     C6      120.000    3.000
+ NAB      C5     C6     H6      120.000    3.000
+ NAB      C5     C6     C1      120.000    3.000
+ NAB      H6     C6     C1      120.000    3.000
+ NAB      C6     C1     N1      120.000    3.000
+ NAB      C6     C1     C2      120.000    3.000
+ NAB      N1     C1     C2      120.000    3.000
+ NAB      C1     N1     "N1'"   120.000    3.000
+ NAB      N1     "N1'"  "C1'"   120.000    3.000
+ NAB      "N1'"  "C1'"  C8A     120.000    3.000
+ NAB      "N1'"  "C1'"  "C2'"   120.000    3.000
+ NAB      C8A    "C1'"  "C2'"   120.000    3.000
+ NAB      "C1'"  C8A    "C8'"   120.000    3.000
+ NAB      "C1'"  C8A    C4A     120.000    3.000
+ NAB      "C8'"  C8A    C4A     120.000    3.000
+ NAB      C8A    "C8'"  "H8'"   120.000    3.000
+ NAB      C8A    "C8'"  "C7'"   120.000    3.000
+ NAB      "H8'"  "C8'"  "C7'"   120.000    3.000
+ NAB      "C8'"  "C7'"  "H7'"   120.000    3.000
+ NAB      "C8'"  "C7'"  "C6'"   120.000    3.000
+ NAB      "H7'"  "C7'"  "C6'"   120.000    3.000
+ NAB      "C7'"  "C6'"  "H6'"   120.000    3.000
+ NAB      "C7'"  "C6'"  "C5'"   120.000    3.000
+ NAB      "H6'"  "C6'"  "C5'"   120.000    3.000
+ NAB      "C6'"  "C5'"  "H5'"   120.000    3.000
+ NAB      "C6'"  "C5'"  C4A     120.000    3.000
+ NAB      "H5'"  "C5'"  C4A     120.000    3.000
+ NAB      C8A    C4A    "C4'"   120.000    3.000
+ NAB      C8A    C4A    "C5'"   120.000    3.000
+ NAB      "C4'"  C4A    "C5'"   120.000    3.000
+ NAB      C4A    "C4'"  "O4'"   120.000    3.000
+ NAB      C4A    "C4'"  "C3'"   120.000    3.000
+ NAB      "O4'"  "C4'"  "C3'"   120.000    3.000
+ NAB      "C4'"  "O4'"  "HO4'"  109.470    3.000
+ NAB      "C4'"  "C3'"  "H3'"   120.000    3.000
+ NAB      "C4'"  "C3'"  "C2'"   120.000    3.000
+ NAB      "H3'"  "C3'"  "C2'"   120.000    3.000
+ NAB      "C3'"  "C2'"  "H2'"   120.000    3.000
+ NAB      "C3'"  "C2'"  "C1'"   120.000    3.000
+ NAB      "H2'"  "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NAB      var_1    OXT    C      C2     C3         0.098   20.000   1
+ NAB      CONST_1  C      C2     C3     C4       180.000    0.000   0
+ NAB      CONST_2  C2     C3     C4     C5         0.000    0.000   0
+ NAB      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ NAB      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ NAB      CONST_5  C5     C6     C1     N1       180.000    0.000   0
+ NAB      CONST_6  C6     C1     C2     C        180.000    0.000   0
+ NAB      var_2    C6     C1     N1     "N1'"     -0.116   20.000   1
+ NAB      CONST_7  C1     N1     "N1'"  "C1'"    179.999    0.000   0
+ NAB      var_3    N1     "N1'"  "C1'"  C8A      179.794   20.000   1
+ NAB      CONST_8  "N1'"  "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ NAB      CONST_9  "N1'"  "C1'"  C8A    C4A      180.000    0.000   0
+ NAB      CONST_10 "C1'"  C8A    "C8'"  "C7'"    180.000    0.000   0
+ NAB      CONST_11 C8A    "C8'"  "C7'"  "C6'"      0.000    0.000   0
+ NAB      CONST_12 "C8'"  "C7'"  "C6'"  "C5'"      0.000    0.000   0
+ NAB      CONST_13 "C7'"  "C6'"  "C5'"  C4A        0.000    0.000   0
+ NAB      CONST_14 "C1'"  C8A    C4A    "C4'"      0.000    0.000   0
+ NAB      CONST_15 C8A    C4A    "C5'"  "C6'"      0.000    0.000   0
+ NAB      CONST_16 C8A    C4A    "C4'"  "C3'"      0.000    0.000   0
+ NAB      var_4    C4A    "C4'"  "O4'"  "HO4'"   -89.904   20.000   1
+ NAB      CONST_17 C4A    "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ NAB      CONST_18 "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NAB      plan-1    C1        0.020
+ NAB      plan-1    C2        0.020
+ NAB      plan-1    C6        0.020
+ NAB      plan-1    N1        0.020
+ NAB      plan-1    C3        0.020
+ NAB      plan-1    C4        0.020
+ NAB      plan-1    C5        0.020
+ NAB      plan-1    C         0.020
+ NAB      plan-1    H3        0.020
+ NAB      plan-1    H4        0.020
+ NAB      plan-1    H5        0.020
+ NAB      plan-1    H6        0.020
+ NAB      plan-2    "C1'"     0.020
+ NAB      plan-2    "C2'"     0.020
+ NAB      plan-2    C8A       0.020
+ NAB      plan-2    "N1'"     0.020
+ NAB      plan-2    "C3'"     0.020
+ NAB      plan-2    "C4'"     0.020
+ NAB      plan-2    "H2'"     0.020
+ NAB      plan-2    "H3'"     0.020
+ NAB      plan-2    C4A       0.020
+ NAB      plan-2    "O4'"     0.020
+ NAB      plan-2    "C5'"     0.020
+ NAB      plan-2    "C6'"     0.020
+ NAB      plan-2    "C7'"     0.020
+ NAB      plan-2    "C8'"     0.020
+ NAB      plan-2    "H5'"     0.020
+ NAB      plan-2    "H6'"     0.020
+ NAB      plan-2    "H7'"     0.020
+ NAB      plan-2    "H8'"     0.020
+ NAB      plan-3    C         0.020
+ NAB      plan-3    C2        0.020
+ NAB      plan-3    O         0.020
+ NAB      plan-3    OXT       0.020
+ NAB      plan-4    N1        0.020
+ NAB      plan-4    C1        0.020
+ NAB      plan-4    "N1'"     0.020
+ NAB      plan-4    "C1'"     0.020
+# ------------------------------------------------------

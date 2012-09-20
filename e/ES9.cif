@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ES9      ES9 '5-chloro-1H-benzimidazole           ' non-polymer        15  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ES9
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ES9           CL01   CL   CL        0.000      0.000    0.000    0.000
+ ES9           C02    C    CR6       0.000     -1.733   -0.105    0.000
+ ES9           C03    C    CR16      0.000     -2.348   -1.350    0.000
+ ES9           H03    H    H         0.000     -1.743   -2.249    0.000
+ ES9           C04    C    CR16      0.000     -3.722   -1.450    0.000
+ ES9           H04    H    H         0.000     -4.196   -2.424    0.000
+ ES9           C05    C    CR56      0.000     -4.498   -0.299    0.000
+ ES9           C09    C    CR56      0.000     -3.882    0.963    0.001
+ ES9           C10    C    CR16      0.000     -2.487    1.048    0.001
+ ES9           H10    H    H         0.000     -2.001    2.016    0.002
+ ES9           N08    N    NRD5      0.000     -4.876    1.889    0.000
+ ES9           C07    C    CR15      0.000     -6.030    1.291   -0.001
+ ES9           H07    H    H         0.000     -6.989    1.795   -0.002
+ ES9           N06    N    NR15      0.000     -5.858   -0.059    0.000
+ ES9           HN06   H    H         0.000     -6.611   -0.776    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ES9      CL01   n/a    C02    START
+ ES9      C02    CL01   C03    .
+ ES9      C03    C02    C04    .
+ ES9      H03    C03    .      .
+ ES9      C04    C03    C05    .
+ ES9      H04    C04    .      .
+ ES9      C05    C04    C09    .
+ ES9      C09    C05    N08    .
+ ES9      C10    C09    H10    .
+ ES9      H10    C10    .      .
+ ES9      N08    C09    C07    .
+ ES9      C07    N08    N06    .
+ ES9      H07    C07    .      .
+ ES9      N06    C07    HN06   .
+ ES9      HN06   N06    .      END
+ ES9      C10    C02    .    ADD
+ ES9      C05    N06    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ES9      C10    C02       double      1.390    0.020
+ ES9      C10    C09       single      1.390    0.020
+ ES9      C02    CL01      single      1.795    0.020
+ ES9      C03    C02       single      1.390    0.020
+ ES9      C04    C03       double      1.390    0.020
+ ES9      C05    C04       single      1.390    0.020
+ ES9      C05    N06       single      1.340    0.020
+ ES9      C09    C05       double      1.490    0.020
+ ES9      N06    C07       single      1.350    0.020
+ ES9      C07    N08       double      1.350    0.020
+ ES9      N08    C09       single      1.350    0.020
+ ES9      H10    C10       single      1.083    0.020
+ ES9      H03    C03       single      1.083    0.020
+ ES9      H04    C04       single      1.083    0.020
+ ES9      HN06   N06       single      1.040    0.020
+ ES9      H07    C07       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ES9      CL01   C02    C03     120.000    3.000
+ ES9      CL01   C02    C10     120.000    3.000
+ ES9      C03    C02    C10     120.000    3.000
+ ES9      C02    C03    H03     120.000    3.000
+ ES9      C02    C03    C04     120.000    3.000
+ ES9      H03    C03    C04     120.000    3.000
+ ES9      C03    C04    H04     120.000    3.000
+ ES9      C03    C04    C05     120.000    3.000
+ ES9      H04    C04    C05     120.000    3.000
+ ES9      C04    C05    C09     120.000    3.000
+ ES9      C04    C05    N06     132.000    3.000
+ ES9      C09    C05    N06     108.000    3.000
+ ES9      C05    C09    C10     120.000    3.000
+ ES9      C05    C09    N08     108.000    3.000
+ ES9      C10    C09    N08     132.000    3.000
+ ES9      C09    C10    H10     120.000    3.000
+ ES9      C09    C10    C02     120.000    3.000
+ ES9      H10    C10    C02     120.000    3.000
+ ES9      C09    N08    C07     108.000    3.000
+ ES9      N08    C07    H07     126.000    3.000
+ ES9      N08    C07    N06     108.000    3.000
+ ES9      H07    C07    N06     126.000    3.000
+ ES9      C07    N06    HN06    126.000    3.000
+ ES9      C07    N06    C05     108.000    3.000
+ ES9      HN06   N06    C05     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ES9      CONST_1  CL01   C02    C03    C04      180.000    0.000   0
+ ES9      CONST_2  C02    C03    C04    C05        0.000    0.000   0
+ ES9      CONST_3  C03    C04    C05    C09        0.000    0.000   0
+ ES9      CONST_4  C04    C05    N06    C07      180.000    0.000   0
+ ES9      CONST_5  C04    C05    C09    N08      180.000    0.000   0
+ ES9      CONST_6  C05    C09    C10    C02        0.000    0.000   0
+ ES9      CONST_7  C09    C10    C02    CL01     180.000    0.000   0
+ ES9      CONST_8  C05    C09    N08    C07        0.000    0.000   0
+ ES9      CONST_9  C09    N08    C07    N06        0.000    0.000   0
+ ES9      CONST_10 N08    C07    N06    C05        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ES9      plan-1    C10       0.020
+ ES9      plan-1    C02       0.020
+ ES9      plan-1    C09       0.020
+ ES9      plan-1    H10       0.020
+ ES9      plan-1    C03       0.020
+ ES9      plan-1    C04       0.020
+ ES9      plan-1    CL01      0.020
+ ES9      plan-1    H03       0.020
+ ES9      plan-1    C05       0.020
+ ES9      plan-1    H04       0.020
+ ES9      plan-1    N06       0.020
+ ES9      plan-1    C07       0.020
+ ES9      plan-1    N08       0.020
+ ES9      plan-1    HN06      0.020
+ ES9      plan-1    H07       0.020
+# ------------------------------------------------------

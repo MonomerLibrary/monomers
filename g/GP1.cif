@@ -1,0 +1,235 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GP1      GP1 'GLUCOSAMINE 1-PHOSPHATE             ' non-polymer        28  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GP1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GP1           O9B    O    OP       -0.666      0.000    0.000    0.000
+ GP1           P4B    P    P         0.000     -0.305    0.642   -1.335
+ GP1           O7B    O    OP       -0.666      0.176    2.076   -1.326
+ GP1           O8B    O    OP       -0.666      0.401   -0.120   -2.435
+ GP1           O1B    O    O2        0.000     -1.894    0.610   -1.595
+ GP1           C1B    C    CH1       0.000     -2.286   -0.763   -1.593
+ GP1           H1     H    H         0.000     -1.451   -1.382   -1.949
+ GP1           O6B    O    O2        0.000     -2.634   -1.153   -0.267
+ GP1           C5B    C    CH1       0.000     -3.591   -0.217    0.224
+ GP1           H5     H    H         0.000     -3.201    0.803    0.101
+ GP1           C6B    C    CH2       0.000     -3.850   -0.487    1.707
+ GP1           H61    H    H         0.000     -4.240   -1.499    1.830
+ GP1           H62    H    H         0.000     -4.580    0.232    2.085
+ GP1           O5B    O    OH1       0.000     -2.628   -0.355    2.436
+ GP1           HO5    H    H         0.000     -2.793   -0.525    3.373
+ GP1           C4B    C    CH1       0.000     -4.901   -0.359   -0.556
+ GP1           H4     H    H         0.000     -5.281   -1.386   -0.453
+ GP1           O4B    O    OH1       0.000     -5.866    0.561   -0.043
+ GP1           HO4    H    H         0.000     -6.030    0.368    0.890
+ GP1           C3B    C    CH1       0.000     -4.636   -0.056   -2.034
+ GP1           H3     H    H         0.000     -4.358    1.001   -2.149
+ GP1           O3B    O    OH1       0.000     -5.812   -0.329   -2.799
+ GP1           HO3    H    H         0.000     -6.535    0.235   -2.491
+ GP1           C2B    C    CH1       0.000     -3.488   -0.947   -2.520
+ GP1           H2     H    H         0.000     -3.807   -1.998   -2.505
+ GP1           N2B    N    NH2       0.000     -3.116   -0.566   -3.889
+ GP1           HN22   H    H         0.000     -3.605    0.185   -4.362
+ GP1           HN21   H    H         0.000     -2.368   -1.052   -4.369
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GP1      O9B    n/a    P4B    START
+ GP1      P4B    O9B    O1B    .
+ GP1      O7B    P4B    .      .
+ GP1      O8B    P4B    .      .
+ GP1      O1B    P4B    C1B    .
+ GP1      C1B    O1B    O6B    .
+ GP1      H1     C1B    .      .
+ GP1      O6B    C1B    C5B    .
+ GP1      C5B    O6B    C4B    .
+ GP1      H5     C5B    .      .
+ GP1      C6B    C5B    O5B    .
+ GP1      H61    C6B    .      .
+ GP1      H62    C6B    .      .
+ GP1      O5B    C6B    HO5    .
+ GP1      HO5    O5B    .      .
+ GP1      C4B    C5B    C3B    .
+ GP1      H4     C4B    .      .
+ GP1      O4B    C4B    HO4    .
+ GP1      HO4    O4B    .      .
+ GP1      C3B    C4B    C2B    .
+ GP1      H3     C3B    .      .
+ GP1      O3B    C3B    HO3    .
+ GP1      HO3    O3B    .      .
+ GP1      C2B    C3B    N2B    .
+ GP1      H2     C2B    .      .
+ GP1      N2B    C2B    HN21   .
+ GP1      HN22   N2B    .      .
+ GP1      HN21   N2B    .      END
+ GP1      C1B    C2B    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GP1      C1B    C2B       single      1.524    0.020
+ GP1      C1B    O1B       single      1.426    0.020
+ GP1      O6B    C1B       single      1.426    0.020
+ GP1      H1     C1B       single      1.099    0.020
+ GP1      C2B    C3B       single      1.524    0.020
+ GP1      N2B    C2B       single      1.450    0.020
+ GP1      H2     C2B       single      1.099    0.020
+ GP1      C3B    C4B       single      1.524    0.020
+ GP1      O3B    C3B       single      1.432    0.020
+ GP1      H3     C3B       single      1.099    0.020
+ GP1      C4B    C5B       single      1.524    0.020
+ GP1      O4B    C4B       single      1.432    0.020
+ GP1      H4     C4B       single      1.099    0.020
+ GP1      C6B    C5B       single      1.524    0.020
+ GP1      C5B    O6B       single      1.426    0.020
+ GP1      H5     C5B       single      1.099    0.020
+ GP1      O5B    C6B       single      1.432    0.020
+ GP1      H61    C6B       single      1.092    0.020
+ GP1      H62    C6B       single      1.092    0.020
+ GP1      HN21   N2B       single      1.010    0.020
+ GP1      HN22   N2B       single      1.010    0.020
+ GP1      O1B    P4B       single      1.610    0.020
+ GP1      HO3    O3B       single      0.967    0.020
+ GP1      HO4    O4B       single      0.967    0.020
+ GP1      HO5    O5B       single      0.967    0.020
+ GP1      O7B    P4B       deloc       1.510    0.020
+ GP1      O8B    P4B       deloc       1.510    0.020
+ GP1      P4B    O9B       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GP1      O9B    P4B    O7B     119.900    3.000
+ GP1      O9B    P4B    O8B     119.900    3.000
+ GP1      O9B    P4B    O1B     108.200    3.000
+ GP1      O7B    P4B    O8B     119.900    3.000
+ GP1      O7B    P4B    O1B     108.200    3.000
+ GP1      O8B    P4B    O1B     108.200    3.000
+ GP1      P4B    O1B    C1B     120.500    3.000
+ GP1      O1B    C1B    H1      109.470    3.000
+ GP1      O1B    C1B    O6B     109.470    3.000
+ GP1      O1B    C1B    C2B     109.470    3.000
+ GP1      H1     C1B    O6B     109.470    3.000
+ GP1      H1     C1B    C2B     108.340    3.000
+ GP1      O6B    C1B    C2B     109.470    3.000
+ GP1      C1B    O6B    C5B     111.800    3.000
+ GP1      O6B    C5B    H5      109.470    3.000
+ GP1      O6B    C5B    C6B     109.470    3.000
+ GP1      O6B    C5B    C4B     109.470    3.000
+ GP1      H5     C5B    C6B     108.340    3.000
+ GP1      H5     C5B    C4B     108.340    3.000
+ GP1      C6B    C5B    C4B     111.000    3.000
+ GP1      C5B    C6B    H61     109.470    3.000
+ GP1      C5B    C6B    H62     109.470    3.000
+ GP1      C5B    C6B    O5B     109.470    3.000
+ GP1      H61    C6B    H62     107.900    3.000
+ GP1      H61    C6B    O5B     109.470    3.000
+ GP1      H62    C6B    O5B     109.470    3.000
+ GP1      C6B    O5B    HO5     109.470    3.000
+ GP1      C5B    C4B    H4      108.340    3.000
+ GP1      C5B    C4B    O4B     109.470    3.000
+ GP1      C5B    C4B    C3B     111.000    3.000
+ GP1      H4     C4B    O4B     109.470    3.000
+ GP1      H4     C4B    C3B     108.340    3.000
+ GP1      O4B    C4B    C3B     109.470    3.000
+ GP1      C4B    O4B    HO4     109.470    3.000
+ GP1      C4B    C3B    H3      108.340    3.000
+ GP1      C4B    C3B    O3B     109.470    3.000
+ GP1      C4B    C3B    C2B     111.000    3.000
+ GP1      H3     C3B    O3B     109.470    3.000
+ GP1      H3     C3B    C2B     108.340    3.000
+ GP1      O3B    C3B    C2B     109.470    3.000
+ GP1      C3B    O3B    HO3     109.470    3.000
+ GP1      C3B    C2B    H2      108.340    3.000
+ GP1      C3B    C2B    N2B     109.470    3.000
+ GP1      C3B    C2B    C1B     111.000    3.000
+ GP1      H2     C2B    N2B     109.470    3.000
+ GP1      H2     C2B    C1B     108.340    3.000
+ GP1      N2B    C2B    C1B     109.470    3.000
+ GP1      C2B    N2B    HN22    120.000    3.000
+ GP1      C2B    N2B    HN21    120.000    3.000
+ GP1      HN22   N2B    HN21    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GP1      var_1    O9B    P4B    O1B    C1B      -60.040   20.000   1
+ GP1      var_2    P4B    O1B    C1B    O6B       89.982   20.000   1
+ GP1      var_3    O1B    C1B    C2B    C3B      -60.000   20.000   3
+ GP1      var_4    O1B    C1B    O6B    C5B       60.000   20.000   1
+ GP1      var_5    C1B    O6B    C5B    C4B       60.000   20.000   1
+ GP1      var_6    O6B    C5B    C6B    O5B       59.724   20.000   3
+ GP1      var_7    C5B    C6B    O5B    HO5     -179.978   20.000   1
+ GP1      var_8    O6B    C5B    C4B    C3B      -60.000   20.000   3
+ GP1      var_9    C5B    C4B    O4B    HO4      -60.399   20.000   1
+ GP1      var_10   C5B    C4B    C3B    C2B       60.000   20.000   3
+ GP1      var_11   C4B    C3B    O3B    HO3       60.762   20.000   1
+ GP1      var_12   C4B    C3B    C2B    N2B      180.000   20.000   3
+ GP1      var_13   C3B    C2B    N2B    HN21     179.866   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GP1      chir_01  C1B    C2B    O1B    O6B       negativ
+ GP1      chir_02  C2B    C1B    C3B    N2B       negativ
+ GP1      chir_03  C3B    C2B    C4B    O3B       positiv
+ GP1      chir_04  C4B    C3B    C5B    O4B       negativ
+ GP1      chir_05  C5B    C4B    C6B    O6B       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GP1      plan-1    N2B       0.020
+ GP1      plan-1    C2B       0.000
+ GP1      plan-1    HN21      0.000
+ GP1      plan-1    HN22      0.000
+# ------------------------------------------------------

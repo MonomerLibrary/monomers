@@ -1,0 +1,396 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CPH      CPH '1,8-DIHYDROXY-7-METHYL-3-(1,3,4-TRIH' non-polymer        52  28 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CPH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CPH           "O2'"  O    O         0.000      0.000    0.000    0.000
+ CPH           "C2'"  C    C         0.000     -1.054   -0.193    0.557
+ CPH           "C3'"  C    CH1       0.000     -1.074   -0.714    1.970
+ CPH           "H3'"  H    H         0.000     -1.982   -1.313    2.126
+ CPH           "C4'"  C    CH1       0.000     -1.066    0.462    2.949
+ CPH           "H4'"  H    H         0.000     -1.952    1.088    2.777
+ CPH           "C5'"  C    CH3       0.000     -1.086   -0.068    4.383
+ CPH           H53    H    H         0.000     -1.961   -0.646    4.535
+ CPH           H52    H    H         0.000     -0.232   -0.672    4.550
+ CPH           H51    H    H         0.000     -1.080    0.745    5.062
+ CPH           "O4'"  O    OH1       0.000      0.115    1.241    2.745
+ CPH           HO4    H    H         0.000      0.895    0.689    2.897
+ CPH           "O3'"  O    OH1       0.000      0.078   -1.529    2.194
+ CPH           HO3    H    H         0.000      0.876   -1.002    2.057
+ CPH           "C1'"  C    CH1       0.000     -2.348    0.088   -0.162
+ CPH           "H1'"  H    H         0.000     -3.116    0.380    0.568
+ CPH           "O1'"  O    O2        0.000     -2.153    1.150   -1.098
+ CPH           CME    C    CH3       0.000     -2.317    2.373   -0.377
+ CPH           H13    H    H         0.000     -3.317    2.451   -0.037
+ CPH           H12    H    H         0.000     -1.661    2.384    0.454
+ CPH           H11    H    H         0.000     -2.096    3.191   -1.013
+ CPH           C3     C    CH1       0.000     -2.802   -1.169   -0.904
+ CPH           H3     H    H         0.000     -1.996   -1.511   -1.568
+ CPH           C2     C    C1        0.000     -3.122   -2.251    0.093
+ CPH           H2     H    H         0.000     -2.381   -2.993    0.341
+ CPH           C1     C    C         0.000     -4.320   -2.289    0.668
+ CPH           O1     O    OH1       0.000     -4.618   -3.262    1.568
+ CPH           HO1    H    H         0.000     -3.854   -3.848    1.683
+ CPH           C4     C    CH2       0.000     -4.042   -0.847   -1.735
+ CPH           H41    H    H         0.000     -4.274   -1.698   -2.379
+ CPH           H42    H    H         0.000     -3.842    0.031   -2.353
+ CPH           C4A    C    CR6       0.000     -5.217   -0.568   -0.824
+ CPH           C10    C    CH2       0.000     -6.219    0.466   -1.241
+ CPH           H101   H    H         0.000     -6.860    0.010   -1.998
+ CPH           H102   H    H         0.000     -5.664    1.294   -1.687
+ CPH           C5A    C    CR66      0.000     -7.063    0.978   -0.112
+ CPH           C8A    C    CR66      0.000     -7.190    0.269    1.083
+ CPH           C9     C    CR6       0.000     -6.453   -1.000    1.244
+ CPH           O9     O    O         0.000     -6.758   -1.800    2.107
+ CPH           C9A    C    CR6       0.000     -5.329   -1.263    0.319
+ CPH           C8     C    CR6       0.000     -8.003    0.754    2.113
+ CPH           O8     O    OH1       0.000     -8.128    0.060    3.271
+ CPH           HO8    H    H         0.000     -7.445    0.346    3.892
+ CPH           C7     C    CR6       0.000     -8.679    1.954    1.942
+ CPH           CC7    C    CH3       0.000     -9.558    2.489    3.042
+ CPH           H73    H    H         0.000    -10.348    3.054    2.618
+ CPH           H72    H    H         0.000     -9.960    1.682    3.597
+ CPH           H71    H    H         0.000     -8.985    3.108    3.682
+ CPH           C6     C    CR16      0.000     -8.543    2.655    0.761
+ CPH           H6     H    H         0.000     -9.069    3.593    0.631
+ CPH           C5     C    CR16      0.000     -7.742    2.173   -0.260
+ CPH           H5     H    H         0.000     -7.647    2.735   -1.180
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CPH      "O2'"  n/a    "C2'"  START
+ CPH      "C2'"  "O2'"  "C1'"  .
+ CPH      "C3'"  "C2'"  "O3'"  .
+ CPH      "H3'"  "C3'"  .      .
+ CPH      "C4'"  "C3'"  "O4'"  .
+ CPH      "H4'"  "C4'"  .      .
+ CPH      "C5'"  "C4'"  H51    .
+ CPH      H53    "C5'"  .      .
+ CPH      H52    "C5'"  .      .
+ CPH      H51    "C5'"  .      .
+ CPH      "O4'"  "C4'"  HO4    .
+ CPH      HO4    "O4'"  .      .
+ CPH      "O3'"  "C3'"  HO3    .
+ CPH      HO3    "O3'"  .      .
+ CPH      "C1'"  "C2'"  C3     .
+ CPH      "H1'"  "C1'"  .      .
+ CPH      "O1'"  "C1'"  CME    .
+ CPH      CME    "O1'"  H11    .
+ CPH      H13    CME    .      .
+ CPH      H12    CME    .      .
+ CPH      H11    CME    .      .
+ CPH      C3     "C1'"  C4     .
+ CPH      H3     C3     .      .
+ CPH      C2     C3     C1     .
+ CPH      H2     C2     .      .
+ CPH      C1     C2     O1     .
+ CPH      O1     C1     HO1    .
+ CPH      HO1    O1     .      .
+ CPH      C4     C3     C4A    .
+ CPH      H41    C4     .      .
+ CPH      H42    C4     .      .
+ CPH      C4A    C4     C10    .
+ CPH      C10    C4A    C5A    .
+ CPH      H101   C10    .      .
+ CPH      H102   C10    .      .
+ CPH      C5A    C10    C8A    .
+ CPH      C8A    C5A    C8     .
+ CPH      C9     C8A    C9A    .
+ CPH      O9     C9     .      .
+ CPH      C9A    C9     .      .
+ CPH      C8     C8A    C7     .
+ CPH      O8     C8     HO8    .
+ CPH      HO8    O8     .      .
+ CPH      C7     C8     C6     .
+ CPH      CC7    C7     H71    .
+ CPH      H73    CC7    .      .
+ CPH      H72    CC7    .      .
+ CPH      H71    CC7    .      .
+ CPH      C6     C7     C5     .
+ CPH      H6     C6     .      .
+ CPH      C5     C6     H5     .
+ CPH      H5     C5     .      END
+ CPH      C1     C9A    .    ADD
+ CPH      C9A    C4A    .    ADD
+ CPH      C5A    C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CPH      O1     C1        single      1.330    0.020
+ CPH      C1     C9A       single      1.500    0.020
+ CPH      C1     C2        double      1.340    0.020
+ CPH      HO1    O1        single      0.967    0.020
+ CPH      C9A    C4A       double      1.487    0.020
+ CPH      C9A    C9        single      1.487    0.020
+ CPH      C2     C3        single      1.510    0.020
+ CPH      H2     C2        single      1.077    0.020
+ CPH      C4     C3        single      1.524    0.020
+ CPH      C3     "C1'"     single      1.524    0.020
+ CPH      H3     C3        single      1.099    0.020
+ CPH      C4A    C4        single      1.511    0.020
+ CPH      H41    C4        single      1.092    0.020
+ CPH      H42    C4        single      1.092    0.020
+ CPH      C10    C4A       single      1.511    0.020
+ CPH      C5A    C10       single      1.457    0.020
+ CPH      H101   C10       single      1.092    0.020
+ CPH      H102   C10       single      1.092    0.020
+ CPH      C5A    C5        double      1.390    0.020
+ CPH      C8A    C5A       single      1.490    0.020
+ CPH      C5     C6        single      1.390    0.020
+ CPH      H5     C5        single      1.083    0.020
+ CPH      C6     C7        double      1.390    0.020
+ CPH      H6     C6        single      1.083    0.020
+ CPH      CC7    C7        single      1.506    0.020
+ CPH      C7     C8        single      1.487    0.020
+ CPH      H71    CC7       single      1.059    0.020
+ CPH      H72    CC7       single      1.059    0.020
+ CPH      H73    CC7       single      1.059    0.020
+ CPH      O8     C8        single      1.362    0.020
+ CPH      C8     C8A       double      1.490    0.020
+ CPH      HO8    O8        single      0.967    0.020
+ CPH      C9     C8A       single      1.490    0.020
+ CPH      O9     C9        double      1.250    0.020
+ CPH      "O1'"  "C1'"     single      1.426    0.020
+ CPH      "C1'"  "C2'"     single      1.500    0.020
+ CPH      "H1'"  "C1'"     single      1.099    0.020
+ CPH      CME    "O1'"     single      1.426    0.020
+ CPH      H11    CME       single      1.059    0.020
+ CPH      H12    CME       single      1.059    0.020
+ CPH      H13    CME       single      1.059    0.020
+ CPH      "C2'"  "O2'"     double      1.220    0.020
+ CPH      "C3'"  "C2'"     single      1.500    0.020
+ CPH      "O3'"  "C3'"     single      1.432    0.020
+ CPH      "C4'"  "C3'"     single      1.524    0.020
+ CPH      "H3'"  "C3'"     single      1.099    0.020
+ CPH      HO3    "O3'"     single      0.967    0.020
+ CPH      "O4'"  "C4'"     single      1.432    0.020
+ CPH      "C5'"  "C4'"     single      1.524    0.020
+ CPH      "H4'"  "C4'"     single      1.099    0.020
+ CPH      HO4    "O4'"     single      0.967    0.020
+ CPH      H51    "C5'"     single      1.059    0.020
+ CPH      H52    "C5'"     single      1.059    0.020
+ CPH      H53    "C5'"     single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CPH      "O2'"  "C2'"  "C3'"   120.500    3.000
+ CPH      "O2'"  "C2'"  "C1'"   120.500    3.000
+ CPH      "C3'"  "C2'"  "C1'"   120.000    3.000
+ CPH      "C2'"  "C3'"  "H3'"   108.810    3.000
+ CPH      "C2'"  "C3'"  "C4'"   109.470    3.000
+ CPH      "C2'"  "C3'"  "O3'"   109.470    3.000
+ CPH      "H3'"  "C3'"  "C4'"   108.340    3.000
+ CPH      "H3'"  "C3'"  "O3'"   109.470    3.000
+ CPH      "C4'"  "C3'"  "O3'"   109.470    3.000
+ CPH      "C3'"  "C4'"  "H4'"   108.340    3.000
+ CPH      "C3'"  "C4'"  "C5'"   111.000    3.000
+ CPH      "C3'"  "C4'"  "O4'"   109.470    3.000
+ CPH      "H4'"  "C4'"  "C5'"   108.340    3.000
+ CPH      "H4'"  "C4'"  "O4'"   109.470    3.000
+ CPH      "C5'"  "C4'"  "O4'"   109.470    3.000
+ CPH      "C4'"  "C5'"  H53     109.470    3.000
+ CPH      "C4'"  "C5'"  H52     109.470    3.000
+ CPH      "C4'"  "C5'"  H51     109.470    3.000
+ CPH      H53    "C5'"  H52     109.470    3.000
+ CPH      H53    "C5'"  H51     109.470    3.000
+ CPH      H52    "C5'"  H51     109.470    3.000
+ CPH      "C4'"  "O4'"  HO4     109.470    3.000
+ CPH      "C3'"  "O3'"  HO3     109.470    3.000
+ CPH      "C2'"  "C1'"  "H1'"   108.810    3.000
+ CPH      "C2'"  "C1'"  "O1'"   109.470    3.000
+ CPH      "C2'"  "C1'"  C3      109.470    3.000
+ CPH      "H1'"  "C1'"  "O1'"   109.470    3.000
+ CPH      "H1'"  "C1'"  C3      108.340    3.000
+ CPH      "O1'"  "C1'"  C3      109.470    3.000
+ CPH      "C1'"  "O1'"  CME     111.800    3.000
+ CPH      "O1'"  CME    H13     109.470    3.000
+ CPH      "O1'"  CME    H12     109.470    3.000
+ CPH      "O1'"  CME    H11     109.470    3.000
+ CPH      H13    CME    H12     109.470    3.000
+ CPH      H13    CME    H11     109.470    3.000
+ CPH      H12    CME    H11     109.470    3.000
+ CPH      "C1'"  C3     H3      108.340    3.000
+ CPH      "C1'"  C3     C2      109.470    3.000
+ CPH      "C1'"  C3     C4      111.000    3.000
+ CPH      H3     C3     C2      108.810    3.000
+ CPH      H3     C3     C4      108.340    3.000
+ CPH      C2     C3     C4      109.470    3.000
+ CPH      C3     C2     H2      120.000    3.000
+ CPH      C3     C2     C1      120.500    3.000
+ CPH      H2     C2     C1      120.000    3.000
+ CPH      C2     C1     O1      120.000    3.000
+ CPH      C2     C1     C9A     120.000    3.000
+ CPH      O1     C1     C9A     120.000    3.000
+ CPH      C1     O1     HO1     109.470    3.000
+ CPH      C3     C4     H41     109.470    3.000
+ CPH      C3     C4     H42     109.470    3.000
+ CPH      C3     C4     C4A     109.470    3.000
+ CPH      H41    C4     H42     107.900    3.000
+ CPH      H41    C4     C4A     109.470    3.000
+ CPH      H42    C4     C4A     109.470    3.000
+ CPH      C4     C4A    C10     120.000    3.000
+ CPH      C4     C4A    C9A     120.000    3.000
+ CPH      C10    C4A    C9A     120.000    3.000
+ CPH      C4A    C10    H101    109.470    3.000
+ CPH      C4A    C10    H102    109.470    3.000
+ CPH      C4A    C10    C5A     109.500    3.000
+ CPH      H101   C10    H102    107.900    3.000
+ CPH      H101   C10    C5A     109.470    3.000
+ CPH      H102   C10    C5A     109.470    3.000
+ CPH      C10    C5A    C8A     120.000    3.000
+ CPH      C10    C5A    C5      120.000    3.000
+ CPH      C8A    C5A    C5      120.000    3.000
+ CPH      C5A    C8A    C9      120.000    3.000
+ CPH      C5A    C8A    C8      120.000    3.000
+ CPH      C9     C8A    C8      120.000    3.000
+ CPH      C8A    C9     O9      120.000    3.000
+ CPH      C8A    C9     C9A     120.000    3.000
+ CPH      O9     C9     C9A     120.000    3.000
+ CPH      C9     C9A    C1      120.000    3.000
+ CPH      C9     C9A    C4A     120.000    3.000
+ CPH      C1     C9A    C4A     120.000    3.000
+ CPH      C8A    C8     O8      120.000    3.000
+ CPH      C8A    C8     C7      120.000    3.000
+ CPH      O8     C8     C7      120.000    3.000
+ CPH      C8     O8     HO8     109.470    3.000
+ CPH      C8     C7     CC7     120.000    3.000
+ CPH      C8     C7     C6      120.000    3.000
+ CPH      CC7    C7     C6      120.000    3.000
+ CPH      C7     CC7    H73     109.470    3.000
+ CPH      C7     CC7    H72     109.470    3.000
+ CPH      C7     CC7    H71     109.470    3.000
+ CPH      H73    CC7    H72     109.470    3.000
+ CPH      H73    CC7    H71     109.470    3.000
+ CPH      H72    CC7    H71     109.470    3.000
+ CPH      C7     C6     H6      120.000    3.000
+ CPH      C7     C6     C5      120.000    3.000
+ CPH      H6     C6     C5      120.000    3.000
+ CPH      C6     C5     H5      120.000    3.000
+ CPH      C6     C5     C5A     120.000    3.000
+ CPH      H5     C5     C5A     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CPH      var_1    "O2'"  "C2'"  "C3'"  "O3'"    -30.044   20.000   3
+ CPH      var_2    "C2'"  "C3'"  "C4'"  "O4'"    -60.036   20.000   3
+ CPH      var_3    "C3'"  "C4'"  "C5'"  H51      179.967   20.000   3
+ CPH      var_4    "C3'"  "C4'"  "O4'"  HO4      -60.032   20.000   1
+ CPH      var_5    "C2'"  "C3'"  "O3'"  HO3       60.056   20.000   1
+ CPH      var_6    "O2'"  "C2'"  "C1'"  C3        90.013   20.000   3
+ CPH      var_7    "C2'"  "C1'"  "O1'"  CME      -84.974   20.000   1
+ CPH      var_8    "C1'"  "O1'"  CME    H11      174.969   20.000   1
+ CPH      var_9    "C2'"  "C1'"  C3     C4      -174.807   20.000   3
+ CPH      var_10   "C1'"  C3     C2     C1        90.000   20.000   1
+ CPH      var_11   C3     C2     C1     O1       180.000   20.000   1
+ CPH      var_12   C2     C1     C9A    C9      -150.000   20.000   1
+ CPH      var_13   C2     C1     O1     HO1        0.055   20.000   1
+ CPH      var_14   "C1'"  C3     C4     C4A      -60.000   20.000   3
+ CPH      var_15   C3     C4     C4A    C10      150.000   20.000   2
+ CPH      CONST_1  C4     C4A    C10    C5A     -150.000    0.000   0
+ CPH      CONST_2  C4A    C10    C5A    C8A      -30.000    0.000   0
+ CPH      CONST_3  C10    C5A    C5     C6       180.000    0.000   0
+ CPH      CONST_4  C10    C5A    C8A    C8       180.000    0.000   0
+ CPH      CONST_5  C5A    C8A    C9     C9A       30.000    0.000   0
+ CPH      CONST_6  C8A    C9     C9A    C1       150.000    0.000   0
+ CPH      CONST_7  C9     C9A    C4A    C4       180.000    0.000   0
+ CPH      CONST_8  C5A    C8A    C8     C7         0.000    0.000   0
+ CPH      var_16   C8A    C8     O8     HO8       89.922   20.000   1
+ CPH      CONST_9  C8A    C8     C7     C6         0.000    0.000   0
+ CPH      var_17   C8     C7     CC7    H71       89.999   20.000   1
+ CPH      CONST_10 C8     C7     C6     C5         0.000    0.000   0
+ CPH      CONST_11 C7     C6     C5     C5A        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CPH      chir_01  C3     C2     C4     "C1'"     negativ
+ CPH      chir_02  "C1'"  C3     "O1'"  "C2'"     positiv
+ CPH      chir_03  "C3'"  "C2'"  "O3'"  "C4'"     negativ
+ CPH      chir_04  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CPH      plan-1    C1        0.020
+ CPH      plan-1    O1        0.020
+ CPH      plan-1    C9A       0.020
+ CPH      plan-1    C2        0.020
+ CPH      plan-1    H2        0.020
+ CPH      plan-2    C9A       0.020
+ CPH      plan-2    C1        0.020
+ CPH      plan-2    C4A       0.020
+ CPH      plan-2    C9        0.020
+ CPH      plan-2    C10       0.020
+ CPH      plan-2    C4        0.020
+ CPH      plan-2    C8A       0.020
+ CPH      plan-2    O9        0.020
+ CPH      plan-2    C5A       0.020
+ CPH      plan-2    C5        0.020
+ CPH      plan-2    C6        0.020
+ CPH      plan-2    C7        0.020
+ CPH      plan-2    C8        0.020
+ CPH      plan-2    H5        0.020
+ CPH      plan-2    H6        0.020
+ CPH      plan-2    CC7       0.020
+ CPH      plan-2    O8        0.020
+ CPH      plan-3    C2        0.020
+ CPH      plan-3    C1        0.020
+ CPH      plan-3    C3        0.020
+ CPH      plan-3    H2        0.020
+ CPH      plan-4    "C2'"     0.020
+ CPH      plan-4    "C1'"     0.020
+ CPH      plan-4    "O2'"     0.020
+ CPH      plan-4    "C3'"     0.020
+# ------------------------------------------------------

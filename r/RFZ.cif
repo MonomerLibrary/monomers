@@ -1,0 +1,277 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+RFZ      RFZ '5,6-dichloro-1-beta-D-ribofuranosyl-' non-polymer        32  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_RFZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ RFZ           CL1    CL   CL        0.000      0.000    0.000    0.000
+ RFZ           C3     C    CR6       0.000     -1.729   -0.157    0.019
+ RFZ           C4     C    CR6       0.000     -2.514    0.920    0.410
+ RFZ           CL2    CL   CL        0.000     -1.762    2.413    0.876
+ RFZ           C5     C    CR16      0.000     -3.890    0.811    0.430
+ RFZ           H5     H    H         0.000     -4.497    1.654    0.735
+ RFZ           C2     C    CR16      0.000     -2.311   -1.348   -0.352
+ RFZ           H2     H    H         0.000     -1.693   -2.184   -0.655
+ RFZ           C7     C    CR56      0.000     -3.702   -1.474   -0.337
+ RFZ           N2     N    NRD5      0.000     -4.552   -2.490   -0.640
+ RFZ           C1     C    CR15      0.000     -5.781   -2.100   -0.460
+ RFZ           H1     H    H         0.000     -6.658   -2.715   -0.626
+ RFZ           N1     N    NR5       0.000     -5.804   -0.808   -0.034
+ RFZ           C6     C    CR56      0.000     -4.493   -0.383    0.058
+ RFZ           "C1'"  C    CH1       0.000     -6.997   -0.017    0.276
+ RFZ           "H1'"  H    H         0.000     -6.800    0.656    1.122
+ RFZ           "C2'"  C    CH1       0.000     -7.443    0.793   -0.962
+ RFZ           "H2'"  H    H         0.000     -7.083    0.316   -1.884
+ RFZ           "O2'"  O    OH1       0.000     -6.974    2.140   -0.879
+ RFZ           "HO2'" H    H         0.000     -7.314    2.645   -1.631
+ RFZ           "C3'"  C    CH1       0.000     -8.989    0.752   -0.898
+ RFZ           "H3'"  H    H         0.000     -9.399    0.255   -1.789
+ RFZ           "O3'"  O    OH1       0.000     -9.517    2.074   -0.773
+ RFZ           "HO3'" H    H         0.000    -10.478    2.028   -0.673
+ RFZ           "C4'"  C    CH1       0.000     -9.290   -0.074    0.372
+ RFZ           "H4'"  H    H         0.000     -9.448    0.591    1.232
+ RFZ           "O4'"  O    O2        0.000     -8.112   -0.885    0.574
+ RFZ           "C5'"  C    CH2       0.000    -10.516   -0.961    0.151
+ RFZ           "H5'"  H    H         0.000    -10.315   -1.665   -0.660
+ RFZ           "H5'A" H    H         0.000    -11.373   -0.338   -0.113
+ RFZ           "O5'"  O    OH1       0.000    -10.803   -1.684    1.350
+ RFZ           "HO5'" H    H         0.000    -11.579   -2.244    1.210
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ RFZ      CL1    n/a    C3     START
+ RFZ      C3     CL1    C2     .
+ RFZ      C4     C3     C5     .
+ RFZ      CL2    C4     .      .
+ RFZ      C5     C4     H5     .
+ RFZ      H5     C5     .      .
+ RFZ      C2     C3     C7     .
+ RFZ      H2     C2     .      .
+ RFZ      C7     C2     N2     .
+ RFZ      N2     C7     C1     .
+ RFZ      C1     N2     N1     .
+ RFZ      H1     C1     .      .
+ RFZ      N1     C1     "C1'"  .
+ RFZ      C6     N1     .      .
+ RFZ      "C1'"  N1     "C2'"  .
+ RFZ      "H1'"  "C1'"  .      .
+ RFZ      "C2'"  "C1'"  "C3'"  .
+ RFZ      "H2'"  "C2'"  .      .
+ RFZ      "O2'"  "C2'"  "HO2'" .
+ RFZ      "HO2'" "O2'"  .      .
+ RFZ      "C3'"  "C2'"  "C4'"  .
+ RFZ      "H3'"  "C3'"  .      .
+ RFZ      "O3'"  "C3'"  "HO3'" .
+ RFZ      "HO3'" "O3'"  .      .
+ RFZ      "C4'"  "C3'"  "C5'"  .
+ RFZ      "H4'"  "C4'"  .      .
+ RFZ      "O4'"  "C4'"  .      .
+ RFZ      "C5'"  "C4'"  "O5'"  .
+ RFZ      "H5'"  "C5'"  .      .
+ RFZ      "H5'A" "C5'"  .      .
+ RFZ      "O5'"  "C5'"  "HO5'" .
+ RFZ      "HO5'" "O5'"  .      END
+ RFZ      C6     C5     .    ADD
+ RFZ      C6     C7     .    ADD
+ RFZ      "C1'"  "O4'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ RFZ      "O3'"  "C3'"     single      1.432    0.020
+ RFZ      "C4'"  "C3'"     single      1.524    0.020
+ RFZ      "C3'"  "C2'"     single      1.524    0.020
+ RFZ      "C5'"  "C4'"     single      1.524    0.020
+ RFZ      "O4'"  "C4'"     single      1.426    0.020
+ RFZ      "O5'"  "C5'"     single      1.432    0.020
+ RFZ      "O2'"  "C2'"     single      1.432    0.020
+ RFZ      "C2'"  "C1'"     single      1.524    0.020
+ RFZ      "C1'"  "O4'"     single      1.426    0.020
+ RFZ      "C1'"  N1        single      1.485    0.020
+ RFZ      N1     C1        single      1.337    0.020
+ RFZ      C6     N1        single      1.337    0.020
+ RFZ      C1     N2        double      1.350    0.020
+ RFZ      C6     C5        double      1.390    0.020
+ RFZ      C5     C4        single      1.390    0.020
+ RFZ      C6     C7        single      1.490    0.020
+ RFZ      CL2    C4        single      1.795    0.020
+ RFZ      C4     C3        double      1.487    0.020
+ RFZ      N2     C7        single      1.350    0.020
+ RFZ      C7     C2        double      1.390    0.020
+ RFZ      C2     C3        single      1.390    0.020
+ RFZ      C3     CL1       single      1.795    0.020
+ RFZ      H5     C5        single      1.083    0.020
+ RFZ      H2     C2        single      1.083    0.020
+ RFZ      H1     C1        single      1.083    0.020
+ RFZ      "H1'"  "C1'"     single      1.099    0.020
+ RFZ      "H4'"  "C4'"     single      1.099    0.020
+ RFZ      "H5'"  "C5'"     single      1.092    0.020
+ RFZ      "H5'A" "C5'"     single      1.092    0.020
+ RFZ      "HO5'" "O5'"     single      0.967    0.020
+ RFZ      "H3'"  "C3'"     single      1.099    0.020
+ RFZ      "HO3'" "O3'"     single      0.967    0.020
+ RFZ      "H2'"  "C2'"     single      1.099    0.020
+ RFZ      "HO2'" "O2'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ RFZ      CL1    C3     C4      120.000    3.000
+ RFZ      CL1    C3     C2      120.000    3.000
+ RFZ      C4     C3     C2      120.000    3.000
+ RFZ      C3     C4     CL2     120.000    3.000
+ RFZ      C3     C4     C5      120.000    3.000
+ RFZ      CL2    C4     C5      120.000    3.000
+ RFZ      C4     C5     H5      120.000    3.000
+ RFZ      C4     C5     C6      120.000    3.000
+ RFZ      H5     C5     C6      120.000    3.000
+ RFZ      C3     C2     H2      120.000    3.000
+ RFZ      C3     C2     C7      120.000    3.000
+ RFZ      H2     C2     C7      120.000    3.000
+ RFZ      C2     C7     N2      132.000    3.000
+ RFZ      C2     C7     C6      120.000    3.000
+ RFZ      N2     C7     C6      108.000    3.000
+ RFZ      C7     N2     C1      108.000    3.000
+ RFZ      N2     C1     H1      126.000    3.000
+ RFZ      N2     C1     N1      108.000    3.000
+ RFZ      H1     C1     N1      126.000    3.000
+ RFZ      C1     N1     C6      108.000    3.000
+ RFZ      C1     N1     "C1'"   126.000    3.000
+ RFZ      C6     N1     "C1'"   126.000    3.000
+ RFZ      N1     C6     C5      132.000    3.000
+ RFZ      N1     C6     C7      108.000    3.000
+ RFZ      C5     C6     C7      120.000    3.000
+ RFZ      N1     "C1'"  "H1'"   109.470    3.000
+ RFZ      N1     "C1'"  "C2'"   109.470    3.000
+ RFZ      N1     "C1'"  "O4'"   109.470    3.000
+ RFZ      "H1'"  "C1'"  "C2'"   108.340    3.000
+ RFZ      "H1'"  "C1'"  "O4'"   109.470    3.000
+ RFZ      "C2'"  "C1'"  "O4'"   109.470    3.000
+ RFZ      "C1'"  "C2'"  "H2'"   108.340    3.000
+ RFZ      "C1'"  "C2'"  "O2'"   109.470    3.000
+ RFZ      "C1'"  "C2'"  "C3'"   111.000    3.000
+ RFZ      "H2'"  "C2'"  "O2'"   109.470    3.000
+ RFZ      "H2'"  "C2'"  "C3'"   108.340    3.000
+ RFZ      "O2'"  "C2'"  "C3'"   109.470    3.000
+ RFZ      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ RFZ      "C2'"  "C3'"  "H3'"   108.340    3.000
+ RFZ      "C2'"  "C3'"  "O3'"   109.470    3.000
+ RFZ      "C2'"  "C3'"  "C4'"   111.000    3.000
+ RFZ      "H3'"  "C3'"  "O3'"   109.470    3.000
+ RFZ      "H3'"  "C3'"  "C4'"   108.340    3.000
+ RFZ      "O3'"  "C3'"  "C4'"   109.470    3.000
+ RFZ      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ RFZ      "C3'"  "C4'"  "H4'"   108.340    3.000
+ RFZ      "C3'"  "C4'"  "O4'"   109.470    3.000
+ RFZ      "C3'"  "C4'"  "C5'"   111.000    3.000
+ RFZ      "H4'"  "C4'"  "O4'"   109.470    3.000
+ RFZ      "H4'"  "C4'"  "C5'"   108.340    3.000
+ RFZ      "O4'"  "C4'"  "C5'"   109.470    3.000
+ RFZ      "C4'"  "O4'"  "C1'"   111.800    3.000
+ RFZ      "C4'"  "C5'"  "H5'"   109.470    3.000
+ RFZ      "C4'"  "C5'"  "H5'A"  109.470    3.000
+ RFZ      "C4'"  "C5'"  "O5'"   109.470    3.000
+ RFZ      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ RFZ      "H5'"  "C5'"  "O5'"   109.470    3.000
+ RFZ      "H5'A" "C5'"  "O5'"   109.470    3.000
+ RFZ      "C5'"  "O5'"  "HO5'"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ RFZ      CONST_1  CL1    C3     C4     C5       180.000    0.000   0
+ RFZ      CONST_2  C3     C4     C5     C6         0.000    0.000   0
+ RFZ      CONST_3  CL1    C3     C2     C7       180.000    0.000   0
+ RFZ      CONST_4  C3     C2     C7     N2       180.000    0.000   0
+ RFZ      CONST_5  C2     C7     N2     C1       180.000    0.000   0
+ RFZ      CONST_6  C7     N2     C1     N1         0.000    0.000   0
+ RFZ      CONST_7  N2     C1     N1     "C1'"    180.000    0.000   0
+ RFZ      CONST_8  C1     N1     C6     C5       180.000    0.000   0
+ RFZ      CONST_9  N1     C6     C5     C4       180.000    0.000   0
+ RFZ      CONST_10 N1     C6     C7     C2       180.000    0.000   0
+ RFZ      var_1    C1     N1     "C1'"  "C2'"    -93.440   20.000   1
+ RFZ      var_2    N1     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ RFZ      var_3    N1     "C1'"  "C2'"  "C3'"    150.000   20.000   3
+ RFZ      var_4    "C1'"  "C2'"  "O2'"  "HO2'"  -176.135   20.000   1
+ RFZ      var_5    "C1'"  "C2'"  "C3'"  "C4'"      0.000   20.000   3
+ RFZ      var_6    "C2'"  "C3'"  "O3'"  "HO3'"  -176.050   20.000   1
+ RFZ      var_7    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ RFZ      var_8    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ RFZ      var_9    "C3'"  "C4'"  "C5'"  "O5'"   -178.154   20.000   3
+ RFZ      var_10   "C4'"  "C5'"  "O5'"  "HO5'"   179.977   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ RFZ      chir_01  "C1'"  N1     "O4'"  "C2'"     positiv
+ RFZ      chir_02  "C4'"  "O4'"  "C5'"  "C3'"     positiv
+ RFZ      chir_03  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ RFZ      chir_04  "C2'"  "C1'"  "C3'"  "O2'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ RFZ      plan-1    C6        0.020
+ RFZ      plan-1    C5        0.020
+ RFZ      plan-1    C7        0.020
+ RFZ      plan-1    N1        0.020
+ RFZ      plan-1    N2        0.020
+ RFZ      plan-1    C1        0.020
+ RFZ      plan-1    C4        0.020
+ RFZ      plan-1    H5        0.020
+ RFZ      plan-1    C3        0.020
+ RFZ      plan-1    C2        0.020
+ RFZ      plan-1    CL2       0.020
+ RFZ      plan-1    CL1       0.020
+ RFZ      plan-1    H2        0.020
+ RFZ      plan-1    H1        0.020
+ RFZ      plan-1    "C1'"     0.020
+# ------------------------------------------------------

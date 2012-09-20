@@ -1,0 +1,172 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+A2F      A2F '2-fluoroadenine                     ' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_A2F
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ A2F           F      F    F         0.000      0.000    0.000    0.000
+ A2F           C2     C    CR6       0.000     -1.346    0.119    0.002
+ A2F           N1     N    NRD6      0.000     -2.082   -0.980    0.000
+ A2F           C6     C    CR6       0.000     -3.411   -0.916    0.000
+ A2F           N6     N    NH2       0.000     -4.175   -2.072    0.000
+ A2F           HN6A   H    H         0.000     -5.189   -2.021    0.000
+ A2F           HN6    H    H         0.000     -3.729   -2.985   -0.002
+ A2F           C5     C    CR56      0.000     -4.018    0.340    0.002
+ A2F           N7     N    NR15      0.000     -5.320    0.798    0.003
+ A2F           HN7    H    H         0.000     -6.181    0.214    0.002
+ A2F           C8     C    CR15      0.000     -5.268    2.149    0.004
+ A2F           H8     H    H         0.000     -6.131    2.803    0.007
+ A2F           N9     N    NRD5      0.000     -4.026    2.549    0.000
+ A2F           C4     C    CR56      0.000     -3.204    1.484   -0.002
+ A2F           N3     N    NRD6      0.000     -1.876    1.325   -0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ A2F      F      n/a    C2     START
+ A2F      C2     F      N1     .
+ A2F      N1     C2     C6     .
+ A2F      C6     N1     C5     .
+ A2F      N6     C6     HN6    .
+ A2F      HN6A   N6     .      .
+ A2F      HN6    N6     .      .
+ A2F      C5     C6     N7     .
+ A2F      N7     C5     C8     .
+ A2F      HN7    N7     .      .
+ A2F      C8     N7     N9     .
+ A2F      H8     C8     .      .
+ A2F      N9     C8     C4     .
+ A2F      C4     N9     N3     .
+ A2F      N3     C4     .      END
+ A2F      C2     N3     .    ADD
+ A2F      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ A2F      C2     F         single      1.345    0.020
+ A2F      N1     C2        double      1.350    0.020
+ A2F      C2     N3        single      1.350    0.020
+ A2F      N3     C4        double      1.355    0.020
+ A2F      C6     N1        single      1.350    0.020
+ A2F      N6     C6        single      1.355    0.020
+ A2F      C5     C6        double      1.490    0.020
+ A2F      HN6    N6        single      1.010    0.020
+ A2F      HN6A   N6        single      1.010    0.020
+ A2F      N7     C5        single      1.340    0.020
+ A2F      C5     C4        single      1.490    0.020
+ A2F      C4     N9        single      1.350    0.020
+ A2F      C8     N7        single      1.350    0.020
+ A2F      N9     C8        double      1.350    0.020
+ A2F      H8     C8        single      1.083    0.020
+ A2F      HN7    N7        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ A2F      F      C2     N1      120.000    3.000
+ A2F      F      C2     N3      120.000    3.000
+ A2F      N1     C2     N3      120.000    3.000
+ A2F      C2     N1     C6      120.000    3.000
+ A2F      N1     C6     N6      120.000    3.000
+ A2F      N1     C6     C5      120.000    3.000
+ A2F      N6     C6     C5      120.000    3.000
+ A2F      C6     N6     HN6A    120.000    3.000
+ A2F      C6     N6     HN6     120.000    3.000
+ A2F      HN6A   N6     HN6     120.000    3.000
+ A2F      C6     C5     N7      132.000    3.000
+ A2F      C6     C5     C4      120.000    3.000
+ A2F      N7     C5     C4      108.000    3.000
+ A2F      C5     N7     HN7     126.000    3.000
+ A2F      C5     N7     C8      108.000    3.000
+ A2F      HN7    N7     C8      126.000    3.000
+ A2F      N7     C8     H8      126.000    3.000
+ A2F      N7     C8     N9      108.000    3.000
+ A2F      H8     C8     N9      126.000    3.000
+ A2F      C8     N9     C4      108.000    3.000
+ A2F      N9     C4     N3      120.000    3.000
+ A2F      N9     C4     C5      108.000    3.000
+ A2F      N3     C4     C5      120.000    3.000
+ A2F      C4     N3     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ A2F      CONST_1  F      C2     N3     C4       180.000    0.000   0
+ A2F      CONST_2  F      C2     N1     C6       180.000    0.000   0
+ A2F      CONST_3  C2     N1     C6     C5         0.000    0.000   0
+ A2F      CONST_4  N1     C6     N6     HN6       -0.020    0.000   0
+ A2F      CONST_5  N1     C6     C5     N7       180.000    0.000   0
+ A2F      CONST_6  C6     C5     C4     N9       180.000    0.000   0
+ A2F      CONST_7  C6     C5     N7     C8       180.000    0.000   0
+ A2F      CONST_8  C5     N7     C8     N9         0.000    0.000   0
+ A2F      CONST_9  N7     C8     N9     C4         0.000    0.000   0
+ A2F      CONST_10 C8     N9     C4     N3       180.000    0.000   0
+ A2F      CONST_11 N9     C4     N3     C2       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ A2F      plan-1    C2        0.020
+ A2F      plan-1    F         0.020
+ A2F      plan-1    N3        0.020
+ A2F      plan-1    N1        0.020
+ A2F      plan-1    C6        0.020
+ A2F      plan-1    C4        0.020
+ A2F      plan-1    N6        0.020
+ A2F      plan-1    C5        0.020
+ A2F      plan-1    N7        0.020
+ A2F      plan-1    C8        0.020
+ A2F      plan-1    N9        0.020
+ A2F      plan-1    HN7       0.020
+ A2F      plan-1    H8        0.020
+ A2F      plan-1    HN6A      0.020
+ A2F      plan-1    HN6       0.020
+ A2F      plan-2    N6        0.020
+ A2F      plan-2    C6        0.020
+ A2F      plan-2    HN6       0.020
+ A2F      plan-2    HN6A      0.020
+# ------------------------------------------------------

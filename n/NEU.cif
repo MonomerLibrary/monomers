@@ -1,0 +1,257 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NEU      NEU 'L-NEOPTERIN                         ' non-polymer        29  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NEU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NEU           O11    O    O         0.000      0.000    0.000    0.000
+ NEU           C1     C    CR6       0.000     -0.461    1.074   -0.337
+ NEU           C10    C    CR66      0.000     -1.903    1.356   -0.223
+ NEU           C5     C    CR66      0.000     -2.366    2.628   -0.633
+ NEU           N4     N    NRD6      0.000     -1.483    3.525   -1.108
+ NEU           C3     C    CR6       0.000     -0.204    3.253   -1.201
+ NEU           N13    N    NH2       0.000      0.635    4.217   -1.694
+ NEU           H132   H    H         0.000      1.628    4.035   -1.777
+ NEU           H131   H    H         0.000      0.268    5.117   -1.979
+ NEU           N2     N    NR16      0.000      0.330    2.053   -0.835
+ NEU           HN2    H    H         0.000      1.351    1.889   -0.938
+ NEU           N6     N    NRD6      0.000     -3.666    2.911   -0.541
+ NEU           C7     C    CR16      0.000     -4.499    2.005   -0.070
+ NEU           H7     H    H         0.000     -5.554    2.235    0.005
+ NEU           C8     C    CR6       0.000     -4.036    0.755    0.333
+ NEU           N9     N    NRD6      0.000     -2.755    0.458    0.250
+ NEU           C16    C    CH1       0.000     -5.008   -0.264    0.870
+ NEU           H16    H    H         0.000     -6.032    0.125    0.782
+ NEU           O21    O    OH1       0.000     -4.713   -0.527    2.243
+ NEU           H21    H    H         0.000     -3.812   -0.869    2.319
+ NEU           C26    C    CH1       0.000     -4.883   -1.559    0.065
+ NEU           H26    H    H         0.000     -3.859   -1.948    0.153
+ NEU           O22    O    OH1       0.000     -5.178   -1.296   -1.309
+ NEU           H22    H    H         0.000     -6.079   -0.955   -1.385
+ NEU           C28    C    CH2       0.000     -5.870   -2.594    0.609
+ NEU           H281   H    H         0.000     -6.891   -2.246    0.442
+ NEU           H282   H    H         0.000     -5.703   -2.728    1.680
+ NEU           O24    O    OH1       0.000     -5.674   -3.840   -0.064
+ NEU           H24    H    H         0.000     -6.297   -4.494    0.280
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NEU      O11    n/a    C1     START
+ NEU      C1     O11    C10    .
+ NEU      C10    C1     C5     .
+ NEU      C5     C10    N6     .
+ NEU      N4     C5     C3     .
+ NEU      C3     N4     N2     .
+ NEU      N13    C3     H131   .
+ NEU      H132   N13    .      .
+ NEU      H131   N13    .      .
+ NEU      N2     C3     HN2    .
+ NEU      HN2    N2     .      .
+ NEU      N6     C5     C7     .
+ NEU      C7     N6     C8     .
+ NEU      H7     C7     .      .
+ NEU      C8     C7     C16    .
+ NEU      N9     C8     .      .
+ NEU      C16    C8     C26    .
+ NEU      H16    C16    .      .
+ NEU      O21    C16    H21    .
+ NEU      H21    O21    .      .
+ NEU      C26    C16    C28    .
+ NEU      H26    C26    .      .
+ NEU      O22    C26    H22    .
+ NEU      H22    O22    .      .
+ NEU      C28    C26    O24    .
+ NEU      H281   C28    .      .
+ NEU      H282   C28    .      .
+ NEU      O24    C28    H24    .
+ NEU      H24    O24    .      END
+ NEU      N2     C1     .    ADD
+ NEU      C10    N9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NEU      N2     C1        single      1.337    0.020
+ NEU      N2     C3        single      1.337    0.020
+ NEU      HN2    N2        single      1.040    0.020
+ NEU      C10    C1        single      1.490    0.020
+ NEU      C1     O11       double      1.250    0.020
+ NEU      C10    N9        single      1.350    0.020
+ NEU      C5     C10       double      1.490    0.020
+ NEU      N9     C8        double      1.350    0.020
+ NEU      C8     C7        single      1.390    0.020
+ NEU      C16    C8        single      1.480    0.020
+ NEU      C7     N6        double      1.337    0.020
+ NEU      H7     C7        single      1.083    0.020
+ NEU      N6     C5        single      1.350    0.020
+ NEU      N4     C5        single      1.350    0.020
+ NEU      C3     N4        double      1.350    0.020
+ NEU      N13    C3        single      1.355    0.020
+ NEU      H131   N13       single      1.010    0.020
+ NEU      H132   N13       single      1.010    0.020
+ NEU      O21    C16       single      1.432    0.020
+ NEU      C26    C16       single      1.524    0.020
+ NEU      H16    C16       single      1.099    0.020
+ NEU      H21    O21       single      0.967    0.020
+ NEU      O22    C26       single      1.432    0.020
+ NEU      C28    C26       single      1.524    0.020
+ NEU      H26    C26       single      1.099    0.020
+ NEU      H22    O22       single      0.967    0.020
+ NEU      O24    C28       single      1.432    0.020
+ NEU      H281   C28       single      1.092    0.020
+ NEU      H282   C28       single      1.092    0.020
+ NEU      H24    O24       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NEU      O11    C1     C10     120.000    3.000
+ NEU      O11    C1     N2      120.000    3.000
+ NEU      C10    C1     N2      120.000    3.000
+ NEU      C1     C10    C5      120.000    3.000
+ NEU      C1     C10    N9      120.000    3.000
+ NEU      C5     C10    N9      120.000    3.000
+ NEU      C10    C5     N4      120.000    3.000
+ NEU      C10    C5     N6      120.000    3.000
+ NEU      N4     C5     N6      120.000    3.000
+ NEU      C5     N4     C3      120.000    3.000
+ NEU      N4     C3     N13     120.000    3.000
+ NEU      N4     C3     N2      120.000    3.000
+ NEU      N13    C3     N2      120.000    3.000
+ NEU      C3     N13    H132    120.000    3.000
+ NEU      C3     N13    H131    120.000    3.000
+ NEU      H132   N13    H131    120.000    3.000
+ NEU      C3     N2     HN2     120.000    3.000
+ NEU      C3     N2     C1      120.000    3.000
+ NEU      HN2    N2     C1      120.000    3.000
+ NEU      C5     N6     C7      120.000    3.000
+ NEU      N6     C7     H7      120.000    3.000
+ NEU      N6     C7     C8      120.000    3.000
+ NEU      H7     C7     C8      120.000    3.000
+ NEU      C7     C8     N9      120.000    3.000
+ NEU      C7     C8     C16     120.000    3.000
+ NEU      N9     C8     C16     120.000    3.000
+ NEU      C8     N9     C10     120.000    3.000
+ NEU      C8     C16    H16     109.470    3.000
+ NEU      C8     C16    O21     109.470    3.000
+ NEU      C8     C16    C26     109.470    3.000
+ NEU      H16    C16    O21     109.470    3.000
+ NEU      H16    C16    C26     108.340    3.000
+ NEU      O21    C16    C26     109.470    3.000
+ NEU      C16    O21    H21     109.470    3.000
+ NEU      C16    C26    H26     108.340    3.000
+ NEU      C16    C26    O22     109.470    3.000
+ NEU      C16    C26    C28     111.000    3.000
+ NEU      H26    C26    O22     109.470    3.000
+ NEU      H26    C26    C28     108.340    3.000
+ NEU      O22    C26    C28     109.470    3.000
+ NEU      C26    O22    H22     109.470    3.000
+ NEU      C26    C28    H281    109.470    3.000
+ NEU      C26    C28    H282    109.470    3.000
+ NEU      C26    C28    O24     109.470    3.000
+ NEU      H281   C28    H282    107.900    3.000
+ NEU      H281   C28    O24     109.470    3.000
+ NEU      H282   C28    O24     109.470    3.000
+ NEU      C28    O24    H24     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NEU      CONST_1  O11    C1     C10    C5       180.000    0.000   0
+ NEU      CONST_2  C1     C10    N9     C8       180.000    0.000   0
+ NEU      CONST_3  C1     C10    C5     N6       180.000    0.000   0
+ NEU      CONST_4  C10    C5     N4     C3         0.000    0.000   0
+ NEU      CONST_5  C5     N4     C3     N2         0.000    0.000   0
+ NEU      CONST_6  N4     C3     N13    H131      -0.051    0.000   0
+ NEU      CONST_7  N4     C3     N2     C1         0.000    0.000   0
+ NEU      CONST_8  C3     N2     C1     O11      180.000    0.000   0
+ NEU      CONST_9  C10    C5     N6     C7         0.000    0.000   0
+ NEU      CONST_10 C5     N6     C7     C8         0.000    0.000   0
+ NEU      CONST_11 N6     C7     C8     C16      180.000    0.000   0
+ NEU      CONST_12 C7     C8     N9     C10        0.000    0.000   0
+ NEU      var_1    C7     C8     C16    C26      125.040   20.000   1
+ NEU      var_2    C8     C16    O21    H21      -59.962   20.000   1
+ NEU      var_3    C8     C16    C26    C28     -179.981   20.000   3
+ NEU      var_4    C16    C26    O22    H22      -59.974   20.000   1
+ NEU      var_5    C16    C26    C28    O24     -175.036   20.000   3
+ NEU      var_6    C26    C28    O24    H24      179.984   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ NEU      chir_01  C16    C8     O21    C26       positiv
+ NEU      chir_02  C26    C16    O22    C28       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NEU      plan-1    N2        0.020
+ NEU      plan-1    C1        0.020
+ NEU      plan-1    C3        0.020
+ NEU      plan-1    HN2       0.020
+ NEU      plan-1    N4        0.020
+ NEU      plan-1    C10       0.020
+ NEU      plan-1    O11       0.020
+ NEU      plan-1    N9        0.020
+ NEU      plan-1    C5        0.020
+ NEU      plan-1    C8        0.020
+ NEU      plan-1    C7        0.020
+ NEU      plan-1    N6        0.020
+ NEU      plan-1    C16       0.020
+ NEU      plan-1    H7        0.020
+ NEU      plan-1    N13       0.020
+ NEU      plan-1    H132      0.020
+ NEU      plan-1    H131      0.020
+ NEU      plan-2    N13       0.020
+ NEU      plan-2    C3        0.020
+ NEU      plan-2    H131      0.020
+ NEU      plan-2    H132      0.020
+# ------------------------------------------------------

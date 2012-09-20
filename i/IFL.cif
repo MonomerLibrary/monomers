@@ -1,0 +1,206 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IFL      IFL '(3S,4R,5R)-3,4-DIHYDROXY-5-(HYDROXYM' non-polymer        22  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IFL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IFL           O2     O    O         0.000      0.000    0.000    0.000
+ IFL           C2     C    C         0.000     -1.131   -0.035    0.434
+ IFL           C3     C    CH1       0.000     -2.265    0.241   -0.511
+ IFL           H3     H    H         0.000     -2.336    1.324   -0.688
+ IFL           O3     O    OH1       0.000     -2.020   -0.425   -1.752
+ IFL           HB     H    H         0.000     -1.193   -0.100   -2.134
+ IFL           N      N    NH1       0.000     -1.303   -0.315    1.727
+ IFL           H      H    H         0.000     -0.479   -0.452    2.295
+ IFL           C7     C    CH2       0.000     -2.604   -0.435    2.370
+ IFL           H7C1   H    H         0.000     -2.557    0.037    3.354
+ IFL           H7C2   H    H         0.000     -2.845   -1.494    2.486
+ IFL           C5     C    CH1       0.000     -3.684    0.245    1.528
+ IFL           H5     H    H         0.000     -3.534    1.334    1.547
+ IFL           C6     C    CH2       0.000     -5.065   -0.091    2.093
+ IFL           H6C1   H    H         0.000     -5.212   -1.173    2.072
+ IFL           H6C2   H    H         0.000     -5.833    0.392    1.485
+ IFL           O6     O    OH1       0.000     -5.157    0.378    3.439
+ IFL           H6     H    H         0.000     -6.031    0.165    3.795
+ IFL           C4     C    CH1       0.000     -3.579   -0.263    0.085
+ IFL           HA     H    H         0.000     -3.588   -1.362    0.080
+ IFL           O4     O    OH1       0.000     -4.677    0.229   -0.685
+ IFL           H4     H    H         0.000     -4.597   -0.084   -1.596
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IFL      O2     n/a    C2     START
+ IFL      C2     O2     N      .
+ IFL      C3     C2     O3     .
+ IFL      H3     C3     .      .
+ IFL      O3     C3     HB     .
+ IFL      HB     O3     .      .
+ IFL      N      C2     C7     .
+ IFL      H      N      .      .
+ IFL      C7     N      C5     .
+ IFL      H7C1   C7     .      .
+ IFL      H7C2   C7     .      .
+ IFL      C5     C7     C4     .
+ IFL      H5     C5     .      .
+ IFL      C6     C5     O6     .
+ IFL      H6C1   C6     .      .
+ IFL      H6C2   C6     .      .
+ IFL      O6     C6     H6     .
+ IFL      H6     O6     .      .
+ IFL      C4     C5     O4     .
+ IFL      HA     C4     .      .
+ IFL      O4     C4     H4     .
+ IFL      H4     O4     .      END
+ IFL      C4     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IFL      O4     C4        single      1.432    0.020
+ IFL      H4     O4        single      0.967    0.020
+ IFL      C4     C3        single      1.524    0.020
+ IFL      C4     C5        single      1.524    0.020
+ IFL      HA     C4        single      1.099    0.020
+ IFL      O3     C3        single      1.432    0.020
+ IFL      C3     C2        single      1.500    0.020
+ IFL      H3     C3        single      1.099    0.020
+ IFL      HB     O3        single      0.967    0.020
+ IFL      N      C2        single      1.330    0.020
+ IFL      C2     O2        double      1.220    0.020
+ IFL      C7     N         single      1.450    0.020
+ IFL      H      N         single      1.010    0.020
+ IFL      C5     C7        single      1.524    0.020
+ IFL      H7C1   C7        single      1.092    0.020
+ IFL      H7C2   C7        single      1.092    0.020
+ IFL      C6     C5        single      1.524    0.020
+ IFL      H5     C5        single      1.099    0.020
+ IFL      O6     C6        single      1.432    0.020
+ IFL      H6C1   C6        single      1.092    0.020
+ IFL      H6C2   C6        single      1.092    0.020
+ IFL      H6     O6        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IFL      O2     C2     C3      120.500    3.000
+ IFL      O2     C2     N       123.000    3.000
+ IFL      C3     C2     N       116.500    3.000
+ IFL      C2     C3     H3      108.810    3.000
+ IFL      C2     C3     O3      109.470    3.000
+ IFL      C2     C3     C4      109.470    3.000
+ IFL      H3     C3     O3      109.470    3.000
+ IFL      H3     C3     C4      108.340    3.000
+ IFL      O3     C3     C4      109.470    3.000
+ IFL      C3     O3     HB      109.470    3.000
+ IFL      C2     N      H       120.000    3.000
+ IFL      C2     N      C7      121.500    3.000
+ IFL      H      N      C7      118.500    3.000
+ IFL      N      C7     H7C1    109.470    3.000
+ IFL      N      C7     H7C2    109.470    3.000
+ IFL      N      C7     C5      110.000    3.000
+ IFL      H7C1   C7     H7C2    107.900    3.000
+ IFL      H7C1   C7     C5      109.470    3.000
+ IFL      H7C2   C7     C5      109.470    3.000
+ IFL      C7     C5     H5      108.340    3.000
+ IFL      C7     C5     C6      109.470    3.000
+ IFL      C7     C5     C4      111.000    3.000
+ IFL      H5     C5     C6      108.340    3.000
+ IFL      H5     C5     C4      108.340    3.000
+ IFL      C6     C5     C4      111.000    3.000
+ IFL      C5     C6     H6C1    109.470    3.000
+ IFL      C5     C6     H6C2    109.470    3.000
+ IFL      C5     C6     O6      109.470    3.000
+ IFL      H6C1   C6     H6C2    107.900    3.000
+ IFL      H6C1   C6     O6      109.470    3.000
+ IFL      H6C2   C6     O6      109.470    3.000
+ IFL      C6     O6     H6      109.470    3.000
+ IFL      C5     C4     HA      108.340    3.000
+ IFL      C5     C4     O4      109.470    3.000
+ IFL      C5     C4     C3      111.000    3.000
+ IFL      HA     C4     O4      109.470    3.000
+ IFL      HA     C4     C3      108.340    3.000
+ IFL      O4     C4     C3      109.470    3.000
+ IFL      C4     O4     H4      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IFL      var_1    O2     C2     C3     O3        30.000   20.000   3
+ IFL      var_2    C2     C3     O3     HB       -59.972   20.000   1
+ IFL      CONST_1  O2     C2     N      C7       180.000    0.000   0
+ IFL      var_3    C2     N      C7     C5       -30.000   20.000   3
+ IFL      var_4    N      C7     C5     C4        60.000   20.000   3
+ IFL      var_5    C7     C5     C6     O6        60.274   20.000   3
+ IFL      var_6    C5     C6     O6     H6       179.965   20.000   1
+ IFL      var_7    C7     C5     C4     O4       180.000   20.000   3
+ IFL      var_8    C5     C4     C3     C2        60.000   20.000   3
+ IFL      var_9    C5     C4     O4     H4       179.149   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IFL      chir_01  C4     O4     C3     C5        negativ
+ IFL      chir_02  C3     C4     O3     C2        positiv
+ IFL      chir_03  C5     C4     C7     C6        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IFL      plan-1    C2        0.020
+ IFL      plan-1    C3        0.020
+ IFL      plan-1    N         0.020
+ IFL      plan-1    O2        0.020
+ IFL      plan-1    H         0.020
+ IFL      plan-2    N         0.020
+ IFL      plan-2    C2        0.020
+ IFL      plan-2    C7        0.020
+ IFL      plan-2    H         0.020
+# ------------------------------------------------------

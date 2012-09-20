@@ -1,0 +1,147 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+1MZ      1MZ '1-METHYLIMIDAZOLE                   ' non-polymer        13   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_1MZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 1MZ           CM1    C    CH3       0.000      0.000    0.000    0.000
+ 1MZ           HM11   H    H         0.000      0.359    0.859   -0.501
+ 1MZ           HM12   H    H         0.000      0.349   -0.002    0.998
+ 1MZ           HM13   H    H         0.000      0.337   -0.870   -0.497
+ 1MZ           N1     N    NR5       0.000     -1.465    0.019    0.000
+ 1MZ           C5     C    CR15      0.000     -2.262    1.131   -0.001
+ 1MZ           H5     H    H         0.000     -1.931    2.163   -0.003
+ 1MZ           C4     C    CR15      0.000     -3.537    0.698    0.000
+ 1MZ           H4     H    H         0.000     -4.422    1.322    0.000
+ 1MZ           N3     N    NR15      1.000     -3.518   -0.644    0.002
+ 1MZ           HN3    H    H         0.000     -4.357   -1.258    0.007
+ 1MZ           C2     C    CR15      0.000     -2.280   -1.057   -0.003
+ 1MZ           H2     H    H         0.000     -1.960   -2.091   -0.010
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 1MZ      CM1    n/a    N1     START
+ 1MZ      HM11   CM1    .      .
+ 1MZ      HM12   CM1    .      .
+ 1MZ      HM13   CM1    .      .
+ 1MZ      N1     CM1    C5     .
+ 1MZ      C5     N1     C4     .
+ 1MZ      H5     C5     .      .
+ 1MZ      C4     C5     N3     .
+ 1MZ      H4     C4     .      .
+ 1MZ      N3     C4     C2     .
+ 1MZ      HN3    N3     .      .
+ 1MZ      C2     N3     H2     .
+ 1MZ      H2     C2     .      END
+ 1MZ      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 1MZ      N1     C2        single      1.337    0.020
+ 1MZ      C5     N1        single      1.337    0.020
+ 1MZ      N1     CM1       single      1.485    0.020
+ 1MZ      C2     N3        double      1.350    0.020
+ 1MZ      H2     C2        single      1.083    0.020
+ 1MZ      N3     C4        single      1.350    0.020
+ 1MZ      HN3    N3        single      1.040    0.020
+ 1MZ      C4     C5        double      1.380    0.020
+ 1MZ      H4     C4        single      1.083    0.020
+ 1MZ      H5     C5        single      1.083    0.020
+ 1MZ      HM11   CM1       single      1.059    0.020
+ 1MZ      HM12   CM1       single      1.059    0.020
+ 1MZ      HM13   CM1       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 1MZ      HM11   CM1    HM12    109.470    3.000
+ 1MZ      HM11   CM1    HM13    109.470    3.000
+ 1MZ      HM12   CM1    HM13    109.470    3.000
+ 1MZ      HM11   CM1    N1      109.470    3.000
+ 1MZ      HM12   CM1    N1      109.470    3.000
+ 1MZ      HM13   CM1    N1      109.470    3.000
+ 1MZ      CM1    N1     C5      126.000    3.000
+ 1MZ      CM1    N1     C2      126.000    3.000
+ 1MZ      C5     N1     C2      108.000    3.000
+ 1MZ      N1     C5     H5      126.000    3.000
+ 1MZ      N1     C5     C4      108.000    3.000
+ 1MZ      H5     C5     C4      126.000    3.000
+ 1MZ      C5     C4     H4      126.000    3.000
+ 1MZ      C5     C4     N3      108.000    3.000
+ 1MZ      H4     C4     N3      126.000    3.000
+ 1MZ      C4     N3     HN3     126.000    3.000
+ 1MZ      C4     N3     C2      108.000    3.000
+ 1MZ      HN3    N3     C2      126.000    3.000
+ 1MZ      N3     C2     H2      126.000    3.000
+ 1MZ      N3     C2     N1      108.000    3.000
+ 1MZ      H2     C2     N1      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 1MZ      var_1    HM13   CM1    N1     C5      -150.027   20.000   1
+ 1MZ      CONST_1  CM1    N1     C2     N3       180.000    0.000   0
+ 1MZ      CONST_2  CM1    N1     C5     C4       180.000    0.000   0
+ 1MZ      CONST_3  N1     C5     C4     N3         0.000    0.000   0
+ 1MZ      CONST_4  C5     C4     N3     C2         0.000    0.000   0
+ 1MZ      CONST_5  C4     N3     C2     N1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 1MZ      plan-1    N1        0.020
+ 1MZ      plan-1    C2        0.020
+ 1MZ      plan-1    C5        0.020
+ 1MZ      plan-1    CM1       0.020
+ 1MZ      plan-1    N3        0.020
+ 1MZ      plan-1    C4        0.020
+ 1MZ      plan-1    H2        0.020
+ 1MZ      plan-1    HN3       0.020
+ 1MZ      plan-1    H4        0.020
+ 1MZ      plan-1    H5        0.020
+# ------------------------------------------------------

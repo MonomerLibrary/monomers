@@ -1,0 +1,149 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AAC      AAC 'ACETYLAMINO-ACETIC ACID             ' non-polymer        14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AAC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AAC           O3     O    O         0.000      0.000    0.000    0.000
+ AAC           C3     C    C         0.000     -1.040    0.000    0.623
+ AAC           C4     C    CH3       0.000     -1.016    0.000    2.129
+ AAC           HC43   H    H         0.000     -1.509    0.865    2.491
+ AAC           HC42   H    H         0.000     -1.509   -0.865    2.491
+ AAC           HC41   H    H         0.000     -0.012    0.000    2.467
+ AAC           N1     N    NH1       0.000     -2.218    0.000   -0.033
+ AAC           HN1    H    H         0.000     -3.085    0.000    0.485
+ AAC           C2     C    CH2       0.000     -2.240    0.000   -1.497
+ AAC           HC21   H    H         0.000     -1.729   -0.891   -1.868
+ AAC           HC22   H    H         0.000     -1.729    0.891   -1.868
+ AAC           C1     C    C         0.000     -3.668    0.000   -1.978
+ AAC           O1     O    OC       -0.500     -3.916    0.000   -3.204
+ AAC           O2     O    OC       -0.500     -4.606    0.000   -1.150
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AAC      O3     n/a    C3     START
+ AAC      C3     O3     N1     .
+ AAC      C4     C3     HC41   .
+ AAC      HC43   C4     .      .
+ AAC      HC42   C4     .      .
+ AAC      HC41   C4     .      .
+ AAC      N1     C3     C2     .
+ AAC      HN1    N1     .      .
+ AAC      C2     N1     C1     .
+ AAC      HC21   C2     .      .
+ AAC      HC22   C2     .      .
+ AAC      C1     C2     O2     .
+ AAC      O1     C1     .      .
+ AAC      O2     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AAC      C1     C2        single      1.510    0.020
+ AAC      O1     C1        deloc       1.250    0.020
+ AAC      O2     C1        deloc       1.250    0.020
+ AAC      C2     N1        single      1.450    0.020
+ AAC      HC21   C2        single      1.092    0.020
+ AAC      HC22   C2        single      1.092    0.020
+ AAC      C4     C3        single      1.500    0.020
+ AAC      N1     C3        single      1.330    0.020
+ AAC      C3     O3        double      1.220    0.020
+ AAC      HC41   C4        single      1.059    0.020
+ AAC      HC42   C4        single      1.059    0.020
+ AAC      HC43   C4        single      1.059    0.020
+ AAC      HN1    N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AAC      O3     C3     C4      123.000    3.000
+ AAC      O3     C3     N1      123.000    3.000
+ AAC      C4     C3     N1      116.500    3.000
+ AAC      C3     C4     HC43    109.470    3.000
+ AAC      C3     C4     HC42    109.470    3.000
+ AAC      C3     C4     HC41    109.470    3.000
+ AAC      HC43   C4     HC42    109.470    3.000
+ AAC      HC43   C4     HC41    109.470    3.000
+ AAC      HC42   C4     HC41    109.470    3.000
+ AAC      C3     N1     HN1     120.000    3.000
+ AAC      C3     N1     C2      121.500    3.000
+ AAC      HN1    N1     C2      118.500    3.000
+ AAC      N1     C2     HC21    109.470    3.000
+ AAC      N1     C2     HC22    109.470    3.000
+ AAC      N1     C2     C1      111.600    3.000
+ AAC      HC21   C2     HC22    107.900    3.000
+ AAC      HC21   C2     C1      109.470    3.000
+ AAC      HC22   C2     C1      109.470    3.000
+ AAC      C2     C1     O1      118.500    3.000
+ AAC      C2     C1     O2      118.500    3.000
+ AAC      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AAC      var_1    O3     C3     C4     HC41       0.000   20.000   1
+ AAC      CONST_1  O3     C3     N1     C2         0.000    0.000   0
+ AAC      var_2    C3     N1     C2     C1       180.000   20.000   3
+ AAC      var_3    N1     C2     C1     O2         0.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AAC      plan-1    C1        0.020
+ AAC      plan-1    C2        0.020
+ AAC      plan-1    O1        0.020
+ AAC      plan-1    O2        0.020
+ AAC      plan-2    C3        0.020
+ AAC      plan-2    C4        0.020
+ AAC      plan-2    N1        0.020
+ AAC      plan-2    O3        0.020
+ AAC      plan-2    HN1       0.020
+ AAC      plan-3    N1        0.020
+ AAC      plan-3    C2        0.020
+ AAC      plan-3    C3        0.020
+ AAC      plan-3    HN1       0.020
+# ------------------------------------------------------

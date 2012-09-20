@@ -1,0 +1,188 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+RF5      RF5 '1,4-anhydro-2-deoxy-2-fluoro-5-O-pho' non-polymer        21  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_RF5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ RF5           O1P    O    OP       -0.666      0.000    0.000    0.000
+ RF5           "P'"   P    P         0.000     -1.132    0.980   -0.220
+ RF5           O2P    O    OP       -0.666     -1.295    1.239   -1.702
+ RF5           O3P    O    OP       -0.666     -0.819    2.279    0.489
+ RF5           "O5'"  O    O2        0.000     -2.498    0.363    0.370
+ RF5           "C5'"  C    CH2       0.000     -3.116   -0.810   -0.165
+ RF5           "H5'"  H    H         0.000     -2.426   -1.653   -0.089
+ RF5           "H5'A" H    H         0.000     -3.369   -0.642   -1.214
+ RF5           "C4'"  C    CH1       0.000     -4.390   -1.119    0.625
+ RF5           "H4'"  H    H         0.000     -4.166   -1.231    1.695
+ RF5           "O1'"  O    O2        0.000     -5.379   -0.087    0.417
+ RF5           "C3'"  C    CH1       0.000     -5.077   -2.394    0.075
+ RF5           "H3'"  H    H         0.000     -4.991   -2.444   -1.020
+ RF5           "O3'"  O    OH1       0.000     -4.534   -3.568    0.682
+ RF5           "HO3'" H    H         0.000     -5.037   -4.342    0.394
+ RF5           "C2'"  C    CH1       0.000     -6.549   -2.181    0.503
+ RF5           "H2'"  H    H         0.000     -6.763   -2.730    1.431
+ RF5           "F2'"  F    F         0.000     -7.419   -2.582   -0.516
+ RF5           "C1'"  C    CH2       0.000     -6.658   -0.662    0.738
+ RF5           "H1'A" H    H         0.000     -6.901   -0.453    1.781
+ RF5           "H1'"  H    H         0.000     -7.425   -0.229    0.092
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ RF5      O1P    n/a    "P'"   START
+ RF5      "P'"   O1P    "O5'"  .
+ RF5      O2P    "P'"   .      .
+ RF5      O3P    "P'"   .      .
+ RF5      "O5'"  "P'"   "C5'"  .
+ RF5      "C5'"  "O5'"  "C4'"  .
+ RF5      "H5'"  "C5'"  .      .
+ RF5      "H5'A" "C5'"  .      .
+ RF5      "C4'"  "C5'"  "C3'"  .
+ RF5      "H4'"  "C4'"  .      .
+ RF5      "O1'"  "C4'"  .      .
+ RF5      "C3'"  "C4'"  "C2'"  .
+ RF5      "H3'"  "C3'"  .      .
+ RF5      "O3'"  "C3'"  "HO3'" .
+ RF5      "HO3'" "O3'"  .      .
+ RF5      "C2'"  "C3'"  "C1'"  .
+ RF5      "H2'"  "C2'"  .      .
+ RF5      "F2'"  "C2'"  .      .
+ RF5      "C1'"  "C2'"  "H1'"  .
+ RF5      "H1'A" "C1'"  .      .
+ RF5      "H1'"  "C1'"  .      END
+ RF5      "C1'"  "O1'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ RF5      "C1'"  "O1'"     single      1.426    0.020
+ RF5      "C1'"  "C2'"     single      1.524    0.020
+ RF5      "H1'"  "C1'"     single      1.092    0.020
+ RF5      "H1'A" "C1'"     single      1.092    0.020
+ RF5      "O1'"  "C4'"     single      1.426    0.020
+ RF5      "C2'"  "C3'"     single      1.524    0.020
+ RF5      "F2'"  "C2'"     single      1.370    0.020
+ RF5      "H2'"  "C2'"     single      1.099    0.020
+ RF5      "C3'"  "C4'"     single      1.524    0.020
+ RF5      "O3'"  "C3'"     single      1.432    0.020
+ RF5      "H3'"  "C3'"     single      1.099    0.020
+ RF5      "HO3'" "O3'"     single      0.967    0.020
+ RF5      "C4'"  "C5'"     single      1.524    0.020
+ RF5      "H4'"  "C4'"     single      1.099    0.020
+ RF5      "C5'"  "O5'"     single      1.426    0.020
+ RF5      "H5'"  "C5'"     single      1.092    0.020
+ RF5      "H5'A" "C5'"     single      1.092    0.020
+ RF5      "O5'"  "P'"      single      1.610    0.020
+ RF5      O2P    "P'"      deloc       1.510    0.020
+ RF5      "P'"   O1P       deloc       1.510    0.020
+ RF5      O3P    "P'"      deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ RF5      O1P    "P'"   O2P     119.900    3.000
+ RF5      O1P    "P'"   O3P     119.900    3.000
+ RF5      O1P    "P'"   "O5'"   108.200    3.000
+ RF5      O2P    "P'"   O3P     119.900    3.000
+ RF5      O2P    "P'"   "O5'"   108.200    3.000
+ RF5      O3P    "P'"   "O5'"   108.200    3.000
+ RF5      "P'"   "O5'"  "C5'"   120.500    3.000
+ RF5      "O5'"  "C5'"  "H5'"   109.470    3.000
+ RF5      "O5'"  "C5'"  "H5'A"  109.470    3.000
+ RF5      "O5'"  "C5'"  "C4'"   109.470    3.000
+ RF5      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ RF5      "H5'"  "C5'"  "C4'"   109.470    3.000
+ RF5      "H5'A" "C5'"  "C4'"   109.470    3.000
+ RF5      "C5'"  "C4'"  "H4'"   108.340    3.000
+ RF5      "C5'"  "C4'"  "O1'"   109.470    3.000
+ RF5      "C5'"  "C4'"  "C3'"   111.000    3.000
+ RF5      "H4'"  "C4'"  "O1'"   109.470    3.000
+ RF5      "H4'"  "C4'"  "C3'"   108.340    3.000
+ RF5      "O1'"  "C4'"  "C3'"   109.470    3.000
+ RF5      "C4'"  "O1'"  "C1'"   111.800    3.000
+ RF5      "C4'"  "C3'"  "H3'"   108.340    3.000
+ RF5      "C4'"  "C3'"  "O3'"   109.470    3.000
+ RF5      "C4'"  "C3'"  "C2'"   111.000    3.000
+ RF5      "H3'"  "C3'"  "O3'"   109.470    3.000
+ RF5      "H3'"  "C3'"  "C2'"   108.340    3.000
+ RF5      "O3'"  "C3'"  "C2'"   109.470    3.000
+ RF5      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ RF5      "C3'"  "C2'"  "H2'"   108.340    3.000
+ RF5      "C3'"  "C2'"  "F2'"   109.500    3.000
+ RF5      "C3'"  "C2'"  "C1'"   111.000    3.000
+ RF5      "H2'"  "C2'"  "F2'"   109.500    3.000
+ RF5      "H2'"  "C2'"  "C1'"   108.340    3.000
+ RF5      "F2'"  "C2'"  "C1'"   109.500    3.000
+ RF5      "C2'"  "C1'"  "H1'A"  109.470    3.000
+ RF5      "C2'"  "C1'"  "H1'"   109.470    3.000
+ RF5      "C2'"  "C1'"  "O1'"   109.470    3.000
+ RF5      "H1'A" "C1'"  "H1'"   107.900    3.000
+ RF5      "H1'A" "C1'"  "O1'"   109.470    3.000
+ RF5      "H1'"  "C1'"  "O1'"   109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ RF5      var_1    O1P    "P'"   "O5'"  "C5'"    -64.992   20.000   1
+ RF5      var_2    "P'"   "O5'"  "C5'"  "C4'"    179.980   20.000   1
+ RF5      var_3    "O5'"  "C5'"  "C4'"  "C3'"   -179.488   20.000   3
+ RF5      var_4    "C5'"  "C4'"  "O1'"  "C1'"    150.000   20.000   1
+ RF5      var_5    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ RF5      var_6    "C4'"  "C3'"  "O3'"  "HO3'"   174.155   20.000   1
+ RF5      var_7    "C4'"  "C3'"  "C2'"  "C1'"     30.000   20.000   3
+ RF5      var_8    "C3'"  "C2'"  "C1'"  "O1'"      0.000   20.000   3
+ RF5      var_9    "C2'"  "C1'"  "O1'"  "C4'"    -30.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ RF5      chir_01  "C2'"  "C1'"  "C3'"  "F2'"     positiv
+ RF5      chir_02  "C3'"  "C2'"  "O3'"  "C4'"     positiv
+ RF5      chir_03  "C4'"  "O1'"  "C3'"  "C5'"     negativ
+# ------------------------------------------------------

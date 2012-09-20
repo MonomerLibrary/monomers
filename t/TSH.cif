@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TSH      TSH '2-(1H-INDOL-3-YL)ETHANIMINE         ' non-polymer        22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TSH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TSH           N      N    N         0.000      0.000    0.000    0.000
+ TSH           HN     H    H         0.000      0.562    0.288    0.719
+ TSH           CA     C    C1        0.000     -1.201    0.432   -0.096
+ TSH           HA     H    H         0.000     -1.585    1.124    0.635
+ TSH           CB     C    CH2       0.000     -2.077   -0.027   -1.232
+ TSH           HB1    H    H         0.000     -1.550   -0.787   -1.813
+ TSH           HB2    H    H         0.000     -2.313    0.823   -1.876
+ TSH           CG     C    CR5       0.000     -3.352   -0.611   -0.680
+ TSH           CD1    C    CR15      0.000     -3.597   -1.908   -0.437
+ TSH           HD1    H    H         0.000     -2.897   -2.716   -0.611
+ TSH           NE1    N    NR15      0.000     -4.861   -2.059    0.064
+ TSH           HE1    H    H         0.000     -5.292   -2.966    0.334
+ TSH           CE2    C    CR56      0.000     -5.477   -0.831    0.157
+ TSH           CD2    C    CR56      0.000     -4.556    0.131   -0.298
+ TSH           CZ2    C    CR16      0.000     -6.734   -0.420    0.590
+ TSH           HZ2    H    H         0.000     -7.450   -1.149    0.947
+ TSH           CH2    C    CR16      0.000     -7.064    0.918    0.563
+ TSH           HH2    H    H         0.000     -8.042    1.236    0.901
+ TSH           CZ3    C    CR16      0.000     -6.154    1.862    0.107
+ TSH           HZ3    H    H         0.000     -6.428    2.909    0.092
+ TSH           CE3    C    CR16      0.000     -4.914    1.480   -0.324
+ TSH           HE3    H    H         0.000     -4.212    2.221   -0.684
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TSH      N      n/a    CA     START
+ TSH      HN     N      .      .
+ TSH      CA     N      CB     .
+ TSH      HA     CA     .      .
+ TSH      CB     CA     CG     .
+ TSH      HB1    CB     .      .
+ TSH      HB2    CB     .      .
+ TSH      CG     CB     CD1    .
+ TSH      CD1    CG     NE1    .
+ TSH      HD1    CD1    .      .
+ TSH      NE1    CD1    CE2    .
+ TSH      HE1    NE1    .      .
+ TSH      CE2    NE1    CZ2    .
+ TSH      CD2    CE2    .      .
+ TSH      CZ2    CE2    CH2    .
+ TSH      HZ2    CZ2    .      .
+ TSH      CH2    CZ2    CZ3    .
+ TSH      HH2    CH2    .      .
+ TSH      CZ3    CH2    CE3    .
+ TSH      HZ3    CZ3    .      .
+ TSH      CE3    CZ3    HE3    .
+ TSH      HE3    CE3    .      END
+ TSH      CG     CD2    .    ADD
+ TSH      CD2    CE3    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TSH      CA     N         double      1.260    0.020
+ TSH      HN     N         single      0.954    0.020
+ TSH      CB     CA        single      1.510    0.020
+ TSH      HA     CA        single      1.077    0.020
+ TSH      CG     CB        single      1.510    0.020
+ TSH      HB1    CB        single      1.092    0.020
+ TSH      HB2    CB        single      1.092    0.020
+ TSH      CG     CD2       single      1.490    0.020
+ TSH      CD1    CG        double      1.387    0.020
+ TSH      CD2    CE3       double      1.390    0.020
+ TSH      CD2    CE2       single      1.490    0.020
+ TSH      CE3    CZ3       single      1.390    0.020
+ TSH      HE3    CE3       single      1.083    0.020
+ TSH      CZ3    CH2       double      1.390    0.020
+ TSH      HZ3    CZ3       single      1.083    0.020
+ TSH      CH2    CZ2       single      1.390    0.020
+ TSH      HH2    CH2       single      1.083    0.020
+ TSH      CZ2    CE2       double      1.390    0.020
+ TSH      HZ2    CZ2       single      1.083    0.020
+ TSH      CE2    NE1       single      1.340    0.020
+ TSH      NE1    CD1       single      1.350    0.020
+ TSH      HE1    NE1       single      1.040    0.020
+ TSH      HD1    CD1       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TSH      HN     N      CA      120.000    3.000
+ TSH      N      CA     HA      120.000    3.000
+ TSH      N      CA     CB      120.000    3.000
+ TSH      HA     CA     CB      120.000    3.000
+ TSH      CA     CB     HB1     109.470    3.000
+ TSH      CA     CB     HB2     109.470    3.000
+ TSH      CA     CB     CG      109.500    3.000
+ TSH      HB1    CB     HB2     107.900    3.000
+ TSH      HB1    CB     CG      109.470    3.000
+ TSH      HB2    CB     CG      109.470    3.000
+ TSH      CB     CG     CD1     126.000    3.000
+ TSH      CB     CG     CD2     126.000    3.000
+ TSH      CD1    CG     CD2     108.000    3.000
+ TSH      CG     CD1    HD1     126.000    3.000
+ TSH      CG     CD1    NE1     108.000    3.000
+ TSH      HD1    CD1    NE1     126.000    3.000
+ TSH      CD1    NE1    HE1     126.000    3.000
+ TSH      CD1    NE1    CE2     108.000    3.000
+ TSH      HE1    NE1    CE2     126.000    3.000
+ TSH      NE1    CE2    CD2     108.000    3.000
+ TSH      NE1    CE2    CZ2     132.000    3.000
+ TSH      CD2    CE2    CZ2     120.000    3.000
+ TSH      CE2    CD2    CG      108.000    3.000
+ TSH      CE2    CD2    CE3     120.000    3.000
+ TSH      CG     CD2    CE3     126.000    3.000
+ TSH      CE2    CZ2    HZ2     120.000    3.000
+ TSH      CE2    CZ2    CH2     120.000    3.000
+ TSH      HZ2    CZ2    CH2     120.000    3.000
+ TSH      CZ2    CH2    HH2     120.000    3.000
+ TSH      CZ2    CH2    CZ3     120.000    3.000
+ TSH      HH2    CH2    CZ3     120.000    3.000
+ TSH      CH2    CZ3    HZ3     120.000    3.000
+ TSH      CH2    CZ3    CE3     120.000    3.000
+ TSH      HZ3    CZ3    CE3     120.000    3.000
+ TSH      CZ3    CE3    HE3     120.000    3.000
+ TSH      CZ3    CE3    CD2     120.000    3.000
+ TSH      HE3    CE3    CD2     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TSH      CONST_1  HN     N      CA     CB      -179.982    0.000   0
+ TSH      var_1    N      CA     CB     CG       125.033   20.000   1
+ TSH      var_2    CA     CB     CG     CD1      -95.022   20.000   2
+ TSH      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ TSH      CONST_3  CB     CG     CD1    NE1      180.000    0.000   0
+ TSH      CONST_4  CG     CD1    NE1    CE2        0.000    0.000   0
+ TSH      CONST_5  CD1    NE1    CE2    CZ2      180.000    0.000   0
+ TSH      CONST_6  NE1    CE2    CD2    CG         0.000    0.000   0
+ TSH      CONST_7  CE2    CD2    CE3    CZ3        0.000    0.000   0
+ TSH      CONST_8  NE1    CE2    CZ2    CH2      180.000    0.000   0
+ TSH      CONST_9  CE2    CZ2    CH2    CZ3        0.000    0.000   0
+ TSH      CONST_10 CZ2    CH2    CZ3    CE3        0.000    0.000   0
+ TSH      CONST_11 CH2    CZ3    CE3    CD2        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TSH      plan-1    N         0.020
+ TSH      plan-1    CA        0.020
+ TSH      plan-1    HN        0.020
+ TSH      plan-1    CB        0.020
+ TSH      plan-1    HA        0.020
+ TSH      plan-2    CG        0.020
+ TSH      plan-2    CB        0.020
+ TSH      plan-2    CD2       0.020
+ TSH      plan-2    CD1       0.020
+ TSH      plan-2    NE1       0.020
+ TSH      plan-2    CE3       0.020
+ TSH      plan-2    CE2       0.020
+ TSH      plan-2    CZ3       0.020
+ TSH      plan-2    CH2       0.020
+ TSH      plan-2    CZ2       0.020
+ TSH      plan-2    HE3       0.020
+ TSH      plan-2    HZ3       0.020
+ TSH      plan-2    HH2       0.020
+ TSH      plan-2    HZ2       0.020
+ TSH      plan-2    HE1       0.020
+ TSH      plan-2    HD1       0.020
+# ------------------------------------------------------

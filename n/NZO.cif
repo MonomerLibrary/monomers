@@ -1,0 +1,284 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NZO      NZO 'nocodazole                          ' non-polymer        32  21 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NZO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NZO           O1     O    O         0.000      0.000    0.000    0.000
+ NZO           C5     C    C         0.000     -1.172   -0.288   -0.167
+ NZO           C4     C    CR5       0.000     -1.547   -1.667   -0.488
+ NZO           S      S    S2        0.000     -3.165   -2.213   -0.908
+ NZO           C1     C    CR15      0.000     -2.626   -3.821   -1.090
+ NZO           H1     H    H         0.000     -3.260   -4.653   -1.371
+ NZO           C2     C    CR15      0.000     -1.315   -3.918   -0.839
+ NZO           H2     H    H         0.000     -0.780   -4.858   -0.897
+ NZO           C3     C    CR15      0.000     -0.695   -2.739   -0.504
+ NZO           H3     H    H         0.000      0.361   -2.665   -0.275
+ NZO           C6     C    CR6       0.000     -2.212    0.750   -0.044
+ NZO           C7     C    CR16      0.000     -3.512    0.395    0.321
+ NZO           H7     H    H         0.000     -3.759   -0.641    0.516
+ NZO           C11    C    CR16      0.000     -1.893    2.093   -0.293
+ NZO           H11    H    H         0.000     -0.881    2.363   -0.568
+ NZO           C10    C    CR16      0.000     -2.847    3.060   -0.191
+ NZO           H10    H    H         0.000     -2.594    4.093   -0.395
+ NZO           C9     C    CR56      0.000     -4.154    2.720    0.179
+ NZO           C8     C    CR56      0.000     -4.481    1.374    0.433
+ NZO           N1     N    NR15      0.000     -5.825    1.361    0.766
+ NZO           HN1    H    H         0.000     -6.391    0.524    1.013
+ NZO           N2     N    NRD5      0.000     -5.286    3.443    0.358
+ NZO           C12    C    CR5       0.000     -6.268    2.650    0.709
+ NZO           N3     N    NH1       0.000     -7.562    3.057    0.975
+ NZO           HN3    H    H         0.000     -7.807    4.035    0.910
+ NZO           C13    C    C         0.000     -8.496    2.149    1.322
+ NZO           O2     O    O         0.000     -8.201    0.974    1.403
+ NZO           O3     O    O2        0.000     -9.754    2.547    1.588
+ NZO           C14    C    CH3       0.000    -10.707    1.516    1.962
+ NZO           H14B   H    H         0.000    -10.795    0.807    1.178
+ NZO           H14A   H    H         0.000    -10.376    1.023    2.842
+ NZO           H14    H    H         0.000    -11.657    1.953    2.144
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NZO      O1     n/a    C5     START
+ NZO      C5     O1     C6     .
+ NZO      C4     C5     S      .
+ NZO      S      C4     C1     .
+ NZO      C1     S      C2     .
+ NZO      H1     C1     .      .
+ NZO      C2     C1     C3     .
+ NZO      H2     C2     .      .
+ NZO      C3     C2     H3     .
+ NZO      H3     C3     .      .
+ NZO      C6     C5     C11    .
+ NZO      C7     C6     H7     .
+ NZO      H7     C7     .      .
+ NZO      C11    C6     C10    .
+ NZO      H11    C11    .      .
+ NZO      C10    C11    C9     .
+ NZO      H10    C10    .      .
+ NZO      C9     C10    N2     .
+ NZO      C8     C9     N1     .
+ NZO      N1     C8     HN1    .
+ NZO      HN1    N1     .      .
+ NZO      N2     C9     C12    .
+ NZO      C12    N2     N3     .
+ NZO      N3     C12    C13    .
+ NZO      HN3    N3     .      .
+ NZO      C13    N3     O3     .
+ NZO      O2     C13    .      .
+ NZO      O3     C13    C14    .
+ NZO      C14    O3     H14    .
+ NZO      H14B   C14    .      .
+ NZO      H14A   C14    .      .
+ NZO      H14    C14    .      END
+ NZO      C12    N1     .    ADD
+ NZO      C8     C7     .    ADD
+ NZO      C4     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NZO      O2     C13       double      1.220    0.020
+ NZO      C13    N3        single      1.330    0.020
+ NZO      O3     C13       single      1.454    0.020
+ NZO      C14    O3        single      1.426    0.020
+ NZO      H14    C14       single      1.059    0.020
+ NZO      H14A   C14       single      1.059    0.020
+ NZO      H14B   C14       single      1.059    0.020
+ NZO      N3     C12       single      1.350    0.020
+ NZO      HN3    N3        single      1.010    0.020
+ NZO      C12    N2        double      1.350    0.020
+ NZO      C12    N1        single      1.340    0.020
+ NZO      N1     C8        single      1.340    0.020
+ NZO      C8     C9        single      1.490    0.020
+ NZO      C8     C7        double      1.390    0.020
+ NZO      C7     C6        single      1.390    0.020
+ NZO      H7     C7        single      1.083    0.020
+ NZO      N2     C9        single      1.350    0.020
+ NZO      C9     C10       double      1.390    0.020
+ NZO      C10    C11       single      1.390    0.020
+ NZO      H10    C10       single      1.083    0.020
+ NZO      C11    C6        double      1.390    0.020
+ NZO      H11    C11       single      1.083    0.020
+ NZO      C6     C5        single      1.500    0.020
+ NZO      C4     C5        single      1.490    0.020
+ NZO      C5     O1        double      1.220    0.020
+ NZO      C4     C3        double      1.387    0.020
+ NZO      S      C4        single      1.745    0.020
+ NZO      C3     C2        single      1.380    0.020
+ NZO      H3     C3        single      1.083    0.020
+ NZO      C2     C1        double      1.380    0.020
+ NZO      H2     C2        single      1.083    0.020
+ NZO      C1     S         single      1.745    0.020
+ NZO      H1     C1        single      1.083    0.020
+ NZO      HN1    N1        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NZO      O1     C5     C4      120.500    3.000
+ NZO      O1     C5     C6      120.500    3.000
+ NZO      C4     C5     C6      120.000    3.000
+ NZO      C5     C4     S       108.000    3.000
+ NZO      C5     C4     C3      126.000    3.000
+ NZO      S      C4     C3      108.000    3.000
+ NZO      C4     S      C1       91.548    3.000
+ NZO      S      C1     H1      108.000    3.000
+ NZO      S      C1     C2      108.000    3.000
+ NZO      H1     C1     C2      126.000    3.000
+ NZO      C1     C2     H2      126.000    3.000
+ NZO      C1     C2     C3      108.000    3.000
+ NZO      H2     C2     C3      126.000    3.000
+ NZO      C2     C3     H3      126.000    3.000
+ NZO      C2     C3     C4      108.000    3.000
+ NZO      H3     C3     C4      126.000    3.000
+ NZO      C5     C6     C7      120.000    3.000
+ NZO      C5     C6     C11     120.000    3.000
+ NZO      C7     C6     C11     120.000    3.000
+ NZO      C6     C7     H7      120.000    3.000
+ NZO      C6     C7     C8      120.000    3.000
+ NZO      H7     C7     C8      120.000    3.000
+ NZO      C6     C11    H11     120.000    3.000
+ NZO      C6     C11    C10     120.000    3.000
+ NZO      H11    C11    C10     120.000    3.000
+ NZO      C11    C10    H10     120.000    3.000
+ NZO      C11    C10    C9      120.000    3.000
+ NZO      H10    C10    C9      120.000    3.000
+ NZO      C10    C9     C8      120.000    3.000
+ NZO      C10    C9     N2      132.000    3.000
+ NZO      C8     C9     N2      108.000    3.000
+ NZO      C9     C8     N1      108.000    3.000
+ NZO      C9     C8     C7      120.000    3.000
+ NZO      N1     C8     C7      132.000    3.000
+ NZO      C8     N1     HN1     126.000    3.000
+ NZO      C8     N1     C12     108.000    3.000
+ NZO      HN1    N1     C12     126.000    3.000
+ NZO      C9     N2     C12     108.000    3.000
+ NZO      N2     C12    N3      108.000    3.000
+ NZO      N2     C12    N1      108.000    3.000
+ NZO      N3     C12    N1      108.000    3.000
+ NZO      C12    N3     HN3     120.000    3.000
+ NZO      C12    N3     C13     120.000    3.000
+ NZO      HN3    N3     C13     120.000    3.000
+ NZO      N3     C13    O2      123.000    3.000
+ NZO      N3     C13    O3      118.000    3.000
+ NZO      O2     C13    O3      119.000    3.000
+ NZO      C13    O3     C14     120.000    3.000
+ NZO      O3     C14    H14B    109.470    3.000
+ NZO      O3     C14    H14A    109.470    3.000
+ NZO      O3     C14    H14     109.470    3.000
+ NZO      H14B   C14    H14A    109.470    3.000
+ NZO      H14B   C14    H14     109.470    3.000
+ NZO      H14A   C14    H14     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NZO      var_1    O1     C5     C4     S       -173.764   20.000   1
+ NZO      CONST_1  C5     C4     C3     C2       180.000    0.000   0
+ NZO      CONST_2  C5     C4     S      C1       180.000    0.000   0
+ NZO      CONST_3  C4     S      C1     C2         0.000    0.000   0
+ NZO      CONST_4  S      C1     C2     C3         0.000    0.000   0
+ NZO      CONST_5  C1     C2     C3     C4         0.000    0.000   0
+ NZO      var_2    O1     C5     C6     C11       26.592   20.000   1
+ NZO      CONST_6  C5     C6     C7     C8       180.000    0.000   0
+ NZO      CONST_7  C5     C6     C11    C10      180.000    0.000   0
+ NZO      CONST_8  C6     C11    C10    C9         0.000    0.000   0
+ NZO      CONST_9  C11    C10    C9     N2       180.000    0.000   0
+ NZO      CONST_10 C10    C9     C8     N1       180.000    0.000   0
+ NZO      CONST_11 C9     C8     C7     C6         0.000    0.000   0
+ NZO      CONST_12 C9     C8     N1     C12        0.000    0.000   0
+ NZO      CONST_13 C10    C9     N2     C12      180.000    0.000   0
+ NZO      CONST_14 C9     N2     C12    N3       180.000    0.000   0
+ NZO      CONST_15 N2     C12    N1     C8         0.000    0.000   0
+ NZO      var_3    N2     C12    N3     C13      179.659   20.000   1
+ NZO      CONST_16 C12    N3     C13    O3       180.000    0.000   0
+ NZO      var_4    N3     C13    O3     C14     -179.703   20.000   1
+ NZO      var_5    C13    O3     C14    H14     -179.974   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NZO      plan-1    C13       0.020
+ NZO      plan-1    O2        0.020
+ NZO      plan-1    O3        0.020
+ NZO      plan-1    N3        0.020
+ NZO      plan-1    HN3       0.020
+ NZO      plan-2    N3        0.020
+ NZO      plan-2    C13       0.020
+ NZO      plan-2    C12       0.020
+ NZO      plan-2    HN3       0.020
+ NZO      plan-3    C12       0.020
+ NZO      plan-3    N3        0.020
+ NZO      plan-3    N1        0.020
+ NZO      plan-3    N2        0.020
+ NZO      plan-3    C8        0.020
+ NZO      plan-3    HN1       0.020
+ NZO      plan-3    C7        0.020
+ NZO      plan-3    C9        0.020
+ NZO      plan-3    C10       0.020
+ NZO      plan-3    C11       0.020
+ NZO      plan-3    C6        0.020
+ NZO      plan-3    H7        0.020
+ NZO      plan-3    H10       0.020
+ NZO      plan-3    H11       0.020
+ NZO      plan-3    C5        0.020
+ NZO      plan-3    HN3       0.020
+ NZO      plan-4    C5        0.020
+ NZO      plan-4    C6        0.020
+ NZO      plan-4    O1        0.020
+ NZO      plan-4    C4        0.020
+ NZO      plan-5    C4        0.020
+ NZO      plan-5    C5        0.020
+ NZO      plan-5    C3        0.020
+ NZO      plan-5    S         0.020
+ NZO      plan-5    C2        0.020
+ NZO      plan-5    C1        0.020
+ NZO      plan-5    H3        0.020
+ NZO      plan-5    H2        0.020
+ NZO      plan-5    H1        0.020
+# ------------------------------------------------------

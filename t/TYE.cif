@@ -1,0 +1,224 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TYE      TYE '4-[(2S)-2-amino-3-hydroxypropyl]phen' non-polymer        25  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TYE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TYE           OH     O    OH1       0.000      0.000    0.000    0.000
+ TYE           HOH    H    H         0.000      0.491    0.180   -0.813
+ TYE           CZ     C    CR6       0.000     -1.333    0.084   -0.249
+ TYE           CE1    C    CR16      0.000     -1.994    1.293   -0.099
+ TYE           HE1    H    H         0.000     -1.448    2.174    0.217
+ TYE           CD1    C    CR16      0.000     -3.350    1.376   -0.354
+ TYE           HD1    H    H         0.000     -3.866    2.321   -0.238
+ TYE           CE2    C    CR16      0.000     -2.037   -1.044   -0.649
+ TYE           HE2    H    H         0.000     -1.524   -1.991   -0.761
+ TYE           CD2    C    CR16      0.000     -3.392   -0.957   -0.903
+ TYE           HD2    H    H         0.000     -3.941   -1.836   -1.216
+ TYE           CG     C    CR6       0.000     -4.047    0.252   -0.757
+ TYE           CB     C    CH2       0.000     -5.526    0.345   -1.034
+ TYE           HB     H    H         0.000     -5.799   -0.388   -1.797
+ TYE           HBA    H    H         0.000     -5.767    1.348   -1.392
+ TYE           CA     C    CH1       0.000     -6.304    0.059    0.252
+ TYE           HAA    H    H         0.000     -5.963    0.740    1.045
+ TYE           N      N    NH2       0.000     -6.071   -1.331    0.667
+ TYE           HNA    H    H         0.000     -5.654   -1.533    1.568
+ TYE           HN     H    H         0.000     -6.327   -2.097    0.056
+ TYE           C      C    CH2       0.000     -7.798    0.274    0.003
+ TYE           H      H    H         0.000     -8.154   -0.462   -0.721
+ TYE           HA     H    H         0.000     -7.959    1.279   -0.392
+ TYE           O      O    OH1       0.000     -8.513    0.122    1.231
+ TYE           HO     H    H         0.000     -9.457    0.258    1.072
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TYE      OH     n/a    CZ     START
+ TYE      HOH    OH     .      .
+ TYE      CZ     OH     CE2    .
+ TYE      CE1    CZ     CD1    .
+ TYE      HE1    CE1    .      .
+ TYE      CD1    CE1    HD1    .
+ TYE      HD1    CD1    .      .
+ TYE      CE2    CZ     CD2    .
+ TYE      HE2    CE2    .      .
+ TYE      CD2    CE2    CG     .
+ TYE      HD2    CD2    .      .
+ TYE      CG     CD2    CB     .
+ TYE      CB     CG     CA     .
+ TYE      HB     CB     .      .
+ TYE      HBA    CB     .      .
+ TYE      CA     CB     C      .
+ TYE      HAA    CA     .      .
+ TYE      N      CA     HN     .
+ TYE      HNA    N      .      .
+ TYE      HN     N      .      .
+ TYE      C      CA     O      .
+ TYE      H      C      .      .
+ TYE      HA     C      .      .
+ TYE      O      C      HO     .
+ TYE      HO     O      .      END
+ TYE      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TYE      O      C         single      1.432    0.020
+ TYE      C      CA        single      1.524    0.020
+ TYE      H      C         single      1.092    0.020
+ TYE      HA     C         single      1.092    0.020
+ TYE      N      CA        single      1.450    0.020
+ TYE      HN     N         single      1.010    0.020
+ TYE      HNA    N         single      1.010    0.020
+ TYE      HO     O         single      0.967    0.020
+ TYE      CA     CB        single      1.524    0.020
+ TYE      HAA    CA        single      1.099    0.020
+ TYE      CB     CG        single      1.511    0.020
+ TYE      HB     CB        single      1.092    0.020
+ TYE      HBA    CB        single      1.092    0.020
+ TYE      CG     CD1       double      1.390    0.020
+ TYE      CG     CD2       single      1.390    0.020
+ TYE      CZ     OH        single      1.362    0.020
+ TYE      HOH    OH        single      0.967    0.020
+ TYE      CE1    CZ        double      1.390    0.020
+ TYE      CE2    CZ        single      1.390    0.020
+ TYE      CD1    CE1       single      1.390    0.020
+ TYE      HD1    CD1       single      1.083    0.020
+ TYE      CD2    CE2       double      1.390    0.020
+ TYE      HD2    CD2       single      1.083    0.020
+ TYE      HE1    CE1       single      1.083    0.020
+ TYE      HE2    CE2       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TYE      HOH    OH     CZ      109.470    3.000
+ TYE      OH     CZ     CE1     120.000    3.000
+ TYE      OH     CZ     CE2     120.000    3.000
+ TYE      CE1    CZ     CE2     120.000    3.000
+ TYE      CZ     CE1    HE1     120.000    3.000
+ TYE      CZ     CE1    CD1     120.000    3.000
+ TYE      HE1    CE1    CD1     120.000    3.000
+ TYE      CE1    CD1    HD1     120.000    3.000
+ TYE      CE1    CD1    CG      120.000    3.000
+ TYE      HD1    CD1    CG      120.000    3.000
+ TYE      CZ     CE2    HE2     120.000    3.000
+ TYE      CZ     CE2    CD2     120.000    3.000
+ TYE      HE2    CE2    CD2     120.000    3.000
+ TYE      CE2    CD2    HD2     120.000    3.000
+ TYE      CE2    CD2    CG      120.000    3.000
+ TYE      HD2    CD2    CG      120.000    3.000
+ TYE      CD2    CG     CB      120.000    3.000
+ TYE      CD2    CG     CD1     120.000    3.000
+ TYE      CB     CG     CD1     120.000    3.000
+ TYE      CG     CB     HB      109.470    3.000
+ TYE      CG     CB     HBA     109.470    3.000
+ TYE      CG     CB     CA      109.470    3.000
+ TYE      HB     CB     HBA     107.900    3.000
+ TYE      HB     CB     CA      109.470    3.000
+ TYE      HBA    CB     CA      109.470    3.000
+ TYE      CB     CA     HAA     108.340    3.000
+ TYE      CB     CA     N       109.470    3.000
+ TYE      CB     CA     C       109.470    3.000
+ TYE      HAA    CA     N       109.470    3.000
+ TYE      HAA    CA     C       108.340    3.000
+ TYE      N      CA     C       109.470    3.000
+ TYE      CA     N      HNA     120.000    3.000
+ TYE      CA     N      HN      120.000    3.000
+ TYE      HNA    N      HN      120.000    3.000
+ TYE      CA     C      H       109.470    3.000
+ TYE      CA     C      HA      109.470    3.000
+ TYE      CA     C      O       109.470    3.000
+ TYE      H      C      HA      107.900    3.000
+ TYE      H      C      O       109.470    3.000
+ TYE      HA     C      O       109.470    3.000
+ TYE      C      O      HO      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TYE      var_1    HOH    OH     CZ     CE2       90.030   20.000   1
+ TYE      CONST_1  OH     CZ     CE1    CD1      180.000    0.000   0
+ TYE      CONST_2  CZ     CE1    CD1    CG         0.000    0.000   0
+ TYE      CONST_3  OH     CZ     CE2    CD2      180.000    0.000   0
+ TYE      CONST_4  CZ     CE2    CD2    CG         0.000    0.000   0
+ TYE      CONST_5  CE2    CD2    CG     CB       180.000    0.000   0
+ TYE      CONST_6  CD2    CG     CD1    CE1        0.000    0.000   0
+ TYE      var_2    CD2    CG     CB     CA        90.009   20.000   2
+ TYE      var_3    CG     CB     CA     C        175.046   20.000   3
+ TYE      var_4    CB     CA     N      HN       -60.025   20.000   1
+ TYE      var_5    CB     CA     C      O       -174.974   20.000   3
+ TYE      var_6    CA     C      O      HO       179.980   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TYE      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TYE      plan-1    N         0.020
+ TYE      plan-1    CA        0.020
+ TYE      plan-1    HN        0.020
+ TYE      plan-1    HNA       0.020
+ TYE      plan-2    CG        0.020
+ TYE      plan-2    CB        0.020
+ TYE      plan-2    CD1       0.020
+ TYE      plan-2    CD2       0.020
+ TYE      plan-2    CZ        0.020
+ TYE      plan-2    CE1       0.020
+ TYE      plan-2    CE2       0.020
+ TYE      plan-2    OH        0.020
+ TYE      plan-2    HD1       0.020
+ TYE      plan-2    HD2       0.020
+ TYE      plan-2    HE1       0.020
+ TYE      plan-2    HE2       0.020
+# ------------------------------------------------------

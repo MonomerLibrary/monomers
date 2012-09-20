@@ -1,0 +1,114 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BO4      BO4 'BORATE ION                          ' non-polymer         9   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BO4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BO4           O4     O    OH1       0.000      0.000    0.000    0.000
+ BO4           HO4    H    H         0.000      0.778    0.000    0.530
+ BO4           B      B    B        -1.000     -1.202    0.000    0.653
+ BO4           O3     O    OH1       0.000     -1.294   -1.116    1.436
+ BO4           HO3    H    H         0.000     -0.643   -1.226    2.108
+ BO4           O2     O    OH1       0.000     -2.217    0.000   -0.263
+ BO4           HO2    H    H         0.000     -2.257   -0.725   -0.862
+ BO4           O1     O    OH1       0.000     -1.294    1.116    1.436
+ BO4           HO1    H    H         0.000     -1.243    1.951    1.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BO4      O4     n/a    B      START
+ BO4      HO4    O4     .      .
+ BO4      B      O4     O1     .
+ BO4      O3     B      HO3    .
+ BO4      HO3    O3     .      .
+ BO4      O2     B      HO2    .
+ BO4      HO2    O2     .      .
+ BO4      O1     B      HO1    .
+ BO4      HO1    O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BO4      O1     B         single      1.535    0.020
+ BO4      O2     B         single      1.535    0.020
+ BO4      O3     B         single      1.535    0.020
+ BO4      B      O4        single      1.535    0.020
+ BO4      HO1    O1        single      0.967    0.020
+ BO4      HO2    O2        single      0.967    0.020
+ BO4      HO3    O3        single      0.967    0.020
+ BO4      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BO4      HO4    O4     B       120.000    3.000
+ BO4      O4     B      O3      120.000    3.000
+ BO4      O4     B      O2      120.000    3.000
+ BO4      O4     B      O1      120.000    3.000
+ BO4      O3     B      O2      120.000    3.000
+ BO4      O3     B      O1      120.000    3.000
+ BO4      O2     B      O1      120.000    3.000
+ BO4      B      O3     HO3     120.000    3.000
+ BO4      B      O2     HO2     120.000    3.000
+ BO4      B      O1     HO1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BO4      var_1    HO4    O4     B      O1        59.997   20.000   1
+ BO4      var_2    O4     B      O3     HO3       59.977   20.000   1
+ BO4      var_3    O4     B      O2     HO2       60.025   20.000   1
+ BO4      var_4    O4     B      O1     HO1       60.023   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BO4      chir_01  B      O1     O2     O3        positiv
+# ------------------------------------------------------

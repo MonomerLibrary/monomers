@@ -1,0 +1,194 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3MA      3MA '6-AMINO-3-METHYLPURINE              ' non-polymer        19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3MA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3MA           N6     N    NH2       0.000      0.000    0.000    0.000
+ 3MA           HN61   H    H         0.000      0.771    0.661    0.000
+ 3MA           HN62   H    H         0.000      0.205   -0.994    0.000
+ 3MA           C6     C    CR6       0.000     -1.309    0.447    0.000
+ 3MA           N1     N    NRD6      0.000     -1.584    1.747    0.000
+ 3MA           C2     C    CR16      0.000     -2.830    2.183    0.000
+ 3MA           H2     H    H         0.000     -3.009    3.252    0.001
+ 3MA           N3     N    NR6       1.000     -3.865    1.368   -0.001
+ 3MA           CN3    C    CH3       0.000     -5.222    1.918   -0.001
+ 3MA           H33    H    H         0.000     -5.549    2.051   -0.999
+ 3MA           H32    H    H         0.000     -5.874    1.249    0.498
+ 3MA           H31    H    H         0.000     -5.224    2.852    0.498
+ 3MA           C5     C    CR56      0.000     -2.380   -0.463    0.000
+ 3MA           C4     C    CR56      0.000     -3.688    0.050    0.005
+ 3MA           N7     N    NRD5      0.000     -2.482   -1.814   -0.001
+ 3MA           C8     C    CR15      0.000     -3.739   -2.154   -0.001
+ 3MA           H8     H    H         0.000     -4.107   -3.172   -0.002
+ 3MA           N9     N    NR15      0.000     -4.523   -1.038    0.000
+ 3MA           HN9    H    H         0.000     -5.562   -1.017   -0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3MA      N6     n/a    C6     START
+ 3MA      HN61   N6     .      .
+ 3MA      HN62   N6     .      .
+ 3MA      C6     N6     C5     .
+ 3MA      N1     C6     C2     .
+ 3MA      C2     N1     N3     .
+ 3MA      H2     C2     .      .
+ 3MA      N3     C2     CN3    .
+ 3MA      CN3    N3     H31    .
+ 3MA      H33    CN3    .      .
+ 3MA      H32    CN3    .      .
+ 3MA      H31    CN3    .      .
+ 3MA      C5     C6     N7     .
+ 3MA      C4     C5     .      .
+ 3MA      N7     C5     C8     .
+ 3MA      C8     N7     N9     .
+ 3MA      H8     C8     .      .
+ 3MA      N9     C8     HN9    .
+ 3MA      HN9    N9     .      END
+ 3MA      N9     C4     .    ADD
+ 3MA      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3MA      N9     C4        single      1.340    0.020
+ 3MA      N9     C8        single      1.350    0.020
+ 3MA      HN9    N9        single      1.040    0.020
+ 3MA      C4     N3        single      1.337    0.020
+ 3MA      C4     C5        double      1.490    0.020
+ 3MA      CN3    N3        single      1.465    0.020
+ 3MA      N3     C2        double      1.337    0.020
+ 3MA      H31    CN3       single      1.059    0.020
+ 3MA      H32    CN3       single      1.059    0.020
+ 3MA      H33    CN3       single      1.059    0.020
+ 3MA      C2     N1        single      1.337    0.020
+ 3MA      H2     C2        single      1.083    0.020
+ 3MA      N1     C6        double      1.350    0.020
+ 3MA      C6     N6        single      1.355    0.020
+ 3MA      C5     C6        single      1.490    0.020
+ 3MA      HN61   N6        single      1.010    0.020
+ 3MA      HN62   N6        single      1.010    0.020
+ 3MA      N7     C5        single      1.350    0.020
+ 3MA      C8     N7        double      1.350    0.020
+ 3MA      H8     C8        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3MA      HN61   N6     HN62    120.000    3.000
+ 3MA      HN61   N6     C6      120.000    3.000
+ 3MA      HN62   N6     C6      120.000    3.000
+ 3MA      N6     C6     N1      120.000    3.000
+ 3MA      N6     C6     C5      120.000    3.000
+ 3MA      N1     C6     C5      120.000    3.000
+ 3MA      C6     N1     C2      120.000    3.000
+ 3MA      N1     C2     H2      120.000    3.000
+ 3MA      N1     C2     N3      120.000    3.000
+ 3MA      H2     C2     N3      120.000    3.000
+ 3MA      C2     N3     CN3     120.000    3.000
+ 3MA      C2     N3     C4      120.000    3.000
+ 3MA      CN3    N3     C4      120.000    3.000
+ 3MA      N3     CN3    H33     109.470    3.000
+ 3MA      N3     CN3    H32     109.470    3.000
+ 3MA      N3     CN3    H31     109.470    3.000
+ 3MA      H33    CN3    H32     109.470    3.000
+ 3MA      H33    CN3    H31     109.470    3.000
+ 3MA      H32    CN3    H31     109.470    3.000
+ 3MA      C6     C5     C4      120.000    3.000
+ 3MA      C6     C5     N7      132.000    3.000
+ 3MA      C4     C5     N7      108.000    3.000
+ 3MA      C5     C4     N9      108.000    3.000
+ 3MA      C5     C4     N3      120.000    3.000
+ 3MA      N9     C4     N3      132.000    3.000
+ 3MA      C5     N7     C8      108.000    3.000
+ 3MA      N7     C8     H8      126.000    3.000
+ 3MA      N7     C8     N9      108.000    3.000
+ 3MA      H8     C8     N9      126.000    3.000
+ 3MA      C8     N9     HN9     126.000    3.000
+ 3MA      C8     N9     C4      108.000    3.000
+ 3MA      HN9    N9     C4      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3MA      CONST_1  HN62   N6     C6     C5         0.000    0.000   0
+ 3MA      CONST_2  N6     C6     N1     C2       180.000    0.000   0
+ 3MA      CONST_3  C6     N1     C2     N3         0.000    0.000   0
+ 3MA      CONST_4  N1     C2     N3     CN3      180.000    0.000   0
+ 3MA      var_1    C2     N3     CN3    H31      -29.960   20.000   1
+ 3MA      CONST_5  N6     C6     C5     N7         0.000    0.000   0
+ 3MA      CONST_6  C6     C5     C4     N9       180.000    0.000   0
+ 3MA      CONST_7  C5     C4     N3     C2         0.000    0.000   0
+ 3MA      CONST_8  C6     C5     N7     C8       180.000    0.000   0
+ 3MA      CONST_9  C5     N7     C8     N9         0.000    0.000   0
+ 3MA      CONST_10 N7     C8     N9     C4         0.000    0.000   0
+ 3MA      CONST_11 C8     N9     C4     C5         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3MA      plan-1    N9        0.020
+ 3MA      plan-1    C4        0.020
+ 3MA      plan-1    C8        0.020
+ 3MA      plan-1    HN9       0.020
+ 3MA      plan-1    N7        0.020
+ 3MA      plan-1    N3        0.020
+ 3MA      plan-1    C5        0.020
+ 3MA      plan-1    C2        0.020
+ 3MA      plan-1    N1        0.020
+ 3MA      plan-1    C6        0.020
+ 3MA      plan-1    CN3       0.020
+ 3MA      plan-1    H2        0.020
+ 3MA      plan-1    N6        0.020
+ 3MA      plan-1    H8        0.020
+ 3MA      plan-1    HN61      0.020
+ 3MA      plan-1    HN62      0.020
+ 3MA      plan-2    N6        0.020
+ 3MA      plan-2    C6        0.020
+ 3MA      plan-2    HN61      0.020
+ 3MA      plan-2    HN62      0.020
+# ------------------------------------------------------

@@ -1,0 +1,184 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SOT      SOT 'morpholine-4-sulfonic acid          ' non-polymer        19  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SOT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SOT           O2S    O    OS        0.000      0.000    0.000    0.000
+ SOT           S      S    ST        0.000     -0.886    0.971   -0.539
+ SOT           O1S    O    OS        0.000     -1.030    2.278    0.000
+ SOT           O4     O    OH1       0.000     -0.493    1.149   -1.999
+ SOT           H9     H    H         0.000      0.355    1.533   -2.193
+ SOT           N4     N    N         0.000     -2.396    0.288   -0.519
+ SOT           C3     C    CH2       0.000     -2.566   -1.174   -0.510
+ SOT           H31    H    H         0.000     -1.602   -1.661   -0.345
+ SOT           H32    H    H         0.000     -2.982   -1.507   -1.463
+ SOT           C2     C    CH2       0.000     -3.527   -1.541    0.626
+ SOT           H22    H    H         0.000     -3.053   -1.332    1.588
+ SOT           H21    H    H         0.000     -3.775   -2.603    0.567
+ SOT           C5     C    CH2       0.000     -3.606    1.126   -0.509
+ SOT           H51    H    H         0.000     -4.131    1.034   -1.462
+ SOT           H52    H    H         0.000     -3.335    2.171   -0.344
+ SOT           C6     C    CH2       0.000     -4.516    0.646    0.626
+ SOT           H62    H    H         0.000     -5.477    1.161    0.567
+ SOT           H61    H    H         0.000     -4.047    0.864    1.588
+ SOT           O1     O    O2        0.000     -4.720   -0.764    0.503
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SOT      O2S    n/a    S      START
+ SOT      S      O2S    N4     .
+ SOT      O1S    S      .      .
+ SOT      O4     S      H9     .
+ SOT      H9     O4     .      .
+ SOT      N4     S      C5     .
+ SOT      C3     N4     C2     .
+ SOT      H31    C3     .      .
+ SOT      H32    C3     .      .
+ SOT      C2     C3     H21    .
+ SOT      H22    C2     .      .
+ SOT      H21    C2     .      .
+ SOT      C5     N4     C6     .
+ SOT      H51    C5     .      .
+ SOT      H52    C5     .      .
+ SOT      C6     C5     O1     .
+ SOT      H62    C6     .      .
+ SOT      H61    C6     .      .
+ SOT      O1     C6     .      END
+ SOT      O1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SOT      O1     C2        single      1.426    0.020
+ SOT      O1     C6        single      1.426    0.020
+ SOT      C2     C3        single      1.524    0.020
+ SOT      H21    C2        single      1.092    0.020
+ SOT      H22    C2        single      1.092    0.020
+ SOT      C3     N4        single      1.455    0.020
+ SOT      H31    C3        single      1.092    0.020
+ SOT      H32    C3        single      1.092    0.020
+ SOT      C5     N4        single      1.455    0.020
+ SOT      N4     S         single      1.520    0.020
+ SOT      C6     C5        single      1.524    0.020
+ SOT      H51    C5        single      1.092    0.020
+ SOT      H52    C5        single      1.092    0.020
+ SOT      H61    C6        single      1.092    0.020
+ SOT      H62    C6        single      1.092    0.020
+ SOT      O1S    S         double      1.436    0.020
+ SOT      S      O2S       double      1.436    0.020
+ SOT      O4     S         single      1.635    0.020
+ SOT      H9     O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SOT      O2S    S      O1S     109.500    3.000
+ SOT      O2S    S      O4      109.500    3.000
+ SOT      O2S    S      N4      109.500    3.000
+ SOT      O1S    S      O4      109.500    3.000
+ SOT      O1S    S      N4      109.500    3.000
+ SOT      O4     S      N4      109.500    3.000
+ SOT      S      O4     H9      120.000    3.000
+ SOT      S      N4     C3      120.000    3.000
+ SOT      S      N4     C5      120.000    3.000
+ SOT      C3     N4     C5      120.000    3.000
+ SOT      N4     C3     H31     109.470    3.000
+ SOT      N4     C3     H32     109.470    3.000
+ SOT      N4     C3     C2      105.000    3.000
+ SOT      H31    C3     H32     107.900    3.000
+ SOT      H31    C3     C2      109.470    3.000
+ SOT      H32    C3     C2      109.470    3.000
+ SOT      C3     C2     H22     109.470    3.000
+ SOT      C3     C2     H21     109.470    3.000
+ SOT      C3     C2     O1      109.470    3.000
+ SOT      H22    C2     H21     107.900    3.000
+ SOT      H22    C2     O1      109.470    3.000
+ SOT      H21    C2     O1      109.470    3.000
+ SOT      N4     C5     H51     109.470    3.000
+ SOT      N4     C5     H52     109.470    3.000
+ SOT      N4     C5     C6      105.000    3.000
+ SOT      H51    C5     H52     107.900    3.000
+ SOT      H51    C5     C6      109.470    3.000
+ SOT      H52    C5     C6      109.470    3.000
+ SOT      C5     C6     H62     109.470    3.000
+ SOT      C5     C6     H61     109.470    3.000
+ SOT      C5     C6     O1      109.470    3.000
+ SOT      H62    C6     H61     107.900    3.000
+ SOT      H62    C6     O1      109.470    3.000
+ SOT      H61    C6     O1      109.470    3.000
+ SOT      C6     O1     C2      111.800    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SOT      var_1    O2S    S      O4     H9       -66.495   20.000   1
+ SOT      var_2    O2S    S      N4     C5       156.455   20.000   1
+ SOT      var_3    S      N4     C3     C2       120.000   20.000   1
+ SOT      var_4    N4     C3     C2     O1        60.000   20.000   3
+ SOT      var_5    S      N4     C5     C6      -120.000   20.000   1
+ SOT      var_6    N4     C5     C6     O1       -60.000   20.000   3
+ SOT      var_7    C5     C6     O1     C2        60.000   20.000   1
+ SOT      var_8    C6     O1     C2     C3       -60.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SOT      chir_01  S      N4     O1S    O2S       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SOT      plan-1    N4        0.020
+ SOT      plan-1    C3        0.000
+ SOT      plan-1    C5        0.000
+ SOT      plan-1    S         0.000
+# ------------------------------------------------------

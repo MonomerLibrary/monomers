@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ALO      ALO 'ALLO-THREONINE                      ' peptide            16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ALO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ALO           N      N    NH2       0.000      0.000    0.000    0.000
+ ALO           HN1    H    H         0.000      0.462    0.330   -0.840
+ ALO           HN2    H    H         0.000      0.540   -0.119    0.849
+ ALO           CA     C    CH1       0.000     -1.438   -0.304   -0.014
+ ALO           HA     H    H         0.000     -1.588   -1.378    0.161
+ ALO           CB     C    CH1       0.000     -2.137    0.495    1.086
+ ALO           HB     H    H         0.000     -1.987    1.569    0.911
+ ALO           OG1    O    OH1       0.000     -3.536    0.200    1.072
+ ALO           HG1    H    H         0.000     -3.667   -0.746    1.227
+ ALO           CG2    C    CH3       0.000     -1.550    0.114    2.446
+ ALO           HG23   H    H         0.000     -1.695   -0.921    2.617
+ ALO           HG22   H    H         0.000     -0.514    0.332    2.459
+ ALO           HG21   H    H         0.000     -2.036    0.667    3.209
+ ALO           C      C    C         0.000     -2.017    0.073   -1.353
+ ALO           O      O    OC       -0.500     -1.518    1.014   -2.009
+ ALO           OXT    O    OC       -0.500     -2.997   -0.557   -1.810
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ALO      N      n/a    CA     START
+ ALO      HN1    N      .      .
+ ALO      HN2    N      .      .
+ ALO      CA     N      C      .
+ ALO      HA     CA     .      .
+ ALO      CB     CA     CG2    .
+ ALO      HB     CB     .      .
+ ALO      OG1    CB     HG1    .
+ ALO      HG1    OG1    .      .
+ ALO      CG2    CB     HG21   .
+ ALO      HG23   CG2    .      .
+ ALO      HG22   CG2    .      .
+ ALO      HG21   CG2    .      .
+ ALO      C      CA     .      END
+ ALO      O      C      .      .
+ ALO      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ALO      CA     N         single      1.450    0.020
+ ALO      CB     CA        single      1.524    0.020
+ ALO      C      CA        single      1.500    0.020
+ ALO      HA     CA        single      1.099    0.020
+ ALO      CG2    CB        single      1.524    0.020
+ ALO      OG1    CB        single      1.432    0.020
+ ALO      HB     CB        single      1.099    0.020
+ ALO      HG21   CG2       single      1.059    0.020
+ ALO      HG22   CG2       single      1.059    0.020
+ ALO      HG23   CG2       single      1.059    0.020
+ ALO      HG1    OG1       single      0.967    0.020
+ ALO      O      C         deloc       1.250    0.020
+ ALO      OXT    C         deloc       1.250    0.020
+ ALO      HN1    N         single      1.010    0.020
+ ALO      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ALO      HN1    N      HN2     120.000    3.000
+ ALO      HN1    N      CA      120.000    3.000
+ ALO      HN2    N      CA      120.000    3.000
+ ALO      N      CA     HA      109.470    3.000
+ ALO      N      CA     CB      109.470    3.000
+ ALO      N      CA     C       109.470    3.000
+ ALO      HA     CA     CB      108.340    3.000
+ ALO      HA     CA     C       108.810    3.000
+ ALO      CB     CA     C       109.470    3.000
+ ALO      CA     CB     HB      108.340    3.000
+ ALO      CA     CB     OG1     109.470    3.000
+ ALO      CA     CB     CG2     111.000    3.000
+ ALO      HB     CB     OG1     109.470    3.000
+ ALO      HB     CB     CG2     108.340    3.000
+ ALO      OG1    CB     CG2     109.470    3.000
+ ALO      CB     OG1    HG1     109.470    3.000
+ ALO      CB     CG2    HG23    109.470    3.000
+ ALO      CB     CG2    HG22    109.470    3.000
+ ALO      CB     CG2    HG21    109.470    3.000
+ ALO      HG23   CG2    HG22    109.470    3.000
+ ALO      HG23   CG2    HG21    109.470    3.000
+ ALO      HG22   CG2    HG21    109.470    3.000
+ ALO      CA     C      O       118.500    3.000
+ ALO      CA     C      OXT     118.500    3.000
+ ALO      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ALO      var_1    HN2    N      CA     C        175.000   20.000   1
+ ALO      var_2    N      CA     CB     CG2      -60.047   20.000   3
+ ALO      var_3    CA     CB     OG1    HG1       60.075   20.000   1
+ ALO      var_4    CA     CB     CG2    HG21    -179.965   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ALO      chir_01  CA     N      CB     C         negativ
+ ALO      chir_02  CB     CA     CG2    OG1       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ALO      plan-1    N         0.020
+ ALO      plan-1    CA        0.020
+ ALO      plan-1    HN1       0.020
+ ALO      plan-1    HN2       0.020
+ ALO      plan-2    C         0.020
+ ALO      plan-2    CA        0.020
+ ALO      plan-2    O         0.020
+ ALO      plan-2    OXT       0.020
+# ------------------------------------------------------

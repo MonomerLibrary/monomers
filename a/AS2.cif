@@ -1,0 +1,156 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AS2      AS2 '(2R)-2-AMINO-4-OXOBUTANOIC ACID     ' peptide            14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AS2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AS2           N      N    NH2       0.000      0.000    0.000    0.000
+ AS2           HN1    H    H         0.000      0.797    0.250   -0.574
+ AS2           HN2    H    H         0.000      0.037   -0.843    0.561
+ AS2           CA     C    CH1       0.000     -1.196    0.851    0.018
+ AS2           HA     H    H         0.000     -1.427    1.136    1.054
+ AS2           CB     C    CH2       0.000     -2.379    0.082   -0.575
+ AS2           HB     H    H         0.000     -2.116   -0.276   -1.572
+ AS2           HBA    H    H         0.000     -3.245    0.744   -0.644
+ AS2           CG     C    C1        0.000     -2.710   -1.091    0.311
+ AS2           HG     H    H         0.000     -1.948   -1.810    0.561
+ AS2           OD2    O    O         0.000     -3.831   -1.225    0.741
+ AS2           C      C    C         0.000     -0.944    2.092   -0.800
+ AS2           O      O    OC       -0.500     -0.026    2.104   -1.650
+ AS2           OXT    O    OC       -0.500     -1.654    3.108   -0.632
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AS2      N      n/a    CA     START
+ AS2      HN1    N      .      .
+ AS2      HN2    N      .      .
+ AS2      CA     N      C      .
+ AS2      HA     CA     .      .
+ AS2      CB     CA     CG     .
+ AS2      HB     CB     .      .
+ AS2      HBA    CB     .      .
+ AS2      CG     CB     OD2    .
+ AS2      HG     CG     .      .
+ AS2      OD2    CG     .      .
+ AS2      C      CA     .      END
+ AS2      O      C      .      .
+ AS2      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AS2      O      C         deloc       1.250    0.020
+ AS2      OXT    C         deloc       1.250    0.020
+ AS2      C      CA        single      1.500    0.020
+ AS2      CA     N         single      1.450    0.020
+ AS2      CB     CA        single      1.524    0.020
+ AS2      HA     CA        single      1.099    0.020
+ AS2      CG     CB        single      1.510    0.020
+ AS2      HB     CB        single      1.092    0.020
+ AS2      HBA    CB        single      1.092    0.020
+ AS2      OD2    CG        double      1.220    0.020
+ AS2      HG     CG        single      1.077    0.020
+ AS2      HN1    N         single      1.010    0.020
+ AS2      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AS2      HN1    N      HN2     120.000    3.000
+ AS2      HN1    N      CA      120.000    3.000
+ AS2      HN2    N      CA      120.000    3.000
+ AS2      N      CA     HA      109.470    3.000
+ AS2      N      CA     CB      109.470    3.000
+ AS2      N      CA     C       109.470    3.000
+ AS2      HA     CA     CB      108.340    3.000
+ AS2      HA     CA     C       108.810    3.000
+ AS2      CB     CA     C       109.470    3.000
+ AS2      CA     CB     HB      109.470    3.000
+ AS2      CA     CB     HBA     109.470    3.000
+ AS2      CA     CB     CG      109.470    3.000
+ AS2      HB     CB     HBA     107.900    3.000
+ AS2      HB     CB     CG      109.470    3.000
+ AS2      HBA    CB     CG      109.470    3.000
+ AS2      CB     CG     HG      120.000    3.000
+ AS2      CB     CG     OD2     120.500    3.000
+ AS2      HG     CG     OD2     123.000    3.000
+ AS2      CA     C      O       118.500    3.000
+ AS2      CA     C      OXT     118.500    3.000
+ AS2      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AS2      var_1    HN2    N      CA     C        175.000   20.000   1
+ AS2      var_2    N      CA     CB     CG        64.964   20.000   3
+ AS2      var_3    CA     CB     CG     OD2      125.009   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AS2      chir_01  CA     C      N      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AS2      plan-1    C         0.020
+ AS2      plan-1    O         0.020
+ AS2      plan-1    OXT       0.020
+ AS2      plan-1    CA        0.020
+ AS2      plan-2    N         0.020
+ AS2      plan-2    CA        0.020
+ AS2      plan-2    HN1       0.020
+ AS2      plan-2    HN2       0.020
+ AS2      plan-3    CG        0.020
+ AS2      plan-3    CB        0.020
+ AS2      plan-3    OD2       0.020
+ AS2      plan-3    HG        0.020
+# ------------------------------------------------------

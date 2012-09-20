@@ -1,0 +1,150 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+J1Z      J1Z 'thieno[3,2-b]thiophene              ' non-polymer        12   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_J1Z
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ J1Z           HAD    H    H         0.000      0.003    0.001    0.001
+ J1Z           CAD    C    CR15      0.000     -1.079    0.040    0.000
+ J1Z           CAH    C    CR55      0.000     -1.873   -1.128    0.000
+ J1Z           SAE    S    S2        0.000     -1.620   -2.882    0.000
+ J1Z           CAA    C    CR15      0.000     -3.349   -3.175    0.000
+ J1Z           HAA    H    H         0.000     -3.810   -4.155    0.001
+ J1Z           CAG    C    CR55      0.000     -3.215   -0.864    0.000
+ J1Z           CAC    C    CR15      0.000     -4.009   -2.032   -0.001
+ J1Z           HAC    H    H         0.000     -5.091   -1.992   -0.002
+ J1Z           SAF    S    S2        0.000     -3.468    0.890    0.000
+ J1Z           CAB    C    CR15      0.000     -1.739    1.183   -0.001
+ J1Z           HAB    H    H         0.000     -1.279    2.163   -0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ J1Z      HAD    n/a    CAD    START
+ J1Z      CAD    HAD    CAH    .
+ J1Z      CAH    CAD    CAG    .
+ J1Z      SAE    CAH    CAA    .
+ J1Z      CAA    SAE    HAA    .
+ J1Z      HAA    CAA    .      .
+ J1Z      CAG    CAH    SAF    .
+ J1Z      CAC    CAG    HAC    .
+ J1Z      HAC    CAC    .      .
+ J1Z      SAF    CAG    CAB    .
+ J1Z      CAB    SAF    HAB    .
+ J1Z      HAB    CAB    .      END
+ J1Z      CAA    CAC    .    ADD
+ J1Z      CAB    CAD    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ J1Z      CAA    CAC       double      1.380    0.020
+ J1Z      CAA    SAE       single      1.745    0.020
+ J1Z      CAB    CAD       double      1.380    0.020
+ J1Z      CAB    SAF       single      1.745    0.020
+ J1Z      CAC    CAG       single      1.390    0.020
+ J1Z      CAH    CAD       single      1.390    0.020
+ J1Z      SAE    CAH       single      1.695    0.020
+ J1Z      SAF    CAG       single      1.695    0.020
+ J1Z      CAG    CAH       double      1.390    0.020
+ J1Z      HAA    CAA       single      1.083    0.020
+ J1Z      HAB    CAB       single      1.083    0.020
+ J1Z      HAC    CAC       single      1.083    0.020
+ J1Z      CAD    HAD       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ J1Z      HAD    CAD    CAH     108.000    3.000
+ J1Z      HAD    CAD    CAB     126.000    3.000
+ J1Z      CAH    CAD    CAB     108.000    3.000
+ J1Z      CAD    CAH    SAE     108.000    3.000
+ J1Z      CAD    CAH    CAG     108.000    3.000
+ J1Z      SAE    CAH    CAG     108.000    3.000
+ J1Z      CAH    SAE    CAA      91.409    3.000
+ J1Z      SAE    CAA    HAA     108.000    3.000
+ J1Z      SAE    CAA    CAC     108.000    3.000
+ J1Z      HAA    CAA    CAC     126.000    3.000
+ J1Z      CAH    CAG    CAC     108.000    3.000
+ J1Z      CAH    CAG    SAF     108.000    3.000
+ J1Z      CAC    CAG    SAF     108.000    3.000
+ J1Z      CAG    CAC    HAC     108.000    3.000
+ J1Z      CAG    CAC    CAA     108.000    3.000
+ J1Z      HAC    CAC    CAA     126.000    3.000
+ J1Z      CAG    SAF    CAB      91.409    3.000
+ J1Z      SAF    CAB    HAB     108.000    3.000
+ J1Z      SAF    CAB    CAD     108.000    3.000
+ J1Z      HAB    CAB    CAD     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ J1Z      CONST_1  HAD    CAD    CAH    CAG      180.000    0.000   0
+ J1Z      CONST_2  CAD    CAH    SAE    CAA      180.000    0.000   0
+ J1Z      CONST_3  CAH    SAE    CAA    CAC        0.000    0.000   0
+ J1Z      CONST_4  SAE    CAA    CAC    CAG        0.000    0.000   0
+ J1Z      CONST_5  CAD    CAH    CAG    SAF        0.000    0.000   0
+ J1Z      CONST_6  CAH    CAG    CAC    CAA        0.000    0.000   0
+ J1Z      CONST_7  CAH    CAG    SAF    CAB        0.000    0.000   0
+ J1Z      CONST_8  CAG    SAF    CAB    CAD        0.000    0.000   0
+ J1Z      CONST_9  SAF    CAB    CAD    HAD      180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ J1Z      plan-1    CAA       0.020
+ J1Z      plan-1    CAC       0.020
+ J1Z      plan-1    SAE       0.020
+ J1Z      plan-1    HAA       0.020
+ J1Z      plan-1    CAG       0.020
+ J1Z      plan-1    HAC       0.020
+ J1Z      plan-1    SAF       0.020
+ J1Z      plan-1    CAH       0.020
+ J1Z      plan-1    CAD       0.020
+ J1Z      plan-1    CAB       0.020
+ J1Z      plan-1    HAB       0.020
+ J1Z      plan-1    HAD       0.020
+# ------------------------------------------------------

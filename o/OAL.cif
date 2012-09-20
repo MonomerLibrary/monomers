@@ -1,0 +1,269 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OAL      OAL '(1,8-DIHYDROXY-9,10-DIOXO-9,10-DIHYD' non-polymer        31  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OAL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OAL           O6     O    O         0.000      0.000    0.000    0.000
+ OAL           C10    C    CR6       0.000     -1.188   -0.053   -0.256
+ OAL           C3     C    CR66      0.000     -1.649    0.073   -1.654
+ OAL           C2     C    CR16      0.000     -0.732    0.256   -2.682
+ OAL           HC2    H    H         0.000      0.327    0.306   -2.460
+ OAL           C9     C    CR66      0.000     -2.171   -0.248    0.829
+ OAL           C14    C    CR16      0.000     -1.746   -0.368    2.147
+ OAL           HC14   H    H         0.000     -0.690   -0.320    2.381
+ OAL           C13    C    CR16      0.000     -2.673   -0.549    3.161
+ OAL           HC13   H    H         0.000     -2.336   -0.642    4.186
+ OAL           C12    C    CR6       0.000     -4.022   -0.611    2.875
+ OAL           C15    C    CH2       0.000     -5.016   -0.808    3.990
+ OAL           H151   H    H         0.000     -4.552   -1.387    4.792
+ OAL           H152   H    H         0.000     -5.886   -1.347    3.610
+ OAL           C16    C    C         0.000     -5.446    0.534    4.522
+ OAL           O4     O    OC       -0.500     -6.274    0.599    5.458
+ OAL           O5     O    OC       -0.500     -4.976    1.582    4.028
+ OAL           C11    C    CR6       0.000     -4.468   -0.499    1.561
+ OAL           O3     O    OH1       0.000     -5.793   -0.566    1.285
+ OAL           HO3    H    H         0.000     -6.039   -1.486    1.115
+ OAL           C8     C    CR66      0.000     -3.543   -0.311    0.529
+ OAL           C7     C    CR6       0.000     -4.004   -0.183   -0.865
+ OAL           O2     O    O         0.000     -5.192   -0.237   -1.121
+ OAL           C4     C    CR66      0.000     -3.023    0.009   -1.949
+ OAL           C5     C    CR6       0.000     -3.452    0.132   -3.274
+ OAL           O1     O    OH1       0.000     -4.773    0.073   -3.570
+ OAL           HO1    H    H         0.000     -5.022   -0.844   -3.745
+ OAL           C6     C    CR16      0.000     -2.515    0.315   -4.287
+ OAL           HC6    H    H         0.000     -2.846    0.411   -5.314
+ OAL           C1     C    CR16      0.000     -1.170    0.375   -3.992
+ OAL           HC1    H    H         0.000     -0.450    0.517   -4.789
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OAL      O6     n/a    C10    START
+ OAL      C10    O6     C9     .
+ OAL      C3     C10    C2     .
+ OAL      C2     C3     HC2    .
+ OAL      HC2    C2     .      .
+ OAL      C9     C10    C14    .
+ OAL      C14    C9     C13    .
+ OAL      HC14   C14    .      .
+ OAL      C13    C14    C12    .
+ OAL      HC13   C13    .      .
+ OAL      C12    C13    C11    .
+ OAL      C15    C12    C16    .
+ OAL      H151   C15    .      .
+ OAL      H152   C15    .      .
+ OAL      C16    C15    O5     .
+ OAL      O4     C16    .      .
+ OAL      O5     C16    .      .
+ OAL      C11    C12    C8     .
+ OAL      O3     C11    HO3    .
+ OAL      HO3    O3     .      .
+ OAL      C8     C11    C7     .
+ OAL      C7     C8     C4     .
+ OAL      O2     C7     .      .
+ OAL      C4     C7     C5     .
+ OAL      C5     C4     C6     .
+ OAL      O1     C5     HO1    .
+ OAL      HO1    O1     .      .
+ OAL      C6     C5     C1     .
+ OAL      HC6    C6     .      .
+ OAL      C1     C6     HC1    .
+ OAL      HC1    C1     .      END
+ OAL      C1     C2     .    ADD
+ OAL      C3     C4     .    ADD
+ OAL      C8     C9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OAL      C1     C2        double      1.390    0.020
+ OAL      C1     C6        single      1.390    0.020
+ OAL      HC1    C1        single      1.083    0.020
+ OAL      C2     C3        single      1.390    0.020
+ OAL      HC2    C2        single      1.083    0.020
+ OAL      C3     C4        double      1.490    0.020
+ OAL      C3     C10       single      1.490    0.020
+ OAL      C5     C4        single      1.490    0.020
+ OAL      C4     C7        single      1.490    0.020
+ OAL      C6     C5        double      1.390    0.020
+ OAL      O1     C5        single      1.362    0.020
+ OAL      HC6    C6        single      1.083    0.020
+ OAL      C7     C8        single      1.490    0.020
+ OAL      O2     C7        double      1.250    0.020
+ OAL      C8     C9        double      1.490    0.020
+ OAL      C8     C11       single      1.490    0.020
+ OAL      C9     C10       single      1.490    0.020
+ OAL      C14    C9        single      1.390    0.020
+ OAL      C10    O6        double      1.250    0.020
+ OAL      C11    C12       double      1.487    0.020
+ OAL      O3     C11       single      1.362    0.020
+ OAL      C12    C13       single      1.390    0.020
+ OAL      C15    C12       single      1.511    0.020
+ OAL      C13    C14       double      1.390    0.020
+ OAL      HC13   C13       single      1.083    0.020
+ OAL      HC14   C14       single      1.083    0.020
+ OAL      C16    C15       single      1.510    0.020
+ OAL      H151   C15       single      1.092    0.020
+ OAL      H152   C15       single      1.092    0.020
+ OAL      O5     C16       deloc       1.250    0.020
+ OAL      O4     C16       deloc       1.250    0.020
+ OAL      HO1    O1        single      0.967    0.020
+ OAL      HO3    O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OAL      O6     C10    C3      120.000    3.000
+ OAL      O6     C10    C9      120.000    3.000
+ OAL      C3     C10    C9      120.000    3.000
+ OAL      C10    C3     C2      120.000    3.000
+ OAL      C10    C3     C4      120.000    3.000
+ OAL      C2     C3     C4      120.000    3.000
+ OAL      C3     C2     HC2     120.000    3.000
+ OAL      C3     C2     C1      120.000    3.000
+ OAL      HC2    C2     C1      120.000    3.000
+ OAL      C10    C9     C14     120.000    3.000
+ OAL      C10    C9     C8      120.000    3.000
+ OAL      C14    C9     C8      120.000    3.000
+ OAL      C9     C14    HC14    120.000    3.000
+ OAL      C9     C14    C13     120.000    3.000
+ OAL      HC14   C14    C13     120.000    3.000
+ OAL      C14    C13    HC13    120.000    3.000
+ OAL      C14    C13    C12     120.000    3.000
+ OAL      HC13   C13    C12     120.000    3.000
+ OAL      C13    C12    C15     120.000    3.000
+ OAL      C13    C12    C11     120.000    3.000
+ OAL      C15    C12    C11     120.000    3.000
+ OAL      C12    C15    H151    109.470    3.000
+ OAL      C12    C15    H152    109.470    3.000
+ OAL      C12    C15    C16     109.470    3.000
+ OAL      H151   C15    H152    107.900    3.000
+ OAL      H151   C15    C16     109.470    3.000
+ OAL      H152   C15    C16     109.470    3.000
+ OAL      C15    C16    O4      118.500    3.000
+ OAL      C15    C16    O5      118.500    3.000
+ OAL      O4     C16    O5      123.000    3.000
+ OAL      C12    C11    O3      120.000    3.000
+ OAL      C12    C11    C8      120.000    3.000
+ OAL      O3     C11    C8      120.000    3.000
+ OAL      C11    O3     HO3     109.470    3.000
+ OAL      C11    C8     C7      120.000    3.000
+ OAL      C11    C8     C9      120.000    3.000
+ OAL      C7     C8     C9      120.000    3.000
+ OAL      C8     C7     O2      120.000    3.000
+ OAL      C8     C7     C4      120.000    3.000
+ OAL      O2     C7     C4      120.000    3.000
+ OAL      C7     C4     C5      120.000    3.000
+ OAL      C7     C4     C3      120.000    3.000
+ OAL      C5     C4     C3      120.000    3.000
+ OAL      C4     C5     O1      120.000    3.000
+ OAL      C4     C5     C6      120.000    3.000
+ OAL      O1     C5     C6      120.000    3.000
+ OAL      C5     O1     HO1     109.470    3.000
+ OAL      C5     C6     HC6     120.000    3.000
+ OAL      C5     C6     C1      120.000    3.000
+ OAL      HC6    C6     C1      120.000    3.000
+ OAL      C6     C1     HC1     120.000    3.000
+ OAL      C6     C1     C2      120.000    3.000
+ OAL      HC1    C1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OAL      CONST_1  O6     C10    C3     C2         0.000    0.000   0
+ OAL      CONST_2  C10    C3     C4     C7         0.000    0.000   0
+ OAL      CONST_3  C10    C3     C2     C1       180.000    0.000   0
+ OAL      CONST_4  O6     C10    C9     C14        0.000    0.000   0
+ OAL      CONST_5  C10    C9     C14    C13      180.000    0.000   0
+ OAL      CONST_6  C9     C14    C13    C12        0.000    0.000   0
+ OAL      CONST_7  C14    C13    C12    C11        0.000    0.000   0
+ OAL      var_1    C13    C12    C15    C16       90.009   20.000   2
+ OAL      var_2    C12    C15    C16    O5         0.000   20.000   3
+ OAL      CONST_8  C13    C12    C11    C8         0.000    0.000   0
+ OAL      var_3    C12    C11    O3     HO3      -90.290   20.000   1
+ OAL      CONST_9  C12    C11    C8     C7       180.000    0.000   0
+ OAL      CONST_10 C11    C8     C9     C10      180.000    0.000   0
+ OAL      CONST_11 C11    C8     C7     C4       180.000    0.000   0
+ OAL      CONST_12 C8     C7     C4     C5       180.000    0.000   0
+ OAL      CONST_13 C7     C4     C5     C6       180.000    0.000   0
+ OAL      var_4    C4     C5     O1     HO1      -89.986   20.000   1
+ OAL      CONST_14 C4     C5     C6     C1         0.000    0.000   0
+ OAL      CONST_15 C5     C6     C1     C2         0.000    0.000   0
+ OAL      CONST_16 C6     C1     C2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OAL      plan-1    C1        0.020
+ OAL      plan-1    C2        0.020
+ OAL      plan-1    C6        0.020
+ OAL      plan-1    HC1       0.020
+ OAL      plan-1    C5        0.020
+ OAL      plan-1    C3        0.020
+ OAL      plan-1    HC2       0.020
+ OAL      plan-1    C4        0.020
+ OAL      plan-1    C10       0.020
+ OAL      plan-1    C7        0.020
+ OAL      plan-1    O1        0.020
+ OAL      plan-1    HC6       0.020
+ OAL      plan-1    C8        0.020
+ OAL      plan-1    O2        0.020
+ OAL      plan-1    C9        0.020
+ OAL      plan-1    C11       0.020
+ OAL      plan-1    C12       0.020
+ OAL      plan-1    C13       0.020
+ OAL      plan-1    C14       0.020
+ OAL      plan-1    O6        0.020
+ OAL      plan-1    O3        0.020
+ OAL      plan-1    C15       0.020
+ OAL      plan-1    HC13      0.020
+ OAL      plan-1    HC14      0.020
+ OAL      plan-2    C16       0.020
+ OAL      plan-2    C15       0.020
+ OAL      plan-2    O5        0.020
+ OAL      plan-2    O4        0.020
+# ------------------------------------------------------

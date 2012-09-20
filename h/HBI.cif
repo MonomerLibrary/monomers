@@ -1,0 +1,263 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HBI      HBI '7,8-DIHYDROBIOPTERIN                ' non-polymer        30  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HBI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HBI           O4     O    O         0.000      0.000    0.000    0.000
+ HBI           C4     C    CR6       0.000     -0.895    0.113   -0.821
+ HBI           N3     N    NR16      0.000     -0.620    0.169   -2.142
+ HBI           H3     H    H         0.000      0.367    0.116   -2.467
+ HBI           C2     C    CR6       0.000     -1.624    0.293   -3.052
+ HBI           N2     N    NH2       0.000     -1.313    0.341   -4.384
+ HBI           HN22   H    H         0.000     -0.348    0.283   -4.685
+ HBI           HN21   H    H         0.000     -2.046    0.435   -5.076
+ HBI           C4A    C    CR66      0.000     -2.242    0.191   -0.415
+ HBI           N5     N    NRD6      0.000     -2.592    0.131    0.901
+ HBI           C6     C    CR6       0.000     -3.812   -0.050    1.269
+ HBI           C9     C    CH1       0.000     -4.143   -0.068    2.739
+ HBI           H9     H    H         0.000     -4.860    0.735    2.963
+ HBI           C10    C    CH1       0.000     -2.866    0.150    3.551
+ HBI           H10    H    H         0.000     -2.148   -0.652    3.328
+ HBI           C11    C    CH3       0.000     -3.201    0.133    5.044
+ HBI           H113   H    H         0.000     -3.892    0.907    5.260
+ HBI           H112   H    H         0.000     -3.627   -0.802    5.301
+ HBI           H111   H    H         0.000     -2.316    0.284    5.608
+ HBI           O10    O    OH1       0.000     -2.291    1.412    3.207
+ HBI           HO1    H    H         0.000     -2.922    2.117    3.404
+ HBI           O9     O    OH1       0.000     -4.717   -1.329    3.084
+ HBI           HO9    H    H         0.000     -4.086   -2.034    2.887
+ HBI           C7     C    CH2       0.000     -4.916   -0.251    0.263
+ HBI           H71    H    H         0.000     -5.845    0.175    0.647
+ HBI           H72    H    H         0.000     -5.055   -1.319    0.079
+ HBI           N8     N    NR16      0.000     -4.548    0.421   -0.994
+ HBI           H8     H    H         0.000     -5.251    0.944   -1.555
+ HBI           C8A    C    CR66      0.000     -3.229    0.329   -1.399
+ HBI           N1     N    NRD6      0.000     -2.887    0.371   -2.684
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HBI      O4     n/a    C4     START
+ HBI      C4     O4     C4A    .
+ HBI      N3     C4     C2     .
+ HBI      H3     N3     .      .
+ HBI      C2     N3     N2     .
+ HBI      N2     C2     HN21   .
+ HBI      HN22   N2     .      .
+ HBI      HN21   N2     .      .
+ HBI      C4A    C4     N5     .
+ HBI      N5     C4A    C6     .
+ HBI      C6     N5     C7     .
+ HBI      C9     C6     O9     .
+ HBI      H9     C9     .      .
+ HBI      C10    C9     O10    .
+ HBI      H10    C10    .      .
+ HBI      C11    C10    H111   .
+ HBI      H113   C11    .      .
+ HBI      H112   C11    .      .
+ HBI      H111   C11    .      .
+ HBI      O10    C10    HO1    .
+ HBI      HO1    O10    .      .
+ HBI      O9     C9     HO9    .
+ HBI      HO9    O9     .      .
+ HBI      C7     C6     N8     .
+ HBI      H71    C7     .      .
+ HBI      H72    C7     .      .
+ HBI      N8     C7     C8A    .
+ HBI      H8     N8     .      .
+ HBI      C8A    N8     N1     .
+ HBI      N1     C8A    .      END
+ HBI      N1     C2     .    ADD
+ HBI      C4A    C8A    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HBI      N1     C2        double      1.350    0.020
+ HBI      N1     C8A       single      1.350    0.020
+ HBI      N2     C2        single      1.355    0.020
+ HBI      HN21   N2        single      1.010    0.020
+ HBI      HN22   N2        single      1.010    0.020
+ HBI      C2     N3        single      1.337    0.020
+ HBI      N3     C4        single      1.337    0.020
+ HBI      H3     N3        single      1.040    0.020
+ HBI      C4     O4        double      1.250    0.020
+ HBI      C4A    C4        single      1.490    0.020
+ HBI      C4A    C8A       double      1.490    0.020
+ HBI      N5     C4A       single      1.350    0.020
+ HBI      C8A    N8        single      1.337    0.020
+ HBI      N8     C7        single      1.462    0.020
+ HBI      H8     N8        single      1.040    0.020
+ HBI      C7     C6        single      1.511    0.020
+ HBI      H71    C7        single      1.092    0.020
+ HBI      H72    C7        single      1.092    0.020
+ HBI      C6     N5        double      1.350    0.020
+ HBI      C9     C6        single      1.480    0.020
+ HBI      O9     C9        single      1.432    0.020
+ HBI      C10    C9        single      1.524    0.020
+ HBI      H9     C9        single      1.099    0.020
+ HBI      HO9    O9        single      0.967    0.020
+ HBI      O10    C10       single      1.432    0.020
+ HBI      C11    C10       single      1.524    0.020
+ HBI      H10    C10       single      1.099    0.020
+ HBI      HO1    O10       single      0.967    0.020
+ HBI      H111   C11       single      1.059    0.020
+ HBI      H112   C11       single      1.059    0.020
+ HBI      H113   C11       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HBI      O4     C4     N3      120.000    3.000
+ HBI      O4     C4     C4A     120.000    3.000
+ HBI      N3     C4     C4A     120.000    3.000
+ HBI      C4     N3     H3      120.000    3.000
+ HBI      C4     N3     C2      120.000    3.000
+ HBI      H3     N3     C2      120.000    3.000
+ HBI      N3     C2     N2      120.000    3.000
+ HBI      N3     C2     N1      120.000    3.000
+ HBI      N2     C2     N1      120.000    3.000
+ HBI      C2     N2     HN22    120.000    3.000
+ HBI      C2     N2     HN21    120.000    3.000
+ HBI      HN22   N2     HN21    120.000    3.000
+ HBI      C4     C4A    N5      120.000    3.000
+ HBI      C4     C4A    C8A     120.000    3.000
+ HBI      N5     C4A    C8A     120.000    3.000
+ HBI      C4A    N5     C6      120.000    3.000
+ HBI      N5     C6     C9      120.000    3.000
+ HBI      N5     C6     C7      120.000    3.000
+ HBI      C9     C6     C7      120.000    3.000
+ HBI      C6     C9     H9      109.470    3.000
+ HBI      C6     C9     C10     109.470    3.000
+ HBI      C6     C9     O9      109.470    3.000
+ HBI      H9     C9     C10     108.340    3.000
+ HBI      H9     C9     O9      109.470    3.000
+ HBI      C10    C9     O9      109.470    3.000
+ HBI      C9     C10    H10     108.340    3.000
+ HBI      C9     C10    C11     111.000    3.000
+ HBI      C9     C10    O10     109.470    3.000
+ HBI      H10    C10    C11     108.340    3.000
+ HBI      H10    C10    O10     109.470    3.000
+ HBI      C11    C10    O10     109.470    3.000
+ HBI      C10    C11    H113    109.470    3.000
+ HBI      C10    C11    H112    109.470    3.000
+ HBI      C10    C11    H111    109.470    3.000
+ HBI      H113   C11    H112    109.470    3.000
+ HBI      H113   C11    H111    109.470    3.000
+ HBI      H112   C11    H111    109.470    3.000
+ HBI      C10    O10    HO1     109.470    3.000
+ HBI      C9     O9     HO9     109.470    3.000
+ HBI      C6     C7     H71     109.470    3.000
+ HBI      C6     C7     H72     109.470    3.000
+ HBI      C6     C7     N8      109.500    3.000
+ HBI      H71    C7     H72     107.900    3.000
+ HBI      H71    C7     N8      109.500    3.000
+ HBI      H72    C7     N8      109.500    3.000
+ HBI      C7     N8     H8      120.000    3.000
+ HBI      C7     N8     C8A     120.000    3.000
+ HBI      H8     N8     C8A     120.000    3.000
+ HBI      N8     C8A    N1      120.000    3.000
+ HBI      N8     C8A    C4A     120.000    3.000
+ HBI      N1     C8A    C4A     120.000    3.000
+ HBI      C8A    N1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HBI      CONST_1  O4     C4     N3     C2       180.000    0.000   0
+ HBI      CONST_2  C4     N3     C2     N2       180.000    0.000   0
+ HBI      CONST_3  N3     C2     N2     HN21    -179.917    0.000   0
+ HBI      CONST_4  O4     C4     C4A    N5         0.000    0.000   0
+ HBI      CONST_5  C4     C4A    C8A    N8       180.000    0.000   0
+ HBI      CONST_6  C4     C4A    N5     C6       180.000    0.000   0
+ HBI      CONST_7  C4A    N5     C6     C7         0.000    0.000   0
+ HBI      var_1    N5     C6     C9     O9      -120.002   20.000   1
+ HBI      var_2    C6     C9     C10    O10       59.998   20.000   3
+ HBI      var_3    C9     C10    C11    H111    -179.990   20.000   3
+ HBI      var_4    C9     C10    O10    HO1       59.994   20.000   1
+ HBI      var_5    C6     C9     O9     HO9       60.031   20.000   1
+ HBI      CONST_8  N5     C6     C7     N8       -30.000    0.000   0
+ HBI      CONST_9  C6     C7     N8     C8A       30.000    0.000   0
+ HBI      CONST_10 C7     N8     C8A    N1       150.000    0.000   0
+ HBI      CONST_11 N8     C8A    N1     C2       180.000    0.000   0
+ HBI      CONST_12 C8A    N1     C2     N3         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HBI      chir_01  C9     C6     O9     C10       negativ
+ HBI      chir_02  C10    C9     O10    C11       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HBI      plan-1    N1        0.020
+ HBI      plan-1    C2        0.020
+ HBI      plan-1    C8A       0.020
+ HBI      plan-1    N3        0.020
+ HBI      plan-1    C4        0.020
+ HBI      plan-1    N2        0.020
+ HBI      plan-1    H3        0.020
+ HBI      plan-1    O4        0.020
+ HBI      plan-1    C4A       0.020
+ HBI      plan-1    N5        0.020
+ HBI      plan-1    N8        0.020
+ HBI      plan-1    C7        0.020
+ HBI      plan-1    C6        0.020
+ HBI      plan-1    H8        0.020
+ HBI      plan-1    C9        0.020
+ HBI      plan-1    HN22      0.020
+ HBI      plan-1    HN21      0.020
+ HBI      plan-2    N2        0.020
+ HBI      plan-2    C2        0.020
+ HBI      plan-2    HN21      0.020
+ HBI      plan-2    HN22      0.020
+# ------------------------------------------------------

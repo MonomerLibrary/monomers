@@ -1,0 +1,150 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HBR      HBR 'R,3-HYDROXYBUTAN-2-ONE              ' non-polymer        14   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HBR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HBR           O2     O    O         0.000      0.000    0.000    0.000
+ HBR           C2     C    C         0.000     -1.178    0.054    0.259
+ HBR           C1     C    CH3       0.000     -2.192    0.118   -0.853
+ HBR           H13    H    H         0.000     -2.020    0.982   -1.441
+ HBR           H12    H    H         0.000     -2.105   -0.745   -1.463
+ HBR           H11    H    H         0.000     -3.168    0.160   -0.442
+ HBR           C3     C    CH1       0.000     -1.635    0.058    1.695
+ HBR           H3     H    H         0.000     -2.469    0.764    1.812
+ HBR           O7     O    OH1       0.000     -0.552    0.457    2.539
+ HBR           HO7    H    H         0.000     -0.845    0.459    3.460
+ HBR           C4     C    CH3       0.000     -2.097   -1.347    2.088
+ HBR           H43    H    H         0.000     -2.900   -1.643    1.464
+ HBR           H42    H    H         0.000     -1.293   -2.028    1.975
+ HBR           H41    H    H         0.000     -2.417   -1.345    3.098
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HBR      O2     n/a    C2     START
+ HBR      C2     O2     C3     .
+ HBR      C1     C2     H11    .
+ HBR      H13    C1     .      .
+ HBR      H12    C1     .      .
+ HBR      H11    C1     .      .
+ HBR      C3     C2     C4     .
+ HBR      H3     C3     .      .
+ HBR      O7     C3     HO7    .
+ HBR      HO7    O7     .      .
+ HBR      C4     C3     H41    .
+ HBR      H43    C4     .      .
+ HBR      H42    C4     .      .
+ HBR      H41    C4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HBR      C4     C3        single      1.524    0.020
+ HBR      H41    C4        single      1.059    0.020
+ HBR      H42    C4        single      1.059    0.020
+ HBR      H43    C4        single      1.059    0.020
+ HBR      O7     C3        single      1.432    0.020
+ HBR      C3     C2        single      1.500    0.020
+ HBR      H3     C3        single      1.099    0.020
+ HBR      HO7    O7        single      0.967    0.020
+ HBR      C1     C2        single      1.500    0.020
+ HBR      C2     O2        double      1.220    0.020
+ HBR      H11    C1        single      1.059    0.020
+ HBR      H12    C1        single      1.059    0.020
+ HBR      H13    C1        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HBR      O2     C2     C1      123.000    3.000
+ HBR      O2     C2     C3      120.500    3.000
+ HBR      C1     C2     C3      120.000    3.000
+ HBR      C2     C1     H13     109.470    3.000
+ HBR      C2     C1     H12     109.470    3.000
+ HBR      C2     C1     H11     109.470    3.000
+ HBR      H13    C1     H12     109.470    3.000
+ HBR      H13    C1     H11     109.470    3.000
+ HBR      H12    C1     H11     109.470    3.000
+ HBR      C2     C3     H3      108.810    3.000
+ HBR      C2     C3     O7      109.470    3.000
+ HBR      C2     C3     C4      109.470    3.000
+ HBR      H3     C3     O7      109.470    3.000
+ HBR      H3     C3     C4      108.340    3.000
+ HBR      O7     C3     C4      109.470    3.000
+ HBR      C3     O7     HO7     109.470    3.000
+ HBR      C3     C4     H43     109.470    3.000
+ HBR      C3     C4     H42     109.470    3.000
+ HBR      C3     C4     H41     109.470    3.000
+ HBR      H43    C4     H42     109.470    3.000
+ HBR      H43    C4     H41     109.470    3.000
+ HBR      H42    C4     H41     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HBR      var_1    O2     C2     C1     H11     -179.975   20.000   1
+ HBR      var_2    O2     C2     C3     C4       -99.976   20.000   3
+ HBR      var_3    C2     C3     O7     HO7      179.999   20.000   1
+ HBR      var_4    C2     C3     C4     H41      179.939   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HBR      chir_01  C3     C4     O7     C2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HBR      plan-1    C2        0.020
+ HBR      plan-1    C3        0.000
+ HBR      plan-1    C1        0.000
+ HBR      plan-1    O2        0.000
+# ------------------------------------------------------

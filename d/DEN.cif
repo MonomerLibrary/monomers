@@ -1,0 +1,179 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DEN      DEN 'INDENE                              ' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DEN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DEN           H7     H    H         0.000      0.003    0.000   -0.001
+ DEN           C7     C    CR16      0.000     -1.041    0.000    0.287
+ DEN           C6     C    CR16      0.000     -1.392    0.000    1.627
+ DEN           H6     H    H         0.000     -0.620    0.000    2.387
+ DEN           C5     C    CR16      0.000     -2.724    0.000    1.995
+ DEN           H5     H    H         0.000     -2.992    0.000    3.044
+ DEN           C8     C    CR56      0.000     -2.021    0.000   -0.678
+ DEN           C1     C    CH2       0.000     -1.985    0.000   -2.187
+ DEN           H12    H    H         0.000     -1.486   -0.891   -2.574
+ DEN           H11    H    H         0.000     -1.486    0.891   -2.574
+ DEN           C9     C    CR56      0.000     -3.369    0.000   -0.319
+ DEN           C4     C    CR16      0.000     -3.714    0.000    1.035
+ DEN           H4     H    H         0.000     -4.756    0.000    1.330
+ DEN           C3     C    CR15      0.000     -4.191    0.000   -1.543
+ DEN           H3     H    H         0.000     -5.273    0.000   -1.554
+ DEN           C2     C    CR15      0.000     -3.431    0.000   -2.624
+ DEN           H2     H    H         0.000     -3.784    0.000   -3.648
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DEN      H7     n/a    C7     START
+ DEN      C7     H7     C8     .
+ DEN      C6     C7     C5     .
+ DEN      H6     C6     .      .
+ DEN      C5     C6     H5     .
+ DEN      H5     C5     .      .
+ DEN      C8     C7     C9     .
+ DEN      C1     C8     H11    .
+ DEN      H12    C1     .      .
+ DEN      H11    C1     .      .
+ DEN      C9     C8     C3     .
+ DEN      C4     C9     H4     .
+ DEN      H4     C4     .      .
+ DEN      C3     C9     C2     .
+ DEN      H3     C3     .      .
+ DEN      C2     C3     H2     .
+ DEN      H2     C2     .      END
+ DEN      C1     C2     .    ADD
+ DEN      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DEN      C1     C2        single      1.507    0.020
+ DEN      C1     C8        single      1.457    0.020
+ DEN      H11    C1        single      1.092    0.020
+ DEN      H12    C1        single      1.092    0.020
+ DEN      C2     C3        double      1.380    0.020
+ DEN      H2     C2        single      1.083    0.020
+ DEN      C3     C9        single      1.440    0.020
+ DEN      H3     C3        single      1.083    0.020
+ DEN      C4     C5        double      1.390    0.020
+ DEN      C4     C9        single      1.390    0.020
+ DEN      H4     C4        single      1.083    0.020
+ DEN      C5     C6        single      1.390    0.020
+ DEN      H5     C5        single      1.083    0.020
+ DEN      C6     C7        double      1.390    0.020
+ DEN      H6     C6        single      1.083    0.020
+ DEN      C8     C7        single      1.390    0.020
+ DEN      C7     H7        single      1.083    0.020
+ DEN      C9     C8        double      1.490    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DEN      H7     C7     C6      120.000    3.000
+ DEN      H7     C7     C8      120.000    3.000
+ DEN      C6     C7     C8      120.000    3.000
+ DEN      C7     C6     H6      120.000    3.000
+ DEN      C7     C6     C5      120.000    3.000
+ DEN      H6     C6     C5      120.000    3.000
+ DEN      C6     C5     H5      120.000    3.000
+ DEN      C6     C5     C4      120.000    3.000
+ DEN      H5     C5     C4      120.000    3.000
+ DEN      C7     C8     C1      120.000    3.000
+ DEN      C7     C8     C9      120.000    3.000
+ DEN      C1     C8     C9      120.000    3.000
+ DEN      C8     C1     H12     109.500    3.000
+ DEN      C8     C1     H11     109.500    3.000
+ DEN      C8     C1     C2      109.500    3.000
+ DEN      H12    C1     H11     107.900    3.000
+ DEN      H12    C1     C2      109.470    3.000
+ DEN      H11    C1     C2      109.470    3.000
+ DEN      C8     C9     C4      120.000    3.000
+ DEN      C8     C9     C3      120.000    3.000
+ DEN      C4     C9     C3      126.000    3.000
+ DEN      C9     C4     H4      120.000    3.000
+ DEN      C9     C4     C5      120.000    3.000
+ DEN      H4     C4     C5      120.000    3.000
+ DEN      C9     C3     H3      108.000    3.000
+ DEN      C9     C3     C2      108.000    3.000
+ DEN      H3     C3     C2      126.000    3.000
+ DEN      C3     C2     H2      126.000    3.000
+ DEN      C3     C2     C1      126.000    3.000
+ DEN      H2     C2     C1      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DEN      CONST_1  H7     C7     C6     C5       180.000    0.000   0
+ DEN      CONST_2  C7     C6     C5     C4         0.000    0.000   0
+ DEN      CONST_3  H7     C7     C8     C9       180.000    0.000   0
+ DEN      CONST_4  C7     C8     C1     C2       180.000    0.000   0
+ DEN      CONST_5  C8     C1     C2     C3         0.000    0.000   0
+ DEN      CONST_6  C7     C8     C9     C3       180.000    0.000   0
+ DEN      CONST_7  C8     C9     C4     C5         0.000    0.000   0
+ DEN      CONST_8  C9     C4     C5     C6         0.000    0.000   0
+ DEN      CONST_9  C8     C9     C3     C2         0.000    0.000   0
+ DEN      CONST_10 C9     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DEN      plan-1    C2        0.020
+ DEN      plan-1    C1        0.020
+ DEN      plan-1    C3        0.020
+ DEN      plan-1    H2        0.020
+ DEN      plan-1    C9        0.020
+ DEN      plan-1    H3        0.020
+ DEN      plan-1    C4        0.020
+ DEN      plan-1    C8        0.020
+ DEN      plan-1    C5        0.020
+ DEN      plan-1    C6        0.020
+ DEN      plan-1    C7        0.020
+ DEN      plan-1    H4        0.020
+ DEN      plan-1    H5        0.020
+ DEN      plan-1    H6        0.020
+ DEN      plan-1    H7        0.020
+# ------------------------------------------------------

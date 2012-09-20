@@ -1,0 +1,219 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XCG      XCG '2-(2-BENZOFURANYL)-2-IMIDAZOLINE    ' non-polymer        22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XCG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XCG           HAG    H    H         0.000      0.004   -0.001   -0.004
+ XCG           CAG    C    CR15      0.000     -0.986    0.439    0.000
+ XCG           CAF    C    CR15      0.000     -1.262    1.760    0.001
+ XCG           HAF    H    H         0.000     -0.541    2.568    0.002
+ XCG           NAH    N    NR15      0.000     -2.626    1.886    0.000
+ XCG           HAH    H    H         0.000     -3.165    2.775   -0.001
+ XCG           NAI    N    NRD5      0.000     -2.141   -0.235    0.005
+ XCG           CAK    C    CR5       0.000     -3.143    0.620    0.000
+ XCG           CAL    C    CR5       0.000     -4.573    0.274   -0.001
+ XCG           CAE    C    CR15      0.000     -5.070   -0.989   -0.002
+ XCG           HAE    H    H         0.000     -4.504   -1.912   -0.003
+ XCG           OAJ    O    O2        0.000     -5.587    1.163    0.000
+ XCG           CAN    C    CR56      0.000     -6.779    0.532    0.000
+ XCG           CAM    C    CR56      0.000     -6.528   -0.851   -0.001
+ XCG           CAD    C    CR16      0.000     -8.093    0.982    0.000
+ XCG           HAD    H    H         0.000     -8.303    2.044   -0.001
+ XCG           CAB    C    CR16      0.000     -9.130    0.073    0.001
+ XCG           HAB    H    H         0.000    -10.153    0.428    0.001
+ XCG           CAA    C    CR16      0.000     -8.876   -1.291    0.000
+ XCG           HAA    H    H         0.000     -9.702   -1.992    0.002
+ XCG           CAC    C    CR16      0.000     -7.591   -1.757   -0.001
+ XCG           HAC    H    H         0.000     -7.398   -2.822   -0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XCG      HAG    n/a    CAG    START
+ XCG      CAG    HAG    NAI    .
+ XCG      CAF    CAG    NAH    .
+ XCG      HAF    CAF    .      .
+ XCG      NAH    CAF    HAH    .
+ XCG      HAH    NAH    .      .
+ XCG      NAI    CAG    CAK    .
+ XCG      CAK    NAI    CAL    .
+ XCG      CAL    CAK    OAJ    .
+ XCG      CAE    CAL    HAE    .
+ XCG      HAE    CAE    .      .
+ XCG      OAJ    CAL    CAN    .
+ XCG      CAN    OAJ    CAD    .
+ XCG      CAM    CAN    .      .
+ XCG      CAD    CAN    CAB    .
+ XCG      HAD    CAD    .      .
+ XCG      CAB    CAD    CAA    .
+ XCG      HAB    CAB    .      .
+ XCG      CAA    CAB    CAC    .
+ XCG      HAA    CAA    .      .
+ XCG      CAC    CAA    HAC    .
+ XCG      HAC    CAC    .      END
+ XCG      CAE    CAM    .    ADD
+ XCG      CAM    CAC    .    ADD
+ XCG      CAK    NAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XCG      CAE    CAM       single      1.440    0.020
+ XCG      CAE    CAL       double      1.387    0.020
+ XCG      CAM    CAC       single      1.390    0.020
+ XCG      CAM    CAN       double      1.490    0.020
+ XCG      CAC    CAA       double      1.390    0.020
+ XCG      CAA    CAB       single      1.390    0.020
+ XCG      CAB    CAD       double      1.390    0.020
+ XCG      CAD    CAN       single      1.390    0.020
+ XCG      CAN    OAJ       single      1.329    0.020
+ XCG      OAJ    CAL       single      1.370    0.020
+ XCG      CAL    CAK       single      1.490    0.020
+ XCG      CAK    NAH       single      1.340    0.020
+ XCG      CAK    NAI       double      1.350    0.020
+ XCG      NAH    CAF       single      1.350    0.020
+ XCG      CAF    CAG       double      1.380    0.020
+ XCG      NAI    CAG       single      1.350    0.020
+ XCG      HAE    CAE       single      1.083    0.020
+ XCG      HAC    CAC       single      1.083    0.020
+ XCG      HAA    CAA       single      1.083    0.020
+ XCG      HAB    CAB       single      1.083    0.020
+ XCG      HAD    CAD       single      1.083    0.020
+ XCG      HAH    NAH       single      1.040    0.020
+ XCG      HAF    CAF       single      1.083    0.020
+ XCG      CAG    HAG       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XCG      HAG    CAG    CAF     126.000    3.000
+ XCG      HAG    CAG    NAI     126.000    3.000
+ XCG      CAF    CAG    NAI     108.000    3.000
+ XCG      CAG    CAF    HAF     126.000    3.000
+ XCG      CAG    CAF    NAH     108.000    3.000
+ XCG      HAF    CAF    NAH     126.000    3.000
+ XCG      CAF    NAH    HAH     126.000    3.000
+ XCG      CAF    NAH    CAK     108.000    3.000
+ XCG      HAH    NAH    CAK     126.000    3.000
+ XCG      CAG    NAI    CAK     108.000    3.000
+ XCG      NAI    CAK    CAL     108.000    3.000
+ XCG      NAI    CAK    NAH     108.000    3.000
+ XCG      CAL    CAK    NAH     108.000    3.000
+ XCG      CAK    CAL    CAE     108.000    3.000
+ XCG      CAK    CAL    OAJ     108.000    3.000
+ XCG      CAE    CAL    OAJ     108.000    3.000
+ XCG      CAL    CAE    HAE     126.000    3.000
+ XCG      CAL    CAE    CAM     108.000    3.000
+ XCG      HAE    CAE    CAM     108.000    3.000
+ XCG      CAL    OAJ    CAN     120.000    3.000
+ XCG      OAJ    CAN    CAM     120.000    3.000
+ XCG      OAJ    CAN    CAD     120.000    3.000
+ XCG      CAM    CAN    CAD     120.000    3.000
+ XCG      CAN    CAM    CAE     120.000    3.000
+ XCG      CAN    CAM    CAC     120.000    3.000
+ XCG      CAE    CAM    CAC     126.000    3.000
+ XCG      CAN    CAD    HAD     120.000    3.000
+ XCG      CAN    CAD    CAB     120.000    3.000
+ XCG      HAD    CAD    CAB     120.000    3.000
+ XCG      CAD    CAB    HAB     120.000    3.000
+ XCG      CAD    CAB    CAA     120.000    3.000
+ XCG      HAB    CAB    CAA     120.000    3.000
+ XCG      CAB    CAA    HAA     120.000    3.000
+ XCG      CAB    CAA    CAC     120.000    3.000
+ XCG      HAA    CAA    CAC     120.000    3.000
+ XCG      CAA    CAC    HAC     120.000    3.000
+ XCG      CAA    CAC    CAM     120.000    3.000
+ XCG      HAC    CAC    CAM     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XCG      CONST_1  HAG    CAG    CAF    NAH      180.000    0.000   0
+ XCG      CONST_2  CAG    CAF    NAH    CAK        0.000    0.000   0
+ XCG      CONST_3  HAG    CAG    NAI    CAK      180.000    0.000   0
+ XCG      CONST_4  CAG    NAI    CAK    CAL      180.000    0.000   0
+ XCG      CONST_5  NAI    CAK    NAH    CAF        0.000    0.000   0
+ XCG      CONST_6  NAI    CAK    CAL    OAJ      180.000    0.000   0
+ XCG      CONST_7  CAK    CAL    CAE    CAM      180.000    0.000   0
+ XCG      CONST_8  CAL    CAE    CAM    CAN        0.000    0.000   0
+ XCG      CONST_9  CAK    CAL    OAJ    CAN      180.000    0.000   0
+ XCG      CONST_10 CAL    OAJ    CAN    CAD      180.000    0.000   0
+ XCG      CONST_11 OAJ    CAN    CAM    CAE        0.000    0.000   0
+ XCG      CONST_12 CAN    CAM    CAC    CAA        0.000    0.000   0
+ XCG      CONST_13 OAJ    CAN    CAD    CAB      180.000    0.000   0
+ XCG      CONST_14 CAN    CAD    CAB    CAA        0.000    0.000   0
+ XCG      CONST_15 CAD    CAB    CAA    CAC        0.000    0.000   0
+ XCG      CONST_16 CAB    CAA    CAC    CAM        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ XCG      plan-1    CAE       0.020
+ XCG      plan-1    CAM       0.020
+ XCG      plan-1    CAL       0.020
+ XCG      plan-1    HAE       0.020
+ XCG      plan-1    OAJ       0.020
+ XCG      plan-1    CAC       0.020
+ XCG      plan-1    CAN       0.020
+ XCG      plan-1    CAA       0.020
+ XCG      plan-1    CAB       0.020
+ XCG      plan-1    CAD       0.020
+ XCG      plan-1    HAC       0.020
+ XCG      plan-1    HAA       0.020
+ XCG      plan-1    HAB       0.020
+ XCG      plan-1    HAD       0.020
+ XCG      plan-1    CAK       0.020
+ XCG      plan-2    CAK       0.020
+ XCG      plan-2    CAL       0.020
+ XCG      plan-2    NAH       0.020
+ XCG      plan-2    NAI       0.020
+ XCG      plan-2    CAF       0.020
+ XCG      plan-2    CAG       0.020
+ XCG      plan-2    HAH       0.020
+ XCG      plan-2    HAF       0.020
+ XCG      plan-2    HAG       0.020
+# ------------------------------------------------------

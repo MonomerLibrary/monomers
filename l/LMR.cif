@@ -1,0 +1,148 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LMR      LMR '(2S)-2-hydroxybutanedioic acid      ' non-polymer        13   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LMR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LMR           O4B    O    OC       -0.500      0.000    0.000    0.000
+ LMR           C4     C    C         0.000     -0.992    0.532   -0.546
+ LMR           O4A    O    OC       -0.500     -0.833    1.312   -1.511
+ LMR           C3     C    CH2       0.000     -2.381    0.232   -0.040
+ LMR           H3     H    H         0.000     -2.971   -0.215   -0.843
+ LMR           H3A    H    H         0.000     -2.856    1.159    0.287
+ LMR           C2     C    CH1       0.000     -2.295   -0.743    1.137
+ LMR           H2     H    H         0.000     -1.628   -0.330    1.907
+ LMR           O2     O    OH1       0.000     -1.781   -1.995    0.681
+ LMR           HO2    H    H         0.000     -2.368   -2.356    0.004
+ LMR           C1     C    C         0.000     -3.670   -0.946    1.720
+ LMR           O1A    O    OC       -0.500     -4.215   -2.071    1.659
+ LMR           O1B    O    OC       -0.500     -4.264    0.008    2.268
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LMR      O4B    n/a    C4     START
+ LMR      C4     O4B    C3     .
+ LMR      O4A    C4     .      .
+ LMR      C3     C4     C2     .
+ LMR      H3     C3     .      .
+ LMR      H3A    C3     .      .
+ LMR      C2     C3     C1     .
+ LMR      H2     C2     .      .
+ LMR      O2     C2     HO2    .
+ LMR      HO2    O2     .      .
+ LMR      C1     C2     O1B    .
+ LMR      O1A    C1     .      .
+ LMR      O1B    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LMR      O1A    C1        deloc       1.250    0.020
+ LMR      O1B    C1        deloc       1.250    0.020
+ LMR      C1     C2        single      1.500    0.020
+ LMR      O2     C2        single      1.432    0.020
+ LMR      C2     C3        single      1.524    0.020
+ LMR      C3     C4        single      1.510    0.020
+ LMR      O4A    C4        deloc       1.250    0.020
+ LMR      C4     O4B       deloc       1.250    0.020
+ LMR      H2     C2        single      1.099    0.020
+ LMR      HO2    O2        single      0.967    0.020
+ LMR      H3     C3        single      1.092    0.020
+ LMR      H3A    C3        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LMR      O4B    C4     O4A     123.000    3.000
+ LMR      O4B    C4     C3      118.500    3.000
+ LMR      O4A    C4     C3      118.500    3.000
+ LMR      C4     C3     H3      109.470    3.000
+ LMR      C4     C3     H3A     109.470    3.000
+ LMR      C4     C3     C2      109.470    3.000
+ LMR      H3     C3     H3A     107.900    3.000
+ LMR      H3     C3     C2      109.470    3.000
+ LMR      H3A    C3     C2      109.470    3.000
+ LMR      C3     C2     H2      108.340    3.000
+ LMR      C3     C2     O2      109.470    3.000
+ LMR      C3     C2     C1      109.470    3.000
+ LMR      H2     C2     O2      109.470    3.000
+ LMR      H2     C2     C1      108.810    3.000
+ LMR      O2     C2     C1      109.470    3.000
+ LMR      C2     O2     HO2     109.470    3.000
+ LMR      C2     C1     O1A     118.500    3.000
+ LMR      C2     C1     O1B     118.500    3.000
+ LMR      O1A    C1     O1B     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LMR      var_1    O4B    C4     C3     C2        -0.004   20.000   3
+ LMR      var_2    C4     C3     C2     C1       175.005   20.000   3
+ LMR      var_3    C3     C2     O2     HO2      -59.981   20.000   1
+ LMR      var_4    C3     C2     C1     O1B      -65.280   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LMR      chir_01  C2     C1     O2     C3        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LMR      plan-1    C1        0.020
+ LMR      plan-1    O1A       0.020
+ LMR      plan-1    O1B       0.020
+ LMR      plan-1    C2        0.020
+ LMR      plan-2    C4        0.020
+ LMR      plan-2    C3        0.020
+ LMR      plan-2    O4A       0.020
+ LMR      plan-2    O4B       0.020
+# ------------------------------------------------------

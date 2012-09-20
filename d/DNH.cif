@@ -1,0 +1,205 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DNH      DNH '1R,2R-DIAMINOCYCLOHEXANE            ' non-polymer        22   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DNH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DNH           N2     N    NH2       0.000      0.000    0.000    0.000
+ DNH           H21    H    H         0.000      0.709    0.719    0.078
+ DNH           H22    H    H         0.000      0.238   -0.959    0.223
+ DNH           C4     C    CH1       0.000     -1.360    0.344   -0.433
+ DNH           H4     H    H         0.000     -1.451    1.436   -0.520
+ DNH           C6     C    CH2       0.000     -2.369   -0.170    0.595
+ DNH           H61    H    H         0.000     -2.166    0.290    1.564
+ DNH           H62    H    H         0.000     -2.277   -1.255    0.682
+ DNH           C8     C    CH2       0.000     -3.786    0.189    0.145
+ DNH           H82    H    H         0.000     -3.876    1.274    0.061
+ DNH           H81    H    H         0.000     -4.504   -0.180    0.879
+ DNH           C3     C    CH1       0.000     -1.642   -0.299   -1.791
+ DNH           H3     H    H         0.000     -1.551   -1.391   -1.705
+ DNH           N1     N    NH2       0.000     -0.674    0.195   -2.779
+ DNH           H12    H    H         0.000      0.038    0.863   -2.507
+ DNH           H11    H    H         0.000     -0.712   -0.128   -3.738
+ DNH           C5     C    CH2       0.000     -3.059    0.060   -2.242
+ DNH           H51    H    H         0.000     -3.259   -0.400   -3.212
+ DNH           H52    H    H         0.000     -3.148    1.145   -2.330
+ DNH           C7     C    CH2       0.000     -4.068   -0.455   -1.214
+ DNH           H72    H    H         0.000     -3.978   -1.540   -1.129
+ DNH           H71    H    H         0.000     -5.079   -0.198   -1.537
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DNH      N2     n/a    C4     START
+ DNH      H21    N2     .      .
+ DNH      H22    N2     .      .
+ DNH      C4     N2     C3     .
+ DNH      H4     C4     .      .
+ DNH      C6     C4     C8     .
+ DNH      H61    C6     .      .
+ DNH      H62    C6     .      .
+ DNH      C8     C6     H81    .
+ DNH      H82    C8     .      .
+ DNH      H81    C8     .      .
+ DNH      C3     C4     C5     .
+ DNH      H3     C3     .      .
+ DNH      N1     C3     H11    .
+ DNH      H12    N1     .      .
+ DNH      H11    N1     .      .
+ DNH      C5     C3     C7     .
+ DNH      H51    C5     .      .
+ DNH      H52    C5     .      .
+ DNH      C7     C5     H71    .
+ DNH      H72    C7     .      .
+ DNH      H71    C7     .      END
+ DNH      C7     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DNH      C7     C8        single      1.524    0.020
+ DNH      C7     C5        single      1.524    0.020
+ DNH      H71    C7        single      1.092    0.020
+ DNH      H72    C7        single      1.092    0.020
+ DNH      C8     C6        single      1.524    0.020
+ DNH      H81    C8        single      1.092    0.020
+ DNH      H82    C8        single      1.092    0.020
+ DNH      C3     C4        single      1.524    0.020
+ DNH      C5     C3        single      1.524    0.020
+ DNH      N1     C3        single      1.450    0.020
+ DNH      H3     C3        single      1.099    0.020
+ DNH      C6     C4        single      1.524    0.020
+ DNH      C4     N2        single      1.450    0.020
+ DNH      H4     C4        single      1.099    0.020
+ DNH      H51    C5        single      1.092    0.020
+ DNH      H52    C5        single      1.092    0.020
+ DNH      H61    C6        single      1.092    0.020
+ DNH      H62    C6        single      1.092    0.020
+ DNH      H11    N1        single      1.010    0.020
+ DNH      H12    N1        single      1.010    0.020
+ DNH      H21    N2        single      1.010    0.020
+ DNH      H22    N2        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DNH      H21    N2     H22     120.000    3.000
+ DNH      H21    N2     C4      120.000    3.000
+ DNH      H22    N2     C4      120.000    3.000
+ DNH      N2     C4     H4      109.470    3.000
+ DNH      N2     C4     C6      109.470    3.000
+ DNH      N2     C4     C3      109.470    3.000
+ DNH      H4     C4     C6      108.340    3.000
+ DNH      H4     C4     C3      108.340    3.000
+ DNH      C6     C4     C3      111.000    3.000
+ DNH      C4     C6     H61     109.470    3.000
+ DNH      C4     C6     H62     109.470    3.000
+ DNH      C4     C6     C8      111.000    3.000
+ DNH      H61    C6     H62     107.900    3.000
+ DNH      H61    C6     C8      109.470    3.000
+ DNH      H62    C6     C8      109.470    3.000
+ DNH      C6     C8     H82     109.470    3.000
+ DNH      C6     C8     H81     109.470    3.000
+ DNH      C6     C8     C7      111.000    3.000
+ DNH      H82    C8     H81     107.900    3.000
+ DNH      H82    C8     C7      109.470    3.000
+ DNH      H81    C8     C7      109.470    3.000
+ DNH      C4     C3     H3      108.340    3.000
+ DNH      C4     C3     N1      109.470    3.000
+ DNH      C4     C3     C5      111.000    3.000
+ DNH      H3     C3     N1      109.470    3.000
+ DNH      H3     C3     C5      108.340    3.000
+ DNH      N1     C3     C5      109.470    3.000
+ DNH      C3     N1     H12     120.000    3.000
+ DNH      C3     N1     H11     120.000    3.000
+ DNH      H12    N1     H11     120.000    3.000
+ DNH      C3     C5     H51     109.470    3.000
+ DNH      C3     C5     H52     109.470    3.000
+ DNH      C3     C5     C7      111.000    3.000
+ DNH      H51    C5     H52     107.900    3.000
+ DNH      H51    C5     C7      109.470    3.000
+ DNH      H52    C5     C7      109.470    3.000
+ DNH      C5     C7     H72     109.470    3.000
+ DNH      C5     C7     H71     109.470    3.000
+ DNH      C5     C7     C8      111.000    3.000
+ DNH      H72    C7     H71     107.900    3.000
+ DNH      H72    C7     C8      109.470    3.000
+ DNH      H71    C7     C8      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DNH      var_1    H22    N2     C4     C3       -66.249   20.000   1
+ DNH      var_2    N2     C4     C6     C8       180.000   20.000   3
+ DNH      var_3    C4     C6     C8     C7        60.000   20.000   3
+ DNH      var_4    N2     C4     C3     C5       180.000   20.000   3
+ DNH      var_5    C4     C3     N1     H11      179.946   20.000   1
+ DNH      var_6    C4     C3     C5     C7       -60.000   20.000   3
+ DNH      var_7    C3     C5     C7     C8        60.000   20.000   3
+ DNH      var_8    C5     C7     C8     C6       -60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DNH      chir_01  C3     C4     C5     N1        negativ
+ DNH      chir_02  C4     C3     C6     N2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DNH      plan-1    N1        0.020
+ DNH      plan-1    C3        0.020
+ DNH      plan-1    H11       0.020
+ DNH      plan-1    H12       0.020
+ DNH      plan-2    N2        0.020
+ DNH      plan-2    C4        0.020
+ DNH      plan-2    H21       0.020
+ DNH      plan-2    H22       0.020
+# ------------------------------------------------------

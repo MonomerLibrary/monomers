@@ -1,0 +1,194 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HPP      HPP 'HYDROXYPHENYL PROPIONIC ACID        ' non-polymer        21  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HPP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HPP           O2     O    OC       -0.500      0.000    0.000    0.000
+ HPP           C9     C    C         0.000     -1.029    0.682   -0.202
+ HPP           O1     O    OC       -0.500     -0.978    1.930   -0.121
+ HPP           C8     C    CH2       0.000     -2.330    0.002   -0.542
+ HPP           H81    H    H         0.000     -2.612   -0.670    0.271
+ HPP           H82    H    H         0.000     -2.210   -0.573   -1.462
+ HPP           C7     C    CH2       0.000     -3.421    1.056   -0.736
+ HPP           H71    H    H         0.000     -3.137    1.728   -1.549
+ HPP           H72    H    H         0.000     -3.539    1.631    0.185
+ HPP           C1     C    CR6       0.000     -4.721    0.375   -1.075
+ HPP           C6     C    CR16      0.000     -5.049    0.133   -2.397
+ HPP           H6     H    H         0.000     -4.373    0.435   -3.187
+ HPP           C5     C    CR16      0.000     -6.239   -0.495   -2.710
+ HPP           H5     H    H         0.000     -6.492   -0.691   -3.745
+ HPP           C4     C    CR6       0.000     -7.110   -0.873   -1.700
+ HPP           O4     O    OH1       0.000     -8.282   -1.487   -2.006
+ HPP           HO4    H    H         0.000     -8.972   -0.820   -2.129
+ HPP           C3     C    CR16      0.000     -6.781   -0.623   -0.376
+ HPP           H3     H    H         0.000     -7.460   -0.917    0.416
+ HPP           C2     C    CR16      0.000     -5.588    0.001   -0.066
+ HPP           H2     H    H         0.000     -5.331    0.197    0.968
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HPP      O2     n/a    C9     START
+ HPP      C9     O2     C8     .
+ HPP      O1     C9     .      .
+ HPP      C8     C9     C7     .
+ HPP      H81    C8     .      .
+ HPP      H82    C8     .      .
+ HPP      C7     C8     C1     .
+ HPP      H71    C7     .      .
+ HPP      H72    C7     .      .
+ HPP      C1     C7     C6     .
+ HPP      C6     C1     C5     .
+ HPP      H6     C6     .      .
+ HPP      C5     C6     C4     .
+ HPP      H5     C5     .      .
+ HPP      C4     C5     C3     .
+ HPP      O4     C4     HO4    .
+ HPP      HO4    O4     .      .
+ HPP      C3     C4     C2     .
+ HPP      H3     C3     .      .
+ HPP      C2     C3     H2     .
+ HPP      H2     C2     .      END
+ HPP      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HPP      C1     C2        double      1.390    0.020
+ HPP      C6     C1        single      1.390    0.020
+ HPP      C1     C7        single      1.511    0.020
+ HPP      C2     C3        single      1.390    0.020
+ HPP      H2     C2        single      1.083    0.020
+ HPP      C3     C4        double      1.390    0.020
+ HPP      H3     C3        single      1.083    0.020
+ HPP      O4     C4        single      1.362    0.020
+ HPP      C4     C5        single      1.390    0.020
+ HPP      HO4    O4        single      0.967    0.020
+ HPP      C5     C6        double      1.390    0.020
+ HPP      H5     C5        single      1.083    0.020
+ HPP      H6     C6        single      1.083    0.020
+ HPP      C7     C8        single      1.524    0.020
+ HPP      H71    C7        single      1.092    0.020
+ HPP      H72    C7        single      1.092    0.020
+ HPP      C8     C9        single      1.510    0.020
+ HPP      H81    C8        single      1.092    0.020
+ HPP      H82    C8        single      1.092    0.020
+ HPP      O1     C9        deloc       1.250    0.020
+ HPP      C9     O2        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HPP      O2     C9     O1      123.000    3.000
+ HPP      O2     C9     C8      118.500    3.000
+ HPP      O1     C9     C8      118.500    3.000
+ HPP      C9     C8     H81     109.470    3.000
+ HPP      C9     C8     H82     109.470    3.000
+ HPP      C9     C8     C7      109.470    3.000
+ HPP      H81    C8     H82     107.900    3.000
+ HPP      H81    C8     C7      109.470    3.000
+ HPP      H82    C8     C7      109.470    3.000
+ HPP      C8     C7     H71     109.470    3.000
+ HPP      C8     C7     H72     109.470    3.000
+ HPP      C8     C7     C1      109.470    3.000
+ HPP      H71    C7     H72     107.900    3.000
+ HPP      H71    C7     C1      109.470    3.000
+ HPP      H72    C7     C1      109.470    3.000
+ HPP      C7     C1     C6      120.000    3.000
+ HPP      C7     C1     C2      120.000    3.000
+ HPP      C6     C1     C2      120.000    3.000
+ HPP      C1     C6     H6      120.000    3.000
+ HPP      C1     C6     C5      120.000    3.000
+ HPP      H6     C6     C5      120.000    3.000
+ HPP      C6     C5     H5      120.000    3.000
+ HPP      C6     C5     C4      120.000    3.000
+ HPP      H5     C5     C4      120.000    3.000
+ HPP      C5     C4     O4      120.000    3.000
+ HPP      C5     C4     C3      120.000    3.000
+ HPP      O4     C4     C3      120.000    3.000
+ HPP      C4     O4     HO4     109.470    3.000
+ HPP      C4     C3     H3      120.000    3.000
+ HPP      C4     C3     C2      120.000    3.000
+ HPP      H3     C3     C2      120.000    3.000
+ HPP      C3     C2     H2      120.000    3.000
+ HPP      C3     C2     C1      120.000    3.000
+ HPP      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HPP      var_1    O2     C9     C8     C7       179.915   20.000   3
+ HPP      var_2    C9     C8     C7     C1       180.000   20.000   3
+ HPP      var_3    C8     C7     C1     C6       -90.232   20.000   2
+ HPP      CONST_1  C7     C1     C2     C3       180.000    0.000   0
+ HPP      CONST_2  C7     C1     C6     C5       180.000    0.000   0
+ HPP      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ HPP      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ HPP      var_4    C5     C4     O4     HO4      -90.031   20.000   1
+ HPP      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ HPP      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HPP      plan-1    C1        0.020
+ HPP      plan-1    C2        0.020
+ HPP      plan-1    C6        0.020
+ HPP      plan-1    C7        0.020
+ HPP      plan-1    C3        0.020
+ HPP      plan-1    C4        0.020
+ HPP      plan-1    C5        0.020
+ HPP      plan-1    H2        0.020
+ HPP      plan-1    H3        0.020
+ HPP      plan-1    O4        0.020
+ HPP      plan-1    H5        0.020
+ HPP      plan-1    H6        0.020
+ HPP      plan-2    C9        0.020
+ HPP      plan-2    C8        0.020
+ HPP      plan-2    O1        0.020
+ HPP      plan-2    O2        0.020
+# ------------------------------------------------------

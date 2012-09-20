@@ -1,0 +1,75 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2BM      2BM 'DIBROMOMETHANE                      ' non-polymer         5   3 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2BM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2BM           BR2    BR   BR        0.000      0.000    0.000    0.000
+ 2BM           C      C    CH2       0.000     -1.965    0.000    0.030
+ 2BM           H2     H    H         0.000     -2.320   -0.890    0.549
+ 2BM           H1     H    H         0.000     -2.320    0.890    0.549
+ 2BM           BR1    BR   BR        0.000     -2.649    0.000   -1.812
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2BM      BR2    n/a    C      START
+ 2BM      C      BR2    BR1    .
+ 2BM      H2     C      .      .
+ 2BM      H1     C      .      .
+ 2BM      BR1    C      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2BM      BR1    C         single      2.012    0.020
+ 2BM      C      BR2       single      2.012    0.020
+ 2BM      H1     C         single      1.092    0.020
+ 2BM      H2     C         single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2BM      BR2    C      H2      109.500    3.000
+ 2BM      BR2    C      H1      109.500    3.000
+ 2BM      BR2    C      BR1     109.500    3.000
+ 2BM      H2     C      H1      107.900    3.000
+ 2BM      H2     C      BR1     109.500    3.000
+ 2BM      H1     C      BR1     109.500    3.000
+# ------------------------------------------------------

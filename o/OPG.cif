@@ -1,0 +1,212 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OPG      OPG 'OXIRANPSEUDOGLUCOSE                 ' non-polymer        24  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OPG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OPG           O7     O    OH1       0.000      0.000    0.000    0.000
+ OPG           HO7    H    H         0.000      0.795    0.306    0.458
+ OPG           C7     C    CH2       0.000     -1.149    0.290    0.798
+ OPG           H71    H    H         0.000     -1.213    1.368    0.964
+ OPG           H72    H    H         0.000     -1.062   -0.220    1.759
+ OPG           C5     C    CT        0.000     -2.407   -0.192    0.075
+ OPG           C6     C    CH1       0.000     -3.721   -0.018    0.820
+ OPG           H6     H    H         0.000     -3.664    0.437    1.819
+ OPG           O8     O    O2        0.000     -3.085   -1.296    0.659
+ OPG           C1     C    CH2       0.000     -5.027    0.177    0.055
+ OPG           H12    H    H         0.000     -5.651    0.895    0.591
+ OPG           H11    H    H         0.000     -5.550   -0.780   -0.009
+ OPG           C4     C    CH1       0.000     -2.380   -0.028   -1.437
+ OPG           H4     H    H         0.000     -2.038    0.986   -1.686
+ OPG           O4     O    OH1       0.000     -1.465   -0.982   -1.980
+ OPG           HO4    H    H         0.000     -1.422   -0.875   -2.940
+ OPG           C3     C    CH1       0.000     -3.755   -0.255   -2.035
+ OPG           H3     H    H         0.000     -4.066   -1.295   -1.864
+ OPG           O3     O    OH1       0.000     -3.723    0.014   -3.438
+ OPG           HO3    H    H         0.000     -4.606   -0.116   -3.810
+ OPG           C2     C    CH1       0.000     -4.740    0.698   -1.352
+ OPG           H2     H    H         0.000     -4.299    1.703   -1.290
+ OPG           O2     O    OH1       0.000     -5.957    0.754   -2.100
+ OPG           HO2    H    H         0.000     -5.772    1.085   -2.990
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OPG      O7     n/a    C7     START
+ OPG      HO7    O7     .      .
+ OPG      C7     O7     C5     .
+ OPG      H71    C7     .      .
+ OPG      H72    C7     .      .
+ OPG      C5     C7     C4     .
+ OPG      C6     C5     C1     .
+ OPG      H6     C6     .      .
+ OPG      O8     C6     .      .
+ OPG      C1     C6     H11    .
+ OPG      H12    C1     .      .
+ OPG      H11    C1     .      .
+ OPG      C4     C5     C3     .
+ OPG      H4     C4     .      .
+ OPG      O4     C4     HO4    .
+ OPG      HO4    O4     .      .
+ OPG      C3     C4     C2     .
+ OPG      H3     C3     .      .
+ OPG      O3     C3     HO3    .
+ OPG      HO3    O3     .      .
+ OPG      C2     C3     O2     .
+ OPG      H2     C2     .      .
+ OPG      O2     C2     HO2    .
+ OPG      HO2    O2     .      END
+ OPG      C1     C2     .    ADD
+ OPG      C5     O8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OPG      C1     C2        single      1.524    0.020
+ OPG      C1     C6        single      1.524    0.020
+ OPG      H11    C1        single      1.092    0.020
+ OPG      H12    C1        single      1.092    0.020
+ OPG      O2     C2        single      1.432    0.020
+ OPG      C2     C3        single      1.524    0.020
+ OPG      H2     C2        single      1.099    0.020
+ OPG      HO2    O2        single      0.967    0.020
+ OPG      O3     C3        single      1.432    0.020
+ OPG      C3     C4        single      1.524    0.020
+ OPG      H3     C3        single      1.099    0.020
+ OPG      HO3    O3        single      0.967    0.020
+ OPG      O4     C4        single      1.432    0.020
+ OPG      C4     C5        single      1.524    0.020
+ OPG      H4     C4        single      1.099    0.020
+ OPG      HO4    O4        single      0.967    0.020
+ OPG      C5     O8        single      1.426    0.020
+ OPG      C5     C7        single      1.524    0.020
+ OPG      C6     C5        single      1.524    0.020
+ OPG      O8     C6        single      1.426    0.020
+ OPG      C7     O7        single      1.432    0.020
+ OPG      H71    C7        single      1.092    0.020
+ OPG      H72    C7        single      1.092    0.020
+ OPG      H6     C6        single      1.099    0.020
+ OPG      HO7    O7        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OPG      HO7    O7     C7      109.470    3.000
+ OPG      O7     C7     H71     109.470    3.000
+ OPG      O7     C7     H72     109.470    3.000
+ OPG      O7     C7     C5      109.470    3.000
+ OPG      H71    C7     H72     107.900    3.000
+ OPG      H71    C7     C5      109.470    3.000
+ OPG      H72    C7     C5      109.470    3.000
+ OPG      C7     C5     C6      111.000    3.000
+ OPG      C7     C5     C4      111.000    3.000
+ OPG      C7     C5     O8      109.470    3.000
+ OPG      C6     C5     C4      111.000    3.000
+ OPG      C6     C5     O8       57.699    3.000
+ OPG      C4     C5     O8      109.470    3.000
+ OPG      C5     C6     H6      108.340    3.000
+ OPG      C5     C6     O8       57.699    3.000
+ OPG      C5     C6     C1      111.000    3.000
+ OPG      H6     C6     O8      109.470    3.000
+ OPG      H6     C6     C1      108.340    3.000
+ OPG      O8     C6     C1      109.470    3.000
+ OPG      C6     O8     C5       64.601    3.000
+ OPG      C6     C1     H12     109.470    3.000
+ OPG      C6     C1     H11     109.470    3.000
+ OPG      C6     C1     C2      111.000    3.000
+ OPG      H12    C1     H11     107.900    3.000
+ OPG      H12    C1     C2      109.470    3.000
+ OPG      H11    C1     C2      109.470    3.000
+ OPG      C5     C4     H4      108.340    3.000
+ OPG      C5     C4     O4      109.470    3.000
+ OPG      C5     C4     C3      111.000    3.000
+ OPG      H4     C4     O4      109.470    3.000
+ OPG      H4     C4     C3      108.340    3.000
+ OPG      O4     C4     C3      109.470    3.000
+ OPG      C4     O4     HO4     109.470    3.000
+ OPG      C4     C3     H3      108.340    3.000
+ OPG      C4     C3     O3      109.470    3.000
+ OPG      C4     C3     C2      111.000    3.000
+ OPG      H3     C3     O3      109.470    3.000
+ OPG      H3     C3     C2      108.340    3.000
+ OPG      O3     C3     C2      109.470    3.000
+ OPG      C3     O3     HO3     109.470    3.000
+ OPG      C3     C2     H2      108.340    3.000
+ OPG      C3     C2     O2      109.470    3.000
+ OPG      C3     C2     C1      111.000    3.000
+ OPG      H2     C2     O2      109.470    3.000
+ OPG      H2     C2     C1      108.340    3.000
+ OPG      O2     C2     C1      109.470    3.000
+ OPG      C2     O2     HO2     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OPG      var_1    HO7    O7     C7     C5       179.968   20.000   1
+ OPG      var_2    O7     C7     C5     C4       -36.368   20.000   1
+ OPG      var_3    C7     C5     O8     C6       106.032   20.000   1
+ OPG      var_4    C7     C5     C6     C1       150.000   20.000   1
+ OPG      var_5    C5     C6     C1     C2       -30.000   20.000   3
+ OPG      var_6    C6     C1     C2     C3        60.000   20.000   3
+ OPG      var_7    C7     C5     C4     C3       180.000   20.000   1
+ OPG      var_8    C5     C4     O4     HO4     -178.721   20.000   1
+ OPG      var_9    C5     C4     C3     C2        60.000   20.000   3
+ OPG      var_10   C4     C3     O3     HO3     -178.905   20.000   1
+ OPG      var_11   C4     C3     C2     O2       180.000   20.000   3
+ OPG      var_12   C3     C2     O2     HO2      -60.829   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OPG      chir_01  C2     C1     O2     C3        positiv
+ OPG      chir_02  C3     C2     O3     C4        negativ
+ OPG      chir_03  C4     C3     O4     C5        positiv
+ OPG      chir_04  C5     C4     O8     C7        negativ
+ OPG      chir_05  C6     C1     C5     O8        positiv
+# ------------------------------------------------------

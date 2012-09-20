@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GEG      GEG '(4E)-4-AMINOHEX-4-ENOIC ACID        ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GEG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GEG           "O2'"  O    OC       -0.500      0.000    0.000    0.000
+ GEG           "C1'"  C    C         0.000     -1.102    0.535    0.254
+ GEG           "O1'"  O    OC       -0.500     -1.202    1.782    0.276
+ GEG           C1     C    CH2       0.000     -2.309   -0.324    0.532
+ GEG           H1C1   H    H         0.000     -2.114   -0.954    1.402
+ GEG           H1C2   H    H         0.000     -2.514   -0.955   -0.335
+ GEG           C2     C    CH2       0.000     -3.517    0.571    0.810
+ GEG           H2C1   H    H         0.000     -3.709    1.202   -0.061
+ GEG           H2C2   H    H         0.000     -3.310    1.202    1.677
+ GEG           C3     C    C         0.000     -4.725   -0.287    1.087
+ GEG           N3     N    NH2       0.000     -5.551   -0.682    0.043
+ GEG           H3N2   H    H         0.000     -6.374   -1.263    0.212
+ GEG           H3N1   H    H         0.000     -5.356   -0.400   -0.919
+ GEG           C4     C    C1        0.000     -4.998   -0.663    2.322
+ GEG           H4     H    H         0.000     -5.861   -1.276    2.520
+ GEG           C5     C    CH3       0.000     -4.102   -0.233    3.455
+ GEG           H5C3   H    H         0.000     -3.122   -0.597    3.287
+ GEG           H5C2   H    H         0.000     -4.082    0.824    3.507
+ GEG           H5C1   H    H         0.000     -4.473   -0.625    4.366
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GEG      "O2'"  n/a    "C1'"  START
+ GEG      "C1'"  "O2'"  C1     .
+ GEG      "O1'"  "C1'"  .      .
+ GEG      C1     "C1'"  C2     .
+ GEG      H1C1   C1     .      .
+ GEG      H1C2   C1     .      .
+ GEG      C2     C1     C3     .
+ GEG      H2C1   C2     .      .
+ GEG      H2C2   C2     .      .
+ GEG      C3     C2     C4     .
+ GEG      N3     C3     H3N1   .
+ GEG      H3N2   N3     .      .
+ GEG      H3N1   N3     .      .
+ GEG      C4     C3     C5     .
+ GEG      H4     C4     .      .
+ GEG      C5     C4     H5C1   .
+ GEG      H5C3   C5     .      .
+ GEG      H5C2   C5     .      .
+ GEG      H5C1   C5     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GEG      "O1'"  "C1'"     deloc       1.250    0.020
+ GEG      "C1'"  "O2'"     deloc       1.250    0.020
+ GEG      C1     "C1'"     single      1.510    0.020
+ GEG      C2     C1        single      1.524    0.020
+ GEG      H1C1   C1        single      1.092    0.020
+ GEG      H1C2   C1        single      1.092    0.020
+ GEG      C3     C2        single      1.510    0.020
+ GEG      H2C1   C2        single      1.092    0.020
+ GEG      H2C2   C2        single      1.092    0.020
+ GEG      C4     C3        double      1.340    0.020
+ GEG      N3     C3        single      1.332    0.020
+ GEG      C5     C4        single      1.510    0.020
+ GEG      H4     C4        single      1.077    0.020
+ GEG      H5C1   C5        single      1.059    0.020
+ GEG      H5C2   C5        single      1.059    0.020
+ GEG      H5C3   C5        single      1.059    0.020
+ GEG      H3N1   N3        single      1.010    0.020
+ GEG      H3N2   N3        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GEG      "O2'"  "C1'"  "O1'"   123.000    3.000
+ GEG      "O2'"  "C1'"  C1      118.500    3.000
+ GEG      "O1'"  "C1'"  C1      118.500    3.000
+ GEG      "C1'"  C1     H1C1    109.470    3.000
+ GEG      "C1'"  C1     H1C2    109.470    3.000
+ GEG      "C1'"  C1     C2      109.470    3.000
+ GEG      H1C1   C1     H1C2    107.900    3.000
+ GEG      H1C1   C1     C2      109.470    3.000
+ GEG      H1C2   C1     C2      109.470    3.000
+ GEG      C1     C2     H2C1    109.470    3.000
+ GEG      C1     C2     H2C2    109.470    3.000
+ GEG      C1     C2     C3      109.470    3.000
+ GEG      H2C1   C2     H2C2    107.900    3.000
+ GEG      H2C1   C2     C3      109.470    3.000
+ GEG      H2C2   C2     C3      109.470    3.000
+ GEG      C2     C3     N3      116.500    3.000
+ GEG      C2     C3     C4      120.000    3.000
+ GEG      N3     C3     C4      120.000    3.000
+ GEG      C3     N3     H3N2    120.000    3.000
+ GEG      C3     N3     H3N1    120.000    3.000
+ GEG      H3N2   N3     H3N1    120.000    3.000
+ GEG      C3     C4     H4      120.000    3.000
+ GEG      C3     C4     C5      120.500    3.000
+ GEG      H4     C4     C5      120.000    3.000
+ GEG      C4     C5     H5C3    109.470    3.000
+ GEG      C4     C5     H5C2    109.470    3.000
+ GEG      C4     C5     H5C1    109.470    3.000
+ GEG      H5C3   C5     H5C2    109.470    3.000
+ GEG      H5C3   C5     H5C1    109.470    3.000
+ GEG      H5C2   C5     H5C1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GEG      var_1    "O2'"  "C1'"  C1     C2      -179.992   20.000   3
+ GEG      var_2    "C1'"  C1     C2     C3       179.958   20.000   3
+ GEG      var_3    C1     C2     C3     C4        89.994   20.000   3
+ GEG      CONST_1  C2     C3     N3     H3N1       0.000    0.000   0
+ GEG      CONST_2  C2     C3     C4     C5         0.038    0.000   0
+ GEG      var_4    C3     C4     C5     H5C1    -179.989   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GEG      plan-1    "C1'"     0.020
+ GEG      plan-1    "O1'"     0.020
+ GEG      plan-1    "O2'"     0.020
+ GEG      plan-1    C1        0.020
+ GEG      plan-2    C3        0.020
+ GEG      plan-2    C2        0.020
+ GEG      plan-2    C4        0.020
+ GEG      plan-2    N3        0.020
+ GEG      plan-2    C5        0.020
+ GEG      plan-2    H4        0.020
+ GEG      plan-2    H3N2      0.020
+ GEG      plan-2    H3N1      0.020
+ GEG      plan-3    N3        0.020
+ GEG      plan-3    C3        0.020
+ GEG      plan-3    H3N1      0.020
+ GEG      plan-3    H3N2      0.020
+# ------------------------------------------------------

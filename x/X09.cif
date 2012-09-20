@@ -1,0 +1,249 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+X09      X09 'AMINO-AUSTRALINE                    ' non-polymer        29  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_X09
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ X09           OAB    O    OH1       0.000      0.000    0.000    0.000
+ X09           HAB    H    H         0.000      0.834   -0.466    0.149
+ X09           CAH    C    CH1       0.000     -0.890   -0.841   -0.738
+ X09           HAH    H    H         0.000     -0.432   -1.135   -1.693
+ X09           CAF    C    CH2       0.000     -1.255   -2.093    0.091
+ X09           HAF1   H    H         0.000     -0.521   -2.311    0.869
+ X09           HAF2   H    H         0.000     -1.400   -2.980   -0.530
+ X09           CAG    C    CH2       0.000     -2.600   -1.694    0.745
+ X09           HAG1   H    H         0.000     -2.460   -1.070    1.630
+ X09           HAG2   H    H         0.000     -3.207   -2.563    1.006
+ X09           NAM    N    NT        0.000     -3.285   -0.909   -0.313
+ X09           CAL    C    CH1       0.000     -2.224   -0.120   -0.987
+ X09           HAL    H    H         0.000     -2.427    0.002   -2.060
+ X09           CAJ    C    CH1       0.000     -2.212    1.240   -0.248
+ X09           HAJ    H    H         0.000     -1.645    1.172    0.691
+ X09           OAD    O    OH1       0.000     -1.691    2.274   -1.086
+ X09           HAD    H    H         0.000     -1.784    3.127   -0.641
+ X09           CAK    C    CH1       0.000     -4.234    0.031    0.312
+ X09           HAK    H    H         0.000     -4.276   -0.144    1.396
+ X09           CAE    C    CH2       0.000     -5.625   -0.151   -0.299
+ X09           HAE1   H    H         0.000     -5.596    0.120   -1.357
+ X09           HAE2   H    H         0.000     -6.337    0.492    0.221
+ X09           NAA    N    NH2       0.000     -6.039   -1.554   -0.163
+ X09           HAA2   H    H         0.000     -6.303   -2.092   -0.981
+ X09           HAA1   H    H         0.000     -6.065   -1.994    0.749
+ X09           CAI    C    CH1       0.000     -3.722    1.459    0.031
+ X09           HAI    H    H         0.000     -4.223    1.885   -0.849
+ X09           OAC    O    OH1       0.000     -3.909    2.296    1.174
+ X09           HAC    H    H         0.000     -3.513    3.162    1.006
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ X09      OAB    n/a    CAH    START
+ X09      HAB    OAB    .      .
+ X09      CAH    OAB    CAF    .
+ X09      HAH    CAH    .      .
+ X09      CAF    CAH    CAG    .
+ X09      HAF1   CAF    .      .
+ X09      HAF2   CAF    .      .
+ X09      CAG    CAF    NAM    .
+ X09      HAG1   CAG    .      .
+ X09      HAG2   CAG    .      .
+ X09      NAM    CAG    CAK    .
+ X09      CAL    NAM    CAJ    .
+ X09      HAL    CAL    .      .
+ X09      CAJ    CAL    OAD    .
+ X09      HAJ    CAJ    .      .
+ X09      OAD    CAJ    HAD    .
+ X09      HAD    OAD    .      .
+ X09      CAK    NAM    CAI    .
+ X09      HAK    CAK    .      .
+ X09      CAE    CAK    NAA    .
+ X09      HAE1   CAE    .      .
+ X09      HAE2   CAE    .      .
+ X09      NAA    CAE    HAA1   .
+ X09      HAA2   NAA    .      .
+ X09      HAA1   NAA    .      .
+ X09      CAI    CAK    OAC    .
+ X09      HAI    CAI    .      .
+ X09      OAC    CAI    HAC    .
+ X09      HAC    OAC    .      END
+ X09      CAI    CAJ    .    ADD
+ X09      CAL    CAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ X09      OAC    CAI       single      1.432    0.020
+ X09      CAI    CAJ       single      1.524    0.020
+ X09      CAI    CAK       single      1.524    0.020
+ X09      OAD    CAJ       single      1.432    0.020
+ X09      CAJ    CAL       single      1.524    0.020
+ X09      CAL    CAH       single      1.524    0.020
+ X09      CAL    NAM       single      1.469    0.020
+ X09      CAH    OAB       single      1.432    0.020
+ X09      CAF    CAH       single      1.524    0.020
+ X09      CAG    CAF       single      1.524    0.020
+ X09      NAM    CAG       single      1.469    0.020
+ X09      CAK    NAM       single      1.469    0.020
+ X09      CAE    CAK       single      1.524    0.020
+ X09      NAA    CAE       single      1.450    0.020
+ X09      HAC    OAC       single      0.967    0.020
+ X09      HAI    CAI       single      1.099    0.020
+ X09      HAJ    CAJ       single      1.099    0.020
+ X09      HAK    CAK       single      1.099    0.020
+ X09      HAD    OAD       single      0.967    0.020
+ X09      HAL    CAL       single      1.099    0.020
+ X09      HAH    CAH       single      1.099    0.020
+ X09      HAB    OAB       single      0.967    0.020
+ X09      HAF1   CAF       single      1.092    0.020
+ X09      HAF2   CAF       single      1.092    0.020
+ X09      HAG1   CAG       single      1.092    0.020
+ X09      HAG2   CAG       single      1.092    0.020
+ X09      HAE1   CAE       single      1.092    0.020
+ X09      HAE2   CAE       single      1.092    0.020
+ X09      HAA1   NAA       single      1.010    0.020
+ X09      HAA2   NAA       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ X09      HAB    OAB    CAH     109.470    3.000
+ X09      OAB    CAH    HAH     109.470    3.000
+ X09      OAB    CAH    CAF     109.470    3.000
+ X09      OAB    CAH    CAL     109.470    3.000
+ X09      HAH    CAH    CAF     108.340    3.000
+ X09      HAH    CAH    CAL     108.340    3.000
+ X09      CAF    CAH    CAL     111.000    3.000
+ X09      CAH    CAF    HAF1    109.470    3.000
+ X09      CAH    CAF    HAF2    109.470    3.000
+ X09      CAH    CAF    CAG     111.000    3.000
+ X09      HAF1   CAF    HAF2    107.900    3.000
+ X09      HAF1   CAF    CAG     109.470    3.000
+ X09      HAF2   CAF    CAG     109.470    3.000
+ X09      CAF    CAG    HAG1    109.470    3.000
+ X09      CAF    CAG    HAG2    109.470    3.000
+ X09      CAF    CAG    NAM     109.470    3.000
+ X09      HAG1   CAG    HAG2    107.900    3.000
+ X09      HAG1   CAG    NAM     109.470    3.000
+ X09      HAG2   CAG    NAM     109.470    3.000
+ X09      CAG    NAM    CAL     109.470    3.000
+ X09      CAG    NAM    CAK     109.470    3.000
+ X09      CAL    NAM    CAK     109.500    3.000
+ X09      NAM    CAL    HAL     109.500    3.000
+ X09      NAM    CAL    CAJ     109.500    3.000
+ X09      NAM    CAL    CAH     109.500    3.000
+ X09      HAL    CAL    CAJ     108.340    3.000
+ X09      HAL    CAL    CAH     108.340    3.000
+ X09      CAJ    CAL    CAH     111.000    3.000
+ X09      CAL    CAJ    HAJ     108.340    3.000
+ X09      CAL    CAJ    OAD     109.470    3.000
+ X09      CAL    CAJ    CAI     111.000    3.000
+ X09      HAJ    CAJ    OAD     109.470    3.000
+ X09      HAJ    CAJ    CAI     108.340    3.000
+ X09      OAD    CAJ    CAI     109.470    3.000
+ X09      CAJ    OAD    HAD     109.470    3.000
+ X09      NAM    CAK    HAK     109.500    3.000
+ X09      NAM    CAK    CAE     109.500    3.000
+ X09      NAM    CAK    CAI     109.500    3.000
+ X09      HAK    CAK    CAE     108.340    3.000
+ X09      HAK    CAK    CAI     108.340    3.000
+ X09      CAE    CAK    CAI     111.000    3.000
+ X09      CAK    CAE    HAE1    109.470    3.000
+ X09      CAK    CAE    HAE2    109.470    3.000
+ X09      CAK    CAE    NAA     109.470    3.000
+ X09      HAE1   CAE    HAE2    107.900    3.000
+ X09      HAE1   CAE    NAA     109.470    3.000
+ X09      HAE2   CAE    NAA     109.470    3.000
+ X09      CAE    NAA    HAA2    120.000    3.000
+ X09      CAE    NAA    HAA1    120.000    3.000
+ X09      HAA2   NAA    HAA1    120.000    3.000
+ X09      CAK    CAI    HAI     108.340    3.000
+ X09      CAK    CAI    OAC     109.470    3.000
+ X09      CAK    CAI    CAJ     111.000    3.000
+ X09      HAI    CAI    OAC     109.470    3.000
+ X09      HAI    CAI    CAJ     108.340    3.000
+ X09      OAC    CAI    CAJ     109.470    3.000
+ X09      CAI    OAC    HAC     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ X09      var_1    HAB    OAB    CAH    CAF       64.235   20.000   1
+ X09      var_2    OAB    CAH    CAF    CAG       90.000   20.000   3
+ X09      var_3    CAH    CAF    CAG    NAM       30.000   20.000   3
+ X09      var_4    CAF    CAG    NAM    CAK     -150.000   20.000   1
+ X09      var_5    CAG    NAM    CAL    CAJ      -90.000   20.000   1
+ X09      var_6    NAM    CAL    CAH    OAB     -120.000   20.000   3
+ X09      var_7    NAM    CAL    CAJ    OAD     -150.000   20.000   3
+ X09      var_8    CAL    CAJ    OAD    HAD      173.812   20.000   1
+ X09      var_9    CAG    NAM    CAK    CAI      120.000   20.000   1
+ X09      var_10   NAM    CAK    CAE    NAA       55.566   20.000   3
+ X09      var_11   CAK    CAE    NAA    HAA1      56.124   20.000   1
+ X09      var_12   NAM    CAK    CAI    OAC     -150.000   20.000   3
+ X09      var_13   CAK    CAI    CAJ    CAL       30.000   20.000   3
+ X09      var_14   CAK    CAI    OAC    HAC      175.088   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ X09      chir_01  CAI    OAC    CAJ    CAK       negativ
+ X09      chir_02  CAJ    CAI    OAD    CAL       positiv
+ X09      chir_03  CAL    CAJ    CAH    NAM       negativ
+ X09      chir_04  CAH    CAL    OAB    CAF       negativ
+ X09      chir_05  NAM    CAL    CAG    CAK       negativ
+ X09      chir_06  CAK    CAI    NAM    CAE       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ X09      plan-1    NAA       0.020
+ X09      plan-1    CAE       0.000
+ X09      plan-1    HAA1      0.000
+ X09      plan-1    HAA2      0.000
+# ------------------------------------------------------

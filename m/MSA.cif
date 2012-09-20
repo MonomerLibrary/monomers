@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MSA      MSA '(2-S-METHYL) SARCOSINE              ' M-peptide          16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MSA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MSA           OXT    O    OC       -0.500      0.000    0.000    0.000
+ MSA           C      C    C         0.000     -0.961   -0.799   -0.043
+ MSA           O      O    OC       -0.500     -0.826   -1.911   -0.601
+ MSA           CA     C    CH1       0.000     -2.281   -0.425    0.580
+ MSA           HA     H    H         0.000     -2.997   -1.247    0.444
+ MSA           SB     S    S2        0.000     -2.048   -0.115    2.351
+ MSA           CG     C    CH3       0.000     -3.776    0.082    2.865
+ MSA           HG3    H    H         0.000     -4.192    0.952    2.418
+ MSA           HG2    H    H         0.000     -4.343   -0.765    2.565
+ MSA           HG1    H    H         0.000     -3.832    0.177    3.922
+ MSA           N      N    NH1       0.000     -2.799    0.788   -0.066
+ MSA           H      H    H         0.000     -2.280    1.629   -0.272
+ MSA           CN     C    CH3       0.000     -4.217    0.540   -0.356
+ MSA           HN3    H    H         0.000     -4.306   -0.239   -1.070
+ MSA           HN2    H    H         0.000     -4.720    0.257    0.534
+ MSA           HN1    H    H         0.000     -4.662    1.422   -0.743
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MSA      OXT    n/a    C      START
+ MSA      C      OXT    CA     .
+ MSA      O      C      .      .
+ MSA      CA     C      N      .
+ MSA      HA     CA     .      .
+ MSA      SB     CA     CG     .
+ MSA      CG     SB     HG1    .
+ MSA      HG3    CG     .      .
+ MSA      HG2    CG     .      .
+ MSA      HG1    CG     .      .
+ MSA      N      CA     CN     .
+ MSA      H      N      .      .
+ MSA      CN     N      HN1    .
+ MSA      HN3    CN     .      .
+ MSA      HN2    CN     .      .
+ MSA      HN1    CN     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MSA      N      CA        single      1.450    0.020
+ MSA      CN     N         single      1.450    0.020
+ MSA      H      N         single      1.010    0.020
+ MSA      CA     C         single      1.500    0.020
+ MSA      SB     CA        single      1.765    0.020
+ MSA      HA     CA        single      1.099    0.020
+ MSA      O      C         deloc       1.250    0.020
+ MSA      C      OXT       deloc       1.250    0.020
+ MSA      HN1    CN        single      1.059    0.020
+ MSA      HN2    CN        single      1.059    0.020
+ MSA      HN3    CN        single      1.059    0.020
+ MSA      CG     SB        single      1.762    0.020
+ MSA      HG1    CG        single      1.059    0.020
+ MSA      HG2    CG        single      1.059    0.020
+ MSA      HG3    CG        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MSA      OXT    C      O       123.000    3.000
+ MSA      OXT    C      CA      118.500    3.000
+ MSA      O      C      CA      118.500    3.000
+ MSA      C      CA     HA      108.810    3.000
+ MSA      C      CA     SB      109.500    3.000
+ MSA      C      CA     N       111.600    3.000
+ MSA      HA     CA     SB      109.500    3.000
+ MSA      HA     CA     N       108.550    3.000
+ MSA      SB     CA     N       109.500    3.000
+ MSA      CA     SB     CG       99.956    3.000
+ MSA      SB     CG     HG3     109.500    3.000
+ MSA      SB     CG     HG2     109.500    3.000
+ MSA      SB     CG     HG1     109.500    3.000
+ MSA      HG3    CG     HG2     109.470    3.000
+ MSA      HG3    CG     HG1     109.470    3.000
+ MSA      HG2    CG     HG1     109.470    3.000
+ MSA      CA     N      H       118.500    3.000
+ MSA      CA     N      CN      120.000    3.000
+ MSA      H      N      CN      118.500    3.000
+ MSA      N      CN     HN3     109.470    3.000
+ MSA      N      CN     HN2     109.470    3.000
+ MSA      N      CN     HN1     109.470    3.000
+ MSA      HN3    CN     HN2     109.470    3.000
+ MSA      HN3    CN     HN1     109.470    3.000
+ MSA      HN2    CN     HN1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MSA      var_1    OXT    C      CA     N         60.089   20.000   3
+ MSA      var_2    C      CA     SB     CG      -172.770   20.000   1
+ MSA      var_3    CA     SB     CG     HG1      174.294   20.000   1
+ MSA      var_4    C      CA     N      CN       133.940   20.000   3
+ MSA      var_5    CA     N      CN     HN1      174.750   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MSA      chir_01  CA     N      C      SB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MSA      plan-1    N         0.020
+ MSA      plan-1    CA        0.020
+ MSA      plan-1    CN        0.020
+ MSA      plan-1    H         0.020
+ MSA      plan-2    C         0.020
+ MSA      plan-2    CA        0.020
+ MSA      plan-2    O         0.020
+ MSA      plan-2    OXT       0.020
+# ------------------------------------------------------

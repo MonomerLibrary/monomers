@@ -1,0 +1,209 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BG5      BG5 '5-HYDROXYAMINO-3-METHYL-PYRROLIDINE-' non-polymer        22  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BG5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BG5           O3     O    OC       -0.500      0.000    0.000    0.000
+ BG5           C1     C    C         0.000     -0.879   -0.069    0.887
+ BG5           O1     O    OC       -0.500     -1.179   -1.116    1.502
+ BG5           C2     C    CH1       0.000     -1.717    1.079    1.358
+ BG5           H2     H    H         0.000     -2.782    0.850    1.216
+ BG5           N1     N    NH1       0.000     -1.348    2.266    0.576
+ BG5           HN1    H    H         0.000     -1.539    2.407   -0.406
+ BG5           C5     C    CH1       0.000     -0.659    3.213    1.455
+ BG5           H5     H    H         0.000     -0.868    4.245    1.142
+ BG5           N2     N    NH1       0.000      0.780    2.966    1.459
+ BG5           HN2    H    H         0.000      1.322    2.520    2.186
+ BG5           O2     O    OH1       0.000      1.268    3.498    0.199
+ BG5           HO2    H    H         0.000      1.351    4.461    0.056
+ BG5           C4     C    CH2       0.000     -1.285    2.937    2.814
+ BG5           H41    H    H         0.000     -2.264    3.408    2.924
+ BG5           H42    H    H         0.000     -0.639    3.242    3.639
+ BG5           C3     C    CH1       0.000     -1.445    1.420    2.826
+ BG5           H3     H    H         0.000     -0.496    0.960    3.133
+ BG5           C6     C    CH3       0.000     -2.550    0.953    3.763
+ BG5           H63    H    H         0.000     -3.462    1.416    3.490
+ BG5           H62    H    H         0.000     -2.652   -0.098    3.691
+ BG5           H61    H    H         0.000     -2.303    1.217    4.758
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BG5      O3     n/a    C1     START
+ BG5      C1     O3     C2     .
+ BG5      O1     C1     .      .
+ BG5      C2     C1     N1     .
+ BG5      H2     C2     .      .
+ BG5      N1     C2     C5     .
+ BG5      HN1    N1     .      .
+ BG5      C5     N1     C4     .
+ BG5      H5     C5     .      .
+ BG5      N2     C5     O2     .
+ BG5      HN2    N2     .      .
+ BG5      O2     N2     HO2    .
+ BG5      HO2    O2     .      .
+ BG5      C4     C5     C3     .
+ BG5      H41    C4     .      .
+ BG5      H42    C4     .      .
+ BG5      C3     C4     C6     .
+ BG5      H3     C3     .      .
+ BG5      C6     C3     H61    .
+ BG5      H63    C6     .      .
+ BG5      H62    C6     .      .
+ BG5      H61    C6     .      END
+ BG5      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BG5      C2     C1        single      1.500    0.020
+ BG5      O1     C1        deloc       1.250    0.020
+ BG5      C1     O3        deloc       1.250    0.020
+ BG5      C2     C3        single      1.524    0.020
+ BG5      N1     C2        single      1.450    0.020
+ BG5      H2     C2        single      1.099    0.020
+ BG5      C3     C4        single      1.524    0.020
+ BG5      C6     C3        single      1.524    0.020
+ BG5      H3     C3        single      1.099    0.020
+ BG5      C4     C5        single      1.524    0.020
+ BG5      H41    C4        single      1.092    0.020
+ BG5      H42    C4        single      1.092    0.020
+ BG5      C5     N1        single      1.450    0.020
+ BG5      N2     C5        single      1.450    0.020
+ BG5      H5     C5        single      1.099    0.020
+ BG5      H61    C6        single      1.059    0.020
+ BG5      H62    C6        single      1.059    0.020
+ BG5      H63    C6        single      1.059    0.020
+ BG5      HN1    N1        single      1.010    0.020
+ BG5      O2     N2        single      1.392    0.020
+ BG5      HN2    N2        single      1.010    0.020
+ BG5      HO2    O2        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BG5      O3     C1     O1      123.000    3.000
+ BG5      O3     C1     C2      118.500    3.000
+ BG5      O1     C1     C2      118.500    3.000
+ BG5      C1     C2     H2      108.810    3.000
+ BG5      C1     C2     N1      111.600    3.000
+ BG5      C1     C2     C3      109.470    3.000
+ BG5      H2     C2     N1      108.550    3.000
+ BG5      H2     C2     C3      108.340    3.000
+ BG5      N1     C2     C3      110.000    3.000
+ BG5      C2     N1     HN1     118.500    3.000
+ BG5      C2     N1     C5      120.000    3.000
+ BG5      HN1    N1     C5      118.500    3.000
+ BG5      N1     C5     H5      108.550    3.000
+ BG5      N1     C5     N2      109.470    3.000
+ BG5      N1     C5     C4      110.000    3.000
+ BG5      H5     C5     N2      108.550    3.000
+ BG5      H5     C5     C4      108.340    3.000
+ BG5      N2     C5     C4      110.000    3.000
+ BG5      C5     N2     HN2     118.500    3.000
+ BG5      C5     N2     O2      120.000    3.000
+ BG5      HN2    N2     O2      120.200    3.000
+ BG5      N2     O2     HO2     120.000    3.000
+ BG5      C5     C4     H41     109.470    3.000
+ BG5      C5     C4     H42     109.470    3.000
+ BG5      C5     C4     C3      111.000    3.000
+ BG5      H41    C4     H42     107.900    3.000
+ BG5      H41    C4     C3      109.470    3.000
+ BG5      H42    C4     C3      109.470    3.000
+ BG5      C4     C3     H3      108.340    3.000
+ BG5      C4     C3     C6      111.000    3.000
+ BG5      C4     C3     C2      111.000    3.000
+ BG5      H3     C3     C6      108.340    3.000
+ BG5      H3     C3     C2      108.340    3.000
+ BG5      C6     C3     C2      111.000    3.000
+ BG5      C3     C6     H63     109.470    3.000
+ BG5      C3     C6     H62     109.470    3.000
+ BG5      C3     C6     H61     109.470    3.000
+ BG5      H63    C6     H62     109.470    3.000
+ BG5      H63    C6     H61     109.470    3.000
+ BG5      H62    C6     H61     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BG5      var_1    O3     C1     C2     N1         1.509   20.000   3
+ BG5      var_2    C1     C2     C3     C4       120.000   20.000   3
+ BG5      var_3    C1     C2     N1     C5      -120.000   20.000   3
+ BG5      var_4    C2     N1     C5     C4       -30.000   20.000   3
+ BG5      var_5    N1     C5     N2     O2        75.770   20.000   3
+ BG5      var_6    C5     N2     O2     HO2       74.481   20.000   1
+ BG5      var_7    N1     C5     C4     C3        30.000   20.000   3
+ BG5      var_8    C5     C4     C3     C6      -150.000   20.000   3
+ BG5      var_9    C4     C3     C6     H61      -63.116   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BG5      chir_01  C2     C1     C3     N1        negativ
+ BG5      chir_02  C3     C2     C4     C6        negativ
+ BG5      chir_03  C5     C4     N1     N2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BG5      plan-1    C1        0.020
+ BG5      plan-1    C2        0.020
+ BG5      plan-1    O1        0.020
+ BG5      plan-1    O3        0.020
+ BG5      plan-2    N1        0.020
+ BG5      plan-2    C2        0.020
+ BG5      plan-2    C5        0.020
+ BG5      plan-2    HN1       0.020
+ BG5      plan-3    N2        0.020
+ BG5      plan-3    C5        0.020
+ BG5      plan-3    O2        0.020
+ BG5      plan-3    HN2       0.020
+# ------------------------------------------------------

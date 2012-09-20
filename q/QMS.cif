@@ -1,0 +1,236 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+QMS      QMS 'N-(QUINOLIN-8-YL)METHANESULFONAMIDE ' non-polymer        25  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_QMS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ QMS           O1     O    OS        0.000      0.000    0.000    0.000
+ QMS           S1     S    ST        0.000     -1.099    0.846    0.310
+ QMS           O2     O    OS        0.000     -1.196    2.173   -0.190
+ QMS           C7     C    CH3       0.000     -1.532    0.761    2.070
+ QMS           H73    H    H         0.000     -1.628   -0.254    2.395
+ QMS           H72    H    H         0.000     -0.781    1.227    2.674
+ QMS           H71    H    H         0.000     -2.461    1.256    2.263
+ QMS           N1     N    NH1       0.000     -2.370    0.082   -0.428
+ QMS           HN1    H    H         0.000     -2.206   -0.741   -0.990
+ QMS           C3     C    CR6       0.000     -3.665    0.575   -0.274
+ QMS           C4     C    CR66      0.000     -4.760   -0.313   -0.203
+ QMS           C5     C    CR66      0.000     -6.064    0.216   -0.040
+ QMS           C6     C    CR16      0.000     -6.248    1.606    0.036
+ QMS           H6     H    H         0.000     -7.244    2.015    0.156
+ QMS           C1     C    CR16      0.000     -5.173    2.439   -0.042
+ QMS           H1     H    H         0.000     -5.322    3.510    0.017
+ QMS           C2     C    CR16      0.000     -3.885    1.933   -0.195
+ QMS           H2     H    H         0.000     -3.046    2.615   -0.254
+ QMS           C10    C    CR16      0.000     -7.155   -0.672    0.036
+ QMS           H10    H    H         0.000     -8.166   -0.303    0.156
+ QMS           C9     C    CR16      0.000     -6.902   -2.011   -0.047
+ QMS           H9     H    H         0.000     -7.719   -2.721    0.008
+ QMS           C8     C    CR16      0.000     -5.594   -2.464   -0.201
+ QMS           H8     H    H         0.000     -5.409   -3.529   -0.265
+ QMS           N2     N    NRD6      0.000     -4.581   -1.635   -0.270
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ QMS      O1     n/a    S1     START
+ QMS      S1     O1     N1     .
+ QMS      O2     S1     .      .
+ QMS      C7     S1     H71    .
+ QMS      H73    C7     .      .
+ QMS      H72    C7     .      .
+ QMS      H71    C7     .      .
+ QMS      N1     S1     C3     .
+ QMS      HN1    N1     .      .
+ QMS      C3     N1     C4     .
+ QMS      C4     C3     C5     .
+ QMS      C5     C4     C10    .
+ QMS      C6     C5     C1     .
+ QMS      H6     C6     .      .
+ QMS      C1     C6     C2     .
+ QMS      H1     C1     .      .
+ QMS      C2     C1     H2     .
+ QMS      H2     C2     .      .
+ QMS      C10    C5     C9     .
+ QMS      H10    C10    .      .
+ QMS      C9     C10    C8     .
+ QMS      H9     C9     .      .
+ QMS      C8     C9     N2     .
+ QMS      H8     C8     .      .
+ QMS      N2     C8     .      END
+ QMS      C3     C2     .    ADD
+ QMS      C4     N2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ QMS      O2     S1        double      1.436    0.020
+ QMS      S1     O1        double      1.436    0.020
+ QMS      C7     S1        single      1.662    0.020
+ QMS      N1     S1        single      1.600    0.020
+ QMS      H71    C7        single      1.059    0.020
+ QMS      H72    C7        single      1.059    0.020
+ QMS      H73    C7        single      1.059    0.020
+ QMS      C3     N1        single      1.350    0.020
+ QMS      HN1    N1        single      1.010    0.020
+ QMS      C3     C2        double      1.390    0.020
+ QMS      C4     C3        single      1.490    0.020
+ QMS      C2     C1        single      1.390    0.020
+ QMS      H2     C2        single      1.083    0.020
+ QMS      C4     N2        single      1.350    0.020
+ QMS      C5     C4        double      1.490    0.020
+ QMS      N2     C8        double      1.337    0.020
+ QMS      C8     C9        single      1.390    0.020
+ QMS      H8     C8        single      1.083    0.020
+ QMS      C9     C10       double      1.390    0.020
+ QMS      H9     C9        single      1.083    0.020
+ QMS      C10    C5        single      1.390    0.020
+ QMS      H10    C10       single      1.083    0.020
+ QMS      C6     C5        single      1.390    0.020
+ QMS      C1     C6        double      1.390    0.020
+ QMS      H6     C6        single      1.083    0.020
+ QMS      H1     C1        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ QMS      O1     S1     O2      109.500    3.000
+ QMS      O1     S1     C7      109.500    3.000
+ QMS      O1     S1     N1      109.500    3.000
+ QMS      O2     S1     C7      109.500    3.000
+ QMS      O2     S1     N1      109.500    3.000
+ QMS      C7     S1     N1      109.500    3.000
+ QMS      S1     C7     H73     109.500    3.000
+ QMS      S1     C7     H72     109.500    3.000
+ QMS      S1     C7     H71     109.500    3.000
+ QMS      H73    C7     H72     109.470    3.000
+ QMS      H73    C7     H71     109.470    3.000
+ QMS      H72    C7     H71     109.470    3.000
+ QMS      S1     N1     HN1     120.000    3.000
+ QMS      S1     N1     C3      120.000    3.000
+ QMS      HN1    N1     C3      120.000    3.000
+ QMS      N1     C3     C4      120.000    3.000
+ QMS      N1     C3     C2      120.000    3.000
+ QMS      C4     C3     C2      120.000    3.000
+ QMS      C3     C4     C5      120.000    3.000
+ QMS      C3     C4     N2      120.000    3.000
+ QMS      C5     C4     N2      120.000    3.000
+ QMS      C4     C5     C6      120.000    3.000
+ QMS      C4     C5     C10     120.000    3.000
+ QMS      C6     C5     C10     120.000    3.000
+ QMS      C5     C6     H6      120.000    3.000
+ QMS      C5     C6     C1      120.000    3.000
+ QMS      H6     C6     C1      120.000    3.000
+ QMS      C6     C1     H1      120.000    3.000
+ QMS      C6     C1     C2      120.000    3.000
+ QMS      H1     C1     C2      120.000    3.000
+ QMS      C1     C2     H2      120.000    3.000
+ QMS      C1     C2     C3      120.000    3.000
+ QMS      H2     C2     C3      120.000    3.000
+ QMS      C5     C10    H10     120.000    3.000
+ QMS      C5     C10    C9      120.000    3.000
+ QMS      H10    C10    C9      120.000    3.000
+ QMS      C10    C9     H9      120.000    3.000
+ QMS      C10    C9     C8      120.000    3.000
+ QMS      H9     C9     C8      120.000    3.000
+ QMS      C9     C8     H8      120.000    3.000
+ QMS      C9     C8     N2      120.000    3.000
+ QMS      H8     C8     N2      120.000    3.000
+ QMS      C8     N2     C4      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ QMS      var_1    O1     S1     C7     H71     -169.682   20.000   1
+ QMS      var_2    O1     S1     N1     C3       175.799   20.000   1
+ QMS      var_3    S1     N1     C3     C4      -144.723   20.000   1
+ QMS      CONST_1  N1     C3     C2     C1       180.000    0.000   0
+ QMS      CONST_2  N1     C3     C4     C5       180.000    0.000   0
+ QMS      CONST_3  C3     C4     N2     C8       180.000    0.000   0
+ QMS      CONST_4  C3     C4     C5     C10      180.000    0.000   0
+ QMS      CONST_5  C4     C5     C6     C1         0.000    0.000   0
+ QMS      CONST_6  C5     C6     C1     C2         0.000    0.000   0
+ QMS      CONST_7  C6     C1     C2     C3         0.000    0.000   0
+ QMS      CONST_8  C4     C5     C10    C9         0.000    0.000   0
+ QMS      CONST_9  C5     C10    C9     C8         0.000    0.000   0
+ QMS      CONST_10 C10    C9     C8     N2         0.000    0.000   0
+ QMS      CONST_11 C9     C8     N2     C4         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ QMS      chir_01  S1     O2     O1     C7        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ QMS      plan-1    N1        0.020
+ QMS      plan-1    S1        0.020
+ QMS      plan-1    C3        0.020
+ QMS      plan-1    HN1       0.020
+ QMS      plan-2    C3        0.020
+ QMS      plan-2    N1        0.020
+ QMS      plan-2    C2        0.020
+ QMS      plan-2    C4        0.020
+ QMS      plan-2    C6        0.020
+ QMS      plan-2    C1        0.020
+ QMS      plan-2    H2        0.020
+ QMS      plan-2    N2        0.020
+ QMS      plan-2    C5        0.020
+ QMS      plan-2    C8        0.020
+ QMS      plan-2    C9        0.020
+ QMS      plan-2    C10       0.020
+ QMS      plan-2    H8        0.020
+ QMS      plan-2    H9        0.020
+ QMS      plan-2    H10       0.020
+ QMS      plan-2    H6        0.020
+ QMS      plan-2    H1        0.020
+ QMS      plan-2    HN1       0.020
+# ------------------------------------------------------

@@ -1,0 +1,249 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MTJ      MTJ 'N,O-DIMETHYL-L-TYROSINE             ' non-polymer        29  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MTJ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MTJ           O28    O    OC       -0.500      0.000    0.000    0.000
+ MTJ           C      C    C         0.000     -1.000    0.565    0.496
+ MTJ           O27    O    OC       -0.500     -0.918    1.111    1.618
+ MTJ           CA     C    CH1       0.000     -2.305    0.587   -0.259
+ MTJ           HA     H    H         0.000     -2.862    1.498    0.001
+ MTJ           N      N    NH1       0.000     -2.035    0.574   -1.701
+ MTJ           HN1    H    H         0.000     -1.941   -0.241   -2.290
+ MTJ           CN     C    CH3       0.000     -1.929    1.977   -2.125
+ MTJ           HN3    H    H         0.000     -2.838    2.483   -1.917
+ MTJ           HN2    H    H         0.000     -1.138    2.450   -1.600
+ MTJ           HN1A   H    H         0.000     -1.734    2.023   -3.166
+ MTJ           CB     C    CH2       0.000     -3.133   -0.643    0.116
+ MTJ           HB1    H    H         0.000     -3.333   -0.633    1.190
+ MTJ           HB2    H    H         0.000     -2.578   -1.547   -0.141
+ MTJ           CG     C    CR6       0.000     -4.436   -0.619   -0.638
+ MTJ           CD2    C    CR16      0.000     -5.542   -0.001   -0.086
+ MTJ           HD2    H    H         0.000     -5.472    0.463    0.890
+ MTJ           CE2    C    CR16      0.000     -6.738    0.026   -0.778
+ MTJ           HE2    H    H         0.000     -7.602    0.518   -0.349
+ MTJ           CZ     C    CR6       0.000     -6.830   -0.577   -2.023
+ MTJ           OM     O    O2        0.000     -8.007   -0.557   -2.703
+ MTJ           CM     C    CH3       0.000     -8.943    0.150   -1.889
+ MTJ           HM3    H    H         0.000     -9.054   -0.349   -0.962
+ MTJ           HM2    H    H         0.000     -8.591    1.135   -1.719
+ MTJ           HM1    H    H         0.000     -9.880    0.192   -2.381
+ MTJ           CE1    C    CR16      0.000     -5.721   -1.203   -2.571
+ MTJ           HE1    H    H         0.000     -5.791   -1.676   -3.543
+ MTJ           CD1    C    CR16      0.000     -4.527   -1.223   -1.877
+ MTJ           HD1    H    H         0.000     -3.661   -1.713   -2.305
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MTJ      O28    n/a    C      START
+ MTJ      C      O28    CA     .
+ MTJ      O27    C      .      .
+ MTJ      CA     C      CB     .
+ MTJ      HA     CA     .      .
+ MTJ      N      CA     CN     .
+ MTJ      HN1    N      .      .
+ MTJ      CN     N      HN1A   .
+ MTJ      HN3    CN     .      .
+ MTJ      HN2    CN     .      .
+ MTJ      HN1A   CN     .      .
+ MTJ      CB     CA     CG     .
+ MTJ      HB1    CB     .      .
+ MTJ      HB2    CB     .      .
+ MTJ      CG     CB     CD2    .
+ MTJ      CD2    CG     CE2    .
+ MTJ      HD2    CD2    .      .
+ MTJ      CE2    CD2    CZ     .
+ MTJ      HE2    CE2    .      .
+ MTJ      CZ     CE2    CE1    .
+ MTJ      OM     CZ     CM     .
+ MTJ      CM     OM     HM1    .
+ MTJ      HM3    CM     .      .
+ MTJ      HM2    CM     .      .
+ MTJ      HM1    CM     .      .
+ MTJ      CE1    CZ     CD1    .
+ MTJ      HE1    CE1    .      .
+ MTJ      CD1    CE1    HD1    .
+ MTJ      HD1    CD1    .      END
+ MTJ      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MTJ      CN     N         single      1.450    0.020
+ MTJ      N      CA        single      1.450    0.020
+ MTJ      HN1    N         single      1.010    0.020
+ MTJ      HN1A   CN        single      1.059    0.020
+ MTJ      HN2    CN        single      1.059    0.020
+ MTJ      HN3    CN        single      1.059    0.020
+ MTJ      CB     CA        single      1.524    0.020
+ MTJ      CA     C         single      1.500    0.020
+ MTJ      HA     CA        single      1.099    0.020
+ MTJ      CG     CB        single      1.511    0.020
+ MTJ      HB1    CB        single      1.092    0.020
+ MTJ      HB2    CB        single      1.092    0.020
+ MTJ      CG     CD1       double      1.390    0.020
+ MTJ      CD2    CG        single      1.390    0.020
+ MTJ      CD1    CE1       single      1.390    0.020
+ MTJ      HD1    CD1       single      1.083    0.020
+ MTJ      CE1    CZ        double      1.390    0.020
+ MTJ      HE1    CE1       single      1.083    0.020
+ MTJ      OM     CZ        single      1.370    0.020
+ MTJ      CZ     CE2       single      1.390    0.020
+ MTJ      CM     OM        single      1.426    0.020
+ MTJ      HM1    CM        single      1.059    0.020
+ MTJ      HM2    CM        single      1.059    0.020
+ MTJ      HM3    CM        single      1.059    0.020
+ MTJ      CE2    CD2       double      1.390    0.020
+ MTJ      HE2    CE2       single      1.083    0.020
+ MTJ      HD2    CD2       single      1.083    0.020
+ MTJ      O27    C         deloc       1.250    0.020
+ MTJ      C      O28       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MTJ      O28    C      O27     123.000    3.000
+ MTJ      O28    C      CA      118.500    3.000
+ MTJ      O27    C      CA      118.500    3.000
+ MTJ      C      CA     HA      108.810    3.000
+ MTJ      C      CA     N       111.600    3.000
+ MTJ      C      CA     CB      109.470    3.000
+ MTJ      HA     CA     N       108.550    3.000
+ MTJ      HA     CA     CB      108.340    3.000
+ MTJ      N      CA     CB      110.000    3.000
+ MTJ      CA     N      HN1     118.500    3.000
+ MTJ      CA     N      CN      120.000    3.000
+ MTJ      HN1    N      CN      118.500    3.000
+ MTJ      N      CN     HN3     109.470    3.000
+ MTJ      N      CN     HN2     109.470    3.000
+ MTJ      N      CN     HN1A    109.470    3.000
+ MTJ      HN3    CN     HN2     109.470    3.000
+ MTJ      HN3    CN     HN1A    109.470    3.000
+ MTJ      HN2    CN     HN1A    109.470    3.000
+ MTJ      CA     CB     HB1     109.470    3.000
+ MTJ      CA     CB     HB2     109.470    3.000
+ MTJ      CA     CB     CG      109.470    3.000
+ MTJ      HB1    CB     HB2     107.900    3.000
+ MTJ      HB1    CB     CG      109.470    3.000
+ MTJ      HB2    CB     CG      109.470    3.000
+ MTJ      CB     CG     CD2     120.000    3.000
+ MTJ      CB     CG     CD1     120.000    3.000
+ MTJ      CD2    CG     CD1     120.000    3.000
+ MTJ      CG     CD2    HD2     120.000    3.000
+ MTJ      CG     CD2    CE2     120.000    3.000
+ MTJ      HD2    CD2    CE2     120.000    3.000
+ MTJ      CD2    CE2    HE2     120.000    3.000
+ MTJ      CD2    CE2    CZ      120.000    3.000
+ MTJ      HE2    CE2    CZ      120.000    3.000
+ MTJ      CE2    CZ     OM      120.000    3.000
+ MTJ      CE2    CZ     CE1     120.000    3.000
+ MTJ      OM     CZ     CE1     120.000    3.000
+ MTJ      CZ     OM     CM      120.000    3.000
+ MTJ      OM     CM     HM3     109.470    3.000
+ MTJ      OM     CM     HM2     109.470    3.000
+ MTJ      OM     CM     HM1     109.470    3.000
+ MTJ      HM3    CM     HM2     109.470    3.000
+ MTJ      HM3    CM     HM1     109.470    3.000
+ MTJ      HM2    CM     HM1     109.470    3.000
+ MTJ      CZ     CE1    HE1     120.000    3.000
+ MTJ      CZ     CE1    CD1     120.000    3.000
+ MTJ      HE1    CE1    CD1     120.000    3.000
+ MTJ      CE1    CD1    HD1     120.000    3.000
+ MTJ      CE1    CD1    CG      120.000    3.000
+ MTJ      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MTJ      var_1    O28    C      CA     CB        90.023   20.000   3
+ MTJ      var_2    C      CA     N      CN       -89.985   20.000   3
+ MTJ      var_3    CA     N      CN     HN1A    -179.990   20.000   1
+ MTJ      var_4    C      CA     CB     CG       179.985   20.000   3
+ MTJ      var_5    CA     CB     CG     CD2      -90.380   20.000   2
+ MTJ      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ MTJ      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ MTJ      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ MTJ      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ MTJ      var_6    CE2    CZ     OM     CM         0.131   20.000   1
+ MTJ      var_7    CZ     OM     CM     HM1      179.982   20.000   1
+ MTJ      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ MTJ      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MTJ      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MTJ      plan-1    N         0.020
+ MTJ      plan-1    CN        0.020
+ MTJ      plan-1    CA        0.020
+ MTJ      plan-1    HN1       0.020
+ MTJ      plan-2    CG        0.020
+ MTJ      plan-2    CB        0.020
+ MTJ      plan-2    CD1       0.020
+ MTJ      plan-2    CD2       0.020
+ MTJ      plan-2    CE1       0.020
+ MTJ      plan-2    CZ        0.020
+ MTJ      plan-2    CE2       0.020
+ MTJ      plan-2    HD1       0.020
+ MTJ      plan-2    HE1       0.020
+ MTJ      plan-2    OM        0.020
+ MTJ      plan-2    HE2       0.020
+ MTJ      plan-2    HD2       0.020
+ MTJ      plan-3    C         0.020
+ MTJ      plan-3    CA        0.020
+ MTJ      plan-3    O27       0.020
+ MTJ      plan-3    O28       0.020
+# ------------------------------------------------------

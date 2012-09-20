@@ -1,0 +1,219 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BTP      BTP '2-THIOMETHYL-3-PHENYLPROPANOIC ACID ' non-polymer        24  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BTP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BTP           O2     O    OC       -0.500      0.000    0.000    0.000
+ BTP           C1     C    C         0.000     -0.811    0.793    0.528
+ BTP           O1     O    OC       -0.500     -0.530    2.009    0.614
+ BTP           C2     C    CH1       0.000     -2.126    0.284    1.060
+ BTP           H2     H    H         0.000     -2.188   -0.802    0.903
+ BTP           "C'"   C    CH2       0.000     -2.223    0.588    2.556
+ BTP           "H'1"  H    H         0.000     -2.259    1.670    2.704
+ BTP           "H'2"  H    H         0.000     -1.348    0.181    3.067
+ BTP           "S'"   S    SH1       0.000     -3.726   -0.168    3.231
+ BTP           "HS'"  H    H         0.000     -3.542    0.249    4.481
+ BTP           C3     C    CH2       0.000     -3.274    0.971    0.322
+ BTP           H31    H    H         0.000     -3.155    2.055    0.394
+ BTP           H32    H    H         0.000     -4.224    0.681    0.777
+ BTP           "C1'"  C    CR6       0.000     -3.261    0.558   -1.125
+ BTP           "C6'"  C    CR16      0.000     -2.615    1.341   -2.063
+ BTP           "H6'"  H    H         0.000     -2.120    2.255   -1.756
+ BTP           "C5'"  C    CR16      0.000     -2.599    0.960   -3.391
+ BTP           "H5'"  H    H         0.000     -2.085    1.570   -4.123
+ BTP           "C4'"  C    CR16      0.000     -3.238   -0.200   -3.784
+ BTP           "H4'"  H    H         0.000     -3.228   -0.497   -4.826
+ BTP           "C3'"  C    CR16      0.000     -3.889   -0.981   -2.848
+ BTP           "H3'"  H    H         0.000     -4.390   -1.891   -3.156
+ BTP           "C2'"  C    CR16      0.000     -3.901   -0.602   -1.519
+ BTP           "H2'"  H    H         0.000     -4.413   -1.213   -0.786
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BTP      O2     n/a    C1     START
+ BTP      C1     O2     C2     .
+ BTP      O1     C1     .      .
+ BTP      C2     C1     C3     .
+ BTP      H2     C2     .      .
+ BTP      "C'"   C2     "S'"   .
+ BTP      "H'1"  "C'"   .      .
+ BTP      "H'2"  "C'"   .      .
+ BTP      "S'"   "C'"   "HS'"  .
+ BTP      "HS'"  "S'"   .      .
+ BTP      C3     C2     "C1'"  .
+ BTP      H31    C3     .      .
+ BTP      H32    C3     .      .
+ BTP      "C1'"  C3     "C6'"  .
+ BTP      "C6'"  "C1'"  "C5'"  .
+ BTP      "H6'"  "C6'"  .      .
+ BTP      "C5'"  "C6'"  "C4'"  .
+ BTP      "H5'"  "C5'"  .      .
+ BTP      "C4'"  "C5'"  "C3'"  .
+ BTP      "H4'"  "C4'"  .      .
+ BTP      "C3'"  "C4'"  "C2'"  .
+ BTP      "H3'"  "C3'"  .      .
+ BTP      "C2'"  "C3'"  "H2'"  .
+ BTP      "H2'"  "C2'"  .      END
+ BTP      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BTP      O1     C1        deloc       1.250    0.020
+ BTP      C1     O2        deloc       1.250    0.020
+ BTP      C2     C1        single      1.500    0.020
+ BTP      C3     C2        single      1.524    0.020
+ BTP      "C'"   C2        single      1.524    0.020
+ BTP      H2     C2        single      1.099    0.020
+ BTP      "C1'"  C3        single      1.511    0.020
+ BTP      H31    C3        single      1.092    0.020
+ BTP      H32    C3        single      1.092    0.020
+ BTP      "C1'"  "C2'"     double      1.390    0.020
+ BTP      "C6'"  "C1'"     single      1.390    0.020
+ BTP      "C2'"  "C3'"     single      1.390    0.020
+ BTP      "H2'"  "C2'"     single      1.083    0.020
+ BTP      "C3'"  "C4'"     double      1.390    0.020
+ BTP      "H3'"  "C3'"     single      1.083    0.020
+ BTP      "C4'"  "C5'"     single      1.390    0.020
+ BTP      "H4'"  "C4'"     single      1.083    0.020
+ BTP      "C5'"  "C6'"     double      1.390    0.020
+ BTP      "H5'"  "C5'"     single      1.083    0.020
+ BTP      "H6'"  "C6'"     single      1.083    0.020
+ BTP      "S'"   "C'"      single      1.810    0.020
+ BTP      "H'1"  "C'"      single      1.092    0.020
+ BTP      "H'2"  "C'"      single      1.092    0.020
+ BTP      "HS'"  "S'"      single      1.330    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BTP      O2     C1     O1      123.000    3.000
+ BTP      O2     C1     C2      118.500    3.000
+ BTP      O1     C1     C2      118.500    3.000
+ BTP      C1     C2     H2      108.810    3.000
+ BTP      C1     C2     "C'"    109.470    3.000
+ BTP      C1     C2     C3      109.470    3.000
+ BTP      H2     C2     "C'"    108.340    3.000
+ BTP      H2     C2     C3      108.340    3.000
+ BTP      "C'"   C2     C3      109.470    3.000
+ BTP      C2     "C'"   "H'1"   109.470    3.000
+ BTP      C2     "C'"   "H'2"   109.470    3.000
+ BTP      C2     "C'"   "S'"    112.500    3.000
+ BTP      "H'1"  "C'"   "H'2"   107.900    3.000
+ BTP      "H'1"  "C'"   "S'"    109.470    3.000
+ BTP      "H'2"  "C'"   "S'"    109.470    3.000
+ BTP      "C'"   "S'"   "HS'"    96.000    3.000
+ BTP      C2     C3     H31     109.470    3.000
+ BTP      C2     C3     H32     109.470    3.000
+ BTP      C2     C3     "C1'"   109.470    3.000
+ BTP      H31    C3     H32     107.900    3.000
+ BTP      H31    C3     "C1'"   109.470    3.000
+ BTP      H32    C3     "C1'"   109.470    3.000
+ BTP      C3     "C1'"  "C6'"   120.000    3.000
+ BTP      C3     "C1'"  "C2'"   120.000    3.000
+ BTP      "C6'"  "C1'"  "C2'"   120.000    3.000
+ BTP      "C1'"  "C6'"  "H6'"   120.000    3.000
+ BTP      "C1'"  "C6'"  "C5'"   120.000    3.000
+ BTP      "H6'"  "C6'"  "C5'"   120.000    3.000
+ BTP      "C6'"  "C5'"  "H5'"   120.000    3.000
+ BTP      "C6'"  "C5'"  "C4'"   120.000    3.000
+ BTP      "H5'"  "C5'"  "C4'"   120.000    3.000
+ BTP      "C5'"  "C4'"  "H4'"   120.000    3.000
+ BTP      "C5'"  "C4'"  "C3'"   120.000    3.000
+ BTP      "H4'"  "C4'"  "C3'"   120.000    3.000
+ BTP      "C4'"  "C3'"  "H3'"   120.000    3.000
+ BTP      "C4'"  "C3'"  "C2'"   120.000    3.000
+ BTP      "H3'"  "C3'"  "C2'"   120.000    3.000
+ BTP      "C3'"  "C2'"  "H2'"   120.000    3.000
+ BTP      "C3'"  "C2'"  "C1'"   120.000    3.000
+ BTP      "H2'"  "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BTP      var_1    O2     C1     C2     C3      -119.487   20.000   3
+ BTP      var_2    C1     C2     "C'"   "S'"    -174.390   20.000   3
+ BTP      var_3    C2     "C'"   "S'"   "HS'"   -179.999   20.000   1
+ BTP      var_4    C1     C2     C3     "C1'"     65.729   20.000   3
+ BTP      var_5    C2     C3     "C1'"  "C6'"    -94.494   20.000   2
+ BTP      CONST_1  C3     "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ BTP      CONST_2  C3     "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ BTP      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ BTP      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ BTP      CONST_5  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ BTP      CONST_6  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BTP      chir_01  C2     C1     C3     "C'"      positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BTP      plan-1    C1        0.020
+ BTP      plan-1    O1        0.020
+ BTP      plan-1    O2        0.020
+ BTP      plan-1    C2        0.020
+ BTP      plan-2    "C1'"     0.020
+ BTP      plan-2    C3        0.020
+ BTP      plan-2    "C2'"     0.020
+ BTP      plan-2    "C6'"     0.020
+ BTP      plan-2    "C3'"     0.020
+ BTP      plan-2    "C4'"     0.020
+ BTP      plan-2    "C5'"     0.020
+ BTP      plan-2    "H2'"     0.020
+ BTP      plan-2    "H3'"     0.020
+ BTP      plan-2    "H4'"     0.020
+ BTP      plan-2    "H5'"     0.020
+ BTP      plan-2    "H6'"     0.020
+# ------------------------------------------------------

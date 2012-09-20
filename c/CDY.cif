@@ -1,0 +1,269 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CDY      CDY '2-CHLORODIDEOXYADENOSINE            ' non-polymer        30  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CDY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CDY           CL     CL   CL        0.000      0.000    0.000    0.000
+ CDY           C2     C    CR6       0.000     -1.362    0.047   -1.076
+ CDY           N1     N    NRD6      0.000     -1.142    0.154   -2.375
+ CDY           C6     C    CR6       0.000     -2.149    0.193   -3.240
+ CDY           N6     N    NH2       0.000     -1.911    0.305   -4.599
+ CDY           HN62   H    H         0.000     -2.684    0.334   -5.257
+ CDY           HN61   H    H         0.000     -0.961    0.358   -4.953
+ CDY           C5     C    CR56      0.000     -3.463    0.125   -2.745
+ CDY           N7     N    NRD5      0.000     -4.695    0.130   -3.308
+ CDY           C8     C    CR15      0.000     -5.597    0.034   -2.376
+ CDY           HC8    H    H         0.000     -6.667    0.019   -2.546
+ CDY           N3     N    NRD6      0.000     -2.575   -0.025   -0.567
+ CDY           C4     C    CR56      0.000     -3.643    0.007   -1.357
+ CDY           N9     N    NR5       0.000     -4.998   -0.045   -1.155
+ CDY           "C1'"  C    CH1       0.000     -5.678   -0.162    0.138
+ CDY           "H1'"  H    H         0.000     -5.054   -0.734    0.838
+ CDY           "O4'"  O    O2        0.000     -6.947   -0.816   -0.035
+ CDY           "C2'"  C    CH2       0.000     -5.960    1.239    0.711
+ CDY           HC21   H    H         0.000     -5.652    2.031    0.026
+ CDY           HC22   H    H         0.000     -5.478    1.389    1.679
+ CDY           "C3'"  C    CH2       0.000     -7.498    1.275    0.887
+ CDY           HC31   H    H         0.000     -8.012    1.753    0.051
+ CDY           HC32   H    H         0.000     -7.809    1.746    1.821
+ CDY           "C4'"  C    CH1       0.000     -7.856   -0.232    0.922
+ CDY           "H4'"  H    H         0.000     -7.683   -0.649    1.925
+ CDY           "C5'"  C    CH2       0.000     -9.307   -0.449    0.491
+ CDY           HC51   H    H         0.000     -9.444   -0.075   -0.525
+ CDY           HC52   H    H         0.000     -9.972    0.089    1.169
+ CDY           "O5'"  O    OH1       0.000     -9.611   -1.846    0.531
+ CDY           HO5    H    H         0.000    -10.528   -1.983    0.258
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CDY      CL     n/a    C2     START
+ CDY      C2     CL     N3     .
+ CDY      N1     C2     C6     .
+ CDY      C6     N1     C5     .
+ CDY      N6     C6     HN61   .
+ CDY      HN62   N6     .      .
+ CDY      HN61   N6     .      .
+ CDY      C5     C6     N7     .
+ CDY      N7     C5     C8     .
+ CDY      C8     N7     HC8    .
+ CDY      HC8    C8     .      .
+ CDY      N3     C2     C4     .
+ CDY      C4     N3     N9     .
+ CDY      N9     C4     "C1'"  .
+ CDY      "C1'"  N9     "C2'"  .
+ CDY      "H1'"  "C1'"  .      .
+ CDY      "O4'"  "C1'"  .      .
+ CDY      "C2'"  "C1'"  "C3'"  .
+ CDY      HC21   "C2'"  .      .
+ CDY      HC22   "C2'"  .      .
+ CDY      "C3'"  "C2'"  "C4'"  .
+ CDY      HC31   "C3'"  .      .
+ CDY      HC32   "C3'"  .      .
+ CDY      "C4'"  "C3'"  "C5'"  .
+ CDY      "H4'"  "C4'"  .      .
+ CDY      "C5'"  "C4'"  "O5'"  .
+ CDY      HC51   "C5'"  .      .
+ CDY      HC52   "C5'"  .      .
+ CDY      "O5'"  "C5'"  HO5    .
+ CDY      HO5    "O5'"  .      END
+ CDY      "C4'"  "O4'"  .    ADD
+ CDY      N9     C8     .    ADD
+ CDY      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CDY      "O5'"  "C5'"     single      1.432    0.020
+ CDY      HO5    "O5'"     single      0.967    0.020
+ CDY      "C5'"  "C4'"     single      1.524    0.020
+ CDY      HC51   "C5'"     single      1.092    0.020
+ CDY      HC52   "C5'"     single      1.092    0.020
+ CDY      "C4'"  "O4'"     single      1.426    0.020
+ CDY      "C4'"  "C3'"     single      1.524    0.020
+ CDY      "H4'"  "C4'"     single      1.099    0.020
+ CDY      "O4'"  "C1'"     single      1.426    0.020
+ CDY      "C3'"  "C2'"     single      1.524    0.020
+ CDY      HC31   "C3'"     single      1.092    0.020
+ CDY      HC32   "C3'"     single      1.092    0.020
+ CDY      "C2'"  "C1'"     single      1.524    0.020
+ CDY      HC21   "C2'"     single      1.092    0.020
+ CDY      HC22   "C2'"     single      1.092    0.020
+ CDY      "C1'"  N9        single      1.485    0.020
+ CDY      "H1'"  "C1'"     single      1.099    0.020
+ CDY      N9     C8        single      1.337    0.020
+ CDY      N9     C4        single      1.337    0.020
+ CDY      C8     N7        double      1.350    0.020
+ CDY      HC8    C8        single      1.083    0.020
+ CDY      N7     C5        single      1.350    0.020
+ CDY      C5     C4        double      1.490    0.020
+ CDY      C5     C6        single      1.490    0.020
+ CDY      C4     N3        single      1.355    0.020
+ CDY      N3     C2        double      1.350    0.020
+ CDY      C2     CL        single      1.795    0.020
+ CDY      N1     C2        single      1.350    0.020
+ CDY      C6     N1        double      1.350    0.020
+ CDY      N6     C6        single      1.355    0.020
+ CDY      HN61   N6        single      1.010    0.020
+ CDY      HN62   N6        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CDY      CL     C2     N1      120.000    3.000
+ CDY      CL     C2     N3      120.000    3.000
+ CDY      N1     C2     N3      120.000    3.000
+ CDY      C2     N1     C6      120.000    3.000
+ CDY      N1     C6     N6      120.000    3.000
+ CDY      N1     C6     C5      120.000    3.000
+ CDY      N6     C6     C5      120.000    3.000
+ CDY      C6     N6     HN62    120.000    3.000
+ CDY      C6     N6     HN61    120.000    3.000
+ CDY      HN62   N6     HN61    120.000    3.000
+ CDY      C6     C5     N7      132.000    3.000
+ CDY      C6     C5     C4      120.000    3.000
+ CDY      N7     C5     C4      108.000    3.000
+ CDY      C5     N7     C8      108.000    3.000
+ CDY      N7     C8     HC8     126.000    3.000
+ CDY      N7     C8     N9      108.000    3.000
+ CDY      HC8    C8     N9      126.000    3.000
+ CDY      C2     N3     C4      120.000    3.000
+ CDY      N3     C4     N9      132.000    3.000
+ CDY      N3     C4     C5      120.000    3.000
+ CDY      N9     C4     C5      108.000    3.000
+ CDY      C4     N9     "C1'"   126.000    3.000
+ CDY      C4     N9     C8      108.000    3.000
+ CDY      "C1'"  N9     C8      126.000    3.000
+ CDY      N9     "C1'"  "H1'"   109.470    3.000
+ CDY      N9     "C1'"  "O4'"   109.470    3.000
+ CDY      N9     "C1'"  "C2'"   109.470    3.000
+ CDY      "H1'"  "C1'"  "O4'"   109.470    3.000
+ CDY      "H1'"  "C1'"  "C2'"   108.340    3.000
+ CDY      "O4'"  "C1'"  "C2'"   109.470    3.000
+ CDY      "C1'"  "O4'"  "C4'"   111.800    3.000
+ CDY      "C1'"  "C2'"  HC21    109.470    3.000
+ CDY      "C1'"  "C2'"  HC22    109.470    3.000
+ CDY      "C1'"  "C2'"  "C3'"   111.000    3.000
+ CDY      HC21   "C2'"  HC22    107.900    3.000
+ CDY      HC21   "C2'"  "C3'"   109.470    3.000
+ CDY      HC22   "C2'"  "C3'"   109.470    3.000
+ CDY      "C2'"  "C3'"  HC31    109.470    3.000
+ CDY      "C2'"  "C3'"  HC32    109.470    3.000
+ CDY      "C2'"  "C3'"  "C4'"   111.000    3.000
+ CDY      HC31   "C3'"  HC32    107.900    3.000
+ CDY      HC31   "C3'"  "C4'"   109.470    3.000
+ CDY      HC32   "C3'"  "C4'"   109.470    3.000
+ CDY      "C3'"  "C4'"  "H4'"   108.340    3.000
+ CDY      "C3'"  "C4'"  "C5'"   109.470    3.000
+ CDY      "C3'"  "C4'"  "O4'"   109.470    3.000
+ CDY      "H4'"  "C4'"  "C5'"   108.340    3.000
+ CDY      "H4'"  "C4'"  "O4'"   109.470    3.000
+ CDY      "C5'"  "C4'"  "O4'"   109.470    3.000
+ CDY      "C4'"  "C5'"  HC51    109.470    3.000
+ CDY      "C4'"  "C5'"  HC52    109.470    3.000
+ CDY      "C4'"  "C5'"  "O5'"   109.470    3.000
+ CDY      HC51   "C5'"  HC52    107.900    3.000
+ CDY      HC51   "C5'"  "O5'"   109.470    3.000
+ CDY      HC52   "C5'"  "O5'"   109.470    3.000
+ CDY      "C5'"  "O5'"  HO5     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CDY      CONST_1  CL     C2     N1     C6       180.000    0.000   0
+ CDY      CONST_2  C2     N1     C6     C5         0.000    0.000   0
+ CDY      CONST_3  N1     C6     N6     HN61      -0.015    0.000   0
+ CDY      CONST_4  N1     C6     C5     N7       180.000    0.000   0
+ CDY      CONST_5  C6     C5     C4     N3         0.000    0.000   0
+ CDY      CONST_6  C6     C5     N7     C8       180.000    0.000   0
+ CDY      CONST_7  C5     N7     C8     N9         0.000    0.000   0
+ CDY      CONST_8  CL     C2     N3     C4       180.000    0.000   0
+ CDY      CONST_9  C2     N3     C4     N9       180.000    0.000   0
+ CDY      CONST_10 N3     C4     N9     "C1'"      0.000    0.000   0
+ CDY      CONST_11 C4     N9     C8     N7         0.000    0.000   0
+ CDY      var_1    C4     N9     "C1'"  "C2'"     89.985   20.000   1
+ CDY      var_2    N9     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ CDY      var_3    N9     "C1'"  "C2'"  "C3'"    120.000   20.000   3
+ CDY      var_4    "C1'"  "C2'"  "C3'"  "C4'"     30.000   20.000   3
+ CDY      var_5    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ CDY      var_6    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ CDY      var_7    "C3'"  "C4'"  "C5'"  "O5'"    179.954   20.000   3
+ CDY      var_8    "C4'"  "C5'"  "O5'"  HO5     -179.985   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CDY      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ CDY      chir_02  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CDY      plan-1    N9        0.020
+ CDY      plan-1    "C1'"     0.020
+ CDY      plan-1    C8        0.020
+ CDY      plan-1    C4        0.020
+ CDY      plan-1    N7        0.020
+ CDY      plan-1    HC8       0.020
+ CDY      plan-1    C5        0.020
+ CDY      plan-1    C6        0.020
+ CDY      plan-1    N3        0.020
+ CDY      plan-1    C2        0.020
+ CDY      plan-1    N1        0.020
+ CDY      plan-1    CL        0.020
+ CDY      plan-1    N6        0.020
+ CDY      plan-1    HN62      0.020
+ CDY      plan-1    HN61      0.020
+ CDY      plan-2    N6        0.020
+ CDY      plan-2    C6        0.020
+ CDY      plan-2    HN61      0.020
+ CDY      plan-2    HN62      0.020
+# ------------------------------------------------------

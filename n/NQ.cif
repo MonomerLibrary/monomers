@@ -1,0 +1,191 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NQ       NQ  '2-HYDROXYNAPHTHOQUINONE             ' non-polymer        19  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NQ            OAA    O    O         0.000      0.000    0.000    0.000
+ NQ            CAJ    C    CR6       0.000     -1.021   -0.659    0.003
+ NQ            CAH    C    CR16      0.000     -0.950   -2.123    0.005
+ NQ            HAH    H    H         0.000      0.017   -2.610    0.005
+ NQ            CAI    C    CR6       0.000     -2.072   -2.872    0.008
+ NQ            OAC    O    OH1       0.000     -1.976   -4.222    0.012
+ NQ            HAC    H    H         0.000     -1.044   -4.477    0.013
+ NQ            CAK    C    CR6       0.000     -3.409   -2.233    0.001
+ NQ            OAB    O    O         0.000     -4.412   -2.916   -0.001
+ NQ            CAL    C    CR66      0.000     -2.339    0.016    0.000
+ NQ            CAM    C    CR66      0.000     -3.513   -0.757    0.003
+ NQ            CAF    C    CR16      0.000     -2.427    1.402   -0.003
+ NQ            HAF    H    H         0.000     -1.527    2.004   -0.005
+ NQ            CAD    C    CR16      0.000     -3.672    2.014   -0.004
+ NQ            HAD    H    H         0.000     -3.740    3.095   -0.007
+ NQ            CAE    C    CR16      0.000     -4.826    1.253   -0.002
+ NQ            HAE    H    H         0.000     -5.793    1.742   -0.002
+ NQ            CAG    C    CR16      0.000     -4.754   -0.131    0.002
+ NQ            HAG    H    H         0.000     -5.661   -0.723    0.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NQ       OAA    n/a    CAJ    START
+ NQ       CAJ    OAA    CAL    .
+ NQ       CAH    CAJ    CAI    .
+ NQ       HAH    CAH    .      .
+ NQ       CAI    CAH    CAK    .
+ NQ       OAC    CAI    HAC    .
+ NQ       HAC    OAC    .      .
+ NQ       CAK    CAI    OAB    .
+ NQ       OAB    CAK    .      .
+ NQ       CAL    CAJ    CAF    .
+ NQ       CAM    CAL    .      .
+ NQ       CAF    CAL    CAD    .
+ NQ       HAF    CAF    .      .
+ NQ       CAD    CAF    CAE    .
+ NQ       HAD    CAD    .      .
+ NQ       CAE    CAD    CAG    .
+ NQ       HAE    CAE    .      .
+ NQ       CAG    CAE    HAG    .
+ NQ       HAG    CAG    .      END
+ NQ       CAK    CAM    .    ADD
+ NQ       CAM    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NQ       OAB    CAK       double      1.250    0.020
+ NQ       CAK    CAM       single      1.490    0.020
+ NQ       CAK    CAI       single      1.487    0.020
+ NQ       CAM    CAG       single      1.390    0.020
+ NQ       CAM    CAL       double      1.490    0.020
+ NQ       CAG    CAE       double      1.390    0.020
+ NQ       HAG    CAG       single      1.083    0.020
+ NQ       CAE    CAD       single      1.390    0.020
+ NQ       HAE    CAE       single      1.083    0.020
+ NQ       CAD    CAF       double      1.390    0.020
+ NQ       HAD    CAD       single      1.083    0.020
+ NQ       CAF    CAL       single      1.390    0.020
+ NQ       HAF    CAF       single      1.083    0.020
+ NQ       CAL    CAJ       single      1.490    0.020
+ NQ       CAJ    OAA       double      1.250    0.020
+ NQ       CAH    CAJ       single      1.390    0.020
+ NQ       CAI    CAH       double      1.390    0.020
+ NQ       HAH    CAH       single      1.083    0.020
+ NQ       OAC    CAI       single      1.362    0.020
+ NQ       HAC    OAC       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NQ       OAA    CAJ    CAH     120.000    3.000
+ NQ       OAA    CAJ    CAL     120.000    3.000
+ NQ       CAH    CAJ    CAL     120.000    3.000
+ NQ       CAJ    CAH    HAH     120.000    3.000
+ NQ       CAJ    CAH    CAI     120.000    3.000
+ NQ       HAH    CAH    CAI     120.000    3.000
+ NQ       CAH    CAI    OAC     120.000    3.000
+ NQ       CAH    CAI    CAK     120.000    3.000
+ NQ       OAC    CAI    CAK     120.000    3.000
+ NQ       CAI    OAC    HAC     109.470    3.000
+ NQ       CAI    CAK    OAB     120.000    3.000
+ NQ       CAI    CAK    CAM     120.000    3.000
+ NQ       OAB    CAK    CAM     120.000    3.000
+ NQ       CAJ    CAL    CAM     120.000    3.000
+ NQ       CAJ    CAL    CAF     120.000    3.000
+ NQ       CAM    CAL    CAF     120.000    3.000
+ NQ       CAL    CAM    CAK     120.000    3.000
+ NQ       CAL    CAM    CAG     120.000    3.000
+ NQ       CAK    CAM    CAG     120.000    3.000
+ NQ       CAL    CAF    HAF     120.000    3.000
+ NQ       CAL    CAF    CAD     120.000    3.000
+ NQ       HAF    CAF    CAD     120.000    3.000
+ NQ       CAF    CAD    HAD     120.000    3.000
+ NQ       CAF    CAD    CAE     120.000    3.000
+ NQ       HAD    CAD    CAE     120.000    3.000
+ NQ       CAD    CAE    HAE     120.000    3.000
+ NQ       CAD    CAE    CAG     120.000    3.000
+ NQ       HAE    CAE    CAG     120.000    3.000
+ NQ       CAE    CAG    HAG     120.000    3.000
+ NQ       CAE    CAG    CAM     120.000    3.000
+ NQ       HAG    CAG    CAM     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NQ       CONST_1  OAA    CAJ    CAH    CAI      180.000    0.000   0
+ NQ       CONST_2  CAJ    CAH    CAI    CAK        0.000    0.000   0
+ NQ       var_1    CAH    CAI    OAC    HAC        0.061   20.000   1
+ NQ       CONST_3  CAH    CAI    CAK    OAB      180.000    0.000   0
+ NQ       CONST_4  CAI    CAK    CAM    CAL        0.000    0.000   0
+ NQ       CONST_5  OAA    CAJ    CAL    CAF        0.000    0.000   0
+ NQ       CONST_6  CAJ    CAL    CAM    CAK        0.000    0.000   0
+ NQ       CONST_7  CAL    CAM    CAG    CAE        0.000    0.000   0
+ NQ       CONST_8  CAJ    CAL    CAF    CAD      180.000    0.000   0
+ NQ       CONST_9  CAL    CAF    CAD    CAE        0.000    0.000   0
+ NQ       CONST_10 CAF    CAD    CAE    CAG        0.000    0.000   0
+ NQ       CONST_11 CAD    CAE    CAG    CAM        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NQ       plan-1    CAK       0.020
+ NQ       plan-1    OAB       0.020
+ NQ       plan-1    CAM       0.020
+ NQ       plan-1    CAI       0.020
+ NQ       plan-1    CAJ       0.020
+ NQ       plan-1    CAH       0.020
+ NQ       plan-1    CAG       0.020
+ NQ       plan-1    CAL       0.020
+ NQ       plan-1    CAE       0.020
+ NQ       plan-1    CAD       0.020
+ NQ       plan-1    CAF       0.020
+ NQ       plan-1    HAG       0.020
+ NQ       plan-1    HAE       0.020
+ NQ       plan-1    HAD       0.020
+ NQ       plan-1    HAF       0.020
+ NQ       plan-1    OAA       0.020
+ NQ       plan-1    HAH       0.020
+ NQ       plan-1    OAC       0.020
+# ------------------------------------------------------

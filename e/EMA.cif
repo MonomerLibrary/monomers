@@ -1,0 +1,288 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+EMA      EMA '(ADENIN-9-YL-ETHOXYMETHYL)-HYDROXYPH' non-polymer        37  26 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_EMA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ EMA           O1A    O    O         0.000      0.000    0.000    0.000
+ EMA           PA     P    P         0.000     -1.318    0.660    0.133
+ EMA           O2A    O    OH1       0.000     -2.331   -0.318    0.913
+ EMA           H2A    H    H         0.000     -3.240   -0.036    1.084
+ EMA           O3A    O    O2        0.000     -1.151    2.031    0.960
+ EMA           PB     P    P         0.000     -0.562    1.633    2.405
+ EMA           O1B    O    OP       -0.500      0.748    0.958    2.236
+ EMA           O2B    O    OP       -0.500     -1.507    0.717    3.089
+ EMA           O3B    O    O2        0.000     -0.368    2.964    3.289
+ EMA           PG     P    P         0.000      0.220    2.496    4.713
+ EMA           O3G    O    OP       -0.666     -0.756    1.549    5.374
+ EMA           O2G    O    OP       -0.666      1.544    1.793    4.505
+ EMA           O1G    O    OP       -0.666      0.426    3.706    5.597
+ EMA           "C5'"  C    CH2       0.000     -1.983    1.027   -1.523
+ EMA           "H5'1" H    H         0.000     -1.295    1.691   -2.052
+ EMA           "H5'2" H    H         0.000     -2.955    1.515   -1.425
+ EMA           "O5'"  O    O2        0.000     -2.131   -0.189   -2.258
+ EMA           "C4'"  C    CH2       0.000     -3.446   -0.677   -1.988
+ EMA           "H4'1" H    H         0.000     -4.182    0.064   -2.310
+ EMA           "H4'2" H    H         0.000     -3.555   -0.855   -0.916
+ EMA           "C1'"  C    CH2       0.000     -3.672   -1.985   -2.749
+ EMA           "H1'1" H    H         0.000     -2.936   -2.724   -2.427
+ EMA           "H1'2" H    H         0.000     -3.562   -1.806   -3.821
+ EMA           N9     N    NR5       0.000     -5.021   -2.485   -2.473
+ EMA           C4     C    CR56      0.000     -5.382   -3.330   -1.455
+ EMA           C5     C    CR56      0.000     -6.765   -3.534   -1.591
+ EMA           N7     N    NRD5      0.000     -7.172   -2.808   -2.659
+ EMA           C8     C    CR15      0.000     -6.149   -2.194   -3.180
+ EMA           H8     H    H         0.000     -6.188   -1.548   -4.049
+ EMA           N3     N    NRD6      0.000     -4.734   -3.937   -0.466
+ EMA           C2     C    CR16      0.000     -5.377   -4.714    0.381
+ EMA           H2     H    H         0.000     -4.819   -5.193    1.176
+ EMA           N1     N    NRD6      0.000     -6.676   -4.930    0.296
+ EMA           C6     C    CR6       0.000     -7.408   -4.367   -0.660
+ EMA           N6     N    NH2       0.000     -8.769   -4.600   -0.740
+ EMA           HN62   H    H         0.000     -9.324   -4.167   -1.473
+ EMA           HN61   H    H         0.000     -9.230   -5.205   -0.068
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ EMA      O1A    n/a    PA     START
+ EMA      PA     O1A    "C5'"  .
+ EMA      O2A    PA     H2A    .
+ EMA      H2A    O2A    .      .
+ EMA      O3A    PA     PB     .
+ EMA      PB     O3A    O3B    .
+ EMA      O1B    PB     .      .
+ EMA      O2B    PB     .      .
+ EMA      O3B    PB     PG     .
+ EMA      PG     O3B    O1G    .
+ EMA      O3G    PG     .      .
+ EMA      O2G    PG     .      .
+ EMA      O1G    PG     .      .
+ EMA      "C5'"  PA     "O5'"  .
+ EMA      "H5'1" "C5'"  .      .
+ EMA      "H5'2" "C5'"  .      .
+ EMA      "O5'"  "C5'"  "C4'"  .
+ EMA      "C4'"  "O5'"  "C1'"  .
+ EMA      "H4'1" "C4'"  .      .
+ EMA      "H4'2" "C4'"  .      .
+ EMA      "C1'"  "C4'"  N9     .
+ EMA      "H1'1" "C1'"  .      .
+ EMA      "H1'2" "C1'"  .      .
+ EMA      N9     "C1'"  C4     .
+ EMA      C4     N9     N3     .
+ EMA      C5     C4     N7     .
+ EMA      N7     C5     C8     .
+ EMA      C8     N7     H8     .
+ EMA      H8     C8     .      .
+ EMA      N3     C4     C2     .
+ EMA      C2     N3     N1     .
+ EMA      H2     C2     .      .
+ EMA      N1     C2     C6     .
+ EMA      C6     N1     N6     .
+ EMA      N6     C6     HN61   .
+ EMA      HN62   N6     .      .
+ EMA      HN61   N6     .      END
+ EMA      N9     C8     .    ADD
+ EMA      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ EMA      O1G    PG        deloc       1.510    0.020
+ EMA      O2G    PG        deloc       1.510    0.020
+ EMA      O3G    PG        deloc       1.510    0.020
+ EMA      PG     O3B       single      1.610    0.020
+ EMA      O1B    PB        deloc       1.510    0.020
+ EMA      O2B    PB        deloc       1.510    0.020
+ EMA      O3B    PB        single      1.610    0.020
+ EMA      PB     O3A       single      1.610    0.020
+ EMA      PA     O1A       double      1.480    0.020
+ EMA      O2A    PA        single      1.610    0.020
+ EMA      O3A    PA        single      1.610    0.020
+ EMA      "C5'"  PA        single      1.812    0.020
+ EMA      H2A    O2A       single      0.967    0.020
+ EMA      "O5'"  "C5'"     single      1.426    0.020
+ EMA      "H5'1" "C5'"     single      1.092    0.020
+ EMA      "H5'2" "C5'"     single      1.092    0.020
+ EMA      "C4'"  "O5'"     single      1.426    0.020
+ EMA      "C1'"  "C4'"     single      1.524    0.020
+ EMA      "H4'1" "C4'"     single      1.092    0.020
+ EMA      "H4'2" "C4'"     single      1.092    0.020
+ EMA      N9     "C1'"     single      1.462    0.020
+ EMA      "H1'1" "C1'"     single      1.092    0.020
+ EMA      "H1'2" "C1'"     single      1.092    0.020
+ EMA      N9     C8        single      1.337    0.020
+ EMA      C4     N9        single      1.337    0.020
+ EMA      C8     N7        double      1.350    0.020
+ EMA      H8     C8        single      1.083    0.020
+ EMA      N7     C5        single      1.350    0.020
+ EMA      C5     C6        single      1.490    0.020
+ EMA      C5     C4        double      1.490    0.020
+ EMA      N6     C6        single      1.355    0.020
+ EMA      C6     N1        double      1.350    0.020
+ EMA      HN61   N6        single      1.010    0.020
+ EMA      HN62   N6        single      1.010    0.020
+ EMA      N1     C2        single      1.337    0.020
+ EMA      C2     N3        double      1.337    0.020
+ EMA      H2     C2        single      1.083    0.020
+ EMA      N3     C4        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ EMA      O1A    PA     O2A     109.500    3.000
+ EMA      O1A    PA     O3A     109.500    3.000
+ EMA      O1A    PA     "C5'"   109.500    3.000
+ EMA      O2A    PA     O3A     109.500    3.000
+ EMA      O2A    PA     "C5'"   109.500    3.000
+ EMA      O3A    PA     "C5'"   109.500    3.000
+ EMA      PA     O2A    H2A     120.000    3.000
+ EMA      PA     O3A    PB      120.500    3.000
+ EMA      O3A    PB     O1B     108.200    3.000
+ EMA      O3A    PB     O2B     108.200    3.000
+ EMA      O3A    PB     O3B     102.600    3.000
+ EMA      O1B    PB     O2B     119.900    3.000
+ EMA      O1B    PB     O3B     108.200    3.000
+ EMA      O2B    PB     O3B     108.200    3.000
+ EMA      PB     O3B    PG      120.500    3.000
+ EMA      O3B    PG     O3G     108.200    3.000
+ EMA      O3B    PG     O2G     108.200    3.000
+ EMA      O3B    PG     O1G     108.200    3.000
+ EMA      O3G    PG     O2G     119.900    3.000
+ EMA      O3G    PG     O1G     119.900    3.000
+ EMA      O2G    PG     O1G     119.900    3.000
+ EMA      PA     "C5'"  "H5'1"  109.500    3.000
+ EMA      PA     "C5'"  "H5'2"  109.500    3.000
+ EMA      PA     "C5'"  "O5'"   109.500    3.000
+ EMA      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ EMA      "H5'1" "C5'"  "O5'"   109.470    3.000
+ EMA      "H5'2" "C5'"  "O5'"   109.470    3.000
+ EMA      "C5'"  "O5'"  "C4'"   111.800    3.000
+ EMA      "O5'"  "C4'"  "H4'1"  109.470    3.000
+ EMA      "O5'"  "C4'"  "H4'2"  109.470    3.000
+ EMA      "O5'"  "C4'"  "C1'"   109.470    3.000
+ EMA      "H4'1" "C4'"  "H4'2"  107.900    3.000
+ EMA      "H4'1" "C4'"  "C1'"   109.470    3.000
+ EMA      "H4'2" "C4'"  "C1'"   109.470    3.000
+ EMA      "C4'"  "C1'"  "H1'1"  109.470    3.000
+ EMA      "C4'"  "C1'"  "H1'2"  109.470    3.000
+ EMA      "C4'"  "C1'"  N9      109.500    3.000
+ EMA      "H1'1" "C1'"  "H1'2"  107.900    3.000
+ EMA      "H1'1" "C1'"  N9      109.500    3.000
+ EMA      "H1'2" "C1'"  N9      109.500    3.000
+ EMA      "C1'"  N9     C4      126.000    3.000
+ EMA      "C1'"  N9     C8      126.000    3.000
+ EMA      C4     N9     C8      108.000    3.000
+ EMA      N9     C4     C5      108.000    3.000
+ EMA      N9     C4     N3      132.000    3.000
+ EMA      C5     C4     N3      120.000    3.000
+ EMA      C4     C5     N7      108.000    3.000
+ EMA      C4     C5     C6      120.000    3.000
+ EMA      N7     C5     C6      132.000    3.000
+ EMA      C5     N7     C8      108.000    3.000
+ EMA      N7     C8     H8      126.000    3.000
+ EMA      N7     C8     N9      108.000    3.000
+ EMA      H8     C8     N9      126.000    3.000
+ EMA      C4     N3     C2      120.000    3.000
+ EMA      N3     C2     H2      120.000    3.000
+ EMA      N3     C2     N1      120.000    3.000
+ EMA      H2     C2     N1      120.000    3.000
+ EMA      C2     N1     C6      120.000    3.000
+ EMA      N1     C6     N6      120.000    3.000
+ EMA      N1     C6     C5      120.000    3.000
+ EMA      N6     C6     C5      120.000    3.000
+ EMA      C6     N6     HN62    120.000    3.000
+ EMA      C6     N6     HN61    120.000    3.000
+ EMA      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ EMA      var_1    O1A    PA     O2A    H2A     -179.990   20.000   1
+ EMA      var_2    O1A    PA     O3A    PB       -59.999   20.000   1
+ EMA      var_3    PA     O3A    PB     O3B      179.976   20.000   1
+ EMA      var_4    O3A    PB     O3B    PG       179.989   20.000   1
+ EMA      var_5    PB     O3B    PG     O1G     -179.964   20.000   1
+ EMA      var_6    O1A    PA     "C5'"  "O5'"     59.994   20.000   1
+ EMA      var_7    PA     "C5'"  "O5'"  "C4'"     89.919   20.000   1
+ EMA      var_8    "C5'"  "O5'"  "C4'"  "C1'"    179.988   20.000   1
+ EMA      var_9    "O5'"  "C4'"  "C1'"  N9      -179.970   20.000   3
+ EMA      var_10   "C4'"  "C1'"  N9     C4       -89.913   20.000   1
+ EMA      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ EMA      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ EMA      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ EMA      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ EMA      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ EMA      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ EMA      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ EMA      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ EMA      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ EMA      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ EMA      CONST_11 N1     C6     N6     HN61       0.009    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ EMA      plan-1    N9        0.020
+ EMA      plan-1    "C1'"     0.020
+ EMA      plan-1    C8        0.020
+ EMA      plan-1    C4        0.020
+ EMA      plan-1    N7        0.020
+ EMA      plan-1    H8        0.020
+ EMA      plan-1    C5        0.020
+ EMA      plan-1    C6        0.020
+ EMA      plan-1    N1        0.020
+ EMA      plan-1    C2        0.020
+ EMA      plan-1    N3        0.020
+ EMA      plan-1    N6        0.020
+ EMA      plan-1    H2        0.020
+ EMA      plan-1    HN62      0.020
+ EMA      plan-1    HN61      0.020
+ EMA      plan-2    N6        0.020
+ EMA      plan-2    C6        0.020
+ EMA      plan-2    HN61      0.020
+ EMA      plan-2    HN62      0.020
+# ------------------------------------------------------

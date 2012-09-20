@@ -1,0 +1,276 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+UN4      UN4 '5-{[(2-AMINO-9H-PURIN-6-YL)OXY]METHY' non-polymer        30  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_UN4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ UN4           O14    O    O         0.000      0.000    0.000    0.000
+ UN4           C14    C    C         0.000     -0.839   -0.687   -0.546
+ UN4           "C3'"  C    CH2       0.000     -0.758   -1.182   -1.972
+ UN4           "H3'1" H    H         0.000      0.229   -1.583   -2.211
+ UN4           "H3'2" H    H         0.000     -1.016   -0.402   -2.692
+ UN4           "C2'"  C    CH2       0.000     -1.807   -2.314   -2.039
+ UN4           "H2'2" H    H         0.000     -1.386   -3.301   -1.831
+ UN4           "H2'1" H    H         0.000     -2.347   -2.343   -2.988
+ UN4           N15    N    NH1       0.000     -1.976   -1.116    0.031
+ UN4           H15    H    H         0.000     -2.245   -0.914    0.983
+ UN4           "C4'"  C    CH1       0.000     -2.775   -1.916   -0.905
+ UN4           "H4'"  H    H         0.000     -3.163   -2.813   -0.404
+ UN4           C60    C    CH2       0.000     -3.929   -1.080   -1.462
+ UN4           H601   H    H         0.000     -4.486   -1.671   -2.193
+ UN4           H602   H    H         0.000     -3.530   -0.187   -1.947
+ UN4           O6     O    O2        0.000     -4.799   -0.696   -0.396
+ UN4           C6     C    CR6       0.000     -5.795    0.036   -0.947
+ UN4           N1     N    NRD6      0.000     -5.825    0.264   -2.253
+ UN4           C2     C    CR6       0.000     -6.794    0.984   -2.802
+ UN4           N2     N    NH2       0.000     -6.777    1.197   -4.170
+ UN4           H2N2   H    H         0.000     -7.510    1.740   -4.617
+ UN4           H2N1   H    H         0.000     -6.032    0.812   -4.743
+ UN4           C5     C    CR56      0.000     -6.821    0.565   -0.149
+ UN4           N7     N    NRD5      0.000     -7.109    0.533    1.176
+ UN4           C8     C    CR15      0.000     -8.203    1.200    1.398
+ UN4           H8     H    H         0.000     -8.661    1.336    2.370
+ UN4           N9     N    NR15      0.000     -8.688    1.703    0.227
+ UN4           H9     H    H         0.000     -9.549    2.275    0.112
+ UN4           C4     C    CR56      0.000     -7.831    1.317   -0.774
+ UN4           N3     N    NRD6      0.000     -7.781    1.501   -2.087
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ UN4      O14    n/a    C14    START
+ UN4      C14    O14    N15    .
+ UN4      "C3'"  C14    "C2'"  .
+ UN4      "H3'1" "C3'"  .      .
+ UN4      "H3'2" "C3'"  .      .
+ UN4      "C2'"  "C3'"  "H2'1" .
+ UN4      "H2'2" "C2'"  .      .
+ UN4      "H2'1" "C2'"  .      .
+ UN4      N15    C14    "C4'"  .
+ UN4      H15    N15    .      .
+ UN4      "C4'"  N15    C60    .
+ UN4      "H4'"  "C4'"  .      .
+ UN4      C60    "C4'"  O6     .
+ UN4      H601   C60    .      .
+ UN4      H602   C60    .      .
+ UN4      O6     C60    C6     .
+ UN4      C6     O6     C5     .
+ UN4      N1     C6     C2     .
+ UN4      C2     N1     N2     .
+ UN4      N2     C2     H2N1   .
+ UN4      H2N2   N2     .      .
+ UN4      H2N1   N2     .      .
+ UN4      C5     C6     N7     .
+ UN4      N7     C5     C8     .
+ UN4      C8     N7     N9     .
+ UN4      H8     C8     .      .
+ UN4      N9     C8     C4     .
+ UN4      H9     N9     .      .
+ UN4      C4     N9     N3     .
+ UN4      N3     C4     .      END
+ UN4      C2     N3     .    ADD
+ UN4      C4     C5     .    ADD
+ UN4      "C4'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ UN4      C2     N3        double      1.350    0.020
+ UN4      N2     C2        single      1.355    0.020
+ UN4      C2     N1        single      1.350    0.020
+ UN4      C4     C5        double      1.490    0.020
+ UN4      C4     N9        single      1.340    0.020
+ UN4      N3     C4        single      1.355    0.020
+ UN4      C5     C6        single      1.490    0.020
+ UN4      N7     C5        single      1.350    0.020
+ UN4      "C4'"  "C2'"     single      1.524    0.020
+ UN4      C60    "C4'"     single      1.524    0.020
+ UN4      "C4'"  N15       single      1.450    0.020
+ UN4      "H4'"  "C4'"     single      1.099    0.020
+ UN4      "C2'"  "C3'"     single      1.524    0.020
+ UN4      "C3'"  C14       single      1.510    0.020
+ UN4      "H3'1" "C3'"     single      1.092    0.020
+ UN4      "H3'2" "C3'"     single      1.092    0.020
+ UN4      "H2'1" "C2'"     single      1.092    0.020
+ UN4      "H2'2" "C2'"     single      1.092    0.020
+ UN4      N9     C8        single      1.350    0.020
+ UN4      H9     N9        single      1.040    0.020
+ UN4      H2N1   N2        single      1.010    0.020
+ UN4      H2N2   N2        single      1.010    0.020
+ UN4      N1     C6        double      1.350    0.020
+ UN4      C6     O6        single      1.370    0.020
+ UN4      O6     C60       single      1.426    0.020
+ UN4      H601   C60       single      1.092    0.020
+ UN4      H602   C60       single      1.092    0.020
+ UN4      C14    O14       double      1.220    0.020
+ UN4      N15    C14       single      1.330    0.020
+ UN4      C8     N7        double      1.350    0.020
+ UN4      H8     C8        single      1.083    0.020
+ UN4      H15    N15       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ UN4      O14    C14    "C3'"   120.500    3.000
+ UN4      O14    C14    N15     123.000    3.000
+ UN4      "C3'"  C14    N15     116.500    3.000
+ UN4      C14    "C3'"  "H3'1"  109.470    3.000
+ UN4      C14    "C3'"  "H3'2"  109.470    3.000
+ UN4      C14    "C3'"  "C2'"   109.470    3.000
+ UN4      "H3'1" "C3'"  "H3'2"  107.900    3.000
+ UN4      "H3'1" "C3'"  "C2'"   109.470    3.000
+ UN4      "H3'2" "C3'"  "C2'"   109.470    3.000
+ UN4      "C3'"  "C2'"  "H2'2"  109.470    3.000
+ UN4      "C3'"  "C2'"  "H2'1"  109.470    3.000
+ UN4      "C3'"  "C2'"  "C4'"   111.000    3.000
+ UN4      "H2'2" "C2'"  "H2'1"  107.900    3.000
+ UN4      "H2'2" "C2'"  "C4'"   109.470    3.000
+ UN4      "H2'1" "C2'"  "C4'"   109.470    3.000
+ UN4      C14    N15    H15     120.000    3.000
+ UN4      C14    N15    "C4'"   121.500    3.000
+ UN4      H15    N15    "C4'"   118.500    3.000
+ UN4      N15    "C4'"  "H4'"   108.550    3.000
+ UN4      N15    "C4'"  C60     110.000    3.000
+ UN4      N15    "C4'"  "C2'"   110.000    3.000
+ UN4      "H4'"  "C4'"  C60     108.340    3.000
+ UN4      "H4'"  "C4'"  "C2'"   108.340    3.000
+ UN4      C60    "C4'"  "C2'"   109.470    3.000
+ UN4      "C4'"  C60    H601    109.470    3.000
+ UN4      "C4'"  C60    H602    109.470    3.000
+ UN4      "C4'"  C60    O6      109.470    3.000
+ UN4      H601   C60    H602    107.900    3.000
+ UN4      H601   C60    O6      109.470    3.000
+ UN4      H602   C60    O6      109.470    3.000
+ UN4      C60    O6     C6      120.000    3.000
+ UN4      O6     C6     N1      120.000    3.000
+ UN4      O6     C6     C5      120.000    3.000
+ UN4      N1     C6     C5      120.000    3.000
+ UN4      C6     N1     C2      120.000    3.000
+ UN4      N1     C2     N2      120.000    3.000
+ UN4      N1     C2     N3      120.000    3.000
+ UN4      N2     C2     N3      120.000    3.000
+ UN4      C2     N2     H2N2    120.000    3.000
+ UN4      C2     N2     H2N1    120.000    3.000
+ UN4      H2N2   N2     H2N1    120.000    3.000
+ UN4      C6     C5     N7      132.000    3.000
+ UN4      C6     C5     C4      120.000    3.000
+ UN4      N7     C5     C4      108.000    3.000
+ UN4      C5     N7     C8      108.000    3.000
+ UN4      N7     C8     H8      126.000    3.000
+ UN4      N7     C8     N9      108.000    3.000
+ UN4      H8     C8     N9      126.000    3.000
+ UN4      C8     N9     H9      126.000    3.000
+ UN4      C8     N9     C4      108.000    3.000
+ UN4      H9     N9     C4      126.000    3.000
+ UN4      N9     C4     N3      132.000    3.000
+ UN4      N9     C4     C5      108.000    3.000
+ UN4      N3     C4     C5      120.000    3.000
+ UN4      C4     N3     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ UN4      var_1    O14    C14    "C3'"  "C2'"    150.000   20.000   3
+ UN4      var_2    C14    "C3'"  "C2'"  "C4'"     30.000   20.000   3
+ UN4      CONST_1  O14    C14    N15    "C4'"    180.000    0.000   0
+ UN4      var_3    C14    N15    "C4'"  C60      -90.000   20.000   3
+ UN4      var_4    N15    "C4'"  "C2'"  "C3'"    -30.000   20.000   3
+ UN4      var_5    N15    "C4'"  C60    O6       -62.644   20.000   3
+ UN4      var_6    "C4'"  C60    O6     C6      -179.990   20.000   1
+ UN4      var_7    C60    O6     C6     C5       179.992   20.000   1
+ UN4      CONST_2  O6     C6     N1     C2       180.000    0.000   0
+ UN4      CONST_3  C6     N1     C2     N2       180.000    0.000   0
+ UN4      CONST_4  N1     C2     N3     C4         0.000    0.000   0
+ UN4      CONST_5  N1     C2     N2     H2N1      -0.348    0.000   0
+ UN4      CONST_6  O6     C6     C5     N7         0.000    0.000   0
+ UN4      CONST_7  C6     C5     N7     C8       180.000    0.000   0
+ UN4      CONST_8  C5     N7     C8     N9         0.000    0.000   0
+ UN4      CONST_9  N7     C8     N9     C4         0.000    0.000   0
+ UN4      CONST_10 C8     N9     C4     N3       180.000    0.000   0
+ UN4      CONST_11 N9     C4     C5     C6       180.000    0.000   0
+ UN4      CONST_12 N9     C4     N3     C2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ UN4      chir_01  "C4'"  "C2'"  C60    N15       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ UN4      plan-1    C2        0.020
+ UN4      plan-1    N3        0.020
+ UN4      plan-1    N2        0.020
+ UN4      plan-1    N1        0.020
+ UN4      plan-1    C6        0.020
+ UN4      plan-1    C4        0.020
+ UN4      plan-1    C5        0.020
+ UN4      plan-1    O6        0.020
+ UN4      plan-1    N9        0.020
+ UN4      plan-1    N7        0.020
+ UN4      plan-1    C8        0.020
+ UN4      plan-1    H9        0.020
+ UN4      plan-1    H8        0.020
+ UN4      plan-1    H2N2      0.020
+ UN4      plan-1    H2N1      0.020
+ UN4      plan-2    N2        0.020
+ UN4      plan-2    C2        0.020
+ UN4      plan-2    H2N1      0.020
+ UN4      plan-2    H2N2      0.020
+ UN4      plan-3    C14       0.020
+ UN4      plan-3    "C3'"     0.020
+ UN4      plan-3    O14       0.020
+ UN4      plan-3    N15       0.020
+ UN4      plan-3    H15       0.020
+ UN4      plan-4    N15       0.020
+ UN4      plan-4    "C4'"     0.020
+ UN4      plan-4    C14       0.020
+ UN4      plan-4    H15       0.020
+# ------------------------------------------------------

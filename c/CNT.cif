@@ -1,0 +1,233 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CNT      CNT 'N-METHYL-META-CHLORO-TYROSINE       ' non-polymer        26  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CNT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CNT           OXT    O    OC       -0.500      0.000    0.000    0.000
+ CNT           C      C    C         0.000     -1.217    0.157    0.243
+ CNT           O      O    OC       -0.500     -1.633    0.513    1.368
+ CNT           CA     C    CH1       0.000     -2.144   -0.127   -0.932
+ CNT           HA     H    H         0.000     -1.645   -0.846   -1.596
+ CNT           N      N    NH1       0.000     -3.383   -0.712   -0.485
+ CNT           H      H    H         0.000     -4.292   -0.297   -0.630
+ CNT           CM     C    CH3       0.000     -3.158   -1.982    0.205
+ CNT           HMC3   H    H         0.000     -2.336   -1.886    0.868
+ CNT           HMC2   H    H         0.000     -4.024   -2.245    0.757
+ CNT           HMC1   H    H         0.000     -2.950   -2.741   -0.505
+ CNT           CB     C    CH2       0.000     -2.395    1.162   -1.725
+ CNT           HBC1   H    H         0.000     -2.559    1.967   -1.005
+ CNT           HBC2   H    H         0.000     -3.300    1.015   -2.318
+ CNT           CG     C    CR6       0.000     -1.248    1.525   -2.636
+ CNT           CE1    C    CR16      0.000     -1.237    1.045   -3.936
+ CNT           HE1    H    H         0.000     -2.041    0.414   -4.293
+ CNT           CD1    C    CR16      0.000     -0.177    1.382   -4.779
+ CNT           HD1    H    H         0.000     -0.157    1.013   -5.797
+ CNT           CZ     C    CR6       0.000      0.855    2.195   -4.313
+ CNT           OH     O    OH1       0.000      1.877    2.508   -5.159
+ CNT           HH     H    H         0.000      2.405    3.222   -4.776
+ CNT           CE2    C    CR6       0.000      0.829    2.671   -3.001
+ CNT           CL     CL   CL        0.000      2.094    3.675   -2.397
+ CNT           CD2    C    CR16      0.000     -0.230    2.335   -2.158
+ CNT           HD2    H    H         0.000     -0.256    2.702   -1.139
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CNT      OXT    n/a    C      START
+ CNT      C      OXT    CA     .
+ CNT      O      C      .      .
+ CNT      CA     C      CB     .
+ CNT      HA     CA     .      .
+ CNT      N      CA     CM     .
+ CNT      H      N      .      .
+ CNT      CM     N      HMC1   .
+ CNT      HMC3   CM     .      .
+ CNT      HMC2   CM     .      .
+ CNT      HMC1   CM     .      .
+ CNT      CB     CA     CG     .
+ CNT      HBC1   CB     .      .
+ CNT      HBC2   CB     .      .
+ CNT      CG     CB     CE1    .
+ CNT      CE1    CG     CD1    .
+ CNT      HE1    CE1    .      .
+ CNT      CD1    CE1    CZ     .
+ CNT      HD1    CD1    .      .
+ CNT      CZ     CD1    CE2    .
+ CNT      OH     CZ     HH     .
+ CNT      HH     OH     .      .
+ CNT      CE2    CZ     CD2    .
+ CNT      CL     CE2    .      .
+ CNT      CD2    CE2    HD2    .
+ CNT      HD2    CD2    .      END
+ CNT      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CNT      CM     N         single      1.450    0.020
+ CNT      N      CA        single      1.450    0.020
+ CNT      H      N         single      1.010    0.020
+ CNT      HMC1   CM        single      1.059    0.020
+ CNT      HMC2   CM        single      1.059    0.020
+ CNT      HMC3   CM        single      1.059    0.020
+ CNT      CB     CA        single      1.524    0.020
+ CNT      CA     C         single      1.500    0.020
+ CNT      HA     CA        single      1.099    0.020
+ CNT      CG     CB        single      1.511    0.020
+ CNT      HBC1   CB        single      1.092    0.020
+ CNT      HBC2   CB        single      1.092    0.020
+ CNT      CG     CD2       double      1.390    0.020
+ CNT      CE1    CG        single      1.390    0.020
+ CNT      CD2    CE2       single      1.390    0.020
+ CNT      HD2    CD2       single      1.083    0.020
+ CNT      CL     CE2       single      1.795    0.020
+ CNT      CE2    CZ        double      1.487    0.020
+ CNT      OH     CZ        single      1.362    0.020
+ CNT      CZ     CD1       single      1.390    0.020
+ CNT      HH     OH        single      0.967    0.020
+ CNT      CD1    CE1       double      1.390    0.020
+ CNT      HD1    CD1       single      1.083    0.020
+ CNT      HE1    CE1       single      1.083    0.020
+ CNT      O      C         deloc       1.250    0.020
+ CNT      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CNT      OXT    C      O       123.000    3.000
+ CNT      OXT    C      CA      118.500    3.000
+ CNT      O      C      CA      118.500    3.000
+ CNT      C      CA     HA      108.810    3.000
+ CNT      C      CA     N       111.600    3.000
+ CNT      C      CA     CB      109.470    3.000
+ CNT      HA     CA     N       108.550    3.000
+ CNT      HA     CA     CB      108.340    3.000
+ CNT      N      CA     CB      110.000    3.000
+ CNT      CA     N      H       118.500    3.000
+ CNT      CA     N      CM      120.000    3.000
+ CNT      H      N      CM      118.500    3.000
+ CNT      N      CM     HMC3    109.470    3.000
+ CNT      N      CM     HMC2    109.470    3.000
+ CNT      N      CM     HMC1    109.470    3.000
+ CNT      HMC3   CM     HMC2    109.470    3.000
+ CNT      HMC3   CM     HMC1    109.470    3.000
+ CNT      HMC2   CM     HMC1    109.470    3.000
+ CNT      CA     CB     HBC1    109.470    3.000
+ CNT      CA     CB     HBC2    109.470    3.000
+ CNT      CA     CB     CG      109.470    3.000
+ CNT      HBC1   CB     HBC2    107.900    3.000
+ CNT      HBC1   CB     CG      109.470    3.000
+ CNT      HBC2   CB     CG      109.470    3.000
+ CNT      CB     CG     CE1     120.000    3.000
+ CNT      CB     CG     CD2     120.000    3.000
+ CNT      CE1    CG     CD2     120.000    3.000
+ CNT      CG     CE1    HE1     120.000    3.000
+ CNT      CG     CE1    CD1     120.000    3.000
+ CNT      HE1    CE1    CD1     120.000    3.000
+ CNT      CE1    CD1    HD1     120.000    3.000
+ CNT      CE1    CD1    CZ      120.000    3.000
+ CNT      HD1    CD1    CZ      120.000    3.000
+ CNT      CD1    CZ     OH      120.000    3.000
+ CNT      CD1    CZ     CE2     120.000    3.000
+ CNT      OH     CZ     CE2     120.000    3.000
+ CNT      CZ     OH     HH      109.470    3.000
+ CNT      CZ     CE2    CL      120.000    3.000
+ CNT      CZ     CE2    CD2     120.000    3.000
+ CNT      CL     CE2    CD2     120.000    3.000
+ CNT      CE2    CD2    HD2     120.000    3.000
+ CNT      CE2    CD2    CG      120.000    3.000
+ CNT      HD2    CD2    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CNT      var_1    OXT    C      CA     CB       -91.436   20.000   3
+ CNT      var_2    C      CA     N      CM       -60.482   20.000   3
+ CNT      var_3    CA     N      CM     HMC1     -76.217   20.000   1
+ CNT      var_4    C      CA     CB     CG        78.330   20.000   3
+ CNT      var_5    CA     CB     CG     CE1       90.121   20.000   2
+ CNT      CONST_1  CB     CG     CD2    CE2      180.000    0.000   0
+ CNT      CONST_2  CB     CG     CE1    CD1      180.000    0.000   0
+ CNT      CONST_3  CG     CE1    CD1    CZ         0.000    0.000   0
+ CNT      CONST_4  CE1    CD1    CZ     CE2        0.000    0.000   0
+ CNT      var_6    CD1    CZ     OH     HH       167.436   20.000   1
+ CNT      CONST_5  CD1    CZ     CE2    CD2        0.000    0.000   0
+ CNT      CONST_6  CZ     CE2    CD2    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CNT      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CNT      plan-1    N         0.020
+ CNT      plan-1    CM        0.020
+ CNT      plan-1    CA        0.020
+ CNT      plan-1    H         0.020
+ CNT      plan-2    CG        0.020
+ CNT      plan-2    CB        0.020
+ CNT      plan-2    CD2       0.020
+ CNT      plan-2    CE1       0.020
+ CNT      plan-2    CE2       0.020
+ CNT      plan-2    CZ        0.020
+ CNT      plan-2    CD1       0.020
+ CNT      plan-2    HD2       0.020
+ CNT      plan-2    CL        0.020
+ CNT      plan-2    OH        0.020
+ CNT      plan-2    HD1       0.020
+ CNT      plan-2    HE1       0.020
+ CNT      plan-3    C         0.020
+ CNT      plan-3    CA        0.020
+ CNT      plan-3    O         0.020
+ CNT      plan-3    OXT       0.020
+# ------------------------------------------------------

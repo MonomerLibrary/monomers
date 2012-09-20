@@ -1,0 +1,194 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+J0Z      J0Z 'benzyl acetate                      ' non-polymer        21  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_J0Z
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ J0Z           OAB    O    O        -0.500      0.000    0.000    0.000
+ J0Z           CAJ    C    C         0.000     -0.711   -0.005   -1.030
+ J0Z           CAA    C    CH3       0.000     -0.065   -0.011   -2.391
+ J0Z           HAAB   H    H         0.000     -0.364   -0.878   -2.922
+ J0Z           HAAA   H    H         0.000     -0.364    0.851   -2.929
+ J0Z           HAA    H    H         0.000      0.989   -0.010   -2.284
+ J0Z           OAI    O    O2       -0.500     -1.958   -0.005   -0.930
+ J0Z           CAH    C    CH2       0.000     -2.602    0.002    0.420
+ J0Z           HAH    H    H         0.000     -2.264    0.896    0.948
+ J0Z           HAHA   H    H         0.000     -2.264   -0.887    0.957
+ J0Z           CAK    C    CR6       0.000     -4.107    0.002    0.344
+ J0Z           CAG    C    CR16      0.000     -4.797    1.199    0.309
+ J0Z           HAG    H    H         0.000     -4.257    2.136    0.341
+ J0Z           CAE    C    CR16      0.000     -6.178    1.198    0.233
+ J0Z           HAE    H    H         0.000     -6.719    2.136    0.198
+ J0Z           CAC    C    CR16      0.000     -6.869    0.001    0.203
+ J0Z           HAC    H    H         0.000     -7.950    0.001    0.148
+ J0Z           CAD    C    CR16      0.000     -6.177   -1.196    0.244
+ J0Z           HAD    H    H         0.000     -6.718   -2.134    0.220
+ J0Z           CAF    C    CR16      0.000     -4.798   -1.195    0.315
+ J0Z           HAF    H    H         0.000     -4.257   -2.133    0.347
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ J0Z      OAB    n/a    CAJ    START
+ J0Z      CAJ    OAB    OAI    .
+ J0Z      CAA    CAJ    HAA    .
+ J0Z      HAAB   CAA    .      .
+ J0Z      HAAA   CAA    .      .
+ J0Z      HAA    CAA    .      .
+ J0Z      OAI    CAJ    CAH    .
+ J0Z      CAH    OAI    CAK    .
+ J0Z      HAH    CAH    .      .
+ J0Z      HAHA   CAH    .      .
+ J0Z      CAK    CAH    CAG    .
+ J0Z      CAG    CAK    CAE    .
+ J0Z      HAG    CAG    .      .
+ J0Z      CAE    CAG    CAC    .
+ J0Z      HAE    CAE    .      .
+ J0Z      CAC    CAE    CAD    .
+ J0Z      HAC    CAC    .      .
+ J0Z      CAD    CAC    CAF    .
+ J0Z      HAD    CAD    .      .
+ J0Z      CAF    CAD    HAF    .
+ J0Z      HAF    CAF    .      END
+ J0Z      CAK    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ J0Z      CAA    CAJ       single      1.500    0.020
+ J0Z      CAJ    OAB       deloc       1.220    0.020
+ J0Z      OAI    CAJ       deloc       1.454    0.020
+ J0Z      CAH    OAI       single      1.426    0.020
+ J0Z      CAK    CAH       single      1.511    0.020
+ J0Z      CAK    CAF       double      1.390    0.020
+ J0Z      CAG    CAK       single      1.390    0.020
+ J0Z      CAF    CAD       single      1.390    0.020
+ J0Z      CAD    CAC       double      1.390    0.020
+ J0Z      CAC    CAE       single      1.390    0.020
+ J0Z      CAE    CAG       double      1.390    0.020
+ J0Z      HAA    CAA       single      1.059    0.020
+ J0Z      HAAA   CAA       single      1.059    0.020
+ J0Z      HAAB   CAA       single      1.059    0.020
+ J0Z      HAH    CAH       single      1.092    0.020
+ J0Z      HAHA   CAH       single      1.092    0.020
+ J0Z      HAF    CAF       single      1.083    0.020
+ J0Z      HAD    CAD       single      1.083    0.020
+ J0Z      HAC    CAC       single      1.083    0.020
+ J0Z      HAE    CAE       single      1.083    0.020
+ J0Z      HAG    CAG       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ J0Z      OAB    CAJ    CAA     123.000    3.000
+ J0Z      OAB    CAJ    OAI     119.000    3.000
+ J0Z      CAA    CAJ    OAI     120.000    3.000
+ J0Z      CAJ    CAA    HAAB    109.470    3.000
+ J0Z      CAJ    CAA    HAAA    109.470    3.000
+ J0Z      CAJ    CAA    HAA     109.470    3.000
+ J0Z      HAAB   CAA    HAAA    109.470    3.000
+ J0Z      HAAB   CAA    HAA     109.470    3.000
+ J0Z      HAAA   CAA    HAA     109.470    3.000
+ J0Z      CAJ    OAI    CAH     120.000    3.000
+ J0Z      OAI    CAH    HAH     109.470    3.000
+ J0Z      OAI    CAH    HAHA    109.470    3.000
+ J0Z      OAI    CAH    CAK     109.470    3.000
+ J0Z      HAH    CAH    HAHA    107.900    3.000
+ J0Z      HAH    CAH    CAK     109.470    3.000
+ J0Z      HAHA   CAH    CAK     109.470    3.000
+ J0Z      CAH    CAK    CAG     120.000    3.000
+ J0Z      CAH    CAK    CAF     120.000    3.000
+ J0Z      CAG    CAK    CAF     120.000    3.000
+ J0Z      CAK    CAG    HAG     120.000    3.000
+ J0Z      CAK    CAG    CAE     120.000    3.000
+ J0Z      HAG    CAG    CAE     120.000    3.000
+ J0Z      CAG    CAE    HAE     120.000    3.000
+ J0Z      CAG    CAE    CAC     120.000    3.000
+ J0Z      HAE    CAE    CAC     120.000    3.000
+ J0Z      CAE    CAC    HAC     120.000    3.000
+ J0Z      CAE    CAC    CAD     120.000    3.000
+ J0Z      HAC    CAC    CAD     120.000    3.000
+ J0Z      CAC    CAD    HAD     120.000    3.000
+ J0Z      CAC    CAD    CAF     120.000    3.000
+ J0Z      HAD    CAD    CAF     120.000    3.000
+ J0Z      CAD    CAF    HAF     120.000    3.000
+ J0Z      CAD    CAF    CAK     120.000    3.000
+ J0Z      HAF    CAF    CAK     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ J0Z      var_1    OAB    CAJ    CAA    HAA        0.039   20.000   1
+ J0Z      var_2    OAB    CAJ    OAI    CAH       -0.019   20.000   1
+ J0Z      var_3    CAJ    OAI    CAH    CAK      179.998   20.000   1
+ J0Z      var_4    OAI    CAH    CAK    CAG      -90.304   20.000   2
+ J0Z      CONST_1  CAH    CAK    CAF    CAD      180.000    0.000   0
+ J0Z      CONST_2  CAH    CAK    CAG    CAE      180.000    0.000   0
+ J0Z      CONST_3  CAK    CAG    CAE    CAC        0.000    0.000   0
+ J0Z      CONST_4  CAG    CAE    CAC    CAD        0.000    0.000   0
+ J0Z      CONST_5  CAE    CAC    CAD    CAF        0.000    0.000   0
+ J0Z      CONST_6  CAC    CAD    CAF    CAK        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ J0Z      plan-1    CAJ       0.020
+ J0Z      plan-1    CAA       0.020
+ J0Z      plan-1    OAB       0.020
+ J0Z      plan-1    OAI       0.020
+ J0Z      plan-2    CAK       0.020
+ J0Z      plan-2    CAH       0.020
+ J0Z      plan-2    CAF       0.020
+ J0Z      plan-2    CAG       0.020
+ J0Z      plan-2    CAD       0.020
+ J0Z      plan-2    CAC       0.020
+ J0Z      plan-2    CAE       0.020
+ J0Z      plan-2    HAF       0.020
+ J0Z      plan-2    HAD       0.020
+ J0Z      plan-2    HAC       0.020
+ J0Z      plan-2    HAE       0.020
+ J0Z      plan-2    HAG       0.020
+# ------------------------------------------------------

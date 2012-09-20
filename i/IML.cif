@@ -1,0 +1,208 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IML      IML 'N-METHYL-ISOLEUCINE                 ' M-peptide          24  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IML
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IML           OXT    O    OC       -0.500      0.000    0.000    0.000
+ IML           C      C    C         0.000     -0.851    0.861    0.315
+ IML           O      O    OC       -0.500     -0.514    1.851    1.002
+ IML           CA     C    CH1       0.000     -2.281    0.707   -0.132
+ IML           HA     H    H         0.000     -2.735    1.700   -0.258
+ IML           N      N    NH1       0.000     -2.319   -0.014   -1.411
+ IML           H      H    H         0.000     -2.383   -1.014   -1.536
+ IML           CN     C    CH3       0.000     -2.245    0.999   -2.470
+ IML           HN3    H    H         0.000     -3.069    1.661   -2.389
+ IML           HN2    H    H         0.000     -1.344    1.549   -2.376
+ IML           HN1    H    H         0.000     -2.269    0.526   -3.419
+ IML           CB     C    CH1       0.000     -3.062   -0.080    0.921
+ IML           HB     H    H         0.000     -4.105   -0.193    0.594
+ IML           CG2    C    CH3       0.000     -2.431   -1.462    1.098
+ IML           HG23   H    H         0.000     -2.972   -2.008    1.827
+ IML           HG22   H    H         0.000     -2.458   -1.984    0.176
+ IML           HG21   H    H         0.000     -1.425   -1.355    1.412
+ IML           CG1    C    CH2       0.000     -3.024    0.672    2.252
+ IML           HG12   H    H         0.000     -3.475    1.658    2.125
+ IML           HG13   H    H         0.000     -1.987    0.786    2.575
+ IML           CD1    C    CH3       0.000     -3.804   -0.115    3.307
+ IML           HD13   H    H         0.000     -4.812   -0.226    2.996
+ IML           HD12   H    H         0.000     -3.369   -1.074    3.431
+ IML           HD11   H    H         0.000     -3.779    0.404    4.231
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IML      OXT    n/a    C      START
+ IML      C      OXT    CA     .
+ IML      O      C      .      .
+ IML      CA     C      CB     .
+ IML      HA     CA     .      .
+ IML      N      CA     CN     .
+ IML      H      N      .      .
+ IML      CN     N      HN1    .
+ IML      HN3    CN     .      .
+ IML      HN2    CN     .      .
+ IML      HN1    CN     .      .
+ IML      CB     CA     CG1    .
+ IML      HB     CB     .      .
+ IML      CG2    CB     HG21   .
+ IML      HG23   CG2    .      .
+ IML      HG22   CG2    .      .
+ IML      HG21   CG2    .      .
+ IML      CG1    CB     CD1    .
+ IML      HG12   CG1    .      .
+ IML      HG13   CG1    .      .
+ IML      CD1    CG1    HD11   .
+ IML      HD13   CD1    .      .
+ IML      HD12   CD1    .      .
+ IML      HD11   CD1    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IML      N      CA        single      1.450    0.020
+ IML      CN     N         single      1.450    0.020
+ IML      H      N         single      1.010    0.020
+ IML      CA     C         single      1.500    0.020
+ IML      CB     CA        single      1.524    0.020
+ IML      HA     CA        single      1.099    0.020
+ IML      O      C         deloc       1.250    0.020
+ IML      C      OXT       deloc       1.250    0.020
+ IML      CG2    CB        single      1.524    0.020
+ IML      CG1    CB        single      1.524    0.020
+ IML      HB     CB        single      1.099    0.020
+ IML      HN1    CN        single      1.059    0.020
+ IML      HN2    CN        single      1.059    0.020
+ IML      HN3    CN        single      1.059    0.020
+ IML      HG21   CG2       single      1.059    0.020
+ IML      HG22   CG2       single      1.059    0.020
+ IML      HG23   CG2       single      1.059    0.020
+ IML      CD1    CG1       single      1.513    0.020
+ IML      HG12   CG1       single      1.092    0.020
+ IML      HG13   CG1       single      1.092    0.020
+ IML      HD11   CD1       single      1.059    0.020
+ IML      HD12   CD1       single      1.059    0.020
+ IML      HD13   CD1       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IML      OXT    C      O       123.000    3.000
+ IML      OXT    C      CA      118.500    3.000
+ IML      O      C      CA      118.500    3.000
+ IML      C      CA     HA      108.810    3.000
+ IML      C      CA     N       111.600    3.000
+ IML      C      CA     CB      109.470    3.000
+ IML      HA     CA     N       108.550    3.000
+ IML      HA     CA     CB      108.340    3.000
+ IML      N      CA     CB      110.000    3.000
+ IML      CA     N      H       118.500    3.000
+ IML      CA     N      CN      120.000    3.000
+ IML      H      N      CN      118.500    3.000
+ IML      N      CN     HN3     109.470    3.000
+ IML      N      CN     HN2     109.470    3.000
+ IML      N      CN     HN1     109.470    3.000
+ IML      HN3    CN     HN2     109.470    3.000
+ IML      HN3    CN     HN1     109.470    3.000
+ IML      HN2    CN     HN1     109.470    3.000
+ IML      CA     CB     HB      108.340    3.000
+ IML      CA     CB     CG2     111.000    3.000
+ IML      CA     CB     CG1     111.000    3.000
+ IML      HB     CB     CG2     108.340    3.000
+ IML      HB     CB     CG1     108.340    3.000
+ IML      CG2    CB     CG1     111.000    3.000
+ IML      CB     CG2    HG23    109.470    3.000
+ IML      CB     CG2    HG22    109.470    3.000
+ IML      CB     CG2    HG21    109.470    3.000
+ IML      HG23   CG2    HG22    109.470    3.000
+ IML      HG23   CG2    HG21    109.470    3.000
+ IML      HG22   CG2    HG21    109.470    3.000
+ IML      CB     CG1    HG12    109.470    3.000
+ IML      CB     CG1    HG13    109.470    3.000
+ IML      CB     CG1    CD1     111.000    3.000
+ IML      HG12   CG1    HG13    107.900    3.000
+ IML      HG12   CG1    CD1     109.470    3.000
+ IML      HG13   CG1    CD1     109.470    3.000
+ IML      CG1    CD1    HD13    109.470    3.000
+ IML      CG1    CD1    HD12    109.470    3.000
+ IML      CG1    CD1    HD11    109.470    3.000
+ IML      HD13   CD1    HD12    109.470    3.000
+ IML      HD13   CD1    HD11    109.470    3.000
+ IML      HD12   CD1    HD11    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IML      var_1    OXT    C      CA     CB        89.991   20.000   3
+ IML      var_2    C      CA     N      CN       -89.999   20.000   3
+ IML      var_3    CA     N      CN     HN1      179.983   20.000   1
+ IML      var_4    C      CA     CB     CG1       60.074   20.000   3
+ IML      var_5    CA     CB     CG2    HG21      59.995   20.000   3
+ IML      var_6    CA     CB     CG1    CD1     -179.977   20.000   3
+ IML      var_7    CB     CG1    CD1    HD11     179.950   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IML      chir_01  CA     N      C      CB        positiv
+ IML      chir_02  CB     CA     CG2    CG1       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IML      plan-1    N         0.020
+ IML      plan-1    CA        0.020
+ IML      plan-1    CN        0.020
+ IML      plan-1    H         0.020
+ IML      plan-2    C         0.020
+ IML      plan-2    CA        0.020
+ IML      plan-2    O         0.020
+ IML      plan-2    OXT       0.020
+# ------------------------------------------------------

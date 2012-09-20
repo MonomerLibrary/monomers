@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XBT      XBT '2-[(1R)-1-methylpropyl]-4,5-dihydro-' non-polymer        22   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XBT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XBT           C9     C    CH3       0.000      0.000    0.000    0.000
+ XBT           H9     H    H         0.000      0.405   -0.774    0.599
+ XBT           H9A    H    H         0.000      0.543    0.063   -0.908
+ XBT           H9B    H    H         0.000      0.073    0.921    0.519
+ XBT           C6     C    CH1       0.000     -1.470   -0.302   -0.302
+ XBT           H6     H    H         0.000     -1.545   -1.257   -0.839
+ XBT           C7     C    CH2       0.000     -2.052    0.818   -1.167
+ XBT           H7     H    H         0.000     -1.897    1.779   -0.672
+ XBT           H7A    H    H         0.000     -3.122    0.651   -1.308
+ XBT           C8     C    CH3       0.000     -1.352    0.826   -2.528
+ XBT           H8B    H    H         0.000     -0.313    0.990   -2.394
+ XBT           H8A    H    H         0.000     -1.500   -0.106   -3.011
+ XBT           H8     H    H         0.000     -1.754    1.600   -3.131
+ XBT           C2     C    C         0.000     -2.240   -0.389    0.991
+ XBT           N3     N    N         0.000     -2.888    0.571    1.522
+ XBT           C4     C    CH2       0.000     -3.592    0.369    2.768
+ XBT           H4     H    H         0.000     -4.652    0.578    2.608
+ XBT           H12    H    H         0.000     -3.193    1.064    3.510
+ XBT           C5     C    CH2       0.000     -3.424   -1.074    3.272
+ XBT           H13    H    H         0.000     -4.374   -1.609    3.336
+ XBT           H5     H    H         0.000     -2.915   -1.123    4.237
+ XBT           S1     S    S2        0.000     -2.377   -1.840    1.992
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XBT      C9     n/a    C6     START
+ XBT      H9     C9     .      .
+ XBT      H9A    C9     .      .
+ XBT      H9B    C9     .      .
+ XBT      C6     C9     C2     .
+ XBT      H6     C6     .      .
+ XBT      C7     C6     C8     .
+ XBT      H7     C7     .      .
+ XBT      H7A    C7     .      .
+ XBT      C8     C7     H8     .
+ XBT      H8B    C8     .      .
+ XBT      H8A    C8     .      .
+ XBT      H8     C8     .      .
+ XBT      C2     C6     N3     .
+ XBT      N3     C2     C4     .
+ XBT      C4     N3     C5     .
+ XBT      H4     C4     .      .
+ XBT      H12    C4     .      .
+ XBT      C5     C4     S1     .
+ XBT      H13    C5     .      .
+ XBT      H5     C5     .      .
+ XBT      S1     C5     .      END
+ XBT      S1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XBT      S1     C2        single      1.665    0.020
+ XBT      S1     C5        single      1.762    0.020
+ XBT      N3     C2        double      1.260    0.020
+ XBT      C2     C6        single      1.500    0.020
+ XBT      C4     N3        single      1.455    0.020
+ XBT      C5     C4        single      1.524    0.020
+ XBT      H4     C4        single      1.092    0.020
+ XBT      H5     C5        single      1.092    0.020
+ XBT      C7     C6        single      1.524    0.020
+ XBT      C6     C9        single      1.524    0.020
+ XBT      H6     C6        single      1.099    0.020
+ XBT      C8     C7        single      1.513    0.020
+ XBT      H7     C7        single      1.092    0.020
+ XBT      H7A    C7        single      1.092    0.020
+ XBT      H8     C8        single      1.059    0.020
+ XBT      H8A    C8        single      1.059    0.020
+ XBT      H8B    C8        single      1.059    0.020
+ XBT      H9     C9        single      1.059    0.020
+ XBT      H9A    C9        single      1.059    0.020
+ XBT      H9B    C9        single      1.059    0.020
+ XBT      H12    C4        single      1.092    0.020
+ XBT      H13    C5        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XBT      H9     C9     H9A     109.470    3.000
+ XBT      H9     C9     H9B     109.470    3.000
+ XBT      H9A    C9     H9B     109.470    3.000
+ XBT      H9     C9     C6      109.470    3.000
+ XBT      H9A    C9     C6      109.470    3.000
+ XBT      H9B    C9     C6      109.470    3.000
+ XBT      C9     C6     H6      108.340    3.000
+ XBT      C9     C6     C7      111.000    3.000
+ XBT      C9     C6     C2      109.470    3.000
+ XBT      H6     C6     C7      108.340    3.000
+ XBT      H6     C6     C2      108.810    3.000
+ XBT      C7     C6     C2      109.470    3.000
+ XBT      C6     C7     H7      109.470    3.000
+ XBT      C6     C7     H7A     109.470    3.000
+ XBT      C6     C7     C8      111.000    3.000
+ XBT      H7     C7     H7A     107.900    3.000
+ XBT      H7     C7     C8      109.470    3.000
+ XBT      H7A    C7     C8      109.470    3.000
+ XBT      C7     C8     H8B     109.470    3.000
+ XBT      C7     C8     H8A     109.470    3.000
+ XBT      C7     C8     H8      109.470    3.000
+ XBT      H8B    C8     H8A     109.470    3.000
+ XBT      H8B    C8     H8      109.470    3.000
+ XBT      H8A    C8     H8      109.470    3.000
+ XBT      C6     C2     N3      116.500    3.000
+ XBT      C6     C2     S1      120.000    3.000
+ XBT      N3     C2     S1      120.000    3.000
+ XBT      C2     N3     C4      127.000    3.000
+ XBT      N3     C4     H4      109.470    3.000
+ XBT      N3     C4     H12     109.470    3.000
+ XBT      N3     C4     C5      105.000    3.000
+ XBT      H4     C4     H12     107.900    3.000
+ XBT      H4     C4     C5      109.470    3.000
+ XBT      H12    C4     C5      109.470    3.000
+ XBT      C4     C5     H13     109.470    3.000
+ XBT      C4     C5     H5      109.470    3.000
+ XBT      C4     C5     S1      109.500    3.000
+ XBT      H13    C5     H5      107.900    3.000
+ XBT      H13    C5     S1      109.500    3.000
+ XBT      H5     C5     S1      109.500    3.000
+ XBT      C5     S1     C2       95.587    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XBT      var_1    H9B    C9     C6     C2       -59.936   20.000   3
+ XBT      var_2    C9     C6     C7     C8        65.040   20.000   3
+ XBT      var_3    C6     C7     C8     H8       179.942   20.000   3
+ XBT      var_4    C9     C6     C2     N3        94.980   20.000   3
+ XBT      CONST_1  C6     C2     N3     C4       180.000    0.000   0
+ XBT      var_5    C2     N3     C4     C5         0.000   20.000   1
+ XBT      var_6    N3     C4     C5     S1         0.000   20.000   3
+ XBT      var_7    C4     C5     S1     C2         0.000   20.000   1
+ XBT      var_8    C5     S1     C2     C6       180.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ XBT      chir_01  C6     C2     C7     C9        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ XBT      plan-1    C2        0.020
+ XBT      plan-1    S1        0.020
+ XBT      plan-1    N3        0.020
+ XBT      plan-1    C6        0.020
+ XBT      plan-2    N3        0.020
+ XBT      plan-2    C2        0.020
+ XBT      plan-2    C4        0.020
+# ------------------------------------------------------

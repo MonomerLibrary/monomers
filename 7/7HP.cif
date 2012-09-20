@@ -1,0 +1,161 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+7HP      7HP '7-HYDROXY-PYRAZOLO[4,3-D]PYRIMIDINE ' non-polymer        14  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_7HP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 7HP           O6     O    OH1       0.000      0.000    0.000    0.000
+ 7HP           HO6    H    H         0.000      0.319   -0.911   -0.040
+ 7HP           C6     C    CR6       0.000     -1.344   -0.002    0.171
+ 7HP           N1     N    NRD6      0.000     -1.873   -0.003    1.387
+ 7HP           C2     C    CR16      0.000     -3.183   -0.003    1.565
+ 7HP           H2     H    H         0.000     -3.571   -0.002    2.577
+ 7HP           N3     N    NRD6      0.000     -4.033   -0.004    0.563
+ 7HP           C5     C    CR56      0.000     -2.204    0.004   -0.932
+ 7HP           C4     C    CR56      0.000     -3.592   -0.003   -0.699
+ 7HP           N7     N    NR15      0.000     -2.032   -0.001   -2.290
+ 7HP           HN7    H    H         0.000     -1.121   -0.004   -2.791
+ 7HP           N8     N    NRD5      0.000     -3.300   -0.002   -2.887
+ 7HP           C9     C    CR15      0.000     -4.219   -0.003   -1.964
+ 7HP           H9     H    H         0.000     -5.288   -0.003   -2.137
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 7HP      O6     n/a    C6     START
+ 7HP      HO6    O6     .      .
+ 7HP      C6     O6     C5     .
+ 7HP      N1     C6     C2     .
+ 7HP      C2     N1     N3     .
+ 7HP      H2     C2     .      .
+ 7HP      N3     C2     .      .
+ 7HP      C5     C6     N7     .
+ 7HP      C4     C5     .      .
+ 7HP      N7     C5     N8     .
+ 7HP      HN7    N7     .      .
+ 7HP      N8     N7     C9     .
+ 7HP      C9     N8     H9     .
+ 7HP      H9     C9     .      END
+ 7HP      C9     C4     .    ADD
+ 7HP      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 7HP      C9     C4        single      1.440    0.020
+ 7HP      C9     N8        double      1.350    0.020
+ 7HP      H9     C9        single      1.083    0.020
+ 7HP      C4     N3        single      1.355    0.020
+ 7HP      C4     C5        double      1.490    0.020
+ 7HP      N3     C2        double      1.337    0.020
+ 7HP      C2     N1        single      1.337    0.020
+ 7HP      H2     C2        single      1.083    0.020
+ 7HP      N1     C6        double      1.350    0.020
+ 7HP      C6     O6        single      1.362    0.020
+ 7HP      C5     C6        single      1.490    0.020
+ 7HP      HO6    O6        single      0.967    0.020
+ 7HP      N7     C5        single      1.340    0.020
+ 7HP      N8     N7        single      1.402    0.020
+ 7HP      HN7    N7        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 7HP      HO6    O6     C6      109.470    3.000
+ 7HP      O6     C6     N1      120.000    3.000
+ 7HP      O6     C6     C5      120.000    3.000
+ 7HP      N1     C6     C5      120.000    3.000
+ 7HP      C6     N1     C2      120.000    3.000
+ 7HP      N1     C2     H2      120.000    3.000
+ 7HP      N1     C2     N3      120.000    3.000
+ 7HP      H2     C2     N3      120.000    3.000
+ 7HP      C2     N3     C4      120.000    3.000
+ 7HP      C6     C5     C4      120.000    3.000
+ 7HP      C6     C5     N7      132.000    3.000
+ 7HP      C4     C5     N7      108.000    3.000
+ 7HP      C5     C4     C9      120.000    3.000
+ 7HP      C5     C4     N3      120.000    3.000
+ 7HP      C9     C4     N3      120.000    3.000
+ 7HP      C5     N7     HN7     126.000    3.000
+ 7HP      C5     N7     N8      108.000    3.000
+ 7HP      HN7    N7     N8      108.000    3.000
+ 7HP      N7     N8     C9      108.000    3.000
+ 7HP      N8     C9     H9      126.000    3.000
+ 7HP      N8     C9     C4      108.000    3.000
+ 7HP      H9     C9     C4      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 7HP      var_1    HO6    O6     C6     C5       -90.363   20.000   1
+ 7HP      CONST_1  O6     C6     N1     C2       180.000    0.000   0
+ 7HP      CONST_2  C6     N1     C2     N3         0.000    0.000   0
+ 7HP      CONST_3  N1     C2     N3     C4         0.000    0.000   0
+ 7HP      CONST_4  O6     C6     C5     N7         0.000    0.000   0
+ 7HP      CONST_5  C6     C5     C4     C9       180.000    0.000   0
+ 7HP      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ 7HP      CONST_7  C6     C5     N7     N8       180.000    0.000   0
+ 7HP      CONST_8  C5     N7     N8     C9         0.000    0.000   0
+ 7HP      CONST_9  N7     N8     C9     C4         0.000    0.000   0
+ 7HP      CONST_10 N8     C9     C4     C5         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 7HP      plan-1    C9        0.020
+ 7HP      plan-1    C4        0.020
+ 7HP      plan-1    N8        0.020
+ 7HP      plan-1    H9        0.020
+ 7HP      plan-1    N7        0.020
+ 7HP      plan-1    N3        0.020
+ 7HP      plan-1    C5        0.020
+ 7HP      plan-1    C2        0.020
+ 7HP      plan-1    N1        0.020
+ 7HP      plan-1    C6        0.020
+ 7HP      plan-1    H2        0.020
+ 7HP      plan-1    O6        0.020
+ 7HP      plan-1    HN7       0.020
+# ------------------------------------------------------

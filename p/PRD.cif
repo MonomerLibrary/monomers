@@ -1,0 +1,357 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PRD      PRD 'N6-(2,5-DIMETHOXY-BENZYL)-N6-METHYL-' non-polymer        45  25 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PRD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PRD           "N2'"  N    NH2       0.000      0.000    0.000    0.000
+ PRD           HN21   H    H         0.000      0.769   -0.639    0.174
+ PRD           HN22   H    H         0.000      0.205    0.972   -0.207
+ PRD           C2B    C    CR6       0.000     -1.307   -0.447    0.045
+ PRD           "N1'"  N    NRD6      0.000     -2.278    0.417   -0.185
+ PRD           "N3'"  N    NRD6      0.000     -1.532   -1.727    0.321
+ PRD           C4B    C    CR6       0.000     -2.765   -2.212    0.379
+ PRD           "N4'"  N    NH2       0.000     -2.989   -3.542    0.666
+ PRD           HN42   H    H         0.000     -3.934   -3.907    0.708
+ PRD           HN41   H    H         0.000     -2.210   -4.169    0.837
+ PRD           C4A    C    CR66      0.000     -3.846   -1.329    0.139
+ PRD           C5B    C    CR16      0.000     -5.178   -1.757    0.186
+ PRD           "H5'"  H    H         0.000     -5.427   -2.786    0.414
+ PRD           C6B    C    CR6       0.000     -6.168   -0.822   -0.067
+ PRD           C7B    C    CR16      0.000     -5.812    0.499   -0.347
+ PRD           "H7'"  H    H         0.000     -6.592    1.226   -0.540
+ PRD           "N8'"  N    NRD6      0.000     -4.557    0.882   -0.380
+ PRD           C8A    C    CR66      0.000     -3.561    0.026   -0.151
+ PRD           "N6'"  N    N         0.000     -7.515   -1.197   -0.038
+ PRD           C61    C    CH3       0.000     -7.883   -2.584    0.255
+ PRD           HC63   H    H         0.000     -7.456   -3.226   -0.471
+ PRD           HC62   H    H         0.000     -7.522   -2.851    1.216
+ PRD           HC61   H    H         0.000     -8.938   -2.683    0.236
+ PRD           "C7'"  C    CH2       0.000     -8.558   -0.202   -0.300
+ PRD           HC71   H    H         0.000     -9.422   -0.692   -0.755
+ PRD           HC72   H    H         0.000     -8.172    0.559   -0.982
+ PRD           "C1'"  C    CR6       0.000     -8.971    0.446    0.996
+ PRD           "C6'"  C    CR16      0.000     -8.368    0.068    2.179
+ PRD           "HC6'" H    H         0.000     -7.597   -0.692    2.175
+ PRD           "C5'"  C    CR6       0.000     -8.752    0.662    3.372
+ PRD           "O5'"  O    O2        0.000     -8.163    0.286    4.539
+ PRD           C51    C    CH3       0.000     -8.759    1.070    5.574
+ PRD           HC53   H    H         0.000     -8.590    2.098    5.381
+ PRD           HC52   H    H         0.000     -9.801    0.884    5.603
+ PRD           HC51   H    H         0.000     -8.329    0.811    6.507
+ PRD           "C4'"  C    CR16      0.000     -9.733    1.642    3.376
+ PRD           "HC4'" H    H         0.000    -10.030    2.108    4.307
+ PRD           "C3'"  C    CR16      0.000    -10.332    2.024    2.191
+ PRD           "HC3'" H    H         0.000    -11.097    2.791    2.193
+ PRD           "C2'"  C    CR6       0.000     -9.953    1.426    0.999
+ PRD           "O2'"  O    O2        0.000    -10.542    1.802   -0.168
+ PRD           C21    C    CH3       0.000    -11.494    2.815    0.159
+ PRD           HC23   H    H         0.000    -12.211    2.423    0.833
+ PRD           HC22   H    H         0.000    -10.998    3.635    0.609
+ PRD           HC21   H    H         0.000    -11.982    3.140   -0.724
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PRD      "N2'"  n/a    C2B    START
+ PRD      HN21   "N2'"  .      .
+ PRD      HN22   "N2'"  .      .
+ PRD      C2B    "N2'"  "N3'"  .
+ PRD      "N1'"  C2B    .      .
+ PRD      "N3'"  C2B    C4B    .
+ PRD      C4B    "N3'"  C4A    .
+ PRD      "N4'"  C4B    HN41   .
+ PRD      HN42   "N4'"  .      .
+ PRD      HN41   "N4'"  .      .
+ PRD      C4A    C4B    C5B    .
+ PRD      C5B    C4A    C6B    .
+ PRD      "H5'"  C5B    .      .
+ PRD      C6B    C5B    "N6'"  .
+ PRD      C7B    C6B    "N8'"  .
+ PRD      "H7'"  C7B    .      .
+ PRD      "N8'"  C7B    C8A    .
+ PRD      C8A    "N8'"  .      .
+ PRD      "N6'"  C6B    "C7'"  .
+ PRD      C61    "N6'"  HC61   .
+ PRD      HC63   C61    .      .
+ PRD      HC62   C61    .      .
+ PRD      HC61   C61    .      .
+ PRD      "C7'"  "N6'"  "C1'"  .
+ PRD      HC71   "C7'"  .      .
+ PRD      HC72   "C7'"  .      .
+ PRD      "C1'"  "C7'"  "C6'"  .
+ PRD      "C6'"  "C1'"  "C5'"  .
+ PRD      "HC6'" "C6'"  .      .
+ PRD      "C5'"  "C6'"  "C4'"  .
+ PRD      "O5'"  "C5'"  C51    .
+ PRD      C51    "O5'"  HC51   .
+ PRD      HC53   C51    .      .
+ PRD      HC52   C51    .      .
+ PRD      HC51   C51    .      .
+ PRD      "C4'"  "C5'"  "C3'"  .
+ PRD      "HC4'" "C4'"  .      .
+ PRD      "C3'"  "C4'"  "C2'"  .
+ PRD      "HC3'" "C3'"  .      .
+ PRD      "C2'"  "C3'"  "O2'"  .
+ PRD      "O2'"  "C2'"  C21    .
+ PRD      C21    "O2'"  HC21   .
+ PRD      HC23   C21    .      .
+ PRD      HC22   C21    .      .
+ PRD      HC21   C21    .      END
+ PRD      C4A    C8A    .    ADD
+ PRD      C8A    "N1'"  .    ADD
+ PRD      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PRD      C4A    C8A       double      1.490    0.020
+ PRD      C5B    C4A       single      1.390    0.020
+ PRD      C4A    C4B       single      1.490    0.020
+ PRD      C8A    "N1'"     single      1.350    0.020
+ PRD      C8A    "N8'"     single      1.350    0.020
+ PRD      "N1'"  C2B       double      1.350    0.020
+ PRD      "N8'"  C7B       double      1.337    0.020
+ PRD      C7B    C6B       single      1.390    0.020
+ PRD      "H7'"  C7B       single      1.083    0.020
+ PRD      "N6'"  C6B       single      1.400    0.020
+ PRD      C6B    C5B       double      1.390    0.020
+ PRD      C61    "N6'"     single      1.455    0.020
+ PRD      "C7'"  "N6'"     single      1.455    0.020
+ PRD      HC61   C61       single      1.059    0.020
+ PRD      HC62   C61       single      1.059    0.020
+ PRD      HC63   C61       single      1.059    0.020
+ PRD      "H5'"  C5B       single      1.083    0.020
+ PRD      "N4'"  C4B       single      1.355    0.020
+ PRD      C4B    "N3'"     double      1.350    0.020
+ PRD      HN41   "N4'"     single      1.010    0.020
+ PRD      HN42   "N4'"     single      1.010    0.020
+ PRD      "N3'"  C2B       single      1.350    0.020
+ PRD      C2B    "N2'"     single      1.355    0.020
+ PRD      HN21   "N2'"     single      1.010    0.020
+ PRD      HN22   "N2'"     single      1.010    0.020
+ PRD      "C1'"  "C7'"     single      1.511    0.020
+ PRD      HC71   "C7'"     single      1.092    0.020
+ PRD      HC72   "C7'"     single      1.092    0.020
+ PRD      "C1'"  "C2'"     double      1.487    0.020
+ PRD      "C6'"  "C1'"     single      1.390    0.020
+ PRD      "C2'"  "C3'"     single      1.390    0.020
+ PRD      "O2'"  "C2'"     single      1.370    0.020
+ PRD      "C3'"  "C4'"     double      1.390    0.020
+ PRD      "HC3'" "C3'"     single      1.083    0.020
+ PRD      "C4'"  "C5'"     single      1.390    0.020
+ PRD      "HC4'" "C4'"     single      1.083    0.020
+ PRD      "C5'"  "C6'"     double      1.390    0.020
+ PRD      "O5'"  "C5'"     single      1.370    0.020
+ PRD      "HC6'" "C6'"     single      1.083    0.020
+ PRD      C21    "O2'"     single      1.426    0.020
+ PRD      HC21   C21       single      1.059    0.020
+ PRD      HC22   C21       single      1.059    0.020
+ PRD      HC23   C21       single      1.059    0.020
+ PRD      C51    "O5'"     single      1.426    0.020
+ PRD      HC51   C51       single      1.059    0.020
+ PRD      HC52   C51       single      1.059    0.020
+ PRD      HC53   C51       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PRD      HN21   "N2'"  HN22    120.000    3.000
+ PRD      HN21   "N2'"  C2B     120.000    3.000
+ PRD      HN22   "N2'"  C2B     120.000    3.000
+ PRD      "N2'"  C2B    "N1'"   120.000    3.000
+ PRD      "N2'"  C2B    "N3'"   120.000    3.000
+ PRD      "N1'"  C2B    "N3'"   120.000    3.000
+ PRD      C2B    "N1'"  C8A     120.000    3.000
+ PRD      C2B    "N3'"  C4B     120.000    3.000
+ PRD      "N3'"  C4B    "N4'"   120.000    3.000
+ PRD      "N3'"  C4B    C4A     120.000    3.000
+ PRD      "N4'"  C4B    C4A     120.000    3.000
+ PRD      C4B    "N4'"  HN42    120.000    3.000
+ PRD      C4B    "N4'"  HN41    120.000    3.000
+ PRD      HN42   "N4'"  HN41    120.000    3.000
+ PRD      C4B    C4A    C5B     120.000    3.000
+ PRD      C4B    C4A    C8A     120.000    3.000
+ PRD      C5B    C4A    C8A     120.000    3.000
+ PRD      C4A    C5B    "H5'"   120.000    3.000
+ PRD      C4A    C5B    C6B     120.000    3.000
+ PRD      "H5'"  C5B    C6B     120.000    3.000
+ PRD      C5B    C6B    C7B     120.000    3.000
+ PRD      C5B    C6B    "N6'"   120.000    3.000
+ PRD      C7B    C6B    "N6'"   120.000    3.000
+ PRD      C6B    C7B    "H7'"   120.000    3.000
+ PRD      C6B    C7B    "N8'"   120.000    3.000
+ PRD      "H7'"  C7B    "N8'"   120.000    3.000
+ PRD      C7B    "N8'"  C8A     120.000    3.000
+ PRD      "N8'"  C8A    C4A     120.000    3.000
+ PRD      "N8'"  C8A    "N1'"   120.000    3.000
+ PRD      C4A    C8A    "N1'"   120.000    3.000
+ PRD      C6B    "N6'"  C61     120.000    3.000
+ PRD      C6B    "N6'"  "C7'"   120.000    3.000
+ PRD      C61    "N6'"  "C7'"   120.000    3.000
+ PRD      "N6'"  C61    HC63    109.470    3.000
+ PRD      "N6'"  C61    HC62    109.470    3.000
+ PRD      "N6'"  C61    HC61    109.470    3.000
+ PRD      HC63   C61    HC62    109.470    3.000
+ PRD      HC63   C61    HC61    109.470    3.000
+ PRD      HC62   C61    HC61    109.470    3.000
+ PRD      "N6'"  "C7'"  HC71    109.470    3.000
+ PRD      "N6'"  "C7'"  HC72    109.470    3.000
+ PRD      "N6'"  "C7'"  "C1'"   109.470    3.000
+ PRD      HC71   "C7'"  HC72    107.900    3.000
+ PRD      HC71   "C7'"  "C1'"   109.470    3.000
+ PRD      HC72   "C7'"  "C1'"   109.470    3.000
+ PRD      "C7'"  "C1'"  "C6'"   120.000    3.000
+ PRD      "C7'"  "C1'"  "C2'"   120.000    3.000
+ PRD      "C6'"  "C1'"  "C2'"   120.000    3.000
+ PRD      "C1'"  "C6'"  "HC6'"  120.000    3.000
+ PRD      "C1'"  "C6'"  "C5'"   120.000    3.000
+ PRD      "HC6'" "C6'"  "C5'"   120.000    3.000
+ PRD      "C6'"  "C5'"  "O5'"   120.000    3.000
+ PRD      "C6'"  "C5'"  "C4'"   120.000    3.000
+ PRD      "O5'"  "C5'"  "C4'"   120.000    3.000
+ PRD      "C5'"  "O5'"  C51     120.000    3.000
+ PRD      "O5'"  C51    HC53    109.470    3.000
+ PRD      "O5'"  C51    HC52    109.470    3.000
+ PRD      "O5'"  C51    HC51    109.470    3.000
+ PRD      HC53   C51    HC52    109.470    3.000
+ PRD      HC53   C51    HC51    109.470    3.000
+ PRD      HC52   C51    HC51    109.470    3.000
+ PRD      "C5'"  "C4'"  "HC4'"  120.000    3.000
+ PRD      "C5'"  "C4'"  "C3'"   120.000    3.000
+ PRD      "HC4'" "C4'"  "C3'"   120.000    3.000
+ PRD      "C4'"  "C3'"  "HC3'"  120.000    3.000
+ PRD      "C4'"  "C3'"  "C2'"   120.000    3.000
+ PRD      "HC3'" "C3'"  "C2'"   120.000    3.000
+ PRD      "C3'"  "C2'"  "O2'"   120.000    3.000
+ PRD      "C3'"  "C2'"  "C1'"   120.000    3.000
+ PRD      "O2'"  "C2'"  "C1'"   120.000    3.000
+ PRD      "C2'"  "O2'"  C21     120.000    3.000
+ PRD      "O2'"  C21    HC23    109.470    3.000
+ PRD      "O2'"  C21    HC22    109.470    3.000
+ PRD      "O2'"  C21    HC21    109.470    3.000
+ PRD      HC23   C21    HC22    109.470    3.000
+ PRD      HC23   C21    HC21    109.470    3.000
+ PRD      HC22   C21    HC21    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PRD      CONST_1  HN22   "N2'"  C2B    "N3'"   -179.947    0.000   0
+ PRD      CONST_2  "N2'"  C2B    "N1'"  C8A      180.000    0.000   0
+ PRD      CONST_3  "N2'"  C2B    "N3'"  C4B      180.000    0.000   0
+ PRD      CONST_4  C2B    "N3'"  C4B    C4A        0.000    0.000   0
+ PRD      CONST_5  "N3'"  C4B    "N4'"  HN41       0.007    0.000   0
+ PRD      CONST_6  "N3'"  C4B    C4A    C5B      180.000    0.000   0
+ PRD      CONST_7  C4B    C4A    C8A    "N8'"    180.000    0.000   0
+ PRD      CONST_8  C4B    C4A    C5B    C6B      180.000    0.000   0
+ PRD      CONST_9  C4A    C5B    C6B    "N6'"    180.000    0.000   0
+ PRD      CONST_10 C5B    C6B    C7B    "N8'"      0.000    0.000   0
+ PRD      CONST_11 C6B    C7B    "N8'"  C8A        0.000    0.000   0
+ PRD      CONST_12 C7B    "N8'"  C8A    C4A        0.000    0.000   0
+ PRD      CONST_13 "N8'"  C8A    "N1'"  C2B      180.000    0.000   0
+ PRD      var_1    C5B    C6B    "N6'"  "C7'"    179.666   20.000   1
+ PRD      var_2    C6B    "N6'"  C61    HC61     179.968   20.000   1
+ PRD      var_3    C6B    "N6'"  "C7'"  "C1'"    -89.992   20.000   1
+ PRD      var_4    "N6'"  "C7'"  "C1'"  "C6'"      0.303   20.000   2
+ PRD      CONST_14 "C7'"  "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ PRD      CONST_15 "C7'"  "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ PRD      CONST_16 "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ PRD      var_5    "C6'"  "C5'"  "O5'"  C51      179.770   20.000   1
+ PRD      var_6    "C5'"  "O5'"  C51    HC51    -179.976   20.000   1
+ PRD      CONST_17 "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ PRD      CONST_18 "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ PRD      CONST_19 "C4'"  "C3'"  "C2'"  "O2'"    180.000    0.000   0
+ PRD      var_7    "C3'"  "C2'"  "O2'"  C21       -0.016   20.000   1
+ PRD      var_8    "C2'"  "O2'"  C21    HC21    -179.964   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PRD      plan-1    C4A       0.020
+ PRD      plan-1    C8A       0.020
+ PRD      plan-1    C5B       0.020
+ PRD      plan-1    C4B       0.020
+ PRD      plan-1    "N8'"     0.020
+ PRD      plan-1    C7B       0.020
+ PRD      plan-1    C6B       0.020
+ PRD      plan-1    "N1'"     0.020
+ PRD      plan-1    C2B       0.020
+ PRD      plan-1    "N3'"     0.020
+ PRD      plan-1    "H7'"     0.020
+ PRD      plan-1    "N6'"     0.020
+ PRD      plan-1    "H5'"     0.020
+ PRD      plan-1    "N4'"     0.020
+ PRD      plan-1    "N2'"     0.020
+ PRD      plan-1    HN42      0.020
+ PRD      plan-1    HN41      0.020
+ PRD      plan-1    HN21      0.020
+ PRD      plan-1    HN22      0.020
+ PRD      plan-2    "N6'"     0.020
+ PRD      plan-2    C6B       0.020
+ PRD      plan-2    C61       0.020
+ PRD      plan-2    "C7'"     0.020
+ PRD      plan-3    "N4'"     0.020
+ PRD      plan-3    C4B       0.020
+ PRD      plan-3    HN41      0.020
+ PRD      plan-3    HN42      0.020
+ PRD      plan-4    "N2'"     0.020
+ PRD      plan-4    C2B       0.020
+ PRD      plan-4    HN21      0.020
+ PRD      plan-4    HN22      0.020
+ PRD      plan-5    "C1'"     0.020
+ PRD      plan-5    "C7'"     0.020
+ PRD      plan-5    "C2'"     0.020
+ PRD      plan-5    "C6'"     0.020
+ PRD      plan-5    "C3'"     0.020
+ PRD      plan-5    "C4'"     0.020
+ PRD      plan-5    "C5'"     0.020
+ PRD      plan-5    "O2'"     0.020
+ PRD      plan-5    "HC3'"    0.020
+ PRD      plan-5    "HC4'"    0.020
+ PRD      plan-5    "O5'"     0.020
+ PRD      plan-5    "HC6'"    0.020
+# ------------------------------------------------------

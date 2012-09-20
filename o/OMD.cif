@@ -1,0 +1,183 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OMD      OMD '2-(3,6-DIHYDROXYPHENYL)ACETIC ACID  ' non-polymer        19  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OMD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OMD           O2     O    OC       -0.500      0.000    0.000    0.000
+ OMD           C1     C    C         0.000     -1.192    0.180   -0.334
+ OMD           O1     O    OC       -0.500     -1.592    1.328   -0.630
+ OMD           C2     C    CH2       0.000     -2.147   -0.984   -0.381
+ OMD           H21    H    H         0.000     -2.216   -1.437    0.610
+ OMD           H22    H    H         0.000     -1.781   -1.725   -1.094
+ OMD           "C1'"  C    CR6       0.000     -3.508   -0.501   -0.810
+ OMD           "C6'"  C    CR6       0.000     -4.429   -0.090    0.142
+ OMD           "O6'"  O    OH1       0.000     -4.102   -0.118    1.461
+ OMD           HO6    H    H         0.000     -4.350   -0.974    1.836
+ OMD           "C5'"  C    CR16      0.000     -5.680    0.359   -0.253
+ OMD           "H5'"  H    H         0.000     -6.397    0.688    0.489
+ OMD           "C4'"  C    CR16      0.000     -6.013    0.387   -1.594
+ OMD           "H4'"  H    H         0.000     -6.992    0.732   -1.901
+ OMD           "C3'"  C    CR6       0.000     -5.094   -0.028   -2.545
+ OMD           "O3'"  O    OH1       0.000     -5.421   -0.002   -3.864
+ OMD           HO3    H    H         0.000     -5.820   -0.846   -4.114
+ OMD           "C2'"  C    CR16      0.000     -3.840   -0.472   -2.150
+ OMD           "H2'"  H    H         0.000     -3.122   -0.797   -2.893
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OMD      O2     n/a    C1     START
+ OMD      C1     O2     C2     .
+ OMD      O1     C1     .      .
+ OMD      C2     C1     "C1'"  .
+ OMD      H21    C2     .      .
+ OMD      H22    C2     .      .
+ OMD      "C1'"  C2     "C6'"  .
+ OMD      "C6'"  "C1'"  "C5'"  .
+ OMD      "O6'"  "C6'"  HO6    .
+ OMD      HO6    "O6'"  .      .
+ OMD      "C5'"  "C6'"  "C4'"  .
+ OMD      "H5'"  "C5'"  .      .
+ OMD      "C4'"  "C5'"  "C3'"  .
+ OMD      "H4'"  "C4'"  .      .
+ OMD      "C3'"  "C4'"  "C2'"  .
+ OMD      "O3'"  "C3'"  HO3    .
+ OMD      HO3    "O3'"  .      .
+ OMD      "C2'"  "C3'"  "H2'"  .
+ OMD      "H2'"  "C2'"  .      END
+ OMD      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OMD      C2     C1        single      1.510    0.020
+ OMD      O1     C1        deloc       1.250    0.020
+ OMD      C1     O2        deloc       1.250    0.020
+ OMD      "C1'"  C2        single      1.511    0.020
+ OMD      H21    C2        single      1.092    0.020
+ OMD      H22    C2        single      1.092    0.020
+ OMD      "C1'"  "C2'"     double      1.390    0.020
+ OMD      "C6'"  "C1'"     single      1.487    0.020
+ OMD      "C2'"  "C3'"     single      1.390    0.020
+ OMD      "H2'"  "C2'"     single      1.083    0.020
+ OMD      "O3'"  "C3'"     single      1.362    0.020
+ OMD      "C3'"  "C4'"     double      1.390    0.020
+ OMD      HO3    "O3'"     single      0.967    0.020
+ OMD      "C4'"  "C5'"     single      1.390    0.020
+ OMD      "H4'"  "C4'"     single      1.083    0.020
+ OMD      "C5'"  "C6'"     double      1.390    0.020
+ OMD      "H5'"  "C5'"     single      1.083    0.020
+ OMD      "O6'"  "C6'"     single      1.362    0.020
+ OMD      HO6    "O6'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OMD      O2     C1     O1      123.000    3.000
+ OMD      O2     C1     C2      118.500    3.000
+ OMD      O1     C1     C2      118.500    3.000
+ OMD      C1     C2     H21     109.470    3.000
+ OMD      C1     C2     H22     109.470    3.000
+ OMD      C1     C2     "C1'"   109.470    3.000
+ OMD      H21    C2     H22     107.900    3.000
+ OMD      H21    C2     "C1'"   109.470    3.000
+ OMD      H22    C2     "C1'"   109.470    3.000
+ OMD      C2     "C1'"  "C6'"   120.000    3.000
+ OMD      C2     "C1'"  "C2'"   120.000    3.000
+ OMD      "C6'"  "C1'"  "C2'"   120.000    3.000
+ OMD      "C1'"  "C6'"  "O6'"   120.000    3.000
+ OMD      "C1'"  "C6'"  "C5'"   120.000    3.000
+ OMD      "O6'"  "C6'"  "C5'"   120.000    3.000
+ OMD      "C6'"  "O6'"  HO6     109.470    3.000
+ OMD      "C6'"  "C5'"  "H5'"   120.000    3.000
+ OMD      "C6'"  "C5'"  "C4'"   120.000    3.000
+ OMD      "H5'"  "C5'"  "C4'"   120.000    3.000
+ OMD      "C5'"  "C4'"  "H4'"   120.000    3.000
+ OMD      "C5'"  "C4'"  "C3'"   120.000    3.000
+ OMD      "H4'"  "C4'"  "C3'"   120.000    3.000
+ OMD      "C4'"  "C3'"  "O3'"   120.000    3.000
+ OMD      "C4'"  "C3'"  "C2'"   120.000    3.000
+ OMD      "O3'"  "C3'"  "C2'"   120.000    3.000
+ OMD      "C3'"  "O3'"  HO3     109.470    3.000
+ OMD      "C3'"  "C2'"  "H2'"   120.000    3.000
+ OMD      "C3'"  "C2'"  "C1'"   120.000    3.000
+ OMD      "H2'"  "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OMD      var_1    O2     C1     C2     "C1'"   -179.963   20.000   3
+ OMD      var_2    C1     C2     "C1'"  "C6'"    -90.284   20.000   2
+ OMD      CONST_1  C2     "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ OMD      CONST_2  C2     "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ OMD      var_3    "C1'"  "C6'"  "O6'"  HO6      -90.492   20.000   1
+ OMD      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ OMD      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ OMD      CONST_5  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ OMD      var_4    "C4'"  "C3'"  "O3'"  HO3      -89.892   20.000   1
+ OMD      CONST_6  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OMD      plan-1    C1        0.020
+ OMD      plan-1    C2        0.020
+ OMD      plan-1    O1        0.020
+ OMD      plan-1    O2        0.020
+ OMD      plan-2    "C1'"     0.020
+ OMD      plan-2    C2        0.020
+ OMD      plan-2    "C2'"     0.020
+ OMD      plan-2    "C6'"     0.020
+ OMD      plan-2    "C3'"     0.020
+ OMD      plan-2    "C4'"     0.020
+ OMD      plan-2    "C5'"     0.020
+ OMD      plan-2    "H2'"     0.020
+ OMD      plan-2    "O3'"     0.020
+ OMD      plan-2    "H4'"     0.020
+ OMD      plan-2    "H5'"     0.020
+ OMD      plan-2    "O6'"     0.020
+# ------------------------------------------------------

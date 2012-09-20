@@ -1,0 +1,194 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AEF      AEF '4-(2-aminoethyl)phenol              ' non-polymer        21  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AEF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AEF           O10    O    OH1       0.000      0.000    0.000    0.000
+ AEF           HO10   H    H         0.000      0.218    0.003    0.942
+ AEF           C8     C    CR6       0.000     -1.350    0.003   -0.150
+ AEF           C6     C    CR16      0.000     -2.044   -1.197   -0.223
+ AEF           H6     H    H         0.000     -1.509   -2.137   -0.160
+ AEF           C3     C    CR16      0.000     -3.417   -1.191   -0.377
+ AEF           H3     H    H         0.000     -3.959   -2.127   -0.435
+ AEF           C1     C    CR6       0.000     -4.100    0.008   -0.457
+ AEF           C2     C    CR16      0.000     -3.411    1.205   -0.385
+ AEF           H2     H    H         0.000     -3.948    2.143   -0.449
+ AEF           C5     C    CR16      0.000     -2.038    1.205   -0.231
+ AEF           H5     H    H         0.000     -1.499    2.143   -0.174
+ AEF           C4     C    CH2       0.000     -5.598    0.011   -0.625
+ AEF           H4     H    H         0.000     -5.903   -0.882   -1.175
+ AEF           H4A    H    H         0.000     -5.900    0.901   -1.182
+ AEF           C7     C    CH2       0.000     -6.265    0.017    0.752
+ AEF           H7     H    H         0.000     -5.957    0.910    1.300
+ AEF           H7A    H    H         0.000     -5.961   -0.873    1.307
+ AEF           N9     N    NH2       0.000     -7.725    0.020    0.588
+ AEF           HN9A   H    H         0.000     -8.286    0.748    1.013
+ AEF           HN9    H    H         0.000     -8.180   -0.707    0.048
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AEF      O10    n/a    C8     START
+ AEF      HO10   O10    .      .
+ AEF      C8     O10    C6     .
+ AEF      C6     C8     C3     .
+ AEF      H6     C6     .      .
+ AEF      C3     C6     C1     .
+ AEF      H3     C3     .      .
+ AEF      C1     C3     C4     .
+ AEF      C2     C1     C5     .
+ AEF      H2     C2     .      .
+ AEF      C5     C2     H5     .
+ AEF      H5     C5     .      .
+ AEF      C4     C1     C7     .
+ AEF      H4     C4     .      .
+ AEF      H4A    C4     .      .
+ AEF      C7     C4     N9     .
+ AEF      H7     C7     .      .
+ AEF      H7A    C7     .      .
+ AEF      N9     C7     HN9    .
+ AEF      HN9A   N9     .      .
+ AEF      HN9    N9     .      END
+ AEF      C5     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AEF      C7     C4        single      1.524    0.020
+ AEF      C4     C1        single      1.511    0.020
+ AEF      C5     C8        double      1.390    0.020
+ AEF      C5     C2        single      1.390    0.020
+ AEF      C6     C8        single      1.390    0.020
+ AEF      C3     C6        double      1.390    0.020
+ AEF      N9     C7        single      1.450    0.020
+ AEF      C8     O10       single      1.362    0.020
+ AEF      C1     C3        single      1.390    0.020
+ AEF      C2     C1        double      1.390    0.020
+ AEF      H4     C4        single      1.092    0.020
+ AEF      H4A    C4        single      1.092    0.020
+ AEF      H5     C5        single      1.083    0.020
+ AEF      H6     C6        single      1.083    0.020
+ AEF      H7     C7        single      1.092    0.020
+ AEF      H7A    C7        single      1.092    0.020
+ AEF      HO10   O10       single      0.967    0.020
+ AEF      H3     C3        single      1.083    0.020
+ AEF      H2     C2        single      1.083    0.020
+ AEF      HN9    N9        single      1.010    0.020
+ AEF      HN9A   N9        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AEF      HO10   O10    C8      109.470    3.000
+ AEF      O10    C8     C6      120.000    3.000
+ AEF      O10    C8     C5      120.000    3.000
+ AEF      C6     C8     C5      120.000    3.000
+ AEF      C8     C6     H6      120.000    3.000
+ AEF      C8     C6     C3      120.000    3.000
+ AEF      H6     C6     C3      120.000    3.000
+ AEF      C6     C3     H3      120.000    3.000
+ AEF      C6     C3     C1      120.000    3.000
+ AEF      H3     C3     C1      120.000    3.000
+ AEF      C3     C1     C2      120.000    3.000
+ AEF      C3     C1     C4      120.000    3.000
+ AEF      C2     C1     C4      120.000    3.000
+ AEF      C1     C2     H2      120.000    3.000
+ AEF      C1     C2     C5      120.000    3.000
+ AEF      H2     C2     C5      120.000    3.000
+ AEF      C2     C5     H5      120.000    3.000
+ AEF      C2     C5     C8      120.000    3.000
+ AEF      H5     C5     C8      120.000    3.000
+ AEF      C1     C4     H4      109.470    3.000
+ AEF      C1     C4     H4A     109.470    3.000
+ AEF      C1     C4     C7      109.470    3.000
+ AEF      H4     C4     H4A     107.900    3.000
+ AEF      H4     C4     C7      109.470    3.000
+ AEF      H4A    C4     C7      109.470    3.000
+ AEF      C4     C7     H7      109.470    3.000
+ AEF      C4     C7     H7A     109.470    3.000
+ AEF      C4     C7     N9      109.470    3.000
+ AEF      H7     C7     H7A     107.900    3.000
+ AEF      H7     C7     N9      109.470    3.000
+ AEF      H7A    C7     N9      109.470    3.000
+ AEF      C7     N9     HN9A    120.000    3.000
+ AEF      C7     N9     HN9     120.000    3.000
+ AEF      HN9A   N9     HN9     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AEF      var_1    HO10   O10    C8     C6       -90.022   20.000   1
+ AEF      CONST_1  O10    C8     C6     C3       180.000    0.000   0
+ AEF      CONST_2  C8     C6     C3     C1         0.000    0.000   0
+ AEF      CONST_3  C6     C3     C1     C4       180.000    0.000   0
+ AEF      CONST_4  C3     C1     C2     C5         0.000    0.000   0
+ AEF      CONST_5  C1     C2     C5     C8         0.000    0.000   0
+ AEF      CONST_6  C2     C5     C8     O10      180.000    0.000   0
+ AEF      var_2    C3     C1     C4     C7        90.047   20.000   2
+ AEF      var_3    C1     C4     C7     N9       179.994   20.000   3
+ AEF      var_4    C4     C7     N9     HN9       56.063   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AEF      plan-1    C5        0.020
+ AEF      plan-1    C8        0.020
+ AEF      plan-1    C2        0.020
+ AEF      plan-1    H5        0.020
+ AEF      plan-1    C6        0.020
+ AEF      plan-1    C3        0.020
+ AEF      plan-1    C1        0.020
+ AEF      plan-1    H6        0.020
+ AEF      plan-1    O10       0.020
+ AEF      plan-1    H3        0.020
+ AEF      plan-1    H2        0.020
+ AEF      plan-1    C4        0.020
+ AEF      plan-2    N9        0.020
+ AEF      plan-2    C7        0.020
+ AEF      plan-2    HN9       0.020
+ AEF      plan-2    HN9A      0.020
+# ------------------------------------------------------

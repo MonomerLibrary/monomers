@@ -1,0 +1,238 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+H3P      H3P '2,2'-methanediylbis(3,4,6-trichlorop' non-polymer        27  21 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_H3P
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ H3P           CLAD   CL   CL        0.000      0.000    0.000    0.000
+ H3P           CAM    C    CR6       0.000     -1.371   -0.918   -0.542
+ H3P           CAJ    C    CR16      0.000     -1.326   -2.299   -0.533
+ H3P           HAJ    H    H         0.000     -0.436   -2.810   -0.188
+ H3P           CAO    C    CR6       0.000     -2.418   -3.030   -0.965
+ H3P           CLAF   CL   CL        0.000     -2.360   -4.766   -0.951
+ H3P           CAS    C    CR6       0.000     -3.558   -2.380   -1.407
+ H3P           CLAH   CL   CL        0.000     -4.927   -3.301   -1.948
+ H3P           CAQ    C    CR6       0.000     -2.511   -0.264   -0.990
+ H3P           OAB    O    OH1       0.000     -2.554    1.095   -1.007
+ H3P           HOAB   H    H         0.000     -2.802    1.419   -0.130
+ H3P           CAU    C    CR6       0.000     -3.606   -0.998   -1.419
+ H3P           CAK    C    CH2       0.000     -4.846   -0.291   -1.901
+ H3P           HAK    H    H         0.000     -5.408   -0.955   -2.561
+ H3P           HAKA   H    H         0.000     -4.561    0.609   -2.448
+ H3P           CAT    C    CR6       0.000     -5.702    0.087   -0.719
+ H3P           CAP    C    CR6       0.000     -6.560   -0.846   -0.157
+ H3P           OAA    O    OH1       0.000     -6.631   -2.102   -0.674
+ H3P           HOAA   H    H         0.000     -6.055   -2.691   -0.168
+ H3P           CAR    C    CR6       0.000     -5.634    1.365   -0.197
+ H3P           CLAG   CL   CL        0.000     -4.564    2.536   -0.903
+ H3P           CAN    C    CR6       0.000     -6.415    1.711    0.893
+ H3P           CLAE   CL   CL        0.000     -6.323    3.314    1.551
+ H3P           CAI    C    CR16      0.000     -7.269    0.779    1.457
+ H3P           HAI    H    H         0.000     -7.880    1.051    2.309
+ H3P           CAL    C    CR6       0.000     -7.343   -0.498    0.935
+ H3P           CLAC   CL   CL        0.000     -8.413   -1.667    1.643
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ H3P      CLAD   n/a    CAM    START
+ H3P      CAM    CLAD   CAQ    .
+ H3P      CAJ    CAM    CAO    .
+ H3P      HAJ    CAJ    .      .
+ H3P      CAO    CAJ    CAS    .
+ H3P      CLAF   CAO    .      .
+ H3P      CAS    CAO    CLAH   .
+ H3P      CLAH   CAS    .      .
+ H3P      CAQ    CAM    CAU    .
+ H3P      OAB    CAQ    HOAB   .
+ H3P      HOAB   OAB    .      .
+ H3P      CAU    CAQ    CAK    .
+ H3P      CAK    CAU    CAT    .
+ H3P      HAK    CAK    .      .
+ H3P      HAKA   CAK    .      .
+ H3P      CAT    CAK    CAR    .
+ H3P      CAP    CAT    OAA    .
+ H3P      OAA    CAP    HOAA   .
+ H3P      HOAA   OAA    .      .
+ H3P      CAR    CAT    CAN    .
+ H3P      CLAG   CAR    .      .
+ H3P      CAN    CAR    CAI    .
+ H3P      CLAE   CAN    .      .
+ H3P      CAI    CAN    CAL    .
+ H3P      HAI    CAI    .      .
+ H3P      CAL    CAI    CLAC   .
+ H3P      CLAC   CAL    .      END
+ H3P      CAP    CAL    .    ADD
+ H3P      CAU    CAS    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ H3P      OAA    CAP       single      1.362    0.020
+ H3P      HOAA   OAA       single      0.967    0.020
+ H3P      CAP    CAL       double      1.487    0.020
+ H3P      CAP    CAT       single      1.487    0.020
+ H3P      CLAC   CAL       single      1.795    0.020
+ H3P      CAL    CAI       single      1.390    0.020
+ H3P      CAI    CAN       double      1.390    0.020
+ H3P      HAI    CAI       single      1.083    0.020
+ H3P      CAN    CAR       single      1.487    0.020
+ H3P      CLAE   CAN       single      1.795    0.020
+ H3P      CAR    CAT       double      1.487    0.020
+ H3P      CLAG   CAR       single      1.795    0.020
+ H3P      CAT    CAK       single      1.511    0.020
+ H3P      CAK    CAU       single      1.511    0.020
+ H3P      HAK    CAK       single      1.092    0.020
+ H3P      HAKA   CAK       single      1.092    0.020
+ H3P      CAU    CAQ       double      1.487    0.020
+ H3P      CAU    CAS       single      1.487    0.020
+ H3P      CAS    CAO       double      1.487    0.020
+ H3P      CLAH   CAS       single      1.795    0.020
+ H3P      CAO    CAJ       single      1.390    0.020
+ H3P      CLAF   CAO       single      1.795    0.020
+ H3P      CAJ    CAM       double      1.390    0.020
+ H3P      HAJ    CAJ       single      1.083    0.020
+ H3P      CAM    CLAD      single      1.795    0.020
+ H3P      CAQ    CAM       single      1.487    0.020
+ H3P      OAB    CAQ       single      1.362    0.020
+ H3P      HOAB   OAB       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ H3P      CLAD   CAM    CAJ     120.000    3.000
+ H3P      CLAD   CAM    CAQ     120.000    3.000
+ H3P      CAJ    CAM    CAQ     120.000    3.000
+ H3P      CAM    CAJ    HAJ     120.000    3.000
+ H3P      CAM    CAJ    CAO     120.000    3.000
+ H3P      HAJ    CAJ    CAO     120.000    3.000
+ H3P      CAJ    CAO    CLAF    120.000    3.000
+ H3P      CAJ    CAO    CAS     120.000    3.000
+ H3P      CLAF   CAO    CAS     120.000    3.000
+ H3P      CAO    CAS    CLAH    120.000    3.000
+ H3P      CAO    CAS    CAU     120.000    3.000
+ H3P      CLAH   CAS    CAU     120.000    3.000
+ H3P      CAM    CAQ    OAB     120.000    3.000
+ H3P      CAM    CAQ    CAU     120.000    3.000
+ H3P      OAB    CAQ    CAU     120.000    3.000
+ H3P      CAQ    OAB    HOAB    109.470    3.000
+ H3P      CAQ    CAU    CAK     120.000    3.000
+ H3P      CAQ    CAU    CAS     120.000    3.000
+ H3P      CAK    CAU    CAS     120.000    3.000
+ H3P      CAU    CAK    HAK     109.470    3.000
+ H3P      CAU    CAK    HAKA    109.470    3.000
+ H3P      CAU    CAK    CAT     109.470    3.000
+ H3P      HAK    CAK    HAKA    107.900    3.000
+ H3P      HAK    CAK    CAT     109.470    3.000
+ H3P      HAKA   CAK    CAT     109.470    3.000
+ H3P      CAK    CAT    CAP     120.000    3.000
+ H3P      CAK    CAT    CAR     120.000    3.000
+ H3P      CAP    CAT    CAR     120.000    3.000
+ H3P      CAT    CAP    OAA     120.000    3.000
+ H3P      CAT    CAP    CAL     120.000    3.000
+ H3P      OAA    CAP    CAL     120.000    3.000
+ H3P      CAP    OAA    HOAA    109.470    3.000
+ H3P      CAT    CAR    CLAG    120.000    3.000
+ H3P      CAT    CAR    CAN     120.000    3.000
+ H3P      CLAG   CAR    CAN     120.000    3.000
+ H3P      CAR    CAN    CLAE    120.000    3.000
+ H3P      CAR    CAN    CAI     120.000    3.000
+ H3P      CLAE   CAN    CAI     120.000    3.000
+ H3P      CAN    CAI    HAI     120.000    3.000
+ H3P      CAN    CAI    CAL     120.000    3.000
+ H3P      HAI    CAI    CAL     120.000    3.000
+ H3P      CAI    CAL    CLAC    120.000    3.000
+ H3P      CAI    CAL    CAP     120.000    3.000
+ H3P      CLAC   CAL    CAP     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ H3P      CONST_1  CLAD   CAM    CAJ    CAO      180.000    0.000   0
+ H3P      CONST_2  CAM    CAJ    CAO    CAS        0.000    0.000   0
+ H3P      CONST_3  CAJ    CAO    CAS    CLAH     180.000    0.000   0
+ H3P      CONST_4  CLAD   CAM    CAQ    CAU      180.000    0.000   0
+ H3P      var_1    CAM    CAQ    OAB    HOAB     -83.601   20.000   1
+ H3P      CONST_5  CAM    CAQ    CAU    CAK      180.000    0.000   0
+ H3P      CONST_6  CAQ    CAU    CAS    CAO        0.000    0.000   0
+ H3P      var_2    CAQ    CAU    CAK    CAT      -83.391   20.000   2
+ H3P      var_3    CAU    CAK    CAT    CAR       97.428   20.000   2
+ H3P      CONST_7  CAK    CAT    CAP    OAA        0.000    0.000   0
+ H3P      CONST_8  CAT    CAP    CAL    CAI        0.000    0.000   0
+ H3P      var_4    CAT    CAP    OAA    HOAA      96.072   20.000   1
+ H3P      CONST_9  CAK    CAT    CAR    CAN      180.000    0.000   0
+ H3P      CONST_10 CAT    CAR    CAN    CAI        0.000    0.000   0
+ H3P      CONST_11 CAR    CAN    CAI    CAL        0.000    0.000   0
+ H3P      CONST_12 CAN    CAI    CAL    CLAC     180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ H3P      plan-1    CAP       0.020
+ H3P      plan-1    OAA       0.020
+ H3P      plan-1    CAL       0.020
+ H3P      plan-1    CAT       0.020
+ H3P      plan-1    CAI       0.020
+ H3P      plan-1    CAN       0.020
+ H3P      plan-1    CAR       0.020
+ H3P      plan-1    CLAC      0.020
+ H3P      plan-1    HAI       0.020
+ H3P      plan-1    CLAE      0.020
+ H3P      plan-1    CLAG      0.020
+ H3P      plan-1    CAK       0.020
+ H3P      plan-2    CAU       0.020
+ H3P      plan-2    CAK       0.020
+ H3P      plan-2    CAS       0.020
+ H3P      plan-2    CAQ       0.020
+ H3P      plan-2    CAO       0.020
+ H3P      plan-2    CAJ       0.020
+ H3P      plan-2    CAM       0.020
+ H3P      plan-2    CLAH      0.020
+ H3P      plan-2    CLAF      0.020
+ H3P      plan-2    HAJ       0.020
+ H3P      plan-2    CLAD      0.020
+ H3P      plan-2    OAB       0.020
+# ------------------------------------------------------

@@ -1,0 +1,157 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FOT      FOT '5-FLUORO-2,6-DIOXO-1,2,3,6-TETRAHYDR' non-polymer        14  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FOT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FOT           O41    O    OC       -0.500      0.000    0.000    0.000
+ FOT           C41    C    C         0.000     -0.927    0.840    0.002
+ FOT           O42    O    OC       -0.500     -0.662    2.063    0.006
+ FOT           C4     C    CR6       0.000     -2.334    0.389   -0.001
+ FOT           N3     N    NR16      0.000     -2.635   -0.960   -0.001
+ FOT           HN3    H    H         0.000     -1.863   -1.656   -0.002
+ FOT           C5     C    CR6       0.000     -3.347    1.298    0.001
+ FOT           F5     F    F         0.000     -3.089    2.624    0.001
+ FOT           C6     C    CR6       0.000     -4.733    0.799   -0.002
+ FOT           O6     O    O         0.000     -5.669    1.576   -0.001
+ FOT           N1     N    NR16      0.000     -4.945   -0.533   -0.002
+ FOT           HN1    H    H         0.000     -5.918   -0.900   -0.004
+ FOT           C2     C    CR6       0.000     -3.908   -1.388    0.002
+ FOT           O2     O    O         0.000     -4.129   -2.584    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FOT      O41    n/a    C41    START
+ FOT      C41    O41    C4     .
+ FOT      O42    C41    .      .
+ FOT      C4     C41    C5     .
+ FOT      N3     C4     HN3    .
+ FOT      HN3    N3     .      .
+ FOT      C5     C4     C6     .
+ FOT      F5     C5     .      .
+ FOT      C6     C5     N1     .
+ FOT      O6     C6     .      .
+ FOT      N1     C6     C2     .
+ FOT      HN1    N1     .      .
+ FOT      C2     N1     O2     .
+ FOT      O2     C2     .      END
+ FOT      C2     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FOT      O2     C2        double      1.250    0.020
+ FOT      C2     N3        single      1.337    0.020
+ FOT      C2     N1        single      1.337    0.020
+ FOT      C6     C5        single      1.487    0.020
+ FOT      N1     C6        single      1.337    0.020
+ FOT      O6     C6        double      1.250    0.020
+ FOT      F5     C5        single      1.345    0.020
+ FOT      C5     C4        double      1.487    0.020
+ FOT      N3     C4        single      1.337    0.020
+ FOT      HN3    N3        single      1.040    0.020
+ FOT      HN1    N1        single      1.040    0.020
+ FOT      C4     C41       single      1.500    0.020
+ FOT      O42    C41       deloc       1.250    0.020
+ FOT      C41    O41       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FOT      O41    C41    O42     123.000    3.000
+ FOT      O41    C41    C4      120.000    3.000
+ FOT      O42    C41    C4      120.000    3.000
+ FOT      C41    C4     N3      120.000    3.000
+ FOT      C41    C4     C5      120.000    3.000
+ FOT      N3     C4     C5      120.000    3.000
+ FOT      C4     N3     HN3     120.000    3.000
+ FOT      C4     N3     C2      120.000    3.000
+ FOT      HN3    N3     C2      120.000    3.000
+ FOT      C4     C5     F5      120.000    3.000
+ FOT      C4     C5     C6      120.000    3.000
+ FOT      F5     C5     C6      120.000    3.000
+ FOT      C5     C6     O6      120.000    3.000
+ FOT      C5     C6     N1      120.000    3.000
+ FOT      O6     C6     N1      120.000    3.000
+ FOT      C6     N1     HN1     120.000    3.000
+ FOT      C6     N1     C2      120.000    3.000
+ FOT      HN1    N1     C2      120.000    3.000
+ FOT      N1     C2     O2      120.000    3.000
+ FOT      N1     C2     N3      120.000    3.000
+ FOT      O2     C2     N3      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FOT      var_1    O41    C41    C4     C5      -179.998   20.000   1
+ FOT      CONST_1  C41    C4     N3     C2       180.000    0.000   0
+ FOT      CONST_2  C41    C4     C5     C6       180.000    0.000   0
+ FOT      CONST_3  C4     C5     C6     N1         0.000    0.000   0
+ FOT      CONST_4  C5     C6     N1     C2         0.000    0.000   0
+ FOT      CONST_5  C6     N1     C2     O2       180.000    0.000   0
+ FOT      CONST_6  N1     C2     N3     C4         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FOT      plan-1    C2        0.020
+ FOT      plan-1    O2        0.020
+ FOT      plan-1    N3        0.020
+ FOT      plan-1    N1        0.020
+ FOT      plan-1    C6        0.020
+ FOT      plan-1    C5        0.020
+ FOT      plan-1    C4        0.020
+ FOT      plan-1    O6        0.020
+ FOT      plan-1    F5        0.020
+ FOT      plan-1    HN3       0.020
+ FOT      plan-1    HN1       0.020
+ FOT      plan-1    C41       0.020
+ FOT      plan-2    C41       0.020
+ FOT      plan-2    C4        0.020
+ FOT      plan-2    O42       0.020
+ FOT      plan-2    O41       0.020
+# ------------------------------------------------------

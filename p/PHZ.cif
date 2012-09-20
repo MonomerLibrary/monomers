@@ -1,0 +1,175 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PHZ      PHZ '1-PHENYLHYDRAZINE                   ' non-polymer        16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PHZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PHZ           N1     N    NH2       0.000      0.000    0.000    0.000
+ PHZ           HN11   H    H         0.000     -0.073    1.001   -0.013
+ PHZ           HN12   H    H         0.000      0.894   -0.457    0.014
+ PHZ           N2     N    NH1       0.000     -1.138   -0.754   -0.002
+ PHZ           HN2    H    H         0.000     -1.076   -1.762    0.011
+ PHZ           CG     C    CR6       0.000     -2.389   -0.132   -0.020
+ PHZ           CD2    C    CR16      0.000     -3.548   -0.899   -0.022
+ PHZ           HD2    H    H         0.000     -3.482   -1.980   -0.010
+ PHZ           CE2    C    CR16      0.000     -4.782   -0.281   -0.040
+ PHZ           HE2    H    H         0.000     -5.686   -0.878   -0.041
+ PHZ           CZ     C    CR16      0.000     -4.866    1.100   -0.057
+ PHZ           HZ     H    H         0.000     -5.836    1.582   -0.071
+ PHZ           CE1    C    CR16      0.000     -3.715    1.865   -0.056
+ PHZ           HE1    H    H         0.000     -3.784    2.946   -0.074
+ PHZ           CD1    C    CR16      0.000     -2.477    1.254   -0.032
+ PHZ           HD1    H    H         0.000     -1.576    1.854   -0.023
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PHZ      N1     n/a    N2     START
+ PHZ      HN11   N1     .      .
+ PHZ      HN12   N1     .      .
+ PHZ      N2     N1     CG     .
+ PHZ      HN2    N2     .      .
+ PHZ      CG     N2     CD2    .
+ PHZ      CD2    CG     CE2    .
+ PHZ      HD2    CD2    .      .
+ PHZ      CE2    CD2    CZ     .
+ PHZ      HE2    CE2    .      .
+ PHZ      CZ     CE2    CE1    .
+ PHZ      HZ     CZ     .      .
+ PHZ      CE1    CZ     CD1    .
+ PHZ      HE1    CE1    .      .
+ PHZ      CD1    CE1    HD1    .
+ PHZ      HD1    CD1    .      END
+ PHZ      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PHZ      N2     N1        single      1.400    0.020
+ PHZ      HN11   N1        single      1.010    0.020
+ PHZ      HN12   N1        single      1.010    0.020
+ PHZ      CG     N2        single      1.350    0.020
+ PHZ      HN2    N2        single      1.010    0.020
+ PHZ      CG     CD1       single      1.390    0.020
+ PHZ      CD2    CG        double      1.390    0.020
+ PHZ      CD1    CE1       double      1.390    0.020
+ PHZ      HD1    CD1       single      1.083    0.020
+ PHZ      CE1    CZ        single      1.390    0.020
+ PHZ      HE1    CE1       single      1.083    0.020
+ PHZ      CZ     CE2       double      1.390    0.020
+ PHZ      HZ     CZ        single      1.083    0.020
+ PHZ      CE2    CD2       single      1.390    0.020
+ PHZ      HE2    CE2       single      1.083    0.020
+ PHZ      HD2    CD2       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PHZ      HN11   N1     HN12    120.000    3.000
+ PHZ      HN11   N1     N2      120.000    3.000
+ PHZ      HN12   N1     N2      120.000    3.000
+ PHZ      N1     N2     HN2     120.000    3.000
+ PHZ      N1     N2     CG      120.000    3.000
+ PHZ      HN2    N2     CG      120.000    3.000
+ PHZ      N2     CG     CD2     120.000    3.000
+ PHZ      N2     CG     CD1     120.000    3.000
+ PHZ      CD2    CG     CD1     120.000    3.000
+ PHZ      CG     CD2    HD2     120.000    3.000
+ PHZ      CG     CD2    CE2     120.000    3.000
+ PHZ      HD2    CD2    CE2     120.000    3.000
+ PHZ      CD2    CE2    HE2     120.000    3.000
+ PHZ      CD2    CE2    CZ      120.000    3.000
+ PHZ      HE2    CE2    CZ      120.000    3.000
+ PHZ      CE2    CZ     HZ      120.000    3.000
+ PHZ      CE2    CZ     CE1     120.000    3.000
+ PHZ      HZ     CZ     CE1     120.000    3.000
+ PHZ      CZ     CE1    HE1     120.000    3.000
+ PHZ      CZ     CE1    CD1     120.000    3.000
+ PHZ      HE1    CE1    CD1     120.000    3.000
+ PHZ      CE1    CD1    HD1     120.000    3.000
+ PHZ      CE1    CD1    CG      120.000    3.000
+ PHZ      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PHZ      CONST_1  HN12   N1     N2     CG       179.973    0.000   0
+ PHZ      var_1    N1     N2     CG     CD2      179.987   20.000   1
+ PHZ      CONST_2  N2     CG     CD1    CE1      180.000    0.000   0
+ PHZ      CONST_3  N2     CG     CD2    CE2      180.000    0.000   0
+ PHZ      CONST_4  CG     CD2    CE2    CZ         0.000    0.000   0
+ PHZ      CONST_5  CD2    CE2    CZ     CE1        0.000    0.000   0
+ PHZ      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+ PHZ      CONST_7  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PHZ      plan-1    N1        0.020
+ PHZ      plan-1    N2        0.020
+ PHZ      plan-1    HN11      0.020
+ PHZ      plan-1    HN12      0.020
+ PHZ      plan-1    HN2       0.020
+ PHZ      plan-2    N2        0.020
+ PHZ      plan-2    N1        0.020
+ PHZ      plan-2    CG        0.020
+ PHZ      plan-2    HN2       0.020
+ PHZ      plan-2    HN11      0.020
+ PHZ      plan-2    HN12      0.020
+ PHZ      plan-3    CG        0.020
+ PHZ      plan-3    N2        0.020
+ PHZ      plan-3    CD1       0.020
+ PHZ      plan-3    CD2       0.020
+ PHZ      plan-3    CE1       0.020
+ PHZ      plan-3    CZ        0.020
+ PHZ      plan-3    CE2       0.020
+ PHZ      plan-3    HD1       0.020
+ PHZ      plan-3    HE1       0.020
+ PHZ      plan-3    HZ        0.020
+ PHZ      plan-3    HE2       0.020
+ PHZ      plan-3    HD2       0.020
+ PHZ      plan-3    HN2       0.020
+# ------------------------------------------------------

@@ -1,0 +1,171 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BOC      BOC 'TERT-BUTYL HYDROGEN CARBONATE       ' non-polymer        18   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BOC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BOC           O3     O    OH1       0.000      0.000    0.000    0.000
+ BOC           H3     H    H         0.000      0.024    0.181    0.958
+ BOC           C      C    C         0.000     -1.317   -0.346   -0.414
+ BOC           O1     O    O         0.000     -2.056   -0.324    0.531
+ BOC           O2     O    O2        0.000     -1.810    0.530   -1.424
+ BOC           CT     C    CT        0.000     -3.114    0.163   -1.878
+ BOC           C3     C    CH3       0.000     -3.045   -1.244   -2.470
+ BOC           H33    H    H         0.000     -4.005   -1.530   -2.815
+ BOC           H32    H    H         0.000     -2.362   -1.254   -3.280
+ BOC           H31    H    H         0.000     -2.720   -1.925   -1.727
+ BOC           C2     C    CH3       0.000     -3.530    1.174   -2.944
+ BOC           H23    H    H         0.000     -4.489    0.920   -3.317
+ BOC           H22    H    H         0.000     -3.563    2.143   -2.518
+ BOC           H21    H    H         0.000     -2.829    1.161   -3.737
+ BOC           C1     C    CH3       0.000     -4.074    0.208   -0.690
+ BOC           H13    H    H         0.000     -5.053   -0.028   -1.018
+ BOC           H12    H    H         0.000     -3.768   -0.497    0.039
+ BOC           H11    H    H         0.000     -4.068    1.179   -0.267
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BOC      O3     n/a    C      START
+ BOC      H3     O3     .      .
+ BOC      C      O3     O2     .
+ BOC      O1     C      .      .
+ BOC      O2     C      CT     .
+ BOC      CT     O2     C1     .
+ BOC      C3     CT     H31    .
+ BOC      H33    C3     .      .
+ BOC      H32    C3     .      .
+ BOC      H31    C3     .      .
+ BOC      C2     CT     H21    .
+ BOC      H23    C2     .      .
+ BOC      H22    C2     .      .
+ BOC      H21    C2     .      .
+ BOC      C1     CT     H11    .
+ BOC      H13    C1     .      .
+ BOC      H12    C1     .      .
+ BOC      H11    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BOC      O1     C         double      1.220    0.020
+ BOC      O2     C         single      1.454    0.020
+ BOC      CT     O2        single      1.426    0.020
+ BOC      C1     CT        single      1.524    0.020
+ BOC      C2     CT        single      1.524    0.020
+ BOC      C3     CT        single      1.524    0.020
+ BOC      C      O3        single      1.330    0.020
+ BOC      H11    C1        single      1.059    0.020
+ BOC      H12    C1        single      1.059    0.020
+ BOC      H13    C1        single      1.059    0.020
+ BOC      H21    C2        single      1.059    0.020
+ BOC      H22    C2        single      1.059    0.020
+ BOC      H23    C2        single      1.059    0.020
+ BOC      H31    C3        single      1.059    0.020
+ BOC      H32    C3        single      1.059    0.020
+ BOC      H33    C3        single      1.059    0.020
+ BOC      H3     O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BOC      H3     O3     C       109.470    3.000
+ BOC      O3     C      O1      119.000    3.000
+ BOC      O3     C      O2      120.000    3.000
+ BOC      O1     C      O2      119.000    3.000
+ BOC      C      O2     CT      120.000    3.000
+ BOC      O2     CT     C3      109.470    3.000
+ BOC      O2     CT     C2      109.470    3.000
+ BOC      O2     CT     C1      109.470    3.000
+ BOC      C3     CT     C2      111.000    3.000
+ BOC      C3     CT     C1      111.000    3.000
+ BOC      C2     CT     C1      111.000    3.000
+ BOC      CT     C3     H33     109.470    3.000
+ BOC      CT     C3     H32     109.470    3.000
+ BOC      CT     C3     H31     109.470    3.000
+ BOC      H33    C3     H32     109.470    3.000
+ BOC      H33    C3     H31     109.470    3.000
+ BOC      H32    C3     H31     109.470    3.000
+ BOC      CT     C2     H23     109.470    3.000
+ BOC      CT     C2     H22     109.470    3.000
+ BOC      CT     C2     H21     109.470    3.000
+ BOC      H23    C2     H22     109.470    3.000
+ BOC      H23    C2     H21     109.470    3.000
+ BOC      H22    C2     H21     109.470    3.000
+ BOC      CT     C1     H13     109.470    3.000
+ BOC      CT     C1     H12     109.470    3.000
+ BOC      CT     C1     H11     109.470    3.000
+ BOC      H13    C1     H12     109.470    3.000
+ BOC      H13    C1     H11     109.470    3.000
+ BOC      H12    C1     H11     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BOC      var_1    H3     O3     C      O2       121.899   20.000   1
+ BOC      var_2    O3     C      O2     CT       177.990   20.000   1
+ BOC      var_3    C      O2     CT     C1        59.992   20.000   1
+ BOC      var_4    O2     CT     C3     H31       60.168   20.000   1
+ BOC      var_5    O2     CT     C2     H21       58.945   20.000   1
+ BOC      var_6    O2     CT     C1     H11       57.938   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BOC      chir_01  CT     O2     C1     C2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BOC      plan-1    C         0.020
+ BOC      plan-1    O1        0.000
+ BOC      plan-1    O2        0.000
+ BOC      plan-1    O3        0.000
+# ------------------------------------------------------

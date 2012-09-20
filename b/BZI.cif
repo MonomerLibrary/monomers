@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BZI      BZI 'BENZIMIDAZOLE                       ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BZI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BZI           H7     H    H         0.000      0.002    0.005   -0.002
+ BZI           C7     C    CR16      0.000     -0.909    0.001    0.583
+ BZI           C6     C    CR16      0.000     -0.849   -0.001    1.960
+ BZI           H6     H    H         0.000      0.114   -0.002    2.456
+ BZI           C5     C    CR16      0.000     -2.012    0.000    2.715
+ BZI           H5     H    H         0.000     -1.949    0.000    3.796
+ BZI           C4     C    CR16      0.000     -3.237    0.001    2.108
+ BZI           H4     H    H         0.000     -4.139    0.001    2.707
+ BZI           C7A    C    CR56      0.000     -2.144   -0.005   -0.050
+ BZI           N1     N    NR15      0.000     -2.547    0.001   -1.371
+ BZI           HN1    H    H         0.000     -1.926    0.006   -2.205
+ BZI           C3A    C    CR56      0.000     -3.322    0.001    0.714
+ BZI           N3     N    NRD5      0.000     -4.361    0.001   -0.160
+ BZI           C2     C    CR15      0.000     -3.907    0.001   -1.378
+ BZI           H2     H    H         0.000     -4.522    0.001   -2.270
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BZI      H7     n/a    C7     START
+ BZI      C7     H7     C7A    .
+ BZI      C6     C7     C5     .
+ BZI      H6     C6     .      .
+ BZI      C5     C6     C4     .
+ BZI      H5     C5     .      .
+ BZI      C4     C5     H4     .
+ BZI      H4     C4     .      .
+ BZI      C7A    C7     C3A    .
+ BZI      N1     C7A    HN1    .
+ BZI      HN1    N1     .      .
+ BZI      C3A    C7A    N3     .
+ BZI      N3     C3A    C2     .
+ BZI      C2     N3     H2     .
+ BZI      H2     C2     .      END
+ BZI      N1     C2     .    ADD
+ BZI      C3A    C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BZI      N1     C2        single      1.350    0.020
+ BZI      N1     C7A       single      1.340    0.020
+ BZI      HN1    N1        single      1.040    0.020
+ BZI      C2     N3        double      1.350    0.020
+ BZI      H2     C2        single      1.083    0.020
+ BZI      N3     C3A       single      1.350    0.020
+ BZI      C3A    C4        double      1.390    0.020
+ BZI      C3A    C7A       single      1.490    0.020
+ BZI      C4     C5        single      1.390    0.020
+ BZI      H4     C4        single      1.083    0.020
+ BZI      C5     C6        double      1.390    0.020
+ BZI      H5     C5        single      1.083    0.020
+ BZI      C6     C7        single      1.390    0.020
+ BZI      H6     C6        single      1.083    0.020
+ BZI      C7A    C7        double      1.390    0.020
+ BZI      C7     H7        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BZI      H7     C7     C6      120.000    3.000
+ BZI      H7     C7     C7A     120.000    3.000
+ BZI      C6     C7     C7A     120.000    3.000
+ BZI      C7     C6     H6      120.000    3.000
+ BZI      C7     C6     C5      120.000    3.000
+ BZI      H6     C6     C5      120.000    3.000
+ BZI      C6     C5     H5      120.000    3.000
+ BZI      C6     C5     C4      120.000    3.000
+ BZI      H5     C5     C4      120.000    3.000
+ BZI      C5     C4     H4      120.000    3.000
+ BZI      C5     C4     C3A     120.000    3.000
+ BZI      H4     C4     C3A     120.000    3.000
+ BZI      C7     C7A    N1      132.000    3.000
+ BZI      C7     C7A    C3A     120.000    3.000
+ BZI      N1     C7A    C3A     108.000    3.000
+ BZI      C7A    N1     HN1     126.000    3.000
+ BZI      C7A    N1     C2      108.000    3.000
+ BZI      HN1    N1     C2      126.000    3.000
+ BZI      C7A    C3A    N3      108.000    3.000
+ BZI      C7A    C3A    C4      120.000    3.000
+ BZI      N3     C3A    C4      132.000    3.000
+ BZI      C3A    N3     C2      108.000    3.000
+ BZI      N3     C2     H2      126.000    3.000
+ BZI      N3     C2     N1      108.000    3.000
+ BZI      H2     C2     N1      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BZI      CONST_1  H7     C7     C6     C5       180.000    0.000   0
+ BZI      CONST_2  C7     C6     C5     C4         0.000    0.000   0
+ BZI      CONST_3  C6     C5     C4     C3A        0.000    0.000   0
+ BZI      CONST_4  H7     C7     C7A    C3A      180.000    0.000   0
+ BZI      CONST_5  C7     C7A    N1     C2       180.000    0.000   0
+ BZI      CONST_6  C7A    N1     C2     N3         0.000    0.000   0
+ BZI      CONST_7  C7     C7A    C3A    N3       180.000    0.000   0
+ BZI      CONST_8  C7A    C3A    C4     C5         0.000    0.000   0
+ BZI      CONST_9  C7A    C3A    N3     C2         0.000    0.000   0
+ BZI      CONST_10 C3A    N3     C2     N1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BZI      plan-1    N1        0.020
+ BZI      plan-1    C2        0.020
+ BZI      plan-1    C7A       0.020
+ BZI      plan-1    HN1       0.020
+ BZI      plan-1    N3        0.020
+ BZI      plan-1    H2        0.020
+ BZI      plan-1    C3A       0.020
+ BZI      plan-1    C4        0.020
+ BZI      plan-1    C5        0.020
+ BZI      plan-1    C6        0.020
+ BZI      plan-1    C7        0.020
+ BZI      plan-1    H4        0.020
+ BZI      plan-1    H5        0.020
+ BZI      plan-1    H6        0.020
+ BZI      plan-1    H7        0.020
+# ------------------------------------------------------

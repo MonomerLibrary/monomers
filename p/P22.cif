@@ -1,0 +1,143 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+P22      P22 'ETHYL DIHYDROGEN DIPHOSPHATE        ' non-polymer        16  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_P22
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ P22           O3B    O    OP       -0.666      0.000    0.000    0.000
+ P22           PB     P    P         0.000     -1.312    0.739    0.148
+ P22           O1B    O    OP       -0.666     -1.085    2.015    0.929
+ P22           O2B    O    OP       -0.666     -1.857    1.077   -1.223
+ P22           O3A    O    O2        0.000     -2.367   -0.190    0.932
+ P22           PA     P    P         0.000     -2.862   -1.312   -0.111
+ P22           O1A    O    OP       -0.500     -1.845   -2.388   -0.200
+ P22           O2A    O    OP       -0.500     -3.050   -0.697   -1.447
+ P22           O7     O    O2        0.000     -4.259   -1.935    0.394
+ P22           C7     C    CH2       0.000     -4.703   -2.832   -0.624
+ P22           H71    H    H         0.000     -3.957   -3.617   -0.769
+ P22           H72    H    H         0.000     -4.837   -2.283   -1.559
+ P22           C6     C    CH3       0.000     -6.034   -3.462   -0.205
+ P22           H63    H    H         0.000     -5.906   -3.995    0.703
+ P22           H62    H    H         0.000     -6.760   -2.702   -0.066
+ P22           H61    H    H         0.000     -6.366   -4.130   -0.959
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ P22      O3B    n/a    PB     START
+ P22      PB     O3B    O3A    .
+ P22      O1B    PB     .      .
+ P22      O2B    PB     .      .
+ P22      O3A    PB     PA     .
+ P22      PA     O3A    O7     .
+ P22      O1A    PA     .      .
+ P22      O2A    PA     .      .
+ P22      O7     PA     C7     .
+ P22      C7     O7     C6     .
+ P22      H71    C7     .      .
+ P22      H72    C7     .      .
+ P22      C6     C7     H61    .
+ P22      H63    C6     .      .
+ P22      H62    C6     .      .
+ P22      H61    C6     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ P22      C6     C7        single      1.513    0.020
+ P22      H61    C6        single      1.059    0.020
+ P22      H62    C6        single      1.059    0.020
+ P22      H63    C6        single      1.059    0.020
+ P22      C7     O7        single      1.426    0.020
+ P22      H71    C7        single      1.092    0.020
+ P22      H72    C7        single      1.092    0.020
+ P22      O7     PA        single      1.610    0.020
+ P22      O1A    PA        deloc       1.510    0.020
+ P22      O2A    PA        deloc       1.510    0.020
+ P22      PA     O3A       single      1.610    0.020
+ P22      O3A    PB        single      1.610    0.020
+ P22      O1B    PB        deloc       1.510    0.020
+ P22      O2B    PB        deloc       1.510    0.020
+ P22      PB     O3B       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ P22      O3B    PB     O1B     119.900    3.000
+ P22      O3B    PB     O2B     119.900    3.000
+ P22      O3B    PB     O3A     108.200    3.000
+ P22      O1B    PB     O2B     119.900    3.000
+ P22      O1B    PB     O3A     108.200    3.000
+ P22      O2B    PB     O3A     108.200    3.000
+ P22      PB     O3A    PA      120.500    3.000
+ P22      O3A    PA     O1A     108.200    3.000
+ P22      O3A    PA     O2A     108.200    3.000
+ P22      O3A    PA     O7      102.600    3.000
+ P22      O1A    PA     O2A     119.900    3.000
+ P22      O1A    PA     O7      108.200    3.000
+ P22      O2A    PA     O7      108.200    3.000
+ P22      PA     O7     C7      120.500    3.000
+ P22      O7     C7     H71     109.470    3.000
+ P22      O7     C7     H72     109.470    3.000
+ P22      O7     C7     C6      109.470    3.000
+ P22      H71    C7     H72     107.900    3.000
+ P22      H71    C7     C6      109.470    3.000
+ P22      H72    C7     C6      109.470    3.000
+ P22      C7     C6     H63     109.470    3.000
+ P22      C7     C6     H62     109.470    3.000
+ P22      C7     C6     H61     109.470    3.000
+ P22      H63    C6     H62     109.470    3.000
+ P22      H63    C6     H61     109.470    3.000
+ P22      H62    C6     H61     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ P22      var_1    O3B    PB     O3A    PA       -74.991   20.000   1
+ P22      var_2    PB     O3A    PA     O7      -159.992   20.000   1
+ P22      var_3    O3A    PA     O7     C7       174.961   20.000   1
+ P22      var_4    PA     O7     C7     C6       179.998   20.000   1
+ P22      var_5    O7     C7     C6     H61     -179.939   20.000   3
+# ------------------------------------------------------

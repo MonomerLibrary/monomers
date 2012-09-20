@@ -1,0 +1,157 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BEZ      BEZ 'BENZOIC ACID                        ' non-polymer        14   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BEZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BEZ           O2     O    OC       -0.500      0.000    0.000    0.000
+ BEZ           C      C    C         0.000     -1.194    0.001    0.375
+ BEZ           O1     O    OC       -0.500     -1.466    0.000    1.596
+ BEZ           C1     C    CR6       0.000     -2.282    0.000   -0.625
+ BEZ           C6     C    CR16      0.000     -1.982    0.004   -1.988
+ BEZ           H6     H    H         0.000     -0.950    0.012   -2.316
+ BEZ           C5     C    CR16      0.000     -3.003   -0.001   -2.915
+ BEZ           H5     H    H         0.000     -2.772   -0.006   -3.973
+ BEZ           C4     C    CR16      0.000     -4.322    0.000   -2.496
+ BEZ           H4     H    H         0.000     -5.120    0.000   -3.228
+ BEZ           C3     C    CR16      0.000     -4.626    0.000   -1.147
+ BEZ           H3     H    H         0.000     -5.661   -0.001   -0.826
+ BEZ           C2     C    CR16      0.000     -3.615    0.000   -0.209
+ BEZ           H2     H    H         0.000     -3.854    0.000    0.848
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BEZ      O2     n/a    C      START
+ BEZ      C      O2     C1     .
+ BEZ      O1     C      .      .
+ BEZ      C1     C      C6     .
+ BEZ      C6     C1     C5     .
+ BEZ      H6     C6     .      .
+ BEZ      C5     C6     C4     .
+ BEZ      H5     C5     .      .
+ BEZ      C4     C5     C3     .
+ BEZ      H4     C4     .      .
+ BEZ      C3     C4     C2     .
+ BEZ      H3     C3     .      .
+ BEZ      C2     C3     H2     .
+ BEZ      H2     C2     .      END
+ BEZ      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BEZ      O1     C         deloc       1.250    0.020
+ BEZ      C      O2        deloc       1.250    0.020
+ BEZ      C1     C         single      1.500    0.020
+ BEZ      C1     C2        double      1.390    0.020
+ BEZ      C6     C1        single      1.390    0.020
+ BEZ      C2     C3        single      1.390    0.020
+ BEZ      H2     C2        single      1.083    0.020
+ BEZ      C3     C4        double      1.390    0.020
+ BEZ      H3     C3        single      1.083    0.020
+ BEZ      C4     C5        single      1.390    0.020
+ BEZ      H4     C4        single      1.083    0.020
+ BEZ      C5     C6        double      1.390    0.020
+ BEZ      H5     C5        single      1.083    0.020
+ BEZ      H6     C6        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BEZ      O2     C      O1      123.000    3.000
+ BEZ      O2     C      C1      120.000    3.000
+ BEZ      O1     C      C1      120.000    3.000
+ BEZ      C      C1     C6      120.000    3.000
+ BEZ      C      C1     C2      120.000    3.000
+ BEZ      C6     C1     C2      120.000    3.000
+ BEZ      C1     C6     H6      120.000    3.000
+ BEZ      C1     C6     C5      120.000    3.000
+ BEZ      H6     C6     C5      120.000    3.000
+ BEZ      C6     C5     H5      120.000    3.000
+ BEZ      C6     C5     C4      120.000    3.000
+ BEZ      H5     C5     C4      120.000    3.000
+ BEZ      C5     C4     H4      120.000    3.000
+ BEZ      C5     C4     C3      120.000    3.000
+ BEZ      H4     C4     C3      120.000    3.000
+ BEZ      C4     C3     H3      120.000    3.000
+ BEZ      C4     C3     C2      120.000    3.000
+ BEZ      H3     C3     C2      120.000    3.000
+ BEZ      C3     C2     H2      120.000    3.000
+ BEZ      C3     C2     C1      120.000    3.000
+ BEZ      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BEZ      var_1    O2     C      C1     C6        -0.238   20.000   1
+ BEZ      CONST_1  C      C1     C2     C3       180.000    0.000   0
+ BEZ      CONST_2  C      C1     C6     C5       180.000    0.000   0
+ BEZ      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ BEZ      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ BEZ      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ BEZ      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BEZ      plan-1    C         0.020
+ BEZ      plan-1    O1        0.020
+ BEZ      plan-1    O2        0.020
+ BEZ      plan-1    C1        0.020
+ BEZ      plan-2    C1        0.020
+ BEZ      plan-2    C         0.020
+ BEZ      plan-2    C2        0.020
+ BEZ      plan-2    C6        0.020
+ BEZ      plan-2    C3        0.020
+ BEZ      plan-2    C4        0.020
+ BEZ      plan-2    C5        0.020
+ BEZ      plan-2    H2        0.020
+ BEZ      plan-2    H3        0.020
+ BEZ      plan-2    H4        0.020
+ BEZ      plan-2    H5        0.020
+ BEZ      plan-2    H6        0.020
+# ------------------------------------------------------

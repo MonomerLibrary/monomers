@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+UAA      UAA 'URACIL-6-ACETIC ACID                ' non-polymer        17  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_UAA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ UAA           O4     O    O         0.000      0.000    0.000    0.000
+ UAA           C4     C    CR6       0.000     -1.099   -0.202    0.510
+ UAA           C5     C    CR16      0.000     -2.334    0.371   -0.096
+ UAA           H5     H    H         0.000     -2.265    0.973   -0.994
+ UAA           C6     C    CR6       0.000     -3.531    0.144    0.468
+ UAA           C7     C    CH2       0.000     -4.809    0.687   -0.085
+ UAA           H7C1   H    H         0.000     -4.580    1.639   -0.567
+ UAA           H7C2   H    H         0.000     -5.484    0.859    0.756
+ UAA           C8     C    C         0.000     -5.465   -0.231   -1.074
+ UAA           O8B    O    OC       -0.500     -6.522    0.284   -1.501
+ UAA           O8A    O    OC       -0.500     -5.038   -1.350   -1.436
+ UAA           N1     N    NR16      0.000     -3.632   -0.619    1.610
+ UAA           H1     H    H         0.000     -4.569   -0.784    2.031
+ UAA           C2     C    CR6       0.000     -2.535   -1.160    2.197
+ UAA           O2     O    O         0.000     -2.655   -1.868    3.262
+ UAA           N3     N    NR16      0.000     -1.303   -0.954    1.656
+ UAA           H3     H    H         0.000     -0.477   -1.380    2.124
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ UAA      O4     n/a    C4     START
+ UAA      C4     O4     C5     .
+ UAA      C5     C4     C6     .
+ UAA      H5     C5     .      .
+ UAA      C6     C5     N1     .
+ UAA      C7     C6     C8     .
+ UAA      H7C1   C7     .      .
+ UAA      H7C2   C7     .      .
+ UAA      C8     C7     O8A    .
+ UAA      O8B    C8     .      .
+ UAA      O8A    C8     .      .
+ UAA      N1     C6     C2     .
+ UAA      H1     N1     .      .
+ UAA      C2     N1     N3     .
+ UAA      O2     C2     .      .
+ UAA      N3     C2     H3     .
+ UAA      H3     N3     .      END
+ UAA      N3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ UAA      O2     C2        double      1.250    0.020
+ UAA      N3     C4        single      1.337    0.020
+ UAA      N3     C2        single      1.337    0.020
+ UAA      H3     N3        single      1.040    0.020
+ UAA      C5     C4        single      1.390    0.020
+ UAA      C4     O4        double      1.250    0.020
+ UAA      C6     C5        double      1.390    0.020
+ UAA      H5     C5        single      1.083    0.020
+ UAA      C7     C6        single      1.511    0.020
+ UAA      N1     C6        single      1.337    0.020
+ UAA      C8     C7        single      1.510    0.020
+ UAA      H7C1   C7        single      1.092    0.020
+ UAA      H7C2   C7        single      1.092    0.020
+ UAA      O8A    C8        deloc       1.250    0.020
+ UAA      O8B    C8        deloc       1.250    0.020
+ UAA      C2     N1        single      1.337    0.020
+ UAA      H1     N1        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ UAA      O4     C4     C5      120.000    3.000
+ UAA      O4     C4     N3      120.000    3.000
+ UAA      C5     C4     N3      120.000    3.000
+ UAA      C4     C5     H5      120.000    3.000
+ UAA      C4     C5     C6      120.000    3.000
+ UAA      H5     C5     C6      120.000    3.000
+ UAA      C5     C6     C7      120.000    3.000
+ UAA      C5     C6     N1      120.000    3.000
+ UAA      C7     C6     N1      120.000    3.000
+ UAA      C6     C7     H7C1    109.470    3.000
+ UAA      C6     C7     H7C2    109.470    3.000
+ UAA      C6     C7     C8      109.470    3.000
+ UAA      H7C1   C7     H7C2    107.900    3.000
+ UAA      H7C1   C7     C8      109.470    3.000
+ UAA      H7C2   C7     C8      109.470    3.000
+ UAA      C7     C8     O8B     118.500    3.000
+ UAA      C7     C8     O8A     118.500    3.000
+ UAA      O8B    C8     O8A     123.000    3.000
+ UAA      C6     N1     H1      120.000    3.000
+ UAA      C6     N1     C2      120.000    3.000
+ UAA      H1     N1     C2      120.000    3.000
+ UAA      N1     C2     O2      120.000    3.000
+ UAA      N1     C2     N3      120.000    3.000
+ UAA      O2     C2     N3      120.000    3.000
+ UAA      C2     N3     H3      120.000    3.000
+ UAA      C2     N3     C4      120.000    3.000
+ UAA      H3     N3     C4      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ UAA      CONST_1  O4     C4     C5     C6       180.000    0.000   0
+ UAA      CONST_2  C4     C5     C6     N1         0.000    0.000   0
+ UAA      var_1    C5     C6     C7     C8        90.044   20.000   2
+ UAA      var_2    C6     C7     C8     O8A        0.261   20.000   3
+ UAA      CONST_3  C5     C6     N1     C2         0.000    0.000   0
+ UAA      CONST_4  C6     N1     C2     N3         0.000    0.000   0
+ UAA      CONST_5  N1     C2     N3     C4         0.000    0.000   0
+ UAA      CONST_6  C2     N3     C4     O4       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ UAA      plan-1    N3        0.020
+ UAA      plan-1    C4        0.020
+ UAA      plan-1    C2        0.020
+ UAA      plan-1    H3        0.020
+ UAA      plan-1    C5        0.020
+ UAA      plan-1    C6        0.020
+ UAA      plan-1    N1        0.020
+ UAA      plan-1    O4        0.020
+ UAA      plan-1    H5        0.020
+ UAA      plan-1    C7        0.020
+ UAA      plan-1    O2        0.020
+ UAA      plan-1    H1        0.020
+ UAA      plan-2    C8        0.020
+ UAA      plan-2    C7        0.020
+ UAA      plan-2    O8A       0.020
+ UAA      plan-2    O8B       0.020
+# ------------------------------------------------------

@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CTH      CTH '4-CHLOROTHREONINE                   ' peptide            16   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CTH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CTH           N      N    NH2       0.000      0.000    0.000    0.000
+ CTH           HN1    H    H         0.000      0.587   -0.545    0.620
+ CTH           HN2    H    H         0.000      0.333    0.223   -0.931
+ CTH           CA     C    CH1       0.000     -1.321    0.463    0.446
+ CTH           HA     H    H         0.000     -1.327    1.560    0.496
+ CTH           CB     C    CH1       0.000     -2.386   -0.008   -0.545
+ CTH           HB     H    H         0.000     -3.374    0.338   -0.211
+ CTH           OG1    O    OH1       0.000     -2.378   -1.434   -0.611
+ CTH           HG1    H    H         0.000     -1.509   -1.738   -0.905
+ CTH           CG2    C    CH2       0.000     -2.085    0.569   -1.929
+ CTH           HG23   H    H         0.000     -1.103    0.225   -2.259
+ CTH           HG22   H    H         0.000     -2.090    1.659   -1.877
+ CTH           CL2    CL   CL        0.000     -3.341    0.016   -3.098
+ CTH           C      C    C         0.000     -1.617   -0.105    1.810
+ CTH           O      O    OC       -0.500     -1.140   -1.213    2.144
+ CTH           OXT    O    OC       -0.500     -2.340    0.531    2.608
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CTH      N      n/a    CA     START
+ CTH      HN1    N      .      .
+ CTH      HN2    N      .      .
+ CTH      CA     N      C      .
+ CTH      HA     CA     .      .
+ CTH      CB     CA     CG2    .
+ CTH      HB     CB     .      .
+ CTH      OG1    CB     HG1    .
+ CTH      HG1    OG1    .      .
+ CTH      CG2    CB     CL2    .
+ CTH      HG23   CG2    .      .
+ CTH      HG22   CG2    .      .
+ CTH      CL2    CG2    .      .
+ CTH      C      CA     .      END
+ CTH      O      C      .      .
+ CTH      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CTH      CA     N         single      1.450    0.020
+ CTH      C      CA        single      1.500    0.020
+ CTH      CB     CA        single      1.524    0.020
+ CTH      HA     CA        single      1.099    0.020
+ CTH      O      C         deloc       1.250    0.020
+ CTH      OXT    C         deloc       1.250    0.020
+ CTH      CG2    CB        single      1.524    0.020
+ CTH      OG1    CB        single      1.432    0.020
+ CTH      HB     CB        single      1.099    0.020
+ CTH      CL2    CG2       single      1.790    0.020
+ CTH      HG22   CG2       single      1.092    0.020
+ CTH      HG23   CG2       single      1.092    0.020
+ CTH      HG1    OG1       single      0.967    0.020
+ CTH      HN1    N         single      1.010    0.020
+ CTH      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CTH      HN1    N      HN2     120.000    3.000
+ CTH      HN1    N      CA      120.000    3.000
+ CTH      HN2    N      CA      120.000    3.000
+ CTH      N      CA     HA      109.470    3.000
+ CTH      N      CA     CB      109.470    3.000
+ CTH      N      CA     C       109.470    3.000
+ CTH      HA     CA     CB      108.340    3.000
+ CTH      HA     CA     C       108.810    3.000
+ CTH      CB     CA     C       109.470    3.000
+ CTH      CA     CB     HB      108.340    3.000
+ CTH      CA     CB     OG1     109.470    3.000
+ CTH      CA     CB     CG2     111.000    3.000
+ CTH      HB     CB     OG1     109.470    3.000
+ CTH      HB     CB     CG2     108.340    3.000
+ CTH      OG1    CB     CG2     109.470    3.000
+ CTH      CB     OG1    HG1     109.470    3.000
+ CTH      CB     CG2    HG23    109.470    3.000
+ CTH      CB     CG2    HG22    109.470    3.000
+ CTH      CB     CG2    CL2     109.500    3.000
+ CTH      HG23   CG2    HG22    107.900    3.000
+ CTH      HG23   CG2    CL2     109.500    3.000
+ CTH      HG22   CG2    CL2     109.500    3.000
+ CTH      CA     C      O       118.500    3.000
+ CTH      CA     C      OXT     118.500    3.000
+ CTH      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CTH      var_1    HN2    N      CA     C        175.000   20.000   1
+ CTH      var_2    N      CA     CB     CG2      -60.039   20.000   3
+ CTH      var_3    CA     CB     OG1    HG1      -60.018   20.000   1
+ CTH      var_4    CA     CB     CG2    CL2     -179.960   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CTH      chir_01  CA     N      C      CB        positiv
+ CTH      chir_02  CB     CA     CG2    OG1       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CTH      plan-1    N         0.020
+ CTH      plan-1    CA        0.020
+ CTH      plan-1    HN1       0.020
+ CTH      plan-1    HN2       0.020
+ CTH      plan-2    C         0.020
+ CTH      plan-2    CA        0.020
+ CTH      plan-2    O         0.020
+ CTH      plan-2    OXT       0.020
+# ------------------------------------------------------

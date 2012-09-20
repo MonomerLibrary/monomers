@@ -1,0 +1,201 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+6CS      6CS '(4S,5S)-5-HYDROXY-2-METHYL-1,4,5,6-T' non-polymer        20  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_6CS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 6CS           OXT    O    OC       -0.500      0.000    0.000    0.000
+ 6CS           C      C    C         0.000     -1.124   -0.504    0.218
+ 6CS           O      O    OC       -0.500     -1.225   -1.522    0.939
+ 6CS           CA     C    CH1       0.000     -2.358    0.112   -0.392
+ 6CS           HA     H    H         0.000     -2.135    0.423   -1.422
+ 6CS           CB     C    CH1       0.000     -2.767    1.338    0.428
+ 6CS           HB     H    H         0.000     -2.801    1.075    1.495
+ 6CS           OG1    O    OH1       0.000     -1.825    2.393    0.221
+ 6CS           HOG1   H    H         0.000     -2.087    3.164    0.741
+ 6CS           CG2    C    CH2       0.000     -4.159    1.789   -0.039
+ 6CS           HG21   H    H         0.000     -4.140    2.055   -1.098
+ 6CS           HG22   H    H         0.000     -4.498    2.648    0.544
+ 6CS           NAG    N    NH1       0.000     -5.079    0.660    0.169
+ 6CS           HN     H    H         0.000     -6.004    0.812    0.545
+ 6CS           CAI    C    C         0.000     -4.657   -0.602   -0.156
+ 6CS           N      N    N         0.000     -3.430   -0.875   -0.409
+ 6CS           CAA    C    CH3       0.000     -5.674   -1.713   -0.220
+ 6CS           HAA3   H    H         0.000     -6.140   -1.822    0.725
+ 6CS           HAA2   H    H         0.000     -6.408   -1.480   -0.949
+ 6CS           HAA1   H    H         0.000     -5.193   -2.620   -0.482
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 6CS      OXT    n/a    C      START
+ 6CS      C      OXT    CA     .
+ 6CS      O      C      .      .
+ 6CS      CA     C      CB     .
+ 6CS      HA     CA     .      .
+ 6CS      CB     CA     CG2    .
+ 6CS      HB     CB     .      .
+ 6CS      OG1    CB     HOG1   .
+ 6CS      HOG1   OG1    .      .
+ 6CS      CG2    CB     NAG    .
+ 6CS      HG21   CG2    .      .
+ 6CS      HG22   CG2    .      .
+ 6CS      NAG    CG2    CAI    .
+ 6CS      HN     NAG    .      .
+ 6CS      CAI    NAG    CAA    .
+ 6CS      N      CAI    .      .
+ 6CS      CAA    CAI    HAA1   .
+ 6CS      HAA3   CAA    .      .
+ 6CS      HAA2   CAA    .      .
+ 6CS      HAA1   CAA    .      END
+ 6CS      CA     N      .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 6CS      O      C         deloc       1.250    0.020
+ 6CS      C      OXT       deloc       1.250    0.020
+ 6CS      CA     C         single      1.500    0.020
+ 6CS      CA     N         single      1.455    0.020
+ 6CS      CB     CA        single      1.524    0.020
+ 6CS      HA     CA        single      1.099    0.020
+ 6CS      N      CAI       double      1.260    0.020
+ 6CS      CAA    CAI       single      1.500    0.020
+ 6CS      CAI    NAG       single      1.330    0.020
+ 6CS      HAA1   CAA       single      1.059    0.020
+ 6CS      HAA2   CAA       single      1.059    0.020
+ 6CS      HAA3   CAA       single      1.059    0.020
+ 6CS      NAG    CG2       single      1.450    0.020
+ 6CS      HN     NAG       single      1.010    0.020
+ 6CS      CG2    CB        single      1.524    0.020
+ 6CS      HG21   CG2       single      1.092    0.020
+ 6CS      HG22   CG2       single      1.092    0.020
+ 6CS      OG1    CB        single      1.432    0.020
+ 6CS      HB     CB        single      1.099    0.020
+ 6CS      HOG1   OG1       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 6CS      OXT    C      O       123.000    3.000
+ 6CS      OXT    C      CA      118.500    3.000
+ 6CS      O      C      CA      118.500    3.000
+ 6CS      C      CA     HA      108.810    3.000
+ 6CS      C      CA     CB      109.470    3.000
+ 6CS      C      CA     N       111.600    3.000
+ 6CS      HA     CA     CB      108.340    3.000
+ 6CS      HA     CA     N       109.470    3.000
+ 6CS      CB     CA     N       105.000    3.000
+ 6CS      CA     CB     HB      108.340    3.000
+ 6CS      CA     CB     OG1     109.470    3.000
+ 6CS      CA     CB     CG2     111.000    3.000
+ 6CS      HB     CB     OG1     109.470    3.000
+ 6CS      HB     CB     CG2     108.340    3.000
+ 6CS      OG1    CB     CG2     109.470    3.000
+ 6CS      CB     OG1    HOG1    109.470    3.000
+ 6CS      CB     CG2    HG21    109.470    3.000
+ 6CS      CB     CG2    HG22    109.470    3.000
+ 6CS      CB     CG2    NAG     110.000    3.000
+ 6CS      HG21   CG2    HG22    107.900    3.000
+ 6CS      HG21   CG2    NAG     109.470    3.000
+ 6CS      HG22   CG2    NAG     109.470    3.000
+ 6CS      CG2    NAG    HN      118.500    3.000
+ 6CS      CG2    NAG    CAI     121.500    3.000
+ 6CS      HN     NAG    CAI     120.000    3.000
+ 6CS      NAG    CAI    N       120.000    3.000
+ 6CS      NAG    CAI    CAA     116.500    3.000
+ 6CS      N      CAI    CAA     116.500    3.000
+ 6CS      CAI    N      CA      121.000    3.000
+ 6CS      CAI    CAA    HAA3    109.470    3.000
+ 6CS      CAI    CAA    HAA2    109.470    3.000
+ 6CS      CAI    CAA    HAA1    109.470    3.000
+ 6CS      HAA3   CAA    HAA2    109.470    3.000
+ 6CS      HAA3   CAA    HAA1    109.470    3.000
+ 6CS      HAA2   CAA    HAA1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 6CS      var_1    OXT    C      CA     CB       -79.202   20.000   3
+ 6CS      var_2    C      CA     N      CAI      150.000   20.000   3
+ 6CS      var_3    C      CA     CB     CG2      180.000   20.000   3
+ 6CS      var_4    CA     CB     OG1    HOG1    -179.978   20.000   1
+ 6CS      var_5    CA     CB     CG2    NAG       60.000   20.000   3
+ 6CS      var_6    CB     CG2    NAG    CAI      -30.000   20.000   3
+ 6CS      CONST_1  CG2    NAG    CAI    CAA      180.000    0.000   0
+ 6CS      CONST_2  NAG    CAI    N      CA         0.000    0.000   0
+ 6CS      var_7    NAG    CAI    CAA    HAA1    -179.974   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 6CS      chir_01  CA     C      N      CB        negativ
+ 6CS      chir_02  CB     CA     CG2    OG1       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 6CS      plan-1    C         0.020
+ 6CS      plan-1    O         0.020
+ 6CS      plan-1    OXT       0.020
+ 6CS      plan-1    CA        0.020
+ 6CS      plan-2    N         0.020
+ 6CS      plan-2    CA        0.020
+ 6CS      plan-2    CAI       0.020
+ 6CS      plan-3    CAI       0.020
+ 6CS      plan-3    N         0.020
+ 6CS      plan-3    CAA       0.020
+ 6CS      plan-3    NAG       0.020
+ 6CS      plan-3    HN        0.020
+ 6CS      plan-4    NAG       0.020
+ 6CS      plan-4    CAI       0.020
+ 6CS      plan-4    CG2       0.020
+ 6CS      plan-4    HN        0.020
+# ------------------------------------------------------

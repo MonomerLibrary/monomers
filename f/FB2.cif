@@ -1,0 +1,182 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FB2      FB2 'benzenesulfonamide                  ' non-polymer        17  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FB2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FB2           O08    O    OS        0.000      0.000    0.000    0.000
+ FB2           S07    S    ST        0.000     -0.956    0.947   -0.456
+ FB2           O09    O    OS        0.000     -0.994    2.293   -0.002
+ FB2           NP0    N    NH2       0.000     -0.798    1.014   -2.103
+ FB2           HP02   H    H         0.000      0.049    1.382   -2.532
+ FB2           HP01   H    H         0.000     -1.546    0.689   -2.714
+ FB2           C04    C    CR6       0.000     -2.541    0.260   -0.112
+ FB2           C03    C    CR16      0.000     -2.687   -1.108    0.024
+ FB2           H03    H    H         0.000     -1.827   -1.758   -0.081
+ FB2           C02    C    CR16      0.000     -3.930   -1.647    0.295
+ FB2           H02    H    H         0.000     -4.044   -2.719    0.400
+ FB2           C05    C    CR16      0.000     -3.640    1.088    0.023
+ FB2           H05    H    H         0.000     -3.526    2.160   -0.086
+ FB2           C06    C    CR16      0.000     -4.883    0.549    0.295
+ FB2           H06    H    H         0.000     -5.743    1.199    0.402
+ FB2           C01    C    CR16      0.000     -5.028   -0.819    0.431
+ FB2           H01    H    H         0.000     -6.002   -1.241    0.645
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FB2      O08    n/a    S07    START
+ FB2      S07    O08    C04    .
+ FB2      O09    S07    .      .
+ FB2      NP0    S07    HP01   .
+ FB2      HP02   NP0    .      .
+ FB2      HP01   NP0    .      .
+ FB2      C04    S07    C05    .
+ FB2      C03    C04    C02    .
+ FB2      H03    C03    .      .
+ FB2      C02    C03    H02    .
+ FB2      H02    C02    .      .
+ FB2      C05    C04    C06    .
+ FB2      H05    C05    .      .
+ FB2      C06    C05    C01    .
+ FB2      H06    C06    .      .
+ FB2      C01    C06    H01    .
+ FB2      H01    C01    .      END
+ FB2      C01    C02    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FB2      C01    C02       single      1.390    0.020
+ FB2      C01    C06       double      1.390    0.020
+ FB2      C02    C03       double      1.390    0.020
+ FB2      C03    C04       single      1.390    0.020
+ FB2      C05    C04       double      1.390    0.020
+ FB2      C04    S07       single      1.595    0.020
+ FB2      C06    C05       single      1.390    0.020
+ FB2      S07    O08       double      1.436    0.020
+ FB2      O09    S07       double      1.436    0.020
+ FB2      NP0    S07       single      1.600    0.020
+ FB2      H01    C01       single      1.083    0.020
+ FB2      H02    C02       single      1.083    0.020
+ FB2      H06    C06       single      1.083    0.020
+ FB2      H03    C03       single      1.083    0.020
+ FB2      H05    C05       single      1.083    0.020
+ FB2      HP01   NP0       single      1.010    0.020
+ FB2      HP02   NP0       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FB2      O08    S07    O09     109.500    3.000
+ FB2      O08    S07    NP0     109.500    3.000
+ FB2      O08    S07    C04     109.500    3.000
+ FB2      O09    S07    NP0     109.500    3.000
+ FB2      O09    S07    C04     109.500    3.000
+ FB2      NP0    S07    C04     109.500    3.000
+ FB2      S07    NP0    HP02    120.000    3.000
+ FB2      S07    NP0    HP01    120.000    3.000
+ FB2      HP02   NP0    HP01    120.000    3.000
+ FB2      S07    C04    C03     120.000    3.000
+ FB2      S07    C04    C05     120.000    3.000
+ FB2      C03    C04    C05     120.000    3.000
+ FB2      C04    C03    H03     120.000    3.000
+ FB2      C04    C03    C02     120.000    3.000
+ FB2      H03    C03    C02     120.000    3.000
+ FB2      C03    C02    H02     120.000    3.000
+ FB2      C03    C02    C01     120.000    3.000
+ FB2      H02    C02    C01     120.000    3.000
+ FB2      C04    C05    H05     120.000    3.000
+ FB2      C04    C05    C06     120.000    3.000
+ FB2      H05    C05    C06     120.000    3.000
+ FB2      C05    C06    H06     120.000    3.000
+ FB2      C05    C06    C01     120.000    3.000
+ FB2      H06    C06    C01     120.000    3.000
+ FB2      C06    C01    H01     120.000    3.000
+ FB2      C06    C01    C02     120.000    3.000
+ FB2      H01    C01    C02     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FB2      var_1    O08    S07    NP0    HP01     113.536   20.000   1
+ FB2      var_2    O08    S07    C04    C05      156.455   20.000   1
+ FB2      CONST_1  S07    C04    C03    C02      180.000    0.000   0
+ FB2      CONST_2  C04    C03    C02    C01        0.000    0.000   0
+ FB2      CONST_3  S07    C04    C05    C06      180.000    0.000   0
+ FB2      CONST_4  C04    C05    C06    C01        0.000    0.000   0
+ FB2      CONST_5  C05    C06    C01    C02        0.000    0.000   0
+ FB2      CONST_6  C06    C01    C02    C03        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FB2      chir_01  S07    C04    O09    O08       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FB2      plan-1    C01       0.020
+ FB2      plan-1    C02       0.020
+ FB2      plan-1    C06       0.020
+ FB2      plan-1    H01       0.020
+ FB2      plan-1    C03       0.020
+ FB2      plan-1    C04       0.020
+ FB2      plan-1    C05       0.020
+ FB2      plan-1    H02       0.020
+ FB2      plan-1    H03       0.020
+ FB2      plan-1    S07       0.020
+ FB2      plan-1    H05       0.020
+ FB2      plan-1    H06       0.020
+ FB2      plan-2    NP0       0.020
+ FB2      plan-2    S07       0.020
+ FB2      plan-2    HP01      0.020
+ FB2      plan-2    HP02      0.020
+# ------------------------------------------------------

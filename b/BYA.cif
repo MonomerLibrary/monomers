@@ -1,0 +1,218 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BYA      BYA 'N-(phenylcarbonyl)-beta-alanine     ' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BYA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BYA           O1     O    OC       -0.500      0.000    0.000    0.000
+ BYA           C2     C    C         0.000     -0.542    1.128   -0.005
+ BYA           O3     O    OC       -0.500      0.164    2.160   -0.006
+ BYA           C4     C    CH2       0.000     -2.044    1.242   -0.003
+ BYA           H4     H    H         0.000     -2.368    1.783   -0.894
+ BYA           H4A    H    H         0.000     -2.366    1.784    0.888
+ BYA           C5     C    CH2       0.000     -2.663   -0.159   -0.002
+ BYA           H5     H    H         0.000     -2.336   -0.699    0.889
+ BYA           H5A    H    H         0.000     -2.338   -0.700   -0.893
+ BYA           N6     N    NH1       0.000     -4.123   -0.048    0.000
+ BYA           HN6    H    H         0.000     -4.561    0.863    0.000
+ BYA           C7     C    C         0.000     -4.883   -1.160    0.001
+ BYA           O8     O    O         0.000     -4.356   -2.257    0.001
+ BYA           C9     C    CR6       0.000     -6.357   -1.049    0.003
+ BYA           C10    C    CR16      0.000     -6.965    0.207    0.009
+ BYA           H10    H    H         0.000     -6.357    1.104    0.017
+ BYA           C11    C    CR16      0.000     -8.341    0.305    0.005
+ BYA           H11    H    H         0.000     -8.814    1.279   -0.001
+ BYA           C12    C    CR16      0.000     -9.119   -0.839    0.007
+ BYA           H12    H    H         0.000    -10.198   -0.757    0.009
+ BYA           C13    C    CR16      0.000     -8.523   -2.088    0.007
+ BYA           H13    H    H         0.000     -9.137   -2.980    0.009
+ BYA           C14    C    CR16      0.000     -7.147   -2.199    0.004
+ BYA           H14    H    H         0.000     -6.682   -3.177    0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BYA      O1     n/a    C2     START
+ BYA      C2     O1     C4     .
+ BYA      O3     C2     .      .
+ BYA      C4     C2     C5     .
+ BYA      H4     C4     .      .
+ BYA      H4A    C4     .      .
+ BYA      C5     C4     N6     .
+ BYA      H5     C5     .      .
+ BYA      H5A    C5     .      .
+ BYA      N6     C5     C7     .
+ BYA      HN6    N6     .      .
+ BYA      C7     N6     C9     .
+ BYA      O8     C7     .      .
+ BYA      C9     C7     C10    .
+ BYA      C10    C9     C11    .
+ BYA      H10    C10    .      .
+ BYA      C11    C10    C12    .
+ BYA      H11    C11    .      .
+ BYA      C12    C11    C13    .
+ BYA      H12    C12    .      .
+ BYA      C13    C12    C14    .
+ BYA      H13    C13    .      .
+ BYA      C14    C13    H14    .
+ BYA      H14    C14    .      END
+ BYA      C9     C14    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BYA      C2     O1        deloc       1.250    0.020
+ BYA      C4     C2        single      1.510    0.020
+ BYA      O3     C2        deloc       1.250    0.020
+ BYA      C5     C4        single      1.524    0.020
+ BYA      H4     C4        single      1.092    0.020
+ BYA      H4A    C4        single      1.092    0.020
+ BYA      N6     C5        single      1.450    0.020
+ BYA      H5     C5        single      1.092    0.020
+ BYA      H5A    C5        single      1.092    0.020
+ BYA      C7     N6        single      1.330    0.020
+ BYA      HN6    N6        single      1.010    0.020
+ BYA      C9     C7        single      1.500    0.020
+ BYA      O8     C7        double      1.220    0.020
+ BYA      C10    C9        double      1.390    0.020
+ BYA      C9     C14       single      1.390    0.020
+ BYA      C14    C13       double      1.390    0.020
+ BYA      H14    C14       single      1.083    0.020
+ BYA      C13    C12       single      1.390    0.020
+ BYA      H13    C13       single      1.083    0.020
+ BYA      C12    C11       double      1.390    0.020
+ BYA      H12    C12       single      1.083    0.020
+ BYA      C11    C10       single      1.390    0.020
+ BYA      H11    C11       single      1.083    0.020
+ BYA      H10    C10       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BYA      O1     C2     O3      123.000    3.000
+ BYA      O1     C2     C4      118.500    3.000
+ BYA      O3     C2     C4      118.500    3.000
+ BYA      C2     C4     H4      109.470    3.000
+ BYA      C2     C4     H4A     109.470    3.000
+ BYA      C2     C4     C5      109.470    3.000
+ BYA      H4     C4     H4A     107.900    3.000
+ BYA      H4     C4     C5      109.470    3.000
+ BYA      H4A    C4     C5      109.470    3.000
+ BYA      C4     C5     H5      109.470    3.000
+ BYA      C4     C5     H5A     109.470    3.000
+ BYA      C4     C5     N6      112.000    3.000
+ BYA      H5     C5     H5A     107.900    3.000
+ BYA      H5     C5     N6      109.470    3.000
+ BYA      H5A    C5     N6      109.470    3.000
+ BYA      C5     N6     HN6     118.500    3.000
+ BYA      C5     N6     C7      121.500    3.000
+ BYA      HN6    N6     C7      120.000    3.000
+ BYA      N6     C7     O8      123.000    3.000
+ BYA      N6     C7     C9      120.000    3.000
+ BYA      O8     C7     C9      120.500    3.000
+ BYA      C7     C9     C10     120.000    3.000
+ BYA      C7     C9     C14     120.000    3.000
+ BYA      C10    C9     C14     120.000    3.000
+ BYA      C9     C10    H10     120.000    3.000
+ BYA      C9     C10    C11     120.000    3.000
+ BYA      H10    C10    C11     120.000    3.000
+ BYA      C10    C11    H11     120.000    3.000
+ BYA      C10    C11    C12     120.000    3.000
+ BYA      H11    C11    C12     120.000    3.000
+ BYA      C11    C12    H12     120.000    3.000
+ BYA      C11    C12    C13     120.000    3.000
+ BYA      H12    C12    C13     120.000    3.000
+ BYA      C12    C13    H13     120.000    3.000
+ BYA      C12    C13    C14     120.000    3.000
+ BYA      H13    C13    C14     120.000    3.000
+ BYA      C13    C14    H14     120.000    3.000
+ BYA      C13    C14    C9      120.000    3.000
+ BYA      H14    C14    C9      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BYA      var_1    O1     C2     C4     C5        -0.275   20.000   3
+ BYA      var_2    C2     C4     C5     N6       180.000   20.000   3
+ BYA      var_3    C4     C5     N6     C7       180.000   20.000   3
+ BYA      CONST_1  C5     N6     C7     C9       180.000    0.000   0
+ BYA      var_4    N6     C7     C9     C10       -0.285   20.000   1
+ BYA      CONST_2  C7     C9     C14    C13      180.000    0.000   0
+ BYA      CONST_3  C7     C9     C10    C11      180.000    0.000   0
+ BYA      CONST_4  C9     C10    C11    C12        0.000    0.000   0
+ BYA      CONST_5  C10    C11    C12    C13        0.000    0.000   0
+ BYA      CONST_6  C11    C12    C13    C14        0.000    0.000   0
+ BYA      CONST_7  C12    C13    C14    C9         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BYA      plan-1    C2        0.020
+ BYA      plan-1    C4        0.020
+ BYA      plan-1    O3        0.020
+ BYA      plan-1    O1        0.020
+ BYA      plan-2    N6        0.020
+ BYA      plan-2    C5        0.020
+ BYA      plan-2    C7        0.020
+ BYA      plan-2    HN6       0.020
+ BYA      plan-3    C7        0.020
+ BYA      plan-3    N6        0.020
+ BYA      plan-3    C9        0.020
+ BYA      plan-3    O8        0.020
+ BYA      plan-3    HN6       0.020
+ BYA      plan-4    C9        0.020
+ BYA      plan-4    C7        0.020
+ BYA      plan-4    C14       0.020
+ BYA      plan-4    C10       0.020
+ BYA      plan-4    C13       0.020
+ BYA      plan-4    C12       0.020
+ BYA      plan-4    C11       0.020
+ BYA      plan-4    H14       0.020
+ BYA      plan-4    H13       0.020
+ BYA      plan-4    H12       0.020
+ BYA      plan-4    H11       0.020
+ BYA      plan-4    H10       0.020
+# ------------------------------------------------------

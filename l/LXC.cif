@@ -1,0 +1,183 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LXC      LXC 'BETA-L-XYLOPYRANOSE                 ' non-polymer        20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LXC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LXC           O4     O    OH1       0.000      0.000    0.000    0.000
+ LXC           HD     H    H         0.000      0.743    0.364   -0.500
+ LXC           C4     C    CH1       0.000     -1.228    0.431   -0.590
+ LXC           H4     H    H         0.000     -1.279    1.528   -0.573
+ LXC           C5     C    CH2       0.000     -1.301   -0.061   -2.038
+ LXC           H5C2   H    H         0.000     -1.271   -1.153   -2.049
+ LXC           H5C1   H    H         0.000     -0.449    0.332   -2.595
+ LXC           C3     C    CH1       0.000     -2.408   -0.149    0.197
+ LXC           H3     H    H         0.000     -2.299   -1.241    0.271
+ LXC           O3     O    OH1       0.000     -2.443    0.417    1.508
+ LXC           HC     H    H         0.000     -1.623    0.202    1.972
+ LXC           C2     C    CH1       0.000     -3.705    0.187   -0.544
+ LXC           H2     H    H         0.000     -3.867    1.274   -0.525
+ LXC           O2     O    OH1       0.000     -4.805   -0.470    0.088
+ LXC           HB     H    H         0.000     -5.621   -0.258   -0.385
+ LXC           C1     C    CH1       0.000     -3.592   -0.286   -1.995
+ LXC           H1     H    H         0.000     -3.407   -1.370   -2.012
+ LXC           O5     O    O2        0.000     -2.512    0.388   -2.639
+ LXC           O1     O    OH1       0.000     -4.810   -0.001   -2.684
+ LXC           HA     H    H         0.000     -4.740   -0.304   -3.599
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LXC      O4     n/a    C4     START
+ LXC      HD     O4     .      .
+ LXC      C4     O4     C3     .
+ LXC      H4     C4     .      .
+ LXC      C5     C4     H5C1   .
+ LXC      H5C2   C5     .      .
+ LXC      H5C1   C5     .      .
+ LXC      C3     C4     C2     .
+ LXC      H3     C3     .      .
+ LXC      O3     C3     HC     .
+ LXC      HC     O3     .      .
+ LXC      C2     C3     C1     .
+ LXC      H2     C2     .      .
+ LXC      O2     C2     HB     .
+ LXC      HB     O2     .      .
+ LXC      C1     C2     O1     .
+ LXC      H1     C1     .      .
+ LXC      O5     C1     .      .
+ LXC      O1     C1     HA     .
+ LXC      HA     O1     .      END
+ LXC      C5     O5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LXC      C5     O5        single      1.426    0.020
+ LXC      C5     C4        single      1.524    0.020
+ LXC      H5C1   C5        single      1.092    0.020
+ LXC      H5C2   C5        single      1.092    0.020
+ LXC      O5     C1        single      1.426    0.020
+ LXC      O1     C1        single      1.432    0.020
+ LXC      C1     C2        single      1.524    0.020
+ LXC      H1     C1        single      1.099    0.020
+ LXC      HA     O1        single      0.967    0.020
+ LXC      O2     C2        single      1.432    0.020
+ LXC      C2     C3        single      1.524    0.020
+ LXC      H2     C2        single      1.099    0.020
+ LXC      HB     O2        single      0.967    0.020
+ LXC      O3     C3        single      1.432    0.020
+ LXC      C3     C4        single      1.524    0.020
+ LXC      H3     C3        single      1.099    0.020
+ LXC      HC     O3        single      0.967    0.020
+ LXC      C4     O4        single      1.432    0.020
+ LXC      H4     C4        single      1.099    0.020
+ LXC      HD     O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LXC      HD     O4     C4      109.470    3.000
+ LXC      O4     C4     H4      109.470    3.000
+ LXC      O4     C4     C5      109.470    3.000
+ LXC      O4     C4     C3      109.470    3.000
+ LXC      H4     C4     C5      108.340    3.000
+ LXC      H4     C4     C3      108.340    3.000
+ LXC      C5     C4     C3      111.000    3.000
+ LXC      C4     C5     H5C2    109.470    3.000
+ LXC      C4     C5     H5C1    109.470    3.000
+ LXC      C4     C5     O5      109.470    3.000
+ LXC      H5C2   C5     H5C1    107.900    3.000
+ LXC      H5C2   C5     O5      109.470    3.000
+ LXC      H5C1   C5     O5      109.470    3.000
+ LXC      C4     C3     H3      108.340    3.000
+ LXC      C4     C3     O3      109.470    3.000
+ LXC      C4     C3     C2      111.000    3.000
+ LXC      H3     C3     O3      109.470    3.000
+ LXC      H3     C3     C2      108.340    3.000
+ LXC      O3     C3     C2      109.470    3.000
+ LXC      C3     O3     HC      109.470    3.000
+ LXC      C3     C2     H2      108.340    3.000
+ LXC      C3     C2     O2      109.470    3.000
+ LXC      C3     C2     C1      111.000    3.000
+ LXC      H2     C2     O2      109.470    3.000
+ LXC      H2     C2     C1      108.340    3.000
+ LXC      O2     C2     C1      109.470    3.000
+ LXC      C2     O2     HB      109.470    3.000
+ LXC      C2     C1     H1      108.340    3.000
+ LXC      C2     C1     O5      109.470    3.000
+ LXC      C2     C1     O1      109.470    3.000
+ LXC      H1     C1     O5      109.470    3.000
+ LXC      H1     C1     O1      109.470    3.000
+ LXC      O5     C1     O1      109.470    3.000
+ LXC      C1     O5     C5      111.800    3.000
+ LXC      C1     O1     HA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LXC      var_1    HD     O4     C4     C3       179.774   20.000   1
+ LXC      var_2    O4     C4     C5     O5       180.000   20.000   3
+ LXC      var_3    C4     C5     O5     C1       -60.000   20.000   1
+ LXC      var_4    O4     C4     C3     C2       180.000   20.000   3
+ LXC      var_5    C4     C3     O3     HC       -60.597   20.000   1
+ LXC      var_6    C4     C3     C2     C1        60.000   20.000   3
+ LXC      var_7    C3     C2     O2     HB      -179.738   20.000   1
+ LXC      var_8    C3     C2     C1     O1       180.000   20.000   3
+ LXC      var_9    C2     C1     O5     C5        60.000   20.000   1
+ LXC      var_10   C2     C1     O1     HA      -179.730   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LXC      chir_01  C1     O5     O1     C2        positiv
+ LXC      chir_02  C2     C1     O2     C3        negativ
+ LXC      chir_03  C3     C2     O3     C4        positiv
+ LXC      chir_04  C4     C5     C3     O4        negativ
+# ------------------------------------------------------

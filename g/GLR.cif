@@ -1,0 +1,184 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GLR      GLR '2,3-DIHYDROXY-5-OXO-HEXANEDIOATE    ' non-polymer        19  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GLR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GLR           O6B    O    OC       -0.500      0.000    0.000    0.000
+ GLR           C6     C    C         0.000     -0.779   -0.962   -0.182
+ GLR           O6A    O    OC       -0.500     -0.321   -2.091   -0.470
+ GLR           C5     C    C         0.000     -2.251   -0.763   -0.056
+ GLR           O5     O    O         0.000     -3.002   -1.692   -0.232
+ GLR           C4     C    CH2       0.000     -2.801    0.596    0.290
+ GLR           H41    H    H         0.000     -2.501    1.315   -0.476
+ GLR           H42    H    H         0.000     -2.407    0.912    1.258
+ GLR           C3     C    CH1       0.000     -4.327    0.527    0.357
+ GLR           H31    H    H         0.000     -4.628   -0.260    1.062
+ GLR           O3     O    OH1       0.000     -4.848    0.228   -0.940
+ GLR           HO31   H    H         0.000     -4.582    0.921   -1.560
+ GLR           C2     C    CH1       0.000     -4.879    1.874    0.829
+ GLR           H21    H    H         0.000     -4.552    2.062    1.861
+ GLR           O2     O    OH1       0.000     -4.393    2.913   -0.022
+ GLR           HO21   H    H         0.000     -4.681    2.747   -0.930
+ GLR           C1     C    C         0.000     -6.385    1.845    0.777
+ GLR           O1B    O    OC       -0.500     -7.022    1.069    1.523
+ GLR           O1A    O    OC       -0.500     -6.998    2.599   -0.012
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GLR      O6B    n/a    C6     START
+ GLR      C6     O6B    C5     .
+ GLR      O6A    C6     .      .
+ GLR      C5     C6     C4     .
+ GLR      O5     C5     .      .
+ GLR      C4     C5     C3     .
+ GLR      H41    C4     .      .
+ GLR      H42    C4     .      .
+ GLR      C3     C4     C2     .
+ GLR      H31    C3     .      .
+ GLR      O3     C3     HO31   .
+ GLR      HO31   O3     .      .
+ GLR      C2     C3     C1     .
+ GLR      H21    C2     .      .
+ GLR      O2     C2     HO21   .
+ GLR      HO21   O2     .      .
+ GLR      C1     C2     O1A    .
+ GLR      O1B    C1     .      .
+ GLR      O1A    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GLR      O1B    C1        deloc       1.250    0.020
+ GLR      O1A    C1        deloc       1.250    0.020
+ GLR      C1     C2        single      1.500    0.020
+ GLR      O2     C2        single      1.432    0.020
+ GLR      C2     C3        single      1.524    0.020
+ GLR      H21    C2        single      1.099    0.020
+ GLR      HO21   O2        single      0.967    0.020
+ GLR      O3     C3        single      1.432    0.020
+ GLR      C3     C4        single      1.524    0.020
+ GLR      H31    C3        single      1.099    0.020
+ GLR      HO31   O3        single      0.967    0.020
+ GLR      C4     C5        single      1.510    0.020
+ GLR      H41    C4        single      1.092    0.020
+ GLR      H42    C4        single      1.092    0.020
+ GLR      O5     C5        double      1.220    0.020
+ GLR      C5     C6        single      1.460    0.020
+ GLR      O6A    C6        deloc       1.250    0.020
+ GLR      C6     O6B       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GLR      O6B    C6     O6A     123.000    3.000
+ GLR      O6B    C6     C5      120.000    3.000
+ GLR      O6A    C6     C5      120.000    3.000
+ GLR      C6     C5     O5      120.500    3.000
+ GLR      C6     C5     C4      120.000    3.000
+ GLR      O5     C5     C4      120.500    3.000
+ GLR      C5     C4     H41     109.470    3.000
+ GLR      C5     C4     H42     109.470    3.000
+ GLR      C5     C4     C3      109.470    3.000
+ GLR      H41    C4     H42     107.900    3.000
+ GLR      H41    C4     C3      109.470    3.000
+ GLR      H42    C4     C3      109.470    3.000
+ GLR      C4     C3     H31     108.340    3.000
+ GLR      C4     C3     O3      109.470    3.000
+ GLR      C4     C3     C2      111.000    3.000
+ GLR      H31    C3     O3      109.470    3.000
+ GLR      H31    C3     C2      108.340    3.000
+ GLR      O3     C3     C2      109.470    3.000
+ GLR      C3     O3     HO31    109.470    3.000
+ GLR      C3     C2     H21     108.340    3.000
+ GLR      C3     C2     O2      109.470    3.000
+ GLR      C3     C2     C1      109.470    3.000
+ GLR      H21    C2     O2      109.470    3.000
+ GLR      H21    C2     C1      108.810    3.000
+ GLR      O2     C2     C1      109.470    3.000
+ GLR      C2     O2     HO21    109.470    3.000
+ GLR      C2     C1     O1B     118.500    3.000
+ GLR      C2     C1     O1A     118.500    3.000
+ GLR      O1B    C1     O1A     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GLR      var_1    O6B    C6     C5     C4         0.072   20.000   1
+ GLR      var_2    C6     C5     C4     C3       179.982   20.000   3
+ GLR      var_3    C5     C4     C3     C2       175.002   20.000   3
+ GLR      var_4    C4     C3     O3     HO31     -59.950   20.000   1
+ GLR      var_5    C4     C3     C2     C1       174.987   20.000   3
+ GLR      var_6    C3     C2     O2     HO21      60.003   20.000   1
+ GLR      var_7    C3     C2     C1     O1A     -115.037   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GLR      chir_01  C2     C1     O2     C3        positiv
+ GLR      chir_02  C3     C2     O3     C4        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GLR      plan-1    C1        0.020
+ GLR      plan-1    O1B       0.020
+ GLR      plan-1    O1A       0.020
+ GLR      plan-1    C2        0.020
+ GLR      plan-2    C5        0.020
+ GLR      plan-2    C4        0.020
+ GLR      plan-2    O5        0.020
+ GLR      plan-2    C6        0.020
+ GLR      plan-3    C6        0.020
+ GLR      plan-3    C5        0.020
+ GLR      plan-3    O6A       0.020
+ GLR      plan-3    O6B       0.020
+# ------------------------------------------------------

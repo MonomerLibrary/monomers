@@ -1,0 +1,202 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SKA      SKA '7,8-DICHLORO-1,2,3,4-TETRAHYDROISOQU' non-polymer        21  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SKA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SKA           CL3    CL   CL        0.000      0.000    0.000    0.000
+ SKA           C3     C    CR6       0.000     -1.627    0.604    0.009
+ SKA           C4     C    CR6       0.000     -2.693   -0.277   -0.011
+ SKA           CL4    CL   CL        0.000     -2.400   -1.988   -0.048
+ SKA           C2     C    CR16      0.000     -1.860    1.967    0.032
+ SKA           H2     H    H         0.000     -1.027    2.660    0.044
+ SKA           C1     C    CR16      0.000     -3.156    2.443    0.040
+ SKA           H1     H    H         0.000     -3.339    3.510    0.058
+ SKA           C6     C    CR6       0.000     -4.223    1.561    0.026
+ SKA           C5     C    CR6       0.000     -3.995    0.201    0.003
+ SKA           C8     C    CH2       0.000     -5.628    2.112    0.036
+ SKA           H81    H    H         0.000     -5.699    2.940   -0.672
+ SKA           H82    H    H         0.000     -5.870    2.471    1.039
+ SKA           C9     C    CH2       0.000     -6.610    1.010   -0.364
+ SKA           H91    H    H         0.000     -6.463    0.748   -1.414
+ SKA           H92    H    H         0.000     -7.635    1.357   -0.217
+ SKA           N10    N    NH1       0.000     -6.364   -0.170    0.477
+ SKA           H10    H    H         0.000     -6.935   -0.492    1.245
+ SKA           C11    C    CH2       0.000     -5.131   -0.787   -0.016
+ SKA           H112   H    H         0.000     -5.296   -1.135   -1.038
+ SKA           H111   H    H         0.000     -4.885   -1.639    0.622
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SKA      CL3    n/a    C3     START
+ SKA      C3     CL3    C2     .
+ SKA      C4     C3     CL4    .
+ SKA      CL4    C4     .      .
+ SKA      C2     C3     C1     .
+ SKA      H2     C2     .      .
+ SKA      C1     C2     C6     .
+ SKA      H1     C1     .      .
+ SKA      C6     C1     C8     .
+ SKA      C5     C6     .      .
+ SKA      C8     C6     C9     .
+ SKA      H81    C8     .      .
+ SKA      H82    C8     .      .
+ SKA      C9     C8     N10    .
+ SKA      H91    C9     .      .
+ SKA      H92    C9     .      .
+ SKA      N10    C9     C11    .
+ SKA      H10    N10    .      .
+ SKA      C11    N10    H111   .
+ SKA      H112   C11    .      .
+ SKA      H111   C11    .      END
+ SKA      C4     C5     .    ADD
+ SKA      C5     C11    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SKA      CL4    C4        single      1.795    0.020
+ SKA      C4     C5        double      1.487    0.020
+ SKA      C4     C3        single      1.487    0.020
+ SKA      C5     C11       single      1.511    0.020
+ SKA      C5     C6        single      1.487    0.020
+ SKA      C11    N10       single      1.450    0.020
+ SKA      H111   C11       single      1.092    0.020
+ SKA      H112   C11       single      1.092    0.020
+ SKA      N10    C9        single      1.450    0.020
+ SKA      H10    N10       single      1.010    0.020
+ SKA      C9     C8        single      1.524    0.020
+ SKA      H91    C9        single      1.092    0.020
+ SKA      H92    C9        single      1.092    0.020
+ SKA      C8     C6        single      1.511    0.020
+ SKA      H81    C8        single      1.092    0.020
+ SKA      H82    C8        single      1.092    0.020
+ SKA      C6     C1        double      1.390    0.020
+ SKA      C1     C2        single      1.390    0.020
+ SKA      H1     C1        single      1.083    0.020
+ SKA      C2     C3        double      1.390    0.020
+ SKA      H2     C2        single      1.083    0.020
+ SKA      C3     CL3       single      1.795    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SKA      CL3    C3     C4      120.000    3.000
+ SKA      CL3    C3     C2      120.000    3.000
+ SKA      C4     C3     C2      120.000    3.000
+ SKA      C3     C4     CL4     120.000    3.000
+ SKA      C3     C4     C5      120.000    3.000
+ SKA      CL4    C4     C5      120.000    3.000
+ SKA      C3     C2     H2      120.000    3.000
+ SKA      C3     C2     C1      120.000    3.000
+ SKA      H2     C2     C1      120.000    3.000
+ SKA      C2     C1     H1      120.000    3.000
+ SKA      C2     C1     C6      120.000    3.000
+ SKA      H1     C1     C6      120.000    3.000
+ SKA      C1     C6     C5      120.000    3.000
+ SKA      C1     C6     C8      120.000    3.000
+ SKA      C5     C6     C8      120.000    3.000
+ SKA      C6     C5     C4      120.000    3.000
+ SKA      C6     C5     C11     120.000    3.000
+ SKA      C4     C5     C11     120.000    3.000
+ SKA      C6     C8     H81     109.470    3.000
+ SKA      C6     C8     H82     109.470    3.000
+ SKA      C6     C8     C9      109.470    3.000
+ SKA      H81    C8     H82     107.900    3.000
+ SKA      H81    C8     C9      109.470    3.000
+ SKA      H82    C8     C9      109.470    3.000
+ SKA      C8     C9     H91     109.470    3.000
+ SKA      C8     C9     H92     109.470    3.000
+ SKA      C8     C9     N10     112.000    3.000
+ SKA      H91    C9     H92     107.900    3.000
+ SKA      H91    C9     N10     109.470    3.000
+ SKA      H92    C9     N10     109.470    3.000
+ SKA      C9     N10    H10     118.500    3.000
+ SKA      C9     N10    C11     120.000    3.000
+ SKA      H10    N10    C11     118.500    3.000
+ SKA      N10    C11    H112    109.470    3.000
+ SKA      N10    C11    H111    109.470    3.000
+ SKA      N10    C11    C5      109.500    3.000
+ SKA      H112   C11    H111    107.900    3.000
+ SKA      H112   C11    C5      109.470    3.000
+ SKA      H111   C11    C5      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SKA      CONST_1  CL3    C3     C4     CL4        0.000    0.000   0
+ SKA      CONST_2  C3     C4     C5     C6         0.000    0.000   0
+ SKA      CONST_3  CL3    C3     C2     C1       180.000    0.000   0
+ SKA      CONST_4  C3     C2     C1     C6         0.000    0.000   0
+ SKA      CONST_5  C2     C1     C6     C8       180.000    0.000   0
+ SKA      CONST_6  C1     C6     C5     C4         0.000    0.000   0
+ SKA      var_1    C6     C5     C11    N10      -30.000   20.000   2
+ SKA      var_2    C1     C6     C8     C9       150.000   20.000   2
+ SKA      var_3    C6     C8     C9     N10       60.000   20.000   3
+ SKA      var_4    C8     C9     N10    C11      -60.000   20.000   3
+ SKA      var_5    C9     N10    C11    C5        60.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SKA      plan-1    C4        0.020
+ SKA      plan-1    CL4       0.020
+ SKA      plan-1    C5        0.020
+ SKA      plan-1    C3        0.020
+ SKA      plan-1    C6        0.020
+ SKA      plan-1    C1        0.020
+ SKA      plan-1    C2        0.020
+ SKA      plan-1    C11       0.020
+ SKA      plan-1    C8        0.020
+ SKA      plan-1    H1        0.020
+ SKA      plan-1    H2        0.020
+ SKA      plan-1    CL3       0.020
+ SKA      plan-2    N10       0.020
+ SKA      plan-2    C11       0.020
+ SKA      plan-2    C9        0.020
+ SKA      plan-2    H10       0.020
+# ------------------------------------------------------

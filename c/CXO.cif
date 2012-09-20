@@ -1,0 +1,163 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CXO      CXO 'CYCLOHEXANE-1,2-DIONE               ' non-polymer        16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CXO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CXO           O1     O    O         0.000      0.000    0.000    0.000
+ CXO           C1     C    C         0.000     -1.036   -0.597    0.171
+ CXO           C2     C    C         0.000     -2.361    0.106    0.164
+ CXO           O2     O    O         0.000     -2.622    0.959   -0.651
+ CXO           C6     C    CH2       0.000     -1.057   -2.091    0.405
+ CXO           H61    H    H         0.000     -0.051   -2.445    0.641
+ CXO           H62    H    H         0.000     -1.422   -2.603   -0.488
+ CXO           C5     C    CH2       0.000     -1.993   -2.383    1.582
+ CXO           H51    H    H         0.000     -1.602   -1.902    2.481
+ CXO           H52    H    H         0.000     -2.045   -3.462    1.741
+ CXO           C4     C    CH2       0.000     -3.391   -1.842    1.279
+ CXO           H41    H    H         0.000     -4.079   -2.166    2.063
+ CXO           H42    H    H         0.000     -3.727   -2.234    0.317
+ CXO           C3     C    CH2       0.000     -3.358   -0.312    1.226
+ CXO           H32    H    H         0.000     -3.049    0.089    2.194
+ CXO           H31    H    H         0.000     -4.347    0.075    0.972
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CXO      O1     n/a    C1     START
+ CXO      C1     O1     C6     .
+ CXO      C2     C1     O2     .
+ CXO      O2     C2     .      .
+ CXO      C6     C1     C5     .
+ CXO      H61    C6     .      .
+ CXO      H62    C6     .      .
+ CXO      C5     C6     C4     .
+ CXO      H51    C5     .      .
+ CXO      H52    C5     .      .
+ CXO      C4     C5     C3     .
+ CXO      H41    C4     .      .
+ CXO      H42    C4     .      .
+ CXO      C3     C4     H31    .
+ CXO      H32    C3     .      .
+ CXO      H31    C3     .      END
+ CXO      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CXO      O2     C2        double      1.220    0.020
+ CXO      C2     C3        single      1.510    0.020
+ CXO      C2     C1        single      1.460    0.020
+ CXO      C3     C4        single      1.524    0.020
+ CXO      H31    C3        single      1.092    0.020
+ CXO      H32    C3        single      1.092    0.020
+ CXO      C4     C5        single      1.524    0.020
+ CXO      H41    C4        single      1.092    0.020
+ CXO      H42    C4        single      1.092    0.020
+ CXO      C5     C6        single      1.524    0.020
+ CXO      H51    C5        single      1.092    0.020
+ CXO      H52    C5        single      1.092    0.020
+ CXO      C6     C1        single      1.510    0.020
+ CXO      H61    C6        single      1.092    0.020
+ CXO      H62    C6        single      1.092    0.020
+ CXO      C1     O1        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CXO      O1     C1     C2      120.500    3.000
+ CXO      O1     C1     C6      120.500    3.000
+ CXO      C2     C1     C6      120.000    3.000
+ CXO      C1     C2     O2      120.500    3.000
+ CXO      C1     C2     C3      120.000    3.000
+ CXO      O2     C2     C3      120.500    3.000
+ CXO      C1     C6     H61     109.470    3.000
+ CXO      C1     C6     H62     109.470    3.000
+ CXO      C1     C6     C5      109.470    3.000
+ CXO      H61    C6     H62     107.900    3.000
+ CXO      H61    C6     C5      109.470    3.000
+ CXO      H62    C6     C5      109.470    3.000
+ CXO      C6     C5     H51     109.470    3.000
+ CXO      C6     C5     H52     109.470    3.000
+ CXO      C6     C5     C4      111.000    3.000
+ CXO      H51    C5     H52     107.900    3.000
+ CXO      H51    C5     C4      109.470    3.000
+ CXO      H52    C5     C4      109.470    3.000
+ CXO      C5     C4     H41     109.470    3.000
+ CXO      C5     C4     H42     109.470    3.000
+ CXO      C5     C4     C3      111.000    3.000
+ CXO      H41    C4     H42     107.900    3.000
+ CXO      H41    C4     C3      109.470    3.000
+ CXO      H42    C4     C3      109.470    3.000
+ CXO      C4     C3     H32     109.470    3.000
+ CXO      C4     C3     H31     109.470    3.000
+ CXO      C4     C3     C2      109.470    3.000
+ CXO      H32    C3     H31     107.900    3.000
+ CXO      H32    C3     C2      109.470    3.000
+ CXO      H31    C3     C2      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CXO      var_1    O1     C1     C2     O2        30.000   20.000   1
+ CXO      var_2    C1     C2     C3     C4       -60.000   20.000   3
+ CXO      var_3    O1     C1     C6     C5       120.000   20.000   3
+ CXO      var_4    C1     C6     C5     C4        60.000   20.000   3
+ CXO      var_5    C6     C5     C4     C3       -60.000   20.000   3
+ CXO      var_6    C5     C4     C3     C2        60.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CXO      plan-1    C2        0.020
+ CXO      plan-1    O2        0.020
+ CXO      plan-1    C3        0.020
+ CXO      plan-1    C1        0.020
+ CXO      plan-2    C1        0.020
+ CXO      plan-2    C2        0.020
+ CXO      plan-2    C6        0.020
+ CXO      plan-2    O1        0.020
+# ------------------------------------------------------

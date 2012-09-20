@@ -1,0 +1,205 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+EVA      EVA '(2S,3R,4S,5R)-3,4,5-trihydroxy-6-oxo' non-polymer        21  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_EVA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ EVA           OXT    O    OC       -0.500      0.000    0.000    0.000
+ EVA           C      C    C         0.000     -1.031    0.656   -0.266
+ EVA           O      O    OC       -0.500     -0.977    1.607   -1.077
+ EVA           CA     C    CH1       0.000     -2.342    0.297    0.386
+ EVA           HA     H    H         0.000     -2.166    0.052    1.443
+ EVA           CB     C    CH1       0.000     -2.942   -0.919   -0.320
+ EVA           HB     H    H         0.000     -2.967   -0.741   -1.405
+ EVA           OG     O    OH1       0.000     -2.150   -2.075   -0.042
+ EVA           HOG    H    H         0.000     -1.248   -1.932   -0.360
+ EVA           CG     C    CH1       0.000     -4.368   -1.135    0.199
+ EVA           HG     H    H         0.000     -4.360   -1.171    1.298
+ EVA           OD2    O    OH1       0.000     -4.889   -2.361   -0.319
+ EVA           HOD2   H    H         0.000     -5.787   -2.494    0.012
+ EVA           CD1    C    CH1       0.000     -5.238    0.033   -0.271
+ EVA           HD1    H    H         0.000     -5.403   -0.049   -1.354
+ EVA           OAJ    O    OH1       0.000     -6.496   -0.008    0.406
+ EVA           HOAJ   H    H         0.000     -7.047    0.726    0.105
+ EVA           CAE    C    C         0.000     -4.551    1.334    0.032
+ EVA           OAK    O    O         0.000     -5.217    2.349    0.029
+ EVA           N      N    NH1       0.000     -3.250    1.434    0.303
+ EVA           HN     H    H         0.000     -2.868    2.356    0.461
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ EVA      OXT    n/a    C      START
+ EVA      C      OXT    CA     .
+ EVA      O      C      .      .
+ EVA      CA     C      CB     .
+ EVA      HA     CA     .      .
+ EVA      CB     CA     CG     .
+ EVA      HB     CB     .      .
+ EVA      OG     CB     HOG    .
+ EVA      HOG    OG     .      .
+ EVA      CG     CB     CD1    .
+ EVA      HG     CG     .      .
+ EVA      OD2    CG     HOD2   .
+ EVA      HOD2   OD2    .      .
+ EVA      CD1    CG     CAE    .
+ EVA      HD1    CD1    .      .
+ EVA      OAJ    CD1    HOAJ   .
+ EVA      HOAJ   OAJ    .      .
+ EVA      CAE    CD1    N      .
+ EVA      OAK    CAE    .      .
+ EVA      N      CAE    HN     .
+ EVA      HN     N      .      END
+ EVA      N      CA     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ EVA      O      C         deloc       1.250    0.020
+ EVA      C      OXT       deloc       1.250    0.020
+ EVA      CA     C         single      1.500    0.020
+ EVA      N      CAE       single      1.330    0.020
+ EVA      N      CA        single      1.450    0.020
+ EVA      HN     N         single      1.010    0.020
+ EVA      CB     CA        single      1.524    0.020
+ EVA      HA     CA        single      1.099    0.020
+ EVA      OG     CB        single      1.432    0.020
+ EVA      CG     CB        single      1.524    0.020
+ EVA      HB     CB        single      1.099    0.020
+ EVA      CD1    CG        single      1.524    0.020
+ EVA      OD2    CG        single      1.432    0.020
+ EVA      HG     CG        single      1.099    0.020
+ EVA      HOG    OG        single      0.967    0.020
+ EVA      OAK    CAE       double      1.220    0.020
+ EVA      CAE    CD1       single      1.500    0.020
+ EVA      OAJ    CD1       single      1.432    0.020
+ EVA      HOAJ   OAJ       single      0.967    0.020
+ EVA      HD1    CD1       single      1.099    0.020
+ EVA      HOD2   OD2       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ EVA      OXT    C      O       123.000    3.000
+ EVA      OXT    C      CA      118.500    3.000
+ EVA      O      C      CA      118.500    3.000
+ EVA      C      CA     HA      108.810    3.000
+ EVA      C      CA     CB      109.470    3.000
+ EVA      C      CA     N       111.600    3.000
+ EVA      HA     CA     CB      108.340    3.000
+ EVA      HA     CA     N       108.550    3.000
+ EVA      CB     CA     N       110.000    3.000
+ EVA      CA     CB     HB      108.340    3.000
+ EVA      CA     CB     OG      109.470    3.000
+ EVA      CA     CB     CG      111.000    3.000
+ EVA      HB     CB     OG      109.470    3.000
+ EVA      HB     CB     CG      108.340    3.000
+ EVA      OG     CB     CG      109.470    3.000
+ EVA      CB     OG     HOG     109.470    3.000
+ EVA      CB     CG     HG      108.340    3.000
+ EVA      CB     CG     OD2     109.470    3.000
+ EVA      CB     CG     CD1     111.000    3.000
+ EVA      HG     CG     OD2     109.470    3.000
+ EVA      HG     CG     CD1     108.340    3.000
+ EVA      OD2    CG     CD1     109.470    3.000
+ EVA      CG     OD2    HOD2    109.470    3.000
+ EVA      CG     CD1    HD1     108.340    3.000
+ EVA      CG     CD1    OAJ     109.470    3.000
+ EVA      CG     CD1    CAE     109.470    3.000
+ EVA      HD1    CD1    OAJ     109.470    3.000
+ EVA      HD1    CD1    CAE     108.810    3.000
+ EVA      OAJ    CD1    CAE     109.470    3.000
+ EVA      CD1    OAJ    HOAJ    109.470    3.000
+ EVA      CD1    CAE    OAK     120.500    3.000
+ EVA      CD1    CAE    N       116.500    3.000
+ EVA      OAK    CAE    N       123.000    3.000
+ EVA      CAE    N      HN      120.000    3.000
+ EVA      CAE    N      CA      121.500    3.000
+ EVA      HN     N      CA      118.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ EVA      var_1    OXT    C      CA     CB       -78.631   20.000   3
+ EVA      var_2    C      CA     CB     CG       180.000   20.000   3
+ EVA      var_3    CA     CB     OG     HOG      -59.984   20.000   1
+ EVA      var_4    CA     CB     CG     CD1       60.000   20.000   3
+ EVA      var_5    CB     CG     OD2    HOD2     179.961   20.000   1
+ EVA      var_6    CB     CG     CD1    CAE      -60.000   20.000   3
+ EVA      var_7    CG     CD1    OAJ    HOAJ    -179.600   20.000   1
+ EVA      var_8    CG     CD1    CAE    N         30.000   20.000   3
+ EVA      CONST_1  CD1    CAE    N      CA         0.000    0.000   0
+ EVA      var_9    CAE    N      CA     C        150.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ EVA      chir_01  CA     C      N      CB        negativ
+ EVA      chir_02  CB     CA     CG     OG        positiv
+ EVA      chir_03  CG     CB     CD1    OD2       negativ
+ EVA      chir_04  CD1    CG     CAE    OAJ       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ EVA      plan-1    C         0.020
+ EVA      plan-1    O         0.020
+ EVA      plan-1    CA        0.020
+ EVA      plan-1    OXT       0.020
+ EVA      plan-2    N         0.020
+ EVA      plan-2    CA        0.020
+ EVA      plan-2    CAE       0.020
+ EVA      plan-2    HN        0.020
+ EVA      plan-3    CAE       0.020
+ EVA      plan-3    N         0.020
+ EVA      plan-3    OAK       0.020
+ EVA      plan-3    CD1       0.020
+ EVA      plan-3    HN        0.020
+# ------------------------------------------------------

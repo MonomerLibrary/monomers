@@ -1,0 +1,260 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NAF      NAF 'M-(N,N,N-TRIMETHYLAMMONIO)-2,2,2-TRI' non-polymer        32  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NAF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NAF           "F3'"  F    F         0.000      0.000    0.000    0.000
+ NAF           "C2'"  C    CT        0.000     -0.835   -0.585   -0.957
+ NAF           "F1'"  F    F         0.000     -1.054   -1.927   -0.627
+ NAF           "F2'"  F    F         0.000     -0.228   -0.509   -2.215
+ NAF           "C1'"  C    CT        0.000     -2.173    0.156   -0.991
+ NAF           "O1'"  O    OH1       0.000     -1.949    1.527   -1.329
+ NAF           HO1    H    H         0.000     -1.372    1.931   -0.666
+ NAF           "O2'"  O    OH1       0.000     -3.025   -0.441   -1.970
+ NAF           HO2    H    H         0.000     -3.177   -1.368   -1.741
+ NAF           C3     C    CR6       0.000     -2.827    0.074    0.364
+ NAF           C2     C    CR16      0.000     -2.578    1.048    1.313
+ NAF           H2     H    H         0.000     -1.915    1.873    1.082
+ NAF           C4     C    CR16      0.000     -3.679   -0.974    0.657
+ NAF           H4     H    H         0.000     -3.876   -1.736   -0.087
+ NAF           C5     C    CR16      0.000     -4.280   -1.051    1.899
+ NAF           H5     H    H         0.000     -4.948   -1.872    2.128
+ NAF           C6     C    CR16      0.000     -4.027   -0.079    2.850
+ NAF           H6     H    H         0.000     -4.497   -0.139    3.824
+ NAF           C1     C    CR6       0.000     -3.174    0.968    2.558
+ NAF           N1     N    NT        1.000     -2.918    1.950    3.519
+ NAF           CM3    C    CH3       0.000     -1.480    1.978    3.820
+ NAF           HM33   H    H         0.000     -0.938    2.198    2.937
+ NAF           HM32   H    H         0.000     -1.286    2.723    4.548
+ NAF           HM31   H    H         0.000     -1.179    1.034    4.193
+ NAF           CM2    C    CH3       0.000     -3.335    3.261    3.003
+ NAF           HM23   H    H         0.000     -2.793    3.482    2.120
+ NAF           HM22   H    H         0.000     -4.371    3.242    2.786
+ NAF           HM21   H    H         0.000     -3.141    4.005    3.732
+ NAF           CM1    C    CH3       0.000     -3.669    1.644    4.744
+ NAF           HM13   H    H         0.000     -3.367    0.700    5.117
+ NAF           HM12   H    H         0.000     -3.474    2.389    5.472
+ NAF           HM11   H    H         0.000     -4.705    1.624    4.528
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NAF      "F3'"  n/a    "C2'"  START
+ NAF      "C2'"  "F3'"  "C1'"  .
+ NAF      "F1'"  "C2'"  .      .
+ NAF      "F2'"  "C2'"  .      .
+ NAF      "C1'"  "C2'"  C3     .
+ NAF      "O1'"  "C1'"  HO1    .
+ NAF      HO1    "O1'"  .      .
+ NAF      "O2'"  "C1'"  HO2    .
+ NAF      HO2    "O2'"  .      .
+ NAF      C3     "C1'"  C4     .
+ NAF      C2     C3     H2     .
+ NAF      H2     C2     .      .
+ NAF      C4     C3     C5     .
+ NAF      H4     C4     .      .
+ NAF      C5     C4     C6     .
+ NAF      H5     C5     .      .
+ NAF      C6     C5     C1     .
+ NAF      H6     C6     .      .
+ NAF      C1     C6     N1     .
+ NAF      N1     C1     CM1    .
+ NAF      CM3    N1     HM31   .
+ NAF      HM33   CM3    .      .
+ NAF      HM32   CM3    .      .
+ NAF      HM31   CM3    .      .
+ NAF      CM2    N1     HM21   .
+ NAF      HM23   CM2    .      .
+ NAF      HM22   CM2    .      .
+ NAF      HM21   CM2    .      .
+ NAF      CM1    N1     HM11   .
+ NAF      HM13   CM1    .      .
+ NAF      HM12   CM1    .      .
+ NAF      HM11   CM1    .      END
+ NAF      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NAF      C1     C2        double      1.390    0.020
+ NAF      C1     C6        single      1.390    0.020
+ NAF      N1     C1        single      1.405    0.020
+ NAF      C2     C3        single      1.390    0.020
+ NAF      H2     C2        single      1.083    0.020
+ NAF      C4     C3        double      1.390    0.020
+ NAF      C3     "C1'"     single      1.500    0.020
+ NAF      C5     C4        single      1.390    0.020
+ NAF      H4     C4        single      1.083    0.020
+ NAF      C6     C5        double      1.390    0.020
+ NAF      H5     C5        single      1.083    0.020
+ NAF      H6     C6        single      1.083    0.020
+ NAF      "O1'"  "C1'"     single      1.432    0.020
+ NAF      "O2'"  "C1'"     single      1.432    0.020
+ NAF      "C1'"  "C2'"     single      1.524    0.020
+ NAF      HO1    "O1'"     single      0.967    0.020
+ NAF      HO2    "O2'"     single      0.967    0.020
+ NAF      "F1'"  "C2'"     single      1.320    0.020
+ NAF      "F2'"  "C2'"     single      1.320    0.020
+ NAF      "C2'"  "F3'"     single      1.320    0.020
+ NAF      CM1    N1        single      1.469    0.020
+ NAF      CM2    N1        single      1.469    0.020
+ NAF      CM3    N1        single      1.469    0.020
+ NAF      HM11   CM1       single      1.059    0.020
+ NAF      HM12   CM1       single      1.059    0.020
+ NAF      HM13   CM1       single      1.059    0.020
+ NAF      HM21   CM2       single      1.059    0.020
+ NAF      HM22   CM2       single      1.059    0.020
+ NAF      HM23   CM2       single      1.059    0.020
+ NAF      HM31   CM3       single      1.059    0.020
+ NAF      HM32   CM3       single      1.059    0.020
+ NAF      HM33   CM3       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NAF      "F3'"  "C2'"  "F1'"   109.470    3.000
+ NAF      "F3'"  "C2'"  "F2'"   109.470    3.000
+ NAF      "F3'"  "C2'"  "C1'"   109.470    3.000
+ NAF      "F1'"  "C2'"  "F2'"   109.470    3.000
+ NAF      "F1'"  "C2'"  "C1'"   109.470    3.000
+ NAF      "F2'"  "C2'"  "C1'"   109.470    3.000
+ NAF      "C2'"  "C1'"  "O1'"   109.470    3.000
+ NAF      "C2'"  "C1'"  "O2'"   109.470    3.000
+ NAF      "C2'"  "C1'"  C3      109.500    3.000
+ NAF      "O1'"  "C1'"  "O2'"   109.470    3.000
+ NAF      "O1'"  "C1'"  C3      109.500    3.000
+ NAF      "O2'"  "C1'"  C3      109.500    3.000
+ NAF      "C1'"  "O1'"  HO1     109.470    3.000
+ NAF      "C1'"  "O2'"  HO2     109.470    3.000
+ NAF      "C1'"  C3     C2      120.000    3.000
+ NAF      "C1'"  C3     C4      120.000    3.000
+ NAF      C2     C3     C4      120.000    3.000
+ NAF      C3     C2     H2      120.000    3.000
+ NAF      C3     C2     C1      120.000    3.000
+ NAF      H2     C2     C1      120.000    3.000
+ NAF      C3     C4     H4      120.000    3.000
+ NAF      C3     C4     C5      120.000    3.000
+ NAF      H4     C4     C5      120.000    3.000
+ NAF      C4     C5     H5      120.000    3.000
+ NAF      C4     C5     C6      120.000    3.000
+ NAF      H5     C5     C6      120.000    3.000
+ NAF      C5     C6     H6      120.000    3.000
+ NAF      C5     C6     C1      120.000    3.000
+ NAF      H6     C6     C1      120.000    3.000
+ NAF      C6     C1     N1      120.000    3.000
+ NAF      C6     C1     C2      120.000    3.000
+ NAF      N1     C1     C2      120.000    3.000
+ NAF      C1     N1     CM3     109.500    3.000
+ NAF      C1     N1     CM2     109.500    3.000
+ NAF      C1     N1     CM1     109.500    3.000
+ NAF      CM3    N1     CM2     109.470    3.000
+ NAF      CM3    N1     CM1     109.470    3.000
+ NAF      CM2    N1     CM1     109.470    3.000
+ NAF      N1     CM3    HM33    109.470    3.000
+ NAF      N1     CM3    HM32    109.470    3.000
+ NAF      N1     CM3    HM31    109.470    3.000
+ NAF      HM33   CM3    HM32    109.470    3.000
+ NAF      HM33   CM3    HM31    109.470    3.000
+ NAF      HM32   CM3    HM31    109.470    3.000
+ NAF      N1     CM2    HM23    109.470    3.000
+ NAF      N1     CM2    HM22    109.470    3.000
+ NAF      N1     CM2    HM21    109.470    3.000
+ NAF      HM23   CM2    HM22    109.470    3.000
+ NAF      HM23   CM2    HM21    109.470    3.000
+ NAF      HM22   CM2    HM21    109.470    3.000
+ NAF      N1     CM1    HM13    109.470    3.000
+ NAF      N1     CM1    HM12    109.470    3.000
+ NAF      N1     CM1    HM11    109.470    3.000
+ NAF      HM13   CM1    HM12    109.470    3.000
+ NAF      HM13   CM1    HM11    109.470    3.000
+ NAF      HM12   CM1    HM11    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NAF      var_1    "F3'"  "C2'"  "C1'"  C3       -59.962   20.000   1
+ NAF      var_2    "C2'"  "C1'"  "O1'"  HO1      -59.986   20.000   1
+ NAF      var_3    "C2'"  "C1'"  "O2'"  HO2       60.054   20.000   1
+ NAF      var_4    "C2'"  "C1'"  C3     C4       -89.993   20.000   1
+ NAF      CONST_1  "C1'"  C3     C2     C1       180.000    0.000   0
+ NAF      CONST_2  "C1'"  C3     C4     C5       180.000    0.000   0
+ NAF      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ NAF      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ NAF      CONST_5  C5     C6     C1     N1       180.000    0.000   0
+ NAF      CONST_6  C6     C1     C2     C3         0.000    0.000   0
+ NAF      var_5    C6     C1     N1     CM1        0.044   20.000   1
+ NAF      var_6    C1     N1     CM3    HM31     -60.019   20.000   1
+ NAF      var_7    C1     N1     CM2    HM21    -179.997   20.000   1
+ NAF      var_8    C1     N1     CM1    HM11     -60.012   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ NAF      chir_01  "C1'"  C3     "O1'"  "O2'"     positiv
+ NAF      chir_02  "C2'"  "C1'"  "F1'"  "F2'"     negativ
+ NAF      chir_03  N1     C1     CM1    CM2       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NAF      plan-1    C1        0.020
+ NAF      plan-1    C2        0.020
+ NAF      plan-1    C6        0.020
+ NAF      plan-1    N1        0.020
+ NAF      plan-1    C3        0.020
+ NAF      plan-1    C4        0.020
+ NAF      plan-1    C5        0.020
+ NAF      plan-1    H2        0.020
+ NAF      plan-1    "C1'"     0.020
+ NAF      plan-1    H4        0.020
+ NAF      plan-1    H5        0.020
+ NAF      plan-1    H6        0.020
+# ------------------------------------------------------

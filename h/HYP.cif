@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HYP      HYP '4-HYDROXYPROLINE                    ' P-peptide          17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HYP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HYP           OXT    O    OC       -0.500      0.000    0.000    0.000
+ HYP           C      C    C         0.000     -1.185    0.353   -0.191
+ HYP           O      O    OC       -0.500     -1.449    1.208   -1.066
+ HYP           CA     C    CH1       0.000     -2.294   -0.251    0.632
+ HYP           HA     H    H         0.000     -1.971   -0.379    1.675
+ HYP           CB     C    CH2       0.000     -2.732   -1.604    0.033
+ HYP           HB2    H    H         0.000     -2.272   -2.444    0.558
+ HYP           HB3    H    H         0.000     -2.496   -1.668   -1.031
+ HYP           CG     C    CH1       0.000     -4.262   -1.650    0.226
+ HYP           HG     H    H         0.000     -4.768   -1.718   -0.747
+ HYP           OD1    O    OH1       0.000     -4.625   -2.759    1.052
+ HYP           HD1    H    H         0.000     -5.585   -2.775    1.165
+ HYP           CD     C    CH2       0.000     -4.619   -0.322    0.925
+ HYP           HD22   H    H         0.000     -4.664   -0.433    2.010
+ HYP           HD23   H    H         0.000     -5.564    0.087    0.563
+ HYP           N      N    NH1       0.000     -3.510    0.600    0.566
+ HYP           H      H    H         0.000     -3.569    1.580    0.331
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HYP      OXT    n/a    C      START
+ HYP      C      OXT    CA     .
+ HYP      O      C      .      .
+ HYP      CA     C      CB     .
+ HYP      HA     CA     .      .
+ HYP      CB     CA     CG     .
+ HYP      HB2    CB     .      .
+ HYP      HB3    CB     .      .
+ HYP      CG     CB     CD     .
+ HYP      HG     CG     .      .
+ HYP      OD1    CG     HD1    .
+ HYP      HD1    OD1    .      .
+ HYP      CD     CG     N      .
+ HYP      HD22   CD     .      .
+ HYP      HD23   CD     .      .
+ HYP      N      CD     H      .
+ HYP      H      N      .      END
+ HYP      N      CA     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HYP      N      CA        single      1.450    0.020
+ HYP      N      CD        single      1.450    0.020
+ HYP      H      N         single      1.010    0.020
+ HYP      CA     C         single      1.500    0.020
+ HYP      CB     CA        single      1.524    0.020
+ HYP      HA     CA        single      1.099    0.020
+ HYP      O      C         deloc       1.250    0.020
+ HYP      C      OXT       deloc       1.250    0.020
+ HYP      CG     CB        single      1.524    0.020
+ HYP      HB2    CB        single      1.092    0.020
+ HYP      HB3    CB        single      1.092    0.020
+ HYP      CD     CG        single      1.524    0.020
+ HYP      OD1    CG        single      1.432    0.020
+ HYP      HG     CG        single      1.099    0.020
+ HYP      HD22   CD        single      1.092    0.020
+ HYP      HD23   CD        single      1.092    0.020
+ HYP      HD1    OD1       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HYP      OXT    C      O       123.000    3.000
+ HYP      OXT    C      CA      118.500    3.000
+ HYP      O      C      CA      118.500    3.000
+ HYP      C      CA     HA      108.810    3.000
+ HYP      C      CA     CB      109.470    3.000
+ HYP      C      CA     N       111.600    3.000
+ HYP      HA     CA     CB      108.340    3.000
+ HYP      HA     CA     N       108.550    3.000
+ HYP      CB     CA     N       110.000    3.000
+ HYP      CA     CB     HB2     109.470    3.000
+ HYP      CA     CB     HB3     109.470    3.000
+ HYP      CA     CB     CG      111.000    3.000
+ HYP      HB2    CB     HB3     107.900    3.000
+ HYP      HB2    CB     CG      109.470    3.000
+ HYP      HB3    CB     CG      109.470    3.000
+ HYP      CB     CG     HG      108.340    3.000
+ HYP      CB     CG     OD1     109.470    3.000
+ HYP      CB     CG     CD      109.470    3.000
+ HYP      HG     CG     OD1     109.470    3.000
+ HYP      HG     CG     CD      108.340    3.000
+ HYP      OD1    CG     CD      109.470    3.000
+ HYP      CG     OD1    HD1     109.470    3.000
+ HYP      CG     CD     HD22    109.470    3.000
+ HYP      CG     CD     HD23    109.470    3.000
+ HYP      CG     CD     N       110.000    3.000
+ HYP      HD22   CD     HD23    107.900    3.000
+ HYP      HD22   CD     N       109.470    3.000
+ HYP      HD23   CD     N       109.470    3.000
+ HYP      CD     N      H       118.500    3.000
+ HYP      CD     N      CA      120.000    3.000
+ HYP      H      N      CA      118.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HYP      var_1    OXT    C      CA     CB       -83.371   20.000   3
+ HYP      var_2    C      CA     CB     CG      -150.000   20.000   3
+ HYP      var_3    CA     CB     CG     CD         0.000   20.000   3
+ HYP      var_4    CB     CG     OD1    HD1      179.983   20.000   1
+ HYP      var_5    CB     CG     CD     N         30.000   20.000   3
+ HYP      var_6    CG     CD     N      CA       -30.000   20.000   3
+ HYP      var_7    CD     N      CA     C        150.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HYP      chir_01  CA     N      C      CB        positiv
+ HYP      chir_02  CG     CB     CD     OD1       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HYP      plan-1    N         0.020
+ HYP      plan-1    CA        0.020
+ HYP      plan-1    CD        0.020
+ HYP      plan-1    H         0.020
+ HYP      plan-2    C         0.020
+ HYP      plan-2    CA        0.020
+ HYP      plan-2    O         0.020
+ HYP      plan-2    OXT       0.020
+# ------------------------------------------------------

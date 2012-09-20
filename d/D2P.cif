@@ -1,0 +1,131 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+D2P      D2P '(2S)-2,3-DICHLOROPROPAN-1-OL        ' non-polymer        12   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_D2P
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ D2P           CL1    CL   CL        0.000      0.000    0.000    0.000
+ D2P           C3     C    CH1       0.000     -1.193    1.292    0.401
+ D2P           H3     H    H         0.000     -1.417    1.263    1.476
+ D2P           C4     C    CH2       0.000     -2.480    1.062   -0.393
+ D2P           H4C2   H    H         0.000     -2.257    1.092   -1.462
+ D2P           H4C1   H    H         0.000     -3.201    1.845   -0.151
+ D2P           CL5    CL   CL        0.000     -3.170   -0.548    0.033
+ D2P           C2     C    CH2       0.000     -0.606    2.658    0.039
+ D2P           H2C1   H    H         0.000     -0.301    2.656   -1.010
+ D2P           H2C2   H    H         0.000      0.262    2.860    0.669
+ D2P           O1     O    OH1       0.000     -1.594    3.670    0.247
+ D2P           H1     H    H         0.000     -1.224    4.533    0.018
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ D2P      CL1    n/a    C3     START
+ D2P      C3     CL1    C2     .
+ D2P      H3     C3     .      .
+ D2P      C4     C3     CL5    .
+ D2P      H4C2   C4     .      .
+ D2P      H4C1   C4     .      .
+ D2P      CL5    C4     .      .
+ D2P      C2     C3     O1     .
+ D2P      H2C1   C2     .      .
+ D2P      H2C2   C2     .      .
+ D2P      O1     C2     H1     .
+ D2P      H1     O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ D2P      O1     C2        single      1.432    0.020
+ D2P      H1     O1        single      0.967    0.020
+ D2P      C2     C3        single      1.524    0.020
+ D2P      H2C1   C2        single      1.092    0.020
+ D2P      H2C2   C2        single      1.092    0.020
+ D2P      C4     C3        single      1.524    0.020
+ D2P      C3     CL1       single      1.790    0.020
+ D2P      H3     C3        single      1.099    0.020
+ D2P      CL5    C4        single      1.790    0.020
+ D2P      H4C1   C4        single      1.092    0.020
+ D2P      H4C2   C4        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ D2P      CL1    C3     H3      109.470    3.000
+ D2P      CL1    C3     C4      109.500    3.000
+ D2P      CL1    C3     C2      109.500    3.000
+ D2P      H3     C3     C4      108.340    3.000
+ D2P      H3     C3     C2      108.340    3.000
+ D2P      C4     C3     C2      109.470    3.000
+ D2P      C3     C4     H4C2    109.470    3.000
+ D2P      C3     C4     H4C1    109.470    3.000
+ D2P      C3     C4     CL5     109.500    3.000
+ D2P      H4C2   C4     H4C1    107.900    3.000
+ D2P      H4C2   C4     CL5     109.500    3.000
+ D2P      H4C1   C4     CL5     109.500    3.000
+ D2P      C3     C2     H2C1    109.470    3.000
+ D2P      C3     C2     H2C2    109.470    3.000
+ D2P      C3     C2     O1      109.470    3.000
+ D2P      H2C1   C2     H2C2    107.900    3.000
+ D2P      H2C1   C2     O1      109.470    3.000
+ D2P      H2C2   C2     O1      109.470    3.000
+ D2P      C2     O1     H1      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ D2P      var_1    CL1    C3     C4     CL5       59.982   20.000   3
+ D2P      var_2    CL1    C3     C2     O1       175.008   20.000   3
+ D2P      var_3    C3     C2     O1     H1       179.992   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ D2P      chir_01  C3     C2     C4     CL1       negativ
+# ------------------------------------------------------

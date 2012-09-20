@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+D1X      D1X '2,6-dioxo-1,2,3,6-tetrahydropyridine' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_D1X
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ D1X           OAD    O    O         0.000      0.000    0.000    0.000
+ D1X           CAI    C    CR6       0.000     -1.111   -0.492   -0.001
+ D1X           NAG    N    NR16      0.000     -1.224   -1.827    0.000
+ D1X           HNAG   H    H         0.000     -0.360   -2.406    0.003
+ D1X           CAK    C    CR6       0.000     -2.421   -2.443   -0.004
+ D1X           OAB    O    O         0.000     -2.487   -3.654   -0.003
+ D1X           CAF    C    CH2       0.000     -3.681   -1.608   -0.001
+ D1X           HAF    H    H         0.000     -4.227   -1.918    0.892
+ D1X           HAFA   H    H         0.000     -4.232   -1.919   -0.890
+ D1X           CAJ    C    CR6       0.000     -3.527   -0.102   -0.002
+ D1X           CAE    C    CR16      0.000     -2.279    0.404   -0.005
+ D1X           HAE    H    H         0.000     -2.134    1.477   -0.010
+ D1X           CAH    C    C         0.000     -4.707    0.783    0.001
+ D1X           OAA    O    OC       -0.500     -5.857    0.292    0.004
+ D1X           OAC    O    OC       -0.500     -4.557    2.025    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ D1X      OAD    n/a    CAI    START
+ D1X      CAI    OAD    NAG    .
+ D1X      NAG    CAI    CAK    .
+ D1X      HNAG   NAG    .      .
+ D1X      CAK    NAG    CAF    .
+ D1X      OAB    CAK    .      .
+ D1X      CAF    CAK    CAJ    .
+ D1X      HAF    CAF    .      .
+ D1X      HAFA   CAF    .      .
+ D1X      CAJ    CAF    CAH    .
+ D1X      CAE    CAJ    HAE    .
+ D1X      HAE    CAE    .      .
+ D1X      CAH    CAJ    OAC    .
+ D1X      OAA    CAH    .      .
+ D1X      OAC    CAH    .      END
+ D1X      CAE    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ D1X      OAA    CAH       deloc       1.250    0.020
+ D1X      OAB    CAK       double      1.250    0.020
+ D1X      OAC    CAH       deloc       1.250    0.020
+ D1X      CAI    OAD       double      1.250    0.020
+ D1X      CAE    CAI       single      1.390    0.020
+ D1X      CAE    CAJ       double      1.390    0.020
+ D1X      HAE    CAE       single      1.083    0.020
+ D1X      CAF    CAK       single      1.511    0.020
+ D1X      CAJ    CAF       single      1.511    0.020
+ D1X      HAF    CAF       single      1.092    0.020
+ D1X      HAFA   CAF       single      1.092    0.020
+ D1X      CAK    NAG       single      1.337    0.020
+ D1X      NAG    CAI       single      1.337    0.020
+ D1X      HNAG   NAG       single      1.040    0.020
+ D1X      CAH    CAJ       single      1.500    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ D1X      OAD    CAI    NAG     120.000    3.000
+ D1X      OAD    CAI    CAE     120.000    3.000
+ D1X      NAG    CAI    CAE     120.000    3.000
+ D1X      CAI    NAG    HNAG    120.000    3.000
+ D1X      CAI    NAG    CAK     120.000    3.000
+ D1X      HNAG   NAG    CAK     120.000    3.000
+ D1X      NAG    CAK    OAB     120.000    3.000
+ D1X      NAG    CAK    CAF     120.000    3.000
+ D1X      OAB    CAK    CAF     120.000    3.000
+ D1X      CAK    CAF    HAF     109.470    3.000
+ D1X      CAK    CAF    HAFA    109.470    3.000
+ D1X      CAK    CAF    CAJ     109.470    3.000
+ D1X      HAF    CAF    HAFA    107.900    3.000
+ D1X      HAF    CAF    CAJ     109.470    3.000
+ D1X      HAFA   CAF    CAJ     109.470    3.000
+ D1X      CAF    CAJ    CAE     120.000    3.000
+ D1X      CAF    CAJ    CAH     120.000    3.000
+ D1X      CAE    CAJ    CAH     120.000    3.000
+ D1X      CAJ    CAE    HAE     120.000    3.000
+ D1X      CAJ    CAE    CAI     120.000    3.000
+ D1X      HAE    CAE    CAI     120.000    3.000
+ D1X      CAJ    CAH    OAA     120.000    3.000
+ D1X      CAJ    CAH    OAC     120.000    3.000
+ D1X      OAA    CAH    OAC     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ D1X      CONST_1  OAD    CAI    NAG    CAK      180.000    0.000   0
+ D1X      CONST_2  CAI    NAG    CAK    CAF        0.000    0.000   0
+ D1X      CONST_3  NAG    CAK    CAF    CAJ        0.000    0.000   0
+ D1X      CONST_4  CAK    CAF    CAJ    CAH      180.000    0.000   0
+ D1X      CONST_5  CAF    CAJ    CAE    CAI        0.000    0.000   0
+ D1X      CONST_6  CAJ    CAE    CAI    OAD      180.000    0.000   0
+ D1X      var_1    CAF    CAJ    CAH    OAC      179.963   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ D1X      plan-1    CAE       0.020
+ D1X      plan-1    CAI       0.020
+ D1X      plan-1    CAJ       0.020
+ D1X      plan-1    HAE       0.020
+ D1X      plan-1    CAF       0.020
+ D1X      plan-1    NAG       0.020
+ D1X      plan-1    CAK       0.020
+ D1X      plan-1    HNAG      0.020
+ D1X      plan-1    OAD       0.020
+ D1X      plan-1    CAH       0.020
+ D1X      plan-1    OAB       0.020
+ D1X      plan-2    CAH       0.020
+ D1X      plan-2    OAA       0.020
+ D1X      plan-2    OAC       0.020
+ D1X      plan-2    CAJ       0.020
+# ------------------------------------------------------

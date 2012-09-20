@@ -1,0 +1,126 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CP2      CP2 '1,2-DICHLORO-PROPANE                ' non-polymer        11   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CP2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CP2           CL5    CL   CL        0.000      0.000    0.000    0.000
+ CP2           C3     C    CH1       0.000     -1.707   -0.403    0.413
+ CP2           HC31   H    H         0.000     -1.872   -1.481    0.277
+ CP2           C4     C    CH3       0.000     -1.983   -0.024    1.869
+ CP2           HC43   H    H         0.000     -1.825    1.015    2.001
+ CP2           HC42   H    H         0.000     -2.987   -0.261    2.112
+ CP2           HC41   H    H         0.000     -1.330   -0.563    2.505
+ CP2           C2     C    CH2       0.000     -2.650    0.376   -0.504
+ CP2           HC22   H    H         0.000     -2.487    1.447   -0.367
+ CP2           HC21   H    H         0.000     -3.685    0.132   -0.252
+ CP2           CL1    CL   CL        0.000     -2.327   -0.069   -2.220
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CP2      CL5    n/a    C3     START
+ CP2      C3     CL5    C2     .
+ CP2      HC31   C3     .      .
+ CP2      C4     C3     HC41   .
+ CP2      HC43   C4     .      .
+ CP2      HC42   C4     .      .
+ CP2      HC41   C4     .      .
+ CP2      C2     C3     CL1    .
+ CP2      HC22   C2     .      .
+ CP2      HC21   C2     .      .
+ CP2      CL1    C2     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CP2      CL1    C2        single      1.790    0.020
+ CP2      C2     C3        single      1.524    0.020
+ CP2      HC21   C2        single      1.092    0.020
+ CP2      HC22   C2        single      1.092    0.020
+ CP2      C4     C3        single      1.524    0.020
+ CP2      C3     CL5       single      1.790    0.020
+ CP2      HC31   C3        single      1.099    0.020
+ CP2      HC41   C4        single      1.059    0.020
+ CP2      HC42   C4        single      1.059    0.020
+ CP2      HC43   C4        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CP2      CL5    C3     HC31    109.470    3.000
+ CP2      CL5    C3     C4      109.500    3.000
+ CP2      CL5    C3     C2      109.500    3.000
+ CP2      HC31   C3     C4      108.340    3.000
+ CP2      HC31   C3     C2      108.340    3.000
+ CP2      C4     C3     C2      111.000    3.000
+ CP2      C3     C4     HC43    109.470    3.000
+ CP2      C3     C4     HC42    109.470    3.000
+ CP2      C3     C4     HC41    109.470    3.000
+ CP2      HC43   C4     HC42    109.470    3.000
+ CP2      HC43   C4     HC41    109.470    3.000
+ CP2      HC42   C4     HC41    109.470    3.000
+ CP2      C3     C2     HC22    109.470    3.000
+ CP2      C3     C2     HC21    109.470    3.000
+ CP2      C3     C2     CL1     109.500    3.000
+ CP2      HC22   C2     HC21    107.900    3.000
+ CP2      HC22   C2     CL1     109.500    3.000
+ CP2      HC21   C2     CL1     109.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CP2      var_1    CL5    C3     C4     HC41     -59.995   20.000   3
+ CP2      var_2    CL5    C3     C2     CL1       59.984   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CP2      chir_01  C3     C2     C4     CL5       positiv
+# ------------------------------------------------------

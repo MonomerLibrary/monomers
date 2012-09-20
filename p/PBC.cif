@@ -1,0 +1,163 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PBC      PBC 'PHENYL BORONIC ACID                 ' non-polymer        16   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PBC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PBC           O2     O    OH1       0.000      0.000    0.000    0.000
+ PBC           HO2    H    H         0.000      0.941    0.000   -0.122
+ PBC           B      B    B         0.000     -0.824    0.000   -1.156
+ PBC           O1     O    OH1       0.000     -0.235   -0.001   -2.447
+ PBC           HO1    H    H         0.000      0.713    0.000   -2.506
+ PBC           CA     C    CR6       0.000     -2.387    0.000   -1.006
+ PBC           CB1    C    CR16      0.000     -3.198    0.004   -2.138
+ PBC           HB1    H    H         0.000     -2.752    0.011   -3.125
+ PBC           CG1    C    CR16      0.000     -4.571   -0.001   -2.001
+ PBC           HG1    H    H         0.000     -5.202   -0.006   -2.881
+ PBC           CB2    C    CR16      0.000     -2.968    0.000    0.261
+ PBC           HB2    H    H         0.000     -2.342    0.000    1.145
+ PBC           CG2    C    CR16      0.000     -4.342    0.000    0.386
+ PBC           HG2    H    H         0.000     -4.795    0.000    1.370
+ PBC           CD1    C    CR16      0.000     -5.142    0.000   -0.741
+ PBC           HD1    H    H         0.000     -6.220    0.001   -0.638
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PBC      O2     n/a    B      START
+ PBC      HO2    O2     .      .
+ PBC      B      O2     CA     .
+ PBC      O1     B      HO1    .
+ PBC      HO1    O1     .      .
+ PBC      CA     B      CB2    .
+ PBC      CB1    CA     CG1    .
+ PBC      HB1    CB1    .      .
+ PBC      CG1    CB1    HG1    .
+ PBC      HG1    CG1    .      .
+ PBC      CB2    CA     CG2    .
+ PBC      HB2    CB2    .      .
+ PBC      CG2    CB2    CD1    .
+ PBC      HG2    CG2    .      .
+ PBC      CD1    CG2    HD1    .
+ PBC      HD1    CD1    .      END
+ PBC      CG1    CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PBC      O1     B         single      1.535    0.020
+ PBC      B      O2        single      1.535    0.020
+ PBC      CA     B         single      1.560    0.020
+ PBC      HO1    O1        single      0.967    0.020
+ PBC      HO2    O2        single      0.967    0.020
+ PBC      CG1    CD1       double      1.390    0.020
+ PBC      CG1    CB1       single      1.390    0.020
+ PBC      HG1    CG1       single      1.083    0.020
+ PBC      CD1    CG2       single      1.390    0.020
+ PBC      HD1    CD1       single      1.083    0.020
+ PBC      CG2    CB2       double      1.390    0.020
+ PBC      HG2    CG2       single      1.083    0.020
+ PBC      CB2    CA        single      1.390    0.020
+ PBC      HB2    CB2       single      1.083    0.020
+ PBC      CB1    CA        double      1.390    0.020
+ PBC      HB1    CB1       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PBC      HO2    O2     B       120.000    3.000
+ PBC      O2     B      O1      120.000    3.000
+ PBC      O2     B      CA      120.000    3.000
+ PBC      O1     B      CA      120.000    3.000
+ PBC      B      O1     HO1     120.000    3.000
+ PBC      B      CA     CB1     120.000    3.000
+ PBC      B      CA     CB2     120.000    3.000
+ PBC      CB1    CA     CB2     120.000    3.000
+ PBC      CA     CB1    HB1     120.000    3.000
+ PBC      CA     CB1    CG1     120.000    3.000
+ PBC      HB1    CB1    CG1     120.000    3.000
+ PBC      CB1    CG1    HG1     120.000    3.000
+ PBC      CB1    CG1    CD1     120.000    3.000
+ PBC      HG1    CG1    CD1     120.000    3.000
+ PBC      CA     CB2    HB2     120.000    3.000
+ PBC      CA     CB2    CG2     120.000    3.000
+ PBC      HB2    CB2    CG2     120.000    3.000
+ PBC      CB2    CG2    HG2     120.000    3.000
+ PBC      CB2    CG2    CD1     120.000    3.000
+ PBC      HG2    CG2    CD1     120.000    3.000
+ PBC      CG2    CD1    HD1     120.000    3.000
+ PBC      CG2    CD1    CG1     120.000    3.000
+ PBC      HD1    CD1    CG1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PBC      var_1    HO2    O2     B      CA       180.000   20.000   1
+ PBC      var_2    O2     B      O1     HO1       -0.097   20.000   1
+ PBC      var_3    O2     B      CA     CB2        0.000   20.000   1
+ PBC      CONST_1  B      CA     CB1    CG1      180.000    0.000   0
+ PBC      CONST_2  CA     CB1    CG1    CD1        0.000    0.000   0
+ PBC      CONST_3  CB1    CG1    CD1    CG2        0.000    0.000   0
+ PBC      CONST_4  B      CA     CB2    CG2      180.000    0.000   0
+ PBC      CONST_5  CA     CB2    CG2    CD1        0.000    0.000   0
+ PBC      CONST_6  CB2    CG2    CD1    CG1        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PBC      plan-1    CG1       0.020
+ PBC      plan-1    CD1       0.020
+ PBC      plan-1    CB1       0.020
+ PBC      plan-1    HG1       0.020
+ PBC      plan-1    CG2       0.020
+ PBC      plan-1    CB2       0.020
+ PBC      plan-1    CA        0.020
+ PBC      plan-1    HD1       0.020
+ PBC      plan-1    HG2       0.020
+ PBC      plan-1    HB2       0.020
+ PBC      plan-1    B         0.020
+ PBC      plan-1    HB1       0.020
+# ------------------------------------------------------

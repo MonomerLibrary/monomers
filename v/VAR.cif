@@ -1,0 +1,299 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+VAR      VAR '9-amino-5-(2-aminopyrimidin-4-yl)pyr' non-polymer        33  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_VAR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ VAR           O1     O    OH1       0.000      0.000    0.000    0.000
+ VAR           HO1    H    H         0.000      0.260   -0.274    0.890
+ VAR           C1     C    CR6       0.000     -1.074    0.828    0.078
+ VAR           C10    C    CR56      0.000     -2.380    0.321    0.038
+ VAR           C4     C    CR56      0.000     -3.468    1.206    0.126
+ VAR           N1     N    NRD6      0.000     -3.248    2.512    0.236
+ VAR           C3     C    CR16      0.000     -2.031    3.012    0.272
+ VAR           H3     H    H         0.000     -1.903    4.083    0.364
+ VAR           C2     C    CR16      0.000     -0.911    2.201    0.195
+ VAR           H2     H    H         0.000      0.082    2.634    0.226
+ VAR           C9     C    CR5       0.000     -2.945   -1.030   -0.070
+ VAR           C11    C    CR6       0.000     -2.197   -2.292   -0.183
+ VAR           N5     N    NRD6      0.000     -1.186   -2.408   -1.049
+ VAR           C12    C    CR6       0.000     -0.513   -3.543   -1.144
+ VAR           N6     N    NH2       0.000      0.535   -3.634   -2.045
+ VAR           HN6A   H    H         0.000      0.789   -2.838   -2.623
+ VAR           HN6    H    H         0.000      1.062   -4.497   -2.138
+ VAR           N7     N    NRD6      0.000     -0.820   -4.597   -0.401
+ VAR           C13    C    CR16      0.000     -1.815   -4.551    0.474
+ VAR           H13    H    H         0.000     -2.054   -5.420    1.075
+ VAR           C14    C    CR16      0.000     -2.538   -3.397    0.613
+ VAR           H14    H    H         0.000     -3.355   -3.338    1.321
+ VAR           C8     C    CR56      0.000     -4.329   -0.877   -0.048
+ VAR           N2     N    NR56      0.000     -4.632    0.464    0.069
+ VAR           C7     C    CR16      0.000     -5.387   -1.807   -0.122
+ VAR           H7     H    H         0.000     -5.183   -2.867   -0.213
+ VAR           C6     C    CR16      0.000     -6.668   -1.349   -0.075
+ VAR           H6     H    H         0.000     -7.492   -2.049   -0.132
+ VAR           N4     N    NRD6      0.000     -6.914   -0.042    0.039
+ VAR           C5     C    CR6       0.000     -5.949    0.845    0.110
+ VAR           N3     N    NH2       0.000     -6.262    2.176    0.225
+ VAR           HN3A   H    H         0.000     -7.230    2.473    0.256
+ VAR           HN3    H    H         0.000     -5.527    2.871    0.281
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ VAR      O1     n/a    C1     START
+ VAR      HO1    O1     .      .
+ VAR      C1     O1     C10    .
+ VAR      C10    C1     C9     .
+ VAR      C4     C10    N1     .
+ VAR      N1     C4     C3     .
+ VAR      C3     N1     C2     .
+ VAR      H3     C3     .      .
+ VAR      C2     C3     H2     .
+ VAR      H2     C2     .      .
+ VAR      C9     C10    C8     .
+ VAR      C11    C9     N5     .
+ VAR      N5     C11    C12    .
+ VAR      C12    N5     N7     .
+ VAR      N6     C12    HN6    .
+ VAR      HN6A   N6     .      .
+ VAR      HN6    N6     .      .
+ VAR      N7     C12    C13    .
+ VAR      C13    N7     C14    .
+ VAR      H13    C13    .      .
+ VAR      C14    C13    H14    .
+ VAR      H14    C14    .      .
+ VAR      C8     C9     C7     .
+ VAR      N2     C8     .      .
+ VAR      C7     C8     C6     .
+ VAR      H7     C7     .      .
+ VAR      C6     C7     N4     .
+ VAR      H6     C6     .      .
+ VAR      N4     C6     C5     .
+ VAR      C5     N4     N3     .
+ VAR      N3     C5     HN3    .
+ VAR      HN3A   N3     .      .
+ VAR      HN3    N3     .      END
+ VAR      C1     C2     .    ADD
+ VAR      C4     N2     .    ADD
+ VAR      N2     C5     .    ADD
+ VAR      C11    C14    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ VAR      C1     O1        single      1.362    0.020
+ VAR      C1     C2        single      1.390    0.020
+ VAR      C10    C1        double      1.490    0.020
+ VAR      C2     C3        double      1.390    0.020
+ VAR      C3     N1        single      1.337    0.020
+ VAR      N1     C4        double      1.355    0.020
+ VAR      C4     N2        single      1.337    0.020
+ VAR      C4     C10       single      1.490    0.020
+ VAR      N2     C5        single      1.337    0.020
+ VAR      N2     C8        single      1.337    0.020
+ VAR      N3     C5        single      1.355    0.020
+ VAR      C5     N4        double      1.350    0.020
+ VAR      N4     C6        single      1.337    0.020
+ VAR      C6     C7        double      1.390    0.020
+ VAR      C7     C8        single      1.390    0.020
+ VAR      C8     C9        double      1.490    0.020
+ VAR      C9     C10       single      1.490    0.020
+ VAR      C11    C9        single      1.490    0.020
+ VAR      C11    C14       single      1.390    0.020
+ VAR      N5     C11       double      1.350    0.020
+ VAR      C14    C13       double      1.390    0.020
+ VAR      C13    N7        single      1.337    0.020
+ VAR      N7     C12       double      1.350    0.020
+ VAR      C12    N5        single      1.350    0.020
+ VAR      N6     C12       single      1.355    0.020
+ VAR      HO1    O1        single      0.967    0.020
+ VAR      H2     C2        single      1.083    0.020
+ VAR      H3     C3        single      1.083    0.020
+ VAR      HN3    N3        single      1.010    0.020
+ VAR      HN3A   N3        single      1.010    0.020
+ VAR      H6     C6        single      1.083    0.020
+ VAR      H7     C7        single      1.083    0.020
+ VAR      H14    C14       single      1.083    0.020
+ VAR      H13    C13       single      1.083    0.020
+ VAR      HN6    N6        single      1.010    0.020
+ VAR      HN6A   N6        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ VAR      HO1    O1     C1      109.470    3.000
+ VAR      O1     C1     C10     120.000    3.000
+ VAR      O1     C1     C2      120.000    3.000
+ VAR      C10    C1     C2      120.000    3.000
+ VAR      C1     C10    C4      120.000    3.000
+ VAR      C1     C10    C9      132.000    3.000
+ VAR      C4     C10    C9      108.000    3.000
+ VAR      C10    C4     N1      120.000    3.000
+ VAR      C10    C4     N2      120.000    3.000
+ VAR      N1     C4     N2      120.000    3.000
+ VAR      C4     N1     C3      120.000    3.000
+ VAR      N1     C3     H3      120.000    3.000
+ VAR      N1     C3     C2      120.000    3.000
+ VAR      H3     C3     C2      120.000    3.000
+ VAR      C3     C2     H2      120.000    3.000
+ VAR      C3     C2     C1      120.000    3.000
+ VAR      H2     C2     C1      120.000    3.000
+ VAR      C10    C9     C11     126.000    3.000
+ VAR      C10    C9     C8      108.000    3.000
+ VAR      C11    C9     C8      126.000    3.000
+ VAR      C9     C11    N5      120.000    3.000
+ VAR      C9     C11    C14     120.000    3.000
+ VAR      N5     C11    C14     120.000    3.000
+ VAR      C11    N5     C12     120.000    3.000
+ VAR      N5     C12    N6      120.000    3.000
+ VAR      N5     C12    N7      120.000    3.000
+ VAR      N6     C12    N7      120.000    3.000
+ VAR      C12    N6     HN6A    120.000    3.000
+ VAR      C12    N6     HN6     120.000    3.000
+ VAR      HN6A   N6     HN6     120.000    3.000
+ VAR      C12    N7     C13     120.000    3.000
+ VAR      N7     C13    H13     120.000    3.000
+ VAR      N7     C13    C14     120.000    3.000
+ VAR      H13    C13    C14     120.000    3.000
+ VAR      C13    C14    H14     120.000    3.000
+ VAR      C13    C14    C11     120.000    3.000
+ VAR      H14    C14    C11     120.000    3.000
+ VAR      C9     C8     N2      108.000    3.000
+ VAR      C9     C8     C7      126.000    3.000
+ VAR      N2     C8     C7      120.000    3.000
+ VAR      C8     N2     C4      108.000    3.000
+ VAR      C8     N2     C5      120.000    3.000
+ VAR      C4     N2     C5      120.000    3.000
+ VAR      C8     C7     H7      120.000    3.000
+ VAR      C8     C7     C6      120.000    3.000
+ VAR      H7     C7     C6      120.000    3.000
+ VAR      C7     C6     H6      120.000    3.000
+ VAR      C7     C6     N4      120.000    3.000
+ VAR      H6     C6     N4      120.000    3.000
+ VAR      C6     N4     C5      120.000    3.000
+ VAR      N4     C5     N3      120.000    3.000
+ VAR      N4     C5     N2      120.000    3.000
+ VAR      N3     C5     N2      120.000    3.000
+ VAR      C5     N3     HN3A    120.000    3.000
+ VAR      C5     N3     HN3     120.000    3.000
+ VAR      HN3A   N3     HN3     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ VAR      var_1    HO1    O1     C1     C10      -90.253   20.000   1
+ VAR      CONST_1  O1     C1     C2     C3       180.000    0.000   0
+ VAR      CONST_2  O1     C1     C10    C9         0.000    0.000   0
+ VAR      CONST_3  C1     C10    C4     N1         0.000    0.000   0
+ VAR      CONST_4  C10    C4     N2     C8         0.000    0.000   0
+ VAR      CONST_5  C10    C4     N1     C3         0.000    0.000   0
+ VAR      CONST_6  C4     N1     C3     C2         0.000    0.000   0
+ VAR      CONST_7  N1     C3     C2     C1         0.000    0.000   0
+ VAR      CONST_8  C1     C10    C9     C8       180.000    0.000   0
+ VAR      var_2    C10    C9     C11    N5       -47.185   20.000   1
+ VAR      CONST_9  C9     C11    C14    C13      180.000    0.000   0
+ VAR      CONST_10 C9     C11    N5     C12      180.000    0.000   0
+ VAR      CONST_11 C11    N5     C12    N7         0.000    0.000   0
+ VAR      CONST_12 N5     C12    N6     HN6     -179.649    0.000   0
+ VAR      CONST_13 N5     C12    N7     C13        0.000    0.000   0
+ VAR      CONST_14 C12    N7     C13    C14        0.000    0.000   0
+ VAR      CONST_15 N7     C13    C14    C11        0.000    0.000   0
+ VAR      CONST_16 C10    C9     C8     C7       180.000    0.000   0
+ VAR      CONST_17 C9     C8     N2     C4         0.000    0.000   0
+ VAR      CONST_18 C8     N2     C5     N4         0.000    0.000   0
+ VAR      CONST_19 C9     C8     C7     C6       180.000    0.000   0
+ VAR      CONST_20 C8     C7     C6     N4         0.000    0.000   0
+ VAR      CONST_21 C7     C6     N4     C5         0.000    0.000   0
+ VAR      CONST_22 C6     N4     C5     N3       180.000    0.000   0
+ VAR      CONST_23 N4     C5     N3     HN3     -179.965    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ VAR      plan-1    C1        0.020
+ VAR      plan-1    O1        0.020
+ VAR      plan-1    C2        0.020
+ VAR      plan-1    C10       0.020
+ VAR      plan-1    C3        0.020
+ VAR      plan-1    N1        0.020
+ VAR      plan-1    H2        0.020
+ VAR      plan-1    H3        0.020
+ VAR      plan-1    C4        0.020
+ VAR      plan-1    N2        0.020
+ VAR      plan-1    C9        0.020
+ VAR      plan-1    C5        0.020
+ VAR      plan-1    C8        0.020
+ VAR      plan-1    N4        0.020
+ VAR      plan-1    C6        0.020
+ VAR      plan-1    C7        0.020
+ VAR      plan-1    N3        0.020
+ VAR      plan-1    H6        0.020
+ VAR      plan-1    H7        0.020
+ VAR      plan-1    C11       0.020
+ VAR      plan-1    HN3A      0.020
+ VAR      plan-1    HN3       0.020
+ VAR      plan-2    N3        0.020
+ VAR      plan-2    C5        0.020
+ VAR      plan-2    HN3       0.020
+ VAR      plan-2    HN3A      0.020
+ VAR      plan-3    C11       0.020
+ VAR      plan-3    C9        0.020
+ VAR      plan-3    C14       0.020
+ VAR      plan-3    N5        0.020
+ VAR      plan-3    C13       0.020
+ VAR      plan-3    N7        0.020
+ VAR      plan-3    C12       0.020
+ VAR      plan-3    H14       0.020
+ VAR      plan-3    H13       0.020
+ VAR      plan-3    N6        0.020
+ VAR      plan-3    HN6A      0.020
+ VAR      plan-3    HN6       0.020
+ VAR      plan-4    N6        0.020
+ VAR      plan-4    C12       0.020
+ VAR      plan-4    HN6       0.020
+ VAR      plan-4    HN6A      0.020
+# ------------------------------------------------------

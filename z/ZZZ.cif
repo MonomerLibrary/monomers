@@ -1,0 +1,235 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ZZZ      ZZZ '6-FORMYLTETRAHYDROPTERIN            ' non-polymer        23  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ZZZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ZZZ           O6A    O    O         0.000      0.000    0.000    0.000
+ ZZZ           C6A    C    C1        0.000     -0.466    0.507    0.993
+ ZZZ           H6A    H    H         0.000      0.070    1.290    1.500
+ ZZZ           C6     C    CH1       0.000     -1.798    0.042    1.521
+ ZZZ           H6     H    H         0.000     -1.681   -0.330    2.549
+ ZZZ           C7     C    CH2       0.000     -2.800    1.206    1.503
+ ZZZ           H7C2   H    H         0.000     -2.405    2.047    2.076
+ ZZZ           H7C1   H    H         0.000     -3.751    0.887    1.935
+ ZZZ           N5     N    NH1       0.000     -2.329   -1.029    0.663
+ ZZZ           H5     H    H         0.000     -2.302   -1.993    0.962
+ ZZZ           C10    C    CR6       0.000     -2.876   -0.677   -0.591
+ ZZZ           C9     C    CR6       0.000     -3.215    0.641   -0.857
+ ZZZ           N8     N    NH1       0.000     -3.007    1.616    0.106
+ ZZZ           H8     H    H         0.000     -2.998    2.593   -0.147
+ ZZZ           C4     C    CR6       0.000     -3.086   -1.646   -1.578
+ ZZZ           O4     O    O         0.000     -2.798   -2.817   -1.377
+ ZZZ           N3     N    NR16      0.000     -3.620   -1.260   -2.757
+ ZZZ           H3     H    H         0.000     -3.792   -1.963   -3.504
+ ZZZ           C2     C    CR6       0.000     -3.932    0.046   -2.971
+ ZZZ           N1     N    NRD6      0.000     -3.737    0.963   -2.047
+ ZZZ           N2     N    NH2       0.000     -4.470    0.418   -4.178
+ ZZZ           H2N2   H    H         0.000     -4.628   -0.273   -4.902
+ ZZZ           H2N1   H    H         0.000     -4.712    1.386   -4.354
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ZZZ      O6A    n/a    C6A    START
+ ZZZ      C6A    O6A    C6     .
+ ZZZ      H6A    C6A    .      .
+ ZZZ      C6     C6A    N5     .
+ ZZZ      H6     C6     .      .
+ ZZZ      C7     C6     H7C1   .
+ ZZZ      H7C2   C7     .      .
+ ZZZ      H7C1   C7     .      .
+ ZZZ      N5     C6     C10    .
+ ZZZ      H5     N5     .      .
+ ZZZ      C10    N5     C4     .
+ ZZZ      C9     C10    N8     .
+ ZZZ      N8     C9     H8     .
+ ZZZ      H8     N8     .      .
+ ZZZ      C4     C10    N3     .
+ ZZZ      O4     C4     .      .
+ ZZZ      N3     C4     C2     .
+ ZZZ      H3     N3     .      .
+ ZZZ      C2     N3     N2     .
+ ZZZ      N1     C2     .      .
+ ZZZ      N2     C2     H2N1   .
+ ZZZ      H2N2   N2     .      .
+ ZZZ      H2N1   N2     .      END
+ ZZZ      C7     N8     .    ADD
+ ZZZ      C9     N1     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ZZZ      C7     N8        single      1.450    0.020
+ ZZZ      C7     C6        single      1.524    0.020
+ ZZZ      H7C1   C7        single      1.092    0.020
+ ZZZ      H7C2   C7        single      1.092    0.020
+ ZZZ      N8     C9        single      1.350    0.020
+ ZZZ      H8     N8        single      1.010    0.020
+ ZZZ      C9     N1        single      1.350    0.020
+ ZZZ      C9     C10       double      1.487    0.020
+ ZZZ      N1     C2        double      1.350    0.020
+ ZZZ      N2     C2        single      1.355    0.020
+ ZZZ      C2     N3        single      1.337    0.020
+ ZZZ      H2N1   N2        single      1.010    0.020
+ ZZZ      H2N2   N2        single      1.010    0.020
+ ZZZ      C4     C10       single      1.487    0.020
+ ZZZ      C10    N5        single      1.350    0.020
+ ZZZ      N3     C4        single      1.337    0.020
+ ZZZ      O4     C4        double      1.250    0.020
+ ZZZ      H3     N3        single      1.040    0.020
+ ZZZ      N5     C6        single      1.450    0.020
+ ZZZ      H5     N5        single      1.010    0.020
+ ZZZ      C6     C6A       single      1.510    0.020
+ ZZZ      H6     C6        single      1.099    0.020
+ ZZZ      C6A    O6A       double      1.220    0.020
+ ZZZ      H6A    C6A       single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ZZZ      O6A    C6A    H6A     123.000    3.000
+ ZZZ      O6A    C6A    C6      120.500    3.000
+ ZZZ      H6A    C6A    C6      120.000    3.000
+ ZZZ      C6A    C6     H6      108.810    3.000
+ ZZZ      C6A    C6     C7      109.470    3.000
+ ZZZ      C6A    C6     N5      111.600    3.000
+ ZZZ      H6     C6     C7      108.340    3.000
+ ZZZ      H6     C6     N5      108.550    3.000
+ ZZZ      C7     C6     N5      110.000    3.000
+ ZZZ      C6     C7     H7C2    109.470    3.000
+ ZZZ      C6     C7     H7C1    109.470    3.000
+ ZZZ      C6     C7     N8      110.000    3.000
+ ZZZ      H7C2   C7     H7C1    107.900    3.000
+ ZZZ      H7C2   C7     N8      109.470    3.000
+ ZZZ      H7C1   C7     N8      109.470    3.000
+ ZZZ      C6     N5     H5      118.500    3.000
+ ZZZ      C6     N5     C10     120.000    3.000
+ ZZZ      H5     N5     C10     120.000    3.000
+ ZZZ      N5     C10    C9      120.000    3.000
+ ZZZ      N5     C10    C4      120.000    3.000
+ ZZZ      C9     C10    C4      120.000    3.000
+ ZZZ      C10    C9     N8      120.000    3.000
+ ZZZ      C10    C9     N1      120.000    3.000
+ ZZZ      N8     C9     N1      120.000    3.000
+ ZZZ      C9     N8     H8      120.000    3.000
+ ZZZ      C9     N8     C7      120.000    3.000
+ ZZZ      H8     N8     C7      118.500    3.000
+ ZZZ      C10    C4     O4      120.000    3.000
+ ZZZ      C10    C4     N3      120.000    3.000
+ ZZZ      O4     C4     N3      120.000    3.000
+ ZZZ      C4     N3     H3      120.000    3.000
+ ZZZ      C4     N3     C2      120.000    3.000
+ ZZZ      H3     N3     C2      120.000    3.000
+ ZZZ      N3     C2     N1      120.000    3.000
+ ZZZ      N3     C2     N2      120.000    3.000
+ ZZZ      N1     C2     N2      120.000    3.000
+ ZZZ      C2     N1     C9      120.000    3.000
+ ZZZ      C2     N2     H2N2    120.000    3.000
+ ZZZ      C2     N2     H2N1    120.000    3.000
+ ZZZ      H2N2   N2     H2N1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ZZZ      var_1    O6A    C6A    C6     N5         0.008   20.000   1
+ ZZZ      var_2    C6A    C6     C7     N8        60.000   20.000   3
+ ZZZ      var_3    C6     C7     N8     C9        60.000   20.000   3
+ ZZZ      var_4    C6A    C6     N5     C10      -90.000   20.000   3
+ ZZZ      var_5    C6     N5     C10    C4       150.000   20.000   1
+ ZZZ      CONST_1  N5     C10    C9     N8         0.000    0.000   0
+ ZZZ      CONST_2  C10    C9     N1     C2         0.000    0.000   0
+ ZZZ      var_6    C10    C9     N8     C7       -30.000   20.000   1
+ ZZZ      CONST_3  N5     C10    C4     N3       180.000    0.000   0
+ ZZZ      CONST_4  C10    C4     N3     C2         0.000    0.000   0
+ ZZZ      CONST_5  C4     N3     C2     N2       180.000    0.000   0
+ ZZZ      CONST_6  N3     C2     N1     C9         0.000    0.000   0
+ ZZZ      CONST_7  N3     C2     N2     H2N1     179.760    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ZZZ      chir_01  C6     C7     N5     C6A       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ZZZ      plan-1    N8        0.020
+ ZZZ      plan-1    C7        0.020
+ ZZZ      plan-1    C9        0.020
+ ZZZ      plan-1    H8        0.020
+ ZZZ      plan-2    C9        0.020
+ ZZZ      plan-2    N8        0.020
+ ZZZ      plan-2    N1        0.020
+ ZZZ      plan-2    C10       0.020
+ ZZZ      plan-2    C2        0.020
+ ZZZ      plan-2    C4        0.020
+ ZZZ      plan-2    N3        0.020
+ ZZZ      plan-2    N2        0.020
+ ZZZ      plan-2    N5        0.020
+ ZZZ      plan-2    O4        0.020
+ ZZZ      plan-2    H3        0.020
+ ZZZ      plan-2    H8        0.020
+ ZZZ      plan-2    H2N2      0.020
+ ZZZ      plan-2    H2N1      0.020
+ ZZZ      plan-2    H5        0.020
+ ZZZ      plan-3    N2        0.020
+ ZZZ      plan-3    C2        0.020
+ ZZZ      plan-3    H2N1      0.020
+ ZZZ      plan-3    H2N2      0.020
+ ZZZ      plan-4    N5        0.020
+ ZZZ      plan-4    C10       0.020
+ ZZZ      plan-4    C6        0.020
+ ZZZ      plan-4    H5        0.020
+ ZZZ      plan-5    C6A       0.020
+ ZZZ      plan-5    C6        0.020
+ ZZZ      plan-5    O6A       0.020
+ ZZZ      plan-5    H6A       0.020
+# ------------------------------------------------------

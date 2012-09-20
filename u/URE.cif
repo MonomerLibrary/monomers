@@ -1,0 +1,120 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+URE      URE 'UREA                                ' non-polymer         8   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_URE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ URE           O      O    O         0.000      0.000    0.000    0.000
+ URE           C      C    C         0.000     -1.215    0.000    0.000
+ URE           N2     N    NH2       0.000     -1.888   -1.167    0.000
+ URE           HN22   H    H         0.000     -2.901   -1.172    0.000
+ URE           HN21   H    H         0.000     -1.385   -2.046    0.000
+ URE           N1     N    NH2       0.000     -1.888   -1.167    0.000
+ URE           HN12   H    H         0.000     -2.901   -1.172    0.000
+ URE           HN11   H    H         0.000     -1.385   -2.046    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ URE      O      n/a    C      START
+ URE      C      O      N1     .
+ URE      N2     C      HN21   .
+ URE      HN22   N2     .      .
+ URE      HN21   N2     .      .
+ URE      N1     C      HN11   .
+ URE      HN12   N1     .      .
+ URE      HN11   N1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ URE      C      O         double      1.220    0.020
+ URE      N1     C         single      1.332    0.020
+ URE      N2     C         single      1.332    0.020
+ URE      HN11   N1        single      1.010    0.020
+ URE      HN12   N1        single      1.010    0.020
+ URE      HN21   N2        single      1.010    0.020
+ URE      HN22   N2        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ URE      O      C      N2      123.000    3.000
+ URE      O      C      N1      123.000    3.000
+ URE      N2     C      N1      120.000    3.000
+ URE      C      N2     HN22    120.000    3.000
+ URE      C      N2     HN21    120.000    3.000
+ URE      HN22   N2     HN21    120.000    3.000
+ URE      C      N1     HN12    120.000    3.000
+ URE      C      N1     HN11    120.000    3.000
+ URE      HN12   N1     HN11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ URE      CONST_1  O      C      N2     HN21       0.000    0.000   0
+ URE      CONST_2  O      C      N1     HN11       0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ URE      plan-1    C         0.020
+ URE      plan-1    O         0.020
+ URE      plan-1    N1        0.020
+ URE      plan-1    N2        0.020
+ URE      plan-1    HN12      0.020
+ URE      plan-1    HN11      0.020
+ URE      plan-1    HN22      0.020
+ URE      plan-1    HN21      0.020
+ URE      plan-2    N1        0.020
+ URE      plan-2    C         0.020
+ URE      plan-2    HN11      0.020
+ URE      plan-2    HN12      0.020
+ URE      plan-3    N2        0.020
+ URE      plan-3    C         0.020
+ URE      plan-3    HN21      0.020
+ URE      plan-3    HN22      0.020
+# ------------------------------------------------------

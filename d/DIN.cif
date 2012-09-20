@@ -1,0 +1,196 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DIN      DIN '1,6-DIHYDROXY NAPHTHALENE           ' non-polymer        20  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DIN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DIN           O2     O    OH1       0.000      0.000    0.000    0.000
+ DIN           HO2    H    H         0.000      0.322   -0.041    0.911
+ DIN           C3     C    CR6       0.000     -1.352    0.141    0.004
+ DIN           C2     C    CR16      0.000     -2.145   -0.971   -0.008
+ DIN           H2     H    H         0.000     -1.700   -1.958   -0.025
+ DIN           C4     C    CR16      0.000     -1.912    1.421    0.016
+ DIN           H4     H    H         0.000     -1.264    2.288    0.021
+ DIN           C5     C    CR16      0.000     -3.261    1.593    0.020
+ DIN           H5     H    H         0.000     -3.682    2.591    0.030
+ DIN           C10    C    CR66      0.000     -4.108    0.472    0.012
+ DIN           C1     C    CR66      0.000     -3.543   -0.827    0.000
+ DIN           C6     C    CR6       0.000     -5.510    0.616    0.016
+ DIN           O1     O    OH1       0.000     -6.072    1.851    0.027
+ DIN           HO1    H    H         0.000     -6.207    2.150   -0.883
+ DIN           C9     C    CR16      0.000     -6.305   -0.509    0.007
+ DIN           H9     H    H         0.000     -7.383   -0.401    0.009
+ DIN           C7     C    CR16      0.000     -5.740   -1.781   -0.004
+ DIN           H7     H    H         0.000     -6.386   -2.650   -0.010
+ DIN           C8     C    CR16      0.000     -4.389   -1.950   -0.008
+ DIN           H8     H    H         0.000     -3.966   -2.947   -0.016
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DIN      O2     n/a    C3     START
+ DIN      HO2    O2     .      .
+ DIN      C3     O2     C4     .
+ DIN      C2     C3     H2     .
+ DIN      H2     C2     .      .
+ DIN      C4     C3     C5     .
+ DIN      H4     C4     .      .
+ DIN      C5     C4     C10    .
+ DIN      H5     C5     .      .
+ DIN      C10    C5     C6     .
+ DIN      C1     C10    .      .
+ DIN      C6     C10    C9     .
+ DIN      O1     C6     HO1    .
+ DIN      HO1    O1     .      .
+ DIN      C9     C6     C7     .
+ DIN      H9     C9     .      .
+ DIN      C7     C9     C8     .
+ DIN      H7     C7     .      .
+ DIN      C8     C7     H8     .
+ DIN      H8     C8     .      END
+ DIN      C1     C2     .    ADD
+ DIN      C1     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DIN      C1     C2        double      1.390    0.020
+ DIN      C1     C8        single      1.390    0.020
+ DIN      C1     C10       single      1.490    0.020
+ DIN      C2     C3        single      1.390    0.020
+ DIN      H2     C2        single      1.083    0.020
+ DIN      C4     C3        double      1.390    0.020
+ DIN      C3     O2        single      1.362    0.020
+ DIN      C5     C4        single      1.390    0.020
+ DIN      H4     C4        single      1.083    0.020
+ DIN      C10    C5        double      1.390    0.020
+ DIN      H5     C5        single      1.083    0.020
+ DIN      O1     C6        single      1.362    0.020
+ DIN      C9     C6        double      1.390    0.020
+ DIN      C6     C10       single      1.490    0.020
+ DIN      C8     C7        double      1.390    0.020
+ DIN      C7     C9        single      1.390    0.020
+ DIN      H7     C7        single      1.083    0.020
+ DIN      H8     C8        single      1.083    0.020
+ DIN      HO1    O1        single      0.967    0.020
+ DIN      HO2    O2        single      0.967    0.020
+ DIN      H9     C9        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DIN      HO2    O2     C3      109.470    3.000
+ DIN      O2     C3     C2      120.000    3.000
+ DIN      O2     C3     C4      120.000    3.000
+ DIN      C2     C3     C4      120.000    3.000
+ DIN      C3     C2     H2      120.000    3.000
+ DIN      C3     C2     C1      120.000    3.000
+ DIN      H2     C2     C1      120.000    3.000
+ DIN      C3     C4     H4      120.000    3.000
+ DIN      C3     C4     C5      120.000    3.000
+ DIN      H4     C4     C5      120.000    3.000
+ DIN      C4     C5     H5      120.000    3.000
+ DIN      C4     C5     C10     120.000    3.000
+ DIN      H5     C5     C10     120.000    3.000
+ DIN      C5     C10    C1      120.000    3.000
+ DIN      C5     C10    C6      120.000    3.000
+ DIN      C1     C10    C6      120.000    3.000
+ DIN      C10    C1     C2      120.000    3.000
+ DIN      C10    C1     C8      120.000    3.000
+ DIN      C2     C1     C8      120.000    3.000
+ DIN      C10    C6     O1      120.000    3.000
+ DIN      C10    C6     C9      120.000    3.000
+ DIN      O1     C6     C9      120.000    3.000
+ DIN      C6     O1     HO1     109.470    3.000
+ DIN      C6     C9     H9      120.000    3.000
+ DIN      C6     C9     C7      120.000    3.000
+ DIN      H9     C9     C7      120.000    3.000
+ DIN      C9     C7     H7      120.000    3.000
+ DIN      C9     C7     C8      120.000    3.000
+ DIN      H7     C7     C8      120.000    3.000
+ DIN      C7     C8     H8      120.000    3.000
+ DIN      C7     C8     C1      120.000    3.000
+ DIN      H8     C8     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DIN      var_1    HO2    O2     C3     C4        90.041   20.000   1
+ DIN      CONST_1  O2     C3     C2     C1       180.000    0.000   0
+ DIN      CONST_2  O2     C3     C4     C5       180.000    0.000   0
+ DIN      CONST_3  C3     C4     C5     C10        0.000    0.000   0
+ DIN      CONST_4  C4     C5     C10    C6       180.000    0.000   0
+ DIN      CONST_5  C5     C10    C1     C2         0.000    0.000   0
+ DIN      CONST_6  C10    C1     C2     C3         0.000    0.000   0
+ DIN      CONST_7  C10    C1     C8     C7         0.000    0.000   0
+ DIN      CONST_8  C5     C10    C6     C9       180.000    0.000   0
+ DIN      var_2    C10    C6     O1     HO1       90.001   20.000   1
+ DIN      CONST_9  C10    C6     C9     C7         0.000    0.000   0
+ DIN      CONST_10 C6     C9     C7     C8         0.000    0.000   0
+ DIN      CONST_11 C9     C7     C8     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DIN      plan-1    C1        0.020
+ DIN      plan-1    C2        0.020
+ DIN      plan-1    C8        0.020
+ DIN      plan-1    C10       0.020
+ DIN      plan-1    C6        0.020
+ DIN      plan-1    C7        0.020
+ DIN      plan-1    C9        0.020
+ DIN      plan-1    C3        0.020
+ DIN      plan-1    H2        0.020
+ DIN      plan-1    C4        0.020
+ DIN      plan-1    C5        0.020
+ DIN      plan-1    O2        0.020
+ DIN      plan-1    H4        0.020
+ DIN      plan-1    H5        0.020
+ DIN      plan-1    O1        0.020
+ DIN      plan-1    H7        0.020
+ DIN      plan-1    H8        0.020
+ DIN      plan-1    H9        0.020
+# ------------------------------------------------------

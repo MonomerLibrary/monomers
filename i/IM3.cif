@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IM3      IM3 '(2E)-3-(3,4-DIHYDROXYPHENYL)-2-IMINO' non-polymer        22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IM3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IM3           O      O    OC       -0.500      0.000    0.000    0.000
+ IM3           C      C    C         0.000     -1.088    0.553    0.273
+ IM3           OXT    O    OC       -0.500     -1.335    1.357    1.200
+ IM3           CA     C    C         0.000     -2.123    0.143   -0.730
+ IM3           N      N    N         0.000     -2.257    0.876   -1.784
+ IM3           HN     H    H         0.000     -2.907    0.653   -2.454
+ IM3           CB     C    CH2       0.000     -2.975   -1.065   -0.425
+ IM3           HB1    H    H         0.000     -2.365   -1.775    0.138
+ IM3           HB2    H    H         0.000     -3.274   -1.516   -1.374
+ IM3           CG     C    CR6       0.000     -4.189   -0.714    0.365
+ IM3           CD1    C    CR16      0.000     -5.373   -0.373   -0.290
+ IM3           HD1    H    H         0.000     -5.409   -0.364   -1.372
+ IM3           CE1    C    CR16      0.000     -6.509   -0.044    0.448
+ IM3           HE1    H    H         0.000     -7.427    0.221   -0.061
+ IM3           CZ     C    CR6       0.000     -6.462   -0.054    1.842
+ IM3           OH     O    OH1       0.000     -7.578    0.269    2.552
+ IM3           HOH    H    H         0.000     -8.060    0.971    2.094
+ IM3           CE2    C    CR6       0.000     -5.278   -0.395    2.498
+ IM3           CD2    C    CR16      0.000     -4.142   -0.724    1.759
+ IM3           HD2    H    H         0.000     -3.223   -0.989    2.267
+ IM3           O14    O    OH1       0.000     -5.220   -0.410    3.858
+ IM3           H14    H    H         0.000     -6.008    0.019    4.219
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IM3      O      n/a    C      START
+ IM3      C      O      CA     .
+ IM3      OXT    C      .      .
+ IM3      CA     C      CB     .
+ IM3      N      CA     HN     .
+ IM3      HN     N      .      .
+ IM3      CB     CA     CG     .
+ IM3      HB1    CB     .      .
+ IM3      HB2    CB     .      .
+ IM3      CG     CB     CD1    .
+ IM3      CD1    CG     CE1    .
+ IM3      HD1    CD1    .      .
+ IM3      CE1    CD1    CZ     .
+ IM3      HE1    CE1    .      .
+ IM3      CZ     CE1    CE2    .
+ IM3      OH     CZ     HOH    .
+ IM3      HOH    OH     .      .
+ IM3      CE2    CZ     O14    .
+ IM3      CD2    CE2    HD2    .
+ IM3      HD2    CD2    .      .
+ IM3      O14    CE2    H14    .
+ IM3      H14    O14    .      END
+ IM3      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IM3      OXT    C         deloc       1.250    0.020
+ IM3      CA     C         single      1.460    0.020
+ IM3      C      O         deloc       1.250    0.020
+ IM3      N      CA        double      1.260    0.020
+ IM3      CB     CA        single      1.510    0.020
+ IM3      HN     N         single      0.954    0.020
+ IM3      CG     CB        single      1.511    0.020
+ IM3      HB1    CB        single      1.092    0.020
+ IM3      HB2    CB        single      1.092    0.020
+ IM3      CD1    CG        single      1.390    0.020
+ IM3      CG     CD2       double      1.390    0.020
+ IM3      CD2    CE2       single      1.390    0.020
+ IM3      HD2    CD2       single      1.083    0.020
+ IM3      CE2    CZ        double      1.487    0.020
+ IM3      O14    CE2       single      1.362    0.020
+ IM3      H14    O14       single      0.967    0.020
+ IM3      CZ     CE1       single      1.390    0.020
+ IM3      OH     CZ        single      1.362    0.020
+ IM3      HOH    OH        single      0.967    0.020
+ IM3      CE1    CD1       double      1.390    0.020
+ IM3      HE1    CE1       single      1.083    0.020
+ IM3      HD1    CD1       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IM3      O      C      OXT     123.000    3.000
+ IM3      O      C      CA      120.000    3.000
+ IM3      OXT    C      CA      120.000    3.000
+ IM3      C      CA     N       116.500    3.000
+ IM3      C      CA     CB      120.000    3.000
+ IM3      N      CA     CB      116.500    3.000
+ IM3      CA     N      HN      120.000    3.000
+ IM3      CA     CB     HB1     109.470    3.000
+ IM3      CA     CB     HB2     109.470    3.000
+ IM3      CA     CB     CG      109.470    3.000
+ IM3      HB1    CB     HB2     107.900    3.000
+ IM3      HB1    CB     CG      109.470    3.000
+ IM3      HB2    CB     CG      109.470    3.000
+ IM3      CB     CG     CD1     120.000    3.000
+ IM3      CB     CG     CD2     120.000    3.000
+ IM3      CD1    CG     CD2     120.000    3.000
+ IM3      CG     CD1    HD1     120.000    3.000
+ IM3      CG     CD1    CE1     120.000    3.000
+ IM3      HD1    CD1    CE1     120.000    3.000
+ IM3      CD1    CE1    HE1     120.000    3.000
+ IM3      CD1    CE1    CZ      120.000    3.000
+ IM3      HE1    CE1    CZ      120.000    3.000
+ IM3      CE1    CZ     OH      120.000    3.000
+ IM3      CE1    CZ     CE2     120.000    3.000
+ IM3      OH     CZ     CE2     120.000    3.000
+ IM3      CZ     OH     HOH     109.470    3.000
+ IM3      CZ     CE2    CD2     120.000    3.000
+ IM3      CZ     CE2    O14     120.000    3.000
+ IM3      CD2    CE2    O14     120.000    3.000
+ IM3      CE2    CD2    HD2     120.000    3.000
+ IM3      CE2    CD2    CG      120.000    3.000
+ IM3      HD2    CD2    CG      120.000    3.000
+ IM3      CE2    O14    H14     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IM3      var_1    O      C      CA     CB        91.581   20.000   1
+ IM3      CONST_1  C      CA     N      HN       180.000    0.000   0
+ IM3      var_2    C      CA     CB     CG        87.510   20.000   3
+ IM3      var_3    CA     CB     CG     CD1       89.959   20.000   2
+ IM3      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ IM3      CONST_3  CB     CG     CD1    CE1      180.000    0.000   0
+ IM3      CONST_4  CG     CD1    CE1    CZ         0.000    0.000   0
+ IM3      CONST_5  CD1    CE1    CZ     CE2        0.000    0.000   0
+ IM3      var_4    CE1    CZ     OH     HOH      -36.477   20.000   1
+ IM3      CONST_6  CE1    CZ     CE2    O14      180.000    0.000   0
+ IM3      CONST_7  CZ     CE2    CD2    CG         0.000    0.000   0
+ IM3      var_5    CZ     CE2    O14    H14      -12.195   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IM3      plan-1    C         0.020
+ IM3      plan-1    OXT       0.020
+ IM3      plan-1    O         0.020
+ IM3      plan-1    CA        0.020
+ IM3      plan-2    CA        0.020
+ IM3      plan-2    C         0.020
+ IM3      plan-2    N         0.020
+ IM3      plan-2    CB        0.020
+ IM3      plan-2    HN        0.020
+ IM3      plan-3    CG        0.020
+ IM3      plan-3    CB        0.020
+ IM3      plan-3    CD2       0.020
+ IM3      plan-3    CD1       0.020
+ IM3      plan-3    CE2       0.020
+ IM3      plan-3    CZ        0.020
+ IM3      plan-3    CE1       0.020
+ IM3      plan-3    HD2       0.020
+ IM3      plan-3    O14       0.020
+ IM3      plan-3    OH        0.020
+ IM3      plan-3    HE1       0.020
+ IM3      plan-3    HD1       0.020
+# ------------------------------------------------------

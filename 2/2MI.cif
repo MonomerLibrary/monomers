@@ -1,0 +1,190 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2MI      2MI '2-METHYL-1H-INDOLE                  ' non-polymer        19  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2MI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2MI           CAJ    C    CH3       0.000      0.000    0.000    0.000
+ 2MI           HAJ1   H    H         0.000      0.353    0.007    0.998
+ 2MI           HAJ2   H    H         0.000      0.370   -0.857   -0.499
+ 2MI           HAJ3   H    H         0.000      0.336    0.872   -0.499
+ 2MI           CAG    C    CR5       0.000     -1.507   -0.030    0.000
+ 2MI           NAE    N    NR15      0.000     -2.314    1.073    0.000
+ 2MI           HAE    H    H         0.000     -1.980    2.058   -0.001
+ 2MI           CAB    C    CR56      0.000     -3.636    0.687    0.000
+ 2MI           CAA    C    CR56      0.000     -3.657   -0.720    0.001
+ 2MI           CAC    C    CR15      0.000     -2.255   -1.145   -0.004
+ 2MI           HAC    H    H         0.000     -1.890   -2.164   -0.011
+ 2MI           CAF    C    CR16      0.000     -4.839    1.385   -0.001
+ 2MI           HAF    H    H         0.000     -4.838    2.468   -0.002
+ 2MI           CAI    C    CR16      0.000     -6.031    0.695   -0.001
+ 2MI           HAI    H    H         0.000     -6.967    1.241   -0.002
+ 2MI           CAH    C    CR16      0.000     -6.046   -0.692    0.001
+ 2MI           HAH    H    H         0.000     -6.992   -1.219    0.002
+ 2MI           CAD    C    CR16      0.000     -4.876   -1.399    0.002
+ 2MI           HAD    H    H         0.000     -4.896   -2.482    0.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2MI      CAJ    n/a    CAG    START
+ 2MI      HAJ1   CAJ    .      .
+ 2MI      HAJ2   CAJ    .      .
+ 2MI      HAJ3   CAJ    .      .
+ 2MI      CAG    CAJ    NAE    .
+ 2MI      NAE    CAG    CAB    .
+ 2MI      HAE    NAE    .      .
+ 2MI      CAB    NAE    CAF    .
+ 2MI      CAA    CAB    CAC    .
+ 2MI      CAC    CAA    HAC    .
+ 2MI      HAC    CAC    .      .
+ 2MI      CAF    CAB    CAI    .
+ 2MI      HAF    CAF    .      .
+ 2MI      CAI    CAF    CAH    .
+ 2MI      HAI    CAI    .      .
+ 2MI      CAH    CAI    CAD    .
+ 2MI      HAH    CAH    .      .
+ 2MI      CAD    CAH    HAD    .
+ 2MI      HAD    CAD    .      END
+ 2MI      CAG    CAC    .    ADD
+ 2MI      CAA    CAD    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2MI      CAG    CAJ       single      1.506    0.020
+ 2MI      HAJ1   CAJ       single      1.059    0.020
+ 2MI      HAJ2   CAJ       single      1.059    0.020
+ 2MI      HAJ3   CAJ       single      1.059    0.020
+ 2MI      CAG    CAC       double      1.387    0.020
+ 2MI      NAE    CAG       single      1.340    0.020
+ 2MI      CAC    CAA       single      1.440    0.020
+ 2MI      HAC    CAC       single      1.083    0.020
+ 2MI      CAA    CAD       single      1.390    0.020
+ 2MI      CAA    CAB       double      1.490    0.020
+ 2MI      CAD    CAH       double      1.390    0.020
+ 2MI      HAD    CAD       single      1.083    0.020
+ 2MI      CAH    CAI       single      1.390    0.020
+ 2MI      HAH    CAH       single      1.083    0.020
+ 2MI      CAI    CAF       double      1.390    0.020
+ 2MI      HAI    CAI       single      1.083    0.020
+ 2MI      CAF    CAB       single      1.390    0.020
+ 2MI      HAF    CAF       single      1.083    0.020
+ 2MI      CAB    NAE       single      1.340    0.020
+ 2MI      HAE    NAE       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2MI      HAJ1   CAJ    HAJ2    109.470    3.000
+ 2MI      HAJ1   CAJ    HAJ3    109.470    3.000
+ 2MI      HAJ2   CAJ    HAJ3    109.470    3.000
+ 2MI      HAJ1   CAJ    CAG     109.470    3.000
+ 2MI      HAJ2   CAJ    CAG     109.470    3.000
+ 2MI      HAJ3   CAJ    CAG     109.470    3.000
+ 2MI      CAJ    CAG    NAE     126.000    3.000
+ 2MI      CAJ    CAG    CAC     108.000    3.000
+ 2MI      NAE    CAG    CAC     108.000    3.000
+ 2MI      CAG    NAE    HAE     126.000    3.000
+ 2MI      CAG    NAE    CAB     108.000    3.000
+ 2MI      HAE    NAE    CAB     126.000    3.000
+ 2MI      NAE    CAB    CAA     108.000    3.000
+ 2MI      NAE    CAB    CAF     132.000    3.000
+ 2MI      CAA    CAB    CAF     120.000    3.000
+ 2MI      CAB    CAA    CAC     120.000    3.000
+ 2MI      CAB    CAA    CAD     120.000    3.000
+ 2MI      CAC    CAA    CAD     126.000    3.000
+ 2MI      CAA    CAC    HAC     108.000    3.000
+ 2MI      CAA    CAC    CAG     108.000    3.000
+ 2MI      HAC    CAC    CAG     126.000    3.000
+ 2MI      CAB    CAF    HAF     120.000    3.000
+ 2MI      CAB    CAF    CAI     120.000    3.000
+ 2MI      HAF    CAF    CAI     120.000    3.000
+ 2MI      CAF    CAI    HAI     120.000    3.000
+ 2MI      CAF    CAI    CAH     120.000    3.000
+ 2MI      HAI    CAI    CAH     120.000    3.000
+ 2MI      CAI    CAH    HAH     120.000    3.000
+ 2MI      CAI    CAH    CAD     120.000    3.000
+ 2MI      HAH    CAH    CAD     120.000    3.000
+ 2MI      CAH    CAD    HAD     120.000    3.000
+ 2MI      CAH    CAD    CAA     120.000    3.000
+ 2MI      HAD    CAD    CAA     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 2MI      var_1    HAJ3   CAJ    CAG    NAE      -29.939   20.000   1
+ 2MI      CONST_1  CAJ    CAG    CAC    CAA      180.000    0.000   0
+ 2MI      CONST_2  CAJ    CAG    NAE    CAB      180.000    0.000   0
+ 2MI      CONST_3  CAG    NAE    CAB    CAF      180.000    0.000   0
+ 2MI      CONST_4  NAE    CAB    CAA    CAC        0.000    0.000   0
+ 2MI      CONST_5  CAB    CAA    CAD    CAH        0.000    0.000   0
+ 2MI      CONST_6  CAB    CAA    CAC    CAG        0.000    0.000   0
+ 2MI      CONST_7  NAE    CAB    CAF    CAI      180.000    0.000   0
+ 2MI      CONST_8  CAB    CAF    CAI    CAH        0.000    0.000   0
+ 2MI      CONST_9  CAF    CAI    CAH    CAD        0.000    0.000   0
+ 2MI      CONST_10 CAI    CAH    CAD    CAA        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 2MI      plan-1    CAG       0.020
+ 2MI      plan-1    CAJ       0.020
+ 2MI      plan-1    CAC       0.020
+ 2MI      plan-1    NAE       0.020
+ 2MI      plan-1    CAA       0.020
+ 2MI      plan-1    HAC       0.020
+ 2MI      plan-1    CAD       0.020
+ 2MI      plan-1    CAB       0.020
+ 2MI      plan-1    CAH       0.020
+ 2MI      plan-1    CAI       0.020
+ 2MI      plan-1    CAF       0.020
+ 2MI      plan-1    HAD       0.020
+ 2MI      plan-1    HAH       0.020
+ 2MI      plan-1    HAI       0.020
+ 2MI      plan-1    HAF       0.020
+ 2MI      plan-1    HAE       0.020
+# ------------------------------------------------------

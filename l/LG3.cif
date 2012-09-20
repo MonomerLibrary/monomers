@@ -1,0 +1,163 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LG3      LG3 'PYRIMIDINE-2,4-DIAMINE              ' non-polymer        14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LG3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LG3           N8     N    NH2       0.000      0.000    0.000    0.000
+ LG3           HN81   H    H         0.000      0.708    0.729   -0.004
+ LG3           HN82   H    H         0.000      0.296   -0.972    0.004
+ LG3           C4     C    CR6       0.000     -1.347    0.326    0.000
+ LG3           N3     N    NRD6      0.000     -2.271   -0.628   -0.004
+ LG3           C5     C    CR16      0.000     -1.752    1.663   -0.001
+ LG3           H5     H    H         0.000     -1.023    2.463   -0.002
+ LG3           C6     C    CR16      0.000     -3.105    1.940    0.000
+ LG3           H6     H    H         0.000     -3.453    2.966    0.000
+ LG3           N1     N    NRD6      0.000     -3.972    0.939    0.000
+ LG3           C2     C    CR6       0.000     -3.559   -0.320    0.001
+ LG3           N7     N    NH2       0.000     -4.497   -1.339    0.001
+ LG3           HN72   H    H         0.000     -4.203   -2.311    0.002
+ LG3           HN71   H    H         0.000     -5.490   -1.126    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LG3      N8     n/a    C4     START
+ LG3      HN81   N8     .      .
+ LG3      HN82   N8     .      .
+ LG3      C4     N8     C5     .
+ LG3      N3     C4     .      .
+ LG3      C5     C4     C6     .
+ LG3      H5     C5     .      .
+ LG3      C6     C5     N1     .
+ LG3      H6     C6     .      .
+ LG3      N1     C6     C2     .
+ LG3      C2     N1     N7     .
+ LG3      N7     C2     HN71   .
+ LG3      HN72   N7     .      .
+ LG3      HN71   N7     .      END
+ LG3      C2     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LG3      C2     N3        double      1.350    0.020
+ LG3      C2     N1        single      1.350    0.020
+ LG3      N7     C2        single      1.355    0.020
+ LG3      N3     C4        single      1.350    0.020
+ LG3      C5     C4        double      1.390    0.020
+ LG3      C4     N8        single      1.355    0.020
+ LG3      C6     C5        single      1.390    0.020
+ LG3      H5     C5        single      1.083    0.020
+ LG3      N1     C6        double      1.337    0.020
+ LG3      H6     C6        single      1.083    0.020
+ LG3      HN71   N7        single      1.010    0.020
+ LG3      HN72   N7        single      1.010    0.020
+ LG3      HN81   N8        single      1.010    0.020
+ LG3      HN82   N8        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LG3      HN81   N8     HN82    120.000    3.000
+ LG3      HN81   N8     C4      120.000    3.000
+ LG3      HN82   N8     C4      120.000    3.000
+ LG3      N8     C4     N3      120.000    3.000
+ LG3      N8     C4     C5      120.000    3.000
+ LG3      N3     C4     C5      120.000    3.000
+ LG3      C4     N3     C2      120.000    3.000
+ LG3      C4     C5     H5      120.000    3.000
+ LG3      C4     C5     C6      120.000    3.000
+ LG3      H5     C5     C6      120.000    3.000
+ LG3      C5     C6     H6      120.000    3.000
+ LG3      C5     C6     N1      120.000    3.000
+ LG3      H6     C6     N1      120.000    3.000
+ LG3      C6     N1     C2      120.000    3.000
+ LG3      N1     C2     N7      120.000    3.000
+ LG3      N1     C2     N3      120.000    3.000
+ LG3      N7     C2     N3      120.000    3.000
+ LG3      C2     N7     HN72    120.000    3.000
+ LG3      C2     N7     HN71    120.000    3.000
+ LG3      HN72   N7     HN71    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LG3      CONST_1  HN82   N8     C4     C5       179.775    0.000   0
+ LG3      CONST_2  N8     C4     N3     C2       180.000    0.000   0
+ LG3      CONST_3  N8     C4     C5     C6       180.000    0.000   0
+ LG3      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ LG3      CONST_5  C5     C6     N1     C2         0.000    0.000   0
+ LG3      CONST_6  C6     N1     C2     N7       180.000    0.000   0
+ LG3      CONST_7  N1     C2     N3     C4         0.000    0.000   0
+ LG3      CONST_8  N1     C2     N7     HN71       0.019    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LG3      plan-1    C2        0.020
+ LG3      plan-1    N3        0.020
+ LG3      plan-1    N1        0.020
+ LG3      plan-1    N7        0.020
+ LG3      plan-1    C4        0.020
+ LG3      plan-1    C5        0.020
+ LG3      plan-1    C6        0.020
+ LG3      plan-1    N8        0.020
+ LG3      plan-1    H5        0.020
+ LG3      plan-1    H6        0.020
+ LG3      plan-1    HN72      0.020
+ LG3      plan-1    HN71      0.020
+ LG3      plan-1    HN81      0.020
+ LG3      plan-1    HN82      0.020
+ LG3      plan-2    N7        0.020
+ LG3      plan-2    C2        0.020
+ LG3      plan-2    HN71      0.020
+ LG3      plan-2    HN72      0.020
+ LG3      plan-3    N8        0.020
+ LG3      plan-3    C4        0.020
+ LG3      plan-3    HN81      0.020
+ LG3      plan-3    HN82      0.020
+# ------------------------------------------------------

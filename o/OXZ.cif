@@ -1,0 +1,196 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OXZ      OXZ 'TETRAHYDROOXAZINE                   ' non-polymer        21  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OXZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OXZ           O3     O    OH1       0.000      0.000    0.000    0.000
+ OXZ           HC     H    H         0.000      0.405   -0.352   -0.804
+ OXZ           C3     C    CH1       0.000     -1.353   -0.449    0.086
+ OXZ           H4     H    H         0.000     -1.375   -1.547    0.122
+ OXZ           C4     C    CH1       0.000     -2.008    0.119    1.351
+ OXZ           H3     H    H         0.000     -1.868    1.209    1.380
+ OXZ           O4     O    OH1       0.000     -1.410   -0.470    2.507
+ OXZ           HB     H    H         0.000     -0.464   -0.272    2.516
+ OXZ           C2     C    CH2       0.000     -2.137    0.040   -1.135
+ OXZ           H5C1   H    H         0.000     -1.716   -0.405   -2.040
+ OXZ           H5C2   H    H         0.000     -2.068    1.128   -1.201
+ OXZ           N1     N    NH1       0.000     -3.542   -0.357   -1.002
+ OXZ           H1     H    H         0.000     -4.040   -1.003   -1.597
+ OXZ           O5     O    O2        0.000     -4.089    0.355    0.147
+ OXZ           C5     C    CH1       0.000     -3.503   -0.204    1.321
+ OXZ           H2     H    H         0.000     -3.642   -1.295    1.315
+ OXZ           C6     C    CH2       0.000     -4.178    0.387    2.559
+ OXZ           H1C1   H    H         0.000     -4.038    1.470    2.565
+ OXZ           H1C2   H    H         0.000     -3.728   -0.042    3.457
+ OXZ           O6     O    OH1       0.000     -5.574    0.085    2.533
+ OXZ           HA     H    H         0.000     -5.998    0.460    3.317
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OXZ      O3     n/a    C3     START
+ OXZ      HC     O3     .      .
+ OXZ      C3     O3     C2     .
+ OXZ      H4     C3     .      .
+ OXZ      C4     C3     O4     .
+ OXZ      H3     C4     .      .
+ OXZ      O4     C4     HB     .
+ OXZ      HB     O4     .      .
+ OXZ      C2     C3     N1     .
+ OXZ      H5C1   C2     .      .
+ OXZ      H5C2   C2     .      .
+ OXZ      N1     C2     O5     .
+ OXZ      H1     N1     .      .
+ OXZ      O5     N1     C5     .
+ OXZ      C5     O5     C6     .
+ OXZ      H2     C5     .      .
+ OXZ      C6     C5     O6     .
+ OXZ      H1C1   C6     .      .
+ OXZ      H1C2   C6     .      .
+ OXZ      O6     C6     HA     .
+ OXZ      HA     O6     .      END
+ OXZ      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OXZ      C6     C5        single      1.524    0.020
+ OXZ      O6     C6        single      1.432    0.020
+ OXZ      H1C1   C6        single      1.092    0.020
+ OXZ      H1C2   C6        single      1.092    0.020
+ OXZ      C5     C4        single      1.524    0.020
+ OXZ      C5     O5        single      1.426    0.020
+ OXZ      H2     C5        single      1.099    0.020
+ OXZ      C4     C3        single      1.524    0.020
+ OXZ      O4     C4        single      1.432    0.020
+ OXZ      H3     C4        single      1.099    0.020
+ OXZ      C2     C3        single      1.524    0.020
+ OXZ      C3     O3        single      1.432    0.020
+ OXZ      H4     C3        single      1.099    0.020
+ OXZ      N1     C2        single      1.450    0.020
+ OXZ      H5C1   C2        single      1.092    0.020
+ OXZ      H5C2   C2        single      1.092    0.020
+ OXZ      HA     O6        single      0.967    0.020
+ OXZ      O5     N1        single      1.335    0.020
+ OXZ      HB     O4        single      0.967    0.020
+ OXZ      HC     O3        single      0.967    0.020
+ OXZ      H1     N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OXZ      HC     O3     C3      109.470    3.000
+ OXZ      O3     C3     H4      109.470    3.000
+ OXZ      O3     C3     C4      109.470    3.000
+ OXZ      O3     C3     C2      109.470    3.000
+ OXZ      H4     C3     C4      108.340    3.000
+ OXZ      H4     C3     C2      108.340    3.000
+ OXZ      C4     C3     C2      111.000    3.000
+ OXZ      C3     C4     H3      108.340    3.000
+ OXZ      C3     C4     O4      109.470    3.000
+ OXZ      C3     C4     C5      111.000    3.000
+ OXZ      H3     C4     O4      109.470    3.000
+ OXZ      H3     C4     C5      108.340    3.000
+ OXZ      O4     C4     C5      109.470    3.000
+ OXZ      C4     O4     HB      109.470    3.000
+ OXZ      C3     C2     H5C1    109.470    3.000
+ OXZ      C3     C2     H5C2    109.470    3.000
+ OXZ      C3     C2     N1      110.000    3.000
+ OXZ      H5C1   C2     H5C2    107.900    3.000
+ OXZ      H5C1   C2     N1      109.470    3.000
+ OXZ      H5C2   C2     N1      109.470    3.000
+ OXZ      C2     N1     H1      118.500    3.000
+ OXZ      C2     N1     O5      120.000    3.000
+ OXZ      H1     N1     O5      120.000    3.000
+ OXZ      N1     O5     C5      120.000    3.000
+ OXZ      O5     C5     H2      109.470    3.000
+ OXZ      O5     C5     C6      109.470    3.000
+ OXZ      O5     C5     C4      109.470    3.000
+ OXZ      H2     C5     C6      108.340    3.000
+ OXZ      H2     C5     C4      108.340    3.000
+ OXZ      C6     C5     C4      111.000    3.000
+ OXZ      C5     C6     H1C1    109.470    3.000
+ OXZ      C5     C6     H1C2    109.470    3.000
+ OXZ      C5     C6     O6      109.470    3.000
+ OXZ      H1C1   C6     H1C2    107.900    3.000
+ OXZ      H1C1   C6     O6      109.470    3.000
+ OXZ      H1C2   C6     O6      109.470    3.000
+ OXZ      C6     O6     HA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OXZ      var_1    HC     O3     C3     C2       -59.958   20.000   1
+ OXZ      var_2    O3     C3     C4     O4       -60.000   20.000   3
+ OXZ      var_3    C3     C4     O4     HB        59.909   20.000   1
+ OXZ      var_4    O3     C3     C2     N1       180.000   20.000   3
+ OXZ      var_5    C3     C2     N1     O5        60.000   20.000   3
+ OXZ      var_6    C2     N1     O5     C5       -60.000   20.000   1
+ OXZ      var_7    N1     O5     C5     C6       180.000   20.000   1
+ OXZ      var_8    O5     C5     C4     C3       -60.000   20.000   3
+ OXZ      var_9    O5     C5     C6     O6        59.933   20.000   3
+ OXZ      var_10   C5     C6     O6     HA       179.955   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OXZ      chir_01  C5     C6     C4     O5        positiv
+ OXZ      chir_02  C4     C5     C3     O4        positiv
+ OXZ      chir_03  C3     C4     C2     O3        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OXZ      plan-1    N1        0.020
+ OXZ      plan-1    C2        0.000
+ OXZ      plan-1    O5        0.000
+ OXZ      plan-1    H1        0.000
+# ------------------------------------------------------

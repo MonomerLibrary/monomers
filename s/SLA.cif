@@ -1,0 +1,265 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SLA      SLA '(3S,4R)-3-hydroxy-2-[(1S)-1-hydroxy-' non-polymer        32  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SLA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SLA           O10    O    O         0.000      0.000    0.000    0.000
+ SLA           C3     C    C         0.000     -1.116    0.171   -0.444
+ SLA           C2     C    CH1       0.000     -1.469    0.202   -1.915
+ SLA           H2     H    H         0.000     -1.503   -0.818   -2.324
+ SLA           C9     C    CH3       0.000     -0.463    1.057   -2.688
+ SLA           H9B    H    H         0.000      0.493    0.600   -2.651
+ SLA           H9A    H    H         0.000     -0.773    1.142   -3.698
+ SLA           H9     H    H         0.000     -0.410    2.021   -2.254
+ SLA           N4     N    NH1       0.000     -2.220    0.358    0.301
+ SLA           HN4    H    H         0.000     -2.229    0.382    1.310
+ SLA           C5     C    CT        0.000     -3.410    0.523   -0.543
+ SLA           C6     C    C         0.000     -4.258    1.659   -0.032
+ SLA           O7     O    OC       -0.500     -3.734    2.581    0.632
+ SLA           OXT    O    OC       -0.500     -5.485    1.681   -0.273
+ SLA           C1     C    CH1       0.000     -2.873    0.848   -1.954
+ SLA           H1     H    H         0.000     -3.498    0.383   -2.729
+ SLA           O8     O    OH1       0.000     -2.780    2.260   -2.153
+ SLA           HO8    H    H         0.000     -2.353    2.438   -3.002
+ SLA           C11    C    CH1       0.000     -4.221   -0.774   -0.571
+ SLA           H11    H    H         0.000     -5.150   -0.612   -1.137
+ SLA           O12    O    OH1       0.000     -3.454   -1.803   -1.199
+ SLA           HO12   H    H         0.000     -2.638   -1.945   -0.701
+ SLA           C13    C    CH1       0.000     -4.563   -1.193    0.859
+ SLA           H13    H    H         0.000     -3.643   -1.232    1.459
+ SLA           C15    C    CH3       0.000     -5.220   -2.575    0.843
+ SLA           H15B   H    H         0.000     -4.522   -3.295    0.501
+ SLA           H15A   H    H         0.000     -5.536   -2.829    1.822
+ SLA           H15    H    H         0.000     -6.058   -2.562    0.195
+ SLA           C14    C    CH3       0.000     -5.529   -0.177    1.473
+ SLA           H14B   H    H         0.000     -5.915   -0.559    2.382
+ SLA           H14A   H    H         0.000     -5.016    0.731    1.662
+ SLA           H14    H    H         0.000     -6.327    0.005    0.800
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SLA      O10    n/a    C3     START
+ SLA      C3     O10    N4     .
+ SLA      C2     C3     C9     .
+ SLA      H2     C2     .      .
+ SLA      C9     C2     H9     .
+ SLA      H9B    C9     .      .
+ SLA      H9A    C9     .      .
+ SLA      H9     C9     .      .
+ SLA      N4     C3     C5     .
+ SLA      HN4    N4     .      .
+ SLA      C5     N4     C11    .
+ SLA      C6     C5     OXT    .
+ SLA      O7     C6     .      .
+ SLA      OXT    C6     .      .
+ SLA      C1     C5     O8     .
+ SLA      H1     C1     .      .
+ SLA      O8     C1     HO8    .
+ SLA      HO8    O8     .      .
+ SLA      C11    C5     C13    .
+ SLA      H11    C11    .      .
+ SLA      O12    C11    HO12   .
+ SLA      HO12   O12    .      .
+ SLA      C13    C11    C14    .
+ SLA      H13    C13    .      .
+ SLA      C15    C13    H15    .
+ SLA      H15B   C15    .      .
+ SLA      H15A   C15    .      .
+ SLA      H15    C15    .      .
+ SLA      C14    C13    H14    .
+ SLA      H14B   C14    .      .
+ SLA      H14A   C14    .      .
+ SLA      H14    C14    .      END
+ SLA      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SLA      OXT    C6        deloc       1.250    0.020
+ SLA      O8     C1        single      1.432    0.020
+ SLA      C1     C5        single      1.524    0.020
+ SLA      C1     C2        single      1.524    0.020
+ SLA      H1     C1        single      1.099    0.020
+ SLA      C9     C2        single      1.524    0.020
+ SLA      C2     C3        single      1.500    0.020
+ SLA      H2     C2        single      1.099    0.020
+ SLA      N4     C3        single      1.330    0.020
+ SLA      C3     O10       double      1.220    0.020
+ SLA      C5     N4        single      1.450    0.020
+ SLA      HN4    N4        single      1.010    0.020
+ SLA      C6     C5        single      1.507    0.020
+ SLA      C11    C5        single      1.524    0.020
+ SLA      O7     C6        deloc       1.250    0.020
+ SLA      HO8    O8        single      0.967    0.020
+ SLA      H9     C9        single      1.059    0.020
+ SLA      H9A    C9        single      1.059    0.020
+ SLA      H9B    C9        single      1.059    0.020
+ SLA      C13    C11       single      1.524    0.020
+ SLA      O12    C11       single      1.432    0.020
+ SLA      H11    C11       single      1.099    0.020
+ SLA      HO12   O12       single      0.967    0.020
+ SLA      C14    C13       single      1.524    0.020
+ SLA      C15    C13       single      1.524    0.020
+ SLA      H13    C13       single      1.099    0.020
+ SLA      H14    C14       single      1.059    0.020
+ SLA      H14A   C14       single      1.059    0.020
+ SLA      H14B   C14       single      1.059    0.020
+ SLA      H15    C15       single      1.059    0.020
+ SLA      H15A   C15       single      1.059    0.020
+ SLA      H15B   C15       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SLA      O10    C3     C2      120.500    3.000
+ SLA      O10    C3     N4      123.000    3.000
+ SLA      C2     C3     N4      116.500    3.000
+ SLA      C3     C2     H2      108.810    3.000
+ SLA      C3     C2     C9      109.470    3.000
+ SLA      C3     C2     C1      109.470    3.000
+ SLA      H2     C2     C9      108.340    3.000
+ SLA      H2     C2     C1      108.340    3.000
+ SLA      C9     C2     C1      111.000    3.000
+ SLA      C2     C9     H9B     109.470    3.000
+ SLA      C2     C9     H9A     109.470    3.000
+ SLA      C2     C9     H9      109.470    3.000
+ SLA      H9B    C9     H9A     109.470    3.000
+ SLA      H9B    C9     H9      109.470    3.000
+ SLA      H9A    C9     H9      109.470    3.000
+ SLA      C3     N4     HN4     120.000    3.000
+ SLA      C3     N4     C5      121.500    3.000
+ SLA      HN4    N4     C5      118.500    3.000
+ SLA      N4     C5     C6      111.600    3.000
+ SLA      N4     C5     C1      110.000    3.000
+ SLA      N4     C5     C11     110.000    3.000
+ SLA      C6     C5     C1      109.470    3.000
+ SLA      C6     C5     C11     109.470    3.000
+ SLA      C1     C5     C11     111.000    3.000
+ SLA      C5     C6     O7      118.500    3.000
+ SLA      C5     C6     OXT     118.500    3.000
+ SLA      O7     C6     OXT     123.000    3.000
+ SLA      C5     C1     H1      108.340    3.000
+ SLA      C5     C1     O8      109.470    3.000
+ SLA      C5     C1     C2      111.000    3.000
+ SLA      H1     C1     O8      109.470    3.000
+ SLA      H1     C1     C2      108.340    3.000
+ SLA      O8     C1     C2      109.470    3.000
+ SLA      C1     O8     HO8     109.470    3.000
+ SLA      C5     C11    H11     108.340    3.000
+ SLA      C5     C11    O12     109.470    3.000
+ SLA      C5     C11    C13     111.000    3.000
+ SLA      H11    C11    O12     109.470    3.000
+ SLA      H11    C11    C13     108.340    3.000
+ SLA      O12    C11    C13     109.470    3.000
+ SLA      C11    O12    HO12    109.470    3.000
+ SLA      C11    C13    H13     108.340    3.000
+ SLA      C11    C13    C15     111.000    3.000
+ SLA      C11    C13    C14     111.000    3.000
+ SLA      H13    C13    C15     108.340    3.000
+ SLA      H13    C13    C14     108.340    3.000
+ SLA      C15    C13    C14     111.000    3.000
+ SLA      C13    C15    H15B    109.470    3.000
+ SLA      C13    C15    H15A    109.470    3.000
+ SLA      C13    C15    H15     109.470    3.000
+ SLA      H15B   C15    H15A    109.470    3.000
+ SLA      H15B   C15    H15     109.470    3.000
+ SLA      H15A   C15    H15     109.470    3.000
+ SLA      C13    C14    H14B    109.470    3.000
+ SLA      C13    C14    H14A    109.470    3.000
+ SLA      C13    C14    H14     109.470    3.000
+ SLA      H14B   C14    H14A    109.470    3.000
+ SLA      H14B   C14    H14     109.470    3.000
+ SLA      H14A   C14    H14     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SLA      var_1    O10    C3     C2     C9       -60.000   20.000   3
+ SLA      var_2    C3     C2     C9     H9       -54.787   20.000   3
+ SLA      CONST_1  O10    C3     N4     C5       180.000    0.000   0
+ SLA      var_3    C3     N4     C5     C11       90.000   20.000   1
+ SLA      var_4    N4     C5     C6     OXT     -154.751   20.000   1
+ SLA      var_5    N4     C5     C1     O8       -90.000   20.000   1
+ SLA      var_6    C5     C1     C2     C3       -30.000   20.000   3
+ SLA      var_7    C5     C1     O8     HO8      173.853   20.000   1
+ SLA      var_8    N4     C5     C11    C13       55.388   20.000   1
+ SLA      var_9    C5     C11    O12    HO12      60.000   20.000   1
+ SLA      var_10   C5     C11    C13    C14       67.029   20.000   3
+ SLA      var_11   C11    C13    C15    H15      -54.931   20.000   3
+ SLA      var_12   C11    C13    C14    H14       48.897   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SLA      chir_01  C1     C2     C5     O8        negativ
+ SLA      chir_02  C2     C1     C3     C9        positiv
+ SLA      chir_03  C5     C1     N4     C6        negativ
+ SLA      chir_04  C11    C5     O12    C13       negativ
+ SLA      chir_05  C13    C11    C14    C15       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SLA      plan-1    C3        0.020
+ SLA      plan-1    C2        0.020
+ SLA      plan-1    N4        0.020
+ SLA      plan-1    O10       0.020
+ SLA      plan-1    HN4       0.020
+ SLA      plan-2    N4        0.020
+ SLA      plan-2    C3        0.020
+ SLA      plan-2    C5        0.020
+ SLA      plan-2    HN4       0.020
+ SLA      plan-3    C6        0.020
+ SLA      plan-3    OXT       0.020
+ SLA      plan-3    C5        0.020
+ SLA      plan-3    O7        0.020
+# ------------------------------------------------------

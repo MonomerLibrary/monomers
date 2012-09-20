@@ -1,0 +1,231 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HQI      HQI 'N-(8-hydroxyquinolin-5-yl)acetamide ' non-polymer        25  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HQI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HQI           OAB    O    O         0.000      0.000    0.000    0.000
+ HQI           CAK    C    C         0.000     -0.583   -0.949    0.481
+ HQI           CAA    C    CH3       0.000      0.199   -2.118    1.025
+ HQI           HAAB   H    H         0.000      1.137   -1.781    1.385
+ HQI           HAAA   H    H         0.000     -0.341   -2.568    1.818
+ HQI           HAA    H    H         0.000      0.353   -2.830    0.256
+ HQI           N1     N    NH1       0.000     -1.930   -0.958    0.531
+ HQI           HN1    H    H         0.000     -2.418   -1.781    0.854
+ HQI           CAM    C    CR6       0.000     -2.651    0.172    0.135
+ HQI           CAG    C    CR16      0.000     -2.068    1.420    0.185
+ HQI           HAG    H    H         0.000     -1.047    1.521    0.533
+ HQI           CAN    C    CR66      0.000     -3.979    0.042   -0.320
+ HQI           CAH    C    CR16      0.000     -4.610   -1.214   -0.384
+ HQI           HAH    H    H         0.000     -4.087   -2.114   -0.085
+ HQI           CAD    C    CR16      0.000     -5.899   -1.267   -0.834
+ HQI           HAD    H    H         0.000     -6.412   -2.218   -0.897
+ HQI           CAE    C    CR16      0.000     -6.551   -0.095   -1.211
+ HQI           HAE    H    H         0.000     -7.573   -0.151   -1.565
+ HQI           CAO    C    CR66      0.000     -4.701    1.193   -0.719
+ HQI           N2     N    NRD6      0.000     -5.961    1.073   -1.149
+ HQI           CAL    C    CR6       0.000     -4.073    2.455   -0.655
+ HQI           CAF    C    CR16      0.000     -2.776    2.551   -0.207
+ HQI           HAF    H    H         0.000     -2.299    3.522   -0.160
+ HQI           OAC    O    OH1       0.000     -4.749    3.571   -1.034
+ HQI           HOAC   H    H         0.000     -4.606    3.729   -1.977
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HQI      OAB    n/a    CAK    START
+ HQI      CAK    OAB    N1     .
+ HQI      CAA    CAK    HAA    .
+ HQI      HAAB   CAA    .      .
+ HQI      HAAA   CAA    .      .
+ HQI      HAA    CAA    .      .
+ HQI      N1     CAK    CAM    .
+ HQI      HN1    N1     .      .
+ HQI      CAM    N1     CAN    .
+ HQI      CAG    CAM    HAG    .
+ HQI      HAG    CAG    .      .
+ HQI      CAN    CAM    CAO    .
+ HQI      CAH    CAN    CAD    .
+ HQI      HAH    CAH    .      .
+ HQI      CAD    CAH    CAE    .
+ HQI      HAD    CAD    .      .
+ HQI      CAE    CAD    HAE    .
+ HQI      HAE    CAE    .      .
+ HQI      CAO    CAN    CAL    .
+ HQI      N2     CAO    .      .
+ HQI      CAL    CAO    OAC    .
+ HQI      CAF    CAL    HAF    .
+ HQI      HAF    CAF    .      .
+ HQI      OAC    CAL    HOAC   .
+ HQI      HOAC   OAC    .      END
+ HQI      N2     CAE    .    ADD
+ HQI      CAF    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HQI      N1     CAK       single      1.330    0.020
+ HQI      CAM    N1        single      1.350    0.020
+ HQI      N2     CAE       double      1.337    0.020
+ HQI      N2     CAO       single      1.350    0.020
+ HQI      CAA    CAK       single      1.500    0.020
+ HQI      CAK    OAB       double      1.220    0.020
+ HQI      OAC    CAL       single      1.362    0.020
+ HQI      CAE    CAD       single      1.390    0.020
+ HQI      CAD    CAH       double      1.390    0.020
+ HQI      CAF    CAG       double      1.390    0.020
+ HQI      CAF    CAL       single      1.390    0.020
+ HQI      CAG    CAM       single      1.390    0.020
+ HQI      CAH    CAN       single      1.390    0.020
+ HQI      CAL    CAO       double      1.490    0.020
+ HQI      CAN    CAM       double      1.490    0.020
+ HQI      CAO    CAN       single      1.490    0.020
+ HQI      HN1    N1        single      1.010    0.020
+ HQI      HAA    CAA       single      1.059    0.020
+ HQI      HAAA   CAA       single      1.059    0.020
+ HQI      HAAB   CAA       single      1.059    0.020
+ HQI      HOAC   OAC       single      0.967    0.020
+ HQI      HAD    CAD       single      1.083    0.020
+ HQI      HAE    CAE       single      1.083    0.020
+ HQI      HAF    CAF       single      1.083    0.020
+ HQI      HAG    CAG       single      1.083    0.020
+ HQI      HAH    CAH       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HQI      OAB    CAK    CAA     123.000    3.000
+ HQI      OAB    CAK    N1      123.000    3.000
+ HQI      CAA    CAK    N1      116.500    3.000
+ HQI      CAK    CAA    HAAB    109.470    3.000
+ HQI      CAK    CAA    HAAA    109.470    3.000
+ HQI      CAK    CAA    HAA     109.470    3.000
+ HQI      HAAB   CAA    HAAA    109.470    3.000
+ HQI      HAAB   CAA    HAA     109.470    3.000
+ HQI      HAAA   CAA    HAA     109.470    3.000
+ HQI      CAK    N1     HN1     120.000    3.000
+ HQI      CAK    N1     CAM     120.000    3.000
+ HQI      HN1    N1     CAM     120.000    3.000
+ HQI      N1     CAM    CAG     120.000    3.000
+ HQI      N1     CAM    CAN     120.000    3.000
+ HQI      CAG    CAM    CAN     120.000    3.000
+ HQI      CAM    CAG    HAG     120.000    3.000
+ HQI      CAM    CAG    CAF     120.000    3.000
+ HQI      HAG    CAG    CAF     120.000    3.000
+ HQI      CAM    CAN    CAH     120.000    3.000
+ HQI      CAM    CAN    CAO     120.000    3.000
+ HQI      CAH    CAN    CAO     120.000    3.000
+ HQI      CAN    CAH    HAH     120.000    3.000
+ HQI      CAN    CAH    CAD     120.000    3.000
+ HQI      HAH    CAH    CAD     120.000    3.000
+ HQI      CAH    CAD    HAD     120.000    3.000
+ HQI      CAH    CAD    CAE     120.000    3.000
+ HQI      HAD    CAD    CAE     120.000    3.000
+ HQI      CAD    CAE    HAE     120.000    3.000
+ HQI      CAD    CAE    N2      120.000    3.000
+ HQI      HAE    CAE    N2      120.000    3.000
+ HQI      CAN    CAO    N2      120.000    3.000
+ HQI      CAN    CAO    CAL     120.000    3.000
+ HQI      N2     CAO    CAL     120.000    3.000
+ HQI      CAO    N2     CAE     120.000    3.000
+ HQI      CAO    CAL    CAF     120.000    3.000
+ HQI      CAO    CAL    OAC     120.000    3.000
+ HQI      CAF    CAL    OAC     120.000    3.000
+ HQI      CAL    CAF    HAF     120.000    3.000
+ HQI      CAL    CAF    CAG     120.000    3.000
+ HQI      HAF    CAF    CAG     120.000    3.000
+ HQI      CAL    OAC    HOAC    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HQI      var_1    OAB    CAK    CAA    HAA      -90.023   20.000   1
+ HQI      CONST_1  OAB    CAK    N1     CAM        0.000    0.000   0
+ HQI      var_2    CAK    N1     CAM    CAN      155.083   20.000   1
+ HQI      CONST_2  N1     CAM    CAG    CAF      180.000    0.000   0
+ HQI      CONST_3  N1     CAM    CAN    CAO      180.000    0.000   0
+ HQI      CONST_4  CAM    CAN    CAH    CAD      180.000    0.000   0
+ HQI      CONST_5  CAN    CAH    CAD    CAE        0.000    0.000   0
+ HQI      CONST_6  CAH    CAD    CAE    N2         0.000    0.000   0
+ HQI      CONST_7  CAM    CAN    CAO    CAL        0.000    0.000   0
+ HQI      CONST_8  CAN    CAO    N2     CAE        0.000    0.000   0
+ HQI      CONST_9  CAO    N2     CAE    CAD        0.000    0.000   0
+ HQI      CONST_10 CAN    CAO    CAL    OAC      180.000    0.000   0
+ HQI      CONST_11 CAO    CAL    CAF    CAG        0.000    0.000   0
+ HQI      CONST_12 CAL    CAF    CAG    CAM        0.000    0.000   0
+ HQI      var_3    CAO    CAL    OAC    HOAC     -90.088   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HQI      plan-1    N1        0.020
+ HQI      plan-1    CAK       0.020
+ HQI      plan-1    CAM       0.020
+ HQI      plan-1    HN1       0.020
+ HQI      plan-2    N2        0.020
+ HQI      plan-2    CAE       0.020
+ HQI      plan-2    CAO       0.020
+ HQI      plan-2    CAD       0.020
+ HQI      plan-2    CAH       0.020
+ HQI      plan-2    HAD       0.020
+ HQI      plan-2    HAE       0.020
+ HQI      plan-2    CAN       0.020
+ HQI      plan-2    HAH       0.020
+ HQI      plan-2    CAM       0.020
+ HQI      plan-2    CAL       0.020
+ HQI      plan-2    CAF       0.020
+ HQI      plan-2    CAG       0.020
+ HQI      plan-2    HAF       0.020
+ HQI      plan-2    HAG       0.020
+ HQI      plan-2    OAC       0.020
+ HQI      plan-2    N1        0.020
+ HQI      plan-2    HN1       0.020
+ HQI      plan-3    CAK       0.020
+ HQI      plan-3    N1        0.020
+ HQI      plan-3    CAA       0.020
+ HQI      plan-3    OAB       0.020
+ HQI      plan-3    HN1       0.020
+# ------------------------------------------------------

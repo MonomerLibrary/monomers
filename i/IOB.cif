@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IOB      IOB '3-IODO-BENZYL ALCOHOL               ' non-polymer        16   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IOB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IOB           I      I    I         0.000      0.000    0.000    0.000
+ IOB           CE1    C    CR6       0.000     -2.021    0.034    0.548
+ IOB           CZ     C    CR16      0.000     -2.999   -0.172   -0.408
+ IOB           HZ     H    H         0.000     -2.720   -0.351   -1.439
+ IOB           CE2    C    CR16      0.000     -4.333   -0.149   -0.047
+ IOB           HE2    H    H         0.000     -5.099   -0.309   -0.796
+ IOB           CD2    C    CR16      0.000     -4.689    0.079    1.268
+ IOB           HD2    H    H         0.000     -5.735    0.097    1.551
+ IOB           CD1    C    CR16      0.000     -2.378    0.268    1.862
+ IOB           HD1    H    H         0.000     -1.612    0.438    2.609
+ IOB           CG     C    CR6       0.000     -3.712    0.285    2.223
+ IOB           CB     C    CH2       0.000     -4.101    0.535    3.658
+ IOB           HB2    H    H         0.000     -5.071    1.034    3.690
+ IOB           HB1    H    H         0.000     -3.350    1.170    4.133
+ IOB           O      O    OH1       0.000     -4.182   -0.711    4.353
+ IOB           H      H    H         0.000     -4.430   -0.550    5.273
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IOB      I      n/a    CE1    START
+ IOB      CE1    I      CD1    .
+ IOB      CZ     CE1    CE2    .
+ IOB      HZ     CZ     .      .
+ IOB      CE2    CZ     CD2    .
+ IOB      HE2    CE2    .      .
+ IOB      CD2    CE2    HD2    .
+ IOB      HD2    CD2    .      .
+ IOB      CD1    CE1    CG     .
+ IOB      HD1    CD1    .      .
+ IOB      CG     CD1    CB     .
+ IOB      CB     CG     O      .
+ IOB      HB2    CB     .      .
+ IOB      HB1    CB     .      .
+ IOB      O      CB     H      .
+ IOB      H      O      .      END
+ IOB      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IOB      CG     CD2       double      1.390    0.020
+ IOB      CG     CD1       single      1.390    0.020
+ IOB      CB     CG        single      1.511    0.020
+ IOB      CD2    CE2       single      1.390    0.020
+ IOB      HD2    CD2       single      1.083    0.020
+ IOB      CD1    CE1       double      1.390    0.020
+ IOB      HD1    CD1       single      1.083    0.020
+ IOB      CE2    CZ        double      1.390    0.020
+ IOB      HE2    CE2       single      1.083    0.020
+ IOB      CZ     CE1       single      1.390    0.020
+ IOB      CE1    I         single      2.090    0.020
+ IOB      HZ     CZ        single      1.083    0.020
+ IOB      O      CB        single      1.432    0.020
+ IOB      H      O         single      0.967    0.020
+ IOB      HB2    CB        single      1.092    0.020
+ IOB      HB1    CB        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IOB      I      CE1    CZ      120.000    3.000
+ IOB      I      CE1    CD1     120.000    3.000
+ IOB      CZ     CE1    CD1     120.000    3.000
+ IOB      CE1    CZ     HZ      120.000    3.000
+ IOB      CE1    CZ     CE2     120.000    3.000
+ IOB      HZ     CZ     CE2     120.000    3.000
+ IOB      CZ     CE2    HE2     120.000    3.000
+ IOB      CZ     CE2    CD2     120.000    3.000
+ IOB      HE2    CE2    CD2     120.000    3.000
+ IOB      CE2    CD2    HD2     120.000    3.000
+ IOB      CE2    CD2    CG      120.000    3.000
+ IOB      HD2    CD2    CG      120.000    3.000
+ IOB      CE1    CD1    HD1     120.000    3.000
+ IOB      CE1    CD1    CG      120.000    3.000
+ IOB      HD1    CD1    CG      120.000    3.000
+ IOB      CD1    CG     CB      120.000    3.000
+ IOB      CD1    CG     CD2     120.000    3.000
+ IOB      CB     CG     CD2     120.000    3.000
+ IOB      CG     CB     HB2     109.470    3.000
+ IOB      CG     CB     HB1     109.470    3.000
+ IOB      CG     CB     O       109.500    3.000
+ IOB      HB2    CB     HB1     107.900    3.000
+ IOB      HB2    CB     O       109.470    3.000
+ IOB      HB1    CB     O       109.470    3.000
+ IOB      CB     O      H       109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IOB      CONST_1  I      CE1    CZ     CE2      180.000    0.000   0
+ IOB      CONST_2  CE1    CZ     CE2    CD2        0.000    0.000   0
+ IOB      CONST_3  CZ     CE2    CD2    CG         0.000    0.000   0
+ IOB      CONST_4  I      CE1    CD1    CG       180.000    0.000   0
+ IOB      CONST_5  CE1    CD1    CG     CB       180.000    0.000   0
+ IOB      CONST_6  CD1    CG     CD2    CE2        0.000    0.000   0
+ IOB      var_1    CD1    CG     CB     O        -90.308   20.000   2
+ IOB      var_2    CG     CB     O      H        179.946   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IOB      plan-1    CG        0.020
+ IOB      plan-1    CD2       0.020
+ IOB      plan-1    CD1       0.020
+ IOB      plan-1    CB        0.020
+ IOB      plan-1    CE2       0.020
+ IOB      plan-1    CE1       0.020
+ IOB      plan-1    CZ        0.020
+ IOB      plan-1    HD2       0.020
+ IOB      plan-1    HD1       0.020
+ IOB      plan-1    HE2       0.020
+ IOB      plan-1    I         0.020
+ IOB      plan-1    HZ        0.020
+# ------------------------------------------------------

@@ -1,0 +1,201 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LT2      LT2 '(3S)-3-hydroxy-2,3-dihydro-1H-indole' non-polymer        19  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LT2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LT2           OAB    O    O         0.000      0.000    0.000    0.000
+ LT2           CAK    C    CR6       0.000     -1.208    0.097   -0.040
+ LT2           CAJ    C    CR6       0.000     -2.086   -1.099    0.165
+ LT2           OAA    O    O         0.000     -1.600   -2.193    0.375
+ LT2           CAD    C    CR16      0.000     -3.481   -0.938    0.110
+ LT2           HAD    H    H         0.000     -4.123   -1.798    0.258
+ LT2           CAE    C    CR16      0.000     -1.856    1.398   -0.292
+ LT2           HAE    H    H         0.000     -1.255    2.285   -0.445
+ LT2           CAI    C    CR6       0.000     -3.197    1.474   -0.330
+ LT2           CAH    C    CR6       0.000     -4.043    0.289   -0.127
+ LT2           NAG    N    NH1       0.000     -5.373    0.631   -0.214
+ LT2           HNAG   H    H         0.000     -6.138   -0.020   -0.108
+ LT2           CAL    C    CH1       0.000     -4.119    2.652   -0.563
+ LT2           HAL    H    H         0.000     -3.944    3.086   -1.558
+ LT2           OAC    O    OH1       0.000     -3.931    3.640    0.451
+ LT2           HOAC   H    H         0.000     -4.526    4.385    0.290
+ LT2           CAF    C    CH2       0.000     -5.533    2.059   -0.479
+ LT2           HAFA   H    H         0.000     -6.069    2.198   -1.421
+ LT2           HAF    H    H         0.000     -6.100    2.520    0.332
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LT2      OAB    n/a    CAK    START
+ LT2      CAK    OAB    CAE    .
+ LT2      CAJ    CAK    CAD    .
+ LT2      OAA    CAJ    .      .
+ LT2      CAD    CAJ    HAD    .
+ LT2      HAD    CAD    .      .
+ LT2      CAE    CAK    CAI    .
+ LT2      HAE    CAE    .      .
+ LT2      CAI    CAE    CAL    .
+ LT2      CAH    CAI    NAG    .
+ LT2      NAG    CAH    HNAG   .
+ LT2      HNAG   NAG    .      .
+ LT2      CAL    CAI    CAF    .
+ LT2      HAL    CAL    .      .
+ LT2      OAC    CAL    HOAC   .
+ LT2      HOAC   OAC    .      .
+ LT2      CAF    CAL    HAF    .
+ LT2      HAFA   CAF    .      .
+ LT2      HAF    CAF    .      END
+ LT2      CAF    NAG    .    ADD
+ LT2      CAH    CAD    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LT2      CAF    NAG       single      1.450    0.020
+ LT2      CAF    CAL       single      1.524    0.020
+ LT2      HAF    CAF       single      1.092    0.020
+ LT2      HAFA   CAF       single      1.092    0.020
+ LT2      NAG    CAH       single      1.350    0.020
+ LT2      HNAG   NAG       single      1.010    0.020
+ LT2      CAH    CAD       double      1.390    0.020
+ LT2      CAH    CAI       single      1.487    0.020
+ LT2      CAD    CAJ       single      1.390    0.020
+ LT2      HAD    CAD       single      1.083    0.020
+ LT2      OAA    CAJ       double      1.250    0.020
+ LT2      CAJ    CAK       single      1.487    0.020
+ LT2      CAK    OAB       double      1.250    0.020
+ LT2      CAE    CAK       single      1.390    0.020
+ LT2      CAI    CAE       double      1.390    0.020
+ LT2      HAE    CAE       single      1.083    0.020
+ LT2      CAL    CAI       single      1.480    0.020
+ LT2      OAC    CAL       single      1.432    0.020
+ LT2      HAL    CAL       single      1.099    0.020
+ LT2      HOAC   OAC       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LT2      OAB    CAK    CAJ     120.000    3.000
+ LT2      OAB    CAK    CAE     120.000    3.000
+ LT2      CAJ    CAK    CAE     120.000    3.000
+ LT2      CAK    CAJ    OAA     120.000    3.000
+ LT2      CAK    CAJ    CAD     120.000    3.000
+ LT2      OAA    CAJ    CAD     120.000    3.000
+ LT2      CAJ    CAD    HAD     120.000    3.000
+ LT2      CAJ    CAD    CAH     120.000    3.000
+ LT2      HAD    CAD    CAH     120.000    3.000
+ LT2      CAK    CAE    HAE     120.000    3.000
+ LT2      CAK    CAE    CAI     120.000    3.000
+ LT2      HAE    CAE    CAI     120.000    3.000
+ LT2      CAE    CAI    CAH     120.000    3.000
+ LT2      CAE    CAI    CAL     120.000    3.000
+ LT2      CAH    CAI    CAL     120.000    3.000
+ LT2      CAI    CAH    NAG     120.000    3.000
+ LT2      CAI    CAH    CAD     120.000    3.000
+ LT2      NAG    CAH    CAD     120.000    3.000
+ LT2      CAH    NAG    HNAG    120.000    3.000
+ LT2      CAH    NAG    CAF     120.000    3.000
+ LT2      HNAG   NAG    CAF     118.500    3.000
+ LT2      CAI    CAL    HAL     109.470    3.000
+ LT2      CAI    CAL    OAC     109.470    3.000
+ LT2      CAI    CAL    CAF     109.470    3.000
+ LT2      HAL    CAL    OAC     109.470    3.000
+ LT2      HAL    CAL    CAF     108.340    3.000
+ LT2      OAC    CAL    CAF     109.470    3.000
+ LT2      CAL    OAC    HOAC    109.470    3.000
+ LT2      CAL    CAF    HAFA    109.470    3.000
+ LT2      CAL    CAF    HAF     109.470    3.000
+ LT2      CAL    CAF    NAG     110.000    3.000
+ LT2      HAFA   CAF    HAF     107.900    3.000
+ LT2      HAFA   CAF    NAG     109.470    3.000
+ LT2      HAF    CAF    NAG     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LT2      CONST_1  OAB    CAK    CAJ    CAD      180.000    0.000   0
+ LT2      CONST_2  CAK    CAJ    CAD    CAH        0.000    0.000   0
+ LT2      CONST_3  OAB    CAK    CAE    CAI      180.000    0.000   0
+ LT2      CONST_4  CAK    CAE    CAI    CAL      180.000    0.000   0
+ LT2      CONST_5  CAE    CAI    CAH    NAG      180.000    0.000   0
+ LT2      CONST_6  CAI    CAH    CAD    CAJ        0.000    0.000   0
+ LT2      var_1    CAI    CAH    NAG    CAF        0.000   20.000   1
+ LT2      var_2    CAE    CAI    CAL    CAF      180.000   20.000   1
+ LT2      var_3    CAI    CAL    OAC    HOAC    -179.984   20.000   1
+ LT2      var_4    CAI    CAL    CAF    NAG        0.000   20.000   3
+ LT2      var_5    CAL    CAF    NAG    CAH        0.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LT2      chir_01  CAL    CAF    CAI    OAC       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LT2      plan-1    NAG       0.020
+ LT2      plan-1    CAF       0.020
+ LT2      plan-1    CAH       0.020
+ LT2      plan-1    HNAG      0.020
+ LT2      plan-2    CAH       0.020
+ LT2      plan-2    NAG       0.020
+ LT2      plan-2    CAD       0.020
+ LT2      plan-2    CAI       0.020
+ LT2      plan-2    CAJ       0.020
+ LT2      plan-2    CAK       0.020
+ LT2      plan-2    CAE       0.020
+ LT2      plan-2    HAD       0.020
+ LT2      plan-2    OAA       0.020
+ LT2      plan-2    OAB       0.020
+ LT2      plan-2    HAE       0.020
+ LT2      plan-2    CAL       0.020
+ LT2      plan-2    HNAG      0.020
+# ------------------------------------------------------

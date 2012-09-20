@@ -1,0 +1,262 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LLT      LLT 'L-deoxythymidine                    ' non-polymer        31  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LLT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LLT           O2     O    O         0.000      0.000    0.000    0.000
+ LLT           C2     C    CR6       0.000     -1.108    0.213   -0.454
+ LLT           N3     N    NR16      0.000     -1.243    0.512   -1.760
+ LLT           HN3    H    H         0.000     -0.403    0.560   -2.370
+ LLT           C4     C    CR6       0.000     -2.465    0.751   -2.278
+ LLT           O4     O    O         0.000     -2.589    1.021   -3.460
+ LLT           N1     N    NR6       0.000     -2.181    0.146    0.356
+ LLT           C6     C    CR16      0.000     -3.438    0.376   -0.134
+ LLT           H6     H    H         0.000     -4.296    0.317    0.524
+ LLT           C5     C    CR6       0.000     -3.603    0.678   -1.440
+ LLT           C7     C    CH3       0.000     -4.980    0.935   -1.996
+ LLT           H7B    H    H         0.000     -5.582    0.075   -1.858
+ LLT           H7A    H    H         0.000     -5.417    1.757   -1.490
+ LLT           H7     H    H         0.000     -4.908    1.154   -3.029
+ LLT           "C1'"  C    CH1       0.000     -2.002   -0.182    1.771
+ LLT           "H1'"  H    H         0.000     -1.391    0.585    2.268
+ LLT           "C2'"  C    CH2       0.000     -1.346   -1.573    1.923
+ LLT           "H2'"  H    H         0.000     -0.271   -1.502    2.104
+ LLT           "H2'A" H    H         0.000     -1.526   -2.208    1.054
+ LLT           "C3'"  C    CH1       0.000     -2.039   -2.182    3.162
+ LLT           "H3'"  H    H         0.000     -2.578   -3.101    2.888
+ LLT           "O3'"  O    OH1       0.000     -1.085   -2.449    4.192
+ LLT           "HO3'" H    H         0.000     -0.473   -3.135    3.895
+ LLT           "C4'"  C    CH1       0.000     -3.032   -1.087    3.613
+ LLT           "H4'"  H    H         0.000     -2.581   -0.461    4.396
+ LLT           "O4'"  O    O2        0.000     -3.283   -0.306    2.425
+ LLT           "C5'"  C    CH2       0.000     -4.330   -1.720    4.119
+ LLT           "H5'"  H    H         0.000     -4.106   -2.399    4.945
+ LLT           "H5'A" H    H         0.000     -4.801   -2.279    3.308
+ LLT           "O5'"  O    OH1       0.000     -5.215   -0.694    4.570
+ LLT           "HO5'" H    H         0.000     -6.035   -1.094    4.890
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LLT      O2     n/a    C2     START
+ LLT      C2     O2     N1     .
+ LLT      N3     C2     C4     .
+ LLT      HN3    N3     .      .
+ LLT      C4     N3     O4     .
+ LLT      O4     C4     .      .
+ LLT      N1     C2     "C1'"  .
+ LLT      C6     N1     C5     .
+ LLT      H6     C6     .      .
+ LLT      C5     C6     C7     .
+ LLT      C7     C5     H7     .
+ LLT      H7B    C7     .      .
+ LLT      H7A    C7     .      .
+ LLT      H7     C7     .      .
+ LLT      "C1'"  N1     "C2'"  .
+ LLT      "H1'"  "C1'"  .      .
+ LLT      "C2'"  "C1'"  "C3'"  .
+ LLT      "H2'"  "C2'"  .      .
+ LLT      "H2'A" "C2'"  .      .
+ LLT      "C3'"  "C2'"  "C4'"  .
+ LLT      "H3'"  "C3'"  .      .
+ LLT      "O3'"  "C3'"  "HO3'" .
+ LLT      "HO3'" "O3'"  .      .
+ LLT      "C4'"  "C3'"  "C5'"  .
+ LLT      "H4'"  "C4'"  .      .
+ LLT      "O4'"  "C4'"  .      .
+ LLT      "C5'"  "C4'"  "O5'"  .
+ LLT      "H5'"  "C5'"  .      .
+ LLT      "H5'A" "C5'"  .      .
+ LLT      "O5'"  "C5'"  "HO5'" .
+ LLT      "HO5'" "O5'"  .      END
+ LLT      C4     C5     .    ADD
+ LLT      "C1'"  "O4'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LLT      O4     C4        double      1.250    0.020
+ LLT      C4     N3        single      1.337    0.020
+ LLT      C4     C5        single      1.487    0.020
+ LLT      C7     C5        single      1.506    0.020
+ LLT      C5     C6        double      1.390    0.020
+ LLT      H7     C7        single      1.059    0.020
+ LLT      H7A    C7        single      1.059    0.020
+ LLT      H7B    C7        single      1.059    0.020
+ LLT      C6     N1        single      1.337    0.020
+ LLT      H6     C6        single      1.083    0.020
+ LLT      N3     C2        single      1.337    0.020
+ LLT      HN3    N3        single      1.040    0.020
+ LLT      C2     O2        double      1.250    0.020
+ LLT      N1     C2        single      1.410    0.020
+ LLT      "C1'"  N1        single      1.465    0.020
+ LLT      "C1'"  "O4'"     single      1.426    0.020
+ LLT      "C2'"  "C1'"     single      1.524    0.020
+ LLT      "H1'"  "C1'"     single      1.099    0.020
+ LLT      "O4'"  "C4'"     single      1.426    0.020
+ LLT      "C5'"  "C4'"     single      1.524    0.020
+ LLT      "C4'"  "C3'"     single      1.524    0.020
+ LLT      "H4'"  "C4'"     single      1.099    0.020
+ LLT      "O5'"  "C5'"     single      1.432    0.020
+ LLT      "H5'"  "C5'"     single      1.092    0.020
+ LLT      "H5'A" "C5'"     single      1.092    0.020
+ LLT      "HO5'" "O5'"     single      0.967    0.020
+ LLT      "C3'"  "C2'"     single      1.524    0.020
+ LLT      "O3'"  "C3'"     single      1.432    0.020
+ LLT      "H3'"  "C3'"     single      1.099    0.020
+ LLT      "HO3'" "O3'"     single      0.967    0.020
+ LLT      "H2'"  "C2'"     single      1.092    0.020
+ LLT      "H2'A" "C2'"     single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LLT      O2     C2     N3      120.000    3.000
+ LLT      O2     C2     N1      120.000    3.000
+ LLT      N3     C2     N1      120.000    3.000
+ LLT      C2     N3     HN3     120.000    3.000
+ LLT      C2     N3     C4      120.000    3.000
+ LLT      HN3    N3     C4      120.000    3.000
+ LLT      N3     C4     O4      120.000    3.000
+ LLT      N3     C4     C5      120.000    3.000
+ LLT      O4     C4     C5      120.000    3.000
+ LLT      C2     N1     C6      120.000    3.000
+ LLT      C2     N1     "C1'"   120.000    3.000
+ LLT      C6     N1     "C1'"   120.000    3.000
+ LLT      N1     C6     H6      120.000    3.000
+ LLT      N1     C6     C5      120.000    3.000
+ LLT      H6     C6     C5      120.000    3.000
+ LLT      C6     C5     C7      120.000    3.000
+ LLT      C6     C5     C4      120.000    3.000
+ LLT      C7     C5     C4      120.000    3.000
+ LLT      C5     C7     H7B     109.470    3.000
+ LLT      C5     C7     H7A     109.470    3.000
+ LLT      C5     C7     H7      109.470    3.000
+ LLT      H7B    C7     H7A     109.470    3.000
+ LLT      H7B    C7     H7      109.470    3.000
+ LLT      H7A    C7     H7      109.470    3.000
+ LLT      N1     "C1'"  "H1'"   109.470    3.000
+ LLT      N1     "C1'"  "C2'"   109.470    3.000
+ LLT      N1     "C1'"  "O4'"   109.470    3.000
+ LLT      "H1'"  "C1'"  "C2'"   108.340    3.000
+ LLT      "H1'"  "C1'"  "O4'"   109.470    3.000
+ LLT      "C2'"  "C1'"  "O4'"   109.470    3.000
+ LLT      "C1'"  "C2'"  "H2'"   109.470    3.000
+ LLT      "C1'"  "C2'"  "H2'A"  109.470    3.000
+ LLT      "C1'"  "C2'"  "C3'"   111.000    3.000
+ LLT      "H2'"  "C2'"  "H2'A"  107.900    3.000
+ LLT      "H2'"  "C2'"  "C3'"   109.470    3.000
+ LLT      "H2'A" "C2'"  "C3'"   109.470    3.000
+ LLT      "C2'"  "C3'"  "H3'"   108.340    3.000
+ LLT      "C2'"  "C3'"  "O3'"   109.470    3.000
+ LLT      "C2'"  "C3'"  "C4'"   111.000    3.000
+ LLT      "H3'"  "C3'"  "O3'"   109.470    3.000
+ LLT      "H3'"  "C3'"  "C4'"   108.340    3.000
+ LLT      "O3'"  "C3'"  "C4'"   109.470    3.000
+ LLT      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ LLT      "C3'"  "C4'"  "H4'"   108.340    3.000
+ LLT      "C3'"  "C4'"  "O4'"   109.470    3.000
+ LLT      "C3'"  "C4'"  "C5'"   111.000    3.000
+ LLT      "H4'"  "C4'"  "O4'"   109.470    3.000
+ LLT      "H4'"  "C4'"  "C5'"   108.340    3.000
+ LLT      "O4'"  "C4'"  "C5'"   109.470    3.000
+ LLT      "C4'"  "O4'"  "C1'"   111.800    3.000
+ LLT      "C4'"  "C5'"  "H5'"   109.470    3.000
+ LLT      "C4'"  "C5'"  "H5'A"  109.470    3.000
+ LLT      "C4'"  "C5'"  "O5'"   109.470    3.000
+ LLT      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ LLT      "H5'"  "C5'"  "O5'"   109.470    3.000
+ LLT      "H5'A" "C5'"  "O5'"   109.470    3.000
+ LLT      "C5'"  "O5'"  "HO5'"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LLT      CONST_1  O2     C2     N3     C4       180.000    0.000   0
+ LLT      CONST_2  C2     N3     C4     O4       180.000    0.000   0
+ LLT      CONST_3  N3     C4     C5     C6         0.000    0.000   0
+ LLT      CONST_4  O2     C2     N1     "C1'"      0.000    0.000   0
+ LLT      CONST_5  C2     N1     C6     C5         0.000    0.000   0
+ LLT      CONST_6  N1     C6     C5     C7       180.000    0.000   0
+ LLT      var_1    C6     C5     C7     H7      -179.991   20.000   1
+ LLT      var_2    C2     N1     "C1'"  "C2'"    -60.026   20.000   1
+ LLT      var_3    N1     "C1'"  "O4'"  "C4'"    150.000   20.000   1
+ LLT      var_4    N1     "C1'"  "C2'"  "C3'"   -150.000   20.000   3
+ LLT      var_5    "C1'"  "C2'"  "C3'"  "C4'"      0.000   20.000   3
+ LLT      var_6    "C2'"  "C3'"  "O3'"  "HO3'"   -65.345   20.000   1
+ LLT      var_7    "C2'"  "C3'"  "C4'"  "C5'"    150.000   20.000   3
+ LLT      var_8    "C3'"  "C4'"  "O4'"  "C1'"    -30.000   20.000   1
+ LLT      var_9    "C3'"  "C4'"  "C5'"  "O5'"    178.178   20.000   3
+ LLT      var_10   "C4'"  "C5'"  "O5'"  "HO5'"  -179.965   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LLT      chir_01  "C1'"  N1     "O4'"  "C2'"     negativ
+ LLT      chir_02  "C4'"  "O4'"  "C5'"  "C3'"     negativ
+ LLT      chir_03  "C3'"  "C4'"  "O3'"  "C2'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LLT      plan-1    C4        0.020
+ LLT      plan-1    O4        0.020
+ LLT      plan-1    C5        0.020
+ LLT      plan-1    N3        0.020
+ LLT      plan-1    C6        0.020
+ LLT      plan-1    C2        0.020
+ LLT      plan-1    N1        0.020
+ LLT      plan-1    C7        0.020
+ LLT      plan-1    H6        0.020
+ LLT      plan-1    HN3       0.020
+ LLT      plan-1    O2        0.020
+ LLT      plan-1    "C1'"     0.020
+# ------------------------------------------------------

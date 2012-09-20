@@ -1,0 +1,224 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MPO      MPO '3[N-MORPHOLINO]PROPANE SULFONIC ACID' non-polymer        28  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MPO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MPO           O2     O    OS        0.000      0.000    0.000    0.000
+ MPO           S1     S    ST        0.000     -0.885    0.459    1.012
+ MPO           O1     O    OS        0.000     -0.970    1.830    1.375
+ MPO           O3     O    OH1       0.000     -0.323   -0.188    2.269
+ MPO           HO3    H    H         0.000      0.549    0.062    2.552
+ MPO           C1     C    CH2       0.000     -2.527   -0.294    0.856
+ MPO           H11    H    H         0.000     -3.118   -0.064    1.745
+ MPO           H12    H    H         0.000     -2.423   -1.377    0.760
+ MPO           C2     C    CH2       0.000     -3.228    0.264   -0.384
+ MPO           H21    H    H         0.000     -2.636    0.034   -1.271
+ MPO           H22    H    H         0.000     -3.331    1.347   -0.287
+ MPO           C3     C    CH2       0.000     -4.614   -0.371   -0.514
+ MPO           H31    H    H         0.000     -5.205   -0.140    0.375
+ MPO           H32    H    H         0.000     -4.510   -1.453   -0.609
+ MPO           N1     N    NT        0.000     -5.287    0.165   -1.704
+ MPO           C4     C    CH2       0.000     -6.605   -0.482   -1.771
+ MPO           H41    H    H         0.000     -7.214   -0.151   -0.928
+ MPO           H42    H    H         0.000     -6.479   -1.565   -1.725
+ MPO           C5     C    CH2       0.000     -7.296   -0.102   -3.081
+ MPO           H52    H    H         0.000     -7.377    0.985   -3.144
+ MPO           H51    H    H         0.000     -8.295   -0.543   -3.103
+ MPO           C7     C    CH2       0.000     -4.528   -0.305   -2.868
+ MPO           H71    H    H         0.000     -4.417   -1.390   -2.814
+ MPO           H72    H    H         0.000     -3.540    0.160   -2.868
+ MPO           C6     C    CH2       0.000     -5.271    0.070   -4.150
+ MPO           H62    H    H         0.000     -4.676   -0.234   -5.014
+ MPO           H61    H    H         0.000     -5.422    1.152   -4.176
+ MPO           O4     O    O2        0.000     -6.536   -0.589   -4.186
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MPO      O2     n/a    S1     START
+ MPO      S1     O2     C1     .
+ MPO      O1     S1     .      .
+ MPO      O3     S1     HO3    .
+ MPO      HO3    O3     .      .
+ MPO      C1     S1     C2     .
+ MPO      H11    C1     .      .
+ MPO      H12    C1     .      .
+ MPO      C2     C1     C3     .
+ MPO      H21    C2     .      .
+ MPO      H22    C2     .      .
+ MPO      C3     C2     N1     .
+ MPO      H31    C3     .      .
+ MPO      H32    C3     .      .
+ MPO      N1     C3     C7     .
+ MPO      C4     N1     C5     .
+ MPO      H41    C4     .      .
+ MPO      H42    C4     .      .
+ MPO      C5     C4     H51    .
+ MPO      H52    C5     .      .
+ MPO      H51    C5     .      .
+ MPO      C7     N1     C6     .
+ MPO      H71    C7     .      .
+ MPO      H72    C7     .      .
+ MPO      C6     C7     O4     .
+ MPO      H62    C6     .      .
+ MPO      H61    C6     .      .
+ MPO      O4     C6     .      END
+ MPO      O4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MPO      O1     S1        double      1.436    0.020
+ MPO      S1     O2        double      1.436    0.020
+ MPO      C1     S1        single      1.662    0.020
+ MPO      O3     S1        single      1.635    0.020
+ MPO      O4     C5        single      1.426    0.020
+ MPO      O4     C6        single      1.426    0.020
+ MPO      N1     C3        single      1.469    0.020
+ MPO      C4     N1        single      1.469    0.020
+ MPO      C7     N1        single      1.469    0.020
+ MPO      C2     C1        single      1.524    0.020
+ MPO      H11    C1        single      1.092    0.020
+ MPO      H12    C1        single      1.092    0.020
+ MPO      HO3    O3        single      0.967    0.020
+ MPO      C3     C2        single      1.524    0.020
+ MPO      H21    C2        single      1.092    0.020
+ MPO      H22    C2        single      1.092    0.020
+ MPO      H31    C3        single      1.092    0.020
+ MPO      H32    C3        single      1.092    0.020
+ MPO      C5     C4        single      1.524    0.020
+ MPO      H41    C4        single      1.092    0.020
+ MPO      H42    C4        single      1.092    0.020
+ MPO      H51    C5        single      1.092    0.020
+ MPO      H52    C5        single      1.092    0.020
+ MPO      C6     C7        single      1.524    0.020
+ MPO      H61    C6        single      1.092    0.020
+ MPO      H62    C6        single      1.092    0.020
+ MPO      H71    C7        single      1.092    0.020
+ MPO      H72    C7        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MPO      O2     S1     O1      109.500    3.000
+ MPO      O2     S1     O3      109.500    3.000
+ MPO      O2     S1     C1      109.500    3.000
+ MPO      O1     S1     O3      109.500    3.000
+ MPO      O1     S1     C1      109.500    3.000
+ MPO      O3     S1     C1      109.500    3.000
+ MPO      S1     O3     HO3     120.000    3.000
+ MPO      S1     C1     H11     109.500    3.000
+ MPO      S1     C1     H12     109.500    3.000
+ MPO      S1     C1     C2      109.500    3.000
+ MPO      H11    C1     H12     107.900    3.000
+ MPO      H11    C1     C2      109.470    3.000
+ MPO      H12    C1     C2      109.470    3.000
+ MPO      C1     C2     H21     109.470    3.000
+ MPO      C1     C2     H22     109.470    3.000
+ MPO      C1     C2     C3      111.000    3.000
+ MPO      H21    C2     H22     107.900    3.000
+ MPO      H21    C2     C3      109.470    3.000
+ MPO      H22    C2     C3      109.470    3.000
+ MPO      C2     C3     H31     109.470    3.000
+ MPO      C2     C3     H32     109.470    3.000
+ MPO      C2     C3     N1      109.470    3.000
+ MPO      H31    C3     H32     107.900    3.000
+ MPO      H31    C3     N1      109.470    3.000
+ MPO      H32    C3     N1      109.470    3.000
+ MPO      C3     N1     C4      109.470    3.000
+ MPO      C3     N1     C7      109.470    3.000
+ MPO      C4     N1     C7      109.470    3.000
+ MPO      N1     C4     H41     109.470    3.000
+ MPO      N1     C4     H42     109.470    3.000
+ MPO      N1     C4     C5      109.470    3.000
+ MPO      H41    C4     H42     107.900    3.000
+ MPO      H41    C4     C5      109.470    3.000
+ MPO      H42    C4     C5      109.470    3.000
+ MPO      C4     C5     H52     109.470    3.000
+ MPO      C4     C5     H51     109.470    3.000
+ MPO      C4     C5     O4      109.470    3.000
+ MPO      H52    C5     H51     107.900    3.000
+ MPO      H52    C5     O4      109.470    3.000
+ MPO      H51    C5     O4      109.470    3.000
+ MPO      N1     C7     H71     109.470    3.000
+ MPO      N1     C7     H72     109.470    3.000
+ MPO      N1     C7     C6      109.470    3.000
+ MPO      H71    C7     H72     107.900    3.000
+ MPO      H71    C7     C6      109.470    3.000
+ MPO      H72    C7     C6      109.470    3.000
+ MPO      C7     C6     H62     109.470    3.000
+ MPO      C7     C6     H61     109.470    3.000
+ MPO      C7     C6     O4      109.470    3.000
+ MPO      H62    C6     H61     107.900    3.000
+ MPO      H62    C6     O4      109.470    3.000
+ MPO      H61    C6     O4      109.470    3.000
+ MPO      C6     O4     C5      111.800    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MPO      var_1    O2     S1     O3     HO3       63.759   20.000   1
+ MPO      var_2    O2     S1     C1     C2       -70.208   20.000   1
+ MPO      var_3    S1     C1     C2     C3      -179.964   20.000   3
+ MPO      var_4    C1     C2     C3     N1      -179.979   20.000   3
+ MPO      var_5    C2     C3     N1     C7        66.188   20.000   1
+ MPO      var_6    C3     N1     C4     C5       180.000   20.000   1
+ MPO      var_7    N1     C4     C5     O4        60.000   20.000   3
+ MPO      var_8    C3     N1     C7     C6       180.000   20.000   1
+ MPO      var_9    N1     C7     C6     O4       -60.000   20.000   3
+ MPO      var_10   C7     C6     O4     C5        60.000   20.000   1
+ MPO      var_11   C6     O4     C5     C4       -60.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MPO      chir_01  S1     O1     O2     C1        positiv
+ MPO      chir_02  N1     C3     C4     C7        positiv
+# ------------------------------------------------------

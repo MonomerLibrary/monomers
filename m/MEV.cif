@@ -1,0 +1,187 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MEV      MEV '(R)-MEVALONATE                      ' non-polymer        21  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MEV
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MEV           O4     O    OC       -0.500      0.000    0.000    0.000
+ MEV           C5     C    C         0.000     -1.182    0.409    0.029
+ MEV           O3     O    OC       -0.500     -1.417    1.636    0.086
+ MEV           C4     C    CH2       0.000     -2.321   -0.576   -0.005
+ MEV           H41    H    H         0.000     -2.250   -1.244    0.856
+ MEV           H42    H    H         0.000     -2.265   -1.163   -0.925
+ MEV           C3     C    CT        0.000     -3.651    0.179    0.040
+ MEV           O7     O    OH1       0.000     -3.721    0.947    1.244
+ MEV           HX     H    H         0.000     -3.660    0.356    2.007
+ MEV           C6     C    CH3       0.000     -3.748    1.114   -1.166
+ MEV           H63    H    H         0.000     -3.696    0.546   -2.059
+ MEV           H62    H    H         0.000     -4.668    1.638   -1.135
+ MEV           H61    H    H         0.000     -2.947    1.807   -1.143
+ MEV           C2     C    CH2       0.000     -4.808   -0.821    0.006
+ MEV           H21    H    H         0.000     -4.788   -1.430    0.913
+ MEV           H22    H    H         0.000     -4.703   -1.468   -0.867
+ MEV           C8     C    CH2       0.000     -6.135   -0.064   -0.074
+ MEV           H81    H    H         0.000     -6.151    0.545   -0.980
+ MEV           H82    H    H         0.000     -6.237    0.583    0.800
+ MEV           O8     O    OH1       0.000     -7.216   -0.998   -0.106
+ MEV           HX2    H    H         0.000     -8.054   -0.519   -0.157
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MEV      O4     n/a    C5     START
+ MEV      C5     O4     C4     .
+ MEV      O3     C5     .      .
+ MEV      C4     C5     C3     .
+ MEV      H41    C4     .      .
+ MEV      H42    C4     .      .
+ MEV      C3     C4     C2     .
+ MEV      O7     C3     HX     .
+ MEV      HX     O7     .      .
+ MEV      C6     C3     H61    .
+ MEV      H63    C6     .      .
+ MEV      H62    C6     .      .
+ MEV      H61    C6     .      .
+ MEV      C2     C3     C8     .
+ MEV      H21    C2     .      .
+ MEV      H22    C2     .      .
+ MEV      C8     C2     O8     .
+ MEV      H81    C8     .      .
+ MEV      H82    C8     .      .
+ MEV      O8     C8     HX2    .
+ MEV      HX2    O8     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MEV      O8     C8        single      1.432    0.020
+ MEV      C8     C2        single      1.524    0.020
+ MEV      H81    C8        single      1.092    0.020
+ MEV      H82    C8        single      1.092    0.020
+ MEV      HX2    O8        single      0.967    0.020
+ MEV      C2     C3        single      1.524    0.020
+ MEV      H21    C2        single      1.092    0.020
+ MEV      H22    C2        single      1.092    0.020
+ MEV      O7     C3        single      1.432    0.020
+ MEV      C3     C4        single      1.524    0.020
+ MEV      C6     C3        single      1.524    0.020
+ MEV      HX     O7        single      0.967    0.020
+ MEV      C4     C5        single      1.510    0.020
+ MEV      H41    C4        single      1.092    0.020
+ MEV      H42    C4        single      1.092    0.020
+ MEV      O3     C5        deloc       1.250    0.020
+ MEV      C5     O4        deloc       1.250    0.020
+ MEV      H61    C6        single      1.059    0.020
+ MEV      H62    C6        single      1.059    0.020
+ MEV      H63    C6        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MEV      O4     C5     O3      123.000    3.000
+ MEV      O4     C5     C4      118.500    3.000
+ MEV      O3     C5     C4      118.500    3.000
+ MEV      C5     C4     H41     109.470    3.000
+ MEV      C5     C4     H42     109.470    3.000
+ MEV      C5     C4     C3      109.470    3.000
+ MEV      H41    C4     H42     107.900    3.000
+ MEV      H41    C4     C3      109.470    3.000
+ MEV      H42    C4     C3      109.470    3.000
+ MEV      C4     C3     O7      109.470    3.000
+ MEV      C4     C3     C6      111.000    3.000
+ MEV      C4     C3     C2      111.000    3.000
+ MEV      O7     C3     C6      109.470    3.000
+ MEV      O7     C3     C2      109.470    3.000
+ MEV      C6     C3     C2      111.000    3.000
+ MEV      C3     O7     HX      109.470    3.000
+ MEV      C3     C6     H63     109.470    3.000
+ MEV      C3     C6     H62     109.470    3.000
+ MEV      C3     C6     H61     109.470    3.000
+ MEV      H63    C6     H62     109.470    3.000
+ MEV      H63    C6     H61     109.470    3.000
+ MEV      H62    C6     H61     109.470    3.000
+ MEV      C3     C2     H21     109.470    3.000
+ MEV      C3     C2     H22     109.470    3.000
+ MEV      C3     C2     C8      111.000    3.000
+ MEV      H21    C2     H22     107.900    3.000
+ MEV      H21    C2     C8      109.470    3.000
+ MEV      H22    C2     C8      109.470    3.000
+ MEV      C2     C8     H81     109.470    3.000
+ MEV      C2     C8     H82     109.470    3.000
+ MEV      C2     C8     O8      109.470    3.000
+ MEV      H81    C8     H82     107.900    3.000
+ MEV      H81    C8     O8      109.470    3.000
+ MEV      H82    C8     O8      109.470    3.000
+ MEV      C8     O8     HX2     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MEV      var_1    O4     C5     C4     C3      -179.972   20.000   3
+ MEV      var_2    C5     C4     C3     C2      -179.955   20.000   1
+ MEV      var_3    C4     C3     O7     HX       -60.024   20.000   1
+ MEV      var_4    C4     C3     C6     H61      -59.930   20.000   1
+ MEV      var_5    C4     C3     C2     C8      -174.993   20.000   1
+ MEV      var_6    C3     C2     C8     O8       179.975   20.000   3
+ MEV      var_7    C2     C8     O8     HX2     -179.995   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MEV      chir_01  C3     C2     O7     C4        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MEV      plan-1    C5        0.020
+ MEV      plan-1    C4        0.000
+ MEV      plan-1    O3        0.000
+ MEV      plan-1    O4        0.000
+# ------------------------------------------------------

@@ -1,0 +1,185 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ES1      ES1 'quinolin-4-ol                       ' non-polymer        18  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ES1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ES1           O01    O    OH1       0.000      0.000    0.000    0.000
+ ES1           HO01   H    H         0.000      0.261    0.196   -0.910
+ ES1           CAF    C    CR6       0.000     -1.104   -0.786   -0.008
+ ES1           CAD    C    CR16      0.000     -0.996   -2.166   -0.023
+ ES1           HAD    H    H         0.000     -0.021   -2.636   -0.029
+ ES1           CAL    C    CR66      0.000     -2.400   -0.224   -0.002
+ ES1           CAI    C    CR16      0.000     -2.592    1.165    0.014
+ ES1           HAI    H    H         0.000     -1.740    1.833    0.020
+ ES1           CAM    C    CR66      0.000     -3.522   -1.087   -0.009
+ ES1           NAH    N    NRD6      0.000     -3.345   -2.412   -0.024
+ ES1           CAE    C    CR16      0.000     -2.146   -2.945   -0.030
+ ES1           HAE    H    H         0.000     -2.050   -4.024   -0.040
+ ES1           CAJ    C    CR16      0.000     -4.812   -0.529   -0.002
+ ES1           HAJ    H    H         0.000     -5.683   -1.173   -0.008
+ ES1           CAK    C    CR16      0.000     -4.964    0.823    0.011
+ ES1           HAK    H    H         0.000     -5.960    1.248    0.015
+ ES1           CAG    C    CR16      0.000     -3.858    1.670    0.021
+ ES1           HAG    H    H         0.000     -4.006    2.743    0.034
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ES1      O01    n/a    CAF    START
+ ES1      HO01   O01    .      .
+ ES1      CAF    O01    CAL    .
+ ES1      CAD    CAF    HAD    .
+ ES1      HAD    CAD    .      .
+ ES1      CAL    CAF    CAM    .
+ ES1      CAI    CAL    HAI    .
+ ES1      HAI    CAI    .      .
+ ES1      CAM    CAL    CAJ    .
+ ES1      NAH    CAM    CAE    .
+ ES1      CAE    NAH    HAE    .
+ ES1      HAE    CAE    .      .
+ ES1      CAJ    CAM    CAK    .
+ ES1      HAJ    CAJ    .      .
+ ES1      CAK    CAJ    CAG    .
+ ES1      HAK    CAK    .      .
+ ES1      CAG    CAK    HAG    .
+ ES1      HAG    CAG    .      END
+ ES1      CAD    CAE    .    ADD
+ ES1      CAG    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ES1      CAF    O01       single      1.362    0.020
+ ES1      CAD    CAE       double      1.390    0.020
+ ES1      CAD    CAF       single      1.390    0.020
+ ES1      CAE    NAH       single      1.337    0.020
+ ES1      CAL    CAF       double      1.490    0.020
+ ES1      CAG    CAI       double      1.390    0.020
+ ES1      CAG    CAK       single      1.390    0.020
+ ES1      NAH    CAM       double      1.350    0.020
+ ES1      CAI    CAL       single      1.390    0.020
+ ES1      CAK    CAJ       double      1.390    0.020
+ ES1      CAJ    CAM       single      1.390    0.020
+ ES1      CAM    CAL       single      1.490    0.020
+ ES1      HO01   O01       single      0.967    0.020
+ ES1      HAD    CAD       single      1.083    0.020
+ ES1      HAE    CAE       single      1.083    0.020
+ ES1      HAG    CAG       single      1.083    0.020
+ ES1      HAI    CAI       single      1.083    0.020
+ ES1      HAJ    CAJ       single      1.083    0.020
+ ES1      HAK    CAK       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ES1      HO01   O01    CAF     109.470    3.000
+ ES1      O01    CAF    CAD     120.000    3.000
+ ES1      O01    CAF    CAL     120.000    3.000
+ ES1      CAD    CAF    CAL     120.000    3.000
+ ES1      CAF    CAD    HAD     120.000    3.000
+ ES1      CAF    CAD    CAE     120.000    3.000
+ ES1      HAD    CAD    CAE     120.000    3.000
+ ES1      CAF    CAL    CAI     120.000    3.000
+ ES1      CAF    CAL    CAM     120.000    3.000
+ ES1      CAI    CAL    CAM     120.000    3.000
+ ES1      CAL    CAI    HAI     120.000    3.000
+ ES1      CAL    CAI    CAG     120.000    3.000
+ ES1      HAI    CAI    CAG     120.000    3.000
+ ES1      CAL    CAM    NAH     120.000    3.000
+ ES1      CAL    CAM    CAJ     120.000    3.000
+ ES1      NAH    CAM    CAJ     120.000    3.000
+ ES1      CAM    NAH    CAE     120.000    3.000
+ ES1      NAH    CAE    HAE     120.000    3.000
+ ES1      NAH    CAE    CAD     120.000    3.000
+ ES1      HAE    CAE    CAD     120.000    3.000
+ ES1      CAM    CAJ    HAJ     120.000    3.000
+ ES1      CAM    CAJ    CAK     120.000    3.000
+ ES1      HAJ    CAJ    CAK     120.000    3.000
+ ES1      CAJ    CAK    HAK     120.000    3.000
+ ES1      CAJ    CAK    CAG     120.000    3.000
+ ES1      HAK    CAK    CAG     120.000    3.000
+ ES1      CAK    CAG    HAG     120.000    3.000
+ ES1      CAK    CAG    CAI     120.000    3.000
+ ES1      HAG    CAG    CAI     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ES1      var_1    HO01   O01    CAF    CAL      -90.006   20.000   1
+ ES1      CONST_1  O01    CAF    CAD    CAE      180.000    0.000   0
+ ES1      CONST_2  CAF    CAD    CAE    NAH        0.000    0.000   0
+ ES1      CONST_3  O01    CAF    CAL    CAM      180.000    0.000   0
+ ES1      CONST_4  CAF    CAL    CAI    CAG      180.000    0.000   0
+ ES1      CONST_5  CAF    CAL    CAM    CAJ      180.000    0.000   0
+ ES1      CONST_6  CAL    CAM    NAH    CAE        0.000    0.000   0
+ ES1      CONST_7  CAM    NAH    CAE    CAD        0.000    0.000   0
+ ES1      CONST_8  CAL    CAM    CAJ    CAK        0.000    0.000   0
+ ES1      CONST_9  CAM    CAJ    CAK    CAG        0.000    0.000   0
+ ES1      CONST_10 CAJ    CAK    CAG    CAI        0.000    0.000   0
+ ES1      CONST_11 CAK    CAG    CAI    CAL        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ES1      plan-1    CAD       0.020
+ ES1      plan-1    CAE       0.020
+ ES1      plan-1    CAF       0.020
+ ES1      plan-1    HAD       0.020
+ ES1      plan-1    NAH       0.020
+ ES1      plan-1    HAE       0.020
+ ES1      plan-1    O01       0.020
+ ES1      plan-1    CAL       0.020
+ ES1      plan-1    CAM       0.020
+ ES1      plan-1    CAI       0.020
+ ES1      plan-1    CAJ       0.020
+ ES1      plan-1    CAG       0.020
+ ES1      plan-1    CAK       0.020
+ ES1      plan-1    HAG       0.020
+ ES1      plan-1    HAI       0.020
+ ES1      plan-1    HAJ       0.020
+ ES1      plan-1    HAK       0.020
+# ------------------------------------------------------

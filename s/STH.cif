@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+STH      STH '2-AMINO-4H-1,3-BENZOXATHIIN-4-OL    ' non-polymer        21  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_STH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ STH           O8     O    OH1       0.000      0.000    0.000    0.000
+ STH           HO8    H    H         0.000      0.854    0.031   -0.452
+ STH           C8     C    CH1       0.000     -1.035   -0.243   -0.955
+ STH           H8     H    H         0.000     -0.850   -1.202   -1.460
+ STH           S7     S    S2        0.000     -1.053    1.094   -2.183
+ STH           C7     C    CH1       0.000     -1.911    2.339   -1.169
+ STH           H7     H    H         0.000     -1.390    2.458   -0.209
+ STH           N7     N    NH2       0.000     -1.939    3.624   -1.881
+ STH           HN72   H    H         0.000     -1.509    3.713   -2.794
+ STH           HN71   H    H         0.000     -2.389    4.430   -1.463
+ STH           O2     O    O2        0.000     -3.233    1.890   -0.943
+ STH           C2     C    CR6       0.000     -3.300    0.722   -0.269
+ STH           C3     C    CR16      0.000     -4.477    0.565    0.482
+ STH           H3     H    H         0.000     -5.212    1.361    0.489
+ STH           C4     C    CR16      0.000     -4.715   -0.577    1.207
+ STH           H4     H    H         0.000     -5.629   -0.675    1.780
+ STH           C5     C    CR16      0.000     -3.785   -1.600    1.203
+ STH           H5     H    H         0.000     -3.968   -2.508    1.765
+ STH           C6     C    CR16      0.000     -2.624   -1.454    0.476
+ STH           H6     H    H         0.000     -1.894   -2.254    0.470
+ STH           C1     C    CR6       0.000     -2.372   -0.293   -0.250
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ STH      O8     n/a    C8     START
+ STH      HO8    O8     .      .
+ STH      C8     O8     S7     .
+ STH      H8     C8     .      .
+ STH      S7     C8     C7     .
+ STH      C7     S7     O2     .
+ STH      H7     C7     .      .
+ STH      N7     C7     HN71   .
+ STH      HN72   N7     .      .
+ STH      HN71   N7     .      .
+ STH      O2     C7     C2     .
+ STH      C2     O2     C3     .
+ STH      C3     C2     C4     .
+ STH      H3     C3     .      .
+ STH      C4     C3     C5     .
+ STH      H4     C4     .      .
+ STH      C5     C4     C6     .
+ STH      H5     C5     .      .
+ STH      C6     C5     C1     .
+ STH      H6     C6     .      .
+ STH      C1     C6     .      END
+ STH      C8     C1     .    ADD
+ STH      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ STH      C8     O8        single      1.432    0.020
+ STH      C8     C1        single      1.480    0.020
+ STH      S7     C8        single      1.765    0.020
+ STH      H8     C8        single      1.099    0.020
+ STH      HO8    O8        single      0.967    0.020
+ STH      C1     C2        double      1.487    0.020
+ STH      C1     C6        single      1.390    0.020
+ STH      C3     C2        single      1.390    0.020
+ STH      C2     O2        single      1.370    0.020
+ STH      C4     C3        double      1.390    0.020
+ STH      H3     C3        single      1.083    0.020
+ STH      C5     C4        single      1.390    0.020
+ STH      H4     C4        single      1.083    0.020
+ STH      C6     C5        double      1.390    0.020
+ STH      H5     C5        single      1.083    0.020
+ STH      H6     C6        single      1.083    0.020
+ STH      O2     C7        single      1.426    0.020
+ STH      N7     C7        single      1.450    0.020
+ STH      C7     S7        single      1.765    0.020
+ STH      H7     C7        single      1.099    0.020
+ STH      HN71   N7        single      1.010    0.020
+ STH      HN72   N7        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ STH      HO8    O8     C8      109.470    3.000
+ STH      O8     C8     H8      109.470    3.000
+ STH      O8     C8     S7      109.500    3.000
+ STH      O8     C8     C1      109.470    3.000
+ STH      H8     C8     S7      109.500    3.000
+ STH      H8     C8     C1      109.470    3.000
+ STH      S7     C8     C1      109.500    3.000
+ STH      C8     S7     C7       97.573    3.000
+ STH      S7     C7     H7      109.500    3.000
+ STH      S7     C7     N7      109.500    3.000
+ STH      S7     C7     O2      109.500    3.000
+ STH      H7     C7     N7      109.470    3.000
+ STH      H7     C7     O2      109.470    3.000
+ STH      N7     C7     O2      109.500    3.000
+ STH      C7     N7     HN72    120.000    3.000
+ STH      C7     N7     HN71    120.000    3.000
+ STH      HN72   N7     HN71    120.000    3.000
+ STH      C7     O2     C2      120.000    3.000
+ STH      O2     C2     C3      120.000    3.000
+ STH      O2     C2     C1      120.000    3.000
+ STH      C3     C2     C1      120.000    3.000
+ STH      C2     C3     H3      120.000    3.000
+ STH      C2     C3     C4      120.000    3.000
+ STH      H3     C3     C4      120.000    3.000
+ STH      C3     C4     H4      120.000    3.000
+ STH      C3     C4     C5      120.000    3.000
+ STH      H4     C4     C5      120.000    3.000
+ STH      C4     C5     H5      120.000    3.000
+ STH      C4     C5     C6      120.000    3.000
+ STH      H5     C5     C6      120.000    3.000
+ STH      C5     C6     H6      120.000    3.000
+ STH      C5     C6     C1      120.000    3.000
+ STH      H6     C6     C1      120.000    3.000
+ STH      C6     C1     C8      120.000    3.000
+ STH      C6     C1     C2      120.000    3.000
+ STH      C8     C1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ STH      var_1    HO8    O8     C8     S7       -60.167   20.000   1
+ STH      var_2    O8     C8     C1     C6       -90.000   20.000   1
+ STH      var_3    O8     C8     S7     C7       -90.000   20.000   1
+ STH      var_4    C8     S7     C7     O2       -60.000   20.000   1
+ STH      var_5    S7     C7     N7     HN71     179.359   20.000   1
+ STH      var_6    S7     C7     O2     C2        60.000   20.000   1
+ STH      var_7    C7     O2     C2     C3       150.000   20.000   1
+ STH      CONST_1  O2     C2     C3     C4       180.000    0.000   0
+ STH      CONST_2  C2     C3     C4     C5         0.000    0.000   0
+ STH      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ STH      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ STH      CONST_5  C5     C6     C1     C8       180.000    0.000   0
+ STH      CONST_6  C6     C1     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ STH      chir_01  C8     O8     C1     S7        negativ
+ STH      chir_02  C7     O2     N7     S7        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ STH      plan-1    C1        0.020
+ STH      plan-1    C8        0.020
+ STH      plan-1    C2        0.020
+ STH      plan-1    C6        0.020
+ STH      plan-1    C3        0.020
+ STH      plan-1    C4        0.020
+ STH      plan-1    C5        0.020
+ STH      plan-1    O2        0.020
+ STH      plan-1    H3        0.020
+ STH      plan-1    H4        0.020
+ STH      plan-1    H5        0.020
+ STH      plan-1    H6        0.020
+ STH      plan-2    N7        0.020
+ STH      plan-2    C7        0.020
+ STH      plan-2    HN71      0.020
+ STH      plan-2    HN72      0.020
+# ------------------------------------------------------

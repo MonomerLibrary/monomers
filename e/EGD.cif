@@ -1,0 +1,157 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+EGD      EGD 'N-ETHYLGUANIDINE                    ' non-polymer        15   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_EGD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ EGD           NH1    N    N         0.000      0.000    0.000    0.000
+ EGD           HH1    H    H         0.000      0.502   -0.820    0.000
+ EGD           CZ     C    C         0.000     -1.303   -0.014    0.000
+ EGD           NH2    N    NH2       0.000     -1.978   -1.213    0.000
+ EGD           HH22   H    H         0.000     -1.471   -2.096    0.000
+ EGD           HH21   H    H         0.000     -2.996   -1.238    0.000
+ EGD           NE     N    NH1       0.000     -2.004    1.169    0.000
+ EGD           HNE    H    H         0.000     -3.014    1.158    0.000
+ EGD           CD     C    CH2       0.000     -1.285    2.445    0.000
+ EGD           HD1    H    H         0.000     -0.657    2.509   -0.891
+ EGD           HD2    H    H         0.000     -0.657    2.509    0.891
+ EGD           CG     C    CH3       0.000     -2.292    3.598    0.000
+ EGD           HG3    H    H         0.000     -2.903    3.538   -0.865
+ EGD           HG2    H    H         0.000     -2.903    3.538    0.865
+ EGD           HG1    H    H         0.000     -1.776    4.524    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ EGD      NH1    n/a    CZ     START
+ EGD      HH1    NH1    .      .
+ EGD      CZ     NH1    NE     .
+ EGD      NH2    CZ     HH21   .
+ EGD      HH22   NH2    .      .
+ EGD      HH21   NH2    .      .
+ EGD      NE     CZ     CD     .
+ EGD      HNE    NE     .      .
+ EGD      CD     NE     CG     .
+ EGD      HD1    CD     .      .
+ EGD      HD2    CD     .      .
+ EGD      CG     CD     HG1    .
+ EGD      HG3    CG     .      .
+ EGD      HG2    CG     .      .
+ EGD      HG1    CG     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ EGD      CG     CD        single      1.513    0.020
+ EGD      HG1    CG        single      1.059    0.020
+ EGD      HG2    CG        single      1.059    0.020
+ EGD      HG3    CG        single      1.059    0.020
+ EGD      CD     NE        single      1.450    0.020
+ EGD      HD1    CD        single      1.092    0.020
+ EGD      HD2    CD        single      1.092    0.020
+ EGD      NE     CZ        single      1.330    0.020
+ EGD      HNE    NE        single      1.010    0.020
+ EGD      CZ     NH1       double      1.260    0.020
+ EGD      NH2    CZ        single      1.332    0.020
+ EGD      HH1    NH1       single      0.954    0.020
+ EGD      HH21   NH2       single      1.010    0.020
+ EGD      HH22   NH2       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ EGD      HH1    NH1    CZ      120.000    3.000
+ EGD      NH1    CZ     NH2     120.000    3.000
+ EGD      NH1    CZ     NE      120.000    3.000
+ EGD      NH2    CZ     NE      120.000    3.000
+ EGD      CZ     NH2    HH22    120.000    3.000
+ EGD      CZ     NH2    HH21    120.000    3.000
+ EGD      HH22   NH2    HH21    120.000    3.000
+ EGD      CZ     NE     HNE     120.000    3.000
+ EGD      CZ     NE     CD      121.500    3.000
+ EGD      HNE    NE     CD      118.500    3.000
+ EGD      NE     CD     HD1     109.470    3.000
+ EGD      NE     CD     HD2     109.470    3.000
+ EGD      NE     CD     CG      112.000    3.000
+ EGD      HD1    CD     HD2     107.900    3.000
+ EGD      HD1    CD     CG      109.470    3.000
+ EGD      HD2    CD     CG      109.470    3.000
+ EGD      CD     CG     HG3     109.470    3.000
+ EGD      CD     CG     HG2     109.470    3.000
+ EGD      CD     CG     HG1     109.470    3.000
+ EGD      HG3    CG     HG2     109.470    3.000
+ EGD      HG3    CG     HG1     109.470    3.000
+ EGD      HG2    CG     HG1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ EGD      CONST_1  HH1    NH1    CZ     NE       180.000    0.000   0
+ EGD      CONST_2  NH1    CZ     NH2    HH21     180.000    0.000   0
+ EGD      CONST_3  NH1    CZ     NE     CD         0.000    0.000   0
+ EGD      var_1    CZ     NE     CD     CG       180.000   20.000   3
+ EGD      var_2    NE     CD     CG     HG1      180.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ EGD      plan-1    NE        0.020
+ EGD      plan-1    CD        0.020
+ EGD      plan-1    CZ        0.020
+ EGD      plan-1    HNE       0.020
+ EGD      plan-2    CZ        0.020
+ EGD      plan-2    NE        0.020
+ EGD      plan-2    NH1       0.020
+ EGD      plan-2    NH2       0.020
+ EGD      plan-2    HH1       0.020
+ EGD      plan-2    HNE       0.020
+ EGD      plan-2    HH22      0.020
+ EGD      plan-2    HH21      0.020
+ EGD      plan-3    NH2       0.020
+ EGD      plan-3    CZ        0.020
+ EGD      plan-3    HH21      0.020
+ EGD      plan-3    HH22      0.020
+# ------------------------------------------------------

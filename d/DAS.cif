@@ -1,0 +1,156 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DAS      DAS 'D-ASPARTIC ACID                     ' peptide            14   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DAS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DAS           N      N    NH2       0.000      0.000    0.000    0.000
+ DAS           HN1    H    H         0.000      0.569   -0.509   -0.666
+ DAS           HN2    H    H         0.000      0.388    0.237    0.906
+ DAS           CA     C    CH1       0.000     -1.373    0.390   -0.344
+ DAS           HA     H    H         0.000     -1.490    1.475   -0.211
+ DAS           CB     C    CH2       0.000     -2.355   -0.344    0.569
+ DAS           HB2    H    H         0.000     -2.239   -1.421    0.435
+ DAS           HB3    H    H         0.000     -3.376   -0.054    0.312
+ DAS           CG     C    C         0.000     -2.075    0.019    2.005
+ DAS           OD1    O    OC       -0.500     -1.149    0.814    2.279
+ DAS           OD2    O    OC       -0.500     -2.768   -0.474    2.922
+ DAS           C      C    C         0.000     -1.654    0.027   -1.779
+ DAS           O      O    OC       -0.500     -1.080   -0.955   -2.300
+ DAS           OXT    O    OC       -0.500     -2.461    0.708   -2.450
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DAS      N      n/a    CA     START
+ DAS      HN1    N      .      .
+ DAS      HN2    N      .      .
+ DAS      CA     N      C      .
+ DAS      HA     CA     .      .
+ DAS      CB     CA     CG     .
+ DAS      HB2    CB     .      .
+ DAS      HB3    CB     .      .
+ DAS      CG     CB     OD2    .
+ DAS      OD1    CG     .      .
+ DAS      OD2    CG     .      .
+ DAS      C      CA     .      END
+ DAS      O      C      .      .
+ DAS      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DAS      CA     N         single      1.450    0.020
+ DAS      C      CA        single      1.500    0.020
+ DAS      CB     CA        single      1.524    0.020
+ DAS      HA     CA        single      1.099    0.020
+ DAS      O      C         deloc       1.250    0.020
+ DAS      OXT    C         deloc       1.250    0.020
+ DAS      CG     CB        single      1.510    0.020
+ DAS      HB2    CB        single      1.092    0.020
+ DAS      HB3    CB        single      1.092    0.020
+ DAS      OD1    CG        deloc       1.250    0.020
+ DAS      OD2    CG        deloc       1.250    0.020
+ DAS      HN1    N         single      1.010    0.020
+ DAS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DAS      HN1    N      HN2     120.000    3.000
+ DAS      HN1    N      CA      120.000    3.000
+ DAS      HN2    N      CA      120.000    3.000
+ DAS      N      CA     HA      109.470    3.000
+ DAS      N      CA     CB      109.470    3.000
+ DAS      N      CA     C       109.470    3.000
+ DAS      HA     CA     CB      108.340    3.000
+ DAS      HA     CA     C       108.810    3.000
+ DAS      CB     CA     C       109.470    3.000
+ DAS      CA     CB     HB2     109.470    3.000
+ DAS      CA     CB     HB3     109.470    3.000
+ DAS      CA     CB     CG      109.470    3.000
+ DAS      HB2    CB     HB3     107.900    3.000
+ DAS      HB2    CB     CG      109.470    3.000
+ DAS      HB3    CB     CG      109.470    3.000
+ DAS      CB     CG     OD1     118.500    3.000
+ DAS      CB     CG     OD2     118.500    3.000
+ DAS      OD1    CG     OD2     123.000    3.000
+ DAS      CA     C      O       118.500    3.000
+ DAS      CA     C      OXT     118.500    3.000
+ DAS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DAS      var_1    HN2    N      CA     C        175.000   20.000   1
+ DAS      var_2    N      CA     CB     CG        60.010   20.000   3
+ DAS      var_3    CA     CB     CG     OD2      179.953   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DAS      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DAS      plan-1    N         0.020
+ DAS      plan-1    CA        0.020
+ DAS      plan-1    HN1       0.020
+ DAS      plan-1    HN2       0.020
+ DAS      plan-2    C         0.020
+ DAS      plan-2    CA        0.020
+ DAS      plan-2    O         0.020
+ DAS      plan-2    OXT       0.020
+ DAS      plan-3    CG        0.020
+ DAS      plan-3    CB        0.020
+ DAS      plan-3    OD1       0.020
+ DAS      plan-3    OD2       0.020
+# ------------------------------------------------------

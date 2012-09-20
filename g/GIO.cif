@@ -1,0 +1,214 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GIO      GIO 'CYCLO-(GLYCINE-L-PROLINE) INHIBITOR ' non-polymer        21  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GIO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GIO           O      O    O         0.000      0.000    0.000    0.000
+ GIO           C      C    C         0.000     -1.024   -0.158   -0.629
+ GIO           CA     C    CH2       0.000     -0.993   -0.436   -2.116
+ GIO           HAC1   H    H         0.000     -0.988   -1.516   -2.281
+ GIO           HAC2   H    H         0.000     -0.090    0.001   -2.546
+ GIO           N      N    NH1       0.000     -2.171    0.150   -2.753
+ GIO           H      H    H         0.000     -2.085    0.538   -3.682
+ GIO           CP     C    C         0.000     -3.366    0.185   -2.134
+ GIO           OP     O    O         0.000     -4.332    0.652   -2.700
+ GIO           NP     N    N         0.000     -2.229   -0.098   -0.027
+ GIO           CAP    C    CH1       0.000     -3.500   -0.360   -0.735
+ GIO           HAP    H    H         0.000     -3.738   -1.432   -0.744
+ GIO           CDP    C    CH2       0.000     -2.546    0.274    1.367
+ GIO           HDP1   H    H         0.000     -2.158    1.269    1.594
+ GIO           HDP2   H    H         0.000     -2.117   -0.450    2.063
+ GIO           CGP    C    CH2       0.000     -4.084    0.275    1.504
+ GIO           HGP1   H    H         0.000     -4.450    1.107    2.110
+ GIO           HGP2   H    H         0.000     -4.469   -0.664    1.908
+ GIO           CBP    C    CH2       0.000     -4.568    0.447    0.039
+ GIO           HBP2   H    H         0.000     -4.558    1.485   -0.300
+ GIO           HBP1   H    H         0.000     -5.554    0.016   -0.143
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GIO      O      n/a    C      START
+ GIO      C      O      NP     .
+ GIO      CA     C      N      .
+ GIO      HAC1   CA     .      .
+ GIO      HAC2   CA     .      .
+ GIO      N      CA     CP     .
+ GIO      H      N      .      .
+ GIO      CP     N      OP     .
+ GIO      OP     CP     .      .
+ GIO      NP     C      CDP    .
+ GIO      CAP    NP     HAP    .
+ GIO      HAP    CAP    .      .
+ GIO      CDP    NP     CGP    .
+ GIO      HDP1   CDP    .      .
+ GIO      HDP2   CDP    .      .
+ GIO      CGP    CDP    CBP    .
+ GIO      HGP1   CGP    .      .
+ GIO      HGP2   CGP    .      .
+ GIO      CBP    CGP    HBP1   .
+ GIO      HBP2   CBP    .      .
+ GIO      HBP1   CBP    .      END
+ GIO      CP     CAP    .    ADD
+ GIO      CAP    CBP    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GIO      OP     CP        double      1.220    0.020
+ GIO      CP     CAP       single      1.500    0.020
+ GIO      CP     N         single      1.330    0.020
+ GIO      CAP    CBP       single      1.524    0.020
+ GIO      CAP    NP        single      1.455    0.020
+ GIO      HAP    CAP       single      1.099    0.020
+ GIO      CBP    CGP       single      1.524    0.020
+ GIO      HBP1   CBP       single      1.092    0.020
+ GIO      HBP2   CBP       single      1.092    0.020
+ GIO      CGP    CDP       single      1.524    0.020
+ GIO      HGP1   CGP       single      1.092    0.020
+ GIO      HGP2   CGP       single      1.092    0.020
+ GIO      CDP    NP        single      1.455    0.020
+ GIO      HDP1   CDP       single      1.092    0.020
+ GIO      HDP2   CDP       single      1.092    0.020
+ GIO      NP     C         single      1.330    0.020
+ GIO      C      O         double      1.220    0.020
+ GIO      CA     C         single      1.510    0.020
+ GIO      N      CA        single      1.450    0.020
+ GIO      HAC1   CA        single      1.092    0.020
+ GIO      HAC2   CA        single      1.092    0.020
+ GIO      H      N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GIO      O      C      CA      120.500    3.000
+ GIO      O      C      NP      123.000    3.000
+ GIO      CA     C      NP      116.500    3.000
+ GIO      C      CA     HAC1    109.470    3.000
+ GIO      C      CA     HAC2    109.470    3.000
+ GIO      C      CA     N       111.600    3.000
+ GIO      HAC1   CA     HAC2    107.900    3.000
+ GIO      HAC1   CA     N       109.470    3.000
+ GIO      HAC2   CA     N       109.470    3.000
+ GIO      CA     N      H       118.500    3.000
+ GIO      CA     N      CP      121.500    3.000
+ GIO      H      N      CP      120.000    3.000
+ GIO      N      CP     OP      123.000    3.000
+ GIO      N      CP     CAP     116.500    3.000
+ GIO      OP     CP     CAP     120.500    3.000
+ GIO      C      NP     CAP     121.000    3.000
+ GIO      C      NP     CDP     127.000    3.000
+ GIO      CAP    NP     CDP     112.000    3.000
+ GIO      NP     CAP    HAP     109.470    3.000
+ GIO      NP     CAP    CP      111.600    3.000
+ GIO      NP     CAP    CBP     105.000    3.000
+ GIO      CP     CAP    CBP     109.470    3.000
+ GIO      HAP    CAP    CP      108.810    3.000
+ GIO      HAP    CAP    CBP     108.340    3.000
+ GIO      NP     CDP    HDP1    109.470    3.000
+ GIO      NP     CDP    HDP2    109.470    3.000
+ GIO      NP     CDP    CGP     105.000    3.000
+ GIO      HDP1   CDP    HDP2    107.900    3.000
+ GIO      HDP1   CDP    CGP     109.470    3.000
+ GIO      HDP2   CDP    CGP     109.470    3.000
+ GIO      CDP    CGP    HGP1    109.470    3.000
+ GIO      CDP    CGP    HGP2    109.470    3.000
+ GIO      CDP    CGP    CBP     111.000    3.000
+ GIO      HGP1   CGP    HGP2    107.900    3.000
+ GIO      HGP1   CGP    CBP     109.470    3.000
+ GIO      HGP2   CGP    CBP     109.470    3.000
+ GIO      CGP    CBP    HBP2    109.470    3.000
+ GIO      CGP    CBP    HBP1    109.470    3.000
+ GIO      CGP    CBP    CAP     111.000    3.000
+ GIO      HBP2   CBP    HBP1    107.900    3.000
+ GIO      HBP2   CBP    CAP     109.470    3.000
+ GIO      HBP1   CBP    CAP     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GIO      var_1    O      C      CA     N       -150.000   20.000   3
+ GIO      var_2    C      CA     N      CP       -30.000   20.000   3
+ GIO      CONST_1  CA     N      CP     OP       180.000    0.000   0
+ GIO      var_3    N      CP     CAP    NP        30.000   20.000   3
+ GIO      CONST_2  O      C      NP     CDP        0.000    0.000   0
+ GIO      var_4    C      NP     CAP    CP       -30.000   20.000   3
+ GIO      var_5    NP     CAP    CBP    CGP      -30.000   20.000   3
+ GIO      var_6    C      NP     CDP    CGP      180.000   20.000   1
+ GIO      var_7    NP     CDP    CGP    CBP      -30.000   20.000   3
+ GIO      var_8    CDP    CGP    CBP    CAP       30.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GIO      chir_01  CAP    CP     CBP    NP        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GIO      plan-1    CP        0.020
+ GIO      plan-1    OP        0.020
+ GIO      plan-1    CAP       0.020
+ GIO      plan-1    N         0.020
+ GIO      plan-1    H         0.020
+ GIO      plan-2    NP        0.020
+ GIO      plan-2    CAP       0.020
+ GIO      plan-2    CDP       0.020
+ GIO      plan-2    C         0.020
+ GIO      plan-3    C         0.020
+ GIO      plan-3    NP        0.020
+ GIO      plan-3    O         0.020
+ GIO      plan-3    CA        0.020
+ GIO      plan-4    N         0.020
+ GIO      plan-4    CP        0.020
+ GIO      plan-4    CA        0.020
+ GIO      plan-4    H         0.020
+# ------------------------------------------------------

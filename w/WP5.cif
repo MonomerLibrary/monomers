@@ -1,0 +1,330 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+WP5      WP5 'METHYL [(4S)-6-BROMO-2-METHYL-4-PHEN' non-polymer        40  23 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_WP5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ WP5           BRA    BR   BR        0.000      0.000    0.000    0.000
+ WP5           CAH    C    CR6       0.000     -1.763   -0.553    0.400
+ WP5           CAQ    C    CR16      0.000     -1.987   -1.452    1.429
+ WP5           HAQ    H    H         0.000     -1.152   -1.836    2.001
+ WP5           CAR    C    CR16      0.000     -3.270   -1.862    1.729
+ WP5           HAR    H    H         0.000     -3.442   -2.565    2.534
+ WP5           CAI    C    CR16      0.000     -2.826   -0.058   -0.337
+ WP5           HAI    H    H         0.000     -2.647    0.645   -1.141
+ WP5           CAJ    C    CR66      0.000     -4.111   -0.461   -0.046
+ WP5           CAS    C    CR66      0.000     -4.346   -1.368    0.990
+ WP5           NAT    N    NRD6      0.000     -5.625   -1.766    1.275
+ WP5           CAU    C    CR6       0.000     -6.596   -1.559    0.434
+ WP5           CAW    C    CH3       0.000     -7.992   -2.011    0.778
+ WP5           HAW3   H    H         0.000     -8.124   -1.981    1.828
+ WP5           HAW2   H    H         0.000     -8.695   -1.369    0.315
+ WP5           HAW1   H    H         0.000     -8.137   -3.001    0.432
+ WP5           CAK    C    CH1       0.000     -5.280    0.064   -0.836
+ WP5           HAK    H    H         0.000     -4.984    0.217   -1.884
+ WP5           N      N    NR6       0.000     -6.359   -0.933   -0.763
+ WP5           CA     C    CH2       0.000     -7.161   -1.255   -1.946
+ WP5           HA1C   H    H         0.000     -7.492   -2.294   -1.889
+ WP5           HA2C   H    H         0.000     -6.556   -1.115   -2.844
+ WP5           C      C    C         0.000     -8.363   -0.346   -2.001
+ WP5           O      O    O        -0.500     -8.537    0.515   -1.110
+ WP5           OAO    O    O2       -0.500     -9.185   -0.452   -2.938
+ WP5           CAP    C    CH3       0.000    -10.377    0.448   -2.996
+ WP5           HAP3   H    H         0.000    -10.978    0.322   -2.126
+ WP5           HAP2   H    H         0.000    -10.070    1.466   -3.052
+ WP5           HAP1   H    H         0.000    -10.968    0.223   -3.852
+ WP5           CAE    C    CR6       0.000     -5.748    1.368   -0.243
+ WP5           CAD    C    CR16      0.000     -6.531    1.368    0.896
+ WP5           HAD    H    H         0.000     -6.812    0.430    1.360
+ WP5           CAA    C    CR16      0.000     -6.957    2.564    1.442
+ WP5           HAA    H    H         0.000     -7.564    2.564    2.339
+ WP5           CAB    C    CR16      0.000     -6.607    3.760    0.844
+ WP5           HAB    H    H         0.000     -6.944    4.697    1.270
+ WP5           CAC    C    CR16      0.000     -5.827    3.761   -0.297
+ WP5           HAC    H    H         0.000     -5.552    4.698   -0.765
+ WP5           CAF    C    CR16      0.000     -5.398    2.564   -0.840
+ WP5           HAF    H    H         0.000     -4.787    2.564   -1.735
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ WP5      BRA    n/a    CAH    START
+ WP5      CAH    BRA    CAI    .
+ WP5      CAQ    CAH    CAR    .
+ WP5      HAQ    CAQ    .      .
+ WP5      CAR    CAQ    HAR    .
+ WP5      HAR    CAR    .      .
+ WP5      CAI    CAH    CAJ    .
+ WP5      HAI    CAI    .      .
+ WP5      CAJ    CAI    CAK    .
+ WP5      CAS    CAJ    NAT    .
+ WP5      NAT    CAS    CAU    .
+ WP5      CAU    NAT    CAW    .
+ WP5      CAW    CAU    HAW1   .
+ WP5      HAW3   CAW    .      .
+ WP5      HAW2   CAW    .      .
+ WP5      HAW1   CAW    .      .
+ WP5      CAK    CAJ    CAE    .
+ WP5      HAK    CAK    .      .
+ WP5      N      CAK    CA     .
+ WP5      CA     N      C      .
+ WP5      HA1C   CA     .      .
+ WP5      HA2C   CA     .      .
+ WP5      C      CA     OAO    .
+ WP5      O      C      .      .
+ WP5      OAO    C      CAP    .
+ WP5      CAP    OAO    HAP1   .
+ WP5      HAP3   CAP    .      .
+ WP5      HAP2   CAP    .      .
+ WP5      HAP1   CAP    .      .
+ WP5      CAE    CAK    CAD    .
+ WP5      CAD    CAE    CAA    .
+ WP5      HAD    CAD    .      .
+ WP5      CAA    CAD    CAB    .
+ WP5      HAA    CAA    .      .
+ WP5      CAB    CAA    CAC    .
+ WP5      HAB    CAB    .      .
+ WP5      CAC    CAB    CAF    .
+ WP5      HAC    CAC    .      .
+ WP5      CAF    CAC    HAF    .
+ WP5      HAF    CAF    .      END
+ WP5      N      CAU    .    ADD
+ WP5      CAS    CAR    .    ADD
+ WP5      CAE    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ WP5      CAP    OAO       single      1.426    0.020
+ WP5      OAO    C         deloc       1.454    0.020
+ WP5      O      C         deloc       1.220    0.020
+ WP5      C      CA        single      1.510    0.020
+ WP5      CA     N         single      1.465    0.020
+ WP5      N      CAU       single      1.410    0.020
+ WP5      N      CAK       single      1.465    0.020
+ WP5      CAW    CAU       single      1.506    0.020
+ WP5      CAU    NAT       double      1.350    0.020
+ WP5      NAT    CAS       single      1.350    0.020
+ WP5      CAS    CAR       single      1.390    0.020
+ WP5      CAS    CAJ       double      1.490    0.020
+ WP5      CAR    CAQ       double      1.390    0.020
+ WP5      CAQ    CAH       single      1.390    0.020
+ WP5      CAH    BRA       single      1.890    0.020
+ WP5      CAI    CAH       double      1.390    0.020
+ WP5      CAJ    CAI       single      1.390    0.020
+ WP5      CAK    CAJ       single      1.460    0.020
+ WP5      CAE    CAK       single      1.480    0.020
+ WP5      CAE    CAF       single      1.390    0.020
+ WP5      CAD    CAE       double      1.390    0.020
+ WP5      CAF    CAC       double      1.390    0.020
+ WP5      CAC    CAB       single      1.390    0.020
+ WP5      CAB    CAA       double      1.390    0.020
+ WP5      CAA    CAD       single      1.390    0.020
+ WP5      HAP1   CAP       single      1.059    0.020
+ WP5      HAP2   CAP       single      1.059    0.020
+ WP5      HAP3   CAP       single      1.059    0.020
+ WP5      HA1C   CA        single      1.092    0.020
+ WP5      HA2C   CA        single      1.092    0.020
+ WP5      HAK    CAK       single      1.099    0.020
+ WP5      HAW1   CAW       single      1.059    0.020
+ WP5      HAW2   CAW       single      1.059    0.020
+ WP5      HAW3   CAW       single      1.059    0.020
+ WP5      HAR    CAR       single      1.083    0.020
+ WP5      HAQ    CAQ       single      1.083    0.020
+ WP5      HAI    CAI       single      1.083    0.020
+ WP5      HAF    CAF       single      1.083    0.020
+ WP5      HAD    CAD       single      1.083    0.020
+ WP5      HAC    CAC       single      1.083    0.020
+ WP5      HAB    CAB       single      1.083    0.020
+ WP5      HAA    CAA       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ WP5      BRA    CAH    CAQ     120.000    3.000
+ WP5      BRA    CAH    CAI     120.000    3.000
+ WP5      CAQ    CAH    CAI     120.000    3.000
+ WP5      CAH    CAQ    HAQ     120.000    3.000
+ WP5      CAH    CAQ    CAR     120.000    3.000
+ WP5      HAQ    CAQ    CAR     120.000    3.000
+ WP5      CAQ    CAR    HAR     120.000    3.000
+ WP5      CAQ    CAR    CAS     120.000    3.000
+ WP5      HAR    CAR    CAS     120.000    3.000
+ WP5      CAH    CAI    HAI     120.000    3.000
+ WP5      CAH    CAI    CAJ     120.000    3.000
+ WP5      HAI    CAI    CAJ     120.000    3.000
+ WP5      CAI    CAJ    CAS     120.000    3.000
+ WP5      CAI    CAJ    CAK     120.000    3.000
+ WP5      CAS    CAJ    CAK     120.000    3.000
+ WP5      CAJ    CAS    NAT     120.000    3.000
+ WP5      CAJ    CAS    CAR     120.000    3.000
+ WP5      NAT    CAS    CAR     120.000    3.000
+ WP5      CAS    NAT    CAU     120.000    3.000
+ WP5      NAT    CAU    CAW     120.000    3.000
+ WP5      NAT    CAU    N       120.000    3.000
+ WP5      CAW    CAU    N       120.000    3.000
+ WP5      CAU    CAW    HAW3    109.470    3.000
+ WP5      CAU    CAW    HAW2    109.470    3.000
+ WP5      CAU    CAW    HAW1    109.470    3.000
+ WP5      HAW3   CAW    HAW2    109.470    3.000
+ WP5      HAW3   CAW    HAW1    109.470    3.000
+ WP5      HAW2   CAW    HAW1    109.470    3.000
+ WP5      CAJ    CAK    HAK     109.500    3.000
+ WP5      CAJ    CAK    N       109.500    3.000
+ WP5      CAJ    CAK    CAE     109.500    3.000
+ WP5      HAK    CAK    N       109.470    3.000
+ WP5      HAK    CAK    CAE     109.470    3.000
+ WP5      N      CAK    CAE     109.500    3.000
+ WP5      CAK    N      CA      120.000    3.000
+ WP5      CAK    N      CAU     120.000    3.000
+ WP5      CA     N      CAU     120.000    3.000
+ WP5      N      CA     HA1C    109.470    3.000
+ WP5      N      CA     HA2C    109.470    3.000
+ WP5      N      CA     C       109.500    3.000
+ WP5      HA1C   CA     HA2C    107.900    3.000
+ WP5      HA1C   CA     C       109.470    3.000
+ WP5      HA2C   CA     C       109.470    3.000
+ WP5      CA     C      O       120.500    3.000
+ WP5      CA     C      OAO     120.000    3.000
+ WP5      O      C      OAO     119.000    3.000
+ WP5      C      OAO    CAP     120.000    3.000
+ WP5      OAO    CAP    HAP3    109.470    3.000
+ WP5      OAO    CAP    HAP2    109.470    3.000
+ WP5      OAO    CAP    HAP1    109.470    3.000
+ WP5      HAP3   CAP    HAP2    109.470    3.000
+ WP5      HAP3   CAP    HAP1    109.470    3.000
+ WP5      HAP2   CAP    HAP1    109.470    3.000
+ WP5      CAK    CAE    CAD     120.000    3.000
+ WP5      CAK    CAE    CAF     120.000    3.000
+ WP5      CAD    CAE    CAF     120.000    3.000
+ WP5      CAE    CAD    HAD     120.000    3.000
+ WP5      CAE    CAD    CAA     120.000    3.000
+ WP5      HAD    CAD    CAA     120.000    3.000
+ WP5      CAD    CAA    HAA     120.000    3.000
+ WP5      CAD    CAA    CAB     120.000    3.000
+ WP5      HAA    CAA    CAB     120.000    3.000
+ WP5      CAA    CAB    HAB     120.000    3.000
+ WP5      CAA    CAB    CAC     120.000    3.000
+ WP5      HAB    CAB    CAC     120.000    3.000
+ WP5      CAB    CAC    HAC     120.000    3.000
+ WP5      CAB    CAC    CAF     120.000    3.000
+ WP5      HAC    CAC    CAF     120.000    3.000
+ WP5      CAC    CAF    HAF     120.000    3.000
+ WP5      CAC    CAF    CAE     120.000    3.000
+ WP5      HAF    CAF    CAE     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ WP5      CONST_1  BRA    CAH    CAQ    CAR      180.000    0.000   0
+ WP5      CONST_2  CAH    CAQ    CAR    CAS        0.000    0.000   0
+ WP5      CONST_3  BRA    CAH    CAI    CAJ      180.000    0.000   0
+ WP5      CONST_4  CAH    CAI    CAJ    CAK      180.000    0.000   0
+ WP5      CONST_5  CAI    CAJ    CAS    NAT      180.000    0.000   0
+ WP5      CONST_6  CAJ    CAS    CAR    CAQ        0.000    0.000   0
+ WP5      CONST_7  CAJ    CAS    NAT    CAU       30.000    0.000   0
+ WP5      CONST_8  CAS    NAT    CAU    CAW      180.000    0.000   0
+ WP5      var_1    NAT    CAU    CAW    HAW1     -90.006   20.000   1
+ WP5      var_2    CAI    CAJ    CAK    CAE      -90.000   20.000   1
+ WP5      CONST_9  CAJ    CAK    N      CA      -150.000    0.000   0
+ WP5      CONST_10 CAK    N      CAU    NAT      -30.000    0.000   0
+ WP5      var_3    CAK    N      CA     C        -90.267   20.000   1
+ WP5      var_4    N      CA     C      OAO      179.966   20.000   3
+ WP5      var_5    CA     C      OAO    CAP     -179.962   20.000   1
+ WP5      var_6    C      OAO    CAP    HAP1    -179.975   20.000   1
+ WP5      var_7    CAJ    CAK    CAE    CAD      -78.668   20.000   1
+ WP5      CONST_11 CAK    CAE    CAF    CAC      180.000    0.000   0
+ WP5      CONST_12 CAK    CAE    CAD    CAA      180.000    0.000   0
+ WP5      CONST_13 CAE    CAD    CAA    CAB        0.000    0.000   0
+ WP5      CONST_14 CAD    CAA    CAB    CAC        0.000    0.000   0
+ WP5      CONST_15 CAA    CAB    CAC    CAF        0.000    0.000   0
+ WP5      CONST_16 CAB    CAC    CAF    CAE        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ WP5      chir_01  CAK    N      CAJ    CAE       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ WP5      plan-1    C         0.020
+ WP5      plan-1    OAO       0.020
+ WP5      plan-1    O         0.020
+ WP5      plan-1    CA        0.020
+ WP5      plan-2    N         0.020
+ WP5      plan-2    CA        0.020
+ WP5      plan-2    CAU       0.020
+ WP5      plan-2    CAK       0.020
+ WP5      plan-2    NAT       0.020
+ WP5      plan-2    CAW       0.020
+ WP5      plan-2    CAS       0.020
+ WP5      plan-2    CAR       0.020
+ WP5      plan-2    CAJ       0.020
+ WP5      plan-2    CAQ       0.020
+ WP5      plan-2    CAH       0.020
+ WP5      plan-2    CAI       0.020
+ WP5      plan-2    HAR       0.020
+ WP5      plan-2    HAQ       0.020
+ WP5      plan-2    BRA       0.020
+ WP5      plan-2    HAI       0.020
+ WP5      plan-3    CAE       0.020
+ WP5      plan-3    CAK       0.020
+ WP5      plan-3    CAF       0.020
+ WP5      plan-3    CAD       0.020
+ WP5      plan-3    CAC       0.020
+ WP5      plan-3    CAB       0.020
+ WP5      plan-3    CAA       0.020
+ WP5      plan-3    HAF       0.020
+ WP5      plan-3    HAC       0.020
+ WP5      plan-3    HAB       0.020
+ WP5      plan-3    HAA       0.020
+ WP5      plan-3    HAD       0.020
+# ------------------------------------------------------

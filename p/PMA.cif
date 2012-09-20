@@ -1,0 +1,199 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PMA      PMA 'PYROMELLITIC ACID                   ' non-polymer        20  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PMA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PMA           O8     O    OC       -0.500      0.000    0.000    0.000
+ PMA           C8     C    C         0.000     -0.970   -0.704   -0.360
+ PMA           O7     O    OC       -0.500     -0.793   -1.651   -1.158
+ PMA           C5     C    CR6       0.000     -2.326   -0.417    0.159
+ PMA           C3     C    CR16      0.000     -2.564   -0.432    1.530
+ PMA           H3     H    H         0.000     -1.757   -0.654    2.217
+ PMA           C1     C    CR6       0.000     -3.839   -0.161    2.017
+ PMA           C9     C    C         0.000     -4.093   -0.177    3.476
+ PMA           O2     O    OC       -0.500     -3.449    0.584    4.231
+ PMA           O1     O    OC       -0.500     -4.951   -0.953    3.953
+ PMA           C4     C    CR6       0.000     -3.374   -0.130   -0.733
+ PMA           C7     C    C         0.000     -3.120   -0.114   -2.192
+ PMA           O6     O    OC       -0.500     -4.072    0.027   -2.991
+ PMA           O5     O    OC       -0.500     -1.954   -0.241   -2.625
+ PMA           C6     C    CR16      0.000     -4.649    0.140   -0.246
+ PMA           H6     H    H         0.000     -5.455    0.365   -0.933
+ PMA           C2     C    CR6       0.000     -4.888    0.120    1.125
+ PMA           C10    C    C         0.000     -6.245    0.408    1.643
+ PMA           O3     O    OC       -0.500     -6.436    0.504    2.876
+ PMA           O4     O    OC       -0.500     -7.200    0.555    0.849
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PMA      O8     n/a    C8     START
+ PMA      C8     O8     C5     .
+ PMA      O7     C8     .      .
+ PMA      C5     C8     C4     .
+ PMA      C3     C5     C1     .
+ PMA      H3     C3     .      .
+ PMA      C1     C3     C9     .
+ PMA      C9     C1     O1     .
+ PMA      O2     C9     .      .
+ PMA      O1     C9     .      .
+ PMA      C4     C5     C6     .
+ PMA      C7     C4     O5     .
+ PMA      O6     C7     .      .
+ PMA      O5     C7     .      .
+ PMA      C6     C4     C2     .
+ PMA      H6     C6     .      .
+ PMA      C2     C6     C10    .
+ PMA      C10    C2     O4     .
+ PMA      O3     C10    .      .
+ PMA      O4     C10    .      END
+ PMA      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PMA      C1     C2        double      1.487    0.020
+ PMA      C1     C3        single      1.390    0.020
+ PMA      C9     C1        single      1.500    0.020
+ PMA      C2     C6        single      1.390    0.020
+ PMA      C10    C2        single      1.500    0.020
+ PMA      C3     C5        double      1.390    0.020
+ PMA      H3     C3        single      1.083    0.020
+ PMA      C4     C5        single      1.487    0.020
+ PMA      C6     C4        double      1.390    0.020
+ PMA      C7     C4        single      1.500    0.020
+ PMA      C5     C8        single      1.500    0.020
+ PMA      H6     C6        single      1.083    0.020
+ PMA      O5     C7        deloc       1.250    0.020
+ PMA      O6     C7        deloc       1.250    0.020
+ PMA      O7     C8        deloc       1.250    0.020
+ PMA      C8     O8        deloc       1.250    0.020
+ PMA      O1     C9        deloc       1.250    0.020
+ PMA      O2     C9        deloc       1.250    0.020
+ PMA      O3     C10       deloc       1.250    0.020
+ PMA      O4     C10       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PMA      O8     C8     O7      123.000    3.000
+ PMA      O8     C8     C5      120.000    3.000
+ PMA      O7     C8     C5      120.000    3.000
+ PMA      C8     C5     C3      120.000    3.000
+ PMA      C8     C5     C4      120.000    3.000
+ PMA      C3     C5     C4      120.000    3.000
+ PMA      C5     C3     H3      120.000    3.000
+ PMA      C5     C3     C1      120.000    3.000
+ PMA      H3     C3     C1      120.000    3.000
+ PMA      C3     C1     C9      120.000    3.000
+ PMA      C3     C1     C2      120.000    3.000
+ PMA      C9     C1     C2      120.000    3.000
+ PMA      C1     C9     O2      120.000    3.000
+ PMA      C1     C9     O1      120.000    3.000
+ PMA      O2     C9     O1      123.000    3.000
+ PMA      C5     C4     C7      120.000    3.000
+ PMA      C5     C4     C6      120.000    3.000
+ PMA      C7     C4     C6      120.000    3.000
+ PMA      C4     C7     O6      120.000    3.000
+ PMA      C4     C7     O5      120.000    3.000
+ PMA      O6     C7     O5      123.000    3.000
+ PMA      C4     C6     H6      120.000    3.000
+ PMA      C4     C6     C2      120.000    3.000
+ PMA      H6     C6     C2      120.000    3.000
+ PMA      C6     C2     C10     120.000    3.000
+ PMA      C6     C2     C1      120.000    3.000
+ PMA      C10    C2     C1      120.000    3.000
+ PMA      C2     C10    O3      120.000    3.000
+ PMA      C2     C10    O4      120.000    3.000
+ PMA      O3     C10    O4      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PMA      var_1    O8     C8     C5     C4       121.780   20.000   1
+ PMA      CONST_1  C8     C5     C3     C1       180.000    0.000   0
+ PMA      CONST_2  C5     C3     C1     C9       180.000    0.000   0
+ PMA      CONST_3  C3     C1     C2     C6         0.000    0.000   0
+ PMA      var_2    C3     C1     C9     O1      -121.455   20.000   1
+ PMA      CONST_4  C8     C5     C4     C6       180.000    0.000   0
+ PMA      var_3    C5     C4     C7     O5        -6.133   20.000   1
+ PMA      CONST_5  C5     C4     C6     C2         0.000    0.000   0
+ PMA      CONST_6  C4     C6     C2     C10      180.000    0.000   0
+ PMA      var_4    C6     C2     C10    O4         6.139   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PMA      plan-1    C1        0.020
+ PMA      plan-1    C2        0.020
+ PMA      plan-1    C3        0.020
+ PMA      plan-1    C9        0.020
+ PMA      plan-1    C4        0.020
+ PMA      plan-1    C5        0.020
+ PMA      plan-1    C6        0.020
+ PMA      plan-1    C10       0.020
+ PMA      plan-1    H3        0.020
+ PMA      plan-1    C7        0.020
+ PMA      plan-1    C8        0.020
+ PMA      plan-1    H6        0.020
+ PMA      plan-2    C7        0.020
+ PMA      plan-2    C4        0.020
+ PMA      plan-2    O5        0.020
+ PMA      plan-2    O6        0.020
+ PMA      plan-3    C8        0.020
+ PMA      plan-3    C5        0.020
+ PMA      plan-3    O7        0.020
+ PMA      plan-3    O8        0.020
+ PMA      plan-4    C9        0.020
+ PMA      plan-4    C1        0.020
+ PMA      plan-4    O1        0.020
+ PMA      plan-4    O2        0.020
+ PMA      plan-5    C10       0.020
+ PMA      plan-5    C2        0.020
+ PMA      plan-5    O3        0.020
+ PMA      plan-5    O4        0.020
+# ------------------------------------------------------

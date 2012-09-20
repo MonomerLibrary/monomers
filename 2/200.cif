@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+200      200 '4-CHLORO-L-PHENYLALANINE            ' peptide            22  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_200
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 200           N      N    NH2       0.000      0.000    0.000    0.000
+ 200           HN1    H    H         0.000      0.924   -0.093   -0.404
+ 200           HN2    H    H         0.000     -0.159    0.692    0.723
+ 200           CA     C    CH1       0.000     -1.099   -0.859   -0.458
+ 200           HA     H    H         0.000     -1.422   -1.512    0.365
+ 200           CB     C    CH2       0.000     -2.274    0.012   -0.909
+ 200           HB2    H    H         0.000     -3.055   -0.622   -1.334
+ 200           HB3    H    H         0.000     -1.931    0.721   -1.665
+ 200           CG     C    CR6       0.000     -2.824    0.764    0.275
+ 200           CD2    C    CR16      0.000     -2.321    2.013    0.595
+ 200           HD2    H    H         0.000     -1.532    2.448   -0.006
+ 200           CE2    C    CR16      0.000     -2.824    2.703    1.680
+ 200           HE2    H    H         0.000     -2.430    3.680    1.930
+ 200           CZ     C    CR6       0.000     -3.833    2.147    2.448
+ 200           CE1    C    CR16      0.000     -4.336    0.899    2.127
+ 200           HE1    H    H         0.000     -5.122    0.461    2.729
+ 200           CD1    C    CR16      0.000     -3.835    0.210    1.038
+ 200           HD1    H    H         0.000     -4.235   -0.763    0.782
+ 200           CL     CL   CL        0.000     -4.466    3.015    3.811
+ 200           C      C    C         0.000     -0.628   -1.704   -1.614
+ 200           O      O    OC       -0.500      0.380   -1.361   -2.270
+ 200           OXT    O    OC       -0.500     -1.246   -2.749   -1.918
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 200      N      n/a    CA     START
+ 200      HN1    N      .      .
+ 200      HN2    N      .      .
+ 200      CA     N      C      .
+ 200      HA     CA     .      .
+ 200      CB     CA     CG     .
+ 200      HB2    CB     .      .
+ 200      HB3    CB     .      .
+ 200      CG     CB     CD2    .
+ 200      CD2    CG     CE2    .
+ 200      HD2    CD2    .      .
+ 200      CE2    CD2    CZ     .
+ 200      HE2    CE2    .      .
+ 200      CZ     CE2    CL     .
+ 200      CE1    CZ     CD1    .
+ 200      HE1    CE1    .      .
+ 200      CD1    CE1    HD1    .
+ 200      HD1    CD1    .      .
+ 200      CL     CZ     .      .
+ 200      C      CA     .      END
+ 200      O      C      .      .
+ 200      OXT    C      .      .
+ 200      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 200      CA     N         single      1.450    0.020
+ 200      C      CA        single      1.500    0.020
+ 200      CB     CA        single      1.524    0.020
+ 200      HA     CA        single      1.099    0.020
+ 200      O      C         deloc       1.250    0.020
+ 200      OXT    C         deloc       1.250    0.020
+ 200      CG     CB        single      1.511    0.020
+ 200      HB2    CB        single      1.092    0.020
+ 200      HB3    CB        single      1.092    0.020
+ 200      CG     CD1       single      1.390    0.020
+ 200      CD2    CG        double      1.390    0.020
+ 200      CD1    CE1       double      1.390    0.020
+ 200      HD1    CD1       single      1.083    0.020
+ 200      CE2    CD2       single      1.390    0.020
+ 200      HD2    CD2       single      1.083    0.020
+ 200      CE1    CZ        single      1.390    0.020
+ 200      HE1    CE1       single      1.083    0.020
+ 200      CZ     CE2       double      1.390    0.020
+ 200      HE2    CE2       single      1.083    0.020
+ 200      CL     CZ        single      1.795    0.020
+ 200      HN1    N         single      1.010    0.020
+ 200      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 200      HN1    N      HN2     120.000    3.000
+ 200      HN1    N      CA      120.000    3.000
+ 200      HN2    N      CA      120.000    3.000
+ 200      N      CA     HA      109.470    3.000
+ 200      N      CA     CB      109.470    3.000
+ 200      N      CA     C       109.470    3.000
+ 200      HA     CA     CB      108.340    3.000
+ 200      HA     CA     C       108.810    3.000
+ 200      CB     CA     C       109.470    3.000
+ 200      CA     CB     HB2     109.470    3.000
+ 200      CA     CB     HB3     109.470    3.000
+ 200      CA     CB     CG      109.470    3.000
+ 200      HB2    CB     HB3     107.900    3.000
+ 200      HB2    CB     CG      109.470    3.000
+ 200      HB3    CB     CG      109.470    3.000
+ 200      CB     CG     CD2     120.000    3.000
+ 200      CB     CG     CD1     120.000    3.000
+ 200      CD2    CG     CD1     120.000    3.000
+ 200      CG     CD2    HD2     120.000    3.000
+ 200      CG     CD2    CE2     120.000    3.000
+ 200      HD2    CD2    CE2     120.000    3.000
+ 200      CD2    CE2    HE2     120.000    3.000
+ 200      CD2    CE2    CZ      120.000    3.000
+ 200      HE2    CE2    CZ      120.000    3.000
+ 200      CE2    CZ     CE1     120.000    3.000
+ 200      CE2    CZ     CL      120.000    3.000
+ 200      CE1    CZ     CL      120.000    3.000
+ 200      CZ     CE1    HE1     120.000    3.000
+ 200      CZ     CE1    CD1     120.000    3.000
+ 200      HE1    CE1    CD1     120.000    3.000
+ 200      CE1    CD1    HD1     120.000    3.000
+ 200      CE1    CD1    CG      120.000    3.000
+ 200      HD1    CD1    CG      120.000    3.000
+ 200      CA     C      O       118.500    3.000
+ 200      CA     C      OXT     118.500    3.000
+ 200      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 200      var_1    HN2    N      CA     C        175.000   20.000   1
+ 200      var_2    N      CA     CB     CG       -65.055   20.000   3
+ 200      var_3    CA     CB     CG     CD2       90.031   20.000   2
+ 200      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ 200      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ 200      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ 200      CONST_4  CD2    CE2    CZ     CL       180.000    0.000   0
+ 200      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ 200      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 200      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 200      plan-1    N         0.020
+ 200      plan-1    CA        0.020
+ 200      plan-1    HN1       0.020
+ 200      plan-1    HN2       0.020
+ 200      plan-2    C         0.020
+ 200      plan-2    CA        0.020
+ 200      plan-2    O         0.020
+ 200      plan-2    OXT       0.020
+ 200      plan-3    CG        0.020
+ 200      plan-3    CB        0.020
+ 200      plan-3    CD1       0.020
+ 200      plan-3    CD2       0.020
+ 200      plan-3    CE1       0.020
+ 200      plan-3    CE2       0.020
+ 200      plan-3    CZ        0.020
+ 200      plan-3    HD1       0.020
+ 200      plan-3    HD2       0.020
+ 200      plan-3    HE1       0.020
+ 200      plan-3    HE2       0.020
+ 200      plan-3    CL        0.020
+# ------------------------------------------------------

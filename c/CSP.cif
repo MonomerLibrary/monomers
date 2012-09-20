@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CSP      CSP 'S-PHOSPHOCYSTEINE                   ' peptide            18  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CSP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CSP           N      N    NH2       0.000      0.000    0.000    0.000
+ CSP           HN1    H    H         0.000      0.698   -0.545    0.493
+ CSP           HN2    H    H         0.000      0.104    0.156   -0.996
+ CSP           CA     C    CH1       0.000     -1.151    0.558    0.722
+ CSP           HA     H    H         0.000     -1.099    1.656    0.703
+ CSP           CB     C    CH2       0.000     -2.446    0.098    0.049
+ CSP           HB2    H    H         0.000     -3.302    0.511    0.586
+ CSP           HB3    H    H         0.000     -2.498   -0.993    0.068
+ CSP           SG     S    S2        0.000     -2.473    0.675   -1.669
+ CSP           P      P    P         0.000     -4.342   -0.108   -2.292
+ CSP           O2P    O    OH1       0.000     -4.603    0.282   -3.831
+ CSP           HO2P   H    H         0.000     -5.416   -0.002   -4.270
+ CSP           O3P    O    OH1       0.000     -4.329   -1.710   -2.140
+ CSP           HO3P   H    H         0.000     -3.681   -2.237   -2.627
+ CSP           O1P    O    O         0.000     -5.420    0.458   -1.450
+ CSP           C      C    C         0.000     -1.129    0.080    2.150
+ CSP           O      O    OC       -0.500     -0.632   -1.034    2.428
+ CSP           OXT    O    OC       -0.500     -1.608    0.794    3.058
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CSP      N      n/a    CA     START
+ CSP      HN1    N      .      .
+ CSP      HN2    N      .      .
+ CSP      CA     N      C      .
+ CSP      HA     CA     .      .
+ CSP      CB     CA     SG     .
+ CSP      HB2    CB     .      .
+ CSP      HB3    CB     .      .
+ CSP      SG     CB     P      .
+ CSP      P      SG     O1P    .
+ CSP      O2P    P      HO2P   .
+ CSP      HO2P   O2P    .      .
+ CSP      O3P    P      HO3P   .
+ CSP      HO3P   O3P    .      .
+ CSP      O1P    P      .      .
+ CSP      C      CA     .      END
+ CSP      O      C      .      .
+ CSP      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CSP      CA     N         single      1.450    0.020
+ CSP      CB     CA        single      1.524    0.020
+ CSP      C      CA        single      1.500    0.020
+ CSP      HA     CA        single      1.099    0.020
+ CSP      SG     CB        single      1.762    0.020
+ CSP      HB2    CB        single      1.092    0.020
+ CSP      HB3    CB        single      1.092    0.020
+ CSP      P      SG        single      2.050    0.020
+ CSP      O      C         deloc       1.250    0.020
+ CSP      OXT    C         deloc       1.250    0.020
+ CSP      O1P    P         double      1.480    0.020
+ CSP      O2P    P         single      1.610    0.020
+ CSP      O3P    P         single      1.610    0.020
+ CSP      HO2P   O2P       single      0.967    0.020
+ CSP      HO3P   O3P       single      0.967    0.020
+ CSP      HN1    N         single      1.010    0.020
+ CSP      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CSP      HN1    N      HN2     120.000    3.000
+ CSP      HN1    N      CA      120.000    3.000
+ CSP      HN2    N      CA      120.000    3.000
+ CSP      N      CA     HA      109.470    3.000
+ CSP      N      CA     CB      109.470    3.000
+ CSP      N      CA     C       109.470    3.000
+ CSP      HA     CA     CB      108.340    3.000
+ CSP      HA     CA     C       108.810    3.000
+ CSP      CB     CA     C       109.470    3.000
+ CSP      CA     CB     HB2     109.470    3.000
+ CSP      CA     CB     HB3     109.470    3.000
+ CSP      CA     CB     SG      109.500    3.000
+ CSP      HB2    CB     HB3     107.900    3.000
+ CSP      HB2    CB     SG      109.500    3.000
+ CSP      HB3    CB     SG      109.500    3.000
+ CSP      CB     SG     P       100.016    3.000
+ CSP      SG     P      O3P     109.500    3.000
+ CSP      SG     P      O2P     109.500    3.000
+ CSP      SG     P      O1P     109.500    3.000
+ CSP      O3P    P      O2P     109.500    3.000
+ CSP      O3P    P      O1P     109.500    3.000
+ CSP      O2P    P      O1P     109.500    3.000
+ CSP      P      O3P    HO3P    120.000    3.000
+ CSP      P      O2P    HO2P    120.000    3.000
+ CSP      CA     C      O       118.500    3.000
+ CSP      CA     C      OXT     118.500    3.000
+ CSP      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CSP      var_1    HN2    N      CA     C        175.000   20.000   1
+ CSP      var_2    N      CA     CB     SG       -60.028   20.000   3
+ CSP      var_3    CA     CB     SG     P       -179.961   20.000   1
+ CSP      var_4    CB     SG     P      O1P       59.971   20.000   1
+ CSP      var_5    SG     P      O3P    HO3P     -60.035   20.000   1
+ CSP      var_6    SG     P      O2P    HO2P     179.962   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CSP      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CSP      plan-1    N         0.020
+ CSP      plan-1    CA        0.020
+ CSP      plan-1    HN1       0.020
+ CSP      plan-1    HN2       0.020
+ CSP      plan-2    C         0.020
+ CSP      plan-2    CA        0.020
+ CSP      plan-2    O         0.020
+ CSP      plan-2    OXT       0.020
+# ------------------------------------------------------

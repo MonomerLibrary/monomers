@@ -1,0 +1,191 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3ML      3ML '[(2S)-3-methyl-5-oxo-2,5-dihydrofura' non-polymer        18  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3ML
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3ML           OAB    O    OC       -0.500      0.000    0.000    0.000
+ 3ML           CAH    C    C         0.000     -1.156   -0.114    0.465
+ 3ML           OAD    O    OC       -0.500     -1.366   -0.865    1.443
+ 3ML           CAF    C    CH2       0.000     -2.295    0.655   -0.152
+ 3ML           HAF    H    H         0.000     -2.403    0.367   -1.200
+ 3ML           HAFA   H    H         0.000     -2.088    1.725   -0.090
+ 3ML           CAK    C    CH1       0.000     -3.590    0.339    0.600
+ 3ML           HAK    H    H         0.000     -3.459    0.493    1.680
+ 3ML           CAI    C    C         0.000     -4.720    1.194    0.073
+ 3ML           CAA    C    CH3       0.000     -4.788    2.699    0.089
+ 3ML           HAAB   H    H         0.000     -5.799    3.008    0.159
+ 3ML           HAAA   H    H         0.000     -4.249    3.070    0.923
+ 3ML           HAA    H    H         0.000     -4.364    3.083   -0.803
+ 3ML           OAG    O    O2       -0.500     -4.072   -1.039    0.320
+ 3ML           CAJ    C    C         0.000     -5.192   -1.020   -0.237
+ 3ML           OAC    O    O        -0.500     -5.835   -2.033   -0.591
+ 3ML           CAE    C    C1        0.000     -5.640    0.364   -0.413
+ 3ML           HAE    H    H         0.000     -6.570    0.664   -0.866
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3ML      OAB    n/a    CAH    START
+ 3ML      CAH    OAB    CAF    .
+ 3ML      OAD    CAH    .      .
+ 3ML      CAF    CAH    CAK    .
+ 3ML      HAF    CAF    .      .
+ 3ML      HAFA   CAF    .      .
+ 3ML      CAK    CAF    OAG    .
+ 3ML      HAK    CAK    .      .
+ 3ML      CAI    CAK    CAA    .
+ 3ML      CAA    CAI    HAA    .
+ 3ML      HAAB   CAA    .      .
+ 3ML      HAAA   CAA    .      .
+ 3ML      HAA    CAA    .      .
+ 3ML      OAG    CAK    CAJ    .
+ 3ML      CAJ    OAG    CAE    .
+ 3ML      OAC    CAJ    .      .
+ 3ML      CAE    CAJ    HAE    .
+ 3ML      HAE    CAE    .      END
+ 3ML      CAI    CAE    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3ML      CAA    CAI       single      1.500    0.020
+ 3ML      HAA    CAA       single      1.059    0.020
+ 3ML      HAAA   CAA       single      1.059    0.020
+ 3ML      HAAB   CAA       single      1.059    0.020
+ 3ML      CAI    CAK       single      1.500    0.020
+ 3ML      CAI    CAE       double      1.340    0.020
+ 3ML      CAE    CAJ       single      1.475    0.020
+ 3ML      HAE    CAE       single      1.077    0.020
+ 3ML      CAJ    OAG       deloc       1.454    0.020
+ 3ML      OAC    CAJ       deloc       1.220    0.020
+ 3ML      OAG    CAK       single      1.426    0.020
+ 3ML      CAK    CAF       single      1.524    0.020
+ 3ML      HAK    CAK       single      1.099    0.020
+ 3ML      CAF    CAH       single      1.510    0.020
+ 3ML      HAF    CAF       single      1.092    0.020
+ 3ML      HAFA   CAF       single      1.092    0.020
+ 3ML      OAD    CAH       deloc       1.250    0.020
+ 3ML      CAH    OAB       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3ML      OAB    CAH    OAD     123.000    3.000
+ 3ML      OAB    CAH    CAF     118.500    3.000
+ 3ML      OAD    CAH    CAF     118.500    3.000
+ 3ML      CAH    CAF    HAF     109.470    3.000
+ 3ML      CAH    CAF    HAFA    109.470    3.000
+ 3ML      CAH    CAF    CAK     109.470    3.000
+ 3ML      HAF    CAF    HAFA    107.900    3.000
+ 3ML      HAF    CAF    CAK     109.470    3.000
+ 3ML      HAFA   CAF    CAK     109.470    3.000
+ 3ML      CAF    CAK    HAK     108.340    3.000
+ 3ML      CAF    CAK    CAI     109.470    3.000
+ 3ML      CAF    CAK    OAG     109.470    3.000
+ 3ML      HAK    CAK    CAI     108.810    3.000
+ 3ML      HAK    CAK    OAG     109.470    3.000
+ 3ML      CAI    CAK    OAG     109.470    3.000
+ 3ML      CAK    CAI    CAA     120.000    3.000
+ 3ML      CAK    CAI    CAE     120.000    3.000
+ 3ML      CAA    CAI    CAE     120.000    3.000
+ 3ML      CAI    CAA    HAAB    109.470    3.000
+ 3ML      CAI    CAA    HAAA    109.470    3.000
+ 3ML      CAI    CAA    HAA     109.470    3.000
+ 3ML      HAAB   CAA    HAAA    109.470    3.000
+ 3ML      HAAB   CAA    HAA     109.470    3.000
+ 3ML      HAAA   CAA    HAA     109.470    3.000
+ 3ML      CAK    OAG    CAJ     111.800    3.000
+ 3ML      OAG    CAJ    OAC     119.000    3.000
+ 3ML      OAG    CAJ    CAE     120.000    3.000
+ 3ML      OAC    CAJ    CAE     120.500    3.000
+ 3ML      CAJ    CAE    HAE     120.000    3.000
+ 3ML      CAJ    CAE    CAI     120.000    3.000
+ 3ML      HAE    CAE    CAI     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3ML      var_1    OAB    CAH    CAF    CAK     -179.966   20.000   3
+ 3ML      var_2    CAH    CAF    CAK    OAG      -71.680   20.000   3
+ 3ML      var_3    CAF    CAK    CAI    CAA      -60.000   20.000   3
+ 3ML      var_4    CAK    CAI    CAE    CAJ        0.000   20.000   1
+ 3ML      var_5    CAK    CAI    CAA    HAA       90.017   20.000   1
+ 3ML      var_6    CAF    CAK    OAG    CAJ     -120.000   20.000   1
+ 3ML      var_7    CAK    OAG    CAJ    CAE        0.000   20.000   1
+ 3ML      var_8    OAG    CAJ    CAE    CAI        0.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 3ML      chir_01  CAK    CAI    OAG    CAF       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3ML      plan-1    CAI       0.020
+ 3ML      plan-1    CAA       0.020
+ 3ML      plan-1    CAE       0.020
+ 3ML      plan-1    CAK       0.020
+ 3ML      plan-1    HAE       0.020
+ 3ML      plan-2    CAE       0.020
+ 3ML      plan-2    CAI       0.020
+ 3ML      plan-2    CAJ       0.020
+ 3ML      plan-2    HAE       0.020
+ 3ML      plan-3    CAJ       0.020
+ 3ML      plan-3    CAE       0.020
+ 3ML      plan-3    OAC       0.020
+ 3ML      plan-3    OAG       0.020
+ 3ML      plan-3    HAE       0.020
+ 3ML      plan-4    CAH       0.020
+ 3ML      plan-4    CAF       0.020
+ 3ML      plan-4    OAD       0.020
+ 3ML      plan-4    OAB       0.020
+# ------------------------------------------------------

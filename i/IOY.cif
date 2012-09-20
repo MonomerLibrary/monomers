@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IOY      IOY 'P-IODO-D-PHENYLALANINE              ' peptide            22  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IOY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IOY           N      N    NH2       0.000      0.000    0.000    0.000
+ IOY           HN1    H    H         0.000      0.957    0.249    0.221
+ IOY           HN2    H    H         0.000     -0.569    0.642   -0.539
+ IOY           CA     C    CH1       0.000     -0.557   -1.279    0.457
+ IOY           HA     H    H         0.000     -0.953   -1.835   -0.405
+ IOY           CB     C    CH2       0.000     -1.686   -1.017    1.457
+ IOY           HB3    H    H         0.000     -1.313   -0.391    2.270
+ IOY           HB2    H    H         0.000     -2.039   -1.967    1.863
+ IOY           CG     C    CR6       0.000     -2.822   -0.314    0.759
+ IOY           CD2    C    CR16      0.000     -2.857    1.068    0.716
+ IOY           HD2    H    H         0.000     -2.070    1.645    1.187
+ IOY           CE2    C    CR16      0.000     -3.896    1.713    0.073
+ IOY           HE2    H    H         0.000     -3.920    2.795    0.033
+ IOY           CZ     C    CR6       0.000     -4.905    0.976   -0.520
+ IOY           I1     I    I         0.000     -6.484    1.954   -1.490
+ IOY           CE1    C    CR16      0.000     -4.872   -0.405   -0.474
+ IOY           HE1    H    H         0.000     -5.662   -0.981   -0.938
+ IOY           CD1    C    CR16      0.000     -3.830   -1.050    0.166
+ IOY           HD1    H    H         0.000     -3.805   -2.132    0.203
+ IOY           C      C    C         0.000      0.525   -2.090    1.123
+ IOY           OXT    O    OC       -0.500      0.392   -3.327    1.249
+ IOY           O      O    OC       -0.500      1.557   -1.525    1.548
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IOY      N      n/a    CA     START
+ IOY      HN1    N      .      .
+ IOY      HN2    N      .      .
+ IOY      CA     N      C      .
+ IOY      HA     CA     .      .
+ IOY      CB     CA     CG     .
+ IOY      HB3    CB     .      .
+ IOY      HB2    CB     .      .
+ IOY      CG     CB     CD2    .
+ IOY      CD2    CG     CE2    .
+ IOY      HD2    CD2    .      .
+ IOY      CE2    CD2    CZ     .
+ IOY      HE2    CE2    .      .
+ IOY      CZ     CE2    CE1    .
+ IOY      I1     CZ     .      .
+ IOY      CE1    CZ     CD1    .
+ IOY      HE1    CE1    .      .
+ IOY      CD1    CE1    HD1    .
+ IOY      HD1    CD1    .      .
+ IOY      C      CA     .      END
+ IOY      OXT    C      .      .
+ IOY      O      C      .      .
+ IOY      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IOY      CG     CD1       double      1.390    0.020
+ IOY      CD2    CG        single      1.390    0.020
+ IOY      CG     CB        single      1.511    0.020
+ IOY      CD1    CE1       single      1.390    0.020
+ IOY      HD1    CD1       single      1.083    0.020
+ IOY      CE1    CZ        double      1.390    0.020
+ IOY      HE1    CE1       single      1.083    0.020
+ IOY      I1     CZ        single      2.090    0.020
+ IOY      CZ     CE2       single      1.390    0.020
+ IOY      CE2    CD2       double      1.390    0.020
+ IOY      HE2    CE2       single      1.083    0.020
+ IOY      HD2    CD2       single      1.083    0.020
+ IOY      CB     CA        single      1.524    0.020
+ IOY      HB3    CB        single      1.092    0.020
+ IOY      HB2    CB        single      1.092    0.020
+ IOY      CA     N         single      1.450    0.020
+ IOY      OXT    C         deloc       1.250    0.020
+ IOY      O      C         deloc       1.250    0.020
+ IOY      C      CA        single      1.500    0.020
+ IOY      HA     CA        single      1.099    0.020
+ IOY      HN1    N         single      1.010    0.020
+ IOY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IOY      HN1    N      HN2     120.000    3.000
+ IOY      HN1    N      CA      120.000    3.000
+ IOY      HN2    N      CA      120.000    3.000
+ IOY      N      CA     HA      109.470    3.000
+ IOY      N      CA     CB      109.470    3.000
+ IOY      N      CA     C       109.470    3.000
+ IOY      HA     CA     CB      108.340    3.000
+ IOY      HA     CA     C       108.810    3.000
+ IOY      CB     CA     C       109.470    3.000
+ IOY      CA     CB     HB3     109.470    3.000
+ IOY      CA     CB     HB2     109.470    3.000
+ IOY      CA     CB     CG      109.470    3.000
+ IOY      HB3    CB     HB2     107.900    3.000
+ IOY      HB3    CB     CG      109.470    3.000
+ IOY      HB2    CB     CG      109.470    3.000
+ IOY      CB     CG     CD2     120.000    3.000
+ IOY      CB     CG     CD1     120.000    3.000
+ IOY      CD2    CG     CD1     120.000    3.000
+ IOY      CG     CD2    HD2     120.000    3.000
+ IOY      CG     CD2    CE2     120.000    3.000
+ IOY      HD2    CD2    CE2     120.000    3.000
+ IOY      CD2    CE2    HE2     120.000    3.000
+ IOY      CD2    CE2    CZ      120.000    3.000
+ IOY      HE2    CE2    CZ      120.000    3.000
+ IOY      CE2    CZ     I1      120.000    3.000
+ IOY      CE2    CZ     CE1     120.000    3.000
+ IOY      I1     CZ     CE1     120.000    3.000
+ IOY      CZ     CE1    HE1     120.000    3.000
+ IOY      CZ     CE1    CD1     120.000    3.000
+ IOY      HE1    CE1    CD1     120.000    3.000
+ IOY      CE1    CD1    HD1     120.000    3.000
+ IOY      CE1    CD1    CG      120.000    3.000
+ IOY      HD1    CD1    CG      120.000    3.000
+ IOY      CA     C      OXT     118.500    3.000
+ IOY      CA     C      O       118.500    3.000
+ IOY      OXT    C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IOY      var_1    HN2    N      CA     C        175.000   20.000   1
+ IOY      var_2    N      CA     CB     CG        64.989   20.000   3
+ IOY      var_3    CA     CB     CG     CD2      -90.263   20.000   2
+ IOY      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ IOY      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ IOY      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ IOY      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ IOY      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ IOY      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IOY      chir_01  CA     CB     N      C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IOY      plan-1    CG        0.020
+ IOY      plan-1    CD1       0.020
+ IOY      plan-1    CD2       0.020
+ IOY      plan-1    CB        0.020
+ IOY      plan-1    CE1       0.020
+ IOY      plan-1    CZ        0.020
+ IOY      plan-1    CE2       0.020
+ IOY      plan-1    HD1       0.020
+ IOY      plan-1    HE1       0.020
+ IOY      plan-1    I1        0.020
+ IOY      plan-1    HE2       0.020
+ IOY      plan-1    HD2       0.020
+ IOY      plan-2    N         0.020
+ IOY      plan-2    CA        0.020
+ IOY      plan-2    HN1       0.020
+ IOY      plan-2    HN2       0.020
+ IOY      plan-3    C         0.020
+ IOY      plan-3    OXT       0.020
+ IOY      plan-3    O         0.020
+ IOY      plan-3    CA        0.020
+# ------------------------------------------------------

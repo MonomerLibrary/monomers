@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+K8X      K8X '4,5,6,7-tetraiodo-1H-benzimidazole  ' non-polymer        15  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_K8X
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ K8X           I19    I    I         0.000      0.000    0.000    0.000
+ K8X           C4     C    CR6       0.000     -2.039    0.479   -0.002
+ K8X           C5     C    CR6       0.000     -2.985   -0.522   -0.001
+ K8X           I17    I    I         0.000     -2.375   -2.527    0.000
+ K8X           C6     C    CR6       0.000     -4.338   -0.213   -0.002
+ K8X           I15    I    I         0.000     -5.758   -1.755   -0.002
+ K8X           C1     C    CR6       0.000     -4.756    1.101   -0.004
+ K8X           I13    I    I         0.000     -6.802    1.554    0.003
+ K8X           C3     C    CR56      0.000     -2.446    1.817   -0.002
+ K8X           N25    N    NRD5      0.000     -1.775    2.998   -0.002
+ K8X           C23    C    CR15      0.000     -2.625    3.983   -0.003
+ K8X           H23    H    H         0.000     -2.357    5.033   -0.003
+ K8X           N21    N    NR15      0.000     -3.898    3.503   -0.005
+ K8X           HN21   H    H         0.000     -4.771    4.069   -0.007
+ K8X           C2     C    CR56      0.000     -3.817    2.125   -0.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ K8X      I19    n/a    C4     START
+ K8X      C4     I19    C3     .
+ K8X      C5     C4     C6     .
+ K8X      I17    C5     .      .
+ K8X      C6     C5     C1     .
+ K8X      I15    C6     .      .
+ K8X      C1     C6     I13    .
+ K8X      I13    C1     .      .
+ K8X      C3     C4     N25    .
+ K8X      N25    C3     C23    .
+ K8X      C23    N25    N21    .
+ K8X      H23    C23    .      .
+ K8X      N21    C23    C2     .
+ K8X      HN21   N21    .      .
+ K8X      C2     N21    .      END
+ K8X      C1     C2     .    ADD
+ K8X      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ K8X      I13    C1        single      2.090    0.020
+ K8X      C1     C2        double      1.490    0.020
+ K8X      C1     C6        single      1.487    0.020
+ K8X      C2     N21       single      1.340    0.020
+ K8X      C2     C3        single      1.490    0.020
+ K8X      N25    C3        single      1.350    0.020
+ K8X      C3     C4        double      1.490    0.020
+ K8X      C5     C4        single      1.487    0.020
+ K8X      C4     I19       single      2.090    0.020
+ K8X      C6     C5        double      1.487    0.020
+ K8X      I17    C5        single      2.090    0.020
+ K8X      I15    C6        single      2.090    0.020
+ K8X      N21    C23       single      1.350    0.020
+ K8X      C23    N25       double      1.350    0.020
+ K8X      H23    C23       single      1.083    0.020
+ K8X      HN21   N21       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ K8X      I19    C4     C5      120.000    3.000
+ K8X      I19    C4     C3      120.000    3.000
+ K8X      C5     C4     C3      120.000    3.000
+ K8X      C4     C5     I17     120.000    3.000
+ K8X      C4     C5     C6      120.000    3.000
+ K8X      I17    C5     C6      120.000    3.000
+ K8X      C5     C6     I15     120.000    3.000
+ K8X      C5     C6     C1      120.000    3.000
+ K8X      I15    C6     C1      120.000    3.000
+ K8X      C6     C1     I13     120.000    3.000
+ K8X      C6     C1     C2      120.000    3.000
+ K8X      I13    C1     C2      120.000    3.000
+ K8X      C4     C3     N25     132.000    3.000
+ K8X      C4     C3     C2      120.000    3.000
+ K8X      N25    C3     C2      108.000    3.000
+ K8X      C3     N25    C23     108.000    3.000
+ K8X      N25    C23    H23     126.000    3.000
+ K8X      N25    C23    N21     108.000    3.000
+ K8X      H23    C23    N21     126.000    3.000
+ K8X      C23    N21    HN21    126.000    3.000
+ K8X      C23    N21    C2      108.000    3.000
+ K8X      HN21   N21    C2      126.000    3.000
+ K8X      N21    C2     C1      132.000    3.000
+ K8X      N21    C2     C3      108.000    3.000
+ K8X      C1     C2     C3      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ K8X      CONST_1  I19    C4     C5     C6       180.000    0.000   0
+ K8X      CONST_2  C4     C5     C6     C1         0.000    0.000   0
+ K8X      CONST_3  C5     C6     C1     I13      180.000    0.000   0
+ K8X      CONST_4  C6     C1     C2     N21      180.000    0.000   0
+ K8X      CONST_5  I19    C4     C3     N25        0.000    0.000   0
+ K8X      CONST_6  C4     C3     N25    C23      180.000    0.000   0
+ K8X      CONST_7  C3     N25    C23    N21        0.000    0.000   0
+ K8X      CONST_8  N25    C23    N21    C2         0.000    0.000   0
+ K8X      CONST_9  C23    N21    C2     C1       180.000    0.000   0
+ K8X      CONST_10 N21    C2     C3     C4       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ K8X      plan-1    C1        0.020
+ K8X      plan-1    C2        0.020
+ K8X      plan-1    C6        0.020
+ K8X      plan-1    I13       0.020
+ K8X      plan-1    C4        0.020
+ K8X      plan-1    C5        0.020
+ K8X      plan-1    C3        0.020
+ K8X      plan-1    N21       0.020
+ K8X      plan-1    C23       0.020
+ K8X      plan-1    N25       0.020
+ K8X      plan-1    I19       0.020
+ K8X      plan-1    I17       0.020
+ K8X      plan-1    I15       0.020
+ K8X      plan-1    HN21      0.020
+ K8X      plan-1    H23       0.020
+# ------------------------------------------------------

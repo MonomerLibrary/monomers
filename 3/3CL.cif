@@ -1,0 +1,122 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3CL      3CL '3-CHLOROPROPANOL                    ' non-polymer        12   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3CL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3CL           CL5    CL   CL        0.000      0.000    0.000    0.000
+ 3CL           C4     C    CH2       0.000     -1.149    0.000    1.389
+ 3CL           H41    H    H         0.000     -0.982    0.891    1.998
+ 3CL           H42    H    H         0.000     -0.982   -0.891    1.998
+ 3CL           C3     C    CH2       0.000     -2.585    0.000    0.864
+ 3CL           H31    H    H         0.000     -2.749   -0.891    0.255
+ 3CL           H32    H    H         0.000     -2.749    0.891    0.255
+ 3CL           C2     C    CH2       0.000     -3.560    0.000    2.043
+ 3CL           H21    H    H         0.000     -3.393    0.891    2.651
+ 3CL           H22    H    H         0.000     -3.393   -0.891    2.651
+ 3CL           O1     O    OH1       0.000     -4.901    0.000    1.553
+ 3CL           HO1    H    H         0.000     -5.516    0.000    2.299
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3CL      CL5    n/a    C4     START
+ 3CL      C4     CL5    C3     .
+ 3CL      H41    C4     .      .
+ 3CL      H42    C4     .      .
+ 3CL      C3     C4     C2     .
+ 3CL      H31    C3     .      .
+ 3CL      H32    C3     .      .
+ 3CL      C2     C3     O1     .
+ 3CL      H21    C2     .      .
+ 3CL      H22    C2     .      .
+ 3CL      O1     C2     HO1    .
+ 3CL      HO1    O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3CL      O1     C2        single      1.432    0.020
+ 3CL      HO1    O1        single      0.967    0.020
+ 3CL      C2     C3        single      1.524    0.020
+ 3CL      H21    C2        single      1.092    0.020
+ 3CL      H22    C2        single      1.092    0.020
+ 3CL      C3     C4        single      1.524    0.020
+ 3CL      H31    C3        single      1.092    0.020
+ 3CL      H32    C3        single      1.092    0.020
+ 3CL      C4     CL5       single      1.790    0.020
+ 3CL      H41    C4        single      1.092    0.020
+ 3CL      H42    C4        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3CL      CL5    C4     H41     109.500    3.000
+ 3CL      CL5    C4     H42     109.500    3.000
+ 3CL      CL5    C4     C3      109.500    3.000
+ 3CL      H41    C4     H42     107.900    3.000
+ 3CL      H41    C4     C3      109.470    3.000
+ 3CL      H42    C4     C3      109.470    3.000
+ 3CL      C4     C3     H31     109.470    3.000
+ 3CL      C4     C3     H32     109.470    3.000
+ 3CL      C4     C3     C2      111.000    3.000
+ 3CL      H31    C3     H32     107.900    3.000
+ 3CL      H31    C3     C2      109.470    3.000
+ 3CL      H32    C3     C2      109.470    3.000
+ 3CL      C3     C2     H21     109.470    3.000
+ 3CL      C3     C2     H22     109.470    3.000
+ 3CL      C3     C2     O1      109.470    3.000
+ 3CL      H21    C2     H22     107.900    3.000
+ 3CL      H21    C2     O1      109.470    3.000
+ 3CL      H22    C2     O1      109.470    3.000
+ 3CL      C2     O1     HO1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3CL      var_1    CL5    C4     C3     C2       180.000   20.000   3
+ 3CL      var_2    C4     C3     C2     O1       180.000   20.000   3
+ 3CL      var_3    C3     C2     O1     HO1      180.000   20.000   1
+# ------------------------------------------------------

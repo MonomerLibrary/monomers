@@ -1,0 +1,189 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BGX      BGX '4-METHYL-PYRROLINE-5-CARBOXYLIC ACID' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BGX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BGX           O2     O    OC       -0.500      0.000    0.000    0.000
+ BGX           C1     C    C         0.000     -1.024   -0.571   -0.436
+ BGX           O1     O    OC       -0.500     -1.055   -1.262   -1.479
+ BGX           C2     C    CH1       0.000     -2.192   -0.318    0.460
+ BGX           HC2    H    H         0.000     -1.991   -0.670    1.481
+ BGX           N1     N    NH1       0.000     -3.350   -0.985   -0.102
+ BGX           HN1    H    H         0.000     -3.408   -1.983   -0.244
+ BGX           C5     C    C1        0.000     -4.347   -0.118   -0.416
+ BGX           HC5    H    H         0.000     -5.291   -0.411   -0.843
+ BGX           C4     C    C1        0.000     -4.013    1.144   -0.129
+ BGX           HC4    H    H         0.000     -4.641    2.004   -0.291
+ BGX           C3     C    CH1       0.000     -2.617    1.182    0.458
+ BGX           HC3    H    H         0.000     -1.949    1.763   -0.193
+ BGX           C6     C    CH3       0.000     -2.620    1.772    1.864
+ BGX           HC63   H    H         0.000     -3.554    1.580    2.325
+ BGX           HC62   H    H         0.000     -1.847    1.328    2.435
+ BGX           HC61   H    H         0.000     -2.462    2.818    1.808
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BGX      O2     n/a    C1     START
+ BGX      C1     O2     C2     .
+ BGX      O1     C1     .      .
+ BGX      C2     C1     N1     .
+ BGX      HC2    C2     .      .
+ BGX      N1     C2     C5     .
+ BGX      HN1    N1     .      .
+ BGX      C5     N1     C4     .
+ BGX      HC5    C5     .      .
+ BGX      C4     C5     C3     .
+ BGX      HC4    C4     .      .
+ BGX      C3     C4     C6     .
+ BGX      HC3    C3     .      .
+ BGX      C6     C3     HC61   .
+ BGX      HC63   C6     .      .
+ BGX      HC62   C6     .      .
+ BGX      HC61   C6     .      END
+ BGX      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BGX      C2     C1        single      1.500    0.020
+ BGX      O1     C1        deloc       1.250    0.020
+ BGX      C1     O2        deloc       1.250    0.020
+ BGX      C2     C3        single      1.524    0.020
+ BGX      N1     C2        single      1.450    0.020
+ BGX      HC2    C2        single      1.099    0.020
+ BGX      C3     C4        single      1.510    0.020
+ BGX      C6     C3        single      1.524    0.020
+ BGX      HC3    C3        single      1.099    0.020
+ BGX      C4     C5        double      1.330    0.020
+ BGX      HC4    C4        single      1.077    0.020
+ BGX      C5     N1        single      1.330    0.020
+ BGX      HC5    C5        single      1.077    0.020
+ BGX      HC61   C6        single      1.059    0.020
+ BGX      HC62   C6        single      1.059    0.020
+ BGX      HC63   C6        single      1.059    0.020
+ BGX      HN1    N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BGX      O2     C1     O1      123.000    3.000
+ BGX      O2     C1     C2      118.500    3.000
+ BGX      O1     C1     C2      118.500    3.000
+ BGX      C1     C2     HC2     108.810    3.000
+ BGX      C1     C2     N1      111.600    3.000
+ BGX      C1     C2     C3      109.470    3.000
+ BGX      HC2    C2     N1      108.550    3.000
+ BGX      HC2    C2     C3      108.340    3.000
+ BGX      N1     C2     C3      110.000    3.000
+ BGX      C2     N1     HN1     118.500    3.000
+ BGX      C2     N1     C5      120.000    3.000
+ BGX      HN1    N1     C5      120.000    3.000
+ BGX      N1     C5     HC5     120.000    3.000
+ BGX      N1     C5     C4      120.000    3.000
+ BGX      HC5    C5     C4      120.000    3.000
+ BGX      C5     C4     HC4     120.000    3.000
+ BGX      C5     C4     C3      120.000    3.000
+ BGX      HC4    C4     C3      120.000    3.000
+ BGX      C4     C3     HC3     108.810    3.000
+ BGX      C4     C3     C6      109.470    3.000
+ BGX      C4     C3     C2      109.470    3.000
+ BGX      HC3    C3     C6      108.340    3.000
+ BGX      HC3    C3     C2      108.340    3.000
+ BGX      C6     C3     C2      111.000    3.000
+ BGX      C3     C6     HC63    109.470    3.000
+ BGX      C3     C6     HC62    109.470    3.000
+ BGX      C3     C6     HC61    109.470    3.000
+ BGX      HC63   C6     HC62    109.470    3.000
+ BGX      HC63   C6     HC61    109.470    3.000
+ BGX      HC62   C6     HC61    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BGX      var_1    O2     C1     C2     N1       179.206   20.000   3
+ BGX      var_2    C1     C2     C3     C4       120.000   20.000   3
+ BGX      var_3    C1     C2     N1     C5      -120.000   20.000   3
+ BGX      var_4    C2     N1     C5     C4         0.000   20.000   1
+ BGX      var_5    N1     C5     C4     C3         0.000   20.000   1
+ BGX      var_6    C5     C4     C3     C6      -120.000   20.000   1
+ BGX      var_7    C4     C3     C6     HC61     -91.323   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BGX      chir_01  C2     C1     C3     N1        negativ
+ BGX      chir_02  C3     C2     C4     C6        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BGX      plan-1    C1        0.020
+ BGX      plan-1    C2        0.020
+ BGX      plan-1    O1        0.020
+ BGX      plan-1    O2        0.020
+ BGX      plan-2    C4        0.020
+ BGX      plan-2    C3        0.020
+ BGX      plan-2    C5        0.020
+ BGX      plan-2    HC4       0.020
+ BGX      plan-2    HC5       0.020
+ BGX      plan-3    C5        0.020
+ BGX      plan-3    C4        0.020
+ BGX      plan-3    N1        0.020
+ BGX      plan-3    HC5       0.020
+ BGX      plan-3    HC4       0.020
+ BGX      plan-3    HN1       0.020
+ BGX      plan-4    N1        0.020
+ BGX      plan-4    C2        0.020
+ BGX      plan-4    C5        0.020
+ BGX      plan-4    HN1       0.020
+ BGX      plan-4    HC5       0.020
+# ------------------------------------------------------

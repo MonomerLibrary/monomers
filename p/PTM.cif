@@ -1,0 +1,248 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PTM      PTM 'ALPHA-METHYL-O-PHOSPHOTYROSINE      ' peptide            29  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PTM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PTM           N      N    NH2       0.000      0.000    0.000    0.000
+ PTM           HN1    H    H         0.000     -0.327   -0.250    0.924
+ PTM           HN2    H    H         0.000      0.114   -0.719   -0.703
+ PTM           CA     C    CT        0.000      0.309    1.402   -0.320
+ PTM           CH3    C    CH3       0.000      1.827    1.471   -0.543
+ PTM           HC33   H    H         0.000      2.092    0.873   -1.377
+ PTM           HC32   H    H         0.000      2.114    2.475   -0.726
+ PTM           HC31   H    H         0.000      2.330    1.114    0.319
+ PTM           CB     C    CH2       0.000     -0.482    1.804   -1.589
+ PTM           HB2    H    H         0.000     -1.535    1.619   -1.367
+ PTM           HB3    H    H         0.000     -0.154    1.130   -2.383
+ PTM           CG     C    CR6       0.000     -0.305    3.238   -2.039
+ PTM           CD2    C    CR16      0.000      0.711    3.547   -2.929
+ PTM           HD2    H    H         0.000      1.370    2.771   -3.298
+ PTM           CE2    C    CR16      0.000      0.874    4.868   -3.343
+ PTM           HE2    H    H         0.000      1.665    5.124   -4.038
+ PTM           CZ     C    CR6       0.000      0.019    5.861   -2.864
+ PTM           CE1    C    CR16      0.000     -0.998    5.532   -1.968
+ PTM           HE1    H    H         0.000     -1.661    6.303   -1.595
+ PTM           CD1    C    CR16      0.000     -1.162    4.210   -1.553
+ PTM           HD1    H    H         0.000     -1.951    3.948   -0.858
+ PTM           OH     O    O2        0.000      0.177    7.150   -3.271
+ PTM           P      P    P         0.000     -0.740    8.397   -2.797
+ PTM           O1P    O    OP       -0.666     -2.213    8.277   -3.125
+ PTM           O2P    O    OP       -0.666     -0.407    8.565   -1.331
+ PTM           O3P    O    OP       -0.666     -0.052    9.581   -3.439
+ PTM           C      C    C         0.000     -0.084    2.245    0.897
+ PTM           O      O    OC       -0.500     -1.059    1.996    1.640
+ PTM           OXT    O    OC       -0.500      0.657    3.235    1.087
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PTM      N      n/a    CA     START
+ PTM      HN1    N      .      .
+ PTM      HN2    N      .      .
+ PTM      CA     N      C      .
+ PTM      CH3    CA     HC31   .
+ PTM      HC33   CH3    .      .
+ PTM      HC32   CH3    .      .
+ PTM      HC31   CH3    .      .
+ PTM      CB     CA     CG     .
+ PTM      HB2    CB     .      .
+ PTM      HB3    CB     .      .
+ PTM      CG     CB     CD2    .
+ PTM      CD2    CG     CE2    .
+ PTM      HD2    CD2    .      .
+ PTM      CE2    CD2    CZ     .
+ PTM      HE2    CE2    .      .
+ PTM      CZ     CE2    OH     .
+ PTM      CE1    CZ     CD1    .
+ PTM      HE1    CE1    .      .
+ PTM      CD1    CE1    HD1    .
+ PTM      HD1    CD1    .      .
+ PTM      OH     CZ     P      .
+ PTM      P      OH     O3P    .
+ PTM      O1P    P      .      .
+ PTM      O2P    P      .      .
+ PTM      O3P    P      .      .
+ PTM      C      CA     .      END
+ PTM      O      C      .      .
+ PTM      OXT    C      .      .
+ PTM      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PTM      CA     N         single      1.462    0.020
+ PTM      CH3    CA        single      1.524    0.020
+ PTM      C      CA        single      1.507    0.020
+ PTM      CB     CA        single      1.524    0.020
+ PTM      HC31   CH3       single      1.059    0.020
+ PTM      HC32   CH3       single      1.059    0.020
+ PTM      HC33   CH3       single      1.059    0.020
+ PTM      O      C         deloc       1.250    0.020
+ PTM      OXT    C         deloc       1.250    0.020
+ PTM      CG     CB        single      1.511    0.020
+ PTM      HB2    CB        single      1.092    0.020
+ PTM      HB3    CB        single      1.092    0.020
+ PTM      CG     CD1       double      1.390    0.020
+ PTM      CD2    CG        single      1.390    0.020
+ PTM      CD1    CE1       single      1.390    0.020
+ PTM      HD1    CD1       single      1.083    0.020
+ PTM      CE2    CD2       double      1.390    0.020
+ PTM      HD2    CD2       single      1.083    0.020
+ PTM      CE1    CZ        double      1.390    0.020
+ PTM      HE1    CE1       single      1.083    0.020
+ PTM      CZ     CE2       single      1.390    0.020
+ PTM      HE2    CE2       single      1.083    0.020
+ PTM      OH     CZ        single      1.370    0.020
+ PTM      P      OH        single      1.610    0.020
+ PTM      O1P    P         deloc       1.510    0.020
+ PTM      O2P    P         deloc       1.510    0.020
+ PTM      O3P    P         deloc       1.510    0.020
+ PTM      HN1    N         single      1.010    0.020
+ PTM      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PTM      HN1    N      HN2     120.000    3.000
+ PTM      HN1    N      CA      120.000    3.000
+ PTM      HN2    N      CA      120.000    3.000
+ PTM      N      CA     CH3     109.500    3.000
+ PTM      N      CA     CB      109.500    3.000
+ PTM      N      CA     C       109.500    3.000
+ PTM      CH3    CA     CB      111.000    3.000
+ PTM      CH3    CA     C       109.470    3.000
+ PTM      CB     CA     C       109.470    3.000
+ PTM      CA     CH3    HC33    109.470    3.000
+ PTM      CA     CH3    HC32    109.470    3.000
+ PTM      CA     CH3    HC31    109.470    3.000
+ PTM      HC33   CH3    HC32    109.470    3.000
+ PTM      HC33   CH3    HC31    109.470    3.000
+ PTM      HC32   CH3    HC31    109.470    3.000
+ PTM      CA     CB     HB2     109.470    3.000
+ PTM      CA     CB     HB3     109.470    3.000
+ PTM      CA     CB     CG      109.470    3.000
+ PTM      HB2    CB     HB3     107.900    3.000
+ PTM      HB2    CB     CG      109.470    3.000
+ PTM      HB3    CB     CG      109.470    3.000
+ PTM      CB     CG     CD2     120.000    3.000
+ PTM      CB     CG     CD1     120.000    3.000
+ PTM      CD2    CG     CD1     120.000    3.000
+ PTM      CG     CD2    HD2     120.000    3.000
+ PTM      CG     CD2    CE2     120.000    3.000
+ PTM      HD2    CD2    CE2     120.000    3.000
+ PTM      CD2    CE2    HE2     120.000    3.000
+ PTM      CD2    CE2    CZ      120.000    3.000
+ PTM      HE2    CE2    CZ      120.000    3.000
+ PTM      CE2    CZ     CE1     120.000    3.000
+ PTM      CE2    CZ     OH      120.000    3.000
+ PTM      CE1    CZ     OH      120.000    3.000
+ PTM      CZ     CE1    HE1     120.000    3.000
+ PTM      CZ     CE1    CD1     120.000    3.000
+ PTM      HE1    CE1    CD1     120.000    3.000
+ PTM      CE1    CD1    HD1     120.000    3.000
+ PTM      CE1    CD1    CG      120.000    3.000
+ PTM      HD1    CD1    CG      120.000    3.000
+ PTM      CZ     OH     P       120.000    3.000
+ PTM      OH     P      O1P     108.200    3.000
+ PTM      OH     P      O2P     108.200    3.000
+ PTM      OH     P      O3P     108.200    3.000
+ PTM      O1P    P      O2P     119.900    3.000
+ PTM      O1P    P      O3P     119.900    3.000
+ PTM      O2P    P      O3P     119.900    3.000
+ PTM      CA     C      O       118.500    3.000
+ PTM      CA     C      OXT     118.500    3.000
+ PTM      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PTM      var_1    HN2    N      CA     C        175.000   20.000   1
+ PTM      var_2    N      CA     CH3    HC31     -56.877   20.000   1
+ PTM      var_3    N      CA     CB     CG       178.479   20.000   1
+ PTM      var_4    CA     CB     CG     CD2       89.999   20.000   2
+ PTM      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ PTM      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ PTM      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ PTM      CONST_4  CD2    CE2    CZ     OH       180.000    0.000   0
+ PTM      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ PTM      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+ PTM      var_5    CE2    CZ     OH     P        179.935   20.000   1
+ PTM      var_6    CZ     OH     P      O3P      174.890   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PTM      chir_01  CA     N      CH3    C         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PTM      plan-1    N         0.020
+ PTM      plan-1    CA        0.020
+ PTM      plan-1    HN1       0.020
+ PTM      plan-1    HN2       0.020
+ PTM      plan-2    C         0.020
+ PTM      plan-2    CA        0.020
+ PTM      plan-2    O         0.020
+ PTM      plan-2    OXT       0.020
+ PTM      plan-3    CG        0.020
+ PTM      plan-3    CB        0.020
+ PTM      plan-3    CD1       0.020
+ PTM      plan-3    CD2       0.020
+ PTM      plan-3    CE1       0.020
+ PTM      plan-3    CE2       0.020
+ PTM      plan-3    CZ        0.020
+ PTM      plan-3    HD1       0.020
+ PTM      plan-3    HD2       0.020
+ PTM      plan-3    HE1       0.020
+ PTM      plan-3    HE2       0.020
+ PTM      plan-3    OH        0.020
+# ------------------------------------------------------

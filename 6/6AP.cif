@@ -1,0 +1,188 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+6AP      6AP '9H-PURINE-2,6-DIAMINE               ' non-polymer        17  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_6AP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 6AP           N6     N    NH2       0.000      0.000    0.000    0.000
+ 6AP           HN61   H    H         0.000      0.890   -0.489    0.000
+ 6AP           HN62   H    H         0.000     -0.003    1.015   -0.001
+ 6AP           C6     C    CR6       0.000     -1.190   -0.706    0.001
+ 6AP           C5     C    CR56      0.000     -2.425   -0.033    0.000
+ 6AP           N7     N    NRD5      0.000     -2.797    1.271   -0.001
+ 6AP           C8     C    CR15      0.000     -4.095    1.351    0.000
+ 6AP           H8     H    H         0.000     -4.661    2.274   -0.001
+ 6AP           N1     N    NRD6      0.000     -1.191   -2.034    0.003
+ 6AP           C2     C    CR6       0.000     -2.327   -2.719    0.003
+ 6AP           N2     N    NH2       0.000     -2.275   -4.103    0.005
+ 6AP           HN22   H    H         0.000     -3.129   -4.653    0.005
+ 6AP           HN21   H    H         0.000     -1.381   -4.586    0.005
+ 6AP           N3     N    NRD6      0.000     -3.510   -2.126   -0.003
+ 6AP           C4     C    CR56      0.000     -3.601   -0.800    0.000
+ 6AP           N9     N    NR15      0.000     -4.638    0.098    0.000
+ 6AP           HN9    H    H         0.000     -5.652   -0.133    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 6AP      N6     n/a    C6     START
+ 6AP      HN61   N6     .      .
+ 6AP      HN62   N6     .      .
+ 6AP      C6     N6     N1     .
+ 6AP      C5     C6     N7     .
+ 6AP      N7     C5     C8     .
+ 6AP      C8     N7     H8     .
+ 6AP      H8     C8     .      .
+ 6AP      N1     C6     C2     .
+ 6AP      C2     N1     N3     .
+ 6AP      N2     C2     HN21   .
+ 6AP      HN22   N2     .      .
+ 6AP      HN21   N2     .      .
+ 6AP      N3     C2     C4     .
+ 6AP      C4     N3     N9     .
+ 6AP      N9     C4     HN9    .
+ 6AP      HN9    N9     .      END
+ 6AP      N9     C8     .    ADD
+ 6AP      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 6AP      N9     C8        single      1.350    0.020
+ 6AP      N9     C4        single      1.340    0.020
+ 6AP      HN9    N9        single      1.040    0.020
+ 6AP      C8     N7        double      1.350    0.020
+ 6AP      H8     C8        single      1.083    0.020
+ 6AP      N7     C5        single      1.350    0.020
+ 6AP      C5     C4        single      1.490    0.020
+ 6AP      C5     C6        double      1.490    0.020
+ 6AP      C4     N3        double      1.355    0.020
+ 6AP      N3     C2        single      1.350    0.020
+ 6AP      N2     C2        single      1.355    0.020
+ 6AP      C2     N1        double      1.350    0.020
+ 6AP      HN21   N2        single      1.010    0.020
+ 6AP      HN22   N2        single      1.010    0.020
+ 6AP      N1     C6        single      1.350    0.020
+ 6AP      C6     N6        single      1.355    0.020
+ 6AP      HN61   N6        single      1.010    0.020
+ 6AP      HN62   N6        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 6AP      HN61   N6     HN62    120.000    3.000
+ 6AP      HN61   N6     C6      120.000    3.000
+ 6AP      HN62   N6     C6      120.000    3.000
+ 6AP      N6     C6     C5      120.000    3.000
+ 6AP      N6     C6     N1      120.000    3.000
+ 6AP      C5     C6     N1      120.000    3.000
+ 6AP      C6     C5     N7      132.000    3.000
+ 6AP      C6     C5     C4      120.000    3.000
+ 6AP      N7     C5     C4      108.000    3.000
+ 6AP      C5     N7     C8      108.000    3.000
+ 6AP      N7     C8     H8      126.000    3.000
+ 6AP      N7     C8     N9      108.000    3.000
+ 6AP      H8     C8     N9      126.000    3.000
+ 6AP      C6     N1     C2      120.000    3.000
+ 6AP      N1     C2     N2      120.000    3.000
+ 6AP      N1     C2     N3      120.000    3.000
+ 6AP      N2     C2     N3      120.000    3.000
+ 6AP      C2     N2     HN22    120.000    3.000
+ 6AP      C2     N2     HN21    120.000    3.000
+ 6AP      HN22   N2     HN21    120.000    3.000
+ 6AP      C2     N3     C4      120.000    3.000
+ 6AP      N3     C4     N9      132.000    3.000
+ 6AP      N3     C4     C5      120.000    3.000
+ 6AP      N9     C4     C5      108.000    3.000
+ 6AP      C4     N9     HN9     126.000    3.000
+ 6AP      C4     N9     C8      108.000    3.000
+ 6AP      HN9    N9     C8      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 6AP      CONST_1  HN62   N6     C6     N1      -179.951    0.000   0
+ 6AP      CONST_2  N6     C6     C5     N7         0.000    0.000   0
+ 6AP      CONST_3  C6     C5     C4     N3         0.000    0.000   0
+ 6AP      CONST_4  C6     C5     N7     C8       180.000    0.000   0
+ 6AP      CONST_5  C5     N7     C8     N9         0.000    0.000   0
+ 6AP      CONST_6  N6     C6     N1     C2       180.000    0.000   0
+ 6AP      CONST_7  C6     N1     C2     N3         0.000    0.000   0
+ 6AP      CONST_8  N1     C2     N2     HN21       0.000    0.000   0
+ 6AP      CONST_9  N1     C2     N3     C4         0.000    0.000   0
+ 6AP      CONST_10 C2     N3     C4     N9       180.000    0.000   0
+ 6AP      CONST_11 N3     C4     N9     C8       180.000    0.000   0
+ 6AP      CONST_12 C4     N9     C8     N7         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 6AP      plan-1    N9        0.020
+ 6AP      plan-1    C8        0.020
+ 6AP      plan-1    C4        0.020
+ 6AP      plan-1    HN9       0.020
+ 6AP      plan-1    N7        0.020
+ 6AP      plan-1    H8        0.020
+ 6AP      plan-1    C5        0.020
+ 6AP      plan-1    C6        0.020
+ 6AP      plan-1    N3        0.020
+ 6AP      plan-1    C2        0.020
+ 6AP      plan-1    N1        0.020
+ 6AP      plan-1    N2        0.020
+ 6AP      plan-1    N6        0.020
+ 6AP      plan-1    HN22      0.020
+ 6AP      plan-1    HN21      0.020
+ 6AP      plan-1    HN61      0.020
+ 6AP      plan-1    HN62      0.020
+ 6AP      plan-2    N2        0.020
+ 6AP      plan-2    C2        0.020
+ 6AP      plan-2    HN21      0.020
+ 6AP      plan-2    HN22      0.020
+ 6AP      plan-3    N6        0.020
+ 6AP      plan-3    C6        0.020
+ 6AP      plan-3    HN61      0.020
+ 6AP      plan-3    HN62      0.020
+# ------------------------------------------------------

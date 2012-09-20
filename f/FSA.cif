@@ -1,0 +1,239 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FSA      FSA '1-S-(carboxymethyl)-1-thio-beta-D-fr' non-polymer        29  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FSA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FSA           OAA    O    OC       -0.500      0.000    0.000    0.000
+ FSA           CAL    C    C         0.000     -0.367   -0.863   -0.827
+ FSA           OAB    O    OC       -0.500      0.484   -1.495   -1.492
+ FSA           CAH    C    CH2       0.000     -1.835   -1.144   -1.023
+ FSA           HAH    H    H         0.000     -2.039   -2.191   -0.788
+ FSA           HAHA   H    H         0.000     -2.108   -0.945   -2.061
+ FSA           SAK    S    S2        0.000     -2.806   -0.077    0.076
+ FSA           CAI    C    CH2       0.000     -4.516   -0.553   -0.298
+ FSA           HAI    H    H         0.000     -4.653   -1.614   -0.082
+ FSA           HAIA   H    H         0.000     -4.722   -0.368   -1.355
+ FSA           CAP    C    CT        0.000     -5.475    0.273    0.561
+ FSA           OAF    O    OH1       0.000     -5.205    0.029    1.943
+ FSA           HOAF   H    H         0.000     -4.294    0.283    2.143
+ FSA           OAJ    O    O2        0.000     -5.295    1.661    0.277
+ FSA           CAG    C    CH2       0.000     -6.129    2.528    1.050
+ FSA           HAG    H    H         0.000     -5.916    3.567    0.788
+ FSA           HAGA   H    H         0.000     -5.930    2.374    2.112
+ FSA           CAM    C    CH1       0.000     -7.598    2.217    0.754
+ FSA           HAM    H    H         0.000     -8.242    2.851    1.379
+ FSA           OAC    O    OH1       0.000     -7.871    2.471   -0.626
+ FSA           HOAC   H    H         0.000     -7.697    3.402   -0.822
+ FSA           CAN    C    CH1       0.000     -7.874    0.743    1.066
+ FSA           HAN    H    H         0.000     -7.713    0.557    2.137
+ FSA           OAD    O    OH1       0.000     -9.224    0.426    0.722
+ FSA           HOAD   H    H         0.000     -9.826    0.976    1.241
+ FSA           CAO    C    CH1       0.000     -6.918   -0.129    0.245
+ FSA           HAO    H    H         0.000     -7.114    0.018   -0.827
+ FSA           OAE    O    OH1       0.000     -7.116   -1.504    0.582
+ FSA           HOAE   H    H         0.000     -8.028   -1.756    0.383
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FSA      OAA    n/a    CAL    START
+ FSA      CAL    OAA    CAH    .
+ FSA      OAB    CAL    .      .
+ FSA      CAH    CAL    SAK    .
+ FSA      HAH    CAH    .      .
+ FSA      HAHA   CAH    .      .
+ FSA      SAK    CAH    CAI    .
+ FSA      CAI    SAK    CAP    .
+ FSA      HAI    CAI    .      .
+ FSA      HAIA   CAI    .      .
+ FSA      CAP    CAI    OAJ    .
+ FSA      OAF    CAP    HOAF   .
+ FSA      HOAF   OAF    .      .
+ FSA      OAJ    CAP    CAG    .
+ FSA      CAG    OAJ    CAM    .
+ FSA      HAG    CAG    .      .
+ FSA      HAGA   CAG    .      .
+ FSA      CAM    CAG    CAN    .
+ FSA      HAM    CAM    .      .
+ FSA      OAC    CAM    HOAC   .
+ FSA      HOAC   OAC    .      .
+ FSA      CAN    CAM    CAO    .
+ FSA      HAN    CAN    .      .
+ FSA      OAD    CAN    HOAD   .
+ FSA      HOAD   OAD    .      .
+ FSA      CAO    CAN    OAE    .
+ FSA      HAO    CAO    .      .
+ FSA      OAE    CAO    HOAE   .
+ FSA      HOAE   OAE    .      END
+ FSA      CAP    CAO    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FSA      OAB    CAL       deloc       1.250    0.020
+ FSA      CAL    OAA       deloc       1.250    0.020
+ FSA      CAH    CAL       single      1.510    0.020
+ FSA      SAK    CAH       single      1.762    0.020
+ FSA      HAH    CAH       single      1.092    0.020
+ FSA      HAHA   CAH       single      1.092    0.020
+ FSA      CAI    SAK       single      1.762    0.020
+ FSA      CAP    CAI       single      1.524    0.020
+ FSA      HAI    CAI       single      1.092    0.020
+ FSA      HAIA   CAI       single      1.092    0.020
+ FSA      CAP    CAO       single      1.524    0.020
+ FSA      OAF    CAP       single      1.432    0.020
+ FSA      OAJ    CAP       single      1.426    0.020
+ FSA      HOAF   OAF       single      0.967    0.020
+ FSA      OAE    CAO       single      1.432    0.020
+ FSA      CAO    CAN       single      1.524    0.020
+ FSA      HAO    CAO       single      1.099    0.020
+ FSA      HOAE   OAE       single      0.967    0.020
+ FSA      OAD    CAN       single      1.432    0.020
+ FSA      CAN    CAM       single      1.524    0.020
+ FSA      HAN    CAN       single      1.099    0.020
+ FSA      HOAD   OAD       single      0.967    0.020
+ FSA      OAC    CAM       single      1.432    0.020
+ FSA      CAM    CAG       single      1.524    0.020
+ FSA      HAM    CAM       single      1.099    0.020
+ FSA      HOAC   OAC       single      0.967    0.020
+ FSA      CAG    OAJ       single      1.426    0.020
+ FSA      HAG    CAG       single      1.092    0.020
+ FSA      HAGA   CAG       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FSA      OAA    CAL    OAB     123.000    3.000
+ FSA      OAA    CAL    CAH     118.500    3.000
+ FSA      OAB    CAL    CAH     118.500    3.000
+ FSA      CAL    CAH    HAH     109.470    3.000
+ FSA      CAL    CAH    HAHA    109.470    3.000
+ FSA      CAL    CAH    SAK     109.500    3.000
+ FSA      HAH    CAH    HAHA    107.900    3.000
+ FSA      HAH    CAH    SAK     109.500    3.000
+ FSA      HAHA   CAH    SAK     109.500    3.000
+ FSA      CAH    SAK    CAI     103.011    3.000
+ FSA      SAK    CAI    HAI     109.500    3.000
+ FSA      SAK    CAI    HAIA    109.500    3.000
+ FSA      SAK    CAI    CAP     109.500    3.000
+ FSA      HAI    CAI    HAIA    107.900    3.000
+ FSA      HAI    CAI    CAP     109.470    3.000
+ FSA      HAIA   CAI    CAP     109.470    3.000
+ FSA      CAI    CAP    OAF     109.470    3.000
+ FSA      CAI    CAP    OAJ     109.470    3.000
+ FSA      CAI    CAP    CAO     111.000    3.000
+ FSA      OAF    CAP    OAJ     109.470    3.000
+ FSA      OAF    CAP    CAO     109.470    3.000
+ FSA      OAJ    CAP    CAO     109.470    3.000
+ FSA      CAP    OAF    HOAF    109.470    3.000
+ FSA      CAP    OAJ    CAG     111.800    3.000
+ FSA      OAJ    CAG    HAG     109.470    3.000
+ FSA      OAJ    CAG    HAGA    109.470    3.000
+ FSA      OAJ    CAG    CAM     109.470    3.000
+ FSA      HAG    CAG    HAGA    107.900    3.000
+ FSA      HAG    CAG    CAM     109.470    3.000
+ FSA      HAGA   CAG    CAM     109.470    3.000
+ FSA      CAG    CAM    HAM     108.340    3.000
+ FSA      CAG    CAM    OAC     109.470    3.000
+ FSA      CAG    CAM    CAN     111.000    3.000
+ FSA      HAM    CAM    OAC     109.470    3.000
+ FSA      HAM    CAM    CAN     108.340    3.000
+ FSA      OAC    CAM    CAN     109.470    3.000
+ FSA      CAM    OAC    HOAC    109.470    3.000
+ FSA      CAM    CAN    HAN     108.340    3.000
+ FSA      CAM    CAN    OAD     109.470    3.000
+ FSA      CAM    CAN    CAO     111.000    3.000
+ FSA      HAN    CAN    OAD     109.470    3.000
+ FSA      HAN    CAN    CAO     108.340    3.000
+ FSA      OAD    CAN    CAO     109.470    3.000
+ FSA      CAN    OAD    HOAD    109.470    3.000
+ FSA      CAN    CAO    HAO     108.340    3.000
+ FSA      CAN    CAO    OAE     109.470    3.000
+ FSA      CAN    CAO    CAP     111.000    3.000
+ FSA      HAO    CAO    OAE     109.470    3.000
+ FSA      HAO    CAO    CAP     108.340    3.000
+ FSA      OAE    CAO    CAP     109.470    3.000
+ FSA      CAO    OAE    HOAE    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FSA      var_1    OAA    CAL    CAH    SAK        0.062   20.000   3
+ FSA      var_2    CAL    CAH    SAK    CAI      179.968   20.000   1
+ FSA      var_3    CAH    SAK    CAI    CAP     -179.978   20.000   1
+ FSA      var_4    SAK    CAI    CAP    OAJ       60.030   20.000   1
+ FSA      var_5    CAI    CAP    CAO    CAN      180.000   20.000   1
+ FSA      var_6    CAI    CAP    OAF    HOAF      60.059   20.000   1
+ FSA      var_7    CAI    CAP    OAJ    CAG      180.000   20.000   1
+ FSA      var_8    CAP    OAJ    CAG    CAM      -60.000   20.000   1
+ FSA      var_9    OAJ    CAG    CAM    CAN       60.000   20.000   3
+ FSA      var_10   CAG    CAM    OAC    HOAC     -60.298   20.000   1
+ FSA      var_11   CAG    CAM    CAN    CAO      -60.000   20.000   3
+ FSA      var_12   CAM    CAN    OAD    HOAD     -60.442   20.000   1
+ FSA      var_13   CAM    CAN    CAO    OAE      180.000   20.000   3
+ FSA      var_14   CAN    CAO    OAE    HOAE      60.300   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FSA      chir_01  CAP    CAI    OAF    CAO       positiv
+ FSA      chir_02  CAO    CAP    OAE    CAN       negativ
+ FSA      chir_03  CAN    CAO    OAD    CAM       positiv
+ FSA      chir_04  CAM    CAN    OAC    CAG       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FSA      plan-1    CAL       0.020
+ FSA      plan-1    OAB       0.000
+ FSA      plan-1    OAA       0.000
+ FSA      plan-1    CAH       0.000
+# ------------------------------------------------------

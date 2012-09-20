@@ -1,0 +1,192 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FP1      FP1 'N-hydroxy-1-(1-methylpyridin-2(1H)-y' non-polymer        20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FP1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FP1           O1     O    OH1       0.000      0.000    0.000    0.000
+ FP1           H1     H    H         0.000      0.647    0.689    0.224
+ FP1           N2     N    NH1       0.000     -1.388    0.264    0.087
+ FP1           H2     H    H         0.000     -1.711    1.174    0.384
+ FP1           C6     C    C1        0.000     -2.318   -0.739   -0.240
+ FP1           H6     H    H         0.000     -1.978   -1.737   -0.462
+ FP1           C5     C    CR6       0.000     -3.633   -0.453   -0.276
+ FP1           N1     N    NR6       0.000     -4.111    0.876   -0.180
+ FP1           C7     C    CH3       0.000     -3.394    1.991   -0.804
+ FP1           H7C3   H    H         0.000     -3.477    2.852   -0.192
+ FP1           H7C2   H    H         0.000     -2.373    1.736   -0.918
+ FP1           H7C1   H    H         0.000     -3.815    2.193   -1.755
+ FP1           C1     C    CR16      0.000     -5.283    1.082    0.524
+ FP1           HB     H    H         0.000     -5.489    2.047    0.970
+ FP1           C2     C    CR16      0.000     -6.166    0.077    0.651
+ FP1           HA     H    H         0.000     -7.083    0.236    1.205
+ FP1           C3     C    CR16      0.000     -5.901   -1.228    0.049
+ FP1           H3     H    H         0.000     -6.692   -1.965   -0.029
+ FP1           C4     C    CR16      0.000     -4.656   -1.509   -0.412
+ FP1           H4     H    H         0.000     -4.422   -2.466   -0.860
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FP1      O1     n/a    N2     START
+ FP1      H1     O1     .      .
+ FP1      N2     O1     C6     .
+ FP1      H2     N2     .      .
+ FP1      C6     N2     C5     .
+ FP1      H6     C6     .      .
+ FP1      C5     C6     N1     .
+ FP1      N1     C5     C1     .
+ FP1      C7     N1     H7C1   .
+ FP1      H7C3   C7     .      .
+ FP1      H7C2   C7     .      .
+ FP1      H7C1   C7     .      .
+ FP1      C1     N1     C2     .
+ FP1      HB     C1     .      .
+ FP1      C2     C1     C3     .
+ FP1      HA     C2     .      .
+ FP1      C3     C2     C4     .
+ FP1      H3     C3     .      .
+ FP1      C4     C3     H4     .
+ FP1      H4     C4     .      END
+ FP1      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FP1      N2     O1        single      1.392    0.020
+ FP1      C6     N2        single      1.330    0.020
+ FP1      C5     C6        double      1.480    0.020
+ FP1      C5     C4        single      1.390    0.020
+ FP1      N1     C5        single      1.410    0.020
+ FP1      C4     C3        double      1.390    0.020
+ FP1      C3     C2        single      1.390    0.020
+ FP1      C2     C1        double      1.390    0.020
+ FP1      C1     N1        single      1.337    0.020
+ FP1      C7     N1        single      1.465    0.020
+ FP1      H1     O1        single      0.967    0.020
+ FP1      H2     N2        single      1.010    0.020
+ FP1      H6     C6        single      1.077    0.020
+ FP1      H4     C4        single      1.083    0.020
+ FP1      H3     C3        single      1.083    0.020
+ FP1      HA     C2        single      1.083    0.020
+ FP1      HB     C1        single      1.083    0.020
+ FP1      H7C1   C7        single      1.059    0.020
+ FP1      H7C2   C7        single      1.059    0.020
+ FP1      H7C3   C7        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FP1      H1     O1     N2      120.000    3.000
+ FP1      O1     N2     H2      120.200    3.000
+ FP1      O1     N2     C6      120.000    3.000
+ FP1      H2     N2     C6      120.000    3.000
+ FP1      N2     C6     H6      120.000    3.000
+ FP1      N2     C6     C5      120.000    3.000
+ FP1      H6     C6     C5      120.000    3.000
+ FP1      C6     C5     N1      120.000    3.000
+ FP1      C6     C5     C4      120.000    3.000
+ FP1      N1     C5     C4      120.000    3.000
+ FP1      C5     N1     C7      120.000    3.000
+ FP1      C5     N1     C1      120.000    3.000
+ FP1      C7     N1     C1      120.000    3.000
+ FP1      N1     C7     H7C3    109.470    3.000
+ FP1      N1     C7     H7C2    109.470    3.000
+ FP1      N1     C7     H7C1    109.470    3.000
+ FP1      H7C3   C7     H7C2    109.470    3.000
+ FP1      H7C3   C7     H7C1    109.470    3.000
+ FP1      H7C2   C7     H7C1    109.470    3.000
+ FP1      N1     C1     HB      120.000    3.000
+ FP1      N1     C1     C2      120.000    3.000
+ FP1      HB     C1     C2      120.000    3.000
+ FP1      C1     C2     HA      120.000    3.000
+ FP1      C1     C2     C3      120.000    3.000
+ FP1      HA     C2     C3      120.000    3.000
+ FP1      C2     C3     H3      120.000    3.000
+ FP1      C2     C3     C4      120.000    3.000
+ FP1      H3     C3     C4      120.000    3.000
+ FP1      C3     C4     H4      120.000    3.000
+ FP1      C3     C4     C5      120.000    3.000
+ FP1      H4     C4     C5      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FP1      var_1    H1     O1     N2     C6       179.974   20.000   1
+ FP1      var_2    O1     N2     C6     C5      -173.910   20.000   1
+ FP1      CONST_1  N2     C6     C5     N1         9.109    0.000   0
+ FP1      CONST_2  C6     C5     C4     C3       150.000    0.000   0
+ FP1      CONST_3  C6     C5     N1     C1      -150.000    0.000   0
+ FP1      var_3    C5     N1     C7     H7C1      95.575   20.000   1
+ FP1      CONST_4  C5     N1     C1     C2       -30.000    0.000   0
+ FP1      CONST_5  N1     C1     C2     C3         0.000    0.000   0
+ FP1      CONST_6  C1     C2     C3     C4         0.000    0.000   0
+ FP1      CONST_7  C2     C3     C4     C5         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FP1      plan-1    N2        0.020
+ FP1      plan-1    O1        0.020
+ FP1      plan-1    C6        0.020
+ FP1      plan-1    H2        0.020
+ FP1      plan-1    H6        0.020
+ FP1      plan-2    C6        0.020
+ FP1      plan-2    N2        0.020
+ FP1      plan-2    C5        0.020
+ FP1      plan-2    H6        0.020
+ FP1      plan-2    C4        0.020
+ FP1      plan-2    N1        0.020
+ FP1      plan-2    C3        0.020
+ FP1      plan-2    C2        0.020
+ FP1      plan-2    C1        0.020
+ FP1      plan-2    H4        0.020
+ FP1      plan-2    H3        0.020
+ FP1      plan-2    HA        0.020
+ FP1      plan-2    HB        0.020
+ FP1      plan-2    C7        0.020
+ FP1      plan-2    H2        0.020
+# ------------------------------------------------------

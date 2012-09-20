@@ -1,0 +1,249 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+X05      X05 'AMINO-CASTANOSPERMINE               ' non-polymer        29  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_X05
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ X05           OAC    O    OH1       0.000      0.000    0.000    0.000
+ X05           HAC    H    H         0.000      0.680   -0.639    0.252
+ X05           CAJ    C    CH1       0.000     -1.269   -0.437    0.491
+ X05           HAJ    H    H         0.000     -1.228   -0.507    1.587
+ X05           CAK    C    CH1       0.000     -2.347    0.581    0.087
+ X05           HAK    H    H         0.000     -2.351    0.707   -1.004
+ X05           OAD    O    OH1       0.000     -2.090    1.836    0.721
+ X05           HAD    H    H         0.000     -1.236    2.178    0.424
+ X05           CAH    C    CH1       0.000     -1.586   -1.815   -0.090
+ X05           HAH    H    H         0.000     -1.506   -1.773   -1.185
+ X05           NAA    N    NH2       0.000     -0.620   -2.793    0.428
+ X05           HAA2   H    H         0.000      0.098   -2.505    1.083
+ X05           HAA1   H    H         0.000     -0.665   -3.761    0.135
+ X05           CAG    C    CH2       0.000     -3.006   -2.254    0.297
+ X05           HAG1   H    H         0.000     -3.091   -2.343    1.382
+ X05           HAG2   H    H         0.000     -3.245   -3.213   -0.166
+ X05           NAM    N    NT        0.000     -3.933   -1.236   -0.182
+ X05           CAL    C    CH1       0.000     -3.691    0.034    0.550
+ X05           HAL    H    H         0.000     -3.682   -0.142    1.634
+ X05           CAF    C    CH2       0.000     -5.364   -1.497    0.035
+ X05           HAF1   H    H         0.000     -5.569   -1.872    1.040
+ X05           HAF2   H    H         0.000     -5.776   -2.190   -0.701
+ X05           CAE    C    CH2       0.000     -6.018   -0.101   -0.143
+ X05           HAE1   H    H         0.000     -6.841    0.052    0.559
+ X05           HAE2   H    H         0.000     -6.379    0.049   -1.163
+ X05           CAI    C    CH1       0.000     -4.885    0.912    0.160
+ X05           HAI    H    H         0.000     -5.168    1.569    0.995
+ X05           OAB    O    OH1       0.000     -4.580    1.684   -1.003
+ X05           HAB    H    H         0.000     -5.343    2.231   -1.234
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ X05      OAC    n/a    CAJ    START
+ X05      HAC    OAC    .      .
+ X05      CAJ    OAC    CAH    .
+ X05      HAJ    CAJ    .      .
+ X05      CAK    CAJ    OAD    .
+ X05      HAK    CAK    .      .
+ X05      OAD    CAK    HAD    .
+ X05      HAD    OAD    .      .
+ X05      CAH    CAJ    CAG    .
+ X05      HAH    CAH    .      .
+ X05      NAA    CAH    HAA1   .
+ X05      HAA2   NAA    .      .
+ X05      HAA1   NAA    .      .
+ X05      CAG    CAH    NAM    .
+ X05      HAG1   CAG    .      .
+ X05      HAG2   CAG    .      .
+ X05      NAM    CAG    CAF    .
+ X05      CAL    NAM    HAL    .
+ X05      HAL    CAL    .      .
+ X05      CAF    NAM    CAE    .
+ X05      HAF1   CAF    .      .
+ X05      HAF2   CAF    .      .
+ X05      CAE    CAF    CAI    .
+ X05      HAE1   CAE    .      .
+ X05      HAE2   CAE    .      .
+ X05      CAI    CAE    OAB    .
+ X05      HAI    CAI    .      .
+ X05      OAB    CAI    HAB    .
+ X05      HAB    OAB    .      END
+ X05      CAK    CAL    .    ADD
+ X05      CAL    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ X05      OAD    CAK       single      1.432    0.020
+ X05      CAK    CAL       single      1.524    0.020
+ X05      CAK    CAJ       single      1.524    0.020
+ X05      CAL    CAI       single      1.524    0.020
+ X05      CAL    NAM       single      1.469    0.020
+ X05      OAB    CAI       single      1.432    0.020
+ X05      CAI    CAE       single      1.524    0.020
+ X05      CAE    CAF       single      1.524    0.020
+ X05      CAF    NAM       single      1.469    0.020
+ X05      NAM    CAG       single      1.469    0.020
+ X05      CAG    CAH       single      1.524    0.020
+ X05      NAA    CAH       single      1.450    0.020
+ X05      CAH    CAJ       single      1.524    0.020
+ X05      CAJ    OAC       single      1.432    0.020
+ X05      HAD    OAD       single      0.967    0.020
+ X05      HAK    CAK       single      1.099    0.020
+ X05      HAL    CAL       single      1.099    0.020
+ X05      HAJ    CAJ       single      1.099    0.020
+ X05      HAI    CAI       single      1.099    0.020
+ X05      HAB    OAB       single      0.967    0.020
+ X05      HAE1   CAE       single      1.092    0.020
+ X05      HAE2   CAE       single      1.092    0.020
+ X05      HAF1   CAF       single      1.092    0.020
+ X05      HAF2   CAF       single      1.092    0.020
+ X05      HAG1   CAG       single      1.092    0.020
+ X05      HAG2   CAG       single      1.092    0.020
+ X05      HAH    CAH       single      1.099    0.020
+ X05      HAA1   NAA       single      1.010    0.020
+ X05      HAA2   NAA       single      1.010    0.020
+ X05      HAC    OAC       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ X05      HAC    OAC    CAJ     109.470    3.000
+ X05      OAC    CAJ    HAJ     109.470    3.000
+ X05      OAC    CAJ    CAK     109.470    3.000
+ X05      OAC    CAJ    CAH     109.470    3.000
+ X05      HAJ    CAJ    CAK     108.340    3.000
+ X05      HAJ    CAJ    CAH     108.340    3.000
+ X05      CAK    CAJ    CAH     111.000    3.000
+ X05      CAJ    CAK    HAK     108.340    3.000
+ X05      CAJ    CAK    OAD     109.470    3.000
+ X05      CAJ    CAK    CAL     111.000    3.000
+ X05      HAK    CAK    OAD     109.470    3.000
+ X05      HAK    CAK    CAL     108.340    3.000
+ X05      OAD    CAK    CAL     109.470    3.000
+ X05      CAK    OAD    HAD     109.470    3.000
+ X05      CAJ    CAH    HAH     108.340    3.000
+ X05      CAJ    CAH    NAA     109.470    3.000
+ X05      CAJ    CAH    CAG     111.000    3.000
+ X05      HAH    CAH    NAA     109.470    3.000
+ X05      HAH    CAH    CAG     108.340    3.000
+ X05      NAA    CAH    CAG     109.470    3.000
+ X05      CAH    NAA    HAA2    120.000    3.000
+ X05      CAH    NAA    HAA1    120.000    3.000
+ X05      HAA2   NAA    HAA1    120.000    3.000
+ X05      CAH    CAG    HAG1    109.470    3.000
+ X05      CAH    CAG    HAG2    109.470    3.000
+ X05      CAH    CAG    NAM     109.500    3.000
+ X05      HAG1   CAG    HAG2    107.900    3.000
+ X05      HAG1   CAG    NAM     109.470    3.000
+ X05      HAG2   CAG    NAM     109.470    3.000
+ X05      CAG    NAM    CAL     109.470    3.000
+ X05      CAG    NAM    CAF     109.470    3.000
+ X05      CAL    NAM    CAF     109.470    3.000
+ X05      NAM    CAL    HAL     109.500    3.000
+ X05      NAM    CAL    CAK     109.500    3.000
+ X05      NAM    CAL    CAI     109.500    3.000
+ X05      CAK    CAL    CAI     111.000    3.000
+ X05      HAL    CAL    CAK     108.340    3.000
+ X05      HAL    CAL    CAI     108.340    3.000
+ X05      NAM    CAF    HAF1    109.470    3.000
+ X05      NAM    CAF    HAF2    109.470    3.000
+ X05      NAM    CAF    CAE     109.470    3.000
+ X05      HAF1   CAF    HAF2    107.900    3.000
+ X05      HAF1   CAF    CAE     109.470    3.000
+ X05      HAF2   CAF    CAE     109.470    3.000
+ X05      CAF    CAE    HAE1    109.470    3.000
+ X05      CAF    CAE    HAE2    109.470    3.000
+ X05      CAF    CAE    CAI     111.000    3.000
+ X05      HAE1   CAE    HAE2    107.900    3.000
+ X05      HAE1   CAE    CAI     109.470    3.000
+ X05      HAE2   CAE    CAI     109.470    3.000
+ X05      CAE    CAI    HAI     108.340    3.000
+ X05      CAE    CAI    OAB     109.470    3.000
+ X05      CAE    CAI    CAL     111.000    3.000
+ X05      HAI    CAI    OAB     109.470    3.000
+ X05      HAI    CAI    CAL     108.340    3.000
+ X05      OAB    CAI    CAL     109.470    3.000
+ X05      CAI    OAB    HAB     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ X05      var_1    HAC    OAC    CAJ    CAH      -58.833   20.000   1
+ X05      var_2    OAC    CAJ    CAK    OAD      -60.000   20.000   3
+ X05      var_3    CAJ    CAK    CAL    NAM      -60.000   20.000   3
+ X05      var_4    CAJ    CAK    OAD    HAD       61.884   20.000   1
+ X05      var_5    OAC    CAJ    CAH    CAG      180.000   20.000   3
+ X05      var_6    CAJ    CAH    NAA    HAA1    -178.765   20.000   1
+ X05      var_7    CAJ    CAH    CAG    NAM       60.000   20.000   3
+ X05      var_8    CAH    CAG    NAM    CAF      180.000   20.000   1
+ X05      var_9    CAG    NAM    CAL    CAK       60.000   20.000   1
+ X05      var_10   NAM    CAL    CAI    CAE       30.000   20.000   3
+ X05      var_11   CAG    NAM    CAF    CAE      150.000   20.000   1
+ X05      var_12   NAM    CAF    CAE    CAI      -30.000   20.000   3
+ X05      var_13   CAF    CAE    CAI    OAB      120.000   20.000   3
+ X05      var_14   CAE    CAI    OAB    HAB       65.194   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ X05      chir_01  CAK    OAD    CAL    CAJ       positiv
+ X05      chir_02  CAL    CAK    CAI    NAM       negativ
+ X05      chir_03  CAI    CAL    OAB    CAE       negativ
+ X05      chir_04  NAM    CAL    CAF    CAG       positiv
+ X05      chir_05  CAH    CAG    NAA    CAJ       positiv
+ X05      chir_06  CAJ    CAK    CAH    OAC       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ X05      plan-1    NAA       0.020
+ X05      plan-1    CAH       0.000
+ X05      plan-1    HAA1      0.000
+ X05      plan-1    HAA2      0.000
+# ------------------------------------------------------

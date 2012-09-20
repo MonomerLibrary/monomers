@@ -1,0 +1,219 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PDH      PDH '(2S)-2-AMINO-3-PHENYL-1-PROPANOL    ' non-polymer        24  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PDH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PDH           O      O    OH1       0.000      0.000    0.000    0.000
+ PDH           HO     H    H         0.000      0.786   -0.463   -0.319
+ PDH           C      C    CH2       0.000     -1.120   -0.886   -0.036
+ PDH           H1     H    H         0.000     -0.920   -1.750    0.601
+ PDH           H2     H    H         0.000     -1.284   -1.222   -1.062
+ PDH           CA     C    CH1       0.000     -2.365   -0.155    0.469
+ PDH           HA     H    H         0.000     -2.565    0.714   -0.173
+ PDH           N      N    NH2       0.000     -2.143    0.296    1.848
+ PDH           H      H    H         0.000     -2.188    1.282    2.077
+ PDH           HN     H    H         0.000     -1.943   -0.375    2.580
+ PDH           CB     C    CH2       0.000     -3.565   -1.103    0.430
+ PDH           HB1    H    H         0.000     -3.365   -1.968    1.067
+ PDH           HB2    H    H         0.000     -3.730   -1.439   -0.596
+ PDH           CG     C    CR6       0.000     -4.790   -0.384    0.928
+ PDH           CD2    C    CR16      0.000     -5.112   -0.413    2.271
+ PDH           HD2    H    H         0.000     -4.484   -0.956    2.966
+ PDH           CE2    C    CR16      0.000     -6.235    0.251    2.728
+ PDH           HE2    H    H         0.000     -6.482    0.234    3.782
+ PDH           CZ     C    CR16      0.000     -7.042    0.937    1.839
+ PDH           HZ     H    H         0.000     -7.924    1.454    2.196
+ PDH           CE1    C    CR16      0.000     -6.723    0.961    0.495
+ PDH           HE1    H    H         0.000     -7.355    1.498   -0.201
+ PDH           CD1    C    CR16      0.000     -5.598    0.301    0.039
+ PDH           HD1    H    H         0.000     -5.349    0.320   -1.015
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PDH      O      n/a    C      START
+ PDH      HO     O      .      .
+ PDH      C      O      CA     .
+ PDH      H1     C      .      .
+ PDH      H2     C      .      .
+ PDH      CA     C      CB     .
+ PDH      HA     CA     .      .
+ PDH      N      CA     HN     .
+ PDH      H      N      .      .
+ PDH      HN     N      .      .
+ PDH      CB     CA     CG     .
+ PDH      HB1    CB     .      .
+ PDH      HB2    CB     .      .
+ PDH      CG     CB     CD2    .
+ PDH      CD2    CG     CE2    .
+ PDH      HD2    CD2    .      .
+ PDH      CE2    CD2    CZ     .
+ PDH      HE2    CE2    .      .
+ PDH      CZ     CE2    CE1    .
+ PDH      HZ     CZ     .      .
+ PDH      CE1    CZ     CD1    .
+ PDH      HE1    CE1    .      .
+ PDH      CD1    CE1    HD1    .
+ PDH      HD1    CD1    .      END
+ PDH      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PDH      C      O         single      1.432    0.020
+ PDH      CA     C         single      1.524    0.020
+ PDH      H1     C         single      1.092    0.020
+ PDH      H2     C         single      1.092    0.020
+ PDH      HO     O         single      0.967    0.020
+ PDH      N      CA        single      1.450    0.020
+ PDH      CB     CA        single      1.524    0.020
+ PDH      HA     CA        single      1.099    0.020
+ PDH      HN     N         single      1.010    0.020
+ PDH      H      N         single      1.010    0.020
+ PDH      CG     CB        single      1.511    0.020
+ PDH      HB1    CB        single      1.092    0.020
+ PDH      HB2    CB        single      1.092    0.020
+ PDH      CG     CD1       double      1.390    0.020
+ PDH      CD2    CG        single      1.390    0.020
+ PDH      CD1    CE1       single      1.390    0.020
+ PDH      HD1    CD1       single      1.083    0.020
+ PDH      CE2    CD2       double      1.390    0.020
+ PDH      HD2    CD2       single      1.083    0.020
+ PDH      CE1    CZ        double      1.390    0.020
+ PDH      HE1    CE1       single      1.083    0.020
+ PDH      CZ     CE2       single      1.390    0.020
+ PDH      HE2    CE2       single      1.083    0.020
+ PDH      HZ     CZ        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PDH      HO     O      C       109.470    3.000
+ PDH      O      C      H1      109.470    3.000
+ PDH      O      C      H2      109.470    3.000
+ PDH      O      C      CA      109.470    3.000
+ PDH      H1     C      H2      107.900    3.000
+ PDH      H1     C      CA      109.470    3.000
+ PDH      H2     C      CA      109.470    3.000
+ PDH      C      CA     HA      108.340    3.000
+ PDH      C      CA     N       109.470    3.000
+ PDH      C      CA     CB      109.470    3.000
+ PDH      HA     CA     N       109.470    3.000
+ PDH      HA     CA     CB      108.340    3.000
+ PDH      N      CA     CB      109.470    3.000
+ PDH      CA     N      H       120.000    3.000
+ PDH      CA     N      HN      120.000    3.000
+ PDH      H      N      HN      120.000    3.000
+ PDH      CA     CB     HB1     109.470    3.000
+ PDH      CA     CB     HB2     109.470    3.000
+ PDH      CA     CB     CG      109.470    3.000
+ PDH      HB1    CB     HB2     107.900    3.000
+ PDH      HB1    CB     CG      109.470    3.000
+ PDH      HB2    CB     CG      109.470    3.000
+ PDH      CB     CG     CD2     120.000    3.000
+ PDH      CB     CG     CD1     120.000    3.000
+ PDH      CD2    CG     CD1     120.000    3.000
+ PDH      CG     CD2    HD2     120.000    3.000
+ PDH      CG     CD2    CE2     120.000    3.000
+ PDH      HD2    CD2    CE2     120.000    3.000
+ PDH      CD2    CE2    HE2     120.000    3.000
+ PDH      CD2    CE2    CZ      120.000    3.000
+ PDH      HE2    CE2    CZ      120.000    3.000
+ PDH      CE2    CZ     HZ      120.000    3.000
+ PDH      CE2    CZ     CE1     120.000    3.000
+ PDH      HZ     CZ     CE1     120.000    3.000
+ PDH      CZ     CE1    HE1     120.000    3.000
+ PDH      CZ     CE1    CD1     120.000    3.000
+ PDH      HE1    CE1    CD1     120.000    3.000
+ PDH      CE1    CD1    HD1     120.000    3.000
+ PDH      CE1    CD1    CG      120.000    3.000
+ PDH      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PDH      var_1    HO     O      C      CA       179.951   20.000   1
+ PDH      var_2    O      C      CA     CB       179.984   20.000   3
+ PDH      var_3    C      CA     N      HN       -59.988   20.000   1
+ PDH      var_4    C      CA     CB     CG       179.999   20.000   3
+ PDH      var_5    CA     CB     CG     CD2      -90.282   20.000   2
+ PDH      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ PDH      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ PDH      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ PDH      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ PDH      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ PDH      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PDH      chir_01  CA     C      N      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PDH      plan-1    N         0.020
+ PDH      plan-1    CA        0.020
+ PDH      plan-1    HN        0.020
+ PDH      plan-1    H         0.020
+ PDH      plan-2    CG        0.020
+ PDH      plan-2    CB        0.020
+ PDH      plan-2    CD1       0.020
+ PDH      plan-2    CD2       0.020
+ PDH      plan-2    CE1       0.020
+ PDH      plan-2    CE2       0.020
+ PDH      plan-2    CZ        0.020
+ PDH      plan-2    HD1       0.020
+ PDH      plan-2    HD2       0.020
+ PDH      plan-2    HE1       0.020
+ PDH      plan-2    HE2       0.020
+ PDH      plan-2    HZ        0.020
+# ------------------------------------------------------

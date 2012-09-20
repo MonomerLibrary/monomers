@@ -1,0 +1,150 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MMU      MMU '1,3-dimethylurea                    ' non-polymer        14   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MMU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MMU           OAC    O    O         0.000      0.000    0.000    0.000
+ MMU           CAF    C    C         0.000     -0.938   -0.772    0.000
+ MMU           N2     N    NH1       0.000     -0.716   -2.102    0.000
+ MMU           HN2    H    H         0.000     -1.496   -2.744    0.000
+ MMU           CAB    C    CH3       0.000      0.656   -2.616    0.000
+ MMU           HABB   H    H         0.000      1.165   -2.274    0.865
+ MMU           HABA   H    H         0.000      0.639   -3.676    0.000
+ MMU           HAB    H    H         0.000      1.165   -2.273   -0.865
+ MMU           N1     N    NH1       0.000     -2.200   -0.300    0.000
+ MMU           HN1    H    H         0.000     -2.979   -0.943    0.000
+ MMU           CAA    C    CH3       0.000     -2.442    1.145    0.000
+ MMU           HAAB   H    H         0.000     -3.485    1.332    0.000
+ MMU           HAAA   H    H         0.000     -2.009    1.579    0.865
+ MMU           HAA    H    H         0.000     -2.008    1.579   -0.865
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MMU      OAC    n/a    CAF    START
+ MMU      CAF    OAC    N1     .
+ MMU      N2     CAF    CAB    .
+ MMU      HN2    N2     .      .
+ MMU      CAB    N2     HAB    .
+ MMU      HABB   CAB    .      .
+ MMU      HABA   CAB    .      .
+ MMU      HAB    CAB    .      .
+ MMU      N1     CAF    CAA    .
+ MMU      HN1    N1     .      .
+ MMU      CAA    N1     HAA    .
+ MMU      HAAB   CAA    .      .
+ MMU      HAAA   CAA    .      .
+ MMU      HAA    CAA    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MMU      CAA    N1        single      1.450    0.020
+ MMU      N1     CAF       single      1.330    0.020
+ MMU      CAB    N2        single      1.450    0.020
+ MMU      N2     CAF       single      1.330    0.020
+ MMU      CAF    OAC       double      1.220    0.020
+ MMU      HN1    N1        single      1.010    0.020
+ MMU      HN2    N2        single      1.010    0.020
+ MMU      HAA    CAA       single      1.059    0.020
+ MMU      HAAA   CAA       single      1.059    0.020
+ MMU      HAAB   CAA       single      1.059    0.020
+ MMU      HAB    CAB       single      1.059    0.020
+ MMU      HABA   CAB       single      1.059    0.020
+ MMU      HABB   CAB       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MMU      OAC    CAF    N2      123.000    3.000
+ MMU      OAC    CAF    N1      123.000    3.000
+ MMU      N2     CAF    N1      120.000    3.000
+ MMU      CAF    N2     HN2     120.000    3.000
+ MMU      CAF    N2     CAB     121.500    3.000
+ MMU      HN2    N2     CAB     118.500    3.000
+ MMU      N2     CAB    HABB    109.470    3.000
+ MMU      N2     CAB    HABA    109.470    3.000
+ MMU      N2     CAB    HAB     109.470    3.000
+ MMU      HABB   CAB    HABA    109.470    3.000
+ MMU      HABB   CAB    HAB     109.470    3.000
+ MMU      HABA   CAB    HAB     109.470    3.000
+ MMU      CAF    N1     HN1     120.000    3.000
+ MMU      CAF    N1     CAA     121.500    3.000
+ MMU      HN1    N1     CAA     118.500    3.000
+ MMU      N1     CAA    HAAB    109.470    3.000
+ MMU      N1     CAA    HAAA    109.470    3.000
+ MMU      N1     CAA    HAA     109.470    3.000
+ MMU      HAAB   CAA    HAAA    109.470    3.000
+ MMU      HAAB   CAA    HAA     109.470    3.000
+ MMU      HAAA   CAA    HAA     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MMU      CONST_1  OAC    CAF    N2     CAB        0.000    0.000   0
+ MMU      var_1    CAF    N2     CAB    HAB      -59.986   20.000   1
+ MMU      CONST_2  OAC    CAF    N1     CAA        0.000    0.000   0
+ MMU      var_2    CAF    N1     CAA    HAA       59.986   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MMU      plan-1    N1        0.020
+ MMU      plan-1    CAA       0.020
+ MMU      plan-1    CAF       0.020
+ MMU      plan-1    HN1       0.020
+ MMU      plan-2    N2        0.020
+ MMU      plan-2    CAB       0.020
+ MMU      plan-2    CAF       0.020
+ MMU      plan-2    HN2       0.020
+ MMU      plan-3    CAF       0.020
+ MMU      plan-3    N1        0.020
+ MMU      plan-3    N2        0.020
+ MMU      plan-3    OAC       0.020
+ MMU      plan-3    HN1       0.020
+ MMU      plan-3    HN2       0.020
+# ------------------------------------------------------

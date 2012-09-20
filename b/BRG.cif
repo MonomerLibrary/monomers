@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BRG      BRG '8-BROMOGUANINE                      ' non-polymer        16  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BRG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BRG           BR     BR   BR        0.000      0.000    0.000    0.000
+ BRG           C8     C    CR5       0.000     -1.789    0.000    0.612
+ BRG           N9     N    NRD5      0.000     -2.151    0.000    1.868
+ BRG           N7     N    NR15      0.000     -2.879    0.000   -0.182
+ BRG           H7     H    H         0.000     -2.887    0.000   -1.222
+ BRG           C5     C    CR56      0.000     -3.985    0.000    0.647
+ BRG           C4     C    CR56      0.000     -3.492    0.000    1.955
+ BRG           C6     C    CR6       0.000     -5.374    0.000    0.442
+ BRG           O6     O    O         0.000     -5.838    0.001   -0.686
+ BRG           N1     N    NR16      0.000     -6.184   -0.004    1.525
+ BRG           H1     H    H         0.000     -7.217   -0.010    1.398
+ BRG           C2     C    CR6       0.000     -5.655    0.000    2.779
+ BRG           N3     N    NRD6      0.000     -4.359    0.000    2.986
+ BRG           N2     N    NH2       0.000     -6.502    0.000    3.860
+ BRG           H22    H    H         0.000     -7.506    0.000    3.724
+ BRG           H21    H    H         0.000     -6.129    0.000    4.803
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BRG      BR     n/a    C8     START
+ BRG      C8     BR     N7     .
+ BRG      N9     C8     .      .
+ BRG      N7     C8     C5     .
+ BRG      H7     N7     .      .
+ BRG      C5     N7     C6     .
+ BRG      C4     C5     .      .
+ BRG      C6     C5     N1     .
+ BRG      O6     C6     .      .
+ BRG      N1     C6     C2     .
+ BRG      H1     N1     .      .
+ BRG      C2     N1     N2     .
+ BRG      N3     C2     .      .
+ BRG      N2     C2     H21    .
+ BRG      H22    N2     .      .
+ BRG      H21    N2     .      END
+ BRG      N9     C4     .    ADD
+ BRG      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BRG      N9     C4        single      1.350    0.020
+ BRG      N9     C8        double      1.350    0.020
+ BRG      C4     N3        single      1.355    0.020
+ BRG      C4     C5        double      1.490    0.020
+ BRG      N3     C2        double      1.350    0.020
+ BRG      N2     C2        single      1.355    0.020
+ BRG      C2     N1        single      1.337    0.020
+ BRG      H21    N2        single      1.010    0.020
+ BRG      H22    N2        single      1.010    0.020
+ BRG      N1     C6        single      1.337    0.020
+ BRG      H1     N1        single      1.040    0.020
+ BRG      O6     C6        double      1.250    0.020
+ BRG      C6     C5        single      1.490    0.020
+ BRG      C5     N7        single      1.340    0.020
+ BRG      N7     C8        single      1.340    0.020
+ BRG      H7     N7        single      1.040    0.020
+ BRG      C8     BR        single      1.995    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BRG      BR     C8     N9      108.000    3.000
+ BRG      BR     C8     N7      108.000    3.000
+ BRG      N9     C8     N7      108.000    3.000
+ BRG      C8     N9     C4      108.000    3.000
+ BRG      C8     N7     H7      126.000    3.000
+ BRG      C8     N7     C5      108.000    3.000
+ BRG      H7     N7     C5      126.000    3.000
+ BRG      N7     C5     C4      108.000    3.000
+ BRG      N7     C5     C6      132.000    3.000
+ BRG      C4     C5     C6      120.000    3.000
+ BRG      C5     C4     N9      108.000    3.000
+ BRG      C5     C4     N3      120.000    3.000
+ BRG      N9     C4     N3      120.000    3.000
+ BRG      C5     C6     O6      120.000    3.000
+ BRG      C5     C6     N1      120.000    3.000
+ BRG      O6     C6     N1      120.000    3.000
+ BRG      C6     N1     H1      120.000    3.000
+ BRG      C6     N1     C2      120.000    3.000
+ BRG      H1     N1     C2      120.000    3.000
+ BRG      N1     C2     N3      120.000    3.000
+ BRG      N1     C2     N2      120.000    3.000
+ BRG      N3     C2     N2      120.000    3.000
+ BRG      C2     N3     C4      120.000    3.000
+ BRG      C2     N2     H22     120.000    3.000
+ BRG      C2     N2     H21     120.000    3.000
+ BRG      H22    N2     H21     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BRG      CONST_1  BR     C8     N9     C4       180.000    0.000   0
+ BRG      CONST_2  C8     N9     C4     C5         0.000    0.000   0
+ BRG      CONST_3  BR     C8     N7     C5       180.000    0.000   0
+ BRG      CONST_4  C8     N7     C5     C6       180.000    0.000   0
+ BRG      CONST_5  N7     C5     C4     N9         0.000    0.000   0
+ BRG      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ BRG      CONST_7  N7     C5     C6     N1       180.000    0.000   0
+ BRG      CONST_8  C5     C6     N1     C2         0.000    0.000   0
+ BRG      CONST_9  C6     N1     C2     N2       180.000    0.000   0
+ BRG      CONST_10 N1     C2     N3     C4         0.000    0.000   0
+ BRG      CONST_11 N1     C2     N2     H21      179.808    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BRG      plan-1    N9        0.020
+ BRG      plan-1    C4        0.020
+ BRG      plan-1    C8        0.020
+ BRG      plan-1    N7        0.020
+ BRG      plan-1    N3        0.020
+ BRG      plan-1    C5        0.020
+ BRG      plan-1    C2        0.020
+ BRG      plan-1    N1        0.020
+ BRG      plan-1    C6        0.020
+ BRG      plan-1    N2        0.020
+ BRG      plan-1    H1        0.020
+ BRG      plan-1    O6        0.020
+ BRG      plan-1    H7        0.020
+ BRG      plan-1    BR        0.020
+ BRG      plan-1    H22       0.020
+ BRG      plan-1    H21       0.020
+ BRG      plan-2    N2        0.020
+ BRG      plan-2    C2        0.020
+ BRG      plan-2    H21       0.020
+ BRG      plan-2    H22       0.020
+# ------------------------------------------------------

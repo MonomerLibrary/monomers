@@ -1,0 +1,136 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BUA      BUA 'BUTANOIC ACID                       ' non-polymer        13   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BUA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BUA           O2     O    OC       -0.500      0.000    0.000    0.000
+ BUA           C4     C    C         0.000     -0.922    0.000    0.846
+ BUA           O1     O    OC       -0.500     -0.650    0.000    2.067
+ BUA           C3     C    CH2       0.000     -2.359    0.000    0.395
+ BUA           H31    H    H         0.000     -2.551   -0.891   -0.206
+ BUA           H32    H    H         0.000     -2.551    0.891   -0.206
+ BUA           C2     C    CH2       0.000     -3.278    0.000    1.618
+ BUA           H21    H    H         0.000     -3.083    0.891    2.218
+ BUA           H22    H    H         0.000     -3.083   -0.891    2.218
+ BUA           C1     C    CH3       0.000     -4.738    0.000    1.161
+ BUA           H13    H    H         0.000     -5.376    0.000    2.007
+ BUA           H12    H    H         0.000     -4.929    0.865    0.578
+ BUA           H11    H    H         0.000     -4.929   -0.864    0.577
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BUA      O2     n/a    C4     START
+ BUA      C4     O2     C3     .
+ BUA      O1     C4     .      .
+ BUA      C3     C4     C2     .
+ BUA      H31    C3     .      .
+ BUA      H32    C3     .      .
+ BUA      C2     C3     C1     .
+ BUA      H21    C2     .      .
+ BUA      H22    C2     .      .
+ BUA      C1     C2     H11    .
+ BUA      H13    C1     .      .
+ BUA      H12    C1     .      .
+ BUA      H11    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BUA      C1     C2        single      1.513    0.020
+ BUA      H11    C1        single      1.059    0.020
+ BUA      H12    C1        single      1.059    0.020
+ BUA      H13    C1        single      1.059    0.020
+ BUA      C2     C3        single      1.524    0.020
+ BUA      H21    C2        single      1.092    0.020
+ BUA      H22    C2        single      1.092    0.020
+ BUA      C3     C4        single      1.510    0.020
+ BUA      H31    C3        single      1.092    0.020
+ BUA      H32    C3        single      1.092    0.020
+ BUA      O1     C4        deloc       1.250    0.020
+ BUA      C4     O2        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BUA      O2     C4     O1      123.000    3.000
+ BUA      O2     C4     C3      118.500    3.000
+ BUA      O1     C4     C3      118.500    3.000
+ BUA      C4     C3     H31     109.470    3.000
+ BUA      C4     C3     H32     109.470    3.000
+ BUA      C4     C3     C2      109.470    3.000
+ BUA      H31    C3     H32     107.900    3.000
+ BUA      H31    C3     C2      109.470    3.000
+ BUA      H32    C3     C2      109.470    3.000
+ BUA      C3     C2     H21     109.470    3.000
+ BUA      C3     C2     H22     109.470    3.000
+ BUA      C3     C2     C1      111.000    3.000
+ BUA      H21    C2     H22     107.900    3.000
+ BUA      H21    C2     C1      109.470    3.000
+ BUA      H22    C2     C1      109.470    3.000
+ BUA      C2     C1     H13     109.470    3.000
+ BUA      C2     C1     H12     109.470    3.000
+ BUA      C2     C1     H11     109.470    3.000
+ BUA      H13    C1     H12     109.470    3.000
+ BUA      H13    C1     H11     109.470    3.000
+ BUA      H12    C1     H11     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BUA      var_1    O2     C4     C3     C2       180.000   20.000   3
+ BUA      var_2    C4     C3     C2     C1       180.000   20.000   3
+ BUA      var_3    C3     C2     C1     H11       59.972   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BUA      plan-1    C4        0.020
+ BUA      plan-1    C3        0.000
+ BUA      plan-1    O1        0.000
+ BUA      plan-1    O2        0.000
+# ------------------------------------------------------

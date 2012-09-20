@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XDK      XDK '2-AMINO-4-PYRIDYL-PYRIMIDINE        ' non-polymer        21  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XDK
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XDK           N7     N    NH2       0.000      0.000    0.000    0.000
+ XDK           H71N   H    H         0.000     -0.018    1.015    0.035
+ XDK           H72N   H    H         0.000      0.898   -0.475   -0.016
+ XDK           C2     C    CR6       0.000     -1.180   -0.725   -0.026
+ XDK           N3     N    NRD6      0.000     -2.334   -0.078   -0.004
+ XDK           N1     N    NRD6      0.000     -1.123   -2.047   -0.072
+ XDK           C6     C    CR16      0.000     -2.229   -2.776   -0.092
+ XDK           H6     H    H         0.000     -2.171   -3.857   -0.124
+ XDK           C5     C    CR16      0.000     -3.458   -2.142   -0.071
+ XDK           H5     H    H         0.000     -4.377   -2.715   -0.088
+ XDK           C4     C    CR6       0.000     -3.486   -0.745   -0.028
+ XDK           C5A    C    CR6       0.000     -4.778   -0.018   -0.004
+ XDK           C9     C    CR16      0.000     -4.809    1.379   -0.060
+ XDK           H9     H    H         0.000     -3.892    1.952   -0.122
+ XDK           C7A    C    CR16      0.000     -6.040    2.009   -0.034
+ XDK           H7A    H    H         0.000     -6.103    3.090   -0.077
+ XDK           C1A    C    CR16      0.000     -5.981   -0.716    0.076
+ XDK           H1A    H    H         0.000     -5.972   -1.798    0.122
+ XDK           N2A    N    NRD6      0.000     -7.130   -0.071    0.097
+ XDK           C3A    C    CR16      0.000     -7.191    1.245    0.046
+ XDK           H3A    H    H         0.000     -8.156    1.736    0.067
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XDK      N7     n/a    C2     START
+ XDK      H71N   N7     .      .
+ XDK      H72N   N7     .      .
+ XDK      C2     N7     N1     .
+ XDK      N3     C2     .      .
+ XDK      N1     C2     C6     .
+ XDK      C6     N1     C5     .
+ XDK      H6     C6     .      .
+ XDK      C5     C6     C4     .
+ XDK      H5     C5     .      .
+ XDK      C4     C5     C5A    .
+ XDK      C5A    C4     C1A    .
+ XDK      C9     C5A    C7A    .
+ XDK      H9     C9     .      .
+ XDK      C7A    C9     H7A    .
+ XDK      H7A    C7A    .      .
+ XDK      C1A    C5A    N2A    .
+ XDK      H1A    C1A    .      .
+ XDK      N2A    C1A    C3A    .
+ XDK      C3A    N2A    H3A    .
+ XDK      H3A    C3A    .      END
+ XDK      C7A    C3A    .    ADD
+ XDK      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XDK      C7A    C3A       single      1.390    0.020
+ XDK      C7A    C9        double      1.390    0.020
+ XDK      C3A    N2A       double      1.337    0.020
+ XDK      N2A    C1A       single      1.337    0.020
+ XDK      C1A    C5A       double      1.390    0.020
+ XDK      C5A    C4        single      1.487    0.020
+ XDK      C9     C5A       single      1.390    0.020
+ XDK      C4     N3        double      1.350    0.020
+ XDK      C4     C5        single      1.390    0.020
+ XDK      N3     C2        single      1.350    0.020
+ XDK      C5     C6        double      1.390    0.020
+ XDK      C6     N1        single      1.337    0.020
+ XDK      N1     C2        double      1.350    0.020
+ XDK      C2     N7        single      1.355    0.020
+ XDK      H7A    C7A       single      1.083    0.020
+ XDK      H3A    C3A       single      1.083    0.020
+ XDK      H9     C9        single      1.083    0.020
+ XDK      H1A    C1A       single      1.083    0.020
+ XDK      H5     C5        single      1.083    0.020
+ XDK      H6     C6        single      1.083    0.020
+ XDK      H71N   N7        single      1.010    0.020
+ XDK      H72N   N7        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XDK      H71N   N7     H72N    120.000    3.000
+ XDK      H71N   N7     C2      120.000    3.000
+ XDK      H72N   N7     C2      120.000    3.000
+ XDK      N7     C2     N3      120.000    3.000
+ XDK      N7     C2     N1      120.000    3.000
+ XDK      N3     C2     N1      120.000    3.000
+ XDK      C2     N3     C4      120.000    3.000
+ XDK      C2     N1     C6      120.000    3.000
+ XDK      N1     C6     H6      120.000    3.000
+ XDK      N1     C6     C5      120.000    3.000
+ XDK      H6     C6     C5      120.000    3.000
+ XDK      C6     C5     H5      120.000    3.000
+ XDK      C6     C5     C4      120.000    3.000
+ XDK      H5     C5     C4      120.000    3.000
+ XDK      C5     C4     C5A     120.000    3.000
+ XDK      C5     C4     N3      120.000    3.000
+ XDK      C5A    C4     N3      120.000    3.000
+ XDK      C4     C5A    C9      120.000    3.000
+ XDK      C4     C5A    C1A     120.000    3.000
+ XDK      C9     C5A    C1A     120.000    3.000
+ XDK      C5A    C9     H9      120.000    3.000
+ XDK      C5A    C9     C7A     120.000    3.000
+ XDK      H9     C9     C7A     120.000    3.000
+ XDK      C9     C7A    H7A     120.000    3.000
+ XDK      C9     C7A    C3A     120.000    3.000
+ XDK      H7A    C7A    C3A     120.000    3.000
+ XDK      C5A    C1A    H1A     120.000    3.000
+ XDK      C5A    C1A    N2A     120.000    3.000
+ XDK      H1A    C1A    N2A     120.000    3.000
+ XDK      C1A    N2A    C3A     120.000    3.000
+ XDK      N2A    C3A    H3A     120.000    3.000
+ XDK      N2A    C3A    C7A     120.000    3.000
+ XDK      H3A    C3A    C7A     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XDK      CONST_1  H72N   N7     C2     N1         0.009    0.000   0
+ XDK      CONST_2  N7     C2     N3     C4       180.000    0.000   0
+ XDK      CONST_3  N7     C2     N1     C6       180.000    0.000   0
+ XDK      CONST_4  C2     N1     C6     C5         0.000    0.000   0
+ XDK      CONST_5  N1     C6     C5     C4         0.000    0.000   0
+ XDK      CONST_6  C6     C5     C4     C5A      180.000    0.000   0
+ XDK      CONST_7  C5     C4     N3     C2         0.000    0.000   0
+ XDK      CONST_8  C5     C4     C5A    C1A        0.000    0.000   0
+ XDK      CONST_9  C4     C5A    C9     C7A      180.000    0.000   0
+ XDK      CONST_10 C5A    C9     C7A    C3A        0.000    0.000   0
+ XDK      CONST_11 C9     C7A    C3A    N2A        0.000    0.000   0
+ XDK      CONST_12 C4     C5A    C1A    N2A      180.000    0.000   0
+ XDK      CONST_13 C5A    C1A    N2A    C3A        0.000    0.000   0
+ XDK      CONST_14 C1A    N2A    C3A    C7A        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ XDK      plan-1    C7A       0.020
+ XDK      plan-1    C3A       0.020
+ XDK      plan-1    C9        0.020
+ XDK      plan-1    H7A       0.020
+ XDK      plan-1    N2A       0.020
+ XDK      plan-1    C1A       0.020
+ XDK      plan-1    C5A       0.020
+ XDK      plan-1    H3A       0.020
+ XDK      plan-1    H1A       0.020
+ XDK      plan-1    C4        0.020
+ XDK      plan-1    H9        0.020
+ XDK      plan-2    C4        0.020
+ XDK      plan-2    C5A       0.020
+ XDK      plan-2    N3        0.020
+ XDK      plan-2    C5        0.020
+ XDK      plan-2    C6        0.020
+ XDK      plan-2    N1        0.020
+ XDK      plan-2    C2        0.020
+ XDK      plan-2    H5        0.020
+ XDK      plan-2    H6        0.020
+ XDK      plan-2    N7        0.020
+ XDK      plan-2    H71N      0.020
+ XDK      plan-2    H72N      0.020
+ XDK      plan-3    N7        0.020
+ XDK      plan-3    C2        0.020
+ XDK      plan-3    H71N      0.020
+ XDK      plan-3    H72N      0.020
+# ------------------------------------------------------

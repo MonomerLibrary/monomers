@@ -1,0 +1,104 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FAH      FAH 'fluoroacetic acid                   ' non-polymer         7   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FAH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FAH           OXT    O    OC       -0.500      0.000    0.000    0.000
+ FAH           C      C    C         0.000     -1.204    0.340    0.002
+ FAH           O      O    OC       -0.500     -1.512    1.552    0.000
+ FAH           CH3    C    CH2       0.000     -2.283   -0.712    0.001
+ FAH           HH3A   H    H         0.000     -2.185   -1.335    0.893
+ FAH           HH3    H    H         0.000     -2.182   -1.336   -0.890
+ FAH           F      F    F         0.000     -3.538   -0.093   -0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FAH      OXT    n/a    C      START
+ FAH      C      OXT    CH3    .
+ FAH      O      C      .      .
+ FAH      CH3    C      F      .
+ FAH      HH3A   CH3    .      .
+ FAH      HH3    CH3    .      .
+ FAH      F      CH3    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FAH      O      C         deloc       1.250    0.020
+ FAH      C      OXT       deloc       1.250    0.020
+ FAH      CH3    C         single      1.510    0.020
+ FAH      F      CH3       single      1.370    0.020
+ FAH      HH3    CH3       single      1.092    0.020
+ FAH      HH3A   CH3       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FAH      OXT    C      O       123.000    3.000
+ FAH      OXT    C      CH3     118.500    3.000
+ FAH      O      C      CH3     118.500    3.000
+ FAH      C      CH3    HH3A    109.470    3.000
+ FAH      C      CH3    HH3     109.470    3.000
+ FAH      C      CH3    F       109.500    3.000
+ FAH      HH3A   CH3    HH3     107.900    3.000
+ FAH      HH3A   CH3    F       109.500    3.000
+ FAH      HH3    CH3    F       109.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FAH      var_1    OXT    C      CH3    F       -179.757   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FAH      plan-1    C         0.020
+ FAH      plan-1    O         0.000
+ FAH      plan-1    CH3       0.000
+ FAH      plan-1    OXT       0.000
+# ------------------------------------------------------

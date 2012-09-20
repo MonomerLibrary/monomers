@@ -1,0 +1,263 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TTR      TTR '9-ACETYL-2,3,4,9-TETRAHYDRO-1H-CARBA' non-polymer        30  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TTR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TTR           OL     O    O         0.000      0.000    0.000    0.000
+ TTR           CL     C    C         0.000     -1.033   -0.635   -0.066
+ TTR           CM     C    CH2       0.000     -1.017   -2.144   -0.149
+ TTR           HM2    H    H         0.000     -0.115   -2.520    0.338
+ TTR           HM1    H    H         0.000     -1.014   -2.445   -1.199
+ TTR           CD1    C    CR5       0.000     -2.296    0.017   -0.072
+ TTR           NE1    N    NR5       0.000     -2.577    1.367   -0.037
+ TTR           CJ1    C    C         0.000     -1.666    2.361    0.006
+ TTR           CN1    C    CH3       0.000     -2.120    3.797    0.035
+ TTR           HN3    H    H         0.000     -2.687    4.008   -0.835
+ TTR           HN2    H    H         0.000     -2.719    3.963    0.893
+ TTR           HN1    H    H         0.000     -1.275    4.436    0.067
+ TTR           OJ1    O    O         0.000     -0.483    2.098    0.021
+ TTR           CE2    C    CR56      0.000     -3.951    1.531   -0.058
+ TTR           CZ2    C    CR16      0.000     -4.771    2.652   -0.046
+ TTR           HZ2    H    H         0.000     -4.335    3.643   -0.013
+ TTR           CH2    C    CR16      0.000     -6.142    2.503   -0.076
+ TTR           HH2    H    H         0.000     -6.778    3.379   -0.067
+ TTR           CZ3    C    CR16      0.000     -6.713    1.239   -0.119
+ TTR           HZ3    H    H         0.000     -7.791    1.138   -0.142
+ TTR           CE3    C    CR16      0.000     -5.928    0.122   -0.131
+ TTR           HE3    H    H         0.000     -6.385   -0.860   -0.164
+ TTR           CD2    C    CR56      0.000     -4.533    0.245   -0.099
+ TTR           CG     C    CR5       0.000     -3.474   -0.683   -0.098
+ TTR           CB     C    CH2       0.000     -3.529   -2.190   -0.116
+ TTR           HB1    H    H         0.000     -3.586   -2.552   -1.144
+ TTR           HB2    H    H         0.000     -4.401   -2.541    0.441
+ TTR           CA     C    CH2       0.000     -2.251   -2.721    0.545
+ TTR           HA2    H    H         0.000     -2.238   -3.811    0.469
+ TTR           HA1    H    H         0.000     -2.248   -2.431    1.598
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TTR      OL     n/a    CL     START
+ TTR      CL     OL     CD1    .
+ TTR      CM     CL     HM1    .
+ TTR      HM2    CM     .      .
+ TTR      HM1    CM     .      .
+ TTR      CD1    CL     NE1    .
+ TTR      NE1    CD1    CE2    .
+ TTR      CJ1    NE1    OJ1    .
+ TTR      CN1    CJ1    HN1    .
+ TTR      HN3    CN1    .      .
+ TTR      HN2    CN1    .      .
+ TTR      HN1    CN1    .      .
+ TTR      OJ1    CJ1    .      .
+ TTR      CE2    NE1    CZ2    .
+ TTR      CZ2    CE2    CH2    .
+ TTR      HZ2    CZ2    .      .
+ TTR      CH2    CZ2    CZ3    .
+ TTR      HH2    CH2    .      .
+ TTR      CZ3    CH2    CE3    .
+ TTR      HZ3    CZ3    .      .
+ TTR      CE3    CZ3    CD2    .
+ TTR      HE3    CE3    .      .
+ TTR      CD2    CE3    CG     .
+ TTR      CG     CD2    CB     .
+ TTR      CB     CG     CA     .
+ TTR      HB1    CB     .      .
+ TTR      HB2    CB     .      .
+ TTR      CA     CB     HA1    .
+ TTR      HA2    CA     .      .
+ TTR      HA1    CA     .      END
+ TTR      CM     CA     .    ADD
+ TTR      CG     CD1    .    ADD
+ TTR      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TTR      CM     CA        single      1.524    0.020
+ TTR      CM     CL        single      1.510    0.020
+ TTR      HM1    CM        single      1.092    0.020
+ TTR      HM2    CM        single      1.092    0.020
+ TTR      CA     CB        single      1.524    0.020
+ TTR      HA1    CA        single      1.092    0.020
+ TTR      HA2    CA        single      1.092    0.020
+ TTR      CB     CG        single      1.510    0.020
+ TTR      HB1    CB        single      1.092    0.020
+ TTR      HB2    CB        single      1.092    0.020
+ TTR      CG     CD1       double      1.490    0.020
+ TTR      CG     CD2       single      1.490    0.020
+ TTR      NE1    CD1       single      1.337    0.020
+ TTR      CD1    CL        single      1.490    0.020
+ TTR      CD2    CE2       single      1.490    0.020
+ TTR      CD2    CE3       double      1.390    0.020
+ TTR      CJ1    NE1       single      1.365    0.020
+ TTR      CE2    NE1       single      1.337    0.020
+ TTR      OJ1    CJ1       double      1.220    0.020
+ TTR      CN1    CJ1       single      1.500    0.020
+ TTR      HN1    CN1       single      1.059    0.020
+ TTR      HN2    CN1       single      1.059    0.020
+ TTR      HN3    CN1       single      1.059    0.020
+ TTR      CZ2    CE2       double      1.390    0.020
+ TTR      CE3    CZ3       single      1.390    0.020
+ TTR      HE3    CE3       single      1.083    0.020
+ TTR      CH2    CZ2       single      1.390    0.020
+ TTR      HZ2    CZ2       single      1.083    0.020
+ TTR      CZ3    CH2       double      1.390    0.020
+ TTR      HZ3    CZ3       single      1.083    0.020
+ TTR      HH2    CH2       single      1.083    0.020
+ TTR      CL     OL        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TTR      OL     CL     CM      120.500    3.000
+ TTR      OL     CL     CD1     120.500    3.000
+ TTR      CM     CL     CD1     116.500    3.000
+ TTR      CL     CM     HM2     109.470    3.000
+ TTR      CL     CM     HM1     109.470    3.000
+ TTR      CL     CM     CA      109.470    3.000
+ TTR      HM2    CM     HM1     107.900    3.000
+ TTR      HM2    CM     CA      109.470    3.000
+ TTR      HM1    CM     CA      109.470    3.000
+ TTR      CL     CD1    NE1     126.000    3.000
+ TTR      CL     CD1    CG      117.000    3.000
+ TTR      NE1    CD1    CG      108.000    3.000
+ TTR      CD1    NE1    CJ1     108.000    3.000
+ TTR      CD1    NE1    CE2     108.000    3.000
+ TTR      CJ1    NE1    CE2     108.000    3.000
+ TTR      NE1    CJ1    CN1     120.000    3.000
+ TTR      NE1    CJ1    OJ1     120.000    3.000
+ TTR      CN1    CJ1    OJ1     123.000    3.000
+ TTR      CJ1    CN1    HN3     109.470    3.000
+ TTR      CJ1    CN1    HN2     109.470    3.000
+ TTR      CJ1    CN1    HN1     109.470    3.000
+ TTR      HN3    CN1    HN2     109.470    3.000
+ TTR      HN3    CN1    HN1     109.470    3.000
+ TTR      HN2    CN1    HN1     109.470    3.000
+ TTR      NE1    CE2    CZ2     132.000    3.000
+ TTR      NE1    CE2    CD2     108.000    3.000
+ TTR      CZ2    CE2    CD2     120.000    3.000
+ TTR      CE2    CZ2    HZ2     120.000    3.000
+ TTR      CE2    CZ2    CH2     120.000    3.000
+ TTR      HZ2    CZ2    CH2     120.000    3.000
+ TTR      CZ2    CH2    HH2     120.000    3.000
+ TTR      CZ2    CH2    CZ3     120.000    3.000
+ TTR      HH2    CH2    CZ3     120.000    3.000
+ TTR      CH2    CZ3    HZ3     120.000    3.000
+ TTR      CH2    CZ3    CE3     120.000    3.000
+ TTR      HZ3    CZ3    CE3     120.000    3.000
+ TTR      CZ3    CE3    HE3     120.000    3.000
+ TTR      CZ3    CE3    CD2     120.000    3.000
+ TTR      HE3    CE3    CD2     120.000    3.000
+ TTR      CE3    CD2    CG      126.000    3.000
+ TTR      CE3    CD2    CE2     120.000    3.000
+ TTR      CG     CD2    CE2     108.000    3.000
+ TTR      CD2    CG     CB      126.000    3.000
+ TTR      CD2    CG     CD1     108.000    3.000
+ TTR      CB     CG     CD1     126.000    3.000
+ TTR      CG     CB     HB1     109.470    3.000
+ TTR      CG     CB     HB2     109.470    3.000
+ TTR      CG     CB     CA      109.470    3.000
+ TTR      HB1    CB     HB2     107.900    3.000
+ TTR      HB1    CB     CA      109.470    3.000
+ TTR      HB2    CB     CA      109.470    3.000
+ TTR      CB     CA     HA2     109.470    3.000
+ TTR      CB     CA     HA1     109.470    3.000
+ TTR      CB     CA     CM      111.000    3.000
+ TTR      HA2    CA     HA1     107.900    3.000
+ TTR      HA2    CA     CM      109.470    3.000
+ TTR      HA1    CA     CM      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TTR      var_1    OL     CL     CM     CA       150.000   20.000   3
+ TTR      var_2    CL     CM     CA     CB        60.000   20.000   3
+ TTR      var_3    OL     CL     CD1    NE1        0.000   20.000   1
+ TTR      CONST_1  CL     CD1    NE1    CE2      180.000    0.000   0
+ TTR      var_4    CD1    NE1    CJ1    OJ1       -0.323   20.000   1
+ TTR      var_5    NE1    CJ1    CN1    HN1      179.986   20.000   1
+ TTR      CONST_2  CD1    NE1    CE2    CZ2      180.000    0.000   0
+ TTR      CONST_3  NE1    CE2    CZ2    CH2      180.000    0.000   0
+ TTR      CONST_4  CE2    CZ2    CH2    CZ3        0.000    0.000   0
+ TTR      CONST_5  CZ2    CH2    CZ3    CE3        0.000    0.000   0
+ TTR      CONST_6  CH2    CZ3    CE3    CD2        0.000    0.000   0
+ TTR      CONST_7  CZ3    CE3    CD2    CG       180.000    0.000   0
+ TTR      CONST_8  CE3    CD2    CE2    NE1      180.000    0.000   0
+ TTR      CONST_9  CE3    CD2    CG     CB         0.000    0.000   0
+ TTR      CONST_10 CD2    CG     CD1    CL       180.000    0.000   0
+ TTR      var_6    CD2    CG     CB     CA      -150.000   20.000   2
+ TTR      var_7    CG     CB     CA     CM       -60.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TTR      plan-1    CG        0.020
+ TTR      plan-1    CB        0.020
+ TTR      plan-1    CD1       0.020
+ TTR      plan-1    CD2       0.020
+ TTR      plan-1    NE1       0.020
+ TTR      plan-1    CL        0.020
+ TTR      plan-1    CE2       0.020
+ TTR      plan-1    CE3       0.020
+ TTR      plan-1    CZ2       0.020
+ TTR      plan-1    CZ3       0.020
+ TTR      plan-1    CH2       0.020
+ TTR      plan-1    CJ1       0.020
+ TTR      plan-1    HE3       0.020
+ TTR      plan-1    HZ2       0.020
+ TTR      plan-1    HZ3       0.020
+ TTR      plan-1    HH2       0.020
+ TTR      plan-2    CJ1       0.020
+ TTR      plan-2    NE1       0.020
+ TTR      plan-2    OJ1       0.020
+ TTR      plan-2    CN1       0.020
+ TTR      plan-3    CL        0.020
+ TTR      plan-3    CM        0.020
+ TTR      plan-3    CD1       0.020
+ TTR      plan-3    OL        0.020
+# ------------------------------------------------------

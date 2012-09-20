@@ -1,0 +1,180 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ETY      ETY '4-ethylphenol                       ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ETY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ETY           O1     O    OH1       0.000      0.000    0.000    0.000
+ ETY           HO1    H    H         0.000      0.391    0.002   -0.884
+ ETY           C1     C    CR6       0.000     -1.356    0.001   -0.104
+ ETY           C2     C    CR16      0.000     -2.048   -1.200   -0.161
+ ETY           H2     H    H         0.000     -1.510   -2.139   -0.121
+ ETY           C3     C    CR16      0.000     -3.426   -1.197   -0.268
+ ETY           H3     H    H         0.000     -3.968   -2.134   -0.313
+ ETY           C6     C    CR16      0.000     -2.048    1.202   -0.160
+ ETY           H6     H    H         0.000     -1.509    2.140   -0.121
+ ETY           C5     C    CR16      0.000     -3.426    1.199   -0.265
+ ETY           H5     H    H         0.000     -3.967    2.136   -0.307
+ ETY           CG     C    CR6       0.000     -4.114    0.001   -0.316
+ ETY           C7     C    CH2       0.000     -5.617    0.002   -0.432
+ ETY           H71    H    H         0.000     -5.940   -0.888   -0.977
+ ETY           H72    H    H         0.000     -5.939    0.895   -0.972
+ ETY           C8     C    CH3       0.000     -6.235   -0.003    0.967
+ ETY           H83    H    H         0.000     -7.293   -0.002    0.890
+ ETY           H82    H    H         0.000     -5.923   -0.869    1.493
+ ETY           H81    H    H         0.000     -5.923    0.860    1.498
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ETY      O1     n/a    C1     START
+ ETY      HO1    O1     .      .
+ ETY      C1     O1     C6     .
+ ETY      C2     C1     C3     .
+ ETY      H2     C2     .      .
+ ETY      C3     C2     H3     .
+ ETY      H3     C3     .      .
+ ETY      C6     C1     C5     .
+ ETY      H6     C6     .      .
+ ETY      C5     C6     CG     .
+ ETY      H5     C5     .      .
+ ETY      CG     C5     C7     .
+ ETY      C7     CG     C8     .
+ ETY      H71    C7     .      .
+ ETY      H72    C7     .      .
+ ETY      C8     C7     H81    .
+ ETY      H83    C8     .      .
+ ETY      H82    C8     .      .
+ ETY      H81    C8     .      END
+ ETY      CG     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ETY      C8     C7        single      1.513    0.020
+ ETY      C7     CG        single      1.511    0.020
+ ETY      CG     C3        double      1.390    0.020
+ ETY      CG     C5        single      1.390    0.020
+ ETY      C3     C2        single      1.390    0.020
+ ETY      C2     C1        double      1.390    0.020
+ ETY      C5     C6        double      1.390    0.020
+ ETY      C6     C1        single      1.390    0.020
+ ETY      C1     O1        single      1.362    0.020
+ ETY      H81    C8        single      1.059    0.020
+ ETY      H82    C8        single      1.059    0.020
+ ETY      H83    C8        single      1.059    0.020
+ ETY      H71    C7        single      1.092    0.020
+ ETY      H72    C7        single      1.092    0.020
+ ETY      H3     C3        single      1.083    0.020
+ ETY      H2     C2        single      1.083    0.020
+ ETY      H5     C5        single      1.083    0.020
+ ETY      H6     C6        single      1.083    0.020
+ ETY      HO1    O1        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ETY      HO1    O1     C1      109.470    3.000
+ ETY      O1     C1     C2      120.000    3.000
+ ETY      O1     C1     C6      120.000    3.000
+ ETY      C2     C1     C6      120.000    3.000
+ ETY      C1     C2     H2      120.000    3.000
+ ETY      C1     C2     C3      120.000    3.000
+ ETY      H2     C2     C3      120.000    3.000
+ ETY      C2     C3     H3      120.000    3.000
+ ETY      C2     C3     CG      120.000    3.000
+ ETY      H3     C3     CG      120.000    3.000
+ ETY      C1     C6     H6      120.000    3.000
+ ETY      C1     C6     C5      120.000    3.000
+ ETY      H6     C6     C5      120.000    3.000
+ ETY      C6     C5     H5      120.000    3.000
+ ETY      C6     C5     CG      120.000    3.000
+ ETY      H5     C5     CG      120.000    3.000
+ ETY      C5     CG     C7      120.000    3.000
+ ETY      C5     CG     C3      120.000    3.000
+ ETY      C7     CG     C3      120.000    3.000
+ ETY      CG     C7     H71     109.470    3.000
+ ETY      CG     C7     H72     109.470    3.000
+ ETY      CG     C7     C8      109.500    3.000
+ ETY      H71    C7     H72     107.900    3.000
+ ETY      H71    C7     C8      109.470    3.000
+ ETY      H72    C7     C8      109.470    3.000
+ ETY      C7     C8     H83     109.470    3.000
+ ETY      C7     C8     H82     109.470    3.000
+ ETY      C7     C8     H81     109.470    3.000
+ ETY      H83    C8     H82     109.470    3.000
+ ETY      H83    C8     H81     109.470    3.000
+ ETY      H82    C8     H81     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ETY      var_1    HO1    O1     C1     C6       -89.757   20.000   1
+ ETY      CONST_1  O1     C1     C2     C3       180.000    0.000   0
+ ETY      CONST_2  C1     C2     C3     CG         0.000    0.000   0
+ ETY      CONST_3  O1     C1     C6     C5       180.000    0.000   0
+ ETY      CONST_4  C1     C6     C5     CG         0.000    0.000   0
+ ETY      CONST_5  C6     C5     CG     C7       180.000    0.000   0
+ ETY      CONST_6  C5     CG     C3     C2         0.000    0.000   0
+ ETY      var_2    C5     CG     C7     C8       -90.252   20.000   2
+ ETY      var_3    CG     C7     C8     H81       59.989   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ETY      plan-1    CG        0.020
+ ETY      plan-1    C7        0.020
+ ETY      plan-1    C3        0.020
+ ETY      plan-1    C5        0.020
+ ETY      plan-1    C2        0.020
+ ETY      plan-1    C6        0.020
+ ETY      plan-1    C1        0.020
+ ETY      plan-1    H3        0.020
+ ETY      plan-1    H2        0.020
+ ETY      plan-1    H5        0.020
+ ETY      plan-1    H6        0.020
+ ETY      plan-1    O1        0.020
+# ------------------------------------------------------

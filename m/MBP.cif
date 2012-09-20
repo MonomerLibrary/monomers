@@ -1,0 +1,264 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MBP      MBP '1-[(2-AMINO-6,9-DIHYDRO-1H-PURIN-6-Y' non-polymer        30  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MBP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MBP           "O4'"  O    O         0.000      0.000    0.000    0.000
+ MBP           "C4'"  C    C         0.000     -0.322    0.054   -1.163
+ MBP           "C2'"  C    CH1       0.000      0.736    0.101   -2.235
+ MBP           "H2'"  H    H         0.000      0.354    0.660   -3.101
+ MBP           C12    C    CH3       0.000      1.092   -1.322   -2.665
+ MBP           H123   H    H         0.000      0.228   -1.805   -3.043
+ MBP           H122   H    H         0.000      1.836   -1.289   -3.418
+ MBP           H121   H    H         0.000      1.460   -1.862   -1.831
+ MBP           "C3'"  C    CH3       0.000      1.985    0.797   -1.691
+ MBP           "H3'3" H    H         0.000      1.739    1.784   -1.394
+ MBP           "H3'2" H    H         0.000      2.354    0.260   -0.856
+ MBP           "H3'1" H    H         0.000      2.729    0.831   -2.445
+ MBP           C60    C    CH2       0.000     -1.780    0.072   -1.540
+ MBP           H601   H    H         0.000     -2.003   -0.791   -2.171
+ MBP           H602   H    H         0.000     -2.001    0.990   -2.089
+ MBP           O6     O    O2        0.000     -2.580    0.019   -0.358
+ MBP           C6     C    CR6       0.000     -3.874    0.039   -0.760
+ MBP           N1     N    NRD6      0.000     -4.182    0.098   -2.050
+ MBP           C2     C    CR6       0.000     -5.446    0.118   -2.451
+ MBP           N2     N    NH2       0.000     -5.716    0.181   -3.808
+ MBP           H2N2   H    H         0.000     -4.959    0.210   -4.484
+ MBP           H2N1   H    H         0.000     -6.675    0.198   -4.144
+ MBP           C5     C    CR56      0.000     -4.907   -0.007    0.174
+ MBP           N7     N    NR15      0.000     -4.981   -0.064    1.552
+ MBP           H7     H    H         0.000     -4.178   -0.092    2.213
+ MBP           C8     C    CR15      0.000     -6.293   -0.078    1.880
+ MBP           H8     H    H         0.000     -6.678   -0.123    2.891
+ MBP           N9     N    NRD5      0.000     -7.025   -0.028    0.804
+ MBP           C4     C    CR56      0.000     -6.235    0.021   -0.285
+ MBP           N3     N    NRD6      0.000     -6.458    0.080   -1.600
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MBP      "O4'"  n/a    "C4'"  START
+ MBP      "C4'"  "O4'"  C60    .
+ MBP      "C2'"  "C4'"  "C3'"  .
+ MBP      "H2'"  "C2'"  .      .
+ MBP      C12    "C2'"  H121   .
+ MBP      H123   C12    .      .
+ MBP      H122   C12    .      .
+ MBP      H121   C12    .      .
+ MBP      "C3'"  "C2'"  "H3'1" .
+ MBP      "H3'3" "C3'"  .      .
+ MBP      "H3'2" "C3'"  .      .
+ MBP      "H3'1" "C3'"  .      .
+ MBP      C60    "C4'"  O6     .
+ MBP      H601   C60    .      .
+ MBP      H602   C60    .      .
+ MBP      O6     C60    C6     .
+ MBP      C6     O6     C5     .
+ MBP      N1     C6     C2     .
+ MBP      C2     N1     N2     .
+ MBP      N2     C2     H2N1   .
+ MBP      H2N2   N2     .      .
+ MBP      H2N1   N2     .      .
+ MBP      C5     C6     N7     .
+ MBP      N7     C5     C8     .
+ MBP      H7     N7     .      .
+ MBP      C8     N7     N9     .
+ MBP      H8     C8     .      .
+ MBP      N9     C8     C4     .
+ MBP      C4     N9     N3     .
+ MBP      N3     C4     .      END
+ MBP      C2     N3     .    ADD
+ MBP      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MBP      C2     N3        double      1.350    0.020
+ MBP      N2     C2        single      1.355    0.020
+ MBP      C2     N1        single      1.350    0.020
+ MBP      C4     C5        double      1.490    0.020
+ MBP      C4     N9        single      1.350    0.020
+ MBP      N3     C4        single      1.355    0.020
+ MBP      C5     C6        single      1.490    0.020
+ MBP      N7     C5        single      1.340    0.020
+ MBP      "C4'"  "O4'"     double      1.220    0.020
+ MBP      "C2'"  "C4'"     single      1.500    0.020
+ MBP      C60    "C4'"     single      1.510    0.020
+ MBP      "C3'"  "C2'"     single      1.524    0.020
+ MBP      "H3'1" "C3'"     single      1.059    0.020
+ MBP      "H3'2" "C3'"     single      1.059    0.020
+ MBP      "H3'3" "C3'"     single      1.059    0.020
+ MBP      C12    "C2'"     single      1.524    0.020
+ MBP      "H2'"  "C2'"     single      1.099    0.020
+ MBP      H121   C12       single      1.059    0.020
+ MBP      H122   C12       single      1.059    0.020
+ MBP      H123   C12       single      1.059    0.020
+ MBP      N9     C8        double      1.350    0.020
+ MBP      H2N1   N2        single      1.010    0.020
+ MBP      H2N2   N2        single      1.010    0.020
+ MBP      N1     C6        double      1.350    0.020
+ MBP      C6     O6        single      1.370    0.020
+ MBP      O6     C60       single      1.426    0.020
+ MBP      H601   C60       single      1.092    0.020
+ MBP      H602   C60       single      1.092    0.020
+ MBP      C8     N7        single      1.350    0.020
+ MBP      H7     N7        single      1.040    0.020
+ MBP      H8     C8        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MBP      "O4'"  "C4'"  "C2'"   120.500    3.000
+ MBP      "O4'"  "C4'"  C60     120.500    3.000
+ MBP      "C2'"  "C4'"  C60     120.000    3.000
+ MBP      "C4'"  "C2'"  "H2'"   108.810    3.000
+ MBP      "C4'"  "C2'"  C12     109.470    3.000
+ MBP      "C4'"  "C2'"  "C3'"   109.470    3.000
+ MBP      "H2'"  "C2'"  C12     108.340    3.000
+ MBP      "H2'"  "C2'"  "C3'"   108.340    3.000
+ MBP      C12    "C2'"  "C3'"   111.000    3.000
+ MBP      "C2'"  C12    H123    109.470    3.000
+ MBP      "C2'"  C12    H122    109.470    3.000
+ MBP      "C2'"  C12    H121    109.470    3.000
+ MBP      H123   C12    H122    109.470    3.000
+ MBP      H123   C12    H121    109.470    3.000
+ MBP      H122   C12    H121    109.470    3.000
+ MBP      "C2'"  "C3'"  "H3'3"  109.470    3.000
+ MBP      "C2'"  "C3'"  "H3'2"  109.470    3.000
+ MBP      "C2'"  "C3'"  "H3'1"  109.470    3.000
+ MBP      "H3'3" "C3'"  "H3'2"  109.470    3.000
+ MBP      "H3'3" "C3'"  "H3'1"  109.470    3.000
+ MBP      "H3'2" "C3'"  "H3'1"  109.470    3.000
+ MBP      "C4'"  C60    H601    109.470    3.000
+ MBP      "C4'"  C60    H602    109.470    3.000
+ MBP      "C4'"  C60    O6      109.470    3.000
+ MBP      H601   C60    H602    107.900    3.000
+ MBP      H601   C60    O6      109.470    3.000
+ MBP      H602   C60    O6      109.470    3.000
+ MBP      C60    O6     C6      120.000    3.000
+ MBP      O6     C6     N1      120.000    3.000
+ MBP      O6     C6     C5      120.000    3.000
+ MBP      N1     C6     C5      120.000    3.000
+ MBP      C6     N1     C2      120.000    3.000
+ MBP      N1     C2     N2      120.000    3.000
+ MBP      N1     C2     N3      120.000    3.000
+ MBP      N2     C2     N3      120.000    3.000
+ MBP      C2     N2     H2N2    120.000    3.000
+ MBP      C2     N2     H2N1    120.000    3.000
+ MBP      H2N2   N2     H2N1    120.000    3.000
+ MBP      C6     C5     N7      132.000    3.000
+ MBP      C6     C5     C4      120.000    3.000
+ MBP      N7     C5     C4      108.000    3.000
+ MBP      C5     N7     H7      126.000    3.000
+ MBP      C5     N7     C8      108.000    3.000
+ MBP      H7     N7     C8      126.000    3.000
+ MBP      N7     C8     H8      126.000    3.000
+ MBP      N7     C8     N9      108.000    3.000
+ MBP      H8     C8     N9      126.000    3.000
+ MBP      C8     N9     C4      108.000    3.000
+ MBP      N9     C4     N3      120.000    3.000
+ MBP      N9     C4     C5      108.000    3.000
+ MBP      N3     C4     C5      120.000    3.000
+ MBP      C4     N3     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MBP      var_1    "O4'"  "C4'"  "C2'"  "C3'"    -30.069   20.000   3
+ MBP      var_2    "C4'"  "C2'"  C12    H121     -60.016   20.000   3
+ MBP      var_3    "C4'"  "C2'"  "C3'"  "H3'1"  -179.970   20.000   3
+ MBP      var_4    "O4'"  "C4'"  C60    O6         0.018   20.000   3
+ MBP      var_5    "C4'"  C60    O6     C6       179.954   20.000   1
+ MBP      var_6    C60    O6     C6     C5       179.761   20.000   1
+ MBP      CONST_1  O6     C6     N1     C2       180.000    0.000   0
+ MBP      CONST_2  C6     N1     C2     N2       180.000    0.000   0
+ MBP      CONST_3  N1     C2     N3     C4         0.000    0.000   0
+ MBP      CONST_4  N1     C2     N2     H2N1    -179.970    0.000   0
+ MBP      CONST_5  O6     C6     C5     N7         0.000    0.000   0
+ MBP      CONST_6  C6     C5     N7     C8       180.000    0.000   0
+ MBP      CONST_7  C5     N7     C8     N9         0.000    0.000   0
+ MBP      CONST_8  N7     C8     N9     C4         0.000    0.000   0
+ MBP      CONST_9  C8     N9     C4     N3       180.000    0.000   0
+ MBP      CONST_10 N9     C4     C5     C6       180.000    0.000   0
+ MBP      CONST_11 N9     C4     N3     C2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MBP      chir_01  "C2'"  "C4'"  "C3'"  C12       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MBP      plan-1    C2        0.020
+ MBP      plan-1    N3        0.020
+ MBP      plan-1    N2        0.020
+ MBP      plan-1    N1        0.020
+ MBP      plan-1    C6        0.020
+ MBP      plan-1    C4        0.020
+ MBP      plan-1    C5        0.020
+ MBP      plan-1    O6        0.020
+ MBP      plan-1    N9        0.020
+ MBP      plan-1    N7        0.020
+ MBP      plan-1    C8        0.020
+ MBP      plan-1    H7        0.020
+ MBP      plan-1    H8        0.020
+ MBP      plan-1    H2N2      0.020
+ MBP      plan-1    H2N1      0.020
+ MBP      plan-2    "C4'"     0.020
+ MBP      plan-2    "O4'"     0.020
+ MBP      plan-2    "C2'"     0.020
+ MBP      plan-2    C60       0.020
+ MBP      plan-3    N2        0.020
+ MBP      plan-3    C2        0.020
+ MBP      plan-3    H2N1      0.020
+ MBP      plan-3    H2N2      0.020
+# ------------------------------------------------------

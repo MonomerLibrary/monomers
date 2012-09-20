@@ -1,0 +1,196 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+KDF      KDF '3-deoxy-alpha-D-erythro-hex-2-ulofur' non-polymer        21  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_KDF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ KDF           O6B    O    OC       -0.500      0.000    0.000    0.000
+ KDF           C6     C    C         0.000     -1.158   -0.019    0.472
+ KDF           O6A    O    OC       -0.500     -1.329   -0.001    1.711
+ KDF           C5     C    CT        0.000     -2.348   -0.060   -0.452
+ KDF           O2     O    O2        0.000     -3.130    1.136   -0.297
+ KDF           O5     O    OH1       0.000     -1.910   -0.181   -1.807
+ KDF           H5     H    H         0.000     -1.352    0.575   -2.033
+ KDF           C4     C    CH2       0.000     -3.255   -1.251   -0.085
+ KDF           H4C1   H    H         0.000     -2.890   -1.788    0.793
+ KDF           H4C2   H    H         0.000     -3.368   -1.950   -0.916
+ KDF           C3     C    CH1       0.000     -4.623   -0.602    0.235
+ KDF           H3     H    H         0.000     -4.746   -0.463    1.318
+ KDF           O3     O    OH1       0.000     -5.695   -1.378   -0.304
+ KDF           HA     H    H         0.000     -5.745   -2.224    0.162
+ KDF           C2     C    CH1       0.000     -4.512    0.764   -0.488
+ KDF           H2     H    H         0.000     -4.739    0.655   -1.558
+ KDF           C1     C    CH2       0.000     -5.442    1.793    0.157
+ KDF           H1C1   H    H         0.000     -5.161    1.931    1.203
+ KDF           H1C2   H    H         0.000     -6.472    1.436    0.101
+ KDF           O1B    O    OH1       0.000     -5.329    3.038   -0.536
+ KDF           H1B    H    H         0.000     -5.917    3.687   -0.127
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ KDF      O6B    n/a    C6     START
+ KDF      C6     O6B    C5     .
+ KDF      O6A    C6     .      .
+ KDF      C5     C6     C4     .
+ KDF      O2     C5     .      .
+ KDF      O5     C5     H5     .
+ KDF      H5     O5     .      .
+ KDF      C4     C5     C3     .
+ KDF      H4C1   C4     .      .
+ KDF      H4C2   C4     .      .
+ KDF      C3     C4     C2     .
+ KDF      H3     C3     .      .
+ KDF      O3     C3     HA     .
+ KDF      HA     O3     .      .
+ KDF      C2     C3     C1     .
+ KDF      H2     C2     .      .
+ KDF      C1     C2     O1B    .
+ KDF      H1C1   C1     .      .
+ KDF      H1C2   C1     .      .
+ KDF      O1B    C1     H1B    .
+ KDF      H1B    O1B    .      END
+ KDF      C2     O2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ KDF      O1B    C1        single      1.432    0.020
+ KDF      C1     C2        single      1.524    0.020
+ KDF      C2     O2        single      1.426    0.020
+ KDF      C2     C3        single      1.524    0.020
+ KDF      O2     C5        single      1.426    0.020
+ KDF      O3     C3        single      1.432    0.020
+ KDF      C3     C4        single      1.524    0.020
+ KDF      C4     C5        single      1.524    0.020
+ KDF      O5     C5        single      1.432    0.020
+ KDF      C6     O6B       deloc       1.250    0.020
+ KDF      O6A    C6        deloc       1.250    0.020
+ KDF      C5     C6        single      1.507    0.020
+ KDF      H1B    O1B       single      0.967    0.020
+ KDF      H1C1   C1        single      1.092    0.020
+ KDF      H1C2   C1        single      1.092    0.020
+ KDF      H2     C2        single      1.099    0.020
+ KDF      H3     C3        single      1.099    0.020
+ KDF      HA     O3        single      0.967    0.020
+ KDF      H4C1   C4        single      1.092    0.020
+ KDF      H4C2   C4        single      1.092    0.020
+ KDF      H5     O5        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ KDF      O6B    C6     O6A     123.000    3.000
+ KDF      O6B    C6     C5      118.500    3.000
+ KDF      O6A    C6     C5      118.500    3.000
+ KDF      C6     C5     O2      109.470    3.000
+ KDF      C6     C5     O5      109.470    3.000
+ KDF      C6     C5     C4      109.470    3.000
+ KDF      O2     C5     O5      109.470    3.000
+ KDF      O2     C5     C4      109.470    3.000
+ KDF      O5     C5     C4      109.470    3.000
+ KDF      C5     O2     C2      111.800    3.000
+ KDF      C5     O5     H5      109.470    3.000
+ KDF      C5     C4     H4C1    109.470    3.000
+ KDF      C5     C4     H4C2    109.470    3.000
+ KDF      C5     C4     C3      111.000    3.000
+ KDF      H4C1   C4     H4C2    107.900    3.000
+ KDF      H4C1   C4     C3      109.470    3.000
+ KDF      H4C2   C4     C3      109.470    3.000
+ KDF      C4     C3     H3      108.340    3.000
+ KDF      C4     C3     O3      109.470    3.000
+ KDF      C4     C3     C2      111.000    3.000
+ KDF      H3     C3     O3      109.470    3.000
+ KDF      H3     C3     C2      108.340    3.000
+ KDF      O3     C3     C2      109.470    3.000
+ KDF      C3     O3     HA      109.470    3.000
+ KDF      C3     C2     H2      108.340    3.000
+ KDF      C3     C2     C1      111.000    3.000
+ KDF      C3     C2     O2      109.470    3.000
+ KDF      H2     C2     C1      108.340    3.000
+ KDF      H2     C2     O2      109.470    3.000
+ KDF      C1     C2     O2      109.470    3.000
+ KDF      C2     C1     H1C1    109.470    3.000
+ KDF      C2     C1     H1C2    109.470    3.000
+ KDF      C2     C1     O1B     109.470    3.000
+ KDF      H1C1   C1     H1C2    107.900    3.000
+ KDF      H1C1   C1     O1B     109.470    3.000
+ KDF      H1C2   C1     O1B     109.470    3.000
+ KDF      C1     O1B    H1B     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ KDF      var_1    O6B    C6     C5     C4       125.805   20.000   1
+ KDF      var_2    C6     C5     O2     C2      -150.000   20.000   1
+ KDF      var_3    C6     C5     O5     H5       -59.630   20.000   1
+ KDF      var_4    C6     C5     C4     C3       120.000   20.000   1
+ KDF      var_5    C5     C4     C3     C2        30.000   20.000   3
+ KDF      var_6    C4     C3     O3     HA        67.286   20.000   1
+ KDF      var_7    C4     C3     C2     C1      -150.000   20.000   3
+ KDF      var_8    C3     C2     O2     C5        30.000   20.000   1
+ KDF      var_9    C3     C2     C1     O1B     -179.477   20.000   3
+ KDF      var_10   C2     C1     O1B    H1B      179.996   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ KDF      chir_01  C2     C1     O2     C3        negativ
+ KDF      chir_02  C3     C2     O3     C4        negativ
+ KDF      chir_03  C5     O2     C4     O5        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ KDF      plan-1    C6        0.020
+ KDF      plan-1    O6A       0.000
+ KDF      plan-1    C5        0.000
+ KDF      plan-1    O6B       0.000
+# ------------------------------------------------------

@@ -1,0 +1,132 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OXQ      OXQ '4-HYDROXY-1,2,5-OXADIAZOLE-3-CARBOXY' non-polymer        10   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OXQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OXQ           O8     O    OC       -0.500      0.000    0.000    0.000
+ OXQ           C6     C    C         0.000     -0.522   -0.011   -1.137
+ OXQ           O9     O    OC       -0.500      0.202   -0.033   -2.157
+ OXQ           C2     C    CR5       0.000     -1.996    0.004   -1.273
+ OXQ           N3     N    NRD5      0.000     -2.720   -0.002   -2.371
+ OXQ           O4     O    O2        0.000     -3.892    0.016   -2.077
+ OXQ           N5     N    NRD5      0.000     -4.143    0.036   -0.895
+ OXQ           C1     C    CR5       0.000     -3.024    0.027   -0.211
+ OXQ           O7     O    OH1       0.000     -2.854    0.042    1.134
+ OXQ           HO7    H    H         0.000     -2.813   -0.790    1.585
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OXQ      O8     n/a    C6     START
+ OXQ      C6     O8     C2     .
+ OXQ      O9     C6     .      .
+ OXQ      C2     C6     N3     .
+ OXQ      N3     C2     O4     .
+ OXQ      O4     N3     N5     .
+ OXQ      N5     O4     C1     .
+ OXQ      C1     N5     O7     .
+ OXQ      O7     C1     HO7    .
+ OXQ      HO7    O7     .      END
+ OXQ      C2     C1     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OXQ      O9     C6        deloc       1.250    0.020
+ OXQ      C6     O8        deloc       1.250    0.020
+ OXQ      C2     C6        single      1.490    0.020
+ OXQ      C2     C1        single      1.490    0.020
+ OXQ      N3     C2        double      1.350    0.020
+ OXQ      O7     C1        single      1.480    0.020
+ OXQ      C1     N5        double      1.350    0.020
+ OXQ      HO7    O7        single      0.967    0.020
+ OXQ      O4     N3        single      1.337    0.020
+ OXQ      N5     O4        single      1.337    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OXQ      O8     C6     O9      123.000    3.000
+ OXQ      O8     C6     C2      120.000    3.000
+ OXQ      O9     C6     C2      120.000    3.000
+ OXQ      C6     C2     N3      126.000    3.000
+ OXQ      C6     C2     C1      117.000    3.000
+ OXQ      N3     C2     C1      108.000    3.000
+ OXQ      C2     N3     O4      108.000    3.000
+ OXQ      N3     O4     N5      120.000    3.000
+ OXQ      O4     N5     C1      108.000    3.000
+ OXQ      N5     C1     O7      108.000    3.000
+ OXQ      N5     C1     C2      108.000    3.000
+ OXQ      O7     C1     C2      108.000    3.000
+ OXQ      C1     O7     HO7     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OXQ      var_1    O8     C6     C2     N3       179.918   20.000   1
+ OXQ      CONST_1  C6     C2     C1     N5       180.000    0.000   0
+ OXQ      CONST_2  C6     C2     N3     O4       180.000    0.000   0
+ OXQ      CONST_3  C2     N3     O4     N5         0.000    0.000   0
+ OXQ      CONST_4  N3     O4     N5     C1         0.000    0.000   0
+ OXQ      CONST_5  O4     N5     C1     O7       180.000    0.000   0
+ OXQ      var_2    N5     C1     O7     HO7       89.930   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OXQ      plan-1    C6        0.020
+ OXQ      plan-1    O9        0.020
+ OXQ      plan-1    O8        0.020
+ OXQ      plan-1    C2        0.020
+ OXQ      plan-2    C2        0.020
+ OXQ      plan-2    C6        0.020
+ OXQ      plan-2    C1        0.020
+ OXQ      plan-2    N3        0.020
+ OXQ      plan-2    O4        0.020
+ OXQ      plan-2    N5        0.020
+ OXQ      plan-2    O7        0.020
+# ------------------------------------------------------

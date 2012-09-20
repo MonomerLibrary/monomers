@@ -1,0 +1,134 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PYM      PYM 'PYRUVAMIDE                          ' non-polymer        11   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PYM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PYM           O2     O    O         0.000      0.000    0.000    0.000
+ PYM           C2     C    C         0.000     -0.680    0.000   -0.997
+ PYM           C3     C    CH3       0.000     -0.028    0.000   -2.355
+ PYM           H31    H    H         0.000     -0.324   -0.865   -2.891
+ PYM           H32    H    H         0.000     -0.324    0.865   -2.891
+ PYM           H33    H    H         0.000      1.026    0.000   -2.242
+ PYM           C1     C    C         0.000     -2.166    0.000   -0.885
+ PYM           O1     O    O         0.000     -2.850    0.000   -1.887
+ PYM           N1     N    NH2       0.000     -2.751    0.000    0.329
+ PYM           HN11   H    H         0.000     -2.184    0.000    1.169
+ PYM           HN12   H    H         0.000     -3.760    0.000    0.409
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PYM      O2     n/a    C2     START
+ PYM      C2     O2     C1     .
+ PYM      C3     C2     H33    .
+ PYM      H31    C3     .      .
+ PYM      H32    C3     .      .
+ PYM      H33    C3     .      .
+ PYM      C1     C2     N1     .
+ PYM      O1     C1     .      .
+ PYM      N1     C1     HN12   .
+ PYM      HN11   N1     .      .
+ PYM      HN12   N1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PYM      N1     C1        single      1.332    0.020
+ PYM      O1     C1        double      1.220    0.020
+ PYM      C1     C2        single      1.460    0.020
+ PYM      HN12   N1        single      1.010    0.020
+ PYM      HN11   N1        single      1.010    0.020
+ PYM      C2     O2        double      1.220    0.020
+ PYM      C3     C2        single      1.500    0.020
+ PYM      H33    C3        single      1.059    0.020
+ PYM      H32    C3        single      1.059    0.020
+ PYM      H31    C3        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PYM      O2     C2     C3      123.000    3.000
+ PYM      O2     C2     C1      120.500    3.000
+ PYM      C3     C2     C1      120.000    3.000
+ PYM      C2     C3     H31     109.470    3.000
+ PYM      C2     C3     H32     109.470    3.000
+ PYM      C2     C3     H33     109.470    3.000
+ PYM      H31    C3     H32     109.470    3.000
+ PYM      H31    C3     H33     109.470    3.000
+ PYM      H32    C3     H33     109.470    3.000
+ PYM      C2     C1     O1      120.500    3.000
+ PYM      C2     C1     N1      120.000    3.000
+ PYM      O1     C1     N1      123.000    3.000
+ PYM      C1     N1     HN11    120.000    3.000
+ PYM      C1     N1     HN12    120.000    3.000
+ PYM      HN11   N1     HN12    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PYM      var_1    O2     C2     C3     H33        0.000   20.000   1
+ PYM      var_2    O2     C2     C1     N1         0.000   20.000   1
+ PYM      CONST_1  C2     C1     N1     HN12     180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PYM      plan-1    C1        0.020
+ PYM      plan-1    N1        0.020
+ PYM      plan-1    O1        0.020
+ PYM      plan-1    C2        0.020
+ PYM      plan-1    HN11      0.020
+ PYM      plan-1    HN12      0.020
+ PYM      plan-2    N1        0.020
+ PYM      plan-2    C1        0.020
+ PYM      plan-2    HN12      0.020
+ PYM      plan-2    HN11      0.020
+ PYM      plan-3    C2        0.020
+ PYM      plan-3    C1        0.020
+ PYM      plan-3    O2        0.020
+ PYM      plan-3    C3        0.020
+# ------------------------------------------------------

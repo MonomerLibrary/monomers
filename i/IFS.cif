@@ -1,0 +1,296 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IFS      IFS 'bis(1-methylethyl) [2-(sulfanylmethy' non-polymer        39  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IFS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IFS           O1     O    O         0.000      0.000    0.000    0.000
+ IFS           P1     P    P         0.000     -1.373   -0.279    0.476
+ IFS           O22    O    O2        0.000     -2.265    1.056    0.352
+ IFS           C81    C    CH1       0.000     -2.388    1.800   -0.862
+ IFS           H81    H    H         0.000     -1.875    1.265   -1.673
+ IFS           C91    C    CH3       0.000     -3.868    1.962   -1.213
+ IFS           H91B   H    H         0.000     -4.331    1.009   -1.245
+ IFS           H91A   H    H         0.000     -4.344    2.559   -0.479
+ IFS           H91    H    H         0.000     -3.959    2.429   -2.160
+ IFS           C101   C    CH3       0.000     -1.754    3.180   -0.681
+ IFS           H10B   H    H         0.000     -0.728    3.070   -0.437
+ IFS           H10A   H    H         0.000     -1.844    3.733   -1.580
+ IFS           H101   H    H         0.000     -2.247    3.697    0.101
+ IFS           O21    O    O2        0.000     -2.027   -1.446   -0.421
+ IFS           C82    C    CH1       0.000     -2.080   -1.393   -1.847
+ IFS           H82    H    H         0.000     -1.719   -0.413   -2.191
+ IFS           C92    C    CH3       0.000     -1.197   -2.496   -2.433
+ IFS           H92B   H    H         0.000     -0.197   -2.357   -2.112
+ IFS           H92A   H    H         0.000     -1.544   -3.441   -2.102
+ IFS           H92    H    H         0.000     -1.236   -2.457   -3.491
+ IFS           C102   C    CH3       0.000     -3.524   -1.595   -2.312
+ IFS           H10D   H    H         0.000     -3.553   -1.634   -3.370
+ IFS           H10C   H    H         0.000     -3.900   -2.502   -1.915
+ IFS           H102   H    H         0.000     -4.121   -0.788   -1.973
+ IFS           C1     C    CR6       0.000     -1.317   -0.809    2.210
+ IFS           C6     C    CR16      0.000     -1.320   -2.156    2.522
+ IFS           H6     H    H         0.000     -1.352   -2.895    1.730
+ IFS           C5     C    CR16      0.000     -1.284   -2.560    3.842
+ IFS           H5     H    H         0.000     -1.287   -3.615    4.086
+ IFS           C4     C    CR16      0.000     -1.242   -1.618    4.853
+ IFS           H4     H    H         0.000     -1.213   -1.934    5.888
+ IFS           C3     C    CR16      0.000     -1.237   -0.271    4.542
+ IFS           H3     H    H         0.000     -1.204    0.467    5.334
+ IFS           C2     C    CR6       0.000     -1.274    0.134    3.220
+ IFS           C7     C    CH2       0.000     -1.270    1.601    2.880
+ IFS           H7     H    H         0.000     -0.869    1.740    1.874
+ IFS           H7A    H    H         0.000     -0.644    2.138    3.596
+ IFS           S1     S    SH1       0.000     -2.964    2.245    2.952
+ IFS           HS1    H    H         0.000     -2.651    3.496    2.623
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IFS      O1     n/a    P1     START
+ IFS      P1     O1     C1     .
+ IFS      O22    P1     C81    .
+ IFS      C81    O22    C101   .
+ IFS      H81    C81    .      .
+ IFS      C91    C81    H91    .
+ IFS      H91B   C91    .      .
+ IFS      H91A   C91    .      .
+ IFS      H91    C91    .      .
+ IFS      C101   C81    H101   .
+ IFS      H10B   C101   .      .
+ IFS      H10A   C101   .      .
+ IFS      H101   C101   .      .
+ IFS      O21    P1     C82    .
+ IFS      C82    O21    C102   .
+ IFS      H82    C82    .      .
+ IFS      C92    C82    H92    .
+ IFS      H92B   C92    .      .
+ IFS      H92A   C92    .      .
+ IFS      H92    C92    .      .
+ IFS      C102   C82    H102   .
+ IFS      H10D   C102   .      .
+ IFS      H10C   C102   .      .
+ IFS      H102   C102   .      .
+ IFS      C1     P1     C6     .
+ IFS      C6     C1     C5     .
+ IFS      H6     C6     .      .
+ IFS      C5     C6     C4     .
+ IFS      H5     C5     .      .
+ IFS      C4     C5     C3     .
+ IFS      H4     C4     .      .
+ IFS      C3     C4     C2     .
+ IFS      H3     C3     .      .
+ IFS      C2     C3     C7     .
+ IFS      C7     C2     S1     .
+ IFS      H7     C7     .      .
+ IFS      H7A    C7     .      .
+ IFS      S1     C7     HS1    .
+ IFS      HS1    S1     .      END
+ IFS      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IFS      C1     P1        single      1.745    0.020
+ IFS      C1     C2        double      1.487    0.020
+ IFS      C6     C1        single      1.390    0.020
+ IFS      P1     O1        double      1.480    0.020
+ IFS      O21    P1        single      1.610    0.020
+ IFS      O22    P1        single      1.610    0.020
+ IFS      S1     C7        single      1.810    0.020
+ IFS      HS1    S1        single      1.330    0.020
+ IFS      C7     C2        single      1.511    0.020
+ IFS      C2     C3        single      1.390    0.020
+ IFS      C3     C4        double      1.390    0.020
+ IFS      H3     C3        single      1.083    0.020
+ IFS      C4     C5        single      1.390    0.020
+ IFS      H4     C4        single      1.083    0.020
+ IFS      C5     C6        double      1.390    0.020
+ IFS      H5     C5        single      1.083    0.020
+ IFS      H6     C6        single      1.083    0.020
+ IFS      H7     C7        single      1.092    0.020
+ IFS      H7A    C7        single      1.092    0.020
+ IFS      C101   C81       single      1.524    0.020
+ IFS      H101   C101      single      1.059    0.020
+ IFS      H10A   C101      single      1.059    0.020
+ IFS      H10B   C101      single      1.059    0.020
+ IFS      C102   C82       single      1.524    0.020
+ IFS      H102   C102      single      1.059    0.020
+ IFS      H10C   C102      single      1.059    0.020
+ IFS      H10D   C102      single      1.059    0.020
+ IFS      C82    O21       single      1.426    0.020
+ IFS      C81    O22       single      1.426    0.020
+ IFS      C91    C81       single      1.524    0.020
+ IFS      H81    C81       single      1.099    0.020
+ IFS      C92    C82       single      1.524    0.020
+ IFS      H82    C82       single      1.099    0.020
+ IFS      H91    C91       single      1.059    0.020
+ IFS      H91A   C91       single      1.059    0.020
+ IFS      H91B   C91       single      1.059    0.020
+ IFS      H92    C92       single      1.059    0.020
+ IFS      H92A   C92       single      1.059    0.020
+ IFS      H92B   C92       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IFS      O1     P1     O22     109.500    3.000
+ IFS      O1     P1     O21     109.500    3.000
+ IFS      O1     P1     C1      109.500    3.000
+ IFS      O22    P1     O21     102.600    3.000
+ IFS      O22    P1     C1      109.500    3.000
+ IFS      O21    P1     C1      109.500    3.000
+ IFS      P1     O22    C81     120.500    3.000
+ IFS      O22    C81    H81     109.470    3.000
+ IFS      O22    C81    C91     109.470    3.000
+ IFS      O22    C81    C101    109.470    3.000
+ IFS      H81    C81    C91     108.340    3.000
+ IFS      H81    C81    C101    108.340    3.000
+ IFS      C91    C81    C101    111.000    3.000
+ IFS      C81    C91    H91B    109.470    3.000
+ IFS      C81    C91    H91A    109.470    3.000
+ IFS      C81    C91    H91     109.470    3.000
+ IFS      H91B   C91    H91A    109.470    3.000
+ IFS      H91B   C91    H91     109.470    3.000
+ IFS      H91A   C91    H91     109.470    3.000
+ IFS      C81    C101   H10B    109.470    3.000
+ IFS      C81    C101   H10A    109.470    3.000
+ IFS      C81    C101   H101    109.470    3.000
+ IFS      H10B   C101   H10A    109.470    3.000
+ IFS      H10B   C101   H101    109.470    3.000
+ IFS      H10A   C101   H101    109.470    3.000
+ IFS      P1     O21    C82     120.500    3.000
+ IFS      O21    C82    H82     109.470    3.000
+ IFS      O21    C82    C92     109.470    3.000
+ IFS      O21    C82    C102    109.470    3.000
+ IFS      H82    C82    C92     108.340    3.000
+ IFS      H82    C82    C102    108.340    3.000
+ IFS      C92    C82    C102    111.000    3.000
+ IFS      C82    C92    H92B    109.470    3.000
+ IFS      C82    C92    H92A    109.470    3.000
+ IFS      C82    C92    H92     109.470    3.000
+ IFS      H92B   C92    H92A    109.470    3.000
+ IFS      H92B   C92    H92     109.470    3.000
+ IFS      H92A   C92    H92     109.470    3.000
+ IFS      C82    C102   H10D    109.470    3.000
+ IFS      C82    C102   H10C    109.470    3.000
+ IFS      C82    C102   H102    109.470    3.000
+ IFS      H10D   C102   H10C    109.470    3.000
+ IFS      H10D   C102   H102    109.470    3.000
+ IFS      H10C   C102   H102    109.470    3.000
+ IFS      P1     C1     C6      120.000    3.000
+ IFS      P1     C1     C2      120.000    3.000
+ IFS      C6     C1     C2      120.000    3.000
+ IFS      C1     C6     H6      120.000    3.000
+ IFS      C1     C6     C5      120.000    3.000
+ IFS      H6     C6     C5      120.000    3.000
+ IFS      C6     C5     H5      120.000    3.000
+ IFS      C6     C5     C4      120.000    3.000
+ IFS      H5     C5     C4      120.000    3.000
+ IFS      C5     C4     H4      120.000    3.000
+ IFS      C5     C4     C3      120.000    3.000
+ IFS      H4     C4     C3      120.000    3.000
+ IFS      C4     C3     H3      120.000    3.000
+ IFS      C4     C3     C2      120.000    3.000
+ IFS      H3     C3     C2      120.000    3.000
+ IFS      C3     C2     C7      120.000    3.000
+ IFS      C3     C2     C1      120.000    3.000
+ IFS      C7     C2     C1      120.000    3.000
+ IFS      C2     C7     H7      109.470    3.000
+ IFS      C2     C7     H7A     109.470    3.000
+ IFS      C2     C7     S1      109.500    3.000
+ IFS      H7     C7     H7A     107.900    3.000
+ IFS      H7     C7     S1      109.470    3.000
+ IFS      H7A    C7     S1      109.470    3.000
+ IFS      C7     S1     HS1      96.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IFS      var_1    O1     P1     O22    C81       53.279   20.000   1
+ IFS      var_2    P1     O22    C81    C101    -114.456   20.000   1
+ IFS      var_3    O22    C81    C91    H91     -174.454   20.000   3
+ IFS      var_4    O22    C81    C101   H101     -59.995   20.000   3
+ IFS      var_5    O1     P1     O21    C82      -53.061   20.000   1
+ IFS      var_6    P1     O21    C82    C102    -126.123   20.000   1
+ IFS      var_7    O21    C82    C92    H92     -179.991   20.000   3
+ IFS      var_8    O21    C82    C102   H102      64.564   20.000   3
+ IFS      var_9    O1     P1     C1     C6       -96.446   20.000   1
+ IFS      CONST_1  P1     C1     C2     C3       180.000    0.000   0
+ IFS      CONST_2  P1     C1     C6     C5       180.000    0.000   0
+ IFS      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ IFS      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ IFS      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ IFS      CONST_6  C4     C3     C2     C7       180.000    0.000   0
+ IFS      var_10   C3     C2     C7     S1       -84.629   20.000   2
+ IFS      var_11   C2     C7     S1     HS1      179.941   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IFS      chir_01  C81    C101   O22    C91       negativ
+ IFS      chir_02  C82    C102   O21    C92       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IFS      plan-1    C1        0.020
+ IFS      plan-1    P1        0.020
+ IFS      plan-1    C2        0.020
+ IFS      plan-1    C6        0.020
+ IFS      plan-1    C3        0.020
+ IFS      plan-1    C4        0.020
+ IFS      plan-1    C5        0.020
+ IFS      plan-1    C7        0.020
+ IFS      plan-1    H3        0.020
+ IFS      plan-1    H4        0.020
+ IFS      plan-1    H5        0.020
+ IFS      plan-1    H6        0.020
+# ------------------------------------------------------

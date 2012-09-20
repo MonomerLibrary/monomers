@@ -1,0 +1,223 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ZYR      ZYR '5,6,7,8-TETRAHYDRO[1]BENZOTHIENO[2,3' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ZYR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ZYR           OAA    O    O         0.000      0.000    0.000    0.000
+ ZYR           CAL    C    CR6       0.000     -1.117    0.486    0.064
+ ZYR           NAH    N    NR16      0.000     -1.280    1.811    0.249
+ ZYR           HAH    H    H         0.000     -0.447    2.427    0.343
+ ZYR           CAB    C    CR16      0.000     -2.525    2.347    0.314
+ ZYR           HAB    H    H         0.000     -2.632    3.415    0.454
+ ZYR           NAG    N    NRD6      0.000     -3.594    1.613    0.213
+ ZYR           CAM    C    CR56      0.000     -3.521    0.276    0.030
+ ZYR           CAN    C    CR56      0.000     -2.279   -0.338   -0.050
+ ZYR           SAI    S    S2        0.000     -4.788   -0.930   -0.137
+ ZYR           CAJ    C    CR5       0.000     -3.625   -2.234   -0.312
+ ZYR           CAK    C    CR5       0.000     -2.372   -1.778   -0.246
+ ZYR           CAE    C    CH2       0.000     -3.996   -3.693   -0.509
+ ZYR           HAE1   H    H         0.000     -4.808   -3.773   -1.236
+ ZYR           HAE2   H    H         0.000     -4.317   -4.124    0.441
+ ZYR           CAC    C    CH2       0.000     -2.770   -4.449   -1.026
+ ZYR           HAC1   H    H         0.000     -2.553   -4.141   -2.051
+ ZYR           HAC2   H    H         0.000     -2.964   -5.524   -1.004
+ ZYR           CAD    C    CH2       0.000     -1.571   -4.126   -0.128
+ ZYR           HAD1   H    H         0.000     -0.741   -4.793   -0.370
+ ZYR           HAD2   H    H         0.000     -1.851   -4.258    0.919
+ ZYR           CAF    C    CH2       0.000     -1.147   -2.675   -0.365
+ ZYR           HAF2   H    H         0.000     -0.717   -2.575   -1.364
+ ZYR           HAF1   H    H         0.000     -0.405   -2.382    0.381
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ZYR      OAA    n/a    CAL    START
+ ZYR      CAL    OAA    NAH    .
+ ZYR      NAH    CAL    CAB    .
+ ZYR      HAH    NAH    .      .
+ ZYR      CAB    NAH    NAG    .
+ ZYR      HAB    CAB    .      .
+ ZYR      NAG    CAB    CAM    .
+ ZYR      CAM    NAG    SAI    .
+ ZYR      CAN    CAM    .      .
+ ZYR      SAI    CAM    CAJ    .
+ ZYR      CAJ    SAI    CAE    .
+ ZYR      CAK    CAJ    .      .
+ ZYR      CAE    CAJ    CAC    .
+ ZYR      HAE1   CAE    .      .
+ ZYR      HAE2   CAE    .      .
+ ZYR      CAC    CAE    CAD    .
+ ZYR      HAC1   CAC    .      .
+ ZYR      HAC2   CAC    .      .
+ ZYR      CAD    CAC    CAF    .
+ ZYR      HAD1   CAD    .      .
+ ZYR      HAD2   CAD    .      .
+ ZYR      CAF    CAD    HAF1   .
+ ZYR      HAF2   CAF    .      .
+ ZYR      HAF1   CAF    .      END
+ ZYR      CAL    CAN    .    ADD
+ ZYR      CAN    CAK    .    ADD
+ ZYR      CAK    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ZYR      CAL    OAA       double      1.250    0.020
+ ZYR      CAL    CAN       single      1.490    0.020
+ ZYR      NAH    CAL       single      1.337    0.020
+ ZYR      CAN    CAK       single      1.490    0.020
+ ZYR      CAN    CAM       double      1.490    0.020
+ ZYR      CAK    CAF       single      1.510    0.020
+ ZYR      CAK    CAJ       double      1.490    0.020
+ ZYR      CAF    CAD       single      1.524    0.020
+ ZYR      CAD    CAC       single      1.524    0.020
+ ZYR      CAC    CAE       single      1.524    0.020
+ ZYR      CAE    CAJ       single      1.510    0.020
+ ZYR      CAJ    SAI       single      1.745    0.020
+ ZYR      SAI    CAM       single      1.695    0.020
+ ZYR      CAM    NAG       single      1.355    0.020
+ ZYR      NAG    CAB       double      1.337    0.020
+ ZYR      CAB    NAH       single      1.337    0.020
+ ZYR      HAH    NAH       single      1.040    0.020
+ ZYR      HAF1   CAF       single      1.092    0.020
+ ZYR      HAF2   CAF       single      1.092    0.020
+ ZYR      HAD1   CAD       single      1.092    0.020
+ ZYR      HAD2   CAD       single      1.092    0.020
+ ZYR      HAC1   CAC       single      1.092    0.020
+ ZYR      HAC2   CAC       single      1.092    0.020
+ ZYR      HAE1   CAE       single      1.092    0.020
+ ZYR      HAE2   CAE       single      1.092    0.020
+ ZYR      HAB    CAB       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ZYR      OAA    CAL    NAH     120.000    3.000
+ ZYR      OAA    CAL    CAN     120.000    3.000
+ ZYR      NAH    CAL    CAN     120.000    3.000
+ ZYR      CAL    NAH    HAH     120.000    3.000
+ ZYR      CAL    NAH    CAB     120.000    3.000
+ ZYR      HAH    NAH    CAB     120.000    3.000
+ ZYR      NAH    CAB    HAB     120.000    3.000
+ ZYR      NAH    CAB    NAG     120.000    3.000
+ ZYR      HAB    CAB    NAG     120.000    3.000
+ ZYR      CAB    NAG    CAM     120.000    3.000
+ ZYR      NAG    CAM    CAN     120.000    3.000
+ ZYR      NAG    CAM    SAI     120.000    3.000
+ ZYR      CAN    CAM    SAI     120.000    3.000
+ ZYR      CAM    CAN    CAL     120.000    3.000
+ ZYR      CAM    CAN    CAK     108.000    3.000
+ ZYR      CAL    CAN    CAK     132.000    3.000
+ ZYR      CAM    SAI    CAJ      92.402    3.000
+ ZYR      SAI    CAJ    CAK     108.000    3.000
+ ZYR      SAI    CAJ    CAE     108.000    3.000
+ ZYR      CAK    CAJ    CAE     126.000    3.000
+ ZYR      CAJ    CAK    CAN     108.000    3.000
+ ZYR      CAJ    CAK    CAF     126.000    3.000
+ ZYR      CAN    CAK    CAF     126.000    3.000
+ ZYR      CAJ    CAE    HAE1    109.470    3.000
+ ZYR      CAJ    CAE    HAE2    109.470    3.000
+ ZYR      CAJ    CAE    CAC     109.470    3.000
+ ZYR      HAE1   CAE    HAE2    107.900    3.000
+ ZYR      HAE1   CAE    CAC     109.470    3.000
+ ZYR      HAE2   CAE    CAC     109.470    3.000
+ ZYR      CAE    CAC    HAC1    109.470    3.000
+ ZYR      CAE    CAC    HAC2    109.470    3.000
+ ZYR      CAE    CAC    CAD     111.000    3.000
+ ZYR      HAC1   CAC    HAC2    107.900    3.000
+ ZYR      HAC1   CAC    CAD     109.470    3.000
+ ZYR      HAC2   CAC    CAD     109.470    3.000
+ ZYR      CAC    CAD    HAD1    109.470    3.000
+ ZYR      CAC    CAD    HAD2    109.470    3.000
+ ZYR      CAC    CAD    CAF     111.000    3.000
+ ZYR      HAD1   CAD    HAD2    107.900    3.000
+ ZYR      HAD1   CAD    CAF     109.470    3.000
+ ZYR      HAD2   CAD    CAF     109.470    3.000
+ ZYR      CAD    CAF    HAF2    109.470    3.000
+ ZYR      CAD    CAF    HAF1    109.470    3.000
+ ZYR      CAD    CAF    CAK     109.470    3.000
+ ZYR      HAF2   CAF    HAF1    107.900    3.000
+ ZYR      HAF2   CAF    CAK     109.470    3.000
+ ZYR      HAF1   CAF    CAK     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ZYR      CONST_1  OAA    CAL    CAN    CAM      180.000    0.000   0
+ ZYR      CONST_2  OAA    CAL    NAH    CAB      180.000    0.000   0
+ ZYR      CONST_3  CAL    NAH    CAB    NAG        0.000    0.000   0
+ ZYR      CONST_4  NAH    CAB    NAG    CAM        0.000    0.000   0
+ ZYR      CONST_5  CAB    NAG    CAM    SAI      180.000    0.000   0
+ ZYR      CONST_6  NAG    CAM    CAN    CAL        0.000    0.000   0
+ ZYR      CONST_7  CAM    CAN    CAK    CAJ        0.000    0.000   0
+ ZYR      CONST_8  NAG    CAM    SAI    CAJ      180.000    0.000   0
+ ZYR      CONST_9  CAM    SAI    CAJ    CAE      180.000    0.000   0
+ ZYR      CONST_10 SAI    CAJ    CAK    CAN        0.000    0.000   0
+ ZYR      var_1    CAJ    CAK    CAF    CAD      -30.000   20.000   2
+ ZYR      var_2    SAI    CAJ    CAE    CAC      150.000   20.000   2
+ ZYR      var_3    CAJ    CAE    CAC    CAD       60.000   20.000   3
+ ZYR      var_4    CAE    CAC    CAD    CAF      -60.000   20.000   3
+ ZYR      var_5    CAC    CAD    CAF    CAK       60.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ZYR      plan-1    CAL       0.020
+ ZYR      plan-1    OAA       0.020
+ ZYR      plan-1    CAN       0.020
+ ZYR      plan-1    NAH       0.020
+ ZYR      plan-1    NAG       0.020
+ ZYR      plan-1    CAB       0.020
+ ZYR      plan-1    CAK       0.020
+ ZYR      plan-1    CAM       0.020
+ ZYR      plan-1    CAJ       0.020
+ ZYR      plan-1    SAI       0.020
+ ZYR      plan-1    CAF       0.020
+ ZYR      plan-1    CAE       0.020
+ ZYR      plan-1    HAB       0.020
+ ZYR      plan-1    HAH       0.020
+# ------------------------------------------------------

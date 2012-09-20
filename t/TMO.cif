@@ -1,0 +1,142 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TMO      TMO 'trimethylamine oxide                ' non-polymer        14   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TMO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TMO           OAE    O    O        -1.000      0.000    0.000    0.000
+ TMO           NAC    N    NT        1.000     -1.207    0.000    0.827
+ TMO           CAB    C    CH3       0.000     -2.297   -0.668    0.102
+ TMO           HABB   H    H         0.000     -2.018   -1.666   -0.114
+ TMO           HABA   H    H         0.000     -3.171   -0.668    0.700
+ TMO           HAB    H    H         0.000     -2.489   -0.152   -0.803
+ TMO           CAD    C    CH3       0.000     -0.942   -0.717    2.081
+ TMO           HADB   H    H         0.000     -0.662   -1.715    1.865
+ TMO           HADA   H    H         0.000     -0.156   -0.236    2.604
+ TMO           HAD    H    H         0.000     -1.815   -0.717    2.680
+ TMO           CAA    C    CH3       0.000     -1.595    1.385    1.128
+ TMO           HAAB   H    H         0.000     -1.787    1.902    0.224
+ TMO           HAAA   H    H         0.000     -2.468    1.385    1.727
+ TMO           HAA    H    H         0.000     -0.809    1.866    1.649
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TMO      OAE    n/a    NAC    START
+ TMO      NAC    OAE    CAA    .
+ TMO      CAB    NAC    HAB    .
+ TMO      HABB   CAB    .      .
+ TMO      HABA   CAB    .      .
+ TMO      HAB    CAB    .      .
+ TMO      CAD    NAC    HAD    .
+ TMO      HADB   CAD    .      .
+ TMO      HADA   CAD    .      .
+ TMO      HAD    CAD    .      .
+ TMO      CAA    NAC    HAA    .
+ TMO      HAAB   CAA    .      .
+ TMO      HAAA   CAA    .      .
+ TMO      HAA    CAA    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TMO      CAA    NAC       single      1.469    0.020
+ TMO      HAA    CAA       single      1.059    0.020
+ TMO      HAAA   CAA       single      1.059    0.020
+ TMO      HAAB   CAA       single      1.059    0.020
+ TMO      CAD    NAC       single      1.469    0.020
+ TMO      CAB    NAC       single      1.469    0.020
+ TMO      NAC    OAE       single      1.250    0.020
+ TMO      HAD    CAD       single      1.059    0.020
+ TMO      HADA   CAD       single      1.059    0.020
+ TMO      HADB   CAD       single      1.059    0.020
+ TMO      HAB    CAB       single      1.059    0.020
+ TMO      HABA   CAB       single      1.059    0.020
+ TMO      HABB   CAB       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TMO      OAE    NAC    CAB     109.500    3.000
+ TMO      OAE    NAC    CAD     109.500    3.000
+ TMO      OAE    NAC    CAA     109.500    3.000
+ TMO      CAB    NAC    CAD     109.470    3.000
+ TMO      CAB    NAC    CAA     109.470    3.000
+ TMO      CAD    NAC    CAA     109.470    3.000
+ TMO      NAC    CAB    HABB    109.470    3.000
+ TMO      NAC    CAB    HABA    109.470    3.000
+ TMO      NAC    CAB    HAB     109.470    3.000
+ TMO      HABB   CAB    HABA    109.470    3.000
+ TMO      HABB   CAB    HAB     109.470    3.000
+ TMO      HABA   CAB    HAB     109.470    3.000
+ TMO      NAC    CAD    HADB    109.470    3.000
+ TMO      NAC    CAD    HADA    109.470    3.000
+ TMO      NAC    CAD    HAD     109.470    3.000
+ TMO      HADB   CAD    HADA    109.470    3.000
+ TMO      HADB   CAD    HAD     109.470    3.000
+ TMO      HADA   CAD    HAD     109.470    3.000
+ TMO      NAC    CAA    HAAB    109.470    3.000
+ TMO      NAC    CAA    HAAA    109.470    3.000
+ TMO      NAC    CAA    HAA     109.470    3.000
+ TMO      HAAB   CAA    HAAA    109.470    3.000
+ TMO      HAAB   CAA    HAA     109.470    3.000
+ TMO      HAAA   CAA    HAA     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TMO      var_1    OAE    NAC    CAB    HAB      -59.968   20.000   1
+ TMO      var_2    OAE    NAC    CAD    HAD      180.000   20.000   1
+ TMO      var_3    OAE    NAC    CAA    HAA      -59.954   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TMO      chir_01  NAC    CAA    CAD    CAB       negativ
+# ------------------------------------------------------

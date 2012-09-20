@@ -1,0 +1,277 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DMB      DMB '.                                   ' non-polymer        33  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DMB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DMB           OXT    O    OC       -0.500      0.000    0.000    0.000
+ DMB           C      C    C         0.000     -1.180   -0.005    0.414
+ DMB           O      O    OC       -0.500     -2.130   -0.008   -0.400
+ DMB           C2     C    CR6       0.000     -1.453   -0.007    1.864
+ DMB           C3     C    CR16      0.000     -0.399   -0.005    2.776
+ DMB           H3     H    H         0.000      0.624   -0.001    2.421
+ DMB           C4     C    CR16      0.000     -0.659   -0.008    4.131
+ DMB           H4     H    H         0.000      0.163   -0.011    4.837
+ DMB           C5     C    CR16      0.000     -1.964   -0.007    4.596
+ DMB           H5     H    H         0.000     -2.156   -0.009    5.662
+ DMB           C6     C    CR16      0.000     -3.022   -0.003    3.710
+ DMB           H6     H    H         0.000     -4.040   -0.001    4.082
+ DMB           C1     C    CR6       0.000     -2.782   -0.001    2.336
+ DMB           N1     N    N         0.000     -3.824    0.002    1.455
+ DMB           "N1'"  N    N         0.000     -5.037    0.004    1.893
+ DMB           "C1'"  C    CR6       0.000     -6.078    0.007    1.013
+ DMB           "C6'"  C    CR16      0.000     -5.834    0.010   -0.363
+ DMB           "H6'"  H    H         0.000     -4.817    0.010   -0.734
+ DMB           "C5'"  C    CR6       0.000     -6.890    0.014   -1.248
+ DMB           CM5    C    CH3       0.000     -6.627    0.017   -2.732
+ DMB           HM53   H    H         0.000     -7.416    0.520   -3.229
+ DMB           HM52   H    H         0.000     -5.713    0.514   -2.928
+ DMB           HM51   H    H         0.000     -6.568   -0.981   -3.082
+ DMB           "C4'"  C    CR6       0.000     -8.196    0.010   -0.774
+ DMB           "O4'"  O    OH1       0.000     -9.234    0.014   -1.649
+ DMB           "HO4'" H    H         0.000     -9.478   -0.896   -1.862
+ DMB           "C3'"  C    CR6       0.000     -8.445    0.013    0.593
+ DMB           CM3    C    CH3       0.000     -9.864    0.014    1.100
+ DMB           HM33   H    H         0.000    -10.488   -0.483    0.404
+ DMB           HM32   H    H         0.000     -9.906   -0.487    2.032
+ DMB           HM31   H    H         0.000    -10.195    1.013    1.221
+ DMB           "C2'"  C    CR16      0.000     -7.396    0.009    1.486
+ DMB           "H2'"  H    H         0.000     -7.591    0.007    2.551
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DMB      OXT    n/a    C      START
+ DMB      C      OXT    C2     .
+ DMB      O      C      .      .
+ DMB      C2     C      C3     .
+ DMB      C3     C2     C4     .
+ DMB      H3     C3     .      .
+ DMB      C4     C3     C5     .
+ DMB      H4     C4     .      .
+ DMB      C5     C4     C6     .
+ DMB      H5     C5     .      .
+ DMB      C6     C5     C1     .
+ DMB      H6     C6     .      .
+ DMB      C1     C6     N1     .
+ DMB      N1     C1     "N1'"  .
+ DMB      "N1'"  N1     "C1'"  .
+ DMB      "C1'"  "N1'"  "C6'"  .
+ DMB      "C6'"  "C1'"  "C5'"  .
+ DMB      "H6'"  "C6'"  .      .
+ DMB      "C5'"  "C6'"  "C4'"  .
+ DMB      CM5    "C5'"  HM51   .
+ DMB      HM53   CM5    .      .
+ DMB      HM52   CM5    .      .
+ DMB      HM51   CM5    .      .
+ DMB      "C4'"  "C5'"  "C3'"  .
+ DMB      "O4'"  "C4'"  "HO4'" .
+ DMB      "HO4'" "O4'"  .      .
+ DMB      "C3'"  "C4'"  "C2'"  .
+ DMB      CM3    "C3'"  HM31   .
+ DMB      HM33   CM3    .      .
+ DMB      HM32   CM3    .      .
+ DMB      HM31   CM3    .      .
+ DMB      "C2'"  "C3'"  "H2'"  .
+ DMB      "H2'"  "C2'"  .      END
+ DMB      C1     C2     .    ADD
+ DMB      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DMB      C1     C2        single      1.487    0.020
+ DMB      C1     C6        double      1.390    0.020
+ DMB      N1     C1        single      1.400    0.020
+ DMB      C3     C2        double      1.390    0.020
+ DMB      C2     C         single      1.500    0.020
+ DMB      C4     C3        single      1.390    0.020
+ DMB      H3     C3        single      1.083    0.020
+ DMB      C5     C4        double      1.390    0.020
+ DMB      H4     C4        single      1.083    0.020
+ DMB      C6     C5        single      1.390    0.020
+ DMB      H5     C5        single      1.083    0.020
+ DMB      H6     C6        single      1.083    0.020
+ DMB      "C1'"  "C2'"     single      1.390    0.020
+ DMB      "C6'"  "C1'"     double      1.390    0.020
+ DMB      "C1'"  "N1'"     single      1.400    0.020
+ DMB      "C2'"  "C3'"     double      1.390    0.020
+ DMB      "H2'"  "C2'"     single      1.083    0.020
+ DMB      "C3'"  "C4'"     single      1.487    0.020
+ DMB      CM3    "C3'"     single      1.506    0.020
+ DMB      "C4'"  "C5'"     double      1.487    0.020
+ DMB      "O4'"  "C4'"     single      1.362    0.020
+ DMB      "C5'"  "C6'"     single      1.390    0.020
+ DMB      CM5    "C5'"     single      1.506    0.020
+ DMB      "H6'"  "C6'"     single      1.083    0.020
+ DMB      O      C         deloc       1.250    0.020
+ DMB      C      OXT       deloc       1.250    0.020
+ DMB      HM31   CM3       single      1.059    0.020
+ DMB      HM32   CM3       single      1.059    0.020
+ DMB      HM33   CM3       single      1.059    0.020
+ DMB      HM51   CM5       single      1.059    0.020
+ DMB      HM52   CM5       single      1.059    0.020
+ DMB      HM53   CM5       single      1.059    0.020
+ DMB      "N1'"  N1        double      1.240    0.020
+ DMB      "HO4'" "O4'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DMB      OXT    C      O       123.000    3.000
+ DMB      OXT    C      C2      120.000    3.000
+ DMB      O      C      C2      120.000    3.000
+ DMB      C      C2     C3      120.000    3.000
+ DMB      C      C2     C1      120.000    3.000
+ DMB      C3     C2     C1      120.000    3.000
+ DMB      C2     C3     H3      120.000    3.000
+ DMB      C2     C3     C4      120.000    3.000
+ DMB      H3     C3     C4      120.000    3.000
+ DMB      C3     C4     H4      120.000    3.000
+ DMB      C3     C4     C5      120.000    3.000
+ DMB      H4     C4     C5      120.000    3.000
+ DMB      C4     C5     H5      120.000    3.000
+ DMB      C4     C5     C6      120.000    3.000
+ DMB      H5     C5     C6      120.000    3.000
+ DMB      C5     C6     H6      120.000    3.000
+ DMB      C5     C6     C1      120.000    3.000
+ DMB      H6     C6     C1      120.000    3.000
+ DMB      C6     C1     N1      120.000    3.000
+ DMB      C6     C1     C2      120.000    3.000
+ DMB      N1     C1     C2      120.000    3.000
+ DMB      C1     N1     "N1'"   120.000    3.000
+ DMB      N1     "N1'"  "C1'"   120.000    3.000
+ DMB      "N1'"  "C1'"  "C6'"   120.000    3.000
+ DMB      "N1'"  "C1'"  "C2'"   120.000    3.000
+ DMB      "C6'"  "C1'"  "C2'"   120.000    3.000
+ DMB      "C1'"  "C6'"  "H6'"   120.000    3.000
+ DMB      "C1'"  "C6'"  "C5'"   120.000    3.000
+ DMB      "H6'"  "C6'"  "C5'"   120.000    3.000
+ DMB      "C6'"  "C5'"  CM5     120.000    3.000
+ DMB      "C6'"  "C5'"  "C4'"   120.000    3.000
+ DMB      CM5    "C5'"  "C4'"   120.000    3.000
+ DMB      "C5'"  CM5    HM53    109.470    3.000
+ DMB      "C5'"  CM5    HM52    109.470    3.000
+ DMB      "C5'"  CM5    HM51    109.470    3.000
+ DMB      HM53   CM5    HM52    109.470    3.000
+ DMB      HM53   CM5    HM51    109.470    3.000
+ DMB      HM52   CM5    HM51    109.470    3.000
+ DMB      "C5'"  "C4'"  "O4'"   120.000    3.000
+ DMB      "C5'"  "C4'"  "C3'"   120.000    3.000
+ DMB      "O4'"  "C4'"  "C3'"   120.000    3.000
+ DMB      "C4'"  "O4'"  "HO4'"  109.470    3.000
+ DMB      "C4'"  "C3'"  CM3     120.000    3.000
+ DMB      "C4'"  "C3'"  "C2'"   120.000    3.000
+ DMB      CM3    "C3'"  "C2'"   120.000    3.000
+ DMB      "C3'"  CM3    HM33    109.470    3.000
+ DMB      "C3'"  CM3    HM32    109.470    3.000
+ DMB      "C3'"  CM3    HM31    109.470    3.000
+ DMB      HM33   CM3    HM32    109.470    3.000
+ DMB      HM33   CM3    HM31    109.470    3.000
+ DMB      HM32   CM3    HM31    109.470    3.000
+ DMB      "C3'"  "C2'"  "H2'"   120.000    3.000
+ DMB      "C3'"  "C2'"  "C1'"   120.000    3.000
+ DMB      "H2'"  "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DMB      var_1    OXT    C      C2     C3        -0.018   20.000   1
+ DMB      CONST_1  C      C2     C3     C4       180.000    0.000   0
+ DMB      CONST_2  C2     C3     C4     C5         0.000    0.000   0
+ DMB      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ DMB      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ DMB      CONST_5  C5     C6     C1     N1       180.000    0.000   0
+ DMB      CONST_6  C6     C1     C2     C        180.000    0.000   0
+ DMB      var_2    C6     C1     N1     "N1'"      0.049   20.000   1
+ DMB      CONST_7  C1     N1     "N1'"  "C1'"    180.000    0.000   0
+ DMB      var_3    N1     "N1'"  "C1'"  "C6'"     -0.144   20.000   1
+ DMB      CONST_8  "N1'"  "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ DMB      CONST_9  "N1'"  "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ DMB      CONST_10 "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ DMB      var_4    "C6'"  "C5'"  CM5    HM51      90.047   20.000   1
+ DMB      CONST_11 "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ DMB      var_5    "C5'"  "C4'"  "O4'"  "HO4'"    89.984   20.000   1
+ DMB      CONST_12 "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ DMB      var_6    "C4'"  "C3'"  CM3    HM31     -90.224   20.000   1
+ DMB      CONST_13 "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DMB      plan-1    C1        0.020
+ DMB      plan-1    C2        0.020
+ DMB      plan-1    C6        0.020
+ DMB      plan-1    N1        0.020
+ DMB      plan-1    C3        0.020
+ DMB      plan-1    C4        0.020
+ DMB      plan-1    C5        0.020
+ DMB      plan-1    C         0.020
+ DMB      plan-1    H3        0.020
+ DMB      plan-1    H4        0.020
+ DMB      plan-1    H5        0.020
+ DMB      plan-1    H6        0.020
+ DMB      plan-2    "C1'"     0.020
+ DMB      plan-2    "C2'"     0.020
+ DMB      plan-2    "C6'"     0.020
+ DMB      plan-2    "N1'"     0.020
+ DMB      plan-2    "C3'"     0.020
+ DMB      plan-2    "C4'"     0.020
+ DMB      plan-2    "C5'"     0.020
+ DMB      plan-2    "H2'"     0.020
+ DMB      plan-2    CM3       0.020
+ DMB      plan-2    "O4'"     0.020
+ DMB      plan-2    CM5       0.020
+ DMB      plan-2    "H6'"     0.020
+ DMB      plan-3    C         0.020
+ DMB      plan-3    C2        0.020
+ DMB      plan-3    O         0.020
+ DMB      plan-3    OXT       0.020
+ DMB      plan-4    N1        0.020
+ DMB      plan-4    C1        0.020
+ DMB      plan-4    "N1'"     0.020
+ DMB      plan-4    "C1'"     0.020
+# ------------------------------------------------------

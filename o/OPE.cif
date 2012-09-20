@@ -1,0 +1,141 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OPE      OPE 'PHOSPHORIC ACID MONO-(2-AMINO-ETHYL)' non-polymer        14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OPE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OPE           O3     O    OP       -0.666      0.000    0.000    0.000
+ OPE           P      P    P         0.000     -1.153   -0.973   -0.108
+ OPE           O1     O    OP       -0.666     -1.927   -0.696   -1.379
+ OPE           O2     O    OP       -0.666     -0.617   -2.388   -0.143
+ OPE           O4     O    O2        0.000     -2.125   -0.797    1.161
+ OPE           CA     C    CH2       0.000     -2.596    0.551    1.139
+ OPE           HA1    H    H         0.000     -3.137    0.731    0.207
+ OPE           HA2    H    H         0.000     -1.746    1.234    1.202
+ OPE           CB     C    CH2       0.000     -3.530    0.785    2.326
+ OPE           HB1    H    H         0.000     -4.380    0.103    2.260
+ OPE           HB2    H    H         0.000     -3.890    1.816    2.307
+ OPE           N      N    NH2       0.000     -2.801    0.543    3.578
+ OPE           HN2    H    H         0.000     -1.827    0.265    3.557
+ OPE           HN1    H    H         0.000     -3.268    0.653    4.471
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OPE      O3     n/a    P      START
+ OPE      P      O3     O4     .
+ OPE      O1     P      .      .
+ OPE      O2     P      .      .
+ OPE      O4     P      CA     .
+ OPE      CA     O4     CB     .
+ OPE      HA1    CA     .      .
+ OPE      HA2    CA     .      .
+ OPE      CB     CA     N      .
+ OPE      HB1    CB     .      .
+ OPE      HB2    CB     .      .
+ OPE      N      CB     HN1    .
+ OPE      HN2    N      .      .
+ OPE      HN1    N      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OPE      CB     CA        single      1.524    0.020
+ OPE      CA     O4        single      1.426    0.020
+ OPE      HA1    CA        single      1.092    0.020
+ OPE      HA2    CA        single      1.092    0.020
+ OPE      N      CB        single      1.450    0.020
+ OPE      HB1    CB        single      1.092    0.020
+ OPE      HB2    CB        single      1.092    0.020
+ OPE      O1     P         deloc       1.510    0.020
+ OPE      O2     P         deloc       1.510    0.020
+ OPE      P      O3        deloc       1.510    0.020
+ OPE      O4     P         single      1.610    0.020
+ OPE      HN1    N         single      1.010    0.020
+ OPE      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OPE      O3     P      O1      119.900    3.000
+ OPE      O3     P      O2      119.900    3.000
+ OPE      O3     P      O4      108.200    3.000
+ OPE      O1     P      O2      119.900    3.000
+ OPE      O1     P      O4      108.200    3.000
+ OPE      O2     P      O4      108.200    3.000
+ OPE      P      O4     CA      120.500    3.000
+ OPE      O4     CA     HA1     109.470    3.000
+ OPE      O4     CA     HA2     109.470    3.000
+ OPE      O4     CA     CB      109.470    3.000
+ OPE      HA1    CA     HA2     107.900    3.000
+ OPE      HA1    CA     CB      109.470    3.000
+ OPE      HA2    CA     CB      109.470    3.000
+ OPE      CA     CB     HB1     109.470    3.000
+ OPE      CA     CB     HB2     109.470    3.000
+ OPE      CA     CB     N       109.470    3.000
+ OPE      HB1    CB     HB2     107.900    3.000
+ OPE      HB1    CB     N       109.470    3.000
+ OPE      HB2    CB     N       109.470    3.000
+ OPE      CB     N      HN2     120.000    3.000
+ OPE      CB     N      HN1     120.000    3.000
+ OPE      HN2    N      HN1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OPE      var_1    O3     P      O4     CA        59.956   20.000   1
+ OPE      var_2    P      O4     CA     CB      -179.977   20.000   1
+ OPE      var_3    O4     CA     CB     N         60.007   20.000   3
+ OPE      var_4    CA     CB     N      HN1      179.961   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OPE      plan-1    N         0.020
+ OPE      plan-1    CB        0.000
+ OPE      plan-1    HN1       0.000
+ OPE      plan-1    HN2       0.000
+# ------------------------------------------------------

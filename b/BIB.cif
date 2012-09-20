@@ -1,0 +1,159 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BIB      BIB 'BETA-AMINO ISOBUTYRATE              ' non-polymer        15   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BIB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BIB           O6     O    OC       -0.500      0.000    0.000    0.000
+ BIB           C5     C    C         0.000     -1.037    0.557   -0.424
+ BIB           O7     O    OC       -0.500     -0.987    1.280   -1.443
+ BIB           C3     C    CH1       0.000     -2.347    0.358    0.295
+ BIB           H3     H    H         0.000     -2.153    0.016    1.321
+ BIB           C2     C    CH3       0.000     -3.115    1.681    0.334
+ BIB           H23    H    H         0.000     -4.036    1.541    0.838
+ BIB           H22    H    H         0.000     -2.540    2.409    0.845
+ BIB           H21    H    H         0.000     -3.302    2.011   -0.655
+ BIB           C4     C    CH2       0.000     -3.179   -0.693   -0.444
+ BIB           H41    H    H         0.000     -2.595   -1.609   -0.551
+ BIB           H42    H    H         0.000     -3.446   -0.315   -1.433
+ BIB           N1     N    NH2       0.000     -4.401   -0.976    0.320
+ BIB           HN12   H    H         0.000     -4.544   -1.888    0.737
+ BIB           HN11   H    H         0.000     -5.110   -0.260    0.435
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BIB      O6     n/a    C5     START
+ BIB      C5     O6     C3     .
+ BIB      O7     C5     .      .
+ BIB      C3     C5     C4     .
+ BIB      H3     C3     .      .
+ BIB      C2     C3     H21    .
+ BIB      H23    C2     .      .
+ BIB      H22    C2     .      .
+ BIB      H21    C2     .      .
+ BIB      C4     C3     N1     .
+ BIB      H41    C4     .      .
+ BIB      H42    C4     .      .
+ BIB      N1     C4     HN11   .
+ BIB      HN12   N1     .      .
+ BIB      HN11   N1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BIB      O7     C5        deloc       1.250    0.020
+ BIB      C5     O6        deloc       1.250    0.020
+ BIB      C3     C5        single      1.500    0.020
+ BIB      C2     C3        single      1.524    0.020
+ BIB      C4     C3        single      1.524    0.020
+ BIB      H3     C3        single      1.099    0.020
+ BIB      H21    C2        single      1.059    0.020
+ BIB      H22    C2        single      1.059    0.020
+ BIB      H23    C2        single      1.059    0.020
+ BIB      N1     C4        single      1.450    0.020
+ BIB      H41    C4        single      1.092    0.020
+ BIB      H42    C4        single      1.092    0.020
+ BIB      HN11   N1        single      1.010    0.020
+ BIB      HN12   N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BIB      O6     C5     O7      123.000    3.000
+ BIB      O6     C5     C3      118.500    3.000
+ BIB      O7     C5     C3      118.500    3.000
+ BIB      C5     C3     H3      108.810    3.000
+ BIB      C5     C3     C2      109.470    3.000
+ BIB      C5     C3     C4      109.470    3.000
+ BIB      H3     C3     C2      108.340    3.000
+ BIB      H3     C3     C4      108.340    3.000
+ BIB      C2     C3     C4      111.000    3.000
+ BIB      C3     C2     H23     109.470    3.000
+ BIB      C3     C2     H22     109.470    3.000
+ BIB      C3     C2     H21     109.470    3.000
+ BIB      H23    C2     H22     109.470    3.000
+ BIB      H23    C2     H21     109.470    3.000
+ BIB      H22    C2     H21     109.470    3.000
+ BIB      C3     C4     H41     109.470    3.000
+ BIB      C3     C4     H42     109.470    3.000
+ BIB      C3     C4     N1      109.470    3.000
+ BIB      H41    C4     H42     107.900    3.000
+ BIB      H41    C4     N1      109.470    3.000
+ BIB      H42    C4     N1      109.470    3.000
+ BIB      C4     N1     HN12    120.000    3.000
+ BIB      C4     N1     HN11    120.000    3.000
+ BIB      HN12   N1     HN11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BIB      var_1    O6     C5     C3     C4      -100.014   20.000   3
+ BIB      var_2    C5     C3     C2     H21       59.983   20.000   3
+ BIB      var_3    C5     C3     C4     N1       174.959   20.000   3
+ BIB      var_4    C3     C4     N1     HN11      66.243   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BIB      chir_01  C3     C5     C2     C4        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BIB      plan-1    C5        0.020
+ BIB      plan-1    O7        0.020
+ BIB      plan-1    O6        0.020
+ BIB      plan-1    C3        0.020
+ BIB      plan-2    N1        0.020
+ BIB      plan-2    C4        0.020
+ BIB      plan-2    HN11      0.020
+ BIB      plan-2    HN12      0.020
+# ------------------------------------------------------

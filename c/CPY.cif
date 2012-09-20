@@ -1,0 +1,330 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CPY      CPY '1-(3-AMINO-4-CYCLOHEXYL-2-HYDROXYBUT' non-polymer        43  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CPY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CPY           O2     O    O         0.000      0.000    0.000    0.000
+ CPY           C2     C    CR6       0.000      0.172    0.118   -1.203
+ CPY           C3     C    CR16      0.000      1.386   -0.291   -1.781
+ CPY           HC3    H    H         0.000      2.170   -0.714   -1.166
+ CPY           C4     C    CR16      0.000      1.565   -0.152   -3.126
+ CPY           HC4    H    H         0.000      2.495   -0.456   -3.589
+ CPY           C5     C    CR16      0.000      0.532    0.391   -3.902
+ CPY           HC5    H    H         0.000      0.660    0.506   -4.971
+ CPY           C6     C    CR16      0.000     -0.627    0.772   -3.313
+ CPY           HC6    H    H         0.000     -1.421    1.193   -3.916
+ CPY           N1     N    NR6       0.000     -0.802    0.631   -1.975
+ CPY           CM     C    CH2       0.000     -2.067    1.050   -1.363
+ CPY           HM1    H    H         0.000     -2.492    1.877   -1.937
+ CPY           HM2    H    H         0.000     -1.884    1.377   -0.338
+ CPY           CH     C    CH1       0.000     -3.045   -0.125   -1.359
+ CPY           HH     H    H         0.000     -2.616   -0.956   -0.782
+ CPY           OH     O    OH1       0.000     -3.284   -0.550   -2.701
+ CPY           HO     H    H         0.000     -3.661    0.182   -3.208
+ CPY           CA     C    CH1       0.000     -4.364    0.311   -0.720
+ CPY           HA     H    H         0.000     -4.180    0.638    0.313
+ CPY           N      N    NH2       0.000     -4.936    1.423   -1.491
+ CPY           HN2    H    H         0.000     -5.101    2.321   -1.049
+ CPY           HN1    H    H         0.000     -5.171    1.301   -2.469
+ CPY           CB     C    CH2       0.000     -5.343   -0.863   -0.716
+ CPY           HB1    H    H         0.000     -4.916   -1.690   -0.144
+ CPY           HB2    H    H         0.000     -5.525   -1.188   -1.742
+ CPY           CG     C    CH1       0.000     -6.662   -0.426   -0.076
+ CPY           HG     H    H         0.000     -7.091    0.406   -0.653
+ CPY           CD2    C    CH2       0.000     -6.406    0.028    1.361
+ CPY           HD21   H    H         0.000     -5.706    0.867    1.358
+ CPY           HD22   H    H         0.000     -5.979   -0.798    1.933
+ CPY           CE2    C    CH2       0.000     -7.726    0.465    2.000
+ CPY           HE21   H    H         0.000     -8.150    1.293    1.428
+ CPY           HE22   H    H         0.000     -7.542    0.791    3.026
+ CPY           CZ     C    CH2       0.000     -8.705   -0.709    2.004
+ CPY           HCZ1   H    H         0.000     -9.646   -0.396    2.461
+ CPY           HCZ2   H    H         0.000     -8.280   -1.535    2.579
+ CPY           CE1    C    CH2       0.000     -8.961   -1.164    0.567
+ CPY           HE11   H    H         0.000     -9.388   -0.338   -0.005
+ CPY           HE12   H    H         0.000     -9.661   -2.003    0.571
+ CPY           CD1    C    CH2       0.000     -7.641   -1.602   -0.072
+ CPY           HD12   H    H         0.000     -7.825   -1.927   -1.098
+ CPY           HD11   H    H         0.000     -7.217   -2.429    0.500
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CPY      O2     n/a    C2     START
+ CPY      C2     O2     C3     .
+ CPY      C3     C2     C4     .
+ CPY      HC3    C3     .      .
+ CPY      C4     C3     C5     .
+ CPY      HC4    C4     .      .
+ CPY      C5     C4     C6     .
+ CPY      HC5    C5     .      .
+ CPY      C6     C5     N1     .
+ CPY      HC6    C6     .      .
+ CPY      N1     C6     CM     .
+ CPY      CM     N1     CH     .
+ CPY      HM1    CM     .      .
+ CPY      HM2    CM     .      .
+ CPY      CH     CM     CA     .
+ CPY      HH     CH     .      .
+ CPY      OH     CH     HO     .
+ CPY      HO     OH     .      .
+ CPY      CA     CH     CB     .
+ CPY      HA     CA     .      .
+ CPY      N      CA     HN1    .
+ CPY      HN2    N      .      .
+ CPY      HN1    N      .      .
+ CPY      CB     CA     CG     .
+ CPY      HB1    CB     .      .
+ CPY      HB2    CB     .      .
+ CPY      CG     CB     CD2    .
+ CPY      HG     CG     .      .
+ CPY      CD2    CG     CE2    .
+ CPY      HD21   CD2    .      .
+ CPY      HD22   CD2    .      .
+ CPY      CE2    CD2    CZ     .
+ CPY      HE21   CE2    .      .
+ CPY      HE22   CE2    .      .
+ CPY      CZ     CE2    CE1    .
+ CPY      HCZ1   CZ     .      .
+ CPY      HCZ2   CZ     .      .
+ CPY      CE1    CZ     CD1    .
+ CPY      HE11   CE1    .      .
+ CPY      HE12   CE1    .      .
+ CPY      CD1    CE1    HD11   .
+ CPY      HD12   CD1    .      .
+ CPY      HD11   CD1    .      END
+ CPY      CG     CD1    .    ADD
+ CPY      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CPY      N      CA        single      1.450    0.020
+ CPY      HN1    N         single      1.010    0.020
+ CPY      HN2    N         single      1.010    0.020
+ CPY      CB     CA        single      1.524    0.020
+ CPY      CA     CH        single      1.524    0.020
+ CPY      HA     CA        single      1.099    0.020
+ CPY      CG     CB        single      1.524    0.020
+ CPY      HB1    CB        single      1.092    0.020
+ CPY      HB2    CB        single      1.092    0.020
+ CPY      CG     CD1       single      1.524    0.020
+ CPY      CD2    CG        single      1.524    0.020
+ CPY      HG     CG        single      1.099    0.020
+ CPY      CD1    CE1       single      1.524    0.020
+ CPY      HD11   CD1       single      1.092    0.020
+ CPY      HD12   CD1       single      1.092    0.020
+ CPY      CE2    CD2       single      1.524    0.020
+ CPY      HD21   CD2       single      1.092    0.020
+ CPY      HD22   CD2       single      1.092    0.020
+ CPY      CE1    CZ        single      1.524    0.020
+ CPY      HE11   CE1       single      1.092    0.020
+ CPY      HE12   CE1       single      1.092    0.020
+ CPY      CZ     CE2       single      1.524    0.020
+ CPY      HE21   CE2       single      1.092    0.020
+ CPY      HE22   CE2       single      1.092    0.020
+ CPY      HCZ1   CZ        single      1.092    0.020
+ CPY      HCZ2   CZ        single      1.092    0.020
+ CPY      OH     CH        single      1.432    0.020
+ CPY      CH     CM        single      1.524    0.020
+ CPY      HH     CH        single      1.099    0.020
+ CPY      HO     OH        single      0.967    0.020
+ CPY      CM     N1        single      1.465    0.020
+ CPY      HM1    CM        single      1.092    0.020
+ CPY      HM2    CM        single      1.092    0.020
+ CPY      N1     C2        single      1.410    0.020
+ CPY      N1     C6        single      1.337    0.020
+ CPY      C2     O2        double      1.250    0.020
+ CPY      C3     C2        single      1.390    0.020
+ CPY      C4     C3        double      1.390    0.020
+ CPY      HC3    C3        single      1.083    0.020
+ CPY      C5     C4        single      1.390    0.020
+ CPY      HC4    C4        single      1.083    0.020
+ CPY      C6     C5        double      1.390    0.020
+ CPY      HC5    C5        single      1.083    0.020
+ CPY      HC6    C6        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CPY      O2     C2     C3      120.000    3.000
+ CPY      O2     C2     N1      120.000    3.000
+ CPY      C3     C2     N1      120.000    3.000
+ CPY      C2     C3     HC3     120.000    3.000
+ CPY      C2     C3     C4      120.000    3.000
+ CPY      HC3    C3     C4      120.000    3.000
+ CPY      C3     C4     HC4     120.000    3.000
+ CPY      C3     C4     C5      120.000    3.000
+ CPY      HC4    C4     C5      120.000    3.000
+ CPY      C4     C5     HC5     120.000    3.000
+ CPY      C4     C5     C6      120.000    3.000
+ CPY      HC5    C5     C6      120.000    3.000
+ CPY      C5     C6     HC6     120.000    3.000
+ CPY      C5     C6     N1      120.000    3.000
+ CPY      HC6    C6     N1      120.000    3.000
+ CPY      C6     N1     CM      120.000    3.000
+ CPY      C6     N1     C2      120.000    3.000
+ CPY      CM     N1     C2      120.000    3.000
+ CPY      N1     CM     HM1     109.470    3.000
+ CPY      N1     CM     HM2     109.470    3.000
+ CPY      N1     CM     CH      109.470    3.000
+ CPY      HM1    CM     HM2     107.900    3.000
+ CPY      HM1    CM     CH      109.470    3.000
+ CPY      HM2    CM     CH      109.470    3.000
+ CPY      CM     CH     HH      108.340    3.000
+ CPY      CM     CH     OH      109.470    3.000
+ CPY      CM     CH     CA      111.000    3.000
+ CPY      HH     CH     OH      109.470    3.000
+ CPY      HH     CH     CA      108.340    3.000
+ CPY      OH     CH     CA      109.470    3.000
+ CPY      CH     OH     HO      109.470    3.000
+ CPY      CH     CA     HA      108.340    3.000
+ CPY      CH     CA     N       109.470    3.000
+ CPY      CH     CA     CB      111.000    3.000
+ CPY      HA     CA     N       109.470    3.000
+ CPY      HA     CA     CB      108.340    3.000
+ CPY      N      CA     CB      109.470    3.000
+ CPY      CA     N      HN2     120.000    3.000
+ CPY      CA     N      HN1     120.000    3.000
+ CPY      HN2    N      HN1     120.000    3.000
+ CPY      CA     CB     HB1     109.470    3.000
+ CPY      CA     CB     HB2     109.470    3.000
+ CPY      CA     CB     CG      111.000    3.000
+ CPY      HB1    CB     HB2     107.900    3.000
+ CPY      HB1    CB     CG      109.470    3.000
+ CPY      HB2    CB     CG      109.470    3.000
+ CPY      CB     CG     HG      108.340    3.000
+ CPY      CB     CG     CD2     109.470    3.000
+ CPY      CB     CG     CD1     109.470    3.000
+ CPY      HG     CG     CD2     108.340    3.000
+ CPY      HG     CG     CD1     108.340    3.000
+ CPY      CD2    CG     CD1     109.470    3.000
+ CPY      CG     CD2    HD21    109.470    3.000
+ CPY      CG     CD2    HD22    109.470    3.000
+ CPY      CG     CD2    CE2     111.000    3.000
+ CPY      HD21   CD2    HD22    107.900    3.000
+ CPY      HD21   CD2    CE2     109.470    3.000
+ CPY      HD22   CD2    CE2     109.470    3.000
+ CPY      CD2    CE2    HE21    109.470    3.000
+ CPY      CD2    CE2    HE22    109.470    3.000
+ CPY      CD2    CE2    CZ      111.000    3.000
+ CPY      HE21   CE2    HE22    107.900    3.000
+ CPY      HE21   CE2    CZ      109.470    3.000
+ CPY      HE22   CE2    CZ      109.470    3.000
+ CPY      CE2    CZ     HCZ1    109.470    3.000
+ CPY      CE2    CZ     HCZ2    109.470    3.000
+ CPY      CE2    CZ     CE1     111.000    3.000
+ CPY      HCZ1   CZ     HCZ2    107.900    3.000
+ CPY      HCZ1   CZ     CE1     109.470    3.000
+ CPY      HCZ2   CZ     CE1     109.470    3.000
+ CPY      CZ     CE1    HE11    109.470    3.000
+ CPY      CZ     CE1    HE12    109.470    3.000
+ CPY      CZ     CE1    CD1     111.000    3.000
+ CPY      HE11   CE1    HE12    107.900    3.000
+ CPY      HE11   CE1    CD1     109.470    3.000
+ CPY      HE12   CE1    CD1     109.470    3.000
+ CPY      CE1    CD1    HD12    109.470    3.000
+ CPY      CE1    CD1    HD11    109.470    3.000
+ CPY      CE1    CD1    CG      111.000    3.000
+ CPY      HD12   CD1    HD11    107.900    3.000
+ CPY      HD12   CD1    CG      109.470    3.000
+ CPY      HD11   CD1    CG      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CPY      CONST_1  O2     C2     C3     C4       180.000    0.000   0
+ CPY      CONST_2  C2     C3     C4     C5         0.000    0.000   0
+ CPY      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ CPY      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ CPY      CONST_5  C5     C6     N1     CM       180.000    0.000   0
+ CPY      CONST_6  C6     N1     C2     O2       180.000    0.000   0
+ CPY      var_1    C6     N1     CM     CH        90.074   20.000   1
+ CPY      var_2    N1     CM     CH     CA       179.943   20.000   3
+ CPY      var_3    CM     CH     OH     HO       -60.013   20.000   1
+ CPY      var_4    CM     CH     CA     CB       179.952   20.000   3
+ CPY      var_5    CH     CA     N      HN1       60.042   20.000   1
+ CPY      var_6    CH     CA     CB     CG      -179.988   20.000   3
+ CPY      var_7    CA     CB     CG     CD2      -60.010   20.000   3
+ CPY      var_8    CB     CG     CD1    CE1      180.000   20.000   3
+ CPY      var_9    CB     CG     CD2    CE2      180.000   20.000   3
+ CPY      var_10   CG     CD2    CE2    CZ        60.000   20.000   3
+ CPY      var_11   CD2    CE2    CZ     CE1      -60.000   20.000   3
+ CPY      var_12   CE2    CZ     CE1    CD1       60.000   20.000   3
+ CPY      var_13   CZ     CE1    CD1    CG       -60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CPY      chir_01  CA     N      CB     CH        negativ
+ CPY      chir_02  CG     CB     CD1    CD2       negativ
+ CPY      chir_03  CH     CA     OH     CM        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CPY      plan-1    N         0.020
+ CPY      plan-1    CA        0.020
+ CPY      plan-1    HN1       0.020
+ CPY      plan-1    HN2       0.020
+ CPY      plan-2    N1        0.020
+ CPY      plan-2    CM        0.020
+ CPY      plan-2    C2        0.020
+ CPY      plan-2    C6        0.020
+ CPY      plan-2    C3        0.020
+ CPY      plan-2    C4        0.020
+ CPY      plan-2    C5        0.020
+ CPY      plan-2    O2        0.020
+ CPY      plan-2    HC3       0.020
+ CPY      plan-2    HC4       0.020
+ CPY      plan-2    HC5       0.020
+ CPY      plan-2    HC6       0.020
+# ------------------------------------------------------

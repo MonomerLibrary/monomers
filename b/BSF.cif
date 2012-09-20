@@ -1,0 +1,234 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BSF      BSF '{[(benzylsulfonyl)amino]methyl}boron' non-polymer        27  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BSF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BSF           OAB    O    OS        0.000      0.000    0.000    0.000
+ BSF           SAP    S    ST        0.000     -1.325    0.049    0.512
+ BSF           OAA    O    OS        0.000     -1.637    0.819    1.664
+ BSF           NAM    N    NH1       0.000     -2.206    0.752   -0.702
+ BSF           HNAM   H    H         0.000     -1.754    1.015   -1.566
+ BSF           CAK    C    CH2       0.000     -3.640    0.991   -0.521
+ BSF           HAK    H    H         0.000     -3.788    1.720    0.279
+ BSF           HAKA   H    H         0.000     -4.134    0.055   -0.255
+ BSF           BOR    B    B         0.000     -4.250    1.547   -1.857
+ BSF           OAD    O    OH1       0.000     -4.194    2.936   -2.139
+ BSF           H12    H    H         0.000     -4.571    3.242   -2.955
+ BSF           OAC    O    OH1       0.000     -4.858    0.658   -2.783
+ BSF           H11    H    H         0.000     -4.817   -0.274   -2.602
+ BSF           CAL    C    CH2       0.000     -2.012   -1.624    0.659
+ BSF           HAL    H    H         0.000     -1.895   -2.150   -0.290
+ BSF           HALA   H    H         0.000     -3.073   -1.560    0.910
+ BSF           CAN    C    CR6       0.000     -1.282   -2.372    1.744
+ BSF           CAI    C    CR16      0.000     -1.740   -2.319    3.049
+ BSF           HAI    H    H         0.000     -2.623   -1.739    3.290
+ BSF           CAG    C    CR16      0.000     -1.072   -3.007    4.044
+ BSF           HAG    H    H         0.000     -1.430   -2.965    5.065
+ BSF           CAJ    C    CR16      0.000     -0.156   -3.113    1.437
+ BSF           HAJ    H    H         0.000      0.202   -3.155    0.416
+ BSF           CAH    C    CR16      0.000      0.513   -3.799    2.433
+ BSF           HAH    H    H         0.000      1.397   -4.378    2.193
+ BSF           CAF    C    CR16      0.000      0.054   -3.748    3.737
+ BSF           HAF    H    H         0.000      0.577   -4.287    4.517
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BSF      OAB    n/a    SAP    START
+ BSF      SAP    OAB    CAL    .
+ BSF      OAA    SAP    .      .
+ BSF      NAM    SAP    CAK    .
+ BSF      HNAM   NAM    .      .
+ BSF      CAK    NAM    BOR    .
+ BSF      HAK    CAK    .      .
+ BSF      HAKA   CAK    .      .
+ BSF      BOR    CAK    OAC    .
+ BSF      OAD    BOR    H12    .
+ BSF      H12    OAD    .      .
+ BSF      OAC    BOR    H11    .
+ BSF      H11    OAC    .      .
+ BSF      CAL    SAP    CAN    .
+ BSF      HAL    CAL    .      .
+ BSF      HALA   CAL    .      .
+ BSF      CAN    CAL    CAJ    .
+ BSF      CAI    CAN    CAG    .
+ BSF      HAI    CAI    .      .
+ BSF      CAG    CAI    HAG    .
+ BSF      HAG    CAG    .      .
+ BSF      CAJ    CAN    CAH    .
+ BSF      HAJ    CAJ    .      .
+ BSF      CAH    CAJ    CAF    .
+ BSF      HAH    CAH    .      .
+ BSF      CAF    CAH    HAF    .
+ BSF      HAF    CAF    .      END
+ BSF      CAF    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BSF      OAA    SAP       double      1.436    0.020
+ BSF      SAP    OAB       double      1.436    0.020
+ BSF      OAC    BOR       single      1.535    0.020
+ BSF      OAD    BOR       single      1.535    0.020
+ BSF      CAF    CAG       double      1.390    0.020
+ BSF      CAF    CAH       single      1.390    0.020
+ BSF      HAF    CAF       single      1.083    0.020
+ BSF      CAG    CAI       single      1.390    0.020
+ BSF      HAG    CAG       single      1.083    0.020
+ BSF      CAH    CAJ       double      1.390    0.020
+ BSF      HAH    CAH       single      1.083    0.020
+ BSF      CAI    CAN       double      1.390    0.020
+ BSF      HAI    CAI       single      1.083    0.020
+ BSF      CAJ    CAN       single      1.390    0.020
+ BSF      HAJ    CAJ       single      1.083    0.020
+ BSF      CAK    NAM       single      1.450    0.020
+ BSF      BOR    CAK       single      1.600    0.020
+ BSF      HAK    CAK       single      1.092    0.020
+ BSF      HAKA   CAK       single      1.092    0.020
+ BSF      CAN    CAL       single      1.511    0.020
+ BSF      CAL    SAP       single      1.662    0.020
+ BSF      HAL    CAL       single      1.092    0.020
+ BSF      HALA   CAL       single      1.092    0.020
+ BSF      NAM    SAP       single      1.600    0.020
+ BSF      HNAM   NAM       single      1.010    0.020
+ BSF      H11    OAC       single      0.967    0.020
+ BSF      H12    OAD       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BSF      OAB    SAP    OAA     109.500    3.000
+ BSF      OAB    SAP    NAM     109.500    3.000
+ BSF      OAB    SAP    CAL     109.500    3.000
+ BSF      OAA    SAP    NAM     109.500    3.000
+ BSF      OAA    SAP    CAL     109.500    3.000
+ BSF      NAM    SAP    CAL     109.500    3.000
+ BSF      SAP    NAM    HNAM    120.000    3.000
+ BSF      SAP    NAM    CAK     120.000    3.000
+ BSF      HNAM   NAM    CAK     118.500    3.000
+ BSF      NAM    CAK    HAK     109.470    3.000
+ BSF      NAM    CAK    HAKA    109.470    3.000
+ BSF      NAM    CAK    BOR     109.500    3.000
+ BSF      HAK    CAK    HAKA    107.900    3.000
+ BSF      HAK    CAK    BOR     109.500    3.000
+ BSF      HAKA   CAK    BOR     109.500    3.000
+ BSF      CAK    BOR    OAD     120.000    3.000
+ BSF      CAK    BOR    OAC     120.000    3.000
+ BSF      OAD    BOR    OAC     120.000    3.000
+ BSF      BOR    OAD    H12     120.000    3.000
+ BSF      BOR    OAC    H11     120.000    3.000
+ BSF      SAP    CAL    HAL     109.500    3.000
+ BSF      SAP    CAL    HALA    109.500    3.000
+ BSF      SAP    CAL    CAN     109.500    3.000
+ BSF      HAL    CAL    HALA    107.900    3.000
+ BSF      HAL    CAL    CAN     109.470    3.000
+ BSF      HALA   CAL    CAN     109.470    3.000
+ BSF      CAL    CAN    CAI     120.000    3.000
+ BSF      CAL    CAN    CAJ     120.000    3.000
+ BSF      CAI    CAN    CAJ     120.000    3.000
+ BSF      CAN    CAI    HAI     120.000    3.000
+ BSF      CAN    CAI    CAG     120.000    3.000
+ BSF      HAI    CAI    CAG     120.000    3.000
+ BSF      CAI    CAG    HAG     120.000    3.000
+ BSF      CAI    CAG    CAF     120.000    3.000
+ BSF      HAG    CAG    CAF     120.000    3.000
+ BSF      CAN    CAJ    HAJ     120.000    3.000
+ BSF      CAN    CAJ    CAH     120.000    3.000
+ BSF      HAJ    CAJ    CAH     120.000    3.000
+ BSF      CAJ    CAH    HAH     120.000    3.000
+ BSF      CAJ    CAH    CAF     120.000    3.000
+ BSF      HAH    CAH    CAF     120.000    3.000
+ BSF      CAH    CAF    HAF     120.000    3.000
+ BSF      CAH    CAF    CAG     120.000    3.000
+ BSF      HAF    CAF    CAG     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BSF      var_1    OAB    SAP    NAM    CAK     -178.947   20.000   1
+ BSF      var_2    SAP    NAM    CAK    BOR     -175.137   20.000   3
+ BSF      var_3    NAM    CAK    BOR    OAC       94.878   20.000   1
+ BSF      var_4    CAK    BOR    OAD    H12      179.997   20.000   1
+ BSF      var_5    CAK    BOR    OAC    H11       -5.041   20.000   1
+ BSF      var_6    OAB    SAP    CAL    CAN       68.313   20.000   1
+ BSF      var_7    SAP    CAL    CAN    CAJ      -90.044   20.000   2
+ BSF      CONST_1  CAL    CAN    CAI    CAG      180.000    0.000   0
+ BSF      CONST_2  CAN    CAI    CAG    CAF        0.000    0.000   0
+ BSF      CONST_3  CAL    CAN    CAJ    CAH      180.000    0.000   0
+ BSF      CONST_4  CAN    CAJ    CAH    CAF        0.000    0.000   0
+ BSF      CONST_5  CAJ    CAH    CAF    CAG        0.000    0.000   0
+ BSF      CONST_6  CAH    CAF    CAG    CAI        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BSF      chir_01  SAP    OAA    OAB    CAL       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BSF      plan-1    CAF       0.020
+ BSF      plan-1    CAG       0.020
+ BSF      plan-1    CAH       0.020
+ BSF      plan-1    HAF       0.020
+ BSF      plan-1    CAI       0.020
+ BSF      plan-1    CAJ       0.020
+ BSF      plan-1    CAN       0.020
+ BSF      plan-1    HAG       0.020
+ BSF      plan-1    HAH       0.020
+ BSF      plan-1    HAI       0.020
+ BSF      plan-1    HAJ       0.020
+ BSF      plan-1    CAL       0.020
+ BSF      plan-2    NAM       0.020
+ BSF      plan-2    CAK       0.020
+ BSF      plan-2    SAP       0.020
+ BSF      plan-2    HNAM      0.020
+# ------------------------------------------------------

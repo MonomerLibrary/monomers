@@ -1,0 +1,222 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+B23      B23 '5-(2-NITROPHENYL)-2-FUROIC ACID     ' non-polymer        23  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_B23
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ B23           OAP    O    O         0.000      0.000    0.000    0.000
+ B23           NAL    N    N         1.000     -0.577    0.980    0.437
+ B23           OAQ    O    O        -1.000      0.060    1.957    0.787
+ B23           CAH    C    CR6       0.000     -2.054    0.984    0.542
+ B23           CAK    C    CR16      0.000     -2.709    2.094    1.031
+ B23           HAK    H    H         0.000     -2.142    2.966    1.334
+ B23           CAI    C    CR16      0.000     -4.089    2.097    1.135
+ B23           HAI    H    H         0.000     -4.599    2.970    1.524
+ B23           CAJ    C    CR16      0.000     -4.821    0.989    0.744
+ B23           HAJ    H    H         0.000     -5.900    0.998    0.828
+ B23           CAG    C    CR16      0.000     -4.179   -0.126    0.248
+ B23           HAG    H    H         0.000     -4.753   -0.993   -0.058
+ B23           CAF    C    CR6       0.000     -2.786   -0.135    0.140
+ B23           CAB    C    CR5       0.000     -2.092   -1.326   -0.390
+ B23           OAM    O    O2        0.000     -1.164   -1.323   -1.360
+ B23           CAD    C    CR15      0.000     -2.289   -2.613    0.024
+ B23           HAD    H    H         0.000     -2.974   -2.943    0.794
+ B23           CAC    C    CR15      0.000     -1.438   -3.424   -0.735
+ B23           HAC    H    H         0.000     -1.341   -4.500   -0.666
+ B23           CAA    C    CR5       0.000     -0.748   -2.588   -1.587
+ B23           CAE    C    C         0.000      0.256   -3.000   -2.568
+ B23           OAN    O    OC       -0.500      0.812   -2.144   -3.291
+ B23           OAO    O    OC       -0.500      0.558   -4.209   -2.684
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ B23      OAP    n/a    NAL    START
+ B23      NAL    OAP    CAH    .
+ B23      OAQ    NAL    .      .
+ B23      CAH    NAL    CAF    .
+ B23      CAK    CAH    CAI    .
+ B23      HAK    CAK    .      .
+ B23      CAI    CAK    CAJ    .
+ B23      HAI    CAI    .      .
+ B23      CAJ    CAI    CAG    .
+ B23      HAJ    CAJ    .      .
+ B23      CAG    CAJ    HAG    .
+ B23      HAG    CAG    .      .
+ B23      CAF    CAH    CAB    .
+ B23      CAB    CAF    CAD    .
+ B23      OAM    CAB    .      .
+ B23      CAD    CAB    CAC    .
+ B23      HAD    CAD    .      .
+ B23      CAC    CAD    CAA    .
+ B23      HAC    CAC    .      .
+ B23      CAA    CAC    CAE    .
+ B23      CAE    CAA    OAO    .
+ B23      OAN    CAE    .      .
+ B23      OAO    CAE    .      END
+ B23      CAA    OAM    .    ADD
+ B23      CAF    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ B23      OAN    CAE       deloc       1.250    0.020
+ B23      OAO    CAE       deloc       1.250    0.020
+ B23      CAE    CAA       single      1.490    0.020
+ B23      CAA    OAM       single      1.370    0.020
+ B23      CAA    CAC       double      1.387    0.020
+ B23      OAM    CAB       single      1.370    0.020
+ B23      CAC    CAD       single      1.380    0.020
+ B23      HAC    CAC       single      1.083    0.020
+ B23      CAD    CAB       double      1.387    0.020
+ B23      HAD    CAD       single      1.083    0.020
+ B23      CAB    CAF       single      1.490    0.020
+ B23      CAF    CAG       single      1.390    0.020
+ B23      CAF    CAH       double      1.487    0.020
+ B23      CAG    CAJ       double      1.390    0.020
+ B23      HAG    CAG       single      1.083    0.020
+ B23      CAJ    CAI       single      1.390    0.020
+ B23      HAJ    CAJ       single      1.083    0.020
+ B23      CAI    CAK       double      1.390    0.020
+ B23      HAI    CAI       single      1.083    0.020
+ B23      CAK    CAH       single      1.390    0.020
+ B23      HAK    CAK       single      1.083    0.020
+ B23      CAH    NAL       single      1.400    0.020
+ B23      OAQ    NAL       single      1.400    0.020
+ B23      NAL    OAP       double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ B23      OAP    NAL    OAQ     120.000    3.000
+ B23      OAP    NAL    CAH     120.000    3.000
+ B23      OAQ    NAL    CAH     120.000    3.000
+ B23      NAL    CAH    CAK     120.000    3.000
+ B23      NAL    CAH    CAF     120.000    3.000
+ B23      CAK    CAH    CAF     120.000    3.000
+ B23      CAH    CAK    HAK     120.000    3.000
+ B23      CAH    CAK    CAI     120.000    3.000
+ B23      HAK    CAK    CAI     120.000    3.000
+ B23      CAK    CAI    HAI     120.000    3.000
+ B23      CAK    CAI    CAJ     120.000    3.000
+ B23      HAI    CAI    CAJ     120.000    3.000
+ B23      CAI    CAJ    HAJ     120.000    3.000
+ B23      CAI    CAJ    CAG     120.000    3.000
+ B23      HAJ    CAJ    CAG     120.000    3.000
+ B23      CAJ    CAG    HAG     120.000    3.000
+ B23      CAJ    CAG    CAF     120.000    3.000
+ B23      HAG    CAG    CAF     120.000    3.000
+ B23      CAH    CAF    CAB     120.000    3.000
+ B23      CAH    CAF    CAG     120.000    3.000
+ B23      CAB    CAF    CAG     120.000    3.000
+ B23      CAF    CAB    OAM     126.000    3.000
+ B23      CAF    CAB    CAD     126.000    3.000
+ B23      OAM    CAB    CAD     108.000    3.000
+ B23      CAB    OAM    CAA     108.000    3.000
+ B23      CAB    CAD    HAD     126.000    3.000
+ B23      CAB    CAD    CAC     108.000    3.000
+ B23      HAD    CAD    CAC     126.000    3.000
+ B23      CAD    CAC    HAC     126.000    3.000
+ B23      CAD    CAC    CAA     108.000    3.000
+ B23      HAC    CAC    CAA     126.000    3.000
+ B23      CAC    CAA    CAE     126.000    3.000
+ B23      CAC    CAA    OAM     108.000    3.000
+ B23      CAE    CAA    OAM     108.000    3.000
+ B23      CAA    CAE    OAN     120.000    3.000
+ B23      CAA    CAE    OAO     120.000    3.000
+ B23      OAN    CAE    OAO     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ B23      var_1    OAP    NAL    CAH    CAF        0.016   20.000   1
+ B23      CONST_1  NAL    CAH    CAK    CAI      180.000    0.000   0
+ B23      CONST_2  CAH    CAK    CAI    CAJ        0.000    0.000   0
+ B23      CONST_3  CAK    CAI    CAJ    CAG        0.000    0.000   0
+ B23      CONST_4  CAI    CAJ    CAG    CAF        0.000    0.000   0
+ B23      CONST_5  NAL    CAH    CAF    CAB        0.000    0.000   0
+ B23      CONST_6  CAH    CAF    CAG    CAJ        0.000    0.000   0
+ B23      var_2    CAH    CAF    CAB    CAD      129.851   20.000   1
+ B23      CONST_7  CAF    CAB    OAM    CAA      180.000    0.000   0
+ B23      CONST_8  CAF    CAB    CAD    CAC      180.000    0.000   0
+ B23      CONST_9  CAB    CAD    CAC    CAA        0.000    0.000   0
+ B23      CONST_10 CAD    CAC    CAA    CAE      180.000    0.000   0
+ B23      CONST_11 CAC    CAA    OAM    CAB        0.000    0.000   0
+ B23      var_3    CAC    CAA    CAE    OAO       -0.174   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ B23      plan-1    CAE       0.020
+ B23      plan-1    OAN       0.020
+ B23      plan-1    OAO       0.020
+ B23      plan-1    CAA       0.020
+ B23      plan-2    CAA       0.020
+ B23      plan-2    CAE       0.020
+ B23      plan-2    OAM       0.020
+ B23      plan-2    CAC       0.020
+ B23      plan-2    CAD       0.020
+ B23      plan-2    CAB       0.020
+ B23      plan-2    HAC       0.020
+ B23      plan-2    HAD       0.020
+ B23      plan-2    CAF       0.020
+ B23      plan-3    CAF       0.020
+ B23      plan-3    CAB       0.020
+ B23      plan-3    CAG       0.020
+ B23      plan-3    CAH       0.020
+ B23      plan-3    CAJ       0.020
+ B23      plan-3    CAI       0.020
+ B23      plan-3    CAK       0.020
+ B23      plan-3    HAG       0.020
+ B23      plan-3    HAJ       0.020
+ B23      plan-3    HAI       0.020
+ B23      plan-3    HAK       0.020
+ B23      plan-3    NAL       0.020
+ B23      plan-4    NAL       0.020
+ B23      plan-4    CAH       0.020
+ B23      plan-4    OAQ       0.020
+ B23      plan-4    OAP       0.020
+# ------------------------------------------------------

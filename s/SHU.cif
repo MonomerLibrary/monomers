@@ -1,0 +1,180 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SHU      SHU '4,6-DIOXOHEPTANOIC ACID             ' non-polymer        20  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SHU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SHU           O4L    O    O         0.000      0.000    0.000    0.000
+ SHU           C4     C    C         0.000     -1.177    0.000    0.269
+ SHU           C5     C    CH2       0.000     -1.621    0.000    1.709
+ SHU           HC51   H    H         0.000     -2.221   -0.891    1.904
+ SHU           HC52   H    H         0.000     -2.221    0.891    1.904
+ SHU           C6     C    C         0.000     -0.411    0.000    2.607
+ SHU           C7     C    CH3       0.000     -0.584    0.000    4.105
+ SHU           HC3    H    H         0.000     -1.121    0.865    4.400
+ SHU           HC2    H    H         0.000     -1.121   -0.865    4.400
+ SHU           HC1    H    H         0.000      0.367    0.000    4.572
+ SHU           O6     O    O         0.000      0.696    0.000    2.128
+ SHU           C3     C    CH2       0.000     -2.201    0.000   -0.835
+ SHU           HC31   H    H         0.000     -2.827    0.891   -0.750
+ SHU           HC32   H    H         0.000     -2.827   -0.891   -0.750
+ SHU           C2     C    CH2       0.000     -1.492    0.000   -2.190
+ SHU           HC21   H    H         0.000     -0.866   -0.891   -2.272
+ SHU           HC22   H    H         0.000     -0.866    0.891   -2.272
+ SHU           C1     C    C         0.000     -2.516    0.000   -3.295
+ SHU           O1     O    OC       -0.500     -3.736    0.000   -3.016
+ SHU           OH1    O    OC       -0.500     -2.148    0.000   -4.490
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SHU      O4L    n/a    C4     START
+ SHU      C4     O4L    C3     .
+ SHU      C5     C4     C6     .
+ SHU      HC51   C5     .      .
+ SHU      HC52   C5     .      .
+ SHU      C6     C5     O6     .
+ SHU      C7     C6     HC1    .
+ SHU      HC3    C7     .      .
+ SHU      HC2    C7     .      .
+ SHU      HC1    C7     .      .
+ SHU      O6     C6     .      .
+ SHU      C3     C4     C2     .
+ SHU      HC31   C3     .      .
+ SHU      HC32   C3     .      .
+ SHU      C2     C3     C1     .
+ SHU      HC21   C2     .      .
+ SHU      HC22   C2     .      .
+ SHU      C1     C2     OH1    .
+ SHU      O1     C1     .      .
+ SHU      OH1    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SHU      C5     C4        single      1.510    0.020
+ SHU      C3     C4        single      1.510    0.020
+ SHU      C4     O4L       double      1.220    0.020
+ SHU      C6     C5        single      1.510    0.020
+ SHU      HC51   C5        single      1.092    0.020
+ SHU      HC52   C5        single      1.092    0.020
+ SHU      O6     C6        double      1.220    0.020
+ SHU      C7     C6        single      1.500    0.020
+ SHU      HC1    C7        single      1.059    0.020
+ SHU      HC2    C7        single      1.059    0.020
+ SHU      HC3    C7        single      1.059    0.020
+ SHU      C2     C3        single      1.524    0.020
+ SHU      HC31   C3        single      1.092    0.020
+ SHU      HC32   C3        single      1.092    0.020
+ SHU      C1     C2        single      1.510    0.020
+ SHU      HC21   C2        single      1.092    0.020
+ SHU      HC22   C2        single      1.092    0.020
+ SHU      O1     C1        deloc       1.250    0.020
+ SHU      OH1    C1        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SHU      O4L    C4     C5      120.500    3.000
+ SHU      O4L    C4     C3      120.500    3.000
+ SHU      C5     C4     C3      120.000    3.000
+ SHU      C4     C5     HC51    109.470    3.000
+ SHU      C4     C5     HC52    109.470    3.000
+ SHU      C4     C5     C6      109.470    3.000
+ SHU      HC51   C5     HC52    107.900    3.000
+ SHU      HC51   C5     C6      109.470    3.000
+ SHU      HC52   C5     C6      109.470    3.000
+ SHU      C5     C6     C7      120.000    3.000
+ SHU      C5     C6     O6      120.500    3.000
+ SHU      C7     C6     O6      123.000    3.000
+ SHU      C6     C7     HC3     109.470    3.000
+ SHU      C6     C7     HC2     109.470    3.000
+ SHU      C6     C7     HC1     109.470    3.000
+ SHU      HC3    C7     HC2     109.470    3.000
+ SHU      HC3    C7     HC1     109.470    3.000
+ SHU      HC2    C7     HC1     109.470    3.000
+ SHU      C4     C3     HC31    109.470    3.000
+ SHU      C4     C3     HC32    109.470    3.000
+ SHU      C4     C3     C2      109.470    3.000
+ SHU      HC31   C3     HC32    107.900    3.000
+ SHU      HC31   C3     C2      109.470    3.000
+ SHU      HC32   C3     C2      109.470    3.000
+ SHU      C3     C2     HC21    109.470    3.000
+ SHU      C3     C2     HC22    109.470    3.000
+ SHU      C3     C2     C1      109.470    3.000
+ SHU      HC21   C2     HC22    107.900    3.000
+ SHU      HC21   C2     C1      109.470    3.000
+ SHU      HC22   C2     C1      109.470    3.000
+ SHU      C2     C1     O1      118.500    3.000
+ SHU      C2     C1     OH1     118.500    3.000
+ SHU      O1     C1     OH1     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SHU      var_1    O4L    C4     C5     C6         0.000   20.000   3
+ SHU      var_2    C4     C5     C6     O6         0.000   20.000   3
+ SHU      var_3    C5     C6     C7     HC1      180.000   20.000   1
+ SHU      var_4    O4L    C4     C3     C2         0.000   20.000   3
+ SHU      var_5    C4     C3     C2     C1       180.000   20.000   3
+ SHU      var_6    C3     C2     C1     OH1      180.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SHU      plan-1    C4        0.020
+ SHU      plan-1    C5        0.020
+ SHU      plan-1    C3        0.020
+ SHU      plan-1    O4L       0.020
+ SHU      plan-2    C6        0.020
+ SHU      plan-2    C5        0.020
+ SHU      plan-2    O6        0.020
+ SHU      plan-2    C7        0.020
+ SHU      plan-3    C1        0.020
+ SHU      plan-3    C2        0.020
+ SHU      plan-3    O1        0.020
+ SHU      plan-3    OH1       0.020
+# ------------------------------------------------------

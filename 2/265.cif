@@ -1,0 +1,139 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+265      265 '2-nitrothiophene                    ' non-polymer        11   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_265
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 265           OAA    O    O         0.000      0.000    0.000    0.000
+ 265           NAH    N    N         1.000     -0.836   -0.887    0.000
+ 265           OAB    O    O        -1.000     -0.486   -2.052    0.000
+ 265           CAG    C    CR5       0.000     -2.276   -0.545   -0.001
+ 265           CAE    C    CR15      0.000     -3.276   -1.428   -0.001
+ 265           HAE    H    H         0.000     -3.108   -2.498   -0.002
+ 265           SAF    S    S2        0.000     -2.932    1.088    0.000
+ 265           CAD    C    CR15      0.000     -4.574    0.460    0.000
+ 265           HAD    H    H         0.000     -5.473    1.063    0.000
+ 265           CAC    C    CR15      0.000     -4.544   -0.874    0.000
+ 265           HAC    H    H         0.000     -5.443   -1.477    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 265      OAA    n/a    NAH    START
+ 265      NAH    OAA    CAG    .
+ 265      OAB    NAH    .      .
+ 265      CAG    NAH    SAF    .
+ 265      CAE    CAG    HAE    .
+ 265      HAE    CAE    .      .
+ 265      SAF    CAG    CAD    .
+ 265      CAD    SAF    CAC    .
+ 265      HAD    CAD    .      .
+ 265      CAC    CAD    HAC    .
+ 265      HAC    CAC    .      END
+ 265      CAE    CAC    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 265      CAE    CAC       single      1.380    0.020
+ 265      CAE    CAG       double      1.387    0.020
+ 265      CAC    CAD       double      1.380    0.020
+ 265      CAD    SAF       single      1.745    0.020
+ 265      SAF    CAG       single      1.745    0.020
+ 265      CAG    NAH       single      1.365    0.020
+ 265      OAB    NAH       single      1.400    0.020
+ 265      NAH    OAA       double      1.220    0.020
+ 265      HAE    CAE       single      1.083    0.020
+ 265      HAC    CAC       single      1.083    0.020
+ 265      HAD    CAD       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 265      OAA    NAH    OAB     120.000    3.000
+ 265      OAA    NAH    CAG     120.000    3.000
+ 265      OAB    NAH    CAG     120.000    3.000
+ 265      NAH    CAG    CAE     108.000    3.000
+ 265      NAH    CAG    SAF     108.000    3.000
+ 265      CAE    CAG    SAF     108.000    3.000
+ 265      CAG    CAE    HAE     126.000    3.000
+ 265      CAG    CAE    CAC     108.000    3.000
+ 265      HAE    CAE    CAC     126.000    3.000
+ 265      CAG    SAF    CAD      90.951    3.000
+ 265      SAF    CAD    HAD     108.000    3.000
+ 265      SAF    CAD    CAC     108.000    3.000
+ 265      HAD    CAD    CAC     126.000    3.000
+ 265      CAD    CAC    HAC     126.000    3.000
+ 265      CAD    CAC    CAE     108.000    3.000
+ 265      HAC    CAC    CAE     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 265      var_1    OAA    NAH    CAG    SAF       -0.090   20.000   1
+ 265      CONST_1  NAH    CAG    CAE    CAC      180.000    0.000   0
+ 265      CONST_2  CAG    CAE    CAC    CAD        0.000    0.000   0
+ 265      CONST_3  NAH    CAG    SAF    CAD      180.000    0.000   0
+ 265      CONST_4  CAG    SAF    CAD    CAC        0.000    0.000   0
+ 265      CONST_5  SAF    CAD    CAC    CAE        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 265      plan-1    CAE       0.020
+ 265      plan-1    CAC       0.020
+ 265      plan-1    CAG       0.020
+ 265      plan-1    HAE       0.020
+ 265      plan-1    CAD       0.020
+ 265      plan-1    SAF       0.020
+ 265      plan-1    HAC       0.020
+ 265      plan-1    HAD       0.020
+ 265      plan-1    NAH       0.020
+ 265      plan-2    NAH       0.020
+ 265      plan-2    CAG       0.020
+ 265      plan-2    OAB       0.020
+ 265      plan-2    OAA       0.020
+# ------------------------------------------------------

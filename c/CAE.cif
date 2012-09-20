@@ -1,0 +1,234 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CAE      CAE 'CAMPHANE                            ' non-polymer        28  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CAE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CAE           C10    C    CH3       0.000      0.000    0.000    0.000
+ CAE           H101   H    H         0.000      0.769    0.024   -0.728
+ CAE           H102   H    H         0.000      0.078    0.854    0.623
+ CAE           H103   H    H         0.000      0.100   -0.875    0.588
+ CAE           C1     C    CT        0.000     -1.363   -0.004   -0.695
+ CAE           C7     C    CT        0.000     -2.620   -0.014    0.244
+ CAE           C8     C    CH3       0.000     -2.696   -1.289    1.086
+ CAE           H83    H    H         0.000     -2.547   -2.134    0.465
+ CAE           H82    H    H         0.000     -1.945   -1.266    1.834
+ CAE           H81    H    H         0.000     -3.648   -1.354    1.546
+ CAE           C9     C    CH3       0.000     -2.700    1.243    1.111
+ CAE           H93    H    H         0.000     -1.949    1.206    1.857
+ CAE           H92    H    H         0.000     -2.554    2.100    0.506
+ CAE           H91    H    H         0.000     -3.653    1.294    1.571
+ CAE           C4     C    CH1       0.000     -3.687   -0.004   -0.907
+ CAE           H4     H    H         0.000     -4.740   -0.009   -0.593
+ CAE           C5     C    CH2       0.000     -3.214   -1.228   -1.749
+ CAE           H51    H    H         0.000     -3.490   -1.127   -2.801
+ CAE           H52    H    H         0.000     -3.613   -2.167   -1.358
+ CAE           C6     C    CH2       0.000     -1.654   -1.227   -1.615
+ CAE           H62    H    H         0.000     -1.156   -1.087   -2.577
+ CAE           H61    H    H         0.000     -1.279   -2.137   -1.141
+ CAE           C3     C    CH2       0.000     -3.217    1.237   -1.724
+ CAE           H31    H    H         0.000     -3.621    2.166   -1.318
+ CAE           H32    H    H         0.000     -3.487    1.154   -2.779
+ CAE           C2     C    CH2       0.000     -1.678    1.237   -1.584
+ CAE           H22    H    H         0.000     -1.317    2.142   -1.090
+ CAE           H21    H    H         0.000     -1.183    1.129   -2.551
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CAE      C10    n/a    C1     START
+ CAE      H101   C10    .      .
+ CAE      H102   C10    .      .
+ CAE      H103   C10    .      .
+ CAE      C1     C10    C7     .
+ CAE      C7     C1     C4     .
+ CAE      C8     C7     H81    .
+ CAE      H83    C8     .      .
+ CAE      H82    C8     .      .
+ CAE      H81    C8     .      .
+ CAE      C9     C7     H91    .
+ CAE      H93    C9     .      .
+ CAE      H92    C9     .      .
+ CAE      H91    C9     .      .
+ CAE      C4     C7     C3     .
+ CAE      H4     C4     .      .
+ CAE      C5     C4     C6     .
+ CAE      H51    C5     .      .
+ CAE      H52    C5     .      .
+ CAE      C6     C5     H61    .
+ CAE      H62    C6     .      .
+ CAE      H61    C6     .      .
+ CAE      C3     C4     C2     .
+ CAE      H31    C3     .      .
+ CAE      H32    C3     .      .
+ CAE      C2     C3     H21    .
+ CAE      H22    C2     .      .
+ CAE      H21    C2     .      END
+ CAE      C1     C2     .    ADD
+ CAE      C1     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CAE      C1     C2        single      1.524    0.020
+ CAE      C1     C6        single      1.524    0.020
+ CAE      C7     C1        single      1.524    0.020
+ CAE      C1     C10       single      1.524    0.020
+ CAE      C2     C3        single      1.524    0.020
+ CAE      H21    C2        single      1.092    0.020
+ CAE      H22    C2        single      1.092    0.020
+ CAE      C3     C4        single      1.524    0.020
+ CAE      H31    C3        single      1.092    0.020
+ CAE      H32    C3        single      1.092    0.020
+ CAE      C5     C4        single      1.524    0.020
+ CAE      C4     C7        single      1.524    0.020
+ CAE      H4     C4        single      1.099    0.020
+ CAE      C6     C5        single      1.524    0.020
+ CAE      H51    C5        single      1.092    0.020
+ CAE      H52    C5        single      1.092    0.020
+ CAE      H61    C6        single      1.092    0.020
+ CAE      H62    C6        single      1.092    0.020
+ CAE      C8     C7        single      1.524    0.020
+ CAE      C9     C7        single      1.524    0.020
+ CAE      H81    C8        single      1.059    0.020
+ CAE      H82    C8        single      1.059    0.020
+ CAE      H83    C8        single      1.059    0.020
+ CAE      H91    C9        single      1.059    0.020
+ CAE      H92    C9        single      1.059    0.020
+ CAE      H93    C9        single      1.059    0.020
+ CAE      H101   C10       single      1.059    0.020
+ CAE      H102   C10       single      1.059    0.020
+ CAE      H103   C10       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CAE      H101   C10    H102    109.470    3.000
+ CAE      H101   C10    H103    109.470    3.000
+ CAE      H102   C10    H103    109.470    3.000
+ CAE      H101   C10    C1      109.470    3.000
+ CAE      H102   C10    C1      109.470    3.000
+ CAE      H103   C10    C1      109.470    3.000
+ CAE      C10    C1     C7      111.000    3.000
+ CAE      C10    C1     C2      111.000    3.000
+ CAE      C10    C1     C6      111.000    3.000
+ CAE      C2     C1     C6      111.000    3.000
+ CAE      C7     C1     C2      111.000    3.000
+ CAE      C7     C1     C6      111.000    3.000
+ CAE      C1     C7     C8      111.000    3.000
+ CAE      C1     C7     C9      111.000    3.000
+ CAE      C1     C7     C4      111.000    3.000
+ CAE      C8     C7     C9      111.000    3.000
+ CAE      C8     C7     C4      111.000    3.000
+ CAE      C9     C7     C4      111.000    3.000
+ CAE      C7     C8     H83     109.470    3.000
+ CAE      C7     C8     H82     109.470    3.000
+ CAE      C7     C8     H81     109.470    3.000
+ CAE      H83    C8     H82     109.470    3.000
+ CAE      H83    C8     H81     109.470    3.000
+ CAE      H82    C8     H81     109.470    3.000
+ CAE      C7     C9     H93     109.470    3.000
+ CAE      C7     C9     H92     109.470    3.000
+ CAE      C7     C9     H91     109.470    3.000
+ CAE      H93    C9     H92     109.470    3.000
+ CAE      H93    C9     H91     109.470    3.000
+ CAE      H92    C9     H91     109.470    3.000
+ CAE      C7     C4     H4      108.340    3.000
+ CAE      C7     C4     C5      111.000    3.000
+ CAE      C7     C4     C3      111.000    3.000
+ CAE      H4     C4     C5      108.340    3.000
+ CAE      H4     C4     C3      108.340    3.000
+ CAE      C5     C4     C3      109.470    3.000
+ CAE      C4     C5     H51     109.470    3.000
+ CAE      C4     C5     H52     109.470    3.000
+ CAE      C4     C5     C6      111.000    3.000
+ CAE      H51    C5     H52     107.900    3.000
+ CAE      H51    C5     C6      109.470    3.000
+ CAE      H52    C5     C6      109.470    3.000
+ CAE      C5     C6     H62     109.470    3.000
+ CAE      C5     C6     H61     109.470    3.000
+ CAE      C5     C6     C1      111.000    3.000
+ CAE      H62    C6     H61     107.900    3.000
+ CAE      H62    C6     C1      109.470    3.000
+ CAE      H61    C6     C1      109.470    3.000
+ CAE      C4     C3     H31     109.470    3.000
+ CAE      C4     C3     H32     109.470    3.000
+ CAE      C4     C3     C2      111.000    3.000
+ CAE      H31    C3     H32     107.900    3.000
+ CAE      H31    C3     C2      109.470    3.000
+ CAE      H32    C3     C2      109.470    3.000
+ CAE      C3     C2     H22     109.470    3.000
+ CAE      C3     C2     H21     109.470    3.000
+ CAE      C3     C2     C1      111.000    3.000
+ CAE      H22    C2     H21     107.900    3.000
+ CAE      H22    C2     C1      109.470    3.000
+ CAE      H21    C2     C1      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CAE      var_1    H103   C10    C1     C7        60.998   20.000   1
+ CAE      var_2    C10    C1     C2     C3      -150.000   20.000   1
+ CAE      var_3    C10    C1     C6     C5       150.000   20.000   1
+ CAE      var_4    C10    C1     C7     C4       179.643   20.000   1
+ CAE      var_5    C1     C7     C8     H81     -168.068   20.000   1
+ CAE      var_6    C1     C7     C9     H91      168.120   20.000   1
+ CAE      var_7    C1     C7     C4     C3       -53.584   20.000   1
+ CAE      var_8    C7     C4     C5     C6       -30.000   20.000   3
+ CAE      var_9    C4     C5     C6     C1         0.000   20.000   3
+ CAE      var_10   C7     C4     C3     C2        30.000   20.000   3
+ CAE      var_11   C4     C3     C2     C1         0.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CAE      chir_01  C1     C2     C6     C7        positiv
+ CAE      chir_02  C4     C3     C5     C7        negativ
+ CAE      chir_03  C7     C1     C4     C8        negativ
+# ------------------------------------------------------

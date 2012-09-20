@@ -1,0 +1,126 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GAI      GAI 'GUANIDINE                           ' non-polymer         9   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GAI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GAI           N1     N    N         0.000      0.000    0.000    0.000
+ GAI           HN1    H    H         0.000      0.400    0.000   -0.874
+ GAI           C      C    C         0.000     -1.296    0.000    0.142
+ GAI           N3     N    NH2       0.000     -2.109    0.000   -0.965
+ GAI           HN32   H    H         0.000     -3.122    0.000   -0.867
+ GAI           HN31   H    H         0.000     -1.712    0.000   -1.903
+ GAI           N2     N    NH2       0.000     -1.847    0.000    1.401
+ GAI           HN22   H    H         0.000     -2.858    0.000    1.528
+ GAI           HN21   H    H         0.000     -1.255    0.000    2.230
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GAI      N1     n/a    C      START
+ GAI      HN1    N1     .      .
+ GAI      C      N1     N2     .
+ GAI      N3     C      HN31   .
+ GAI      HN32   N3     .      .
+ GAI      HN31   N3     .      .
+ GAI      N2     C      HN21   .
+ GAI      HN22   N2     .      .
+ GAI      HN21   N2     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GAI      C      N1        double      1.260    0.020
+ GAI      N2     C         single      1.332    0.020
+ GAI      N3     C         single      1.332    0.020
+ GAI      HN1    N1        single      0.954    0.020
+ GAI      HN21   N2        single      1.010    0.020
+ GAI      HN22   N2        single      1.010    0.020
+ GAI      HN31   N3        single      1.010    0.020
+ GAI      HN32   N3        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GAI      HN1    N1     C       120.000    3.000
+ GAI      N1     C      N3      120.000    3.000
+ GAI      N1     C      N2      120.000    3.000
+ GAI      N3     C      N2      120.000    3.000
+ GAI      C      N3     HN32    120.000    3.000
+ GAI      C      N3     HN31    120.000    3.000
+ GAI      HN32   N3     HN31    120.000    3.000
+ GAI      C      N2     HN22    120.000    3.000
+ GAI      C      N2     HN21    120.000    3.000
+ GAI      HN22   N2     HN21    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GAI      CONST_1  HN1    N1     C      N2       180.000    0.000   0
+ GAI      CONST_2  N1     C      N3     HN31       0.000    0.000   0
+ GAI      CONST_3  N1     C      N2     HN21       0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GAI      plan-1    C         0.020
+ GAI      plan-1    N1        0.020
+ GAI      plan-1    N2        0.020
+ GAI      plan-1    N3        0.020
+ GAI      plan-1    HN1       0.020
+ GAI      plan-1    HN22      0.020
+ GAI      plan-1    HN21      0.020
+ GAI      plan-1    HN32      0.020
+ GAI      plan-1    HN31      0.020
+ GAI      plan-2    N2        0.020
+ GAI      plan-2    C         0.020
+ GAI      plan-2    HN21      0.020
+ GAI      plan-2    HN22      0.020
+ GAI      plan-3    N3        0.020
+ GAI      plan-3    C         0.020
+ GAI      plan-3    HN31      0.020
+ GAI      plan-3    HN32      0.020
+# ------------------------------------------------------

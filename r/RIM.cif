@@ -1,0 +1,284 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+RIM      RIM 'RIMANTADINE                         ' non-polymer        34  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_RIM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ RIM           NC     N    NH2       0.000      0.000    0.000    0.000
+ RIM           HNC1   H    H         0.000      0.777   -0.240   -0.604
+ RIM           HNC2   H    H         0.000      0.058   -0.207    0.990
+ RIM           CB     C    CH1       0.000     -1.199    0.641   -0.554
+ RIM           HB     H    H         0.000     -1.103    0.718   -1.646
+ RIM           CA     C    CH3       0.000     -1.350    2.042    0.044
+ RIM           HA3    H    H         0.000     -0.498    2.623   -0.195
+ RIM           HA2    H    H         0.000     -2.216    2.506   -0.355
+ RIM           HA1    H    H         0.000     -1.443    1.970    1.097
+ RIM           CD     C    CT        0.000     -2.432   -0.196   -0.208
+ RIM           CE3    C    CH2       0.000     -2.566   -0.302    1.312
+ RIM           HE31   H    H         0.000     -2.673    0.698    1.738
+ RIM           HE32   H    H         0.000     -1.674   -0.778    1.723
+ RIM           CF3    C    CH1       0.000     -3.800   -1.140    1.658
+ RIM           HF3    H    H         0.000     -3.897   -1.216    2.750
+ RIM           CG2    C    CH2       0.000     -3.649   -2.539    1.060
+ RIM           HG21   H    H         0.000     -4.528   -3.137    1.308
+ RIM           HG22   H    H         0.000     -2.757   -3.016    1.473
+ RIM           CF2    C    CH1       0.000     -3.514   -2.433   -0.461
+ RIM           HF2    H    H         0.000     -3.406   -3.439   -0.890
+ RIM           CG1    C    CH2       0.000     -4.764   -1.764   -1.038
+ RIM           HG12   H    H         0.000     -5.643   -2.363   -0.792
+ RIM           HG11   H    H         0.000     -4.668   -1.689   -2.123
+ RIM           CE2    C    CH2       0.000     -2.282   -1.596   -0.806
+ RIM           HE22   H    H         0.000     -2.186   -1.521   -1.892
+ RIM           HE21   H    H         0.000     -1.390   -2.075   -0.396
+ RIM           CG3    C    CH2       0.000     -5.048   -0.470    1.081
+ RIM           HG31   H    H         0.000     -5.155    0.529    1.508
+ RIM           HG32   H    H         0.000     -5.928   -1.067    1.329
+ RIM           CF1    C    CH1       0.000     -4.914   -0.364   -0.439
+ RIM           HF1    H    H         0.000     -5.811    0.116   -0.853
+ RIM           CE1    C    CH2       0.000     -3.681    0.473   -0.785
+ RIM           HE12   H    H         0.000     -3.790    1.473   -0.359
+ RIM           HE11   H    H         0.000     -3.587    0.550   -1.870
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ RIM      NC     n/a    CB     START
+ RIM      HNC1   NC     .      .
+ RIM      HNC2   NC     .      .
+ RIM      CB     NC     CD     .
+ RIM      HB     CB     .      .
+ RIM      CA     CB     HA1    .
+ RIM      HA3    CA     .      .
+ RIM      HA2    CA     .      .
+ RIM      HA1    CA     .      .
+ RIM      CD     CB     CE3    .
+ RIM      CE3    CD     CF3    .
+ RIM      HE31   CE3    .      .
+ RIM      HE32   CE3    .      .
+ RIM      CF3    CE3    CG3    .
+ RIM      HF3    CF3    .      .
+ RIM      CG2    CF3    CF2    .
+ RIM      HG21   CG2    .      .
+ RIM      HG22   CG2    .      .
+ RIM      CF2    CG2    CE2    .
+ RIM      HF2    CF2    .      .
+ RIM      CG1    CF2    HG11   .
+ RIM      HG12   CG1    .      .
+ RIM      HG11   CG1    .      .
+ RIM      CE2    CF2    HE21   .
+ RIM      HE22   CE2    .      .
+ RIM      HE21   CE2    .      .
+ RIM      CG3    CF3    CF1    .
+ RIM      HG31   CG3    .      .
+ RIM      HG32   CG3    .      .
+ RIM      CF1    CG3    CE1    .
+ RIM      HF1    CF1    .      .
+ RIM      CE1    CF1    HE11   .
+ RIM      HE12   CE1    .      .
+ RIM      HE11   CE1    .      END
+ RIM      CD     CE1    .    ADD
+ RIM      CD     CE2    .    ADD
+ RIM      CF1    CG1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ RIM      CA     CB        single      1.524    0.020
+ RIM      HA1    CA        single      1.059    0.020
+ RIM      HA2    CA        single      1.059    0.020
+ RIM      HA3    CA        single      1.059    0.020
+ RIM      CD     CB        single      1.524    0.020
+ RIM      CB     NC        single      1.450    0.020
+ RIM      HB     CB        single      1.099    0.020
+ RIM      HNC1   NC        single      1.010    0.020
+ RIM      HNC2   NC        single      1.010    0.020
+ RIM      CD     CE2       single      1.524    0.020
+ RIM      CD     CE1       single      1.524    0.020
+ RIM      CE3    CD        single      1.524    0.020
+ RIM      CE1    CF1       single      1.524    0.020
+ RIM      HE11   CE1       single      1.092    0.020
+ RIM      HE12   CE1       single      1.092    0.020
+ RIM      CE2    CF2       single      1.524    0.020
+ RIM      HE21   CE2       single      1.092    0.020
+ RIM      HE22   CE2       single      1.092    0.020
+ RIM      CF3    CE3       single      1.524    0.020
+ RIM      HE31   CE3       single      1.092    0.020
+ RIM      HE32   CE3       single      1.092    0.020
+ RIM      CF1    CG1       single      1.524    0.020
+ RIM      CF1    CG3       single      1.524    0.020
+ RIM      HF1    CF1       single      1.099    0.020
+ RIM      CG1    CF2       single      1.524    0.020
+ RIM      CF2    CG2       single      1.524    0.020
+ RIM      HF2    CF2       single      1.099    0.020
+ RIM      CG2    CF3       single      1.524    0.020
+ RIM      CG3    CF3       single      1.524    0.020
+ RIM      HF3    CF3       single      1.099    0.020
+ RIM      HG11   CG1       single      1.092    0.020
+ RIM      HG12   CG1       single      1.092    0.020
+ RIM      HG21   CG2       single      1.092    0.020
+ RIM      HG22   CG2       single      1.092    0.020
+ RIM      HG31   CG3       single      1.092    0.020
+ RIM      HG32   CG3       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ RIM      HNC1   NC     HNC2    120.000    3.000
+ RIM      HNC1   NC     CB      120.000    3.000
+ RIM      HNC2   NC     CB      120.000    3.000
+ RIM      NC     CB     HB      109.470    3.000
+ RIM      NC     CB     CA      109.470    3.000
+ RIM      NC     CB     CD      109.500    3.000
+ RIM      HB     CB     CA      108.340    3.000
+ RIM      HB     CB     CD      108.340    3.000
+ RIM      CA     CB     CD      111.000    3.000
+ RIM      CB     CA     HA3     109.470    3.000
+ RIM      CB     CA     HA2     109.470    3.000
+ RIM      CB     CA     HA1     109.470    3.000
+ RIM      HA3    CA     HA2     109.470    3.000
+ RIM      HA3    CA     HA1     109.470    3.000
+ RIM      HA2    CA     HA1     109.470    3.000
+ RIM      CB     CD     CE3     111.000    3.000
+ RIM      CB     CD     CE1     111.000    3.000
+ RIM      CB     CD     CE2     111.000    3.000
+ RIM      CE1    CD     CE2     111.000    3.000
+ RIM      CE3    CD     CE1     111.000    3.000
+ RIM      CE3    CD     CE2     111.000    3.000
+ RIM      CD     CE3    HE31    109.470    3.000
+ RIM      CD     CE3    HE32    109.470    3.000
+ RIM      CD     CE3    CF3     111.000    3.000
+ RIM      HE31   CE3    HE32    107.900    3.000
+ RIM      HE31   CE3    CF3     109.470    3.000
+ RIM      HE32   CE3    CF3     109.470    3.000
+ RIM      CE3    CF3    HF3     108.340    3.000
+ RIM      CE3    CF3    CG2     109.470    3.000
+ RIM      CE3    CF3    CG3     109.470    3.000
+ RIM      HF3    CF3    CG2     108.340    3.000
+ RIM      HF3    CF3    CG3     108.340    3.000
+ RIM      CG2    CF3    CG3     109.470    3.000
+ RIM      CF3    CG2    HG21    109.470    3.000
+ RIM      CF3    CG2    HG22    109.470    3.000
+ RIM      CF3    CG2    CF2     111.000    3.000
+ RIM      HG21   CG2    HG22    107.900    3.000
+ RIM      HG21   CG2    CF2     109.470    3.000
+ RIM      HG22   CG2    CF2     109.470    3.000
+ RIM      CG2    CF2    HF2     108.340    3.000
+ RIM      CG2    CF2    CG1     109.470    3.000
+ RIM      CG2    CF2    CE2     109.470    3.000
+ RIM      HF2    CF2    CG1     108.340    3.000
+ RIM      HF2    CF2    CE2     108.340    3.000
+ RIM      CG1    CF2    CE2     109.470    3.000
+ RIM      CF2    CG1    HG12    109.470    3.000
+ RIM      CF2    CG1    HG11    109.470    3.000
+ RIM      CF2    CG1    CF1     111.000    3.000
+ RIM      HG12   CG1    HG11    107.900    3.000
+ RIM      HG12   CG1    CF1     109.470    3.000
+ RIM      HG11   CG1    CF1     109.470    3.000
+ RIM      CF2    CE2    HE22    109.470    3.000
+ RIM      CF2    CE2    HE21    109.470    3.000
+ RIM      CF2    CE2    CD      111.000    3.000
+ RIM      HE22   CE2    HE21    107.900    3.000
+ RIM      HE22   CE2    CD      109.470    3.000
+ RIM      HE21   CE2    CD      109.470    3.000
+ RIM      CF3    CG3    HG31    109.470    3.000
+ RIM      CF3    CG3    HG32    109.470    3.000
+ RIM      CF3    CG3    CF1     111.000    3.000
+ RIM      HG31   CG3    HG32    107.900    3.000
+ RIM      HG31   CG3    CF1     109.470    3.000
+ RIM      HG32   CG3    CF1     109.470    3.000
+ RIM      CG3    CF1    HF1     108.340    3.000
+ RIM      CG3    CF1    CE1     109.470    3.000
+ RIM      CG3    CF1    CG1     109.470    3.000
+ RIM      HF1    CF1    CE1     108.340    3.000
+ RIM      HF1    CF1    CG1     108.340    3.000
+ RIM      CE1    CF1    CG1     109.470    3.000
+ RIM      CF1    CE1    HE12    109.470    3.000
+ RIM      CF1    CE1    HE11    109.470    3.000
+ RIM      CF1    CE1    CD      111.000    3.000
+ RIM      HE12   CE1    HE11    107.900    3.000
+ RIM      HE12   CE1    CD      109.470    3.000
+ RIM      HE11   CE1    CD      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ RIM      var_1    HNC2   NC     CB     CD       -56.015   20.000   1
+ RIM      var_2    NC     CB     CA     HA1      -60.000   20.000   3
+ RIM      var_3    NC     CB     CD     CE3       60.000   20.000   1
+ RIM      var_4    CB     CD     CE1    CF1      180.000   20.000   1
+ RIM      var_5    CB     CD     CE2    CF2      180.000   20.000   1
+ RIM      var_6    CB     CD     CE3    CF3     -180.000   20.000   1
+ RIM      var_7    CD     CE3    CF3    CG3      -60.022   20.000   3
+ RIM      var_8    CE3    CF3    CG2    CF2      -60.026   20.000   3
+ RIM      var_9    CF3    CG2    CF2    CE2       60.022   20.000   3
+ RIM      var_10   CG2    CF2    CG1    CF1       60.000   20.000   3
+ RIM      var_11   CG2    CF2    CE2    CD       -60.000   20.000   3
+ RIM      var_12   CE3    CF3    CG3    CF1       60.036   20.000   3
+ RIM      var_13   CF3    CG3    CF1    CE1      -60.043   20.000   3
+ RIM      var_14   CG3    CF1    CG1    CF2      -60.000   20.000   3
+ RIM      var_15   CG3    CF1    CE1    CD        60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ RIM      chir_01  CB     CA     NC     CD        negativ
+ RIM      chir_02  CD     CB     CE1    CE2       negativ
+ RIM      chir_03  CF1    CE1    CG1    CG3       negativ
+ RIM      chir_04  CF2    CE2    CG1    CG2       positiv
+ RIM      chir_05  CF3    CE3    CG2    CG3       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ RIM      plan-1    NC        0.020
+ RIM      plan-1    CB        0.000
+ RIM      plan-1    HNC1      0.000
+ RIM      plan-1    HNC2      0.000
+# ------------------------------------------------------

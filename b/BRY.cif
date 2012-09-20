@@ -1,0 +1,272 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BRY      BRY '.                                   ' non-polymer        30  21 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BRY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BRY           BR1    BR   BR        0.000      0.000    0.000    0.000
+ BRY           C21    C    CR6       0.000     -1.218    0.016   -1.448
+ BRY           C20    C    CR16      0.000     -0.743    0.040   -2.749
+ BRY           H20    H    H         0.000      0.324    0.050   -2.931
+ BRY           C19    C    CR16      0.000     -1.619    0.051   -3.816
+ BRY           H19    H    H         0.000     -1.236    0.071   -4.829
+ BRY           C17    C    CR56      0.000     -2.991    0.036   -3.594
+ BRY           N16    N    NR15      0.000     -4.069    0.044   -4.473
+ BRY           H16    H    H         0.000     -3.981    0.062   -5.509
+ BRY           C15    C    CR5       0.000     -5.239    0.024   -3.813
+ BRY           O23    O    O         0.000     -6.345    0.024   -4.317
+ BRY           C22    C    CR16      0.000     -2.576   -0.004   -1.205
+ BRY           H22    H    H         0.000     -2.947   -0.030   -0.188
+ BRY           C18    C    CR56      0.000     -3.468    0.011   -2.275
+ BRY           C14    C    CR5       0.000     -4.941    0.003   -2.363
+ BRY           C13    C    CR5       0.000     -5.844   -0.021   -1.320
+ BRY           C2     C    CR5       0.000     -5.530    0.140    0.118
+ BRY           O1     O    O         0.000     -4.436    0.317    0.619
+ BRY           N4     N    NR15      0.000     -7.204   -0.204   -1.424
+ BRY           H4     H    H         0.000     -7.714   -0.347   -2.319
+ BRY           C3     C    CR56      0.000     -7.804   -0.171   -0.174
+ BRY           C5     C    CR16      0.000     -9.133   -0.308    0.212
+ BRY           H5     H    H         0.000     -9.898   -0.472   -0.537
+ BRY           C7     C    CR16      0.000     -9.480   -0.235    1.545
+ BRY           H7     H    H         0.000    -10.518   -0.342    1.835
+ BRY           C9     C    CR16      0.000     -8.514   -0.026    2.516
+ BRY           H9     H    H         0.000     -8.800    0.029    3.560
+ BRY           C11    C    CR16      0.000     -7.190    0.112    2.157
+ BRY           H11    H    H         0.000     -6.435    0.275    2.916
+ BRY           C1     C    CR56      0.000     -6.827    0.040    0.811
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BRY      BR1    n/a    C21    START
+ BRY      C21    BR1    C22    .
+ BRY      C20    C21    C19    .
+ BRY      H20    C20    .      .
+ BRY      C19    C20    C17    .
+ BRY      H19    C19    .      .
+ BRY      C17    C19    N16    .
+ BRY      N16    C17    C15    .
+ BRY      H16    N16    .      .
+ BRY      C15    N16    O23    .
+ BRY      O23    C15    .      .
+ BRY      C22    C21    C18    .
+ BRY      H22    C22    .      .
+ BRY      C18    C22    C14    .
+ BRY      C14    C18    C13    .
+ BRY      C13    C14    N4     .
+ BRY      C2     C13    O1     .
+ BRY      O1     C2     .      .
+ BRY      N4     C13    C3     .
+ BRY      H4     N4     .      .
+ BRY      C3     N4     C5     .
+ BRY      C5     C3     C7     .
+ BRY      H5     C5     .      .
+ BRY      C7     C5     C9     .
+ BRY      H7     C7     .      .
+ BRY      C9     C7     C11    .
+ BRY      H9     C9     .      .
+ BRY      C11    C9     C1     .
+ BRY      H11    C11    .      .
+ BRY      C1     C11    .      END
+ BRY      C1     C2     .    ADD
+ BRY      C1     C3     .    ADD
+ BRY      C14    C15    .    ADD
+ BRY      C17    C18    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BRY      C1     C2        single      1.490    0.020
+ BRY      C1     C3        double      1.490    0.020
+ BRY      C1     C11       single      1.390    0.020
+ BRY      C2     C13       single      1.490    0.020
+ BRY      O1     C2        double      1.285    0.020
+ BRY      C3     N4        single      1.340    0.020
+ BRY      C5     C3        single      1.390    0.020
+ BRY      N4     C13       single      1.340    0.020
+ BRY      H4     N4        single      1.040    0.020
+ BRY      C7     C5        double      1.390    0.020
+ BRY      H5     C5        single      1.083    0.020
+ BRY      C9     C7        single      1.390    0.020
+ BRY      H7     C7        single      1.083    0.020
+ BRY      C11    C9        double      1.390    0.020
+ BRY      H9     C9        single      1.083    0.020
+ BRY      H11    C11       single      1.083    0.020
+ BRY      C13    C14       double      1.490    0.020
+ BRY      C14    C15       single      1.490    0.020
+ BRY      C14    C18       single      1.490    0.020
+ BRY      C15    N16       single      1.340    0.020
+ BRY      O23    C15       double      1.285    0.020
+ BRY      N16    C17       single      1.340    0.020
+ BRY      H16    N16       single      1.040    0.020
+ BRY      C17    C18       double      1.490    0.020
+ BRY      C17    C19       single      1.390    0.020
+ BRY      C18    C22       single      1.390    0.020
+ BRY      C19    C20       double      1.390    0.020
+ BRY      H19    C19       single      1.083    0.020
+ BRY      C20    C21       single      1.390    0.020
+ BRY      H20    C20       single      1.083    0.020
+ BRY      C22    C21       double      1.390    0.020
+ BRY      C21    BR1       single      1.890    0.020
+ BRY      H22    C22       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BRY      BR1    C21    C20     120.000    3.000
+ BRY      BR1    C21    C22     120.000    3.000
+ BRY      C20    C21    C22     120.000    3.000
+ BRY      C21    C20    H20     120.000    3.000
+ BRY      C21    C20    C19     120.000    3.000
+ BRY      H20    C20    C19     120.000    3.000
+ BRY      C20    C19    H19     120.000    3.000
+ BRY      C20    C19    C17     120.000    3.000
+ BRY      H19    C19    C17     120.000    3.000
+ BRY      C19    C17    N16     132.000    3.000
+ BRY      C19    C17    C18     120.000    3.000
+ BRY      N16    C17    C18     108.000    3.000
+ BRY      C17    N16    H16     126.000    3.000
+ BRY      C17    N16    C15     108.000    3.000
+ BRY      H16    N16    C15     126.000    3.000
+ BRY      N16    C15    O23     108.000    3.000
+ BRY      N16    C15    C14     108.000    3.000
+ BRY      O23    C15    C14     108.000    3.000
+ BRY      C21    C22    H22     120.000    3.000
+ BRY      C21    C22    C18     120.000    3.000
+ BRY      H22    C22    C18     120.000    3.000
+ BRY      C22    C18    C14     126.000    3.000
+ BRY      C22    C18    C17     120.000    3.000
+ BRY      C14    C18    C17     108.000    3.000
+ BRY      C18    C14    C13     108.000    3.000
+ BRY      C18    C14    C15     108.000    3.000
+ BRY      C13    C14    C15     108.000    3.000
+ BRY      C14    C13    C2      108.000    3.000
+ BRY      C14    C13    N4      108.000    3.000
+ BRY      C2     C13    N4      108.000    3.000
+ BRY      C13    C2     O1      108.000    3.000
+ BRY      C13    C2     C1      108.000    3.000
+ BRY      O1     C2     C1      108.000    3.000
+ BRY      C13    N4     H4      126.000    3.000
+ BRY      C13    N4     C3      108.000    3.000
+ BRY      H4     N4     C3      126.000    3.000
+ BRY      N4     C3     C5      132.000    3.000
+ BRY      N4     C3     C1      108.000    3.000
+ BRY      C5     C3     C1      120.000    3.000
+ BRY      C3     C5     H5      120.000    3.000
+ BRY      C3     C5     C7      120.000    3.000
+ BRY      H5     C5     C7      120.000    3.000
+ BRY      C5     C7     H7      120.000    3.000
+ BRY      C5     C7     C9      120.000    3.000
+ BRY      H7     C7     C9      120.000    3.000
+ BRY      C7     C9     H9      120.000    3.000
+ BRY      C7     C9     C11     120.000    3.000
+ BRY      H9     C9     C11     120.000    3.000
+ BRY      C9     C11    H11     120.000    3.000
+ BRY      C9     C11    C1      120.000    3.000
+ BRY      H11    C11    C1      120.000    3.000
+ BRY      C11    C1     C2      126.000    3.000
+ BRY      C11    C1     C3      120.000    3.000
+ BRY      C2     C1     C3      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BRY      CONST_1  BR1    C21    C20    C19      180.000    0.000   0
+ BRY      CONST_2  C21    C20    C19    C17        0.000    0.000   0
+ BRY      CONST_3  C20    C19    C17    N16      180.000    0.000   0
+ BRY      CONST_4  C19    C17    C18    C22        0.000    0.000   0
+ BRY      CONST_5  C19    C17    N16    C15      180.000    0.000   0
+ BRY      CONST_6  C17    N16    C15    O23      180.000    0.000   0
+ BRY      CONST_7  BR1    C21    C22    C18      180.000    0.000   0
+ BRY      CONST_8  C21    C22    C18    C14      180.000    0.000   0
+ BRY      CONST_9  C22    C18    C14    C13        0.000    0.000   0
+ BRY      CONST_10 C18    C14    C15    N16        0.000    0.000   0
+ BRY      CONST_11 C18    C14    C13    N4       180.000    0.000   0
+ BRY      CONST_12 C14    C13    C2     O1         0.000    0.000   0
+ BRY      CONST_13 C14    C13    N4     C3       180.000    0.000   0
+ BRY      CONST_14 C13    N4     C3     C5       180.000    0.000   0
+ BRY      CONST_15 N4     C3     C5     C7       180.000    0.000   0
+ BRY      CONST_16 C3     C5     C7     C9         0.000    0.000   0
+ BRY      CONST_17 C5     C7     C9     C11        0.000    0.000   0
+ BRY      CONST_18 C7     C9     C11    C1         0.000    0.000   0
+ BRY      CONST_19 C9     C11    C1     C2       180.000    0.000   0
+ BRY      CONST_20 C11    C1     C2     C13      180.000    0.000   0
+ BRY      CONST_21 C11    C1     C3     N4       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BRY      plan-1    C1        0.020
+ BRY      plan-1    C2        0.020
+ BRY      plan-1    C3        0.020
+ BRY      plan-1    C11       0.020
+ BRY      plan-1    C5        0.020
+ BRY      plan-1    C7        0.020
+ BRY      plan-1    C9        0.020
+ BRY      plan-1    C13       0.020
+ BRY      plan-1    O1        0.020
+ BRY      plan-1    N4        0.020
+ BRY      plan-1    H4        0.020
+ BRY      plan-1    H5        0.020
+ BRY      plan-1    H7        0.020
+ BRY      plan-1    H9        0.020
+ BRY      plan-1    H11       0.020
+ BRY      plan-1    C14       0.020
+ BRY      plan-1    C15       0.020
+ BRY      plan-1    C18       0.020
+ BRY      plan-1    N16       0.020
+ BRY      plan-1    O23       0.020
+ BRY      plan-1    C17       0.020
+ BRY      plan-1    H16       0.020
+ BRY      plan-1    C19       0.020
+ BRY      plan-1    C20       0.020
+ BRY      plan-1    C21       0.020
+ BRY      plan-1    C22       0.020
+ BRY      plan-1    H19       0.020
+ BRY      plan-1    H20       0.020
+ BRY      plan-1    BR1       0.020
+ BRY      plan-1    H22       0.020
+# ------------------------------------------------------

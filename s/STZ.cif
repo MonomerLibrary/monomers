@@ -1,0 +1,272 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+STZ      STZ 'STREPTOZOTOCIN                      ' non-polymer        33  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_STZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ STZ           OAP    O    O         0.000      0.000    0.000    0.000
+ STZ           NAO    N    N         0.000     -1.215    0.073    0.004
+ STZ           NAN    N    N         0.000     -1.907   -0.631   -0.827
+ STZ           CAH    C    CH3       0.000     -1.229   -1.521   -1.774
+ STZ           HAH3   H    H         0.000     -0.320   -1.865   -1.351
+ STZ           HAH2   H    H         0.000     -1.852   -2.351   -1.991
+ STZ           HAH1   H    H         0.000     -1.022   -0.994   -2.670
+ STZ           CAM    C    C         0.000     -3.252   -0.551   -0.822
+ STZ           OAG    O    O         0.000     -3.903   -1.214   -1.604
+ STZ           N2     N    NH1       0.000     -3.875    0.267    0.050
+ STZ           HD     H    H         0.000     -3.334    0.818    0.701
+ STZ           C2     C    CH1       0.000     -5.337    0.355    0.054
+ STZ           H2     H    H         0.000     -5.714    0.251   -0.973
+ STZ           C3     C    CH1       0.000     -5.767    1.710    0.624
+ STZ           HA     H    H         0.000     -5.346    1.836    1.632
+ STZ           O3     O    OH1       0.000     -5.294    2.758   -0.225
+ STZ           H3     H    H         0.000     -5.573    3.612    0.132
+ STZ           C1     C    CH1       0.000     -5.915   -0.763    0.928
+ STZ           H1     H    H         0.000     -5.504   -0.684    1.944
+ STZ           O1     O    OH1       0.000     -5.565   -2.031    0.370
+ STZ           HC     H    H         0.000     -5.930   -2.737    0.922
+ STZ           O5     O    O2        0.000     -7.337   -0.640    0.977
+ STZ           C5     C    CH1       0.000     -7.797    0.589    1.545
+ STZ           H5     H    H         0.000     -7.412    0.686    2.569
+ STZ           C6     C    CH2       0.000     -9.327    0.597    1.573
+ STZ           H61C   H    H         0.000     -9.710    0.411    0.567
+ STZ           H62C   H    H         0.000     -9.679    1.570    1.922
+ STZ           O6     O    OH1       0.000     -9.793   -0.426    2.457
+ STZ           H6     H    H         0.000    -10.759   -0.420    2.475
+ STZ           C4     C    CH1       0.000     -7.296    1.760    0.697
+ STZ           H4     H    H         0.000     -7.714    1.685   -0.316
+ STZ           O4     O    OH1       0.000     -7.706    2.992    1.294
+ STZ           HB     H    H         0.000     -8.671    3.022    1.340
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ STZ      OAP    n/a    NAO    START
+ STZ      NAO    OAP    NAN    .
+ STZ      NAN    NAO    CAM    .
+ STZ      CAH    NAN    HAH1   .
+ STZ      HAH3   CAH    .      .
+ STZ      HAH2   CAH    .      .
+ STZ      HAH1   CAH    .      .
+ STZ      CAM    NAN    N2     .
+ STZ      OAG    CAM    .      .
+ STZ      N2     CAM    C2     .
+ STZ      HD     N2     .      .
+ STZ      C2     N2     C1     .
+ STZ      H2     C2     .      .
+ STZ      C3     C2     O3     .
+ STZ      HA     C3     .      .
+ STZ      O3     C3     H3     .
+ STZ      H3     O3     .      .
+ STZ      C1     C2     O5     .
+ STZ      H1     C1     .      .
+ STZ      O1     C1     HC     .
+ STZ      HC     O1     .      .
+ STZ      O5     C1     C5     .
+ STZ      C5     O5     C4     .
+ STZ      H5     C5     .      .
+ STZ      C6     C5     O6     .
+ STZ      H61C   C6     .      .
+ STZ      H62C   C6     .      .
+ STZ      O6     C6     H6     .
+ STZ      H6     O6     .      .
+ STZ      C4     C5     O4     .
+ STZ      H4     C4     .      .
+ STZ      O4     C4     HB     .
+ STZ      HB     O4     .      END
+ STZ      C3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ STZ      O3     C3        single      1.432    0.020
+ STZ      C3     C4        single      1.524    0.020
+ STZ      C3     C2        single      1.524    0.020
+ STZ      O4     C4        single      1.432    0.020
+ STZ      C4     C5        single      1.524    0.020
+ STZ      C6     C5        single      1.524    0.020
+ STZ      C5     O5        single      1.426    0.020
+ STZ      O6     C6        single      1.432    0.020
+ STZ      O5     C1        single      1.426    0.020
+ STZ      O1     C1        single      1.432    0.020
+ STZ      C1     C2        single      1.524    0.020
+ STZ      C2     N2        single      1.450    0.020
+ STZ      N2     CAM       single      1.330    0.020
+ STZ      OAG    CAM       double      1.220    0.020
+ STZ      CAM    NAN       single      1.330    0.020
+ STZ      CAH    NAN       single      1.455    0.020
+ STZ      NAN    NAO       single      1.410    0.020
+ STZ      NAO    OAP       double      1.220    0.020
+ STZ      H3     O3        single      0.967    0.020
+ STZ      HA     C3        single      1.099    0.020
+ STZ      H4     C4        single      1.099    0.020
+ STZ      H2     C2        single      1.099    0.020
+ STZ      HB     O4        single      0.967    0.020
+ STZ      H5     C5        single      1.099    0.020
+ STZ      H61C   C6        single      1.092    0.020
+ STZ      H62C   C6        single      1.092    0.020
+ STZ      H6     O6        single      0.967    0.020
+ STZ      H1     C1        single      1.099    0.020
+ STZ      HC     O1        single      0.967    0.020
+ STZ      HD     N2        single      1.010    0.020
+ STZ      HAH1   CAH       single      1.059    0.020
+ STZ      HAH2   CAH       single      1.059    0.020
+ STZ      HAH3   CAH       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ STZ      OAP    NAO    NAN     120.000    3.000
+ STZ      NAO    NAN    CAH     120.000    3.000
+ STZ      NAO    NAN    CAM     120.000    3.000
+ STZ      CAH    NAN    CAM     127.000    3.000
+ STZ      NAN    CAH    HAH3    109.470    3.000
+ STZ      NAN    CAH    HAH2    109.470    3.000
+ STZ      NAN    CAH    HAH1    109.470    3.000
+ STZ      HAH3   CAH    HAH2    109.470    3.000
+ STZ      HAH3   CAH    HAH1    109.470    3.000
+ STZ      HAH2   CAH    HAH1    109.470    3.000
+ STZ      NAN    CAM    OAG     123.000    3.000
+ STZ      NAN    CAM    N2      120.000    3.000
+ STZ      OAG    CAM    N2      123.000    3.000
+ STZ      CAM    N2     HD      120.000    3.000
+ STZ      CAM    N2     C2      121.500    3.000
+ STZ      HD     N2     C2      118.500    3.000
+ STZ      N2     C2     H2      108.550    3.000
+ STZ      N2     C2     C3      110.000    3.000
+ STZ      N2     C2     C1      110.000    3.000
+ STZ      H2     C2     C3      108.340    3.000
+ STZ      H2     C2     C1      108.340    3.000
+ STZ      C3     C2     C1      111.000    3.000
+ STZ      C2     C3     HA      108.340    3.000
+ STZ      C2     C3     O3      109.470    3.000
+ STZ      C2     C3     C4      111.000    3.000
+ STZ      HA     C3     O3      109.470    3.000
+ STZ      HA     C3     C4      108.340    3.000
+ STZ      O3     C3     C4      109.470    3.000
+ STZ      C3     O3     H3      109.470    3.000
+ STZ      C2     C1     H1      108.340    3.000
+ STZ      C2     C1     O1      109.470    3.000
+ STZ      C2     C1     O5      109.470    3.000
+ STZ      H1     C1     O1      109.470    3.000
+ STZ      H1     C1     O5      109.470    3.000
+ STZ      O1     C1     O5      109.470    3.000
+ STZ      C1     O1     HC      109.470    3.000
+ STZ      C1     O5     C5      111.800    3.000
+ STZ      O5     C5     H5      109.470    3.000
+ STZ      O5     C5     C6      109.470    3.000
+ STZ      O5     C5     C4      109.470    3.000
+ STZ      H5     C5     C6      108.340    3.000
+ STZ      H5     C5     C4      108.340    3.000
+ STZ      C6     C5     C4      111.000    3.000
+ STZ      C5     C6     H61C    109.470    3.000
+ STZ      C5     C6     H62C    109.470    3.000
+ STZ      C5     C6     O6      109.470    3.000
+ STZ      H61C   C6     H62C    107.900    3.000
+ STZ      H61C   C6     O6      109.470    3.000
+ STZ      H62C   C6     O6      109.470    3.000
+ STZ      C6     O6     H6      109.470    3.000
+ STZ      C5     C4     H4      108.340    3.000
+ STZ      C5     C4     O4      109.470    3.000
+ STZ      C5     C4     C3      111.000    3.000
+ STZ      H4     C4     O4      109.470    3.000
+ STZ      H4     C4     C3      108.340    3.000
+ STZ      O4     C4     C3      109.470    3.000
+ STZ      C4     O4     HB      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ STZ      var_1    OAP    NAO    NAN    CAM     -179.985   20.000   1
+ STZ      var_2    NAO    NAN    CAH    HAH1     -90.071   20.000   1
+ STZ      CONST_1  NAO    NAN    CAM    N2         0.000    0.000   0
+ STZ      CONST_2  NAN    CAM    N2     C2       180.000    0.000   0
+ STZ      var_3    CAM    N2     C2     C1        85.353   20.000   3
+ STZ      var_4    N2     C2     C3     O3        60.000   20.000   3
+ STZ      var_5    C2     C3     C4     C5        60.000   20.000   3
+ STZ      var_6    C2     C3     O3     H3       179.510   20.000   1
+ STZ      var_7    N2     C2     C1     O5       180.000   20.000   3
+ STZ      var_8    C2     C1     O1     HC       180.000   20.000   1
+ STZ      var_9    C2     C1     O5     C5       -60.000   20.000   1
+ STZ      var_10   C1     O5     C5     C4        60.000   20.000   1
+ STZ      var_11   O5     C5     C6     O6        65.028   20.000   3
+ STZ      var_12   C5     C6     O6     H6      -179.998   20.000   1
+ STZ      var_13   O5     C5     C4     O4       180.000   20.000   3
+ STZ      var_14   C5     C4     O4     HB       -60.241   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ STZ      chir_01  C3     O3     C4     C2        negativ
+ STZ      chir_02  C4     C3     O4     C5        positiv
+ STZ      chir_03  C5     C4     C6     O5        negativ
+ STZ      chir_04  C1     O5     O1     C2        negativ
+ STZ      chir_05  C2     C3     C1     N2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ STZ      plan-1    N2        0.020
+ STZ      plan-1    C2        0.020
+ STZ      plan-1    CAM       0.020
+ STZ      plan-1    HD        0.020
+ STZ      plan-2    CAM       0.020
+ STZ      plan-2    N2        0.020
+ STZ      plan-2    OAG       0.020
+ STZ      plan-2    NAN       0.020
+ STZ      plan-2    HD        0.020
+ STZ      plan-3    NAN       0.020
+ STZ      plan-3    CAM       0.020
+ STZ      plan-3    CAH       0.020
+ STZ      plan-3    NAO       0.020
+ STZ      plan-4    NAO       0.020
+ STZ      plan-4    NAN       0.020
+ STZ      plan-4    OAP       0.020
+# ------------------------------------------------------

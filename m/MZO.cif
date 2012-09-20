@@ -1,0 +1,262 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MZO      MZO 'N-(3-methoxyphenyl)-9H-purin-6-amine' non-polymer        29  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MZO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MZO           CAA    C    CH3       0.000      0.000    0.000    0.000
+ MZO           HAA    H    H         0.000      0.316   -0.839    0.564
+ MZO           HAAA   H    H         0.000      0.147   -0.193   -1.031
+ MZO           HAAB   H    H         0.000      0.566    0.849    0.284
+ MZO           OAM    O    O2        0.000     -1.386    0.246    0.246
+ MZO           CAP    C    CR6       0.000     -2.255   -0.753   -0.065
+ MZO           CAF    C    CR16      0.000     -1.782   -1.941   -0.602
+ MZO           HAF    H    H         0.000     -0.720   -2.073   -0.773
+ MZO           CAC    C    CR16      0.000     -2.663   -2.958   -0.919
+ MZO           HAC    H    H         0.000     -2.291   -3.885   -1.338
+ MZO           CAE    C    CR16      0.000     -4.018   -2.793   -0.704
+ MZO           HAE    H    H         0.000     -4.706   -3.592   -0.950
+ MZO           CAO    C    CR6       0.000     -4.498   -1.603   -0.172
+ MZO           CAG    C    CR16      0.000     -3.613   -0.581    0.149
+ MZO           HAG    H    H         0.000     -3.984    0.348    0.564
+ MZO           N6     N    NH1       0.000     -5.868   -1.434    0.042
+ MZO           HN6    H    H         0.000     -6.441   -2.226    0.298
+ MZO           C6     C    CR6       0.000     -6.441   -0.181   -0.096
+ MZO           N1     N    NRD6      0.000     -5.725    0.850   -0.531
+ MZO           C2     C    CR16      0.000     -6.265    2.048   -0.670
+ MZO           H2     H    H         0.000     -5.647    2.859   -1.036
+ MZO           N3     N    NRD6      0.000     -7.525    2.292   -0.381
+ MZO           C4     C    CR56      0.000     -8.318    1.324    0.066
+ MZO           C5     C    CR56      0.000     -7.793    0.031    0.226
+ MZO           N9     N    NR15      0.000     -9.634    1.247    0.446
+ MZO           HN9    H    H         0.000    -10.320    2.029    0.451
+ MZO           C8     C    CR15      0.000     -9.878   -0.041    0.817
+ MZO           H8     H    H         0.000    -10.831   -0.417    1.168
+ MZO           N7     N    NRD5      0.000     -8.796   -0.753    0.688
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MZO      CAA    n/a    OAM    START
+ MZO      HAA    CAA    .      .
+ MZO      HAAA   CAA    .      .
+ MZO      HAAB   CAA    .      .
+ MZO      OAM    CAA    CAP    .
+ MZO      CAP    OAM    CAF    .
+ MZO      CAF    CAP    CAC    .
+ MZO      HAF    CAF    .      .
+ MZO      CAC    CAF    CAE    .
+ MZO      HAC    CAC    .      .
+ MZO      CAE    CAC    CAO    .
+ MZO      HAE    CAE    .      .
+ MZO      CAO    CAE    N6     .
+ MZO      CAG    CAO    HAG    .
+ MZO      HAG    CAG    .      .
+ MZO      N6     CAO    C6     .
+ MZO      HN6    N6     .      .
+ MZO      C6     N6     N1     .
+ MZO      N1     C6     C2     .
+ MZO      C2     N1     N3     .
+ MZO      H2     C2     .      .
+ MZO      N3     C2     C4     .
+ MZO      C4     N3     N9     .
+ MZO      C5     C4     .      .
+ MZO      N9     C4     C8     .
+ MZO      HN9    N9     .      .
+ MZO      C8     N9     N7     .
+ MZO      H8     C8     .      .
+ MZO      N7     C8     .      END
+ MZO      CAP    CAG    .    ADD
+ MZO      C6     C5     .    ADD
+ MZO      C5     N7     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MZO      OAM    CAA       single      1.426    0.020
+ MZO      CAP    OAM       single      1.370    0.020
+ MZO      CAP    CAG       double      1.390    0.020
+ MZO      CAF    CAP       single      1.390    0.020
+ MZO      CAG    CAO       single      1.390    0.020
+ MZO      CAC    CAF       double      1.390    0.020
+ MZO      CAE    CAC       single      1.390    0.020
+ MZO      CAO    CAE       double      1.390    0.020
+ MZO      N6     CAO       single      1.350    0.020
+ MZO      C6     N6        single      1.350    0.020
+ MZO      C6     C5        single      1.490    0.020
+ MZO      N1     C6        double      1.350    0.020
+ MZO      C5     N7        single      1.350    0.020
+ MZO      C5     C4        double      1.490    0.020
+ MZO      N7     C8        double      1.350    0.020
+ MZO      C8     N9        single      1.350    0.020
+ MZO      N9     C4        single      1.340    0.020
+ MZO      C4     N3        single      1.355    0.020
+ MZO      N3     C2        double      1.337    0.020
+ MZO      C2     N1        single      1.337    0.020
+ MZO      HAA    CAA       single      1.059    0.020
+ MZO      HAAA   CAA       single      1.059    0.020
+ MZO      HAAB   CAA       single      1.059    0.020
+ MZO      HAG    CAG       single      1.083    0.020
+ MZO      HAF    CAF       single      1.083    0.020
+ MZO      HAC    CAC       single      1.083    0.020
+ MZO      HAE    CAE       single      1.083    0.020
+ MZO      HN6    N6        single      1.010    0.020
+ MZO      H8     C8        single      1.083    0.020
+ MZO      HN9    N9        single      1.040    0.020
+ MZO      H2     C2        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MZO      HAA    CAA    HAAA    109.470    3.000
+ MZO      HAA    CAA    HAAB    109.470    3.000
+ MZO      HAAA   CAA    HAAB    109.470    3.000
+ MZO      HAA    CAA    OAM     109.470    3.000
+ MZO      HAAA   CAA    OAM     109.470    3.000
+ MZO      HAAB   CAA    OAM     109.470    3.000
+ MZO      CAA    OAM    CAP     120.000    3.000
+ MZO      OAM    CAP    CAF     120.000    3.000
+ MZO      OAM    CAP    CAG     120.000    3.000
+ MZO      CAF    CAP    CAG     120.000    3.000
+ MZO      CAP    CAF    HAF     120.000    3.000
+ MZO      CAP    CAF    CAC     120.000    3.000
+ MZO      HAF    CAF    CAC     120.000    3.000
+ MZO      CAF    CAC    HAC     120.000    3.000
+ MZO      CAF    CAC    CAE     120.000    3.000
+ MZO      HAC    CAC    CAE     120.000    3.000
+ MZO      CAC    CAE    HAE     120.000    3.000
+ MZO      CAC    CAE    CAO     120.000    3.000
+ MZO      HAE    CAE    CAO     120.000    3.000
+ MZO      CAE    CAO    CAG     120.000    3.000
+ MZO      CAE    CAO    N6      120.000    3.000
+ MZO      CAG    CAO    N6      120.000    3.000
+ MZO      CAO    CAG    HAG     120.000    3.000
+ MZO      CAO    CAG    CAP     120.000    3.000
+ MZO      HAG    CAG    CAP     120.000    3.000
+ MZO      CAO    N6     HN6     120.000    3.000
+ MZO      CAO    N6     C6      120.000    3.000
+ MZO      HN6    N6     C6      120.000    3.000
+ MZO      N6     C6     N1      120.000    3.000
+ MZO      N6     C6     C5      120.000    3.000
+ MZO      N1     C6     C5      120.000    3.000
+ MZO      C6     N1     C2      120.000    3.000
+ MZO      N1     C2     H2      120.000    3.000
+ MZO      N1     C2     N3      120.000    3.000
+ MZO      H2     C2     N3      120.000    3.000
+ MZO      C2     N3     C4      120.000    3.000
+ MZO      N3     C4     C5      120.000    3.000
+ MZO      N3     C4     N9      132.000    3.000
+ MZO      C5     C4     N9      108.000    3.000
+ MZO      C4     C5     C6      120.000    3.000
+ MZO      C4     C5     N7      108.000    3.000
+ MZO      C6     C5     N7      132.000    3.000
+ MZO      C4     N9     HN9     126.000    3.000
+ MZO      C4     N9     C8      108.000    3.000
+ MZO      HN9    N9     C8      126.000    3.000
+ MZO      N9     C8     H8      126.000    3.000
+ MZO      N9     C8     N7      108.000    3.000
+ MZO      H8     C8     N7      126.000    3.000
+ MZO      C8     N7     C5      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MZO      var_1    HAAB   CAA    OAM    CAP     -179.973   20.000   1
+ MZO      var_2    CAA    OAM    CAP    CAF       -0.258   20.000   1
+ MZO      CONST_1  OAM    CAP    CAG    CAO      180.000    0.000   0
+ MZO      CONST_2  OAM    CAP    CAF    CAC      180.000    0.000   0
+ MZO      CONST_3  CAP    CAF    CAC    CAE        0.000    0.000   0
+ MZO      CONST_4  CAF    CAC    CAE    CAO        0.000    0.000   0
+ MZO      CONST_5  CAC    CAE    CAO    N6       180.000    0.000   0
+ MZO      CONST_6  CAE    CAO    CAG    CAP        0.000    0.000   0
+ MZO      var_3    CAE    CAO    N6     C6      -147.087   20.000   1
+ MZO      var_4    CAO    N6     C6     N1         5.201   20.000   1
+ MZO      CONST_7  N6     C6     C5     C4       180.000    0.000   0
+ MZO      CONST_8  N6     C6     N1     C2       180.000    0.000   0
+ MZO      CONST_9  C6     N1     C2     N3         0.000    0.000   0
+ MZO      CONST_10 N1     C2     N3     C4         0.000    0.000   0
+ MZO      CONST_11 C2     N3     C4     N9       180.000    0.000   0
+ MZO      CONST_12 N3     C4     C5     C6         0.000    0.000   0
+ MZO      CONST_13 C4     C5     N7     C8         0.000    0.000   0
+ MZO      CONST_14 N3     C4     N9     C8       180.000    0.000   0
+ MZO      CONST_15 C4     N9     C8     N7         0.000    0.000   0
+ MZO      CONST_16 N9     C8     N7     C5         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MZO      plan-1    CAP       0.020
+ MZO      plan-1    OAM       0.020
+ MZO      plan-1    CAG       0.020
+ MZO      plan-1    CAF       0.020
+ MZO      plan-1    CAC       0.020
+ MZO      plan-1    CAE       0.020
+ MZO      plan-1    CAO       0.020
+ MZO      plan-1    HAG       0.020
+ MZO      plan-1    HAF       0.020
+ MZO      plan-1    HAC       0.020
+ MZO      plan-1    HAE       0.020
+ MZO      plan-1    N6        0.020
+ MZO      plan-1    HN6       0.020
+ MZO      plan-2    N6        0.020
+ MZO      plan-2    CAO       0.020
+ MZO      plan-2    C6        0.020
+ MZO      plan-2    HN6       0.020
+ MZO      plan-3    C6        0.020
+ MZO      plan-3    N6        0.020
+ MZO      plan-3    C5        0.020
+ MZO      plan-3    N1        0.020
+ MZO      plan-3    N3        0.020
+ MZO      plan-3    C2        0.020
+ MZO      plan-3    N7        0.020
+ MZO      plan-3    C4        0.020
+ MZO      plan-3    C8        0.020
+ MZO      plan-3    N9        0.020
+ MZO      plan-3    H8        0.020
+ MZO      plan-3    HN9       0.020
+ MZO      plan-3    H2        0.020
+ MZO      plan-3    HN6       0.020
+# ------------------------------------------------------

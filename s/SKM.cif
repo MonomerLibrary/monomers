@@ -1,0 +1,204 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SKM      SKM '(3R,4S,5R)-3,4,5-TRIHYDROXYCYCLOHEX-' non-polymer        21  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SKM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SKM           O3     O    OC       -0.500      0.000    0.000    0.000
+ SKM           C1     C    C         0.000     -1.059    0.664    0.044
+ SKM           O2     O    OC       -0.500     -1.014    1.903    0.206
+ SKM           C4     C    C         0.000     -2.356   -0.013   -0.095
+ SKM           C5     C    CH2       0.000     -3.600    0.826   -0.037
+ SKM           H51    H    H         0.000     -3.726    1.346   -0.989
+ SKM           H52    H    H         0.000     -3.500    1.559    0.767
+ SKM           C6     C    CH1       0.000     -4.820   -0.060    0.228
+ SKM           H6     H    H         0.000     -4.783   -0.441    1.259
+ SKM           O7     O    OH1       0.000     -6.015    0.700    0.040
+ SKM           HO7    H    H         0.000     -6.024    1.444    0.658
+ SKM           C10    C    C1        0.000     -2.360   -1.318   -0.264
+ SKM           H10    H    H         0.000     -1.412   -1.828   -0.300
+ SKM           C9     C    CH1       0.000     -3.610   -2.136   -0.410
+ SKM           H9     H    H         0.000     -3.469   -2.877   -1.210
+ SKM           O11    O    OH1       0.000     -3.880   -2.813    0.820
+ SKM           H11    H    H         0.000     -3.138   -3.393    1.038
+ SKM           C8     C    CH1       0.000     -4.797   -1.235   -0.756
+ SKM           H8     H    H         0.000     -4.683   -0.854   -1.781
+ SKM           O12    O    OH1       0.000     -6.011   -1.981   -0.656
+ SKM           H12    H    H         0.000     -5.983   -2.725   -1.272
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SKM      O3     n/a    C1     START
+ SKM      C1     O3     C4     .
+ SKM      O2     C1     .      .
+ SKM      C4     C1     C10    .
+ SKM      C5     C4     C6     .
+ SKM      H51    C5     .      .
+ SKM      H52    C5     .      .
+ SKM      C6     C5     O7     .
+ SKM      H6     C6     .      .
+ SKM      O7     C6     HO7    .
+ SKM      HO7    O7     .      .
+ SKM      C10    C4     C9     .
+ SKM      H10    C10    .      .
+ SKM      C9     C10    C8     .
+ SKM      H9     C9     .      .
+ SKM      O11    C9     H11    .
+ SKM      H11    O11    .      .
+ SKM      C8     C9     O12    .
+ SKM      H8     C8     .      .
+ SKM      O12    C8     H12    .
+ SKM      H12    O12    .      END
+ SKM      C8     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SKM      O12    C8        single      1.432    0.020
+ SKM      H12    O12       single      0.967    0.020
+ SKM      C8     C6        single      1.524    0.020
+ SKM      C8     C9        single      1.524    0.020
+ SKM      H8     C8        single      1.099    0.020
+ SKM      O7     C6        single      1.432    0.020
+ SKM      C6     C5        single      1.524    0.020
+ SKM      H6     C6        single      1.099    0.020
+ SKM      HO7    O7        single      0.967    0.020
+ SKM      C5     C4        single      1.510    0.020
+ SKM      H51    C5        single      1.092    0.020
+ SKM      H52    C5        single      1.092    0.020
+ SKM      C4     C1        single      1.460    0.020
+ SKM      C10    C4        double      1.340    0.020
+ SKM      O2     C1        deloc       1.250    0.020
+ SKM      C1     O3        deloc       1.250    0.020
+ SKM      C9     C10       single      1.510    0.020
+ SKM      H10    C10       single      1.077    0.020
+ SKM      O11    C9        single      1.432    0.020
+ SKM      H9     C9        single      1.099    0.020
+ SKM      H11    O11       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SKM      O3     C1     O2      123.000    3.000
+ SKM      O3     C1     C4      120.000    3.000
+ SKM      O2     C1     C4      120.000    3.000
+ SKM      C1     C4     C5      120.000    3.000
+ SKM      C1     C4     C10     120.000    3.000
+ SKM      C5     C4     C10     120.000    3.000
+ SKM      C4     C5     H51     109.470    3.000
+ SKM      C4     C5     H52     109.470    3.000
+ SKM      C4     C5     C6      109.470    3.000
+ SKM      H51    C5     H52     107.900    3.000
+ SKM      H51    C5     C6      109.470    3.000
+ SKM      H52    C5     C6      109.470    3.000
+ SKM      C5     C6     H6      108.340    3.000
+ SKM      C5     C6     O7      109.470    3.000
+ SKM      C5     C6     C8      111.000    3.000
+ SKM      H6     C6     O7      109.470    3.000
+ SKM      H6     C6     C8      108.340    3.000
+ SKM      O7     C6     C8      109.470    3.000
+ SKM      C6     O7     HO7     109.470    3.000
+ SKM      C4     C10    H10     120.000    3.000
+ SKM      C4     C10    C9      120.500    3.000
+ SKM      H10    C10    C9      120.000    3.000
+ SKM      C10    C9     H9      108.810    3.000
+ SKM      C10    C9     O11     109.470    3.000
+ SKM      C10    C9     C8      109.470    3.000
+ SKM      H9     C9     O11     109.470    3.000
+ SKM      H9     C9     C8      108.340    3.000
+ SKM      O11    C9     C8      109.470    3.000
+ SKM      C9     O11    H11     109.470    3.000
+ SKM      C9     C8     H8      108.340    3.000
+ SKM      C9     C8     O12     109.470    3.000
+ SKM      C9     C8     C6      111.000    3.000
+ SKM      H8     C8     O12     109.470    3.000
+ SKM      H8     C8     C6      108.340    3.000
+ SKM      O12    C8     C6      109.470    3.000
+ SKM      C8     O12    H12     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SKM      var_1    O3     C1     C4     C10        0.034   20.000   1
+ SKM      var_2    C1     C4     C5     C6      -150.000   20.000   3
+ SKM      var_3    C4     C5     C6     O7       180.000   20.000   3
+ SKM      var_4    C5     C6     O7     HO7      -60.393   20.000   1
+ SKM      var_5    C1     C4     C10    C9       180.000   20.000   1
+ SKM      var_6    C4     C10    C9     C8        30.000   20.000   1
+ SKM      var_7    C10    C9     O11    H11      -60.024   20.000   1
+ SKM      var_8    C10    C9     C8     O12      180.000   20.000   3
+ SKM      var_9    C9     C8     C6     C5        60.000   20.000   3
+ SKM      var_10   C9     C8     O12    H12      -60.071   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SKM      chir_01  C8     O12    C6     C9        negativ
+ SKM      chir_02  C6     C8     O7     C5        positiv
+ SKM      chir_03  C9     C8     C10    O11       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SKM      plan-1    C4        0.020
+ SKM      plan-1    C5        0.020
+ SKM      plan-1    C1        0.020
+ SKM      plan-1    C10       0.020
+ SKM      plan-1    H10       0.020
+ SKM      plan-2    C1        0.020
+ SKM      plan-2    C4        0.020
+ SKM      plan-2    O2        0.020
+ SKM      plan-2    O3        0.020
+ SKM      plan-3    C10       0.020
+ SKM      plan-3    C4        0.020
+ SKM      plan-3    C9        0.020
+ SKM      plan-3    H10       0.020
+# ------------------------------------------------------

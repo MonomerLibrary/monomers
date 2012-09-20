@@ -1,0 +1,198 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2FX      2FX '1-benzothiophen-2-ylacetic acid     ' non-polymer        20  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2FX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2FX           O3     O    OC       -0.500      0.000    0.000    0.000
+ 2FX           C2     C    C         0.000     -0.309    0.069    1.210
+ 2FX           O1     O    OC       -0.500      0.586    0.152    2.081
+ 2FX           C13    C    CH2       0.000     -1.759    0.052    1.619
+ 2FX           H13    H    H         0.000     -1.996    0.973    2.156
+ 2FX           H13A   H    H         0.000     -1.943   -0.805    2.271
+ 2FX           C4     C    CR5       0.000     -2.626   -0.053    0.392
+ 2FX           S12    S    S2        0.000     -3.244    1.323   -0.503
+ 2FX           C11    C    CR56      0.000     -4.068    0.287   -1.661
+ 2FX           C6     C    CR56      0.000     -3.854   -1.054   -1.328
+ 2FX           C5     C    CR15      0.000     -3.022   -1.191   -0.144
+ 2FX           H5     H    H         0.000     -2.748   -2.155    0.266
+ 2FX           C10    C    CR16      0.000     -4.848    0.610   -2.775
+ 2FX           H10    H    H         0.000     -5.015    1.648   -3.035
+ 2FX           C9     C    CR16      0.000     -5.404   -0.388   -3.541
+ 2FX           H9     H    H         0.000     -6.008   -0.133   -4.404
+ 2FX           C8     C    CR16      0.000     -5.194   -1.720   -3.213
+ 2FX           H8     H    H         0.000     -5.637   -2.499   -3.821
+ 2FX           C7     C    CR16      0.000     -4.437   -2.056   -2.133
+ 2FX           H7     H    H         0.000     -4.281   -3.100   -1.889
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2FX      O3     n/a    C2     START
+ 2FX      C2     O3     C13    .
+ 2FX      O1     C2     .      .
+ 2FX      C13    C2     C4     .
+ 2FX      H13    C13    .      .
+ 2FX      H13A   C13    .      .
+ 2FX      C4     C13    S12    .
+ 2FX      S12    C4     C11    .
+ 2FX      C11    S12    C10    .
+ 2FX      C6     C11    C5     .
+ 2FX      C5     C6     H5     .
+ 2FX      H5     C5     .      .
+ 2FX      C10    C11    C9     .
+ 2FX      H10    C10    .      .
+ 2FX      C9     C10    C8     .
+ 2FX      H9     C9     .      .
+ 2FX      C8     C9     C7     .
+ 2FX      H8     C8     .      .
+ 2FX      C7     C8     H7     .
+ 2FX      H7     C7     .      END
+ 2FX      C4     C5     .    ADD
+ 2FX      C6     C7     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2FX      O1     C2        deloc       1.250    0.020
+ 2FX      C13    C2        single      1.510    0.020
+ 2FX      C2     O3        deloc       1.250    0.020
+ 2FX      S12    C4        single      1.745    0.020
+ 2FX      C4     C5        double      1.387    0.020
+ 2FX      C4     C13       single      1.510    0.020
+ 2FX      C5     C6        single      1.440    0.020
+ 2FX      H5     C5        single      1.083    0.020
+ 2FX      C6     C7        double      1.390    0.020
+ 2FX      C6     C11       single      1.490    0.020
+ 2FX      C7     C8        single      1.390    0.020
+ 2FX      H7     C7        single      1.083    0.020
+ 2FX      C8     C9        double      1.390    0.020
+ 2FX      H8     C8        single      1.083    0.020
+ 2FX      C9     C10       single      1.390    0.020
+ 2FX      H9     C9        single      1.083    0.020
+ 2FX      C10    C11       double      1.390    0.020
+ 2FX      H10    C10       single      1.083    0.020
+ 2FX      C11    S12       single      1.695    0.020
+ 2FX      H13    C13       single      1.092    0.020
+ 2FX      H13A   C13       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2FX      O3     C2     O1      123.000    3.000
+ 2FX      O3     C2     C13     118.500    3.000
+ 2FX      O1     C2     C13     118.500    3.000
+ 2FX      C2     C13    H13     109.470    3.000
+ 2FX      C2     C13    H13A    109.470    3.000
+ 2FX      C2     C13    C4      109.500    3.000
+ 2FX      H13    C13    H13A    107.900    3.000
+ 2FX      H13    C13    C4      109.470    3.000
+ 2FX      H13A   C13    C4      109.470    3.000
+ 2FX      C13    C4     S12     108.000    3.000
+ 2FX      C13    C4     C5      126.000    3.000
+ 2FX      S12    C4     C5      108.000    3.000
+ 2FX      C4     S12    C11      92.194    3.000
+ 2FX      S12    C11    C6      120.000    3.000
+ 2FX      S12    C11    C10     120.000    3.000
+ 2FX      C6     C11    C10     120.000    3.000
+ 2FX      C11    C6     C5      120.000    3.000
+ 2FX      C11    C6     C7      120.000    3.000
+ 2FX      C5     C6     C7      126.000    3.000
+ 2FX      C6     C5     H5      108.000    3.000
+ 2FX      C6     C5     C4      108.000    3.000
+ 2FX      H5     C5     C4      126.000    3.000
+ 2FX      C11    C10    H10     120.000    3.000
+ 2FX      C11    C10    C9      120.000    3.000
+ 2FX      H10    C10    C9      120.000    3.000
+ 2FX      C10    C9     H9      120.000    3.000
+ 2FX      C10    C9     C8      120.000    3.000
+ 2FX      H9     C9     C8      120.000    3.000
+ 2FX      C9     C8     H8      120.000    3.000
+ 2FX      C9     C8     C7      120.000    3.000
+ 2FX      H8     C8     C7      120.000    3.000
+ 2FX      C8     C7     H7      120.000    3.000
+ 2FX      C8     C7     C6      120.000    3.000
+ 2FX      H7     C7     C6      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 2FX      var_1    O3     C2     C13    C4        -0.008   20.000   3
+ 2FX      var_2    C2     C13    C4     S12      -90.277   20.000   2
+ 2FX      CONST_1  C13    C4     C5     C6       180.000    0.000   0
+ 2FX      CONST_2  C13    C4     S12    C11      180.000    0.000   0
+ 2FX      CONST_3  C4     S12    C11    C10      180.000    0.000   0
+ 2FX      CONST_4  S12    C11    C6     C5         0.000    0.000   0
+ 2FX      CONST_5  C11    C6     C7     C8         0.000    0.000   0
+ 2FX      CONST_6  C11    C6     C5     C4         0.000    0.000   0
+ 2FX      CONST_7  S12    C11    C10    C9       180.000    0.000   0
+ 2FX      CONST_8  C11    C10    C9     C8         0.000    0.000   0
+ 2FX      CONST_9  C10    C9     C8     C7         0.000    0.000   0
+ 2FX      CONST_10 C9     C8     C7     C6         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 2FX      plan-1    C2        0.020
+ 2FX      plan-1    O1        0.020
+ 2FX      plan-1    O3        0.020
+ 2FX      plan-1    C13       0.020
+ 2FX      plan-2    C4        0.020
+ 2FX      plan-2    C5        0.020
+ 2FX      plan-2    S12       0.020
+ 2FX      plan-2    C13       0.020
+ 2FX      plan-2    C6        0.020
+ 2FX      plan-2    H5        0.020
+ 2FX      plan-2    C7        0.020
+ 2FX      plan-2    C11       0.020
+ 2FX      plan-2    C8        0.020
+ 2FX      plan-2    C9        0.020
+ 2FX      plan-2    C10       0.020
+ 2FX      plan-2    H7        0.020
+ 2FX      plan-2    H8        0.020
+ 2FX      plan-2    H9        0.020
+ 2FX      plan-2    H10       0.020
+# ------------------------------------------------------

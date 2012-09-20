@@ -1,0 +1,163 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NXA      NXA 'N-CARBOXYALANINE                    ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NXA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NXA           OXT    O    OC       -0.500      0.000    0.000    0.000
+ NXA           C      C    C         0.000     -0.360    0.257    1.170
+ NXA           O      O    OC       -0.500      0.479    0.660    2.007
+ NXA           CA     C    CH1       0.000     -1.802    0.083    1.570
+ NXA           HA     H    H         0.000     -2.207    1.047    1.909
+ NXA           CB     C    CH3       0.000     -1.896   -0.936    2.707
+ NXA           HBC3   H    H         0.000     -1.337   -0.591    3.539
+ NXA           HBC2   H    H         0.000     -2.909   -1.059    2.990
+ NXA           HBC1   H    H         0.000     -1.506   -1.866    2.382
+ NXA           N      N    NH1       0.000     -2.573   -0.394    0.422
+ NXA           H      H    H         0.000     -2.129   -0.966   -0.282
+ NXA           C1     C    C         0.000     -3.877   -0.070    0.303
+ NXA           OD2    O    O         0.000     -4.410    0.620    1.149
+ NXA           OD1    O    OH1       0.000     -4.586   -0.508   -0.754
+ NXA           HD1    H    H         0.000     -5.498   -0.190   -0.689
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NXA      OXT    n/a    C      START
+ NXA      C      OXT    CA     .
+ NXA      O      C      .      .
+ NXA      CA     C      N      .
+ NXA      HA     CA     .      .
+ NXA      CB     CA     HBC1   .
+ NXA      HBC3   CB     .      .
+ NXA      HBC2   CB     .      .
+ NXA      HBC1   CB     .      .
+ NXA      N      CA     C1     .
+ NXA      H      N      .      .
+ NXA      C1     N      OD1    .
+ NXA      OD2    C1     .      .
+ NXA      OD1    C1     HD1    .
+ NXA      HD1    OD1    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NXA      N      CA        single      1.450    0.020
+ NXA      C1     N         single      1.330    0.020
+ NXA      H      N         single      1.010    0.020
+ NXA      CA     C         single      1.500    0.020
+ NXA      CB     CA        single      1.524    0.020
+ NXA      HA     CA        single      1.099    0.020
+ NXA      O      C         deloc       1.250    0.020
+ NXA      C      OXT       deloc       1.250    0.020
+ NXA      HBC1   CB        single      1.059    0.020
+ NXA      HBC2   CB        single      1.059    0.020
+ NXA      HBC3   CB        single      1.059    0.020
+ NXA      OD1    C1        single      1.330    0.020
+ NXA      HD1    OD1       single      0.967    0.020
+ NXA      OD2    C1        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NXA      OXT    C      O       123.000    3.000
+ NXA      OXT    C      CA      118.500    3.000
+ NXA      O      C      CA      118.500    3.000
+ NXA      C      CA     HA      108.810    3.000
+ NXA      C      CA     CB      109.470    3.000
+ NXA      C      CA     N       111.600    3.000
+ NXA      HA     CA     CB      108.340    3.000
+ NXA      HA     CA     N       108.550    3.000
+ NXA      CB     CA     N       110.000    3.000
+ NXA      CA     CB     HBC3    109.470    3.000
+ NXA      CA     CB     HBC2    109.470    3.000
+ NXA      CA     CB     HBC1    109.470    3.000
+ NXA      HBC3   CB     HBC2    109.470    3.000
+ NXA      HBC3   CB     HBC1    109.470    3.000
+ NXA      HBC2   CB     HBC1    109.470    3.000
+ NXA      CA     N      H       118.500    3.000
+ NXA      CA     N      C1      121.500    3.000
+ NXA      H      N      C1      120.000    3.000
+ NXA      N      C1     OD2     123.000    3.000
+ NXA      N      C1     OD1     120.000    3.000
+ NXA      OD2    C1     OD1     119.000    3.000
+ NXA      C1     OD1    HD1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NXA      var_1    OXT    C      CA     N          0.021   20.000   3
+ NXA      var_2    C      CA     CB     HBC1     -60.061   20.000   3
+ NXA      var_3    C      CA     N      C1      -150.026   20.000   3
+ NXA      CONST_1  CA     N      C1     OD1      180.000    0.000   0
+ NXA      var_4    N      C1     OD1    HD1      179.967   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ NXA      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NXA      plan-1    N         0.020
+ NXA      plan-1    CA        0.020
+ NXA      plan-1    C1        0.020
+ NXA      plan-1    H         0.020
+ NXA      plan-2    C         0.020
+ NXA      plan-2    CA        0.020
+ NXA      plan-2    O         0.020
+ NXA      plan-2    OXT       0.020
+ NXA      plan-3    C1        0.020
+ NXA      plan-3    N         0.020
+ NXA      plan-3    OD1       0.020
+ NXA      plan-3    OD2       0.020
+ NXA      plan-3    H         0.020
+# ------------------------------------------------------

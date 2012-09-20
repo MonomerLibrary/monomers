@@ -1,0 +1,169 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MBD      MBD '3-METHYLCATECHOL                    ' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MBD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MBD           OA2    O    OH1       0.000      0.000    0.000    0.000
+ MBD           HA2    H    H         0.000      0.298   -0.919    0.029
+ MBD           CA2    C    CR6       0.000     -1.358    0.033   -0.068
+ MBD           CA3    C    CR6       0.000     -1.990    0.042   -1.300
+ MBD           CB3    C    CH3       0.000     -1.176    0.009   -2.567
+ MBD           HB33   H    H         0.000     -0.270   -0.512   -2.392
+ MBD           HB32   H    H         0.000     -1.725   -0.484   -3.327
+ MBD           HB31   H    H         0.000     -0.960    1.000   -2.874
+ MBD           CA4    C    CR16      0.000     -3.371    0.077   -1.368
+ MBD           HA4    H    H         0.000     -3.865    0.080   -2.332
+ MBD           CA5    C    CR16      0.000     -4.122    0.106   -0.209
+ MBD           HA5    H    H         0.000     -5.203    0.133   -0.266
+ MBD           CA6    C    CR16      0.000     -3.496    0.102    1.024
+ MBD           HA6    H    H         0.000     -4.087    0.124    1.932
+ MBD           CA1    C    CR6       0.000     -2.114    0.068    1.099
+ MBD           OA1    O    OH1       0.000     -1.497    0.065    2.311
+ MBD           HA1    H    H         0.000     -1.373   -0.847    2.606
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MBD      OA2    n/a    CA2    START
+ MBD      HA2    OA2    .      .
+ MBD      CA2    OA2    CA3    .
+ MBD      CA3    CA2    CA4    .
+ MBD      CB3    CA3    HB31   .
+ MBD      HB33   CB3    .      .
+ MBD      HB32   CB3    .      .
+ MBD      HB31   CB3    .      .
+ MBD      CA4    CA3    CA5    .
+ MBD      HA4    CA4    .      .
+ MBD      CA5    CA4    CA6    .
+ MBD      HA5    CA5    .      .
+ MBD      CA6    CA5    CA1    .
+ MBD      HA6    CA6    .      .
+ MBD      CA1    CA6    OA1    .
+ MBD      OA1    CA1    HA1    .
+ MBD      HA1    OA1    .      END
+ MBD      CA1    CA2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MBD      OA1    CA1       single      1.362    0.020
+ MBD      CA1    CA2       double      1.487    0.020
+ MBD      CA1    CA6       single      1.390    0.020
+ MBD      HA1    OA1       single      0.967    0.020
+ MBD      CA2    OA2       single      1.362    0.020
+ MBD      CA3    CA2       single      1.487    0.020
+ MBD      HA2    OA2       single      0.967    0.020
+ MBD      CB3    CA3       single      1.506    0.020
+ MBD      CA4    CA3       double      1.390    0.020
+ MBD      HB31   CB3       single      1.059    0.020
+ MBD      HB32   CB3       single      1.059    0.020
+ MBD      HB33   CB3       single      1.059    0.020
+ MBD      CA5    CA4       single      1.390    0.020
+ MBD      HA4    CA4       single      1.083    0.020
+ MBD      CA6    CA5       double      1.390    0.020
+ MBD      HA5    CA5       single      1.083    0.020
+ MBD      HA6    CA6       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MBD      HA2    OA2    CA2     109.470    3.000
+ MBD      OA2    CA2    CA3     120.000    3.000
+ MBD      OA2    CA2    CA1     120.000    3.000
+ MBD      CA3    CA2    CA1     120.000    3.000
+ MBD      CA2    CA3    CB3     120.000    3.000
+ MBD      CA2    CA3    CA4     120.000    3.000
+ MBD      CB3    CA3    CA4     120.000    3.000
+ MBD      CA3    CB3    HB33    109.470    3.000
+ MBD      CA3    CB3    HB32    109.470    3.000
+ MBD      CA3    CB3    HB31    109.470    3.000
+ MBD      HB33   CB3    HB32    109.470    3.000
+ MBD      HB33   CB3    HB31    109.470    3.000
+ MBD      HB32   CB3    HB31    109.470    3.000
+ MBD      CA3    CA4    HA4     120.000    3.000
+ MBD      CA3    CA4    CA5     120.000    3.000
+ MBD      HA4    CA4    CA5     120.000    3.000
+ MBD      CA4    CA5    HA5     120.000    3.000
+ MBD      CA4    CA5    CA6     120.000    3.000
+ MBD      HA5    CA5    CA6     120.000    3.000
+ MBD      CA5    CA6    HA6     120.000    3.000
+ MBD      CA5    CA6    CA1     120.000    3.000
+ MBD      HA6    CA6    CA1     120.000    3.000
+ MBD      CA6    CA1    OA1     120.000    3.000
+ MBD      CA6    CA1    CA2     120.000    3.000
+ MBD      OA1    CA1    CA2     120.000    3.000
+ MBD      CA1    OA1    HA1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MBD      var_1    HA2    OA2    CA2    CA3      -90.474   20.000   1
+ MBD      CONST_1  OA2    CA2    CA3    CA4      180.000    0.000   0
+ MBD      var_2    CA2    CA3    CB3    HB31     -90.226   20.000   1
+ MBD      CONST_2  CA2    CA3    CA4    CA5        0.000    0.000   0
+ MBD      CONST_3  CA3    CA4    CA5    CA6        0.000    0.000   0
+ MBD      CONST_4  CA4    CA5    CA6    CA1        0.000    0.000   0
+ MBD      CONST_5  CA5    CA6    CA1    OA1      180.000    0.000   0
+ MBD      CONST_6  CA6    CA1    CA2    OA2      180.000    0.000   0
+ MBD      var_3    CA6    CA1    OA1    HA1       90.029   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MBD      plan-1    CA1       0.020
+ MBD      plan-1    OA1       0.020
+ MBD      plan-1    CA2       0.020
+ MBD      plan-1    CA6       0.020
+ MBD      plan-1    CA3       0.020
+ MBD      plan-1    CA4       0.020
+ MBD      plan-1    CA5       0.020
+ MBD      plan-1    OA2       0.020
+ MBD      plan-1    CB3       0.020
+ MBD      plan-1    HA4       0.020
+ MBD      plan-1    HA5       0.020
+ MBD      plan-1    HA6       0.020
+# ------------------------------------------------------

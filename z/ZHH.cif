@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ZHH      ZHH '2-(4-METHOXYPHENYL)ETHANAMINE       ' non-polymer        24  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ZHH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ZHH           N2     N    NH2       0.000      0.000    0.000    0.000
+ ZHH           HN21   H    H         0.000      0.803    0.330    0.512
+ ZHH           HN22   H    H         0.000     -0.035    0.085   -1.004
+ ZHH           CA     C    CH2       0.000     -1.102   -0.597    0.706
+ ZHH           HA1    H    H         0.000     -0.711   -1.418    1.309
+ ZHH           HA2    H    H         0.000     -1.802   -0.991   -0.034
+ ZHH           CB     C    CH2       0.000     -1.826    0.406    1.612
+ ZHH           HB1    H    H         0.000     -2.196    1.213    0.976
+ ZHH           HB2    H    H         0.000     -1.088    0.806    2.311
+ ZHH           CG     C    CR6       0.000     -2.962   -0.189    2.374
+ ZHH           CD1    C    CR16      0.000     -2.741   -0.744    3.635
+ ZHH           HD1    H    H         0.000     -1.746   -0.743    4.060
+ ZHH           CE1    C    CR16      0.000     -3.804   -1.301    4.347
+ ZHH           HE1    H    H         0.000     -3.633   -1.731    5.325
+ ZHH           CZ     C    CR6       0.000     -5.086   -1.303    3.799
+ ZHH           O1     O    O2        0.000     -6.123   -1.844    4.494
+ ZHH           CF1    C    CH3       0.000     -5.828   -2.394    5.777
+ ZHH           HF13   H    H         0.000     -6.577   -3.094    6.043
+ ZHH           HF12   H    H         0.000     -4.887   -2.879    5.746
+ ZHH           HF11   H    H         0.000     -5.800   -1.617    6.497
+ ZHH           CE2    C    CR16      0.000     -5.307   -0.748    2.538
+ ZHH           HE2    H    H         0.000     -6.302   -0.749    2.112
+ ZHH           CD2    C    CR16      0.000     -4.244   -0.191    1.826
+ ZHH           HD2    H    H         0.000     -4.415    0.240    0.847
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ZHH      N2     n/a    CA     START
+ ZHH      HN21   N2     .      .
+ ZHH      HN22   N2     .      .
+ ZHH      CA     N2     CB     .
+ ZHH      HA1    CA     .      .
+ ZHH      HA2    CA     .      .
+ ZHH      CB     CA     CG     .
+ ZHH      HB1    CB     .      .
+ ZHH      HB2    CB     .      .
+ ZHH      CG     CB     CD1    .
+ ZHH      CD1    CG     CE1    .
+ ZHH      HD1    CD1    .      .
+ ZHH      CE1    CD1    CZ     .
+ ZHH      HE1    CE1    .      .
+ ZHH      CZ     CE1    CE2    .
+ ZHH      O1     CZ     CF1    .
+ ZHH      CF1    O1     HF11   .
+ ZHH      HF13   CF1    .      .
+ ZHH      HF12   CF1    .      .
+ ZHH      HF11   CF1    .      .
+ ZHH      CE2    CZ     CD2    .
+ ZHH      HE2    CE2    .      .
+ ZHH      CD2    CE2    HD2    .
+ ZHH      HD2    CD2    .      END
+ ZHH      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ZHH      CA     N2        single      1.450    0.020
+ ZHH      HN21   N2        single      1.010    0.020
+ ZHH      HN22   N2        single      1.010    0.020
+ ZHH      CB     CA        single      1.524    0.020
+ ZHH      HA1    CA        single      1.092    0.020
+ ZHH      HA2    CA        single      1.092    0.020
+ ZHH      CG     CB        single      1.511    0.020
+ ZHH      HB1    CB        single      1.092    0.020
+ ZHH      HB2    CB        single      1.092    0.020
+ ZHH      CG     CD2       double      1.390    0.020
+ ZHH      CD1    CG        single      1.390    0.020
+ ZHH      CD2    CE2       single      1.390    0.020
+ ZHH      HD2    CD2       single      1.083    0.020
+ ZHH      CE2    CZ        double      1.390    0.020
+ ZHH      HE2    CE2       single      1.083    0.020
+ ZHH      O1     CZ        single      1.370    0.020
+ ZHH      CZ     CE1       single      1.390    0.020
+ ZHH      CF1    O1        single      1.426    0.020
+ ZHH      HF11   CF1       single      1.059    0.020
+ ZHH      HF12   CF1       single      1.059    0.020
+ ZHH      HF13   CF1       single      1.059    0.020
+ ZHH      CE1    CD1       double      1.390    0.020
+ ZHH      HE1    CE1       single      1.083    0.020
+ ZHH      HD1    CD1       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ZHH      HN21   N2     HN22    120.000    3.000
+ ZHH      HN21   N2     CA      120.000    3.000
+ ZHH      HN22   N2     CA      120.000    3.000
+ ZHH      N2     CA     HA1     109.470    3.000
+ ZHH      N2     CA     HA2     109.470    3.000
+ ZHH      N2     CA     CB      109.470    3.000
+ ZHH      HA1    CA     HA2     107.900    3.000
+ ZHH      HA1    CA     CB      109.470    3.000
+ ZHH      HA2    CA     CB      109.470    3.000
+ ZHH      CA     CB     HB1     109.470    3.000
+ ZHH      CA     CB     HB2     109.470    3.000
+ ZHH      CA     CB     CG      109.470    3.000
+ ZHH      HB1    CB     HB2     107.900    3.000
+ ZHH      HB1    CB     CG      109.470    3.000
+ ZHH      HB2    CB     CG      109.470    3.000
+ ZHH      CB     CG     CD1     120.000    3.000
+ ZHH      CB     CG     CD2     120.000    3.000
+ ZHH      CD1    CG     CD2     120.000    3.000
+ ZHH      CG     CD1    HD1     120.000    3.000
+ ZHH      CG     CD1    CE1     120.000    3.000
+ ZHH      HD1    CD1    CE1     120.000    3.000
+ ZHH      CD1    CE1    HE1     120.000    3.000
+ ZHH      CD1    CE1    CZ      120.000    3.000
+ ZHH      HE1    CE1    CZ      120.000    3.000
+ ZHH      CE1    CZ     O1      120.000    3.000
+ ZHH      CE1    CZ     CE2     120.000    3.000
+ ZHH      O1     CZ     CE2     120.000    3.000
+ ZHH      CZ     O1     CF1     120.000    3.000
+ ZHH      O1     CF1    HF13    109.470    3.000
+ ZHH      O1     CF1    HF12    109.470    3.000
+ ZHH      O1     CF1    HF11    109.470    3.000
+ ZHH      HF13   CF1    HF12    109.470    3.000
+ ZHH      HF13   CF1    HF11    109.470    3.000
+ ZHH      HF12   CF1    HF11    109.470    3.000
+ ZHH      CZ     CE2    HE2     120.000    3.000
+ ZHH      CZ     CE2    CD2     120.000    3.000
+ ZHH      HE2    CE2    CD2     120.000    3.000
+ ZHH      CE2    CD2    HD2     120.000    3.000
+ ZHH      CE2    CD2    CG      120.000    3.000
+ ZHH      HD2    CD2    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ZHH      var_1    HN22   N2     CA     CB      -114.120   20.000   1
+ ZHH      var_2    N2     CA     CB     CG      -179.118   20.000   3
+ ZHH      var_3    CA     CB     CG     CD1       89.964   20.000   2
+ ZHH      CONST_1  CB     CG     CD2    CE2      180.000    0.000   0
+ ZHH      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
+ ZHH      CONST_3  CG     CD1    CE1    CZ         0.000    0.000   0
+ ZHH      CONST_4  CD1    CE1    CZ     CE2        0.000    0.000   0
+ ZHH      var_4    CE1    CZ     O1     CF1       -0.082   20.000   1
+ ZHH      var_5    CZ     O1     CF1    HF11      82.033   20.000   1
+ ZHH      CONST_5  CE1    CZ     CE2    CD2        0.000    0.000   0
+ ZHH      CONST_6  CZ     CE2    CD2    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ZHH      plan-1    N2        0.020
+ ZHH      plan-1    CA        0.020
+ ZHH      plan-1    HN21      0.020
+ ZHH      plan-1    HN22      0.020
+ ZHH      plan-2    CG        0.020
+ ZHH      plan-2    CB        0.020
+ ZHH      plan-2    CD2       0.020
+ ZHH      plan-2    CD1       0.020
+ ZHH      plan-2    CE2       0.020
+ ZHH      plan-2    CZ        0.020
+ ZHH      plan-2    CE1       0.020
+ ZHH      plan-2    HD2       0.020
+ ZHH      plan-2    HE2       0.020
+ ZHH      plan-2    O1        0.020
+ ZHH      plan-2    HE1       0.020
+ ZHH      plan-2    HD1       0.020
+# ------------------------------------------------------

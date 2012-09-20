@@ -1,0 +1,155 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3PG      3PG '3-PHOSPHOGLYCERIC ACID              ' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3PG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3PG           O4P    O    OP       -0.666      0.000    0.000    0.000
+ 3PG           P      P    P         0.000     -0.462   -0.306   -1.408
+ 3PG           O2P    O    OP       -0.666     -0.730   -1.790   -1.537
+ 3PG           O3P    O    OP       -0.666      0.613    0.099   -2.392
+ 3PG           O1P    O    O2        0.000     -1.813    0.512   -1.719
+ 3PG           C3     C    CH2       0.000     -2.783    0.086   -0.763
+ 3PG           H31    H    H         0.000     -2.421    0.302    0.244
+ 3PG           H32    H    H         0.000     -2.948   -0.988   -0.866
+ 3PG           C2     C    CH1       0.000     -4.098    0.831   -1.004
+ 3PG           H2     H    H         0.000     -3.930    1.912   -0.901
+ 3PG           O3     O    OH1       0.000     -4.571    0.546   -2.322
+ 3PG           HO3    H    H         0.000     -4.718   -0.405   -2.413
+ 3PG           C1     C    C         0.000     -5.122    0.383    0.004
+ 3PG           O1     O    OC       -0.500     -6.189   -0.147   -0.379
+ 3PG           O2     O    OC       -0.500     -4.907    0.539    1.226
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3PG      O4P    n/a    P      START
+ 3PG      P      O4P    O1P    .
+ 3PG      O2P    P      .      .
+ 3PG      O3P    P      .      .
+ 3PG      O1P    P      C3     .
+ 3PG      C3     O1P    C2     .
+ 3PG      H31    C3     .      .
+ 3PG      H32    C3     .      .
+ 3PG      C2     C3     C1     .
+ 3PG      H2     C2     .      .
+ 3PG      O3     C2     HO3    .
+ 3PG      HO3    O3     .      .
+ 3PG      C1     C2     O2     .
+ 3PG      O1     C1     .      .
+ 3PG      O2     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3PG      O1     C1        deloc       1.250    0.020
+ 3PG      O2     C1        deloc       1.250    0.020
+ 3PG      C1     C2        single      1.500    0.020
+ 3PG      O3     C2        single      1.432    0.020
+ 3PG      C2     C3        single      1.524    0.020
+ 3PG      H2     C2        single      1.099    0.020
+ 3PG      HO3    O3        single      0.967    0.020
+ 3PG      C3     O1P       single      1.426    0.020
+ 3PG      H31    C3        single      1.092    0.020
+ 3PG      H32    C3        single      1.092    0.020
+ 3PG      O1P    P         single      1.610    0.020
+ 3PG      O2P    P         deloc       1.510    0.020
+ 3PG      O3P    P         deloc       1.510    0.020
+ 3PG      P      O4P       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3PG      O4P    P      O2P     119.900    3.000
+ 3PG      O4P    P      O3P     119.900    3.000
+ 3PG      O4P    P      O1P     108.200    3.000
+ 3PG      O2P    P      O3P     119.900    3.000
+ 3PG      O2P    P      O1P     108.200    3.000
+ 3PG      O3P    P      O1P     108.200    3.000
+ 3PG      P      O1P    C3      120.500    3.000
+ 3PG      O1P    C3     H31     109.470    3.000
+ 3PG      O1P    C3     H32     109.470    3.000
+ 3PG      O1P    C3     C2      109.470    3.000
+ 3PG      H31    C3     H32     107.900    3.000
+ 3PG      H31    C3     C2      109.470    3.000
+ 3PG      H32    C3     C2      109.470    3.000
+ 3PG      C3     C2     H2      108.340    3.000
+ 3PG      C3     C2     O3      109.470    3.000
+ 3PG      C3     C2     C1      109.470    3.000
+ 3PG      H2     C2     O3      109.470    3.000
+ 3PG      H2     C2     C1      108.810    3.000
+ 3PG      O3     C2     C1      109.470    3.000
+ 3PG      C2     O3     HO3     109.470    3.000
+ 3PG      C2     C1     O1      118.500    3.000
+ 3PG      C2     C1     O2      118.500    3.000
+ 3PG      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3PG      var_1    O4P    P      O1P    C3       -59.981   20.000   1
+ 3PG      var_2    P      O1P    C3     C2       179.972   20.000   1
+ 3PG      var_3    O1P    C3     C2     C1      -179.971   20.000   3
+ 3PG      var_4    C3     C2     O3     HO3       60.022   20.000   1
+ 3PG      var_5    C3     C2     C1     O2        59.992   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 3PG      chir_01  C2     C1     O3     C3        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3PG      plan-1    C1        0.020
+ 3PG      plan-1    O1        0.000
+ 3PG      plan-1    O2        0.000
+ 3PG      plan-1    C2        0.000
+# ------------------------------------------------------

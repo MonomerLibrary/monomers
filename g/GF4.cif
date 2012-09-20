@@ -1,0 +1,218 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GF4      GF4 '4-ethyl-5-methyl-2-(1H-tetrazol-5-yl' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GF4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GF4           O11    O    O         0.000      0.000    0.000    0.000
+ GF4           C3     C    CR5       0.000     -0.844    0.862    0.164
+ GF4           N2     N    NR5       0.000     -2.181    0.688    0.101
+ GF4           C6     C    CR5       0.000     -2.840   -0.505   -0.158
+ GF4           N7     N    NRD5      0.000     -2.281   -1.669   -0.397
+ GF4           N8     N    NRD5      0.000     -3.178   -2.567   -0.594
+ GF4           N9     N    NRD5      0.000     -4.355   -2.049   -0.506
+ GF4           N10    N    NR15      0.000     -4.180   -0.685   -0.218
+ GF4           HN10   H    H         0.000     -4.920    0.032   -0.081
+ GF4           N1     N    NR15      0.000     -2.783    1.928    0.354
+ GF4           H10    H    H         0.000     -3.805    2.116    0.380
+ GF4           C5     C    CR5       0.000     -1.794    2.848    0.560
+ GF4           C14    C    CH3       0.000     -1.999    4.310    0.859
+ GF4           H14B   H    H         0.000     -2.912    4.439    1.381
+ GF4           H14A   H    H         0.000     -1.199    4.665    1.455
+ GF4           H14    H    H         0.000     -2.031    4.855   -0.049
+ GF4           C4     C    CR5       0.000     -0.602    2.225    0.450
+ GF4           C12    C    CH2       0.000      0.751    2.869    0.605
+ GF4           H12    H    H         0.000      0.673    3.935    0.378
+ GF4           H12A   H    H         0.000      1.457    2.402   -0.084
+ GF4           C13    C    CH3       0.000      1.242    2.686    2.044
+ GF4           H13B   H    H         0.000      2.194    3.139    2.156
+ GF4           H13A   H    H         0.000      0.558    3.140    2.715
+ GF4           H13    H    H         0.000      1.317    1.652    2.267
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GF4      O11    n/a    C3     START
+ GF4      C3     O11    N2     .
+ GF4      N2     C3     N1     .
+ GF4      C6     N2     N7     .
+ GF4      N7     C6     N8     .
+ GF4      N8     N7     N9     .
+ GF4      N9     N8     N10    .
+ GF4      N10    N9     HN10   .
+ GF4      HN10   N10    .      .
+ GF4      N1     N2     C5     .
+ GF4      H10    N1     .      .
+ GF4      C5     N1     C4     .
+ GF4      C14    C5     H14    .
+ GF4      H14B   C14    .      .
+ GF4      H14A   C14    .      .
+ GF4      H14    C14    .      .
+ GF4      C4     C5     C12    .
+ GF4      C12    C4     C13    .
+ GF4      H12    C12    .      .
+ GF4      H12A   C12    .      .
+ GF4      C13    C12    H13    .
+ GF4      H13B   C13    .      .
+ GF4      H13A   C13    .      .
+ GF4      H13    C13    .      END
+ GF4      C3     C4     .    ADD
+ GF4      C6     N10    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GF4      C3     O11       double      1.285    0.020
+ GF4      C3     C4        single      1.490    0.020
+ GF4      C12    C4        single      1.510    0.020
+ GF4      C13    C12       single      1.513    0.020
+ GF4      H12    C12       single      1.092    0.020
+ GF4      H12A   C12       single      1.092    0.020
+ GF4      H13    C13       single      1.059    0.020
+ GF4      H13A   C13       single      1.059    0.020
+ GF4      H13B   C13       single      1.059    0.020
+ GF4      C4     C5        double      1.490    0.020
+ GF4      C5     N1        single      1.340    0.020
+ GF4      C14    C5        single      1.506    0.020
+ GF4      H14    C14       single      1.059    0.020
+ GF4      H14A   C14       single      1.059    0.020
+ GF4      H14B   C14       single      1.059    0.020
+ GF4      N1     N2        single      1.400    0.020
+ GF4      N2     C3        single      1.337    0.020
+ GF4      C6     N2        single      1.337    0.020
+ GF4      N7     C6        double      1.350    0.020
+ GF4      C6     N10       single      1.340    0.020
+ GF4      N10    N9        single      1.402    0.020
+ GF4      HN10   N10       single      1.040    0.020
+ GF4      N9     N8        double      1.404    0.020
+ GF4      N8     N7        single      1.404    0.020
+ GF4      H10    N1        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GF4      O11    C3     N2      108.000    3.000
+ GF4      O11    C3     C4      108.000    3.000
+ GF4      N2     C3     C4      108.000    3.000
+ GF4      C3     N2     C6      108.000    3.000
+ GF4      C3     N2     N1      108.000    3.000
+ GF4      C6     N2     N1      108.000    3.000
+ GF4      N2     C6     N7      108.000    3.000
+ GF4      N2     C6     N10     108.000    3.000
+ GF4      N7     C6     N10     108.000    3.000
+ GF4      C6     N7     N8      108.000    3.000
+ GF4      N7     N8     N9      108.000    3.000
+ GF4      N8     N9     N10     108.000    3.000
+ GF4      N9     N10    HN10    108.000    3.000
+ GF4      N9     N10    C6      108.000    3.000
+ GF4      HN10   N10    C6      126.000    3.000
+ GF4      N2     N1     H10     108.000    3.000
+ GF4      N2     N1     C5      108.000    3.000
+ GF4      H10    N1     C5      126.000    3.000
+ GF4      N1     C5     C14     126.000    3.000
+ GF4      N1     C5     C4      108.000    3.000
+ GF4      C14    C5     C4      126.000    3.000
+ GF4      C5     C14    H14B    109.470    3.000
+ GF4      C5     C14    H14A    109.470    3.000
+ GF4      C5     C14    H14     109.470    3.000
+ GF4      H14B   C14    H14A    109.470    3.000
+ GF4      H14B   C14    H14     109.470    3.000
+ GF4      H14A   C14    H14     109.470    3.000
+ GF4      C5     C4     C12     126.000    3.000
+ GF4      C5     C4     C3      108.000    3.000
+ GF4      C12    C4     C3      126.000    3.000
+ GF4      C4     C12    H12     109.470    3.000
+ GF4      C4     C12    H12A    109.470    3.000
+ GF4      C4     C12    C13     109.470    3.000
+ GF4      H12    C12    H12A    107.900    3.000
+ GF4      H12    C12    C13     109.470    3.000
+ GF4      H12A   C12    C13     109.470    3.000
+ GF4      C12    C13    H13B    109.470    3.000
+ GF4      C12    C13    H13A    109.470    3.000
+ GF4      C12    C13    H13     109.470    3.000
+ GF4      H13B   C13    H13A    109.470    3.000
+ GF4      H13B   C13    H13     109.470    3.000
+ GF4      H13A   C13    H13     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GF4      CONST_1  O11    C3     C4     C5       180.000    0.000   0
+ GF4      CONST_2  O11    C3     N2     N1       180.000    0.000   0
+ GF4      var_1    C3     N2     C6     N7        -0.616   20.000   1
+ GF4      CONST_3  N2     C6     N10    N9       180.000    0.000   0
+ GF4      CONST_4  N2     C6     N7     N8       180.000    0.000   0
+ GF4      CONST_5  C6     N7     N8     N9         0.000    0.000   0
+ GF4      CONST_6  N7     N8     N9     N10        0.000    0.000   0
+ GF4      CONST_7  N8     N9     N10    C6         0.000    0.000   0
+ GF4      CONST_8  C3     N2     N1     C5         0.000    0.000   0
+ GF4      CONST_9  N2     N1     C5     C4         0.000    0.000   0
+ GF4      var_2    N1     C5     C14    H14      -89.968   20.000   1
+ GF4      CONST_10 N1     C5     C4     C12      180.000    0.000   0
+ GF4      var_3    C5     C4     C12    C13       94.960   20.000   2
+ GF4      var_4    C4     C12    C13    H13       59.971   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GF4      plan-1    C3        0.020
+ GF4      plan-1    O11       0.020
+ GF4      plan-1    C4        0.020
+ GF4      plan-1    N2        0.020
+ GF4      plan-1    C5        0.020
+ GF4      plan-1    N1        0.020
+ GF4      plan-1    C12       0.020
+ GF4      plan-1    C14       0.020
+ GF4      plan-1    H10       0.020
+ GF4      plan-1    C6        0.020
+ GF4      plan-2    C6        0.020
+ GF4      plan-2    N2        0.020
+ GF4      plan-2    N10       0.020
+ GF4      plan-2    N7        0.020
+ GF4      plan-2    N9        0.020
+ GF4      plan-2    N8        0.020
+ GF4      plan-2    HN10      0.020
+# ------------------------------------------------------

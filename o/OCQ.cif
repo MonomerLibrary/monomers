@@ -1,0 +1,239 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OCQ      OCQ '(3S)-3-[(2S)-2-AMINO-4-HYDROXY-3-OXO' non-polymer        27  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OCQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OCQ           O      O    O         0.000      0.000    0.000    0.000
+ OCQ           C      C    C         0.000     -0.724    0.476    0.841
+ OCQ           CMK    C    CH2       0.000     -0.217    1.580    1.733
+ OCQ           HMK1   H    H         0.000     -0.268    1.257    2.775
+ OCQ           HMK2   H    H         0.000     -0.836    2.469    1.598
+ OCQ           OMP    O    OH1       0.000      1.138    1.884    1.393
+ OCQ           HMP    H    H         0.000      1.462    2.592    1.966
+ OCQ           CA     C    CH1       0.000     -2.134   -0.031    0.998
+ OCQ           HA     H    H         0.000     -2.385   -0.092    2.066
+ OCQ           N      N    NH2       0.000     -2.244   -1.366    0.393
+ OCQ           HN2    H    H         0.000     -2.517   -2.162    0.957
+ OCQ           HN1    H    H         0.000     -2.047   -1.499   -0.592
+ OCQ           CB     C    CH2       0.000     -3.102    0.925    0.300
+ OCQ           HB1    H    H         0.000     -2.909    0.917   -0.774
+ OCQ           HB2    H    H         0.000     -2.956    1.936    0.688
+ OCQ           CG     C    CH1       0.000     -4.541    0.479    0.565
+ OCQ           HG     H    H         0.000     -4.733    0.415    1.645
+ OCQ           CD2    C    C         0.000     -4.812   -0.853   -0.101
+ OCQ           OAD    O    O         0.000     -4.446   -1.929    0.322
+ OCQ           CD1    C    CH2       0.000     -5.538    1.450   -0.106
+ OCQ           HD11   H    H         0.000     -5.117    2.443   -0.280
+ OCQ           HD12   H    H         0.000     -6.478    1.545    0.441
+ OCQ           CAE    C    CH2       0.000     -5.796    0.754   -1.460
+ OCQ           HAE1   H    H         0.000     -5.128    1.132   -2.236
+ OCQ           HAE2   H    H         0.000     -6.833    0.879   -1.781
+ OCQ           NAH    N    NH1       0.000     -5.523   -0.670   -1.227
+ OCQ           HAH    H    H         0.000     -5.830   -1.416   -1.835
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OCQ      O      n/a    C      START
+ OCQ      C      O      CA     .
+ OCQ      CMK    C      OMP    .
+ OCQ      HMK1   CMK    .      .
+ OCQ      HMK2   CMK    .      .
+ OCQ      OMP    CMK    HMP    .
+ OCQ      HMP    OMP    .      .
+ OCQ      CA     C      CB     .
+ OCQ      HA     CA     .      .
+ OCQ      N      CA     HN1    .
+ OCQ      HN2    N      .      .
+ OCQ      HN1    N      .      .
+ OCQ      CB     CA     CG     .
+ OCQ      HB1    CB     .      .
+ OCQ      HB2    CB     .      .
+ OCQ      CG     CB     CD1    .
+ OCQ      HG     CG     .      .
+ OCQ      CD2    CG     OAD    .
+ OCQ      OAD    CD2    .      .
+ OCQ      CD1    CG     CAE    .
+ OCQ      HD11   CD1    .      .
+ OCQ      HD12   CD1    .      .
+ OCQ      CAE    CD1    NAH    .
+ OCQ      HAE1   CAE    .      .
+ OCQ      HAE2   CAE    .      .
+ OCQ      NAH    CAE    HAH    .
+ OCQ      HAH    NAH    .      END
+ OCQ      CD2    NAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OCQ      OAD    CD2       double      1.220    0.020
+ OCQ      CD2    CG        single      1.500    0.020
+ OCQ      CD2    NAH       single      1.330    0.020
+ OCQ      HAH    NAH       single      1.010    0.020
+ OCQ      NAH    CAE       single      1.450    0.020
+ OCQ      HAE1   CAE       single      1.092    0.020
+ OCQ      HAE2   CAE       single      1.092    0.020
+ OCQ      CAE    CD1       single      1.524    0.020
+ OCQ      CD1    CG        single      1.524    0.020
+ OCQ      HD11   CD1       single      1.092    0.020
+ OCQ      HD12   CD1       single      1.092    0.020
+ OCQ      CG     CB        single      1.524    0.020
+ OCQ      HG     CG        single      1.099    0.020
+ OCQ      CB     CA        single      1.524    0.020
+ OCQ      HB1    CB        single      1.092    0.020
+ OCQ      HB2    CB        single      1.092    0.020
+ OCQ      CA     C         single      1.500    0.020
+ OCQ      HA     CA        single      1.099    0.020
+ OCQ      N      CA        single      1.450    0.020
+ OCQ      HN1    N         single      1.010    0.020
+ OCQ      HN2    N         single      1.010    0.020
+ OCQ      CMK    C         single      1.510    0.020
+ OCQ      C      O         double      1.220    0.020
+ OCQ      OMP    CMK       single      1.432    0.020
+ OCQ      HMK1   CMK       single      1.092    0.020
+ OCQ      HMK2   CMK       single      1.092    0.020
+ OCQ      HMP    OMP       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OCQ      O      C      CMK     120.500    3.000
+ OCQ      O      C      CA      120.500    3.000
+ OCQ      CMK    C      CA      120.000    3.000
+ OCQ      C      CMK    HMK1    109.470    3.000
+ OCQ      C      CMK    HMK2    109.470    3.000
+ OCQ      C      CMK    OMP     109.500    3.000
+ OCQ      HMK1   CMK    HMK2    107.900    3.000
+ OCQ      HMK1   CMK    OMP     109.470    3.000
+ OCQ      HMK2   CMK    OMP     109.470    3.000
+ OCQ      CMK    OMP    HMP     109.470    3.000
+ OCQ      C      CA     HA      108.810    3.000
+ OCQ      C      CA     N       109.470    3.000
+ OCQ      C      CA     CB      109.470    3.000
+ OCQ      HA     CA     N       109.470    3.000
+ OCQ      HA     CA     CB      108.340    3.000
+ OCQ      N      CA     CB      109.470    3.000
+ OCQ      CA     N      HN2     120.000    3.000
+ OCQ      CA     N      HN1     120.000    3.000
+ OCQ      HN2    N      HN1     120.000    3.000
+ OCQ      CA     CB     HB1     109.470    3.000
+ OCQ      CA     CB     HB2     109.470    3.000
+ OCQ      CA     CB     CG      111.000    3.000
+ OCQ      HB1    CB     HB2     107.900    3.000
+ OCQ      HB1    CB     CG      109.470    3.000
+ OCQ      HB2    CB     CG      109.470    3.000
+ OCQ      CB     CG     HG      108.340    3.000
+ OCQ      CB     CG     CD2     109.470    3.000
+ OCQ      CB     CG     CD1     109.470    3.000
+ OCQ      HG     CG     CD2     108.810    3.000
+ OCQ      HG     CG     CD1     108.340    3.000
+ OCQ      CD2    CG     CD1     109.470    3.000
+ OCQ      CG     CD2    OAD     120.500    3.000
+ OCQ      CG     CD2    NAH     116.500    3.000
+ OCQ      OAD    CD2    NAH     123.000    3.000
+ OCQ      CG     CD1    HD11    109.470    3.000
+ OCQ      CG     CD1    HD12    109.470    3.000
+ OCQ      CG     CD1    CAE     111.000    3.000
+ OCQ      HD11   CD1    HD12    107.900    3.000
+ OCQ      HD11   CD1    CAE     109.470    3.000
+ OCQ      HD12   CD1    CAE     109.470    3.000
+ OCQ      CD1    CAE    HAE1    109.470    3.000
+ OCQ      CD1    CAE    HAE2    109.470    3.000
+ OCQ      CD1    CAE    NAH     112.000    3.000
+ OCQ      HAE1   CAE    HAE2    107.900    3.000
+ OCQ      HAE1   CAE    NAH     109.470    3.000
+ OCQ      HAE2   CAE    NAH     109.470    3.000
+ OCQ      CAE    NAH    HAH     118.500    3.000
+ OCQ      CAE    NAH    CD2     121.500    3.000
+ OCQ      HAH    NAH    CD2     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OCQ      var_1    O      C      CMK    OMP       -0.035   20.000   3
+ OCQ      var_2    C      CMK    OMP    HMP     -179.966   20.000   1
+ OCQ      var_3    O      C      CA     CB       -99.956   20.000   3
+ OCQ      var_4    C      CA     N      HN1      -59.994   20.000   1
+ OCQ      var_5    C      CA     CB     CG      -175.001   20.000   3
+ OCQ      var_6    CA     CB     CG     CD1      178.753   20.000   3
+ OCQ      var_7    CB     CG     CD2    OAD       90.000   20.000   3
+ OCQ      CONST_1  CG     CD2    NAH    CAE        0.000    0.000   0
+ OCQ      var_8    CB     CG     CD1    CAE       90.000   20.000   3
+ OCQ      var_9    CG     CD1    CAE    NAH       30.000   20.000   3
+ OCQ      var_10   CD1    CAE    NAH    CD2      -30.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OCQ      chir_01  CG     CD2    CD1    CB        positiv
+ OCQ      chir_02  CA     CB     N      C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OCQ      plan-1    CD2       0.020
+ OCQ      plan-1    OAD       0.020
+ OCQ      plan-1    NAH       0.020
+ OCQ      plan-1    CG        0.020
+ OCQ      plan-1    HAH       0.020
+ OCQ      plan-2    NAH       0.020
+ OCQ      plan-2    CD2       0.020
+ OCQ      plan-2    CAE       0.020
+ OCQ      plan-2    HAH       0.020
+ OCQ      plan-3    N         0.020
+ OCQ      plan-3    CA        0.020
+ OCQ      plan-3    HN1       0.020
+ OCQ      plan-3    HN2       0.020
+ OCQ      plan-4    C         0.020
+ OCQ      plan-4    CA        0.020
+ OCQ      plan-4    O         0.020
+ OCQ      plan-4    CMK       0.020
+# ------------------------------------------------------

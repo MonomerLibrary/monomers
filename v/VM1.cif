@@ -1,0 +1,202 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+VM1      VM1 '5-(2-thienyl)nicotinic acid         ' non-polymer        20  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_VM1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ VM1           O1C    O    OC       -0.500      0.000    0.000    0.000
+ VM1           C1B    C    C         0.000     -1.147   -0.500    0.005
+ VM1           O1A    O    OC       -0.500     -1.286   -1.744    0.005
+ VM1           C1G    C    CR6       0.000     -2.336    0.376    0.002
+ VM1           C1L    C    CR16      0.000     -2.191    1.766    0.007
+ VM1           H1L    H    H         0.000     -1.199    2.201    0.012
+ VM1           N1M    N    NRD6      0.000     -3.246    2.554    0.005
+ VM1           C1N    C    CR16      0.000     -4.474    2.079   -0.001
+ VM1           H1N    H    H         0.000     -5.312    2.765   -0.007
+ VM1           C1I    C    CR6       0.000     -4.711    0.703    0.000
+ VM1           C1H    C    CR16      0.000     -3.621   -0.172    0.001
+ VM1           H1H    H    H         0.000     -3.768   -1.245    0.003
+ VM1           C1J    C    CR5       0.000     -6.094    0.179   -0.002
+ VM1           S1D    S    S2        0.000     -6.535   -1.523    0.000
+ VM1           C1K    C    CR15      0.000     -7.212    0.932   -0.003
+ VM1           H1K    H    H         0.000     -7.187    2.015   -0.002
+ VM1           C1F    C    CR15      0.000     -8.390    0.216   -0.004
+ VM1           H1F    H    H         0.000     -9.361    0.694   -0.005
+ VM1           C1E    C    CR15      0.000     -8.244   -1.113   -0.003
+ VM1           H1E    H    H         0.000     -9.057   -1.829   -0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ VM1      O1C    n/a    C1B    START
+ VM1      C1B    O1C    C1G    .
+ VM1      O1A    C1B    .      .
+ VM1      C1G    C1B    C1L    .
+ VM1      C1L    C1G    N1M    .
+ VM1      H1L    C1L    .      .
+ VM1      N1M    C1L    C1N    .
+ VM1      C1N    N1M    C1I    .
+ VM1      H1N    C1N    .      .
+ VM1      C1I    C1N    C1J    .
+ VM1      C1H    C1I    H1H    .
+ VM1      H1H    C1H    .      .
+ VM1      C1J    C1I    C1K    .
+ VM1      S1D    C1J    .      .
+ VM1      C1K    C1J    C1F    .
+ VM1      H1K    C1K    .      .
+ VM1      C1F    C1K    C1E    .
+ VM1      H1F    C1F    .      .
+ VM1      C1E    C1F    H1E    .
+ VM1      H1E    C1E    .      END
+ VM1      S1D    C1E    .    ADD
+ VM1      C1G    C1H    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ VM1      O1A    C1B       deloc       1.250    0.020
+ VM1      C1G    C1B       single      1.500    0.020
+ VM1      C1B    O1C       deloc       1.250    0.020
+ VM1      S1D    C1E       single      1.745    0.020
+ VM1      S1D    C1J       single      1.745    0.020
+ VM1      C1E    C1F       double      1.380    0.020
+ VM1      H1E    C1E       single      1.083    0.020
+ VM1      C1F    C1K       single      1.380    0.020
+ VM1      H1F    C1F       single      1.083    0.020
+ VM1      C1G    C1H       double      1.390    0.020
+ VM1      C1L    C1G       single      1.390    0.020
+ VM1      C1H    C1I       single      1.390    0.020
+ VM1      H1H    C1H       single      1.083    0.020
+ VM1      C1J    C1I       single      1.490    0.020
+ VM1      C1I    C1N       double      1.390    0.020
+ VM1      C1K    C1J       double      1.387    0.020
+ VM1      H1K    C1K       single      1.083    0.020
+ VM1      N1M    C1L       double      1.337    0.020
+ VM1      H1L    C1L       single      1.083    0.020
+ VM1      C1N    N1M       single      1.337    0.020
+ VM1      H1N    C1N       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ VM1      O1C    C1B    O1A     123.000    3.000
+ VM1      O1C    C1B    C1G     120.000    3.000
+ VM1      O1A    C1B    C1G     120.000    3.000
+ VM1      C1B    C1G    C1L     120.000    3.000
+ VM1      C1B    C1G    C1H     120.000    3.000
+ VM1      C1L    C1G    C1H     120.000    3.000
+ VM1      C1G    C1L    H1L     120.000    3.000
+ VM1      C1G    C1L    N1M     120.000    3.000
+ VM1      H1L    C1L    N1M     120.000    3.000
+ VM1      C1L    N1M    C1N     120.000    3.000
+ VM1      N1M    C1N    H1N     120.000    3.000
+ VM1      N1M    C1N    C1I     120.000    3.000
+ VM1      H1N    C1N    C1I     120.000    3.000
+ VM1      C1N    C1I    C1H     120.000    3.000
+ VM1      C1N    C1I    C1J     120.000    3.000
+ VM1      C1H    C1I    C1J     120.000    3.000
+ VM1      C1I    C1H    H1H     120.000    3.000
+ VM1      C1I    C1H    C1G     120.000    3.000
+ VM1      H1H    C1H    C1G     120.000    3.000
+ VM1      C1I    C1J    S1D     108.000    3.000
+ VM1      C1I    C1J    C1K     126.000    3.000
+ VM1      S1D    C1J    C1K     108.000    3.000
+ VM1      C1J    S1D    C1E      91.031    3.000
+ VM1      C1J    C1K    H1K     126.000    3.000
+ VM1      C1J    C1K    C1F     108.000    3.000
+ VM1      H1K    C1K    C1F     126.000    3.000
+ VM1      C1K    C1F    H1F     126.000    3.000
+ VM1      C1K    C1F    C1E     108.000    3.000
+ VM1      H1F    C1F    C1E     126.000    3.000
+ VM1      C1F    C1E    H1E     126.000    3.000
+ VM1      C1F    C1E    S1D     108.000    3.000
+ VM1      H1E    C1E    S1D     108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ VM1      var_1    O1C    C1B    C1G    C1L       -0.625   20.000   1
+ VM1      CONST_1  C1B    C1G    C1H    C1I      180.000    0.000   0
+ VM1      CONST_2  C1B    C1G    C1L    N1M      180.000    0.000   0
+ VM1      CONST_3  C1G    C1L    N1M    C1N        0.000    0.000   0
+ VM1      CONST_4  C1L    N1M    C1N    C1I        0.000    0.000   0
+ VM1      CONST_5  N1M    C1N    C1I    C1J      180.000    0.000   0
+ VM1      CONST_6  C1N    C1I    C1H    C1G        0.000    0.000   0
+ VM1      var_2    C1N    C1I    C1J    C1K       -0.048   20.000   1
+ VM1      CONST_7  C1I    C1J    S1D    C1E      180.000    0.000   0
+ VM1      CONST_8  C1J    S1D    C1E    C1F        0.000    0.000   0
+ VM1      CONST_9  C1I    C1J    C1K    C1F      180.000    0.000   0
+ VM1      CONST_10 C1J    C1K    C1F    C1E        0.000    0.000   0
+ VM1      CONST_11 C1K    C1F    C1E    S1D        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ VM1      plan-1    C1B       0.020
+ VM1      plan-1    O1A       0.020
+ VM1      plan-1    O1C       0.020
+ VM1      plan-1    C1G       0.020
+ VM1      plan-2    C1E       0.020
+ VM1      plan-2    S1D       0.020
+ VM1      plan-2    C1F       0.020
+ VM1      plan-2    H1E       0.020
+ VM1      plan-2    C1J       0.020
+ VM1      plan-2    C1K       0.020
+ VM1      plan-2    H1F       0.020
+ VM1      plan-2    C1I       0.020
+ VM1      plan-2    H1K       0.020
+ VM1      plan-3    C1G       0.020
+ VM1      plan-3    C1B       0.020
+ VM1      plan-3    C1H       0.020
+ VM1      plan-3    C1L       0.020
+ VM1      plan-3    C1I       0.020
+ VM1      plan-3    N1M       0.020
+ VM1      plan-3    C1N       0.020
+ VM1      plan-3    H1H       0.020
+ VM1      plan-3    C1J       0.020
+ VM1      plan-3    H1L       0.020
+ VM1      plan-3    H1N       0.020
+# ------------------------------------------------------

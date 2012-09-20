@@ -1,0 +1,259 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LTN      LTN 'L-TRYPTOPHANAMIDE                   ' non-polymer        28  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LTN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LTN           O      O    O         0.000      0.000    0.000    0.000
+ LTN           C      C    C         0.000     -1.087    0.174    0.506
+ LTN           N      N    NH2       0.000     -1.229    0.094    1.844
+ LTN           HN2    H    H         0.000     -2.136    0.239    2.271
+ LTN           HN1    H    H         0.000     -0.429   -0.110    2.431
+ LTN           CA     C    CH1       0.000     -2.282    0.481   -0.361
+ LTN           HA     H    H         0.000     -2.990    1.106    0.201
+ LTN           NH3    N    NH2       0.000     -1.842    1.200   -1.563
+ LTN           HH32   H    H         0.000     -2.195    2.128   -1.761
+ LTN           HH31   H    H         0.000     -1.183    0.771   -2.202
+ LTN           CB     C    CH2       0.000     -2.965   -0.825   -0.768
+ LTN           HB1    H    H         0.000     -3.291   -1.359    0.127
+ LTN           HB2    H    H         0.000     -2.260   -1.446   -1.325
+ LTN           CG     C    CR5       0.000     -4.158   -0.517   -1.634
+ LTN           CD1    C    CR15      0.000     -4.167   -0.408   -2.972
+ LTN           HD1    H    H         0.000     -3.301   -0.528   -3.612
+ LTN           NE1    N    NR15      0.000     -5.432   -0.121   -3.409
+ LTN           HE1    H    H         0.000     -5.704    0.015   -4.403
+ LTN           CE2    C    CR56      0.000     -6.290   -0.040   -2.336
+ LTN           CZ2    C    CR16      0.000     -7.652    0.220   -2.216
+ LTN           HZ2    H    H         0.000     -8.249    0.410   -3.099
+ LTN           CH2    C    CR16      0.000     -8.237    0.234   -0.970
+ LTN           HH2    H    H         0.000     -9.297    0.436   -0.878
+ LTN           CZ3    C    CR16      0.000     -7.484   -0.007    0.170
+ LTN           HZ3    H    H         0.000     -7.960    0.006    1.142
+ LTN           CE3    C    CR16      0.000     -6.145   -0.263    0.075
+ LTN           HE3    H    H         0.000     -5.562   -0.444    0.970
+ LTN           CD2    C    CR56      0.000     -5.531   -0.288   -1.178
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LTN      O      n/a    C      START
+ LTN      C      O      CA     .
+ LTN      N      C      HN1    .
+ LTN      HN2    N      .      .
+ LTN      HN1    N      .      .
+ LTN      CA     C      CB     .
+ LTN      HA     CA     .      .
+ LTN      NH3    CA     HH31   .
+ LTN      HH32   NH3    .      .
+ LTN      HH31   NH3    .      .
+ LTN      CB     CA     CG     .
+ LTN      HB1    CB     .      .
+ LTN      HB2    CB     .      .
+ LTN      CG     CB     CD1    .
+ LTN      CD1    CG     NE1    .
+ LTN      HD1    CD1    .      .
+ LTN      NE1    CD1    CE2    .
+ LTN      HE1    NE1    .      .
+ LTN      CE2    NE1    CZ2    .
+ LTN      CZ2    CE2    CH2    .
+ LTN      HZ2    CZ2    .      .
+ LTN      CH2    CZ2    CZ3    .
+ LTN      HH2    CH2    .      .
+ LTN      CZ3    CH2    CE3    .
+ LTN      HZ3    CZ3    .      .
+ LTN      CE3    CZ3    CD2    .
+ LTN      HE3    CE3    .      .
+ LTN      CD2    CE3    .      END
+ LTN      CG     CD2    .    ADD
+ LTN      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LTN      NH3    CA        single      1.450    0.020
+ LTN      HH31   NH3       single      1.010    0.020
+ LTN      HH32   NH3       single      1.010    0.020
+ LTN      CB     CA        single      1.524    0.020
+ LTN      CA     C         single      1.500    0.020
+ LTN      HA     CA        single      1.099    0.020
+ LTN      CG     CB        single      1.510    0.020
+ LTN      HB1    CB        single      1.092    0.020
+ LTN      HB2    CB        single      1.092    0.020
+ LTN      CG     CD2       single      1.490    0.020
+ LTN      CD1    CG        double      1.387    0.020
+ LTN      CD2    CE2       double      1.490    0.020
+ LTN      CD2    CE3       single      1.390    0.020
+ LTN      CE2    NE1       single      1.340    0.020
+ LTN      CZ2    CE2       single      1.390    0.020
+ LTN      CE3    CZ3       double      1.390    0.020
+ LTN      HE3    CE3       single      1.083    0.020
+ LTN      NE1    CD1       single      1.350    0.020
+ LTN      HD1    CD1       single      1.083    0.020
+ LTN      HE1    NE1       single      1.040    0.020
+ LTN      CH2    CZ2       double      1.390    0.020
+ LTN      HZ2    CZ2       single      1.083    0.020
+ LTN      CZ3    CH2       single      1.390    0.020
+ LTN      HZ3    CZ3       single      1.083    0.020
+ LTN      HH2    CH2       single      1.083    0.020
+ LTN      C      O         double      1.220    0.020
+ LTN      N      C         single      1.332    0.020
+ LTN      HN1    N         single      1.010    0.020
+ LTN      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LTN      O      C      N       123.000    3.000
+ LTN      O      C      CA      120.500    3.000
+ LTN      N      C      CA      120.000    3.000
+ LTN      C      N      HN2     120.000    3.000
+ LTN      C      N      HN1     120.000    3.000
+ LTN      HN2    N      HN1     120.000    3.000
+ LTN      C      CA     HA      108.810    3.000
+ LTN      C      CA     NH3     109.470    3.000
+ LTN      C      CA     CB      109.470    3.000
+ LTN      HA     CA     NH3     109.470    3.000
+ LTN      HA     CA     CB      108.340    3.000
+ LTN      NH3    CA     CB      109.470    3.000
+ LTN      CA     NH3    HH32    120.000    3.000
+ LTN      CA     NH3    HH31    120.000    3.000
+ LTN      HH32   NH3    HH31    120.000    3.000
+ LTN      CA     CB     HB1     109.470    3.000
+ LTN      CA     CB     HB2     109.470    3.000
+ LTN      CA     CB     CG      109.470    3.000
+ LTN      HB1    CB     HB2     107.900    3.000
+ LTN      HB1    CB     CG      109.470    3.000
+ LTN      HB2    CB     CG      109.470    3.000
+ LTN      CB     CG     CD1     126.000    3.000
+ LTN      CB     CG     CD2     126.000    3.000
+ LTN      CD1    CG     CD2     108.000    3.000
+ LTN      CG     CD1    HD1     126.000    3.000
+ LTN      CG     CD1    NE1     108.000    3.000
+ LTN      HD1    CD1    NE1     126.000    3.000
+ LTN      CD1    NE1    HE1     126.000    3.000
+ LTN      CD1    NE1    CE2     108.000    3.000
+ LTN      HE1    NE1    CE2     126.000    3.000
+ LTN      NE1    CE2    CZ2     132.000    3.000
+ LTN      NE1    CE2    CD2     108.000    3.000
+ LTN      CZ2    CE2    CD2     120.000    3.000
+ LTN      CE2    CZ2    HZ2     120.000    3.000
+ LTN      CE2    CZ2    CH2     120.000    3.000
+ LTN      HZ2    CZ2    CH2     120.000    3.000
+ LTN      CZ2    CH2    HH2     120.000    3.000
+ LTN      CZ2    CH2    CZ3     120.000    3.000
+ LTN      HH2    CH2    CZ3     120.000    3.000
+ LTN      CH2    CZ3    HZ3     120.000    3.000
+ LTN      CH2    CZ3    CE3     120.000    3.000
+ LTN      HZ3    CZ3    CE3     120.000    3.000
+ LTN      CZ3    CE3    HE3     120.000    3.000
+ LTN      CZ3    CE3    CD2     120.000    3.000
+ LTN      HE3    CE3    CD2     120.000    3.000
+ LTN      CE3    CD2    CG      126.000    3.000
+ LTN      CE3    CD2    CE2     120.000    3.000
+ LTN      CG     CD2    CE2     108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LTN      CONST_1  O      C      N      HN1        0.000    0.000   0
+ LTN      var_1    O      C      CA     CB        90.057   20.000   3
+ LTN      var_2    C      CA     NH3    HH31      59.972   20.000   1
+ LTN      var_3    C      CA     CB     CG      -179.987   20.000   3
+ LTN      var_4    CA     CB     CG     CD1       90.044   20.000   2
+ LTN      CONST_2  CB     CG     CD2    CE3        0.000    0.000   0
+ LTN      CONST_3  CB     CG     CD1    NE1      180.000    0.000   0
+ LTN      CONST_4  CG     CD1    NE1    CE2        0.000    0.000   0
+ LTN      CONST_5  CD1    NE1    CE2    CZ2      180.000    0.000   0
+ LTN      CONST_6  NE1    CE2    CZ2    CH2      180.000    0.000   0
+ LTN      CONST_7  CE2    CZ2    CH2    CZ3        0.000    0.000   0
+ LTN      CONST_8  CZ2    CH2    CZ3    CE3        0.000    0.000   0
+ LTN      CONST_9  CH2    CZ3    CE3    CD2        0.000    0.000   0
+ LTN      CONST_10 CZ3    CE3    CD2    CG       180.000    0.000   0
+ LTN      CONST_11 CE3    CD2    CE2    NE1      180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ LTN      chir_01  CA     NH3    CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LTN      plan-1    NH3       0.020
+ LTN      plan-1    CA        0.020
+ LTN      plan-1    HH31      0.020
+ LTN      plan-1    HH32      0.020
+ LTN      plan-2    CG        0.020
+ LTN      plan-2    CB        0.020
+ LTN      plan-2    CD2       0.020
+ LTN      plan-2    CD1       0.020
+ LTN      plan-2    NE1       0.020
+ LTN      plan-2    CE2       0.020
+ LTN      plan-2    CE3       0.020
+ LTN      plan-2    CZ2       0.020
+ LTN      plan-2    CZ3       0.020
+ LTN      plan-2    CH2       0.020
+ LTN      plan-2    HE3       0.020
+ LTN      plan-2    HD1       0.020
+ LTN      plan-2    HE1       0.020
+ LTN      plan-2    HZ2       0.020
+ LTN      plan-2    HZ3       0.020
+ LTN      plan-2    HH2       0.020
+ LTN      plan-3    C         0.020
+ LTN      plan-3    CA        0.020
+ LTN      plan-3    O         0.020
+ LTN      plan-3    N         0.020
+ LTN      plan-3    HN2       0.020
+ LTN      plan-3    HN1       0.020
+ LTN      plan-4    N         0.020
+ LTN      plan-4    C         0.020
+ LTN      plan-4    HN1       0.020
+ LTN      plan-4    HN2       0.020
+# ------------------------------------------------------

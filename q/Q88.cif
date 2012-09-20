@@ -1,0 +1,188 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+Q88      Q88 '9H-purine-6,8-diamine               ' non-polymer        17  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_Q88
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ Q88           N8     N    NH2       0.000      0.000    0.000    0.000
+ Q88           HN8    H    H         0.000      0.416    0.926    0.001
+ Q88           HN8A   H    H         0.000      0.607   -0.813    0.000
+ Q88           C8     C    CR5       0.000     -1.373   -0.151   -0.001
+ Q88           N7     N    NRD5      0.000     -2.238    0.833    0.000
+ Q88           C5     C    CR56      0.000     -3.496    0.325   -0.001
+ Q88           C6     C    CR6       0.000     -4.784    0.884    0.000
+ Q88           N6     N    NH2       0.000     -4.959    2.259    0.000
+ Q88           HN6A   H    H         0.000     -4.156    2.881    0.000
+ Q88           HN6    H    H         0.000     -5.892    2.661    0.000
+ Q88           N1     N    NRD6      0.000     -5.831    0.065    0.001
+ Q88           N9     N    NR15      0.000     -2.033   -1.348   -0.001
+ Q88           HN9    H    H         0.000     -1.596   -2.292    0.000
+ Q88           C4     C    CR56      0.000     -3.382   -1.075   -0.001
+ Q88           N3     N    NRD6      0.000     -4.485   -1.814    0.000
+ Q88           C2     C    CR16      0.000     -5.673   -1.246    0.000
+ Q88           H2     H    H         0.000     -6.553   -1.877    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ Q88      N8     n/a    C8     START
+ Q88      HN8    N8     .      .
+ Q88      HN8A   N8     .      .
+ Q88      C8     N8     N9     .
+ Q88      N7     C8     C5     .
+ Q88      C5     N7     C6     .
+ Q88      C6     C5     N1     .
+ Q88      N6     C6     HN6    .
+ Q88      HN6A   N6     .      .
+ Q88      HN6    N6     .      .
+ Q88      N1     C6     .      .
+ Q88      N9     C8     C4     .
+ Q88      HN9    N9     .      .
+ Q88      C4     N9     N3     .
+ Q88      N3     C4     C2     .
+ Q88      C2     N3     H2     .
+ Q88      H2     C2     .      END
+ Q88      N1     C2     .    ADD
+ Q88      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ Q88      N1     C2        double      1.337    0.020
+ Q88      N1     C6        single      1.350    0.020
+ Q88      C2     N3        single      1.337    0.020
+ Q88      N3     C4        double      1.355    0.020
+ Q88      C4     C5        single      1.490    0.020
+ Q88      C4     N9        single      1.340    0.020
+ Q88      C6     C5        double      1.490    0.020
+ Q88      C5     N7        single      1.350    0.020
+ Q88      N6     C6        single      1.355    0.020
+ Q88      N7     C8        double      1.350    0.020
+ Q88      C8     N8        single      1.355    0.020
+ Q88      N9     C8        single      1.340    0.020
+ Q88      H2     C2        single      1.083    0.020
+ Q88      HN6    N6        single      1.010    0.020
+ Q88      HN6A   N6        single      1.010    0.020
+ Q88      HN8    N8        single      1.010    0.020
+ Q88      HN8A   N8        single      1.010    0.020
+ Q88      HN9    N9        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ Q88      HN8    N8     HN8A    120.000    3.000
+ Q88      HN8    N8     C8      120.000    3.000
+ Q88      HN8A   N8     C8      120.000    3.000
+ Q88      N8     C8     N7      108.000    3.000
+ Q88      N8     C8     N9      108.000    3.000
+ Q88      N7     C8     N9      108.000    3.000
+ Q88      C8     N7     C5      108.000    3.000
+ Q88      N7     C5     C6      132.000    3.000
+ Q88      N7     C5     C4      108.000    3.000
+ Q88      C6     C5     C4      120.000    3.000
+ Q88      C5     C6     N6      120.000    3.000
+ Q88      C5     C6     N1      120.000    3.000
+ Q88      N6     C6     N1      120.000    3.000
+ Q88      C6     N6     HN6A    120.000    3.000
+ Q88      C6     N6     HN6     120.000    3.000
+ Q88      HN6A   N6     HN6     120.000    3.000
+ Q88      C6     N1     C2      120.000    3.000
+ Q88      C8     N9     HN9     126.000    3.000
+ Q88      C8     N9     C4      108.000    3.000
+ Q88      HN9    N9     C4      126.000    3.000
+ Q88      N9     C4     N3      132.000    3.000
+ Q88      N9     C4     C5      108.000    3.000
+ Q88      N3     C4     C5      120.000    3.000
+ Q88      C4     N3     C2      120.000    3.000
+ Q88      N3     C2     H2      120.000    3.000
+ Q88      N3     C2     N1      120.000    3.000
+ Q88      H2     C2     N1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ Q88      CONST_1  HN8A   N8     C8     N9         0.053    0.000   0
+ Q88      CONST_2  N8     C8     N7     C5       180.000    0.000   0
+ Q88      CONST_3  C8     N7     C5     C6       180.000    0.000   0
+ Q88      CONST_4  N7     C5     C6     N1       180.000    0.000   0
+ Q88      CONST_5  C5     C6     N6     HN6      179.953    0.000   0
+ Q88      CONST_6  C5     C6     N1     C2         0.000    0.000   0
+ Q88      CONST_7  C6     N1     C2     N3         0.000    0.000   0
+ Q88      CONST_8  N8     C8     N9     C4       180.000    0.000   0
+ Q88      CONST_9  C8     N9     C4     N3       180.000    0.000   0
+ Q88      CONST_10 N9     C4     C5     N7         0.000    0.000   0
+ Q88      CONST_11 N9     C4     N3     C2       180.000    0.000   0
+ Q88      CONST_12 C4     N3     C2     N1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ Q88      plan-1    N1        0.020
+ Q88      plan-1    C2        0.020
+ Q88      plan-1    C6        0.020
+ Q88      plan-1    N3        0.020
+ Q88      plan-1    H2        0.020
+ Q88      plan-1    C4        0.020
+ Q88      plan-1    C5        0.020
+ Q88      plan-1    N9        0.020
+ Q88      plan-1    N7        0.020
+ Q88      plan-1    C8        0.020
+ Q88      plan-1    N6        0.020
+ Q88      plan-1    N8        0.020
+ Q88      plan-1    HN9       0.020
+ Q88      plan-1    HN6A      0.020
+ Q88      plan-1    HN6       0.020
+ Q88      plan-1    HN8       0.020
+ Q88      plan-1    HN8A      0.020
+ Q88      plan-2    N6        0.020
+ Q88      plan-2    C6        0.020
+ Q88      plan-2    HN6       0.020
+ Q88      plan-2    HN6A      0.020
+ Q88      plan-3    N8        0.020
+ Q88      plan-3    C8        0.020
+ Q88      plan-3    HN8       0.020
+ Q88      plan-3    HN8A      0.020
+# ------------------------------------------------------

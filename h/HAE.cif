@@ -1,0 +1,124 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HAE      HAE 'ACETOHYDROXAMIC ACID                ' non-polymer        10   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HAE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HAE           O2     O    O         0.000      0.000    0.000    0.000
+ HAE           C2     C    C         0.000     -1.178    0.000    0.290
+ HAE           C1     C    CH3       0.000     -1.597    0.000    1.737
+ HAE           H13    H    H         0.000     -0.737    0.000    2.356
+ HAE           H12    H    H         0.000     -2.176    0.865    1.939
+ HAE           H11    H    H         0.000     -2.175   -0.865    1.939
+ HAE           N      N    NH1       0.000     -2.110    0.000   -0.682
+ HAE           HN     H    H         0.000     -3.091    0.000   -0.441
+ HAE           O      O    OH1       0.000     -1.715    0.000   -2.042
+ HAE           HO     H    H         0.000     -2.382    0.000   -2.748
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HAE      O2     n/a    C2     START
+ HAE      C2     O2     N      .
+ HAE      C1     C2     H11    .
+ HAE      H13    C1     .      .
+ HAE      H12    C1     .      .
+ HAE      H11    C1     .      .
+ HAE      N      C2     O      .
+ HAE      HN     N      .      .
+ HAE      O      N      HO     .
+ HAE      HO     O      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HAE      C1     C2        single      1.500    0.020
+ HAE      H11    C1        single      1.059    0.020
+ HAE      H12    C1        single      1.059    0.020
+ HAE      H13    C1        single      1.059    0.020
+ HAE      C2     O2        double      1.220    0.020
+ HAE      N      C2        single      1.330    0.020
+ HAE      O      N         single      1.392    0.020
+ HAE      HN     N         single      1.010    0.020
+ HAE      HO     O         single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HAE      O2     C2     C1      123.000    3.000
+ HAE      O2     C2     N       123.000    3.000
+ HAE      C1     C2     N       116.500    3.000
+ HAE      C2     C1     H13     109.470    3.000
+ HAE      C2     C1     H12     109.470    3.000
+ HAE      C2     C1     H11     109.470    3.000
+ HAE      H13    C1     H12     109.470    3.000
+ HAE      H13    C1     H11     109.470    3.000
+ HAE      H12    C1     H11     109.470    3.000
+ HAE      C2     N      HN      120.000    3.000
+ HAE      C2     N      O       120.000    3.000
+ HAE      HN     N      O       120.200    3.000
+ HAE      N      O      HO      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HAE      var_1    O2     C2     C1     H11     -119.991   20.000   1
+ HAE      CONST_1  O2     C2     N      O          0.000    0.000   0
+ HAE      var_2    C2     N      O      HO       180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HAE      plan-1    C2        0.020
+ HAE      plan-1    C1        0.020
+ HAE      plan-1    O2        0.020
+ HAE      plan-1    N         0.020
+ HAE      plan-1    HN        0.020
+ HAE      plan-2    N         0.020
+ HAE      plan-2    C2        0.020
+ HAE      plan-2    O         0.020
+ HAE      plan-2    HN        0.020
+# ------------------------------------------------------

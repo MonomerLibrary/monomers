@@ -1,0 +1,142 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AGU      AGU 'AMINOGUANIDINE                      ' non-polymer        11   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AGU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AGU           N1     N    N         0.000      0.000    0.000    0.000
+ AGU           HN1    H    H         0.000      0.959    0.037    0.066
+ AGU           C      C    C         0.000     -0.745   -0.009    1.071
+ AGU           N2     N    NH2       0.000     -0.160    0.032    2.314
+ AGU           HN22   H    H         0.000     -0.729    0.025    3.158
+ AGU           HN21   H    H         0.000      0.853    0.070    2.412
+ AGU           N3     N    NH1       0.000     -2.112   -0.063    0.955
+ AGU           HN3    H    H         0.000     -2.688   -0.070    1.784
+ AGU           N4     N    NH2       0.000     -2.693   -0.105   -0.280
+ AGU           HN42   H    H         0.000     -2.111   -0.097   -1.098
+ AGU           HN41   H    H         0.000     -3.693   -0.143   -0.352
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AGU      N1     n/a    C      START
+ AGU      HN1    N1     .      .
+ AGU      C      N1     N3     .
+ AGU      N2     C      HN21   .
+ AGU      HN22   N2     .      .
+ AGU      HN21   N2     .      .
+ AGU      N3     C      N4     .
+ AGU      HN3    N3     .      .
+ AGU      N4     N3     HN41   .
+ AGU      HN42   N4     .      .
+ AGU      HN41   N4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AGU      C      N1        double      1.260    0.020
+ AGU      N2     C         single      1.332    0.020
+ AGU      N3     C         single      1.330    0.020
+ AGU      HN1    N1        single      0.954    0.020
+ AGU      HN21   N2        single      1.010    0.020
+ AGU      HN22   N2        single      1.010    0.020
+ AGU      N4     N3        single      1.400    0.020
+ AGU      HN3    N3        single      1.010    0.020
+ AGU      HN41   N4        single      1.010    0.020
+ AGU      HN42   N4        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AGU      HN1    N1     C       120.000    3.000
+ AGU      N1     C      N2      120.000    3.000
+ AGU      N1     C      N3      120.000    3.000
+ AGU      N2     C      N3      120.000    3.000
+ AGU      C      N2     HN22    120.000    3.000
+ AGU      C      N2     HN21    120.000    3.000
+ AGU      HN22   N2     HN21    120.000    3.000
+ AGU      C      N3     HN3     120.000    3.000
+ AGU      C      N3     N4      120.000    3.000
+ AGU      HN3    N3     N4      120.000    3.000
+ AGU      N3     N4     HN42    120.000    3.000
+ AGU      N3     N4     HN41    120.000    3.000
+ AGU      HN42   N4     HN41    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AGU      CONST_1  HN1    N1     C      N3       180.000    0.000   0
+ AGU      CONST_2  N1     C      N2     HN21       0.000    0.000   0
+ AGU      CONST_3  N1     C      N3     N4         0.000    0.000   0
+ AGU      CONST_4  C      N3     N4     HN41    -179.975    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AGU      plan-1    C         0.020
+ AGU      plan-1    N1        0.020
+ AGU      plan-1    N2        0.020
+ AGU      plan-1    N3        0.020
+ AGU      plan-1    HN1       0.020
+ AGU      plan-1    HN22      0.020
+ AGU      plan-1    HN21      0.020
+ AGU      plan-1    HN3       0.020
+ AGU      plan-2    N2        0.020
+ AGU      plan-2    C         0.020
+ AGU      plan-2    HN21      0.020
+ AGU      plan-2    HN22      0.020
+ AGU      plan-3    N3        0.020
+ AGU      plan-3    C         0.020
+ AGU      plan-3    N4        0.020
+ AGU      plan-3    HN3       0.020
+ AGU      plan-3    HN42      0.020
+ AGU      plan-3    HN41      0.020
+ AGU      plan-4    N4        0.020
+ AGU      plan-4    N3        0.020
+ AGU      plan-4    HN41      0.020
+ AGU      plan-4    HN42      0.020
+ AGU      plan-4    HN3       0.020
+# ------------------------------------------------------

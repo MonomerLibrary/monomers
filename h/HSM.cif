@@ -1,0 +1,171 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HSM      HSM 'HISTAMINE                           ' non-polymer        17   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HSM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HSM           N      N    NH2       0.000      0.000    0.000    0.000
+ HSM           H1     H    H         0.000      0.383   -0.781   -0.520
+ HSM           H2     H    H         0.000      0.607    0.535    0.610
+ HSM           CA     C    CH2       0.000     -1.420    0.353   -0.130
+ HSM           HA1    H    H         0.000     -1.508    1.375   -0.503
+ HSM           HA2    H    H         0.000     -1.902    0.281    0.848
+ HSM           CB     C    CH2       0.000     -2.099   -0.609   -1.106
+ HSM           HB1    H    H         0.000     -2.009   -1.630   -0.732
+ HSM           HB2    H    H         0.000     -1.615   -0.536   -2.083
+ HSM           CG     C    CR5       0.000     -3.554   -0.247   -1.238
+ HSM           CD2    C    CR15      0.000     -4.181    0.112   -2.375
+ HSM           HD2    H    H         0.000     -3.736    0.195   -3.359
+ HSM           NE2    N    NR15      0.000     -5.488    0.351   -2.049
+ HSM           HE2    H    H         0.000     -6.242    0.649   -2.700
+ HSM           CE1    C    CR15      0.000     -5.615    0.129   -0.723
+ HSM           HE1    H    H         0.000     -6.528    0.233   -0.150
+ HSM           ND1    N    NRD5      0.000     -4.455   -0.232   -0.246
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HSM      N      n/a    CA     START
+ HSM      H1     N      .      .
+ HSM      H2     N      .      .
+ HSM      CA     N      CB     .
+ HSM      HA1    CA     .      .
+ HSM      HA2    CA     .      .
+ HSM      CB     CA     CG     .
+ HSM      HB1    CB     .      .
+ HSM      HB2    CB     .      .
+ HSM      CG     CB     CD2    .
+ HSM      CD2    CG     NE2    .
+ HSM      HD2    CD2    .      .
+ HSM      NE2    CD2    CE1    .
+ HSM      HE2    NE2    .      .
+ HSM      CE1    NE2    ND1    .
+ HSM      HE1    CE1    .      .
+ HSM      ND1    CE1    .      END
+ HSM      CG     ND1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HSM      CA     N         single      1.450    0.020
+ HSM      H1     N         single      1.010    0.020
+ HSM      H2     N         single      1.010    0.020
+ HSM      CB     CA        single      1.524    0.020
+ HSM      HA1    CA        single      1.092    0.020
+ HSM      HA2    CA        single      1.092    0.020
+ HSM      CG     CB        single      1.510    0.020
+ HSM      HB1    CB        single      1.092    0.020
+ HSM      HB2    CB        single      1.092    0.020
+ HSM      CG     ND1       single      1.350    0.020
+ HSM      CD2    CG        double      1.387    0.020
+ HSM      ND1    CE1       double      1.350    0.020
+ HSM      NE2    CD2       single      1.350    0.020
+ HSM      HD2    CD2       single      1.083    0.020
+ HSM      CE1    NE2       single      1.350    0.020
+ HSM      HE1    CE1       single      1.083    0.020
+ HSM      HE2    NE2       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HSM      H1     N      H2      120.000    3.000
+ HSM      H1     N      CA      120.000    3.000
+ HSM      H2     N      CA      120.000    3.000
+ HSM      N      CA     HA1     109.470    3.000
+ HSM      N      CA     HA2     109.470    3.000
+ HSM      N      CA     CB      109.470    3.000
+ HSM      HA1    CA     HA2     107.900    3.000
+ HSM      HA1    CA     CB      109.470    3.000
+ HSM      HA2    CA     CB      109.470    3.000
+ HSM      CA     CB     HB1     109.470    3.000
+ HSM      CA     CB     HB2     109.470    3.000
+ HSM      CA     CB     CG      109.470    3.000
+ HSM      HB1    CB     HB2     107.900    3.000
+ HSM      HB1    CB     CG      109.470    3.000
+ HSM      HB2    CB     CG      109.470    3.000
+ HSM      CB     CG     CD2     126.000    3.000
+ HSM      CB     CG     ND1     126.000    3.000
+ HSM      CD2    CG     ND1     108.000    3.000
+ HSM      CG     CD2    HD2     126.000    3.000
+ HSM      CG     CD2    NE2     108.000    3.000
+ HSM      HD2    CD2    NE2     126.000    3.000
+ HSM      CD2    NE2    HE2     126.000    3.000
+ HSM      CD2    NE2    CE1     108.000    3.000
+ HSM      HE2    NE2    CE1     126.000    3.000
+ HSM      NE2    CE1    HE1     126.000    3.000
+ HSM      NE2    CE1    ND1     108.000    3.000
+ HSM      HE1    CE1    ND1     126.000    3.000
+ HSM      CE1    ND1    CG      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HSM      var_1    H2     N      CA     CB       179.969   20.000   1
+ HSM      var_2    N      CA     CB     CG       179.979   20.000   3
+ HSM      var_3    CA     CB     CG     CD2      120.077   20.000   2
+ HSM      CONST_1  CB     CG     ND1    CE1      180.000    0.000   0
+ HSM      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
+ HSM      CONST_3  CG     CD2    NE2    CE1        0.000    0.000   0
+ HSM      CONST_4  CD2    NE2    CE1    ND1        0.000    0.000   0
+ HSM      CONST_5  NE2    CE1    ND1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HSM      plan-1    N         0.020
+ HSM      plan-1    CA        0.020
+ HSM      plan-1    H1        0.020
+ HSM      plan-1    H2        0.020
+ HSM      plan-2    CG        0.020
+ HSM      plan-2    CB        0.020
+ HSM      plan-2    ND1       0.020
+ HSM      plan-2    CD2       0.020
+ HSM      plan-2    CE1       0.020
+ HSM      plan-2    NE2       0.020
+ HSM      plan-2    HD2       0.020
+ HSM      plan-2    HE1       0.020
+ HSM      plan-2    HE2       0.020
+# ------------------------------------------------------

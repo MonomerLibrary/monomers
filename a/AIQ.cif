@@ -1,0 +1,284 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AIQ      AIQ '2,6-DIAMINO-8-(1H-IMIDAZOL-2-YLSULFA' non-polymer        32  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AIQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AIQ           O1     O    O         0.000      0.000    0.000    0.000
+ AIQ           C7     C    CR6       0.000     -1.052   -0.134    0.596
+ AIQ           N1     N    NR16      0.000     -1.089   -0.204    1.947
+ AIQ           HN11   H    H         0.000     -0.205   -0.141    2.491
+ AIQ           C8     C    CR6       0.000     -2.277   -0.357    2.601
+ AIQ           N2     N    NH2       0.000     -2.264   -0.427    3.973
+ AIQ           HN22   H    H         0.000     -1.389   -0.370    4.480
+ AIQ           HN21   H    H         0.000     -3.130   -0.537    4.488
+ AIQ           N3     N    NRD6      0.000     -3.428   -0.435    1.983
+ AIQ           C4     C    CR66      0.000     -2.330   -0.219   -0.123
+ AIQ           C5     C    CR16      0.000     -2.396   -0.153   -1.515
+ AIQ           H51    H    H         0.000     -1.492   -0.036   -2.100
+ AIQ           C6     C    CR6       0.000     -3.628   -0.238   -2.140
+ AIQ           N4     N    NH2       0.000     -3.704   -0.173   -3.535
+ AIQ           HN42   H    H         0.000     -4.602   -0.234   -4.011
+ AIQ           HN41   H    H         0.000     -2.863   -0.063   -4.099
+ AIQ           C1     C    CR16      0.000     -4.792   -0.390   -1.388
+ AIQ           H11    H    H         0.000     -5.749   -0.456   -1.891
+ AIQ           C3     C    CR66      0.000     -3.514   -0.371    0.632
+ AIQ           C2     C    CR6       0.000     -4.743   -0.456   -0.025
+ AIQ           C9     C    CH2       0.000     -6.014   -0.619    0.768
+ AIQ           H91    H    H         0.000     -5.800   -1.166    1.689
+ AIQ           H92    H    H         0.000     -6.742   -1.177    0.176
+ AIQ           S1     S    S2        0.000     -6.686    1.011    1.174
+ AIQ           C10    C    CR5       0.000     -8.123    0.534    2.073
+ AIQ           N6     N    NR15      0.000     -9.031    1.382    2.631
+ AIQ           HN61   H    H         0.000     -9.005    2.422    2.605
+ AIQ           C12    C    CR15      0.000     -9.991    0.602    3.236
+ AIQ           H121   H    H         0.000    -10.861    0.954    3.775
+ AIQ           C11    C    CR15      0.000     -9.643   -0.679    3.029
+ AIQ           H111   H    H         0.000    -10.186   -1.548    3.378
+ AIQ           N5     N    NRD5      0.000     -8.505   -0.697    2.313
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AIQ      O1     n/a    C7     START
+ AIQ      C7     O1     C4     .
+ AIQ      N1     C7     C8     .
+ AIQ      HN11   N1     .      .
+ AIQ      C8     N1     N3     .
+ AIQ      N2     C8     HN21   .
+ AIQ      HN22   N2     .      .
+ AIQ      HN21   N2     .      .
+ AIQ      N3     C8     .      .
+ AIQ      C4     C7     C3     .
+ AIQ      C5     C4     C6     .
+ AIQ      H51    C5     .      .
+ AIQ      C6     C5     C1     .
+ AIQ      N4     C6     HN41   .
+ AIQ      HN42   N4     .      .
+ AIQ      HN41   N4     .      .
+ AIQ      C1     C6     H11    .
+ AIQ      H11    C1     .      .
+ AIQ      C3     C4     C2     .
+ AIQ      C2     C3     C9     .
+ AIQ      C9     C2     S1     .
+ AIQ      H91    C9     .      .
+ AIQ      H92    C9     .      .
+ AIQ      S1     C9     C10    .
+ AIQ      C10    S1     N6     .
+ AIQ      N6     C10    C12    .
+ AIQ      HN61   N6     .      .
+ AIQ      C12    N6     C11    .
+ AIQ      H121   C12    .      .
+ AIQ      C11    C12    N5     .
+ AIQ      H111   C11    .      .
+ AIQ      N5     C11    .      END
+ AIQ      C1     C2     .    ADD
+ AIQ      C3     N3     .    ADD
+ AIQ      C10    N5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AIQ      C1     C2        double      1.390    0.020
+ AIQ      C1     C6        single      1.390    0.020
+ AIQ      H11    C1        single      1.083    0.020
+ AIQ      C9     C2        single      1.511    0.020
+ AIQ      C2     C3        single      1.490    0.020
+ AIQ      S1     C9        single      1.762    0.020
+ AIQ      H91    C9        single      1.092    0.020
+ AIQ      H92    C9        single      1.092    0.020
+ AIQ      C3     N3        single      1.350    0.020
+ AIQ      C3     C4        double      1.490    0.020
+ AIQ      N3     C8        double      1.350    0.020
+ AIQ      N2     C8        single      1.355    0.020
+ AIQ      C8     N1        single      1.337    0.020
+ AIQ      HN21   N2        single      1.010    0.020
+ AIQ      HN22   N2        single      1.010    0.020
+ AIQ      N1     C7        single      1.337    0.020
+ AIQ      HN11   N1        single      1.040    0.020
+ AIQ      C7     O1        double      1.250    0.020
+ AIQ      C4     C7        single      1.490    0.020
+ AIQ      C5     C4        single      1.390    0.020
+ AIQ      C6     C5        double      1.390    0.020
+ AIQ      H51    C5        single      1.083    0.020
+ AIQ      N4     C6        single      1.355    0.020
+ AIQ      HN41   N4        single      1.010    0.020
+ AIQ      HN42   N4        single      1.010    0.020
+ AIQ      C10    S1        single      1.745    0.020
+ AIQ      C10    N5        double      1.350    0.020
+ AIQ      N6     C10       single      1.340    0.020
+ AIQ      N5     C11       single      1.350    0.020
+ AIQ      C12    N6        single      1.350    0.020
+ AIQ      HN61   N6        single      1.040    0.020
+ AIQ      C11    C12       double      1.380    0.020
+ AIQ      H111   C11       single      1.083    0.020
+ AIQ      H121   C12       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AIQ      O1     C7     N1      120.000    3.000
+ AIQ      O1     C7     C4      120.000    3.000
+ AIQ      N1     C7     C4      120.000    3.000
+ AIQ      C7     N1     HN11    120.000    3.000
+ AIQ      C7     N1     C8      120.000    3.000
+ AIQ      HN11   N1     C8      120.000    3.000
+ AIQ      N1     C8     N2      120.000    3.000
+ AIQ      N1     C8     N3      120.000    3.000
+ AIQ      N2     C8     N3      120.000    3.000
+ AIQ      C8     N2     HN22    120.000    3.000
+ AIQ      C8     N2     HN21    120.000    3.000
+ AIQ      HN22   N2     HN21    120.000    3.000
+ AIQ      C8     N3     C3      120.000    3.000
+ AIQ      C7     C4     C5      120.000    3.000
+ AIQ      C7     C4     C3      120.000    3.000
+ AIQ      C5     C4     C3      120.000    3.000
+ AIQ      C4     C5     H51     120.000    3.000
+ AIQ      C4     C5     C6      120.000    3.000
+ AIQ      H51    C5     C6      120.000    3.000
+ AIQ      C5     C6     N4      120.000    3.000
+ AIQ      C5     C6     C1      120.000    3.000
+ AIQ      N4     C6     C1      120.000    3.000
+ AIQ      C6     N4     HN42    120.000    3.000
+ AIQ      C6     N4     HN41    120.000    3.000
+ AIQ      HN42   N4     HN41    120.000    3.000
+ AIQ      C6     C1     H11     120.000    3.000
+ AIQ      C6     C1     C2      120.000    3.000
+ AIQ      H11    C1     C2      120.000    3.000
+ AIQ      C4     C3     C2      120.000    3.000
+ AIQ      C4     C3     N3      120.000    3.000
+ AIQ      C2     C3     N3      120.000    3.000
+ AIQ      C3     C2     C9      120.000    3.000
+ AIQ      C3     C2     C1      120.000    3.000
+ AIQ      C9     C2     C1      120.000    3.000
+ AIQ      C2     C9     H91     109.470    3.000
+ AIQ      C2     C9     H92     109.470    3.000
+ AIQ      C2     C9     S1      109.500    3.000
+ AIQ      H91    C9     H92     107.900    3.000
+ AIQ      H91    C9     S1      109.500    3.000
+ AIQ      H92    C9     S1      109.500    3.000
+ AIQ      C9     S1     C10      99.997    3.000
+ AIQ      S1     C10    N6      108.000    3.000
+ AIQ      S1     C10    N5      108.000    3.000
+ AIQ      N6     C10    N5      108.000    3.000
+ AIQ      C10    N6     HN61    126.000    3.000
+ AIQ      C10    N6     C12     108.000    3.000
+ AIQ      HN61   N6     C12     126.000    3.000
+ AIQ      N6     C12    H121    126.000    3.000
+ AIQ      N6     C12    C11     108.000    3.000
+ AIQ      H121   C12    C11     126.000    3.000
+ AIQ      C12    C11    H111    126.000    3.000
+ AIQ      C12    C11    N5      108.000    3.000
+ AIQ      H111   C11    N5      126.000    3.000
+ AIQ      C11    N5     C10     108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AIQ      CONST_1  O1     C7     N1     C8       180.000    0.000   0
+ AIQ      CONST_2  C7     N1     C8     N3         0.000    0.000   0
+ AIQ      CONST_3  N1     C8     N2     HN21     179.758    0.000   0
+ AIQ      CONST_4  N1     C8     N3     C3         0.000    0.000   0
+ AIQ      CONST_5  O1     C7     C4     C3       180.000    0.000   0
+ AIQ      CONST_6  C7     C4     C5     C6       180.000    0.000   0
+ AIQ      CONST_7  C4     C5     C6     C1         0.000    0.000   0
+ AIQ      CONST_8  C5     C6     N4     HN41      -0.015    0.000   0
+ AIQ      CONST_9  C5     C6     C1     C2         0.000    0.000   0
+ AIQ      CONST_10 C6     C1     C2     C3         0.000    0.000   0
+ AIQ      CONST_11 C7     C4     C3     C2       180.000    0.000   0
+ AIQ      CONST_12 C4     C3     N3     C8         0.000    0.000   0
+ AIQ      CONST_13 C4     C3     C2     C9       180.000    0.000   0
+ AIQ      var_1    C3     C2     C9     S1        89.973   20.000   2
+ AIQ      var_2    C2     C9     S1     C10     -179.993   20.000   1
+ AIQ      var_3    C9     S1     C10    N6      -179.939   20.000   1
+ AIQ      CONST_14 S1     C10    N5     C11      180.000    0.000   0
+ AIQ      CONST_15 S1     C10    N6     C12      180.000    0.000   0
+ AIQ      CONST_16 C10    N6     C12    C11        0.000    0.000   0
+ AIQ      CONST_17 N6     C12    C11    N5         0.000    0.000   0
+ AIQ      CONST_18 C12    C11    N5     C10        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AIQ      plan-1    C1        0.020
+ AIQ      plan-1    C2        0.020
+ AIQ      plan-1    C6        0.020
+ AIQ      plan-1    H11       0.020
+ AIQ      plan-1    C5        0.020
+ AIQ      plan-1    C9        0.020
+ AIQ      plan-1    C3        0.020
+ AIQ      plan-1    N3        0.020
+ AIQ      plan-1    C4        0.020
+ AIQ      plan-1    C8        0.020
+ AIQ      plan-1    N1        0.020
+ AIQ      plan-1    C7        0.020
+ AIQ      plan-1    N2        0.020
+ AIQ      plan-1    HN11      0.020
+ AIQ      plan-1    O1        0.020
+ AIQ      plan-1    H51       0.020
+ AIQ      plan-1    N4        0.020
+ AIQ      plan-1    HN22      0.020
+ AIQ      plan-1    HN21      0.020
+ AIQ      plan-1    HN42      0.020
+ AIQ      plan-1    HN41      0.020
+ AIQ      plan-2    N2        0.020
+ AIQ      plan-2    C8        0.020
+ AIQ      plan-2    HN21      0.020
+ AIQ      plan-2    HN22      0.020
+ AIQ      plan-3    N4        0.020
+ AIQ      plan-3    C6        0.020
+ AIQ      plan-3    HN41      0.020
+ AIQ      plan-3    HN42      0.020
+ AIQ      plan-4    C10       0.020
+ AIQ      plan-4    S1        0.020
+ AIQ      plan-4    N5        0.020
+ AIQ      plan-4    N6        0.020
+ AIQ      plan-4    C11       0.020
+ AIQ      plan-4    C12       0.020
+ AIQ      plan-4    HN61      0.020
+ AIQ      plan-4    H111      0.020
+ AIQ      plan-4    H121      0.020
+# ------------------------------------------------------

@@ -1,0 +1,169 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+UN2      UN2 '2-AMINO-4,4-DIHYDROXYBUTANOIC ACID  ' peptide            17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_UN2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ UN2           N      N    NH2       0.000      0.000    0.000    0.000
+ UN2           HN1    H    H         0.000      0.982    0.194   -0.153
+ UN2           HN2    H    H         0.000     -0.547   -0.417   -0.743
+ UN2           CA     C    CH1       0.000     -0.625    0.320    1.286
+ UN2           HA     H    H         0.000     -1.362    1.122    1.147
+ UN2           CB     C    CH2       0.000     -1.320   -0.922    1.860
+ UN2           HBC1   H    H         0.000     -1.667   -0.660    2.861
+ UN2           HBC2   H    H         0.000     -0.564   -1.707    1.931
+ UN2           CG     C    CH1       0.000     -2.501   -1.422    1.023
+ UN2           HGC1   H    H         0.000     -2.157   -1.677    0.011
+ UN2           OD2    O    OH1       0.000     -3.488   -0.404    0.952
+ UN2           HDT    H    H         0.000     -4.033   -0.542    0.166
+ UN2           OD1    O    OH1       0.000     -3.023   -2.583    1.659
+ UN2           HD1    H    H         0.000     -3.495   -3.119    1.009
+ UN2           C      C    C         0.000      0.486    0.805    2.200
+ UN2           O      O    OC       -0.500      1.702    0.827    1.905
+ UN2           OXT    O    OC       -0.500      0.051    1.216    3.299
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ UN2      N      n/a    CA     START
+ UN2      HN1    N      .      .
+ UN2      HN2    N      .      .
+ UN2      CA     N      C      .
+ UN2      HA     CA     .      .
+ UN2      CB     CA     CG     .
+ UN2      HBC1   CB     .      .
+ UN2      HBC2   CB     .      .
+ UN2      CG     CB     OD1    .
+ UN2      HGC1   CG     .      .
+ UN2      OD2    CG     HDT    .
+ UN2      HDT    OD2    .      .
+ UN2      OD1    CG     HD1    .
+ UN2      HD1    OD1    .      .
+ UN2      C      CA     .      END
+ UN2      O      C      .      .
+ UN2      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ UN2      CA     N         single      1.450    0.020
+ UN2      C      CA        single      1.500    0.020
+ UN2      CB     CA        single      1.524    0.020
+ UN2      HA     CA        single      1.099    0.020
+ UN2      O      C         deloc       1.250    0.020
+ UN2      OXT    C         deloc       1.250    0.020
+ UN2      CG     CB        single      1.524    0.020
+ UN2      HBC1   CB        single      1.092    0.020
+ UN2      HBC2   CB        single      1.092    0.020
+ UN2      OD1    CG        single      1.432    0.020
+ UN2      OD2    CG        single      1.432    0.020
+ UN2      HGC1   CG        single      1.099    0.020
+ UN2      HD1    OD1       single      0.967    0.020
+ UN2      HDT    OD2       single      0.967    0.020
+ UN2      HN1    N         single      1.010    0.020
+ UN2      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ UN2      HN1    N      HN2     120.000    3.000
+ UN2      HN1    N      CA      120.000    3.000
+ UN2      HN2    N      CA      120.000    3.000
+ UN2      N      CA     HA      109.470    3.000
+ UN2      N      CA     CB      109.470    3.000
+ UN2      N      CA     C       109.470    3.000
+ UN2      HA     CA     CB      108.340    3.000
+ UN2      HA     CA     C       108.810    3.000
+ UN2      CB     CA     C       109.470    3.000
+ UN2      CA     CB     HBC1    109.470    3.000
+ UN2      CA     CB     HBC2    109.470    3.000
+ UN2      CA     CB     CG      111.000    3.000
+ UN2      HBC1   CB     HBC2    107.900    3.000
+ UN2      HBC1   CB     CG      109.470    3.000
+ UN2      HBC2   CB     CG      109.470    3.000
+ UN2      CB     CG     HGC1    108.340    3.000
+ UN2      CB     CG     OD2     109.470    3.000
+ UN2      CB     CG     OD1     109.470    3.000
+ UN2      HGC1   CG     OD2     109.470    3.000
+ UN2      HGC1   CG     OD1     109.470    3.000
+ UN2      OD2    CG     OD1     109.500    3.000
+ UN2      CG     OD2    HDT     109.470    3.000
+ UN2      CG     OD1    HD1     109.470    3.000
+ UN2      CA     C      O       118.500    3.000
+ UN2      CA     C      OXT     118.500    3.000
+ UN2      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ UN2      var_1    HN2    N      CA     C        175.000   20.000   1
+ UN2      var_2    N      CA     CB     CG       -64.883   20.000   3
+ UN2      var_3    CA     CB     CG     OD1      178.889   20.000   3
+ UN2      var_4    CB     CG     OD2    HDT      156.468   20.000   1
+ UN2      var_5    CB     CG     OD1    HD1     -156.642   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ UN2      chir_01  CA     N      C      CB        positiv
+ UN2      chir_02  CG     CB     OD1    OD2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ UN2      plan-1    N         0.020
+ UN2      plan-1    CA        0.020
+ UN2      plan-1    HN1       0.020
+ UN2      plan-1    HN2       0.020
+ UN2      plan-2    C         0.020
+ UN2      plan-2    CA        0.020
+ UN2      plan-2    O         0.020
+ UN2      plan-2    OXT       0.020
+# ------------------------------------------------------

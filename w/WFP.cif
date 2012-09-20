@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+WFP      WFP '3,5-difluoro-L-phenylalanine        ' peptide            22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_WFP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ WFP           N      N    NH2       0.000      0.000    0.000    0.000
+ WFP           HN1    H    H         0.000      0.866    0.020    0.525
+ WFP           HN2    H    H         0.000     -0.026   -0.466   -0.899
+ WFP           CA     C    CH1       0.000     -1.207    0.641    0.537
+ WFP           HA     H    H         0.000     -1.493    1.483   -0.109
+ WFP           CB     C    CH2       0.000     -2.349   -0.376    0.583
+ WFP           HB2    H    H         0.000     -3.219    0.075    1.065
+ WFP           HB3    H    H         0.000     -2.032   -1.252    1.153
+ WFP           CG     C    CR6       0.000     -2.709   -0.790   -0.820
+ WFP           CD2    C    CR16      0.000     -3.674   -0.093   -1.520
+ WFP           HD2    H    H         0.000     -4.172    0.752   -1.059
+ WFP           CE2    C    CR6       0.000     -4.007   -0.472   -2.810
+ WFP           F2     F    F         0.000     -4.946    0.214   -3.496
+ WFP           CZ     C    CR16      0.000     -3.370   -1.551   -3.398
+ WFP           HZ     H    H         0.000     -3.626   -1.846   -4.409
+ WFP           CE1    C    CR6       0.000     -2.406   -2.254   -2.694
+ WFP           F1     F    F         0.000     -1.789   -3.310   -3.265
+ WFP           CD1    C    CR16      0.000     -2.077   -1.872   -1.405
+ WFP           HD1    H    H         0.000     -1.323   -2.421   -0.855
+ WFP           C      C    C         0.000     -0.930    1.148    1.929
+ WFP           O      O    OC       -0.500      0.029    0.683    2.584
+ WFP           OXT    O    OC       -0.500     -1.661    2.031    2.432
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ WFP      N      n/a    CA     START
+ WFP      HN1    N      .      .
+ WFP      HN2    N      .      .
+ WFP      CA     N      C      .
+ WFP      HA     CA     .      .
+ WFP      CB     CA     CG     .
+ WFP      HB2    CB     .      .
+ WFP      HB3    CB     .      .
+ WFP      CG     CB     CD2    .
+ WFP      CD2    CG     CE2    .
+ WFP      HD2    CD2    .      .
+ WFP      CE2    CD2    CZ     .
+ WFP      F2     CE2    .      .
+ WFP      CZ     CE2    CE1    .
+ WFP      HZ     CZ     .      .
+ WFP      CE1    CZ     CD1    .
+ WFP      F1     CE1    .      .
+ WFP      CD1    CE1    HD1    .
+ WFP      HD1    CD1    .      .
+ WFP      C      CA     .      END
+ WFP      O      C      .      .
+ WFP      OXT    C      .      .
+ WFP      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ WFP      O      C         deloc       1.250    0.020
+ WFP      C      CA        single      1.500    0.020
+ WFP      OXT    C         deloc       1.250    0.020
+ WFP      CA     N         single      1.450    0.020
+ WFP      F1     CE1       single      1.345    0.020
+ WFP      F2     CE2       single      1.345    0.020
+ WFP      CB     CA        single      1.524    0.020
+ WFP      CG     CB        single      1.511    0.020
+ WFP      CG     CD1       double      1.390    0.020
+ WFP      CD2    CG        single      1.390    0.020
+ WFP      CE1    CZ        double      1.390    0.020
+ WFP      CZ     CE2       single      1.390    0.020
+ WFP      CD1    CE1       single      1.390    0.020
+ WFP      CE2    CD2       double      1.390    0.020
+ WFP      HA     CA        single      1.099    0.020
+ WFP      HB2    CB        single      1.092    0.020
+ WFP      HB3    CB        single      1.092    0.020
+ WFP      HZ     CZ        single      1.083    0.020
+ WFP      HD1    CD1       single      1.083    0.020
+ WFP      HD2    CD2       single      1.083    0.020
+ WFP      HN1    N         single      1.010    0.020
+ WFP      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ WFP      HN1    N      HN2     120.000    3.000
+ WFP      HN1    N      CA      120.000    3.000
+ WFP      HN2    N      CA      120.000    3.000
+ WFP      N      CA     HA      109.470    3.000
+ WFP      N      CA     CB      109.470    3.000
+ WFP      N      CA     C       109.470    3.000
+ WFP      HA     CA     CB      108.340    3.000
+ WFP      HA     CA     C       108.810    3.000
+ WFP      CB     CA     C       109.470    3.000
+ WFP      CA     CB     HB2     109.470    3.000
+ WFP      CA     CB     HB3     109.470    3.000
+ WFP      CA     CB     CG      109.470    3.000
+ WFP      HB2    CB     HB3     107.900    3.000
+ WFP      HB2    CB     CG      109.470    3.000
+ WFP      HB3    CB     CG      109.470    3.000
+ WFP      CB     CG     CD2     120.000    3.000
+ WFP      CB     CG     CD1     120.000    3.000
+ WFP      CD2    CG     CD1     120.000    3.000
+ WFP      CG     CD2    HD2     120.000    3.000
+ WFP      CG     CD2    CE2     120.000    3.000
+ WFP      HD2    CD2    CE2     120.000    3.000
+ WFP      CD2    CE2    F2      120.000    3.000
+ WFP      CD2    CE2    CZ      120.000    3.000
+ WFP      F2     CE2    CZ      120.000    3.000
+ WFP      CE2    CZ     HZ      120.000    3.000
+ WFP      CE2    CZ     CE1     120.000    3.000
+ WFP      HZ     CZ     CE1     120.000    3.000
+ WFP      CZ     CE1    F1      120.000    3.000
+ WFP      CZ     CE1    CD1     120.000    3.000
+ WFP      F1     CE1    CD1     120.000    3.000
+ WFP      CE1    CD1    HD1     120.000    3.000
+ WFP      CE1    CD1    CG      120.000    3.000
+ WFP      HD1    CD1    CG      120.000    3.000
+ WFP      CA     C      O       118.500    3.000
+ WFP      CA     C      OXT     118.500    3.000
+ WFP      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ WFP      var_1    HN2    N      CA     C        175.000   20.000   1
+ WFP      var_2    N      CA     CB     CG       -64.981   20.000   3
+ WFP      var_3    CA     CB     CG     CD2      -90.282   20.000   2
+ WFP      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ WFP      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ WFP      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ WFP      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ WFP      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ WFP      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ WFP      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ WFP      plan-1    C         0.020
+ WFP      plan-1    O         0.020
+ WFP      plan-1    CA        0.020
+ WFP      plan-1    OXT       0.020
+ WFP      plan-2    N         0.020
+ WFP      plan-2    CA        0.020
+ WFP      plan-2    HN1       0.020
+ WFP      plan-2    HN2       0.020
+ WFP      plan-3    CG        0.020
+ WFP      plan-3    CB        0.020
+ WFP      plan-3    CD1       0.020
+ WFP      plan-3    CD2       0.020
+ WFP      plan-3    CZ        0.020
+ WFP      plan-3    CE1       0.020
+ WFP      plan-3    CE2       0.020
+ WFP      plan-3    HZ        0.020
+ WFP      plan-3    HD1       0.020
+ WFP      plan-3    HD2       0.020
+ WFP      plan-3    F1        0.020
+ WFP      plan-3    F2        0.020
+# ------------------------------------------------------

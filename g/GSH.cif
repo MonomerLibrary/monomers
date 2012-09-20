@@ -1,0 +1,285 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GSH      GSH 'GLUTATHIONE                         ' non-polymer        35  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GSH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GSH           O32    O    OC       -0.500      0.000    0.000    0.000
+ GSH           C3     C    C         0.000     -1.210   -0.176   -0.264
+ GSH           O31    O    OC       -0.500     -1.540   -0.819   -1.285
+ GSH           CA3    C    CH2       0.000     -2.270    0.387    0.648
+ GSH           HA31   H    H         0.000     -2.164    1.472    0.702
+ GSH           HA32   H    H         0.000     -2.153   -0.039    1.647
+ GSH           N3     N    NH1       0.000     -3.595    0.049    0.123
+ GSH           HN3    H    H         0.000     -3.679   -0.484   -0.731
+ GSH           C2     C    C         0.000     -4.701    0.449    0.779
+ GSH           O2     O    O         0.000     -4.601    1.092    1.802
+ GSH           CA2    C    CH1       0.000     -6.065    0.100    0.240
+ GSH           HA2    H    H         0.000     -6.170   -0.992    0.188
+ GSH           CB2    C    CH2       0.000     -6.228    0.697   -1.160
+ GSH           HB22   H    H         0.000     -5.459    0.290   -1.820
+ GSH           HB23   H    H         0.000     -6.123    1.782   -1.107
+ GSH           SG2    S    SH1       0.000     -7.868    0.277   -1.808
+ GSH           HSG    H    H         0.000     -7.721    0.899   -2.975
+ GSH           N2     N    NH1       0.000     -7.095    0.648    1.126
+ GSH           HN2    H    H         0.000     -6.914    1.494    1.648
+ GSH           CD1    C    C         0.000     -8.283    0.024    1.244
+ GSH           OE1    O    O         0.000     -8.499   -0.991    0.616
+ GSH           CG1    C    CH2       0.000     -9.343    0.587    2.154
+ GSH           HG12   H    H         0.000     -9.604    1.595    1.827
+ GSH           HG13   H    H         0.000     -8.961    0.624    3.177
+ GSH           CB1    C    CH2       0.000    -10.585   -0.304    2.105
+ GSH           HB12   H    H         0.000    -10.321   -1.313    2.429
+ GSH           HB13   H    H         0.000    -10.965   -0.340    1.082
+ GSH           CA1    C    CH1       0.000    -11.660    0.267    3.031
+ GSH           HA1    H    H         0.000    -11.925    1.282    2.703
+ GSH           N1     N    NH2       0.000    -11.147    0.315    4.406
+ GSH           HN12   H    H         0.000    -11.665   -0.120    5.160
+ GSH           HN11   H    H         0.000    -10.273    0.785    4.609
+ GSH           C1     C    C         0.000    -12.885   -0.611    2.982
+ GSH           O11    O    OC       -0.500    -13.000   -1.567    3.781
+ GSH           O12    O    OC       -0.500    -13.784   -0.385    2.142
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GSH      O32    n/a    C3     START
+ GSH      C3     O32    CA3    .
+ GSH      O31    C3     .      .
+ GSH      CA3    C3     N3     .
+ GSH      HA31   CA3    .      .
+ GSH      HA32   CA3    .      .
+ GSH      N3     CA3    C2     .
+ GSH      HN3    N3     .      .
+ GSH      C2     N3     CA2    .
+ GSH      O2     C2     .      .
+ GSH      CA2    C2     N2     .
+ GSH      HA2    CA2    .      .
+ GSH      CB2    CA2    SG2    .
+ GSH      HB22   CB2    .      .
+ GSH      HB23   CB2    .      .
+ GSH      SG2    CB2    HSG    .
+ GSH      HSG    SG2    .      .
+ GSH      N2     CA2    CD1    .
+ GSH      HN2    N2     .      .
+ GSH      CD1    N2     CG1    .
+ GSH      OE1    CD1    .      .
+ GSH      CG1    CD1    CB1    .
+ GSH      HG12   CG1    .      .
+ GSH      HG13   CG1    .      .
+ GSH      CB1    CG1    CA1    .
+ GSH      HB12   CB1    .      .
+ GSH      HB13   CB1    .      .
+ GSH      CA1    CB1    C1     .
+ GSH      HA1    CA1    .      .
+ GSH      N1     CA1    HN11   .
+ GSH      HN12   N1     .      .
+ GSH      HN11   N1     .      .
+ GSH      C1     CA1    O12    .
+ GSH      O11    C1     .      .
+ GSH      O12    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GSH      N1     CA1       single      1.450    0.020
+ GSH      HN11   N1        single      1.010    0.020
+ GSH      HN12   N1        single      1.010    0.020
+ GSH      C1     CA1       single      1.500    0.020
+ GSH      CA1    CB1       single      1.524    0.020
+ GSH      HA1    CA1       single      1.099    0.020
+ GSH      O11    C1        deloc       1.250    0.020
+ GSH      O12    C1        deloc       1.250    0.020
+ GSH      CB1    CG1       single      1.524    0.020
+ GSH      HB12   CB1       single      1.092    0.020
+ GSH      HB13   CB1       single      1.092    0.020
+ GSH      CG1    CD1       single      1.510    0.020
+ GSH      HG12   CG1       single      1.092    0.020
+ GSH      HG13   CG1       single      1.092    0.020
+ GSH      OE1    CD1       double      1.220    0.020
+ GSH      CD1    N2        single      1.330    0.020
+ GSH      N2     CA2       single      1.450    0.020
+ GSH      HN2    N2        single      1.010    0.020
+ GSH      CA2    C2        single      1.500    0.020
+ GSH      CB2    CA2       single      1.524    0.020
+ GSH      HA2    CA2       single      1.099    0.020
+ GSH      O2     C2        double      1.220    0.020
+ GSH      C2     N3        single      1.330    0.020
+ GSH      SG2    CB2       single      1.810    0.020
+ GSH      HB22   CB2       single      1.092    0.020
+ GSH      HB23   CB2       single      1.092    0.020
+ GSH      HSG    SG2       single      1.330    0.020
+ GSH      N3     CA3       single      1.450    0.020
+ GSH      HN3    N3        single      1.010    0.020
+ GSH      CA3    C3        single      1.510    0.020
+ GSH      HA31   CA3       single      1.092    0.020
+ GSH      HA32   CA3       single      1.092    0.020
+ GSH      O31    C3        deloc       1.250    0.020
+ GSH      C3     O32       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GSH      O32    C3     O31     123.000    3.000
+ GSH      O32    C3     CA3     118.500    3.000
+ GSH      O31    C3     CA3     118.500    3.000
+ GSH      C3     CA3    HA31    109.470    3.000
+ GSH      C3     CA3    HA32    109.470    3.000
+ GSH      C3     CA3    N3      111.600    3.000
+ GSH      HA31   CA3    HA32    107.900    3.000
+ GSH      HA31   CA3    N3      109.470    3.000
+ GSH      HA32   CA3    N3      109.470    3.000
+ GSH      CA3    N3     HN3     118.500    3.000
+ GSH      CA3    N3     C2      121.500    3.000
+ GSH      HN3    N3     C2      120.000    3.000
+ GSH      N3     C2     O2      123.000    3.000
+ GSH      N3     C2     CA2     116.500    3.000
+ GSH      O2     C2     CA2     120.500    3.000
+ GSH      C2     CA2    HA2     108.810    3.000
+ GSH      C2     CA2    CB2     109.470    3.000
+ GSH      C2     CA2    N2      111.600    3.000
+ GSH      HA2    CA2    CB2     108.340    3.000
+ GSH      HA2    CA2    N2      108.550    3.000
+ GSH      CB2    CA2    N2      110.000    3.000
+ GSH      CA2    CB2    HB22    109.470    3.000
+ GSH      CA2    CB2    HB23    109.470    3.000
+ GSH      CA2    CB2    SG2     112.500    3.000
+ GSH      HB22   CB2    HB23    107.900    3.000
+ GSH      HB22   CB2    SG2     109.470    3.000
+ GSH      HB23   CB2    SG2     109.470    3.000
+ GSH      CB2    SG2    HSG      96.000    3.000
+ GSH      CA2    N2     HN2     118.500    3.000
+ GSH      CA2    N2     CD1     121.500    3.000
+ GSH      HN2    N2     CD1     120.000    3.000
+ GSH      N2     CD1    OE1     123.000    3.000
+ GSH      N2     CD1    CG1     116.500    3.000
+ GSH      OE1    CD1    CG1     120.500    3.000
+ GSH      CD1    CG1    HG12    109.470    3.000
+ GSH      CD1    CG1    HG13    109.470    3.000
+ GSH      CD1    CG1    CB1     109.470    3.000
+ GSH      HG12   CG1    HG13    107.900    3.000
+ GSH      HG12   CG1    CB1     109.470    3.000
+ GSH      HG13   CG1    CB1     109.470    3.000
+ GSH      CG1    CB1    HB12    109.470    3.000
+ GSH      CG1    CB1    HB13    109.470    3.000
+ GSH      CG1    CB1    CA1     111.000    3.000
+ GSH      HB12   CB1    HB13    107.900    3.000
+ GSH      HB12   CB1    CA1     109.470    3.000
+ GSH      HB13   CB1    CA1     109.470    3.000
+ GSH      CB1    CA1    HA1     108.340    3.000
+ GSH      CB1    CA1    N1      109.470    3.000
+ GSH      CB1    CA1    C1      109.470    3.000
+ GSH      HA1    CA1    N1      109.470    3.000
+ GSH      HA1    CA1    C1      108.810    3.000
+ GSH      N1     CA1    C1      109.470    3.000
+ GSH      CA1    N1     HN12    120.000    3.000
+ GSH      CA1    N1     HN11    120.000    3.000
+ GSH      HN12   N1     HN11    120.000    3.000
+ GSH      CA1    C1     O11     118.500    3.000
+ GSH      CA1    C1     O12     118.500    3.000
+ GSH      O11    C1     O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GSH      var_1    O32    C3     CA3    N3       179.916   20.000   3
+ GSH      var_2    C3     CA3    N3     C2       179.930   20.000   3
+ GSH      CONST_1  CA3    N3     C2     CA2      180.000    0.000   0
+ GSH      var_3    N3     C2     CA2    N2      -179.884   20.000   3
+ GSH      var_4    C2     CA2    CB2    SG2      179.974   20.000   3
+ GSH      var_5    CA2    CB2    SG2    HSG     -179.973   20.000   1
+ GSH      var_6    C2     CA2    N2     CD1     -149.985   20.000   3
+ GSH      CONST_2  CA2    N2     CD1    CG1      180.000    0.000   0
+ GSH      var_7    N2     CD1    CG1    CB1      179.930   20.000   3
+ GSH      var_8    CD1    CG1    CB1    CA1      179.919   20.000   3
+ GSH      var_9    CG1    CB1    CA1    C1       179.999   20.000   3
+ GSH      var_10   CB1    CA1    N1     HN11      53.759   20.000   1
+ GSH      var_11   CB1    CA1    C1     O12      -89.953   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GSH      chir_01  CA1    N1     C1     CB1       positiv
+ GSH      chir_02  CA2    N2     C2     CB2       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GSH      plan-1    N1        0.020
+ GSH      plan-1    CA1       0.020
+ GSH      plan-1    HN11      0.020
+ GSH      plan-1    HN12      0.020
+ GSH      plan-2    C1        0.020
+ GSH      plan-2    CA1       0.020
+ GSH      plan-2    O11       0.020
+ GSH      plan-2    O12       0.020
+ GSH      plan-3    CD1       0.020
+ GSH      plan-3    CG1       0.020
+ GSH      plan-3    OE1       0.020
+ GSH      plan-3    N2        0.020
+ GSH      plan-3    HN2       0.020
+ GSH      plan-4    N2        0.020
+ GSH      plan-4    CD1       0.020
+ GSH      plan-4    CA2       0.020
+ GSH      plan-4    HN2       0.020
+ GSH      plan-5    C2        0.020
+ GSH      plan-5    CA2       0.020
+ GSH      plan-5    O2        0.020
+ GSH      plan-5    N3        0.020
+ GSH      plan-5    HN3       0.020
+ GSH      plan-6    N3        0.020
+ GSH      plan-6    C2        0.020
+ GSH      plan-6    CA3       0.020
+ GSH      plan-6    HN3       0.020
+ GSH      plan-7    C3        0.020
+ GSH      plan-7    CA3       0.020
+ GSH      plan-7    O31       0.020
+ GSH      plan-7    O32       0.020
+# ------------------------------------------------------

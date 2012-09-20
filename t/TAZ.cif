@@ -1,0 +1,276 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TAZ      TAZ 'TAZOBACTAM                          ' non-polymer        31  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TAZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TAZ           O11    O    OC       -0.500      0.000    0.000    0.000
+ TAZ           C9     C    C         0.000     -0.511    0.070    1.140
+ TAZ           O10    O    OC       -0.500      0.052   -0.481    2.112
+ TAZ           C3     C    CH1       0.000     -1.805    0.815    1.341
+ TAZ           HC3    H    H         0.000     -1.637    1.888    1.176
+ TAZ           N4     N    NT        0.000     -2.276    0.603    2.709
+ TAZ           C7     C    C         0.000     -2.326   -0.639    3.221
+ TAZ           O8     O    O         0.000     -1.463   -1.469    3.411
+ TAZ           C6     C    CH2       0.000     -3.808   -0.660    3.480
+ TAZ           HC62   H    H         0.000     -4.196   -0.625    4.500
+ TAZ           HC61   H    H         0.000     -4.473   -1.265    2.859
+ TAZ           C5     C    CH1       0.000     -3.729    0.756    2.913
+ TAZ           HC51   H    H         0.000     -4.031    1.561    3.598
+ TAZ           S1     S    ST        0.000     -4.384    0.881    1.194
+ TAZ           O13    O    OS        0.000     -5.424   -0.069    1.017
+ TAZ           O12    O    OS        0.000     -4.614    2.247    0.877
+ TAZ           C2     C    CT        0.000     -2.863    0.297    0.323
+ TAZ           C20    C    CH3       0.000     -2.832   -1.228    0.203
+ TAZ           H203   H    H         0.000     -1.903   -1.533   -0.204
+ TAZ           H202   H    H         0.000     -2.956   -1.661    1.162
+ TAZ           H201   H    H         0.000     -3.617   -1.549   -0.432
+ TAZ           C14    C    CH2       0.000     -2.705    0.965   -1.044
+ TAZ           H141   H    H         0.000     -1.744    0.681   -1.478
+ TAZ           H142   H    H         0.000     -2.742    2.050   -0.924
+ TAZ           N15    N    NR5       0.000     -3.789    0.532   -1.930
+ TAZ           C18    C    CR15      0.000     -4.705    1.339   -2.515
+ TAZ           H181   H    H         0.000     -4.778    2.415   -2.422
+ TAZ           N16    N    NRD5      0.000     -4.032   -0.679   -2.287
+ TAZ           N17    N    NRD5      0.000     -5.056   -0.716   -3.064
+ TAZ           C19    C    CR15      0.000     -5.511    0.530   -3.240
+ TAZ           H191   H    H         0.000     -6.358    0.831   -3.845
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TAZ      O11    n/a    C9     START
+ TAZ      C9     O11    C3     .
+ TAZ      O10    C9     .      .
+ TAZ      C3     C9     C2     .
+ TAZ      HC3    C3     .      .
+ TAZ      N4     C3     C5     .
+ TAZ      C7     N4     C6     .
+ TAZ      O8     C7     .      .
+ TAZ      C6     C7     HC61   .
+ TAZ      HC62   C6     .      .
+ TAZ      HC61   C6     .      .
+ TAZ      C5     N4     S1     .
+ TAZ      HC51   C5     .      .
+ TAZ      S1     C5     O12    .
+ TAZ      O13    S1     .      .
+ TAZ      O12    S1     .      .
+ TAZ      C2     C3     C14    .
+ TAZ      C20    C2     H201   .
+ TAZ      H203   C20    .      .
+ TAZ      H202   C20    .      .
+ TAZ      H201   C20    .      .
+ TAZ      C14    C2     N15    .
+ TAZ      H141   C14    .      .
+ TAZ      H142   C14    .      .
+ TAZ      N15    C14    N16    .
+ TAZ      C18    N15    H181   .
+ TAZ      H181   C18    .      .
+ TAZ      N16    N15    N17    .
+ TAZ      N17    N16    C19    .
+ TAZ      C19    N17    H191   .
+ TAZ      H191   C19    .      END
+ TAZ      S1     C2     .    ADD
+ TAZ      C5     C6     .    ADD
+ TAZ      C19    C18    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TAZ      S1     C2        single      1.662    0.020
+ TAZ      S1     C5        single      1.665    0.020
+ TAZ      O12    S1        double      1.436    0.020
+ TAZ      O13    S1        double      1.436    0.020
+ TAZ      C2     C3        single      1.524    0.020
+ TAZ      C20    C2        single      1.524    0.020
+ TAZ      C14    C2        single      1.524    0.020
+ TAZ      C3     C9        single      1.500    0.020
+ TAZ      N4     C3        single      1.469    0.020
+ TAZ      HC3    C3        single      1.099    0.020
+ TAZ      C5     C6        single      1.524    0.020
+ TAZ      C5     N4        single      1.469    0.020
+ TAZ      HC51   C5        single      1.099    0.020
+ TAZ      C6     C7        single      1.510    0.020
+ TAZ      HC61   C6        single      1.092    0.020
+ TAZ      HC62   C6        single      1.092    0.020
+ TAZ      C7     N4        single      1.416    0.020
+ TAZ      O8     C7        double      1.220    0.020
+ TAZ      O10    C9        deloc       1.250    0.020
+ TAZ      C9     O11       deloc       1.250    0.020
+ TAZ      H201   C20       single      1.059    0.020
+ TAZ      H202   C20       single      1.059    0.020
+ TAZ      H203   C20       single      1.059    0.020
+ TAZ      N15    C14       single      1.462    0.020
+ TAZ      H141   C14       single      1.092    0.020
+ TAZ      H142   C14       single      1.092    0.020
+ TAZ      C19    C18       double      1.380    0.020
+ TAZ      C19    N17       single      1.350    0.020
+ TAZ      H191   C19       single      1.083    0.020
+ TAZ      C18    N15       single      1.337    0.020
+ TAZ      H181   C18       single      1.083    0.020
+ TAZ      N16    N15       single      1.402    0.020
+ TAZ      N17    N16       double      1.404    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TAZ      O11    C9     O10     123.000    3.000
+ TAZ      O11    C9     C3      118.500    3.000
+ TAZ      O10    C9     C3      118.500    3.000
+ TAZ      C9     C3     HC3     108.810    3.000
+ TAZ      C9     C3     N4      109.500    3.000
+ TAZ      C9     C3     C2      109.470    3.000
+ TAZ      HC3    C3     N4      109.500    3.000
+ TAZ      HC3    C3     C2      108.340    3.000
+ TAZ      N4     C3     C2      109.500    3.000
+ TAZ      C3     N4     C7      109.470    3.000
+ TAZ      C3     N4     C5      109.500    3.000
+ TAZ      C7     N4     C5      109.470    3.000
+ TAZ      N4     C7     O8      120.000    3.000
+ TAZ      N4     C7     C6      120.000    3.000
+ TAZ      O8     C7     C6      120.500    3.000
+ TAZ      C7     C6     HC62    109.470    3.000
+ TAZ      C7     C6     HC61    109.470    3.000
+ TAZ      C7     C6     C5      109.470    3.000
+ TAZ      HC62   C6     HC61    107.900    3.000
+ TAZ      HC62   C6     C5      109.470    3.000
+ TAZ      HC61   C6     C5      109.470    3.000
+ TAZ      N4     C5     HC51    109.500    3.000
+ TAZ      N4     C5     S1      109.500    3.000
+ TAZ      N4     C5     C6      109.500    3.000
+ TAZ      HC51   C5     S1      109.500    3.000
+ TAZ      HC51   C5     C6      108.340    3.000
+ TAZ      S1     C5     C6      109.500    3.000
+ TAZ      C5     S1     O13     109.500    3.000
+ TAZ      C5     S1     O12     109.500    3.000
+ TAZ      C5     S1     C2      109.500    3.000
+ TAZ      O13    S1     O12     109.500    3.000
+ TAZ      O13    S1     C2      109.500    3.000
+ TAZ      O12    S1     C2      109.500    3.000
+ TAZ      C3     C2     C20     111.000    3.000
+ TAZ      C3     C2     C14     111.000    3.000
+ TAZ      C3     C2     S1      109.500    3.000
+ TAZ      C20    C2     C14     111.000    3.000
+ TAZ      C20    C2     S1      109.500    3.000
+ TAZ      C14    C2     S1      109.500    3.000
+ TAZ      C2     C20    H203    109.470    3.000
+ TAZ      C2     C20    H202    109.470    3.000
+ TAZ      C2     C20    H201    109.470    3.000
+ TAZ      H203   C20    H202    109.470    3.000
+ TAZ      H203   C20    H201    109.470    3.000
+ TAZ      H202   C20    H201    109.470    3.000
+ TAZ      C2     C14    H141    109.470    3.000
+ TAZ      C2     C14    H142    109.470    3.000
+ TAZ      C2     C14    N15     109.500    3.000
+ TAZ      H141   C14    H142    107.900    3.000
+ TAZ      H141   C14    N15     109.500    3.000
+ TAZ      H142   C14    N15     109.500    3.000
+ TAZ      C14    N15    C18     126.000    3.000
+ TAZ      C14    N15    N16     108.000    3.000
+ TAZ      C18    N15    N16     108.000    3.000
+ TAZ      N15    C18    H181    126.000    3.000
+ TAZ      N15    C18    C19     108.000    3.000
+ TAZ      H181   C18    C19     126.000    3.000
+ TAZ      N15    N16    N17     108.000    3.000
+ TAZ      N16    N17    C19     108.000    3.000
+ TAZ      N17    C19    H191    126.000    3.000
+ TAZ      N17    C19    C18     108.000    3.000
+ TAZ      H191   C19    C18     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TAZ      var_1    O11    C9     C3     C2        52.066   20.000   3
+ TAZ      var_2    C9     C3     N4     C5      -150.000   20.000   1
+ TAZ      var_3    C3     N4     C7     C6      -119.424   20.000   1
+ TAZ      var_4    N4     C7     C6     C5        -0.758   20.000   3
+ TAZ      var_5    C3     N4     C5     S1         0.000   20.000   1
+ TAZ      var_6    N4     C5     C6     C7         0.687   20.000   3
+ TAZ      var_7    N4     C5     S1     O12      -90.000   20.000   1
+ TAZ      var_8    C5     S1     C2     C3       -30.000   20.000   1
+ TAZ      var_9    C9     C3     C2     C14      -90.000   20.000   1
+ TAZ      var_10   C3     C2     C20    H201     175.182   20.000   1
+ TAZ      var_11   C3     C2     C14    N15     -175.173   20.000   1
+ TAZ      var_12   C2     C14    N15    N16      -60.317   20.000   1
+ TAZ      CONST_1  C14    N15    C18    C19      180.000    0.000   0
+ TAZ      CONST_2  C14    N15    N16    N17      180.000    0.000   0
+ TAZ      CONST_3  N15    N16    N17    C19        0.000    0.000   0
+ TAZ      CONST_4  N16    N17    C19    C18        0.000    0.000   0
+ TAZ      CONST_5  N17    C19    C18    N15        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TAZ      chir_01  S1     C2     C5     O12       negativ
+ TAZ      chir_02  C2     S1     C3     C20       negativ
+ TAZ      chir_03  C3     C2     C9     N4        positiv
+ TAZ      chir_04  C5     S1     C6     N4        negativ
+ TAZ      chir_05  N4     C3     C5     C7        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TAZ      plan-1    C7        0.020
+ TAZ      plan-1    C6        0.020
+ TAZ      plan-1    N4        0.020
+ TAZ      plan-1    O8        0.020
+ TAZ      plan-2    C9        0.020
+ TAZ      plan-2    C3        0.020
+ TAZ      plan-2    O10       0.020
+ TAZ      plan-2    O11       0.020
+ TAZ      plan-3    C19       0.020
+ TAZ      plan-3    C18       0.020
+ TAZ      plan-3    N17       0.020
+ TAZ      plan-3    H191      0.020
+ TAZ      plan-3    N15       0.020
+ TAZ      plan-3    N16       0.020
+ TAZ      plan-3    H181      0.020
+ TAZ      plan-3    C14       0.020
+# ------------------------------------------------------

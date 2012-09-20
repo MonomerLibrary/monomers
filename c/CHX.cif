@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CHX      CHX 'CYCLOHEXANE                         ' non-polymer        18   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CHX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CHX           H62    H    H         0.000      0.001   -0.002    0.001
+ CHX           C6     C    CH2       0.000     -0.663    0.865    0.000
+ CHX           H61    H    H         0.000     -0.213    1.668    0.588
+ CHX           C1     C    CH2       0.000     -2.009    0.476    0.615
+ CHX           H12    H    H         0.000     -2.672    1.343    0.615
+ CHX           H11    H    H         0.000     -1.855    0.137    1.641
+ CHX           C5     C    CH2       0.000     -0.879    1.342   -1.437
+ CHX           H51    H    H         0.000      0.082    1.621   -1.875
+ CHX           H52    H    H         0.000     -1.543    2.210   -1.436
+ CHX           C4     C    CH2       0.000     -1.509    0.217   -2.259
+ CHX           H41    H    H         0.000     -0.843   -0.649   -2.259
+ CHX           H42    H    H         0.000     -1.661    0.558   -3.285
+ CHX           C3     C    CH2       0.000     -2.854   -0.172   -1.644
+ CHX           H31    H    H         0.000     -3.304   -0.975   -2.232
+ CHX           H32    H    H         0.000     -3.518    0.695   -1.645
+ CHX           C2     C    CH2       0.000     -2.638   -0.649   -0.207
+ CHX           H22    H    H         0.000     -1.975   -1.517   -0.208
+ CHX           H21    H    H         0.000     -3.599   -0.928    0.231
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CHX      H62    n/a    C6     START
+ CHX      C6     H62    C5     .
+ CHX      H61    C6     .      .
+ CHX      C1     C6     H11    .
+ CHX      H12    C1     .      .
+ CHX      H11    C1     .      .
+ CHX      C5     C6     C4     .
+ CHX      H51    C5     .      .
+ CHX      H52    C5     .      .
+ CHX      C4     C5     C3     .
+ CHX      H41    C4     .      .
+ CHX      H42    C4     .      .
+ CHX      C3     C4     C2     .
+ CHX      H31    C3     .      .
+ CHX      H32    C3     .      .
+ CHX      C2     C3     H21    .
+ CHX      H22    C2     .      .
+ CHX      H21    C2     .      END
+ CHX      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CHX      C1     C2        single      1.524    0.020
+ CHX      C1     C6        single      1.524    0.020
+ CHX      H11    C1        single      1.092    0.020
+ CHX      H12    C1        single      1.092    0.020
+ CHX      C2     C3        single      1.524    0.020
+ CHX      H21    C2        single      1.092    0.020
+ CHX      H22    C2        single      1.092    0.020
+ CHX      C3     C4        single      1.524    0.020
+ CHX      H31    C3        single      1.092    0.020
+ CHX      H32    C3        single      1.092    0.020
+ CHX      C4     C5        single      1.524    0.020
+ CHX      H41    C4        single      1.092    0.020
+ CHX      H42    C4        single      1.092    0.020
+ CHX      C5     C6        single      1.524    0.020
+ CHX      H51    C5        single      1.092    0.020
+ CHX      H52    C5        single      1.092    0.020
+ CHX      H61    C6        single      1.092    0.020
+ CHX      C6     H62       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CHX      H62    C6     H61     107.900    3.000
+ CHX      H62    C6     C1      109.470    3.000
+ CHX      H62    C6     C5      109.470    3.000
+ CHX      H61    C6     C1      109.470    3.000
+ CHX      H61    C6     C5      109.470    3.000
+ CHX      C1     C6     C5      111.000    3.000
+ CHX      C6     C1     H12     109.470    3.000
+ CHX      C6     C1     H11     109.470    3.000
+ CHX      C6     C1     C2      111.000    3.000
+ CHX      H12    C1     H11     107.900    3.000
+ CHX      H12    C1     C2      109.470    3.000
+ CHX      H11    C1     C2      109.470    3.000
+ CHX      C6     C5     H51     109.470    3.000
+ CHX      C6     C5     H52     109.470    3.000
+ CHX      C6     C5     C4      111.000    3.000
+ CHX      H51    C5     H52     107.900    3.000
+ CHX      H51    C5     C4      109.470    3.000
+ CHX      H52    C5     C4      109.470    3.000
+ CHX      C5     C4     H41     109.470    3.000
+ CHX      C5     C4     H42     109.470    3.000
+ CHX      C5     C4     C3      111.000    3.000
+ CHX      H41    C4     H42     107.900    3.000
+ CHX      H41    C4     C3      109.470    3.000
+ CHX      H42    C4     C3      109.470    3.000
+ CHX      C4     C3     H31     109.470    3.000
+ CHX      C4     C3     H32     109.470    3.000
+ CHX      C4     C3     C2      111.000    3.000
+ CHX      H31    C3     H32     107.900    3.000
+ CHX      H31    C3     C2      109.470    3.000
+ CHX      H32    C3     C2      109.470    3.000
+ CHX      C3     C2     H22     109.470    3.000
+ CHX      C3     C2     H21     109.470    3.000
+ CHX      C3     C2     C1      111.000    3.000
+ CHX      H22    C2     H21     107.900    3.000
+ CHX      H22    C2     C1      109.470    3.000
+ CHX      H21    C2     C1      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CHX      var_1    H62    C6     C1     C2       -60.000   20.000   3
+ CHX      var_2    C6     C1     C2     C3       -60.000   20.000   3
+ CHX      var_3    H62    C6     C5     C4        60.000   20.000   3
+ CHX      var_4    C6     C5     C4     C3        60.000   20.000   3
+ CHX      var_5    C5     C4     C3     C2       -60.000   20.000   3
+ CHX      var_6    C4     C3     C2     C1        60.000   20.000   3
+# ------------------------------------------------------

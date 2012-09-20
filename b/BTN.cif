@@ -1,0 +1,270 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BTN      BTN 'BIOTIN                              ' non-polymer        31  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BTN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BTN           O3     O    O         0.000      0.000    0.000    0.000
+ BTN           C3     C    C         0.000     -0.949    0.438   -0.622
+ BTN           N1     N    NH1       0.000     -1.129    0.218   -1.931
+ BTN           HN1    H    H         0.000     -0.515   -0.320   -2.526
+ BTN           N2     N    NH1       0.000     -1.908    1.186   -0.060
+ BTN           HN2    H    H         0.000     -1.946    1.457    0.912
+ BTN           C4     C    CH1       0.000     -2.897    1.548   -1.087
+ BTN           H4     H    H         0.000     -2.925    2.639   -1.213
+ BTN           C5     C    CH1       0.000     -2.366    0.887   -2.363
+ BTN           H5     H    H         0.000     -2.134    1.655   -3.114
+ BTN           C6     C    CH2       0.000     -3.325   -0.163   -2.962
+ BTN           H62    H    H         0.000     -2.813   -1.052   -3.338
+ BTN           H61    H    H         0.000     -3.973    0.239   -3.743
+ BTN           S1     S    S2        0.000     -4.341   -0.613   -1.489
+ BTN           C2     C    CH1       0.000     -4.286    1.031   -0.653
+ BTN           H2     H    H         0.000     -5.085    1.688   -1.025
+ BTN           C7     C    CH2       0.000     -4.365    0.878    0.865
+ BTN           H71    H    H         0.000     -4.246    1.856    1.336
+ BTN           H72    H    H         0.000     -3.568    0.212    1.205
+ BTN           C8     C    CH2       0.000     -5.722    0.287    1.249
+ BTN           H81    H    H         0.000     -5.839   -0.691    0.777
+ BTN           H82    H    H         0.000     -6.518    0.953    0.906
+ BTN           C9     C    CH2       0.000     -5.803    0.134    2.769
+ BTN           H91    H    H         0.000     -5.683    1.113    3.238
+ BTN           H92    H    H         0.000     -5.006   -0.531    3.109
+ BTN           C10    C    CH2       0.000     -7.160   -0.455    3.153
+ BTN           H101   H    H         0.000     -7.277   -1.433    2.681
+ BTN           H102   H    H         0.000     -7.954    0.211    2.811
+ BTN           C11    C    C         0.000     -7.239   -0.606    4.651
+ BTN           O11    O    OC       -0.500     -6.270   -0.263    5.364
+ BTN           O12    O    OC       -0.500     -8.271   -1.073    5.179
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BTN      O3     n/a    C3     START
+ BTN      C3     O3     N2     .
+ BTN      N1     C3     HN1    .
+ BTN      HN1    N1     .      .
+ BTN      N2     C3     C4     .
+ BTN      HN2    N2     .      .
+ BTN      C4     N2     C2     .
+ BTN      H4     C4     .      .
+ BTN      C5     C4     C6     .
+ BTN      H5     C5     .      .
+ BTN      C6     C5     S1     .
+ BTN      H62    C6     .      .
+ BTN      H61    C6     .      .
+ BTN      S1     C6     .      .
+ BTN      C2     C4     C7     .
+ BTN      H2     C2     .      .
+ BTN      C7     C2     C8     .
+ BTN      H71    C7     .      .
+ BTN      H72    C7     .      .
+ BTN      C8     C7     C9     .
+ BTN      H81    C8     .      .
+ BTN      H82    C8     .      .
+ BTN      C9     C8     C10    .
+ BTN      H91    C9     .      .
+ BTN      H92    C9     .      .
+ BTN      C10    C9     C11    .
+ BTN      H101   C10    .      .
+ BTN      H102   C10    .      .
+ BTN      C11    C10    O12    .
+ BTN      O11    C11    .      .
+ BTN      O12    C11    .      END
+ BTN      C2     S1     .    ADD
+ BTN      C5     N1     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BTN      O11    C11       deloc       1.250    0.020
+ BTN      O12    C11       deloc       1.250    0.020
+ BTN      C11    C10       single      1.510    0.020
+ BTN      C10    C9        single      1.524    0.020
+ BTN      H101   C10       single      1.092    0.020
+ BTN      H102   C10       single      1.092    0.020
+ BTN      C9     C8        single      1.524    0.020
+ BTN      H91    C9        single      1.092    0.020
+ BTN      H92    C9        single      1.092    0.020
+ BTN      C8     C7        single      1.524    0.020
+ BTN      H81    C8        single      1.092    0.020
+ BTN      H82    C8        single      1.092    0.020
+ BTN      C7     C2        single      1.524    0.020
+ BTN      H71    C7        single      1.092    0.020
+ BTN      H72    C7        single      1.092    0.020
+ BTN      C2     S1        single      1.765    0.020
+ BTN      C2     C4        single      1.524    0.020
+ BTN      H2     C2        single      1.099    0.020
+ BTN      S1     C6        single      1.762    0.020
+ BTN      C6     C5        single      1.524    0.020
+ BTN      H61    C6        single      1.092    0.020
+ BTN      H62    C6        single      1.092    0.020
+ BTN      C5     N1        single      1.450    0.020
+ BTN      C5     C4        single      1.524    0.020
+ BTN      H5     C5        single      1.099    0.020
+ BTN      N1     C3        single      1.330    0.020
+ BTN      HN1    N1        single      1.010    0.020
+ BTN      C3     O3        double      1.220    0.020
+ BTN      N2     C3        single      1.330    0.020
+ BTN      C4     N2        single      1.450    0.020
+ BTN      HN2    N2        single      1.010    0.020
+ BTN      H4     C4        single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BTN      O3     C3     N1      123.000    3.000
+ BTN      O3     C3     N2      123.000    3.000
+ BTN      N1     C3     N2      120.000    3.000
+ BTN      C3     N1     HN1     120.000    3.000
+ BTN      C3     N1     C5      121.500    3.000
+ BTN      HN1    N1     C5      118.500    3.000
+ BTN      C3     N2     HN2     120.000    3.000
+ BTN      C3     N2     C4      121.500    3.000
+ BTN      HN2    N2     C4      118.500    3.000
+ BTN      N2     C4     H4      108.550    3.000
+ BTN      N2     C4     C5      110.000    3.000
+ BTN      N2     C4     C2      110.000    3.000
+ BTN      H4     C4     C5      108.340    3.000
+ BTN      H4     C4     C2      108.340    3.000
+ BTN      C5     C4     C2      111.000    3.000
+ BTN      C4     C5     H5      108.340    3.000
+ BTN      C4     C5     C6      111.000    3.000
+ BTN      C4     C5     N1      110.000    3.000
+ BTN      H5     C5     C6      108.340    3.000
+ BTN      H5     C5     N1      108.550    3.000
+ BTN      C6     C5     N1      110.000    3.000
+ BTN      C5     C6     H62     109.470    3.000
+ BTN      C5     C6     H61     109.470    3.000
+ BTN      C5     C6     S1      109.500    3.000
+ BTN      H62    C6     H61     107.900    3.000
+ BTN      H62    C6     S1      109.500    3.000
+ BTN      H61    C6     S1      109.500    3.000
+ BTN      C6     S1     C2       97.370    3.000
+ BTN      C4     C2     H2      108.340    3.000
+ BTN      C4     C2     C7      111.000    3.000
+ BTN      C4     C2     S1      109.500    3.000
+ BTN      H2     C2     C7      108.340    3.000
+ BTN      H2     C2     S1      109.500    3.000
+ BTN      C7     C2     S1      109.500    3.000
+ BTN      C2     C7     H71     109.470    3.000
+ BTN      C2     C7     H72     109.470    3.000
+ BTN      C2     C7     C8      111.000    3.000
+ BTN      H71    C7     H72     107.900    3.000
+ BTN      H71    C7     C8      109.470    3.000
+ BTN      H72    C7     C8      109.470    3.000
+ BTN      C7     C8     H81     109.470    3.000
+ BTN      C7     C8     H82     109.470    3.000
+ BTN      C7     C8     C9      111.000    3.000
+ BTN      H81    C8     H82     107.900    3.000
+ BTN      H81    C8     C9      109.470    3.000
+ BTN      H82    C8     C9      109.470    3.000
+ BTN      C8     C9     H91     109.470    3.000
+ BTN      C8     C9     H92     109.470    3.000
+ BTN      C8     C9     C10     111.000    3.000
+ BTN      H91    C9     H92     107.900    3.000
+ BTN      H91    C9     C10     109.470    3.000
+ BTN      H92    C9     C10     109.470    3.000
+ BTN      C9     C10    H101    109.470    3.000
+ BTN      C9     C10    H102    109.470    3.000
+ BTN      C9     C10    C11     109.470    3.000
+ BTN      H101   C10    H102    107.900    3.000
+ BTN      H101   C10    C11     109.470    3.000
+ BTN      H102   C10    C11     109.470    3.000
+ BTN      C10    C11    O11     118.500    3.000
+ BTN      C10    C11    O12     118.500    3.000
+ BTN      O11    C11    O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BTN      CONST_1  O3     C3     N1     C5       180.000    0.000   0
+ BTN      CONST_2  O3     C3     N2     C4       180.000    0.000   0
+ BTN      var_1    C3     N2     C4     C2       120.000   20.000   3
+ BTN      var_2    N2     C4     C5     C6       120.000   20.000   3
+ BTN      var_3    C4     C5     N1     C3         0.000   20.000   3
+ BTN      var_4    C4     C5     C6     S1       -30.000   20.000   3
+ BTN      var_5    C5     C6     S1     C2        30.000   20.000   1
+ BTN      var_6    N2     C4     C2     C7        30.000   20.000   3
+ BTN      var_7    C4     C2     S1     C6       -30.000   20.000   1
+ BTN      var_8    C4     C2     C7     C8      -176.683   20.000   3
+ BTN      var_9    C2     C7     C8     C9      -179.946   20.000   3
+ BTN      var_10   C7     C8     C9     C10      179.966   20.000   3
+ BTN      var_11   C8     C9     C10    C11     -180.000   20.000   3
+ BTN      var_12   C9     C10    C11    O12     -179.963   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BTN      chir_01  C2     C7     S1     C4        positiv
+ BTN      chir_02  C5     C6     N1     C4        positiv
+ BTN      chir_03  C4     C2     C5     N2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BTN      plan-1    C11       0.020
+ BTN      plan-1    O11       0.020
+ BTN      plan-1    O12       0.020
+ BTN      plan-1    C10       0.020
+ BTN      plan-2    N1        0.020
+ BTN      plan-2    C5        0.020
+ BTN      plan-2    C3        0.020
+ BTN      plan-2    HN1       0.020
+ BTN      plan-3    C3        0.020
+ BTN      plan-3    N1        0.020
+ BTN      plan-3    O3        0.020
+ BTN      plan-3    N2        0.020
+ BTN      plan-3    HN1       0.020
+ BTN      plan-3    HN2       0.020
+ BTN      plan-4    N2        0.020
+ BTN      plan-4    C3        0.020
+ BTN      plan-4    C4        0.020
+ BTN      plan-4    HN2       0.020
+# ------------------------------------------------------

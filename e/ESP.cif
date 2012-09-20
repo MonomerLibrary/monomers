@@ -1,0 +1,204 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ESP      ESP 'THIENO[2,3-B]PYRIDINE-2-CARBOXAMIDIN' non-polymer        20  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ESP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ESP           N2     N    NH2       1.000      0.000    0.000    0.000
+ ESP           HH21   H    H         0.000      0.908    0.399   -0.194
+ ESP           HH22   H    H         0.000     -0.068   -0.896    0.462
+ ESP           C0     C    C         0.000     -1.108    0.657   -0.353
+ ESP           N1     N    NH2       0.000     -1.015    1.841   -0.962
+ ESP           HH12   H    H         0.000     -0.108    2.240   -1.157
+ ESP           HH11   H    H         0.000     -1.853    2.339   -1.230
+ ESP           C1     C    CR5       0.000     -2.429    0.075   -0.070
+ ESP           C5     C    CR15      0.000     -2.779   -1.236   -0.003
+ ESP           H5     H    H         0.000     -2.037   -2.006   -0.172
+ ESP           C4     C    CR56      0.000     -4.109   -1.591    0.287
+ ESP           C9     C    CR16      0.000     -4.671   -2.889    0.406
+ ESP           H9     H    H         0.000     -4.054   -3.769    0.273
+ ESP           C8     C    CR16      0.000     -5.999   -3.014    0.689
+ ESP           H8     H    H         0.000     -6.437   -4.000    0.781
+ ESP           C7     C    CR16      0.000     -6.795   -1.889    0.860
+ ESP           H7     H    H         0.000     -7.848   -2.005    1.085
+ ESP           N6     N    NRD6      0.000     -6.276   -0.682    0.751
+ ESP           C3     C    CR56      0.000     -5.003   -0.509    0.479
+ ESP           S2     S    S2        0.000     -3.967    0.918    0.260
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ESP      N2     n/a    C0     START
+ ESP      HH21   N2     .      .
+ ESP      HH22   N2     .      .
+ ESP      C0     N2     C1     .
+ ESP      N1     C0     HH11   .
+ ESP      HH12   N1     .      .
+ ESP      HH11   N1     .      .
+ ESP      C1     C0     C5     .
+ ESP      C5     C1     C4     .
+ ESP      H5     C5     .      .
+ ESP      C4     C5     C9     .
+ ESP      C9     C4     C8     .
+ ESP      H9     C9     .      .
+ ESP      C8     C9     C7     .
+ ESP      H8     C8     .      .
+ ESP      C7     C8     N6     .
+ ESP      H7     C7     .      .
+ ESP      N6     C7     C3     .
+ ESP      C3     N6     S2     .
+ ESP      S2     C3     .      END
+ ESP      C1     S2     .    ADD
+ ESP      C3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ESP      C1     C0        single      1.490    0.020
+ ESP      N1     C0        single      1.332    0.020
+ ESP      C0     N2        double      1.332    0.020
+ ESP      C1     S2        single      1.745    0.020
+ ESP      C5     C1        double      1.387    0.020
+ ESP      HH11   N1        single      1.010    0.020
+ ESP      HH12   N1        single      1.010    0.020
+ ESP      HH21   N2        single      1.010    0.020
+ ESP      HH22   N2        single      1.010    0.020
+ ESP      S2     C3        single      1.695    0.020
+ ESP      C3     C4        double      1.490    0.020
+ ESP      C3     N6        single      1.355    0.020
+ ESP      C4     C5        single      1.440    0.020
+ ESP      C9     C4        single      1.390    0.020
+ ESP      H5     C5        single      1.083    0.020
+ ESP      N6     C7        double      1.337    0.020
+ ESP      C7     C8        single      1.390    0.020
+ ESP      H7     C7        single      1.083    0.020
+ ESP      C8     C9        double      1.390    0.020
+ ESP      H8     C8        single      1.083    0.020
+ ESP      H9     C9        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ESP      HH21   N2     HH22    120.000    3.000
+ ESP      HH21   N2     C0      120.000    3.000
+ ESP      HH22   N2     C0      120.000    3.000
+ ESP      N2     C0     N1      120.000    3.000
+ ESP      N2     C0     C1      120.000    3.000
+ ESP      N1     C0     C1      120.000    3.000
+ ESP      C0     N1     HH12    120.000    3.000
+ ESP      C0     N1     HH11    120.000    3.000
+ ESP      HH12   N1     HH11    120.000    3.000
+ ESP      C0     C1     C5      126.000    3.000
+ ESP      C0     C1     S2      108.000    3.000
+ ESP      C5     C1     S2      108.000    3.000
+ ESP      C1     C5     H5      126.000    3.000
+ ESP      C1     C5     C4      108.000    3.000
+ ESP      H5     C5     C4      108.000    3.000
+ ESP      C5     C4     C9      126.000    3.000
+ ESP      C5     C4     C3      120.000    3.000
+ ESP      C9     C4     C3      120.000    3.000
+ ESP      C4     C9     H9      120.000    3.000
+ ESP      C4     C9     C8      120.000    3.000
+ ESP      H9     C9     C8      120.000    3.000
+ ESP      C9     C8     H8      120.000    3.000
+ ESP      C9     C8     C7      120.000    3.000
+ ESP      H8     C8     C7      120.000    3.000
+ ESP      C8     C7     H7      120.000    3.000
+ ESP      C8     C7     N6      120.000    3.000
+ ESP      H7     C7     N6      120.000    3.000
+ ESP      C7     N6     C3      120.000    3.000
+ ESP      N6     C3     S2      120.000    3.000
+ ESP      N6     C3     C4      120.000    3.000
+ ESP      S2     C3     C4      120.000    3.000
+ ESP      C3     S2     C1       98.411    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ESP      CONST_1  HH22   N2     C0     C1         0.000    0.000   0
+ ESP      CONST_2  N2     C0     N1     HH11     180.000    0.000   0
+ ESP      var_1    N2     C0     C1     C5       -30.374   20.000   1
+ ESP      CONST_3  C0     C1     S2     C3       180.000    0.000   0
+ ESP      CONST_4  C0     C1     C5     C4       180.000    0.000   0
+ ESP      CONST_5  C1     C5     C4     C9       180.000    0.000   0
+ ESP      CONST_6  C5     C4     C9     C8       180.000    0.000   0
+ ESP      CONST_7  C4     C9     C8     C7         0.000    0.000   0
+ ESP      CONST_8  C9     C8     C7     N6         0.000    0.000   0
+ ESP      CONST_9  C8     C7     N6     C3         0.000    0.000   0
+ ESP      CONST_10 C7     N6     C3     S2       180.000    0.000   0
+ ESP      CONST_11 N6     C3     C4     C5       180.000    0.000   0
+ ESP      CONST_12 N6     C3     S2     C1       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ESP      plan-1    C0        0.020
+ ESP      plan-1    C1        0.020
+ ESP      plan-1    N1        0.020
+ ESP      plan-1    N2        0.020
+ ESP      plan-1    HH21      0.020
+ ESP      plan-1    HH22      0.020
+ ESP      plan-1    HH12      0.020
+ ESP      plan-1    HH11      0.020
+ ESP      plan-2    C1        0.020
+ ESP      plan-2    C0        0.020
+ ESP      plan-2    S2        0.020
+ ESP      plan-2    C5        0.020
+ ESP      plan-2    C4        0.020
+ ESP      plan-2    H5        0.020
+ ESP      plan-2    C3        0.020
+ ESP      plan-2    N6        0.020
+ ESP      plan-2    C7        0.020
+ ESP      plan-2    C8        0.020
+ ESP      plan-2    C9        0.020
+ ESP      plan-2    H7        0.020
+ ESP      plan-2    H8        0.020
+ ESP      plan-2    H9        0.020
+ ESP      plan-3    N1        0.020
+ ESP      plan-3    C0        0.020
+ ESP      plan-3    HH11      0.020
+ ESP      plan-3    HH12      0.020
+# ------------------------------------------------------

@@ -1,0 +1,175 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IPG      IPG 'N-ISOPROPYL GLYCINE                 ' M-peptide          18   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IPG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IPG           OXT    O    OC       -0.500      0.000    0.000    0.000
+ IPG           C      C    C         0.000     -0.972    0.242    0.749
+ IPG           O      O    OC       -0.500     -0.821    0.971    1.754
+ IPG           CA     C    CH2       0.000     -2.325   -0.347    0.444
+ IPG           HA1    H    H         0.000     -2.255   -1.437    0.444
+ IPG           HA2    H    H         0.000     -2.657   -0.005   -0.538
+ IPG           N      N    NH1       0.000     -3.288    0.082    1.465
+ IPG           H      H    H         0.000     -3.100    0.678    2.259
+ IPG           CN     C    CH1       0.000     -4.578   -0.523    1.110
+ IPG           HCN    H    H         0.000     -4.405   -1.476    0.590
+ IPG           CG2    C    CH3       0.000     -5.351    0.426    0.192
+ IPG           HG23   H    H         0.000     -4.790    0.603   -0.689
+ IPG           HG22   H    H         0.000     -6.282   -0.010   -0.066
+ IPG           HG21   H    H         0.000     -5.520    1.344    0.692
+ IPG           CG1    C    CH3       0.000     -5.391   -0.776    2.381
+ IPG           HG13   H    H         0.000     -4.857   -1.433    3.018
+ IPG           HG12   H    H         0.000     -5.559    0.141    2.882
+ IPG           HG11   H    H         0.000     -6.321   -1.214    2.125
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IPG      OXT    n/a    C      START
+ IPG      C      OXT    CA     .
+ IPG      O      C      .      .
+ IPG      CA     C      N      .
+ IPG      HA1    CA     .      .
+ IPG      HA2    CA     .      .
+ IPG      N      CA     CN     .
+ IPG      H      N      .      .
+ IPG      CN     N      CG1    .
+ IPG      HCN    CN     .      .
+ IPG      CG2    CN     HG21   .
+ IPG      HG23   CG2    .      .
+ IPG      HG22   CG2    .      .
+ IPG      HG21   CG2    .      .
+ IPG      CG1    CN     HG11   .
+ IPG      HG13   CG1    .      .
+ IPG      HG12   CG1    .      .
+ IPG      HG11   CG1    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IPG      N      CA        single      1.450    0.020
+ IPG      CN     N         single      1.450    0.020
+ IPG      H      N         single      1.010    0.020
+ IPG      CA     C         single      1.510    0.020
+ IPG      HA1    CA        single      1.092    0.020
+ IPG      HA2    CA        single      1.092    0.020
+ IPG      O      C         deloc       1.250    0.020
+ IPG      C      OXT       deloc       1.250    0.020
+ IPG      CG1    CN        single      1.524    0.020
+ IPG      CG2    CN        single      1.524    0.020
+ IPG      HCN    CN        single      1.099    0.020
+ IPG      HG11   CG1       single      1.059    0.020
+ IPG      HG12   CG1       single      1.059    0.020
+ IPG      HG13   CG1       single      1.059    0.020
+ IPG      HG21   CG2       single      1.059    0.020
+ IPG      HG22   CG2       single      1.059    0.020
+ IPG      HG23   CG2       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IPG      OXT    C      O       123.000    3.000
+ IPG      OXT    C      CA      118.500    3.000
+ IPG      O      C      CA      118.500    3.000
+ IPG      C      CA     HA1     109.470    3.000
+ IPG      C      CA     HA2     109.470    3.000
+ IPG      C      CA     N       111.600    3.000
+ IPG      HA1    CA     HA2     107.900    3.000
+ IPG      HA1    CA     N       109.470    3.000
+ IPG      HA2    CA     N       109.470    3.000
+ IPG      CA     N      H       118.500    3.000
+ IPG      CA     N      CN      120.000    3.000
+ IPG      H      N      CN      118.500    3.000
+ IPG      N      CN     HCN     108.550    3.000
+ IPG      N      CN     CG2     110.000    3.000
+ IPG      N      CN     CG1     110.000    3.000
+ IPG      HCN    CN     CG2     108.340    3.000
+ IPG      HCN    CN     CG1     108.340    3.000
+ IPG      CG2    CN     CG1     111.000    3.000
+ IPG      CN     CG2    HG23    109.470    3.000
+ IPG      CN     CG2    HG22    109.470    3.000
+ IPG      CN     CG2    HG21    109.470    3.000
+ IPG      HG23   CG2    HG22    109.470    3.000
+ IPG      HG23   CG2    HG21    109.470    3.000
+ IPG      HG22   CG2    HG21    109.470    3.000
+ IPG      CN     CG1    HG13    109.470    3.000
+ IPG      CN     CG1    HG12    109.470    3.000
+ IPG      CN     CG1    HG11    109.470    3.000
+ IPG      HG13   CG1    HG12    109.470    3.000
+ IPG      HG13   CG1    HG11    109.470    3.000
+ IPG      HG12   CG1    HG11    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IPG      var_1    OXT    C      CA     N        179.954   20.000   3
+ IPG      var_2    C      CA     N      CN       179.976   20.000   3
+ IPG      var_3    CA     N      CN     CG1      150.032   20.000   3
+ IPG      var_4    N      CN     CG2    HG21     -60.045   20.000   3
+ IPG      var_5    N      CN     CG1    HG11    -179.965   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IPG      chir_01  CN     N      CG1    CG2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IPG      plan-1    N         0.020
+ IPG      plan-1    CA        0.020
+ IPG      plan-1    CN        0.020
+ IPG      plan-1    H         0.020
+ IPG      plan-2    C         0.020
+ IPG      plan-2    CA        0.020
+ IPG      plan-2    O         0.020
+ IPG      plan-2    OXT       0.020
+# ------------------------------------------------------

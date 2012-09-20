@@ -1,0 +1,172 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DPR      DPR 'D-PROLINE                           ' P-peptide          16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DPR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DPR           OXT    O    OC       -0.500      0.000    0.000    0.000
+ DPR           C      C    C         0.000     -0.357    0.127   -1.192
+ DPR           O      O    OC       -0.500     -0.992   -0.739   -1.834
+ DPR           CA     C    CH1       0.000      0.077    1.448   -1.734
+ DPR           HA     H    H         0.000     -0.372    2.267   -1.155
+ DPR           CB     C    CH2       0.000      1.595    1.590   -1.770
+ DPR           HB2    H    H         0.000      2.093    0.723   -1.332
+ DPR           HB3    H    H         0.000      1.930    2.496   -1.261
+ DPR           CG     C    CH2       0.000      1.937    1.680   -3.249
+ DPR           HG2    H    H         0.000      2.177    0.707   -3.682
+ DPR           HG3    H    H         0.000      2.755    2.377   -3.446
+ DPR           CD     C    CH2       0.000      0.661    2.209   -3.869
+ DPR           HD2    H    H         0.000      0.577    1.970   -4.931
+ DPR           HD3    H    H         0.000      0.537    3.285   -3.729
+ DPR           N      N    NH1       0.000     -0.373    1.498   -3.125
+ DPR           H      H    H         0.000     -1.231    1.115   -3.498
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DPR      OXT    n/a    C      START
+ DPR      C      OXT    CA     .
+ DPR      O      C      .      .
+ DPR      CA     C      CB     .
+ DPR      HA     CA     .      .
+ DPR      CB     CA     CG     .
+ DPR      HB2    CB     .      .
+ DPR      HB3    CB     .      .
+ DPR      CG     CB     CD     .
+ DPR      HG2    CG     .      .
+ DPR      HG3    CG     .      .
+ DPR      CD     CG     N      .
+ DPR      HD2    CD     .      .
+ DPR      HD3    CD     .      .
+ DPR      N      CD     H      .
+ DPR      H      N      .      END
+ DPR      N      CA     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DPR      N      CA        single      1.450    0.020
+ DPR      N      CD        single      1.450    0.020
+ DPR      H      N         single      1.010    0.020
+ DPR      CB     CA        single      1.524    0.020
+ DPR      CA     C         single      1.500    0.020
+ DPR      HA     CA        single      1.099    0.020
+ DPR      CG     CB        single      1.524    0.020
+ DPR      HB2    CB        single      1.092    0.020
+ DPR      HB3    CB        single      1.092    0.020
+ DPR      CD     CG        single      1.524    0.020
+ DPR      HG2    CG        single      1.092    0.020
+ DPR      HG3    CG        single      1.092    0.020
+ DPR      HD2    CD        single      1.092    0.020
+ DPR      HD3    CD        single      1.092    0.020
+ DPR      O      C         deloc       1.250    0.020
+ DPR      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DPR      OXT    C      O       123.000    3.000
+ DPR      OXT    C      CA      118.500    3.000
+ DPR      O      C      CA      118.500    3.000
+ DPR      C      CA     HA      108.810    3.000
+ DPR      C      CA     CB      109.470    3.000
+ DPR      C      CA     N       111.600    3.000
+ DPR      HA     CA     CB      108.340    3.000
+ DPR      HA     CA     N       108.550    3.000
+ DPR      CB     CA     N       110.000    3.000
+ DPR      CA     CB     HB2     109.470    3.000
+ DPR      CA     CB     HB3     109.470    3.000
+ DPR      CA     CB     CG      111.000    3.000
+ DPR      HB2    CB     HB3     107.900    3.000
+ DPR      HB2    CB     CG      109.470    3.000
+ DPR      HB3    CB     CG      109.470    3.000
+ DPR      CB     CG     HG2     109.470    3.000
+ DPR      CB     CG     HG3     109.470    3.000
+ DPR      CB     CG     CD      111.000    3.000
+ DPR      HG2    CG     HG3     107.900    3.000
+ DPR      HG2    CG     CD      109.470    3.000
+ DPR      HG3    CG     CD      109.470    3.000
+ DPR      CG     CD     HD2     109.470    3.000
+ DPR      CG     CD     HD3     109.470    3.000
+ DPR      CG     CD     N       112.000    3.000
+ DPR      HD2    CD     HD3     107.900    3.000
+ DPR      HD2    CD     N       109.470    3.000
+ DPR      HD3    CD     N       109.470    3.000
+ DPR      CD     N      H       118.500    3.000
+ DPR      CD     N      CA      120.000    3.000
+ DPR      H      N      CA      118.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DPR      var_1    OXT    C      CA     CB        63.508   20.000   3
+ DPR      var_2    C      CA     CB     CG       120.000   20.000   3
+ DPR      var_3    CA     CB     CG     CD        30.000   20.000   3
+ DPR      var_4    CB     CG     CD     N        -30.000   20.000   3
+ DPR      var_5    CG     CD     N      CA        30.000   20.000   3
+ DPR      var_6    CD     N      CA     C       -150.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DPR      chir_01  CA     N      CB     C         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DPR      plan-1    N         0.020
+ DPR      plan-1    CA        0.020
+ DPR      plan-1    CD        0.020
+ DPR      plan-1    H         0.020
+ DPR      plan-2    C         0.020
+ DPR      plan-2    CA        0.020
+ DPR      plan-2    O         0.020
+ DPR      plan-2    OXT       0.020
+# ------------------------------------------------------

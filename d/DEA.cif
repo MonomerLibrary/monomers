@@ -1,0 +1,254 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DEA      DEA 'D-ERITADENINE                       ' non-polymer        28  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DEA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DEA           OXT    O    OC       -0.500      0.000    0.000    0.000
+ DEA           "C4'"  C    C         0.000     -0.543   -0.368   -1.066
+ DEA           O      O    OC       -0.500     -0.015   -0.087   -2.165
+ DEA           "C3'"  C    CH1       0.000     -1.831   -1.147   -1.024
+ DEA           "H3'"  H    H         0.000     -1.675   -2.083   -0.470
+ DEA           "O3'"  O    OH1       0.000     -2.248   -1.447   -2.357
+ DEA           "HO'3" H    H         0.000     -2.385   -0.624   -2.845
+ DEA           "C2'"  C    CH1       0.000     -2.909   -0.315   -0.327
+ DEA           "H2'"  H    H         0.000     -3.065    0.621   -0.882
+ DEA           "O2'"  O    OH1       0.000     -2.492   -0.015    1.005
+ DEA           "HO'2" H    H         0.000     -2.356   -0.838    1.492
+ DEA           "C1'"  C    CH2       0.000     -4.217   -1.107   -0.286
+ DEA           "H1'1" H    H         0.000     -4.062   -2.037    0.264
+ DEA           "H1'2" H    H         0.000     -4.535   -1.337   -1.305
+ DEA           N9     N    NR5       0.000     -5.249   -0.310    0.380
+ DEA           C4     C    CR56      0.000     -5.527   -0.303    1.724
+ DEA           C5     C    CR56      0.000     -6.589    0.600    1.895
+ DEA           N7     N    NRD5      0.000     -6.893    1.096    0.670
+ DEA           C8     C    CR15      0.000     -6.109    0.560   -0.220
+ DEA           H8     H    H         0.000     -6.136    0.774   -1.281
+ DEA           N3     N    NRD6      0.000     -5.036   -0.929    2.787
+ DEA           C2     C    CR16      0.000     -5.530   -0.704    3.986
+ DEA           H2     H    H         0.000     -5.107   -1.232    4.832
+ DEA           N1     N    NRD6      0.000     -6.523    0.140    4.197
+ DEA           C6     C    CR6       0.000     -7.080    0.811    3.194
+ DEA           N6     N    NH2       0.000     -8.119    1.695    3.425
+ DEA           HN62   H    H         0.000     -8.540    2.208    2.656
+ DEA           HN61   H    H         0.000     -8.473    1.840    4.365
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DEA      OXT    n/a    "C4'"  START
+ DEA      "C4'"  OXT    "C3'"  .
+ DEA      O      "C4'"  .      .
+ DEA      "C3'"  "C4'"  "C2'"  .
+ DEA      "H3'"  "C3'"  .      .
+ DEA      "O3'"  "C3'"  "HO'3" .
+ DEA      "HO'3" "O3'"  .      .
+ DEA      "C2'"  "C3'"  "C1'"  .
+ DEA      "H2'"  "C2'"  .      .
+ DEA      "O2'"  "C2'"  "HO'2" .
+ DEA      "HO'2" "O2'"  .      .
+ DEA      "C1'"  "C2'"  N9     .
+ DEA      "H1'1" "C1'"  .      .
+ DEA      "H1'2" "C1'"  .      .
+ DEA      N9     "C1'"  C4     .
+ DEA      C4     N9     N3     .
+ DEA      C5     C4     N7     .
+ DEA      N7     C5     C8     .
+ DEA      C8     N7     H8     .
+ DEA      H8     C8     .      .
+ DEA      N3     C4     C2     .
+ DEA      C2     N3     N1     .
+ DEA      H2     C2     .      .
+ DEA      N1     C2     C6     .
+ DEA      C6     N1     N6     .
+ DEA      N6     C6     HN61   .
+ DEA      HN62   N6     .      .
+ DEA      HN61   N6     .      END
+ DEA      N9     C8     .    ADD
+ DEA      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DEA      N9     C8        single      1.337    0.020
+ DEA      C4     N9        single      1.337    0.020
+ DEA      N9     "C1'"     single      1.462    0.020
+ DEA      C8     N7        double      1.350    0.020
+ DEA      H8     C8        single      1.083    0.020
+ DEA      N7     C5        single      1.350    0.020
+ DEA      C5     C6        single      1.490    0.020
+ DEA      C5     C4        double      1.490    0.020
+ DEA      N6     C6        single      1.355    0.020
+ DEA      C6     N1        double      1.350    0.020
+ DEA      HN61   N6        single      1.010    0.020
+ DEA      HN62   N6        single      1.010    0.020
+ DEA      N1     C2        single      1.337    0.020
+ DEA      C2     N3        double      1.337    0.020
+ DEA      H2     C2        single      1.083    0.020
+ DEA      N3     C4        single      1.355    0.020
+ DEA      "C1'"  "C2'"     single      1.524    0.020
+ DEA      "H1'1" "C1'"     single      1.092    0.020
+ DEA      "H1'2" "C1'"     single      1.092    0.020
+ DEA      "O2'"  "C2'"     single      1.432    0.020
+ DEA      "C2'"  "C3'"     single      1.524    0.020
+ DEA      "H2'"  "C2'"     single      1.099    0.020
+ DEA      "HO'2" "O2'"     single      0.967    0.020
+ DEA      "O3'"  "C3'"     single      1.432    0.020
+ DEA      "C3'"  "C4'"     single      1.500    0.020
+ DEA      "H3'"  "C3'"     single      1.099    0.020
+ DEA      "HO'3" "O3'"     single      0.967    0.020
+ DEA      O      "C4'"     deloc       1.250    0.020
+ DEA      "C4'"  OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DEA      OXT    "C4'"  O       123.000    3.000
+ DEA      OXT    "C4'"  "C3'"   118.500    3.000
+ DEA      O      "C4'"  "C3'"   118.500    3.000
+ DEA      "C4'"  "C3'"  "H3'"   108.810    3.000
+ DEA      "C4'"  "C3'"  "O3'"   109.470    3.000
+ DEA      "C4'"  "C3'"  "C2'"   109.470    3.000
+ DEA      "H3'"  "C3'"  "O3'"   109.470    3.000
+ DEA      "H3'"  "C3'"  "C2'"   108.340    3.000
+ DEA      "O3'"  "C3'"  "C2'"   109.470    3.000
+ DEA      "C3'"  "O3'"  "HO'3"  109.470    3.000
+ DEA      "C3'"  "C2'"  "H2'"   108.340    3.000
+ DEA      "C3'"  "C2'"  "O2'"   109.470    3.000
+ DEA      "C3'"  "C2'"  "C1'"   111.000    3.000
+ DEA      "H2'"  "C2'"  "O2'"   109.470    3.000
+ DEA      "H2'"  "C2'"  "C1'"   108.340    3.000
+ DEA      "O2'"  "C2'"  "C1'"   109.470    3.000
+ DEA      "C2'"  "O2'"  "HO'2"  109.470    3.000
+ DEA      "C2'"  "C1'"  "H1'1"  109.470    3.000
+ DEA      "C2'"  "C1'"  "H1'2"  109.470    3.000
+ DEA      "C2'"  "C1'"  N9      109.500    3.000
+ DEA      "H1'1" "C1'"  "H1'2"  107.900    3.000
+ DEA      "H1'1" "C1'"  N9      109.500    3.000
+ DEA      "H1'2" "C1'"  N9      109.500    3.000
+ DEA      "C1'"  N9     C4      126.000    3.000
+ DEA      "C1'"  N9     C8      126.000    3.000
+ DEA      C4     N9     C8      108.000    3.000
+ DEA      N9     C4     C5      108.000    3.000
+ DEA      N9     C4     N3      132.000    3.000
+ DEA      C5     C4     N3      120.000    3.000
+ DEA      C4     C5     N7      108.000    3.000
+ DEA      C4     C5     C6      120.000    3.000
+ DEA      N7     C5     C6      132.000    3.000
+ DEA      C5     N7     C8      108.000    3.000
+ DEA      N7     C8     H8      126.000    3.000
+ DEA      N7     C8     N9      108.000    3.000
+ DEA      H8     C8     N9      126.000    3.000
+ DEA      C4     N3     C2      120.000    3.000
+ DEA      N3     C2     H2      120.000    3.000
+ DEA      N3     C2     N1      120.000    3.000
+ DEA      H2     C2     N1      120.000    3.000
+ DEA      C2     N1     C6      120.000    3.000
+ DEA      N1     C6     N6      120.000    3.000
+ DEA      N1     C6     C5      120.000    3.000
+ DEA      N6     C6     C5      120.000    3.000
+ DEA      C6     N6     HN62    120.000    3.000
+ DEA      C6     N6     HN61    120.000    3.000
+ DEA      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DEA      var_1    OXT    "C4'"  "C3'"  "C2'"     59.910   20.000   3
+ DEA      var_2    "C4'"  "C3'"  "O3'"  "HO'3"   -60.004   20.000   1
+ DEA      var_3    "C4'"  "C3'"  "C2'"  "C1'"    179.980   20.000   3
+ DEA      var_4    "C3'"  "C2'"  "O2'"  "HO'2"   -60.041   20.000   1
+ DEA      var_5    "C3'"  "C2'"  "C1'"  N9      -179.970   20.000   3
+ DEA      var_6    "C2'"  "C1'"  N9     C4       -89.995   20.000   1
+ DEA      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ DEA      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ DEA      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ DEA      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ DEA      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ DEA      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ DEA      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ DEA      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ DEA      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ DEA      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ DEA      CONST_11 N1     C6     N6     HN61      -0.183    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DEA      chir_01  "C2'"  "C1'"  "O2'"  "C3'"     negativ
+ DEA      chir_02  "C3'"  "C2'"  "O3'"  "C4'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DEA      plan-1    N9        0.020
+ DEA      plan-1    C8        0.020
+ DEA      plan-1    C4        0.020
+ DEA      plan-1    "C1'"     0.020
+ DEA      plan-1    N7        0.020
+ DEA      plan-1    H8        0.020
+ DEA      plan-1    C5        0.020
+ DEA      plan-1    C6        0.020
+ DEA      plan-1    N1        0.020
+ DEA      plan-1    C2        0.020
+ DEA      plan-1    N3        0.020
+ DEA      plan-1    N6        0.020
+ DEA      plan-1    H2        0.020
+ DEA      plan-1    HN62      0.020
+ DEA      plan-1    HN61      0.020
+ DEA      plan-2    N6        0.020
+ DEA      plan-2    C6        0.020
+ DEA      plan-2    HN61      0.020
+ DEA      plan-2    HN62      0.020
+ DEA      plan-3    "C4'"     0.020
+ DEA      plan-3    "C3'"     0.020
+ DEA      plan-3    O         0.020
+ DEA      plan-3    OXT       0.020
+# ------------------------------------------------------

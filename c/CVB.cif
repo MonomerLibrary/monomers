@@ -1,0 +1,205 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CVB      CVB '4-(CARBOXYVIN-2-YL)PHENYLBORONIC ACI' non-polymer        22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CVB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CVB           OX2    O    OC       -0.500      0.000    0.000    0.000
+ CVB           CX3    C    C         0.000     -0.454    0.000    1.166
+ CVB           OX1    O    OC       -0.500      0.328    0.000    2.142
+ CVB           CX2    C    C1        0.000     -1.902    0.000    1.388
+ CVB           HX21   H    H         0.000     -2.292    0.000    2.392
+ CVB           CX1    C    C1        0.000     -2.746    0.000    0.338
+ CVB           HX11   H    H         0.000     -2.355    0.000   -0.666
+ CVB           CP4    C    CR6       0.000     -4.201    0.000    0.561
+ CVB           CP3    C    CR16      0.000     -5.077    0.000   -0.529
+ CVB           HC31   H    H         0.000     -4.685    0.000   -1.539
+ CVB           CP2    C    CR16      0.000     -6.437    0.000   -0.318
+ CVB           HC21   H    H         0.000     -7.116    0.000   -1.162
+ CVB           CP5    C    CR16      0.000     -4.708    0.000    1.864
+ CVB           HC51   H    H         0.000     -4.032   -0.003    2.709
+ CVB           CP6    C    CR16      0.000     -6.070    0.004    2.070
+ CVB           HC61   H    H         0.000     -6.465    0.010    3.079
+ CVB           CP1    C    CR6       0.000     -6.941    0.000    0.983
+ CVB           B      B    B         0.000     -8.494    0.000    1.220
+ CVB           OB2    O    OH1       0.000     -9.382    0.000    0.113
+ CVB           HO21   H    H         0.000    -10.315    0.000    0.288
+ CVB           OB1    O    OH1       0.000     -9.009   -0.001    2.543
+ CVB           HO11   H    H         0.000     -9.952   -0.001    2.656
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CVB      OX2    n/a    CX3    START
+ CVB      CX3    OX2    CX2    .
+ CVB      OX1    CX3    .      .
+ CVB      CX2    CX3    CX1    .
+ CVB      HX21   CX2    .      .
+ CVB      CX1    CX2    CP4    .
+ CVB      HX11   CX1    .      .
+ CVB      CP4    CX1    CP5    .
+ CVB      CP3    CP4    CP2    .
+ CVB      HC31   CP3    .      .
+ CVB      CP2    CP3    HC21   .
+ CVB      HC21   CP2    .      .
+ CVB      CP5    CP4    CP6    .
+ CVB      HC51   CP5    .      .
+ CVB      CP6    CP5    CP1    .
+ CVB      HC61   CP6    .      .
+ CVB      CP1    CP6    B      .
+ CVB      B      CP1    OB1    .
+ CVB      OB2    B      HO21   .
+ CVB      HO21   OB2    .      .
+ CVB      OB1    B      HO11   .
+ CVB      HO11   OB1    .      END
+ CVB      CP1    CP2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CVB      OB1    B         single      1.535    0.020
+ CVB      OB2    B         single      1.535    0.020
+ CVB      B      CP1       single      1.560    0.020
+ CVB      HO11   OB1       single      0.967    0.020
+ CVB      HO21   OB2       single      0.967    0.020
+ CVB      CP1    CP2       double      1.390    0.020
+ CVB      CP1    CP6       single      1.390    0.020
+ CVB      CP2    CP3       single      1.390    0.020
+ CVB      HC21   CP2       single      1.083    0.020
+ CVB      CP3    CP4       double      1.390    0.020
+ CVB      HC31   CP3       single      1.083    0.020
+ CVB      CP4    CX1       single      1.480    0.020
+ CVB      CP5    CP4       single      1.390    0.020
+ CVB      CX1    CX2       double      1.330    0.020
+ CVB      HX11   CX1       single      1.077    0.020
+ CVB      CX2    CX3       single      1.475    0.020
+ CVB      HX21   CX2       single      1.077    0.020
+ CVB      OX1    CX3       deloc       1.250    0.020
+ CVB      CX3    OX2       deloc       1.250    0.020
+ CVB      CP6    CP5       double      1.390    0.020
+ CVB      HC51   CP5       single      1.083    0.020
+ CVB      HC61   CP6       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CVB      OX2    CX3    OX1     123.000    3.000
+ CVB      OX2    CX3    CX2     120.000    3.000
+ CVB      OX1    CX3    CX2     120.000    3.000
+ CVB      CX3    CX2    HX21    120.000    3.000
+ CVB      CX3    CX2    CX1     120.000    3.000
+ CVB      HX21   CX2    CX1     120.000    3.000
+ CVB      CX2    CX1    HX11    120.000    3.000
+ CVB      CX2    CX1    CP4     120.000    3.000
+ CVB      HX11   CX1    CP4     120.000    3.000
+ CVB      CX1    CP4    CP3     120.000    3.000
+ CVB      CX1    CP4    CP5     120.000    3.000
+ CVB      CP3    CP4    CP5     120.000    3.000
+ CVB      CP4    CP3    HC31    120.000    3.000
+ CVB      CP4    CP3    CP2     120.000    3.000
+ CVB      HC31   CP3    CP2     120.000    3.000
+ CVB      CP3    CP2    HC21    120.000    3.000
+ CVB      CP3    CP2    CP1     120.000    3.000
+ CVB      HC21   CP2    CP1     120.000    3.000
+ CVB      CP4    CP5    HC51    120.000    3.000
+ CVB      CP4    CP5    CP6     120.000    3.000
+ CVB      HC51   CP5    CP6     120.000    3.000
+ CVB      CP5    CP6    HC61    120.000    3.000
+ CVB      CP5    CP6    CP1     120.000    3.000
+ CVB      HC61   CP6    CP1     120.000    3.000
+ CVB      CP6    CP1    B       120.000    3.000
+ CVB      CP6    CP1    CP2     120.000    3.000
+ CVB      B      CP1    CP2     120.000    3.000
+ CVB      CP1    B      OB2     120.000    3.000
+ CVB      CP1    B      OB1     120.000    3.000
+ CVB      OB2    B      OB1     120.000    3.000
+ CVB      B      OB2    HO21    120.000    3.000
+ CVB      B      OB1    HO11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CVB      var_1    OX2    CX3    CX2    CX1        0.000   20.000   1
+ CVB      CONST_1  CX3    CX2    CX1    CP4      180.000    0.000   0
+ CVB      var_2    CX2    CX1    CP4    CP5        0.000   20.000   1
+ CVB      CONST_2  CX1    CP4    CP3    CP2      180.000    0.000   0
+ CVB      CONST_3  CP4    CP3    CP2    CP1        0.000    0.000   0
+ CVB      CONST_4  CX1    CP4    CP5    CP6      180.000    0.000   0
+ CVB      CONST_5  CP4    CP5    CP6    CP1        0.000    0.000   0
+ CVB      CONST_6  CP5    CP6    CP1    B        180.000    0.000   0
+ CVB      CONST_7  CP6    CP1    CP2    CP3        0.000    0.000   0
+ CVB      var_3    CP6    CP1    B      OB1       -0.236   20.000   1
+ CVB      var_4    CP1    B      OB2    HO21     180.000   20.000   1
+ CVB      var_5    CP1    B      OB1    HO11    -179.989   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CVB      plan-1    CP1       0.020
+ CVB      plan-1    B         0.020
+ CVB      plan-1    CP2       0.020
+ CVB      plan-1    CP6       0.020
+ CVB      plan-1    CP3       0.020
+ CVB      plan-1    CP4       0.020
+ CVB      plan-1    CP5       0.020
+ CVB      plan-1    HC21      0.020
+ CVB      plan-1    HC31      0.020
+ CVB      plan-1    CX1       0.020
+ CVB      plan-1    HC51      0.020
+ CVB      plan-1    HC61      0.020
+ CVB      plan-1    HX11      0.020
+ CVB      plan-2    CX1       0.020
+ CVB      plan-2    CP4       0.020
+ CVB      plan-2    CX2       0.020
+ CVB      plan-2    HX11      0.020
+ CVB      plan-2    CX3       0.020
+ CVB      plan-2    HX21      0.020
+ CVB      plan-3    CX3       0.020
+ CVB      plan-3    CX2       0.020
+ CVB      plan-3    OX1       0.020
+ CVB      plan-3    OX2       0.020
+ CVB      plan-3    HX21      0.020
+# ------------------------------------------------------

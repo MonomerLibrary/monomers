@@ -1,0 +1,188 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3OC      3OC '(1R)-3-oxocyclohexanecarboxylic acid' non-polymer        19  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3OC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3OC           OAB    O    OC       -0.500      0.000    0.000    0.000
+ 3OC           CAI    C    C         0.000     -0.904   -0.848   -0.168
+ 3OC           OAC    O    OC       -0.500     -0.638   -1.948   -0.701
+ 3OC           CAJ    C    CH1       0.000     -2.313   -0.546    0.274
+ 3OC           HAJ    H    H         0.000     -2.325   -0.355    1.356
+ 3OC           CAF    C    CH2       0.000     -3.215   -1.740   -0.043
+ 3OC           HAFA   H    H         0.000     -2.809   -2.635    0.433
+ 3OC           HAF    H    H         0.000     -3.248   -1.889   -1.125
+ 3OC           CAG    C    CH2       0.000     -2.827    0.692   -0.470
+ 3OC           HAG    H    H         0.000     -2.732    0.544   -1.548
+ 3OC           HAGA   H    H         0.000     -2.251    1.571   -0.172
+ 3OC           CAH    C    C         0.000     -4.283    0.897   -0.113
+ 3OC           OAA    O    O         0.000     -4.679    1.970    0.275
+ 3OC           CAE    C    CH2       0.000     -5.227   -0.274   -0.255
+ 3OC           HAE    H    H         0.000     -5.359   -0.520   -1.311
+ 3OC           HAEA   H    H         0.000     -6.196   -0.025    0.182
+ 3OC           CAD    C    CH2       0.000     -4.627   -1.477    0.481
+ 3OC           HADA   H    H         0.000     -5.251   -2.357    0.309
+ 3OC           HAD    H    H         0.000     -4.586   -1.265    1.551
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3OC      OAB    n/a    CAI    START
+ 3OC      CAI    OAB    CAJ    .
+ 3OC      OAC    CAI    .      .
+ 3OC      CAJ    CAI    CAG    .
+ 3OC      HAJ    CAJ    .      .
+ 3OC      CAF    CAJ    HAF    .
+ 3OC      HAFA   CAF    .      .
+ 3OC      HAF    CAF    .      .
+ 3OC      CAG    CAJ    CAH    .
+ 3OC      HAG    CAG    .      .
+ 3OC      HAGA   CAG    .      .
+ 3OC      CAH    CAG    CAE    .
+ 3OC      OAA    CAH    .      .
+ 3OC      CAE    CAH    CAD    .
+ 3OC      HAE    CAE    .      .
+ 3OC      HAEA   CAE    .      .
+ 3OC      CAD    CAE    HAD    .
+ 3OC      HADA   CAD    .      .
+ 3OC      HAD    CAD    .      END
+ 3OC      CAF    CAD    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3OC      CAF    CAD       single      1.524    0.020
+ 3OC      CAF    CAJ       single      1.524    0.020
+ 3OC      CAD    CAE       single      1.524    0.020
+ 3OC      CAE    CAH       single      1.510    0.020
+ 3OC      OAA    CAH       double      1.220    0.020
+ 3OC      CAH    CAG       single      1.510    0.020
+ 3OC      CAG    CAJ       single      1.524    0.020
+ 3OC      CAJ    CAI       single      1.500    0.020
+ 3OC      OAC    CAI       deloc       1.250    0.020
+ 3OC      CAI    OAB       deloc       1.250    0.020
+ 3OC      HAF    CAF       single      1.092    0.020
+ 3OC      HAFA   CAF       single      1.092    0.020
+ 3OC      HAD    CAD       single      1.092    0.020
+ 3OC      HADA   CAD       single      1.092    0.020
+ 3OC      HAE    CAE       single      1.092    0.020
+ 3OC      HAEA   CAE       single      1.092    0.020
+ 3OC      HAG    CAG       single      1.092    0.020
+ 3OC      HAGA   CAG       single      1.092    0.020
+ 3OC      HAJ    CAJ       single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3OC      OAB    CAI    OAC     123.000    3.000
+ 3OC      OAB    CAI    CAJ     118.500    3.000
+ 3OC      OAC    CAI    CAJ     118.500    3.000
+ 3OC      CAI    CAJ    HAJ     108.810    3.000
+ 3OC      CAI    CAJ    CAF     109.470    3.000
+ 3OC      CAI    CAJ    CAG     109.470    3.000
+ 3OC      HAJ    CAJ    CAF     108.340    3.000
+ 3OC      HAJ    CAJ    CAG     108.340    3.000
+ 3OC      CAF    CAJ    CAG     109.470    3.000
+ 3OC      CAJ    CAF    HAFA    109.470    3.000
+ 3OC      CAJ    CAF    HAF     109.470    3.000
+ 3OC      CAJ    CAF    CAD     111.000    3.000
+ 3OC      HAFA   CAF    HAF     107.900    3.000
+ 3OC      HAFA   CAF    CAD     109.470    3.000
+ 3OC      HAF    CAF    CAD     109.470    3.000
+ 3OC      CAJ    CAG    HAG     109.470    3.000
+ 3OC      CAJ    CAG    HAGA    109.470    3.000
+ 3OC      CAJ    CAG    CAH     109.470    3.000
+ 3OC      HAG    CAG    HAGA    107.900    3.000
+ 3OC      HAG    CAG    CAH     109.470    3.000
+ 3OC      HAGA   CAG    CAH     109.470    3.000
+ 3OC      CAG    CAH    OAA     120.500    3.000
+ 3OC      CAG    CAH    CAE     120.000    3.000
+ 3OC      OAA    CAH    CAE     120.500    3.000
+ 3OC      CAH    CAE    HAE     109.470    3.000
+ 3OC      CAH    CAE    HAEA    109.470    3.000
+ 3OC      CAH    CAE    CAD     109.470    3.000
+ 3OC      HAE    CAE    HAEA    107.900    3.000
+ 3OC      HAE    CAE    CAD     109.470    3.000
+ 3OC      HAEA   CAE    CAD     109.470    3.000
+ 3OC      CAE    CAD    HADA    109.470    3.000
+ 3OC      CAE    CAD    HAD     109.470    3.000
+ 3OC      CAE    CAD    CAF     111.000    3.000
+ 3OC      HADA   CAD    HAD     107.900    3.000
+ 3OC      HADA   CAD    CAF     109.470    3.000
+ 3OC      HAD    CAD    CAF     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3OC      var_1    OAB    CAI    CAJ    CAG       60.107   20.000   3
+ 3OC      var_2    CAI    CAJ    CAF    CAD      180.000   20.000   3
+ 3OC      var_3    CAJ    CAF    CAD    CAE       60.000   20.000   3
+ 3OC      var_4    CAI    CAJ    CAG    CAH      180.000   20.000   3
+ 3OC      var_5    CAJ    CAG    CAH    CAE      -60.000   20.000   3
+ 3OC      var_6    CAG    CAH    CAE    CAD       60.000   20.000   3
+ 3OC      var_7    CAH    CAE    CAD    CAF      -60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 3OC      chir_01  CAJ    CAF    CAG    CAI       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3OC      plan-1    CAH       0.020
+ 3OC      plan-1    CAE       0.020
+ 3OC      plan-1    OAA       0.020
+ 3OC      plan-1    CAG       0.020
+ 3OC      plan-2    CAI       0.020
+ 3OC      plan-2    CAJ       0.020
+ 3OC      plan-2    OAC       0.020
+ 3OC      plan-2    OAB       0.020
+# ------------------------------------------------------

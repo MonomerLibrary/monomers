@@ -1,0 +1,281 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+H4B      H4B '5,6,7,8-TETRAHYDROBIOPTERIN         ' non-polymer        32  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_H4B
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ H4B           O4     O    O         0.000      0.000    0.000    0.000
+ H4B           C4     C    CR6       0.000     -1.009    0.224   -0.652
+ H4B           N3     N    NR16      0.000     -0.944    0.915   -1.810
+ H4B           HN3    H    H         0.000     -0.026    1.263   -2.155
+ H4B           C2     C    CR6       0.000     -2.073    1.157   -2.527
+ H4B           N2     N    NH2       0.000     -1.984    1.861   -3.702
+ H4B           HN22   H    H         0.000     -1.086    2.197   -4.030
+ H4B           HN21   H    H         0.000     -2.815    2.049   -4.250
+ H4B           C4A    C    CR6       0.000     -2.259   -0.231   -0.216
+ H4B           N5     N    NH1       0.000     -2.381   -0.960    0.987
+ H4B           HN5    H    H         0.000     -1.571   -1.371    1.429
+ H4B           C6     C    CH1       0.000     -3.719   -1.108    1.582
+ H4B           H6     H    H         0.000     -3.707   -1.917    2.325
+ H4B           C9     C    CH1       0.000     -4.133    0.203    2.253
+ H4B           H9     H    H         0.000     -4.142    1.009    1.507
+ H4B           C10    C    CH1       0.000     -3.137    0.546    3.362
+ H4B           H10    H    H         0.000     -3.127   -0.261    4.108
+ H4B           O10    O    OH1       0.000     -1.830    0.690    2.800
+ H4B           HO0    H    H         0.000     -1.839    1.399    2.143
+ H4B           C11    C    CH3       0.000     -3.551    1.857    4.032
+ H4B           H113   H    H         0.000     -3.561    2.635    3.313
+ H4B           H112   H    H         0.000     -4.519    1.751    4.450
+ H4B           H111   H    H         0.000     -2.861    2.096    4.800
+ H4B           O9     O    OH1       0.000     -5.439    0.058    2.815
+ H4B           HO9    H    H         0.000     -5.430   -0.651    3.473
+ H4B           C7     C    CH2       0.000     -4.705   -1.450    0.457
+ H4B           H71    H    H         0.000     -5.722   -1.500    0.854
+ H4B           H72    H    H         0.000     -4.443   -2.411    0.010
+ H4B           N8     N    NH1       0.000     -4.627   -0.396   -0.563
+ H4B           HN8    H    H         0.000     -5.469    0.003   -0.954
+ H4B           C8A    C    CR6       0.000     -3.381    0.043   -0.982
+ H4B           N1     N    NRD6      0.000     -3.251    0.732   -2.122
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ H4B      O4     n/a    C4     START
+ H4B      C4     O4     C4A    .
+ H4B      N3     C4     C2     .
+ H4B      HN3    N3     .      .
+ H4B      C2     N3     N2     .
+ H4B      N2     C2     HN21   .
+ H4B      HN22   N2     .      .
+ H4B      HN21   N2     .      .
+ H4B      C4A    C4     N5     .
+ H4B      N5     C4A    C6     .
+ H4B      HN5    N5     .      .
+ H4B      C6     N5     C7     .
+ H4B      H6     C6     .      .
+ H4B      C9     C6     O9     .
+ H4B      H9     C9     .      .
+ H4B      C10    C9     C11    .
+ H4B      H10    C10    .      .
+ H4B      O10    C10    HO0    .
+ H4B      HO0    O10    .      .
+ H4B      C11    C10    H111   .
+ H4B      H113   C11    .      .
+ H4B      H112   C11    .      .
+ H4B      H111   C11    .      .
+ H4B      O9     C9     HO9    .
+ H4B      HO9    O9     .      .
+ H4B      C7     C6     N8     .
+ H4B      H71    C7     .      .
+ H4B      H72    C7     .      .
+ H4B      N8     C7     C8A    .
+ H4B      HN8    N8     .      .
+ H4B      C8A    N8     N1     .
+ H4B      N1     C8A    .      END
+ H4B      N1     C2     .    ADD
+ H4B      C4A    C8A    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ H4B      N1     C2        double      1.350    0.020
+ H4B      N1     C8A       single      1.350    0.020
+ H4B      N2     C2        single      1.355    0.020
+ H4B      C2     N3        single      1.337    0.020
+ H4B      HN21   N2        single      1.010    0.020
+ H4B      HN22   N2        single      1.010    0.020
+ H4B      N3     C4        single      1.337    0.020
+ H4B      HN3    N3        single      1.040    0.020
+ H4B      C4     O4        double      1.250    0.020
+ H4B      C4A    C4        single      1.487    0.020
+ H4B      C4A    C8A       double      1.487    0.020
+ H4B      N5     C4A       single      1.350    0.020
+ H4B      C8A    N8        single      1.350    0.020
+ H4B      C6     N5        single      1.450    0.020
+ H4B      HN5    N5        single      1.010    0.020
+ H4B      N8     C7        single      1.450    0.020
+ H4B      HN8    N8        single      1.010    0.020
+ H4B      C7     C6        single      1.524    0.020
+ H4B      C9     C6        single      1.524    0.020
+ H4B      H6     C6        single      1.099    0.020
+ H4B      H71    C7        single      1.092    0.020
+ H4B      H72    C7        single      1.092    0.020
+ H4B      O9     C9        single      1.432    0.020
+ H4B      C10    C9        single      1.524    0.020
+ H4B      H9     C9        single      1.099    0.020
+ H4B      HO9    O9        single      0.967    0.020
+ H4B      C11    C10       single      1.524    0.020
+ H4B      O10    C10       single      1.432    0.020
+ H4B      H10    C10       single      1.099    0.020
+ H4B      H111   C11       single      1.059    0.020
+ H4B      H112   C11       single      1.059    0.020
+ H4B      H113   C11       single      1.059    0.020
+ H4B      HO0    O10       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ H4B      O4     C4     N3      120.000    3.000
+ H4B      O4     C4     C4A     120.000    3.000
+ H4B      N3     C4     C4A     120.000    3.000
+ H4B      C4     N3     HN3     120.000    3.000
+ H4B      C4     N3     C2      120.000    3.000
+ H4B      HN3    N3     C2      120.000    3.000
+ H4B      N3     C2     N2      120.000    3.000
+ H4B      N3     C2     N1      120.000    3.000
+ H4B      N2     C2     N1      120.000    3.000
+ H4B      C2     N2     HN22    120.000    3.000
+ H4B      C2     N2     HN21    120.000    3.000
+ H4B      HN22   N2     HN21    120.000    3.000
+ H4B      C4     C4A    N5      120.000    3.000
+ H4B      C4     C4A    C8A     120.000    3.000
+ H4B      N5     C4A    C8A     120.000    3.000
+ H4B      C4A    N5     HN5     120.000    3.000
+ H4B      C4A    N5     C6      120.000    3.000
+ H4B      HN5    N5     C6      118.500    3.000
+ H4B      N5     C6     H6      108.550    3.000
+ H4B      N5     C6     C9      110.000    3.000
+ H4B      N5     C6     C7      110.000    3.000
+ H4B      H6     C6     C9      108.340    3.000
+ H4B      H6     C6     C7      108.340    3.000
+ H4B      C9     C6     C7      111.000    3.000
+ H4B      C6     C9     H9      108.340    3.000
+ H4B      C6     C9     C10     111.000    3.000
+ H4B      C6     C9     O9      109.470    3.000
+ H4B      H9     C9     C10     108.340    3.000
+ H4B      H9     C9     O9      109.470    3.000
+ H4B      C10    C9     O9      109.470    3.000
+ H4B      C9     C10    H10     108.340    3.000
+ H4B      C9     C10    O10     109.470    3.000
+ H4B      C9     C10    C11     111.000    3.000
+ H4B      H10    C10    O10     109.470    3.000
+ H4B      H10    C10    C11     108.340    3.000
+ H4B      O10    C10    C11     109.470    3.000
+ H4B      C10    O10    HO0     109.470    3.000
+ H4B      C10    C11    H113    109.470    3.000
+ H4B      C10    C11    H112    109.470    3.000
+ H4B      C10    C11    H111    109.470    3.000
+ H4B      H113   C11    H112    109.470    3.000
+ H4B      H113   C11    H111    109.470    3.000
+ H4B      H112   C11    H111    109.470    3.000
+ H4B      C9     O9     HO9     109.470    3.000
+ H4B      C6     C7     H71     109.470    3.000
+ H4B      C6     C7     H72     109.470    3.000
+ H4B      C6     C7     N8      110.000    3.000
+ H4B      H71    C7     H72     107.900    3.000
+ H4B      H71    C7     N8      109.470    3.000
+ H4B      H72    C7     N8      109.470    3.000
+ H4B      C7     N8     HN8     118.500    3.000
+ H4B      C7     N8     C8A     120.000    3.000
+ H4B      HN8    N8     C8A     120.000    3.000
+ H4B      N8     C8A    N1      120.000    3.000
+ H4B      N8     C8A    C4A     120.000    3.000
+ H4B      N1     C8A    C4A     120.000    3.000
+ H4B      C8A    N1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ H4B      CONST_1  O4     C4     N3     C2       180.000    0.000   0
+ H4B      CONST_2  C4     N3     C2     N2       180.000    0.000   0
+ H4B      CONST_3  N3     C2     N2     HN21     179.903    0.000   0
+ H4B      CONST_4  O4     C4     C4A    N5         0.000    0.000   0
+ H4B      CONST_5  C4     C4A    C8A    N8       180.000    0.000   0
+ H4B      var_1    C4     C4A    N5     C6       150.000   20.000   1
+ H4B      var_2    C4A    N5     C6     C7        30.000   20.000   3
+ H4B      var_3    N5     C6     C9     O9       179.307   20.000   3
+ H4B      var_4    C6     C9     C10    C11      179.987   20.000   3
+ H4B      var_5    C9     C10    O10    HO0       59.989   20.000   1
+ H4B      var_6    C9     C10    C11    H111    -179.934   20.000   3
+ H4B      var_7    C6     C9     O9     HO9       60.061   20.000   1
+ H4B      var_8    N5     C6     C7     N8       -60.000   20.000   3
+ H4B      var_9    C6     C7     N8     C8A       60.000   20.000   3
+ H4B      var_10   C7     N8     C8A    N1       150.000   20.000   1
+ H4B      CONST_6  N8     C8A    N1     C2       180.000    0.000   0
+ H4B      CONST_7  C8A    N1     C2     N3         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ H4B      chir_01  C6     N5     C7     C9        positiv
+ H4B      chir_02  C9     C6     O9     C10       negativ
+ H4B      chir_03  C10    C9     C11    O10       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ H4B      plan-1    N1        0.020
+ H4B      plan-1    C2        0.020
+ H4B      plan-1    C8A       0.020
+ H4B      plan-1    N3        0.020
+ H4B      plan-1    C4        0.020
+ H4B      plan-1    C4A       0.020
+ H4B      plan-1    N2        0.020
+ H4B      plan-1    HN3       0.020
+ H4B      plan-1    O4        0.020
+ H4B      plan-1    N5        0.020
+ H4B      plan-1    N8        0.020
+ H4B      plan-1    HN22      0.020
+ H4B      plan-1    HN21      0.020
+ H4B      plan-1    HN5       0.020
+ H4B      plan-1    HN8       0.020
+ H4B      plan-2    N2        0.020
+ H4B      plan-2    C2        0.020
+ H4B      plan-2    HN21      0.020
+ H4B      plan-2    HN22      0.020
+ H4B      plan-3    N5        0.020
+ H4B      plan-3    C4A       0.020
+ H4B      plan-3    C6        0.020
+ H4B      plan-3    HN5       0.020
+ H4B      plan-4    N8        0.020
+ H4B      plan-4    C8A       0.020
+ H4B      plan-4    C7        0.020
+ H4B      plan-4    HN8       0.020
+# ------------------------------------------------------

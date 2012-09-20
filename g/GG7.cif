@@ -1,0 +1,155 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GG7      GG7 '[(1R)-1-AMINOETHYL]PHOSPHONIC ACID  ' non-polymer        15   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GG7
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GG7           O1C    O    OH1       0.000      0.000    0.000    0.000
+ GG7           HO1C   H    H         0.000      0.936    0.184   -0.165
+ GG7           P      P    P         0.000     -1.016    1.209    0.348
+ GG7           O1A    O    O         0.000     -0.964    2.358   -0.618
+ GG7           O1B    O    OH1       0.000     -0.628    1.583    1.873
+ GG7           HO1B   H    H         0.000      0.188    2.068    2.062
+ GG7           CA     C    CH1       0.000     -2.599    0.393    0.468
+ GG7           HA     H    H         0.000     -2.553   -0.379    1.249
+ GG7           N      N    NH2       0.000     -3.449    1.487    0.920
+ GG7           HN2    H    H         0.000     -4.414    1.312    1.165
+ GG7           HN1    H    H         0.000     -3.075    2.424    0.989
+ GG7           CB     C    CH3       0.000     -3.127   -0.222   -0.817
+ GG7           HB3    H    H         0.000     -2.481   -1.002   -1.125
+ GG7           HB2    H    H         0.000     -4.097   -0.610   -0.648
+ GG7           HB1    H    H         0.000     -3.169    0.521   -1.570
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GG7      O1C    n/a    P      START
+ GG7      HO1C   O1C    .      .
+ GG7      P      O1C    CA     .
+ GG7      O1A    P      .      .
+ GG7      O1B    P      HO1B   .
+ GG7      HO1B   O1B    .      .
+ GG7      CA     P      CB     .
+ GG7      HA     CA     .      .
+ GG7      N      CA     HN1    .
+ GG7      HN2    N      .      .
+ GG7      HN1    N      .      .
+ GG7      CB     CA     HB1    .
+ GG7      HB3    CB     .      .
+ GG7      HB2    CB     .      .
+ GG7      HB1    CB     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GG7      O1A    P         double      1.480    0.020
+ GG7      O1B    P         single      1.610    0.020
+ GG7      CA     P         single      1.815    0.020
+ GG7      P      O1C       single      1.610    0.020
+ GG7      HO1B   O1B       single      0.967    0.020
+ GG7      CB     CA        single      1.524    0.020
+ GG7      N      CA        single      1.450    0.020
+ GG7      HA     CA        single      1.099    0.020
+ GG7      HB1    CB        single      1.059    0.020
+ GG7      HB2    CB        single      1.059    0.020
+ GG7      HB3    CB        single      1.059    0.020
+ GG7      HN1    N         single      1.010    0.020
+ GG7      HN2    N         single      1.010    0.020
+ GG7      HO1C   O1C       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GG7      HO1C   O1C    P       120.000    3.000
+ GG7      O1C    P      O1A     109.500    3.000
+ GG7      O1C    P      O1B     109.500    3.000
+ GG7      O1C    P      CA      109.500    3.000
+ GG7      O1A    P      O1B     109.500    3.000
+ GG7      O1A    P      CA      109.500    3.000
+ GG7      O1B    P      CA      109.500    3.000
+ GG7      P      O1B    HO1B    120.000    3.000
+ GG7      P      CA     HA      109.500    3.000
+ GG7      P      CA     N       109.500    3.000
+ GG7      P      CA     CB      109.500    3.000
+ GG7      HA     CA     N       109.470    3.000
+ GG7      HA     CA     CB      108.340    3.000
+ GG7      N      CA     CB      109.470    3.000
+ GG7      CA     N      HN2     120.000    3.000
+ GG7      CA     N      HN1     120.000    3.000
+ GG7      HN2    N      HN1     120.000    3.000
+ GG7      CA     CB     HB3     109.470    3.000
+ GG7      CA     CB     HB2     109.470    3.000
+ GG7      CA     CB     HB1     109.470    3.000
+ GG7      HB3    CB     HB2     109.470    3.000
+ GG7      HB3    CB     HB1     109.470    3.000
+ GG7      HB2    CB     HB1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GG7      var_1    HO1C   O1C    P      CA       176.851   20.000   1
+ GG7      var_2    O1C    P      O1B    HO1B      74.433   20.000   1
+ GG7      var_3    O1C    P      CA     CB       -65.249   20.000   1
+ GG7      var_4    P      CA     N      HN1        5.675   20.000   1
+ GG7      var_5    P      CA     CB     HB1      -55.717   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GG7      chir_01  CA     P      CB     N         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GG7      plan-1    N         0.020
+ GG7      plan-1    CA        0.000
+ GG7      plan-1    HN1       0.000
+ GG7      plan-1    HN2       0.000
+# ------------------------------------------------------

@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+INO      INO '2-HYDROXYISONICOTINIC ACID N-OXIDE  ' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_INO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ INO           O4     O    O        -1.000      0.000    0.000    0.000
+ INO           N1     N    NR6       1.000     -1.397    0.233   -0.004
+ INO           C6     C    CR16      0.000     -1.838    1.478    0.006
+ INO           H6     H    H         0.000     -1.128    2.296    0.017
+ INO           C5     C    CR16      0.000     -3.190    1.752    0.002
+ INO           H5     H    H         0.000     -3.542    2.776    0.010
+ INO           C4     C    CR6       0.000     -4.100    0.688   -0.011
+ INO           C7     C    C         0.000     -5.559    0.937   -0.015
+ INO           O2     O    OC       -0.500     -5.993    2.110   -0.005
+ INO           O1     O    OC       -0.500     -6.357   -0.026   -0.026
+ INO           C3     C    CR16      0.000     -3.595   -0.615   -0.015
+ INO           H3     H    H         0.000     -4.265   -1.466   -0.017
+ INO           C2     C    CR6       0.000     -2.221   -0.802   -0.016
+ INO           O3     O    OH1       0.000     -1.715   -2.062   -0.026
+ INO           HO3    H    H         0.000     -1.598   -2.369    0.884
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ INO      O4     n/a    N1     START
+ INO      N1     O4     C6     .
+ INO      C6     N1     C5     .
+ INO      H6     C6     .      .
+ INO      C5     C6     C4     .
+ INO      H5     C5     .      .
+ INO      C4     C5     C3     .
+ INO      C7     C4     O1     .
+ INO      O2     C7     .      .
+ INO      O1     C7     .      .
+ INO      C3     C4     C2     .
+ INO      H3     C3     .      .
+ INO      C2     C3     O3     .
+ INO      O3     C2     HO3    .
+ INO      HO3    O3     .      END
+ INO      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ INO      N1     C2        single      1.410    0.020
+ INO      C6     N1        double      1.337    0.020
+ INO      N1     O4        single      1.240    0.020
+ INO      C2     C3        double      1.390    0.020
+ INO      O3     C2        single      1.362    0.020
+ INO      C3     C4        single      1.390    0.020
+ INO      H3     C3        single      1.083    0.020
+ INO      C4     C5        double      1.390    0.020
+ INO      C7     C4        single      1.500    0.020
+ INO      C5     C6        single      1.390    0.020
+ INO      H5     C5        single      1.083    0.020
+ INO      H6     C6        single      1.083    0.020
+ INO      O1     C7        deloc       1.250    0.020
+ INO      O2     C7        deloc       1.250    0.020
+ INO      HO3    O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ INO      O4     N1     C6      120.000    3.000
+ INO      O4     N1     C2      120.000    3.000
+ INO      C6     N1     C2      120.000    3.000
+ INO      N1     C6     H6      120.000    3.000
+ INO      N1     C6     C5      120.000    3.000
+ INO      H6     C6     C5      120.000    3.000
+ INO      C6     C5     H5      120.000    3.000
+ INO      C6     C5     C4      120.000    3.000
+ INO      H5     C5     C4      120.000    3.000
+ INO      C5     C4     C7      120.000    3.000
+ INO      C5     C4     C3      120.000    3.000
+ INO      C7     C4     C3      120.000    3.000
+ INO      C4     C7     O2      120.000    3.000
+ INO      C4     C7     O1      120.000    3.000
+ INO      O2     C7     O1      123.000    3.000
+ INO      C4     C3     H3      120.000    3.000
+ INO      C4     C3     C2      120.000    3.000
+ INO      H3     C3     C2      120.000    3.000
+ INO      C3     C2     O3      120.000    3.000
+ INO      C3     C2     N1      120.000    3.000
+ INO      O3     C2     N1      120.000    3.000
+ INO      C2     O3     HO3     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ INO      CONST_1  O4     N1     C2     C3       180.000    0.000   0
+ INO      CONST_2  O4     N1     C6     C5       180.000    0.000   0
+ INO      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ INO      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ INO      var_1    C5     C4     C7     O1      -179.966   20.000   1
+ INO      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ INO      CONST_6  C4     C3     C2     O3       180.000    0.000   0
+ INO      var_2    C3     C2     O3     HO3      -89.781   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ INO      plan-1    N1        0.020
+ INO      plan-1    C2        0.020
+ INO      plan-1    C6        0.020
+ INO      plan-1    O4        0.020
+ INO      plan-1    C3        0.020
+ INO      plan-1    C4        0.020
+ INO      plan-1    C5        0.020
+ INO      plan-1    O3        0.020
+ INO      plan-1    H3        0.020
+ INO      plan-1    C7        0.020
+ INO      plan-1    H5        0.020
+ INO      plan-1    H6        0.020
+ INO      plan-2    C7        0.020
+ INO      plan-2    C4        0.020
+ INO      plan-2    O1        0.020
+ INO      plan-2    O2        0.020
+# ------------------------------------------------------

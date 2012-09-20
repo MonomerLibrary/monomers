@@ -1,0 +1,334 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PAP      PAP '3'-PHOSPHATE-ADENOSINE-5'-DIPHOSPHAT' non-polymer        42  31 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PAP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PAP           O3     O    OP       -0.666      0.000    0.000    0.000
+ PAP           P      P    P         0.000     -0.629    1.125   -0.793
+ PAP           O1     O    OP       -0.666     -1.220    0.572   -2.071
+ PAP           O2     O    OP       -0.666      0.426    2.156   -1.128
+ PAP           "O3'"  O    O2        0.000     -1.794    1.811    0.082
+ PAP           "C3'"  C    CH1       0.000     -2.754    0.793    0.365
+ PAP           "H3'"  H    H         0.000     -2.421   -0.173   -0.041
+ PAP           "C4'"  C    CH1       0.000     -4.135    1.174   -0.210
+ PAP           "H4'"  H    H         0.000     -4.214    2.264   -0.325
+ PAP           "C5'"  C    CH2       0.000     -4.365    0.480   -1.554
+ PAP           "H5'1" H    H         0.000     -4.269   -0.600   -1.426
+ PAP           "H5'2" H    H         0.000     -3.621    0.828   -2.274
+ PAP           "O5'"  O    O2        0.000     -5.674    0.791   -2.033
+ PAP           PA     P    P         0.000     -5.847    0.033   -3.442
+ PAP           O1A    O    OP       -0.500     -4.813    0.512   -4.391
+ PAP           O2A    O    OP       -0.500     -5.693   -1.428   -3.239
+ PAP           O3A    O    O2        0.000     -7.310    0.339   -4.041
+ PAP           PB     P    P         0.000     -7.412   -0.446   -5.443
+ PAP           O3B    O    OP       -0.666     -6.333    0.051   -6.380
+ PAP           O2B    O    OP       -0.666     -8.770   -0.198   -6.061
+ PAP           O1B    O    OP       -0.666     -7.230   -1.929   -5.204
+ PAP           "C2'"  C    CH1       0.000     -2.998    0.685    1.889
+ PAP           "H2'"  H    H         0.000     -2.787   -0.334    2.241
+ PAP           "O2'"  O    OH1       0.000     -2.194    1.633    2.593
+ PAP           "HO2'" H    H         0.000     -2.359    1.552    3.542
+ PAP           "C1'"  C    CH1       0.000     -4.498    1.012    2.050
+ PAP           "H1'"  H    H         0.000     -4.634    2.077    2.286
+ PAP           "O4'"  O    O2        0.000     -5.085    0.703    0.768
+ PAP           N9     N    NR5       0.000     -5.092    0.178    3.098
+ PAP           C4     C    CR56      0.000     -5.199    0.499    4.427
+ PAP           C5     C    CR56      0.000     -5.825   -0.597    5.042
+ PAP           N7     N    NRD5      0.000     -6.073   -1.511    4.072
+ PAP           C8     C    CR15      0.000     -5.640   -1.057    2.931
+ PAP           H8     H    H         0.000     -5.705   -1.585    1.988
+ PAP           N3     N    NRD6      0.000     -4.852    1.545    5.171
+ PAP           C2     C    CR16      0.000     -5.096    1.558    6.465
+ PAP           H2     H    H         0.000     -4.801    2.426    7.042
+ PAP           N1     N    NRD6      0.000     -5.687    0.554    7.086
+ PAP           C6     C    CR6       0.000     -6.070   -0.533    6.424
+ PAP           N6     N    NH2       0.000     -6.690   -1.581    7.083
+ PAP           HN62   H    H         0.000     -6.980   -2.410    6.574
+ PAP           HN61   H    H         0.000     -6.861   -1.533    8.083
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PAP      O3     n/a    P      START
+ PAP      P      O3     "O3'"  .
+ PAP      O1     P      .      .
+ PAP      O2     P      .      .
+ PAP      "O3'"  P      "C3'"  .
+ PAP      "C3'"  "O3'"  "C2'"  .
+ PAP      "H3'"  "C3'"  .      .
+ PAP      "C4'"  "C3'"  "C5'"  .
+ PAP      "H4'"  "C4'"  .      .
+ PAP      "C5'"  "C4'"  "O5'"  .
+ PAP      "H5'1" "C5'"  .      .
+ PAP      "H5'2" "C5'"  .      .
+ PAP      "O5'"  "C5'"  PA     .
+ PAP      PA     "O5'"  O3A    .
+ PAP      O1A    PA     .      .
+ PAP      O2A    PA     .      .
+ PAP      O3A    PA     PB     .
+ PAP      PB     O3A    O1B    .
+ PAP      O3B    PB     .      .
+ PAP      O2B    PB     .      .
+ PAP      O1B    PB     .      .
+ PAP      "C2'"  "C3'"  "C1'"  .
+ PAP      "H2'"  "C2'"  .      .
+ PAP      "O2'"  "C2'"  "HO2'" .
+ PAP      "HO2'" "O2'"  .      .
+ PAP      "C1'"  "C2'"  N9     .
+ PAP      "H1'"  "C1'"  .      .
+ PAP      "O4'"  "C1'"  .      .
+ PAP      N9     "C1'"  C4     .
+ PAP      C4     N9     N3     .
+ PAP      C5     C4     N7     .
+ PAP      N7     C5     C8     .
+ PAP      C8     N7     H8     .
+ PAP      H8     C8     .      .
+ PAP      N3     C4     C2     .
+ PAP      C2     N3     N1     .
+ PAP      H2     C2     .      .
+ PAP      N1     C2     C6     .
+ PAP      C6     N1     N6     .
+ PAP      N6     C6     HN61   .
+ PAP      HN62   N6     .      .
+ PAP      HN61   N6     .      END
+ PAP      "C4'"  "O4'"  .    ADD
+ PAP      N9     C8     .    ADD
+ PAP      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PAP      O1B    PB        deloc       1.510    0.020
+ PAP      O2B    PB        deloc       1.510    0.020
+ PAP      O3B    PB        deloc       1.510    0.020
+ PAP      PB     O3A       single      1.610    0.020
+ PAP      O1A    PA        deloc       1.510    0.020
+ PAP      O2A    PA        deloc       1.510    0.020
+ PAP      O3A    PA        single      1.610    0.020
+ PAP      PA     "O5'"     single      1.610    0.020
+ PAP      "O5'"  "C5'"     single      1.426    0.020
+ PAP      "C5'"  "C4'"     single      1.524    0.020
+ PAP      "H5'1" "C5'"     single      1.092    0.020
+ PAP      "H5'2" "C5'"     single      1.092    0.020
+ PAP      "C4'"  "O4'"     single      1.426    0.020
+ PAP      "C4'"  "C3'"     single      1.524    0.020
+ PAP      "H4'"  "C4'"     single      1.099    0.020
+ PAP      "O4'"  "C1'"     single      1.426    0.020
+ PAP      "C3'"  "O3'"     single      1.426    0.020
+ PAP      "C2'"  "C3'"     single      1.524    0.020
+ PAP      "H3'"  "C3'"     single      1.099    0.020
+ PAP      "O3'"  P         single      1.610    0.020
+ PAP      O1     P         deloc       1.510    0.020
+ PAP      O2     P         deloc       1.510    0.020
+ PAP      P      O3        deloc       1.510    0.020
+ PAP      "O2'"  "C2'"     single      1.432    0.020
+ PAP      "C1'"  "C2'"     single      1.524    0.020
+ PAP      "H2'"  "C2'"     single      1.099    0.020
+ PAP      "HO2'" "O2'"     single      0.967    0.020
+ PAP      N9     "C1'"     single      1.485    0.020
+ PAP      "H1'"  "C1'"     single      1.099    0.020
+ PAP      N9     C8        single      1.337    0.020
+ PAP      C4     N9        single      1.337    0.020
+ PAP      C8     N7        double      1.350    0.020
+ PAP      H8     C8        single      1.083    0.020
+ PAP      N7     C5        single      1.350    0.020
+ PAP      C5     C6        single      1.490    0.020
+ PAP      C5     C4        double      1.490    0.020
+ PAP      N6     C6        single      1.355    0.020
+ PAP      C6     N1        double      1.350    0.020
+ PAP      HN61   N6        single      1.010    0.020
+ PAP      HN62   N6        single      1.010    0.020
+ PAP      N1     C2        single      1.337    0.020
+ PAP      C2     N3        double      1.337    0.020
+ PAP      H2     C2        single      1.083    0.020
+ PAP      N3     C4        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PAP      O3     P      O1      119.900    3.000
+ PAP      O3     P      O2      119.900    3.000
+ PAP      O3     P      "O3'"   108.200    3.000
+ PAP      O1     P      O2      119.900    3.000
+ PAP      O1     P      "O3'"   108.200    3.000
+ PAP      O2     P      "O3'"   108.200    3.000
+ PAP      P      "O3'"  "C3'"   120.500    3.000
+ PAP      "O3'"  "C3'"  "H3'"   109.470    3.000
+ PAP      "O3'"  "C3'"  "C4'"   109.470    3.000
+ PAP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ PAP      "H3'"  "C3'"  "C4'"   108.340    3.000
+ PAP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ PAP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ PAP      "C3'"  "C4'"  "H4'"   108.340    3.000
+ PAP      "C3'"  "C4'"  "C5'"   111.000    3.000
+ PAP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ PAP      "H4'"  "C4'"  "C5'"   108.340    3.000
+ PAP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ PAP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ PAP      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ PAP      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ PAP      "C4'"  "C5'"  "O5'"   109.470    3.000
+ PAP      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ PAP      "H5'1" "C5'"  "O5'"   109.470    3.000
+ PAP      "H5'2" "C5'"  "O5'"   109.470    3.000
+ PAP      "C5'"  "O5'"  PA      120.500    3.000
+ PAP      "O5'"  PA     O1A     108.200    3.000
+ PAP      "O5'"  PA     O2A     108.200    3.000
+ PAP      "O5'"  PA     O3A     102.600    3.000
+ PAP      O1A    PA     O2A     119.900    3.000
+ PAP      O1A    PA     O3A     108.200    3.000
+ PAP      O2A    PA     O3A     108.200    3.000
+ PAP      PA     O3A    PB      120.500    3.000
+ PAP      O3A    PB     O3B     108.200    3.000
+ PAP      O3A    PB     O2B     108.200    3.000
+ PAP      O3A    PB     O1B     108.200    3.000
+ PAP      O3B    PB     O2B     119.900    3.000
+ PAP      O3B    PB     O1B     119.900    3.000
+ PAP      O2B    PB     O1B     119.900    3.000
+ PAP      "C3'"  "C2'"  "H2'"   108.340    3.000
+ PAP      "C3'"  "C2'"  "O2'"   109.470    3.000
+ PAP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ PAP      "H2'"  "C2'"  "O2'"   109.470    3.000
+ PAP      "H2'"  "C2'"  "C1'"   108.340    3.000
+ PAP      "O2'"  "C2'"  "C1'"   109.470    3.000
+ PAP      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ PAP      "C2'"  "C1'"  "H1'"   108.340    3.000
+ PAP      "C2'"  "C1'"  "O4'"   109.470    3.000
+ PAP      "C2'"  "C1'"  N9      109.470    3.000
+ PAP      "H1'"  "C1'"  "O4'"   109.470    3.000
+ PAP      "H1'"  "C1'"  N9      109.470    3.000
+ PAP      "O4'"  "C1'"  N9      109.470    3.000
+ PAP      "C1'"  "O4'"  "C4'"   111.800    3.000
+ PAP      "C1'"  N9     C4      126.000    3.000
+ PAP      "C1'"  N9     C8      126.000    3.000
+ PAP      C4     N9     C8      108.000    3.000
+ PAP      N9     C4     C5      108.000    3.000
+ PAP      N9     C4     N3      132.000    3.000
+ PAP      C5     C4     N3      120.000    3.000
+ PAP      C4     C5     N7      108.000    3.000
+ PAP      C4     C5     C6      120.000    3.000
+ PAP      N7     C5     C6      132.000    3.000
+ PAP      C5     N7     C8      108.000    3.000
+ PAP      N7     C8     H8      126.000    3.000
+ PAP      N7     C8     N9      108.000    3.000
+ PAP      H8     C8     N9      126.000    3.000
+ PAP      C4     N3     C2      120.000    3.000
+ PAP      N3     C2     H2      120.000    3.000
+ PAP      N3     C2     N1      120.000    3.000
+ PAP      H2     C2     N1      120.000    3.000
+ PAP      C2     N1     C6      120.000    3.000
+ PAP      N1     C6     N6      120.000    3.000
+ PAP      N1     C6     C5      120.000    3.000
+ PAP      N6     C6     C5      120.000    3.000
+ PAP      C6     N6     HN62    120.000    3.000
+ PAP      C6     N6     HN61    120.000    3.000
+ PAP      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PAP      var_1    O3     P      "O3'"  "C3'"    -60.028   20.000   1
+ PAP      var_2    P      "O3'"  "C3'"  "C2'"    125.298   20.000   1
+ PAP      var_3    "O3'"  "C3'"  "C4'"  "C5'"     90.000   20.000   3
+ PAP      var_4    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ PAP      var_5    "C3'"  "C4'"  "C5'"  "O5'"    176.984   20.000   3
+ PAP      var_6    "C4'"  "C5'"  "O5'"  PA      -179.999   20.000   1
+ PAP      var_7    "C5'"  "O5'"  PA     O3A      179.950   20.000   1
+ PAP      var_8    "O5'"  PA     O3A    PB       179.989   20.000   1
+ PAP      var_9    PA     O3A    PB     O1B       60.040   20.000   1
+ PAP      var_10   "O3'"  "C3'"  "C2'"  "C1'"    120.000   20.000   3
+ PAP      var_11   "C3'"  "C2'"  "O2'"  "HO2'"   179.993   20.000   1
+ PAP      var_12   "C3'"  "C2'"  "C1'"  N9       150.000   20.000   3
+ PAP      var_13   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ PAP      var_14   "C2'"  "C1'"  N9     C4        91.564   20.000   1
+ PAP      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ PAP      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ PAP      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ PAP      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ PAP      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ PAP      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ PAP      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ PAP      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ PAP      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ PAP      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ PAP      CONST_11 N1     C6     N6     HN61       0.062    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PAP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ PAP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ PAP      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ PAP      chir_04  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PAP      plan-1    N9        0.020
+ PAP      plan-1    "C1'"     0.020
+ PAP      plan-1    C8        0.020
+ PAP      plan-1    C4        0.020
+ PAP      plan-1    N7        0.020
+ PAP      plan-1    H8        0.020
+ PAP      plan-1    C5        0.020
+ PAP      plan-1    C6        0.020
+ PAP      plan-1    N1        0.020
+ PAP      plan-1    C2        0.020
+ PAP      plan-1    N3        0.020
+ PAP      plan-1    N6        0.020
+ PAP      plan-1    H2        0.020
+ PAP      plan-1    HN62      0.020
+ PAP      plan-1    HN61      0.020
+ PAP      plan-2    N6        0.020
+ PAP      plan-2    C6        0.020
+ PAP      plan-2    HN61      0.020
+ PAP      plan-2    HN62      0.020
+# ------------------------------------------------------

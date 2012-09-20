@@ -1,0 +1,147 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ISU      ISU 'SE-ETHYL-ISOSELENOUREA              ' non-polymer        14   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ISU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ISU           N2     N    N         0.000      0.000    0.000    0.000
+ ISU           HN2    H    H         0.000      0.825    0.000   -0.490
+ ISU           C3     C    C         0.000     -1.136    0.000   -0.620
+ ISU           N1     N    NH2       0.000     -1.167    0.000   -1.989
+ ISU           HN12   H    H         0.000     -2.053    0.000   -2.488
+ ISU           HN11   H    H         0.000     -0.304    0.000   -2.527
+ ISU           SE     SE   SE        0.000     -2.808    0.000    0.399
+ ISU           C2     C    CH2       0.000     -1.939    0.000    2.155
+ ISU           HC21   H    H         0.000     -1.315    0.891    2.252
+ ISU           HC22   H    H         0.000     -1.315   -0.891    2.252
+ ISU           C1     C    CH3       0.000     -3.005    0.000    3.253
+ ISU           HC13   H    H         0.000     -3.612    0.865    3.161
+ ISU           HC12   H    H         0.000     -3.612   -0.865    3.161
+ ISU           HC11   H    H         0.000     -2.537    0.000    4.205
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ISU      N2     n/a    C3     START
+ ISU      HN2    N2     .      .
+ ISU      C3     N2     SE     .
+ ISU      N1     C3     HN11   .
+ ISU      HN12   N1     .      .
+ ISU      HN11   N1     .      .
+ ISU      SE     C3     C2     .
+ ISU      C2     SE     C1     .
+ ISU      HC21   C2     .      .
+ ISU      HC22   C2     .      .
+ ISU      C1     C2     HC11   .
+ ISU      HC13   C1     .      .
+ ISU      HC12   C1     .      .
+ ISU      HC11   C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ISU      C1     C2        single      1.513    0.020
+ ISU      HC11   C1        single      1.059    0.020
+ ISU      HC12   C1        single      1.059    0.020
+ ISU      HC13   C1        single      1.059    0.020
+ ISU      C2     SE        single      1.970    0.020
+ ISU      HC21   C2        single      1.092    0.020
+ ISU      HC22   C2        single      1.092    0.020
+ ISU      SE     C3        single      1.540    0.020
+ ISU      N1     C3        single      1.332    0.020
+ ISU      C3     N2        double      1.260    0.020
+ ISU      HN11   N1        single      1.010    0.020
+ ISU      HN12   N1        single      1.010    0.020
+ ISU      HN2    N2        single      0.954    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ISU      HN2    N2     C3      120.000    3.000
+ ISU      N2     C3     N1      120.000    3.000
+ ISU      N2     C3     SE      120.000    3.000
+ ISU      N1     C3     SE      120.000    3.000
+ ISU      C3     N1     HN12    120.000    3.000
+ ISU      C3     N1     HN11    120.000    3.000
+ ISU      HN12   N1     HN11    120.000    3.000
+ ISU      C3     SE     C2       98.000    3.000
+ ISU      SE     C2     HC21    109.500    3.000
+ ISU      SE     C2     HC22    109.500    3.000
+ ISU      SE     C2     C1      109.500    3.000
+ ISU      HC21   C2     HC22    107.900    3.000
+ ISU      HC21   C2     C1      109.470    3.000
+ ISU      HC22   C2     C1      109.470    3.000
+ ISU      C2     C1     HC13    109.470    3.000
+ ISU      C2     C1     HC12    109.470    3.000
+ ISU      C2     C1     HC11    109.470    3.000
+ ISU      HC13   C1     HC12    109.470    3.000
+ ISU      HC13   C1     HC11    109.470    3.000
+ ISU      HC12   C1     HC11    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ISU      CONST_1  HN2    N2     C3     SE       180.000    0.000   0
+ ISU      CONST_2  N2     C3     N1     HN11       0.000    0.000   0
+ ISU      var_1    N2     C3     SE     C2         0.000   20.000   1
+ ISU      var_2    C3     SE     C2     C1       180.000   20.000   1
+ ISU      var_3    SE     C2     C1     HC11     180.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ISU      plan-1    C3        0.020
+ ISU      plan-1    SE        0.020
+ ISU      plan-1    N1        0.020
+ ISU      plan-1    N2        0.020
+ ISU      plan-1    HN2       0.020
+ ISU      plan-1    HN12      0.020
+ ISU      plan-1    HN11      0.020
+ ISU      plan-2    N1        0.020
+ ISU      plan-2    C3        0.020
+ ISU      plan-2    HN11      0.020
+ ISU      plan-2    HN12      0.020
+# ------------------------------------------------------

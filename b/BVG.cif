@@ -1,0 +1,146 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BVG      BVG '1H-IMIDAZOL-2-YLMETHANOL            ' non-polymer        13   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BVG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BVG           O7     O    OH1       0.000      0.000    0.000    0.000
+ BVG           HO7    H    H         0.000      0.887   -0.384    0.000
+ BVG           C6     C    CH2       0.000     -0.973   -1.048    0.002
+ BVG           H61    H    H         0.000     -0.842   -1.664    0.894
+ BVG           H62    H    H         0.000     -0.842   -1.667   -0.889
+ BVG           C4     C    CR5       0.000     -2.355   -0.450    0.001
+ BVG           N3     N    NR15      0.000     -2.643    0.870    0.000
+ BVG           HN3    H    H         0.000     -1.956    1.651    0.000
+ BVG           C2     C    CR15      0.000     -4.007    0.987    0.000
+ BVG           H2     H    H         0.000     -4.576    1.909   -0.001
+ BVG           C1     C    CR15      0.000     -4.505   -0.264    0.001
+ BVG           H1     H    H         0.000     -5.555   -0.530    0.004
+ BVG           N5     N    NRD5      0.000     -3.474   -1.122   -0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BVG      O7     n/a    C6     START
+ BVG      HO7    O7     .      .
+ BVG      C6     O7     C4     .
+ BVG      H61    C6     .      .
+ BVG      H62    C6     .      .
+ BVG      C4     C6     N3     .
+ BVG      N3     C4     C2     .
+ BVG      HN3    N3     .      .
+ BVG      C2     N3     C1     .
+ BVG      H2     C2     .      .
+ BVG      C1     C2     N5     .
+ BVG      H1     C1     .      .
+ BVG      N5     C1     .      END
+ BVG      C4     N5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BVG      C6     O7        single      1.432    0.020
+ BVG      HO7    O7        single      0.967    0.020
+ BVG      C4     C6        single      1.510    0.020
+ BVG      H61    C6        single      1.092    0.020
+ BVG      H62    C6        single      1.092    0.020
+ BVG      C4     N5        double      1.350    0.020
+ BVG      N3     C4        single      1.340    0.020
+ BVG      N5     C1        single      1.350    0.020
+ BVG      C2     N3        single      1.350    0.020
+ BVG      HN3    N3        single      1.040    0.020
+ BVG      C1     C2        double      1.380    0.020
+ BVG      H2     C2        single      1.083    0.020
+ BVG      H1     C1        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BVG      HO7    O7     C6      109.470    3.000
+ BVG      O7     C6     H61     109.470    3.000
+ BVG      O7     C6     H62     109.470    3.000
+ BVG      O7     C6     C4      109.500    3.000
+ BVG      H61    C6     H62     107.900    3.000
+ BVG      H61    C6     C4      109.470    3.000
+ BVG      H62    C6     C4      109.470    3.000
+ BVG      C6     C4     N3      126.000    3.000
+ BVG      C6     C4     N5      126.000    3.000
+ BVG      N3     C4     N5      108.000    3.000
+ BVG      C4     N3     HN3     126.000    3.000
+ BVG      C4     N3     C2      108.000    3.000
+ BVG      HN3    N3     C2      126.000    3.000
+ BVG      N3     C2     H2      126.000    3.000
+ BVG      N3     C2     C1      108.000    3.000
+ BVG      H2     C2     C1      126.000    3.000
+ BVG      C2     C1     H1      126.000    3.000
+ BVG      C2     C1     N5      108.000    3.000
+ BVG      H1     C1     N5      126.000    3.000
+ BVG      C1     N5     C4      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BVG      var_1    HO7    O7     C6     C4      -179.996   20.000   1
+ BVG      var_2    O7     C6     C4     N3        -0.033   20.000   2
+ BVG      CONST_1  C6     C4     N5     C1       180.000    0.000   0
+ BVG      CONST_2  C6     C4     N3     C2       180.000    0.000   0
+ BVG      CONST_3  C4     N3     C2     C1         0.000    0.000   0
+ BVG      CONST_4  N3     C2     C1     N5         0.000    0.000   0
+ BVG      CONST_5  C2     C1     N5     C4         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BVG      plan-1    C4        0.020
+ BVG      plan-1    C6        0.020
+ BVG      plan-1    N5        0.020
+ BVG      plan-1    N3        0.020
+ BVG      plan-1    C2        0.020
+ BVG      plan-1    C1        0.020
+ BVG      plan-1    HN3       0.020
+ BVG      plan-1    H2        0.020
+ BVG      plan-1    H1        0.020
+# ------------------------------------------------------

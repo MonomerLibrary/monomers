@@ -1,0 +1,241 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IBR      IBR '.                                   ' non-polymer        28  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IBR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IBR           BR     BR   BR        0.000      0.000    0.000    0.000
+ IBR           C1E    C    CH2       0.000     -1.206   -1.037   -1.153
+ IBR           HE11   H    H         0.000     -0.706   -1.954   -1.470
+ IBR           HE12   H    H         0.000     -1.468   -0.444   -2.031
+ IBR           C2E    C    CH2       0.000     -2.476   -1.390   -0.376
+ IBR           HE21   H    H         0.000     -2.186   -1.996    0.485
+ IBR           HE22   H    H         0.000     -3.119   -1.980   -1.033
+ IBR           O11    O    O2       -0.500     -3.218   -0.174    0.093
+ IBR           C1     C    C         0.000     -4.283   -0.235    0.746
+ IBR           O12    O    O        -0.500     -4.775   -1.348    1.037
+ IBR           C2     C    CH2       0.000     -4.973    1.030    1.181
+ IBR           H21    H    H         0.000     -5.235    1.622    0.302
+ IBR           H22    H    H         0.000     -4.302    1.608    1.821
+ IBR           "C1'"  C    CR6       0.000     -6.224    0.683    1.947
+ IBR           "C6'"  C    CR16      0.000     -6.172    0.514    3.315
+ IBR           "H6'"  H    H         0.000     -5.230    0.631    3.837
+ IBR           "C5'"  C    CR16      0.000     -7.316    0.195    4.022
+ IBR           "H5'"  H    H         0.000     -7.268    0.063    5.096
+ IBR           "C4'"  C    CR6       0.000     -8.529    0.043    3.359
+ IBR           N      N    NH2       0.000     -9.682   -0.279    4.080
+ IBR           HN2    H    H         0.000    -10.576   -0.392    3.607
+ IBR           HN1    H    H         0.000     -9.647   -0.405    5.089
+ IBR           "C3'"  C    CR16      0.000     -8.594    0.205    1.986
+ IBR           "H3'"  H    H         0.000     -9.536    0.079    1.467
+ IBR           "C2'"  C    CR6       0.000     -7.438    0.532    1.271
+ IBR           "C'"   C    C1        0.000     -7.498    0.712   -0.189
+ IBR           "H'"   H    H         0.000     -6.606    0.961   -0.739
+ IBR           "O'"   O    O         0.000     -8.552    0.580   -0.773
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IBR      BR     n/a    C1E    START
+ IBR      C1E    BR     C2E    .
+ IBR      HE11   C1E    .      .
+ IBR      HE12   C1E    .      .
+ IBR      C2E    C1E    O11    .
+ IBR      HE21   C2E    .      .
+ IBR      HE22   C2E    .      .
+ IBR      O11    C2E    C1     .
+ IBR      C1     O11    C2     .
+ IBR      O12    C1     .      .
+ IBR      C2     C1     "C1'"  .
+ IBR      H21    C2     .      .
+ IBR      H22    C2     .      .
+ IBR      "C1'"  C2     "C6'"  .
+ IBR      "C6'"  "C1'"  "C5'"  .
+ IBR      "H6'"  "C6'"  .      .
+ IBR      "C5'"  "C6'"  "C4'"  .
+ IBR      "H5'"  "C5'"  .      .
+ IBR      "C4'"  "C5'"  "C3'"  .
+ IBR      N      "C4'"  HN1    .
+ IBR      HN2    N      .      .
+ IBR      HN1    N      .      .
+ IBR      "C3'"  "C4'"  "C2'"  .
+ IBR      "H3'"  "C3'"  .      .
+ IBR      "C2'"  "C3'"  "C'"   .
+ IBR      "C'"   "C2'"  "O'"   .
+ IBR      "H'"   "C'"   .      .
+ IBR      "O'"   "C'"   .      END
+ IBR      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IBR      "O'"   "C'"      double      1.220    0.020
+ IBR      "C'"   "C2'"     single      1.480    0.020
+ IBR      "H'"   "C'"      single      1.077    0.020
+ IBR      "C1'"  "C2'"     double      1.487    0.020
+ IBR      "C6'"  "C1'"     single      1.390    0.020
+ IBR      "C1'"  C2        single      1.511    0.020
+ IBR      "C2'"  "C3'"     single      1.390    0.020
+ IBR      "C3'"  "C4'"     double      1.390    0.020
+ IBR      "H3'"  "C3'"     single      1.083    0.020
+ IBR      "C4'"  "C5'"     single      1.390    0.020
+ IBR      N      "C4'"     single      1.355    0.020
+ IBR      "C5'"  "C6'"     double      1.390    0.020
+ IBR      "H5'"  "C5'"     single      1.083    0.020
+ IBR      "H6'"  "C6'"     single      1.083    0.020
+ IBR      HN1    N         single      1.010    0.020
+ IBR      HN2    N         single      1.010    0.020
+ IBR      C2     C1        single      1.510    0.020
+ IBR      C1     O11       deloc       1.454    0.020
+ IBR      O12    C1        deloc       1.220    0.020
+ IBR      H21    C2        single      1.092    0.020
+ IBR      H22    C2        single      1.092    0.020
+ IBR      O11    C2E       single      1.426    0.020
+ IBR      C2E    C1E       single      1.524    0.020
+ IBR      C1E    BR        single      2.012    0.020
+ IBR      HE11   C1E       single      1.092    0.020
+ IBR      HE12   C1E       single      1.092    0.020
+ IBR      HE21   C2E       single      1.092    0.020
+ IBR      HE22   C2E       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IBR      BR     C1E    HE11    109.500    3.000
+ IBR      BR     C1E    HE12    109.500    3.000
+ IBR      BR     C1E    C2E     109.500    3.000
+ IBR      HE11   C1E    HE12    107.900    3.000
+ IBR      HE11   C1E    C2E     109.470    3.000
+ IBR      HE12   C1E    C2E     109.470    3.000
+ IBR      C1E    C2E    HE21    109.470    3.000
+ IBR      C1E    C2E    HE22    109.470    3.000
+ IBR      C1E    C2E    O11     109.470    3.000
+ IBR      HE21   C2E    HE22    107.900    3.000
+ IBR      HE21   C2E    O11     109.470    3.000
+ IBR      HE22   C2E    O11     109.470    3.000
+ IBR      C2E    O11    C1      120.000    3.000
+ IBR      O11    C1     O12     119.000    3.000
+ IBR      O11    C1     C2      120.000    3.000
+ IBR      O12    C1     C2      120.500    3.000
+ IBR      C1     C2     H21     109.470    3.000
+ IBR      C1     C2     H22     109.470    3.000
+ IBR      C1     C2     "C1'"   109.470    3.000
+ IBR      H21    C2     H22     107.900    3.000
+ IBR      H21    C2     "C1'"   109.470    3.000
+ IBR      H22    C2     "C1'"   109.470    3.000
+ IBR      C2     "C1'"  "C6'"   120.000    3.000
+ IBR      C2     "C1'"  "C2'"   120.000    3.000
+ IBR      "C6'"  "C1'"  "C2'"   120.000    3.000
+ IBR      "C1'"  "C6'"  "H6'"   120.000    3.000
+ IBR      "C1'"  "C6'"  "C5'"   120.000    3.000
+ IBR      "H6'"  "C6'"  "C5'"   120.000    3.000
+ IBR      "C6'"  "C5'"  "H5'"   120.000    3.000
+ IBR      "C6'"  "C5'"  "C4'"   120.000    3.000
+ IBR      "H5'"  "C5'"  "C4'"   120.000    3.000
+ IBR      "C5'"  "C4'"  N       120.000    3.000
+ IBR      "C5'"  "C4'"  "C3'"   120.000    3.000
+ IBR      N      "C4'"  "C3'"   120.000    3.000
+ IBR      "C4'"  N      HN2     120.000    3.000
+ IBR      "C4'"  N      HN1     120.000    3.000
+ IBR      HN2    N      HN1     120.000    3.000
+ IBR      "C4'"  "C3'"  "H3'"   120.000    3.000
+ IBR      "C4'"  "C3'"  "C2'"   120.000    3.000
+ IBR      "H3'"  "C3'"  "C2'"   120.000    3.000
+ IBR      "C3'"  "C2'"  "C'"    120.000    3.000
+ IBR      "C3'"  "C2'"  "C1'"   120.000    3.000
+ IBR      "C'"   "C2'"  "C1'"   120.000    3.000
+ IBR      "C2'"  "C'"   "H'"    120.000    3.000
+ IBR      "C2'"  "C'"   "O'"    120.000    3.000
+ IBR      "H'"   "C'"   "O'"    123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IBR      var_1    BR     C1E    C2E    O11       60.021   20.000   3
+ IBR      var_2    C1E    C2E    O11    C1       179.980   20.000   1
+ IBR      var_3    C2E    O11    C1     C2      -179.942   20.000   1
+ IBR      var_4    O11    C1     C2     "C1'"   -179.975   20.000   3
+ IBR      var_5    C1     C2     "C1'"  "C6'"     89.960   20.000   2
+ IBR      CONST_1  C2     "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ IBR      CONST_2  C2     "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ IBR      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ IBR      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ IBR      CONST_5  "C5'"  "C4'"  N      HN1       -0.079    0.000   0
+ IBR      CONST_6  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ IBR      CONST_7  "C4'"  "C3'"  "C2'"  "C'"     180.000    0.000   0
+ IBR      var_6    "C3'"  "C2'"  "C'"   "O'"       0.195   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IBR      plan-1    "C'"      0.020
+ IBR      plan-1    "O'"      0.020
+ IBR      plan-1    "C2'"     0.020
+ IBR      plan-1    "H'"      0.020
+ IBR      plan-2    "C1'"     0.020
+ IBR      plan-2    "C2'"     0.020
+ IBR      plan-2    "C6'"     0.020
+ IBR      plan-2    C2        0.020
+ IBR      plan-2    "C3'"     0.020
+ IBR      plan-2    "C4'"     0.020
+ IBR      plan-2    "C5'"     0.020
+ IBR      plan-2    "C'"      0.020
+ IBR      plan-2    "H3'"     0.020
+ IBR      plan-2    N         0.020
+ IBR      plan-2    "H5'"     0.020
+ IBR      plan-2    "H6'"     0.020
+ IBR      plan-2    "H'"      0.020
+ IBR      plan-2    HN2       0.020
+ IBR      plan-2    HN1       0.020
+ IBR      plan-3    N         0.020
+ IBR      plan-3    "C4'"     0.020
+ IBR      plan-3    HN1       0.020
+ IBR      plan-3    HN2       0.020
+ IBR      plan-4    C1        0.020
+ IBR      plan-4    C2        0.020
+ IBR      plan-4    O11       0.020
+ IBR      plan-4    O12       0.020
+# ------------------------------------------------------

@@ -1,0 +1,193 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PMC      PMC '3-(PHOSPHONOMETHYL)PYRIDINE-2-CARBOX' non-polymer        21  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PMC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PMC           OC2    O    OC       -0.500      0.000    0.000    0.000
+ PMC           C      C    C         0.000     -1.178    0.294    0.303
+ PMC           OC1    O    OC       -0.500     -1.450    0.665    1.466
+ PMC           C2     C    CR6       0.000     -2.248    0.205   -0.716
+ PMC           N1     N    NRD6      0.000     -1.976   -0.295   -1.914
+ PMC           C6     C    CR16      0.000     -2.898   -0.393   -2.846
+ PMC           HC6    H    H         0.000     -2.639   -0.807   -3.813
+ PMC           C5     C    CR16      0.000     -4.197    0.028   -2.610
+ PMC           HC5    H    H         0.000     -4.949   -0.057   -3.384
+ PMC           C4     C    CR16      0.000     -4.525    0.558   -1.371
+ PMC           HC4    H    H         0.000     -5.531    0.899   -1.163
+ PMC           C3     C    CR6       0.000     -3.534    0.642   -0.406
+ PMC           CA     C    CH2       0.000     -3.840    1.211    0.955
+ PMC           HCA1   H    H         0.000     -4.695    1.887    0.883
+ PMC           HCA2   H    H         0.000     -2.972    1.762    1.323
+ PMC           P1     P    P         0.000     -4.232   -0.146    2.107
+ PMC           O1     O    O         0.000     -3.074   -1.062    2.203
+ PMC           O2     O    OH1       0.000     -5.512   -0.958    1.564
+ PMC           HO2    H    H         0.000     -6.357   -0.503    1.442
+ PMC           O3     O    OH1       0.000     -4.561    0.460    3.561
+ PMC           HO3    H    H         0.000     -4.790   -0.131    4.291
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PMC      OC2    n/a    C      START
+ PMC      C      OC2    C2     .
+ PMC      OC1    C      .      .
+ PMC      C2     C      N1     .
+ PMC      N1     C2     C6     .
+ PMC      C6     N1     C5     .
+ PMC      HC6    C6     .      .
+ PMC      C5     C6     C4     .
+ PMC      HC5    C5     .      .
+ PMC      C4     C5     C3     .
+ PMC      HC4    C4     .      .
+ PMC      C3     C4     CA     .
+ PMC      CA     C3     P1     .
+ PMC      HCA1   CA     .      .
+ PMC      HCA2   CA     .      .
+ PMC      P1     CA     O3     .
+ PMC      O1     P1     .      .
+ PMC      O2     P1     HO2    .
+ PMC      HO2    O2     .      .
+ PMC      O3     P1     HO3    .
+ PMC      HO3    O3     .      END
+ PMC      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PMC      C2     C3        double      1.487    0.020
+ PMC      N1     C2        single      1.350    0.020
+ PMC      C2     C         single      1.500    0.020
+ PMC      CA     C3        single      1.511    0.020
+ PMC      C3     C4        single      1.390    0.020
+ PMC      P1     CA        single      1.812    0.020
+ PMC      HCA1   CA        single      1.092    0.020
+ PMC      HCA2   CA        single      1.092    0.020
+ PMC      O3     P1        single      1.610    0.020
+ PMC      O2     P1        single      1.610    0.020
+ PMC      O1     P1        double      1.480    0.020
+ PMC      HO3    O3        single      0.967    0.020
+ PMC      HO2    O2        single      0.967    0.020
+ PMC      C4     C5        double      1.390    0.020
+ PMC      HC4    C4        single      1.083    0.020
+ PMC      C5     C6        single      1.390    0.020
+ PMC      HC5    C5        single      1.083    0.020
+ PMC      C6     N1        double      1.337    0.020
+ PMC      HC6    C6        single      1.083    0.020
+ PMC      OC1    C         deloc       1.250    0.020
+ PMC      C      OC2       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PMC      OC2    C      OC1     123.000    3.000
+ PMC      OC2    C      C2      120.000    3.000
+ PMC      OC1    C      C2      120.000    3.000
+ PMC      C      C2     N1      120.000    3.000
+ PMC      C      C2     C3      120.000    3.000
+ PMC      N1     C2     C3      120.000    3.000
+ PMC      C2     N1     C6      120.000    3.000
+ PMC      N1     C6     HC6     120.000    3.000
+ PMC      N1     C6     C5      120.000    3.000
+ PMC      HC6    C6     C5      120.000    3.000
+ PMC      C6     C5     HC5     120.000    3.000
+ PMC      C6     C5     C4      120.000    3.000
+ PMC      HC5    C5     C4      120.000    3.000
+ PMC      C5     C4     HC4     120.000    3.000
+ PMC      C5     C4     C3      120.000    3.000
+ PMC      HC4    C4     C3      120.000    3.000
+ PMC      C4     C3     CA      120.000    3.000
+ PMC      C4     C3     C2      120.000    3.000
+ PMC      CA     C3     C2      120.000    3.000
+ PMC      C3     CA     HCA1    109.470    3.000
+ PMC      C3     CA     HCA2    109.470    3.000
+ PMC      C3     CA     P1      109.500    3.000
+ PMC      HCA1   CA     HCA2    107.900    3.000
+ PMC      HCA1   CA     P1      109.500    3.000
+ PMC      HCA2   CA     P1      109.500    3.000
+ PMC      CA     P1     O1      109.500    3.000
+ PMC      CA     P1     O2      109.500    3.000
+ PMC      CA     P1     O3      109.500    3.000
+ PMC      O1     P1     O2      109.500    3.000
+ PMC      O1     P1     O3      109.500    3.000
+ PMC      O2     P1     O3      109.500    3.000
+ PMC      P1     O2     HO2     120.000    3.000
+ PMC      P1     O3     HO3     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PMC      var_1    OC2    C      C2     N1         5.733   20.000   1
+ PMC      CONST_1  C      C2     C3     C4       180.000    0.000   0
+ PMC      CONST_2  C      C2     N1     C6       180.000    0.000   0
+ PMC      CONST_3  C2     N1     C6     C5         0.000    0.000   0
+ PMC      CONST_4  N1     C6     C5     C4         0.000    0.000   0
+ PMC      CONST_5  C6     C5     C4     C3         0.000    0.000   0
+ PMC      CONST_6  C5     C4     C3     CA       180.000    0.000   0
+ PMC      var_2    C4     C3     CA     P1        95.102   20.000   2
+ PMC      var_3    C3     CA     P1     O3      -179.950   20.000   1
+ PMC      var_4    CA     P1     O2     HO2      -59.955   20.000   1
+ PMC      var_5    CA     P1     O3     HO3      179.999   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PMC      plan-1    C2        0.020
+ PMC      plan-1    C3        0.020
+ PMC      plan-1    N1        0.020
+ PMC      plan-1    C         0.020
+ PMC      plan-1    C4        0.020
+ PMC      plan-1    C5        0.020
+ PMC      plan-1    C6        0.020
+ PMC      plan-1    CA        0.020
+ PMC      plan-1    HC4       0.020
+ PMC      plan-1    HC5       0.020
+ PMC      plan-1    HC6       0.020
+ PMC      plan-2    C         0.020
+ PMC      plan-2    C2        0.020
+ PMC      plan-2    OC1       0.020
+ PMC      plan-2    OC2       0.020
+# ------------------------------------------------------

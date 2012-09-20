@@ -1,0 +1,170 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DA9      DA9 '2-azido-N-(2-sulfanylethyl)ethanamid' non-polymer        18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DA9
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DA9           N10    N    NS       -1.000      0.000    0.000    0.000
+ DA9           N1     N    N         1.000     -0.988   -0.024    0.535
+ DA9           N2     N    N         0.000     -1.976   -0.049    1.069
+ DA9           C3     C    CH2       0.000     -3.005   -1.011    0.663
+ DA9           H3     H    H         0.000     -2.633   -1.613   -0.169
+ DA9           H3A    H    H         0.000     -3.902   -0.472    0.348
+ DA9           C4     C    C         0.000     -3.339   -1.909    1.826
+ DA9           O5     O    O         0.000     -2.774   -1.761    2.889
+ DA9           N6     N    NH1       0.000     -4.266   -2.877    1.684
+ DA9           HN6    H    H         0.000     -4.736   -3.000    0.799
+ DA9           C7     C    CH2       0.000     -4.591   -3.752    2.814
+ DA9           H7     H    H         0.000     -4.962   -3.149    3.645
+ DA9           H7A    H    H         0.000     -3.693   -4.288    3.128
+ DA9           C8     C    CH2       0.000     -5.665   -4.756    2.390
+ DA9           H8     H    H         0.000     -5.292   -5.357    1.559
+ DA9           H8A    H    H         0.000     -6.561   -4.218    2.076
+ DA9           S9     S    SH1       0.000     -6.066   -5.837    3.790
+ DA9           HS9    H    H         0.000     -6.978   -6.562    3.148
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DA9      N10    n/a    N1     START
+ DA9      N1     N10    N2     .
+ DA9      N2     N1     C3     .
+ DA9      C3     N2     C4     .
+ DA9      H3     C3     .      .
+ DA9      H3A    C3     .      .
+ DA9      C4     C3     N6     .
+ DA9      O5     C4     .      .
+ DA9      N6     C4     C7     .
+ DA9      HN6    N6     .      .
+ DA9      C7     N6     C8     .
+ DA9      H7     C7     .      .
+ DA9      H7A    C7     .      .
+ DA9      C8     C7     S9     .
+ DA9      H8     C8     .      .
+ DA9      H8A    C8     .      .
+ DA9      S9     C8     HS9    .
+ DA9      HS9    S9     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DA9      N2     N1        double      1.240    0.020
+ DA9      N1     N10       double      1.295    0.020
+ DA9      C3     N2        single      1.455    0.020
+ DA9      C4     C3        single      1.510    0.020
+ DA9      H3     C3        single      1.092    0.020
+ DA9      H3A    C3        single      1.092    0.020
+ DA9      O5     C4        double      1.220    0.020
+ DA9      N6     C4        single      1.330    0.020
+ DA9      C7     N6        single      1.450    0.020
+ DA9      HN6    N6        single      1.010    0.020
+ DA9      C8     C7        single      1.524    0.020
+ DA9      H7     C7        single      1.092    0.020
+ DA9      H7A    C7        single      1.092    0.020
+ DA9      S9     C8        single      1.810    0.020
+ DA9      H8     C8        single      1.092    0.020
+ DA9      H8A    C8        single      1.092    0.020
+ DA9      HS9    S9        single      1.330    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DA9      N10    N1     N2      120.000    3.000
+ DA9      N1     N2     C3      120.000    3.000
+ DA9      N2     C3     H3      109.470    3.000
+ DA9      N2     C3     H3A     109.470    3.000
+ DA9      N2     C3     C4      109.500    3.000
+ DA9      H3     C3     H3A     107.900    3.000
+ DA9      H3     C3     C4      109.470    3.000
+ DA9      H3A    C3     C4      109.470    3.000
+ DA9      C3     C4     O5      120.500    3.000
+ DA9      C3     C4     N6      116.500    3.000
+ DA9      O5     C4     N6      123.000    3.000
+ DA9      C4     N6     HN6     120.000    3.000
+ DA9      C4     N6     C7      121.500    3.000
+ DA9      HN6    N6     C7      118.500    3.000
+ DA9      N6     C7     H7      109.470    3.000
+ DA9      N6     C7     H7A     109.470    3.000
+ DA9      N6     C7     C8      112.000    3.000
+ DA9      H7     C7     H7A     107.900    3.000
+ DA9      H7     C7     C8      109.470    3.000
+ DA9      H7A    C7     C8      109.470    3.000
+ DA9      C7     C8     H8      109.470    3.000
+ DA9      C7     C8     H8A     109.470    3.000
+ DA9      C7     C8     S9      109.470    3.000
+ DA9      H8     C8     H8A     107.900    3.000
+ DA9      H8     C8     S9      109.470    3.000
+ DA9      H8A    C8     S9      109.470    3.000
+ DA9      C8     S9     HS9      96.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DA9      CONST_1  N10    N1     N2     C3       -42.261    0.000   0
+ DA9      var_1    N1     N2     C3     C4       120.038   20.000   1
+ DA9      var_2    N2     C3     C4     N6      -179.969   20.000   3
+ DA9      CONST_2  C3     C4     N6     C7       180.000    0.000   0
+ DA9      var_3    C4     N6     C7     C8       179.979   20.000   3
+ DA9      var_4    N6     C7     C8     S9      -179.991   20.000   3
+ DA9      var_5    C7     C8     S9     HS9     -179.993   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DA9      plan-1    N1        0.020
+ DA9      plan-1    N2        0.020
+ DA9      plan-1    N10       0.020
+ DA9      plan-1    C3        0.020
+ DA9      plan-2    C4        0.020
+ DA9      plan-2    C3        0.020
+ DA9      plan-2    O5        0.020
+ DA9      plan-2    N6        0.020
+ DA9      plan-2    HN6       0.020
+ DA9      plan-3    N6        0.020
+ DA9      plan-3    C4        0.020
+ DA9      plan-3    C7        0.020
+ DA9      plan-3    HN6       0.020
+# ------------------------------------------------------

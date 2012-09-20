@@ -1,0 +1,271 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MNY      MNY '5,8-DI-AMINO-1,4-DIHYDROXY-ANTHRAQUI' non-polymer        30  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MNY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MNY           O13    O    O         0.000      0.000    0.000    0.000
+ MNY           C13    C    CR6       0.000     -1.213   -0.089   -0.013
+ MNY           C3     C    CR66      0.000     -1.970   -0.151    1.250
+ MNY           C4     C    CR6       0.000     -1.358    0.172    2.462
+ MNY           O4     O    OH1       0.000     -0.055    0.548    2.487
+ MNY           HO4    H    H         0.000      0.004    1.508    2.388
+ MNY           C5     C    CR16      0.000     -2.090    0.106    3.646
+ MNY           HC5    H    H         0.000     -1.615    0.358    4.586
+ MNY           C6     C    CR16      0.000     -3.412   -0.276    3.631
+ MNY           HC6    H    H         0.000     -3.968   -0.323    4.559
+ MNY           C1     C    CR6       0.000     -4.040   -0.601    2.431
+ MNY           O1     O    OH1       0.000     -5.345   -0.975    2.426
+ MNY           HO1    H    H         0.000     -5.903   -0.193    2.319
+ MNY           C14    C    CR66      0.000     -1.944   -0.135   -1.290
+ MNY           C25    C    CR6       0.000     -1.307    0.201   -2.488
+ MNY           N25    N    NH2       0.000      0.027    0.583   -2.483
+ MNY           H252   H    H         0.000      0.574    0.565   -3.340
+ MNY           H251   H    H         0.000      0.475    0.886   -1.623
+ MNY           C24    C    CR16      0.000     -2.017    0.152   -3.690
+ MNY           HC24   H    H         0.000     -1.522    0.413   -4.618
+ MNY           C23    C    CR16      0.000     -3.338   -0.224   -3.705
+ MNY           HC23   H    H         0.000     -3.877   -0.257   -4.645
+ MNY           C22    C    CR6       0.000     -3.993   -0.566   -2.520
+ MNY           N22    N    NH2       0.000     -5.327   -0.946   -2.546
+ MNY           H222   H    H         0.000     -5.885   -0.932   -1.697
+ MNY           H221   H    H         0.000     -5.763   -1.243   -3.414
+ MNY           C15    C    CR66      0.000     -3.302   -0.518   -1.306
+ MNY           C16    C    CR6       0.000     -3.972   -0.879   -0.045
+ MNY           C2     C    CR66      0.000     -3.325   -0.540    1.235
+ MNY           O16    O    O         0.000     -5.049   -1.446   -0.060
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MNY      O13    n/a    C13    START
+ MNY      C13    O13    C14    .
+ MNY      C3     C13    C4     .
+ MNY      C4     C3     C5     .
+ MNY      O4     C4     HO4    .
+ MNY      HO4    O4     .      .
+ MNY      C5     C4     C6     .
+ MNY      HC5    C5     .      .
+ MNY      C6     C5     C1     .
+ MNY      HC6    C6     .      .
+ MNY      C1     C6     O1     .
+ MNY      O1     C1     HO1    .
+ MNY      HO1    O1     .      .
+ MNY      C14    C13    C25    .
+ MNY      C25    C14    C24    .
+ MNY      N25    C25    H251   .
+ MNY      H252   N25    .      .
+ MNY      H251   N25    .      .
+ MNY      C24    C25    C23    .
+ MNY      HC24   C24    .      .
+ MNY      C23    C24    C22    .
+ MNY      HC23   C23    .      .
+ MNY      C22    C23    C15    .
+ MNY      N22    C22    H221   .
+ MNY      H222   N22    .      .
+ MNY      H221   N22    .      .
+ MNY      C15    C22    C16    .
+ MNY      C16    C15    O16    .
+ MNY      C2     C16    .      .
+ MNY      O16    C16    .      END
+ MNY      C1     C2     .    ADD
+ MNY      C2     C3     .    ADD
+ MNY      C14    C15    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MNY      C1     C2        double      1.490    0.020
+ MNY      C1     C6        single      1.390    0.020
+ MNY      O1     C1        single      1.362    0.020
+ MNY      C2     C3        single      1.490    0.020
+ MNY      C2     C16       single      1.490    0.020
+ MNY      C4     C3        double      1.490    0.020
+ MNY      C3     C13       single      1.490    0.020
+ MNY      C5     C4        single      1.390    0.020
+ MNY      O4     C4        single      1.362    0.020
+ MNY      C6     C5        double      1.390    0.020
+ MNY      HC5    C5        single      1.083    0.020
+ MNY      HC6    C6        single      1.083    0.020
+ MNY      C14    C13       single      1.490    0.020
+ MNY      C13    O13       double      1.250    0.020
+ MNY      C14    C15       double      1.490    0.020
+ MNY      C25    C14       single      1.490    0.020
+ MNY      C16    C15       single      1.490    0.020
+ MNY      C15    C22       single      1.490    0.020
+ MNY      O16    C16       double      1.250    0.020
+ MNY      C22    C23       double      1.390    0.020
+ MNY      N22    C22       single      1.355    0.020
+ MNY      C23    C24       single      1.390    0.020
+ MNY      HC23   C23       single      1.083    0.020
+ MNY      C24    C25       double      1.390    0.020
+ MNY      HC24   C24       single      1.083    0.020
+ MNY      N25    C25       single      1.355    0.020
+ MNY      HO1    O1        single      0.967    0.020
+ MNY      H221   N22       single      1.010    0.020
+ MNY      H222   N22       single      1.010    0.020
+ MNY      H251   N25       single      1.010    0.020
+ MNY      H252   N25       single      1.010    0.020
+ MNY      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MNY      O13    C13    C3      120.000    3.000
+ MNY      O13    C13    C14     120.000    3.000
+ MNY      C3     C13    C14     120.000    3.000
+ MNY      C13    C3     C4      120.000    3.000
+ MNY      C13    C3     C2      120.000    3.000
+ MNY      C4     C3     C2      120.000    3.000
+ MNY      C3     C4     O4      120.000    3.000
+ MNY      C3     C4     C5      120.000    3.000
+ MNY      O4     C4     C5      120.000    3.000
+ MNY      C4     O4     HO4     109.470    3.000
+ MNY      C4     C5     HC5     120.000    3.000
+ MNY      C4     C5     C6      120.000    3.000
+ MNY      HC5    C5     C6      120.000    3.000
+ MNY      C5     C6     HC6     120.000    3.000
+ MNY      C5     C6     C1      120.000    3.000
+ MNY      HC6    C6     C1      120.000    3.000
+ MNY      C6     C1     O1      120.000    3.000
+ MNY      C6     C1     C2      120.000    3.000
+ MNY      O1     C1     C2      120.000    3.000
+ MNY      C1     O1     HO1     109.470    3.000
+ MNY      C13    C14    C25     120.000    3.000
+ MNY      C13    C14    C15     120.000    3.000
+ MNY      C25    C14    C15     120.000    3.000
+ MNY      C14    C25    N25     120.000    3.000
+ MNY      C14    C25    C24     120.000    3.000
+ MNY      N25    C25    C24     120.000    3.000
+ MNY      C25    N25    H252    120.000    3.000
+ MNY      C25    N25    H251    120.000    3.000
+ MNY      H252   N25    H251    120.000    3.000
+ MNY      C25    C24    HC24    120.000    3.000
+ MNY      C25    C24    C23     120.000    3.000
+ MNY      HC24   C24    C23     120.000    3.000
+ MNY      C24    C23    HC23    120.000    3.000
+ MNY      C24    C23    C22     120.000    3.000
+ MNY      HC23   C23    C22     120.000    3.000
+ MNY      C23    C22    N22     120.000    3.000
+ MNY      C23    C22    C15     120.000    3.000
+ MNY      N22    C22    C15     120.000    3.000
+ MNY      C22    N22    H222    120.000    3.000
+ MNY      C22    N22    H221    120.000    3.000
+ MNY      H222   N22    H221    120.000    3.000
+ MNY      C22    C15    C16     120.000    3.000
+ MNY      C22    C15    C14     120.000    3.000
+ MNY      C16    C15    C14     120.000    3.000
+ MNY      C15    C16    C2      120.000    3.000
+ MNY      C15    C16    O16     120.000    3.000
+ MNY      C2     C16    O16     120.000    3.000
+ MNY      C16    C2     C1      120.000    3.000
+ MNY      C16    C2     C3      120.000    3.000
+ MNY      C1     C2     C3      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MNY      CONST_1  O13    C13    C3     C4         0.000    0.000   0
+ MNY      CONST_2  C13    C3     C4     C5       180.000    0.000   0
+ MNY      var_1    C3     C4     O4     HO4       90.010   20.000   1
+ MNY      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ MNY      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ MNY      CONST_5  C5     C6     C1     O1       180.000    0.000   0
+ MNY      CONST_6  C6     C1     C2     C16      180.000    0.000   0
+ MNY      var_2    C6     C1     O1     HO1       89.990   20.000   1
+ MNY      CONST_7  O13    C13    C14    C25        0.000    0.000   0
+ MNY      CONST_8  C13    C14    C15    C22      180.000    0.000   0
+ MNY      CONST_9  C13    C14    C25    C24      180.000    0.000   0
+ MNY      CONST_10 C14    C25    N25    H251     -18.025    0.000   0
+ MNY      CONST_11 C14    C25    C24    C23        0.000    0.000   0
+ MNY      CONST_12 C25    C24    C23    C22        0.000    0.000   0
+ MNY      CONST_13 C24    C23    C22    C15        0.000    0.000   0
+ MNY      CONST_14 C23    C22    N22    H221      18.059    0.000   0
+ MNY      CONST_15 C23    C22    C15    C16      180.000    0.000   0
+ MNY      CONST_16 C22    C15    C16    O16        0.000    0.000   0
+ MNY      CONST_17 C15    C16    C2     C1       180.000    0.000   0
+ MNY      CONST_18 C16    C2     C3     C13        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MNY      plan-1    C1        0.020
+ MNY      plan-1    C2        0.020
+ MNY      plan-1    C6        0.020
+ MNY      plan-1    O1        0.020
+ MNY      plan-1    C4        0.020
+ MNY      plan-1    C5        0.020
+ MNY      plan-1    C3        0.020
+ MNY      plan-1    C16       0.020
+ MNY      plan-1    C13       0.020
+ MNY      plan-1    O4        0.020
+ MNY      plan-1    HC5       0.020
+ MNY      plan-1    HC6       0.020
+ MNY      plan-1    C14       0.020
+ MNY      plan-1    O13       0.020
+ MNY      plan-1    C15       0.020
+ MNY      plan-1    C25       0.020
+ MNY      plan-1    C22       0.020
+ MNY      plan-1    C23       0.020
+ MNY      plan-1    C24       0.020
+ MNY      plan-1    O16       0.020
+ MNY      plan-1    N22       0.020
+ MNY      plan-1    HC23      0.020
+ MNY      plan-1    HC24      0.020
+ MNY      plan-1    N25       0.020
+ MNY      plan-1    H222      0.020
+ MNY      plan-1    H221      0.020
+ MNY      plan-1    H252      0.020
+ MNY      plan-1    H251      0.020
+ MNY      plan-2    N22       0.020
+ MNY      plan-2    C22       0.020
+ MNY      plan-2    H221      0.020
+ MNY      plan-2    H222      0.020
+ MNY      plan-3    N25       0.020
+ MNY      plan-3    C25       0.020
+ MNY      plan-3    H251      0.020
+ MNY      plan-3    H252      0.020
+# ------------------------------------------------------

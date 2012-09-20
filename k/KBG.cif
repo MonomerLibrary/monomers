@@ -1,0 +1,202 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+KBG      KBG '2-KETO-BETA-D-GLUCOSE               ' non-polymer        22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_KBG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ KBG           OAG    O    O         0.000      0.000    0.000    0.000
+ KBG           CAH    C    C         0.000     -1.177   -0.147    0.224
+ KBG           CAI    C    CH1       0.000     -2.097    1.046    0.406
+ KBG           HAI    H    H         0.000     -2.358    1.158    1.468
+ KBG           OAL    O    OH1       0.000     -1.452    2.231   -0.064
+ KBG           HOAL   H    H         0.000     -0.638    2.376    0.437
+ KBG           CAB    C    CH1       0.000     -1.788   -1.527    0.333
+ KBG           HAB    H    H         0.000     -2.108   -1.707    1.369
+ KBG           OAA    O    OH1       0.000     -0.824   -2.511   -0.049
+ KBG           HOAA   H    H         0.000     -1.220   -3.391    0.014
+ KBG           OAC    O    O2        0.000     -2.919   -1.602   -0.536
+ KBG           CAD    C    CH1       0.000     -3.868   -0.633   -0.098
+ KBG           HAD    H    H         0.000     -4.013   -0.729    0.987
+ KBG           CAE    C    CH2       0.000     -5.201   -0.869   -0.811
+ KBG           HAE1   H    H         0.000     -5.041   -0.860   -1.891
+ KBG           HAE2   H    H         0.000     -5.903   -0.078   -0.541
+ KBG           OAF    O    OH1       0.000     -5.734   -2.135   -0.417
+ KBG           HOAF   H    H         0.000     -6.576   -2.284   -0.868
+ KBG           CAJ    C    CH1       0.000     -3.364    0.777   -0.419
+ KBG           HAJ    H    H         0.000     -3.130    0.851   -1.490
+ KBG           OAK    O    OH1       0.000     -4.370    1.734   -0.079
+ KBG           HOAK   H    H         0.000     -4.044    2.624   -0.270
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ KBG      OAG    n/a    CAH    START
+ KBG      CAH    OAG    CAB    .
+ KBG      CAI    CAH    OAL    .
+ KBG      HAI    CAI    .      .
+ KBG      OAL    CAI    HOAL   .
+ KBG      HOAL   OAL    .      .
+ KBG      CAB    CAH    OAC    .
+ KBG      HAB    CAB    .      .
+ KBG      OAA    CAB    HOAA   .
+ KBG      HOAA   OAA    .      .
+ KBG      OAC    CAB    CAD    .
+ KBG      CAD    OAC    CAJ    .
+ KBG      HAD    CAD    .      .
+ KBG      CAE    CAD    OAF    .
+ KBG      HAE1   CAE    .      .
+ KBG      HAE2   CAE    .      .
+ KBG      OAF    CAE    HOAF   .
+ KBG      HOAF   OAF    .      .
+ KBG      CAJ    CAD    OAK    .
+ KBG      HAJ    CAJ    .      .
+ KBG      OAK    CAJ    HOAK   .
+ KBG      HOAK   OAK    .      END
+ KBG      CAJ    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ KBG      OAK    CAJ       single      1.432    0.020
+ KBG      HOAK   OAK       single      0.967    0.020
+ KBG      CAJ    CAI       single      1.524    0.020
+ KBG      CAJ    CAD       single      1.524    0.020
+ KBG      HAJ    CAJ       single      1.099    0.020
+ KBG      OAL    CAI       single      1.432    0.020
+ KBG      CAI    CAH       single      1.500    0.020
+ KBG      HAI    CAI       single      1.099    0.020
+ KBG      HOAL   OAL       single      0.967    0.020
+ KBG      CAH    OAG       double      1.220    0.020
+ KBG      CAB    CAH       single      1.500    0.020
+ KBG      OAA    CAB       single      1.432    0.020
+ KBG      OAC    CAB       single      1.426    0.020
+ KBG      HAB    CAB       single      1.099    0.020
+ KBG      HOAA   OAA       single      0.967    0.020
+ KBG      CAD    OAC       single      1.426    0.020
+ KBG      CAE    CAD       single      1.524    0.020
+ KBG      HAD    CAD       single      1.099    0.020
+ KBG      OAF    CAE       single      1.432    0.020
+ KBG      HAE1   CAE       single      1.092    0.020
+ KBG      HAE2   CAE       single      1.092    0.020
+ KBG      HOAF   OAF       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ KBG      OAG    CAH    CAI     120.500    3.000
+ KBG      OAG    CAH    CAB     120.500    3.000
+ KBG      CAI    CAH    CAB     120.000    3.000
+ KBG      CAH    CAI    HAI     108.810    3.000
+ KBG      CAH    CAI    OAL     109.470    3.000
+ KBG      CAH    CAI    CAJ     109.470    3.000
+ KBG      HAI    CAI    OAL     109.470    3.000
+ KBG      HAI    CAI    CAJ     108.340    3.000
+ KBG      OAL    CAI    CAJ     109.470    3.000
+ KBG      CAI    OAL    HOAL    109.470    3.000
+ KBG      CAH    CAB    HAB     108.810    3.000
+ KBG      CAH    CAB    OAA     109.470    3.000
+ KBG      CAH    CAB    OAC     109.470    3.000
+ KBG      HAB    CAB    OAA     109.470    3.000
+ KBG      HAB    CAB    OAC     109.470    3.000
+ KBG      OAA    CAB    OAC     109.470    3.000
+ KBG      CAB    OAA    HOAA    109.470    3.000
+ KBG      CAB    OAC    CAD     111.800    3.000
+ KBG      OAC    CAD    HAD     109.470    3.000
+ KBG      OAC    CAD    CAE     109.470    3.000
+ KBG      OAC    CAD    CAJ     109.470    3.000
+ KBG      HAD    CAD    CAE     108.340    3.000
+ KBG      HAD    CAD    CAJ     108.340    3.000
+ KBG      CAE    CAD    CAJ     111.000    3.000
+ KBG      CAD    CAE    HAE1    109.470    3.000
+ KBG      CAD    CAE    HAE2    109.470    3.000
+ KBG      CAD    CAE    OAF     109.470    3.000
+ KBG      HAE1   CAE    HAE2    107.900    3.000
+ KBG      HAE1   CAE    OAF     109.470    3.000
+ KBG      HAE2   CAE    OAF     109.470    3.000
+ KBG      CAE    OAF    HOAF    109.470    3.000
+ KBG      CAD    CAJ    HAJ     108.340    3.000
+ KBG      CAD    CAJ    OAK     109.470    3.000
+ KBG      CAD    CAJ    CAI     111.000    3.000
+ KBG      HAJ    CAJ    OAK     109.470    3.000
+ KBG      HAJ    CAJ    CAI     108.340    3.000
+ KBG      OAK    CAJ    CAI     109.470    3.000
+ KBG      CAJ    OAK    HOAK    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ KBG      var_1    OAG    CAH    CAI    OAL        0.000   20.000   3
+ KBG      var_2    CAH    CAI    OAL    HOAL     -60.014   20.000   1
+ KBG      var_3    OAG    CAH    CAB    OAC     -120.000   20.000   3
+ KBG      var_4    CAH    CAB    OAA    HOAA    -179.448   20.000   1
+ KBG      var_5    CAH    CAB    OAC    CAD      -60.000   20.000   1
+ KBG      var_6    CAB    OAC    CAD    CAJ       60.000   20.000   1
+ KBG      var_7    OAC    CAD    CAE    OAF       64.718   20.000   3
+ KBG      var_8    CAD    CAE    OAF    HOAF     179.994   20.000   1
+ KBG      var_9    OAC    CAD    CAJ    OAK      180.000   20.000   3
+ KBG      var_10   CAD    CAJ    CAI    CAH       60.000   20.000   3
+ KBG      var_11   CAD    CAJ    OAK    HOAK     179.164   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ KBG      chir_01  CAJ    OAK    CAI    CAD       negativ
+ KBG      chir_02  CAI    CAJ    OAL    CAH       positiv
+ KBG      chir_03  CAB    CAH    OAA    OAC       positiv
+ KBG      chir_04  CAD    CAJ    OAC    CAE       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ KBG      plan-1    CAH       0.020
+ KBG      plan-1    CAI       0.000
+ KBG      plan-1    OAG       0.000
+ KBG      plan-1    CAB       0.000
+# ------------------------------------------------------

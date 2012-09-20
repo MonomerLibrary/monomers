@@ -1,0 +1,384 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GTB      GTB 'S-(P-NITROBENZYL)GLUTATHIONE        ' non-polymer        50  30 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GTB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GTB           O42    O    O         0.000      0.000    0.000    0.000
+ GTB           N41    N    N         1.000     -0.739    0.279    0.926
+ GTB           O41    O    O        -1.000     -0.376    1.073    1.776
+ GTB           "C4'"  C    CR6       0.000     -2.079   -0.344    1.020
+ GTB           "C3'"  C    CR16      0.000     -2.918   -0.025    2.071
+ GTB           "H3'"  H    H         0.000     -2.596    0.681    2.826
+ GTB           "C2'"  C    CR16      0.000     -4.168   -0.608    2.158
+ GTB           "H2'"  H    H         0.000     -4.825   -0.360    2.982
+ GTB           "C5'"  C    CR16      0.000     -2.490   -1.245    0.055
+ GTB           "H5'"  H    H         0.000     -1.833   -1.493   -0.770
+ GTB           "C6'"  C    CR16      0.000     -3.740   -1.829    0.143
+ GTB           "H6'"  H    H         0.000     -4.061   -2.539   -0.609
+ GTB           "C1'"  C    CR6       0.000     -4.580   -1.507    1.192
+ GTB           "C'"   C    CH2       0.000     -5.944   -2.142    1.287
+ GTB           "H'1"  H    H         0.000     -6.232   -2.230    2.336
+ GTB           "H'2"  H    H         0.000     -5.915   -3.136    0.834
+ GTB           SG2    S    S2        0.000     -7.153   -1.112    0.410
+ GTB           CB2    C    CH2       0.000     -8.705   -2.025    0.632
+ GTB           HB21   H    H         0.000     -8.924   -2.115    1.698
+ GTB           HB22   H    H         0.000     -8.606   -3.021    0.196
+ GTB           CA2    C    CH1       0.000     -9.842   -1.272   -0.062
+ GTB           HA2    H    H         0.000     -9.621   -1.182   -1.135
+ GTB           C2     C    C         0.000    -11.131   -2.031    0.123
+ GTB           N3     N    NH1       0.000    -11.244   -3.291   -0.340
+ GTB           HN3    H    H         0.000    -10.464   -3.728   -0.811
+ GTB           CA3    C    CH2       0.000    -12.498   -4.028   -0.160
+ GTB           HA31   H    H         0.000    -13.310   -3.491   -0.655
+ GTB           HA32   H    H         0.000    -12.718   -4.116    0.906
+ GTB           C3     C    C         0.000    -12.362   -5.403   -0.762
+ GTB           O32    O    OC       -0.500    -13.324   -6.202   -0.719
+ GTB           O31    O    OC       -0.500    -11.289   -5.745   -1.306
+ GTB           O2     O    O         0.000    -12.067   -1.506    0.688
+ GTB           N2     N    NH1       0.000     -9.973    0.064    0.523
+ GTB           HN2    H    H         0.000     -9.658    0.235    1.468
+ GTB           CD1    C    C         0.000    -10.515    1.065   -0.198
+ GTB           OE1    O    O         0.000    -10.893    0.860   -1.331
+ GTB           CG1    C    CH2       0.000    -10.650    2.440    0.404
+ GTB           HG11   H    H         0.000     -9.661    2.815    0.679
+ GTB           HG12   H    H         0.000    -11.278    2.387    1.296
+ GTB           CB1    C    CH2       0.000    -11.290    3.384   -0.616
+ GTB           HB11   H    H         0.000    -12.277    3.006   -0.890
+ GTB           HB12   H    H         0.000    -10.661    3.436   -1.507
+ GTB           CA1    C    CH1       0.000    -11.427    4.779   -0.004
+ GTB           HA1    H    H         0.000    -10.445    5.121    0.353
+ GTB           N1     N    NH2       0.000    -12.367    4.730    1.124
+ GTB           HN12   H    H         0.000    -12.854    3.870    1.346
+ GTB           HN11   H    H         0.000    -12.534    5.556    1.686
+ GTB           C1     C    C         0.000    -11.943    5.737   -1.047
+ GTB           O11    O    OC       -0.500    -13.154    6.049   -1.065
+ GTB           O12    O    OC       -0.500    -11.161    6.219   -1.896
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GTB      O42    n/a    N41    START
+ GTB      N41    O42    "C4'"  .
+ GTB      O41    N41    .      .
+ GTB      "C4'"  N41    "C5'"  .
+ GTB      "C3'"  "C4'"  "C2'"  .
+ GTB      "H3'"  "C3'"  .      .
+ GTB      "C2'"  "C3'"  "H2'"  .
+ GTB      "H2'"  "C2'"  .      .
+ GTB      "C5'"  "C4'"  "C6'"  .
+ GTB      "H5'"  "C5'"  .      .
+ GTB      "C6'"  "C5'"  "C1'"  .
+ GTB      "H6'"  "C6'"  .      .
+ GTB      "C1'"  "C6'"  "C'"   .
+ GTB      "C'"   "C1'"  SG2    .
+ GTB      "H'1"  "C'"   .      .
+ GTB      "H'2"  "C'"   .      .
+ GTB      SG2    "C'"   CB2    .
+ GTB      CB2    SG2    CA2    .
+ GTB      HB21   CB2    .      .
+ GTB      HB22   CB2    .      .
+ GTB      CA2    CB2    N2     .
+ GTB      HA2    CA2    .      .
+ GTB      C2     CA2    O2     .
+ GTB      N3     C2     CA3    .
+ GTB      HN3    N3     .      .
+ GTB      CA3    N3     C3     .
+ GTB      HA31   CA3    .      .
+ GTB      HA32   CA3    .      .
+ GTB      C3     CA3    O31    .
+ GTB      O32    C3     .      .
+ GTB      O31    C3     .      .
+ GTB      O2     C2     .      .
+ GTB      N2     CA2    CD1    .
+ GTB      HN2    N2     .      .
+ GTB      CD1    N2     CG1    .
+ GTB      OE1    CD1    .      .
+ GTB      CG1    CD1    CB1    .
+ GTB      HG11   CG1    .      .
+ GTB      HG12   CG1    .      .
+ GTB      CB1    CG1    CA1    .
+ GTB      HB11   CB1    .      .
+ GTB      HB12   CB1    .      .
+ GTB      CA1    CB1    C1     .
+ GTB      HA1    CA1    .      .
+ GTB      N1     CA1    HN11   .
+ GTB      HN12   N1     .      .
+ GTB      HN11   N1     .      .
+ GTB      C1     CA1    O12    .
+ GTB      O11    C1     .      .
+ GTB      O12    C1     .      END
+ GTB      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GTB      N1     CA1       single      1.450    0.020
+ GTB      HN11   N1        single      1.010    0.020
+ GTB      HN12   N1        single      1.010    0.020
+ GTB      C1     CA1       single      1.500    0.020
+ GTB      CA1    CB1       single      1.524    0.020
+ GTB      HA1    CA1       single      1.099    0.020
+ GTB      O11    C1        deloc       1.250    0.020
+ GTB      O12    C1        deloc       1.250    0.020
+ GTB      CB1    CG1       single      1.524    0.020
+ GTB      HB11   CB1       single      1.092    0.020
+ GTB      HB12   CB1       single      1.092    0.020
+ GTB      CG1    CD1       single      1.510    0.020
+ GTB      HG11   CG1       single      1.092    0.020
+ GTB      HG12   CG1       single      1.092    0.020
+ GTB      OE1    CD1       double      1.220    0.020
+ GTB      CD1    N2        single      1.330    0.020
+ GTB      N2     CA2       single      1.450    0.020
+ GTB      HN2    N2        single      1.010    0.020
+ GTB      C2     CA2       single      1.500    0.020
+ GTB      CA2    CB2       single      1.524    0.020
+ GTB      HA2    CA2       single      1.099    0.020
+ GTB      O2     C2        double      1.220    0.020
+ GTB      N3     C2        single      1.330    0.020
+ GTB      CB2    SG2       single      1.762    0.020
+ GTB      HB21   CB2       single      1.092    0.020
+ GTB      HB22   CB2       single      1.092    0.020
+ GTB      SG2    "C'"      single      1.762    0.020
+ GTB      CA3    N3        single      1.450    0.020
+ GTB      HN3    N3        single      1.010    0.020
+ GTB      C3     CA3       single      1.510    0.020
+ GTB      HA31   CA3       single      1.092    0.020
+ GTB      HA32   CA3       single      1.092    0.020
+ GTB      O31    C3        deloc       1.250    0.020
+ GTB      O32    C3        deloc       1.250    0.020
+ GTB      "C'"   "C1'"     single      1.511    0.020
+ GTB      "H'1"  "C'"      single      1.092    0.020
+ GTB      "H'2"  "C'"      single      1.092    0.020
+ GTB      "C1'"  "C2'"     double      1.390    0.020
+ GTB      "C1'"  "C6'"     single      1.390    0.020
+ GTB      "C2'"  "C3'"     single      1.390    0.020
+ GTB      "H2'"  "C2'"     single      1.083    0.020
+ GTB      "C3'"  "C4'"     double      1.390    0.020
+ GTB      "H3'"  "C3'"     single      1.083    0.020
+ GTB      "C4'"  N41       single      1.400    0.020
+ GTB      "C5'"  "C4'"     single      1.390    0.020
+ GTB      O41    N41       single      1.400    0.020
+ GTB      N41    O42       double      1.220    0.020
+ GTB      "C6'"  "C5'"     double      1.390    0.020
+ GTB      "H5'"  "C5'"     single      1.083    0.020
+ GTB      "H6'"  "C6'"     single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GTB      O42    N41    O41     120.000    3.000
+ GTB      O42    N41    "C4'"   120.000    3.000
+ GTB      O41    N41    "C4'"   120.000    3.000
+ GTB      N41    "C4'"  "C3'"   120.000    3.000
+ GTB      N41    "C4'"  "C5'"   120.000    3.000
+ GTB      "C3'"  "C4'"  "C5'"   120.000    3.000
+ GTB      "C4'"  "C3'"  "H3'"   120.000    3.000
+ GTB      "C4'"  "C3'"  "C2'"   120.000    3.000
+ GTB      "H3'"  "C3'"  "C2'"   120.000    3.000
+ GTB      "C3'"  "C2'"  "H2'"   120.000    3.000
+ GTB      "C3'"  "C2'"  "C1'"   120.000    3.000
+ GTB      "H2'"  "C2'"  "C1'"   120.000    3.000
+ GTB      "C4'"  "C5'"  "H5'"   120.000    3.000
+ GTB      "C4'"  "C5'"  "C6'"   120.000    3.000
+ GTB      "H5'"  "C5'"  "C6'"   120.000    3.000
+ GTB      "C5'"  "C6'"  "H6'"   120.000    3.000
+ GTB      "C5'"  "C6'"  "C1'"   120.000    3.000
+ GTB      "H6'"  "C6'"  "C1'"   120.000    3.000
+ GTB      "C6'"  "C1'"  "C'"    120.000    3.000
+ GTB      "C6'"  "C1'"  "C2'"   120.000    3.000
+ GTB      "C'"   "C1'"  "C2'"   120.000    3.000
+ GTB      "C1'"  "C'"   "H'1"   109.470    3.000
+ GTB      "C1'"  "C'"   "H'2"   109.470    3.000
+ GTB      "C1'"  "C'"   SG2     109.500    3.000
+ GTB      "H'1"  "C'"   "H'2"   107.900    3.000
+ GTB      "H'1"  "C'"   SG2     109.500    3.000
+ GTB      "H'2"  "C'"   SG2     109.500    3.000
+ GTB      "C'"   SG2    CB2     102.997    3.000
+ GTB      SG2    CB2    HB21    109.500    3.000
+ GTB      SG2    CB2    HB22    109.500    3.000
+ GTB      SG2    CB2    CA2     109.500    3.000
+ GTB      HB21   CB2    HB22    107.900    3.000
+ GTB      HB21   CB2    CA2     109.470    3.000
+ GTB      HB22   CB2    CA2     109.470    3.000
+ GTB      CB2    CA2    HA2     108.340    3.000
+ GTB      CB2    CA2    C2      109.470    3.000
+ GTB      CB2    CA2    N2      110.000    3.000
+ GTB      HA2    CA2    C2      108.810    3.000
+ GTB      HA2    CA2    N2      108.550    3.000
+ GTB      C2     CA2    N2      111.600    3.000
+ GTB      CA2    C2     N3      116.500    3.000
+ GTB      CA2    C2     O2      120.500    3.000
+ GTB      N3     C2     O2      123.000    3.000
+ GTB      C2     N3     HN3     120.000    3.000
+ GTB      C2     N3     CA3     121.500    3.000
+ GTB      HN3    N3     CA3     118.500    3.000
+ GTB      N3     CA3    HA31    109.470    3.000
+ GTB      N3     CA3    HA32    109.470    3.000
+ GTB      N3     CA3    C3      111.600    3.000
+ GTB      HA31   CA3    HA32    107.900    3.000
+ GTB      HA31   CA3    C3      109.470    3.000
+ GTB      HA32   CA3    C3      109.470    3.000
+ GTB      CA3    C3     O32     118.500    3.000
+ GTB      CA3    C3     O31     118.500    3.000
+ GTB      O32    C3     O31     123.000    3.000
+ GTB      CA2    N2     HN2     118.500    3.000
+ GTB      CA2    N2     CD1     121.500    3.000
+ GTB      HN2    N2     CD1     120.000    3.000
+ GTB      N2     CD1    OE1     123.000    3.000
+ GTB      N2     CD1    CG1     116.500    3.000
+ GTB      OE1    CD1    CG1     120.500    3.000
+ GTB      CD1    CG1    HG11    109.470    3.000
+ GTB      CD1    CG1    HG12    109.470    3.000
+ GTB      CD1    CG1    CB1     109.470    3.000
+ GTB      HG11   CG1    HG12    107.900    3.000
+ GTB      HG11   CG1    CB1     109.470    3.000
+ GTB      HG12   CG1    CB1     109.470    3.000
+ GTB      CG1    CB1    HB11    109.470    3.000
+ GTB      CG1    CB1    HB12    109.470    3.000
+ GTB      CG1    CB1    CA1     111.000    3.000
+ GTB      HB11   CB1    HB12    107.900    3.000
+ GTB      HB11   CB1    CA1     109.470    3.000
+ GTB      HB12   CB1    CA1     109.470    3.000
+ GTB      CB1    CA1    HA1     108.340    3.000
+ GTB      CB1    CA1    N1      109.470    3.000
+ GTB      CB1    CA1    C1      109.470    3.000
+ GTB      HA1    CA1    N1      109.470    3.000
+ GTB      HA1    CA1    C1      108.810    3.000
+ GTB      N1     CA1    C1      109.470    3.000
+ GTB      CA1    N1     HN12    120.000    3.000
+ GTB      CA1    N1     HN11    120.000    3.000
+ GTB      HN12   N1     HN11    120.000    3.000
+ GTB      CA1    C1     O11     118.500    3.000
+ GTB      CA1    C1     O12     118.500    3.000
+ GTB      O11    C1     O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GTB      var_1    O42    N41    "C4'"  "C5'"      0.060   20.000   1
+ GTB      CONST_1  N41    "C4'"  "C3'"  "C2'"    180.000    0.000   0
+ GTB      CONST_2  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+ GTB      CONST_3  N41    "C4'"  "C5'"  "C6'"    180.000    0.000   0
+ GTB      CONST_4  "C4'"  "C5'"  "C6'"  "C1'"      0.000    0.000   0
+ GTB      CONST_5  "C5'"  "C6'"  "C1'"  "C'"     180.000    0.000   0
+ GTB      CONST_6  "C6'"  "C1'"  "C2'"  "C3'"      0.000    0.000   0
+ GTB      var_2    "C6'"  "C1'"  "C'"   SG2      -90.280   20.000   2
+ GTB      var_3    "C1'"  "C'"   SG2    CB2      179.994   20.000   1
+ GTB      var_4    "C'"   SG2    CB2    CA2      179.997   20.000   1
+ GTB      var_5    SG2    CB2    CA2    N2       -59.981   20.000   3
+ GTB      var_6    CB2    CA2    C2     O2       120.003   20.000   3
+ GTB      CONST_7  CA2    C2     N3     CA3      180.000    0.000   0
+ GTB      var_7    C2     N3     CA3    C3      -179.963   20.000   3
+ GTB      var_8    N3     CA3    C3     O31       -0.005   20.000   3
+ GTB      var_9    CB2    CA2    N2     CD1      155.000   20.000   3
+ GTB      CONST_8  CA2    N2     CD1    CG1      180.000    0.000   0
+ GTB      var_10   N2     CD1    CG1    CB1      179.976   20.000   3
+ GTB      var_11   CD1    CG1    CB1    CA1      179.973   20.000   3
+ GTB      var_12   CG1    CB1    CA1    C1       174.999   20.000   3
+ GTB      var_13   CB1    CA1    N1     HN11     176.081   20.000   1
+ GTB      var_14   CB1    CA1    C1     O12      -79.958   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GTB      chir_01  CA1    N1     C1     CB1       positiv
+ GTB      chir_02  CA2    N2     C2     CB2       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GTB      plan-1    N1        0.020
+ GTB      plan-1    CA1       0.020
+ GTB      plan-1    HN11      0.020
+ GTB      plan-1    HN12      0.020
+ GTB      plan-2    C1        0.020
+ GTB      plan-2    CA1       0.020
+ GTB      plan-2    O11       0.020
+ GTB      plan-2    O12       0.020
+ GTB      plan-3    CD1       0.020
+ GTB      plan-3    CG1       0.020
+ GTB      plan-3    OE1       0.020
+ GTB      plan-3    N2        0.020
+ GTB      plan-3    HN2       0.020
+ GTB      plan-4    N2        0.020
+ GTB      plan-4    CD1       0.020
+ GTB      plan-4    CA2       0.020
+ GTB      plan-4    HN2       0.020
+ GTB      plan-5    C2        0.020
+ GTB      plan-5    CA2       0.020
+ GTB      plan-5    O2        0.020
+ GTB      plan-5    N3        0.020
+ GTB      plan-5    HN3       0.020
+ GTB      plan-6    N3        0.020
+ GTB      plan-6    C2        0.020
+ GTB      plan-6    CA3       0.020
+ GTB      plan-6    HN3       0.020
+ GTB      plan-7    C3        0.020
+ GTB      plan-7    CA3       0.020
+ GTB      plan-7    O31       0.020
+ GTB      plan-7    O32       0.020
+ GTB      plan-8    "C1'"     0.020
+ GTB      plan-8    "C'"      0.020
+ GTB      plan-8    "C2'"     0.020
+ GTB      plan-8    "C6'"     0.020
+ GTB      plan-8    "C3'"     0.020
+ GTB      plan-8    "C4'"     0.020
+ GTB      plan-8    "C5'"     0.020
+ GTB      plan-8    "H2'"     0.020
+ GTB      plan-8    "H3'"     0.020
+ GTB      plan-8    N41       0.020
+ GTB      plan-8    "H5'"     0.020
+ GTB      plan-8    "H6'"     0.020
+ GTB      plan-9    N41       0.020
+ GTB      plan-9    "C4'"     0.020
+ GTB      plan-9    O41       0.020
+ GTB      plan-9    O42       0.020
+# ------------------------------------------------------

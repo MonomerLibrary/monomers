@@ -1,0 +1,231 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AHM      AHM '2,5-ANHYDROMANNITOL-1,6-DIPHOSPHATE ' non-polymer        29  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AHM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AHM           O6P    O    OP       -0.666      0.000    0.000    0.000
+ AHM           P2     P    P         0.000     -1.262    0.261    0.792
+ AHM           O4P    O    OP       -0.666     -1.526    1.750    0.844
+ AHM           O5P    O    OP       -0.666     -1.096   -0.269    2.199
+ AHM           O6     O    O2        0.000     -2.505   -0.477    0.083
+ AHM           C6     C    CH2       0.000     -2.611    0.065   -1.234
+ AHM           H61    H    H         0.000     -1.684   -0.123   -1.780
+ AHM           H62    H    H         0.000     -2.784    1.141   -1.171
+ AHM           C5     C    CH1       0.000     -3.779   -0.599   -1.966
+ AHM           H5     H    H         0.000     -3.618   -1.685   -2.018
+ AHM           C4     C    CH1       0.000     -3.902   -0.019   -3.392
+ AHM           H4     H    H         0.000     -3.438    0.975   -3.449
+ AHM           O4     O    OH1       0.000     -3.328   -0.904   -4.356
+ AHM           HO4    H    H         0.000     -3.495   -0.562   -5.245
+ AHM           C3     C    CH1       0.000     -5.439    0.078   -3.576
+ AHM           H3     H    H         0.000     -5.859   -0.883   -3.904
+ AHM           O3     O    OH1       0.000     -5.783    1.126   -4.485
+ AHM           HO3    H    H         0.000     -5.444    0.913   -5.365
+ AHM           O5     O    O2        0.000     -5.006   -0.323   -1.279
+ AHM           C2     C    CH1       0.000     -5.889    0.420   -2.134
+ AHM           H2     H    H         0.000     -5.783    1.498   -1.947
+ AHM           C1     C    CH2       0.000     -7.337   -0.017   -1.907
+ AHM           H11    H    H         0.000     -7.430   -1.086   -2.108
+ AHM           H12    H    H         0.000     -7.994    0.537   -2.582
+ AHM           O1     O    O2        0.000     -7.709    0.249   -0.554
+ AHM           P1     P    P         0.000     -9.236   -0.232   -0.387
+ AHM           O1P    O    OP       -0.666     -9.334   -1.711   -0.691
+ AHM           O2P    O    OP       -0.666     -9.694    0.022    1.032
+ AHM           O3P    O    OP       -0.666    -10.116    0.539   -1.348
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AHM      O6P    n/a    P2     START
+ AHM      P2     O6P    O6     .
+ AHM      O4P    P2     .      .
+ AHM      O5P    P2     .      .
+ AHM      O6     P2     C6     .
+ AHM      C6     O6     C5     .
+ AHM      H61    C6     .      .
+ AHM      H62    C6     .      .
+ AHM      C5     C6     O5     .
+ AHM      H5     C5     .      .
+ AHM      C4     C5     C3     .
+ AHM      H4     C4     .      .
+ AHM      O4     C4     HO4    .
+ AHM      HO4    O4     .      .
+ AHM      C3     C4     O3     .
+ AHM      H3     C3     .      .
+ AHM      O3     C3     HO3    .
+ AHM      HO3    O3     .      .
+ AHM      O5     C5     C2     .
+ AHM      C2     O5     C1     .
+ AHM      H2     C2     .      .
+ AHM      C1     C2     O1     .
+ AHM      H11    C1     .      .
+ AHM      H12    C1     .      .
+ AHM      O1     C1     P1     .
+ AHM      P1     O1     O3P    .
+ AHM      O1P    P1     .      .
+ AHM      O2P    P1     .      .
+ AHM      O3P    P1     .      END
+ AHM      C2     C3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AHM      O1P    P1        deloc       1.510    0.020
+ AHM      O2P    P1        deloc       1.510    0.020
+ AHM      O3P    P1        deloc       1.510    0.020
+ AHM      P1     O1        single      1.610    0.020
+ AHM      O1     C1        single      1.426    0.020
+ AHM      C1     C2        single      1.524    0.020
+ AHM      H11    C1        single      1.092    0.020
+ AHM      H12    C1        single      1.092    0.020
+ AHM      C2     C3        single      1.524    0.020
+ AHM      C2     O5        single      1.426    0.020
+ AHM      H2     C2        single      1.099    0.020
+ AHM      O3     C3        single      1.432    0.020
+ AHM      C3     C4        single      1.524    0.020
+ AHM      H3     C3        single      1.099    0.020
+ AHM      HO3    O3        single      0.967    0.020
+ AHM      O4     C4        single      1.432    0.020
+ AHM      C4     C5        single      1.524    0.020
+ AHM      H4     C4        single      1.099    0.020
+ AHM      HO4    O4        single      0.967    0.020
+ AHM      O5     C5        single      1.426    0.020
+ AHM      C5     C6        single      1.524    0.020
+ AHM      H5     C5        single      1.099    0.020
+ AHM      C6     O6        single      1.426    0.020
+ AHM      H61    C6        single      1.092    0.020
+ AHM      H62    C6        single      1.092    0.020
+ AHM      O6     P2        single      1.610    0.020
+ AHM      O4P    P2        deloc       1.510    0.020
+ AHM      O5P    P2        deloc       1.510    0.020
+ AHM      P2     O6P       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AHM      O6P    P2     O4P     119.900    3.000
+ AHM      O6P    P2     O5P     119.900    3.000
+ AHM      O6P    P2     O6      108.200    3.000
+ AHM      O4P    P2     O5P     119.900    3.000
+ AHM      O4P    P2     O6      108.200    3.000
+ AHM      O5P    P2     O6      108.200    3.000
+ AHM      P2     O6     C6      120.500    3.000
+ AHM      O6     C6     H61     109.470    3.000
+ AHM      O6     C6     H62     109.470    3.000
+ AHM      O6     C6     C5      109.470    3.000
+ AHM      H61    C6     H62     107.900    3.000
+ AHM      H61    C6     C5      109.470    3.000
+ AHM      H62    C6     C5      109.470    3.000
+ AHM      C6     C5     H5      108.340    3.000
+ AHM      C6     C5     C4      111.000    3.000
+ AHM      C6     C5     O5      109.470    3.000
+ AHM      H5     C5     C4      108.340    3.000
+ AHM      H5     C5     O5      109.470    3.000
+ AHM      C4     C5     O5      109.470    3.000
+ AHM      C5     C4     H4      108.340    3.000
+ AHM      C5     C4     O4      109.470    3.000
+ AHM      C5     C4     C3      111.000    3.000
+ AHM      H4     C4     O4      109.470    3.000
+ AHM      H4     C4     C3      108.340    3.000
+ AHM      O4     C4     C3      109.470    3.000
+ AHM      C4     O4     HO4     109.470    3.000
+ AHM      C4     C3     H3      108.340    3.000
+ AHM      C4     C3     O3      109.470    3.000
+ AHM      C4     C3     C2      111.000    3.000
+ AHM      H3     C3     O3      109.470    3.000
+ AHM      H3     C3     C2      108.340    3.000
+ AHM      O3     C3     C2      109.470    3.000
+ AHM      C3     O3     HO3     109.470    3.000
+ AHM      C5     O5     C2      111.800    3.000
+ AHM      O5     C2     H2      109.470    3.000
+ AHM      O5     C2     C1      109.470    3.000
+ AHM      O5     C2     C3      109.470    3.000
+ AHM      H2     C2     C1      108.340    3.000
+ AHM      H2     C2     C3      108.340    3.000
+ AHM      C1     C2     C3      111.000    3.000
+ AHM      C2     C1     H11     109.470    3.000
+ AHM      C2     C1     H12     109.470    3.000
+ AHM      C2     C1     O1      109.470    3.000
+ AHM      H11    C1     H12     107.900    3.000
+ AHM      H11    C1     O1      109.470    3.000
+ AHM      H12    C1     O1      109.470    3.000
+ AHM      C1     O1     P1      120.500    3.000
+ AHM      O1     P1     O1P     108.200    3.000
+ AHM      O1     P1     O2P     108.200    3.000
+ AHM      O1     P1     O3P     108.200    3.000
+ AHM      O1P    P1     O2P     119.900    3.000
+ AHM      O1P    P1     O3P     119.900    3.000
+ AHM      O2P    P1     O3P     119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AHM      var_1    O6P    P2     O6     C6       -59.925   20.000   1
+ AHM      var_2    P2     O6     C6     C5       179.955   20.000   1
+ AHM      var_3    O6     C6     C5     O5        61.806   20.000   3
+ AHM      var_4    C6     C5     C4     C3      -150.000   20.000   3
+ AHM      var_5    C5     C4     O4     HO4      174.359   20.000   1
+ AHM      var_6    C5     C4     C3     O3       150.000   20.000   3
+ AHM      var_7    C4     C3     O3     HO3       64.950   20.000   1
+ AHM      var_8    C6     C5     O5     C2       120.000   20.000   1
+ AHM      var_9    C5     O5     C2     C1       150.000   20.000   1
+ AHM      var_10   O5     C2     C3     C4       -30.000   20.000   3
+ AHM      var_11   O5     C2     C1     O1        61.446   20.000   3
+ AHM      var_12   C2     C1     O1     P1       179.957   20.000   1
+ AHM      var_13   C1     O1     P1     O3P      -59.939   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AHM      chir_01  C2     C1     C3     O5        positiv
+ AHM      chir_02  C3     C2     O3     C4        negativ
+ AHM      chir_03  C4     C3     O4     C5        positiv
+ AHM      chir_04  C5     C4     O5     C6        positiv
+# ------------------------------------------------------

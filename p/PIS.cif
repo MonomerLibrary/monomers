@@ -1,0 +1,111 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PIS      PIS 'TRIHYDROGEN THIODIPHOSPHATE         ' non-polymer        10   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PIS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PIS           O6     O    O         0.000      0.000    0.000    0.000
+ PIS           P2     P    P         0.000     -1.420    0.396    0.135
+ PIS           S1     S    S1       -1.000     -2.604   -1.327    0.482
+ PIS           O4     O    OH1       0.000     -1.577    1.415    1.373
+ PIS           HO4    H    H         0.000     -1.326    1.135    2.264
+ PIS           O1     O    O2        0.000     -1.907    1.119   -1.219
+ PIS           P1     P    P         0.000     -1.723    0.050   -2.409
+ PIS           O2     O    OP       -0.666     -0.255   -0.072   -2.755
+ PIS           O3     O    OP       -0.666     -2.492    0.514   -3.626
+ PIS           O5     O    OP       -0.666     -2.249   -1.296   -1.962
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PIS      O6     n/a    P2     START
+ PIS      P2     O6     O1     .
+ PIS      S1     P2     .      .
+ PIS      O4     P2     HO4    .
+ PIS      HO4    O4     .      .
+ PIS      O1     P2     P1     .
+ PIS      P1     O1     O5     .
+ PIS      O2     P1     .      .
+ PIS      O3     P1     .      .
+ PIS      O5     P1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PIS      P1     O1        single      1.610    0.020
+ PIS      O2     P1        deloc       1.510    0.020
+ PIS      O3     P1        deloc       1.510    0.020
+ PIS      O5     P1        deloc       1.510    0.020
+ PIS      O1     P2        single      1.610    0.020
+ PIS      S1     P2        single      1.950    0.020
+ PIS      O4     P2        single      1.610    0.020
+ PIS      P2     O6        double      1.480    0.020
+ PIS      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PIS      O6     P2     S1      109.500    3.000
+ PIS      O6     P2     O4      109.500    3.000
+ PIS      O6     P2     O1      109.500    3.000
+ PIS      S1     P2     O4      109.500    3.000
+ PIS      S1     P2     O1      109.500    3.000
+ PIS      O4     P2     O1      109.500    3.000
+ PIS      P2     O4     HO4     120.000    3.000
+ PIS      P2     O1     P1      120.500    3.000
+ PIS      O1     P1     O2      108.200    3.000
+ PIS      O1     P1     O3      108.200    3.000
+ PIS      O1     P1     O5      108.200    3.000
+ PIS      O2     P1     O3      119.900    3.000
+ PIS      O2     P1     O5      119.900    3.000
+ PIS      O3     P1     O5      119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PIS      var_1    O6     P2     O4     HO4      -59.994   20.000   1
+ PIS      var_2    O6     P2     O1     P1        59.989   20.000   1
+ PIS      var_3    P2     O1     P1     O5        44.985   20.000   1
+# ------------------------------------------------------

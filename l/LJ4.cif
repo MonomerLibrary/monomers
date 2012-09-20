@@ -1,0 +1,222 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LJ4      LJ4 '2,6-dibromo-4-phenoxyphenol         ' non-polymer        24  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LJ4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LJ4           BRAC   BR   BR        0.000      0.000    0.000    0.000
+ LJ4           CAM    C    CR6       0.000     -1.865   -0.313    0.000
+ LJ4           CAP    C    CR6       0.000     -2.747    0.758   -0.005
+ LJ4           OAA    O    OH1       0.000     -2.271    2.032   -0.009
+ LJ4           HOAA   H    H         0.000     -2.159    2.338    0.901
+ LJ4           CAL    C    CR6       0.000     -4.116    0.529   -0.004
+ LJ4           BRAB   BR   BR        0.000     -5.319    1.988   -0.010
+ LJ4           CAJ    C    CR16      0.000     -2.349   -1.607    0.005
+ LJ4           HAJ    H    H         0.000     -1.660   -2.443    0.010
+ LJ4           CAO    C    CR6       0.000     -3.717   -1.835    0.005
+ LJ4           CAI    C    CR16      0.000     -4.600   -0.766    0.001
+ LJ4           HAI    H    H         0.000     -5.668   -0.945    0.001
+ LJ4           OAK    O    O2        0.000     -4.193   -3.110    0.011
+ LJ4           CAN    C    CR6       0.000     -5.541   -3.287   -0.001
+ LJ4           CAH    C    CR16      0.000     -6.240   -3.374    1.194
+ LJ4           HAH    H    H         0.000     -5.713   -3.305    2.138
+ LJ4           CAF    C    CR16      0.000     -7.610   -3.550    1.179
+ LJ4           HAF    H    H         0.000     -8.158   -3.611    2.112
+ LJ4           CAD    C    CR16      0.000     -8.283   -3.649   -0.024
+ LJ4           HAD    H    H         0.000     -9.357   -3.791   -0.033
+ LJ4           CAE    C    CR16      0.000     -7.588   -3.568   -1.217
+ LJ4           HAE    H    H         0.000     -8.117   -3.646   -2.158
+ LJ4           CAG    C    CR16      0.000     -6.218   -3.386   -1.208
+ LJ4           HAG    H    H         0.000     -5.674   -3.321   -2.142
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LJ4      BRAC   n/a    CAM    START
+ LJ4      CAM    BRAC   CAJ    .
+ LJ4      CAP    CAM    CAL    .
+ LJ4      OAA    CAP    HOAA   .
+ LJ4      HOAA   OAA    .      .
+ LJ4      CAL    CAP    BRAB   .
+ LJ4      BRAB   CAL    .      .
+ LJ4      CAJ    CAM    CAO    .
+ LJ4      HAJ    CAJ    .      .
+ LJ4      CAO    CAJ    OAK    .
+ LJ4      CAI    CAO    HAI    .
+ LJ4      HAI    CAI    .      .
+ LJ4      OAK    CAO    CAN    .
+ LJ4      CAN    OAK    CAH    .
+ LJ4      CAH    CAN    CAF    .
+ LJ4      HAH    CAH    .      .
+ LJ4      CAF    CAH    CAD    .
+ LJ4      HAF    CAF    .      .
+ LJ4      CAD    CAF    CAE    .
+ LJ4      HAD    CAD    .      .
+ LJ4      CAE    CAD    CAG    .
+ LJ4      HAE    CAE    .      .
+ LJ4      CAG    CAE    HAG    .
+ LJ4      HAG    CAG    .      END
+ LJ4      CAI    CAL    .    ADD
+ LJ4      CAN    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LJ4      CAI    CAL       double      1.390    0.020
+ LJ4      CAI    CAO       single      1.390    0.020
+ LJ4      BRAB   CAL       single      1.890    0.020
+ LJ4      CAL    CAP       single      1.487    0.020
+ LJ4      OAA    CAP       single      1.362    0.020
+ LJ4      CAP    CAM       double      1.487    0.020
+ LJ4      CAM    BRAC      single      1.890    0.020
+ LJ4      CAJ    CAM       single      1.390    0.020
+ LJ4      CAO    CAJ       double      1.390    0.020
+ LJ4      OAK    CAO       single      1.370    0.020
+ LJ4      CAN    OAK       single      1.370    0.020
+ LJ4      CAN    CAG       double      1.390    0.020
+ LJ4      CAH    CAN       single      1.390    0.020
+ LJ4      CAG    CAE       single      1.390    0.020
+ LJ4      CAE    CAD       double      1.390    0.020
+ LJ4      CAD    CAF       single      1.390    0.020
+ LJ4      CAF    CAH       double      1.390    0.020
+ LJ4      HAI    CAI       single      1.083    0.020
+ LJ4      HOAA   OAA       single      0.967    0.020
+ LJ4      HAJ    CAJ       single      1.083    0.020
+ LJ4      HAG    CAG       single      1.083    0.020
+ LJ4      HAE    CAE       single      1.083    0.020
+ LJ4      HAD    CAD       single      1.083    0.020
+ LJ4      HAF    CAF       single      1.083    0.020
+ LJ4      HAH    CAH       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LJ4      BRAC   CAM    CAP     120.000    3.000
+ LJ4      BRAC   CAM    CAJ     120.000    3.000
+ LJ4      CAP    CAM    CAJ     120.000    3.000
+ LJ4      CAM    CAP    OAA     120.000    3.000
+ LJ4      CAM    CAP    CAL     120.000    3.000
+ LJ4      OAA    CAP    CAL     120.000    3.000
+ LJ4      CAP    OAA    HOAA    109.470    3.000
+ LJ4      CAP    CAL    BRAB    120.000    3.000
+ LJ4      CAP    CAL    CAI     120.000    3.000
+ LJ4      BRAB   CAL    CAI     120.000    3.000
+ LJ4      CAM    CAJ    HAJ     120.000    3.000
+ LJ4      CAM    CAJ    CAO     120.000    3.000
+ LJ4      HAJ    CAJ    CAO     120.000    3.000
+ LJ4      CAJ    CAO    CAI     120.000    3.000
+ LJ4      CAJ    CAO    OAK     120.000    3.000
+ LJ4      CAI    CAO    OAK     120.000    3.000
+ LJ4      CAO    CAI    HAI     120.000    3.000
+ LJ4      CAO    CAI    CAL     120.000    3.000
+ LJ4      HAI    CAI    CAL     120.000    3.000
+ LJ4      CAO    OAK    CAN     120.000    3.000
+ LJ4      OAK    CAN    CAH     120.000    3.000
+ LJ4      OAK    CAN    CAG     120.000    3.000
+ LJ4      CAH    CAN    CAG     120.000    3.000
+ LJ4      CAN    CAH    HAH     120.000    3.000
+ LJ4      CAN    CAH    CAF     120.000    3.000
+ LJ4      HAH    CAH    CAF     120.000    3.000
+ LJ4      CAH    CAF    HAF     120.000    3.000
+ LJ4      CAH    CAF    CAD     120.000    3.000
+ LJ4      HAF    CAF    CAD     120.000    3.000
+ LJ4      CAF    CAD    HAD     120.000    3.000
+ LJ4      CAF    CAD    CAE     120.000    3.000
+ LJ4      HAD    CAD    CAE     120.000    3.000
+ LJ4      CAD    CAE    HAE     120.000    3.000
+ LJ4      CAD    CAE    CAG     120.000    3.000
+ LJ4      HAE    CAE    CAG     120.000    3.000
+ LJ4      CAE    CAG    HAG     120.000    3.000
+ LJ4      CAE    CAG    CAN     120.000    3.000
+ LJ4      HAG    CAG    CAN     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LJ4      CONST_1  BRAC   CAM    CAP    CAL      180.000    0.000   0
+ LJ4      var_1    CAM    CAP    OAA    HOAA     -90.008   20.000   1
+ LJ4      CONST_2  CAM    CAP    CAL    BRAB     180.000    0.000   0
+ LJ4      CONST_3  BRAC   CAM    CAJ    CAO      180.000    0.000   0
+ LJ4      CONST_4  CAM    CAJ    CAO    OAK      180.000    0.000   0
+ LJ4      CONST_5  CAJ    CAO    CAI    CAL        0.000    0.000   0
+ LJ4      CONST_6  CAO    CAI    CAL    CAP        0.000    0.000   0
+ LJ4      var_2    CAJ    CAO    OAK    CAN     -179.443   20.000   1
+ LJ4      var_3    CAO    OAK    CAN    CAH      -90.314   20.000   1
+ LJ4      CONST_7  OAK    CAN    CAG    CAE      180.000    0.000   0
+ LJ4      CONST_8  OAK    CAN    CAH    CAF      180.000    0.000   0
+ LJ4      CONST_9  CAN    CAH    CAF    CAD        0.000    0.000   0
+ LJ4      CONST_10 CAH    CAF    CAD    CAE        0.000    0.000   0
+ LJ4      CONST_11 CAF    CAD    CAE    CAG        0.000    0.000   0
+ LJ4      CONST_12 CAD    CAE    CAG    CAN        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LJ4      plan-1    CAI       0.020
+ LJ4      plan-1    CAL       0.020
+ LJ4      plan-1    CAO       0.020
+ LJ4      plan-1    HAI       0.020
+ LJ4      plan-1    CAP       0.020
+ LJ4      plan-1    CAM       0.020
+ LJ4      plan-1    CAJ       0.020
+ LJ4      plan-1    BRAB      0.020
+ LJ4      plan-1    OAA       0.020
+ LJ4      plan-1    BRAC      0.020
+ LJ4      plan-1    HAJ       0.020
+ LJ4      plan-1    OAK       0.020
+ LJ4      plan-2    CAN       0.020
+ LJ4      plan-2    OAK       0.020
+ LJ4      plan-2    CAG       0.020
+ LJ4      plan-2    CAH       0.020
+ LJ4      plan-2    CAE       0.020
+ LJ4      plan-2    CAD       0.020
+ LJ4      plan-2    CAF       0.020
+ LJ4      plan-2    HAG       0.020
+ LJ4      plan-2    HAE       0.020
+ LJ4      plan-2    HAD       0.020
+ LJ4      plan-2    HAF       0.020
+ LJ4      plan-2    HAH       0.020
+# ------------------------------------------------------

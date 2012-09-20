@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DPN      DPN 'D-PHENYLALANINE                     ' peptide            22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DPN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DPN           N      N    NH2       0.000      0.000    0.000    0.000
+ DPN           HN1    H    H         0.000      0.589    0.326    0.757
+ DPN           HN2    H    H         0.000      0.389   -0.082   -0.932
+ DPN           CA     C    CH1       0.000     -1.404   -0.351    0.251
+ DPN           HA     H    H         0.000     -1.592   -1.377   -0.094
+ DPN           CB     C    CH2       0.000     -2.316    0.617   -0.506
+ DPN           HB2    H    H         0.000     -2.068    1.643   -0.228
+ DPN           HB3    H    H         0.000     -3.357    0.413   -0.249
+ DPN           CG     C    CR6       0.000     -2.119    0.436   -1.989
+ DPN           CD2    C    CR16      0.000     -1.165    1.183   -2.656
+ DPN           HD2    H    H         0.000     -0.559    1.898   -2.113
+ DPN           CE2    C    CR16      0.000     -0.985    1.017   -4.016
+ DPN           HE2    H    H         0.000     -0.239    1.603   -4.539
+ DPN           CZ     C    CR16      0.000     -1.757    0.104   -4.710
+ DPN           HZ     H    H         0.000     -1.613   -0.030   -5.775
+ DPN           CE1    C    CR16      0.000     -2.714   -0.639   -4.043
+ DPN           HE1    H    H         0.000     -3.321   -1.352   -4.587
+ DPN           CD1    C    CR16      0.000     -2.894   -0.473   -2.683
+ DPN           HD1    H    H         0.000     -3.644   -1.054   -2.161
+ DPN           C      C    C         0.000     -1.689   -0.257    1.728
+ DPN           O      O    OC       -0.500     -0.940    0.418    2.468
+ DPN           OXT    O    OC       -0.500     -2.675   -0.854    2.215
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DPN      N      n/a    CA     START
+ DPN      HN1    N      .      .
+ DPN      HN2    N      .      .
+ DPN      CA     N      C      .
+ DPN      HA     CA     .      .
+ DPN      CB     CA     CG     .
+ DPN      HB2    CB     .      .
+ DPN      HB3    CB     .      .
+ DPN      CG     CB     CD2    .
+ DPN      CD2    CG     CE2    .
+ DPN      HD2    CD2    .      .
+ DPN      CE2    CD2    CZ     .
+ DPN      HE2    CE2    .      .
+ DPN      CZ     CE2    CE1    .
+ DPN      HZ     CZ     .      .
+ DPN      CE1    CZ     CD1    .
+ DPN      HE1    CE1    .      .
+ DPN      CD1    CE1    HD1    .
+ DPN      HD1    CD1    .      .
+ DPN      C      CA     .      END
+ DPN      O      C      .      .
+ DPN      OXT    C      .      .
+ DPN      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DPN      CA     N         single      1.450    0.020
+ DPN      C      CA        single      1.500    0.020
+ DPN      CB     CA        single      1.524    0.020
+ DPN      HA     CA        single      1.099    0.020
+ DPN      O      C         deloc       1.250    0.020
+ DPN      OXT    C         deloc       1.250    0.020
+ DPN      CG     CB        single      1.511    0.020
+ DPN      HB2    CB        single      1.092    0.020
+ DPN      HB3    CB        single      1.092    0.020
+ DPN      CG     CD1       double      1.390    0.020
+ DPN      CD2    CG        single      1.390    0.020
+ DPN      CD1    CE1       single      1.390    0.020
+ DPN      HD1    CD1       single      1.083    0.020
+ DPN      CE2    CD2       double      1.390    0.020
+ DPN      HD2    CD2       single      1.083    0.020
+ DPN      CE1    CZ        double      1.390    0.020
+ DPN      HE1    CE1       single      1.083    0.020
+ DPN      CZ     CE2       single      1.390    0.020
+ DPN      HE2    CE2       single      1.083    0.020
+ DPN      HZ     CZ        single      1.083    0.020
+ DPN      HN1    N         single      1.010    0.020
+ DPN      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DPN      HN1    N      HN2     120.000    3.000
+ DPN      HN1    N      CA      120.000    3.000
+ DPN      HN2    N      CA      120.000    3.000
+ DPN      N      CA     HA      109.470    3.000
+ DPN      N      CA     CB      109.470    3.000
+ DPN      N      CA     C       109.470    3.000
+ DPN      HA     CA     CB      108.340    3.000
+ DPN      HA     CA     C       108.810    3.000
+ DPN      CB     CA     C       109.470    3.000
+ DPN      CA     CB     HB2     109.470    3.000
+ DPN      CA     CB     HB3     109.470    3.000
+ DPN      CA     CB     CG      109.470    3.000
+ DPN      HB2    CB     HB3     107.900    3.000
+ DPN      HB2    CB     CG      109.470    3.000
+ DPN      HB3    CB     CG      109.470    3.000
+ DPN      CB     CG     CD2     120.000    3.000
+ DPN      CB     CG     CD1     120.000    3.000
+ DPN      CD2    CG     CD1     120.000    3.000
+ DPN      CG     CD2    HD2     120.000    3.000
+ DPN      CG     CD2    CE2     120.000    3.000
+ DPN      HD2    CD2    CE2     120.000    3.000
+ DPN      CD2    CE2    HE2     120.000    3.000
+ DPN      CD2    CE2    CZ      120.000    3.000
+ DPN      HE2    CE2    CZ      120.000    3.000
+ DPN      CE2    CZ     HZ      120.000    3.000
+ DPN      CE2    CZ     CE1     120.000    3.000
+ DPN      HZ     CZ     CE1     120.000    3.000
+ DPN      CZ     CE1    HE1     120.000    3.000
+ DPN      CZ     CE1    CD1     120.000    3.000
+ DPN      HE1    CE1    CD1     120.000    3.000
+ DPN      CE1    CD1    HD1     120.000    3.000
+ DPN      CE1    CD1    CG      120.000    3.000
+ DPN      HD1    CD1    CG      120.000    3.000
+ DPN      CA     C      O       118.500    3.000
+ DPN      CA     C      OXT     118.500    3.000
+ DPN      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DPN      var_1    HN2    N      CA     C        175.000   20.000   1
+ DPN      var_2    N      CA     CB     CG        65.009   20.000   3
+ DPN      var_3    CA     CB     CG     CD2      -90.230   20.000   2
+ DPN      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ DPN      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ DPN      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ DPN      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ DPN      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ DPN      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DPN      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DPN      plan-1    N         0.020
+ DPN      plan-1    CA        0.020
+ DPN      plan-1    HN1       0.020
+ DPN      plan-1    HN2       0.020
+ DPN      plan-2    C         0.020
+ DPN      plan-2    CA        0.020
+ DPN      plan-2    O         0.020
+ DPN      plan-2    OXT       0.020
+ DPN      plan-3    CG        0.020
+ DPN      plan-3    CB        0.020
+ DPN      plan-3    CD1       0.020
+ DPN      plan-3    CD2       0.020
+ DPN      plan-3    CE1       0.020
+ DPN      plan-3    CE2       0.020
+ DPN      plan-3    CZ        0.020
+ DPN      plan-3    HD1       0.020
+ DPN      plan-3    HD2       0.020
+ DPN      plan-3    HE1       0.020
+ DPN      plan-3    HE2       0.020
+ DPN      plan-3    HZ        0.020
+# ------------------------------------------------------

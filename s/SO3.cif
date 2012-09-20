@@ -1,0 +1,78 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SO3      SO3 'SULFITE ION                         ' non-polymer         4   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SO3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SO3           O3     O    OS       -1.000      0.000    0.000    0.000
+ SO3           S      S    S3        0.000     -1.051    0.648    0.830
+ SO3           O1     O    OS        0.000     -2.021   -0.476    0.943
+ SO3           O2     O    OS       -1.000     -0.408    0.569    2.170
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SO3      O3     n/a    S      START
+ SO3      S      O3     O2     .
+ SO3      O1     S      .      .
+ SO3      O2     S      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SO3      O1     S         double      1.800    0.020
+ SO3      O2     S         single      1.800    0.020
+ SO3      S      O3        single      1.800    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SO3      O3     S      O1      100.012    3.000
+ SO3      O3     S      O2      100.030    3.000
+ SO3      O1     S      O2       99.989    3.000
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SO3      chir_01  S      O1     O2     O3        negativ
+# ------------------------------------------------------

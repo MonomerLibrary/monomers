@@ -1,0 +1,183 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4NM      4NM '4-NITROPHENYL METHANETHIOL          ' non-polymer        19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4NM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4NM           OAB    O    O         0.000      0.000    0.000    0.000
+ 4NM           NAK    N    N         1.000     -0.091    1.153    0.381
+ 4NM           OAC    O    OH1       0.000     -0.542    1.352    1.490
+ 4NM           HOA    H    H         0.000      0.011    0.880    2.108
+ 4NM           CAJ    C    CR6       0.000      0.228    2.207   -0.496
+ 4NM           CAF    C    CR16      0.000      0.393    1.895   -1.852
+ 4NM           HAF    H    H         0.000      0.311    0.864   -2.174
+ 4NM           CAG    C    CR16      0.000      0.350    3.541   -0.074
+ 4NM           HAG    H    H         0.000      0.220    3.802    0.969
+ 4NM           CAE    C    CR16      0.000      0.640    4.525   -1.023
+ 4NM           HAE    H    H         0.000      0.755    5.554   -0.704
+ 4NM           C1     C    CR6       0.000      0.787    4.203   -2.388
+ 4NM           CAD    C    CR16      0.000      0.659    2.885   -2.793
+ 4NM           HAD    H    H         0.000      0.767    2.625   -3.839
+ 4NM           CAA    C    CH2       0.000      1.095    5.238   -3.457
+ 4NM           HAA1   H    H         0.000      0.360    6.045   -3.439
+ 4NM           HAA2   H    H         0.000      1.107    4.780   -4.448
+ 4NM           SAH    S    SH1       0.000      2.730    5.901   -3.077
+ 4NM           HAH    H    H         0.000      3.040    6.233   -4.327
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4NM      OAB    n/a    NAK    START
+ 4NM      NAK    OAB    CAJ    .
+ 4NM      OAC    NAK    HOA    .
+ 4NM      HOA    OAC    .      .
+ 4NM      CAJ    NAK    CAG    .
+ 4NM      CAF    CAJ    HAF    .
+ 4NM      HAF    CAF    .      .
+ 4NM      CAG    CAJ    CAE    .
+ 4NM      HAG    CAG    .      .
+ 4NM      CAE    CAG    C1     .
+ 4NM      HAE    CAE    .      .
+ 4NM      C1     CAE    CAA    .
+ 4NM      CAD    C1     HAD    .
+ 4NM      HAD    CAD    .      .
+ 4NM      CAA    C1     SAH    .
+ 4NM      HAA1   CAA    .      .
+ 4NM      HAA2   CAA    .      .
+ 4NM      SAH    CAA    HAH    .
+ 4NM      HAH    SAH    .      END
+ 4NM      CAD    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4NM      SAH    CAA       single      1.810    0.020
+ 4NM      CAA    C1        single      1.511    0.020
+ 4NM      CAD    CAF       double      1.390    0.020
+ 4NM      CAD    C1        single      1.390    0.020
+ 4NM      CAF    CAJ       single      1.390    0.020
+ 4NM      CAJ    NAK       single      1.400    0.020
+ 4NM      CAG    CAJ       double      1.390    0.020
+ 4NM      OAC    NAK       single      1.392    0.020
+ 4NM      NAK    OAB       double      1.220    0.020
+ 4NM      CAE    CAG       single      1.390    0.020
+ 4NM      C1     CAE       double      1.390    0.020
+ 4NM      HAA1   CAA       single      1.092    0.020
+ 4NM      HAA2   CAA       single      1.092    0.020
+ 4NM      HAH    SAH       single      1.330    0.020
+ 4NM      HAD    CAD       single      1.083    0.020
+ 4NM      HAF    CAF       single      1.083    0.020
+ 4NM      HAG    CAG       single      1.083    0.020
+ 4NM      HAE    CAE       single      1.083    0.020
+ 4NM      HOA    OAC       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4NM      OAB    NAK    OAC     120.000    3.000
+ 4NM      OAB    NAK    CAJ     120.000    3.000
+ 4NM      OAC    NAK    CAJ     120.000    3.000
+ 4NM      NAK    OAC    HOA     109.470    3.000
+ 4NM      NAK    CAJ    CAF     120.000    3.000
+ 4NM      NAK    CAJ    CAG     120.000    3.000
+ 4NM      CAF    CAJ    CAG     120.000    3.000
+ 4NM      CAJ    CAF    HAF     120.000    3.000
+ 4NM      CAJ    CAF    CAD     120.000    3.000
+ 4NM      HAF    CAF    CAD     120.000    3.000
+ 4NM      CAJ    CAG    HAG     120.000    3.000
+ 4NM      CAJ    CAG    CAE     120.000    3.000
+ 4NM      HAG    CAG    CAE     120.000    3.000
+ 4NM      CAG    CAE    HAE     120.000    3.000
+ 4NM      CAG    CAE    C1      120.000    3.000
+ 4NM      HAE    CAE    C1      120.000    3.000
+ 4NM      CAE    C1     CAD     120.000    3.000
+ 4NM      CAE    C1     CAA     120.000    3.000
+ 4NM      CAD    C1     CAA     120.000    3.000
+ 4NM      C1     CAD    HAD     120.000    3.000
+ 4NM      C1     CAD    CAF     120.000    3.000
+ 4NM      HAD    CAD    CAF     120.000    3.000
+ 4NM      C1     CAA    HAA1    109.470    3.000
+ 4NM      C1     CAA    HAA2    109.470    3.000
+ 4NM      C1     CAA    SAH     109.500    3.000
+ 4NM      HAA1   CAA    HAA2    107.900    3.000
+ 4NM      HAA1   CAA    SAH     109.470    3.000
+ 4NM      HAA2   CAA    SAH     109.470    3.000
+ 4NM      CAA    SAH    HAH      96.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4NM      var_1    OAB    NAK    OAC    HOA       57.937   20.000   1
+ 4NM      var_2    OAB    NAK    CAJ    CAG     -169.764   20.000   1
+ 4NM      CONST_1  NAK    CAJ    CAF    CAD      180.000    0.000   0
+ 4NM      CONST_2  NAK    CAJ    CAG    CAE      180.000    0.000   0
+ 4NM      CONST_3  CAJ    CAG    CAE    C1         0.000    0.000   0
+ 4NM      CONST_4  CAG    CAE    C1     CAA      180.000    0.000   0
+ 4NM      CONST_5  CAE    C1     CAD    CAF        0.000    0.000   0
+ 4NM      CONST_6  C1     CAD    CAF    CAJ        0.000    0.000   0
+ 4NM      var_3    CAE    C1     CAA    SAH       64.186   20.000   2
+ 4NM      var_4    C1     CAA    SAH    HAH      152.945   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4NM      plan-1    CAD       0.020
+ 4NM      plan-1    CAF       0.020
+ 4NM      plan-1    C1        0.020
+ 4NM      plan-1    HAD       0.020
+ 4NM      plan-1    CAJ       0.020
+ 4NM      plan-1    CAG       0.020
+ 4NM      plan-1    CAE       0.020
+ 4NM      plan-1    HAF       0.020
+ 4NM      plan-1    NAK       0.020
+ 4NM      plan-1    HAG       0.020
+ 4NM      plan-1    CAA       0.020
+ 4NM      plan-1    HAE       0.020
+ 4NM      plan-2    NAK       0.020
+ 4NM      plan-2    CAJ       0.020
+ 4NM      plan-2    OAC       0.020
+ 4NM      plan-2    OAB       0.020
+# ------------------------------------------------------

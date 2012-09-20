@@ -1,0 +1,217 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HSA      HSA 'PHOSPHORIC ACID MONO-[2-AMINO-3-(3H-' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HSA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HSA           OP3    O    OP       -0.666      0.000    0.000    0.000
+ HSA           P      P    P         0.000     -0.451    0.625   -1.302
+ HSA           OP1    O    OP       -0.666     -0.222   -0.349   -2.436
+ HSA           OP2    O    OP       -0.666      0.342    1.889   -1.554
+ HSA           OP4    O    O2        0.000     -2.018    0.984   -1.208
+ HSA           C      C    CH2       0.000     -2.710   -0.242   -0.971
+ HSA           H41    H    H         0.000     -2.356   -0.683   -0.036
+ HSA           H42    H    H         0.000     -2.516   -0.933   -1.793
+ HSA           CA     C    CH1       0.000     -4.211    0.029   -0.873
+ HSA           HA     H    H         0.000     -4.404    0.725   -0.045
+ HSA           N      N    NH2       0.000     -4.685    0.621   -2.130
+ HSA           HN2    H    H         0.000     -5.113    1.540   -2.133
+ HSA           HN1    H    H         0.000     -4.587    0.115   -3.002
+ HSA           CB     C    CH2       0.000     -4.952   -1.285   -0.618
+ HSA           HB1    H    H         0.000     -4.598   -1.726    0.317
+ HSA           HB2    H    H         0.000     -4.760   -1.976   -1.441
+ HSA           CG     C    CR5       0.000     -6.431   -1.016   -0.520
+ HSA           ND1    N    NRD5      0.000     -7.031   -0.221    0.376
+ HSA           CE1    C    CR15      0.000     -8.318   -0.224    0.162
+ HSA           HE1    H    H         0.000     -9.053    0.333    0.729
+ HSA           NE2    N    NR15      0.000     -8.581   -1.036   -0.882
+ HSA           HE2    H    H         0.000     -9.518   -1.241   -1.284
+ HSA           CD2    C    CR15      0.000     -7.384   -1.540   -1.315
+ HSA           HD2    H    H         0.000     -7.232   -2.227   -2.138
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HSA      OP3    n/a    P      START
+ HSA      P      OP3    OP4    .
+ HSA      OP1    P      .      .
+ HSA      OP2    P      .      .
+ HSA      OP4    P      C      .
+ HSA      C      OP4    CA     .
+ HSA      H41    C      .      .
+ HSA      H42    C      .      .
+ HSA      CA     C      CB     .
+ HSA      HA     CA     .      .
+ HSA      N      CA     HN1    .
+ HSA      HN2    N      .      .
+ HSA      HN1    N      .      .
+ HSA      CB     CA     CG     .
+ HSA      HB1    CB     .      .
+ HSA      HB2    CB     .      .
+ HSA      CG     CB     ND1    .
+ HSA      ND1    CG     CE1    .
+ HSA      CE1    ND1    NE2    .
+ HSA      HE1    CE1    .      .
+ HSA      NE2    CE1    CD2    .
+ HSA      HE2    NE2    .      .
+ HSA      CD2    NE2    HD2    .
+ HSA      HD2    CD2    .      END
+ HSA      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HSA      CG     CB        single      1.510    0.020
+ HSA      CB     CA        single      1.524    0.020
+ HSA      HB1    CB        single      1.092    0.020
+ HSA      HB2    CB        single      1.092    0.020
+ HSA      CG     CD2       double      1.387    0.020
+ HSA      ND1    CG        single      1.350    0.020
+ HSA      CD2    NE2       single      1.350    0.020
+ HSA      HD2    CD2       single      1.083    0.020
+ HSA      CE1    ND1       double      1.350    0.020
+ HSA      NE2    CE1       single      1.350    0.020
+ HSA      HE1    CE1       single      1.083    0.020
+ HSA      HE2    NE2       single      1.040    0.020
+ HSA      C      OP4       single      1.426    0.020
+ HSA      CA     C         single      1.524    0.020
+ HSA      H41    C         single      1.092    0.020
+ HSA      H42    C         single      1.092    0.020
+ HSA      OP4    P         single      1.610    0.020
+ HSA      OP1    P         deloc       1.510    0.020
+ HSA      OP2    P         deloc       1.510    0.020
+ HSA      P      OP3       deloc       1.510    0.020
+ HSA      N      CA        single      1.450    0.020
+ HSA      HN1    N         single      1.010    0.020
+ HSA      HN2    N         single      1.010    0.020
+ HSA      HA     CA        single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HSA      OP3    P      OP1     119.900    3.000
+ HSA      OP3    P      OP2     119.900    3.000
+ HSA      OP3    P      OP4     108.200    3.000
+ HSA      OP1    P      OP2     119.900    3.000
+ HSA      OP1    P      OP4     108.200    3.000
+ HSA      OP2    P      OP4     108.200    3.000
+ HSA      P      OP4    C       120.500    3.000
+ HSA      OP4    C      H41     109.470    3.000
+ HSA      OP4    C      H42     109.470    3.000
+ HSA      OP4    C      CA      109.470    3.000
+ HSA      H41    C      H42     107.900    3.000
+ HSA      H41    C      CA      109.470    3.000
+ HSA      H42    C      CA      109.470    3.000
+ HSA      C      CA     HA      108.340    3.000
+ HSA      C      CA     N       109.470    3.000
+ HSA      C      CA     CB      109.470    3.000
+ HSA      HA     CA     N       109.470    3.000
+ HSA      HA     CA     CB      108.340    3.000
+ HSA      N      CA     CB      109.470    3.000
+ HSA      CA     N      HN2     120.000    3.000
+ HSA      CA     N      HN1     120.000    3.000
+ HSA      HN2    N      HN1     120.000    3.000
+ HSA      CA     CB     HB1     109.470    3.000
+ HSA      CA     CB     HB2     109.470    3.000
+ HSA      CA     CB     CG      109.470    3.000
+ HSA      HB1    CB     HB2     107.900    3.000
+ HSA      HB1    CB     CG      109.470    3.000
+ HSA      HB2    CB     CG      109.470    3.000
+ HSA      CB     CG     ND1     126.000    3.000
+ HSA      CB     CG     CD2     126.000    3.000
+ HSA      ND1    CG     CD2     108.000    3.000
+ HSA      CG     ND1    CE1     108.000    3.000
+ HSA      ND1    CE1    HE1     126.000    3.000
+ HSA      ND1    CE1    NE2     108.000    3.000
+ HSA      HE1    CE1    NE2     126.000    3.000
+ HSA      CE1    NE2    HE2     126.000    3.000
+ HSA      CE1    NE2    CD2     108.000    3.000
+ HSA      HE2    NE2    CD2     126.000    3.000
+ HSA      NE2    CD2    HD2     126.000    3.000
+ HSA      NE2    CD2    CG      108.000    3.000
+ HSA      HD2    CD2    CG      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HSA      var_1    OP3    P      OP4    C        -60.102   20.000   1
+ HSA      var_2    P      OP4    C      CA      -179.918   20.000   1
+ HSA      var_3    OP4    C      CA     CB      -179.974   20.000   3
+ HSA      var_4    C      CA     N      HN1       60.010   20.000   1
+ HSA      var_5    C      CA     CB     CG       179.940   20.000   3
+ HSA      var_6    CA     CB     CG     ND1      -60.315   20.000   2
+ HSA      CONST_1  CB     CG     CD2    NE2      180.000    0.000   0
+ HSA      CONST_2  CB     CG     ND1    CE1      180.000    0.000   0
+ HSA      CONST_3  CG     ND1    CE1    NE2        0.000    0.000   0
+ HSA      CONST_4  ND1    CE1    NE2    CD2        0.000    0.000   0
+ HSA      CONST_5  CE1    NE2    CD2    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HSA      chir_01  CA     CB     C      N         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HSA      plan-1    CG        0.020
+ HSA      plan-1    CB        0.020
+ HSA      plan-1    CD2       0.020
+ HSA      plan-1    ND1       0.020
+ HSA      plan-1    CE1       0.020
+ HSA      plan-1    NE2       0.020
+ HSA      plan-1    HD2       0.020
+ HSA      plan-1    HE1       0.020
+ HSA      plan-1    HE2       0.020
+ HSA      plan-2    N         0.020
+ HSA      plan-2    CA        0.020
+ HSA      plan-2    HN1       0.020
+ HSA      plan-2    HN2       0.020
+# ------------------------------------------------------

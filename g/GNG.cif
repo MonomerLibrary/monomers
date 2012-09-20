@@ -1,0 +1,281 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GNG      GNG '2'-DEOXY-GUANOSINE                  ' non-polymer        32  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GNG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GNG           O6     O    O         0.000      0.000    0.000    0.000
+ GNG           C6     C    CR6       0.000     -0.920    0.230   -0.770
+ GNG           C5     C    CR56      0.000     -2.312    0.023   -0.358
+ GNG           N7     N    NRD5      0.000     -2.911   -0.404    0.778
+ GNG           C8     C    CR15      0.000     -4.201   -0.402    0.607
+ GNG           H8     H    H         0.000     -4.931   -0.696    1.351
+ GNG           N1     N    NRD6      0.000     -0.678    0.677   -2.011
+ GNG           C2     C    CR6       0.000     -1.658    0.930   -2.851
+ GNG           N2     N    NH2       0.000     -1.350    1.386   -4.105
+ GNG           HN22   H    H         0.000     -2.087    1.588   -4.770
+ GNG           HN21   H    H         0.000     -0.384    1.523   -4.375
+ GNG           N3     N    NR16      0.000     -2.966    0.761   -2.520
+ GNG           HN3    H    H         0.000     -3.707    0.982   -3.215
+ GNG           C4     C    CR56      0.000     -3.315    0.301   -1.276
+ GNG           N9     N    NR5       0.000     -4.493    0.029   -0.653
+ GNG           "C1'"  C    CH1       0.000     -5.832    0.174   -1.230
+ GNG           "H1'"  H    H         0.000     -5.837    0.992   -1.963
+ GNG           "O4'"  O    O2        0.000     -6.786    0.444   -0.190
+ GNG           "C2'"  C    CH2       0.000     -6.253   -1.141   -1.911
+ GNG           "H2'1" H    H         0.000     -5.506   -1.927   -1.782
+ GNG           "H2'2" H    H         0.000     -6.456   -1.004   -2.975
+ GNG           "C3'"  C    CH1       0.000     -7.559   -1.545   -1.182
+ GNG           "H3'"  H    H         0.000     -7.354   -2.280   -0.391
+ GNG           "O3'"  O    OH1       0.000     -8.524   -2.049   -2.107
+ GNG           H1     H    H         0.000     -8.174   -2.840   -2.538
+ GNG           "C4'"  C    CH1       0.000     -8.023   -0.196   -0.576
+ GNG           "H4'"  H    H         0.000     -8.550    0.405   -1.330
+ GNG           "C5'"  C    CH2       0.000     -8.916   -0.433    0.643
+ GNG           "H5'1" H    H         0.000     -8.359   -0.989    1.400
+ GNG           "H5'2" H    H         0.000     -9.795   -1.008    0.343
+ GNG           "O5'"  O    OH1       0.000     -9.329    0.825    1.181
+ GNG           "H5'"  H    H         0.000     -9.894    0.675    1.951
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GNG      O6     n/a    C6     START
+ GNG      C6     O6     N1     .
+ GNG      C5     C6     N7     .
+ GNG      N7     C5     C8     .
+ GNG      C8     N7     H8     .
+ GNG      H8     C8     .      .
+ GNG      N1     C6     C2     .
+ GNG      C2     N1     N3     .
+ GNG      N2     C2     HN21   .
+ GNG      HN22   N2     .      .
+ GNG      HN21   N2     .      .
+ GNG      N3     C2     C4     .
+ GNG      HN3    N3     .      .
+ GNG      C4     N3     N9     .
+ GNG      N9     C4     "C1'"  .
+ GNG      "C1'"  N9     "C2'"  .
+ GNG      "H1'"  "C1'"  .      .
+ GNG      "O4'"  "C1'"  .      .
+ GNG      "C2'"  "C1'"  "C3'"  .
+ GNG      "H2'1" "C2'"  .      .
+ GNG      "H2'2" "C2'"  .      .
+ GNG      "C3'"  "C2'"  "C4'"  .
+ GNG      "H3'"  "C3'"  .      .
+ GNG      "O3'"  "C3'"  H1     .
+ GNG      H1     "O3'"  .      .
+ GNG      "C4'"  "C3'"  "C5'"  .
+ GNG      "H4'"  "C4'"  .      .
+ GNG      "C5'"  "C4'"  "O5'"  .
+ GNG      "H5'1" "C5'"  .      .
+ GNG      "H5'2" "C5'"  .      .
+ GNG      "O5'"  "C5'"  "H5'"  .
+ GNG      "H5'"  "O5'"  .      END
+ GNG      "C4'"  "O4'"  .    ADD
+ GNG      N9     C8     .    ADD
+ GNG      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GNG      "O5'"  "C5'"     single      1.432    0.020
+ GNG      "H5'"  "O5'"     single      0.967    0.020
+ GNG      "C5'"  "C4'"     single      1.524    0.020
+ GNG      "H5'1" "C5'"     single      1.092    0.020
+ GNG      "H5'2" "C5'"     single      1.092    0.020
+ GNG      "C4'"  "O4'"     single      1.426    0.020
+ GNG      "C4'"  "C3'"     single      1.524    0.020
+ GNG      "H4'"  "C4'"     single      1.099    0.020
+ GNG      "O4'"  "C1'"     single      1.426    0.020
+ GNG      "C1'"  N9        single      1.485    0.020
+ GNG      "C2'"  "C1'"     single      1.524    0.020
+ GNG      "H1'"  "C1'"     single      1.099    0.020
+ GNG      N9     C8        single      1.337    0.020
+ GNG      N9     C4        single      1.337    0.020
+ GNG      C8     N7        double      1.350    0.020
+ GNG      H8     C8        single      1.083    0.020
+ GNG      N7     C5        single      1.350    0.020
+ GNG      C5     C4        double      1.490    0.020
+ GNG      C5     C6        single      1.490    0.020
+ GNG      C4     N3        single      1.337    0.020
+ GNG      N3     C2        single      1.337    0.020
+ GNG      HN3    N3        single      1.040    0.020
+ GNG      C2     N1        double      1.350    0.020
+ GNG      N2     C2        single      1.355    0.020
+ GNG      N1     C6        single      1.350    0.020
+ GNG      C6     O6        double      1.250    0.020
+ GNG      HN21   N2        single      1.010    0.020
+ GNG      HN22   N2        single      1.010    0.020
+ GNG      "C3'"  "C2'"     single      1.524    0.020
+ GNG      "H2'1" "C2'"     single      1.092    0.020
+ GNG      "H2'2" "C2'"     single      1.092    0.020
+ GNG      "O3'"  "C3'"     single      1.432    0.020
+ GNG      "H3'"  "C3'"     single      1.099    0.020
+ GNG      H1     "O3'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GNG      O6     C6     C5      120.000    3.000
+ GNG      O6     C6     N1      120.000    3.000
+ GNG      C5     C6     N1      120.000    3.000
+ GNG      C6     C5     N7      132.000    3.000
+ GNG      C6     C5     C4      120.000    3.000
+ GNG      N7     C5     C4      108.000    3.000
+ GNG      C5     N7     C8      108.000    3.000
+ GNG      N7     C8     H8      126.000    3.000
+ GNG      N7     C8     N9      108.000    3.000
+ GNG      H8     C8     N9      126.000    3.000
+ GNG      C6     N1     C2      120.000    3.000
+ GNG      N1     C2     N2      120.000    3.000
+ GNG      N1     C2     N3      120.000    3.000
+ GNG      N2     C2     N3      120.000    3.000
+ GNG      C2     N2     HN22    120.000    3.000
+ GNG      C2     N2     HN21    120.000    3.000
+ GNG      HN22   N2     HN21    120.000    3.000
+ GNG      C2     N3     HN3     120.000    3.000
+ GNG      C2     N3     C4      120.000    3.000
+ GNG      HN3    N3     C4      120.000    3.000
+ GNG      N3     C4     N9      132.000    3.000
+ GNG      N3     C4     C5      120.000    3.000
+ GNG      N9     C4     C5      108.000    3.000
+ GNG      C4     N9     "C1'"   126.000    3.000
+ GNG      C4     N9     C8      108.000    3.000
+ GNG      "C1'"  N9     C8      126.000    3.000
+ GNG      N9     "C1'"  "H1'"   109.470    3.000
+ GNG      N9     "C1'"  "O4'"   109.470    3.000
+ GNG      N9     "C1'"  "C2'"   109.470    3.000
+ GNG      "H1'"  "C1'"  "O4'"   109.470    3.000
+ GNG      "H1'"  "C1'"  "C2'"   108.340    3.000
+ GNG      "O4'"  "C1'"  "C2'"   109.470    3.000
+ GNG      "C1'"  "O4'"  "C4'"   111.800    3.000
+ GNG      "C1'"  "C2'"  "H2'1"  109.470    3.000
+ GNG      "C1'"  "C2'"  "H2'2"  109.470    3.000
+ GNG      "C1'"  "C2'"  "C3'"   111.000    3.000
+ GNG      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ GNG      "H2'1" "C2'"  "C3'"   109.470    3.000
+ GNG      "H2'2" "C2'"  "C3'"   109.470    3.000
+ GNG      "C2'"  "C3'"  "H3'"   108.340    3.000
+ GNG      "C2'"  "C3'"  "O3'"   109.470    3.000
+ GNG      "C2'"  "C3'"  "C4'"   111.000    3.000
+ GNG      "H3'"  "C3'"  "O3'"   109.470    3.000
+ GNG      "H3'"  "C3'"  "C4'"   108.340    3.000
+ GNG      "O3'"  "C3'"  "C4'"   109.470    3.000
+ GNG      "C3'"  "O3'"  H1      109.470    3.000
+ GNG      "C3'"  "C4'"  "H4'"   108.340    3.000
+ GNG      "C3'"  "C4'"  "C5'"   111.000    3.000
+ GNG      "C3'"  "C4'"  "O4'"   109.470    3.000
+ GNG      "H4'"  "C4'"  "C5'"   108.340    3.000
+ GNG      "H4'"  "C4'"  "O4'"   109.470    3.000
+ GNG      "C5'"  "C4'"  "O4'"   109.470    3.000
+ GNG      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ GNG      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ GNG      "C4'"  "C5'"  "O5'"   109.470    3.000
+ GNG      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ GNG      "H5'1" "C5'"  "O5'"   109.470    3.000
+ GNG      "H5'2" "C5'"  "O5'"   109.470    3.000
+ GNG      "C5'"  "O5'"  "H5'"   109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GNG      CONST_1  O6     C6     C5     N7         0.000    0.000   0
+ GNG      CONST_2  C6     C5     C4     N3         0.000    0.000   0
+ GNG      CONST_3  C6     C5     N7     C8       180.000    0.000   0
+ GNG      CONST_4  C5     N7     C8     N9         0.000    0.000   0
+ GNG      CONST_5  O6     C6     N1     C2       180.000    0.000   0
+ GNG      CONST_6  C6     N1     C2     N3         0.000    0.000   0
+ GNG      CONST_7  N1     C2     N2     HN21       0.016    0.000   0
+ GNG      CONST_8  N1     C2     N3     C4         0.000    0.000   0
+ GNG      CONST_9  C2     N3     C4     N9       180.000    0.000   0
+ GNG      CONST_10 N3     C4     N9     "C1'"      0.000    0.000   0
+ GNG      CONST_11 C4     N9     C8     N7         0.000    0.000   0
+ GNG      var_1    C4     N9     "C1'"  "C2'"     90.314   20.000   1
+ GNG      var_2    N9     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ GNG      var_3    N9     "C1'"  "C2'"  "C3'"    120.000   20.000   3
+ GNG      var_4    "C1'"  "C2'"  "C3'"  "C4'"     30.000   20.000   3
+ GNG      var_5    "C2'"  "C3'"  "O3'"  H1        61.472   20.000   1
+ GNG      var_6    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ GNG      var_7    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ GNG      var_8    "C3'"  "C4'"  "C5'"  "O5'"   -179.974   20.000   3
+ GNG      var_9    "C4'"  "C5'"  "O5'"  "H5'"   -179.960   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GNG      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ GNG      chir_02  "C1'"  "O4'"  N9     "C2'"     negativ
+ GNG      chir_03  "C3'"  "C4'"  "C2'"  "O3'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GNG      plan-1    N9        0.020
+ GNG      plan-1    "C1'"     0.020
+ GNG      plan-1    C8        0.020
+ GNG      plan-1    C4        0.020
+ GNG      plan-1    N7        0.020
+ GNG      plan-1    H8        0.020
+ GNG      plan-1    C5        0.020
+ GNG      plan-1    C6        0.020
+ GNG      plan-1    N3        0.020
+ GNG      plan-1    C2        0.020
+ GNG      plan-1    N1        0.020
+ GNG      plan-1    HN3       0.020
+ GNG      plan-1    N2        0.020
+ GNG      plan-1    O6        0.020
+ GNG      plan-1    HN22      0.020
+ GNG      plan-1    HN21      0.020
+ GNG      plan-2    N2        0.020
+ GNG      plan-2    C2        0.020
+ GNG      plan-2    HN21      0.020
+ GNG      plan-2    HN22      0.020
+# ------------------------------------------------------

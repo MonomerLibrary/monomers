@@ -1,0 +1,189 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3AB      3AB '3-aminobenzamide                    ' non-polymer        18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3AB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3AB           "O1'"  O    O         0.000      0.000    0.000    0.000
+ 3AB           "C1'"  C    C         0.000     -1.093    0.532    0.002
+ 3AB           "N1'"  N    NH2       0.000     -1.187    1.877    0.007
+ 3AB           HN1A   H    H         0.000     -0.350    2.448    0.010
+ 3AB           "HN1'" H    H         0.000     -2.095    2.326    0.008
+ 3AB           C1     C    CR6       0.000     -2.318   -0.294   -0.003
+ 3AB           C2     C    CR16      0.000     -2.224   -1.686   -0.004
+ 3AB           H2     H    H         0.000     -1.252   -2.165   -0.007
+ 3AB           C6     C    CR16      0.000     -3.574    0.314   -0.001
+ 3AB           H6     H    H         0.000     -3.652    1.394    0.003
+ 3AB           C5     C    CR16      0.000     -4.717   -0.459   -0.005
+ 3AB           H5     H    H         0.000     -5.690    0.016   -0.008
+ 3AB           C4     C    CR16      0.000     -4.623   -1.838   -0.006
+ 3AB           H4     H    H         0.000     -5.524   -2.440   -0.009
+ 3AB           C3     C    CR6       0.000     -3.378   -2.455   -0.003
+ 3AB           N3     N    NH2       0.000     -3.288   -3.849   -0.004
+ 3AB           HN3A   H    H         0.000     -4.127   -4.425   -0.004
+ 3AB           HN3    H    H         0.000     -2.381   -4.313   -0.006
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3AB      "O1'"  n/a    "C1'"  START
+ 3AB      "C1'"  "O1'"  C1     .
+ 3AB      "N1'"  "C1'"  "HN1'" .
+ 3AB      HN1A   "N1'"  .      .
+ 3AB      "HN1'" "N1'"  .      .
+ 3AB      C1     "C1'"  C6     .
+ 3AB      C2     C1     H2     .
+ 3AB      H2     C2     .      .
+ 3AB      C6     C1     C5     .
+ 3AB      H6     C6     .      .
+ 3AB      C5     C6     C4     .
+ 3AB      H5     C5     .      .
+ 3AB      C4     C5     C3     .
+ 3AB      H4     C4     .      .
+ 3AB      C3     C4     N3     .
+ 3AB      N3     C3     HN3    .
+ 3AB      HN3A   N3     .      .
+ 3AB      HN3    N3     .      END
+ 3AB      C3     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3AB      N3     C3        single      1.355    0.020
+ 3AB      HN3    N3        single      1.010    0.020
+ 3AB      HN3A   N3        single      1.010    0.020
+ 3AB      C3     C4        double      1.390    0.020
+ 3AB      C3     C2        single      1.390    0.020
+ 3AB      C2     C1        double      1.390    0.020
+ 3AB      H2     C2        single      1.083    0.020
+ 3AB      C4     C5        single      1.390    0.020
+ 3AB      H4     C4        single      1.083    0.020
+ 3AB      C5     C6        double      1.390    0.020
+ 3AB      H5     C5        single      1.083    0.020
+ 3AB      C6     C1        single      1.390    0.020
+ 3AB      H6     C6        single      1.083    0.020
+ 3AB      C1     "C1'"     single      1.500    0.020
+ 3AB      "C1'"  "O1'"     double      1.220    0.020
+ 3AB      "N1'"  "C1'"     single      1.332    0.020
+ 3AB      "HN1'" "N1'"     single      1.010    0.020
+ 3AB      HN1A   "N1'"     single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3AB      "O1'"  "C1'"  "N1'"   123.000    3.000
+ 3AB      "O1'"  "C1'"  C1      120.500    3.000
+ 3AB      "N1'"  "C1'"  C1      120.000    3.000
+ 3AB      "C1'"  "N1'"  HN1A    120.000    3.000
+ 3AB      "C1'"  "N1'"  "HN1'"  120.000    3.000
+ 3AB      HN1A   "N1'"  "HN1'"  120.000    3.000
+ 3AB      "C1'"  C1     C2      120.000    3.000
+ 3AB      "C1'"  C1     C6      120.000    3.000
+ 3AB      C2     C1     C6      120.000    3.000
+ 3AB      C1     C2     H2      120.000    3.000
+ 3AB      C1     C2     C3      120.000    3.000
+ 3AB      H2     C2     C3      120.000    3.000
+ 3AB      C1     C6     H6      120.000    3.000
+ 3AB      C1     C6     C5      120.000    3.000
+ 3AB      H6     C6     C5      120.000    3.000
+ 3AB      C6     C5     H5      120.000    3.000
+ 3AB      C6     C5     C4      120.000    3.000
+ 3AB      H5     C5     C4      120.000    3.000
+ 3AB      C5     C4     H4      120.000    3.000
+ 3AB      C5     C4     C3      120.000    3.000
+ 3AB      H4     C4     C3      120.000    3.000
+ 3AB      C4     C3     N3      120.000    3.000
+ 3AB      C4     C3     C2      120.000    3.000
+ 3AB      N3     C3     C2      120.000    3.000
+ 3AB      C3     N3     HN3A    120.000    3.000
+ 3AB      C3     N3     HN3     120.000    3.000
+ 3AB      HN3A   N3     HN3     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3AB      CONST_1  "O1'"  "C1'"  "N1'"  "HN1'"   180.000    0.000   0
+ 3AB      var_1    "O1'"  "C1'"  C1     C6      -179.986   20.000   1
+ 3AB      CONST_2  "C1'"  C1     C2     C3       180.000    0.000   0
+ 3AB      CONST_3  "C1'"  C1     C6     C5       180.000    0.000   0
+ 3AB      CONST_4  C1     C6     C5     C4         0.000    0.000   0
+ 3AB      CONST_5  C6     C5     C4     C3         0.000    0.000   0
+ 3AB      CONST_6  C5     C4     C3     N3       180.000    0.000   0
+ 3AB      CONST_7  C4     C3     C2     C1         0.000    0.000   0
+ 3AB      CONST_8  C4     C3     N3     HN3      179.721    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3AB      plan-1    N3        0.020
+ 3AB      plan-1    C3        0.020
+ 3AB      plan-1    HN3       0.020
+ 3AB      plan-1    HN3A      0.020
+ 3AB      plan-2    C3        0.020
+ 3AB      plan-2    N3        0.020
+ 3AB      plan-2    C2        0.020
+ 3AB      plan-2    C4        0.020
+ 3AB      plan-2    C5        0.020
+ 3AB      plan-2    C6        0.020
+ 3AB      plan-2    C1        0.020
+ 3AB      plan-2    H2        0.020
+ 3AB      plan-2    H4        0.020
+ 3AB      plan-2    H5        0.020
+ 3AB      plan-2    H6        0.020
+ 3AB      plan-2    "C1'"     0.020
+ 3AB      plan-2    HN3A      0.020
+ 3AB      plan-2    HN3       0.020
+ 3AB      plan-3    "C1'"     0.020
+ 3AB      plan-3    C1        0.020
+ 3AB      plan-3    "O1'"     0.020
+ 3AB      plan-3    "N1'"     0.020
+ 3AB      plan-3    HN1A      0.020
+ 3AB      plan-3    "HN1'"    0.020
+ 3AB      plan-4    "N1'"     0.020
+ 3AB      plan-4    "C1'"     0.020
+ 3AB      plan-4    "HN1'"    0.020
+ 3AB      plan-4    HN1A      0.020
+# ------------------------------------------------------

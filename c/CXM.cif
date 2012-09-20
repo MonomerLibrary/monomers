@@ -1,0 +1,200 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CXM      CXM 'N-CARBOXYMETHIONINE                 ' M-peptide          22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CXM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CXM           OXT    O    OC       -0.500      0.000    0.000    0.000
+ CXM           C      C    C         0.000     -0.974   -0.779   -0.098
+ CXM           O      O    OC       -0.500     -0.897   -1.786   -0.836
+ CXM           CA     C    CH1       0.000     -2.240   -0.503    0.672
+ CXM           HA     H    H         0.000     -2.737   -1.454    0.911
+ CXM           N      N    NH1       0.000     -1.913    0.202    1.913
+ CXM           H      H    H         0.000     -1.885    1.211    1.928
+ CXM           CN     C    C         0.000     -1.648   -0.496    3.035
+ CXM           ON2    O    OH1       0.000     -1.347    0.152    4.176
+ CXM           HO2    H    H         0.000     -1.186   -0.490    4.882
+ CXM           ON1    O    O         0.000     -1.682   -1.710    3.017
+ CXM           CB     C    CH2       0.000     -3.174    0.361   -0.175
+ CXM           HB2    H    H         0.000     -3.417   -0.165   -1.100
+ CXM           HB3    H    H         0.000     -2.679    1.305   -0.414
+ CXM           CG     C    CH2       0.000     -4.458    0.641    0.606
+ CXM           HG2    H    H         0.000     -4.213    1.166    1.532
+ CXM           HG3    H    H         0.000     -4.951   -0.304    0.845
+ CXM           SD     S    S2        0.000     -5.567    1.667   -0.397
+ CXM           CE     C    CH3       0.000     -6.965    1.835    0.746
+ CXM           HE3    H    H         0.000     -7.362    0.877    0.978
+ CXM           HE2    H    H         0.000     -6.646    2.303    1.644
+ CXM           HE1    H    H         0.000     -7.729    2.425    0.302
+#loop_
+#_chem_comp_tree.comp_id
+#_chem_comp_tree.atom_id
+#_chem_comp_tree.atom_back
+#_chem_comp_tree.atom_forward
+##_chem_comp_tree.connect_type
+# CXM      OXT    n/a    C      START
+# CXM      C      OXT    CA     .
+# CXM      O      C      .      .
+# CXM      CA     C      CB     .
+# CXM      HA     CA     .      .
+# CXM      N      CA     CN     .
+# CXM      H      N      .      .
+# CXM      CN     N      ON1    .
+# CXM      ON2    CN     HO2    .
+## CXM      HO2    ON2    .      .
+# CXM      ON1    CN     .      .
+# CXM      CB     CA     CG     .
+# CXM      HB2    CB     .      .
+# CXM      HB3    CB     .      .
+# CXM      CG     CB     SD     .
+# CXM      HG2    CG     .      .
+# CXM      HG3    CG     .      .
+# CXM      SD     CG     CE     .
+# CXM      CE     SD     HE1    .
+# CXM      HE3    CE     .      .
+# CXM      HE2    CE     .      .
+# CXM      HE1    CE     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CXM      N      CA        single      1.450    0.020
+ CXM      CN     N         single      1.330    0.020
+ CXM      H      N         single      1.010    0.020
+ CXM      CB     CA        single      1.524    0.020
+ CXM      CA     C         single      1.500    0.020
+ CXM      HA     CA        single      1.099    0.020
+ CXM      CG     CB        single      1.524    0.020
+ CXM      HB2    CB        single      1.092    0.020
+ CXM      HB3    CB        single      1.092    0.020
+ CXM      SD     CG        single      1.762    0.020
+ CXM      HG2    CG        single      1.092    0.020
+ CXM      HG3    CG        single      1.092    0.020
+ CXM      CE     SD        single      1.762    0.020
+ CXM      HE1    CE        single      1.059    0.020
+ CXM      HE2    CE        single      1.059    0.020
+ CXM      HE3    CE        single      1.059    0.020
+ CXM      O      C         deloc       1.250    0.020
+ CXM      C      OXT       deloc       1.250    0.020
+ CXM      ON1    CN        double      1.220    0.020
+ CXM      ON2    CN        single      1.330    0.020
+ CXM      HO2    ON2       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CXM      OXT    C      O       123.000    3.000
+ CXM      OXT    C      CA      118.500    3.000
+ CXM      O      C      CA      118.500    3.000
+ CXM      C      CA     HA      108.810    3.000
+ CXM      C      CA     N       111.600    3.000
+ CXM      C      CA     CB      109.470    3.000
+ CXM      HA     CA     N       108.550    3.000
+ CXM      HA     CA     CB      108.340    3.000
+ CXM      N      CA     CB      110.000    3.000
+ CXM      CA     N      H       118.500    3.000
+ CXM      CA     N      CN      121.500    3.000
+ CXM      H      N      CN      120.000    3.000
+ CXM      N      CN     ON2     120.000    3.000
+ CXM      N      CN     ON1     123.000    3.000
+ CXM      ON2    CN     ON1     119.000    3.000
+ CXM      CN     ON2    HO2     109.470    3.000
+ CXM      CA     CB     HB2     109.470    3.000
+ CXM      CA     CB     HB3     109.470    3.000
+ CXM      CA     CB     CG      111.000    3.000
+ CXM      HB2    CB     HB3     107.900    3.000
+ CXM      HB2    CB     CG      109.470    3.000
+ CXM      HB3    CB     CG      109.470    3.000
+ CXM      CB     CG     HG2     109.470    3.000
+ CXM      CB     CG     HG3     109.470    3.000
+ CXM      CB     CG     SD      109.500    3.000
+ CXM      HG2    CG     HG3     107.900    3.000
+ CXM      HG2    CG     SD      109.500    3.000
+ CXM      HG3    CG     SD      109.500    3.000
+ CXM      CG     SD     CE      100.087    3.000
+ CXM      SD     CE     HE3     109.500    3.000
+ CXM      SD     CE     HE2     109.500    3.000
+ CXM      SD     CE     HE1     109.500    3.000
+ CXM      HE3    CE     HE2     109.470    3.000
+ CXM      HE3    CE     HE1     109.470    3.000
+ CXM      HE2    CE     HE1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CXM      var_1    OXT    C      CA     CB        90.029   20.000   3
+ CXM      var_2    C      CA     N      CN       -89.947   20.000   3
+ CXM      CONST_1  CA     N      CN     ON1        0.000    0.000   0
+ CXM      var_3    N      CN     ON2    HO2      179.964   20.000   1
+ CXM      var_4    C      CA     CB     CG      -179.994   20.000   3
+ CXM      var_5    CA     CB     CG     SD       179.976   20.000   3
+ CXM      var_6    CB     CG     SD     CE       179.995   20.000   1
+ CXM      var_7    CG     SD     CE     HE1     -179.976   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CXM      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CXM      plan-1    N         0.020
+ CXM      plan-1    CA        0.020
+ CXM      plan-1    CN        0.020
+ CXM      plan-1    H         0.020
+ CXM      plan-2    C         0.020
+ CXM      plan-2    CA        0.020
+ CXM      plan-2    O         0.020
+ CXM      plan-2    OXT       0.020
+ CXM      plan-3    CN        0.020
+ CXM      plan-3    N         0.020
+ CXM      plan-3    ON1       0.020
+ CXM      plan-3    ON2       0.020
+ CXM      plan-3    H         0.020
+# ------------------------------------------------------

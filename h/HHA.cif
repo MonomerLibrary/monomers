@@ -1,0 +1,207 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HHA      HHA '(2S,3S)-TRANS-2,3-DIHYDRO-3-HYDROXYA' non-polymer        19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HHA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HHA           O2     O    OC       -0.500      0.000    0.000    0.000
+ HHA           C      C    C         0.000     -0.998   -0.752   -0.053
+ HHA           O1     O    OC       -0.500     -0.855   -1.991    0.044
+ HHA           C1     C    C         0.000     -2.294   -0.199   -0.221
+ HHA           C2     C    CH1       0.000     -3.494   -1.105   -0.284
+ HHA           H2     H    H         0.000     -3.272   -2.043    0.243
+ HHA           N2     N    NH2       0.000     -3.812   -1.397   -1.688
+ HHA           HN22   H    H         0.000     -4.716   -1.144   -2.072
+ HHA           HN21   H    H         0.000     -3.131   -1.854   -2.283
+ HHA           C3     C    CH1       0.000     -4.692   -0.423    0.376
+ HHA           H3     H    H         0.000     -5.601   -1.006    0.172
+ HHA           "O3'"  O    OH1       0.000     -4.480   -0.355    1.788
+ HHA           "H3'"  H    H         0.000     -5.237    0.076    2.207
+ HHA           C4     C    C1        0.000     -4.860    0.970   -0.170
+ HHA           H4     H    H         0.000     -5.847    1.380   -0.297
+ HHA           C5     C    C1        0.000     -3.792    1.698   -0.497
+ HHA           H5     H    H         0.000     -3.916    2.695   -0.885
+ HHA           C6     C    C1        0.000     -2.449    1.140   -0.327
+ HHA           H6     H    H         0.000     -1.591    1.790   -0.287
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HHA      O2     n/a    C      START
+ HHA      C      O2     C1     .
+ HHA      O1     C      .      .
+ HHA      C1     C      C2     .
+ HHA      C2     C1     C3     .
+ HHA      H2     C2     .      .
+ HHA      N2     C2     HN21   .
+ HHA      HN22   N2     .      .
+ HHA      HN21   N2     .      .
+ HHA      C3     C2     C4     .
+ HHA      H3     C3     .      .
+ HHA      "O3'"  C3     "H3'"  .
+ HHA      "H3'"  "O3'"  .      .
+ HHA      C4     C3     C5     .
+ HHA      H4     C4     .      .
+ HHA      C5     C4     C6     .
+ HHA      H5     C5     .      .
+ HHA      C6     C5     H6     .
+ HHA      H6     C6     .      END
+ HHA      C1     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HHA      O1     C         deloc       1.250    0.020
+ HHA      C      O2        deloc       1.250    0.020
+ HHA      C1     C         single      1.460    0.020
+ HHA      C1     C6        double      1.340    0.020
+ HHA      C2     C1        single      1.500    0.020
+ HHA      C6     C5        single      1.460    0.020
+ HHA      H6     C6        single      1.077    0.020
+ HHA      C5     C4        double      1.330    0.020
+ HHA      H5     C5        single      1.077    0.020
+ HHA      C4     C3        single      1.510    0.020
+ HHA      H4     C4        single      1.077    0.020
+ HHA      "O3'"  C3        single      1.432    0.020
+ HHA      C3     C2        single      1.524    0.020
+ HHA      H3     C3        single      1.099    0.020
+ HHA      "H3'"  "O3'"     single      0.967    0.020
+ HHA      N2     C2        single      1.450    0.020
+ HHA      H2     C2        single      1.099    0.020
+ HHA      HN21   N2        single      1.010    0.020
+ HHA      HN22   N2        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HHA      O2     C      O1      123.000    3.000
+ HHA      O2     C      C1      120.000    3.000
+ HHA      O1     C      C1      120.000    3.000
+ HHA      C      C1     C2      120.000    3.000
+ HHA      C      C1     C6      120.000    3.000
+ HHA      C2     C1     C6      120.000    3.000
+ HHA      C1     C2     H2      108.810    3.000
+ HHA      C1     C2     N2      109.470    3.000
+ HHA      C1     C2     C3      109.470    3.000
+ HHA      H2     C2     N2      109.470    3.000
+ HHA      H2     C2     C3      108.340    3.000
+ HHA      N2     C2     C3      109.470    3.000
+ HHA      C2     N2     HN22    120.000    3.000
+ HHA      C2     N2     HN21    120.000    3.000
+ HHA      HN22   N2     HN21    120.000    3.000
+ HHA      C2     C3     H3      108.340    3.000
+ HHA      C2     C3     "O3'"   109.470    3.000
+ HHA      C2     C3     C4      109.470    3.000
+ HHA      H3     C3     "O3'"   109.470    3.000
+ HHA      H3     C3     C4      108.810    3.000
+ HHA      "O3'"  C3     C4      109.470    3.000
+ HHA      C3     "O3'"  "H3'"   109.470    3.000
+ HHA      C3     C4     H4      120.000    3.000
+ HHA      C3     C4     C5      120.000    3.000
+ HHA      H4     C4     C5      120.000    3.000
+ HHA      C4     C5     H5      120.000    3.000
+ HHA      C4     C5     C6      120.000    3.000
+ HHA      H5     C5     C6      120.000    3.000
+ HHA      C5     C6     H6      120.000    3.000
+ HHA      C5     C6     C1      120.000    3.000
+ HHA      H6     C6     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HHA      var_1    O2     C      C1     C2      -179.965   20.000   1
+ HHA      var_2    C      C1     C6     C5       180.000   20.000   1
+ HHA      var_3    C      C1     C2     C3       150.000   20.000   3
+ HHA      var_4    C1     C2     N2     HN21      59.889   20.000   1
+ HHA      var_5    C1     C2     C3     C4        60.000   20.000   3
+ HHA      var_6    C2     C3     "O3'"  "H3'"   -179.973   20.000   1
+ HHA      var_7    C2     C3     C4     C5       -30.000   20.000   1
+ HHA      var_8    C3     C4     C5     C6         0.000   20.000   1
+ HHA      var_9    C4     C5     C6     C1        30.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HHA      chir_01  C3     C4     "O3'"  C2        positiv
+ HHA      chir_02  C2     C1     C3     N2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HHA      plan-1    C         0.020
+ HHA      plan-1    O1        0.020
+ HHA      plan-1    O2        0.020
+ HHA      plan-1    C1        0.020
+ HHA      plan-2    C1        0.020
+ HHA      plan-2    C         0.020
+ HHA      plan-2    C6        0.020
+ HHA      plan-2    C2        0.020
+ HHA      plan-2    H6        0.020
+ HHA      plan-3    C6        0.020
+ HHA      plan-3    C1        0.020
+ HHA      plan-3    C5        0.020
+ HHA      plan-3    H6        0.020
+ HHA      plan-3    H5        0.020
+ HHA      plan-4    C5        0.020
+ HHA      plan-4    C6        0.020
+ HHA      plan-4    C4        0.020
+ HHA      plan-4    H5        0.020
+ HHA      plan-4    H6        0.020
+ HHA      plan-4    H4        0.020
+ HHA      plan-5    C4        0.020
+ HHA      plan-5    C5        0.020
+ HHA      plan-5    C3        0.020
+ HHA      plan-5    H4        0.020
+ HHA      plan-5    H5        0.020
+ HHA      plan-6    N2        0.020
+ HHA      plan-6    C2        0.020
+ HHA      plan-6    HN21      0.020
+ HHA      plan-6    HN22      0.020
+# ------------------------------------------------------

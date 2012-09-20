@@ -1,0 +1,147 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DCY      DCY 'D-CYSTEINE                          ' peptide            13   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DCY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DCY           N      N    NH2       0.000      0.000    0.000    0.000
+ DCY           HN1    H    H         0.000      0.556   -0.442   -0.723
+ DCY           HN2    H    H         0.000      0.443    0.274    0.869
+ DCY           CA     C    CH1       0.000     -1.434    0.241   -0.210
+ DCY           HA     H    H         0.000     -1.653    1.307   -0.052
+ DCY           CB     C    CH2       0.000     -2.242   -0.597    0.781
+ DCY           HB2    H    H         0.000     -2.025   -1.655    0.622
+ DCY           HB3    H    H         0.000     -3.308   -0.418    0.623
+ DCY           SG     S    SH1       0.000     -1.793   -0.132    2.475
+ DCY           HG     H    H         0.000     -2.617   -0.986    3.077
+ DCY           C      C    C         0.000     -1.807   -0.144   -1.617
+ DCY           O      O    OC       -0.500     -1.183   -1.057   -2.202
+ DCY           OXT    O    OC       -0.500     -2.742    0.447   -2.202
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DCY      N      n/a    CA     START
+ DCY      HN1    N      .      .
+ DCY      HN2    N      .      .
+ DCY      CA     N      C      .
+ DCY      HA     CA     .      .
+ DCY      CB     CA     SG     .
+ DCY      HB2    CB     .      .
+ DCY      HB3    CB     .      .
+ DCY      SG     CB     HG     .
+ DCY      HG     SG     .      .
+ DCY      C      CA     .      END
+ DCY      O      C      .      .
+ DCY      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DCY      CA     N         single      1.450    0.020
+ DCY      C      CA        single      1.500    0.020
+ DCY      CB     CA        single      1.524    0.020
+ DCY      HA     CA        single      1.099    0.020
+ DCY      O      C         deloc       1.250    0.020
+ DCY      OXT    C         deloc       1.250    0.020
+ DCY      SG     CB        single      1.810    0.020
+ DCY      HB2    CB        single      1.092    0.020
+ DCY      HB3    CB        single      1.092    0.020
+ DCY      HG     SG        single      1.330    0.020
+ DCY      HN1    N         single      1.010    0.020
+ DCY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DCY      HN1    N      HN2     120.000    3.000
+ DCY      HN1    N      CA      120.000    3.000
+ DCY      HN2    N      CA      120.000    3.000
+ DCY      N      CA     HA      109.470    3.000
+ DCY      N      CA     CB      109.470    3.000
+ DCY      N      CA     C       109.470    3.000
+ DCY      HA     CA     CB      108.340    3.000
+ DCY      HA     CA     C       108.810    3.000
+ DCY      CB     CA     C       109.470    3.000
+ DCY      CA     CB     HB2     109.470    3.000
+ DCY      CA     CB     HB3     109.470    3.000
+ DCY      CA     CB     SG      112.500    3.000
+ DCY      HB2    CB     HB3     107.900    3.000
+ DCY      HB2    CB     SG      109.470    3.000
+ DCY      HB3    CB     SG      109.470    3.000
+ DCY      CB     SG     HG       96.000    3.000
+ DCY      CA     C      O       118.500    3.000
+ DCY      CA     C      OXT     118.500    3.000
+ DCY      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DCY      var_1    HN2    N      CA     C        175.000   20.000   1
+ DCY      var_2    N      CA     CB     SG        59.987   20.000   3
+ DCY      var_3    CA     CB     SG     HG       179.999   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DCY      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DCY      plan-1    N         0.020
+ DCY      plan-1    CA        0.020
+ DCY      plan-1    HN1       0.020
+ DCY      plan-1    HN2       0.020
+ DCY      plan-2    C         0.020
+ DCY      plan-2    CA        0.020
+ DCY      plan-2    O         0.020
+ DCY      plan-2    OXT       0.020
+# ------------------------------------------------------

@@ -1,0 +1,169 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+26D      26D 'PYRIDINE-2,6-DIAMINE                ' non-polymer        15   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_26D
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 26D           N2     N    NH2       0.000      0.000    0.000    0.000
+ 26D           HN21   H    H         0.000      0.425    0.924    0.002
+ 26D           HN22   H    H         0.000      0.606   -0.816   -0.001
+ 26D           C2     C    CR6       0.000     -1.382   -0.144   -0.001
+ 26D           N3     N    NRD6      0.000     -1.915   -1.357    0.003
+ 26D           C4     C    CR16      0.000     -2.191    0.986    0.000
+ 26D           H4     H    H         0.000     -1.750    1.975    0.002
+ 26D           C6     C    CR16      0.000     -3.568    0.833   -0.001
+ 26D           H6     H    H         0.000     -4.221    1.698   -0.001
+ 26D           C5     C    CR16      0.000     -4.092   -0.449   -0.002
+ 26D           H5     H    H         0.000     -5.165   -0.602   -0.002
+ 26D           C3     C    CR6       0.000     -3.228   -1.537   -0.003
+ 26D           N1     N    NH2       0.000     -3.745   -2.827   -0.003
+ 26D           HN12   H    H         0.000     -3.126   -3.633   -0.003
+ 26D           HN11   H    H         0.000     -4.750   -2.982   -0.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 26D      N2     n/a    C2     START
+ 26D      HN21   N2     .      .
+ 26D      HN22   N2     .      .
+ 26D      C2     N2     C4     .
+ 26D      N3     C2     .      .
+ 26D      C4     C2     C6     .
+ 26D      H4     C4     .      .
+ 26D      C6     C4     C5     .
+ 26D      H6     C6     .      .
+ 26D      C5     C6     C3     .
+ 26D      H5     C5     .      .
+ 26D      C3     C5     N1     .
+ 26D      N1     C3     HN11   .
+ 26D      HN12   N1     .      .
+ 26D      HN11   N1     .      END
+ 26D      C3     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 26D      N1     C3        single      1.355    0.020
+ 26D      HN11   N1        single      1.010    0.020
+ 26D      HN12   N1        single      1.010    0.020
+ 26D      C3     N3        single      1.350    0.020
+ 26D      C3     C5        double      1.390    0.020
+ 26D      N3     C2        double      1.350    0.020
+ 26D      C5     C6        single      1.390    0.020
+ 26D      H5     C5        single      1.083    0.020
+ 26D      C6     C4        double      1.390    0.020
+ 26D      H6     C6        single      1.083    0.020
+ 26D      C4     C2        single      1.390    0.020
+ 26D      H4     C4        single      1.083    0.020
+ 26D      C2     N2        single      1.355    0.020
+ 26D      HN21   N2        single      1.010    0.020
+ 26D      HN22   N2        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 26D      HN21   N2     HN22    120.000    3.000
+ 26D      HN21   N2     C2      120.000    3.000
+ 26D      HN22   N2     C2      120.000    3.000
+ 26D      N2     C2     N3      120.000    3.000
+ 26D      N2     C2     C4      120.000    3.000
+ 26D      N3     C2     C4      120.000    3.000
+ 26D      C2     N3     C3      120.000    3.000
+ 26D      C2     C4     H4      120.000    3.000
+ 26D      C2     C4     C6      120.000    3.000
+ 26D      H4     C4     C6      120.000    3.000
+ 26D      C4     C6     H6      120.000    3.000
+ 26D      C4     C6     C5      120.000    3.000
+ 26D      H6     C6     C5      120.000    3.000
+ 26D      C6     C5     H5      120.000    3.000
+ 26D      C6     C5     C3      120.000    3.000
+ 26D      H5     C5     C3      120.000    3.000
+ 26D      C5     C3     N1      120.000    3.000
+ 26D      C5     C3     N3      120.000    3.000
+ 26D      N1     C3     N3      120.000    3.000
+ 26D      C3     N1     HN12    120.000    3.000
+ 26D      C3     N1     HN11    120.000    3.000
+ 26D      HN12   N1     HN11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 26D      CONST_1  HN22   N2     C2     C4      -179.979    0.000   0
+ 26D      CONST_2  N2     C2     N3     C3       180.000    0.000   0
+ 26D      CONST_3  N2     C2     C4     C6       180.000    0.000   0
+ 26D      CONST_4  C2     C4     C6     C5         0.000    0.000   0
+ 26D      CONST_5  C4     C6     C5     C3         0.000    0.000   0
+ 26D      CONST_6  C6     C5     C3     N1       180.000    0.000   0
+ 26D      CONST_7  C5     C3     N3     C2         0.000    0.000   0
+ 26D      CONST_8  C5     C3     N1     HN11       0.047    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 26D      plan-1    N1        0.020
+ 26D      plan-1    C3        0.020
+ 26D      plan-1    HN11      0.020
+ 26D      plan-1    HN12      0.020
+ 26D      plan-2    C3        0.020
+ 26D      plan-2    N1        0.020
+ 26D      plan-2    N3        0.020
+ 26D      plan-2    C5        0.020
+ 26D      plan-2    C6        0.020
+ 26D      plan-2    C4        0.020
+ 26D      plan-2    C2        0.020
+ 26D      plan-2    H5        0.020
+ 26D      plan-2    H6        0.020
+ 26D      plan-2    H4        0.020
+ 26D      plan-2    N2        0.020
+ 26D      plan-2    HN12      0.020
+ 26D      plan-2    HN11      0.020
+ 26D      plan-2    HN21      0.020
+ 26D      plan-2    HN22      0.020
+ 26D      plan-3    N2        0.020
+ 26D      plan-3    C2        0.020
+ 26D      plan-3    HN21      0.020
+ 26D      plan-3    HN22      0.020
+# ------------------------------------------------------

@@ -1,0 +1,145 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ALQ      ALQ '2-METHYL-PROPIONIC ACID             ' non-polymer        13   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ALQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ALQ           OXT    O    OC       -0.500      0.000    0.000    0.000
+ ALQ           C      C    C         0.000     -1.236    0.114    0.155
+ ALQ           O      O    OC       -0.500     -2.010   -0.721   -0.364
+ ALQ           CA     C    CH1       0.000     -1.792    1.255    0.967
+ ALQ           HA     H    H         0.000     -1.400    1.201    1.992
+ ALQ           CB     C    CH3       0.000     -3.319    1.161    0.998
+ ALQ           HB3    H    H         0.000     -3.608    0.241    1.438
+ ALQ           HB2    H    H         0.000     -3.712    1.962    1.569
+ ALQ           HB1    H    H         0.000     -3.698    1.214    0.010
+ ALQ           CM     C    CH3       0.000     -1.376    2.582    0.331
+ ALQ           HM3    H    H         0.000     -0.319    2.648    0.308
+ ALQ           HM2    H    H         0.000     -1.753    2.635   -0.658
+ ALQ           HM1    H    H         0.000     -1.767    3.386    0.900
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ALQ      OXT    n/a    C      START
+ ALQ      C      OXT    CA     .
+ ALQ      O      C      .      .
+ ALQ      CA     C      CM     .
+ ALQ      HA     CA     .      .
+ ALQ      CB     CA     HB1    .
+ ALQ      HB3    CB     .      .
+ ALQ      HB2    CB     .      .
+ ALQ      HB1    CB     .      .
+ ALQ      CM     CA     HM1    .
+ ALQ      HM3    CM     .      .
+ ALQ      HM2    CM     .      .
+ ALQ      HM1    CM     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ALQ      CM     CA        single      1.524    0.020
+ ALQ      HM1    CM        single      1.059    0.020
+ ALQ      HM2    CM        single      1.059    0.020
+ ALQ      HM3    CM        single      1.059    0.020
+ ALQ      CB     CA        single      1.524    0.020
+ ALQ      CA     C         single      1.500    0.020
+ ALQ      HA     CA        single      1.099    0.020
+ ALQ      HB1    CB        single      1.059    0.020
+ ALQ      HB2    CB        single      1.059    0.020
+ ALQ      HB3    CB        single      1.059    0.020
+ ALQ      O      C         deloc       1.250    0.020
+ ALQ      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ALQ      OXT    C      O       123.000    3.000
+ ALQ      OXT    C      CA      118.500    3.000
+ ALQ      O      C      CA      118.500    3.000
+ ALQ      C      CA     HA      108.810    3.000
+ ALQ      C      CA     CB      109.470    3.000
+ ALQ      C      CA     CM      109.470    3.000
+ ALQ      HA     CA     CB      108.340    3.000
+ ALQ      HA     CA     CM      108.340    3.000
+ ALQ      CB     CA     CM      111.000    3.000
+ ALQ      CA     CB     HB3     109.470    3.000
+ ALQ      CA     CB     HB2     109.470    3.000
+ ALQ      CA     CB     HB1     109.470    3.000
+ ALQ      HB3    CB     HB2     109.470    3.000
+ ALQ      HB3    CB     HB1     109.470    3.000
+ ALQ      HB2    CB     HB1     109.470    3.000
+ ALQ      CA     CM     HM3     109.470    3.000
+ ALQ      CA     CM     HM2     109.470    3.000
+ ALQ      CA     CM     HM1     109.470    3.000
+ ALQ      HM3    CM     HM2     109.470    3.000
+ ALQ      HM3    CM     HM1     109.470    3.000
+ ALQ      HM2    CM     HM1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ALQ      var_1    OXT    C      CA     CM        60.018   20.000   3
+ ALQ      var_2    C      CA     CB     HB1      -60.019   20.000   3
+ ALQ      var_3    C      CA     CM     HM1      179.965   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ALQ      chir_01  CA     CM     CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ALQ      plan-1    C         0.020
+ ALQ      plan-1    CA        0.000
+ ALQ      plan-1    O         0.000
+ ALQ      plan-1    OXT       0.000
+# ------------------------------------------------------

@@ -1,0 +1,202 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AHN      AHN 'N-[2-(1H-IMIDAZOL-4-YL)ETHYL]ACETAMI' non-polymer        22  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AHN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AHN           O      O    O         0.000      0.000    0.000    0.000
+ AHN           C      C    C         0.000     -0.298   -1.089    0.443
+ AHN           CT     C    CH3       0.000      0.782   -2.064    0.836
+ AHN           HT3    H    H         0.000      0.690   -2.299    1.865
+ AHN           HT2    H    H         0.000      0.685   -2.949    0.262
+ AHN           HT1    H    H         0.000      1.732   -1.631    0.658
+ AHN           N      N    NH1       0.000     -1.595   -1.426    0.583
+ AHN           HN     H    H         0.000     -1.844   -2.333    0.952
+ AHN           CA     C    CH2       0.000     -2.645   -0.479    0.201
+ AHN           HA1    H    H         0.000     -2.548   -0.237   -0.859
+ AHN           HA2    H    H         0.000     -2.544    0.434    0.792
+ AHN           CB     C    CH2       0.000     -4.017   -1.105    0.459
+ AHN           HB1    H    H         0.000     -4.112   -1.348    1.519
+ AHN           HB2    H    H         0.000     -4.116   -2.018   -0.132
+ AHN           CG     C    CR5       0.000     -5.096   -0.131    0.066
+ AHN           ND1    N    NRD5      0.000     -5.228    1.125    0.520
+ AHN           CE1    C    CR15      0.000     -6.272    1.677   -0.036
+ AHN           HE1    H    H         0.000     -6.620    2.688    0.137
+ AHN           NE2    N    NR15      0.000     -6.847    0.777   -0.864
+ AHN           HE2    H    H         0.000     -7.698    0.927   -1.442
+ AHN           CD2    C    CR15      0.000     -6.102   -0.368   -0.799
+ AHN           HD2    H    H         0.000     -6.285   -1.289   -1.339
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AHN      O      n/a    C      START
+ AHN      C      O      N      .
+ AHN      CT     C      HT1    .
+ AHN      HT3    CT     .      .
+ AHN      HT2    CT     .      .
+ AHN      HT1    CT     .      .
+ AHN      N      C      CA     .
+ AHN      HN     N      .      .
+ AHN      CA     N      CB     .
+ AHN      HA1    CA     .      .
+ AHN      HA2    CA     .      .
+ AHN      CB     CA     CG     .
+ AHN      HB1    CB     .      .
+ AHN      HB2    CB     .      .
+ AHN      CG     CB     ND1    .
+ AHN      ND1    CG     CE1    .
+ AHN      CE1    ND1    NE2    .
+ AHN      HE1    CE1    .      .
+ AHN      NE2    CE1    CD2    .
+ AHN      HE2    NE2    .      .
+ AHN      CD2    NE2    HD2    .
+ AHN      HD2    CD2    .      END
+ AHN      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AHN      C      O         double      1.220    0.020
+ AHN      CT     C         single      1.500    0.020
+ AHN      N      C         single      1.330    0.020
+ AHN      HT1    CT        single      1.059    0.020
+ AHN      HT2    CT        single      1.059    0.020
+ AHN      HT3    CT        single      1.059    0.020
+ AHN      CA     N         single      1.450    0.020
+ AHN      HN     N         single      1.010    0.020
+ AHN      CB     CA        single      1.524    0.020
+ AHN      HA1    CA        single      1.092    0.020
+ AHN      HA2    CA        single      1.092    0.020
+ AHN      CG     CB        single      1.510    0.020
+ AHN      HB1    CB        single      1.092    0.020
+ AHN      HB2    CB        single      1.092    0.020
+ AHN      CG     CD2       double      1.387    0.020
+ AHN      ND1    CG        single      1.350    0.020
+ AHN      CD2    NE2       single      1.350    0.020
+ AHN      HD2    CD2       single      1.083    0.020
+ AHN      CE1    ND1       double      1.350    0.020
+ AHN      NE2    CE1       single      1.350    0.020
+ AHN      HE1    CE1       single      1.083    0.020
+ AHN      HE2    NE2       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AHN      O      C      CT      123.000    3.000
+ AHN      O      C      N       123.000    3.000
+ AHN      CT     C      N       116.500    3.000
+ AHN      C      CT     HT3     109.470    3.000
+ AHN      C      CT     HT2     109.470    3.000
+ AHN      C      CT     HT1     109.470    3.000
+ AHN      HT3    CT     HT2     109.470    3.000
+ AHN      HT3    CT     HT1     109.470    3.000
+ AHN      HT2    CT     HT1     109.470    3.000
+ AHN      C      N      HN      120.000    3.000
+ AHN      C      N      CA      121.500    3.000
+ AHN      HN     N      CA      118.500    3.000
+ AHN      N      CA     HA1     109.470    3.000
+ AHN      N      CA     HA2     109.470    3.000
+ AHN      N      CA     CB      112.000    3.000
+ AHN      HA1    CA     HA2     107.900    3.000
+ AHN      HA1    CA     CB      109.470    3.000
+ AHN      HA2    CA     CB      109.470    3.000
+ AHN      CA     CB     HB1     109.470    3.000
+ AHN      CA     CB     HB2     109.470    3.000
+ AHN      CA     CB     CG      109.470    3.000
+ AHN      HB1    CB     HB2     107.900    3.000
+ AHN      HB1    CB     CG      109.470    3.000
+ AHN      HB2    CB     CG      109.470    3.000
+ AHN      CB     CG     ND1     126.000    3.000
+ AHN      CB     CG     CD2     126.000    3.000
+ AHN      ND1    CG     CD2     108.000    3.000
+ AHN      CG     ND1    CE1     108.000    3.000
+ AHN      ND1    CE1    HE1     126.000    3.000
+ AHN      ND1    CE1    NE2     108.000    3.000
+ AHN      HE1    CE1    NE2     126.000    3.000
+ AHN      CE1    NE2    HE2     126.000    3.000
+ AHN      CE1    NE2    CD2     108.000    3.000
+ AHN      HE2    NE2    CD2     126.000    3.000
+ AHN      NE2    CD2    HD2     126.000    3.000
+ AHN      NE2    CD2    CG      108.000    3.000
+ AHN      HD2    CD2    CG      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AHN      var_1    O      C      CT     HT1       -0.002   20.000   1
+ AHN      CONST_1  O      C      N      CA         0.000    0.000   0
+ AHN      var_2    C      N      CA     CB       179.984   20.000   3
+ AHN      var_3    N      CA     CB     CG       179.993   20.000   3
+ AHN      var_4    CA     CB     CG     ND1      -55.294   20.000   2
+ AHN      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
+ AHN      CONST_3  CB     CG     ND1    CE1      180.000    0.000   0
+ AHN      CONST_4  CG     ND1    CE1    NE2        0.000    0.000   0
+ AHN      CONST_5  ND1    CE1    NE2    CD2        0.000    0.000   0
+ AHN      CONST_6  CE1    NE2    CD2    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AHN      plan-1    C         0.020
+ AHN      plan-1    O         0.020
+ AHN      plan-1    CT        0.020
+ AHN      plan-1    N         0.020
+ AHN      plan-1    HN        0.020
+ AHN      plan-2    N         0.020
+ AHN      plan-2    C         0.020
+ AHN      plan-2    CA        0.020
+ AHN      plan-2    HN        0.020
+ AHN      plan-3    CG        0.020
+ AHN      plan-3    CB        0.020
+ AHN      plan-3    CD2       0.020
+ AHN      plan-3    ND1       0.020
+ AHN      plan-3    CE1       0.020
+ AHN      plan-3    NE2       0.020
+ AHN      plan-3    HD2       0.020
+ AHN      plan-3    HE1       0.020
+ AHN      plan-3    HE2       0.020
+# ------------------------------------------------------

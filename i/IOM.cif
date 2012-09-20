@@ -1,0 +1,184 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IOM      IOM '(DIAMINOMETHYL-METHYL-AMINO)-ACETIC ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IOM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IOM           O2     O    OC       -0.500      0.000    0.000    0.000
+ IOM           CD     C    C         0.000     -0.960   -0.080   -0.798
+ IOM           O1     O    OC       -0.500     -0.747   -0.107   -2.031
+ IOM           CC     C    CH2       0.000     -2.372   -0.144   -0.275
+ IOM           HCC1   H    H         0.000     -2.585    0.756    0.306
+ IOM           HCC2   H    H         0.000     -2.484   -1.023    0.362
+ IOM           NC     N    NT        0.000     -3.308   -0.233   -1.403
+ IOM           CB     C    CH3       0.000     -3.402    1.114   -1.981
+ IOM           HCB3   H    H         0.000     -3.832    1.773   -1.272
+ IOM           HCB2   H    H         0.000     -2.434    1.456   -2.239
+ IOM           HCB1   H    H         0.000     -4.009    1.084   -2.848
+ IOM           CA     C    CH1       0.000     -4.626   -0.542   -0.835
+ IOM           HCA    H    H         0.000     -4.579   -1.501   -0.302
+ IOM           NB     N    NH2       0.000     -5.617   -0.631   -1.915
+ IOM           HNB2   H    H         0.000     -6.069   -1.513   -2.123
+ IOM           HNB1   H    H         0.000     -5.856    0.190   -2.459
+ IOM           NA     N    NH2       0.000     -5.016    0.520    0.102
+ IOM           HNA2   H    H         0.000     -4.401    1.308    0.266
+ IOM           HNA1   H    H         0.000     -5.903    0.471    0.590
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IOM      O2     n/a    CD     START
+ IOM      CD     O2     CC     .
+ IOM      O1     CD     .      .
+ IOM      CC     CD     NC     .
+ IOM      HCC1   CC     .      .
+ IOM      HCC2   CC     .      .
+ IOM      NC     CC     CA     .
+ IOM      CB     NC     HCB1   .
+ IOM      HCB3   CB     .      .
+ IOM      HCB2   CB     .      .
+ IOM      HCB1   CB     .      .
+ IOM      CA     NC     NA     .
+ IOM      HCA    CA     .      .
+ IOM      NB     CA     HNB1   .
+ IOM      HNB2   NB     .      .
+ IOM      HNB1   NB     .      .
+ IOM      NA     CA     HNA1   .
+ IOM      HNA2   NA     .      .
+ IOM      HNA1   NA     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IOM      NA     CA        single      1.450    0.020
+ IOM      HNA1   NA        single      1.010    0.020
+ IOM      HNA2   NA        single      1.010    0.020
+ IOM      NB     CA        single      1.450    0.020
+ IOM      CA     NC        single      1.469    0.020
+ IOM      HCA    CA        single      1.099    0.020
+ IOM      HNB1   NB        single      1.010    0.020
+ IOM      HNB2   NB        single      1.010    0.020
+ IOM      CB     NC        single      1.469    0.020
+ IOM      NC     CC        single      1.469    0.020
+ IOM      HCB1   CB        single      1.059    0.020
+ IOM      HCB2   CB        single      1.059    0.020
+ IOM      HCB3   CB        single      1.059    0.020
+ IOM      CC     CD        single      1.510    0.020
+ IOM      HCC1   CC        single      1.092    0.020
+ IOM      HCC2   CC        single      1.092    0.020
+ IOM      O1     CD        deloc       1.250    0.020
+ IOM      CD     O2        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IOM      O2     CD     O1      123.000    3.000
+ IOM      O2     CD     CC      118.500    3.000
+ IOM      O1     CD     CC      118.500    3.000
+ IOM      CD     CC     HCC1    109.470    3.000
+ IOM      CD     CC     HCC2    109.470    3.000
+ IOM      CD     CC     NC      109.500    3.000
+ IOM      HCC1   CC     HCC2    107.900    3.000
+ IOM      HCC1   CC     NC      109.470    3.000
+ IOM      HCC2   CC     NC      109.470    3.000
+ IOM      CC     NC     CB      109.470    3.000
+ IOM      CC     NC     CA      109.470    3.000
+ IOM      CB     NC     CA      109.470    3.000
+ IOM      NC     CB     HCB3    109.470    3.000
+ IOM      NC     CB     HCB2    109.470    3.000
+ IOM      NC     CB     HCB1    109.470    3.000
+ IOM      HCB3   CB     HCB2    109.470    3.000
+ IOM      HCB3   CB     HCB1    109.470    3.000
+ IOM      HCB2   CB     HCB1    109.470    3.000
+ IOM      NC     CA     HCA     109.500    3.000
+ IOM      NC     CA     NB      109.500    3.000
+ IOM      NC     CA     NA      109.500    3.000
+ IOM      HCA    CA     NB      109.470    3.000
+ IOM      HCA    CA     NA      109.470    3.000
+ IOM      NB     CA     NA      109.470    3.000
+ IOM      CA     NB     HNB2    120.000    3.000
+ IOM      CA     NB     HNB1    120.000    3.000
+ IOM      HNB2   NB     HNB1    120.000    3.000
+ IOM      CA     NA     HNA2    120.000    3.000
+ IOM      CA     NA     HNA1    120.000    3.000
+ IOM      HNA2   NA     HNA1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IOM      var_1    O2     CD     CC     NC      -179.999   20.000   3
+ IOM      var_2    CD     CC     NC     CA       169.699   20.000   1
+ IOM      var_3    CC     NC     CB     HCB1     175.564   20.000   1
+ IOM      var_4    CC     NC     CA     NA        59.362   20.000   1
+ IOM      var_5    NC     CA     NB     HNB1     -65.679   20.000   1
+ IOM      var_6    NC     CA     NA     HNA1     179.987   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IOM      chir_01  CA     NA     NB     NC        negativ
+ IOM      chir_02  NC     CA     CB     CC        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IOM      plan-1    NA        0.020
+ IOM      plan-1    CA        0.020
+ IOM      plan-1    HNA1      0.020
+ IOM      plan-1    HNA2      0.020
+ IOM      plan-2    NB        0.020
+ IOM      plan-2    CA        0.020
+ IOM      plan-2    HNB1      0.020
+ IOM      plan-2    HNB2      0.020
+ IOM      plan-3    CD        0.020
+ IOM      plan-3    CC        0.020
+ IOM      plan-3    O1        0.020
+ IOM      plan-3    O2        0.020
+# ------------------------------------------------------

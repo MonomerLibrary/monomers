@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PFB      PFB '2,3,4,5,6-PENTAFLUOROBENZYL ALCOHOL ' non-polymer        16  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PFB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PFB           F6     F    F         0.000      0.000    0.000    0.000
+ PFB           C6     C    CR6       0.000     -1.322    0.016   -0.273
+ PFB           C1     C    CR6       0.000     -2.239    0.145    0.757
+ PFB           C7     C    CH2       0.000     -1.761    0.276    2.180
+ PFB           H71    H    H         0.000     -2.474    0.876    2.748
+ PFB           H72    H    H         0.000     -0.785    0.765    2.191
+ PFB           O1     O    OH1       0.000     -1.652   -1.021    2.768
+ PFB           HO1    H    H         0.000     -1.345   -0.935    3.680
+ PFB           C5     C    CR6       0.000     -1.762   -0.111   -1.580
+ PFB           F5     F    F         0.000     -0.867   -0.242   -2.583
+ PFB           C4     C    CR6       0.000     -3.118   -0.095   -1.859
+ PFB           F4     F    F         0.000     -3.547   -0.211   -3.135
+ PFB           C3     C    CR6       0.000     -4.036    0.041   -0.829
+ PFB           F3     F    F         0.000     -5.359    0.056   -1.101
+ PFB           C2     C    CR6       0.000     -3.594    0.160    0.478
+ PFB           F2     F    F         0.000     -4.488    0.293    1.483
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PFB      F6     n/a    C6     START
+ PFB      C6     F6     C5     .
+ PFB      C1     C6     C7     .
+ PFB      C7     C1     O1     .
+ PFB      H71    C7     .      .
+ PFB      H72    C7     .      .
+ PFB      O1     C7     HO1    .
+ PFB      HO1    O1     .      .
+ PFB      C5     C6     C4     .
+ PFB      F5     C5     .      .
+ PFB      C4     C5     C3     .
+ PFB      F4     C4     .      .
+ PFB      C3     C4     C2     .
+ PFB      F3     C3     .      .
+ PFB      C2     C3     F2     .
+ PFB      F2     C2     .      END
+ PFB      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PFB      C1     C2        double      1.487    0.020
+ PFB      C1     C6        single      1.487    0.020
+ PFB      C7     C1        single      1.511    0.020
+ PFB      C2     C3        single      1.487    0.020
+ PFB      F2     C2        single      1.345    0.020
+ PFB      C3     C4        double      1.487    0.020
+ PFB      F3     C3        single      1.345    0.020
+ PFB      C4     C5        single      1.487    0.020
+ PFB      F4     C4        single      1.345    0.020
+ PFB      C5     C6        double      1.487    0.020
+ PFB      F5     C5        single      1.345    0.020
+ PFB      C6     F6        single      1.345    0.020
+ PFB      O1     C7        single      1.432    0.020
+ PFB      H71    C7        single      1.092    0.020
+ PFB      H72    C7        single      1.092    0.020
+ PFB      HO1    O1        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PFB      F6     C6     C1      120.000    3.000
+ PFB      F6     C6     C5      120.000    3.000
+ PFB      C1     C6     C5      120.000    3.000
+ PFB      C6     C1     C7      120.000    3.000
+ PFB      C6     C1     C2      120.000    3.000
+ PFB      C7     C1     C2      120.000    3.000
+ PFB      C1     C7     H71     109.470    3.000
+ PFB      C1     C7     H72     109.470    3.000
+ PFB      C1     C7     O1      109.500    3.000
+ PFB      H71    C7     H72     107.900    3.000
+ PFB      H71    C7     O1      109.470    3.000
+ PFB      H72    C7     O1      109.470    3.000
+ PFB      C7     O1     HO1     109.470    3.000
+ PFB      C6     C5     F5      120.000    3.000
+ PFB      C6     C5     C4      120.000    3.000
+ PFB      F5     C5     C4      120.000    3.000
+ PFB      C5     C4     F4      120.000    3.000
+ PFB      C5     C4     C3      120.000    3.000
+ PFB      F4     C4     C3      120.000    3.000
+ PFB      C4     C3     F3      120.000    3.000
+ PFB      C4     C3     C2      120.000    3.000
+ PFB      F3     C3     C2      120.000    3.000
+ PFB      C3     C2     F2      120.000    3.000
+ PFB      C3     C2     C1      120.000    3.000
+ PFB      F2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PFB      CONST_1  F6     C6     C1     C7         0.000    0.000   0
+ PFB      CONST_2  C6     C1     C2     C3         0.000    0.000   0
+ PFB      var_1    C6     C1     C7     O1       -90.262   20.000   2
+ PFB      var_2    C1     C7     O1     HO1      180.000   20.000   1
+ PFB      CONST_3  F6     C6     C5     C4       180.000    0.000   0
+ PFB      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ PFB      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ PFB      CONST_6  C4     C3     C2     F2       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PFB      plan-1    C1        0.020
+ PFB      plan-1    C2        0.020
+ PFB      plan-1    C6        0.020
+ PFB      plan-1    C7        0.020
+ PFB      plan-1    C3        0.020
+ PFB      plan-1    C4        0.020
+ PFB      plan-1    C5        0.020
+ PFB      plan-1    F2        0.020
+ PFB      plan-1    F3        0.020
+ PFB      plan-1    F4        0.020
+ PFB      plan-1    F5        0.020
+ PFB      plan-1    F6        0.020
+# ------------------------------------------------------

@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+1SA      1SA '5-AMINO-1,3,4-THIADIAZOLE-2-SULFONAM' non-polymer        14  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_1SA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 1SA           O2     O    OS        0.000      0.000    0.000    0.000
+ 1SA           S1     S    ST        0.000     -1.275   -0.096    0.619
+ 1SA           O1     O    OS        0.000     -1.733    0.717    1.691
+ 1SA           N1     N    NH2       0.000     -1.399   -1.659    1.153
+ 1SA           HN12   H    H         0.000     -0.805   -2.002    1.907
+ 1SA           HN11   H    H         0.000     -2.072   -2.302    0.738
+ 1SA           C1     C    CR5       0.000     -2.452    0.113   -0.676
+ 1SA           N2     N    NRD5      0.000     -3.307   -0.747   -1.190
+ 1SA           S2     S    S2        0.000     -2.825    1.556   -1.669
+ 1SA           C2     C    CR5       0.000     -4.105    0.781   -2.654
+ 1SA           N3     N    NRD5      0.000     -4.096   -0.435   -2.123
+ 1SA           N4     N    NH2       0.000     -4.885    1.303   -3.675
+ 1SA           HN42   H    H         0.000     -5.578    0.726   -4.142
+ 1SA           HN41   H    H         0.000     -4.773    2.269   -3.967
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 1SA      O2     n/a    S1     START
+ 1SA      S1     O2     C1     .
+ 1SA      O1     S1     .      .
+ 1SA      N1     S1     HN11   .
+ 1SA      HN12   N1     .      .
+ 1SA      HN11   N1     .      .
+ 1SA      C1     S1     S2     .
+ 1SA      N2     C1     .      .
+ 1SA      S2     C1     C2     .
+ 1SA      C2     S2     N4     .
+ 1SA      N3     C2     .      .
+ 1SA      N4     C2     HN41   .
+ 1SA      HN42   N4     .      .
+ 1SA      HN41   N4     .      END
+ 1SA      N2     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 1SA      O1     S1        double      1.436    0.020
+ 1SA      S1     O2        double      1.436    0.020
+ 1SA      N1     S1        single      1.600    0.020
+ 1SA      C1     S1        single      1.645    0.020
+ 1SA      HN11   N1        single      1.010    0.020
+ 1SA      HN12   N1        single      1.010    0.020
+ 1SA      N2     N3        single      1.404    0.020
+ 1SA      N2     C1        double      1.350    0.020
+ 1SA      N3     C2        double      1.350    0.020
+ 1SA      S2     C1        single      1.745    0.020
+ 1SA      C2     S2        single      1.745    0.020
+ 1SA      N4     C2        single      1.355    0.020
+ 1SA      HN41   N4        single      1.010    0.020
+ 1SA      HN42   N4        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 1SA      O2     S1     O1      109.500    3.000
+ 1SA      O2     S1     N1      109.500    3.000
+ 1SA      O2     S1     C1      109.500    3.000
+ 1SA      O1     S1     N1      109.500    3.000
+ 1SA      O1     S1     C1      109.500    3.000
+ 1SA      N1     S1     C1      109.500    3.000
+ 1SA      S1     N1     HN12    120.000    3.000
+ 1SA      S1     N1     HN11    120.000    3.000
+ 1SA      HN12   N1     HN11    120.000    3.000
+ 1SA      S1     C1     N2      108.000    3.000
+ 1SA      S1     C1     S2      108.000    3.000
+ 1SA      N2     C1     S2      108.000    3.000
+ 1SA      C1     N2     N3      108.000    3.000
+ 1SA      C1     S2     C2       96.042    3.000
+ 1SA      S2     C2     N3      108.000    3.000
+ 1SA      S2     C2     N4      108.000    3.000
+ 1SA      N3     C2     N4      108.000    3.000
+ 1SA      C2     N3     N2      108.000    3.000
+ 1SA      C2     N4     HN42    120.000    3.000
+ 1SA      C2     N4     HN41    120.000    3.000
+ 1SA      HN42   N4     HN41    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 1SA      var_1    O2     S1     N1     HN11    -112.634   20.000   1
+ 1SA      var_2    O2     S1     C1     S2       -67.402   20.000   1
+ 1SA      CONST_1  S1     C1     N2     N3       180.000    0.000   0
+ 1SA      CONST_2  C1     N2     N3     C2         0.000    0.000   0
+ 1SA      CONST_3  S1     C1     S2     C2       180.000    0.000   0
+ 1SA      CONST_4  C1     S2     C2     N4       180.000    0.000   0
+ 1SA      CONST_5  S2     C2     N3     N2         0.000    0.000   0
+ 1SA      CONST_6  S2     C2     N4     HN41      -0.053    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 1SA      chir_01  S1     O1     O2     N1        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 1SA      plan-1    N1        0.020
+ 1SA      plan-1    S1        0.020
+ 1SA      plan-1    HN11      0.020
+ 1SA      plan-1    HN12      0.020
+ 1SA      plan-2    N2        0.020
+ 1SA      plan-2    N3        0.020
+ 1SA      plan-2    C1        0.020
+ 1SA      plan-2    S2        0.020
+ 1SA      plan-2    C2        0.020
+ 1SA      plan-2    S1        0.020
+ 1SA      plan-2    N4        0.020
+ 1SA      plan-2    HN42      0.020
+ 1SA      plan-2    HN41      0.020
+ 1SA      plan-3    N4        0.020
+ 1SA      plan-3    C2        0.020
+ 1SA      plan-3    HN41      0.020
+ 1SA      plan-3    HN42      0.020
+# ------------------------------------------------------

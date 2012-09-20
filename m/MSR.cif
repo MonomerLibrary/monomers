@@ -1,0 +1,199 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MSR      MSR '4-(1H-IMIDAZOL-1-YL)PHENOL          ' non-polymer        20  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MSR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MSR           O17    O    OH1       0.000      0.000    0.000    0.000
+ MSR           HO17   H    H         0.000     -0.265    0.551    0.749
+ MSR           C14    C    CR6       0.000     -1.077   -0.222   -0.802
+ MSR           C13    C    CR16      0.000     -2.358    0.100   -0.353
+ MSR           H13    H    H         0.000     -2.496    0.525    0.633
+ MSR           C15    C    CR16      0.000     -0.901   -0.770   -2.072
+ MSR           H15    H    H         0.000      0.094   -1.020   -2.421
+ MSR           C16    C    CR16      0.000     -2.004   -0.997   -2.894
+ MSR           H16    H    H         0.000     -1.867   -1.422   -3.881
+ MSR           C11    C    CR6       0.000     -3.285   -0.674   -2.445
+ MSR           C12    C    CR16      0.000     -3.462   -0.127   -1.175
+ MSR           H12    H    H         0.000     -4.457    0.123   -0.827
+ MSR           N3     N    NR5       0.000     -4.381   -0.899   -3.260
+ MSR           C2     C    CR15      0.000     -4.362   -1.429   -4.526
+ MSR           H2     H    H         0.000     -3.460   -1.737   -5.039
+ MSR           NFE    N    NRD5      0.000     -5.567   -1.518   -5.042
+ MSR           C5     C    CR15      0.000     -6.401   -1.025   -4.070
+ MSR           H5     H    H         0.000     -7.477   -0.952   -4.166
+ MSR           C4     C    CR15      0.000     -5.691   -0.636   -2.958
+ MSR           H4     H    H         0.000     -6.084   -0.213   -2.042
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MSR      O17    n/a    C14    START
+ MSR      HO17   O17    .      .
+ MSR      C14    O17    C15    .
+ MSR      C13    C14    H13    .
+ MSR      H13    C13    .      .
+ MSR      C15    C14    C16    .
+ MSR      H15    C15    .      .
+ MSR      C16    C15    C11    .
+ MSR      H16    C16    .      .
+ MSR      C11    C16    N3     .
+ MSR      C12    C11    H12    .
+ MSR      H12    C12    .      .
+ MSR      N3     C11    C2     .
+ MSR      C2     N3     NFE    .
+ MSR      H2     C2     .      .
+ MSR      NFE    C2     C5     .
+ MSR      C5     NFE    C4     .
+ MSR      H5     C5     .      .
+ MSR      C4     C5     H4     .
+ MSR      H4     C4     .      END
+ MSR      C12    C13    .    ADD
+ MSR      N3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MSR      C12    C13       double      1.390    0.020
+ MSR      C12    C11       single      1.390    0.020
+ MSR      H12    C12       single      1.083    0.020
+ MSR      C13    C14       single      1.390    0.020
+ MSR      H13    C13       single      1.083    0.020
+ MSR      C14    O17       single      1.362    0.020
+ MSR      C15    C14       double      1.390    0.020
+ MSR      HO17   O17       single      0.967    0.020
+ MSR      C16    C15       single      1.390    0.020
+ MSR      H15    C15       single      1.083    0.020
+ MSR      C11    C16       double      1.390    0.020
+ MSR      H16    C16       single      1.083    0.020
+ MSR      N3     C11       single      1.337    0.020
+ MSR      N3     C4        single      1.337    0.020
+ MSR      C2     N3        single      1.337    0.020
+ MSR      C4     C5        double      1.380    0.020
+ MSR      H4     C4        single      1.083    0.020
+ MSR      C5     NFE       single      1.350    0.020
+ MSR      H5     C5        single      1.083    0.020
+ MSR      NFE    C2        double      1.350    0.020
+ MSR      H2     C2        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MSR      HO17   O17    C14     109.470    3.000
+ MSR      O17    C14    C13     120.000    3.000
+ MSR      O17    C14    C15     120.000    3.000
+ MSR      C13    C14    C15     120.000    3.000
+ MSR      C14    C13    H13     120.000    3.000
+ MSR      C14    C13    C12     120.000    3.000
+ MSR      H13    C13    C12     120.000    3.000
+ MSR      C14    C15    H15     120.000    3.000
+ MSR      C14    C15    C16     120.000    3.000
+ MSR      H15    C15    C16     120.000    3.000
+ MSR      C15    C16    H16     120.000    3.000
+ MSR      C15    C16    C11     120.000    3.000
+ MSR      H16    C16    C11     120.000    3.000
+ MSR      C16    C11    C12     120.000    3.000
+ MSR      C16    C11    N3      132.000    3.000
+ MSR      C12    C11    N3      132.000    3.000
+ MSR      C11    C12    H12     120.000    3.000
+ MSR      C11    C12    C13     120.000    3.000
+ MSR      H12    C12    C13     120.000    3.000
+ MSR      C11    N3     C2      108.000    3.000
+ MSR      C11    N3     C4      108.000    3.000
+ MSR      C2     N3     C4      108.000    3.000
+ MSR      N3     C2     H2      126.000    3.000
+ MSR      N3     C2     NFE     108.000    3.000
+ MSR      H2     C2     NFE     126.000    3.000
+ MSR      C2     NFE    C5      108.000    3.000
+ MSR      NFE    C5     H5      126.000    3.000
+ MSR      NFE    C5     C4      108.000    3.000
+ MSR      H5     C5     C4      126.000    3.000
+ MSR      C5     C4     H4      126.000    3.000
+ MSR      C5     C4     N3      108.000    3.000
+ MSR      H4     C4     N3      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MSR      var_1    HO17   O17    C14    C15      167.708   20.000   1
+ MSR      CONST_1  O17    C14    C13    C12      180.000    0.000   0
+ MSR      CONST_2  O17    C14    C15    C16      180.000    0.000   0
+ MSR      CONST_3  C14    C15    C16    C11        0.000    0.000   0
+ MSR      CONST_4  C15    C16    C11    N3       180.000    0.000   0
+ MSR      CONST_5  C16    C11    C12    C13        0.000    0.000   0
+ MSR      CONST_6  C11    C12    C13    C14        0.000    0.000   0
+ MSR      var_2    C16    C11    N3     C2        -0.009   20.000   1
+ MSR      CONST_7  C11    N3     C4     C5       180.000    0.000   0
+ MSR      CONST_8  C11    N3     C2     NFE      180.000    0.000   0
+ MSR      CONST_9  N3     C2     NFE    C5         0.000    0.000   0
+ MSR      CONST_10 C2     NFE    C5     C4         0.000    0.000   0
+ MSR      CONST_11 NFE    C5     C4     N3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MSR      plan-1    C12       0.020
+ MSR      plan-1    C13       0.020
+ MSR      plan-1    C11       0.020
+ MSR      plan-1    H12       0.020
+ MSR      plan-1    C14       0.020
+ MSR      plan-1    C15       0.020
+ MSR      plan-1    C16       0.020
+ MSR      plan-1    H13       0.020
+ MSR      plan-1    O17       0.020
+ MSR      plan-1    H15       0.020
+ MSR      plan-1    H16       0.020
+ MSR      plan-1    N3        0.020
+ MSR      plan-2    N3        0.020
+ MSR      plan-2    C11       0.020
+ MSR      plan-2    C4        0.020
+ MSR      plan-2    C2        0.020
+ MSR      plan-2    C5        0.020
+ MSR      plan-2    NFE       0.020
+ MSR      plan-2    H4        0.020
+ MSR      plan-2    H5        0.020
+ MSR      plan-2    H2        0.020
+# ------------------------------------------------------

@@ -1,0 +1,220 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IOP      IOP 'INDOLYLPROPIONIC ACID               ' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IOP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IOP           O2     O    OC       -0.500      0.000    0.000    0.000
+ IOP           "C1'"  C    C         0.000     -1.053    0.676   -0.009
+ IOP           O1     O    OC       -0.500     -0.996    1.922    0.080
+ IOP           "C2'"  C    CH2       0.000     -2.388   -0.012   -0.127
+ IOP           "H2'1" H    H         0.000     -2.520   -0.697    0.714
+ IOP           "H2'2" H    H         0.000     -2.427   -0.575   -1.062
+ IOP           "C3'"  C    CH2       0.000     -3.503    1.034   -0.113
+ IOP           "H3'1" H    H         0.000     -3.370    1.718   -0.954
+ IOP           "H3'2" H    H         0.000     -3.463    1.597    0.822
+ IOP           C3     C    CR5       0.000     -4.839    0.346   -0.230
+ IOP           C2     C    CR15      0.000     -5.602   -0.092    0.784
+ IOP           H2     H    H         0.000     -5.351   -0.007    1.834
+ IOP           C3A    C    CR56      0.000     -5.552    0.034   -1.470
+ IOP           C7A    C    CR56      0.000     -6.744   -0.606   -1.083
+ IOP           N1     N    NR15      0.000     -6.745   -0.663    0.293
+ IOP           HN1    H    H         0.000     -7.502   -1.079    0.873
+ IOP           C7     C    CR16      0.000     -7.639   -1.029   -2.060
+ IOP           H7     H    H         0.000     -8.562   -1.520   -1.775
+ IOP           C6     C    CR16      0.000     -7.348   -0.823   -3.390
+ IOP           H6     H    H         0.000     -8.047   -1.152   -4.149
+ IOP           C5     C    CR16      0.000     -6.168   -0.196   -3.767
+ IOP           H5     H    H         0.000     -5.954   -0.042   -4.818
+ IOP           C4     C    CR16      0.000     -5.275    0.227   -2.824
+ IOP           H4     H    H         0.000     -4.354    0.711   -3.126
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IOP      O2     n/a    "C1'"  START
+ IOP      "C1'"  O2     "C2'"  .
+ IOP      O1     "C1'"  .      .
+ IOP      "C2'"  "C1'"  "C3'"  .
+ IOP      "H2'1" "C2'"  .      .
+ IOP      "H2'2" "C2'"  .      .
+ IOP      "C3'"  "C2'"  C3     .
+ IOP      "H3'1" "C3'"  .      .
+ IOP      "H3'2" "C3'"  .      .
+ IOP      C3     "C3'"  C3A    .
+ IOP      C2     C3     H2     .
+ IOP      H2     C2     .      .
+ IOP      C3A    C3     C7A    .
+ IOP      C7A    C3A    C7     .
+ IOP      N1     C7A    HN1    .
+ IOP      HN1    N1     .      .
+ IOP      C7     C7A    C6     .
+ IOP      H7     C7     .      .
+ IOP      C6     C7     C5     .
+ IOP      H6     C6     .      .
+ IOP      C5     C6     C4     .
+ IOP      H5     C5     .      .
+ IOP      C4     C5     H4     .
+ IOP      H4     C4     .      END
+ IOP      N1     C2     .    ADD
+ IOP      C3A    C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IOP      O1     "C1'"     deloc       1.250    0.020
+ IOP      "C1'"  O2        deloc       1.250    0.020
+ IOP      "C2'"  "C1'"     single      1.510    0.020
+ IOP      "C3'"  "C2'"     single      1.524    0.020
+ IOP      "H2'1" "C2'"     single      1.092    0.020
+ IOP      "H2'2" "C2'"     single      1.092    0.020
+ IOP      C3     "C3'"     single      1.510    0.020
+ IOP      "H3'1" "C3'"     single      1.092    0.020
+ IOP      "H3'2" "C3'"     single      1.092    0.020
+ IOP      N1     C2        single      1.350    0.020
+ IOP      N1     C7A       single      1.340    0.020
+ IOP      HN1    N1        single      1.040    0.020
+ IOP      C2     C3        double      1.387    0.020
+ IOP      H2     C2        single      1.083    0.020
+ IOP      C3A    C3        single      1.490    0.020
+ IOP      C3A    C4        double      1.390    0.020
+ IOP      C7A    C3A       single      1.490    0.020
+ IOP      C4     C5        single      1.390    0.020
+ IOP      H4     C4        single      1.083    0.020
+ IOP      C5     C6        double      1.390    0.020
+ IOP      H5     C5        single      1.083    0.020
+ IOP      C6     C7        single      1.390    0.020
+ IOP      H6     C6        single      1.083    0.020
+ IOP      C7     C7A       double      1.390    0.020
+ IOP      H7     C7        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IOP      O2     "C1'"  O1      123.000    3.000
+ IOP      O2     "C1'"  "C2'"   118.500    3.000
+ IOP      O1     "C1'"  "C2'"   118.500    3.000
+ IOP      "C1'"  "C2'"  "H2'1"  109.470    3.000
+ IOP      "C1'"  "C2'"  "H2'2"  109.470    3.000
+ IOP      "C1'"  "C2'"  "C3'"   109.470    3.000
+ IOP      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ IOP      "H2'1" "C2'"  "C3'"   109.470    3.000
+ IOP      "H2'2" "C2'"  "C3'"   109.470    3.000
+ IOP      "C2'"  "C3'"  "H3'1"  109.470    3.000
+ IOP      "C2'"  "C3'"  "H3'2"  109.470    3.000
+ IOP      "C2'"  "C3'"  C3      109.470    3.000
+ IOP      "H3'1" "C3'"  "H3'2"  107.900    3.000
+ IOP      "H3'1" "C3'"  C3      109.470    3.000
+ IOP      "H3'2" "C3'"  C3      109.470    3.000
+ IOP      "C3'"  C3     C2      126.000    3.000
+ IOP      "C3'"  C3     C3A     126.000    3.000
+ IOP      C2     C3     C3A     108.000    3.000
+ IOP      C3     C2     H2      126.000    3.000
+ IOP      C3     C2     N1      108.000    3.000
+ IOP      H2     C2     N1      126.000    3.000
+ IOP      C3     C3A    C7A     108.000    3.000
+ IOP      C3     C3A    C4      126.000    3.000
+ IOP      C7A    C3A    C4      120.000    3.000
+ IOP      C3A    C7A    N1      108.000    3.000
+ IOP      C3A    C7A    C7      120.000    3.000
+ IOP      N1     C7A    C7      132.000    3.000
+ IOP      C7A    N1     HN1     126.000    3.000
+ IOP      C7A    N1     C2      108.000    3.000
+ IOP      HN1    N1     C2      126.000    3.000
+ IOP      C7A    C7     H7      120.000    3.000
+ IOP      C7A    C7     C6      120.000    3.000
+ IOP      H7     C7     C6      120.000    3.000
+ IOP      C7     C6     H6      120.000    3.000
+ IOP      C7     C6     C5      120.000    3.000
+ IOP      H6     C6     C5      120.000    3.000
+ IOP      C6     C5     H5      120.000    3.000
+ IOP      C6     C5     C4      120.000    3.000
+ IOP      H5     C5     C4      120.000    3.000
+ IOP      C5     C4     H4      120.000    3.000
+ IOP      C5     C4     C3A     120.000    3.000
+ IOP      H4     C4     C3A     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IOP      var_1    O2     "C1'"  "C2'"  "C3'"    179.990   20.000   3
+ IOP      var_2    "C1'"  "C2'"  "C3'"  C3      -179.950   20.000   3
+ IOP      var_3    "C2'"  "C3'"  C3     C3A      -90.303   20.000   2
+ IOP      CONST_1  "C3'"  C3     C2     N1       180.000    0.000   0
+ IOP      CONST_2  "C3'"  C3     C3A    C7A      180.000    0.000   0
+ IOP      CONST_3  C3     C3A    C4     C5       180.000    0.000   0
+ IOP      CONST_4  C3     C3A    C7A    C7       180.000    0.000   0
+ IOP      CONST_5  C3A    C7A    N1     C2         0.000    0.000   0
+ IOP      CONST_6  C7A    N1     C2     C3         0.000    0.000   0
+ IOP      CONST_7  C3A    C7A    C7     C6         0.000    0.000   0
+ IOP      CONST_8  C7A    C7     C6     C5         0.000    0.000   0
+ IOP      CONST_9  C7     C6     C5     C4         0.000    0.000   0
+ IOP      CONST_10 C6     C5     C4     C3A        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IOP      plan-1    "C1'"     0.020
+ IOP      plan-1    O1        0.020
+ IOP      plan-1    O2        0.020
+ IOP      plan-1    "C2'"     0.020
+ IOP      plan-2    N1        0.020
+ IOP      plan-2    C2        0.020
+ IOP      plan-2    C7A       0.020
+ IOP      plan-2    HN1       0.020
+ IOP      plan-2    C3        0.020
+ IOP      plan-2    H2        0.020
+ IOP      plan-2    "C3'"     0.020
+ IOP      plan-2    C3A       0.020
+ IOP      plan-2    C4        0.020
+ IOP      plan-2    C5        0.020
+ IOP      plan-2    C6        0.020
+ IOP      plan-2    C7        0.020
+ IOP      plan-2    H4        0.020
+ IOP      plan-2    H5        0.020
+ IOP      plan-2    H6        0.020
+ IOP      plan-2    H7        0.020
+# ------------------------------------------------------

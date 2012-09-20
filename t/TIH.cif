@@ -1,0 +1,193 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TIH      TIH 'BETA(2-THIENYL)ALANINE              ' peptide            19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TIH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TIH           N      N    NH2       0.000      0.000    0.000    0.000
+ TIH           HN1    H    H         0.000      0.894   -0.173    0.444
+ TIH           HN2    H    H         0.000     -0.027    0.252   -0.981
+ TIH           CA     C    CH1       0.000     -1.245   -0.113    0.771
+ TIH           HA     H    H         0.000     -1.726    0.873    0.838
+ TIH           CB     C    CH2       0.000     -2.188   -1.094    0.073
+ TIH           HB2    H    H         0.000     -3.113   -1.179    0.648
+ TIH           HB3    H    H         0.000     -1.710   -2.073    0.008
+ TIH           CG     C    CR5       0.000     -2.500   -0.592   -1.312
+ TIH           SD     S    S2        0.000     -3.822    0.478   -1.850
+ TIH           CE2    C    CR15      0.000     -3.417    0.527   -3.587
+ TIH           HE2    H    H         0.000     -3.919    1.052   -4.390
+ TIH           CE1    C    CR15      0.000     -2.318   -0.263   -3.641
+ TIH           HE1    H    H         0.000     -1.817   -0.445   -4.584
+ TIH           CD     C    CR15      0.000     -1.844   -0.833   -2.474
+ TIH           HD     H    H         0.000     -0.963   -1.462   -2.488
+ TIH           C      C    C         0.000     -0.933   -0.615    2.157
+ TIH           O      O    OC       -0.500      0.049   -1.367    2.345
+ TIH           OXT    O    OC       -0.500     -1.656   -0.279    3.121
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TIH      N      n/a    CA     START
+ TIH      HN1    N      .      .
+ TIH      HN2    N      .      .
+ TIH      CA     N      C      .
+ TIH      HA     CA     .      .
+ TIH      CB     CA     CG     .
+ TIH      HB2    CB     .      .
+ TIH      HB3    CB     .      .
+ TIH      CG     CB     SD     .
+ TIH      SD     CG     CE2    .
+ TIH      CE2    SD     CE1    .
+ TIH      HE2    CE2    .      .
+ TIH      CE1    CE2    CD     .
+ TIH      HE1    CE1    .      .
+ TIH      CD     CE1    HD     .
+ TIH      HD     CD     .      .
+ TIH      C      CA     .      END
+ TIH      O      C      .      .
+ TIH      OXT    C      .      .
+ TIH      CG     CD     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TIH      CA     N         single      1.450    0.020
+ TIH      C      CA        single      1.500    0.020
+ TIH      CB     CA        single      1.524    0.020
+ TIH      HA     CA        single      1.099    0.020
+ TIH      O      C         deloc       1.250    0.020
+ TIH      OXT    C         deloc       1.250    0.020
+ TIH      CG     CB        single      1.510    0.020
+ TIH      HB2    CB        single      1.092    0.020
+ TIH      HB3    CB        single      1.092    0.020
+ TIH      CG     CD        double      1.387    0.020
+ TIH      SD     CG        single      1.745    0.020
+ TIH      CD     CE1       single      1.380    0.020
+ TIH      HD     CD        single      1.083    0.020
+ TIH      CE1    CE2       double      1.380    0.020
+ TIH      HE1    CE1       single      1.083    0.020
+ TIH      CE2    SD        single      1.745    0.020
+ TIH      HE2    CE2       single      1.083    0.020
+ TIH      HN1    N         single      1.010    0.020
+ TIH      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TIH      HN1    N      HN2     120.000    3.000
+ TIH      HN1    N      CA      120.000    3.000
+ TIH      HN2    N      CA      120.000    3.000
+ TIH      N      CA     HA      109.470    3.000
+ TIH      N      CA     CB      109.470    3.000
+ TIH      N      CA     C       109.470    3.000
+ TIH      HA     CA     CB      108.340    3.000
+ TIH      HA     CA     C       108.810    3.000
+ TIH      CB     CA     C       109.470    3.000
+ TIH      CA     CB     HB2     109.470    3.000
+ TIH      CA     CB     HB3     109.470    3.000
+ TIH      CA     CB     CG      109.470    3.000
+ TIH      HB2    CB     HB3     107.900    3.000
+ TIH      HB2    CB     CG      109.470    3.000
+ TIH      HB3    CB     CG      109.470    3.000
+ TIH      CB     CG     SD      108.000    3.000
+ TIH      CB     CG     CD      126.000    3.000
+ TIH      SD     CG     CD      108.000    3.000
+ TIH      CG     SD     CE2      98.130    3.000
+ TIH      SD     CE2    HE2     108.000    3.000
+ TIH      SD     CE2    CE1     108.000    3.000
+ TIH      HE2    CE2    CE1     126.000    3.000
+ TIH      CE2    CE1    HE1     126.000    3.000
+ TIH      CE2    CE1    CD      108.000    3.000
+ TIH      HE1    CE1    CD      126.000    3.000
+ TIH      CE1    CD     HD      126.000    3.000
+ TIH      CE1    CD     CG      108.000    3.000
+ TIH      HD     CD     CG      126.000    3.000
+ TIH      CA     C      O       118.500    3.000
+ TIH      CA     C      OXT     118.500    3.000
+ TIH      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TIH      var_1    HN2    N      CA     C        175.000   20.000   1
+ TIH      var_2    N      CA     CB     CG       -60.023   20.000   3
+ TIH      var_3    CA     CB     CG     SD       -89.948   20.000   2
+ TIH      CONST_1  CB     CG     CD     CE1      180.000    0.000   0
+ TIH      CONST_2  CB     CG     SD     CE2      180.000    0.000   0
+ TIH      CONST_3  CG     SD     CE2    CE1        0.000    0.000   0
+ TIH      CONST_4  SD     CE2    CE1    CD         0.000    0.000   0
+ TIH      CONST_5  CE2    CE1    CD     CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TIH      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TIH      plan-1    N         0.020
+ TIH      plan-1    CA        0.020
+ TIH      plan-1    HN1       0.020
+ TIH      plan-1    HN2       0.020
+ TIH      plan-2    C         0.020
+ TIH      plan-2    CA        0.020
+ TIH      plan-2    O         0.020
+ TIH      plan-2    OXT       0.020
+ TIH      plan-3    CG        0.020
+ TIH      plan-3    CB        0.020
+ TIH      plan-3    CD        0.020
+ TIH      plan-3    SD        0.020
+ TIH      plan-3    CE1       0.020
+ TIH      plan-3    CE2       0.020
+ TIH      plan-3    HD        0.020
+ TIH      plan-3    HE1       0.020
+ TIH      plan-3    HE2       0.020
+# ------------------------------------------------------

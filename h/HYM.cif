@@ -1,0 +1,268 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HYM      HYM '(4Z)-4-(2-AMINO-5-OXO-3,5-DIHYDRO-4H' non-polymer        29  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HYM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HYM           OAR    O    O         0.000      0.000    0.000    0.000
+ HYM           CAM    C    CR5       0.000      0.112    0.558   -1.079
+ HYM           NAN    N    NRD5      0.000      1.251    0.841   -1.724
+ HYM           CAO    C    CR5       0.000      0.997    1.448   -2.863
+ HYM           NAQ    N    NH2       0.000      1.956    1.864   -3.746
+ HYM           HAQ2   H    H         0.000      1.690    2.327   -4.607
+ HYM           HAQ1   H    H         0.000      2.936    1.712   -3.544
+ HYM           NAP    N    NR15      0.000     -0.340    1.614   -3.046
+ HYM           HAP    H    H         0.000     -0.800    2.069   -3.860
+ HYM           CAL    C    CR5       0.000     -0.983    1.057   -1.936
+ HYM           CAJ    C    C         0.000     -2.317    0.995   -1.695
+ HYM           CAI    C    CH2       0.000     -3.327    1.555   -2.678
+ HYM           HAI2   H    H         0.000     -3.749    0.743   -3.273
+ HYM           HAI1   H    H         0.000     -2.835    2.272   -3.339
+ HYM           CAE    C    CR5       0.000     -2.850    0.375   -0.477
+ HYM           CAB    C    CR5       0.000     -2.845   -0.954   -0.050
+ HYM           CLB    CL   CL        0.000     -2.070   -2.285   -0.851
+ HYM           CAA    C    CR5       0.000     -3.559   -1.016    1.104
+ HYM           CLA    CL   CL        0.000     -3.854   -2.458    2.025
+ HYM           NAC    N    NR15      0.000     -4.008    0.232    1.425
+ HYM           HAC    H    H         0.000     -4.602    0.470    2.245
+ HYM           CAD    C    CR5       0.000     -3.553    1.111    0.497
+ HYM           CAF    C    C         0.000     -3.678    2.571    0.400
+ HYM           OAK    O    O         0.000     -3.535    3.283    1.377
+ HYM           NAG    N    NH1       0.000     -3.957    3.099   -0.821
+ HYM           HAG    H    H         0.000     -3.822    4.087   -0.980
+ HYM           CAH    C    CH2       0.000     -4.447    2.258   -1.903
+ HYM           HAH2   H    H         0.000     -5.017    2.895   -2.582
+ HYM           HAH1   H    H         0.000     -5.111    1.510   -1.463
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HYM      OAR    n/a    CAM    START
+ HYM      CAM    OAR    CAL    .
+ HYM      NAN    CAM    CAO    .
+ HYM      CAO    NAN    NAP    .
+ HYM      NAQ    CAO    HAQ1   .
+ HYM      HAQ2   NAQ    .      .
+ HYM      HAQ1   NAQ    .      .
+ HYM      NAP    CAO    HAP    .
+ HYM      HAP    NAP    .      .
+ HYM      CAL    CAM    CAJ    .
+ HYM      CAJ    CAL    CAE    .
+ HYM      CAI    CAJ    HAI1   .
+ HYM      HAI2   CAI    .      .
+ HYM      HAI1   CAI    .      .
+ HYM      CAE    CAJ    CAD    .
+ HYM      CAB    CAE    CAA    .
+ HYM      CLB    CAB    .      .
+ HYM      CAA    CAB    NAC    .
+ HYM      CLA    CAA    .      .
+ HYM      NAC    CAA    HAC    .
+ HYM      HAC    NAC    .      .
+ HYM      CAD    CAE    CAF    .
+ HYM      CAF    CAD    NAG    .
+ HYM      OAK    CAF    .      .
+ HYM      NAG    CAF    CAH    .
+ HYM      HAG    NAG    .      .
+ HYM      CAH    NAG    HAH1   .
+ HYM      HAH2   CAH    .      .
+ HYM      HAH1   CAH    .      END
+ HYM      CAI    CAH    .    ADD
+ HYM      CAD    NAC    .    ADD
+ HYM      CAL    NAP    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HYM      CAI    CAH       single      1.524    0.020
+ HYM      CAI    CAJ       single      1.510    0.020
+ HYM      HAI1   CAI       single      1.092    0.020
+ HYM      HAI2   CAI       single      1.092    0.020
+ HYM      CAH    NAG       single      1.450    0.020
+ HYM      HAH1   CAH       single      1.092    0.020
+ HYM      HAH2   CAH       single      1.092    0.020
+ HYM      NAG    CAF       single      1.330    0.020
+ HYM      HAG    NAG       single      1.010    0.020
+ HYM      OAK    CAF       double      1.220    0.020
+ HYM      CAF    CAD       single      1.490    0.020
+ HYM      CAD    NAC       single      1.340    0.020
+ HYM      CAD    CAE       double      1.490    0.020
+ HYM      NAC    CAA       single      1.340    0.020
+ HYM      HAC    NAC       single      1.040    0.020
+ HYM      CLA    CAA       single      1.845    0.020
+ HYM      CAA    CAB       double      1.490    0.020
+ HYM      CLB    CAB       single      1.845    0.020
+ HYM      CAB    CAE       single      1.490    0.020
+ HYM      CAE    CAJ       single      1.490    0.020
+ HYM      CAJ    CAL       double      1.490    0.020
+ HYM      CAL    NAP       single      1.340    0.020
+ HYM      CAL    CAM       single      1.490    0.020
+ HYM      NAP    CAO       single      1.340    0.020
+ HYM      HAP    NAP       single      1.040    0.020
+ HYM      CAM    OAR       double      1.285    0.020
+ HYM      NAN    CAM       single      1.350    0.020
+ HYM      CAO    NAN       double      1.350    0.020
+ HYM      NAQ    CAO       single      1.355    0.020
+ HYM      HAQ1   NAQ       single      1.010    0.020
+ HYM      HAQ2   NAQ       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HYM      OAR    CAM    NAN     108.000    3.000
+ HYM      OAR    CAM    CAL     108.000    3.000
+ HYM      NAN    CAM    CAL     108.000    3.000
+ HYM      CAM    NAN    CAO     108.000    3.000
+ HYM      NAN    CAO    NAQ     108.000    3.000
+ HYM      NAN    CAO    NAP     108.000    3.000
+ HYM      NAQ    CAO    NAP     108.000    3.000
+ HYM      CAO    NAQ    HAQ2    120.000    3.000
+ HYM      CAO    NAQ    HAQ1    120.000    3.000
+ HYM      HAQ2   NAQ    HAQ1    120.000    3.000
+ HYM      CAO    NAP    HAP     126.000    3.000
+ HYM      CAO    NAP    CAL     108.000    3.000
+ HYM      HAP    NAP    CAL     126.000    3.000
+ HYM      CAM    CAL    CAJ     117.000    3.000
+ HYM      CAM    CAL    NAP     108.000    3.000
+ HYM      CAJ    CAL    NAP     126.000    3.000
+ HYM      CAL    CAJ    CAI     116.500    3.000
+ HYM      CAL    CAJ    CAE     120.000    3.000
+ HYM      CAI    CAJ    CAE     116.500    3.000
+ HYM      CAJ    CAI    HAI2    109.470    3.000
+ HYM      CAJ    CAI    HAI1    109.470    3.000
+ HYM      CAJ    CAI    CAH     109.470    3.000
+ HYM      HAI2   CAI    HAI1    107.900    3.000
+ HYM      HAI2   CAI    CAH     109.470    3.000
+ HYM      HAI1   CAI    CAH     109.470    3.000
+ HYM      CAJ    CAE    CAB     117.000    3.000
+ HYM      CAJ    CAE    CAD     117.000    3.000
+ HYM      CAB    CAE    CAD     108.000    3.000
+ HYM      CAE    CAB    CLB     108.000    3.000
+ HYM      CAE    CAB    CAA     108.000    3.000
+ HYM      CLB    CAB    CAA     108.000    3.000
+ HYM      CAB    CAA    CLA     108.000    3.000
+ HYM      CAB    CAA    NAC     108.000    3.000
+ HYM      CLA    CAA    NAC     108.000    3.000
+ HYM      CAA    NAC    HAC     126.000    3.000
+ HYM      CAA    NAC    CAD     108.000    3.000
+ HYM      HAC    NAC    CAD     126.000    3.000
+ HYM      CAE    CAD    CAF     117.000    3.000
+ HYM      CAE    CAD    NAC     108.000    3.000
+ HYM      CAF    CAD    NAC     126.000    3.000
+ HYM      CAD    CAF    OAK     120.500    3.000
+ HYM      CAD    CAF    NAG     120.000    3.000
+ HYM      OAK    CAF    NAG     123.000    3.000
+ HYM      CAF    NAG    HAG     120.000    3.000
+ HYM      CAF    NAG    CAH     121.500    3.000
+ HYM      HAG    NAG    CAH     118.500    3.000
+ HYM      NAG    CAH    HAH2    109.470    3.000
+ HYM      NAG    CAH    HAH1    109.470    3.000
+ HYM      NAG    CAH    CAI     112.000    3.000
+ HYM      HAH2   CAH    HAH1    107.900    3.000
+ HYM      HAH2   CAH    CAI     109.470    3.000
+ HYM      HAH1   CAH    CAI     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HYM      CONST_1  OAR    CAM    NAN    CAO      180.000    0.000   0
+ HYM      CONST_2  CAM    NAN    CAO    NAP        0.000    0.000   0
+ HYM      CONST_3  NAN    CAO    NAQ    HAQ1      -0.012    0.000   0
+ HYM      CONST_4  NAN    CAO    NAP    CAL        0.000    0.000   0
+ HYM      CONST_5  OAR    CAM    CAL    CAJ        0.000    0.000   0
+ HYM      CONST_6  CAM    CAL    NAP    CAO        0.000    0.000   0
+ HYM      CONST_7  CAM    CAL    CAJ    CAE       -0.369    0.000   0
+ HYM      var_1    CAL    CAJ    CAI    CAH     -139.848   20.000   3
+ HYM      var_2    CAJ    CAI    CAH    NAG       44.230   20.000   3
+ HYM      var_3    CAL    CAJ    CAE    CAD      115.455   20.000   1
+ HYM      CONST_8  CAJ    CAE    CAB    CAA      180.000    0.000   0
+ HYM      CONST_9  CAE    CAB    CAA    NAC        0.000    0.000   0
+ HYM      CONST_10 CAB    CAA    NAC    CAD        0.000    0.000   0
+ HYM      CONST_11 CAJ    CAE    CAD    CAF        0.000    0.000   0
+ HYM      CONST_12 CAE    CAD    NAC    CAA        0.000    0.000   0
+ HYM      var_4    CAE    CAD    CAF    NAG       43.108   20.000   1
+ HYM      CONST_13 CAD    CAF    NAG    CAH        0.000    0.000   0
+ HYM      var_5    CAF    NAG    CAH    CAI      -84.491   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HYM      plan-1    NAG       0.020
+ HYM      plan-1    CAH       0.020
+ HYM      plan-1    CAF       0.020
+ HYM      plan-1    HAG       0.020
+ HYM      plan-2    CAF       0.020
+ HYM      plan-2    NAG       0.020
+ HYM      plan-2    OAK       0.020
+ HYM      plan-2    CAD       0.020
+ HYM      plan-2    HAG       0.020
+ HYM      plan-3    CAD       0.020
+ HYM      plan-3    CAF       0.020
+ HYM      plan-3    NAC       0.020
+ HYM      plan-3    CAE       0.020
+ HYM      plan-3    CAA       0.020
+ HYM      plan-3    CAB       0.020
+ HYM      plan-3    HAC       0.020
+ HYM      plan-3    CLA       0.020
+ HYM      plan-3    CLB       0.020
+ HYM      plan-3    CAJ       0.020
+ HYM      plan-4    CAJ       0.020
+ HYM      plan-4    CAI       0.020
+ HYM      plan-4    CAE       0.020
+ HYM      plan-4    CAL       0.020
+ HYM      plan-4    NAP       0.020
+ HYM      plan-4    CAM       0.020
+ HYM      plan-4    NAN       0.020
+ HYM      plan-4    CAO       0.020
+ HYM      plan-4    HAP       0.020
+ HYM      plan-4    OAR       0.020
+ HYM      plan-4    NAQ       0.020
+ HYM      plan-4    HAQ2      0.020
+ HYM      plan-4    HAQ1      0.020
+ HYM      plan-5    NAQ       0.020
+ HYM      plan-5    CAO       0.020
+ HYM      plan-5    HAQ1      0.020
+ HYM      plan-5    HAQ2      0.020
+# ------------------------------------------------------

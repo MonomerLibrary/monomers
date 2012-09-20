@@ -1,0 +1,185 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MHO      MHO 'S-OXYMETHIONINE                     ' peptide            20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MHO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MHO           N      N    NH2       0.000      0.000    0.000    0.000
+ MHO           HN1    H    H         0.000      0.916   -0.407    0.150
+ MHO           HN2    H    H         0.000     -0.420   -0.047   -0.921
+ MHO           CA     C    CH1       0.000     -0.712    0.652    1.107
+ MHO           HA     H    H         0.000     -0.821    1.724    0.891
+ MHO           CB     C    CH2       0.000     -2.095    0.021    1.267
+ MHO           HB2    H    H         0.000     -2.622    0.506    2.091
+ MHO           HB3    H    H         0.000     -1.985   -1.044    1.483
+ MHO           CG     C    CH2       0.000     -2.891    0.201   -0.027
+ MHO           HG2    H    H         0.000     -2.361   -0.284   -0.849
+ MHO           HG3    H    H         0.000     -2.998    1.266   -0.242
+ MHO           SD     S    S3        0.000     -4.532   -0.548    0.164
+ MHO           CE     C    CH3       0.000     -5.231   -0.195   -1.473
+ MHO           HE3    H    H         0.000     -5.260    0.856   -1.650
+ MHO           HE2    H    H         0.000     -4.642   -0.647   -2.238
+ MHO           HE1    H    H         0.000     -6.225   -0.575   -1.546
+ MHO           OD1    O    O         0.000     -4.395   -1.952    0.327
+ MHO           C      C    C         0.000      0.073    0.476    2.381
+ MHO           O      O    OC       -0.500      0.785   -0.540    2.542
+ MHO           OXT    O    OC       -0.500      0.011    1.345    3.279
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MHO      N      n/a    CA     START
+ MHO      HN1    N      .      .
+ MHO      HN2    N      .      .
+ MHO      CA     N      C      .
+ MHO      HA     CA     .      .
+ MHO      CB     CA     CG     .
+ MHO      HB2    CB     .      .
+ MHO      HB3    CB     .      .
+ MHO      CG     CB     SD     .
+ MHO      HG2    CG     .      .
+ MHO      HG3    CG     .      .
+ MHO      SD     CG     OD1    .
+ MHO      CE     SD     HE1    .
+ MHO      HE3    CE     .      .
+ MHO      HE2    CE     .      .
+ MHO      HE1    CE     .      .
+ MHO      OD1    SD     .      .
+ MHO      C      CA     .      END
+ MHO      O      C      .      .
+ MHO      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MHO      CA     N         single      1.450    0.020
+ MHO      CB     CA        single      1.524    0.020
+ MHO      C      CA        single      1.500    0.020
+ MHO      HA     CA        single      1.099    0.020
+ MHO      CG     CB        single      1.524    0.020
+ MHO      HB2    CB        single      1.092    0.020
+ MHO      HB3    CB        single      1.092    0.020
+ MHO      SD     CG        single      1.707    0.020
+ MHO      HG2    CG        single      1.092    0.020
+ MHO      HG3    CG        single      1.092    0.020
+ MHO      CE     SD        single      1.707    0.020
+ MHO      OD1    SD        double      1.480    0.020
+ MHO      HE1    CE        single      1.059    0.020
+ MHO      HE2    CE        single      1.059    0.020
+ MHO      HE3    CE        single      1.059    0.020
+ MHO      O      C         deloc       1.250    0.020
+ MHO      OXT    C         deloc       1.250    0.020
+ MHO      HN1    N         single      1.010    0.020
+ MHO      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MHO      HN1    N      HN2     120.000    3.000
+ MHO      HN1    N      CA      120.000    3.000
+ MHO      HN2    N      CA      120.000    3.000
+ MHO      N      CA     HA      109.470    3.000
+ MHO      N      CA     CB      109.470    3.000
+ MHO      N      CA     C       109.470    3.000
+ MHO      HA     CA     CB      108.340    3.000
+ MHO      HA     CA     C       108.810    3.000
+ MHO      CB     CA     C       109.470    3.000
+ MHO      CA     CB     HB2     109.470    3.000
+ MHO      CA     CB     HB3     109.470    3.000
+ MHO      CA     CB     CG      111.000    3.000
+ MHO      HB2    CB     HB3     107.900    3.000
+ MHO      HB2    CB     CG      109.470    3.000
+ MHO      HB3    CB     CG      109.470    3.000
+ MHO      CB     CG     HG2     109.470    3.000
+ MHO      CB     CG     HG3     109.470    3.000
+ MHO      CB     CG     SD      109.500    3.000
+ MHO      HG2    CG     HG3     107.900    3.000
+ MHO      HG2    CG     SD      109.500    3.000
+ MHO      HG3    CG     SD      109.500    3.000
+ MHO      CG     SD     CE      100.012    3.000
+ MHO      CG     SD     OD1     109.462    3.000
+ MHO      CE     SD     OD1     109.487    3.000
+ MHO      SD     CE     HE3     109.500    3.000
+ MHO      SD     CE     HE2     109.500    3.000
+ MHO      SD     CE     HE1     109.500    3.000
+ MHO      HE3    CE     HE2     109.470    3.000
+ MHO      HE3    CE     HE1     109.470    3.000
+ MHO      HE2    CE     HE1     109.470    3.000
+ MHO      CA     C      O       118.500    3.000
+ MHO      CA     C      OXT     118.500    3.000
+ MHO      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MHO      var_1    HN2    N      CA     C        175.000   20.000   1
+ MHO      var_2    N      CA     CB     CG       -59.991   20.000   3
+ MHO      var_3    CA     CB     CG     SD      -179.976   20.000   3
+ MHO      var_4    CB     CG     SD     OD1      -65.041   20.000   1
+ MHO      var_5    CG     SD     CE     HE1     -179.992   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MHO      chir_01  CA     N      CB     C         negativ
+ MHO      chir_02  SD     CG     CE     OD1       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MHO      plan-1    N         0.020
+ MHO      plan-1    CA        0.020
+ MHO      plan-1    HN1       0.020
+ MHO      plan-1    HN2       0.020
+ MHO      plan-2    C         0.020
+ MHO      plan-2    CA        0.020
+ MHO      plan-2    O         0.020
+ MHO      plan-2    OXT       0.020
+# ------------------------------------------------------

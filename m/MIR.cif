@@ -1,0 +1,200 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MIR      MIR 'Monoethylphosphorylserine           ' peptide            23  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MIR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MIR           N      N    NH2       0.000      0.000    0.000    0.000
+ MIR           HN1    H    H         0.000      0.807   -0.457   -0.409
+ MIR           HN2    H    H         0.000     -0.028    1.012    0.045
+ MIR           CA     C    CH1       0.000     -1.119   -0.796    0.522
+ MIR           HA     H    H         0.000     -1.195   -0.653    1.609
+ MIR           CB     C    CH2       0.000     -2.420   -0.345   -0.145
+ MIR           HB     H    H         0.000     -3.237   -0.996    0.174
+ MIR           HBA    H    H         0.000     -2.313   -0.404   -1.230
+ MIR           OG     O    O2        0.000     -2.707    1.002    0.235
+ MIR           P      P    P         0.000     -4.006    1.802   -0.284
+ MIR           O1P    O    OP       -0.500     -5.229    1.152    0.247
+ MIR           O2P    O    OP       -0.500     -4.038    1.783   -1.766
+ MIR           O3P    O    O2        0.000     -3.940    3.325    0.234
+ MIR           C1     C    CH2       0.000     -4.894    4.318   -0.146
+ MIR           H1     H    H         0.000     -5.891    4.005    0.173
+ MIR           H1A    H    H         0.000     -4.882    4.438   -1.231
+ MIR           C2     C    CH3       0.000     -4.539    5.649    0.520
+ MIR           H2B    H    H         0.000     -3.572    5.955    0.211
+ MIR           H2A    H    H         0.000     -5.246    6.388    0.240
+ MIR           H2     H    H         0.000     -4.550    5.535    1.574
+ MIR           C      C    C         0.000     -0.881   -2.254    0.222
+ MIR           O      O    OC       -0.500     -0.080   -2.584   -0.680
+ MIR           OXT    O    OC       -0.500     -1.484   -3.134    0.876
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MIR      N      n/a    CA     START
+ MIR      HN1    N      .      .
+ MIR      HN2    N      .      .
+ MIR      CA     N      C      .
+ MIR      HA     CA     .      .
+ MIR      CB     CA     OG     .
+ MIR      HB     CB     .      .
+ MIR      HBA    CB     .      .
+ MIR      OG     CB     P      .
+ MIR      P      OG     O3P    .
+ MIR      O1P    P      .      .
+ MIR      O2P    P      .      .
+ MIR      O3P    P      C1     .
+ MIR      C1     O3P    C2     .
+ MIR      H1     C1     .      .
+ MIR      H1A    C1     .      .
+ MIR      C2     C1     H2     .
+ MIR      H2B    C2     .      .
+ MIR      H2A    C2     .      .
+ MIR      H2     C2     .      .
+ MIR      C      CA     .      END
+ MIR      O      C      .      .
+ MIR      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MIR      CA     N         single      1.450    0.020
+ MIR      C      CA        single      1.500    0.020
+ MIR      CB     CA        single      1.524    0.020
+ MIR      HA     CA        single      1.099    0.020
+ MIR      OG     CB        single      1.426    0.020
+ MIR      HB     CB        single      1.092    0.020
+ MIR      HBA    CB        single      1.092    0.020
+ MIR      P      OG        single      1.610    0.020
+ MIR      O2P    P         deloc       1.510    0.020
+ MIR      O1P    P         deloc       1.510    0.020
+ MIR      O3P    P         single      1.610    0.020
+ MIR      C1     O3P       single      1.426    0.020
+ MIR      C2     C1        single      1.513    0.020
+ MIR      H1     C1        single      1.092    0.020
+ MIR      H1A    C1        single      1.092    0.020
+ MIR      H2     C2        single      1.059    0.020
+ MIR      H2A    C2        single      1.059    0.020
+ MIR      H2B    C2        single      1.059    0.020
+ MIR      O      C         deloc       1.250    0.020
+ MIR      OXT    C         deloc       1.250    0.020
+ MIR      HN1    N         single      1.010    0.020
+ MIR      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MIR      HN1    N      HN2     120.000    3.000
+ MIR      HN1    N      CA      120.000    3.000
+ MIR      HN2    N      CA      120.000    3.000
+ MIR      N      CA     HA      109.470    3.000
+ MIR      N      CA     CB      109.470    3.000
+ MIR      N      CA     C       109.470    3.000
+ MIR      HA     CA     CB      108.340    3.000
+ MIR      HA     CA     C       108.810    3.000
+ MIR      CB     CA     C       109.470    3.000
+ MIR      CA     CB     HB      109.470    3.000
+ MIR      CA     CB     HBA     109.470    3.000
+ MIR      CA     CB     OG      109.470    3.000
+ MIR      HB     CB     HBA     107.900    3.000
+ MIR      HB     CB     OG      109.470    3.000
+ MIR      HBA    CB     OG      109.470    3.000
+ MIR      CB     OG     P       120.500    3.000
+ MIR      OG     P      O1P     108.200    3.000
+ MIR      OG     P      O2P     108.200    3.000
+ MIR      OG     P      O3P     102.600    3.000
+ MIR      O1P    P      O2P     119.900    3.000
+ MIR      O1P    P      O3P     108.200    3.000
+ MIR      O2P    P      O3P     108.200    3.000
+ MIR      P      O3P    C1      120.500    3.000
+ MIR      O3P    C1     H1      109.470    3.000
+ MIR      O3P    C1     H1A     109.470    3.000
+ MIR      O3P    C1     C2      109.470    3.000
+ MIR      H1     C1     H1A     107.900    3.000
+ MIR      H1     C1     C2      109.470    3.000
+ MIR      H1A    C1     C2      109.470    3.000
+ MIR      C1     C2     H2B     109.470    3.000
+ MIR      C1     C2     H2A     109.470    3.000
+ MIR      C1     C2     H2      109.470    3.000
+ MIR      H2B    C2     H2A     109.470    3.000
+ MIR      H2B    C2     H2      109.470    3.000
+ MIR      H2A    C2     H2      109.470    3.000
+ MIR      CA     C      O       118.500    3.000
+ MIR      CA     C      OXT     118.500    3.000
+ MIR      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MIR      var_1    HN2    N      CA     C        175.000   20.000   1
+ MIR      var_2    N      CA     CB     OG       -65.053   20.000   3
+ MIR      var_3    CA     CB     OG     P        179.976   20.000   1
+ MIR      var_4    CB     OG     P      O3P     -174.982   20.000   1
+ MIR      var_5    OG     P      O3P    C1       174.991   20.000   1
+ MIR      var_6    P      O3P    C1     C2      -179.974   20.000   1
+ MIR      var_7    O3P    C1     C2     H2       -59.966   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MIR      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MIR      plan-1    N         0.020
+ MIR      plan-1    CA        0.020
+ MIR      plan-1    HN1       0.020
+ MIR      plan-1    HN2       0.020
+ MIR      plan-2    C         0.020
+ MIR      plan-2    CA        0.020
+ MIR      plan-2    O         0.020
+ MIR      plan-2    OXT       0.020
+# ------------------------------------------------------

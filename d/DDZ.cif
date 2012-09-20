@@ -1,0 +1,153 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DDZ      DDZ '3,3-DIHYDROXY L-ALANINE             ' peptide            14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DDZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DDZ           N      N    NH2       0.000      0.000    0.000    0.000
+ DDZ           HN1    H    H         0.000      0.769   -0.338   -0.568
+ DDZ           HN2    H    H         0.000      0.102    0.872    0.506
+ DDZ           CA     C    CH1       0.000     -1.250   -0.767    0.088
+ DDZ           HA     H    H         0.000     -1.389   -1.124    1.119
+ DDZ           CB     C    CH1       0.000     -2.427    0.130   -0.303
+ DDZ           HB     H    H         0.000     -2.335    0.414   -1.360
+ DDZ           OG2    O    OH1       0.000     -2.421    1.305    0.508
+ DDZ           HG2    H    H         0.000     -3.164    1.872    0.260
+ DDZ           OG1    O    OH1       0.000     -3.651   -0.579   -0.106
+ DDZ           HG1    H    H         0.000     -3.732   -0.828    0.825
+ DDZ           C      C    C         0.000     -1.184   -1.946   -0.847
+ DDZ           O      O    OC       -0.500     -0.368   -1.948   -1.795
+ DDZ           OXT    O    OC       -0.500     -1.945   -2.924   -0.676
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DDZ      N      n/a    CA     START
+ DDZ      HN1    N      .      .
+ DDZ      HN2    N      .      .
+ DDZ      CA     N      C      .
+ DDZ      HA     CA     .      .
+ DDZ      CB     CA     OG1    .
+ DDZ      HB     CB     .      .
+ DDZ      OG2    CB     HG2    .
+ DDZ      HG2    OG2    .      .
+ DDZ      OG1    CB     HG1    .
+ DDZ      HG1    OG1    .      .
+ DDZ      C      CA     .      END
+ DDZ      O      C      .      .
+ DDZ      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DDZ      CA     N         single      1.450    0.020
+ DDZ      C      CA        single      1.500    0.020
+ DDZ      CB     CA        single      1.524    0.020
+ DDZ      O      C         deloc       1.250    0.020
+ DDZ      OXT    C         deloc       1.250    0.020
+ DDZ      OG1    CB        single      1.432    0.020
+ DDZ      OG2    CB        single      1.432    0.020
+ DDZ      HA     CA        single      1.099    0.020
+ DDZ      HB     CB        single      1.099    0.020
+ DDZ      HG1    OG1       single      0.967    0.020
+ DDZ      HG2    OG2       single      0.967    0.020
+ DDZ      HN1    N         single      1.010    0.020
+ DDZ      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DDZ      HN1    N      HN2     120.000    3.000
+ DDZ      HN1    N      CA      120.000    3.000
+ DDZ      HN2    N      CA      120.000    3.000
+ DDZ      N      CA     HA      109.470    3.000
+ DDZ      N      CA     CB      109.470    3.000
+ DDZ      N      CA     C       109.470    3.000
+ DDZ      HA     CA     CB      108.340    3.000
+ DDZ      HA     CA     C       108.810    3.000
+ DDZ      CB     CA     C       109.470    3.000
+ DDZ      CA     CB     HB      108.340    3.000
+ DDZ      CA     CB     OG2     109.470    3.000
+ DDZ      CA     CB     OG1     109.470    3.000
+ DDZ      HB     CB     OG2     109.470    3.000
+ DDZ      HB     CB     OG1     109.470    3.000
+ DDZ      OG2    CB     OG1     109.500    3.000
+ DDZ      CB     OG2    HG2     109.470    3.000
+ DDZ      CB     OG1    HG1     109.470    3.000
+ DDZ      CA     C      O       118.500    3.000
+ DDZ      CA     C      OXT     118.500    3.000
+ DDZ      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DDZ      var_1    HN2    N      CA     C        175.000   20.000   1
+ DDZ      var_2    N      CA     CB     OG1     -175.008   20.000   3
+ DDZ      var_3    CA     CB     OG2    HG2      179.934   20.000   1
+ DDZ      var_4    CA     CB     OG1    HG1       60.102   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DDZ      chir_01  CA     N      C      CB        positiv
+ DDZ      chir_02  CB     CA     OG1    OG2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DDZ      plan-1    N         0.020
+ DDZ      plan-1    CA        0.020
+ DDZ      plan-1    HN1       0.020
+ DDZ      plan-1    HN2       0.020
+ DDZ      plan-2    C         0.020
+ DDZ      plan-2    CA        0.020
+ DDZ      plan-2    O         0.020
+ DDZ      plan-2    OXT       0.020
+# ------------------------------------------------------

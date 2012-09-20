@@ -1,0 +1,232 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MPL      MPL 'N-METHYL-PYRIDOXAL-5'-PHOSPHATE     ' non-polymer        28  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MPL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MPL           O      O    O         0.000      0.000    0.000    0.000
+ MPL           C4A    C    C1        0.000     -1.209    0.107   -0.006
+ MPL           H      H    H         0.000     -1.663    1.083   -0.018
+ MPL           C4     C    CR6       0.000     -2.053   -1.098    0.004
+ MPL           C3     C    CR6       0.000     -1.482   -2.383    0.018
+ MPL           O3     O    OH1       0.000     -0.135   -2.539    0.024
+ MPL           HO3    H    H         0.000      0.187   -2.586   -0.886
+ MPL           C2     C    CR6       0.000     -2.323   -3.490    0.026
+ MPL           C2A    C    CH3       0.000     -1.731   -4.875    0.041
+ MPL           H23    H    H         0.000     -2.385   -5.544   -0.454
+ MPL           H22    H    H         0.000     -0.795   -4.864   -0.454
+ MPL           H21    H    H         0.000     -1.596   -5.190    1.044
+ MPL           N1     N    NR6       1.000     -3.631   -3.343    0.014
+ MPL           C6     C    CR16      0.000     -4.205   -2.154    0.005
+ MPL           H6     H    H         0.000     -5.286   -2.085    0.005
+ MPL           C1     C    CH3       0.000     -4.478   -4.537    0.021
+ MPL           H13    H    H         0.000     -3.977   -5.322    0.526
+ MPL           H12    H    H         0.000     -5.388   -4.322    0.519
+ MPL           H11    H    H         0.000     -4.681   -4.832   -0.975
+ MPL           C5     C    CR6       0.000     -3.452   -0.999   -0.003
+ MPL           C5A    C    CH2       0.000     -4.122    0.350   -0.019
+ MPL           H51    H    H         0.000     -3.819    0.896   -0.915
+ MPL           H52    H    H         0.000     -3.825    0.914    0.868
+ MPL           O4P    O    O2        0.000     -5.541    0.178   -0.023
+ MPL           P      P    P         0.000     -6.190    1.650   -0.041
+ MPL           O1P    O    OP       -0.666     -5.640    2.431   -1.215
+ MPL           O2P    O    OP       -0.666     -7.693    1.538   -0.169
+ MPL           O3P    O    OP       -0.666     -5.847    2.368    1.246
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MPL      O      n/a    C4A    START
+ MPL      C4A    O      C4     .
+ MPL      H      C4A    .      .
+ MPL      C4     C4A    C5     .
+ MPL      C3     C4     C2     .
+ MPL      O3     C3     HO3    .
+ MPL      HO3    O3     .      .
+ MPL      C2     C3     N1     .
+ MPL      C2A    C2     H21    .
+ MPL      H23    C2A    .      .
+ MPL      H22    C2A    .      .
+ MPL      H21    C2A    .      .
+ MPL      N1     C2     C1     .
+ MPL      C6     N1     H6     .
+ MPL      H6     C6     .      .
+ MPL      C1     N1     H11    .
+ MPL      H13    C1     .      .
+ MPL      H12    C1     .      .
+ MPL      H11    C1     .      .
+ MPL      C5     C4     C5A    .
+ MPL      C5A    C5     O4P    .
+ MPL      H51    C5A    .      .
+ MPL      H52    C5A    .      .
+ MPL      O4P    C5A    P      .
+ MPL      P      O4P    O3P    .
+ MPL      O1P    P      .      .
+ MPL      O2P    P      .      .
+ MPL      O3P    P      .      END
+ MPL      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MPL      O1P    P         deloc       1.510    0.020
+ MPL      O2P    P         deloc       1.510    0.020
+ MPL      O3P    P         deloc       1.510    0.020
+ MPL      P      O4P       single      1.610    0.020
+ MPL      O4P    C5A       single      1.426    0.020
+ MPL      C5A    C5        single      1.511    0.020
+ MPL      H51    C5A       single      1.092    0.020
+ MPL      H52    C5A       single      1.092    0.020
+ MPL      C5     C6        single      1.390    0.020
+ MPL      C5     C4        double      1.487    0.020
+ MPL      C1     N1        single      1.465    0.020
+ MPL      C6     N1        double      1.337    0.020
+ MPL      N1     C2        single      1.410    0.020
+ MPL      H11    C1        single      1.059    0.020
+ MPL      H12    C1        single      1.059    0.020
+ MPL      H13    C1        single      1.059    0.020
+ MPL      H6     C6        single      1.083    0.020
+ MPL      C2A    C2        single      1.506    0.020
+ MPL      C2     C3        double      1.487    0.020
+ MPL      H21    C2A       single      1.059    0.020
+ MPL      H22    C2A       single      1.059    0.020
+ MPL      H23    C2A       single      1.059    0.020
+ MPL      O3     C3        single      1.362    0.020
+ MPL      C3     C4        single      1.487    0.020
+ MPL      HO3    O3        single      0.967    0.020
+ MPL      C4     C4A       single      1.480    0.020
+ MPL      C4A    O         double      1.220    0.020
+ MPL      H      C4A       single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MPL      O      C4A    H       123.000    3.000
+ MPL      O      C4A    C4      120.000    3.000
+ MPL      H      C4A    C4      120.000    3.000
+ MPL      C4A    C4     C3      120.000    3.000
+ MPL      C4A    C4     C5      120.000    3.000
+ MPL      C3     C4     C5      120.000    3.000
+ MPL      C4     C3     O3      120.000    3.000
+ MPL      C4     C3     C2      120.000    3.000
+ MPL      O3     C3     C2      120.000    3.000
+ MPL      C3     O3     HO3     109.470    3.000
+ MPL      C3     C2     C2A     120.000    3.000
+ MPL      C3     C2     N1      120.000    3.000
+ MPL      C2A    C2     N1      120.000    3.000
+ MPL      C2     C2A    H23     109.470    3.000
+ MPL      C2     C2A    H22     109.470    3.000
+ MPL      C2     C2A    H21     109.470    3.000
+ MPL      H23    C2A    H22     109.470    3.000
+ MPL      H23    C2A    H21     109.470    3.000
+ MPL      H22    C2A    H21     109.470    3.000
+ MPL      C2     N1     C6      120.000    3.000
+ MPL      C2     N1     C1      120.000    3.000
+ MPL      C6     N1     C1      120.000    3.000
+ MPL      N1     C6     H6      120.000    3.000
+ MPL      N1     C6     C5      120.000    3.000
+ MPL      H6     C6     C5      120.000    3.000
+ MPL      N1     C1     H13     109.470    3.000
+ MPL      N1     C1     H12     109.470    3.000
+ MPL      N1     C1     H11     109.470    3.000
+ MPL      H13    C1     H12     109.470    3.000
+ MPL      H13    C1     H11     109.470    3.000
+ MPL      H12    C1     H11     109.470    3.000
+ MPL      C4     C5     C5A     120.000    3.000
+ MPL      C4     C5     C6      120.000    3.000
+ MPL      C5A    C5     C6      120.000    3.000
+ MPL      C5     C5A    H51     109.470    3.000
+ MPL      C5     C5A    H52     109.470    3.000
+ MPL      C5     C5A    O4P     109.470    3.000
+ MPL      H51    C5A    H52     107.900    3.000
+ MPL      H51    C5A    O4P     109.470    3.000
+ MPL      H52    C5A    O4P     109.470    3.000
+ MPL      C5A    O4P    P       120.500    3.000
+ MPL      O4P    P      O1P     108.200    3.000
+ MPL      O4P    P      O2P     108.200    3.000
+ MPL      O4P    P      O3P     108.200    3.000
+ MPL      O1P    P      O2P     119.900    3.000
+ MPL      O1P    P      O3P     119.900    3.000
+ MPL      O2P    P      O3P     119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MPL      var_1    O      C4A    C4     C5      -179.972   20.000   1
+ MPL      CONST_1  C4A    C4     C3     C2       180.000    0.000   0
+ MPL      var_2    C4     C3     O3     HO3      -90.020   20.000   1
+ MPL      CONST_2  C4     C3     C2     N1         0.000    0.000   0
+ MPL      var_3    C3     C2     C2A    H21       89.991   20.000   1
+ MPL      CONST_3  C3     C2     N1     C1       180.000    0.000   0
+ MPL      CONST_4  C2     N1     C6     C5         0.000    0.000   0
+ MPL      var_4    C2     N1     C1     H11      -90.507   20.000   1
+ MPL      CONST_5  C4A    C4     C5     C5A        0.000    0.000   0
+ MPL      CONST_6  C4     C5     C6     N1         0.000    0.000   0
+ MPL      var_5    C4     C5     C5A    O4P     -179.964   20.000   2
+ MPL      var_6    C5     C5A    O4P    P       -179.963   20.000   1
+ MPL      var_7    C5A    O4P    P      O3P      -65.031   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MPL      plan-1    C5        0.020
+ MPL      plan-1    C5A       0.020
+ MPL      plan-1    C6        0.020
+ MPL      plan-1    C4        0.020
+ MPL      plan-1    N1        0.020
+ MPL      plan-1    C2        0.020
+ MPL      plan-1    C3        0.020
+ MPL      plan-1    C1        0.020
+ MPL      plan-1    H6        0.020
+ MPL      plan-1    C2A       0.020
+ MPL      plan-1    O3        0.020
+ MPL      plan-1    C4A       0.020
+ MPL      plan-1    H         0.020
+ MPL      plan-2    C4A       0.020
+ MPL      plan-2    C4        0.020
+ MPL      plan-2    O         0.020
+ MPL      plan-2    H         0.020
+# ------------------------------------------------------

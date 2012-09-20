@@ -1,0 +1,177 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OAS      OAS 'O-ACETYLSERINE                      ' peptide            18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OAS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OAS           N      N    NH2       0.000      0.000    0.000    0.000
+ OAS           HN1    H    H         0.000      0.892   -0.431    0.215
+ OAS           HN2    H    H         0.000     -0.286    0.094   -0.968
+ OAS           CA     C    CH1       0.000     -0.870    0.484    1.081
+ OAS           HA     H    H         0.000     -0.965    1.577    1.013
+ OAS           CB     C    CH2       0.000     -2.252   -0.155    0.947
+ OAS           HB2    H    H         0.000     -2.870    0.209    1.770
+ OAS           HB3    H    H         0.000     -2.130   -1.237    1.036
+ OAS           OG     O    O2       -0.500     -2.912    0.170   -0.358
+ OAS           C1A    C    C         0.000     -4.047   -0.251   -0.673
+ OAS           OAC    O    O        -0.500     -4.685   -0.981    0.119
+ OAS           C2A    C    CH3       0.000     -4.647    0.117   -2.004
+ OAS           HC23   H    H         0.000     -4.739    1.171   -2.072
+ OAS           HC22   H    H         0.000     -4.021   -0.232   -2.784
+ OAS           HC21   H    H         0.000     -5.605   -0.326   -2.097
+ OAS           C      C    C         0.000     -0.270    0.114    2.413
+ OAS           O      O    OC       -0.500      0.428   -0.918    2.520
+ OAS           OXT    O    OC       -0.500     -0.471    0.840    3.411
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OAS      N      n/a    CA     START
+ OAS      HN1    N      .      .
+ OAS      HN2    N      .      .
+ OAS      CA     N      C      .
+ OAS      HA     CA     .      .
+ OAS      CB     CA     OG     .
+ OAS      HB2    CB     .      .
+ OAS      HB3    CB     .      .
+ OAS      OG     CB     C1A    .
+ OAS      C1A    OG     C2A    .
+ OAS      OAC    C1A    .      .
+ OAS      C2A    C1A    HC21   .
+ OAS      HC23   C2A    .      .
+ OAS      HC22   C2A    .      .
+ OAS      HC21   C2A    .      .
+ OAS      C      CA     .      END
+ OAS      O      C      .      .
+ OAS      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OAS      CA     N         single      1.450    0.020
+ OAS      CB     CA        single      1.524    0.020
+ OAS      C      CA        single      1.500    0.020
+ OAS      HA     CA        single      1.099    0.020
+ OAS      OG     CB        single      1.426    0.020
+ OAS      HB2    CB        single      1.092    0.020
+ OAS      HB3    CB        single      1.092    0.020
+ OAS      C1A    OG        deloc       1.454    0.020
+ OAS      O      C         deloc       1.250    0.020
+ OAS      OXT    C         deloc       1.250    0.020
+ OAS      C2A    C1A       single      1.500    0.020
+ OAS      HC21   C2A       single      1.059    0.020
+ OAS      HC22   C2A       single      1.059    0.020
+ OAS      HC23   C2A       single      1.059    0.020
+ OAS      OAC    C1A       deloc       1.220    0.020
+ OAS      HN1    N         single      1.010    0.020
+ OAS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OAS      HN1    N      HN2     120.000    3.000
+ OAS      HN1    N      CA      120.000    3.000
+ OAS      HN2    N      CA      120.000    3.000
+ OAS      N      CA     HA      109.470    3.000
+ OAS      N      CA     CB      109.470    3.000
+ OAS      N      CA     C       109.470    3.000
+ OAS      HA     CA     CB      108.340    3.000
+ OAS      HA     CA     C       108.810    3.000
+ OAS      CB     CA     C       109.470    3.000
+ OAS      CA     CB     HB2     109.470    3.000
+ OAS      CA     CB     HB3     109.470    3.000
+ OAS      CA     CB     OG      109.470    3.000
+ OAS      HB2    CB     HB3     107.900    3.000
+ OAS      HB2    CB     OG      109.470    3.000
+ OAS      HB3    CB     OG      109.470    3.000
+ OAS      CB     OG     C1A     120.000    3.000
+ OAS      OG     C1A    OAC     119.000    3.000
+ OAS      OG     C1A    C2A     120.000    3.000
+ OAS      OAC    C1A    C2A     123.000    3.000
+ OAS      C1A    C2A    HC23    109.470    3.000
+ OAS      C1A    C2A    HC22    109.470    3.000
+ OAS      C1A    C2A    HC21    109.470    3.000
+ OAS      HC23   C2A    HC22    109.470    3.000
+ OAS      HC23   C2A    HC21    109.470    3.000
+ OAS      HC22   C2A    HC21    109.470    3.000
+ OAS      CA     C      O       118.500    3.000
+ OAS      CA     C      OXT     118.500    3.000
+ OAS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OAS      var_1    HN2    N      CA     C        175.000   20.000   1
+ OAS      var_2    N      CA     CB     OG       -59.951   20.000   3
+ OAS      var_3    CA     CB     OG     C1A     -179.985   20.000   1
+ OAS      var_4    CB     OG     C1A    C2A     -179.979   20.000   1
+ OAS      var_5    OG     C1A    C2A    HC21     179.993   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OAS      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OAS      plan-1    N         0.020
+ OAS      plan-1    CA        0.020
+ OAS      plan-1    HN1       0.020
+ OAS      plan-1    HN2       0.020
+ OAS      plan-2    C         0.020
+ OAS      plan-2    CA        0.020
+ OAS      plan-2    O         0.020
+ OAS      plan-2    OXT       0.020
+ OAS      plan-3    C1A       0.020
+ OAS      plan-3    OG        0.020
+ OAS      plan-3    C2A       0.020
+ OAS      plan-3    OAC       0.020
+# ------------------------------------------------------

@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SCH      SCH 'S-METHYL-THIO-CYSTEINE              ' peptide            17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SCH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SCH           N      N    NH2       0.000      0.000    0.000    0.000
+ SCH           HN1    H    H         0.000      0.779    0.580   -0.288
+ SCH           HN2    H    H         0.000     -0.534    0.258    0.822
+ SCH           CA     C    CH1       0.000     -0.352   -1.203   -0.766
+ SCH           HA     H    H         0.000     -0.190   -2.094   -0.143
+ SCH           CB     C    CH2       0.000     -1.823   -1.132   -1.180
+ SCH           HB2    H    H         0.000     -2.083   -2.026   -1.750
+ SCH           HB3    H    H         0.000     -1.983   -0.248   -1.800
+ SCH           SG     S    S2        0.000     -2.864   -1.032    0.301
+ SCH           SD     S    S2        0.000     -2.466    0.846    1.019
+ SCH           CE     C    CH3       0.000     -3.607    1.894    0.075
+ SCH           HE3    H    H         0.000     -4.610    1.595    0.257
+ SCH           HE2    H    H         0.000     -3.492    2.910    0.364
+ SCH           HE1    H    H         0.000     -3.405    1.807   -0.965
+ SCH           C      C    C         0.000      0.514   -1.286   -1.997
+ SCH           O      O    OC       -0.500      1.086   -0.261   -2.429
+ SCH           OXT    O    OC       -0.500      0.659   -2.380   -2.586
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SCH      N      n/a    CA     START
+ SCH      HN1    N      .      .
+ SCH      HN2    N      .      .
+ SCH      CA     N      C      .
+ SCH      HA     CA     .      .
+ SCH      CB     CA     SG     .
+ SCH      HB2    CB     .      .
+ SCH      HB3    CB     .      .
+ SCH      SG     CB     SD     .
+ SCH      SD     SG     CE     .
+ SCH      CE     SD     HE1    .
+ SCH      HE3    CE     .      .
+ SCH      HE2    CE     .      .
+ SCH      HE1    CE     .      .
+ SCH      C      CA     .      END
+ SCH      O      C      .      .
+ SCH      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SCH      CA     N         single      1.450    0.020
+ SCH      CB     CA        single      1.524    0.020
+ SCH      C      CA        single      1.500    0.020
+ SCH      HA     CA        single      1.099    0.020
+ SCH      SG     CB        single      1.762    0.020
+ SCH      HB2    CB        single      1.092    0.020
+ SCH      HB3    CB        single      1.092    0.020
+ SCH      SD     SG        single      2.000    0.020
+ SCH      CE     SD        single      1.762    0.020
+ SCH      HE1    CE        single      1.059    0.020
+ SCH      HE2    CE        single      1.059    0.020
+ SCH      HE3    CE        single      1.059    0.020
+ SCH      O      C         deloc       1.250    0.020
+ SCH      OXT    C         deloc       1.250    0.020
+ SCH      HN1    N         single      1.010    0.020
+ SCH      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SCH      HN1    N      HN2     120.000    3.000
+ SCH      HN1    N      CA      120.000    3.000
+ SCH      HN2    N      CA      120.000    3.000
+ SCH      N      CA     HA      109.470    3.000
+ SCH      N      CA     CB      109.470    3.000
+ SCH      N      CA     C       109.470    3.000
+ SCH      HA     CA     CB      108.340    3.000
+ SCH      HA     CA     C       108.810    3.000
+ SCH      CB     CA     C       109.470    3.000
+ SCH      CA     CB     HB2     109.470    3.000
+ SCH      CA     CB     HB3     109.470    3.000
+ SCH      CA     CB     SG      109.500    3.000
+ SCH      HB2    CB     HB3     107.900    3.000
+ SCH      HB2    CB     SG      109.500    3.000
+ SCH      HB3    CB     SG      109.500    3.000
+ SCH      CB     SG     SD      102.994    3.000
+ SCH      SG     SD     CE      102.988    3.000
+ SCH      SD     CE     HE3     109.500    3.000
+ SCH      SD     CE     HE2     109.500    3.000
+ SCH      SD     CE     HE1     109.500    3.000
+ SCH      HE3    CE     HE2     109.470    3.000
+ SCH      HE3    CE     HE1     109.470    3.000
+ SCH      HE2    CE     HE1     109.470    3.000
+ SCH      CA     C      O       118.500    3.000
+ SCH      CA     C      OXT     118.500    3.000
+ SCH      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SCH      var_1    HN2    N      CA     C        175.000   20.000   1
+ SCH      var_2    N      CA     CB     SG       -59.996   20.000   3
+ SCH      var_3    CA     CB     SG     SD        70.006   20.000   1
+ SCH      var_4    CB     SG     SD     CE        85.011   20.000   1
+ SCH      var_5    SG     SD     CE     HE1      -60.013   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SCH      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SCH      plan-1    N         0.020
+ SCH      plan-1    CA        0.020
+ SCH      plan-1    HN1       0.020
+ SCH      plan-1    HN2       0.020
+ SCH      plan-2    C         0.020
+ SCH      plan-2    CA        0.020
+ SCH      plan-2    O         0.020
+ SCH      plan-2    OXT       0.020
+# ------------------------------------------------------

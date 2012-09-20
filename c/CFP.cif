@@ -1,0 +1,156 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CFP      CFP '6-CHLORO-2-FLUOROPURINE             ' non-polymer        13  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CFP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CFP           F2     F    F         0.000      0.000    0.000    0.000
+ CFP           C2     C    CR6       0.000     -1.311   -0.001    0.327
+ CFP           N1     N    NRD6      0.000     -1.650    0.000    1.605
+ CFP           C6     C    CR6       0.000     -2.918    0.000    1.981
+ CFP           CL6    CL   CL        0.000     -3.345    0.000    3.663
+ CFP           N3     N    NRD6      0.000     -2.207    0.004   -0.639
+ CFP           C4     C    CR56      0.000     -3.502    0.000   -0.355
+ CFP           N9     N    NR15      0.000     -4.658    0.000   -1.094
+ CFP           HN9    H    H         0.000     -4.724    0.000   -2.132
+ CFP           C5     C    CR56      0.000     -3.906    0.000    0.995
+ CFP           N7     N    NRD5      0.000     -5.263    0.000    1.004
+ CFP           C8     C    CR15      0.000     -5.704    0.000   -0.220
+ CFP           H8     H    H         0.000     -6.750    0.000   -0.503
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CFP      F2     n/a    C2     START
+ CFP      C2     F2     N3     .
+ CFP      N1     C2     C6     .
+ CFP      C6     N1     CL6    .
+ CFP      CL6    C6     .      .
+ CFP      N3     C2     C4     .
+ CFP      C4     N3     C5     .
+ CFP      N9     C4     HN9    .
+ CFP      HN9    N9     .      .
+ CFP      C5     C4     N7     .
+ CFP      N7     C5     C8     .
+ CFP      C8     N7     H8     .
+ CFP      H8     C8     .      END
+ CFP      N9     C8     .    ADD
+ CFP      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CFP      N9     C8        single      1.350    0.020
+ CFP      N9     C4        single      1.340    0.020
+ CFP      HN9    N9        single      1.040    0.020
+ CFP      C8     N7        double      1.350    0.020
+ CFP      H8     C8        single      1.083    0.020
+ CFP      N7     C5        single      1.350    0.020
+ CFP      C5     C6        single      1.490    0.020
+ CFP      C5     C4        double      1.490    0.020
+ CFP      CL6    C6        single      1.795    0.020
+ CFP      C6     N1        double      1.350    0.020
+ CFP      N1     C2        single      1.350    0.020
+ CFP      N3     C2        double      1.350    0.020
+ CFP      C2     F2        single      1.345    0.020
+ CFP      C4     N3        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CFP      F2     C2     N1      120.000    3.000
+ CFP      F2     C2     N3      120.000    3.000
+ CFP      N1     C2     N3      120.000    3.000
+ CFP      C2     N1     C6      120.000    3.000
+ CFP      N1     C6     CL6     120.000    3.000
+ CFP      N1     C6     C5      120.000    3.000
+ CFP      CL6    C6     C5      120.000    3.000
+ CFP      C2     N3     C4      120.000    3.000
+ CFP      N3     C4     N9      132.000    3.000
+ CFP      N3     C4     C5      120.000    3.000
+ CFP      N9     C4     C5      108.000    3.000
+ CFP      C4     N9     HN9     126.000    3.000
+ CFP      C4     N9     C8      108.000    3.000
+ CFP      HN9    N9     C8      126.000    3.000
+ CFP      C4     C5     N7      108.000    3.000
+ CFP      C4     C5     C6      120.000    3.000
+ CFP      N7     C5     C6      132.000    3.000
+ CFP      C5     N7     C8      108.000    3.000
+ CFP      N7     C8     H8      126.000    3.000
+ CFP      N7     C8     N9      108.000    3.000
+ CFP      H8     C8     N9      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CFP      CONST_1  F2     C2     N1     C6       180.000    0.000   0
+ CFP      CONST_2  C2     N1     C6     CL6      180.000    0.000   0
+ CFP      CONST_3  F2     C2     N3     C4       180.000    0.000   0
+ CFP      CONST_4  C2     N3     C4     C5         0.000    0.000   0
+ CFP      CONST_5  N3     C4     N9     C8       180.000    0.000   0
+ CFP      CONST_6  C4     N9     C8     N7         0.000    0.000   0
+ CFP      CONST_7  N3     C4     C5     N7       180.000    0.000   0
+ CFP      CONST_8  C4     C5     C6     N1         0.000    0.000   0
+ CFP      CONST_9  C4     C5     N7     C8         0.000    0.000   0
+ CFP      CONST_10 C5     N7     C8     N9         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CFP      plan-1    N9        0.020
+ CFP      plan-1    C8        0.020
+ CFP      plan-1    C4        0.020
+ CFP      plan-1    HN9       0.020
+ CFP      plan-1    N7        0.020
+ CFP      plan-1    H8        0.020
+ CFP      plan-1    C5        0.020
+ CFP      plan-1    C6        0.020
+ CFP      plan-1    N1        0.020
+ CFP      plan-1    C2        0.020
+ CFP      plan-1    N3        0.020
+ CFP      plan-1    CL6       0.020
+ CFP      plan-1    F2        0.020
+# ------------------------------------------------------

@@ -1,0 +1,367 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MGP      MGP '7-METHYL-GUANOSINE-5'-TRIPHOSPHATE  ' non-polymer        48  33 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MGP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MGP           O6     O    O         0.000      0.000    0.000    0.000
+ MGP           C6     C    CR6       0.000     -0.740    0.703    0.666
+ MGP           N1     N    NR16      0.000     -0.280    1.358    1.754
+ MGP           HN1    H    H         0.000      0.717    1.264    2.032
+ MGP           C2     C    CR6       0.000     -1.118    2.141    2.491
+ MGP           N2     N    NH2       0.000     -0.623    2.796    3.591
+ MGP           HN2A   H    H         0.000     -1.229    3.382    4.152
+ MGP           HN2    H    H         0.000      0.352    2.697    3.850
+ MGP           N3     N    NRD6      0.000     -2.386    2.288    2.179
+ MGP           C4     C    CR56      0.000     -2.911    1.674    1.112
+ MGP           C5     C    CR56      0.000     -2.104    0.853    0.318
+ MGP           N7     N    NR5       1.000     -2.884    0.360   -0.675
+ MGP           CM7    C    CH3       0.000     -2.435   -0.543   -1.737
+ MGP           HM7B   H    H         0.000     -1.646   -1.145   -1.372
+ MGP           HM7A   H    H         0.000     -3.243   -1.157   -2.037
+ MGP           HM7    H    H         0.000     -2.096    0.028   -2.560
+ MGP           C8     C    CR15      0.000     -4.094    0.817   -0.538
+ MGP           H8     H    H         0.000     -4.925    0.586   -1.194
+ MGP           N9     N    NR5       0.000     -4.161    1.632    0.555
+ MGP           "C1'"  C    CH1       0.000     -5.350    2.336    1.040
+ MGP           "H1'"  H    H         0.000     -5.337    2.408    2.137
+ MGP           "O4'"  O    O2        0.000     -6.552    1.676    0.587
+ MGP           "C2'"  C    CH1       0.000     -5.449    3.744    0.400
+ MGP           "H2'"  H    H         0.000     -5.118    3.723   -0.648
+ MGP           "O2'"  O    OH1       0.000     -4.698    4.700    1.152
+ MGP           "HO2'" H    H         0.000     -4.848    5.584    0.791
+ MGP           "C3'"  C    CH1       0.000     -6.966    4.038    0.494
+ MGP           "H3'"  H    H         0.000     -7.321    4.529   -0.423
+ MGP           "O3'"  O    OH1       0.000     -7.250    4.847    1.636
+ MGP           "HO3'" H    H         0.000     -6.839    5.715    1.526
+ MGP           "C4'"  C    CH1       0.000     -7.611    2.646    0.645
+ MGP           "H4'"  H    H         0.000     -8.130    2.577    1.611
+ MGP           "C5'"  C    CH2       0.000     -8.601    2.405   -0.497
+ MGP           "H5'"  H    H         0.000     -8.062    2.381   -1.446
+ MGP           "H5'A" H    H         0.000     -9.336    3.212   -0.517
+ MGP           "O5'"  O    O2        0.000     -9.266    1.157   -0.293
+ MGP           PA     P    P         0.000    -10.378    0.581   -1.306
+ MGP           O1A    O    OP       -0.500     -9.751    0.293   -2.618
+ MGP           O2A    O    OP       -0.500    -11.453    1.587   -1.482
+ MGP           O3A    O    O2        0.000    -11.004   -0.773   -0.701
+ MGP           PB     P    P         0.000    -12.317   -1.645   -1.034
+ MGP           O1B    O    OP       -0.500    -12.056   -2.496   -2.221
+ MGP           O2B    O    OP       -0.500    -13.455   -0.737   -1.318
+ MGP           O3B    O    O2        0.000    -12.676   -2.579    0.227
+ MGP           PC     P    P         0.000    -13.976   -3.423    0.660
+ MGP           O1C    O    OP       -0.666    -13.927   -3.700    2.146
+ MGP           O2C    O    OP       -0.666    -15.223   -2.629    0.337
+ MGP           O3C    O    OP       -0.666    -14.003   -4.732   -0.098
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MGP      O6     n/a    C6     START
+ MGP      C6     O6     N1     .
+ MGP      N1     C6     C2     .
+ MGP      HN1    N1     .      .
+ MGP      C2     N1     N3     .
+ MGP      N2     C2     HN2    .
+ MGP      HN2A   N2     .      .
+ MGP      HN2    N2     .      .
+ MGP      N3     C2     C4     .
+ MGP      C4     N3     N9     .
+ MGP      C5     C4     N7     .
+ MGP      N7     C5     C8     .
+ MGP      CM7    N7     HM7    .
+ MGP      HM7B   CM7    .      .
+ MGP      HM7A   CM7    .      .
+ MGP      HM7    CM7    .      .
+ MGP      C8     N7     H8     .
+ MGP      H8     C8     .      .
+ MGP      N9     C4     "C1'"  .
+ MGP      "C1'"  N9     "C2'"  .
+ MGP      "H1'"  "C1'"  .      .
+ MGP      "O4'"  "C1'"  .      .
+ MGP      "C2'"  "C1'"  "C3'"  .
+ MGP      "H2'"  "C2'"  .      .
+ MGP      "O2'"  "C2'"  "HO2'" .
+ MGP      "HO2'" "O2'"  .      .
+ MGP      "C3'"  "C2'"  "C4'"  .
+ MGP      "H3'"  "C3'"  .      .
+ MGP      "O3'"  "C3'"  "HO3'" .
+ MGP      "HO3'" "O3'"  .      .
+ MGP      "C4'"  "C3'"  "C5'"  .
+ MGP      "H4'"  "C4'"  .      .
+ MGP      "C5'"  "C4'"  "O5'"  .
+ MGP      "H5'"  "C5'"  .      .
+ MGP      "H5'A" "C5'"  .      .
+ MGP      "O5'"  "C5'"  PA     .
+ MGP      PA     "O5'"  O3A    .
+ MGP      O1A    PA     .      .
+ MGP      O2A    PA     .      .
+ MGP      O3A    PA     PB     .
+ MGP      PB     O3A    O3B    .
+ MGP      O1B    PB     .      .
+ MGP      O2B    PB     .      .
+ MGP      O3B    PB     PC     .
+ MGP      PC     O3B    O3C    .
+ MGP      O1C    PC     .      .
+ MGP      O2C    PC     .      .
+ MGP      O3C    PC     .      END
+ MGP      "C4'"  "O4'"  .    ADD
+ MGP      N9     C8     .    ADD
+ MGP      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MGP      O1A    PA        deloc       1.510    0.020
+ MGP      O2A    PA        deloc       1.510    0.020
+ MGP      O3A    PA        single      1.610    0.020
+ MGP      PA     "O5'"     single      1.610    0.020
+ MGP      PB     O3A       single      1.610    0.020
+ MGP      "O5'"  "C5'"     single      1.426    0.020
+ MGP      O1B    PB        deloc       1.510    0.020
+ MGP      O2B    PB        deloc       1.510    0.020
+ MGP      O3B    PB        single      1.610    0.020
+ MGP      PC     O3B       single      1.610    0.020
+ MGP      O1C    PC        deloc       1.510    0.020
+ MGP      O2C    PC        deloc       1.510    0.020
+ MGP      O3C    PC        deloc       1.510    0.020
+ MGP      "C5'"  "C4'"     single      1.524    0.020
+ MGP      "H5'"  "C5'"     single      1.092    0.020
+ MGP      "H5'A" "C5'"     single      1.092    0.020
+ MGP      "C4'"  "O4'"     single      1.426    0.020
+ MGP      "C4'"  "C3'"     single      1.524    0.020
+ MGP      "H4'"  "C4'"     single      1.099    0.020
+ MGP      "O4'"  "C1'"     single      1.426    0.020
+ MGP      "O3'"  "C3'"     single      1.432    0.020
+ MGP      "C3'"  "C2'"     single      1.524    0.020
+ MGP      "H3'"  "C3'"     single      1.099    0.020
+ MGP      "HO3'" "O3'"     single      0.967    0.020
+ MGP      "O2'"  "C2'"     single      1.432    0.020
+ MGP      "C2'"  "C1'"     single      1.524    0.020
+ MGP      "H2'"  "C2'"     single      1.099    0.020
+ MGP      "HO2'" "O2'"     single      0.967    0.020
+ MGP      "C1'"  N9        single      1.485    0.020
+ MGP      "H1'"  "C1'"     single      1.099    0.020
+ MGP      N9     C8        single      1.337    0.020
+ MGP      N9     C4        single      1.337    0.020
+ MGP      C8     N7        double      1.337    0.020
+ MGP      H8     C8        single      1.083    0.020
+ MGP      CM7    N7        single      1.485    0.020
+ MGP      N7     C5        single      1.337    0.020
+ MGP      HM7    CM7       single      1.059    0.020
+ MGP      HM7A   CM7       single      1.059    0.020
+ MGP      HM7B   CM7       single      1.059    0.020
+ MGP      C5     C6        single      1.490    0.020
+ MGP      C5     C4        double      1.490    0.020
+ MGP      C6     O6        double      1.250    0.020
+ MGP      N1     C6        single      1.337    0.020
+ MGP      C2     N1        single      1.337    0.020
+ MGP      HN1    N1        single      1.040    0.020
+ MGP      N2     C2        single      1.355    0.020
+ MGP      N3     C2        double      1.350    0.020
+ MGP      HN2    N2        single      1.010    0.020
+ MGP      HN2A   N2        single      1.010    0.020
+ MGP      C4     N3        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MGP      O6     C6     N1      120.000    3.000
+ MGP      O6     C6     C5      120.000    3.000
+ MGP      N1     C6     C5      120.000    3.000
+ MGP      C6     N1     HN1     120.000    3.000
+ MGP      C6     N1     C2      120.000    3.000
+ MGP      HN1    N1     C2      120.000    3.000
+ MGP      N1     C2     N2      120.000    3.000
+ MGP      N1     C2     N3      120.000    3.000
+ MGP      N2     C2     N3      120.000    3.000
+ MGP      C2     N2     HN2A    120.000    3.000
+ MGP      C2     N2     HN2     120.000    3.000
+ MGP      HN2A   N2     HN2     120.000    3.000
+ MGP      C2     N3     C4      120.000    3.000
+ MGP      N3     C4     C5      120.000    3.000
+ MGP      N3     C4     N9      132.000    3.000
+ MGP      C5     C4     N9      108.000    3.000
+ MGP      C4     C5     N7      108.000    3.000
+ MGP      C4     C5     C6      120.000    3.000
+ MGP      N7     C5     C6      120.000    3.000
+ MGP      C5     N7     CM7     126.000    3.000
+ MGP      C5     N7     C8      108.000    3.000
+ MGP      CM7    N7     C8      126.000    3.000
+ MGP      N7     CM7    HM7B    109.470    3.000
+ MGP      N7     CM7    HM7A    109.470    3.000
+ MGP      N7     CM7    HM7     109.470    3.000
+ MGP      HM7B   CM7    HM7A    109.470    3.000
+ MGP      HM7B   CM7    HM7     109.470    3.000
+ MGP      HM7A   CM7    HM7     109.470    3.000
+ MGP      N7     C8     H8      126.000    3.000
+ MGP      N7     C8     N9      108.000    3.000
+ MGP      H8     C8     N9      126.000    3.000
+ MGP      C4     N9     "C1'"   126.000    3.000
+ MGP      C4     N9     C8      108.000    3.000
+ MGP      "C1'"  N9     C8      126.000    3.000
+ MGP      N9     "C1'"  "H1'"   109.470    3.000
+ MGP      N9     "C1'"  "O4'"   109.470    3.000
+ MGP      N9     "C1'"  "C2'"   109.470    3.000
+ MGP      "H1'"  "C1'"  "O4'"   109.470    3.000
+ MGP      "H1'"  "C1'"  "C2'"   108.340    3.000
+ MGP      "O4'"  "C1'"  "C2'"   109.470    3.000
+ MGP      "C1'"  "O4'"  "C4'"   111.800    3.000
+ MGP      "C1'"  "C2'"  "H2'"   108.340    3.000
+ MGP      "C1'"  "C2'"  "O2'"   109.470    3.000
+ MGP      "C1'"  "C2'"  "C3'"   111.000    3.000
+ MGP      "H2'"  "C2'"  "O2'"   109.470    3.000
+ MGP      "H2'"  "C2'"  "C3'"   108.340    3.000
+ MGP      "O2'"  "C2'"  "C3'"   109.470    3.000
+ MGP      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ MGP      "C2'"  "C3'"  "H3'"   108.340    3.000
+ MGP      "C2'"  "C3'"  "O3'"   109.470    3.000
+ MGP      "C2'"  "C3'"  "C4'"   111.000    3.000
+ MGP      "H3'"  "C3'"  "O3'"   109.470    3.000
+ MGP      "H3'"  "C3'"  "C4'"   108.340    3.000
+ MGP      "O3'"  "C3'"  "C4'"   109.470    3.000
+ MGP      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ MGP      "C3'"  "C4'"  "H4'"   108.340    3.000
+ MGP      "C3'"  "C4'"  "C5'"   111.000    3.000
+ MGP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ MGP      "H4'"  "C4'"  "C5'"   108.340    3.000
+ MGP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ MGP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ MGP      "C4'"  "C5'"  "H5'"   109.470    3.000
+ MGP      "C4'"  "C5'"  "H5'A"  109.470    3.000
+ MGP      "C4'"  "C5'"  "O5'"   109.470    3.000
+ MGP      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ MGP      "H5'"  "C5'"  "O5'"   109.470    3.000
+ MGP      "H5'A" "C5'"  "O5'"   109.470    3.000
+ MGP      "C5'"  "O5'"  PA      120.500    3.000
+ MGP      "O5'"  PA     O1A     108.200    3.000
+ MGP      "O5'"  PA     O2A     108.200    3.000
+ MGP      "O5'"  PA     O3A     102.600    3.000
+ MGP      O1A    PA     O2A     119.900    3.000
+ MGP      O1A    PA     O3A     108.200    3.000
+ MGP      O2A    PA     O3A     108.200    3.000
+ MGP      PA     O3A    PB      120.500    3.000
+ MGP      O3A    PB     O1B     108.200    3.000
+ MGP      O3A    PB     O2B     108.200    3.000
+ MGP      O3A    PB     O3B     102.600    3.000
+ MGP      O1B    PB     O2B     119.900    3.000
+ MGP      O1B    PB     O3B     108.200    3.000
+ MGP      O2B    PB     O3B     108.200    3.000
+ MGP      PB     O3B    PC      120.500    3.000
+ MGP      O3B    PC     O1C     108.200    3.000
+ MGP      O3B    PC     O2C     108.200    3.000
+ MGP      O3B    PC     O3C     108.200    3.000
+ MGP      O1C    PC     O2C     119.900    3.000
+ MGP      O1C    PC     O3C     119.900    3.000
+ MGP      O2C    PC     O3C     119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MGP      CONST_1  O6     C6     N1     C2       180.000    0.000   0
+ MGP      CONST_2  C6     N1     C2     N3         0.000    0.000   0
+ MGP      CONST_3  N1     C2     N2     HN2        0.032    0.000   0
+ MGP      CONST_4  N1     C2     N3     C4         0.000    0.000   0
+ MGP      CONST_5  C2     N3     C4     N9       180.000    0.000   0
+ MGP      CONST_6  N3     C4     C5     N7       180.000    0.000   0
+ MGP      CONST_7  C4     C5     C6     O6       180.000    0.000   0
+ MGP      CONST_8  C4     C5     N7     C8         0.000    0.000   0
+ MGP      var_1    C5     N7     CM7    HM7      -89.944   20.000   1
+ MGP      CONST_9  C5     N7     C8     N9         0.000    0.000   0
+ MGP      CONST_10 N3     C4     N9     "C1'"      0.000    0.000   0
+ MGP      CONST_11 C4     N9     C8     N7         0.000    0.000   0
+ MGP      var_2    C4     N9     "C1'"  "C2'"     89.262   20.000   1
+ MGP      var_3    N9     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ MGP      var_4    N9     "C1'"  "C2'"  "C3'"    150.000   20.000   3
+ MGP      var_5    "C1'"  "C2'"  "O2'"  "HO2'"  -174.118   20.000   1
+ MGP      var_6    "C1'"  "C2'"  "C3'"  "C4'"    -30.000   20.000   3
+ MGP      var_7    "C2'"  "C3'"  "O3'"  "HO3'"    65.221   20.000   1
+ MGP      var_8    "C2'"  "C3'"  "C4'"  "C5'"   -120.000   20.000   3
+ MGP      var_9    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ MGP      var_10   "C3'"  "C4'"  "C5'"  "O5'"   -175.701   20.000   3
+ MGP      var_11   "C4'"  "C5'"  "O5'"  PA      -179.966   20.000   1
+ MGP      var_12   "C5'"  "O5'"  PA     O3A     -175.018   20.000   1
+ MGP      var_13   "O5'"  PA     O3A    PB       164.950   20.000   1
+ MGP      var_14   PA     O3A    PB     O3B     -159.973   20.000   1
+ MGP      var_15   O3A    PB     O3B    PC       165.052   20.000   1
+ MGP      var_16   PB     O3B    PC     O3C       79.931   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MGP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ MGP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ MGP      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ MGP      chir_04  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MGP      plan-1    N9        0.020
+ MGP      plan-1    "C1'"     0.020
+ MGP      plan-1    C8        0.020
+ MGP      plan-1    C4        0.020
+ MGP      plan-1    N7        0.020
+ MGP      plan-1    H8        0.020
+ MGP      plan-1    CM7       0.020
+ MGP      plan-1    C5        0.020
+ MGP      plan-1    C6        0.020
+ MGP      plan-1    N1        0.020
+ MGP      plan-1    C2        0.020
+ MGP      plan-1    N3        0.020
+ MGP      plan-1    O6        0.020
+ MGP      plan-1    HN1       0.020
+ MGP      plan-1    N2        0.020
+ MGP      plan-1    HN2A      0.020
+ MGP      plan-1    HN2       0.020
+ MGP      plan-2    N2        0.020
+ MGP      plan-2    C2        0.020
+ MGP      plan-2    HN2       0.020
+ MGP      plan-2    HN2A      0.020
+# ------------------------------------------------------

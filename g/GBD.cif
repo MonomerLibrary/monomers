@@ -1,0 +1,132 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GBD      GBD '4-HYDROXY-1,2,5-THIADIAZOLE-3-CARBOX' non-polymer        10   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GBD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GBD           O11    O    OC       -0.500      0.000    0.000    0.000
+ GBD           C1     C    C         0.000     -0.573   -0.009   -1.112
+ GBD           O13    O    OC       -0.500      0.104   -0.028   -2.164
+ GBD           C3     C    CR5       0.000     -2.046    0.002   -1.183
+ GBD           C4     C    CR5       0.000     -2.832    0.019   -0.034
+ GBD           O4     O    OH1       0.000     -2.310    0.028    1.219
+ GBD           HO4    H    H         0.000     -2.149   -0.806    1.639
+ GBD           N5     N    NRD5      0.000     -4.128    0.032   -0.268
+ GBD           S1     S    S2        0.000     -4.214    0.010   -1.970
+ GBD           N2     N    NRD5      0.000     -2.683   -0.008   -2.339
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GBD      O11    n/a    C1     START
+ GBD      C1     O11    C3     .
+ GBD      O13    C1     .      .
+ GBD      C3     C1     C4     .
+ GBD      C4     C3     N5     .
+ GBD      O4     C4     HO4    .
+ GBD      HO4    O4     .      .
+ GBD      N5     C4     S1     .
+ GBD      S1     N5     N2     .
+ GBD      N2     S1     .      END
+ GBD      C3     N2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GBD      O13    C1        deloc       1.250    0.020
+ GBD      C1     O11       deloc       1.250    0.020
+ GBD      C3     C1        single      1.490    0.020
+ GBD      C3     N2        double      1.350    0.020
+ GBD      C4     C3        single      1.490    0.020
+ GBD      N2     S1        single      1.702    0.020
+ GBD      S1     N5        single      1.702    0.020
+ GBD      O4     C4        single      1.480    0.020
+ GBD      N5     C4        double      1.350    0.020
+ GBD      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GBD      O11    C1     O13     123.000    3.000
+ GBD      O11    C1     C3      120.000    3.000
+ GBD      O13    C1     C3      120.000    3.000
+ GBD      C1     C3     C4      117.000    3.000
+ GBD      C1     C3     N2      126.000    3.000
+ GBD      C4     C3     N2      108.000    3.000
+ GBD      C3     C4     O4      108.000    3.000
+ GBD      C3     C4     N5      108.000    3.000
+ GBD      O4     C4     N5      108.000    3.000
+ GBD      C4     O4     HO4     120.000    3.000
+ GBD      C4     N5     S1      108.000    3.000
+ GBD      N5     S1     N2      100.672    3.000
+ GBD      S1     N2     C3      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GBD      var_1    O11    C1     C3     C4        -0.225   20.000   1
+ GBD      CONST_1  C1     C3     N2     S1       180.000    0.000   0
+ GBD      CONST_2  C1     C3     C4     N5       180.000    0.000   0
+ GBD      var_2    C3     C4     O4     HO4      -90.438   20.000   1
+ GBD      CONST_3  C3     C4     N5     S1         0.000    0.000   0
+ GBD      CONST_4  C4     N5     S1     N2         0.000    0.000   0
+ GBD      CONST_5  N5     S1     N2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GBD      plan-1    C1        0.020
+ GBD      plan-1    O13       0.020
+ GBD      plan-1    O11       0.020
+ GBD      plan-1    C3        0.020
+ GBD      plan-2    C3        0.020
+ GBD      plan-2    C1        0.020
+ GBD      plan-2    N2        0.020
+ GBD      plan-2    C4        0.020
+ GBD      plan-2    S1        0.020
+ GBD      plan-2    N5        0.020
+ GBD      plan-2    O4        0.020
+# ------------------------------------------------------

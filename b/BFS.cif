@@ -1,0 +1,287 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BFS      BFS 'N-[1-(4-BROMOPHENYL)ETHYL]-5-FLUORO ' non-polymer        33  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BFS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BFS           BR4    BR   BR        0.000      0.000    0.000    0.000
+ BFS           "C4'"  C    CR6       0.000     -1.872    0.144    0.219
+ BFS           "C3'"  C    CR16      0.000     -2.466   -0.288    1.391
+ BFS           "H3'"  H    H         0.000     -1.859   -0.708    2.183
+ BFS           "C2'"  C    CR16      0.000     -3.835   -0.183    1.552
+ BFS           "H2'"  H    H         0.000     -4.300   -0.521    2.469
+ BFS           "C5'"  C    CR16      0.000     -2.649    0.680   -0.791
+ BFS           "H5'"  H    H         0.000     -2.184    1.022   -1.708
+ BFS           "C6'"  C    CR16      0.000     -4.018    0.779   -0.633
+ BFS           "H6'"  H    H         0.000     -4.627    1.191   -1.428
+ BFS           "C1'"  C    CR6       0.000     -4.611    0.353    0.540
+ BFS           CE1    C    CH1       0.000     -6.101    0.466    0.716
+ BFS           HE1    H    H         0.000     -6.456   -0.341    1.372
+ BFS           CE2    C    CH3       0.000     -6.440    1.820    1.345
+ BFS           HE23   H    H         0.000     -7.489    1.901    1.468
+ BFS           HE22   H    H         0.000     -5.967    1.900    2.289
+ BFS           HE21   H    H         0.000     -6.099    2.599    0.713
+ BFS           N      N    NH1       0.000     -6.757    0.358   -0.590
+ BFS           HN     H    H         0.000     -6.279    0.673   -1.422
+ BFS           C      C    C         0.000     -7.997   -0.162   -0.681
+ BFS           O      O    O         0.000     -8.572   -0.542    0.321
+ BFS           C1     C    CR6       0.000     -8.656   -0.272   -1.996
+ BFS           C6     C    CR16      0.000     -7.999    0.162   -3.149
+ BFS           H6     H    H         0.000     -7.003    0.581   -3.080
+ BFS           C5     C    CR6       0.000     -8.621    0.057   -4.377
+ BFS           F5     F    F         0.000     -7.986    0.478   -5.492
+ BFS           C4     C    CR16      0.000     -9.897   -0.479   -4.469
+ BFS           H4     H    H         0.000    -10.379   -0.558   -5.435
+ BFS           C3     C    CR16      0.000    -10.556   -0.912   -3.336
+ BFS           H3     H    H         0.000    -11.553   -1.326   -3.415
+ BFS           C2     C    CR6       0.000     -9.942   -0.818   -2.097
+ BFS           O2     O    OH1       0.000    -10.590   -1.244   -0.983
+ BFS           HO2    H    H         0.000    -10.388   -2.177   -0.831
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BFS      BR4    n/a    "C4'"  START
+ BFS      "C4'"  BR4    "C5'"  .
+ BFS      "C3'"  "C4'"  "C2'"  .
+ BFS      "H3'"  "C3'"  .      .
+ BFS      "C2'"  "C3'"  "H2'"  .
+ BFS      "H2'"  "C2'"  .      .
+ BFS      "C5'"  "C4'"  "C6'"  .
+ BFS      "H5'"  "C5'"  .      .
+ BFS      "C6'"  "C5'"  "C1'"  .
+ BFS      "H6'"  "C6'"  .      .
+ BFS      "C1'"  "C6'"  CE1    .
+ BFS      CE1    "C1'"  N      .
+ BFS      HE1    CE1    .      .
+ BFS      CE2    CE1    HE21   .
+ BFS      HE23   CE2    .      .
+ BFS      HE22   CE2    .      .
+ BFS      HE21   CE2    .      .
+ BFS      N      CE1    C      .
+ BFS      HN     N      .      .
+ BFS      C      N      C1     .
+ BFS      O      C      .      .
+ BFS      C1     C      C6     .
+ BFS      C6     C1     C5     .
+ BFS      H6     C6     .      .
+ BFS      C5     C6     C4     .
+ BFS      F5     C5     .      .
+ BFS      C4     C5     C3     .
+ BFS      H4     C4     .      .
+ BFS      C3     C4     C2     .
+ BFS      H3     C3     .      .
+ BFS      C2     C3     O2     .
+ BFS      O2     C2     HO2    .
+ BFS      HO2    O2     .      END
+ BFS      C1     C2     .    ADD
+ BFS      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BFS      C1     C2        double      1.487    0.020
+ BFS      C6     C1        single      1.390    0.020
+ BFS      C1     C         single      1.500    0.020
+ BFS      C2     C3        single      1.390    0.020
+ BFS      O2     C2        single      1.362    0.020
+ BFS      C3     C4        double      1.390    0.020
+ BFS      H3     C3        single      1.083    0.020
+ BFS      C4     C5        single      1.390    0.020
+ BFS      H4     C4        single      1.083    0.020
+ BFS      C5     C6        double      1.390    0.020
+ BFS      F5     C5        single      1.345    0.020
+ BFS      H6     C6        single      1.083    0.020
+ BFS      C      N         single      1.330    0.020
+ BFS      O      C         double      1.220    0.020
+ BFS      CE2    CE1       single      1.524    0.020
+ BFS      CE1    "C1'"     single      1.480    0.020
+ BFS      N      CE1       single      1.450    0.020
+ BFS      HE1    CE1       single      1.099    0.020
+ BFS      HE21   CE2       single      1.059    0.020
+ BFS      HE22   CE2       single      1.059    0.020
+ BFS      HE23   CE2       single      1.059    0.020
+ BFS      "C1'"  "C2'"     double      1.390    0.020
+ BFS      "C1'"  "C6'"     single      1.390    0.020
+ BFS      "C2'"  "C3'"     single      1.390    0.020
+ BFS      "H2'"  "C2'"     single      1.083    0.020
+ BFS      "C3'"  "C4'"     double      1.390    0.020
+ BFS      "H3'"  "C3'"     single      1.083    0.020
+ BFS      "C5'"  "C4'"     single      1.390    0.020
+ BFS      "C4'"  BR4       single      1.890    0.020
+ BFS      "C6'"  "C5'"     double      1.390    0.020
+ BFS      "H5'"  "C5'"     single      1.083    0.020
+ BFS      "H6'"  "C6'"     single      1.083    0.020
+ BFS      HN     N         single      1.010    0.020
+ BFS      HO2    O2        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BFS      BR4    "C4'"  "C3'"   120.000    3.000
+ BFS      BR4    "C4'"  "C5'"   120.000    3.000
+ BFS      "C3'"  "C4'"  "C5'"   120.000    3.000
+ BFS      "C4'"  "C3'"  "H3'"   120.000    3.000
+ BFS      "C4'"  "C3'"  "C2'"   120.000    3.000
+ BFS      "H3'"  "C3'"  "C2'"   120.000    3.000
+ BFS      "C3'"  "C2'"  "H2'"   120.000    3.000
+ BFS      "C3'"  "C2'"  "C1'"   120.000    3.000
+ BFS      "H2'"  "C2'"  "C1'"   120.000    3.000
+ BFS      "C4'"  "C5'"  "H5'"   120.000    3.000
+ BFS      "C4'"  "C5'"  "C6'"   120.000    3.000
+ BFS      "H5'"  "C5'"  "C6'"   120.000    3.000
+ BFS      "C5'"  "C6'"  "H6'"   120.000    3.000
+ BFS      "C5'"  "C6'"  "C1'"   120.000    3.000
+ BFS      "H6'"  "C6'"  "C1'"   120.000    3.000
+ BFS      "C6'"  "C1'"  CE1     120.000    3.000
+ BFS      "C6'"  "C1'"  "C2'"   120.000    3.000
+ BFS      CE1    "C1'"  "C2'"   120.000    3.000
+ BFS      "C1'"  CE1    HE1     109.470    3.000
+ BFS      "C1'"  CE1    CE2     109.470    3.000
+ BFS      "C1'"  CE1    N       109.470    3.000
+ BFS      HE1    CE1    CE2     108.340    3.000
+ BFS      HE1    CE1    N       108.550    3.000
+ BFS      CE2    CE1    N       110.000    3.000
+ BFS      CE1    CE2    HE23    109.470    3.000
+ BFS      CE1    CE2    HE22    109.470    3.000
+ BFS      CE1    CE2    HE21    109.470    3.000
+ BFS      HE23   CE2    HE22    109.470    3.000
+ BFS      HE23   CE2    HE21    109.470    3.000
+ BFS      HE22   CE2    HE21    109.470    3.000
+ BFS      CE1    N      HN      118.500    3.000
+ BFS      CE1    N      C       121.500    3.000
+ BFS      HN     N      C       120.000    3.000
+ BFS      N      C      O       123.000    3.000
+ BFS      N      C      C1      120.000    3.000
+ BFS      O      C      C1      120.500    3.000
+ BFS      C      C1     C6      120.000    3.000
+ BFS      C      C1     C2      120.000    3.000
+ BFS      C6     C1     C2      120.000    3.000
+ BFS      C1     C6     H6      120.000    3.000
+ BFS      C1     C6     C5      120.000    3.000
+ BFS      H6     C6     C5      120.000    3.000
+ BFS      C6     C5     F5      120.000    3.000
+ BFS      C6     C5     C4      120.000    3.000
+ BFS      F5     C5     C4      120.000    3.000
+ BFS      C5     C4     H4      120.000    3.000
+ BFS      C5     C4     C3      120.000    3.000
+ BFS      H4     C4     C3      120.000    3.000
+ BFS      C4     C3     H3      120.000    3.000
+ BFS      C4     C3     C2      120.000    3.000
+ BFS      H3     C3     C2      120.000    3.000
+ BFS      C3     C2     O2      120.000    3.000
+ BFS      C3     C2     C1      120.000    3.000
+ BFS      O2     C2     C1      120.000    3.000
+ BFS      C2     O2     HO2     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BFS      CONST_1  BR4    "C4'"  "C3'"  "C2'"    180.000    0.000   0
+ BFS      CONST_2  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+ BFS      CONST_3  BR4    "C4'"  "C5'"  "C6'"    180.000    0.000   0
+ BFS      CONST_4  "C4'"  "C5'"  "C6'"  "C1'"      0.000    0.000   0
+ BFS      CONST_5  "C5'"  "C6'"  "C1'"  CE1      180.000    0.000   0
+ BFS      CONST_6  "C6'"  "C1'"  "C2'"  "C3'"      0.000    0.000   0
+ BFS      var_1    "C6'"  "C1'"  CE1    N         29.723   20.000   1
+ BFS      var_2    "C1'"  CE1    CE2    HE21      59.987   20.000   3
+ BFS      var_3    "C1'"  CE1    N      C        150.065   20.000   3
+ BFS      CONST_7  CE1    N      C      C1       180.000    0.000   0
+ BFS      var_4    N      C      C1     C6        -0.020   20.000   1
+ BFS      CONST_8  C      C1     C2     C3       180.000    0.000   0
+ BFS      CONST_9  C      C1     C6     C5       180.000    0.000   0
+ BFS      CONST_10 C1     C6     C5     C4         0.000    0.000   0
+ BFS      CONST_11 C6     C5     C4     C3         0.000    0.000   0
+ BFS      CONST_12 C5     C4     C3     C2         0.000    0.000   0
+ BFS      CONST_13 C4     C3     C2     O2       180.000    0.000   0
+ BFS      var_5    C3     C2     O2     HO2       90.008   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BFS      chir_01  CE1    CE2    "C1'"  N         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BFS      plan-1    C1        0.020
+ BFS      plan-1    C2        0.020
+ BFS      plan-1    C6        0.020
+ BFS      plan-1    C         0.020
+ BFS      plan-1    C3        0.020
+ BFS      plan-1    C4        0.020
+ BFS      plan-1    C5        0.020
+ BFS      plan-1    O2        0.020
+ BFS      plan-1    H3        0.020
+ BFS      plan-1    H4        0.020
+ BFS      plan-1    F5        0.020
+ BFS      plan-1    H6        0.020
+ BFS      plan-2    C         0.020
+ BFS      plan-2    C1        0.020
+ BFS      plan-2    N         0.020
+ BFS      plan-2    O         0.020
+ BFS      plan-2    HN        0.020
+ BFS      plan-3    "C1'"     0.020
+ BFS      plan-3    CE1       0.020
+ BFS      plan-3    "C2'"     0.020
+ BFS      plan-3    "C6'"     0.020
+ BFS      plan-3    "C3'"     0.020
+ BFS      plan-3    "C4'"     0.020
+ BFS      plan-3    "C5'"     0.020
+ BFS      plan-3    "H2'"     0.020
+ BFS      plan-3    "H3'"     0.020
+ BFS      plan-3    BR4       0.020
+ BFS      plan-3    "H5'"     0.020
+ BFS      plan-3    "H6'"     0.020
+ BFS      plan-4    N         0.020
+ BFS      plan-4    C         0.020
+ BFS      plan-4    CE1       0.020
+ BFS      plan-4    HN        0.020
+# ------------------------------------------------------

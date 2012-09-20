@@ -1,0 +1,190 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TIS      TIS 'O-(1,1-dihydroxyethyl)-L-serine     ' peptide            21  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TIS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TIS           N      N    NH2       0.000      0.000    0.000    0.000
+ TIS           HN1    H    H         0.000      0.856   -0.128   -0.527
+ TIS           HN2    H    H         0.000     -0.230    0.920    0.358
+ TIS           CA     C    CH1       0.000     -0.898   -1.136    0.244
+ TIS           HA     H    H         0.000     -0.933   -1.351    1.321
+ TIS           CB     C    CH2       0.000     -2.303   -0.792   -0.253
+ TIS           HB     H    H         0.000     -2.948   -1.668   -0.154
+ TIS           HBA    H    H         0.000     -2.255   -0.494   -1.302
+ TIS           OG     O    O2        0.000     -2.834    0.282    0.525
+ TIS           C1T    C    CT        0.000     -4.151    0.684    0.141
+ TIS           O1T    O    OH1       0.000     -4.138    1.116   -1.221
+ TIS           H9     H    H         0.000     -3.845    0.389   -1.787
+ TIS           O2T    O    OH1       0.000     -5.046   -0.422    0.282
+ TIS           H10    H    H         0.000     -5.936   -0.150    0.021
+ TIS           C2T    C    CH3       0.000     -4.614    1.834    1.036
+ TIS           H2TB   H    H         0.000     -5.591    2.132    0.753
+ TIS           H2TA   H    H         0.000     -4.623    1.514    2.047
+ TIS           H2T    H    H         0.000     -3.951    2.653    0.932
+ TIS           C      C    C         0.000     -0.387   -2.347   -0.494
+ TIS           O      O    OC       -0.500      0.406   -2.208   -1.451
+ TIS           OXT    O    OC       -0.500     -0.755   -3.492   -0.148
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TIS      N      n/a    CA     START
+ TIS      HN1    N      .      .
+ TIS      HN2    N      .      .
+ TIS      CA     N      C      .
+ TIS      HA     CA     .      .
+ TIS      CB     CA     OG     .
+ TIS      HB     CB     .      .
+ TIS      HBA    CB     .      .
+ TIS      OG     CB     C1T    .
+ TIS      C1T    OG     C2T    .
+ TIS      O1T    C1T    H9     .
+ TIS      H9     O1T    .      .
+ TIS      O2T    C1T    H10    .
+ TIS      H10    O2T    .      .
+ TIS      C2T    C1T    H2T    .
+ TIS      H2TB   C2T    .      .
+ TIS      H2TA   C2T    .      .
+ TIS      H2T    C2T    .      .
+ TIS      C      CA     .      END
+ TIS      O      C      .      .
+ TIS      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TIS      CA     N         single      1.450    0.020
+ TIS      CB     CA        single      1.524    0.020
+ TIS      C      CA        single      1.500    0.020
+ TIS      HA     CA        single      1.099    0.020
+ TIS      OG     CB        single      1.426    0.020
+ TIS      HB     CB        single      1.092    0.020
+ TIS      HBA    CB        single      1.092    0.020
+ TIS      C1T    OG        single      1.426    0.020
+ TIS      O      C         deloc       1.250    0.020
+ TIS      OXT    C         deloc       1.250    0.020
+ TIS      O1T    C1T       single      1.432    0.020
+ TIS      O2T    C1T       single      1.432    0.020
+ TIS      C2T    C1T       single      1.524    0.020
+ TIS      H2T    C2T       single      1.059    0.020
+ TIS      H2TA   C2T       single      1.059    0.020
+ TIS      H2TB   C2T       single      1.059    0.020
+ TIS      H9     O1T       single      0.967    0.020
+ TIS      H10    O2T       single      0.967    0.020
+ TIS      HN1    N         single      1.010    0.020
+ TIS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TIS      HN1    N      HN2     120.000    3.000
+ TIS      HN1    N      CA      120.000    3.000
+ TIS      HN2    N      CA      120.000    3.000
+ TIS      N      CA     HA      109.470    3.000
+ TIS      N      CA     CB      109.470    3.000
+ TIS      N      CA     C       109.470    3.000
+ TIS      HA     CA     CB      108.340    3.000
+ TIS      HA     CA     C       108.810    3.000
+ TIS      CB     CA     C       109.470    3.000
+ TIS      CA     CB     HB      109.470    3.000
+ TIS      CA     CB     HBA     109.470    3.000
+ TIS      CA     CB     OG      109.470    3.000
+ TIS      HB     CB     HBA     107.900    3.000
+ TIS      HB     CB     OG      109.470    3.000
+ TIS      HBA    CB     OG      109.470    3.000
+ TIS      CB     OG     C1T     111.800    3.000
+ TIS      OG     C1T    O1T     109.470    3.000
+ TIS      OG     C1T    O2T     109.470    3.000
+ TIS      OG     C1T    C2T     109.470    3.000
+ TIS      O1T    C1T    O2T     109.470    3.000
+ TIS      O1T    C1T    C2T     109.470    3.000
+ TIS      O2T    C1T    C2T     109.470    3.000
+ TIS      C1T    O1T    H9      109.470    3.000
+ TIS      C1T    O2T    H10     109.470    3.000
+ TIS      C1T    C2T    H2TB    109.470    3.000
+ TIS      C1T    C2T    H2TA    109.470    3.000
+ TIS      C1T    C2T    H2T     109.470    3.000
+ TIS      H2TB   C2T    H2TA    109.470    3.000
+ TIS      H2TB   C2T    H2T     109.470    3.000
+ TIS      H2TA   C2T    H2T     109.470    3.000
+ TIS      CA     C      O       118.500    3.000
+ TIS      CA     C      OXT     118.500    3.000
+ TIS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TIS      var_1    HN2    N      CA     C        175.000   20.000   1
+ TIS      var_2    N      CA     CB     OG       -65.002   20.000   3
+ TIS      var_3    CA     CB     OG     C1T     -179.998   20.000   1
+ TIS      var_4    CB     OG     C1T    C2T     -179.997   20.000   1
+ TIS      var_5    OG     C1T    O1T    H9        60.019   20.000   1
+ TIS      var_6    OG     C1T    O2T    H10     -179.991   20.000   1
+ TIS      var_7    OG     C1T    C2T    H2T       60.026   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TIS      chir_01  CA     N      CB     C         negativ
+ TIS      chir_02  C1T    OG     O1T    O2T       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TIS      plan-1    N         0.020
+ TIS      plan-1    CA        0.020
+ TIS      plan-1    HN1       0.020
+ TIS      plan-1    HN2       0.020
+ TIS      plan-2    C         0.020
+ TIS      plan-2    CA        0.020
+ TIS      plan-2    O         0.020
+ TIS      plan-2    OXT       0.020
+# ------------------------------------------------------

@@ -1,0 +1,143 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FLA      FLA 'TRIFLUOROALANINE                    ' peptide            12   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FLA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FLA           N      N    NH2       0.000      0.000    0.000    0.000
+ FLA           HN1    H    H         0.000      0.434   -0.601   -0.691
+ FLA           HN2    H    H         0.000      0.548    0.329    0.786
+ FLA           CA     C    CH1       0.000     -1.410    0.391   -0.137
+ FLA           HA     H    H         0.000     -1.490    1.487   -0.117
+ FLA           CB     C    CT        0.000     -2.216   -0.200    1.019
+ FLA           F1     F    F         0.000     -1.716    0.282    2.233
+ FLA           F2     F    F         0.000     -3.559    0.171    0.889
+ FLA           F3     F    F         0.000     -2.115   -1.595    0.994
+ FLA           C      C    C         0.000     -1.949   -0.129   -1.445
+ FLA           O      O    OC       -0.500     -1.489   -1.183   -1.937
+ FLA           OXT    O    OC       -0.500     -2.858    0.494   -2.037
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FLA      N      n/a    CA     START
+ FLA      HN1    N      .      .
+ FLA      HN2    N      .      .
+ FLA      CA     N      C      .
+ FLA      HA     CA     .      .
+ FLA      CB     CA     F3     .
+ FLA      F1     CB     .      .
+ FLA      F2     CB     .      .
+ FLA      F3     CB     .      .
+ FLA      C      CA     .      END
+ FLA      O      C      .      .
+ FLA      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FLA      CA     N         single      1.450    0.020
+ FLA      C      CA        single      1.500    0.020
+ FLA      CB     CA        single      1.524    0.020
+ FLA      HA     CA        single      1.099    0.020
+ FLA      O      C         deloc       1.250    0.020
+ FLA      OXT    C         deloc       1.250    0.020
+ FLA      F1     CB        single      1.320    0.020
+ FLA      F2     CB        single      1.320    0.020
+ FLA      F3     CB        single      1.320    0.020
+ FLA      HN1    N         single      1.010    0.020
+ FLA      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FLA      HN1    N      HN2     120.000    3.000
+ FLA      HN1    N      CA      120.000    3.000
+ FLA      HN2    N      CA      120.000    3.000
+ FLA      N      CA     HA      109.470    3.000
+ FLA      N      CA     CB      109.500    3.000
+ FLA      N      CA     C       109.470    3.000
+ FLA      HA     CA     CB      108.340    3.000
+ FLA      HA     CA     C       108.810    3.000
+ FLA      CB     CA     C       109.470    3.000
+ FLA      CA     CB     F1      109.470    3.000
+ FLA      CA     CB     F2      109.470    3.000
+ FLA      CA     CB     F3      109.470    3.000
+ FLA      F1     CB     F2      109.470    3.000
+ FLA      F1     CB     F3      109.470    3.000
+ FLA      F2     CB     F3      109.470    3.000
+ FLA      CA     C      O       118.500    3.000
+ FLA      CA     C      OXT     118.500    3.000
+ FLA      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FLA      var_1    HN2    N      CA     C        175.000   20.000   1
+ FLA      var_2    N      CA     CB     F3       -60.054   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FLA      chir_01  CA     N      C      CB        negativ
+ FLA      chir_02  CB     CA     F1     F2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FLA      plan-1    N         0.020
+ FLA      plan-1    CA        0.020
+ FLA      plan-1    HN1       0.020
+ FLA      plan-1    HN2       0.020
+ FLA      plan-2    C         0.020
+ FLA      plan-2    CA        0.020
+ FLA      plan-2    O         0.020
+ FLA      plan-2    OXT       0.020
+# ------------------------------------------------------

@@ -1,0 +1,190 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CCM      CCM '1-METHYL-1-CARBOXY-CYCLOPENTANE     ' non-polymer        20   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CCM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CCM           OXT    O    OC       -0.500      0.000    0.000    0.000
+ CCM           C      C    C         0.000     -1.230    0.162    0.164
+ CCM           O      O    OC       -0.500     -1.722    0.089    1.312
+ CCM           CA     C    CT        0.000     -2.117    0.444   -1.020
+ CCM           CH2    C    CH3       0.000     -1.663    1.724   -1.722
+ CCM           HH23   H    H         0.000     -0.656    1.618   -2.034
+ CCM           HH22   H    H         0.000     -2.276    1.902   -2.567
+ CCM           HH21   H    H         0.000     -1.739    2.541   -1.052
+ CCM           CB2    C    CH2       0.000     -2.078   -0.738   -2.004
+ CCM           HB21   H    H         0.000     -1.420   -1.529   -1.636
+ CCM           HB22   H    H         0.000     -1.738   -0.413   -2.989
+ CCM           CG2    C    CH2       0.000     -3.521   -1.274   -2.106
+ CCM           HG21   H    H         0.000     -3.699   -2.105   -1.421
+ CCM           HG22   H    H         0.000     -3.772   -1.583   -3.124
+ CCM           CG1    C    CH2       0.000     -4.403   -0.069   -1.699
+ CCM           HG11   H    H         0.000     -5.380   -0.372   -1.317
+ CCM           HG12   H    H         0.000     -4.537    0.648   -2.511
+ CCM           CB1    C    CH2       0.000     -3.582    0.585   -0.560
+ CCM           HB12   H    H         0.000     -3.717    0.067    0.392
+ CCM           HB11   H    H         0.000     -3.825    1.642   -0.435
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CCM      OXT    n/a    C      START
+ CCM      C      OXT    CA     .
+ CCM      O      C      .      .
+ CCM      CA     C      CB2    .
+ CCM      CH2    CA     HH21   .
+ CCM      HH23   CH2    .      .
+ CCM      HH22   CH2    .      .
+ CCM      HH21   CH2    .      .
+ CCM      CB2    CA     CG2    .
+ CCM      HB21   CB2    .      .
+ CCM      HB22   CB2    .      .
+ CCM      CG2    CB2    CG1    .
+ CCM      HG21   CG2    .      .
+ CCM      HG22   CG2    .      .
+ CCM      CG1    CG2    CB1    .
+ CCM      HG11   CG1    .      .
+ CCM      HG12   CG1    .      .
+ CCM      CB1    CG1    HB11   .
+ CCM      HB12   CB1    .      .
+ CCM      HB11   CB1    .      END
+ CCM      CA     CB1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CCM      CH2    CA        single      1.524    0.020
+ CCM      HH21   CH2       single      1.059    0.020
+ CCM      HH22   CH2       single      1.059    0.020
+ CCM      HH23   CH2       single      1.059    0.020
+ CCM      CA     CB1       single      1.524    0.020
+ CCM      CB2    CA        single      1.524    0.020
+ CCM      CA     C         single      1.507    0.020
+ CCM      CB1    CG1       single      1.524    0.020
+ CCM      HB11   CB1       single      1.092    0.020
+ CCM      HB12   CB1       single      1.092    0.020
+ CCM      CG2    CB2       single      1.524    0.020
+ CCM      HB21   CB2       single      1.092    0.020
+ CCM      HB22   CB2       single      1.092    0.020
+ CCM      CG1    CG2       single      1.524    0.020
+ CCM      HG11   CG1       single      1.092    0.020
+ CCM      HG12   CG1       single      1.092    0.020
+ CCM      HG21   CG2       single      1.092    0.020
+ CCM      HG22   CG2       single      1.092    0.020
+ CCM      O      C         deloc       1.250    0.020
+ CCM      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CCM      OXT    C      O       123.000    3.000
+ CCM      OXT    C      CA      118.500    3.000
+ CCM      O      C      CA      118.500    3.000
+ CCM      C      CA     CH2     109.470    3.000
+ CCM      C      CA     CB2     109.470    3.000
+ CCM      C      CA     CB1     109.470    3.000
+ CCM      CH2    CA     CB2     111.000    3.000
+ CCM      CH2    CA     CB1     111.000    3.000
+ CCM      CB2    CA     CB1     111.000    3.000
+ CCM      CA     CH2    HH23    109.470    3.000
+ CCM      CA     CH2    HH22    109.470    3.000
+ CCM      CA     CH2    HH21    109.470    3.000
+ CCM      HH23   CH2    HH22    109.470    3.000
+ CCM      HH23   CH2    HH21    109.470    3.000
+ CCM      HH22   CH2    HH21    109.470    3.000
+ CCM      CA     CB2    HB21    109.470    3.000
+ CCM      CA     CB2    HB22    109.470    3.000
+ CCM      CA     CB2    CG2     111.000    3.000
+ CCM      HB21   CB2    HB22    107.900    3.000
+ CCM      HB21   CB2    CG2     109.470    3.000
+ CCM      HB22   CB2    CG2     109.470    3.000
+ CCM      CB2    CG2    HG21    109.470    3.000
+ CCM      CB2    CG2    HG22    109.470    3.000
+ CCM      CB2    CG2    CG1     111.000    3.000
+ CCM      HG21   CG2    HG22    107.900    3.000
+ CCM      HG21   CG2    CG1     109.470    3.000
+ CCM      HG22   CG2    CG1     109.470    3.000
+ CCM      CG2    CG1    HG11    109.470    3.000
+ CCM      CG2    CG1    HG12    109.470    3.000
+ CCM      CG2    CG1    CB1     111.000    3.000
+ CCM      HG11   CG1    HG12    107.900    3.000
+ CCM      HG11   CG1    CB1     109.470    3.000
+ CCM      HG12   CG1    CB1     109.470    3.000
+ CCM      CG1    CB1    HB12    109.470    3.000
+ CCM      CG1    CB1    HB11    109.470    3.000
+ CCM      CG1    CB1    CA      111.000    3.000
+ CCM      HB12   CB1    HB11    107.900    3.000
+ CCM      HB12   CB1    CA      109.470    3.000
+ CCM      HB11   CB1    CA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CCM      var_1    OXT    C      CA     CB2       62.077   20.000   1
+ CCM      var_2    C      CA     CB1    CG1     -150.000   20.000   1
+ CCM      var_3    C      CA     CH2    HH21     -61.376   20.000   1
+ CCM      var_4    C      CA     CB2    CG2      120.000   20.000   1
+ CCM      var_5    CA     CB2    CG2    CG1       30.000   20.000   3
+ CCM      var_6    CB2    CG2    CG1    CB1      -30.000   20.000   3
+ CCM      var_7    CG2    CG1    CB1    CA        30.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CCM      chir_01  CA     CH2    CB1    CB2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CCM      plan-1    C         0.020
+ CCM      plan-1    CA        0.000
+ CCM      plan-1    O         0.000
+ CCM      plan-1    OXT       0.000
+# ------------------------------------------------------

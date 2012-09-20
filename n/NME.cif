@@ -1,0 +1,104 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NME      NME 'METHYLAMINE                         ' non-polymer         7   2 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NME
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NME           C      C    CH3       0.000      0.000    0.000    0.000
+ NME           H1     H    H         0.000     -0.405   -0.847   -0.492
+ NME           H2     H    H         0.000     -0.257   -0.034    1.027
+ NME           H3     H    H         0.000     -0.399    0.881   -0.433
+ NME           N      N    NH2       0.000      1.462    0.000   -0.142
+ NME           HN2    H    H         0.000      1.928   -0.772   -0.600
+ NME           HN1    H    H         0.000      2.007    0.772    0.218
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NME      C      n/a    N      START
+ NME      H1     C      .      .
+ NME      H2     C      .      .
+ NME      H3     C      .      .
+ NME      N      C      HN1    .
+ NME      HN2    N      .      .
+ NME      HN1    N      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NME      N      C         single      1.462    0.020
+ NME      HN1    N         single      1.010    0.020
+ NME      HN2    N         single      1.010    0.020
+ NME      H1     C         single      1.059    0.020
+ NME      H2     C         single      1.059    0.020
+ NME      H3     C         single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NME      H1     C      H2      109.470    3.000
+ NME      H1     C      H3      109.470    3.000
+ NME      H2     C      H3      109.470    3.000
+ NME      H1     C      N       109.500    3.000
+ NME      H2     C      N       109.500    3.000
+ NME      H3     C      N       109.500    3.000
+ NME      C      N      HN2     120.000    3.000
+ NME      C      N      HN1     120.000    3.000
+ NME      HN2    N      HN1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NME      var_1    H3     C      N      HN1       56.059   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NME      plan-1    N         0.020
+ NME      plan-1    C         0.000
+ NME      plan-1    HN1       0.000
+ NME      plan-1    HN2       0.000
+# ------------------------------------------------------

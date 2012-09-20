@@ -1,0 +1,241 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SMG      SMG 'N-SUCCINYL METHIONINE               ' non-polymer        29  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SMG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SMG           O12    O    OC       -0.500      0.000    0.000    0.000
+ SMG           C2     C    C         0.000     -0.682    0.896   -0.546
+ SMG           O11    O    OC       -0.500     -0.235    2.062   -0.624
+ SMG           C1     C    CH1       0.000     -2.040    0.569   -1.110
+ SMG           H1     H    H         0.000     -2.685    1.457   -1.049
+ SMG           CB     C    CH2       0.000     -1.897    0.144   -2.572
+ SMG           HB1    H    H         0.000     -1.256   -0.738   -2.633
+ SMG           HB2    H    H         0.000     -1.450    0.959   -3.145
+ SMG           CG     C    CH2       0.000     -3.276   -0.187   -3.145
+ SMG           HG1    H    H         0.000     -3.917    0.695   -3.082
+ SMG           HG2    H    H         0.000     -3.723   -1.001   -2.569
+ SMG           SD     S    S2        0.000     -3.107   -0.692   -4.878
+ SMG           CE     C    CH3       0.000     -4.845   -1.014   -5.285
+ SMG           HE3    H    H         0.000     -5.231   -1.775   -4.653
+ SMG           HE2    H    H         0.000     -5.420   -0.130   -5.150
+ SMG           HE1    H    H         0.000     -4.930   -1.329   -6.296
+ SMG           N1     N    NH1       0.000     -2.640   -0.523   -0.339
+ SMG           HN1    H    H         0.000     -2.483   -1.481   -0.616
+ SMG           C3     C    C         0.000     -3.401   -0.250    0.737
+ SMG           O31    O    O         0.000     -3.591    0.901    1.069
+ SMG           C4     C    CH2       0.000     -4.017   -1.373    1.530
+ SMG           H41    H    H         0.000     -3.227   -2.018    1.920
+ SMG           H42    H    H         0.000     -4.675   -1.956    0.882
+ SMG           C5     C    CH2       0.000     -4.826   -0.794    2.692
+ SMG           H52    H    H         0.000     -5.614   -0.148    2.300
+ SMG           H51    H    H         0.000     -4.167   -0.211    3.339
+ SMG           C6     C    C         0.000     -5.443   -1.917    3.484
+ SMG           O61    O    OC       -0.500     -6.150   -1.664    4.485
+ SMG           O62    O    OC       -0.500     -5.247   -3.105    3.143
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SMG      O12    n/a    C2     START
+ SMG      C2     O12    C1     .
+ SMG      O11    C2     .      .
+ SMG      C1     C2     N1     .
+ SMG      H1     C1     .      .
+ SMG      CB     C1     CG     .
+ SMG      HB1    CB     .      .
+ SMG      HB2    CB     .      .
+ SMG      CG     CB     SD     .
+ SMG      HG1    CG     .      .
+ SMG      HG2    CG     .      .
+ SMG      SD     CG     CE     .
+ SMG      CE     SD     HE1    .
+ SMG      HE3    CE     .      .
+ SMG      HE2    CE     .      .
+ SMG      HE1    CE     .      .
+ SMG      N1     C1     C3     .
+ SMG      HN1    N1     .      .
+ SMG      C3     N1     C4     .
+ SMG      O31    C3     .      .
+ SMG      C4     C3     C5     .
+ SMG      H41    C4     .      .
+ SMG      H42    C4     .      .
+ SMG      C5     C4     C6     .
+ SMG      H52    C5     .      .
+ SMG      H51    C5     .      .
+ SMG      C6     C5     O62    .
+ SMG      O61    C6     .      .
+ SMG      O62    C6     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SMG      O61    C6        deloc       1.250    0.020
+ SMG      O62    C6        deloc       1.250    0.020
+ SMG      C6     C5        single      1.510    0.020
+ SMG      C5     C4        single      1.524    0.020
+ SMG      H51    C5        single      1.092    0.020
+ SMG      H52    C5        single      1.092    0.020
+ SMG      C4     C3        single      1.510    0.020
+ SMG      H41    C4        single      1.092    0.020
+ SMG      H42    C4        single      1.092    0.020
+ SMG      O31    C3        double      1.220    0.020
+ SMG      C3     N1        single      1.330    0.020
+ SMG      N1     C1        single      1.450    0.020
+ SMG      HN1    N1        single      1.010    0.020
+ SMG      O11    C2        deloc       1.250    0.020
+ SMG      C2     O12       deloc       1.250    0.020
+ SMG      C1     C2        single      1.500    0.020
+ SMG      CB     C1        single      1.524    0.020
+ SMG      H1     C1        single      1.099    0.020
+ SMG      CG     CB        single      1.524    0.020
+ SMG      HB1    CB        single      1.092    0.020
+ SMG      HB2    CB        single      1.092    0.020
+ SMG      SD     CG        single      1.762    0.020
+ SMG      HG1    CG        single      1.092    0.020
+ SMG      HG2    CG        single      1.092    0.020
+ SMG      CE     SD        single      1.762    0.020
+ SMG      HE1    CE        single      1.059    0.020
+ SMG      HE2    CE        single      1.059    0.020
+ SMG      HE3    CE        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SMG      O12    C2     O11     123.000    3.000
+ SMG      O12    C2     C1      118.500    3.000
+ SMG      O11    C2     C1      118.500    3.000
+ SMG      C2     C1     H1      108.810    3.000
+ SMG      C2     C1     CB      109.470    3.000
+ SMG      C2     C1     N1      111.600    3.000
+ SMG      H1     C1     CB      108.340    3.000
+ SMG      H1     C1     N1      108.550    3.000
+ SMG      CB     C1     N1      110.000    3.000
+ SMG      C1     CB     HB1     109.470    3.000
+ SMG      C1     CB     HB2     109.470    3.000
+ SMG      C1     CB     CG      111.000    3.000
+ SMG      HB1    CB     HB2     107.900    3.000
+ SMG      HB1    CB     CG      109.470    3.000
+ SMG      HB2    CB     CG      109.470    3.000
+ SMG      CB     CG     HG1     109.470    3.000
+ SMG      CB     CG     HG2     109.470    3.000
+ SMG      CB     CG     SD      109.500    3.000
+ SMG      HG1    CG     HG2     107.900    3.000
+ SMG      HG1    CG     SD      109.500    3.000
+ SMG      HG2    CG     SD      109.500    3.000
+ SMG      CG     SD     CE      100.036    3.000
+ SMG      SD     CE     HE3     109.500    3.000
+ SMG      SD     CE     HE2     109.500    3.000
+ SMG      SD     CE     HE1     109.500    3.000
+ SMG      HE3    CE     HE2     109.470    3.000
+ SMG      HE3    CE     HE1     109.470    3.000
+ SMG      HE2    CE     HE1     109.470    3.000
+ SMG      C1     N1     HN1     118.500    3.000
+ SMG      C1     N1     C3      121.500    3.000
+ SMG      HN1    N1     C3      120.000    3.000
+ SMG      N1     C3     O31     123.000    3.000
+ SMG      N1     C3     C4      116.500    3.000
+ SMG      O31    C3     C4      120.500    3.000
+ SMG      C3     C4     H41     109.470    3.000
+ SMG      C3     C4     H42     109.470    3.000
+ SMG      C3     C4     C5      109.470    3.000
+ SMG      H41    C4     H42     107.900    3.000
+ SMG      H41    C4     C5      109.470    3.000
+ SMG      H42    C4     C5      109.470    3.000
+ SMG      C4     C5     H52     109.470    3.000
+ SMG      C4     C5     H51     109.470    3.000
+ SMG      C4     C5     C6      109.470    3.000
+ SMG      H52    C5     H51     107.900    3.000
+ SMG      H52    C5     C6      109.470    3.000
+ SMG      H51    C5     C6      109.470    3.000
+ SMG      C5     C6     O61     118.500    3.000
+ SMG      C5     C6     O62     118.500    3.000
+ SMG      O61    C6     O62     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SMG      var_1    O12    C2     C1     N1        30.112   20.000   3
+ SMG      var_2    C2     C1     CB     CG      -179.961   20.000   3
+ SMG      var_3    C1     CB     CG     SD      -179.979   20.000   3
+ SMG      var_4    CB     CG     SD     CE       179.989   20.000   1
+ SMG      var_5    CG     SD     CE     HE1     -179.990   20.000   1
+ SMG      var_6    C2     C1     N1     C3        89.895   20.000   3
+ SMG      CONST_1  C1     N1     C3     C4       180.000    0.000   0
+ SMG      var_7    N1     C3     C4     C5       179.985   20.000   3
+ SMG      var_8    C3     C4     C5     C6       179.954   20.000   3
+ SMG      var_9    C4     C5     C6     O62        0.092   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SMG      chir_01  C1     N1     C2     CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SMG      plan-1    C6        0.020
+ SMG      plan-1    O61       0.020
+ SMG      plan-1    O62       0.020
+ SMG      plan-1    C5        0.020
+ SMG      plan-2    C3        0.020
+ SMG      plan-2    C4        0.020
+ SMG      plan-2    O31       0.020
+ SMG      plan-2    N1        0.020
+ SMG      plan-2    HN1       0.020
+ SMG      plan-3    N1        0.020
+ SMG      plan-3    C3        0.020
+ SMG      plan-3    C1        0.020
+ SMG      plan-3    HN1       0.020
+ SMG      plan-4    C2        0.020
+ SMG      plan-4    O11       0.020
+ SMG      plan-4    O12       0.020
+ SMG      plan-4    C1        0.020
+# ------------------------------------------------------

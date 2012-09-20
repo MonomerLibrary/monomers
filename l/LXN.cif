@@ -1,0 +1,143 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LXN      LXN 'ALLOXAN                             ' non-polymer        12  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LXN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LXN           OAA    O    O         0.000      0.000    0.000    0.000
+ LXN           CAG    C    CR6       0.000     -1.215    0.000   -0.001
+ LXN           NAE    N    NR16      0.000     -1.841   -1.184    0.004
+ LXN           HAE    H    H         0.000     -1.274   -2.056    0.012
+ LXN           CAH    C    CR6       0.000     -3.187   -1.276   -0.002
+ LXN           OAB    O    O         0.000     -3.742   -2.355   -0.002
+ LXN           NAF    N    NR16      0.000     -1.841    1.184   -0.001
+ LXN           HAF    H    H         0.000     -1.274    2.056   -0.002
+ LXN           CAI    C    CR6       0.000     -3.187    1.276   -0.001
+ LXN           OAC    O    O         0.000     -3.742    2.355    0.000
+ LXN           CAJ    C    CR6       0.000     -3.976    0.000   -0.002
+ LXN           OAD    O    O         0.000     -5.184    0.000   -0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LXN      OAA    n/a    CAG    START
+ LXN      CAG    OAA    NAF    .
+ LXN      NAE    CAG    CAH    .
+ LXN      HAE    NAE    .      .
+ LXN      CAH    NAE    OAB    .
+ LXN      OAB    CAH    .      .
+ LXN      NAF    CAG    CAI    .
+ LXN      HAF    NAF    .      .
+ LXN      CAI    NAF    CAJ    .
+ LXN      OAC    CAI    .      .
+ LXN      CAJ    CAI    OAD    .
+ LXN      OAD    CAJ    .      END
+ LXN      CAH    CAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LXN      OAB    CAH       double      1.250    0.020
+ LXN      CAH    CAJ       single      1.487    0.020
+ LXN      CAH    NAE       single      1.337    0.020
+ LXN      OAD    CAJ       double      1.250    0.020
+ LXN      CAJ    CAI       single      1.487    0.020
+ LXN      OAC    CAI       double      1.250    0.020
+ LXN      CAI    NAF       single      1.337    0.020
+ LXN      NAF    CAG       single      1.337    0.020
+ LXN      CAG    OAA       double      1.250    0.020
+ LXN      NAE    CAG       single      1.337    0.020
+ LXN      HAE    NAE       single      1.040    0.020
+ LXN      HAF    NAF       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LXN      OAA    CAG    NAE     120.000    3.000
+ LXN      OAA    CAG    NAF     120.000    3.000
+ LXN      NAE    CAG    NAF     120.000    3.000
+ LXN      CAG    NAE    HAE     120.000    3.000
+ LXN      CAG    NAE    CAH     120.000    3.000
+ LXN      HAE    NAE    CAH     120.000    3.000
+ LXN      NAE    CAH    OAB     120.000    3.000
+ LXN      NAE    CAH    CAJ     120.000    3.000
+ LXN      OAB    CAH    CAJ     120.000    3.000
+ LXN      CAG    NAF    HAF     120.000    3.000
+ LXN      CAG    NAF    CAI     120.000    3.000
+ LXN      HAF    NAF    CAI     120.000    3.000
+ LXN      NAF    CAI    OAC     120.000    3.000
+ LXN      NAF    CAI    CAJ     120.000    3.000
+ LXN      OAC    CAI    CAJ     120.000    3.000
+ LXN      CAI    CAJ    OAD     120.000    3.000
+ LXN      CAI    CAJ    CAH     120.000    3.000
+ LXN      OAD    CAJ    CAH     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LXN      CONST_1  OAA    CAG    NAE    CAH      180.000    0.000   0
+ LXN      CONST_2  CAG    NAE    CAH    OAB      180.000    0.000   0
+ LXN      CONST_3  NAE    CAH    CAJ    CAI        0.000    0.000   0
+ LXN      CONST_4  OAA    CAG    NAF    CAI      180.000    0.000   0
+ LXN      CONST_5  CAG    NAF    CAI    CAJ        0.000    0.000   0
+ LXN      CONST_6  NAF    CAI    CAJ    OAD      180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LXN      plan-1    CAH       0.020
+ LXN      plan-1    OAB       0.020
+ LXN      plan-1    CAJ       0.020
+ LXN      plan-1    NAE       0.020
+ LXN      plan-1    CAI       0.020
+ LXN      plan-1    NAF       0.020
+ LXN      plan-1    CAG       0.020
+ LXN      plan-1    OAD       0.020
+ LXN      plan-1    OAC       0.020
+ LXN      plan-1    HAF       0.020
+ LXN      plan-1    OAA       0.020
+ LXN      plan-1    HAE       0.020
+# ------------------------------------------------------

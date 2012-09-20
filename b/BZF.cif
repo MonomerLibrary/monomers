@@ -1,0 +1,168 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BZF      BZF 'BENZOFURAN                          ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BZF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BZF           H7     H    H         0.000      0.003    0.000   -0.001
+ BZF           C7     C    CR16      0.000     -1.040    0.000    0.291
+ BZF           C6     C    CR16      0.000     -1.383    0.000    1.626
+ BZF           H6     H    H         0.000     -0.604    0.000    2.379
+ BZF           C5     C    CR16      0.000     -2.713    0.000    2.015
+ BZF           H5     H    H         0.000     -2.967    0.000    3.068
+ BZF           C4     C    CR16      0.000     -3.714    0.000    1.068
+ BZF           H4     H    H         0.000     -4.753    0.000    1.373
+ BZF           C7A    C    CR56      0.000     -2.032    0.000   -0.679
+ BZF           O1     O    O2        0.000     -2.011    0.000   -2.027
+ BZF           C3A    C    CR56      0.000     -3.380    0.000   -0.284
+ BZF           C3     C    CR15      0.000     -4.155    0.000   -1.531
+ BZF           H3     H    H         0.000     -5.233    0.000   -1.627
+ BZF           C2     C    CR15      0.000     -3.258    0.000   -2.528
+ BZF           H2     H    H         0.000     -3.503    0.000   -3.582
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BZF      H7     n/a    C7     START
+ BZF      C7     H7     C7A    .
+ BZF      C6     C7     C5     .
+ BZF      H6     C6     .      .
+ BZF      C5     C6     C4     .
+ BZF      H5     C5     .      .
+ BZF      C4     C5     H4     .
+ BZF      H4     C4     .      .
+ BZF      C7A    C7     C3A    .
+ BZF      O1     C7A    .      .
+ BZF      C3A    C7A    C3     .
+ BZF      C3     C3A    C2     .
+ BZF      H3     C3     .      .
+ BZF      C2     C3     H2     .
+ BZF      H2     C2     .      END
+ BZF      O1     C2     .    ADD
+ BZF      C3A    C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BZF      O1     C2        single      1.380    0.020
+ BZF      O1     C7A       single      1.329    0.020
+ BZF      C2     C3        double      1.380    0.020
+ BZF      H2     C2        single      1.083    0.020
+ BZF      C3     C3A       single      1.440    0.020
+ BZF      H3     C3        single      1.083    0.020
+ BZF      C3A    C4        double      1.390    0.020
+ BZF      C3A    C7A       single      1.490    0.020
+ BZF      C4     C5        single      1.390    0.020
+ BZF      H4     C4        single      1.083    0.020
+ BZF      C5     C6        double      1.390    0.020
+ BZF      H5     C5        single      1.083    0.020
+ BZF      C6     C7        single      1.390    0.020
+ BZF      H6     C6        single      1.083    0.020
+ BZF      C7A    C7        double      1.390    0.020
+ BZF      C7     H7        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BZF      H7     C7     C6      120.000    3.000
+ BZF      H7     C7     C7A     120.000    3.000
+ BZF      C6     C7     C7A     120.000    3.000
+ BZF      C7     C6     H6      120.000    3.000
+ BZF      C7     C6     C5      120.000    3.000
+ BZF      H6     C6     C5      120.000    3.000
+ BZF      C6     C5     H5      120.000    3.000
+ BZF      C6     C5     C4      120.000    3.000
+ BZF      H5     C5     C4      120.000    3.000
+ BZF      C5     C4     H4      120.000    3.000
+ BZF      C5     C4     C3A     120.000    3.000
+ BZF      H4     C4     C3A     120.000    3.000
+ BZF      C7     C7A    O1      120.000    3.000
+ BZF      C7     C7A    C3A     120.000    3.000
+ BZF      O1     C7A    C3A     120.000    3.000
+ BZF      C7A    O1     C2      120.000    3.000
+ BZF      C7A    C3A    C3      120.000    3.000
+ BZF      C7A    C3A    C4      120.000    3.000
+ BZF      C3     C3A    C4      126.000    3.000
+ BZF      C3A    C3     H3      108.000    3.000
+ BZF      C3A    C3     C2      108.000    3.000
+ BZF      H3     C3     C2      126.000    3.000
+ BZF      C3     C2     H2      126.000    3.000
+ BZF      C3     C2     O1      108.000    3.000
+ BZF      H2     C2     O1      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BZF      CONST_1  H7     C7     C6     C5       180.000    0.000   0
+ BZF      CONST_2  C7     C6     C5     C4         0.000    0.000   0
+ BZF      CONST_3  C6     C5     C4     C3A        0.000    0.000   0
+ BZF      CONST_4  H7     C7     C7A    C3A      180.000    0.000   0
+ BZF      CONST_5  C7     C7A    O1     C2       180.000    0.000   0
+ BZF      CONST_6  C7A    O1     C2     C3         0.000    0.000   0
+ BZF      CONST_7  C7     C7A    C3A    C3       180.000    0.000   0
+ BZF      CONST_8  C7A    C3A    C4     C5         0.000    0.000   0
+ BZF      CONST_9  C7A    C3A    C3     C2         0.000    0.000   0
+ BZF      CONST_10 C3A    C3     C2     O1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BZF      plan-1    C2        0.020
+ BZF      plan-1    O1        0.020
+ BZF      plan-1    C3        0.020
+ BZF      plan-1    H2        0.020
+ BZF      plan-1    C3A       0.020
+ BZF      plan-1    H3        0.020
+ BZF      plan-1    C4        0.020
+ BZF      plan-1    C7A       0.020
+ BZF      plan-1    C5        0.020
+ BZF      plan-1    C6        0.020
+ BZF      plan-1    C7        0.020
+ BZF      plan-1    H4        0.020
+ BZF      plan-1    H5        0.020
+ BZF      plan-1    H6        0.020
+ BZF      plan-1    H7        0.020
+# ------------------------------------------------------

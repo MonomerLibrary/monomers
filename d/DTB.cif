@@ -1,0 +1,267 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DTB      DTB '6-(5-METHYL-2-OXO-IMIDAZOLIDIN-4-YL)' non-polymer        32  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DTB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DTB           OI2    O    OC       -0.500      0.000    0.000    0.000
+ DTB           C      C    C         0.000     -1.195    0.342   -0.141
+ DTB           OI1    O    OC       -0.500     -1.532    1.045   -1.119
+ DTB           CA     C    CH2       0.000     -2.228   -0.092    0.866
+ DTB           HCA1   H    H         0.000     -1.958    0.291    1.852
+ DTB           HCA2   H    H         0.000     -2.267   -1.183    0.899
+ DTB           CB     C    CH2       0.000     -3.598    0.456    0.462
+ DTB           HCB1   H    H         0.000     -3.865    0.072   -0.525
+ DTB           HCB2   H    H         0.000     -3.556    1.547    0.428
+ DTB           CG     C    CH2       0.000     -4.647    0.016    1.484
+ DTB           HCG1   H    H         0.000     -4.378    0.400    2.470
+ DTB           HCG2   H    H         0.000     -4.686   -1.075    1.518
+ DTB           CD     C    CH2       0.000     -6.016    0.563    1.078
+ DTB           HCD1   H    H         0.000     -6.284    0.179    0.092
+ DTB           HCD2   H    H         0.000     -5.976    1.654    1.044
+ DTB           CE     C    CH2       0.000     -7.064    0.122    2.101
+ DTB           HCE1   H    H         0.000     -6.793    0.505    3.087
+ DTB           HCE2   H    H         0.000     -7.103   -0.969    2.134
+ DTB           CR     C    CH1       0.000     -8.434    0.672    1.697
+ DTB           HCR    H    H         0.000     -8.420    1.770    1.681
+ DTB           N2     N    NH1       0.000     -8.837    0.139    0.383
+ DTB           HN2    H    H         0.000     -8.338    0.282   -0.484
+ DTB           CS     C    CH1       0.000     -9.530    0.156    2.650
+ DTB           HCS    H    H         0.000    -10.063    0.997    3.115
+ DTB           CT     C    CH3       0.000     -8.924   -0.753    3.721
+ DTB           HCT3   H    H         0.000     -8.425   -1.563    3.256
+ DTB           HCT2   H    H         0.000     -8.233   -0.201    4.304
+ DTB           HCT1   H    H         0.000     -9.694   -1.125    4.346
+ DTB           N1     N    NH1       0.000    -10.432   -0.606    1.775
+ DTB           HN1    H    H         0.000    -11.269   -1.086    2.073
+ DTB           CN     C    C         0.000     -9.968   -0.563    0.520
+ DTB           O      O    O         0.000    -10.523   -1.113   -0.411
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DTB      OI2    n/a    C      START
+ DTB      C      OI2    CA     .
+ DTB      OI1    C      .      .
+ DTB      CA     C      CB     .
+ DTB      HCA1   CA     .      .
+ DTB      HCA2   CA     .      .
+ DTB      CB     CA     CG     .
+ DTB      HCB1   CB     .      .
+ DTB      HCB2   CB     .      .
+ DTB      CG     CB     CD     .
+ DTB      HCG1   CG     .      .
+ DTB      HCG2   CG     .      .
+ DTB      CD     CG     CE     .
+ DTB      HCD1   CD     .      .
+ DTB      HCD2   CD     .      .
+ DTB      CE     CD     CR     .
+ DTB      HCE1   CE     .      .
+ DTB      HCE2   CE     .      .
+ DTB      CR     CE     CS     .
+ DTB      HCR    CR     .      .
+ DTB      N2     CR     HN2    .
+ DTB      HN2    N2     .      .
+ DTB      CS     CR     N1     .
+ DTB      HCS    CS     .      .
+ DTB      CT     CS     HCT1   .
+ DTB      HCT3   CT     .      .
+ DTB      HCT2   CT     .      .
+ DTB      HCT1   CT     .      .
+ DTB      N1     CS     CN     .
+ DTB      HN1    N1     .      .
+ DTB      CN     N1     O      .
+ DTB      O      CN     .      END
+ DTB      CN     N2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DTB      O      CN        double      1.220    0.020
+ DTB      CN     N2        single      1.330    0.020
+ DTB      CN     N1        single      1.330    0.020
+ DTB      N2     CR        single      1.450    0.020
+ DTB      HN2    N2        single      1.010    0.020
+ DTB      CS     CR        single      1.524    0.020
+ DTB      CR     CE        single      1.524    0.020
+ DTB      HCR    CR        single      1.099    0.020
+ DTB      N1     CS        single      1.450    0.020
+ DTB      CT     CS        single      1.524    0.020
+ DTB      HCS    CS        single      1.099    0.020
+ DTB      HN1    N1        single      1.010    0.020
+ DTB      HCT1   CT        single      1.059    0.020
+ DTB      HCT2   CT        single      1.059    0.020
+ DTB      HCT3   CT        single      1.059    0.020
+ DTB      CE     CD        single      1.524    0.020
+ DTB      HCE1   CE        single      1.092    0.020
+ DTB      HCE2   CE        single      1.092    0.020
+ DTB      CD     CG        single      1.524    0.020
+ DTB      HCD1   CD        single      1.092    0.020
+ DTB      HCD2   CD        single      1.092    0.020
+ DTB      CG     CB        single      1.524    0.020
+ DTB      HCG1   CG        single      1.092    0.020
+ DTB      HCG2   CG        single      1.092    0.020
+ DTB      CB     CA        single      1.524    0.020
+ DTB      HCB1   CB        single      1.092    0.020
+ DTB      HCB2   CB        single      1.092    0.020
+ DTB      CA     C         single      1.510    0.020
+ DTB      HCA1   CA        single      1.092    0.020
+ DTB      HCA2   CA        single      1.092    0.020
+ DTB      OI1    C         deloc       1.250    0.020
+ DTB      C      OI2       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DTB      OI2    C      OI1     123.000    3.000
+ DTB      OI2    C      CA      118.500    3.000
+ DTB      OI1    C      CA      118.500    3.000
+ DTB      C      CA     HCA1    109.470    3.000
+ DTB      C      CA     HCA2    109.470    3.000
+ DTB      C      CA     CB      109.470    3.000
+ DTB      HCA1   CA     HCA2    107.900    3.000
+ DTB      HCA1   CA     CB      109.470    3.000
+ DTB      HCA2   CA     CB      109.470    3.000
+ DTB      CA     CB     HCB1    109.470    3.000
+ DTB      CA     CB     HCB2    109.470    3.000
+ DTB      CA     CB     CG      111.000    3.000
+ DTB      HCB1   CB     HCB2    107.900    3.000
+ DTB      HCB1   CB     CG      109.470    3.000
+ DTB      HCB2   CB     CG      109.470    3.000
+ DTB      CB     CG     HCG1    109.470    3.000
+ DTB      CB     CG     HCG2    109.470    3.000
+ DTB      CB     CG     CD      111.000    3.000
+ DTB      HCG1   CG     HCG2    107.900    3.000
+ DTB      HCG1   CG     CD      109.470    3.000
+ DTB      HCG2   CG     CD      109.470    3.000
+ DTB      CG     CD     HCD1    109.470    3.000
+ DTB      CG     CD     HCD2    109.470    3.000
+ DTB      CG     CD     CE      111.000    3.000
+ DTB      HCD1   CD     HCD2    107.900    3.000
+ DTB      HCD1   CD     CE      109.470    3.000
+ DTB      HCD2   CD     CE      109.470    3.000
+ DTB      CD     CE     HCE1    109.470    3.000
+ DTB      CD     CE     HCE2    109.470    3.000
+ DTB      CD     CE     CR      111.000    3.000
+ DTB      HCE1   CE     HCE2    107.900    3.000
+ DTB      HCE1   CE     CR      109.470    3.000
+ DTB      HCE2   CE     CR      109.470    3.000
+ DTB      CE     CR     HCR     108.340    3.000
+ DTB      CE     CR     N2      110.000    3.000
+ DTB      CE     CR     CS      111.000    3.000
+ DTB      HCR    CR     N2      108.550    3.000
+ DTB      HCR    CR     CS      108.340    3.000
+ DTB      N2     CR     CS      110.000    3.000
+ DTB      CR     N2     HN2     118.500    3.000
+ DTB      CR     N2     CN      121.500    3.000
+ DTB      HN2    N2     CN      120.000    3.000
+ DTB      CR     CS     HCS     108.340    3.000
+ DTB      CR     CS     CT      111.000    3.000
+ DTB      CR     CS     N1      110.000    3.000
+ DTB      HCS    CS     CT      108.340    3.000
+ DTB      HCS    CS     N1      108.550    3.000
+ DTB      CT     CS     N1      110.000    3.000
+ DTB      CS     CT     HCT3    109.470    3.000
+ DTB      CS     CT     HCT2    109.470    3.000
+ DTB      CS     CT     HCT1    109.470    3.000
+ DTB      HCT3   CT     HCT2    109.470    3.000
+ DTB      HCT3   CT     HCT1    109.470    3.000
+ DTB      HCT2   CT     HCT1    109.470    3.000
+ DTB      CS     N1     HN1     118.500    3.000
+ DTB      CS     N1     CN      121.500    3.000
+ DTB      HN1    N1     CN      120.000    3.000
+ DTB      N1     CN     O       123.000    3.000
+ DTB      N1     CN     N2      120.000    3.000
+ DTB      O      CN     N2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DTB      var_1    OI2    C      CA     CB      -179.954   20.000   3
+ DTB      var_2    C      CA     CB     CG      -179.966   20.000   3
+ DTB      var_3    CA     CB     CG     CD      -179.951   20.000   3
+ DTB      var_4    CB     CG     CD     CE       179.996   20.000   3
+ DTB      var_5    CG     CD     CE     CR       179.919   20.000   3
+ DTB      var_6    CD     CE     CR     CS       175.744   20.000   3
+ DTB      var_7    CE     CR     N2     CN       120.000   20.000   3
+ DTB      var_8    CE     CR     CS     N1      -120.000   20.000   3
+ DTB      var_9    CR     CS     CT     HCT1    -178.009   20.000   3
+ DTB      var_10   CR     CS     N1     CN         0.000   20.000   3
+ DTB      CONST_1  CS     N1     CN     O        180.000    0.000   0
+ DTB      CONST_2  N1     CN     N2     CR         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DTB      chir_01  CR     N2     CS     CE        negativ
+ DTB      chir_02  CS     CR     N1     CT        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DTB      plan-1    CN        0.020
+ DTB      plan-1    O         0.020
+ DTB      plan-1    N2        0.020
+ DTB      plan-1    N1        0.020
+ DTB      plan-1    HN2       0.020
+ DTB      plan-1    HN1       0.020
+ DTB      plan-2    N2        0.020
+ DTB      plan-2    CN        0.020
+ DTB      plan-2    CR        0.020
+ DTB      plan-2    HN2       0.020
+ DTB      plan-3    N1        0.020
+ DTB      plan-3    CN        0.020
+ DTB      plan-3    CS        0.020
+ DTB      plan-3    HN1       0.020
+ DTB      plan-4    C         0.020
+ DTB      plan-4    CA        0.020
+ DTB      plan-4    OI1       0.020
+ DTB      plan-4    OI2       0.020
+# ------------------------------------------------------

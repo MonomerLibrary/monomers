@@ -1,0 +1,114 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+S5S      S5S '2-sulfanyl-2lambda~4~-tetrasulfane  ' non-polymer         9   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_S5S
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ S5S           S5     S    SH1       0.000      0.000    0.000    0.000
+ S5S           HS5    H    H         0.000      0.807    1.071    0.003
+ S5S           S2     S    ST        0.000     -1.977    0.576   -0.010
+ S5S           HS2    H    H         0.000     -1.983    0.577    1.224
+ S5S           S1     S    SH1       0.000     -3.956    1.152   -0.020
+ S5S           HS1    H    H         0.000     -4.062    2.484   -0.135
+ S5S           S3     S    S2        0.000     -2.554   -1.402   -0.011
+ S5S           S4     S    SH1       0.000     -4.601   -1.286   -0.021
+ S5S           HS4    H    H         0.000     -5.120   -2.512   -0.022
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ S5S      S5     n/a    S2     START
+ S5S      HS5    S5     .      .
+ S5S      S2     S5     S3     .
+ S5S      HS2    S2     .      .
+ S5S      S1     S2     HS1    .
+ S5S      HS1    S1     .      .
+ S5S      S3     S2     S4     .
+ S5S      S4     S3     HS4    .
+ S5S      HS4    S4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ S5S      S1     S2        single      1.925    0.020
+ S5S      HS1    S1        single      1.330    0.020
+ S5S      S3     S2        single      1.900    0.020
+ S5S      S2     S5        single      1.925    0.020
+ S5S      S4     S3        single      2.025    0.020
+ S5S      HS5    S5        single      1.330    0.020
+ S5S      HS2    S2        single      1.234    0.020
+ S5S      HS4    S4        single      1.330    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ S5S      HS5    S5     S2      109.500    3.000
+ S5S      S5     S2     HS2     109.500    3.000
+ S5S      S5     S2     S1      109.500    3.000
+ S5S      S5     S2     S3      109.500    3.000
+ S5S      HS2    S2     S1      109.500    3.000
+ S5S      HS2    S2     S3      109.500    3.000
+ S5S      S1     S2     S3      109.500    3.000
+ S5S      S2     S1     HS1     109.500    3.000
+ S5S      S2     S3     S4      103.015    3.000
+ S5S      S3     S4     HS4     109.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ S5S      var_1    HS5    S5     S2     S3      -179.995   20.000   1
+ S5S      var_2    S5     S2     S1     HS1      -60.976   20.000   1
+ S5S      var_3    S5     S2     S3     S4      -179.975   20.000   1
+ S5S      var_4    S2     S3     S4     HS4     -179.979   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ S5S      chir_01  S2     S1     S3     S5        negativ
+# ------------------------------------------------------

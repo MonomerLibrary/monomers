@@ -1,0 +1,165 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+URP      URP 'N-(AMINOCARBONYL)-BETA-ALANINE      ' non-polymer        16   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_URP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ URP           O41    O    OC       -0.500      0.000    0.000    0.000
+ URP           C4     C    C         0.000     -0.803   -0.959    0.000
+ URP           O42    O    OC       -0.500     -0.374   -2.135    0.000
+ URP           C5     C    CH2       0.000     -2.288   -0.699    0.000
+ URP           H51    H    H         0.000     -2.735   -1.144    0.891
+ URP           H52    H    H         0.000     -2.735   -1.144   -0.891
+ URP           C6     C    CH2       0.000     -2.540    0.810    0.000
+ URP           H61    H    H         0.000     -2.092    1.254   -0.891
+ URP           H62    H    H         0.000     -2.092    1.254    0.891
+ URP           N1     N    NH1       0.000     -3.984    1.063    0.000
+ URP           HN1    H    H         0.000     -4.633    0.289    0.000
+ URP           C2     C    C         0.000     -4.446    2.330    0.000
+ URP           O2     O    O         0.000     -3.664    3.261    0.000
+ URP           N3     N    NH2       0.000     -5.773    2.563    0.000
+ URP           HN32   H    H         0.000     -6.428    1.789    0.000
+ URP           HN31   H    H         0.000     -6.126    3.512    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ URP      O41    n/a    C4     START
+ URP      C4     O41    C5     .
+ URP      O42    C4     .      .
+ URP      C5     C4     C6     .
+ URP      H51    C5     .      .
+ URP      H52    C5     .      .
+ URP      C6     C5     N1     .
+ URP      H61    C6     .      .
+ URP      H62    C6     .      .
+ URP      N1     C6     C2     .
+ URP      HN1    N1     .      .
+ URP      C2     N1     N3     .
+ URP      O2     C2     .      .
+ URP      N3     C2     HN31   .
+ URP      HN32   N3     .      .
+ URP      HN31   N3     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ URP      O2     C2        double      1.220    0.020
+ URP      N3     C2        single      1.332    0.020
+ URP      C2     N1        single      1.330    0.020
+ URP      HN31   N3        single      1.010    0.020
+ URP      HN32   N3        single      1.010    0.020
+ URP      N1     C6        single      1.450    0.020
+ URP      HN1    N1        single      1.010    0.020
+ URP      C6     C5        single      1.524    0.020
+ URP      H61    C6        single      1.092    0.020
+ URP      H62    C6        single      1.092    0.020
+ URP      C5     C4        single      1.510    0.020
+ URP      H51    C5        single      1.092    0.020
+ URP      H52    C5        single      1.092    0.020
+ URP      O42    C4        deloc       1.250    0.020
+ URP      C4     O41       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ URP      O41    C4     O42     123.000    3.000
+ URP      O41    C4     C5      118.500    3.000
+ URP      O42    C4     C5      118.500    3.000
+ URP      C4     C5     H51     109.470    3.000
+ URP      C4     C5     H52     109.470    3.000
+ URP      C4     C5     C6      109.470    3.000
+ URP      H51    C5     H52     107.900    3.000
+ URP      H51    C5     C6      109.470    3.000
+ URP      H52    C5     C6      109.470    3.000
+ URP      C5     C6     H61     109.470    3.000
+ URP      C5     C6     H62     109.470    3.000
+ URP      C5     C6     N1      112.000    3.000
+ URP      H61    C6     H62     107.900    3.000
+ URP      H61    C6     N1      109.470    3.000
+ URP      H62    C6     N1      109.470    3.000
+ URP      C6     N1     HN1     118.500    3.000
+ URP      C6     N1     C2      121.500    3.000
+ URP      HN1    N1     C2      120.000    3.000
+ URP      N1     C2     O2      123.000    3.000
+ URP      N1     C2     N3      120.000    3.000
+ URP      O2     C2     N3      123.000    3.000
+ URP      C2     N3     HN32    120.000    3.000
+ URP      C2     N3     HN31    120.000    3.000
+ URP      HN32   N3     HN31    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ URP      var_1    O41    C4     C5     C6         0.000   20.000   3
+ URP      var_2    C4     C5     C6     N1       180.000   20.000   3
+ URP      var_3    C5     C6     N1     C2       180.000   20.000   3
+ URP      CONST_1  C6     N1     C2     N3       180.000    0.000   0
+ URP      CONST_2  N1     C2     N3     HN31     180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ URP      plan-1    C2        0.020
+ URP      plan-1    O2        0.020
+ URP      plan-1    N3        0.020
+ URP      plan-1    N1        0.020
+ URP      plan-1    HN32      0.020
+ URP      plan-1    HN31      0.020
+ URP      plan-1    HN1       0.020
+ URP      plan-2    N3        0.020
+ URP      plan-2    C2        0.020
+ URP      plan-2    HN31      0.020
+ URP      plan-2    HN32      0.020
+ URP      plan-3    N1        0.020
+ URP      plan-3    C2        0.020
+ URP      plan-3    C6        0.020
+ URP      plan-3    HN1       0.020
+ URP      plan-4    C4        0.020
+ URP      plan-4    C5        0.020
+ URP      plan-4    O42       0.020
+ URP      plan-4    O41       0.020
+# ------------------------------------------------------

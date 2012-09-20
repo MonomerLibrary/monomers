@@ -1,0 +1,153 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3MP      3MP '3-METHYLPYRIDINE                    ' non-polymer        14   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3MP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3MP           CB     C    CH3       0.000      0.000    0.000    0.000
+ 3MP           HB1    H    H         0.000      0.661   -0.500   -0.659
+ 3MP           HB2    H    H         0.000      0.326    0.999    0.136
+ 3MP           HB3    H    H         0.000     -0.011   -0.498    0.935
+ 3MP           CG     C    CR6       0.000     -1.388    0.000   -0.585
+ 3MP           CD2    C    CR16      0.000     -2.495   -0.003    0.240
+ 3MP           HD2    H    H         0.000     -2.361   -0.010    1.314
+ 3MP           NE2    N    NRD6      0.000     -3.713    0.002   -0.265
+ 3MP           CZ     C    CR16      0.000     -3.924    0.000   -1.567
+ 3MP           HZ     H    H         0.000     -4.939   -0.001   -1.945
+ 3MP           CE1    C    CR16      0.000     -2.865    0.000   -2.454
+ 3MP           HE1    H    H         0.000     -3.044    0.000   -3.522
+ 3MP           CD1    C    CR16      0.000     -1.570    0.000   -1.960
+ 3MP           HD1    H    H         0.000     -0.721   -0.001   -2.632
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3MP      CB     n/a    CG     START
+ 3MP      HB1    CB     .      .
+ 3MP      HB2    CB     .      .
+ 3MP      HB3    CB     .      .
+ 3MP      CG     CB     CD2    .
+ 3MP      CD2    CG     NE2    .
+ 3MP      HD2    CD2    .      .
+ 3MP      NE2    CD2    CZ     .
+ 3MP      CZ     NE2    CE1    .
+ 3MP      HZ     CZ     .      .
+ 3MP      CE1    CZ     CD1    .
+ 3MP      HE1    CE1    .      .
+ 3MP      CD1    CE1    HD1    .
+ 3MP      HD1    CD1    .      END
+ 3MP      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3MP      CG     CB        single      1.506    0.020
+ 3MP      HB1    CB        single      1.059    0.020
+ 3MP      HB2    CB        single      1.059    0.020
+ 3MP      HB3    CB        single      1.059    0.020
+ 3MP      CG     CD1       double      1.390    0.020
+ 3MP      CD2    CG        single      1.390    0.020
+ 3MP      CD1    CE1       single      1.390    0.020
+ 3MP      HD1    CD1       single      1.083    0.020
+ 3MP      NE2    CD2       double      1.337    0.020
+ 3MP      HD2    CD2       single      1.083    0.020
+ 3MP      CE1    CZ        double      1.390    0.020
+ 3MP      HE1    CE1       single      1.083    0.020
+ 3MP      CZ     NE2       single      1.337    0.020
+ 3MP      HZ     CZ        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3MP      HB1    CB     HB2     109.470    3.000
+ 3MP      HB1    CB     HB3     109.470    3.000
+ 3MP      HB2    CB     HB3     109.470    3.000
+ 3MP      HB1    CB     CG      109.470    3.000
+ 3MP      HB2    CB     CG      109.470    3.000
+ 3MP      HB3    CB     CG      109.470    3.000
+ 3MP      CB     CG     CD2     120.000    3.000
+ 3MP      CB     CG     CD1     120.000    3.000
+ 3MP      CD2    CG     CD1     120.000    3.000
+ 3MP      CG     CD2    HD2     120.000    3.000
+ 3MP      CG     CD2    NE2     120.000    3.000
+ 3MP      HD2    CD2    NE2     120.000    3.000
+ 3MP      CD2    NE2    CZ      120.000    3.000
+ 3MP      NE2    CZ     HZ      120.000    3.000
+ 3MP      NE2    CZ     CE1     120.000    3.000
+ 3MP      HZ     CZ     CE1     120.000    3.000
+ 3MP      CZ     CE1    HE1     120.000    3.000
+ 3MP      CZ     CE1    CD1     120.000    3.000
+ 3MP      HE1    CE1    CD1     120.000    3.000
+ 3MP      CE1    CD1    HD1     120.000    3.000
+ 3MP      CE1    CD1    CG      120.000    3.000
+ 3MP      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3MP      var_1    HB3    CB     CG     CD2       29.797   20.000   1
+ 3MP      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ 3MP      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
+ 3MP      CONST_3  CG     CD2    NE2    CZ         0.000    0.000   0
+ 3MP      CONST_4  CD2    NE2    CZ     CE1        0.000    0.000   0
+ 3MP      CONST_5  NE2    CZ     CE1    CD1        0.000    0.000   0
+ 3MP      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3MP      plan-1    CG        0.020
+ 3MP      plan-1    CB        0.020
+ 3MP      plan-1    CD1       0.020
+ 3MP      plan-1    CD2       0.020
+ 3MP      plan-1    CE1       0.020
+ 3MP      plan-1    CZ        0.020
+ 3MP      plan-1    NE2       0.020
+ 3MP      plan-1    HD1       0.020
+ 3MP      plan-1    HD2       0.020
+ 3MP      plan-1    HE1       0.020
+ 3MP      plan-1    HZ        0.020
+# ------------------------------------------------------

@@ -1,0 +1,264 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HDI      HDI '3-(4-HYDROXYPHENYL)-4,5-DIHYDRO-5-IS' non-polymer        30  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HDI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HDI           O3     O    O        -0.500      0.000    0.000    0.000
+ HDI           C11    C    C         0.000     -0.064   -0.751   -0.999
+ HDI           O4     O    O2       -0.500      0.935   -1.422   -1.340
+ HDI           C12    C    CH3       0.000      2.241   -1.379   -0.604
+ HDI           H123   H    H         0.000      2.636   -0.390   -0.606
+ HDI           H122   H    H         0.000      2.107   -1.688    0.406
+ HDI           H121   H    H         0.000      2.949   -2.027   -1.066
+ HDI           C10    C    CH2       0.000     -1.342   -0.845   -1.790
+ HDI           H101   H    H         0.000     -1.700   -1.877   -1.781
+ HDI           H102   H    H         0.000     -1.155   -0.535   -2.820
+ HDI           C9     C    CH1       0.000     -2.398    0.068   -1.165
+ HDI           HC9    H    H         0.000     -2.034    1.103   -1.103
+ HDI           O2     O    O2        0.000     -2.798   -0.416    0.132
+ HDI           C8     C    CH2       0.000     -3.728   -0.003   -1.951
+ HDI           HC81   H    H         0.000     -3.845   -0.940   -2.500
+ HDI           HC82   H    H         0.000     -3.859    0.837   -2.636
+ HDI           C7     C    C         0.000     -4.766    0.074   -0.851
+ HDI           N1     N    N         0.000     -4.181   -0.161    0.276
+ HDI           C6     C    CR6       0.000     -6.200    0.367   -1.034
+ HDI           C1     C    CR16      0.000     -6.708    0.611   -2.311
+ HDI           HC1    H    H         0.000     -6.049    0.589   -3.170
+ HDI           C2     C    CR16      0.000     -8.049    0.878   -2.478
+ HDI           HC2    H    H         0.000     -8.445    1.058   -3.470
+ HDI           C3     C    CR6       0.000     -8.895    0.918   -1.377
+ HDI           O1     O    OH1       0.000    -10.215    1.188   -1.545
+ HDI           HO1    H    H         0.000    -10.358    2.142   -1.487
+ HDI           C4     C    CR16      0.000     -8.392    0.682   -0.104
+ HDI           HC4    H    H         0.000     -9.054    0.713    0.752
+ HDI           C5     C    CR16      0.000     -7.054    0.408    0.072
+ HDI           HC5    H    H         0.000     -6.664    0.224    1.065
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HDI      O3     n/a    C11    START
+ HDI      C11    O3     C10    .
+ HDI      O4     C11    C12    .
+ HDI      C12    O4     H121   .
+ HDI      H123   C12    .      .
+ HDI      H122   C12    .      .
+ HDI      H121   C12    .      .
+ HDI      C10    C11    C9     .
+ HDI      H101   C10    .      .
+ HDI      H102   C10    .      .
+ HDI      C9     C10    C8     .
+ HDI      HC9    C9     .      .
+ HDI      O2     C9     .      .
+ HDI      C8     C9     C7     .
+ HDI      HC81   C8     .      .
+ HDI      HC82   C8     .      .
+ HDI      C7     C8     C6     .
+ HDI      N1     C7     .      .
+ HDI      C6     C7     C1     .
+ HDI      C1     C6     C2     .
+ HDI      HC1    C1     .      .
+ HDI      C2     C1     C3     .
+ HDI      HC2    C2     .      .
+ HDI      C3     C2     C4     .
+ HDI      O1     C3     HO1    .
+ HDI      HO1    O1     .      .
+ HDI      C4     C3     C5     .
+ HDI      HC4    C4     .      .
+ HDI      C5     C4     HC5    .
+ HDI      HC5    C5     .      END
+ HDI      N1     O2     .    ADD
+ HDI      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HDI      C12    O4        single      1.426    0.020
+ HDI      H121   C12       single      1.059    0.020
+ HDI      H122   C12       single      1.059    0.020
+ HDI      H123   C12       single      1.059    0.020
+ HDI      C11    O3        deloc       1.220    0.020
+ HDI      O4     C11       deloc       1.454    0.020
+ HDI      C10    C11       single      1.510    0.020
+ HDI      C9     C10       single      1.524    0.020
+ HDI      H101   C10       single      1.092    0.020
+ HDI      H102   C10       single      1.092    0.020
+ HDI      N1     O2        single      1.255    0.020
+ HDI      N1     C7        double      1.260    0.020
+ HDI      O2     C9        single      1.426    0.020
+ HDI      C8     C9        single      1.524    0.020
+ HDI      HC9    C9        single      1.099    0.020
+ HDI      C7     C8        single      1.510    0.020
+ HDI      HC81   C8        single      1.092    0.020
+ HDI      HC82   C8        single      1.092    0.020
+ HDI      C6     C7        single      1.500    0.020
+ HDI      O1     C3        single      1.362    0.020
+ HDI      HO1    O1        single      0.967    0.020
+ HDI      C5     C6        double      1.390    0.020
+ HDI      C5     C4        single      1.390    0.020
+ HDI      HC5    C5        single      1.083    0.020
+ HDI      C1     C6        single      1.390    0.020
+ HDI      C2     C1        double      1.390    0.020
+ HDI      HC1    C1        single      1.083    0.020
+ HDI      C3     C2        single      1.390    0.020
+ HDI      HC2    C2        single      1.083    0.020
+ HDI      C4     C3        double      1.390    0.020
+ HDI      HC4    C4        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HDI      O3     C11    O4      119.000    3.000
+ HDI      O3     C11    C10     120.500    3.000
+ HDI      O4     C11    C10     120.000    3.000
+ HDI      C11    O4     C12     120.000    3.000
+ HDI      O4     C12    H123    109.470    3.000
+ HDI      O4     C12    H122    109.470    3.000
+ HDI      O4     C12    H121    109.470    3.000
+ HDI      H123   C12    H122    109.470    3.000
+ HDI      H123   C12    H121    109.470    3.000
+ HDI      H122   C12    H121    109.470    3.000
+ HDI      C11    C10    H101    109.470    3.000
+ HDI      C11    C10    H102    109.470    3.000
+ HDI      C11    C10    C9      109.470    3.000
+ HDI      H101   C10    H102    107.900    3.000
+ HDI      H101   C10    C9      109.470    3.000
+ HDI      H102   C10    C9      109.470    3.000
+ HDI      C10    C9     HC9     108.340    3.000
+ HDI      C10    C9     O2      109.470    3.000
+ HDI      C10    C9     C8      109.470    3.000
+ HDI      HC9    C9     O2      109.470    3.000
+ HDI      HC9    C9     C8      108.340    3.000
+ HDI      O2     C9     C8      109.470    3.000
+ HDI      C9     O2     N1      120.000    3.000
+ HDI      C9     C8     HC81    109.470    3.000
+ HDI      C9     C8     HC82    109.470    3.000
+ HDI      C9     C8     C7      109.470    3.000
+ HDI      HC81   C8     HC82    107.900    3.000
+ HDI      HC81   C8     C7      109.470    3.000
+ HDI      HC82   C8     C7      109.470    3.000
+ HDI      C8     C7     N1      116.500    3.000
+ HDI      C8     C7     C6      120.000    3.000
+ HDI      N1     C7     C6      120.000    3.000
+ HDI      C7     N1     O2      120.000    3.000
+ HDI      C7     C6     C1      120.000    3.000
+ HDI      C7     C6     C5      120.000    3.000
+ HDI      C1     C6     C5      120.000    3.000
+ HDI      C6     C1     HC1     120.000    3.000
+ HDI      C6     C1     C2      120.000    3.000
+ HDI      HC1    C1     C2      120.000    3.000
+ HDI      C1     C2     HC2     120.000    3.000
+ HDI      C1     C2     C3      120.000    3.000
+ HDI      HC2    C2     C3      120.000    3.000
+ HDI      C2     C3     O1      120.000    3.000
+ HDI      C2     C3     C4      120.000    3.000
+ HDI      O1     C3     C4      120.000    3.000
+ HDI      C3     O1     HO1     109.470    3.000
+ HDI      C3     C4     HC4     120.000    3.000
+ HDI      C3     C4     C5      120.000    3.000
+ HDI      HC4    C4     C5      120.000    3.000
+ HDI      C4     C5     HC5     120.000    3.000
+ HDI      C4     C5     C6      120.000    3.000
+ HDI      HC5    C5     C6      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HDI      var_1    O3     C11    O4     C12       -0.028   20.000   1
+ HDI      var_2    C11    O4     C12    H121     179.934   20.000   1
+ HDI      var_3    O3     C11    C10    C9        -0.100   20.000   3
+ HDI      var_4    C11    C10    C9     C8      -179.956   20.000   3
+ HDI      var_5    C10    C9     O2     N1      -150.000   20.000   1
+ HDI      var_6    C10    C9     C8     C7       150.000   20.000   3
+ HDI      var_7    C9     C8     C7     C6       150.000   20.000   3
+ HDI      CONST_1  C8     C7     N1     O2         0.000    0.000   0
+ HDI      var_8    C7     N1     O2     C9        30.000   20.000   1
+ HDI      var_9    C8     C7     C6     C1        -0.300   20.000   1
+ HDI      CONST_2  C7     C6     C1     C2       180.000    0.000   0
+ HDI      CONST_3  C6     C1     C2     C3         0.000    0.000   0
+ HDI      CONST_4  C1     C2     C3     C4         0.000    0.000   0
+ HDI      var_10   C2     C3     O1     HO1      -90.003   20.000   1
+ HDI      CONST_5  C2     C3     C4     C5         0.000    0.000   0
+ HDI      CONST_6  C3     C4     C5     C6         0.000    0.000   0
+ HDI      CONST_7  C4     C5     C6     C7       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HDI      chir_01  C9     C10    O2     C8        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HDI      plan-1    C11       0.020
+ HDI      plan-1    O3        0.020
+ HDI      plan-1    O4        0.020
+ HDI      plan-1    C10       0.020
+ HDI      plan-2    N1        0.020
+ HDI      plan-2    O2        0.020
+ HDI      plan-2    C7        0.020
+ HDI      plan-3    C7        0.020
+ HDI      plan-3    N1        0.020
+ HDI      plan-3    C8        0.020
+ HDI      plan-3    C6        0.020
+ HDI      plan-4    C5        0.020
+ HDI      plan-4    C6        0.020
+ HDI      plan-4    C4        0.020
+ HDI      plan-4    HC5       0.020
+ HDI      plan-4    C1        0.020
+ HDI      plan-4    C2        0.020
+ HDI      plan-4    C3        0.020
+ HDI      plan-4    C7        0.020
+ HDI      plan-4    HC1       0.020
+ HDI      plan-4    HC2       0.020
+ HDI      plan-4    O1        0.020
+ HDI      plan-4    HC4       0.020
+# ------------------------------------------------------

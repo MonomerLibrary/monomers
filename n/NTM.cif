@@ -1,0 +1,165 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NTM      NTM 'QUINOLINIC ACID                     ' non-polymer        15  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NTM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NTM           O4     O    OC       -0.500      0.000    0.000    0.000
+ NTM           C8     C    C         0.000     -1.088    0.617    0.025
+ NTM           O3     O    OC       -0.500     -1.314    1.450    0.931
+ NTM           C3     C    CR6       0.000     -2.105    0.364   -1.017
+ NTM           C2     C    CR6       0.000     -3.411   -0.012   -0.665
+ NTM           C7     C    C         0.000     -3.777   -0.151    0.765
+ NTM           O2     O    OC       -0.500     -4.964   -0.379    1.088
+ NTM           O1     O    OC       -0.500     -2.899   -0.041    1.648
+ NTM           C4     C    CR16      0.000     -1.783    0.489   -2.372
+ NTM           H4     H    H         0.000     -0.785    0.774   -2.682
+ NTM           C5     C    CR16      0.000     -2.773    0.241   -3.309
+ NTM           H5     H    H         0.000     -2.557    0.328   -4.367
+ NTM           C6     C    CR16      0.000     -4.041   -0.120   -2.881
+ NTM           H6     H    H         0.000     -4.814   -0.314   -3.614
+ NTM           N1     N    NRD6      0.000     -4.321   -0.232   -1.601
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NTM      O4     n/a    C8     START
+ NTM      C8     O4     C3     .
+ NTM      O3     C8     .      .
+ NTM      C3     C8     C4     .
+ NTM      C2     C3     C7     .
+ NTM      C7     C2     O1     .
+ NTM      O2     C7     .      .
+ NTM      O1     C7     .      .
+ NTM      C4     C3     C5     .
+ NTM      H4     C4     .      .
+ NTM      C5     C4     C6     .
+ NTM      H5     C5     .      .
+ NTM      C6     C5     N1     .
+ NTM      H6     C6     .      .
+ NTM      N1     C6     .      END
+ NTM      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NTM      N1     C2        double      1.350    0.020
+ NTM      N1     C6        single      1.337    0.020
+ NTM      C2     C3        single      1.487    0.020
+ NTM      C7     C2        single      1.500    0.020
+ NTM      C4     C3        double      1.390    0.020
+ NTM      C3     C8        single      1.500    0.020
+ NTM      C5     C4        single      1.390    0.020
+ NTM      H4     C4        single      1.083    0.020
+ NTM      C6     C5        double      1.390    0.020
+ NTM      H5     C5        single      1.083    0.020
+ NTM      H6     C6        single      1.083    0.020
+ NTM      O1     C7        deloc       1.250    0.020
+ NTM      O2     C7        deloc       1.250    0.020
+ NTM      O3     C8        deloc       1.250    0.020
+ NTM      C8     O4        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NTM      O4     C8     O3      123.000    3.000
+ NTM      O4     C8     C3      120.000    3.000
+ NTM      O3     C8     C3      120.000    3.000
+ NTM      C8     C3     C2      120.000    3.000
+ NTM      C8     C3     C4      120.000    3.000
+ NTM      C2     C3     C4      120.000    3.000
+ NTM      C3     C2     C7      120.000    3.000
+ NTM      C3     C2     N1      120.000    3.000
+ NTM      C7     C2     N1      120.000    3.000
+ NTM      C2     C7     O2      120.000    3.000
+ NTM      C2     C7     O1      120.000    3.000
+ NTM      O2     C7     O1      123.000    3.000
+ NTM      C3     C4     H4      120.000    3.000
+ NTM      C3     C4     C5      120.000    3.000
+ NTM      H4     C4     C5      120.000    3.000
+ NTM      C4     C5     H5      120.000    3.000
+ NTM      C4     C5     C6      120.000    3.000
+ NTM      H5     C5     C6      120.000    3.000
+ NTM      C5     C6     H6      120.000    3.000
+ NTM      C5     C6     N1      120.000    3.000
+ NTM      H6     C6     N1      120.000    3.000
+ NTM      C6     N1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NTM      var_1    O4     C8     C3     C4       -54.793   20.000   1
+ NTM      CONST_1  C8     C3     C2     C7         0.000    0.000   0
+ NTM      var_2    C3     C2     C7     O1        -5.860   20.000   1
+ NTM      CONST_2  C8     C3     C4     C5       180.000    0.000   0
+ NTM      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ NTM      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ NTM      CONST_5  C5     C6     N1     C2         0.000    0.000   0
+ NTM      CONST_6  C6     N1     C2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NTM      plan-1    N1        0.020
+ NTM      plan-1    C2        0.020
+ NTM      plan-1    C6        0.020
+ NTM      plan-1    C3        0.020
+ NTM      plan-1    C4        0.020
+ NTM      plan-1    C5        0.020
+ NTM      plan-1    C7        0.020
+ NTM      plan-1    C8        0.020
+ NTM      plan-1    H4        0.020
+ NTM      plan-1    H5        0.020
+ NTM      plan-1    H6        0.020
+ NTM      plan-2    C7        0.020
+ NTM      plan-2    C2        0.020
+ NTM      plan-2    O1        0.020
+ NTM      plan-2    O2        0.020
+ NTM      plan-3    C8        0.020
+ NTM      plan-3    C3        0.020
+ NTM      plan-3    O3        0.020
+ NTM      plan-3    O4        0.020
+# ------------------------------------------------------

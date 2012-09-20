@@ -1,0 +1,256 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+UBB      UBB '2',3'-DIDEOXY-URIDINE-5'-MONOPHOSPHA' non-polymer        30  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_UBB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ UBB           O2     O    O         0.000      0.000    0.000    0.000
+ UBB           C2     C    CR6       0.000     -0.055    0.276    1.200
+ UBB           N3     N    NR16      0.000      1.051    0.083    2.039
+ UBB           HN3    H    H         0.000      1.909   -0.302    1.596
+ UBB           C4     C    CR6       0.000      1.119    0.351    3.397
+ UBB           O4     O    O         0.000      2.112    0.166    4.093
+ UBB           C5     C    CR16      0.000     -0.123    0.896    3.980
+ UBB           H5     H    H         0.000     -0.172    1.140    5.034
+ UBB           C6     C    CR16      0.000     -1.185    1.086    3.194
+ UBB           H6     H    H         0.000     -2.086    1.487    3.643
+ UBB           N1     N    NR6       0.000     -1.204    0.801    1.834
+ UBB           "C1'"  C    CH1       0.000     -2.409    1.050    1.101
+ UBB           "H1'"  H    H         0.000     -2.157    1.263    0.053
+ UBB           "O4'"  O    O2        0.000     -3.084    2.184    1.662
+ UBB           "C2'"  C    CH2       0.000     -3.382   -0.113    1.152
+ UBB           "H2'1" H    H         0.000     -3.351   -0.656    2.099
+ UBB           "H2'2" H    H         0.000     -3.252   -0.816    0.326
+ UBB           "C3'"  C    CH2       0.000     -4.712    0.586    1.014
+ UBB           "H3'1" H    H         0.000     -5.531    0.030    1.475
+ UBB           "H3'2" H    H         0.000     -4.965    0.811   -0.024
+ UBB           "C4'"  C    CH1       0.000     -4.486    1.884    1.775
+ UBB           "H4'"  H    H         0.000     -5.074    2.689    1.312
+ UBB           "C5'"  C    CH2       0.000     -4.838    1.778    3.252
+ UBB           "H5'1" H    H         0.000     -4.227    1.005    3.722
+ UBB           "H5'2" H    H         0.000     -5.894    1.521    3.361
+ UBB           "O5'"  O    O2        0.000     -4.587    3.027    3.876
+ UBB           P      P    P         0.000     -4.885    3.171    5.461
+ UBB           O1P    O    OP       -0.666     -4.116    2.023    6.077
+ UBB           O2P    O    OP       -0.666     -4.588    4.535    6.045
+ UBB           O3P    O    OP       -0.666     -6.326    2.726    5.574
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ UBB      O2     n/a    C2     START
+ UBB      C2     O2     N1     .
+ UBB      N3     C2     C4     .
+ UBB      HN3    N3     .      .
+ UBB      C4     N3     C5     .
+ UBB      O4     C4     .      .
+ UBB      C5     C4     C6     .
+ UBB      H5     C5     .      .
+ UBB      C6     C5     H6     .
+ UBB      H6     C6     .      .
+ UBB      N1     C2     "C1'"  .
+ UBB      "C1'"  N1     "C2'"  .
+ UBB      "H1'"  "C1'"  .      .
+ UBB      "O4'"  "C1'"  .      .
+ UBB      "C2'"  "C1'"  "C3'"  .
+ UBB      "H2'1" "C2'"  .      .
+ UBB      "H2'2" "C2'"  .      .
+ UBB      "C3'"  "C2'"  "C4'"  .
+ UBB      "H3'1" "C3'"  .      .
+ UBB      "H3'2" "C3'"  .      .
+ UBB      "C4'"  "C3'"  "C5'"  .
+ UBB      "H4'"  "C4'"  .      .
+ UBB      "C5'"  "C4'"  "O5'"  .
+ UBB      "H5'1" "C5'"  .      .
+ UBB      "H5'2" "C5'"  .      .
+ UBB      "O5'"  "C5'"  P      .
+ UBB      P      "O5'"  O3P    .
+ UBB      O1P    P      .      .
+ UBB      O2P    P      .      .
+ UBB      O3P    P      .      END
+ UBB      "C4'"  "O4'"  .    ADD
+ UBB      N1     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ UBB      O1P    P         deloc       1.510    0.020
+ UBB      O2P    P         deloc       1.510    0.020
+ UBB      O3P    P         deloc       1.510    0.020
+ UBB      P      "O5'"     single      1.610    0.020
+ UBB      "O5'"  "C5'"     single      1.426    0.020
+ UBB      "C5'"  "C4'"     single      1.524    0.020
+ UBB      "H5'1" "C5'"     single      1.092    0.020
+ UBB      "H5'2" "C5'"     single      1.092    0.020
+ UBB      "C4'"  "O4'"     single      1.426    0.020
+ UBB      "C4'"  "C3'"     single      1.524    0.020
+ UBB      "H4'"  "C4'"     single      1.099    0.020
+ UBB      "O4'"  "C1'"     single      1.426    0.020
+ UBB      "C1'"  N1        single      1.465    0.020
+ UBB      "C2'"  "C1'"     single      1.524    0.020
+ UBB      "H1'"  "C1'"     single      1.099    0.020
+ UBB      N1     C6        single      1.337    0.020
+ UBB      N1     C2        single      1.410    0.020
+ UBB      C6     C5        double      1.390    0.020
+ UBB      H6     C6        single      1.083    0.020
+ UBB      C5     C4        single      1.390    0.020
+ UBB      H5     C5        single      1.083    0.020
+ UBB      O4     C4        double      1.250    0.020
+ UBB      C4     N3        single      1.337    0.020
+ UBB      N3     C2        single      1.337    0.020
+ UBB      HN3    N3        single      1.040    0.020
+ UBB      C2     O2        double      1.250    0.020
+ UBB      "C3'"  "C2'"     single      1.524    0.020
+ UBB      "H2'1" "C2'"     single      1.092    0.020
+ UBB      "H2'2" "C2'"     single      1.092    0.020
+ UBB      "H3'1" "C3'"     single      1.092    0.020
+ UBB      "H3'2" "C3'"     single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ UBB      O2     C2     N3      120.000    3.000
+ UBB      O2     C2     N1      120.000    3.000
+ UBB      N3     C2     N1      120.000    3.000
+ UBB      C2     N3     HN3     120.000    3.000
+ UBB      C2     N3     C4      120.000    3.000
+ UBB      HN3    N3     C4      120.000    3.000
+ UBB      N3     C4     O4      120.000    3.000
+ UBB      N3     C4     C5      120.000    3.000
+ UBB      O4     C4     C5      120.000    3.000
+ UBB      C4     C5     H5      120.000    3.000
+ UBB      C4     C5     C6      120.000    3.000
+ UBB      H5     C5     C6      120.000    3.000
+ UBB      C5     C6     H6      120.000    3.000
+ UBB      C5     C6     N1      120.000    3.000
+ UBB      H6     C6     N1      120.000    3.000
+ UBB      C2     N1     "C1'"   120.000    3.000
+ UBB      C2     N1     C6      120.000    3.000
+ UBB      "C1'"  N1     C6      120.000    3.000
+ UBB      N1     "C1'"  "H1'"   109.470    3.000
+ UBB      N1     "C1'"  "O4'"   109.470    3.000
+ UBB      N1     "C1'"  "C2'"   109.470    3.000
+ UBB      "H1'"  "C1'"  "O4'"   109.470    3.000
+ UBB      "H1'"  "C1'"  "C2'"   108.340    3.000
+ UBB      "O4'"  "C1'"  "C2'"   109.470    3.000
+ UBB      "C1'"  "O4'"  "C4'"   111.800    3.000
+ UBB      "C1'"  "C2'"  "H2'1"  109.470    3.000
+ UBB      "C1'"  "C2'"  "H2'2"  109.470    3.000
+ UBB      "C1'"  "C2'"  "C3'"   111.000    3.000
+ UBB      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ UBB      "H2'1" "C2'"  "C3'"   109.470    3.000
+ UBB      "H2'2" "C2'"  "C3'"   109.470    3.000
+ UBB      "C2'"  "C3'"  "H3'1"  109.470    3.000
+ UBB      "C2'"  "C3'"  "H3'2"  109.470    3.000
+ UBB      "C2'"  "C3'"  "C4'"   111.000    3.000
+ UBB      "H3'1" "C3'"  "H3'2"  107.900    3.000
+ UBB      "H3'1" "C3'"  "C4'"   109.470    3.000
+ UBB      "H3'2" "C3'"  "C4'"   109.470    3.000
+ UBB      "C3'"  "C4'"  "H4'"   108.340    3.000
+ UBB      "C3'"  "C4'"  "C5'"   109.470    3.000
+ UBB      "C3'"  "C4'"  "O4'"   109.470    3.000
+ UBB      "H4'"  "C4'"  "C5'"   108.340    3.000
+ UBB      "H4'"  "C4'"  "O4'"   109.470    3.000
+ UBB      "C5'"  "C4'"  "O4'"   109.470    3.000
+ UBB      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ UBB      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ UBB      "C4'"  "C5'"  "O5'"   109.470    3.000
+ UBB      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ UBB      "H5'1" "C5'"  "O5'"   109.470    3.000
+ UBB      "H5'2" "C5'"  "O5'"   109.470    3.000
+ UBB      "C5'"  "O5'"  P       120.500    3.000
+ UBB      "O5'"  P      O1P     108.200    3.000
+ UBB      "O5'"  P      O2P     108.200    3.000
+ UBB      "O5'"  P      O3P     108.200    3.000
+ UBB      O1P    P      O2P     119.900    3.000
+ UBB      O1P    P      O3P     119.900    3.000
+ UBB      O2P    P      O3P     119.900    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ UBB      CONST_1  O2     C2     N3     C4       180.000    0.000   0
+ UBB      CONST_2  C2     N3     C4     C5         0.000    0.000   0
+ UBB      CONST_3  N3     C4     C5     C6         0.000    0.000   0
+ UBB      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ UBB      CONST_5  O2     C2     N1     "C1'"      0.000    0.000   0
+ UBB      CONST_6  C2     N1     C6     C5         0.000    0.000   0
+ UBB      var_1    C2     N1     "C1'"  "C2'"     93.624   20.000   1
+ UBB      var_2    N1     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ UBB      var_3    N1     "C1'"  "C2'"  "C3'"    150.000   20.000   3
+ UBB      var_4    "C1'"  "C2'"  "C3'"  "C4'"    -30.000   20.000   3
+ UBB      var_5    "C2'"  "C3'"  "C4'"  "C5'"    -90.000   20.000   3
+ UBB      var_6    "C3'"  "C4'"  "O4'"  "C1'"      0.000   20.000   1
+ UBB      var_7    "C3'"  "C4'"  "C5'"  "O5'"    179.537   20.000   3
+ UBB      var_8    "C4'"  "C5'"  "O5'"  P        179.985   20.000   1
+ UBB      var_9    "C5'"  "O5'"  P      O3P      -54.218   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ UBB      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ UBB      chir_02  "C1'"  "O4'"  N1     "C2'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ UBB      plan-1    N1        0.020
+ UBB      plan-1    "C1'"     0.020
+ UBB      plan-1    C6        0.020
+ UBB      plan-1    C2        0.020
+ UBB      plan-1    C5        0.020
+ UBB      plan-1    C4        0.020
+ UBB      plan-1    N3        0.020
+ UBB      plan-1    H6        0.020
+ UBB      plan-1    H5        0.020
+ UBB      plan-1    O4        0.020
+ UBB      plan-1    HN3       0.020
+ UBB      plan-1    O2        0.020
+# ------------------------------------------------------

@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+F2F      F2F '3,4-difluoro-L-phenylalanine        ' peptide            22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_F2F
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ F2F           N      N    NH2       0.000      0.000    0.000    0.000
+ F2F           HN1    H    H         0.000      0.893   -0.038    0.478
+ F2F           HN2    H    H         0.000     -0.109   -0.478   -0.887
+ F2F           CA     C    CH1       0.000     -1.125    0.740    0.588
+ F2F           HA     H    H         0.000     -1.382    1.591   -0.059
+ F2F           CB     C    CH2       0.000     -2.334   -0.188    0.714
+ F2F           HB     H    H         0.000     -3.141    0.334    1.233
+ F2F           HBA    H    H         0.000     -2.052   -1.076    1.284
+ F2F           CG     C    CR6       0.000     -2.801   -0.597   -0.659
+ F2F           CD1    C    CR16      0.000     -3.750    0.160   -1.320
+ F2F           HD1    H    H         0.000     -4.161    1.044   -0.849
+ F2F           CE1    C    CR16      0.000     -4.174   -0.211   -2.582
+ F2F           HE1    H    H         0.000     -4.911    0.388   -3.103
+ F2F           CZ     C    CR6       0.000     -3.658   -1.347   -3.180
+ F2F           F1     F    F         0.000     -4.078   -1.714   -4.411
+ F2F           CE2    C    CR6       0.000     -2.711   -2.110   -2.514
+ F2F           F2     F    F         0.000     -2.206   -3.220   -3.096
+ F2F           CD2    C    CR16      0.000     -2.283   -1.733   -1.253
+ F2F           HD2    H    H         0.000     -1.543   -2.327   -0.732
+ F2F           C      C    C         0.000     -0.735    1.247    1.952
+ F2F           O      O    OC       -0.500      0.221    0.721    2.564
+ F2F           OXT    O    OC       -0.500     -1.370    2.190    2.474
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ F2F      N      n/a    CA     START
+ F2F      HN1    N      .      .
+ F2F      HN2    N      .      .
+ F2F      CA     N      C      .
+ F2F      HA     CA     .      .
+ F2F      CB     CA     CG     .
+ F2F      HB     CB     .      .
+ F2F      HBA    CB     .      .
+ F2F      CG     CB     CD1    .
+ F2F      CD1    CG     CE1    .
+ F2F      HD1    CD1    .      .
+ F2F      CE1    CD1    CZ     .
+ F2F      HE1    CE1    .      .
+ F2F      CZ     CE1    CE2    .
+ F2F      F1     CZ     .      .
+ F2F      CE2    CZ     CD2    .
+ F2F      F2     CE2    .      .
+ F2F      CD2    CE2    HD2    .
+ F2F      HD2    CD2    .      .
+ F2F      C      CA     .      END
+ F2F      O      C      .      .
+ F2F      OXT    C      .      .
+ F2F      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ F2F      O      C         deloc       1.250    0.020
+ F2F      C      CA        single      1.500    0.020
+ F2F      OXT    C         deloc       1.250    0.020
+ F2F      CA     N         single      1.450    0.020
+ F2F      CB     CA        single      1.524    0.020
+ F2F      HA     CA        single      1.099    0.020
+ F2F      CG     CB        single      1.511    0.020
+ F2F      HB     CB        single      1.092    0.020
+ F2F      HBA    CB        single      1.092    0.020
+ F2F      CG     CD2       double      1.390    0.020
+ F2F      CD1    CG        single      1.390    0.020
+ F2F      CD2    CE2       single      1.390    0.020
+ F2F      HD2    CD2       single      1.083    0.020
+ F2F      F2     CE2       single      1.345    0.020
+ F2F      CE2    CZ        double      1.487    0.020
+ F2F      F1     CZ        single      1.345    0.020
+ F2F      CZ     CE1       single      1.390    0.020
+ F2F      CE1    CD1       double      1.390    0.020
+ F2F      HE1    CE1       single      1.083    0.020
+ F2F      HD1    CD1       single      1.083    0.020
+ F2F      HN1    N         single      1.010    0.020
+ F2F      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ F2F      HN1    N      HN2     120.000    3.000
+ F2F      HN1    N      CA      120.000    3.000
+ F2F      HN2    N      CA      120.000    3.000
+ F2F      N      CA     HA      109.470    3.000
+ F2F      N      CA     CB      109.470    3.000
+ F2F      N      CA     C       109.470    3.000
+ F2F      HA     CA     CB      108.340    3.000
+ F2F      HA     CA     C       108.810    3.000
+ F2F      CB     CA     C       109.470    3.000
+ F2F      CA     CB     HB      109.470    3.000
+ F2F      CA     CB     HBA     109.470    3.000
+ F2F      CA     CB     CG      109.470    3.000
+ F2F      HB     CB     HBA     107.900    3.000
+ F2F      HB     CB     CG      109.470    3.000
+ F2F      HBA    CB     CG      109.470    3.000
+ F2F      CB     CG     CD1     120.000    3.000
+ F2F      CB     CG     CD2     120.000    3.000
+ F2F      CD1    CG     CD2     120.000    3.000
+ F2F      CG     CD1    HD1     120.000    3.000
+ F2F      CG     CD1    CE1     120.000    3.000
+ F2F      HD1    CD1    CE1     120.000    3.000
+ F2F      CD1    CE1    HE1     120.000    3.000
+ F2F      CD1    CE1    CZ      120.000    3.000
+ F2F      HE1    CE1    CZ      120.000    3.000
+ F2F      CE1    CZ     F1      120.000    3.000
+ F2F      CE1    CZ     CE2     120.000    3.000
+ F2F      F1     CZ     CE2     120.000    3.000
+ F2F      CZ     CE2    F2      120.000    3.000
+ F2F      CZ     CE2    CD2     120.000    3.000
+ F2F      F2     CE2    CD2     120.000    3.000
+ F2F      CE2    CD2    HD2     120.000    3.000
+ F2F      CE2    CD2    CG      120.000    3.000
+ F2F      HD2    CD2    CG      120.000    3.000
+ F2F      CA     C      O       118.500    3.000
+ F2F      CA     C      OXT     118.500    3.000
+ F2F      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ F2F      var_1    HN2    N      CA     C        175.000   20.000   1
+ F2F      var_2    N      CA     CB     CG       -65.042   20.000   3
+ F2F      var_3    CA     CB     CG     CD1      -90.246   20.000   2
+ F2F      CONST_1  CB     CG     CD2    CE2      180.000    0.000   0
+ F2F      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
+ F2F      CONST_3  CG     CD1    CE1    CZ         0.000    0.000   0
+ F2F      CONST_4  CD1    CE1    CZ     CE2        0.000    0.000   0
+ F2F      CONST_5  CE1    CZ     CE2    CD2        0.000    0.000   0
+ F2F      CONST_6  CZ     CE2    CD2    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ F2F      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ F2F      plan-1    C         0.020
+ F2F      plan-1    O         0.020
+ F2F      plan-1    CA        0.020
+ F2F      plan-1    OXT       0.020
+ F2F      plan-2    N         0.020
+ F2F      plan-2    CA        0.020
+ F2F      plan-2    HN1       0.020
+ F2F      plan-2    HN2       0.020
+ F2F      plan-3    CG        0.020
+ F2F      plan-3    CB        0.020
+ F2F      plan-3    CD2       0.020
+ F2F      plan-3    CD1       0.020
+ F2F      plan-3    CE2       0.020
+ F2F      plan-3    CZ        0.020
+ F2F      plan-3    CE1       0.020
+ F2F      plan-3    HD2       0.020
+ F2F      plan-3    F2        0.020
+ F2F      plan-3    F1        0.020
+ F2F      plan-3    HE1       0.020
+ F2F      plan-3    HD1       0.020
+# ------------------------------------------------------

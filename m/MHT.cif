@@ -1,0 +1,217 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MHT      MHT '(3R)-3-(METHYLSULFANYL)-1-AZABICYCLO' non-polymer        25  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MHT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MHT           CM     C    CH3       0.000      0.000    0.000    0.000
+ MHT           H1M    H    H         0.000      0.250   -0.203   -1.013
+ MHT           H2M    H    H         0.000      0.766    0.598    0.430
+ MHT           H3M    H    H         0.000     -0.059   -0.918    0.531
+ MHT           S3     S    S2        0.000     -1.589    0.871    0.086
+ MHT           C3     C    CH1       0.000     -2.739   -0.301   -0.688
+ MHT           H3     H    H         0.000     -2.377   -0.566   -1.691
+ MHT           C2     C    CH2       0.000     -2.838   -1.565    0.172
+ MHT           H22    H    H         0.000     -2.191   -1.463    1.046
+ MHT           H21    H    H         0.000     -2.522   -2.430   -0.414
+ MHT           C4     C    CH1       0.000     -4.129    0.336   -0.794
+ MHT           H4     H    H         0.000     -4.086    1.247   -1.407
+ MHT           C5     C    CH2       0.000     -4.625    0.667    0.620
+ MHT           H51    H    H         0.000     -5.624    1.104    0.567
+ MHT           H52    H    H         0.000     -3.942    1.377    1.092
+ MHT           C6     C    CH2       0.000     -4.672   -0.623    1.443
+ MHT           H62    H    H         0.000     -5.695   -0.801    1.783
+ MHT           H61    H    H         0.000     -4.014   -0.528    2.309
+ MHT           C8     C    CH2       0.000     -5.089   -0.684   -1.420
+ MHT           H81    H    H         0.000     -4.742   -0.950   -2.421
+ MHT           H82    H    H         0.000     -6.091   -0.255   -1.486
+ MHT           C7     C    CH2       0.000     -5.124   -1.936   -0.540
+ MHT           H72    H    H         0.000     -4.795   -2.799   -1.122
+ MHT           H71    H    H         0.000     -6.143   -2.104   -0.186
+ MHT           N1     N    NT        0.000     -4.228   -1.749    0.609
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MHT      CM     n/a    S3     START
+ MHT      H1M    CM     .      .
+ MHT      H2M    CM     .      .
+ MHT      H3M    CM     .      .
+ MHT      S3     CM     C3     .
+ MHT      C3     S3     C4     .
+ MHT      H3     C3     .      .
+ MHT      C2     C3     H21    .
+ MHT      H22    C2     .      .
+ MHT      H21    C2     .      .
+ MHT      C4     C3     C8     .
+ MHT      H4     C4     .      .
+ MHT      C5     C4     C6     .
+ MHT      H51    C5     .      .
+ MHT      H52    C5     .      .
+ MHT      C6     C5     H61    .
+ MHT      H62    C6     .      .
+ MHT      H61    C6     .      .
+ MHT      C8     C4     C7     .
+ MHT      H81    C8     .      .
+ MHT      H82    C8     .      .
+ MHT      C7     C8     N1     .
+ MHT      H72    C7     .      .
+ MHT      H71    C7     .      .
+ MHT      N1     C7     .      END
+ MHT      N1     C2     .    ADD
+ MHT      N1     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MHT      N1     C2        single      1.469    0.020
+ MHT      N1     C6        single      1.469    0.020
+ MHT      N1     C7        single      1.469    0.020
+ MHT      C2     C3        single      1.524    0.020
+ MHT      C3     S3        single      1.765    0.020
+ MHT      C4     C3        single      1.524    0.020
+ MHT      C5     C4        single      1.524    0.020
+ MHT      C6     C5        single      1.524    0.020
+ MHT      C7     C8        single      1.524    0.020
+ MHT      C8     C4        single      1.524    0.020
+ MHT      S3     CM        single      1.762    0.020
+ MHT      H21    C2        single      1.092    0.020
+ MHT      H22    C2        single      1.092    0.020
+ MHT      H3     C3        single      1.099    0.020
+ MHT      H4     C4        single      1.099    0.020
+ MHT      H51    C5        single      1.092    0.020
+ MHT      H52    C5        single      1.092    0.020
+ MHT      H61    C6        single      1.092    0.020
+ MHT      H62    C6        single      1.092    0.020
+ MHT      H71    C7        single      1.092    0.020
+ MHT      H72    C7        single      1.092    0.020
+ MHT      H81    C8        single      1.092    0.020
+ MHT      H82    C8        single      1.092    0.020
+ MHT      H1M    CM        single      1.059    0.020
+ MHT      H2M    CM        single      1.059    0.020
+ MHT      H3M    CM        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MHT      H1M    CM     H2M     109.470    3.000
+ MHT      H1M    CM     H3M     109.470    3.000
+ MHT      H2M    CM     H3M     109.470    3.000
+ MHT      H1M    CM     S3      109.500    3.000
+ MHT      H2M    CM     S3      109.500    3.000
+ MHT      H3M    CM     S3      109.500    3.000
+ MHT      CM     S3     C3      102.997    3.000
+ MHT      S3     C3     H3      109.500    3.000
+ MHT      S3     C3     C2      109.500    3.000
+ MHT      S3     C3     C4      109.500    3.000
+ MHT      H3     C3     C2      108.340    3.000
+ MHT      H3     C3     C4      108.340    3.000
+ MHT      C2     C3     C4      111.000    3.000
+ MHT      C3     C2     H22     109.470    3.000
+ MHT      C3     C2     H21     109.470    3.000
+ MHT      C3     C2     N1      109.500    3.000
+ MHT      H22    C2     H21     107.900    3.000
+ MHT      H22    C2     N1      109.470    3.000
+ MHT      H21    C2     N1      109.470    3.000
+ MHT      C3     C4     H4      108.340    3.000
+ MHT      C3     C4     C5      111.000    3.000
+ MHT      C3     C4     C8      111.000    3.000
+ MHT      H4     C4     C5      108.340    3.000
+ MHT      H4     C4     C8      108.340    3.000
+ MHT      C5     C4     C8      109.470    3.000
+ MHT      C4     C5     H51     109.470    3.000
+ MHT      C4     C5     H52     109.470    3.000
+ MHT      C4     C5     C6      111.000    3.000
+ MHT      H51    C5     H52     107.900    3.000
+ MHT      H51    C5     C6      109.470    3.000
+ MHT      H52    C5     C6      109.470    3.000
+ MHT      C5     C6     H62     109.470    3.000
+ MHT      C5     C6     H61     109.470    3.000
+ MHT      C5     C6     N1      109.470    3.000
+ MHT      H62    C6     H61     107.900    3.000
+ MHT      H62    C6     N1      109.470    3.000
+ MHT      H61    C6     N1      109.470    3.000
+ MHT      C4     C8     H81     109.470    3.000
+ MHT      C4     C8     H82     109.470    3.000
+ MHT      C4     C8     C7      111.000    3.000
+ MHT      H81    C8     H82     107.900    3.000
+ MHT      H81    C8     C7      109.470    3.000
+ MHT      H82    C8     C7      109.470    3.000
+ MHT      C8     C7     H72     109.470    3.000
+ MHT      C8     C7     H71     109.470    3.000
+ MHT      C8     C7     N1      109.470    3.000
+ MHT      H72    C7     H71     107.900    3.000
+ MHT      H72    C7     N1      109.470    3.000
+ MHT      H71    C7     N1      109.470    3.000
+ MHT      C7     N1     C2      109.470    3.000
+ MHT      C7     N1     C6      109.470    3.000
+ MHT      C2     N1     C6      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MHT      var_1    H3M    CM     S3     C3       -60.023   20.000   1
+ MHT      var_2    CM     S3     C3     C4      -175.634   20.000   1
+ MHT      var_3    S3     C3     C2     N1       120.000   20.000   3
+ MHT      var_4    S3     C3     C4     C8       180.000   20.000   3
+ MHT      var_5    C3     C4     C5     C6       -60.000   20.000   3
+ MHT      var_6    C4     C5     C6     N1         0.000   20.000   3
+ MHT      var_7    C3     C4     C8     C7        58.990   20.000   3
+ MHT      var_8    C4     C8     C7     N1        -0.070   20.000   3
+ MHT      var_9    C8     C7     N1     C2       -61.907   20.000   1
+ MHT      var_10   C7     N1     C2     C3        60.000   20.000   1
+ MHT      var_11   C7     N1     C6     C5       -60.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MHT      chir_01  N1     C2     C6     C7        negativ
+ MHT      chir_02  C3     C2     C4     S3        negativ
+ MHT      chir_03  C4     C3     C5     C8        positiv
+# ------------------------------------------------------

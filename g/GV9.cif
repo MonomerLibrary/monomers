@@ -1,0 +1,185 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GV9      GV9 '3-(acetylamino)thiophene-2-carboxyli' non-polymer        18  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GV9
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GV9           O8     O    OC       -0.500      0.000    0.000    0.000
+ GV9           C6     C    C         0.000     -1.217    0.290   -0.025
+ GV9           O7     O    OC       -0.500     -1.573    1.489   -0.051
+ GV9           C2     C    CR5       0.000     -2.190   -0.737   -0.026
+ GV9           S1     S    S2        0.000     -1.853   -2.461    0.009
+ GV9           C5     C    CR15      0.000     -3.515   -2.838   -0.022
+ GV9           H5     H    H         0.000     -3.914   -3.845   -0.017
+ GV9           C4     C    CR15      0.000     -4.262   -1.731   -0.053
+ GV9           H4     H    H         0.000     -5.344   -1.760   -0.077
+ GV9           C3     C    CR5       0.000     -3.551   -0.547   -0.052
+ GV9           N9     N    NH1       0.000     -4.154    0.712   -0.083
+ GV9           HN9    H    H         0.000     -3.585    1.542   -0.179
+ GV9           C10    C    C         0.000     -5.493    0.822    0.015
+ GV9           O11    O    O         0.000     -6.182   -0.176    0.030
+ GV9           C12    C    CH3       0.000     -6.133    2.182    0.112
+ GV9           H12B   H    H         0.000     -5.541    2.890   -0.409
+ GV9           H12A   H    H         0.000     -7.101    2.149   -0.318
+ GV9           H12    H    H         0.000     -6.209    2.467    1.129
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GV9      O8     n/a    C6     START
+ GV9      C6     O8     C2     .
+ GV9      O7     C6     .      .
+ GV9      C2     C6     C3     .
+ GV9      S1     C2     C5     .
+ GV9      C5     S1     C4     .
+ GV9      H5     C5     .      .
+ GV9      C4     C5     H4     .
+ GV9      H4     C4     .      .
+ GV9      C3     C2     N9     .
+ GV9      N9     C3     C10    .
+ GV9      HN9    N9     .      .
+ GV9      C10    N9     C12    .
+ GV9      O11    C10    .      .
+ GV9      C12    C10    H12    .
+ GV9      H12B   C12    .      .
+ GV9      H12A   C12    .      .
+ GV9      H12    C12    .      END
+ GV9      C3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GV9      O11    C10       double      1.220    0.020
+ GV9      C12    C10       single      1.500    0.020
+ GV9      C10    N9        single      1.330    0.020
+ GV9      H12    C12       single      1.059    0.020
+ GV9      H12A   C12       single      1.059    0.020
+ GV9      H12B   C12       single      1.059    0.020
+ GV9      N9     C3        single      1.350    0.020
+ GV9      HN9    N9        single      1.010    0.020
+ GV9      C3     C4        single      1.387    0.020
+ GV9      C3     C2        double      1.490    0.020
+ GV9      C4     C5        double      1.380    0.020
+ GV9      H4     C4        single      1.083    0.020
+ GV9      C5     S1        single      1.745    0.020
+ GV9      H5     C5        single      1.083    0.020
+ GV9      S1     C2        single      1.745    0.020
+ GV9      C2     C6        single      1.490    0.020
+ GV9      O7     C6        deloc       1.250    0.020
+ GV9      C6     O8        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GV9      O8     C6     O7      123.000    3.000
+ GV9      O8     C6     C2      120.000    3.000
+ GV9      O7     C6     C2      120.000    3.000
+ GV9      C6     C2     S1      108.000    3.000
+ GV9      C6     C2     C3      117.000    3.000
+ GV9      S1     C2     C3      108.000    3.000
+ GV9      C2     S1     C5       91.703    3.000
+ GV9      S1     C5     H5      108.000    3.000
+ GV9      S1     C5     C4      108.000    3.000
+ GV9      H5     C5     C4      126.000    3.000
+ GV9      C5     C4     H4      126.000    3.000
+ GV9      C5     C4     C3      108.000    3.000
+ GV9      H4     C4     C3      126.000    3.000
+ GV9      C2     C3     N9      108.000    3.000
+ GV9      C2     C3     C4      108.000    3.000
+ GV9      N9     C3     C4      126.000    3.000
+ GV9      C3     N9     HN9     120.000    3.000
+ GV9      C3     N9     C10     120.000    3.000
+ GV9      HN9    N9     C10     120.000    3.000
+ GV9      N9     C10    O11     123.000    3.000
+ GV9      N9     C10    C12     116.500    3.000
+ GV9      O11    C10    C12     123.000    3.000
+ GV9      C10    C12    H12B    109.470    3.000
+ GV9      C10    C12    H12A    109.470    3.000
+ GV9      C10    C12    H12     109.470    3.000
+ GV9      H12B   C12    H12A    109.470    3.000
+ GV9      H12B   C12    H12     109.470    3.000
+ GV9      H12A   C12    H12     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GV9      var_1    O8     C6     C2     C3      -179.998   20.000   1
+ GV9      CONST_1  C6     C2     S1     C5       180.000    0.000   0
+ GV9      CONST_2  C2     S1     C5     C4         0.000    0.000   0
+ GV9      CONST_3  S1     C5     C4     C3         0.000    0.000   0
+ GV9      CONST_4  C6     C2     C3     N9         0.000    0.000   0
+ GV9      CONST_5  C2     C3     C4     C5         0.000    0.000   0
+ GV9      var_2    C2     C3     N9     C10     -173.957   20.000   1
+ GV9      CONST_6  C3     N9     C10    C12      180.000    0.000   0
+ GV9      var_3    N9     C10    C12    H12      -89.708   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GV9      plan-1    C10       0.020
+ GV9      plan-1    O11       0.020
+ GV9      plan-1    C12       0.020
+ GV9      plan-1    N9        0.020
+ GV9      plan-1    HN9       0.020
+ GV9      plan-2    N9        0.020
+ GV9      plan-2    C10       0.020
+ GV9      plan-2    C3        0.020
+ GV9      plan-2    HN9       0.020
+ GV9      plan-3    C3        0.020
+ GV9      plan-3    N9        0.020
+ GV9      plan-3    C4        0.020
+ GV9      plan-3    C2        0.020
+ GV9      plan-3    C5        0.020
+ GV9      plan-3    S1        0.020
+ GV9      plan-3    H4        0.020
+ GV9      plan-3    H5        0.020
+ GV9      plan-3    C6        0.020
+ GV9      plan-3    HN9       0.020
+ GV9      plan-4    C6        0.020
+ GV9      plan-4    C2        0.020
+ GV9      plan-4    O7        0.020
+ GV9      plan-4    O8        0.020
+# ------------------------------------------------------

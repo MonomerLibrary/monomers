@@ -1,0 +1,250 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NDM      NDM '7,9-DIMETHYLGUANINE                 ' non-polymer        27  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NDM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NDM           O6     O    OH1       0.000      0.000    0.000    0.000
+ NDM           HO1    H    H         0.000      0.948    0.052   -0.180
+ NDM           C6     C    CH1       0.000     -0.210   -0.118    1.405
+ NDM           H66    H    H         0.000      0.072    0.836    1.873
+ NDM           N1     N    NH1       0.000      0.629   -1.185    1.999
+ NDM           HN11   H    H         0.000      1.520   -1.015    2.443
+ NDM           C2     C    CH1       0.000      0.013   -2.539    1.867
+ NDM           H22    H    H         0.000      0.117   -2.792    0.803
+ NDM           N2     N    NH2       0.000      0.917   -3.468    2.564
+ NDM           HN22   H    H         0.000      0.579   -4.370    2.881
+ NDM           HN21   H    H         0.000      1.883   -3.214    2.733
+ NDM           N3     N    NH1       0.000     -1.432   -2.638    2.137
+ NDM           HN1    H    H         0.000     -1.846   -3.512    2.426
+ NDM           C5     C    CR5       0.000     -1.672   -0.331    1.636
+ NDM           C4     C    CR5       0.000     -2.195   -1.520    1.987
+ NDM           N7     N    NR5       1.000     -2.664    0.627    1.541
+ NDM           CN7    C    CH3       0.000     -2.496    2.024    1.195
+ NDM           HN73   H    H         0.000     -2.917    2.620    1.958
+ NDM           HN72   H    H         0.000     -1.466    2.234    1.101
+ NDM           HN71   H    H         0.000     -2.987    2.213    0.279
+ NDM           C8     C    CR15      0.000     -3.961   -0.014    1.860
+ NDM           HC81   H    H         0.000     -4.949    0.429    1.885
+ NDM           N9     N    NR5       0.000     -3.565   -1.415    2.137
+ NDM           CN9    C    CH3       0.000     -4.481   -2.478    2.497
+ NDM           HN93   H    H         0.000     -4.092   -3.398    2.155
+ NDM           HN92   H    H         0.000     -4.586   -2.500    3.548
+ NDM           HN91   H    H         0.000     -5.418   -2.293    2.046
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NDM      O6     n/a    C6     START
+ NDM      HO1    O6     .      .
+ NDM      C6     O6     C5     .
+ NDM      H66    C6     .      .
+ NDM      N1     C6     C2     .
+ NDM      HN11   N1     .      .
+ NDM      C2     N1     N3     .
+ NDM      H22    C2     .      .
+ NDM      N2     C2     HN21   .
+ NDM      HN22   N2     .      .
+ NDM      HN21   N2     .      .
+ NDM      N3     C2     HN1    .
+ NDM      HN1    N3     .      .
+ NDM      C5     C6     N7     .
+ NDM      C4     C5     .      .
+ NDM      N7     C5     C8     .
+ NDM      CN7    N7     HN71   .
+ NDM      HN73   CN7    .      .
+ NDM      HN72   CN7    .      .
+ NDM      HN71   CN7    .      .
+ NDM      C8     N7     N9     .
+ NDM      HC81   C8     .      .
+ NDM      N9     C8     CN9    .
+ NDM      CN9    N9     HN91   .
+ NDM      HN93   CN9    .      .
+ NDM      HN92   CN9    .      .
+ NDM      HN91   CN9    .      END
+ NDM      N9     C4     .    ADD
+ NDM      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NDM      CN9    N9        single      1.485    0.020
+ NDM      HN91   CN9       single      1.059    0.020
+ NDM      HN92   CN9       single      1.059    0.020
+ NDM      HN93   CN9       single      1.059    0.020
+ NDM      N9     C4        single      1.337    0.020
+ NDM      N9     C8        single      1.337    0.020
+ NDM      C4     N3        single      1.350    0.020
+ NDM      C4     C5        double      1.490    0.020
+ NDM      N3     C2        single      1.450    0.020
+ NDM      N2     C2        single      1.450    0.020
+ NDM      C2     N1        single      1.450    0.020
+ NDM      H22    C2        single      1.099    0.020
+ NDM      HN21   N2        single      1.010    0.020
+ NDM      HN22   N2        single      1.010    0.020
+ NDM      N1     C6        single      1.450    0.020
+ NDM      HN11   N1        single      1.010    0.020
+ NDM      C6     O6        single      1.432    0.020
+ NDM      C5     C6        single      1.480    0.020
+ NDM      H66    C6        single      1.099    0.020
+ NDM      N7     C5        single      1.337    0.020
+ NDM      CN7    N7        single      1.485    0.020
+ NDM      C8     N7        double      1.337    0.020
+ NDM      HN71   CN7       single      1.059    0.020
+ NDM      HN72   CN7       single      1.059    0.020
+ NDM      HN73   CN7       single      1.059    0.020
+ NDM      HC81   C8        single      1.083    0.020
+ NDM      HN1    N3        single      1.010    0.020
+ NDM      HO1    O6        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NDM      HO1    O6     C6      109.470    3.000
+ NDM      O6     C6     H66     109.470    3.000
+ NDM      O6     C6     N1      109.470    3.000
+ NDM      O6     C6     C5      109.500    3.000
+ NDM      H66    C6     N1      108.550    3.000
+ NDM      H66    C6     C5      109.470    3.000
+ NDM      N1     C6     C5      109.470    3.000
+ NDM      C6     N1     HN11    118.500    3.000
+ NDM      C6     N1     C2      120.000    3.000
+ NDM      HN11   N1     C2      118.500    3.000
+ NDM      N1     C2     H22     108.550    3.000
+ NDM      N1     C2     N2      109.500    3.000
+ NDM      N1     C2     N3      109.470    3.000
+ NDM      H22    C2     N2      109.470    3.000
+ NDM      H22    C2     N3      108.550    3.000
+ NDM      N2     C2     N3      109.500    3.000
+ NDM      C2     N2     HN22    120.000    3.000
+ NDM      C2     N2     HN21    120.000    3.000
+ NDM      HN22   N2     HN21    120.000    3.000
+ NDM      C2     N3     HN1     118.500    3.000
+ NDM      C2     N3     C4      120.000    3.000
+ NDM      HN1    N3     C4      120.000    3.000
+ NDM      C6     C5     C4      126.000    3.000
+ NDM      C6     C5     N7      126.000    3.000
+ NDM      C4     C5     N7      108.000    3.000
+ NDM      C5     C4     N9      108.000    3.000
+ NDM      C5     C4     N3      108.000    3.000
+ NDM      N9     C4     N3      108.000    3.000
+ NDM      C5     N7     CN7     126.000    3.000
+ NDM      C5     N7     C8      108.000    3.000
+ NDM      CN7    N7     C8      126.000    3.000
+ NDM      N7     CN7    HN73    109.470    3.000
+ NDM      N7     CN7    HN72    109.470    3.000
+ NDM      N7     CN7    HN71    109.470    3.000
+ NDM      HN73   CN7    HN72    109.470    3.000
+ NDM      HN73   CN7    HN71    109.470    3.000
+ NDM      HN72   CN7    HN71    109.470    3.000
+ NDM      N7     C8     HC81    126.000    3.000
+ NDM      N7     C8     N9      108.000    3.000
+ NDM      HC81   C8     N9      126.000    3.000
+ NDM      C8     N9     CN9     126.000    3.000
+ NDM      C8     N9     C4      108.000    3.000
+ NDM      CN9    N9     C4      126.000    3.000
+ NDM      N9     CN9    HN93    109.470    3.000
+ NDM      N9     CN9    HN92    109.470    3.000
+ NDM      N9     CN9    HN91    109.470    3.000
+ NDM      HN93   CN9    HN92    109.470    3.000
+ NDM      HN93   CN9    HN91    109.470    3.000
+ NDM      HN92   CN9    HN91    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NDM      var_1    HO1    O6     C6     C5      -174.530   20.000   1
+ NDM      var_2    O6     C6     N1     C2       -90.000   20.000   3
+ NDM      var_3    C6     N1     C2     N3       -30.000   20.000   3
+ NDM      var_4    N1     C2     N2     HN21     -20.553   20.000   1
+ NDM      var_5    N1     C2     N3     C4        30.000   20.000   3
+ NDM      var_6    O6     C6     C5     N7       -60.000   20.000   1
+ NDM      CONST_1  C6     C5     C4     N9       180.000    0.000   0
+ NDM      var_7    C5     C4     N3     C2         0.000   20.000   1
+ NDM      CONST_2  C6     C5     N7     C8       180.000    0.000   0
+ NDM      var_8    C5     N7     CN7    HN71     115.123   20.000   1
+ NDM      CONST_3  C5     N7     C8     N9         0.000    0.000   0
+ NDM      CONST_4  N7     C8     N9     CN9      180.000    0.000   0
+ NDM      CONST_5  C8     N9     C4     C5         0.000    0.000   0
+ NDM      var_9    C8     N9     CN9    HN91      30.524   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ NDM      chir_01  C2     N3     N2     N1        positiv
+ NDM      chir_02  C6     N1     O6     C5        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NDM      plan-1    N9        0.020
+ NDM      plan-1    CN9       0.020
+ NDM      plan-1    C4        0.020
+ NDM      plan-1    C8        0.020
+ NDM      plan-1    C5        0.020
+ NDM      plan-1    N7        0.020
+ NDM      plan-1    N3        0.020
+ NDM      plan-1    C6        0.020
+ NDM      plan-1    CN7       0.020
+ NDM      plan-1    HC81      0.020
+ NDM      plan-1    HN1       0.020
+ NDM      plan-2    N3        0.020
+ NDM      plan-2    C4        0.020
+ NDM      plan-2    C2        0.020
+ NDM      plan-2    HN1       0.020
+ NDM      plan-3    N2        0.020
+ NDM      plan-3    C2        0.020
+ NDM      plan-3    HN21      0.020
+ NDM      plan-3    HN22      0.020
+ NDM      plan-4    N1        0.020
+ NDM      plan-4    C2        0.020
+ NDM      plan-4    C6        0.020
+ NDM      plan-4    HN11      0.020
+# ------------------------------------------------------

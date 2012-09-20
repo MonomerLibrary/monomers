@@ -1,0 +1,252 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BDB      BDB '.                                   ' non-polymer        30  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BDB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BDB           OH2    O    OH1       0.000      0.000    0.000    0.000
+ BDB           HH21   H    H         0.000     -0.187    0.284    0.886
+ BDB           B2     B    B         0.000     -1.093   -0.341   -0.838
+ BDB           OH1    O    OH1       0.000     -0.860   -0.770   -2.171
+ BDB           HH11   H    H         0.000      0.038   -0.819   -2.474
+ BDB           CB4    C    CR6       0.000     -2.562   -0.243   -0.291
+ BDB           CB3    C    CR16      0.000     -2.792    0.179    1.017
+ BDB           HB31   H    H         0.000     -1.958    0.438    1.657
+ BDB           CB2    C    CR16      0.000     -4.081    0.265    1.498
+ BDB           HB21   H    H         0.000     -4.259    0.592    2.515
+ BDB           CB5    C    CR16      0.000     -3.637   -0.577   -1.115
+ BDB           HB51   H    H         0.000     -3.459   -0.901   -2.133
+ BDB           CB6    C    CR16      0.000     -4.925   -0.496   -0.634
+ BDB           HB61   H    H         0.000     -5.758   -0.764   -1.271
+ BDB           CB1    C    CR6       0.000     -5.156   -0.069    0.674
+ BDB           CP4    C    CR6       0.000     -6.541    0.023    1.190
+ BDB           CP3    C    CR16      0.000     -7.561    0.506    0.369
+ BDB           HC31   H    H         0.000     -7.339    0.814   -0.645
+ BDB           CP2    C    CR16      0.000     -8.848    0.591    0.850
+ BDB           HC21   H    H         0.000     -9.640    0.966    0.213
+ BDB           CP5    C    CR16      0.000     -6.827   -0.374    2.496
+ BDB           HC51   H    H         0.000     -6.037   -0.753    3.133
+ BDB           CP6    C    CR16      0.000     -8.115   -0.285    2.977
+ BDB           HC61   H    H         0.000     -8.335   -0.588    3.993
+ BDB           CP1    C    CR6       0.000     -9.134    0.194    2.156
+ BDB           B1     B    B         0.000    -10.603    0.291    2.701
+ BDB           OB2    O    OH1       0.000    -11.640    0.783    1.867
+ BDB           HO21   H    H         0.000    -12.517    0.829    2.225
+ BDB           OB1    O    OH1       0.000    -10.894   -0.115    4.030
+ BDB           HO11   H    H         0.000    -11.791   -0.044    4.333
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BDB      OH2    n/a    B2     START
+ BDB      HH21   OH2    .      .
+ BDB      B2     OH2    CB4    .
+ BDB      OH1    B2     HH11   .
+ BDB      HH11   OH1    .      .
+ BDB      CB4    B2     CB5    .
+ BDB      CB3    CB4    CB2    .
+ BDB      HB31   CB3    .      .
+ BDB      CB2    CB3    HB21   .
+ BDB      HB21   CB2    .      .
+ BDB      CB5    CB4    CB6    .
+ BDB      HB51   CB5    .      .
+ BDB      CB6    CB5    CB1    .
+ BDB      HB61   CB6    .      .
+ BDB      CB1    CB6    CP4    .
+ BDB      CP4    CB1    CP5    .
+ BDB      CP3    CP4    CP2    .
+ BDB      HC31   CP3    .      .
+ BDB      CP2    CP3    HC21   .
+ BDB      HC21   CP2    .      .
+ BDB      CP5    CP4    CP6    .
+ BDB      HC51   CP5    .      .
+ BDB      CP6    CP5    CP1    .
+ BDB      HC61   CP6    .      .
+ BDB      CP1    CP6    B1     .
+ BDB      B1     CP1    OB1    .
+ BDB      OB2    B1     HO21   .
+ BDB      HO21   OB2    .      .
+ BDB      OB1    B1     HO11   .
+ BDB      HO11   OB1    .      END
+ BDB      CP1    CP2    .    ADD
+ BDB      CB1    CB2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BDB      OB1    B1        single      1.535    0.020
+ BDB      OB2    B1        single      1.535    0.020
+ BDB      B1     CP1       single      1.560    0.020
+ BDB      HO11   OB1       single      0.967    0.020
+ BDB      HO21   OB2       single      0.967    0.020
+ BDB      CP1    CP2       double      1.390    0.020
+ BDB      CP1    CP6       single      1.390    0.020
+ BDB      CP2    CP3       single      1.390    0.020
+ BDB      HC21   CP2       single      1.083    0.020
+ BDB      CP3    CP4       double      1.390    0.020
+ BDB      HC31   CP3       single      1.083    0.020
+ BDB      CP5    CP4       single      1.390    0.020
+ BDB      CP4    CB1       single      1.487    0.020
+ BDB      CP6    CP5       double      1.390    0.020
+ BDB      HC51   CP5       single      1.083    0.020
+ BDB      HC61   CP6       single      1.083    0.020
+ BDB      CB1    CB2       double      1.390    0.020
+ BDB      CB1    CB6       single      1.390    0.020
+ BDB      CB2    CB3       single      1.390    0.020
+ BDB      HB21   CB2       single      1.083    0.020
+ BDB      CB3    CB4       double      1.390    0.020
+ BDB      HB31   CB3       single      1.083    0.020
+ BDB      CB5    CB4       single      1.390    0.020
+ BDB      CB4    B2        single      1.560    0.020
+ BDB      CB6    CB5       double      1.390    0.020
+ BDB      HB51   CB5       single      1.083    0.020
+ BDB      HB61   CB6       single      1.083    0.020
+ BDB      OH1    B2        single      1.535    0.020
+ BDB      B2     OH2       single      1.535    0.020
+ BDB      HH11   OH1       single      0.967    0.020
+ BDB      HH21   OH2       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BDB      HH21   OH2    B2      120.000    3.000
+ BDB      OH2    B2     OH1     120.000    3.000
+ BDB      OH2    B2     CB4     120.000    3.000
+ BDB      OH1    B2     CB4     120.000    3.000
+ BDB      B2     OH1    HH11    120.000    3.000
+ BDB      B2     CB4    CB3     120.000    3.000
+ BDB      B2     CB4    CB5     120.000    3.000
+ BDB      CB3    CB4    CB5     120.000    3.000
+ BDB      CB4    CB3    HB31    120.000    3.000
+ BDB      CB4    CB3    CB2     120.000    3.000
+ BDB      HB31   CB3    CB2     120.000    3.000
+ BDB      CB3    CB2    HB21    120.000    3.000
+ BDB      CB3    CB2    CB1     120.000    3.000
+ BDB      HB21   CB2    CB1     120.000    3.000
+ BDB      CB4    CB5    HB51    120.000    3.000
+ BDB      CB4    CB5    CB6     120.000    3.000
+ BDB      HB51   CB5    CB6     120.000    3.000
+ BDB      CB5    CB6    HB61    120.000    3.000
+ BDB      CB5    CB6    CB1     120.000    3.000
+ BDB      HB61   CB6    CB1     120.000    3.000
+ BDB      CB6    CB1    CP4     120.000    3.000
+ BDB      CB6    CB1    CB2     120.000    3.000
+ BDB      CP4    CB1    CB2     120.000    3.000
+ BDB      CB1    CP4    CP3     120.000    3.000
+ BDB      CB1    CP4    CP5     120.000    3.000
+ BDB      CP3    CP4    CP5     120.000    3.000
+ BDB      CP4    CP3    HC31    120.000    3.000
+ BDB      CP4    CP3    CP2     120.000    3.000
+ BDB      HC31   CP3    CP2     120.000    3.000
+ BDB      CP3    CP2    HC21    120.000    3.000
+ BDB      CP3    CP2    CP1     120.000    3.000
+ BDB      HC21   CP2    CP1     120.000    3.000
+ BDB      CP4    CP5    HC51    120.000    3.000
+ BDB      CP4    CP5    CP6     120.000    3.000
+ BDB      HC51   CP5    CP6     120.000    3.000
+ BDB      CP5    CP6    HC61    120.000    3.000
+ BDB      CP5    CP6    CP1     120.000    3.000
+ BDB      HC61   CP6    CP1     120.000    3.000
+ BDB      CP6    CP1    B1      120.000    3.000
+ BDB      CP6    CP1    CP2     120.000    3.000
+ BDB      B1     CP1    CP2     120.000    3.000
+ BDB      CP1    B1     OB2     120.000    3.000
+ BDB      CP1    B1     OB1     120.000    3.000
+ BDB      OB2    B1     OB1     120.000    3.000
+ BDB      B1     OB2    HO21    120.000    3.000
+ BDB      B1     OB1    HO11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BDB      var_1    HH21   OH2    B2     CB4        0.000   20.000   1
+ BDB      var_2    OH2    B2     OH1    HH11      -0.006   20.000   1
+ BDB      var_3    OH2    B2     CB4    CB5      179.990   20.000   1
+ BDB      CONST_1  B2     CB4    CB3    CB2      180.000    0.000   0
+ BDB      CONST_2  CB4    CB3    CB2    CB1        0.000    0.000   0
+ BDB      CONST_3  B2     CB4    CB5    CB6      180.000    0.000   0
+ BDB      CONST_4  CB4    CB5    CB6    CB1        0.000    0.000   0
+ BDB      CONST_5  CB5    CB6    CB1    CP4      180.000    0.000   0
+ BDB      CONST_6  CB6    CB1    CB2    CB3        0.000    0.000   0
+ BDB      CONST_7  CB6    CB1    CP4    CP5      180.000    0.000   0
+ BDB      CONST_8  CB1    CP4    CP3    CP2      180.000    0.000   0
+ BDB      CONST_9  CP4    CP3    CP2    CP1        0.000    0.000   0
+ BDB      CONST_10 CB1    CP4    CP5    CP6      180.000    0.000   0
+ BDB      CONST_11 CP4    CP5    CP6    CP1        0.000    0.000   0
+ BDB      CONST_12 CP5    CP6    CP1    B1       180.000    0.000   0
+ BDB      CONST_13 CP6    CP1    CP2    CP3        0.000    0.000   0
+ BDB      var_4    CP6    CP1    B1     OB1       -0.236   20.000   1
+ BDB      var_5    CP1    B1     OB2    HO21    -179.993   20.000   1
+ BDB      var_6    CP1    B1     OB1    HO11     179.978   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BDB      plan-1    CP1       0.020
+ BDB      plan-1    B1        0.020
+ BDB      plan-1    CP2       0.020
+ BDB      plan-1    CP6       0.020
+ BDB      plan-1    CP3       0.020
+ BDB      plan-1    CP4       0.020
+ BDB      plan-1    CP5       0.020
+ BDB      plan-1    HC21      0.020
+ BDB      plan-1    HC31      0.020
+ BDB      plan-1    CB1       0.020
+ BDB      plan-1    HC51      0.020
+ BDB      plan-1    HC61      0.020
+ BDB      plan-2    CB1       0.020
+ BDB      plan-2    CP4       0.020
+ BDB      plan-2    CB2       0.020
+ BDB      plan-2    CB6       0.020
+ BDB      plan-2    CB3       0.020
+ BDB      plan-2    CB4       0.020
+ BDB      plan-2    CB5       0.020
+ BDB      plan-2    HB21      0.020
+ BDB      plan-2    HB31      0.020
+ BDB      plan-2    B2        0.020
+ BDB      plan-2    HB51      0.020
+ BDB      plan-2    HB61      0.020
+# ------------------------------------------------------

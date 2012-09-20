@@ -1,0 +1,169 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+JZ3      JZ3 '2-methoxyphenol                     ' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_JZ3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ JZ3           OAB    O    OH1       0.000      0.000    0.000    0.000
+ JZ3           HOAB   H    H         0.000      0.317   -0.080    0.910
+ JZ3           CAH    C    CR6       0.000     -1.353    0.137    0.003
+ JZ3           CAI    C    CR6       0.000     -1.925    1.405    0.067
+ JZ3           OAG    O    O2        0.000     -1.132    2.508    0.128
+ JZ3           CAA    C    CH3       0.000     -1.789    3.776    0.186
+ JZ3           HAAB   H    H         0.000     -2.401    3.818    1.049
+ JZ3           HAAA   H    H         0.000     -1.065    4.548    0.229
+ JZ3           HAA    H    H         0.000     -2.389    3.903   -0.678
+ JZ3           CAE    C    CR16      0.000     -2.165   -0.984   -0.052
+ JZ3           HAE    H    H         0.000     -1.722   -1.971   -0.092
+ JZ3           CAC    C    CR16      0.000     -3.540   -0.842   -0.055
+ JZ3           HAC    H    H         0.000     -4.173   -1.719   -0.103
+ JZ3           CAD    C    CR16      0.000     -4.109    0.417    0.003
+ JZ3           HAD    H    H         0.000     -5.186    0.524    0.000
+ JZ3           CAF    C    CR16      0.000     -3.304    1.539    0.064
+ JZ3           HAF    H    H         0.000     -3.751    2.524    0.111
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ JZ3      OAB    n/a    CAH    START
+ JZ3      HOAB   OAB    .      .
+ JZ3      CAH    OAB    CAE    .
+ JZ3      CAI    CAH    OAG    .
+ JZ3      OAG    CAI    CAA    .
+ JZ3      CAA    OAG    HAA    .
+ JZ3      HAAB   CAA    .      .
+ JZ3      HAAA   CAA    .      .
+ JZ3      HAA    CAA    .      .
+ JZ3      CAE    CAH    CAC    .
+ JZ3      HAE    CAE    .      .
+ JZ3      CAC    CAE    CAD    .
+ JZ3      HAC    CAC    .      .
+ JZ3      CAD    CAC    CAF    .
+ JZ3      HAD    CAD    .      .
+ JZ3      CAF    CAD    HAF    .
+ JZ3      HAF    CAF    .      END
+ JZ3      CAI    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ JZ3      CAA    OAG       single      1.426    0.020
+ JZ3      OAG    CAI       single      1.370    0.020
+ JZ3      CAI    CAF       double      1.390    0.020
+ JZ3      CAI    CAH       single      1.487    0.020
+ JZ3      CAF    CAD       single      1.390    0.020
+ JZ3      CAD    CAC       double      1.390    0.020
+ JZ3      CAC    CAE       single      1.390    0.020
+ JZ3      CAE    CAH       double      1.390    0.020
+ JZ3      CAH    OAB       single      1.362    0.020
+ JZ3      HAA    CAA       single      1.059    0.020
+ JZ3      HAAA   CAA       single      1.059    0.020
+ JZ3      HAAB   CAA       single      1.059    0.020
+ JZ3      HAF    CAF       single      1.083    0.020
+ JZ3      HAD    CAD       single      1.083    0.020
+ JZ3      HAC    CAC       single      1.083    0.020
+ JZ3      HAE    CAE       single      1.083    0.020
+ JZ3      HOAB   OAB       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ JZ3      HOAB   OAB    CAH     109.470    3.000
+ JZ3      OAB    CAH    CAI     120.000    3.000
+ JZ3      OAB    CAH    CAE     120.000    3.000
+ JZ3      CAI    CAH    CAE     120.000    3.000
+ JZ3      CAH    CAI    OAG     120.000    3.000
+ JZ3      CAH    CAI    CAF     120.000    3.000
+ JZ3      OAG    CAI    CAF     120.000    3.000
+ JZ3      CAI    OAG    CAA     120.000    3.000
+ JZ3      OAG    CAA    HAAB    109.470    3.000
+ JZ3      OAG    CAA    HAAA    109.470    3.000
+ JZ3      OAG    CAA    HAA     109.470    3.000
+ JZ3      HAAB   CAA    HAAA    109.470    3.000
+ JZ3      HAAB   CAA    HAA     109.470    3.000
+ JZ3      HAAA   CAA    HAA     109.470    3.000
+ JZ3      CAH    CAE    HAE     120.000    3.000
+ JZ3      CAH    CAE    CAC     120.000    3.000
+ JZ3      HAE    CAE    CAC     120.000    3.000
+ JZ3      CAE    CAC    HAC     120.000    3.000
+ JZ3      CAE    CAC    CAD     120.000    3.000
+ JZ3      HAC    CAC    CAD     120.000    3.000
+ JZ3      CAC    CAD    HAD     120.000    3.000
+ JZ3      CAC    CAD    CAF     120.000    3.000
+ JZ3      HAD    CAD    CAF     120.000    3.000
+ JZ3      CAD    CAF    HAF     120.000    3.000
+ JZ3      CAD    CAF    CAI     120.000    3.000
+ JZ3      HAF    CAF    CAI     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ JZ3      var_1    HOAB   OAB    CAH    CAE      -89.659   20.000   1
+ JZ3      CONST_1  OAB    CAH    CAI    OAG        0.000    0.000   0
+ JZ3      CONST_2  CAH    CAI    CAF    CAD        0.000    0.000   0
+ JZ3      var_2    CAH    CAI    OAG    CAA      179.728   20.000   1
+ JZ3      var_3    CAI    OAG    CAA    HAA      -59.973   20.000   1
+ JZ3      CONST_3  OAB    CAH    CAE    CAC      180.000    0.000   0
+ JZ3      CONST_4  CAH    CAE    CAC    CAD        0.000    0.000   0
+ JZ3      CONST_5  CAE    CAC    CAD    CAF        0.000    0.000   0
+ JZ3      CONST_6  CAC    CAD    CAF    CAI        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ JZ3      plan-1    CAI       0.020
+ JZ3      plan-1    OAG       0.020
+ JZ3      plan-1    CAF       0.020
+ JZ3      plan-1    CAH       0.020
+ JZ3      plan-1    CAD       0.020
+ JZ3      plan-1    CAC       0.020
+ JZ3      plan-1    CAE       0.020
+ JZ3      plan-1    HAF       0.020
+ JZ3      plan-1    HAD       0.020
+ JZ3      plan-1    HAC       0.020
+ JZ3      plan-1    HAE       0.020
+ JZ3      plan-1    OAB       0.020
+# ------------------------------------------------------

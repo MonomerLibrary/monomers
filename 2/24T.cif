@@ -1,0 +1,151 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+24T      24T '2-AMINO-4-METHYLTHIAZOLE            ' non-polymer        13   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_24T
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 24T           N      N    NH2       0.000      0.000    0.000    0.000
+ 24T           HN1    H    H         0.000      0.833    0.000    0.581
+ 24T           HN2    H    H         0.000      0.107    0.000   -1.010
+ 24T           C2     C    CR5       0.000     -1.261    0.001    0.575
+ 24T           N3     N    NRD5      0.000     -2.440   -0.004   -0.015
+ 24T           C4     C    CR5       0.000     -3.556    0.001    0.691
+ 24T           CM     C    CH3       0.000     -4.900    0.002    0.008
+ 24T           HM3    H    H         0.000     -4.823   -0.497   -0.923
+ 24T           HM2    H    H         0.000     -5.607   -0.497    0.619
+ 24T           HM1    H    H         0.000     -5.214    1.001   -0.151
+ 24T           C5     C    CR15      0.000     -3.465    0.001    2.042
+ 24T           H5     H    H         0.000     -4.251    0.001    2.787
+ 24T           S1     S    S2        0.000     -1.693    0.000    2.256
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 24T      N      n/a    C2     START
+ 24T      HN1    N      .      .
+ 24T      HN2    N      .      .
+ 24T      C2     N      N3     .
+ 24T      N3     C2     C4     .
+ 24T      C4     N3     C5     .
+ 24T      CM     C4     HM1    .
+ 24T      HM3    CM     .      .
+ 24T      HM2    CM     .      .
+ 24T      HM1    CM     .      .
+ 24T      C5     C4     S1     .
+ 24T      H5     C5     .      .
+ 24T      S1     C5     .      END
+ 24T      S1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 24T      S1     C2        single      1.745    0.020
+ 24T      S1     C5        single      1.745    0.020
+ 24T      N3     C2        double      1.350    0.020
+ 24T      C2     N         single      1.355    0.020
+ 24T      C4     N3        single      1.350    0.020
+ 24T      C5     C4        double      1.387    0.020
+ 24T      CM     C4        single      1.506    0.020
+ 24T      H5     C5        single      1.083    0.020
+ 24T      HN1    N         single      1.010    0.020
+ 24T      HN2    N         single      1.010    0.020
+ 24T      HM1    CM        single      1.059    0.020
+ 24T      HM2    CM        single      1.059    0.020
+ 24T      HM3    CM        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 24T      HN1    N      HN2     120.000    3.000
+ 24T      HN1    N      C2      120.000    3.000
+ 24T      HN2    N      C2      120.000    3.000
+ 24T      N      C2     N3      108.000    3.000
+ 24T      N      C2     S1      108.000    3.000
+ 24T      N3     C2     S1      108.000    3.000
+ 24T      C2     N3     C4      108.000    3.000
+ 24T      N3     C4     CM      126.000    3.000
+ 24T      N3     C4     C5      108.000    3.000
+ 24T      CM     C4     C5      108.000    3.000
+ 24T      C4     CM     HM3     109.470    3.000
+ 24T      C4     CM     HM2     109.470    3.000
+ 24T      C4     CM     HM1     109.470    3.000
+ 24T      HM3    CM     HM2     109.470    3.000
+ 24T      HM3    CM     HM1     109.470    3.000
+ 24T      HM2    CM     HM1     109.470    3.000
+ 24T      C4     C5     H5      126.000    3.000
+ 24T      C4     C5     S1      108.000    3.000
+ 24T      H5     C5     S1      108.000    3.000
+ 24T      C5     S1     C2       97.501    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 24T      CONST_1  HN2    N      C2     N3         0.279    0.000   0
+ 24T      CONST_2  N      C2     N3     C4       180.000    0.000   0
+ 24T      CONST_3  C2     N3     C4     C5         0.000    0.000   0
+ 24T      var_1    N3     C4     CM     HM1      -90.192   20.000   1
+ 24T      CONST_4  N3     C4     C5     S1         0.000    0.000   0
+ 24T      CONST_5  C4     C5     S1     C2         0.000    0.000   0
+ 24T      CONST_6  C5     S1     C2     N        180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 24T      plan-1    C2        0.020
+ 24T      plan-1    S1        0.020
+ 24T      plan-1    N3        0.020
+ 24T      plan-1    N         0.020
+ 24T      plan-1    C4        0.020
+ 24T      plan-1    C5        0.020
+ 24T      plan-1    CM        0.020
+ 24T      plan-1    H5        0.020
+ 24T      plan-1    HN1       0.020
+ 24T      plan-1    HN2       0.020
+ 24T      plan-2    N         0.020
+ 24T      plan-2    C2        0.020
+ 24T      plan-2    HN1       0.020
+ 24T      plan-2    HN2       0.020
+# ------------------------------------------------------

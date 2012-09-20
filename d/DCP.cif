@@ -1,0 +1,314 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DCP      DCP '2'-DEOXYCYTIDINE-5'-TRIPHOSPHATE    ' non-polymer        40  28 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DCP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DCP           O3G    O    OP       -0.666      0.000    0.000    0.000
+ DCP           PG     P    P         0.000     -0.352    0.509   -1.380
+ DCP           O1G    O    OP       -0.666     -0.521   -0.662   -2.324
+ DCP           O2G    O    OP       -0.666      0.756    1.407   -1.884
+ DCP           O3B    O    O2        0.000     -1.728    1.343   -1.310
+ DCP           PB     P    P         0.000     -2.858    0.331   -0.769
+ DCP           O1B    O    OP       -0.500     -2.474   -0.165    0.575
+ DCP           O2B    O    OP       -0.500     -2.984   -0.813   -1.704
+ DCP           O3A    O    O2        0.000     -4.267    1.103   -0.674
+ DCP           PA     P    P         0.000     -5.345    0.039   -0.130
+ DCP           O1A    O    OP       -0.500     -4.923   -0.453    1.204
+ DCP           O2A    O    OP       -0.500     -5.432   -1.102   -1.073
+ DCP           "O5'"  O    O2        0.000     -6.785    0.746   -0.010
+ DCP           "C5'"  C    CH2       0.000     -7.693   -0.243    0.477
+ DCP           "H5'1" H    H         0.000     -7.352   -0.601    1.451
+ DCP           "H5'2" H    H         0.000     -7.727   -1.080   -0.225
+ DCP           "C4'"  C    CH1       0.000     -9.089    0.367    0.615
+ DCP           "H4'"  H    H         0.000     -9.064    1.242    1.280
+ DCP           "C3'"  C    CH1       0.000    -10.096   -0.686    1.139
+ DCP           "H3'"  H    H         0.000     -9.888   -1.676    0.709
+ DCP           "O3'"  O    OH1       0.000    -10.082   -0.739    2.568
+ DCP           "HO3'" H    H         0.000    -10.779   -1.334    2.875
+ DCP           "C2'"  C    CH2       0.000    -11.446   -0.132    0.621
+ DCP           "H2'2" H    H         0.000    -11.974    0.441    1.386
+ DCP           "H2'1" H    H         0.000    -12.097   -0.925    0.247
+ DCP           "O4'"  O    O2        0.000     -9.620    0.729   -0.680
+ DCP           "C1'"  C    CH1       0.000    -11.049    0.800   -0.540
+ DCP           "H1'"  H    H         0.000    -11.351    1.831   -0.309
+ DCP           N1     N    NR6       0.000    -11.694    0.358   -1.777
+ DCP           C6     C    CR16      0.000    -12.538    1.198   -2.440
+ DCP           H6     H    H         0.000    -12.738    2.190   -2.054
+ DCP           C5     C    CR16      0.000    -13.124    0.779   -3.586
+ DCP           H5     H    H         0.000    -13.791    1.434   -4.134
+ DCP           C4     C    CR6       0.000    -12.853   -0.521   -4.056
+ DCP           N4     N    NH2       0.000    -13.439   -0.974   -5.215
+ DCP           HN42   H    H         0.000    -14.072   -0.378   -5.737
+ DCP           HN41   H    H         0.000    -13.242   -1.908   -5.558
+ DCP           N3     N    NRD6      0.000    -12.026   -1.304   -3.377
+ DCP           C2     C    CR6       0.000    -11.452   -0.876   -2.254
+ DCP           O2     O    O         0.000    -10.694   -1.615   -1.648
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DCP      O3G    n/a    PG     START
+ DCP      PG     O3G    O3B    .
+ DCP      O1G    PG     .      .
+ DCP      O2G    PG     .      .
+ DCP      O3B    PG     PB     .
+ DCP      PB     O3B    O3A    .
+ DCP      O1B    PB     .      .
+ DCP      O2B    PB     .      .
+ DCP      O3A    PB     PA     .
+ DCP      PA     O3A    "O5'"  .
+ DCP      O1A    PA     .      .
+ DCP      O2A    PA     .      .
+ DCP      "O5'"  PA     "C5'"  .
+ DCP      "C5'"  "O5'"  "C4'"  .
+ DCP      "H5'1" "C5'"  .      .
+ DCP      "H5'2" "C5'"  .      .
+ DCP      "C4'"  "C5'"  "O4'"  .
+ DCP      "H4'"  "C4'"  .      .
+ DCP      "C3'"  "C4'"  "C2'"  .
+ DCP      "H3'"  "C3'"  .      .
+ DCP      "O3'"  "C3'"  "HO3'" .
+ DCP      "HO3'" "O3'"  .      .
+ DCP      "C2'"  "C3'"  "H2'1" .
+ DCP      "H2'2" "C2'"  .      .
+ DCP      "H2'1" "C2'"  .      .
+ DCP      "O4'"  "C4'"  "C1'"  .
+ DCP      "C1'"  "O4'"  N1     .
+ DCP      "H1'"  "C1'"  .      .
+ DCP      N1     "C1'"  C6     .
+ DCP      C6     N1     C5     .
+ DCP      H6     C6     .      .
+ DCP      C5     C6     C4     .
+ DCP      H5     C5     .      .
+ DCP      C4     C5     N3     .
+ DCP      N4     C4     HN41   .
+ DCP      HN42   N4     .      .
+ DCP      HN41   N4     .      .
+ DCP      N3     C4     C2     .
+ DCP      C2     N3     O2     .
+ DCP      O2     C2     .      END
+ DCP      N1     C2     .    ADD
+ DCP      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DCP      N1     C2        single      1.410    0.020
+ DCP      C6     N1        single      1.337    0.020
+ DCP      N1     "C1'"     single      1.465    0.020
+ DCP      C2     N3        single      1.350    0.020
+ DCP      O2     C2        double      1.250    0.020
+ DCP      N3     C4        double      1.350    0.020
+ DCP      C4     C5        single      1.390    0.020
+ DCP      N4     C4        single      1.355    0.020
+ DCP      C5     C6        double      1.390    0.020
+ DCP      H5     C5        single      1.083    0.020
+ DCP      H6     C6        single      1.083    0.020
+ DCP      HN41   N4        single      1.010    0.020
+ DCP      HN42   N4        single      1.010    0.020
+ DCP      "C1'"  "C2'"     single      1.524    0.020
+ DCP      "C1'"  "O4'"     single      1.426    0.020
+ DCP      "H1'"  "C1'"     single      1.099    0.020
+ DCP      "C2'"  "C3'"     single      1.524    0.020
+ DCP      "H2'1" "C2'"     single      1.092    0.020
+ DCP      "H2'2" "C2'"     single      1.092    0.020
+ DCP      "C3'"  "C4'"     single      1.524    0.020
+ DCP      "O3'"  "C3'"     single      1.432    0.020
+ DCP      "H3'"  "C3'"     single      1.099    0.020
+ DCP      "O4'"  "C4'"     single      1.426    0.020
+ DCP      "C4'"  "C5'"     single      1.524    0.020
+ DCP      "H4'"  "C4'"     single      1.099    0.020
+ DCP      "HO3'" "O3'"     single      0.967    0.020
+ DCP      "C5'"  "O5'"     single      1.426    0.020
+ DCP      "H5'1" "C5'"     single      1.092    0.020
+ DCP      "H5'2" "C5'"     single      1.092    0.020
+ DCP      "O5'"  PA        single      1.610    0.020
+ DCP      O1A    PA        deloc       1.510    0.020
+ DCP      O2A    PA        deloc       1.510    0.020
+ DCP      PA     O3A       single      1.610    0.020
+ DCP      O3A    PB        single      1.610    0.020
+ DCP      O1B    PB        deloc       1.510    0.020
+ DCP      O2B    PB        deloc       1.510    0.020
+ DCP      PB     O3B       single      1.610    0.020
+ DCP      O3B    PG        single      1.610    0.020
+ DCP      O1G    PG        deloc       1.510    0.020
+ DCP      O2G    PG        deloc       1.510    0.020
+ DCP      PG     O3G       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DCP      O3G    PG     O1G     119.900    3.000
+ DCP      O3G    PG     O2G     119.900    3.000
+ DCP      O3G    PG     O3B     108.200    3.000
+ DCP      O1G    PG     O2G     119.900    3.000
+ DCP      O1G    PG     O3B     108.200    3.000
+ DCP      O2G    PG     O3B     108.200    3.000
+ DCP      PG     O3B    PB      120.500    3.000
+ DCP      O3B    PB     O1B     108.200    3.000
+ DCP      O3B    PB     O2B     108.200    3.000
+ DCP      O3B    PB     O3A     102.600    3.000
+ DCP      O1B    PB     O2B     119.900    3.000
+ DCP      O1B    PB     O3A     108.200    3.000
+ DCP      O2B    PB     O3A     108.200    3.000
+ DCP      PB     O3A    PA      120.500    3.000
+ DCP      O3A    PA     O1A     108.200    3.000
+ DCP      O3A    PA     O2A     108.200    3.000
+ DCP      O3A    PA     "O5'"   102.600    3.000
+ DCP      O1A    PA     O2A     119.900    3.000
+ DCP      O1A    PA     "O5'"   108.200    3.000
+ DCP      O2A    PA     "O5'"   108.200    3.000
+ DCP      PA     "O5'"  "C5'"   120.500    3.000
+ DCP      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ DCP      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ DCP      "O5'"  "C5'"  "C4'"   109.470    3.000
+ DCP      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ DCP      "H5'1" "C5'"  "C4'"   109.470    3.000
+ DCP      "H5'2" "C5'"  "C4'"   109.470    3.000
+ DCP      "C5'"  "C4'"  "H4'"   108.340    3.000
+ DCP      "C5'"  "C4'"  "C3'"   111.000    3.000
+ DCP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ DCP      "H4'"  "C4'"  "C3'"   108.340    3.000
+ DCP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ DCP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ DCP      "C4'"  "C3'"  "H3'"   108.340    3.000
+ DCP      "C4'"  "C3'"  "O3'"   109.470    3.000
+ DCP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ DCP      "H3'"  "C3'"  "O3'"   109.470    3.000
+ DCP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ DCP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ DCP      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ DCP      "C3'"  "C2'"  "H2'2"  109.470    3.000
+ DCP      "C3'"  "C2'"  "H2'1"  109.470    3.000
+ DCP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ DCP      "H2'2" "C2'"  "H2'1"  107.900    3.000
+ DCP      "H2'2" "C2'"  "C1'"   109.470    3.000
+ DCP      "H2'1" "C2'"  "C1'"   109.470    3.000
+ DCP      "C4'"  "O4'"  "C1'"   111.800    3.000
+ DCP      "O4'"  "C1'"  "H1'"   109.470    3.000
+ DCP      "O4'"  "C1'"  N1      109.470    3.000
+ DCP      "O4'"  "C1'"  "C2'"   109.470    3.000
+ DCP      "H1'"  "C1'"  N1      109.470    3.000
+ DCP      "H1'"  "C1'"  "C2'"   108.340    3.000
+ DCP      N1     "C1'"  "C2'"   109.470    3.000
+ DCP      "C1'"  N1     C6      120.000    3.000
+ DCP      "C1'"  N1     C2      120.000    3.000
+ DCP      C6     N1     C2      120.000    3.000
+ DCP      N1     C6     H6      120.000    3.000
+ DCP      N1     C6     C5      120.000    3.000
+ DCP      H6     C6     C5      120.000    3.000
+ DCP      C6     C5     H5      120.000    3.000
+ DCP      C6     C5     C4      120.000    3.000
+ DCP      H5     C5     C4      120.000    3.000
+ DCP      C5     C4     N4      120.000    3.000
+ DCP      C5     C4     N3      120.000    3.000
+ DCP      N4     C4     N3      120.000    3.000
+ DCP      C4     N4     HN42    120.000    3.000
+ DCP      C4     N4     HN41    120.000    3.000
+ DCP      HN42   N4     HN41    120.000    3.000
+ DCP      C4     N3     C2      120.000    3.000
+ DCP      N3     C2     O2      120.000    3.000
+ DCP      N3     C2     N1      120.000    3.000
+ DCP      O2     C2     N1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DCP      var_1    O3G    PG     O3B    PB       -60.045   20.000   1
+ DCP      var_2    PG     O3B    PB     O3A     -179.955   20.000   1
+ DCP      var_3    O3B    PB     O3A    PA      -179.993   20.000   1
+ DCP      var_4    PB     O3A    PA     "O5'"    179.983   20.000   1
+ DCP      var_5    O3A    PA     "O5'"  "C5'"   -179.955   20.000   1
+ DCP      var_6    PA     "O5'"  "C5'"  "C4'"   -179.993   20.000   1
+ DCP      var_7    "O5'"  "C5'"  "C4'"  "O4'"     65.652   20.000   3
+ DCP      var_8    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ DCP      var_9    "C4'"  "C3'"  "O3'"  "HO3'"   174.226   20.000   1
+ DCP      var_10   "C4'"  "C3'"  "C2'"  "C1'"     30.000   20.000   3
+ DCP      var_11   "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ DCP      var_12   "C4'"  "O4'"  "C1'"  N1      -150.000   20.000   1
+ DCP      var_13   "O4'"  "C1'"  "C2'"  "C3'"      0.000   20.000   3
+ DCP      var_14   "O4'"  "C1'"  N1     C6      -121.720   20.000   1
+ DCP      CONST_1  "C1'"  N1     C2     N3       180.000    0.000   0
+ DCP      CONST_2  "C1'"  N1     C6     C5       180.000    0.000   0
+ DCP      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ DCP      CONST_4  C6     C5     C4     N3         0.000    0.000   0
+ DCP      CONST_5  C5     C4     N4     HN41     179.716    0.000   0
+ DCP      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ DCP      CONST_7  C4     N3     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DCP      chir_01  "C1'"  N1     "C2'"  "O4'"     negativ
+ DCP      chir_02  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+ DCP      chir_03  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DCP      plan-1    N1        0.020
+ DCP      plan-1    C2        0.020
+ DCP      plan-1    C6        0.020
+ DCP      plan-1    "C1'"     0.020
+ DCP      plan-1    N3        0.020
+ DCP      plan-1    C4        0.020
+ DCP      plan-1    C5        0.020
+ DCP      plan-1    O2        0.020
+ DCP      plan-1    N4        0.020
+ DCP      plan-1    H5        0.020
+ DCP      plan-1    H6        0.020
+ DCP      plan-1    HN42      0.020
+ DCP      plan-1    HN41      0.020
+ DCP      plan-2    N4        0.020
+ DCP      plan-2    C4        0.020
+ DCP      plan-2    HN41      0.020
+ DCP      plan-2    HN42      0.020
+# ------------------------------------------------------

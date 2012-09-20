@@ -1,0 +1,95 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PHS      PHS 'PHOSPHONIC ACID                     ' non-polymer         7   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PHS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PHS           O1P    O    O         0.000      0.000    0.000    0.000
+ PHS           P      P    P         0.000     -0.547    0.703    1.212
+ PHS           HP1    H    H         0.000      0.344    1.670    1.642
+ PHS           O3P    O    OH1       0.000     -2.006    1.367    0.952
+ PHS           HO3P   H    H         0.000     -2.702    0.858    0.509
+ PHS           O2P    O    OH1       0.000     -0.881   -0.325    2.425
+ PHS           HO2P   H    H         0.000     -0.804   -0.034    3.346
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PHS      O1P    n/a    P      START
+ PHS      P      O1P    O2P    .
+ PHS      HP1    P      .      .
+ PHS      O3P    P      HO3P   .
+ PHS      HO3P   O3P    .      .
+ PHS      O2P    P      HO2P   .
+ PHS      HO2P   O2P    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PHS      P      O1P       double      1.480    0.020
+ PHS      O2P    P         single      1.610    0.020
+ PHS      O3P    P         single      1.610    0.020
+ PHS      HO2P   O2P       single      0.967    0.020
+ PHS      HO3P   O3P       single      0.967    0.020
+ PHS      HP1    P         single      1.383    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PHS      O1P    P      HP1     109.500    3.000
+ PHS      O1P    P      O3P     109.500    3.000
+ PHS      O1P    P      O2P     109.500    3.000
+ PHS      HP1    P      O3P     109.500    3.000
+ PHS      HP1    P      O2P     109.500    3.000
+ PHS      O3P    P      O2P     109.500    3.000
+ PHS      P      O3P    HO3P    120.000    3.000
+ PHS      P      O2P    HO2P    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PHS      var_1    O1P    P      O3P    HO3P      46.464   20.000   1
+ PHS      var_2    O1P    P      O2P    HO2P     149.106   20.000   1
+# ------------------------------------------------------

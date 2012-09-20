@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NNO      NNO '6-HYDROXYISONICOTINIC ACID N-OXIDE  ' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NNO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NNO           O3     O    O        -1.000      0.000    0.000    0.000
+ NNO           N1     N    NR6       1.000     -1.410    0.132    0.008
+ NNO           C6     C    CR6       0.000     -2.159   -0.961    0.007
+ NNO           O4     O    OH1       0.000     -1.564   -2.179    0.000
+ NNO           HO4    H    H         0.000     -1.428   -2.464   -0.913
+ NNO           C5     C    CR16      0.000     -3.548   -0.876    0.016
+ NNO           H5     H    H         0.000     -4.151   -1.775    0.016
+ NNO           C4     C    CR16      0.000     -4.148    0.366    0.023
+ NNO           H4     H    H         0.000     -5.227    0.461    0.029
+ NNO           C3     C    CR6       0.000     -3.327    1.503    0.023
+ NNO           C2     C    CR16      0.000     -1.941    1.337    0.008
+ NNO           H2     H    H         0.000     -1.296    2.207   -0.002
+ NNO           C7     C    C         0.000     -3.919    2.855    0.031
+ NNO           O1     O    OC       -0.500     -5.163    2.993    0.038
+ NNO           O2     O    OC       -0.500     -3.178    3.863    0.030
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NNO      O3     n/a    N1     START
+ NNO      N1     O3     C6     .
+ NNO      C6     N1     C5     .
+ NNO      O4     C6     HO4    .
+ NNO      HO4    O4     .      .
+ NNO      C5     C6     C4     .
+ NNO      H5     C5     .      .
+ NNO      C4     C5     C3     .
+ NNO      H4     C4     .      .
+ NNO      C3     C4     C7     .
+ NNO      C2     C3     H2     .
+ NNO      H2     C2     .      .
+ NNO      C7     C3     O2     .
+ NNO      O1     C7     .      .
+ NNO      O2     C7     .      END
+ NNO      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NNO      N1     C2        single      1.337    0.020
+ NNO      C6     N1        double      1.337    0.020
+ NNO      N1     O3        single      1.240    0.020
+ NNO      C2     C3        double      1.390    0.020
+ NNO      H2     C2        single      1.083    0.020
+ NNO      C3     C4        single      1.390    0.020
+ NNO      C7     C3        single      1.500    0.020
+ NNO      C4     C5        double      1.390    0.020
+ NNO      H4     C4        single      1.083    0.020
+ NNO      C5     C6        single      1.390    0.020
+ NNO      H5     C5        single      1.083    0.020
+ NNO      O4     C6        single      1.362    0.020
+ NNO      O1     C7        deloc       1.250    0.020
+ NNO      O2     C7        deloc       1.250    0.020
+ NNO      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NNO      O3     N1     C6      120.000    3.000
+ NNO      O3     N1     C2      120.000    3.000
+ NNO      C6     N1     C2      120.000    3.000
+ NNO      N1     C6     O4      120.000    3.000
+ NNO      N1     C6     C5      120.000    3.000
+ NNO      O4     C6     C5      120.000    3.000
+ NNO      C6     O4     HO4     109.470    3.000
+ NNO      C6     C5     H5      120.000    3.000
+ NNO      C6     C5     C4      120.000    3.000
+ NNO      H5     C5     C4      120.000    3.000
+ NNO      C5     C4     H4      120.000    3.000
+ NNO      C5     C4     C3      120.000    3.000
+ NNO      H4     C4     C3      120.000    3.000
+ NNO      C4     C3     C2      120.000    3.000
+ NNO      C4     C3     C7      120.000    3.000
+ NNO      C2     C3     C7      120.000    3.000
+ NNO      C3     C2     H2      120.000    3.000
+ NNO      C3     C2     N1      120.000    3.000
+ NNO      H2     C2     N1      120.000    3.000
+ NNO      C3     C7     O1      120.000    3.000
+ NNO      C3     C7     O2      120.000    3.000
+ NNO      O1     C7     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NNO      CONST_1  O3     N1     C2     C3       180.000    0.000   0
+ NNO      CONST_2  O3     N1     C6     C5       180.000    0.000   0
+ NNO      var_1    N1     C6     O4     HO4      -90.029   20.000   1
+ NNO      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ NNO      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ NNO      CONST_5  C5     C4     C3     C7       180.000    0.000   0
+ NNO      CONST_6  C4     C3     C2     N1         0.000    0.000   0
+ NNO      var_2    C4     C3     C7     O2      -179.985   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NNO      plan-1    N1        0.020
+ NNO      plan-1    C2        0.020
+ NNO      plan-1    C6        0.020
+ NNO      plan-1    O3        0.020
+ NNO      plan-1    C3        0.020
+ NNO      plan-1    C4        0.020
+ NNO      plan-1    C5        0.020
+ NNO      plan-1    H2        0.020
+ NNO      plan-1    C7        0.020
+ NNO      plan-1    H4        0.020
+ NNO      plan-1    H5        0.020
+ NNO      plan-1    O4        0.020
+ NNO      plan-2    C7        0.020
+ NNO      plan-2    C3        0.020
+ NNO      plan-2    O1        0.020
+ NNO      plan-2    O2        0.020
+# ------------------------------------------------------

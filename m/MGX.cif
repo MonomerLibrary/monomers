@@ -1,0 +1,141 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MGX      MGX '1-METHYLGUANIDINE                   ' non-polymer        12   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MGX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MGX           NH2    N    N         0.000      0.000    0.000    0.000
+ MGX           HNH2   H    H         0.000      0.207   -0.939    0.000
+ MGX           CZ     C    C         0.000     -1.237    0.412    0.000
+ MGX           NH1    N    NH2       0.000     -2.265   -0.501    0.000
+ MGX           HH12   H    H         0.000     -3.236   -0.193    0.000
+ MGX           HH11   H    H         0.000     -2.074   -1.501    0.000
+ MGX           NE     N    NH1       0.000     -1.514    1.758    0.000
+ MGX           HNE    H    H         0.000     -0.758    2.429    0.000
+ MGX           CD     C    CH3       0.000     -2.903    2.221    0.000
+ MGX           HD3    H    H         0.000     -3.399    1.861    0.865
+ MGX           HD2    H    H         0.000     -2.926    3.281   -0.001
+ MGX           HD1    H    H         0.000     -3.400    1.860   -0.864
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MGX      NH2    n/a    CZ     START
+ MGX      HNH2   NH2    .      .
+ MGX      CZ     NH2    NE     .
+ MGX      NH1    CZ     HH11   .
+ MGX      HH12   NH1    .      .
+ MGX      HH11   NH1    .      .
+ MGX      NE     CZ     CD     .
+ MGX      HNE    NE     .      .
+ MGX      CD     NE     HD1    .
+ MGX      HD3    CD     .      .
+ MGX      HD2    CD     .      .
+ MGX      HD1    CD     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MGX      CD     NE        single      1.450    0.020
+ MGX      HD1    CD        single      1.059    0.020
+ MGX      HD2    CD        single      1.059    0.020
+ MGX      HD3    CD        single      1.059    0.020
+ MGX      NE     CZ        single      1.330    0.020
+ MGX      HNE    NE        single      1.010    0.020
+ MGX      NH1    CZ        single      1.332    0.020
+ MGX      CZ     NH2       double      1.260    0.020
+ MGX      HH11   NH1       single      1.010    0.020
+ MGX      HH12   NH1       single      1.010    0.020
+ MGX      HNH2   NH2       single      0.954    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MGX      HNH2   NH2    CZ      120.000    3.000
+ MGX      NH2    CZ     NH1     120.000    3.000
+ MGX      NH2    CZ     NE      120.000    3.000
+ MGX      NH1    CZ     NE      120.000    3.000
+ MGX      CZ     NH1    HH12    120.000    3.000
+ MGX      CZ     NH1    HH11    120.000    3.000
+ MGX      HH12   NH1    HH11    120.000    3.000
+ MGX      CZ     NE     HNE     120.000    3.000
+ MGX      CZ     NE     CD      121.500    3.000
+ MGX      HNE    NE     CD      118.500    3.000
+ MGX      NE     CD     HD3     109.470    3.000
+ MGX      NE     CD     HD2     109.470    3.000
+ MGX      NE     CD     HD1     109.470    3.000
+ MGX      HD3    CD     HD2     109.470    3.000
+ MGX      HD3    CD     HD1     109.470    3.000
+ MGX      HD2    CD     HD1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MGX      CONST_1  HNH2   NH2    CZ     NE       180.000    0.000   0
+ MGX      CONST_2  NH2    CZ     NH1    HH11       0.000    0.000   0
+ MGX      CONST_3  NH2    CZ     NE     CD       180.000    0.000   0
+ MGX      var_1    CZ     NE     CD     HD1      -59.939   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MGX      plan-1    NE        0.020
+ MGX      plan-1    CD        0.020
+ MGX      plan-1    CZ        0.020
+ MGX      plan-1    HNE       0.020
+ MGX      plan-2    CZ        0.020
+ MGX      plan-2    NE        0.020
+ MGX      plan-2    NH1       0.020
+ MGX      plan-2    NH2       0.020
+ MGX      plan-2    HNH2      0.020
+ MGX      plan-2    HNE       0.020
+ MGX      plan-2    HH12      0.020
+ MGX      plan-2    HH11      0.020
+ MGX      plan-3    NH1       0.020
+ MGX      plan-3    CZ        0.020
+ MGX      plan-3    HH11      0.020
+ MGX      plan-3    HH12      0.020
+# ------------------------------------------------------

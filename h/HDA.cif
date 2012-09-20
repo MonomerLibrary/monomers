@@ -1,0 +1,138 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HDA      HDA 'HADACIDIN                           ' non-polymer        12   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HDA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HDA           OD2    O    OC       -0.500      0.000    0.000    0.000
+ HDA           CG     C    C         0.000     -1.242   -0.096   -0.117
+ HDA           OD1    O    OC       -0.500     -1.732   -0.847   -0.989
+ HDA           CB     C    CH2       0.000     -2.148    0.694    0.792
+ HDA           HB1    H    H         0.000     -1.951    1.761    0.665
+ HDA           HB2    H    H         0.000     -1.958    0.412    1.830
+ HDA           NA     N    N         0.000     -3.545    0.410    0.456
+ HDA           OB     O    OH1       0.000     -4.313    1.369   -0.248
+ HDA           HOB    H    H         0.000     -3.771    2.150   -0.434
+ HDA           C      C    C1        0.000     -4.101   -0.763    0.821
+ HDA           HC     H    H         0.000     -3.517   -1.492    1.355
+ HDA           O      O    O         0.000     -5.259   -0.996    0.547
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HDA      OD2    n/a    CG     START
+ HDA      CG     OD2    CB     .
+ HDA      OD1    CG     .      .
+ HDA      CB     CG     NA     .
+ HDA      HB1    CB     .      .
+ HDA      HB2    CB     .      .
+ HDA      NA     CB     C      .
+ HDA      OB     NA     HOB    .
+ HDA      HOB    OB     .      .
+ HDA      C      NA     O      .
+ HDA      HC     C      .      .
+ HDA      O      C      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HDA      C      NA        single      1.260    0.020
+ HDA      OB     NA        single      1.392    0.020
+ HDA      NA     CB        single      1.455    0.020
+ HDA      O      C         double      1.220    0.020
+ HDA      HC     C         single      1.077    0.020
+ HDA      HOB    OB        single      0.967    0.020
+ HDA      CB     CG        single      1.510    0.020
+ HDA      HB1    CB        single      1.092    0.020
+ HDA      HB2    CB        single      1.092    0.020
+ HDA      OD1    CG        deloc       1.250    0.020
+ HDA      CG     OD2       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HDA      OD2    CG     OD1     123.000    3.000
+ HDA      OD2    CG     CB      118.500    3.000
+ HDA      OD1    CG     CB      118.500    3.000
+ HDA      CG     CB     HB1     109.470    3.000
+ HDA      CG     CB     HB2     109.470    3.000
+ HDA      CG     CB     NA      109.500    3.000
+ HDA      HB1    CB     HB2     107.900    3.000
+ HDA      HB1    CB     NA      109.470    3.000
+ HDA      HB2    CB     NA      109.470    3.000
+ HDA      CB     NA     OB      120.000    3.000
+ HDA      CB     NA     C       120.000    3.000
+ HDA      OB     NA     C       120.000    3.000
+ HDA      NA     OB     HOB     109.470    3.000
+ HDA      NA     C      HC      120.000    3.000
+ HDA      NA     C      O       120.000    3.000
+ HDA      HC     C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HDA      var_1    OD2    CG     CB     NA       179.990   20.000   3
+ HDA      var_2    CG     CB     NA     C         75.041   20.000   1
+ HDA      var_3    CB     NA     OB     HOB        0.313   20.000   1
+ HDA      var_4    CB     NA     C      O        179.691   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HDA      plan-1    NA        0.020
+ HDA      plan-1    C         0.020
+ HDA      plan-1    OB        0.020
+ HDA      plan-1    CB        0.020
+ HDA      plan-1    HC        0.020
+ HDA      plan-2    C         0.020
+ HDA      plan-2    NA        0.020
+ HDA      plan-2    O         0.020
+ HDA      plan-2    HC        0.020
+ HDA      plan-3    CG        0.020
+ HDA      plan-3    CB        0.020
+ HDA      plan-3    OD1       0.020
+ HDA      plan-3    OD2       0.020
+# ------------------------------------------------------

@@ -1,0 +1,190 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BZZ      BZZ 'BENZYLHYDRAZINE                     ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BZZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BZZ           NX2    N    NH2       0.000      0.000    0.000    0.000
+ BZZ           HX21   H    H         0.000      0.208   -0.828    0.551
+ BZZ           HX22   H    H         0.000      0.678    0.756   -0.023
+ BZZ           NX1    N    NH1       0.000     -1.228    0.100   -0.731
+ BZZ           HNX1   H    H         0.000     -1.488    0.862   -1.341
+ BZZ           C1     C    CH2       0.000     -2.031   -1.064   -0.456
+ BZZ           H11    H    H         0.000     -2.229   -1.090    0.618
+ BZZ           H12    H    H         0.000     -1.454   -1.947   -0.739
+ BZZ           "C3'"  C    CR6       0.000     -3.322   -1.052   -1.201
+ BZZ           "C2'"  C    CR16      0.000     -4.452   -0.465   -0.629
+ BZZ           "H2'"  H    H         0.000     -4.391   -0.019    0.356
+ BZZ           "C4'"  C    CR16      0.000     -3.402   -1.625   -2.470
+ BZZ           "H4'"  H    H         0.000     -2.525   -2.080   -2.914
+ BZZ           "C5'"  C    CR16      0.000     -4.610   -1.613   -3.167
+ BZZ           "H5'"  H    H         0.000     -4.671   -2.059   -4.152
+ BZZ           "C6'"  C    CR16      0.000     -5.739   -1.027   -2.595
+ BZZ           "H6'"  H    H         0.000     -6.677   -1.017   -3.136
+ BZZ           "C1'"  C    CR16      0.000     -5.660   -0.453   -1.327
+ BZZ           "H1'"  H    H         0.000     -6.537    0.002   -0.883
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BZZ      NX2    n/a    NX1    START
+ BZZ      HX21   NX2    .      .
+ BZZ      HX22   NX2    .      .
+ BZZ      NX1    NX2    C1     .
+ BZZ      HNX1   NX1    .      .
+ BZZ      C1     NX1    "C3'"  .
+ BZZ      H11    C1     .      .
+ BZZ      H12    C1     .      .
+ BZZ      "C3'"  C1     "C4'"  .
+ BZZ      "C2'"  "C3'"  "H2'"  .
+ BZZ      "H2'"  "C2'"  .      .
+ BZZ      "C4'"  "C3'"  "C5'"  .
+ BZZ      "H4'"  "C4'"  .      .
+ BZZ      "C5'"  "C4'"  "C6'"  .
+ BZZ      "H5'"  "C5'"  .      .
+ BZZ      "C6'"  "C5'"  "C1'"  .
+ BZZ      "H6'"  "C6'"  .      .
+ BZZ      "C1'"  "C6'"  "H1'"  .
+ BZZ      "H1'"  "C1'"  .      END
+ BZZ      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BZZ      "C1'"  "C2'"     double      1.390    0.020
+ BZZ      "C1'"  "C6'"     single      1.390    0.020
+ BZZ      "H1'"  "C1'"     single      1.083    0.020
+ BZZ      "C2'"  "C3'"     single      1.390    0.020
+ BZZ      "H2'"  "C2'"     single      1.083    0.020
+ BZZ      "C4'"  "C3'"     double      1.390    0.020
+ BZZ      "C3'"  C1        single      1.511    0.020
+ BZZ      "C5'"  "C4'"     single      1.390    0.020
+ BZZ      "H4'"  "C4'"     single      1.083    0.020
+ BZZ      "C6'"  "C5'"     double      1.390    0.020
+ BZZ      "H5'"  "C5'"     single      1.083    0.020
+ BZZ      "H6'"  "C6'"     single      1.083    0.020
+ BZZ      NX1    NX2       single      1.400    0.020
+ BZZ      C1     NX1       single      1.450    0.020
+ BZZ      HNX1   NX1       single      1.010    0.020
+ BZZ      HX21   NX2       single      1.010    0.020
+ BZZ      HX22   NX2       single      1.010    0.020
+ BZZ      H11    C1        single      1.092    0.020
+ BZZ      H12    C1        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BZZ      HX21   NX2    HX22    120.000    3.000
+ BZZ      HX21   NX2    NX1     120.000    3.000
+ BZZ      HX22   NX2    NX1     120.000    3.000
+ BZZ      NX2    NX1    HNX1    120.000    3.000
+ BZZ      NX2    NX1    C1      120.000    3.000
+ BZZ      HNX1   NX1    C1      118.500    3.000
+ BZZ      NX1    C1     H11     109.470    3.000
+ BZZ      NX1    C1     H12     109.470    3.000
+ BZZ      NX1    C1     "C3'"   109.500    3.000
+ BZZ      H11    C1     H12     107.900    3.000
+ BZZ      H11    C1     "C3'"   109.470    3.000
+ BZZ      H12    C1     "C3'"   109.470    3.000
+ BZZ      C1     "C3'"  "C2'"   120.000    3.000
+ BZZ      C1     "C3'"  "C4'"   120.000    3.000
+ BZZ      "C2'"  "C3'"  "C4'"   120.000    3.000
+ BZZ      "C3'"  "C2'"  "H2'"   120.000    3.000
+ BZZ      "C3'"  "C2'"  "C1'"   120.000    3.000
+ BZZ      "H2'"  "C2'"  "C1'"   120.000    3.000
+ BZZ      "C3'"  "C4'"  "H4'"   120.000    3.000
+ BZZ      "C3'"  "C4'"  "C5'"   120.000    3.000
+ BZZ      "H4'"  "C4'"  "C5'"   120.000    3.000
+ BZZ      "C4'"  "C5'"  "H5'"   120.000    3.000
+ BZZ      "C4'"  "C5'"  "C6'"   120.000    3.000
+ BZZ      "H5'"  "C5'"  "C6'"   120.000    3.000
+ BZZ      "C5'"  "C6'"  "H6'"   120.000    3.000
+ BZZ      "C5'"  "C6'"  "C1'"   120.000    3.000
+ BZZ      "H6'"  "C6'"  "C1'"   120.000    3.000
+ BZZ      "C6'"  "C1'"  "H1'"   120.000    3.000
+ BZZ      "C6'"  "C1'"  "C2'"   120.000    3.000
+ BZZ      "H1'"  "C1'"  "C2'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BZZ      CONST_1  HX22   NX2    NX1    C1      -176.412    0.000   0
+ BZZ      var_1    NX2    NX1    C1     "C3'"   -178.939   20.000   3
+ BZZ      var_2    NX1    C1     "C3'"  "C4'"     89.966   20.000   2
+ BZZ      CONST_2  C1     "C3'"  "C2'"  "C1'"    180.000    0.000   0
+ BZZ      CONST_3  C1     "C3'"  "C4'"  "C5'"    180.000    0.000   0
+ BZZ      CONST_4  "C3'"  "C4'"  "C5'"  "C6'"      0.000    0.000   0
+ BZZ      CONST_5  "C4'"  "C5'"  "C6'"  "C1'"      0.000    0.000   0
+ BZZ      CONST_6  "C5'"  "C6'"  "C1'"  "C2'"      0.000    0.000   0
+ BZZ      CONST_7  "C6'"  "C1'"  "C2'"  "C3'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BZZ      plan-1    "C1'"     0.020
+ BZZ      plan-1    "C2'"     0.020
+ BZZ      plan-1    "C6'"     0.020
+ BZZ      plan-1    "H1'"     0.020
+ BZZ      plan-1    "C3'"     0.020
+ BZZ      plan-1    "C4'"     0.020
+ BZZ      plan-1    "C5'"     0.020
+ BZZ      plan-1    "H2'"     0.020
+ BZZ      plan-1    C1        0.020
+ BZZ      plan-1    "H4'"     0.020
+ BZZ      plan-1    "H5'"     0.020
+ BZZ      plan-1    "H6'"     0.020
+ BZZ      plan-2    NX1       0.020
+ BZZ      plan-2    NX2       0.020
+ BZZ      plan-2    C1        0.020
+ BZZ      plan-2    HNX1      0.020
+ BZZ      plan-2    HX21      0.020
+ BZZ      plan-2    HX22      0.020
+ BZZ      plan-3    NX2       0.020
+ BZZ      plan-3    NX1       0.020
+ BZZ      plan-3    HX21      0.020
+ BZZ      plan-3    HX22      0.020
+ BZZ      plan-3    HNX1      0.020
+# ------------------------------------------------------

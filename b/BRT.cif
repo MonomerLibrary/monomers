@@ -1,0 +1,167 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BRT      BRT '5-BROMONICOTINAMIDE                 ' non-polymer        15  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BRT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BRT           O9     O    O         0.000      0.000    0.000    0.000
+ BRT           C7     C    C         0.000     -0.807    0.001    0.908
+ BRT           N8     N    NH2       0.000     -0.383    0.001    2.188
+ BRT           H8N2   H    H         0.000     -1.052    0.002    2.948
+ BRT           H8N1   H    H         0.000      0.608    0.000    2.398
+ BRT           C1     C    CR6       0.000     -2.255    0.000    0.609
+ BRT           C2     C    CR16      0.000     -3.193    0.000    1.643
+ BRT           H2     H    H         0.000     -2.857    0.000    2.673
+ BRT           C6     C    CR16      0.000     -2.710    0.005   -0.714
+ BRT           H6     H    H         0.000     -2.010    0.013   -1.541
+ BRT           C5     C    CR6       0.000     -4.074    0.000   -0.940
+ BRT           BR     BR   BR        0.000     -4.753    0.000   -2.704
+ BRT           C4     C    CR16      0.000     -4.939    0.000    0.141
+ BRT           H4     H    H         0.000     -6.008    0.000   -0.032
+ BRT           N3     N    NRD6      0.000     -4.482    0.000    1.378
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BRT      O9     n/a    C7     START
+ BRT      C7     O9     C1     .
+ BRT      N8     C7     H8N1   .
+ BRT      H8N2   N8     .      .
+ BRT      H8N1   N8     .      .
+ BRT      C1     C7     C6     .
+ BRT      C2     C1     H2     .
+ BRT      H2     C2     .      .
+ BRT      C6     C1     C5     .
+ BRT      H6     C6     .      .
+ BRT      C5     C6     C4     .
+ BRT      BR     C5     .      .
+ BRT      C4     C5     N3     .
+ BRT      H4     C4     .      .
+ BRT      N3     C4     .      END
+ BRT      C2     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BRT      C2     N3        double      1.337    0.020
+ BRT      C2     C1        single      1.390    0.020
+ BRT      H2     C2        single      1.083    0.020
+ BRT      N3     C4        single      1.337    0.020
+ BRT      C4     C5        double      1.390    0.020
+ BRT      H4     C4        single      1.083    0.020
+ BRT      BR     C5        single      1.890    0.020
+ BRT      C5     C6        single      1.390    0.020
+ BRT      C6     C1        double      1.390    0.020
+ BRT      H6     C6        single      1.083    0.020
+ BRT      C1     C7        single      1.500    0.020
+ BRT      C7     O9        double      1.220    0.020
+ BRT      N8     C7        single      1.332    0.020
+ BRT      H8N1   N8        single      1.010    0.020
+ BRT      H8N2   N8        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BRT      O9     C7     N8      123.000    3.000
+ BRT      O9     C7     C1      120.500    3.000
+ BRT      N8     C7     C1      120.000    3.000
+ BRT      C7     N8     H8N2    120.000    3.000
+ BRT      C7     N8     H8N1    120.000    3.000
+ BRT      H8N2   N8     H8N1    120.000    3.000
+ BRT      C7     C1     C2      120.000    3.000
+ BRT      C7     C1     C6      120.000    3.000
+ BRT      C2     C1     C6      120.000    3.000
+ BRT      C1     C2     H2      120.000    3.000
+ BRT      C1     C2     N3      120.000    3.000
+ BRT      H2     C2     N3      120.000    3.000
+ BRT      C1     C6     H6      120.000    3.000
+ BRT      C1     C6     C5      120.000    3.000
+ BRT      H6     C6     C5      120.000    3.000
+ BRT      C6     C5     BR      120.000    3.000
+ BRT      C6     C5     C4      120.000    3.000
+ BRT      BR     C5     C4      120.000    3.000
+ BRT      C5     C4     H4      120.000    3.000
+ BRT      C5     C4     N3      120.000    3.000
+ BRT      H4     C4     N3      120.000    3.000
+ BRT      C4     N3     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BRT      CONST_1  O9     C7     N8     H8N1       0.000    0.000   0
+ BRT      var_1    O9     C7     C1     C6        -0.292   20.000   1
+ BRT      CONST_2  C7     C1     C2     N3       180.000    0.000   0
+ BRT      CONST_3  C1     C2     N3     C4         0.000    0.000   0
+ BRT      CONST_4  C7     C1     C6     C5       180.000    0.000   0
+ BRT      CONST_5  C1     C6     C5     C4         0.000    0.000   0
+ BRT      CONST_6  C6     C5     C4     N3         0.000    0.000   0
+ BRT      CONST_7  C5     C4     N3     C2         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BRT      plan-1    C2        0.020
+ BRT      plan-1    N3        0.020
+ BRT      plan-1    C1        0.020
+ BRT      plan-1    H2        0.020
+ BRT      plan-1    C4        0.020
+ BRT      plan-1    C5        0.020
+ BRT      plan-1    C6        0.020
+ BRT      plan-1    H4        0.020
+ BRT      plan-1    BR        0.020
+ BRT      plan-1    H6        0.020
+ BRT      plan-1    C7        0.020
+ BRT      plan-2    C7        0.020
+ BRT      plan-2    C1        0.020
+ BRT      plan-2    O9        0.020
+ BRT      plan-2    N8        0.020
+ BRT      plan-2    H8N2      0.020
+ BRT      plan-2    H8N1      0.020
+ BRT      plan-3    N8        0.020
+ BRT      plan-3    C7        0.020
+ BRT      plan-3    H8N1      0.020
+ BRT      plan-3    H8N2      0.020
+# ------------------------------------------------------

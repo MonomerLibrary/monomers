@@ -1,0 +1,205 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PBQ      PBQ 'PENTABROMOPSEUDILIN                 ' non-polymer        21  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PBQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PBQ           BR19   BR   BR        0.000      0.000    0.000    0.000
+ PBQ           C7     C    CR5       0.000      0.260    0.980   -1.579
+ PBQ           C8     C    CR5       0.000      0.754    0.559   -2.801
+ PBQ           BR18   BR   BR        0.000      1.308   -1.192   -3.226
+ PBQ           C9     C    CR5       0.000      0.740    1.675   -3.677
+ PBQ           BR17   BR   BR        0.000      1.197    1.651   -5.503
+ PBQ           N11    N    NR15      0.000     -0.045    2.307   -1.716
+ PBQ           H11    H    H         0.000     -0.457    2.893   -0.962
+ PBQ           CD1    C    CR5       0.000      0.261    2.770   -2.973
+ PBQ           CG     C    CR6       0.000     -0.299    4.065   -3.439
+ PBQ           CR     C    CR6       0.000     -0.761    4.995   -2.497
+ PBQ           O      O    OH1       0.000     -0.424    4.886   -1.186
+ PBQ           H      H    H         0.000      0.245    4.195   -1.082
+ PBQ           CD2    C    CR16      0.000     -0.711    4.137   -4.776
+ PBQ           HD2    H    H         0.000     -0.379    3.387   -5.483
+ PBQ           CE2    C    CR6       0.000     -1.548    5.174   -5.203
+ PBQ           BR13   BR   BR        0.000     -2.080    5.276   -7.015
+ PBQ           C3     C    CR16      0.000     -1.981    6.130   -4.289
+ PBQ           H3     H    H         0.000     -2.616    6.945   -4.614
+ PBQ           CH     C    CR6       0.000     -1.595    6.033   -2.950
+ PBQ           BR14   BR   BR        0.000     -2.239    7.335   -1.733
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PBQ      BR19   n/a    C7     START
+ PBQ      C7     BR19   N11    .
+ PBQ      C8     C7     C9     .
+ PBQ      BR18   C8     .      .
+ PBQ      C9     C8     BR17   .
+ PBQ      BR17   C9     .      .
+ PBQ      N11    C7     CD1    .
+ PBQ      H11    N11    .      .
+ PBQ      CD1    N11    CG     .
+ PBQ      CG     CD1    CD2    .
+ PBQ      CR     CG     O      .
+ PBQ      O      CR     H      .
+ PBQ      H      O      .      .
+ PBQ      CD2    CG     CE2    .
+ PBQ      HD2    CD2    .      .
+ PBQ      CE2    CD2    C3     .
+ PBQ      BR13   CE2    .      .
+ PBQ      C3     CE2    CH     .
+ PBQ      H3     C3     .      .
+ PBQ      CH     C3     BR14   .
+ PBQ      BR14   CH     .      END
+ PBQ      CH     CR     .    ADD
+ PBQ      CD1    C9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PBQ      CH     CR        single      1.487    0.020
+ PBQ      CH     C3        double      1.390    0.020
+ PBQ      BR14   CH        single      1.890    0.020
+ PBQ      CG     CD1       single      1.490    0.020
+ PBQ      CD2    CG        single      1.390    0.020
+ PBQ      CR     CG        double      1.487    0.020
+ PBQ      CD1    C9        double      1.490    0.020
+ PBQ      CD1    N11       single      1.340    0.020
+ PBQ      CE2    CD2       double      1.390    0.020
+ PBQ      C3     CE2       single      1.390    0.020
+ PBQ      BR13   CE2       single      1.890    0.020
+ PBQ      O      CR        single      1.362    0.020
+ PBQ      C8     C7        double      1.490    0.020
+ PBQ      N11    C7        single      1.340    0.020
+ PBQ      C7     BR19      single      1.995    0.020
+ PBQ      C9     C8        single      1.490    0.020
+ PBQ      BR18   C8        single      1.995    0.020
+ PBQ      BR17   C9        single      1.995    0.020
+ PBQ      H3     C3        single      1.083    0.020
+ PBQ      HD2    CD2       single      1.083    0.020
+ PBQ      H11    N11       single      1.040    0.020
+ PBQ      H      O         single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PBQ      BR19   C7     C8      108.000    3.000
+ PBQ      BR19   C7     N11     108.000    3.000
+ PBQ      C8     C7     N11     108.000    3.000
+ PBQ      C7     C8     BR18    108.000    3.000
+ PBQ      C7     C8     C9      108.000    3.000
+ PBQ      BR18   C8     C9      108.000    3.000
+ PBQ      C8     C9     BR17    108.000    3.000
+ PBQ      C8     C9     CD1     108.000    3.000
+ PBQ      BR17   C9     CD1     108.000    3.000
+ PBQ      C7     N11    H11     126.000    3.000
+ PBQ      C7     N11    CD1     108.000    3.000
+ PBQ      H11    N11    CD1     126.000    3.000
+ PBQ      N11    CD1    CG      108.000    3.000
+ PBQ      N11    CD1    C9      108.000    3.000
+ PBQ      CG     CD1    C9      126.000    3.000
+ PBQ      CD1    CG     CR      120.000    3.000
+ PBQ      CD1    CG     CD2     120.000    3.000
+ PBQ      CR     CG     CD2     120.000    3.000
+ PBQ      CG     CR     O       120.000    3.000
+ PBQ      CG     CR     CH      120.000    3.000
+ PBQ      O      CR     CH      120.000    3.000
+ PBQ      CR     O      H       109.470    3.000
+ PBQ      CG     CD2    HD2     120.000    3.000
+ PBQ      CG     CD2    CE2     120.000    3.000
+ PBQ      HD2    CD2    CE2     120.000    3.000
+ PBQ      CD2    CE2    BR13    120.000    3.000
+ PBQ      CD2    CE2    C3      120.000    3.000
+ PBQ      BR13   CE2    C3      120.000    3.000
+ PBQ      CE2    C3     H3      120.000    3.000
+ PBQ      CE2    C3     CH      120.000    3.000
+ PBQ      H3     C3     CH      120.000    3.000
+ PBQ      C3     CH     BR14    120.000    3.000
+ PBQ      C3     CH     CR      120.000    3.000
+ PBQ      BR14   CH     CR      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PBQ      CONST_1  BR19   C7     C8     C9       180.000    0.000   0
+ PBQ      CONST_2  C7     C8     C9     BR17     180.000    0.000   0
+ PBQ      CONST_3  BR19   C7     N11    CD1      180.000    0.000   0
+ PBQ      CONST_4  C7     N11    CD1    CG       150.000    0.000   0
+ PBQ      CONST_5  N11    CD1    C9     C8         0.000    0.000   0
+ PBQ      var_1    N11    CD1    CG     CD2     -140.811   20.000   1
+ PBQ      CONST_6  CD1    CG     CR     O         30.000    0.000   0
+ PBQ      var_2    CG     CR     O      H          8.467   20.000   1
+ PBQ      CONST_7  CD1    CG     CD2    CE2      150.000    0.000   0
+ PBQ      CONST_8  CG     CD2    CE2    C3         0.000    0.000   0
+ PBQ      CONST_9  CD2    CE2    C3     CH         0.000    0.000   0
+ PBQ      CONST_10 CE2    C3     CH     BR14     180.000    0.000   0
+ PBQ      CONST_11 C3     CH     CR     CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PBQ      plan-1    CH        0.020
+ PBQ      plan-1    CR        0.020
+ PBQ      plan-1    C3        0.020
+ PBQ      plan-1    BR14      0.020
+ PBQ      plan-1    CG        0.020
+ PBQ      plan-1    CD2       0.020
+ PBQ      plan-1    CE2       0.020
+ PBQ      plan-1    CD1       0.020
+ PBQ      plan-1    HD2       0.020
+ PBQ      plan-1    BR13      0.020
+ PBQ      plan-1    O         0.020
+ PBQ      plan-1    H3        0.020
+ PBQ      plan-2    CD1       0.020
+ PBQ      plan-2    CG        0.020
+ PBQ      plan-2    C9        0.020
+ PBQ      plan-2    N11       0.020
+ PBQ      plan-2    C7        0.020
+ PBQ      plan-2    C8        0.020
+ PBQ      plan-2    BR19      0.020
+ PBQ      plan-2    BR18      0.020
+ PBQ      plan-2    BR17      0.020
+ PBQ      plan-2    H11       0.020
+# ------------------------------------------------------

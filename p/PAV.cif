@@ -1,0 +1,182 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PAV      PAV '(2R,4S)-2-METHYL-2,3,3,4-TETRAHYDROX' non-polymer        20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PAV
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PAV           O13    O    OH1       0.000      0.000    0.000    0.000
+ PAV           H13    H    H         0.000      0.559    0.383   -0.689
+ PAV           C8     C    CT        0.000     -1.134    0.841    0.214
+ PAV           O1     O    OH1       0.000     -0.721    2.138    0.651
+ PAV           HO1    H    H         0.000     -0.170    2.546   -0.031
+ PAV           C4     C    CT        0.000     -2.094    0.210    1.239
+ PAV           C11    C    CH3       0.000     -2.254    1.138    2.445
+ PAV           H113   H    H         0.000     -1.311    1.288    2.903
+ PAV           H112   H    H         0.000     -2.643    2.070    2.125
+ PAV           H111   H    H         0.000     -2.919    0.699    3.143
+ PAV           O3     O    OH1       0.000     -1.585   -1.056    1.666
+ PAV           HO3    H    H         0.000     -2.194   -1.449    2.305
+ PAV           C7     C    CH1       0.000     -1.983    0.949   -1.079
+ PAV           H7     H    H         0.000     -2.409    1.957   -1.185
+ PAV           O12    O    OH1       0.000     -1.208    0.599   -2.228
+ PAV           H12    H    H         0.000     -1.778    0.583   -3.008
+ PAV           C6     C    CH2       0.000     -3.097   -0.098   -0.824
+ PAV           H62    H    H         0.000     -2.768   -1.116   -1.042
+ PAV           H61    H    H         0.000     -4.007    0.118   -1.388
+ PAV           O5     O    O2        0.000     -3.363    0.032    0.588
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PAV      O13    n/a    C8     START
+ PAV      H13    O13    .      .
+ PAV      C8     O13    C7     .
+ PAV      O1     C8     HO1    .
+ PAV      HO1    O1     .      .
+ PAV      C4     C8     O3     .
+ PAV      C11    C4     H111   .
+ PAV      H113   C11    .      .
+ PAV      H112   C11    .      .
+ PAV      H111   C11    .      .
+ PAV      O3     C4     HO3    .
+ PAV      HO3    O3     .      .
+ PAV      C7     C8     C6     .
+ PAV      H7     C7     .      .
+ PAV      O12    C7     H12    .
+ PAV      H12    O12    .      .
+ PAV      C6     C7     O5     .
+ PAV      H62    C6     .      .
+ PAV      H61    C6     .      .
+ PAV      O5     C6     .      END
+ PAV      C4     O5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PAV      O3     C4        single      1.432    0.020
+ PAV      HO3    O3        single      0.967    0.020
+ PAV      C11    C4        single      1.524    0.020
+ PAV      C4     O5        single      1.426    0.020
+ PAV      C4     C8        single      1.524    0.020
+ PAV      H111   C11       single      1.059    0.020
+ PAV      H112   C11       single      1.059    0.020
+ PAV      H113   C11       single      1.059    0.020
+ PAV      O5     C6        single      1.426    0.020
+ PAV      C6     C7        single      1.524    0.020
+ PAV      H61    C6        single      1.092    0.020
+ PAV      H62    C6        single      1.092    0.020
+ PAV      O12    C7        single      1.432    0.020
+ PAV      C7     C8        single      1.524    0.020
+ PAV      H7     C7        single      1.099    0.020
+ PAV      H12    O12       single      0.967    0.020
+ PAV      O1     C8        single      1.432    0.020
+ PAV      C8     O13       single      1.432    0.020
+ PAV      HO1    O1        single      0.967    0.020
+ PAV      H13    O13       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PAV      H13    O13    C8      109.470    3.000
+ PAV      O13    C8     O1      109.470    3.000
+ PAV      O13    C8     C4      109.470    3.000
+ PAV      O13    C8     C7      109.470    3.000
+ PAV      O1     C8     C4      109.470    3.000
+ PAV      O1     C8     C7      109.470    3.000
+ PAV      C4     C8     C7      111.000    3.000
+ PAV      C8     O1     HO1     109.470    3.000
+ PAV      C8     C4     C11     111.000    3.000
+ PAV      C8     C4     O3      109.470    3.000
+ PAV      C8     C4     O5      109.470    3.000
+ PAV      C11    C4     O3      109.470    3.000
+ PAV      C11    C4     O5      109.470    3.000
+ PAV      O3     C4     O5      109.470    3.000
+ PAV      C4     C11    H113    109.470    3.000
+ PAV      C4     C11    H112    109.470    3.000
+ PAV      C4     C11    H111    109.470    3.000
+ PAV      H113   C11    H112    109.470    3.000
+ PAV      H113   C11    H111    109.470    3.000
+ PAV      H112   C11    H111    109.470    3.000
+ PAV      C4     O3     HO3     109.470    3.000
+ PAV      C8     C7     H7      108.340    3.000
+ PAV      C8     C7     O12     109.470    3.000
+ PAV      C8     C7     C6      111.000    3.000
+ PAV      H7     C7     O12     109.470    3.000
+ PAV      H7     C7     C6      108.340    3.000
+ PAV      O12    C7     C6      109.470    3.000
+ PAV      C7     O12    H12     109.470    3.000
+ PAV      C7     C6     H62     109.470    3.000
+ PAV      C7     C6     H61     109.470    3.000
+ PAV      C7     C6     O5      109.470    3.000
+ PAV      H62    C6     H61     107.900    3.000
+ PAV      H62    C6     O5      109.470    3.000
+ PAV      H61    C6     O5      109.470    3.000
+ PAV      C6     O5     C4      111.800    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PAV      var_1    H13    O13    C8     C7        61.411   20.000   1
+ PAV      var_2    O13    C8     O1     HO1       61.134   20.000   1
+ PAV      var_3    O13    C8     C4     O3         0.000   20.000   1
+ PAV      var_4    C8     C4     O5     C6        30.000   20.000   1
+ PAV      var_5    C8     C4     C11    H111     179.730   20.000   1
+ PAV      var_6    C8     C4     O3     HO3     -179.707   20.000   1
+ PAV      var_7    O13    C8     C7     C6        90.000   20.000   1
+ PAV      var_8    C8     C7     O12    H12      174.059   20.000   1
+ PAV      var_9    C8     C7     C6     O5        30.000   20.000   3
+ PAV      var_10   C7     C6     O5     C4       -30.000   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PAV      chir_01  C4     O3     C11    O5        positiv
+ PAV      chir_02  C7     C6     O12    C8        positiv
+ PAV      chir_03  C8     C4     C7     O1        negativ
+# ------------------------------------------------------

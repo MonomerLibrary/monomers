@@ -1,0 +1,195 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+004      004 '(2S)-amino(phenyl)ethanoic acid     ' peptide            19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_004
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 004           N      N    NH2       0.000      0.000    0.000    0.000
+ 004           HN1    H    H         0.000      0.239   -0.421    0.890
+ 004           HN2    H    H         0.000      0.698    0.041   -0.734
+ 004           CA     C    CH1       0.000     -1.345    0.546   -0.225
+ 004           HA     H    H         0.000     -1.280    1.634   -0.369
+ 004           CB     C    CR6       0.000     -1.947   -0.088   -1.452
+ 004           CG2    C    CR16      0.000     -1.757   -1.434   -1.699
+ 004           HG2    H    H         0.000     -1.175   -2.034   -1.010
+ 004           CD2    C    CR16      0.000     -2.308   -2.016   -2.825
+ 004           HD2    H    H         0.000     -2.159   -3.071   -3.017
+ 004           CE     C    CR16      0.000     -3.050   -1.250   -3.705
+ 004           HE     H    H         0.000     -3.484   -1.707   -4.585
+ 004           CD1    C    CR16      0.000     -3.237    0.097   -3.461
+ 004           HD1    H    H         0.000     -3.816    0.697   -4.152
+ 004           CG1    C    CR16      0.000     -2.685    0.678   -2.335
+ 004           HG1    H    H         0.000     -2.830    1.734   -2.145
+ 004           C      C    C         0.000     -2.214    0.249    0.970
+ 004           O      O    OC       -0.500     -1.898   -0.666    1.762
+ 004           OXT    O    OC       -0.500     -3.254    0.915    1.169
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 004      N      n/a    CA     START
+ 004      HN1    N      .      .
+ 004      HN2    N      .      .
+ 004      CA     N      C      .
+ 004      HA     CA     .      .
+ 004      CB     CA     CG2    .
+ 004      CG2    CB     CD2    .
+ 004      HG2    CG2    .      .
+ 004      CD2    CG2    CE     .
+ 004      HD2    CD2    .      .
+ 004      CE     CD2    CD1    .
+ 004      HE     CE     .      .
+ 004      CD1    CE     CG1    .
+ 004      HD1    CD1    .      .
+ 004      CG1    CD1    HG1    .
+ 004      HG1    CG1    .      .
+ 004      C      CA     .      END
+ 004      O      C      .      .
+ 004      OXT    C      .      .
+ 004      CB     CG1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 004      O      C         deloc       1.250    0.020
+ 004      OXT    C         deloc       1.250    0.020
+ 004      C      CA        single      1.500    0.020
+ 004      CA     N         single      1.450    0.020
+ 004      CB     CA        single      1.480    0.020
+ 004      HA     CA        single      1.099    0.020
+ 004      CB     CG1       single      1.390    0.020
+ 004      CD1    CE        single      1.390    0.020
+ 004      HE     CE        single      1.083    0.020
+ 004      HD1    CD1       single      1.083    0.020
+ 004      CE     CD2       double      1.390    0.020
+ 004      HD2    CD2       single      1.083    0.020
+ 004      CG1    CD1       double      1.390    0.020
+ 004      HG1    CG1       single      1.083    0.020
+ 004      CG2    CB        double      1.390    0.020
+ 004      CD2    CG2       single      1.390    0.020
+ 004      HG2    CG2       single      1.083    0.020
+ 004      HN1    N         single      1.010    0.020
+ 004      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 004      HN1    N      HN2     120.000    3.000
+ 004      HN1    N      CA      120.000    3.000
+ 004      HN2    N      CA      120.000    3.000
+ 004      N      CA     HA      109.470    3.000
+ 004      N      CA     CB      109.470    3.000
+ 004      N      CA     C       109.470    3.000
+ 004      HA     CA     CB      109.470    3.000
+ 004      HA     CA     C       108.810    3.000
+ 004      CB     CA     C       109.500    3.000
+ 004      CA     CB     CG2     120.000    3.000
+ 004      CA     CB     CG1     120.000    3.000
+ 004      CG2    CB     CG1     120.000    3.000
+ 004      CB     CG2    HG2     120.000    3.000
+ 004      CB     CG2    CD2     120.000    3.000
+ 004      HG2    CG2    CD2     120.000    3.000
+ 004      CG2    CD2    HD2     120.000    3.000
+ 004      CG2    CD2    CE      120.000    3.000
+ 004      HD2    CD2    CE      120.000    3.000
+ 004      CD2    CE     HE      120.000    3.000
+ 004      CD2    CE     CD1     120.000    3.000
+ 004      HE     CE     CD1     120.000    3.000
+ 004      CE     CD1    HD1     120.000    3.000
+ 004      CE     CD1    CG1     120.000    3.000
+ 004      HD1    CD1    CG1     120.000    3.000
+ 004      CD1    CG1    HG1     120.000    3.000
+ 004      CD1    CG1    CB      120.000    3.000
+ 004      HG1    CG1    CB      120.000    3.000
+ 004      CA     C      O       118.500    3.000
+ 004      CA     C      OXT     118.500    3.000
+ 004      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 004      var_1    HN2    N      CA     C        175.000   20.000   1
+ 004      var_2    N      CA     CB     CG2       39.666   20.000   1
+ 004      CONST_1  CA     CB     CG1    CD1      180.000    0.000   0
+ 004      CONST_2  CA     CB     CG2    CD2      180.000    0.000   0
+ 004      CONST_3  CB     CG2    CD2    CE         0.000    0.000   0
+ 004      CONST_4  CG2    CD2    CE     CD1        0.000    0.000   0
+ 004      CONST_5  CD2    CE     CD1    CG1        0.000    0.000   0
+ 004      CONST_6  CE     CD1    CG1    CB         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 004      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 004      plan-1    C         0.020
+ 004      plan-1    O         0.020
+ 004      plan-1    CA        0.020
+ 004      plan-1    OXT       0.020
+ 004      plan-2    N         0.020
+ 004      plan-2    CA        0.020
+ 004      plan-2    HN1       0.020
+ 004      plan-2    HN2       0.020
+ 004      plan-3    CB        0.020
+ 004      plan-3    CA        0.020
+ 004      plan-3    CG1       0.020
+ 004      plan-3    CG2       0.020
+ 004      plan-3    CE        0.020
+ 004      plan-3    CD1       0.020
+ 004      plan-3    CD2       0.020
+ 004      plan-3    HE        0.020
+ 004      plan-3    HD1       0.020
+ 004      plan-3    HD2       0.020
+ 004      plan-3    HG1       0.020
+ 004      plan-3    HG2       0.020
+# ------------------------------------------------------

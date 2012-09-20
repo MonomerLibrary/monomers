@@ -1,0 +1,197 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3DS      3DS '(4S,5R)-4,5-dihydroxy-3-oxocyclohex-' non-polymer        19  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3DS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3DS           OAC    O    OC       -0.500      0.000    0.000    0.000
+ 3DS           CAH    C    C         0.000     -1.053    0.668    0.093
+ 3DS           OAA    O    OC       -0.500     -0.996    1.894    0.337
+ 3DS           CAJ    C    C         0.000     -2.363    0.010   -0.082
+ 3DS           CAF    C    C1        0.000     -3.471    0.755    0.024
+ 3DS           HAF    H    H         0.000     -3.390    1.809    0.232
+ 3DS           CAG    C    CH2       0.000     -2.391   -1.461   -0.373
+ 3DS           HAG    H    H         0.000     -1.602   -1.944    0.208
+ 3DS           HAGA   H    H         0.000     -2.200   -1.608   -1.438
+ 3DS           CAK    C    CH1       0.000     -3.740   -2.073   -0.008
+ 3DS           HAK    H    H         0.000     -3.776   -3.117   -0.349
+ 3DS           OAD    O    OH1       0.000     -3.919   -2.025    1.409
+ 3DS           HOAD   H    H         0.000     -4.774   -2.412    1.639
+ 3DS           CAL    C    CH1       0.000     -4.859   -1.272   -0.688
+ 3DS           HAL    H    H         0.000     -5.835   -1.722   -0.457
+ 3DS           OAE    O    OH1       0.000     -4.655   -1.254   -2.102
+ 3DS           HOAE   H    H         0.000     -5.344   -0.720   -2.520
+ 3DS           CAI    C    C         0.000     -4.801    0.140   -0.141
+ 3DS           OAB    O    O         0.000     -5.811    0.743    0.150
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3DS      OAC    n/a    CAH    START
+ 3DS      CAH    OAC    CAJ    .
+ 3DS      OAA    CAH    .      .
+ 3DS      CAJ    CAH    CAG    .
+ 3DS      CAF    CAJ    HAF    .
+ 3DS      HAF    CAF    .      .
+ 3DS      CAG    CAJ    CAK    .
+ 3DS      HAG    CAG    .      .
+ 3DS      HAGA   CAG    .      .
+ 3DS      CAK    CAG    CAL    .
+ 3DS      HAK    CAK    .      .
+ 3DS      OAD    CAK    HOAD   .
+ 3DS      HOAD   OAD    .      .
+ 3DS      CAL    CAK    CAI    .
+ 3DS      HAL    CAL    .      .
+ 3DS      OAE    CAL    HOAE   .
+ 3DS      HOAE   OAE    .      .
+ 3DS      CAI    CAL    OAB    .
+ 3DS      OAB    CAI    .      END
+ 3DS      CAF    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3DS      OAA    CAH       deloc       1.250    0.020
+ 3DS      OAB    CAI       double      1.220    0.020
+ 3DS      CAH    OAC       deloc       1.250    0.020
+ 3DS      OAD    CAK       single      1.432    0.020
+ 3DS      HOAD   OAD       single      0.967    0.020
+ 3DS      OAE    CAL       single      1.432    0.020
+ 3DS      HOAE   OAE       single      0.967    0.020
+ 3DS      CAF    CAI       single      1.475    0.020
+ 3DS      CAF    CAJ       double      1.340    0.020
+ 3DS      HAF    CAF       single      1.077    0.020
+ 3DS      CAG    CAJ       single      1.510    0.020
+ 3DS      CAK    CAG       single      1.524    0.020
+ 3DS      HAG    CAG       single      1.092    0.020
+ 3DS      HAGA   CAG       single      1.092    0.020
+ 3DS      CAJ    CAH       single      1.460    0.020
+ 3DS      CAI    CAL       single      1.500    0.020
+ 3DS      CAL    CAK       single      1.524    0.020
+ 3DS      HAK    CAK       single      1.099    0.020
+ 3DS      HAL    CAL       single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3DS      OAC    CAH    OAA     123.000    3.000
+ 3DS      OAC    CAH    CAJ     120.000    3.000
+ 3DS      OAA    CAH    CAJ     120.000    3.000
+ 3DS      CAH    CAJ    CAF     120.000    3.000
+ 3DS      CAH    CAJ    CAG     120.000    3.000
+ 3DS      CAF    CAJ    CAG     120.000    3.000
+ 3DS      CAJ    CAF    HAF     120.000    3.000
+ 3DS      CAJ    CAF    CAI     120.000    3.000
+ 3DS      HAF    CAF    CAI     120.000    3.000
+ 3DS      CAJ    CAG    HAG     109.470    3.000
+ 3DS      CAJ    CAG    HAGA    109.470    3.000
+ 3DS      CAJ    CAG    CAK     109.470    3.000
+ 3DS      HAG    CAG    HAGA    107.900    3.000
+ 3DS      HAG    CAG    CAK     109.470    3.000
+ 3DS      HAGA   CAG    CAK     109.470    3.000
+ 3DS      CAG    CAK    HAK     108.340    3.000
+ 3DS      CAG    CAK    OAD     109.470    3.000
+ 3DS      CAG    CAK    CAL     111.000    3.000
+ 3DS      HAK    CAK    OAD     109.470    3.000
+ 3DS      HAK    CAK    CAL     108.340    3.000
+ 3DS      OAD    CAK    CAL     109.470    3.000
+ 3DS      CAK    OAD    HOAD    109.470    3.000
+ 3DS      CAK    CAL    HAL     108.340    3.000
+ 3DS      CAK    CAL    OAE     109.470    3.000
+ 3DS      CAK    CAL    CAI     109.470    3.000
+ 3DS      HAL    CAL    OAE     109.470    3.000
+ 3DS      HAL    CAL    CAI     108.810    3.000
+ 3DS      OAE    CAL    CAI     109.470    3.000
+ 3DS      CAL    OAE    HOAE    109.470    3.000
+ 3DS      CAL    CAI    OAB     120.500    3.000
+ 3DS      CAL    CAI    CAF     120.000    3.000
+ 3DS      OAB    CAI    CAF     120.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3DS      var_1    OAC    CAH    CAJ    CAG       -0.081   20.000   1
+ 3DS      var_2    CAH    CAJ    CAF    CAI      180.000   20.000   1
+ 3DS      var_3    CAJ    CAF    CAI    CAL        0.000   20.000   1
+ 3DS      var_4    CAH    CAJ    CAG    CAK      150.000   20.000   3
+ 3DS      var_5    CAJ    CAG    CAK    CAL       60.000   20.000   3
+ 3DS      var_6    CAG    CAK    OAD    HOAD     179.968   20.000   1
+ 3DS      var_7    CAG    CAK    CAL    CAI      -60.000   20.000   3
+ 3DS      var_8    CAK    CAL    OAE    HOAE    -177.873   20.000   1
+ 3DS      var_9    CAK    CAL    CAI    OAB     -150.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 3DS      chir_01  CAK    OAD    CAG    CAL       positiv
+ 3DS      chir_02  CAL    OAE    CAI    CAK       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3DS      plan-1    CAF       0.020
+ 3DS      plan-1    CAI       0.020
+ 3DS      plan-1    CAJ       0.020
+ 3DS      plan-1    HAF       0.020
+ 3DS      plan-2    CAH       0.020
+ 3DS      plan-2    OAA       0.020
+ 3DS      plan-2    OAC       0.020
+ 3DS      plan-2    CAJ       0.020
+ 3DS      plan-3    CAI       0.020
+ 3DS      plan-3    OAB       0.020
+ 3DS      plan-3    CAF       0.020
+ 3DS      plan-3    CAL       0.020
+ 3DS      plan-3    HAF       0.020
+ 3DS      plan-4    CAJ       0.020
+ 3DS      plan-4    CAF       0.020
+ 3DS      plan-4    CAG       0.020
+ 3DS      plan-4    CAH       0.020
+ 3DS      plan-4    HAF       0.020
+# ------------------------------------------------------

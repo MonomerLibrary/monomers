@@ -1,0 +1,286 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AS1      AS1 'ARGININOSUCCINATE                   ' non-polymer        35  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AS1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AS1           OD2    O    OC       -0.500      0.000    0.000    0.000
+ AS1           CD     C    C         0.000     -1.177   -0.312    0.286
+ AS1           OD1    O    OC       -0.500     -1.897    0.484    0.929
+ AS1           CB     C    CH2       0.000     -1.728   -1.647   -0.143
+ AS1           HB1    H    H         0.000     -1.127   -2.446    0.297
+ AS1           HB2    H    H         0.000     -1.691   -1.722   -1.232
+ AS1           CA     C    CH1       0.000     -3.178   -1.777    0.330
+ AS1           HA     H    H         0.000     -3.225   -1.612    1.415
+ AS1           CG     C    C         0.000     -3.689   -3.158    0.009
+ AS1           OG1    O    OC       -0.500     -3.122   -4.162    0.492
+ AS1           OG2    O    OC       -0.500     -4.680   -3.299   -0.741
+ AS1           N1     N    NH1       0.000     -4.005   -0.779   -0.352
+ AS1           HN1    H    H         0.000     -3.719   -0.414   -1.250
+ AS1           C      C    C         0.000     -5.170   -0.339    0.229
+ AS1           N3     N    N         0.000     -5.539   -0.810    1.387
+ AS1           HN3    H    H         0.000     -5.005   -1.466    1.845
+ AS1           N2     N    NH1       0.000     -5.947    0.598   -0.411
+ AS1           HN2    H    H         0.000     -5.661    0.963   -1.308
+ AS1           C1     C    CH2       0.000     -7.189    1.066    0.209
+ AS1           H11    H    H         0.000     -6.964    1.523    1.174
+ AS1           H12    H    H         0.000     -7.863    0.219    0.356
+ AS1           C2     C    CH2       0.000     -7.856    2.098   -0.703
+ AS1           H21    H    H         0.000     -8.080    1.639   -1.668
+ AS1           H22    H    H         0.000     -7.181    2.943   -0.851
+ AS1           C3     C    CH2       0.000     -9.154    2.587   -0.056
+ AS1           H31    H    H         0.000     -8.928    3.045    0.910
+ AS1           H32    H    H         0.000     -9.828    1.741    0.093
+ AS1           C4     C    CH1       0.000     -9.821    3.619   -0.968
+ AS1           H4     H    H         0.000     -9.966    3.185   -1.967
+ AS1           N4     N    NH2       0.000     -8.965    4.809   -1.071
+ AS1           HN42   H    H         0.000     -8.610    5.107   -1.972
+ AS1           HN41   H    H         0.000     -8.724    5.339   -0.242
+ AS1           C5     C    C         0.000    -11.157    4.009   -0.391
+ AS1           O51    O    OC       -0.500    -11.272    5.076    0.252
+ AS1           O52    O    OC       -0.500    -12.151    3.267   -0.555
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AS1      OD2    n/a    CD     START
+ AS1      CD     OD2    CB     .
+ AS1      OD1    CD     .      .
+ AS1      CB     CD     CA     .
+ AS1      HB1    CB     .      .
+ AS1      HB2    CB     .      .
+ AS1      CA     CB     N1     .
+ AS1      HA     CA     .      .
+ AS1      CG     CA     OG2    .
+ AS1      OG1    CG     .      .
+ AS1      OG2    CG     .      .
+ AS1      N1     CA     C      .
+ AS1      HN1    N1     .      .
+ AS1      C      N1     N2     .
+ AS1      N3     C      HN3    .
+ AS1      HN3    N3     .      .
+ AS1      N2     C      C1     .
+ AS1      HN2    N2     .      .
+ AS1      C1     N2     C2     .
+ AS1      H11    C1     .      .
+ AS1      H12    C1     .      .
+ AS1      C2     C1     C3     .
+ AS1      H21    C2     .      .
+ AS1      H22    C2     .      .
+ AS1      C3     C2     C4     .
+ AS1      H31    C3     .      .
+ AS1      H32    C3     .      .
+ AS1      C4     C3     C5     .
+ AS1      H4     C4     .      .
+ AS1      N4     C4     HN41   .
+ AS1      HN42   N4     .      .
+ AS1      HN41   N4     .      .
+ AS1      C5     C4     O52    .
+ AS1      O51    C5     .      .
+ AS1      O52    C5     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AS1      O51    C5        deloc       1.250    0.020
+ AS1      O52    C5        deloc       1.250    0.020
+ AS1      C5     C4        single      1.500    0.020
+ AS1      N4     C4        single      1.450    0.020
+ AS1      C4     C3        single      1.524    0.020
+ AS1      H4     C4        single      1.099    0.020
+ AS1      HN41   N4        single      1.010    0.020
+ AS1      HN42   N4        single      1.010    0.020
+ AS1      C3     C2        single      1.524    0.020
+ AS1      H31    C3        single      1.092    0.020
+ AS1      H32    C3        single      1.092    0.020
+ AS1      C2     C1        single      1.524    0.020
+ AS1      H21    C2        single      1.092    0.020
+ AS1      H22    C2        single      1.092    0.020
+ AS1      C1     N2        single      1.450    0.020
+ AS1      H11    C1        single      1.092    0.020
+ AS1      H12    C1        single      1.092    0.020
+ AS1      N2     C         single      1.330    0.020
+ AS1      HN2    N2        single      1.010    0.020
+ AS1      N3     C         double      1.260    0.020
+ AS1      C      N1        single      1.330    0.020
+ AS1      HN3    N3        single      0.954    0.020
+ AS1      N1     CA        single      1.450    0.020
+ AS1      HN1    N1        single      1.010    0.020
+ AS1      CG     CA        single      1.500    0.020
+ AS1      CA     CB        single      1.524    0.020
+ AS1      HA     CA        single      1.099    0.020
+ AS1      OG2    CG        deloc       1.250    0.020
+ AS1      OG1    CG        deloc       1.250    0.020
+ AS1      CB     CD        single      1.510    0.020
+ AS1      HB1    CB        single      1.092    0.020
+ AS1      HB2    CB        single      1.092    0.020
+ AS1      OD1    CD        deloc       1.250    0.020
+ AS1      CD     OD2       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AS1      OD2    CD     OD1     123.000    3.000
+ AS1      OD2    CD     CB      118.500    3.000
+ AS1      OD1    CD     CB      118.500    3.000
+ AS1      CD     CB     HB1     109.470    3.000
+ AS1      CD     CB     HB2     109.470    3.000
+ AS1      CD     CB     CA      109.470    3.000
+ AS1      HB1    CB     HB2     107.900    3.000
+ AS1      HB1    CB     CA      109.470    3.000
+ AS1      HB2    CB     CA      109.470    3.000
+ AS1      CB     CA     HA      108.340    3.000
+ AS1      CB     CA     CG      109.470    3.000
+ AS1      CB     CA     N1      110.000    3.000
+ AS1      HA     CA     CG      108.810    3.000
+ AS1      HA     CA     N1      108.550    3.000
+ AS1      CG     CA     N1      111.600    3.000
+ AS1      CA     CG     OG1     118.500    3.000
+ AS1      CA     CG     OG2     118.500    3.000
+ AS1      OG1    CG     OG2     123.000    3.000
+ AS1      CA     N1     HN1     118.500    3.000
+ AS1      CA     N1     C       121.500    3.000
+ AS1      HN1    N1     C       120.000    3.000
+ AS1      N1     C      N3      120.000    3.000
+ AS1      N1     C      N2      120.000    3.000
+ AS1      N3     C      N2      120.000    3.000
+ AS1      C      N3     HN3     120.000    3.000
+ AS1      C      N2     HN2     120.000    3.000
+ AS1      C      N2     C1      121.500    3.000
+ AS1      HN2    N2     C1      118.500    3.000
+ AS1      N2     C1     H11     109.470    3.000
+ AS1      N2     C1     H12     109.470    3.000
+ AS1      N2     C1     C2      112.000    3.000
+ AS1      H11    C1     H12     107.900    3.000
+ AS1      H11    C1     C2      109.470    3.000
+ AS1      H12    C1     C2      109.470    3.000
+ AS1      C1     C2     H21     109.470    3.000
+ AS1      C1     C2     H22     109.470    3.000
+ AS1      C1     C2     C3      111.000    3.000
+ AS1      H21    C2     H22     107.900    3.000
+ AS1      H21    C2     C3      109.470    3.000
+ AS1      H22    C2     C3      109.470    3.000
+ AS1      C2     C3     H31     109.470    3.000
+ AS1      C2     C3     H32     109.470    3.000
+ AS1      C2     C3     C4      111.000    3.000
+ AS1      H31    C3     H32     107.900    3.000
+ AS1      H31    C3     C4      109.470    3.000
+ AS1      H32    C3     C4      109.470    3.000
+ AS1      C3     C4     H4      108.340    3.000
+ AS1      C3     C4     N4      109.470    3.000
+ AS1      C3     C4     C5      109.470    3.000
+ AS1      H4     C4     N4      109.470    3.000
+ AS1      H4     C4     C5      108.810    3.000
+ AS1      N4     C4     C5      109.470    3.000
+ AS1      C4     N4     HN42    120.000    3.000
+ AS1      C4     N4     HN41    120.000    3.000
+ AS1      HN42   N4     HN41    120.000    3.000
+ AS1      C4     C5     O51     118.500    3.000
+ AS1      C4     C5     O52     118.500    3.000
+ AS1      O51    C5     O52     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AS1      var_1    OD2    CD     CB     CA      -179.978   20.000   3
+ AS1      var_2    CD     CB     CA     N1        64.995   20.000   3
+ AS1      var_3    CB     CA     CG     OG2     -119.965   20.000   3
+ AS1      var_4    CB     CA     N1     C       -154.982   20.000   3
+ AS1      CONST_1  CA     N1     C      N2       180.000    0.000   0
+ AS1      CONST_2  N1     C      N3     HN3        0.000    0.000   0
+ AS1      CONST_3  N1     C      N2     C1       180.000    0.000   0
+ AS1      var_5    C      N2     C1     C2       179.995   20.000   3
+ AS1      var_6    N2     C1     C2     C3      -179.970   20.000   3
+ AS1      var_7    C1     C2     C3     C4      -179.982   20.000   3
+ AS1      var_8    C2     C3     C4     C5       174.986   20.000   3
+ AS1      var_9    C3     C4     N4     HN41     -59.943   20.000   1
+ AS1      var_10   C3     C4     C5     O52      -80.016   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AS1      chir_01  C4     C5     N4     C3        negativ
+ AS1      chir_02  CA     N1     CG     CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AS1      plan-1    C5        0.020
+ AS1      plan-1    O51       0.020
+ AS1      plan-1    O52       0.020
+ AS1      plan-1    C4        0.020
+ AS1      plan-2    N4        0.020
+ AS1      plan-2    C4        0.020
+ AS1      plan-2    HN41      0.020
+ AS1      plan-2    HN42      0.020
+ AS1      plan-3    N2        0.020
+ AS1      plan-3    C1        0.020
+ AS1      plan-3    C         0.020
+ AS1      plan-3    HN2       0.020
+ AS1      plan-4    C         0.020
+ AS1      plan-4    N2        0.020
+ AS1      plan-4    N3        0.020
+ AS1      plan-4    N1        0.020
+ AS1      plan-4    HN3       0.020
+ AS1      plan-4    HN2       0.020
+ AS1      plan-4    HN1       0.020
+ AS1      plan-5    N1        0.020
+ AS1      plan-5    C         0.020
+ AS1      plan-5    CA        0.020
+ AS1      plan-5    HN1       0.020
+ AS1      plan-6    CG        0.020
+ AS1      plan-6    CA        0.020
+ AS1      plan-6    OG2       0.020
+ AS1      plan-6    OG1       0.020
+ AS1      plan-7    CD        0.020
+ AS1      plan-7    CB        0.020
+ AS1      plan-7    OD1       0.020
+ AS1      plan-7    OD2       0.020
+# ------------------------------------------------------

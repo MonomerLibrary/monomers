@@ -1,0 +1,195 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BZ3      BZ3 '5-methoxy-1H-indole                 ' non-polymer        20  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BZ3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BZ3           CAA    C    CH3       0.000      0.000    0.000    0.000
+ BZ3           HAA    H    H         0.000     -0.052    0.610    0.865
+ BZ3           HAAA   H    H         0.000      0.914   -0.535    0.001
+ BZ3           HAAB   H    H         0.000     -0.051    0.610   -0.865
+ BZ3           OAH    O    O2        0.000     -1.093   -0.921   -0.001
+ BZ3           CAI    C    CR6       0.000     -2.345   -0.392   -0.001
+ BZ3           CAC    C    CR16      0.000     -2.515    0.989   -0.001
+ BZ3           HAC    H    H         0.000     -1.646    1.636    0.000
+ BZ3           CAF    C    CR16      0.000     -3.444   -1.228   -0.003
+ BZ3           HAF    H    H         0.000     -3.311   -2.303   -0.006
+ BZ3           CAJ    C    CR56      0.000     -4.728   -0.680    0.000
+ BZ3           CAD    C    CR15      0.000     -6.078   -1.250    0.000
+ BZ3           HAD    H    H         0.000     -6.332   -2.303   -0.004
+ BZ3           CAK    C    CR56      0.000     -4.896    0.716    0.000
+ BZ3           CAE    C    CR16      0.000     -3.776    1.541   -0.002
+ BZ3           HAE    H    H         0.000     -3.896    2.617   -0.005
+ BZ3           NAG    N    NR15      0.000     -6.253    0.962    0.001
+ BZ3           HNAG   H    H         0.000     -6.690    1.906   -0.001
+ BZ3           CAB    C    CR15      0.000     -6.940   -0.221    0.004
+ BZ3           HAB    H    H         0.000     -8.019   -0.314    0.009
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BZ3      CAA    n/a    OAH    START
+ BZ3      HAA    CAA    .      .
+ BZ3      HAAA   CAA    .      .
+ BZ3      HAAB   CAA    .      .
+ BZ3      OAH    CAA    CAI    .
+ BZ3      CAI    OAH    CAF    .
+ BZ3      CAC    CAI    HAC    .
+ BZ3      HAC    CAC    .      .
+ BZ3      CAF    CAI    CAJ    .
+ BZ3      HAF    CAF    .      .
+ BZ3      CAJ    CAF    CAK    .
+ BZ3      CAD    CAJ    HAD    .
+ BZ3      HAD    CAD    .      .
+ BZ3      CAK    CAJ    NAG    .
+ BZ3      CAE    CAK    HAE    .
+ BZ3      HAE    CAE    .      .
+ BZ3      NAG    CAK    CAB    .
+ BZ3      HNAG   NAG    .      .
+ BZ3      CAB    NAG    HAB    .
+ BZ3      HAB    CAB    .      END
+ BZ3      CAB    CAD    .    ADD
+ BZ3      CAC    CAE    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BZ3      OAH    CAA       single      1.426    0.020
+ BZ3      HAA    CAA       single      1.059    0.020
+ BZ3      HAAA   CAA       single      1.059    0.020
+ BZ3      HAAB   CAA       single      1.059    0.020
+ BZ3      CAB    NAG       single      1.350    0.020
+ BZ3      CAB    CAD       double      1.380    0.020
+ BZ3      HAB    CAB       single      1.083    0.020
+ BZ3      CAC    CAI       double      1.390    0.020
+ BZ3      CAC    CAE       single      1.390    0.020
+ BZ3      HAC    CAC       single      1.083    0.020
+ BZ3      CAD    CAJ       single      1.440    0.020
+ BZ3      HAD    CAD       single      1.083    0.020
+ BZ3      CAE    CAK       double      1.390    0.020
+ BZ3      HAE    CAE       single      1.083    0.020
+ BZ3      CAF    CAI       single      1.390    0.020
+ BZ3      CAJ    CAF       double      1.390    0.020
+ BZ3      HAF    CAF       single      1.083    0.020
+ BZ3      NAG    CAK       single      1.340    0.020
+ BZ3      CAI    OAH       single      1.370    0.020
+ BZ3      CAK    CAJ       single      1.490    0.020
+ BZ3      HNAG   NAG       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BZ3      HAA    CAA    HAAA    109.470    3.000
+ BZ3      HAA    CAA    HAAB    109.470    3.000
+ BZ3      HAAA   CAA    HAAB    109.470    3.000
+ BZ3      HAA    CAA    OAH     109.470    3.000
+ BZ3      HAAA   CAA    OAH     109.470    3.000
+ BZ3      HAAB   CAA    OAH     109.470    3.000
+ BZ3      CAA    OAH    CAI     120.000    3.000
+ BZ3      OAH    CAI    CAC     120.000    3.000
+ BZ3      OAH    CAI    CAF     120.000    3.000
+ BZ3      CAC    CAI    CAF     120.000    3.000
+ BZ3      CAI    CAC    HAC     120.000    3.000
+ BZ3      CAI    CAC    CAE     120.000    3.000
+ BZ3      HAC    CAC    CAE     120.000    3.000
+ BZ3      CAI    CAF    HAF     120.000    3.000
+ BZ3      CAI    CAF    CAJ     120.000    3.000
+ BZ3      HAF    CAF    CAJ     120.000    3.000
+ BZ3      CAF    CAJ    CAD     126.000    3.000
+ BZ3      CAF    CAJ    CAK     120.000    3.000
+ BZ3      CAD    CAJ    CAK     120.000    3.000
+ BZ3      CAJ    CAD    HAD     108.000    3.000
+ BZ3      CAJ    CAD    CAB     108.000    3.000
+ BZ3      HAD    CAD    CAB     126.000    3.000
+ BZ3      CAJ    CAK    CAE     120.000    3.000
+ BZ3      CAJ    CAK    NAG     108.000    3.000
+ BZ3      CAE    CAK    NAG     132.000    3.000
+ BZ3      CAK    CAE    HAE     120.000    3.000
+ BZ3      CAK    CAE    CAC     120.000    3.000
+ BZ3      HAE    CAE    CAC     120.000    3.000
+ BZ3      CAK    NAG    HNAG    126.000    3.000
+ BZ3      CAK    NAG    CAB     108.000    3.000
+ BZ3      HNAG   NAG    CAB     126.000    3.000
+ BZ3      NAG    CAB    HAB     126.000    3.000
+ BZ3      NAG    CAB    CAD     108.000    3.000
+ BZ3      HAB    CAB    CAD     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BZ3      var_1    HAAB   CAA    OAH    CAI      -60.023   20.000   1
+ BZ3      var_2    CAA    OAH    CAI    CAF      179.952   20.000   1
+ BZ3      CONST_1  OAH    CAI    CAC    CAE      180.000    0.000   0
+ BZ3      CONST_2  CAI    CAC    CAE    CAK        0.000    0.000   0
+ BZ3      CONST_3  OAH    CAI    CAF    CAJ      180.000    0.000   0
+ BZ3      CONST_4  CAI    CAF    CAJ    CAK        0.000    0.000   0
+ BZ3      CONST_5  CAF    CAJ    CAD    CAB      180.000    0.000   0
+ BZ3      CONST_6  CAF    CAJ    CAK    NAG      180.000    0.000   0
+ BZ3      CONST_7  CAJ    CAK    CAE    CAC        0.000    0.000   0
+ BZ3      CONST_8  CAJ    CAK    NAG    CAB        0.000    0.000   0
+ BZ3      CONST_9  CAK    NAG    CAB    CAD        0.000    0.000   0
+ BZ3      CONST_10 NAG    CAB    CAD    CAJ        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BZ3      plan-1    CAB       0.020
+ BZ3      plan-1    CAD       0.020
+ BZ3      plan-1    NAG       0.020
+ BZ3      plan-1    HAB       0.020
+ BZ3      plan-1    CAJ       0.020
+ BZ3      plan-1    HAD       0.020
+ BZ3      plan-1    CAK       0.020
+ BZ3      plan-1    HNAG      0.020
+ BZ3      plan-1    CAF       0.020
+ BZ3      plan-1    CAE       0.020
+ BZ3      plan-1    CAC       0.020
+ BZ3      plan-1    CAI       0.020
+ BZ3      plan-1    HAC       0.020
+ BZ3      plan-1    HAE       0.020
+ BZ3      plan-1    HAF       0.020
+ BZ3      plan-1    OAH       0.020
+# ------------------------------------------------------

@@ -1,0 +1,245 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+EDM      EDM '6-ethenyl-N,N-dimethyl-2-(methylsulf' non-polymer        28  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_EDM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ EDM           O19    O    OS        0.000      0.000    0.000    0.000
+ EDM           S17    S    ST        0.000     -1.179   -0.506    0.613
+ EDM           O27    O    OS        0.000     -1.499   -1.889    0.553
+ EDM           C29    C    CH3       0.000     -1.325    0.108    2.313
+ EDM           H29B   H    H         0.000     -0.566   -0.311    2.941
+ EDM           H29A   H    H         0.000     -1.228    1.173    2.348
+ EDM           H29    H    H         0.000     -2.275   -0.147    2.735
+ EDM           C5     C    CR6       0.000     -2.493    0.282   -0.255
+ EDM           N4     N    NRD6      0.000     -3.667   -0.310   -0.311
+ EDM           C3     C    CR6       0.000     -4.687    0.251   -0.963
+ EDM           C13    C    C1        0.000     -6.001   -0.423   -1.025
+ EDM           H13    H    H         0.000     -6.818    0.039   -1.552
+ EDM           C15    C    C2        0.000     -6.173   -1.597   -0.433
+ EDM           H15A   H    H         0.000     -5.355   -2.062    0.095
+ EDM           H15    H    H         0.000     -7.130   -2.090   -0.477
+ EDM           C2     C    CR16      0.000     -4.495    1.486   -1.582
+ EDM           H2     H    H         0.000     -5.302    1.970   -2.119
+ EDM           N6     N    NRD6      0.000     -2.272    1.449   -0.827
+ EDM           C1     C    CR6       0.000     -3.237    2.079   -1.492
+ EDM           N21    N    N         0.000     -2.993    3.305   -2.091
+ EDM           C25    C    CH3       0.000     -1.641    3.868   -2.083
+ EDM           H25B   H    H         0.000     -1.319    4.005   -1.083
+ EDM           H25A   H    H         0.000     -0.978    3.206   -2.578
+ EDM           H25    H    H         0.000     -1.643    4.803   -2.583
+ EDM           C23    C    CH3       0.000     -4.089    4.038   -2.730
+ EDM           H23B   H    H         0.000     -5.001    3.812   -2.241
+ EDM           H23A   H    H         0.000     -3.904    5.080   -2.666
+ EDM           H23    H    H         0.000     -4.158    3.756   -3.749
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ EDM      O19    n/a    S17    START
+ EDM      S17    O19    C5     .
+ EDM      O27    S17    .      .
+ EDM      C29    S17    H29    .
+ EDM      H29B   C29    .      .
+ EDM      H29A   C29    .      .
+ EDM      H29    C29    .      .
+ EDM      C5     S17    N6     .
+ EDM      N4     C5     C3     .
+ EDM      C3     N4     C2     .
+ EDM      C13    C3     C15    .
+ EDM      H13    C13    .      .
+ EDM      C15    C13    H15    .
+ EDM      H15A   C15    .      .
+ EDM      H15    C15    .      .
+ EDM      C2     C3     H2     .
+ EDM      H2     C2     .      .
+ EDM      N6     C5     C1     .
+ EDM      C1     N6     N21    .
+ EDM      N21    C1     C23    .
+ EDM      C25    N21    H25    .
+ EDM      H25B   C25    .      .
+ EDM      H25A   C25    .      .
+ EDM      H25    C25    .      .
+ EDM      C23    N21    H23    .
+ EDM      H23B   C23    .      .
+ EDM      H23A   C23    .      .
+ EDM      H23    C23    .      END
+ EDM      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ EDM      C23    N21       single      1.455    0.020
+ EDM      C25    N21       single      1.455    0.020
+ EDM      N21    C1        single      1.400    0.020
+ EDM      C1     C2        double      1.390    0.020
+ EDM      C1     N6        single      1.350    0.020
+ EDM      C2     C3        single      1.390    0.020
+ EDM      N6     C5        double      1.350    0.020
+ EDM      C5     S17       single      1.595    0.020
+ EDM      N4     C5        single      1.350    0.020
+ EDM      C29    S17       single      1.662    0.020
+ EDM      O27    S17       double      1.436    0.020
+ EDM      S17    O19       double      1.436    0.020
+ EDM      C3     N4        double      1.350    0.020
+ EDM      C13    C3        single      1.480    0.020
+ EDM      C15    C13       double      1.320    0.020
+ EDM      H23    C23       single      1.059    0.020
+ EDM      H23A   C23       single      1.059    0.020
+ EDM      H23B   C23       single      1.059    0.020
+ EDM      H25    C25       single      1.059    0.020
+ EDM      H25A   C25       single      1.059    0.020
+ EDM      H25B   C25       single      1.059    0.020
+ EDM      H2     C2        single      1.083    0.020
+ EDM      H29    C29       single      1.059    0.020
+ EDM      H29A   C29       single      1.059    0.020
+ EDM      H29B   C29       single      1.059    0.020
+ EDM      H13    C13       single      1.077    0.020
+ EDM      H15    C15       single      1.077    0.020
+ EDM      H15A   C15       single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ EDM      O19    S17    O27     109.500    3.000
+ EDM      O19    S17    C29     109.500    3.000
+ EDM      O19    S17    C5      109.500    3.000
+ EDM      O27    S17    C29     109.500    3.000
+ EDM      O27    S17    C5      109.500    3.000
+ EDM      C29    S17    C5      109.500    3.000
+ EDM      S17    C29    H29B    109.500    3.000
+ EDM      S17    C29    H29A    109.500    3.000
+ EDM      S17    C29    H29     109.500    3.000
+ EDM      H29B   C29    H29A    109.470    3.000
+ EDM      H29B   C29    H29     109.470    3.000
+ EDM      H29A   C29    H29     109.470    3.000
+ EDM      S17    C5     N4      120.000    3.000
+ EDM      S17    C5     N6      120.000    3.000
+ EDM      N4     C5     N6      120.000    3.000
+ EDM      C5     N4     C3      120.000    3.000
+ EDM      N4     C3     C13     120.000    3.000
+ EDM      N4     C3     C2      120.000    3.000
+ EDM      C13    C3     C2      120.000    3.000
+ EDM      C3     C13    H13     120.000    3.000
+ EDM      C3     C13    C15     120.000    3.000
+ EDM      H13    C13    C15     120.000    3.000
+ EDM      C13    C15    H15A    120.000    3.000
+ EDM      C13    C15    H15     120.000    3.000
+ EDM      H15A   C15    H15     120.000    3.000
+ EDM      C3     C2     H2      120.000    3.000
+ EDM      C3     C2     C1      120.000    3.000
+ EDM      H2     C2     C1      120.000    3.000
+ EDM      C5     N6     C1      120.000    3.000
+ EDM      N6     C1     N21     120.000    3.000
+ EDM      N6     C1     C2      120.000    3.000
+ EDM      N21    C1     C2      120.000    3.000
+ EDM      C1     N21    C25     120.000    3.000
+ EDM      C1     N21    C23     120.000    3.000
+ EDM      C25    N21    C23     120.000    3.000
+ EDM      N21    C25    H25B    109.470    3.000
+ EDM      N21    C25    H25A    109.470    3.000
+ EDM      N21    C25    H25     109.470    3.000
+ EDM      H25B   C25    H25A    109.470    3.000
+ EDM      H25B   C25    H25     109.470    3.000
+ EDM      H25A   C25    H25     109.470    3.000
+ EDM      N21    C23    H23B    109.470    3.000
+ EDM      N21    C23    H23A    109.470    3.000
+ EDM      N21    C23    H23     109.470    3.000
+ EDM      H23B   C23    H23A    109.470    3.000
+ EDM      H23B   C23    H23     109.470    3.000
+ EDM      H23A   C23    H23     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ EDM      var_1    O19    S17    C29    H29      171.632   20.000   1
+ EDM      var_2    O19    S17    C5     N6       -26.121   20.000   1
+ EDM      CONST_1  S17    C5     N4     C3       180.000    0.000   0
+ EDM      CONST_2  C5     N4     C3     C2         0.000    0.000   0
+ EDM      var_3    N4     C3     C13    C15       -0.092   20.000   1
+ EDM      CONST_3  C3     C13    C15    H15      179.969    0.000   0
+ EDM      CONST_4  N4     C3     C2     C1         0.000    0.000   0
+ EDM      CONST_5  S17    C5     N6     C1       180.000    0.000   0
+ EDM      CONST_6  C5     N6     C1     N21      180.000    0.000   0
+ EDM      CONST_7  N6     C1     C2     C3         0.000    0.000   0
+ EDM      var_4    N6     C1     N21    C23     -175.257   20.000   1
+ EDM      var_5    C1     N21    C25    H25      179.984   20.000   1
+ EDM      var_6    C1     N21    C23    H23      -90.071   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ EDM      chir_01  S17    C5     C29    O27       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ EDM      plan-1    N21       0.020
+ EDM      plan-1    C23       0.020
+ EDM      plan-1    C25       0.020
+ EDM      plan-1    C1        0.020
+ EDM      plan-2    C1        0.020
+ EDM      plan-2    N21       0.020
+ EDM      plan-2    C2        0.020
+ EDM      plan-2    N6        0.020
+ EDM      plan-2    C5        0.020
+ EDM      plan-2    N4        0.020
+ EDM      plan-2    C3        0.020
+ EDM      plan-2    H2        0.020
+ EDM      plan-2    S17       0.020
+ EDM      plan-2    C13       0.020
+ EDM      plan-2    H13       0.020
+ EDM      plan-3    C13       0.020
+ EDM      plan-3    C3        0.020
+ EDM      plan-3    C15       0.020
+ EDM      plan-3    H13       0.020
+ EDM      plan-3    H15       0.020
+ EDM      plan-3    H15A      0.020
+# ------------------------------------------------------

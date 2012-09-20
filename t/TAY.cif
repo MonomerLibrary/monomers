@@ -1,0 +1,177 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TAY      TAY '2,2-dimethylpropanamide             ' non-polymer        18   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TAY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TAY           OAE    O    O         0.000      0.000    0.000    0.000
+ TAY           CAF    C    C         0.000     -1.203    0.152    0.000
+ TAY           NAD    N    NH2       0.000     -2.018   -0.923    0.000
+ TAY           HNAA   H    H         0.000     -3.024   -0.802    0.000
+ TAY           HNAD   H    H         0.000     -1.629   -1.859    0.000
+ TAY           CAG    C    CT        0.000     -1.788    1.540    0.000
+ TAY           CAC    C    CH3       0.000     -2.650    1.731   -1.249
+ TAY           HACB   H    H         0.000     -3.435    1.018   -1.250
+ TAY           HACA   H    H         0.000     -3.062    2.707   -1.250
+ TAY           HAC    H    H         0.000     -2.054    1.599   -2.115
+ TAY           CAB    C    CH3       0.000     -2.650    1.731    1.249
+ TAY           HABB   H    H         0.000     -3.435    1.018    1.250
+ TAY           HABA   H    H         0.000     -2.054    1.599    2.115
+ TAY           HAB    H    H         0.000     -3.062    2.707    1.250
+ TAY           CAA    C    CH3       0.000     -0.657    2.571    0.000
+ TAY           HAAB   H    H         0.000     -0.058    2.440   -0.865
+ TAY           HAAA   H    H         0.000     -1.067    3.547    0.000
+ TAY           HAA    H    H         0.000     -0.059    2.440    0.865
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TAY      OAE    n/a    CAF    START
+ TAY      CAF    OAE    CAG    .
+ TAY      NAD    CAF    HNAD   .
+ TAY      HNAA   NAD    .      .
+ TAY      HNAD   NAD    .      .
+ TAY      CAG    CAF    CAA    .
+ TAY      CAC    CAG    HAC    .
+ TAY      HACB   CAC    .      .
+ TAY      HACA   CAC    .      .
+ TAY      HAC    CAC    .      .
+ TAY      CAB    CAG    HAB    .
+ TAY      HABB   CAB    .      .
+ TAY      HABA   CAB    .      .
+ TAY      HAB    CAB    .      .
+ TAY      CAA    CAG    HAA    .
+ TAY      HAAB   CAA    .      .
+ TAY      HAAA   CAA    .      .
+ TAY      HAA    CAA    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TAY      CAA    CAG       single      1.524    0.020
+ TAY      CAB    CAG       single      1.524    0.020
+ TAY      CAC    CAG       single      1.524    0.020
+ TAY      NAD    CAF       single      1.332    0.020
+ TAY      CAF    OAE       double      1.220    0.020
+ TAY      CAG    CAF       single      1.507    0.020
+ TAY      HAA    CAA       single      1.059    0.020
+ TAY      HAAA   CAA       single      1.059    0.020
+ TAY      HAAB   CAA       single      1.059    0.020
+ TAY      HAB    CAB       single      1.059    0.020
+ TAY      HABA   CAB       single      1.059    0.020
+ TAY      HABB   CAB       single      1.059    0.020
+ TAY      HAC    CAC       single      1.059    0.020
+ TAY      HACA   CAC       single      1.059    0.020
+ TAY      HACB   CAC       single      1.059    0.020
+ TAY      HNAD   NAD       single      1.010    0.020
+ TAY      HNAA   NAD       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TAY      OAE    CAF    NAD     123.000    3.000
+ TAY      OAE    CAF    CAG     120.500    3.000
+ TAY      NAD    CAF    CAG     120.000    3.000
+ TAY      CAF    NAD    HNAA    120.000    3.000
+ TAY      CAF    NAD    HNAD    120.000    3.000
+ TAY      HNAA   NAD    HNAD    120.000    3.000
+ TAY      CAF    CAG    CAC     109.470    3.000
+ TAY      CAF    CAG    CAB     109.470    3.000
+ TAY      CAF    CAG    CAA     109.470    3.000
+ TAY      CAC    CAG    CAB     111.000    3.000
+ TAY      CAC    CAG    CAA     111.000    3.000
+ TAY      CAB    CAG    CAA     111.000    3.000
+ TAY      CAG    CAC    HACB    109.470    3.000
+ TAY      CAG    CAC    HACA    109.470    3.000
+ TAY      CAG    CAC    HAC     109.470    3.000
+ TAY      HACB   CAC    HACA    109.470    3.000
+ TAY      HACB   CAC    HAC     109.470    3.000
+ TAY      HACA   CAC    HAC     109.470    3.000
+ TAY      CAG    CAB    HABB    109.470    3.000
+ TAY      CAG    CAB    HABA    109.470    3.000
+ TAY      CAG    CAB    HAB     109.470    3.000
+ TAY      HABB   CAB    HABA    109.470    3.000
+ TAY      HABB   CAB    HAB     109.470    3.000
+ TAY      HABA   CAB    HAB     109.470    3.000
+ TAY      CAG    CAA    HAAB    109.470    3.000
+ TAY      CAG    CAA    HAAA    109.470    3.000
+ TAY      CAG    CAA    HAA     109.470    3.000
+ TAY      HAAB   CAA    HAAA    109.470    3.000
+ TAY      HAAB   CAA    HAA     109.470    3.000
+ TAY      HAAA   CAA    HAA     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TAY      CONST_1  OAE    CAF    NAD    HNAD       0.000    0.000   0
+ TAY      var_1    OAE    CAF    CAG    CAA        0.000   20.000   1
+ TAY      var_2    CAF    CAG    CAC    HAC      -59.979   20.000   1
+ TAY      var_3    CAF    CAG    CAB    HAB      179.987   20.000   1
+ TAY      var_4    CAF    CAG    CAA    HAA      -60.008   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TAY      chir_01  CAG    CAA    CAB    CAC       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TAY      plan-1    NAD       0.020
+ TAY      plan-1    CAF       0.020
+ TAY      plan-1    HNAD      0.020
+ TAY      plan-1    HNAA      0.020
+ TAY      plan-2    CAF       0.020
+ TAY      plan-2    NAD       0.020
+ TAY      plan-2    OAE       0.020
+ TAY      plan-2    CAG       0.020
+ TAY      plan-2    HNAA      0.020
+ TAY      plan-2    HNAD      0.020
+# ------------------------------------------------------

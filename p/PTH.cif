@@ -1,0 +1,253 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PTH      PTH 'CE1-METHYLENE-HYDROXY-PHOSPHOTYROSIN' peptide            30  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PTH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PTH           N      N    NH2       0.000      0.000    0.000    0.000
+ PTH           HN1    H    H         0.000      1.009    0.030   -0.087
+ PTH           HN2    H    H         0.000     -0.572    0.057   -0.835
+ PTH           CA     C    CH1       0.000     -0.628   -0.126    1.322
+ PTH           HA     H    H         0.000     -1.202    0.785    1.544
+ PTH           CB     C    CH2       0.000     -1.565   -1.334    1.328
+ PTH           HB2    H    H         0.000     -2.030   -1.428    2.312
+ PTH           HB3    H    H         0.000     -0.994   -2.238    1.108
+ PTH           CG     C    CR6       0.000     -2.633   -1.145    0.282
+ PTH           CD2    C    CR16      0.000     -2.427   -1.604   -1.006
+ PTH           HD2    H    H         0.000     -1.497   -2.098   -1.262
+ PTH           CE2    C    CR16      0.000     -3.403   -1.433   -1.967
+ PTH           HE2    H    H         0.000     -3.240   -1.793   -2.975
+ PTH           CZ     C    CR6       0.000     -4.593   -0.800   -1.639
+ PTH           CE1    C    CR6       0.000     -4.799   -0.341   -0.347
+ PTH           CF     C    CH2       0.000     -6.090    0.346    0.012
+ PTH           HF1    H    H         0.000     -6.926   -0.335   -0.163
+ PTH           HF2    H    H         0.000     -6.212    1.237   -0.607
+ PTH           OF     O    OH1       0.000     -6.062    0.723    1.390
+ PTH           HOF    H    H         0.000     -6.891    1.164    1.620
+ PTH           CD1    C    CR16      0.000     -3.820   -0.520    0.612
+ PTH           HD1    H    H         0.000     -3.984   -0.169    1.623
+ PTH           OH     O    O2        0.000     -5.556   -0.630   -2.584
+ PTH           P      P    P         0.000     -5.068    0.571   -3.535
+ PTH           O1P    O    OP       -0.666     -3.707    0.240   -4.108
+ PTH           O2P    O    OP       -0.666     -6.059    0.755   -4.664
+ PTH           O3P    O    OP       -0.666     -4.979    1.848   -2.729
+ PTH           C      C    C         0.000      0.440   -0.314    2.369
+ PTH           O      O    OC       -0.500      1.513   -0.885    2.072
+ PTH           OXT    O    OC       -0.500      0.255    0.101    3.534
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PTH      N      n/a    CA     START
+ PTH      HN1    N      .      .
+ PTH      HN2    N      .      .
+ PTH      CA     N      C      .
+ PTH      HA     CA     .      .
+ PTH      CB     CA     CG     .
+ PTH      HB2    CB     .      .
+ PTH      HB3    CB     .      .
+ PTH      CG     CB     CD2    .
+ PTH      CD2    CG     CE2    .
+ PTH      HD2    CD2    .      .
+ PTH      CE2    CD2    CZ     .
+ PTH      HE2    CE2    .      .
+ PTH      CZ     CE2    OH     .
+ PTH      CE1    CZ     CD1    .
+ PTH      CF     CE1    OF     .
+ PTH      HF1    CF     .      .
+ PTH      HF2    CF     .      .
+ PTH      OF     CF     HOF    .
+ PTH      HOF    OF     .      .
+ PTH      CD1    CE1    HD1    .
+ PTH      HD1    CD1    .      .
+ PTH      OH     CZ     P      .
+ PTH      P      OH     O3P    .
+ PTH      O1P    P      .      .
+ PTH      O2P    P      .      .
+ PTH      O3P    P      .      .
+ PTH      C      CA     .      END
+ PTH      O      C      .      .
+ PTH      OXT    C      .      .
+ PTH      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PTH      CA     N         single      1.450    0.020
+ PTH      C      CA        single      1.500    0.020
+ PTH      CB     CA        single      1.524    0.020
+ PTH      HA     CA        single      1.099    0.020
+ PTH      O      C         deloc       1.250    0.020
+ PTH      OXT    C         deloc       1.250    0.020
+ PTH      CG     CB        single      1.511    0.020
+ PTH      HB2    CB        single      1.092    0.020
+ PTH      HB3    CB        single      1.092    0.020
+ PTH      CG     CD1       double      1.390    0.020
+ PTH      CD2    CG        single      1.390    0.020
+ PTH      CD1    CE1       single      1.390    0.020
+ PTH      HD1    CD1       single      1.083    0.020
+ PTH      CE2    CD2       double      1.390    0.020
+ PTH      HD2    CD2       single      1.083    0.020
+ PTH      CE1    CZ        double      1.487    0.020
+ PTH      CF     CE1       single      1.511    0.020
+ PTH      CZ     CE2       single      1.390    0.020
+ PTH      HE2    CE2       single      1.083    0.020
+ PTH      OH     CZ        single      1.370    0.020
+ PTH      OF     CF        single      1.432    0.020
+ PTH      HF1    CF        single      1.092    0.020
+ PTH      HF2    CF        single      1.092    0.020
+ PTH      P      OH        single      1.610    0.020
+ PTH      O1P    P         deloc       1.510    0.020
+ PTH      O2P    P         deloc       1.510    0.020
+ PTH      O3P    P         deloc       1.510    0.020
+ PTH      HOF    OF        single      0.967    0.020
+ PTH      HN1    N         single      1.010    0.020
+ PTH      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PTH      HN1    N      HN2     120.000    3.000
+ PTH      HN1    N      CA      120.000    3.000
+ PTH      HN2    N      CA      120.000    3.000
+ PTH      N      CA     HA      109.470    3.000
+ PTH      N      CA     CB      109.470    3.000
+ PTH      N      CA     C       109.470    3.000
+ PTH      HA     CA     CB      108.340    3.000
+ PTH      HA     CA     C       108.810    3.000
+ PTH      CB     CA     C       109.470    3.000
+ PTH      CA     CB     HB2     109.470    3.000
+ PTH      CA     CB     HB3     109.470    3.000
+ PTH      CA     CB     CG      109.470    3.000
+ PTH      HB2    CB     HB3     107.900    3.000
+ PTH      HB2    CB     CG      109.470    3.000
+ PTH      HB3    CB     CG      109.470    3.000
+ PTH      CB     CG     CD2     120.000    3.000
+ PTH      CB     CG     CD1     120.000    3.000
+ PTH      CD2    CG     CD1     120.000    3.000
+ PTH      CG     CD2    HD2     120.000    3.000
+ PTH      CG     CD2    CE2     120.000    3.000
+ PTH      HD2    CD2    CE2     120.000    3.000
+ PTH      CD2    CE2    HE2     120.000    3.000
+ PTH      CD2    CE2    CZ      120.000    3.000
+ PTH      HE2    CE2    CZ      120.000    3.000
+ PTH      CE2    CZ     CE1     120.000    3.000
+ PTH      CE2    CZ     OH      120.000    3.000
+ PTH      CE1    CZ     OH      120.000    3.000
+ PTH      CZ     CE1    CF      120.000    3.000
+ PTH      CZ     CE1    CD1     120.000    3.000
+ PTH      CF     CE1    CD1     120.000    3.000
+ PTH      CE1    CF     HF1     109.470    3.000
+ PTH      CE1    CF     HF2     109.470    3.000
+ PTH      CE1    CF     OF      109.500    3.000
+ PTH      HF1    CF     HF2     107.900    3.000
+ PTH      HF1    CF     OF      109.470    3.000
+ PTH      HF2    CF     OF      109.470    3.000
+ PTH      CF     OF     HOF     109.470    3.000
+ PTH      CE1    CD1    HD1     120.000    3.000
+ PTH      CE1    CD1    CG      120.000    3.000
+ PTH      HD1    CD1    CG      120.000    3.000
+ PTH      CZ     OH     P       120.000    3.000
+ PTH      OH     P      O1P     108.200    3.000
+ PTH      OH     P      O2P     108.200    3.000
+ PTH      OH     P      O3P     108.200    3.000
+ PTH      O1P    P      O2P     119.900    3.000
+ PTH      O1P    P      O3P     119.900    3.000
+ PTH      O2P    P      O3P     119.900    3.000
+ PTH      CA     C      O       118.500    3.000
+ PTH      CA     C      OXT     118.500    3.000
+ PTH      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PTH      var_1    HN2    N      CA     C        175.000   20.000   1
+ PTH      var_2    N      CA     CB     CG       -60.048   20.000   3
+ PTH      var_3    CA     CB     CG     CD2       90.046   20.000   2
+ PTH      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ PTH      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ PTH      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ PTH      CONST_4  CD2    CE2    CZ     OH       180.000    0.000   0
+ PTH      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ PTH      var_4    CZ     CE1    CF     OF      -179.989   20.000   2
+ PTH      var_5    CE1    CF     OF     HOF     -179.945   20.000   1
+ PTH      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+ PTH      var_6    CE2    CZ     OH     P        -75.754   20.000   1
+ PTH      var_7    CZ     OH     P      O3P      -63.498   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PTH      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PTH      plan-1    N         0.020
+ PTH      plan-1    CA        0.020
+ PTH      plan-1    HN1       0.020
+ PTH      plan-1    HN2       0.020
+ PTH      plan-2    C         0.020
+ PTH      plan-2    CA        0.020
+ PTH      plan-2    O         0.020
+ PTH      plan-2    OXT       0.020
+ PTH      plan-3    CG        0.020
+ PTH      plan-3    CB        0.020
+ PTH      plan-3    CD1       0.020
+ PTH      plan-3    CD2       0.020
+ PTH      plan-3    CE1       0.020
+ PTH      plan-3    CE2       0.020
+ PTH      plan-3    CZ        0.020
+ PTH      plan-3    HD1       0.020
+ PTH      plan-3    HD2       0.020
+ PTH      plan-3    CF        0.020
+ PTH      plan-3    HE2       0.020
+ PTH      plan-3    OH        0.020
+# ------------------------------------------------------

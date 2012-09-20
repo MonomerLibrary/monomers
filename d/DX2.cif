@@ -1,0 +1,279 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DX2      DX2 '6-phenylpteridine-2,4,7-triamine    ' non-polymer        30  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DX2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DX2           NAB    N    NH2       0.000      0.000    0.000    0.000
+ DX2           HNAB   H    H         0.000      0.520   -0.872   -0.009
+ DX2           HNAA   H    H         0.000      0.511    0.877    0.007
+ DX2           C7     C    CR6       0.000     -1.383   -0.007    0.002
+ DX2           N8     N    NRD6      0.000     -2.046    1.124   -0.159
+ DX2           C8A    C    CR66      0.000     -3.382    1.114   -0.156
+ DX2           N1     N    NRD6      0.000     -4.090    2.241   -0.316
+ DX2           C2     C    CR6       0.000     -5.410    2.210   -0.310
+ DX2           N3     N    NRD6      0.000     -6.102    1.087   -0.149
+ DX2           N2     N    NH2       0.000     -6.100    3.395   -0.479
+ DX2           HN2A   H    H         0.000     -7.115    3.404   -0.479
+ DX2           HN2    H    H         0.000     -5.600    4.269   -0.606
+ DX2           C4A    C    CR66      0.000     -4.076   -0.108    0.020
+ DX2           C4     C    CR6       0.000     -5.495   -0.080    0.017
+ DX2           N4     N    NH2       0.000     -6.224   -1.237    0.189
+ DX2           HN4A   H    H         0.000     -5.753   -2.126    0.316
+ DX2           HN4    H    H         0.000     -7.238   -1.210    0.191
+ DX2           N5     N    NRD6      0.000     -3.401   -1.243    0.181
+ DX2           C6     C    CR6       0.000     -2.080   -1.225    0.177
+ DX2           CAN    C    CR6       0.000     -1.324   -2.488    0.357
+ DX2           CAG    C    CR16      0.000     -0.220   -2.527    1.207
+ DX2           HAG    H    H         0.000      0.089   -1.635    1.738
+ DX2           CAH    C    CR16      0.000     -1.716   -3.641   -0.323
+ DX2           HAH    H    H         0.000     -2.573   -3.616   -0.984
+ DX2           CAF    C    CR16      0.000     -1.008   -4.813   -0.152
+ DX2           HAF    H    H         0.000     -1.310   -5.709   -0.680
+ DX2           CAD    C    CR16      0.000      0.087   -4.846    0.693
+ DX2           HAD    H    H         0.000      0.638   -5.768    0.824
+ DX2           CAE    C    CR16      0.000      0.480   -3.706    1.370
+ DX2           HAE    H    H         0.000      1.338   -3.738    2.030
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DX2      NAB    n/a    C7     START
+ DX2      HNAB   NAB    .      .
+ DX2      HNAA   NAB    .      .
+ DX2      C7     NAB    N8     .
+ DX2      N8     C7     C8A    .
+ DX2      C8A    N8     C4A    .
+ DX2      N1     C8A    C2     .
+ DX2      C2     N1     N2     .
+ DX2      N3     C2     .      .
+ DX2      N2     C2     HN2    .
+ DX2      HN2A   N2     .      .
+ DX2      HN2    N2     .      .
+ DX2      C4A    C8A    N5     .
+ DX2      C4     C4A    N4     .
+ DX2      N4     C4     HN4    .
+ DX2      HN4A   N4     .      .
+ DX2      HN4    N4     .      .
+ DX2      N5     C4A    C6     .
+ DX2      C6     N5     CAN    .
+ DX2      CAN    C6     CAH    .
+ DX2      CAG    CAN    HAG    .
+ DX2      HAG    CAG    .      .
+ DX2      CAH    CAN    CAF    .
+ DX2      HAH    CAH    .      .
+ DX2      CAF    CAH    CAD    .
+ DX2      HAF    CAF    .      .
+ DX2      CAD    CAF    CAE    .
+ DX2      HAD    CAD    .      .
+ DX2      CAE    CAD    HAE    .
+ DX2      HAE    CAE    .      END
+ DX2      C4     N3     .    ADD
+ DX2      C6     C7     .    ADD
+ DX2      CAG    CAE    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DX2      C4     N3        double      1.350    0.020
+ DX2      C4     C4A       single      1.490    0.020
+ DX2      N4     C4        single      1.355    0.020
+ DX2      C6     C7        double      1.487    0.020
+ DX2      CAN    C6        single      1.487    0.020
+ DX2      C6     N5        single      1.350    0.020
+ DX2      N8     C7        single      1.350    0.020
+ DX2      C7     NAB       single      1.355    0.020
+ DX2      C2     N1        double      1.350    0.020
+ DX2      N1     C8A       single      1.350    0.020
+ DX2      N2     C2        single      1.355    0.020
+ DX2      N3     C2        single      1.350    0.020
+ DX2      CAG    CAE       double      1.390    0.020
+ DX2      CAG    CAN       single      1.390    0.020
+ DX2      CAE    CAD       single      1.390    0.020
+ DX2      CAD    CAF       double      1.390    0.020
+ DX2      CAF    CAH       single      1.390    0.020
+ DX2      CAH    CAN       double      1.390    0.020
+ DX2      N5     C4A       double      1.350    0.020
+ DX2      C4A    C8A       single      1.490    0.020
+ DX2      C8A    N8        double      1.350    0.020
+ DX2      HN2    N2        single      1.010    0.020
+ DX2      HN2A   N2        single      1.010    0.020
+ DX2      HAG    CAG       single      1.083    0.020
+ DX2      HAE    CAE       single      1.083    0.020
+ DX2      HAD    CAD       single      1.083    0.020
+ DX2      HAF    CAF       single      1.083    0.020
+ DX2      HAH    CAH       single      1.083    0.020
+ DX2      HN4    N4        single      1.010    0.020
+ DX2      HN4A   N4        single      1.010    0.020
+ DX2      HNAB   NAB       single      1.010    0.020
+ DX2      HNAA   NAB       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DX2      HNAB   NAB    HNAA    120.000    3.000
+ DX2      HNAB   NAB    C7      120.000    3.000
+ DX2      HNAA   NAB    C7      120.000    3.000
+ DX2      NAB    C7     N8      120.000    3.000
+ DX2      NAB    C7     C6      120.000    3.000
+ DX2      N8     C7     C6      120.000    3.000
+ DX2      C7     N8     C8A     120.000    3.000
+ DX2      N8     C8A    N1      120.000    3.000
+ DX2      N8     C8A    C4A     120.000    3.000
+ DX2      N1     C8A    C4A     120.000    3.000
+ DX2      C8A    N1     C2      120.000    3.000
+ DX2      N1     C2     N3      120.000    3.000
+ DX2      N1     C2     N2      120.000    3.000
+ DX2      N3     C2     N2      120.000    3.000
+ DX2      C2     N3     C4      120.000    3.000
+ DX2      C2     N2     HN2A    120.000    3.000
+ DX2      C2     N2     HN2     120.000    3.000
+ DX2      HN2A   N2     HN2     120.000    3.000
+ DX2      C8A    C4A    C4      120.000    3.000
+ DX2      C8A    C4A    N5      120.000    3.000
+ DX2      C4     C4A    N5      120.000    3.000
+ DX2      C4A    C4     N4      120.000    3.000
+ DX2      C4A    C4     N3      120.000    3.000
+ DX2      N4     C4     N3      120.000    3.000
+ DX2      C4     N4     HN4A    120.000    3.000
+ DX2      C4     N4     HN4     120.000    3.000
+ DX2      HN4A   N4     HN4     120.000    3.000
+ DX2      C4A    N5     C6      120.000    3.000
+ DX2      N5     C6     CAN     120.000    3.000
+ DX2      N5     C6     C7      120.000    3.000
+ DX2      CAN    C6     C7      120.000    3.000
+ DX2      C6     CAN    CAG     120.000    3.000
+ DX2      C6     CAN    CAH     120.000    3.000
+ DX2      CAG    CAN    CAH     120.000    3.000
+ DX2      CAN    CAG    HAG     120.000    3.000
+ DX2      CAN    CAG    CAE     120.000    3.000
+ DX2      HAG    CAG    CAE     120.000    3.000
+ DX2      CAN    CAH    HAH     120.000    3.000
+ DX2      CAN    CAH    CAF     120.000    3.000
+ DX2      HAH    CAH    CAF     120.000    3.000
+ DX2      CAH    CAF    HAF     120.000    3.000
+ DX2      CAH    CAF    CAD     120.000    3.000
+ DX2      HAF    CAF    CAD     120.000    3.000
+ DX2      CAF    CAD    HAD     120.000    3.000
+ DX2      CAF    CAD    CAE     120.000    3.000
+ DX2      HAD    CAD    CAE     120.000    3.000
+ DX2      CAD    CAE    HAE     120.000    3.000
+ DX2      CAD    CAE    CAG     120.000    3.000
+ DX2      HAE    CAE    CAG     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DX2      CONST_1  HNAA   NAB    C7     N8         8.665    0.000   0
+ DX2      CONST_2  NAB    C7     N8     C8A      180.000    0.000   0
+ DX2      CONST_3  C7     N8     C8A    C4A        0.000    0.000   0
+ DX2      CONST_4  N8     C8A    N1     C2       180.000    0.000   0
+ DX2      CONST_5  C8A    N1     C2     N2       180.000    0.000   0
+ DX2      CONST_6  N1     C2     N3     C4         0.000    0.000   0
+ DX2      CONST_7  N1     C2     N2     HN2        0.057    0.000   0
+ DX2      CONST_8  N8     C8A    C4A    N5         0.000    0.000   0
+ DX2      CONST_9  C8A    C4A    C4     N4       180.000    0.000   0
+ DX2      CONST_10 C4A    C4     N3     C2         0.000    0.000   0
+ DX2      CONST_11 C4A    C4     N4     HN4      179.738    0.000   0
+ DX2      CONST_12 C8A    C4A    N5     C6         0.000    0.000   0
+ DX2      CONST_13 C4A    N5     C6     CAN      180.000    0.000   0
+ DX2      CONST_14 N5     C6     C7     NAB      180.000    0.000   0
+ DX2      CONST_15 N5     C6     CAN    CAH        0.000    0.000   0
+ DX2      CONST_16 C6     CAN    CAG    CAE      180.000    0.000   0
+ DX2      CONST_17 CAN    CAG    CAE    CAD        0.000    0.000   0
+ DX2      CONST_18 C6     CAN    CAH    CAF      180.000    0.000   0
+ DX2      CONST_19 CAN    CAH    CAF    CAD        0.000    0.000   0
+ DX2      CONST_20 CAH    CAF    CAD    CAE        0.000    0.000   0
+ DX2      CONST_21 CAF    CAD    CAE    CAG        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DX2      plan-1    C4        0.020
+ DX2      plan-1    N3        0.020
+ DX2      plan-1    C4A       0.020
+ DX2      plan-1    N4        0.020
+ DX2      plan-1    N1        0.020
+ DX2      plan-1    C2        0.020
+ DX2      plan-1    C8A       0.020
+ DX2      plan-1    N5        0.020
+ DX2      plan-1    N2        0.020
+ DX2      plan-1    N8        0.020
+ DX2      plan-1    C7        0.020
+ DX2      plan-1    C6        0.020
+ DX2      plan-1    CAN       0.020
+ DX2      plan-1    NAB       0.020
+ DX2      plan-1    HN4A      0.020
+ DX2      plan-1    HN4       0.020
+ DX2      plan-1    HN2A      0.020
+ DX2      plan-1    HN2       0.020
+ DX2      plan-1    HNAB      0.020
+ DX2      plan-1    HNAA      0.020
+ DX2      plan-2    N2        0.020
+ DX2      plan-2    C2        0.020
+ DX2      plan-2    HN2       0.020
+ DX2      plan-2    HN2A      0.020
+ DX2      plan-3    CAG       0.020
+ DX2      plan-3    CAE       0.020
+ DX2      plan-3    CAN       0.020
+ DX2      plan-3    HAG       0.020
+ DX2      plan-3    CAD       0.020
+ DX2      plan-3    CAF       0.020
+ DX2      plan-3    CAH       0.020
+ DX2      plan-3    HAE       0.020
+ DX2      plan-3    HAD       0.020
+ DX2      plan-3    HAF       0.020
+ DX2      plan-3    HAH       0.020
+ DX2      plan-3    C6        0.020
+ DX2      plan-4    N4        0.020
+ DX2      plan-4    C4        0.020
+ DX2      plan-4    HN4       0.020
+ DX2      plan-4    HN4A      0.020
+ DX2      plan-5    NAB       0.020
+ DX2      plan-5    C7        0.020
+ DX2      plan-5    HNAB      0.020
+ DX2      plan-5    HNAA      0.020
+# ------------------------------------------------------

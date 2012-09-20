@@ -1,0 +1,177 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4CB      4CB '4-CARBOXYPHENYLBORONIC ACID         ' non-polymer        18  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4CB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4CB           OX2    O    OC       -0.500      0.000    0.000    0.000
+ 4CB           CX     C    C         0.000     -0.657    0.000    1.065
+ 4CB           OX1    O    OC       -0.500     -0.062    0.000    2.166
+ 4CB           CP4    C    CR6       0.000     -2.136    0.000    1.022
+ 4CB           CP3    C    CR16      0.000     -2.800    0.000   -0.206
+ 4CB           HC31   H    H         0.000     -2.233    0.000   -1.128
+ 4CB           CP2    C    CR16      0.000     -4.177    0.000   -0.244
+ 4CB           HC21   H    H         0.000     -4.692    0.000   -1.196
+ 4CB           CP5    C    CR16      0.000     -2.869    0.000    2.210
+ 4CB           HC51   H    H         0.000     -2.355   -0.003    3.163
+ 4CB           CP6    C    CR16      0.000     -4.246    0.004    2.169
+ 4CB           HC61   H    H         0.000     -4.815    0.010    3.090
+ 4CB           CP1    C    CR6       0.000     -4.907    0.000    0.943
+ 4CB           B      B    B         0.000     -6.477    0.000    0.896
+ 4CB           OB2    O    OH1       0.000     -7.152    0.000   -0.352
+ 4CB           HO21   H    H         0.000     -8.101    0.000   -0.347
+ 4CB           OB1    O    OH1       0.000     -7.222   -0.001    2.105
+ 4CB           HO11   H    H         0.000     -8.170   -0.001    2.046
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4CB      OX2    n/a    CX     START
+ 4CB      CX     OX2    CP4    .
+ 4CB      OX1    CX     .      .
+ 4CB      CP4    CX     CP5    .
+ 4CB      CP3    CP4    CP2    .
+ 4CB      HC31   CP3    .      .
+ 4CB      CP2    CP3    HC21   .
+ 4CB      HC21   CP2    .      .
+ 4CB      CP5    CP4    CP6    .
+ 4CB      HC51   CP5    .      .
+ 4CB      CP6    CP5    CP1    .
+ 4CB      HC61   CP6    .      .
+ 4CB      CP1    CP6    B      .
+ 4CB      B      CP1    OB1    .
+ 4CB      OB2    B      HO21   .
+ 4CB      HO21   OB2    .      .
+ 4CB      OB1    B      HO11   .
+ 4CB      HO11   OB1    .      END
+ 4CB      CP1    CP2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4CB      OB1    B         single      1.535    0.020
+ 4CB      OB2    B         single      1.535    0.020
+ 4CB      B      CP1       single      1.560    0.020
+ 4CB      HO11   OB1       single      0.967    0.020
+ 4CB      HO21   OB2       single      0.967    0.020
+ 4CB      CP1    CP2       double      1.390    0.020
+ 4CB      CP1    CP6       single      1.390    0.020
+ 4CB      CP2    CP3       single      1.390    0.020
+ 4CB      HC21   CP2       single      1.083    0.020
+ 4CB      CP3    CP4       double      1.390    0.020
+ 4CB      HC31   CP3       single      1.083    0.020
+ 4CB      CP4    CX        single      1.500    0.020
+ 4CB      CP5    CP4       single      1.390    0.020
+ 4CB      OX1    CX        deloc       1.250    0.020
+ 4CB      CX     OX2       deloc       1.250    0.020
+ 4CB      CP6    CP5       double      1.390    0.020
+ 4CB      HC51   CP5       single      1.083    0.020
+ 4CB      HC61   CP6       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4CB      OX2    CX     OX1     123.000    3.000
+ 4CB      OX2    CX     CP4     120.000    3.000
+ 4CB      OX1    CX     CP4     120.000    3.000
+ 4CB      CX     CP4    CP3     120.000    3.000
+ 4CB      CX     CP4    CP5     120.000    3.000
+ 4CB      CP3    CP4    CP5     120.000    3.000
+ 4CB      CP4    CP3    HC31    120.000    3.000
+ 4CB      CP4    CP3    CP2     120.000    3.000
+ 4CB      HC31   CP3    CP2     120.000    3.000
+ 4CB      CP3    CP2    HC21    120.000    3.000
+ 4CB      CP3    CP2    CP1     120.000    3.000
+ 4CB      HC21   CP2    CP1     120.000    3.000
+ 4CB      CP4    CP5    HC51    120.000    3.000
+ 4CB      CP4    CP5    CP6     120.000    3.000
+ 4CB      HC51   CP5    CP6     120.000    3.000
+ 4CB      CP5    CP6    HC61    120.000    3.000
+ 4CB      CP5    CP6    CP1     120.000    3.000
+ 4CB      HC61   CP6    CP1     120.000    3.000
+ 4CB      CP6    CP1    B       120.000    3.000
+ 4CB      CP6    CP1    CP2     120.000    3.000
+ 4CB      B      CP1    CP2     120.000    3.000
+ 4CB      CP1    B      OB2     120.000    3.000
+ 4CB      CP1    B      OB1     120.000    3.000
+ 4CB      OB2    B      OB1     120.000    3.000
+ 4CB      B      OB2    HO21    120.000    3.000
+ 4CB      B      OB1    HO11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4CB      var_1    OX2    CX     CP4    CP5      180.000   20.000   1
+ 4CB      CONST_1  CX     CP4    CP3    CP2      180.000    0.000   0
+ 4CB      CONST_2  CP4    CP3    CP2    CP1        0.000    0.000   0
+ 4CB      CONST_3  CX     CP4    CP5    CP6      180.000    0.000   0
+ 4CB      CONST_4  CP4    CP5    CP6    CP1        0.000    0.000   0
+ 4CB      CONST_5  CP5    CP6    CP1    B        180.000    0.000   0
+ 4CB      CONST_6  CP6    CP1    CP2    CP3        0.000    0.000   0
+ 4CB      var_2    CP6    CP1    B      OB1       -0.237   20.000   1
+ 4CB      var_3    CP1    B      OB2    HO21     180.000   20.000   1
+ 4CB      var_4    CP1    B      OB1    HO11    -179.989   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4CB      plan-1    CP1       0.020
+ 4CB      plan-1    B         0.020
+ 4CB      plan-1    CP2       0.020
+ 4CB      plan-1    CP6       0.020
+ 4CB      plan-1    CP3       0.020
+ 4CB      plan-1    CP4       0.020
+ 4CB      plan-1    CP5       0.020
+ 4CB      plan-1    HC21      0.020
+ 4CB      plan-1    HC31      0.020
+ 4CB      plan-1    CX        0.020
+ 4CB      plan-1    HC51      0.020
+ 4CB      plan-1    HC61      0.020
+ 4CB      plan-2    CX        0.020
+ 4CB      plan-2    CP4       0.020
+ 4CB      plan-2    OX1       0.020
+ 4CB      plan-2    OX2       0.020
+# ------------------------------------------------------

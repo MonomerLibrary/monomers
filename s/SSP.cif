@@ -1,0 +1,175 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SSP      SSP 'DITHIOBIS-(PROPANE)                 ' non-polymer        22   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SSP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SSP           CA2    C    CH3       0.000      0.000    0.000    0.000
+ SSP           HA21   H    H         0.000      0.658    0.137    0.819
+ SSP           HA22   H    H         0.000      0.553    0.030   -0.904
+ SSP           HA23   H    H         0.000     -0.722    0.775   -0.004
+ SSP           CB2    C    CH2       0.000     -0.698   -1.347    0.127
+ SSP           HB21   H    H         0.000      0.059   -2.134    0.113
+ SSP           HB22   H    H         0.000     -1.369   -1.473   -0.725
+ SSP           CG2    C    CH2       0.000     -1.497   -1.430    1.422
+ SSP           HG21   H    H         0.000     -2.243   -0.633    1.430
+ SSP           HG22   H    H         0.000     -0.817   -1.299    2.267
+ SSP           S2     S    S2        0.000     -2.324   -3.034    1.555
+ SSP           S1     S    S2        0.000     -3.297   -2.855    3.356
+ SSP           CG1    C    CH2       0.000     -4.893   -2.161    2.839
+ SSP           HG11   H    H         0.000     -5.373   -2.855    2.145
+ SSP           HG12   H    H         0.000     -4.718   -1.208    2.336
+ SSP           CB1    C    CH2       0.000     -5.797   -1.941    4.047
+ SSP           HB11   H    H         0.000     -5.298   -1.257    4.736
+ SSP           HB12   H    H         0.000     -5.957   -2.901    4.542
+ SSP           CA1    C    CH3       0.000     -7.137   -1.355    3.629
+ SSP           HA13   H    H         0.000     -7.743   -1.210    4.486
+ SSP           HA12   H    H         0.000     -6.982   -0.424    3.146
+ SSP           HA11   H    H         0.000     -7.623   -2.020    2.963
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SSP      CA2    n/a    CB2    START
+ SSP      HA21   CA2    .      .
+ SSP      HA22   CA2    .      .
+ SSP      HA23   CA2    .      .
+ SSP      CB2    CA2    CG2    .
+ SSP      HB21   CB2    .      .
+ SSP      HB22   CB2    .      .
+ SSP      CG2    CB2    S2     .
+ SSP      HG21   CG2    .      .
+ SSP      HG22   CG2    .      .
+ SSP      S2     CG2    S1     .
+ SSP      S1     S2     CG1    .
+ SSP      CG1    S1     CB1    .
+ SSP      HG11   CG1    .      .
+ SSP      HG12   CG1    .      .
+ SSP      CB1    CG1    CA1    .
+ SSP      HB11   CB1    .      .
+ SSP      HB12   CB1    .      .
+ SSP      CA1    CB1    HA11   .
+ SSP      HA13   CA1    .      .
+ SSP      HA12   CA1    .      .
+ SSP      HA11   CA1    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SSP      S1     S2        single      2.000    0.020
+ SSP      CG1    S1        single      1.762    0.020
+ SSP      S2     CG2       single      1.762    0.020
+ SSP      CA1    CB1       single      1.513    0.020
+ SSP      HA11   CA1       single      1.059    0.020
+ SSP      HA12   CA1       single      1.059    0.020
+ SSP      HA13   CA1       single      1.059    0.020
+ SSP      CB1    CG1       single      1.524    0.020
+ SSP      HB11   CB1       single      1.092    0.020
+ SSP      HB12   CB1       single      1.092    0.020
+ SSP      HG11   CG1       single      1.092    0.020
+ SSP      HG12   CG1       single      1.092    0.020
+ SSP      CB2    CA2       single      1.513    0.020
+ SSP      HA21   CA2       single      1.059    0.020
+ SSP      HA22   CA2       single      1.059    0.020
+ SSP      HA23   CA2       single      1.059    0.020
+ SSP      CG2    CB2       single      1.524    0.020
+ SSP      HB21   CB2       single      1.092    0.020
+ SSP      HB22   CB2       single      1.092    0.020
+ SSP      HG21   CG2       single      1.092    0.020
+ SSP      HG22   CG2       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SSP      HA21   CA2    HA22    109.470    3.000
+ SSP      HA21   CA2    HA23    109.470    3.000
+ SSP      HA22   CA2    HA23    109.470    3.000
+ SSP      HA21   CA2    CB2     109.470    3.000
+ SSP      HA22   CA2    CB2     109.470    3.000
+ SSP      HA23   CA2    CB2     109.470    3.000
+ SSP      CA2    CB2    HB21    109.470    3.000
+ SSP      CA2    CB2    HB22    109.470    3.000
+ SSP      CA2    CB2    CG2     111.000    3.000
+ SSP      HB21   CB2    HB22    107.900    3.000
+ SSP      HB21   CB2    CG2     109.470    3.000
+ SSP      HB22   CB2    CG2     109.470    3.000
+ SSP      CB2    CG2    HG21    109.470    3.000
+ SSP      CB2    CG2    HG22    109.470    3.000
+ SSP      CB2    CG2    S2      109.500    3.000
+ SSP      HG21   CG2    HG22    107.900    3.000
+ SSP      HG21   CG2    S2      109.500    3.000
+ SSP      HG22   CG2    S2      109.500    3.000
+ SSP      CG2    S2     S1      101.748    3.000
+ SSP      S2     S1     CG1     101.538    3.000
+ SSP      S1     CG1    HG11    109.500    3.000
+ SSP      S1     CG1    HG12    109.500    3.000
+ SSP      S1     CG1    CB1     109.500    3.000
+ SSP      HG11   CG1    HG12    107.900    3.000
+ SSP      HG11   CG1    CB1     109.470    3.000
+ SSP      HG12   CG1    CB1     109.470    3.000
+ SSP      CG1    CB1    HB11    109.470    3.000
+ SSP      CG1    CB1    HB12    109.470    3.000
+ SSP      CG1    CB1    CA1     111.000    3.000
+ SSP      HB11   CB1    HB12    107.900    3.000
+ SSP      HB11   CB1    CA1     109.470    3.000
+ SSP      HB12   CB1    CA1     109.470    3.000
+ SSP      CB1    CA1    HA13    109.470    3.000
+ SSP      CB1    CA1    HA12    109.470    3.000
+ SSP      CB1    CA1    HA11    109.470    3.000
+ SSP      HA13   CA1    HA12    109.470    3.000
+ SSP      HA13   CA1    HA11    109.470    3.000
+ SSP      HA12   CA1    HA11    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SSP      var_1    HA23   CA2    CB2    CG2      -60.378   20.000   3
+ SSP      var_2    CA2    CB2    CG2    S2       179.832   20.000   3
+ SSP      var_3    CB2    CG2    S2     S1      -180.000   20.000   1
+ SSP      var_4    CG2    S2     S1     CG1       90.051   20.000   1
+ SSP      var_5    S2     S1     CG1    CB1     -179.991   20.000   1
+ SSP      var_6    S1     CG1    CB1    CA1      179.805   20.000   3
+ SSP      var_7    CG1    CB1    CA1    HA11      60.174   20.000   3
+# ------------------------------------------------------

@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ISA      ISA '3-(4-IODO-PHENYL)-2-MERCAPTO-PROPION' non-polymer        21  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ISA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ISA           O2     O    OC       -0.500      0.000    0.000    0.000
+ ISA           C2     C    C         0.000     -0.935    0.824   -0.112
+ ISA           O3     O    OC       -0.500     -0.692    2.051   -0.098
+ ISA           C3     C    CH1       0.000     -2.354    0.337   -0.261
+ ISA           H3     H    H         0.000     -2.356   -0.636   -0.772
+ ISA           S3     S    SH1       0.000     -3.109    0.161    1.377
+ ISA           HS3    H    H         0.000     -3.109    1.338    2.001
+ ISA           C4     C    CH2       0.000     -3.154    1.346   -1.086
+ ISA           H41    H    H         0.000     -2.697    1.453   -2.072
+ ISA           H42    H    H         0.000     -3.150    2.313   -0.578
+ ISA           CG     C    CR6       0.000     -4.573    0.861   -1.236
+ ISA           CD1    C    CR16      0.000     -5.527    1.215   -0.302
+ ISA           HD1    H    H         0.000     -5.256    1.843    0.538
+ ISA           CE1    C    CR16      0.000     -6.827    0.770   -0.439
+ ISA           HE1    H    H         0.000     -7.575    1.047    0.293
+ ISA           CD2    C    CR16      0.000     -4.920    0.066   -2.311
+ ISA           HD2    H    H         0.000     -4.173   -0.204   -3.048
+ ISA           CE2    C    CR16      0.000     -6.219   -0.385   -2.447
+ ISA           HE2    H    H         0.000     -6.489   -1.014   -3.286
+ ISA           CZ     C    CR6       0.000     -7.174   -0.030   -1.512
+ ISA           I      I    I         0.000     -9.147   -0.705   -1.722
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ISA      O2     n/a    C2     START
+ ISA      C2     O2     C3     .
+ ISA      O3     C2     .      .
+ ISA      C3     C2     C4     .
+ ISA      H3     C3     .      .
+ ISA      S3     C3     HS3    .
+ ISA      HS3    S3     .      .
+ ISA      C4     C3     CG     .
+ ISA      H41    C4     .      .
+ ISA      H42    C4     .      .
+ ISA      CG     C4     CD2    .
+ ISA      CD1    CG     CE1    .
+ ISA      HD1    CD1    .      .
+ ISA      CE1    CD1    HE1    .
+ ISA      HE1    CE1    .      .
+ ISA      CD2    CG     CE2    .
+ ISA      HD2    CD2    .      .
+ ISA      CE2    CD2    CZ     .
+ ISA      HE2    CE2    .      .
+ ISA      CZ     CE2    I      .
+ ISA      I      CZ     .      END
+ ISA      CZ     CE1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ISA      I      CZ        single      2.090    0.020
+ ISA      CZ     CE1       double      1.390    0.020
+ ISA      CZ     CE2       single      1.390    0.020
+ ISA      CE1    CD1       single      1.390    0.020
+ ISA      HE1    CE1       single      1.083    0.020
+ ISA      CD1    CG        double      1.390    0.020
+ ISA      HD1    CD1       single      1.083    0.020
+ ISA      CE2    CD2       double      1.390    0.020
+ ISA      HE2    CE2       single      1.083    0.020
+ ISA      CD2    CG        single      1.390    0.020
+ ISA      HD2    CD2       single      1.083    0.020
+ ISA      CG     C4        single      1.511    0.020
+ ISA      C4     C3        single      1.524    0.020
+ ISA      H41    C4        single      1.092    0.020
+ ISA      H42    C4        single      1.092    0.020
+ ISA      S3     C3        single      1.790    0.020
+ ISA      C3     C2        single      1.500    0.020
+ ISA      H3     C3        single      1.099    0.020
+ ISA      HS3    S3        single      1.330    0.020
+ ISA      O3     C2        deloc       1.250    0.020
+ ISA      C2     O2        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ISA      O2     C2     O3      123.000    3.000
+ ISA      O2     C2     C3      118.500    3.000
+ ISA      O3     C2     C3      118.500    3.000
+ ISA      C2     C3     H3      108.810    3.000
+ ISA      C2     C3     S3      109.500    3.000
+ ISA      C2     C3     C4      109.470    3.000
+ ISA      H3     C3     S3      109.500    3.000
+ ISA      H3     C3     C4      108.340    3.000
+ ISA      S3     C3     C4      109.500    3.000
+ ISA      C3     S3     HS3     109.500    3.000
+ ISA      C3     C4     H41     109.470    3.000
+ ISA      C3     C4     H42     109.470    3.000
+ ISA      C3     C4     CG      109.470    3.000
+ ISA      H41    C4     H42     107.900    3.000
+ ISA      H41    C4     CG      109.470    3.000
+ ISA      H42    C4     CG      109.470    3.000
+ ISA      C4     CG     CD1     120.000    3.000
+ ISA      C4     CG     CD2     120.000    3.000
+ ISA      CD1    CG     CD2     120.000    3.000
+ ISA      CG     CD1    HD1     120.000    3.000
+ ISA      CG     CD1    CE1     120.000    3.000
+ ISA      HD1    CD1    CE1     120.000    3.000
+ ISA      CD1    CE1    HE1     120.000    3.000
+ ISA      CD1    CE1    CZ      120.000    3.000
+ ISA      HE1    CE1    CZ      120.000    3.000
+ ISA      CG     CD2    HD2     120.000    3.000
+ ISA      CG     CD2    CE2     120.000    3.000
+ ISA      HD2    CD2    CE2     120.000    3.000
+ ISA      CD2    CE2    HE2     120.000    3.000
+ ISA      CD2    CE2    CZ      120.000    3.000
+ ISA      HE2    CE2    CZ      120.000    3.000
+ ISA      CE2    CZ     I       120.000    3.000
+ ISA      CE2    CZ     CE1     120.000    3.000
+ ISA      I      CZ     CE1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ISA      var_1    O2     C2     C3     C4      -150.004   20.000   3
+ ISA      var_2    C2     C3     S3     HS3       59.980   20.000   1
+ ISA      var_3    C2     C3     C4     CG       179.987   20.000   3
+ ISA      var_4    C3     C4     CG     CD2      -90.301   20.000   2
+ ISA      CONST_1  C4     CG     CD1    CE1      180.000    0.000   0
+ ISA      CONST_2  CG     CD1    CE1    CZ         0.000    0.000   0
+ ISA      CONST_3  C4     CG     CD2    CE2      180.000    0.000   0
+ ISA      CONST_4  CG     CD2    CE2    CZ         0.000    0.000   0
+ ISA      CONST_5  CD2    CE2    CZ     I        180.000    0.000   0
+ ISA      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ISA      chir_01  C3     C4     S3     C2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ISA      plan-1    CZ        0.020
+ ISA      plan-1    I         0.020
+ ISA      plan-1    CE1       0.020
+ ISA      plan-1    CE2       0.020
+ ISA      plan-1    CD1       0.020
+ ISA      plan-1    CD2       0.020
+ ISA      plan-1    CG        0.020
+ ISA      plan-1    HE1       0.020
+ ISA      plan-1    HD1       0.020
+ ISA      plan-1    HE2       0.020
+ ISA      plan-1    HD2       0.020
+ ISA      plan-1    C4        0.020
+ ISA      plan-2    C2        0.020
+ ISA      plan-2    C3        0.020
+ ISA      plan-2    O3        0.020
+ ISA      plan-2    O2        0.020
+# ------------------------------------------------------

@@ -1,0 +1,247 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LJ5      LJ5 'N-(3,5-dibromo-4-hydroxyphenyl)benza' non-polymer        27  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LJ5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LJ5           OAA    O    O         0.000      0.000    0.000    0.000
+ LJ5           CAM    C    C         0.000     -0.102   -0.971   -0.726
+ LJ5           CAQ    C    CR6       0.000      1.109   -1.599   -1.294
+ LJ5           CAI    C    CR16      0.000      0.995   -2.718   -2.122
+ LJ5           HAI    H    H         0.000      0.019   -3.130   -2.346
+ LJ5           CAG    C    CR16      0.000      2.129   -3.296   -2.653
+ LJ5           HAG    H    H         0.000      2.042   -4.158   -3.303
+ LJ5           CAE    C    CR16      0.000      3.378   -2.778   -2.358
+ LJ5           HAE    H    H         0.000      4.265   -3.239   -2.774
+ LJ5           CAF    C    CR16      0.000      3.498   -1.673   -1.534
+ LJ5           HAF    H    H         0.000      4.478   -1.271   -1.307
+ LJ5           CAH    C    CR16      0.000      2.372   -1.082   -1.000
+ LJ5           HAH    H    H         0.000      2.467   -0.218   -0.354
+ LJ5           NAL    N    NH1       0.000     -1.320   -1.473   -1.010
+ LJ5           HNAL   H    H         0.000     -1.402   -2.326   -1.546
+ LJ5           CAN    C    CR6       0.000     -2.471   -0.813   -0.564
+ LJ5           CAJ    C    CR16      0.000     -2.486    0.571   -0.470
+ LJ5           HAJ    H    H         0.000     -1.607    1.142   -0.742
+ LJ5           CAK    C    CR16      0.000     -3.599   -1.546   -0.216
+ LJ5           HAK    H    H         0.000     -3.588   -2.626   -0.289
+ LJ5           CAP    C    CR6       0.000     -4.736   -0.894    0.223
+ LJ5           BRAD   BR   BR        0.000     -6.272   -1.890    0.697
+ LJ5           CAR    C    CR6       0.000     -4.750    0.490    0.317
+ LJ5           OAB    O    OH1       0.000     -5.870    1.131    0.750
+ LJ5           HOAB   H    H         0.000     -6.435    1.338   -0.006
+ LJ5           CAO    C    CR6       0.000     -3.623    1.222   -0.029
+ LJ5           BRAC   BR   BR        0.000     -3.644    3.109    0.099
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LJ5      OAA    n/a    CAM    START
+ LJ5      CAM    OAA    NAL    .
+ LJ5      CAQ    CAM    CAI    .
+ LJ5      CAI    CAQ    CAG    .
+ LJ5      HAI    CAI    .      .
+ LJ5      CAG    CAI    CAE    .
+ LJ5      HAG    CAG    .      .
+ LJ5      CAE    CAG    CAF    .
+ LJ5      HAE    CAE    .      .
+ LJ5      CAF    CAE    CAH    .
+ LJ5      HAF    CAF    .      .
+ LJ5      CAH    CAF    HAH    .
+ LJ5      HAH    CAH    .      .
+ LJ5      NAL    CAM    CAN    .
+ LJ5      HNAL   NAL    .      .
+ LJ5      CAN    NAL    CAK    .
+ LJ5      CAJ    CAN    HAJ    .
+ LJ5      HAJ    CAJ    .      .
+ LJ5      CAK    CAN    CAP    .
+ LJ5      HAK    CAK    .      .
+ LJ5      CAP    CAK    CAR    .
+ LJ5      BRAD   CAP    .      .
+ LJ5      CAR    CAP    CAO    .
+ LJ5      OAB    CAR    HOAB   .
+ LJ5      HOAB   OAB    .      .
+ LJ5      CAO    CAR    BRAC   .
+ LJ5      BRAC   CAO    .      END
+ LJ5      CAJ    CAO    .    ADD
+ LJ5      CAQ    CAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LJ5      CAJ    CAO       double      1.390    0.020
+ LJ5      CAJ    CAN       single      1.390    0.020
+ LJ5      BRAC   CAO       single      1.890    0.020
+ LJ5      CAO    CAR       single      1.487    0.020
+ LJ5      OAB    CAR       single      1.362    0.020
+ LJ5      CAR    CAP       double      1.487    0.020
+ LJ5      BRAD   CAP       single      1.890    0.020
+ LJ5      CAP    CAK       single      1.390    0.020
+ LJ5      CAK    CAN       double      1.390    0.020
+ LJ5      CAN    NAL       single      1.350    0.020
+ LJ5      NAL    CAM       single      1.330    0.020
+ LJ5      CAM    OAA       double      1.220    0.020
+ LJ5      CAQ    CAM       single      1.500    0.020
+ LJ5      CAQ    CAH       double      1.390    0.020
+ LJ5      CAI    CAQ       single      1.390    0.020
+ LJ5      CAH    CAF       single      1.390    0.020
+ LJ5      CAF    CAE       double      1.390    0.020
+ LJ5      CAE    CAG       single      1.390    0.020
+ LJ5      CAG    CAI       double      1.390    0.020
+ LJ5      HAJ    CAJ       single      1.083    0.020
+ LJ5      HOAB   OAB       single      0.967    0.020
+ LJ5      HAK    CAK       single      1.083    0.020
+ LJ5      HNAL   NAL       single      1.010    0.020
+ LJ5      HAH    CAH       single      1.083    0.020
+ LJ5      HAF    CAF       single      1.083    0.020
+ LJ5      HAE    CAE       single      1.083    0.020
+ LJ5      HAG    CAG       single      1.083    0.020
+ LJ5      HAI    CAI       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LJ5      OAA    CAM    CAQ     120.500    3.000
+ LJ5      OAA    CAM    NAL     123.000    3.000
+ LJ5      CAQ    CAM    NAL     120.000    3.000
+ LJ5      CAM    CAQ    CAI     120.000    3.000
+ LJ5      CAM    CAQ    CAH     120.000    3.000
+ LJ5      CAI    CAQ    CAH     120.000    3.000
+ LJ5      CAQ    CAI    HAI     120.000    3.000
+ LJ5      CAQ    CAI    CAG     120.000    3.000
+ LJ5      HAI    CAI    CAG     120.000    3.000
+ LJ5      CAI    CAG    HAG     120.000    3.000
+ LJ5      CAI    CAG    CAE     120.000    3.000
+ LJ5      HAG    CAG    CAE     120.000    3.000
+ LJ5      CAG    CAE    HAE     120.000    3.000
+ LJ5      CAG    CAE    CAF     120.000    3.000
+ LJ5      HAE    CAE    CAF     120.000    3.000
+ LJ5      CAE    CAF    HAF     120.000    3.000
+ LJ5      CAE    CAF    CAH     120.000    3.000
+ LJ5      HAF    CAF    CAH     120.000    3.000
+ LJ5      CAF    CAH    HAH     120.000    3.000
+ LJ5      CAF    CAH    CAQ     120.000    3.000
+ LJ5      HAH    CAH    CAQ     120.000    3.000
+ LJ5      CAM    NAL    HNAL    120.000    3.000
+ LJ5      CAM    NAL    CAN     120.000    3.000
+ LJ5      HNAL   NAL    CAN     120.000    3.000
+ LJ5      NAL    CAN    CAJ     120.000    3.000
+ LJ5      NAL    CAN    CAK     120.000    3.000
+ LJ5      CAJ    CAN    CAK     120.000    3.000
+ LJ5      CAN    CAJ    HAJ     120.000    3.000
+ LJ5      CAN    CAJ    CAO     120.000    3.000
+ LJ5      HAJ    CAJ    CAO     120.000    3.000
+ LJ5      CAN    CAK    HAK     120.000    3.000
+ LJ5      CAN    CAK    CAP     120.000    3.000
+ LJ5      HAK    CAK    CAP     120.000    3.000
+ LJ5      CAK    CAP    BRAD    120.000    3.000
+ LJ5      CAK    CAP    CAR     120.000    3.000
+ LJ5      BRAD   CAP    CAR     120.000    3.000
+ LJ5      CAP    CAR    OAB     120.000    3.000
+ LJ5      CAP    CAR    CAO     120.000    3.000
+ LJ5      OAB    CAR    CAO     120.000    3.000
+ LJ5      CAR    OAB    HOAB    109.470    3.000
+ LJ5      CAR    CAO    BRAC    120.000    3.000
+ LJ5      CAR    CAO    CAJ     120.000    3.000
+ LJ5      BRAC   CAO    CAJ     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LJ5      var_1    OAA    CAM    CAQ    CAI      179.672   20.000   1
+ LJ5      CONST_1  CAM    CAQ    CAH    CAF      180.000    0.000   0
+ LJ5      CONST_2  CAM    CAQ    CAI    CAG      180.000    0.000   0
+ LJ5      CONST_3  CAQ    CAI    CAG    CAE        0.000    0.000   0
+ LJ5      CONST_4  CAI    CAG    CAE    CAF        0.000    0.000   0
+ LJ5      CONST_5  CAG    CAE    CAF    CAH        0.000    0.000   0
+ LJ5      CONST_6  CAE    CAF    CAH    CAQ        0.000    0.000   0
+ LJ5      CONST_7  OAA    CAM    NAL    CAN        0.000    0.000   0
+ LJ5      var_2    CAM    NAL    CAN    CAK     -146.775   20.000   1
+ LJ5      CONST_8  NAL    CAN    CAJ    CAO      180.000    0.000   0
+ LJ5      CONST_9  CAN    CAJ    CAO    CAR        0.000    0.000   0
+ LJ5      CONST_10 NAL    CAN    CAK    CAP      180.000    0.000   0
+ LJ5      CONST_11 CAN    CAK    CAP    CAR        0.000    0.000   0
+ LJ5      CONST_12 CAK    CAP    CAR    CAO        0.000    0.000   0
+ LJ5      var_3    CAP    CAR    OAB    HOAB     -90.049   20.000   1
+ LJ5      CONST_13 CAP    CAR    CAO    BRAC     180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LJ5      plan-1    CAJ       0.020
+ LJ5      plan-1    CAO       0.020
+ LJ5      plan-1    CAN       0.020
+ LJ5      plan-1    HAJ       0.020
+ LJ5      plan-1    CAR       0.020
+ LJ5      plan-1    CAP       0.020
+ LJ5      plan-1    CAK       0.020
+ LJ5      plan-1    BRAC      0.020
+ LJ5      plan-1    OAB       0.020
+ LJ5      plan-1    BRAD      0.020
+ LJ5      plan-1    HAK       0.020
+ LJ5      plan-1    NAL       0.020
+ LJ5      plan-1    HNAL      0.020
+ LJ5      plan-2    NAL       0.020
+ LJ5      plan-2    CAN       0.020
+ LJ5      plan-2    CAM       0.020
+ LJ5      plan-2    HNAL      0.020
+ LJ5      plan-3    CAM       0.020
+ LJ5      plan-3    NAL       0.020
+ LJ5      plan-3    OAA       0.020
+ LJ5      plan-3    CAQ       0.020
+ LJ5      plan-3    HNAL      0.020
+ LJ5      plan-4    CAQ       0.020
+ LJ5      plan-4    CAM       0.020
+ LJ5      plan-4    CAH       0.020
+ LJ5      plan-4    CAI       0.020
+ LJ5      plan-4    CAF       0.020
+ LJ5      plan-4    CAE       0.020
+ LJ5      plan-4    CAG       0.020
+ LJ5      plan-4    HAH       0.020
+ LJ5      plan-4    HAF       0.020
+ LJ5      plan-4    HAE       0.020
+ LJ5      plan-4    HAG       0.020
+ LJ5      plan-4    HAI       0.020
+# ------------------------------------------------------

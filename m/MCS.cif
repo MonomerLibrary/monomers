@@ -1,0 +1,191 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MCS      MCS 'MALONYL CYSTEINE                    ' peptide            20  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MCS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MCS           N      N    NH2       0.000      0.000    0.000    0.000
+ MCS           HN1    H    H         0.000      0.734    0.238   -0.650
+ MCS           HN2    H    H         0.000      0.208   -0.124    0.979
+ MCS           CA     C    CH1       0.000     -1.352   -0.163   -0.473
+ MCS           HA     H    H         0.000     -1.594   -1.230   -0.376
+ MCS           CB     C    CH2       0.000     -2.359    0.597    0.396
+ MCS           HBC1   H    H         0.000     -2.204    0.274    1.428
+ MCS           HBC2   H    H         0.000     -3.357    0.301    0.069
+ MCS           SAI    S    S2        0.000     -2.195    2.410    0.293
+ MCS           CAK    C    C         0.000     -3.516    2.895    1.356
+ MCS           OAC    O    O         0.000     -4.257    2.096    1.916
+ MCS           CAG    C    CH2       0.000     -3.645    4.394    1.481
+ MCS           HAG1   H    H         0.000     -4.295    4.725    0.667
+ MCS           HAG2   H    H         0.000     -2.646    4.811    1.340
+ MCS           CAJ    C    C         0.000     -4.206    4.865    2.796
+ MCS           OAE    O    OC       -0.500     -4.288    6.112    2.862
+ MCS           OAB    O    OC       -0.500     -4.558    4.101    3.722
+ MCS           C      C    C         0.000     -1.483    0.183   -1.947
+ MCS           O      O    OC       -0.500     -0.554    0.662   -2.634
+ MCS           OXT    O    OC       -0.500     -2.623   -0.045   -2.408
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MCS      N      n/a    CA     START
+ MCS      HN1    N      .      .
+ MCS      HN2    N      .      .
+ MCS      CA     N      C      .
+ MCS      HA     CA     .      .
+ MCS      CB     CA     SAI    .
+ MCS      HBC1   CB     .      .
+ MCS      HBC2   CB     .      .
+ MCS      SAI    CB     CAK    .
+ MCS      CAK    SAI    CAG    .
+ MCS      OAC    CAK    .      .
+ MCS      CAG    CAK    CAJ    .
+ MCS      HAG1   CAG    .      .
+ MCS      HAG2   CAG    .      .
+ MCS      CAJ    CAG    OAB    .
+ MCS      OAE    CAJ    .      .
+ MCS      OAB    CAJ    .      .
+ MCS      C      CA     .      END
+ MCS      O      C      .      .
+ MCS      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MCS      O      C         deloc       1.250    0.020
+ MCS      C      CA        single      1.500    0.020
+ MCS      OXT    C         deloc       1.250    0.020
+ MCS      CA     N         single      1.450    0.020
+ MCS      CB     CA        single      1.524    0.020
+ MCS      HA     CA        single      1.099    0.020
+ MCS      SAI    CB        single      1.762    0.020
+ MCS      HBC1   CB        single      1.092    0.020
+ MCS      HBC2   CB        single      1.092    0.020
+ MCS      CAK    SAI       single      1.665    0.020
+ MCS      OAC    CAK       double      1.220    0.020
+ MCS      CAG    CAK       single      1.510    0.020
+ MCS      CAJ    CAG       single      1.510    0.020
+ MCS      HAG1   CAG       single      1.092    0.020
+ MCS      HAG2   CAG       single      1.092    0.020
+ MCS      OAE    CAJ       deloc       1.250    0.020
+ MCS      OAB    CAJ       deloc       1.250    0.020
+ MCS      HN1    N         single      1.010    0.020
+ MCS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MCS      HN1    N      HN2     120.000    3.000
+ MCS      HN1    N      CA      120.000    3.000
+ MCS      HN2    N      CA      120.000    3.000
+ MCS      N      CA     HA      109.470    3.000
+ MCS      N      CA     CB      109.470    3.000
+ MCS      N      CA     C       109.470    3.000
+ MCS      HA     CA     CB      108.340    3.000
+ MCS      HA     CA     C       108.810    3.000
+ MCS      CB     CA     C       109.470    3.000
+ MCS      CA     CB     HBC1    109.470    3.000
+ MCS      CA     CB     HBC2    109.470    3.000
+ MCS      CA     CB     SAI     109.500    3.000
+ MCS      HBC1   CB     HBC2    107.900    3.000
+ MCS      HBC1   CB     SAI     109.500    3.000
+ MCS      HBC2   CB     SAI     109.500    3.000
+ MCS      CB     SAI    CAK      99.919    3.000
+ MCS      SAI    CAK    OAC     120.000    3.000
+ MCS      SAI    CAK    CAG     120.000    3.000
+ MCS      OAC    CAK    CAG     120.500    3.000
+ MCS      CAK    CAG    HAG1    109.470    3.000
+ MCS      CAK    CAG    HAG2    109.470    3.000
+ MCS      CAK    CAG    CAJ     109.470    3.000
+ MCS      HAG1   CAG    HAG2    107.900    3.000
+ MCS      HAG1   CAG    CAJ     109.470    3.000
+ MCS      HAG2   CAG    CAJ     109.470    3.000
+ MCS      CAG    CAJ    OAE     118.500    3.000
+ MCS      CAG    CAJ    OAB     118.500    3.000
+ MCS      OAE    CAJ    OAB     123.000    3.000
+ MCS      CA     C      O       118.500    3.000
+ MCS      CA     C      OXT     118.500    3.000
+ MCS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MCS      var_1    HN2    N      CA     C        175.000   20.000   1
+ MCS      var_2    N      CA     CB     SAI       67.238   20.000   3
+ MCS      var_3    CA     CB     SAI    CAK      178.303   20.000   1
+ MCS      var_4    CB     SAI    CAK    CAG     -179.966   20.000   1
+ MCS      var_5    SAI    CAK    CAG    CAJ     -150.626   20.000   3
+ MCS      var_6    CAK    CAG    CAJ    OAB       -0.710   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MCS      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MCS      plan-1    C         0.020
+ MCS      plan-1    O         0.020
+ MCS      plan-1    CA        0.020
+ MCS      plan-1    OXT       0.020
+ MCS      plan-2    N         0.020
+ MCS      plan-2    CA        0.020
+ MCS      plan-2    HN1       0.020
+ MCS      plan-2    HN2       0.020
+ MCS      plan-3    CAK       0.020
+ MCS      plan-3    SAI       0.020
+ MCS      plan-3    OAC       0.020
+ MCS      plan-3    CAG       0.020
+ MCS      plan-4    CAJ       0.020
+ MCS      plan-4    CAG       0.020
+ MCS      plan-4    OAE       0.020
+ MCS      plan-4    OAB       0.020
+# ------------------------------------------------------

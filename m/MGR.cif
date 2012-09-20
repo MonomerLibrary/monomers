@@ -1,0 +1,383 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MGR      MGR 'MALACHITE GREEN                     ' non-polymer        50  25 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MGR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MGR           C25    C    CH3       0.000      0.000    0.000    0.000
+ MGR           H251   H    H         0.000     -0.134   -0.736   -0.750
+ MGR           H252   H    H         0.000      0.976    0.406   -0.077
+ MGR           H253   H    H         0.000     -0.121   -0.445    0.954
+ MGR           N3     N    N         1.000     -0.990    1.065   -0.175
+ MGR           C24    C    CH3       0.000     -0.550    2.443   -0.412
+ MGR           H243   H    H         0.000      0.110    2.743    0.361
+ MGR           H242   H    H         0.000     -0.049    2.501   -1.344
+ MGR           H241   H    H         0.000     -1.392    3.087   -0.425
+ MGR           C17    C    CR6       0.000     -2.317    0.776   -0.116
+ MGR           C16    C    CR16      0.000     -3.263    1.812   -0.157
+ MGR           H161   H    H         0.000     -2.935    2.841   -0.235
+ MGR           C15    C    CR16      0.000     -4.592    1.525   -0.099
+ MGR           H151   H    H         0.000     -5.321    2.325   -0.130
+ MGR           C18    C    CR16      0.000     -2.740   -0.558   -0.015
+ MGR           H181   H    H         0.000     -2.008   -1.356    0.012
+ MGR           C19    C    CR16      0.000     -4.067   -0.850    0.048
+ MGR           H191   H    H         0.000     -4.393   -1.879    0.134
+ MGR           C14    C    CR6       0.000     -5.017    0.188    0.002
+ MGR           C1     C    C         0.000     -6.401   -0.114    0.063
+ MGR           C8     C    CR6       0.000     -6.829   -1.463    0.165
+ MGR           C13    C    CR16      0.000     -6.584   -2.361   -0.890
+ MGR           H131   H    H         0.000     -6.072   -2.022   -1.782
+ MGR           C12    C    CR16      0.000     -6.991   -3.655   -0.789
+ MGR           H121   H    H         0.000     -6.794   -4.349   -1.597
+ MGR           C11    C    CR6       0.000     -7.664   -4.092    0.363
+ MGR           N2     N    N         0.000     -8.075   -5.384    0.461
+ MGR           C23    C    CH3       0.000     -7.819   -6.320   -0.638
+ MGR           H233   H    H         0.000     -8.289   -5.969   -1.520
+ MGR           H232   H    H         0.000     -6.775   -6.396   -0.803
+ MGR           H231   H    H         0.000     -8.206   -7.274   -0.389
+ MGR           C22    C    CH3       0.000     -8.773   -5.843    1.664
+ MGR           H223   H    H         0.000     -8.148   -5.710    2.510
+ MGR           H222   H    H         0.000     -9.663   -5.283    1.794
+ MGR           H221   H    H         0.000     -9.015   -6.870    1.565
+ MGR           C10    C    CR16      0.000     -7.910   -3.197    1.416
+ MGR           H101   H    H         0.000     -8.427   -3.537    2.305
+ MGR           C9     C    CR16      0.000     -7.500   -1.903    1.320
+ MGR           H91    H    H         0.000     -7.689   -1.213    2.133
+ MGR           C2     C    CR6       0.000     -7.394    0.972    0.020
+ MGR           C7     C    CR16      0.000     -8.217    1.216    1.126
+ MGR           H71    H    H         0.000     -8.130    0.603    2.014
+ MGR           C6     C    CR16      0.000     -9.140    2.239    1.080
+ MGR           H61    H    H         0.000     -9.772    2.435    1.937
+ MGR           C5     C    CR16      0.000     -9.262    3.015   -0.060
+ MGR           H51    H    H         0.000     -9.993    3.814   -0.092
+ MGR           C4     C    CR16      0.000     -8.455    2.776   -1.160
+ MGR           H41    H    H         0.000     -8.557    3.389   -2.047
+ MGR           C3     C    CR16      0.000     -7.524    1.762   -1.128
+ MGR           H31    H    H         0.000     -6.894    1.576   -1.989
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MGR      C25    n/a    N3     START
+ MGR      H251   C25    .      .
+ MGR      H252   C25    .      .
+ MGR      H253   C25    .      .
+ MGR      N3     C25    C17    .
+ MGR      C24    N3     H241   .
+ MGR      H243   C24    .      .
+ MGR      H242   C24    .      .
+ MGR      H241   C24    .      .
+ MGR      C17    N3     C18    .
+ MGR      C16    C17    C15    .
+ MGR      H161   C16    .      .
+ MGR      C15    C16    H151   .
+ MGR      H151   C15    .      .
+ MGR      C18    C17    C19    .
+ MGR      H181   C18    .      .
+ MGR      C19    C18    C14    .
+ MGR      H191   C19    .      .
+ MGR      C14    C19    C1     .
+ MGR      C1     C14    C2     .
+ MGR      C8     C1     C13    .
+ MGR      C13    C8     C12    .
+ MGR      H131   C13    .      .
+ MGR      C12    C13    C11    .
+ MGR      H121   C12    .      .
+ MGR      C11    C12    C10    .
+ MGR      N2     C11    C22    .
+ MGR      C23    N2     H231   .
+ MGR      H233   C23    .      .
+ MGR      H232   C23    .      .
+ MGR      H231   C23    .      .
+ MGR      C22    N2     H221   .
+ MGR      H223   C22    .      .
+ MGR      H222   C22    .      .
+ MGR      H221   C22    .      .
+ MGR      C10    C11    C9     .
+ MGR      H101   C10    .      .
+ MGR      C9     C10    H91    .
+ MGR      H91    C9     .      .
+ MGR      C2     C1     C7     .
+ MGR      C7     C2     C6     .
+ MGR      H71    C7     .      .
+ MGR      C6     C7     C5     .
+ MGR      H61    C6     .      .
+ MGR      C5     C6     C4     .
+ MGR      H51    C5     .      .
+ MGR      C4     C5     C3     .
+ MGR      H41    C4     .      .
+ MGR      C3     C4     H31    .
+ MGR      H31    C3     .      END
+ MGR      C2     C3     .    ADD
+ MGR      C8     C9     .    ADD
+ MGR      C14    C15    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MGR      C2     C1        single      1.500    0.020
+ MGR      C8     C1        single      1.500    0.020
+ MGR      C1     C14       double      1.500    0.020
+ MGR      C2     C3        double      1.390    0.020
+ MGR      C7     C2        single      1.390    0.020
+ MGR      C3     C4        single      1.390    0.020
+ MGR      H31    C3        single      1.083    0.020
+ MGR      C4     C5        double      1.390    0.020
+ MGR      H41    C4        single      1.083    0.020
+ MGR      C5     C6        single      1.390    0.020
+ MGR      H51    C5        single      1.083    0.020
+ MGR      C6     C7        double      1.390    0.020
+ MGR      H61    C6        single      1.083    0.020
+ MGR      H71    C7        single      1.083    0.020
+ MGR      C8     C9        double      1.390    0.020
+ MGR      C13    C8        single      1.390    0.020
+ MGR      C9     C10       single      1.390    0.020
+ MGR      H91    C9        single      1.083    0.020
+ MGR      C10    C11       double      1.390    0.020
+ MGR      H101   C10       single      1.083    0.020
+ MGR      C11    C12       single      1.390    0.020
+ MGR      N2     C11       single      1.400    0.020
+ MGR      C12    C13       double      1.390    0.020
+ MGR      H121   C12       single      1.083    0.020
+ MGR      H131   C13       single      1.083    0.020
+ MGR      C14    C15       single      1.390    0.020
+ MGR      C14    C19       single      1.390    0.020
+ MGR      C15    C16       double      1.390    0.020
+ MGR      H151   C15       single      1.083    0.020
+ MGR      C16    C17       single      1.390    0.020
+ MGR      H161   C16       single      1.083    0.020
+ MGR      C18    C17       single      1.390    0.020
+ MGR      C17    N3        double      1.355    0.020
+ MGR      C19    C18       double      1.390    0.020
+ MGR      H181   C18       single      1.083    0.020
+ MGR      H191   C19       single      1.083    0.020
+ MGR      C22    N2        single      1.455    0.020
+ MGR      H221   C22       single      1.059    0.020
+ MGR      H222   C22       single      1.059    0.020
+ MGR      H223   C22       single      1.059    0.020
+ MGR      C23    N2        single      1.455    0.020
+ MGR      H231   C23       single      1.059    0.020
+ MGR      H232   C23       single      1.059    0.020
+ MGR      H233   C23       single      1.059    0.020
+ MGR      C24    N3        single      1.455    0.020
+ MGR      H241   C24       single      1.059    0.020
+ MGR      H242   C24       single      1.059    0.020
+ MGR      H243   C24       single      1.059    0.020
+ MGR      N3     C25       single      1.455    0.020
+ MGR      H251   C25       single      1.059    0.020
+ MGR      H252   C25       single      1.059    0.020
+ MGR      H253   C25       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MGR      H251   C25    H252    109.470    3.000
+ MGR      H251   C25    H253    109.470    3.000
+ MGR      H252   C25    H253    109.470    3.000
+ MGR      H251   C25    N3      109.470    3.000
+ MGR      H252   C25    N3      109.470    3.000
+ MGR      H253   C25    N3      109.470    3.000
+ MGR      C25    N3     C24     120.000    3.000
+ MGR      C25    N3     C17     120.000    3.000
+ MGR      C24    N3     C17     120.000    3.000
+ MGR      N3     C24    H243    109.470    3.000
+ MGR      N3     C24    H242    109.470    3.000
+ MGR      N3     C24    H241    109.470    3.000
+ MGR      H243   C24    H242    109.470    3.000
+ MGR      H243   C24    H241    109.470    3.000
+ MGR      H242   C24    H241    109.470    3.000
+ MGR      N3     C17    C16     120.000    3.000
+ MGR      N3     C17    C18     120.000    3.000
+ MGR      C16    C17    C18     120.000    3.000
+ MGR      C17    C16    H161    120.000    3.000
+ MGR      C17    C16    C15     120.000    3.000
+ MGR      H161   C16    C15     120.000    3.000
+ MGR      C16    C15    H151    120.000    3.000
+ MGR      C16    C15    C14     120.000    3.000
+ MGR      H151   C15    C14     120.000    3.000
+ MGR      C17    C18    H181    120.000    3.000
+ MGR      C17    C18    C19     120.000    3.000
+ MGR      H181   C18    C19     120.000    3.000
+ MGR      C18    C19    H191    120.000    3.000
+ MGR      C18    C19    C14     120.000    3.000
+ MGR      H191   C19    C14     120.000    3.000
+ MGR      C19    C14    C1      120.000    3.000
+ MGR      C19    C14    C15     120.000    3.000
+ MGR      C1     C14    C15     120.000    3.000
+ MGR      C14    C1     C8      120.000    3.000
+ MGR      C14    C1     C2      120.000    3.000
+ MGR      C8     C1     C2      120.000    3.000
+ MGR      C1     C8     C13     120.000    3.000
+ MGR      C1     C8     C9      120.000    3.000
+ MGR      C13    C8     C9      120.000    3.000
+ MGR      C8     C13    H131    120.000    3.000
+ MGR      C8     C13    C12     120.000    3.000
+ MGR      H131   C13    C12     120.000    3.000
+ MGR      C13    C12    H121    120.000    3.000
+ MGR      C13    C12    C11     120.000    3.000
+ MGR      H121   C12    C11     120.000    3.000
+ MGR      C12    C11    N2      120.000    3.000
+ MGR      C12    C11    C10     120.000    3.000
+ MGR      N2     C11    C10     120.000    3.000
+ MGR      C11    N2     C23     120.000    3.000
+ MGR      C11    N2     C22     120.000    3.000
+ MGR      C23    N2     C22     120.000    3.000
+ MGR      N2     C23    H233    109.470    3.000
+ MGR      N2     C23    H232    109.470    3.000
+ MGR      N2     C23    H231    109.470    3.000
+ MGR      H233   C23    H232    109.470    3.000
+ MGR      H233   C23    H231    109.470    3.000
+ MGR      H232   C23    H231    109.470    3.000
+ MGR      N2     C22    H223    109.470    3.000
+ MGR      N2     C22    H222    109.470    3.000
+ MGR      N2     C22    H221    109.470    3.000
+ MGR      H223   C22    H222    109.470    3.000
+ MGR      H223   C22    H221    109.470    3.000
+ MGR      H222   C22    H221    109.470    3.000
+ MGR      C11    C10    H101    120.000    3.000
+ MGR      C11    C10    C9      120.000    3.000
+ MGR      H101   C10    C9      120.000    3.000
+ MGR      C10    C9     H91     120.000    3.000
+ MGR      C10    C9     C8      120.000    3.000
+ MGR      H91    C9     C8      120.000    3.000
+ MGR      C1     C2     C7      120.000    3.000
+ MGR      C1     C2     C3      120.000    3.000
+ MGR      C7     C2     C3      120.000    3.000
+ MGR      C2     C7     H71     120.000    3.000
+ MGR      C2     C7     C6      120.000    3.000
+ MGR      H71    C7     C6      120.000    3.000
+ MGR      C7     C6     H61     120.000    3.000
+ MGR      C7     C6     C5      120.000    3.000
+ MGR      H61    C6     C5      120.000    3.000
+ MGR      C6     C5     H51     120.000    3.000
+ MGR      C6     C5     C4      120.000    3.000
+ MGR      H51    C5     C4      120.000    3.000
+ MGR      C5     C4     H41     120.000    3.000
+ MGR      C5     C4     C3      120.000    3.000
+ MGR      H41    C4     C3      120.000    3.000
+ MGR      C4     C3     H31     120.000    3.000
+ MGR      C4     C3     C2      120.000    3.000
+ MGR      H31    C3     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MGR      var_1    H253   C25    N3     C17      -59.998   20.000   1
+ MGR      var_2    C25    N3     C24    H241    -174.824   20.000   1
+ MGR      CONST_1  C25    N3     C17    C18       -6.081    0.000   0
+ MGR      CONST_2  N3     C17    C16    C15      180.000    0.000   0
+ MGR      CONST_3  C17    C16    C15    C14        0.000    0.000   0
+ MGR      CONST_4  N3     C17    C18    C19      180.000    0.000   0
+ MGR      CONST_5  C17    C18    C19    C14        0.000    0.000   0
+ MGR      CONST_6  C18    C19    C14    C1       180.000    0.000   0
+ MGR      CONST_7  C19    C14    C15    C16        0.000    0.000   0
+ MGR      CONST_8  C19    C14    C1     C2       179.731    0.000   0
+ MGR      var_3    C14    C1     C8     C13      -65.034   20.000   1
+ MGR      CONST_9  C1     C8     C9     C10      180.000    0.000   0
+ MGR      CONST_10 C1     C8     C13    C12      180.000    0.000   0
+ MGR      CONST_11 C8     C13    C12    C11        0.000    0.000   0
+ MGR      CONST_12 C13    C12    C11    C10        0.000    0.000   0
+ MGR      var_4    C12    C11    N2     C22      179.730   20.000   1
+ MGR      var_5    C11    N2     C23    H231    -179.972   20.000   1
+ MGR      var_6    C11    N2     C22    H221    -179.978   20.000   1
+ MGR      CONST_13 C12    C11    C10    C9         0.000    0.000   0
+ MGR      CONST_14 C11    C10    C9     C8         0.000    0.000   0
+ MGR      var_7    C14    C1     C2     C7      -115.270   20.000   1
+ MGR      CONST_15 C1     C2     C3     C4       180.000    0.000   0
+ MGR      CONST_16 C1     C2     C7     C6       180.000    0.000   0
+ MGR      CONST_17 C2     C7     C6     C5         0.000    0.000   0
+ MGR      CONST_18 C7     C6     C5     C4         0.000    0.000   0
+ MGR      CONST_19 C6     C5     C4     C3         0.000    0.000   0
+ MGR      CONST_20 C5     C4     C3     C2         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MGR      plan-1    C1        0.020
+ MGR      plan-1    C2        0.020
+ MGR      plan-1    C8        0.020
+ MGR      plan-1    C14       0.020
+ MGR      plan-1    C15       0.020
+ MGR      plan-1    C19       0.020
+ MGR      plan-1    C16       0.020
+ MGR      plan-1    C17       0.020
+ MGR      plan-1    C18       0.020
+ MGR      plan-1    H151      0.020
+ MGR      plan-1    H161      0.020
+ MGR      plan-1    N3        0.020
+ MGR      plan-1    H181      0.020
+ MGR      plan-1    H191      0.020
+ MGR      plan-1    C24       0.020
+ MGR      plan-1    C25       0.020
+ MGR      plan-2    C2        0.020
+ MGR      plan-2    C1        0.020
+ MGR      plan-2    C3        0.020
+ MGR      plan-2    C7        0.020
+ MGR      plan-2    C4        0.020
+ MGR      plan-2    C5        0.020
+ MGR      plan-2    C6        0.020
+ MGR      plan-2    H31       0.020
+ MGR      plan-2    H41       0.020
+ MGR      plan-2    H51       0.020
+ MGR      plan-2    H61       0.020
+ MGR      plan-2    H71       0.020
+ MGR      plan-3    C8        0.020
+ MGR      plan-3    C1        0.020
+ MGR      plan-3    C9        0.020
+ MGR      plan-3    C13       0.020
+ MGR      plan-3    C10       0.020
+ MGR      plan-3    C11       0.020
+ MGR      plan-3    C12       0.020
+ MGR      plan-3    H91       0.020
+ MGR      plan-3    H101      0.020
+ MGR      plan-3    N2        0.020
+ MGR      plan-3    H121      0.020
+ MGR      plan-3    H131      0.020
+ MGR      plan-4    N2        0.020
+ MGR      plan-4    C11       0.020
+ MGR      plan-4    C22       0.020
+ MGR      plan-4    C23       0.020
+# ------------------------------------------------------

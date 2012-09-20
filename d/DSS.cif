@@ -1,0 +1,141 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DSS      DSS 'METHYL METHYLSULFINYLMETHYL SULFIDE ' non-polymer        14   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DSS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DSS           O      O    O         0.000      0.000    0.000    0.000
+ DSS           S      S    S3        0.000     -1.189   -0.638   -0.446
+ DSS           C1     C    CH3       0.000     -1.541   -0.137   -2.153
+ DSS           H13    H    H         0.000     -2.475   -0.538   -2.476
+ DSS           H12    H    H         0.000     -1.587    0.925   -2.231
+ DSS           H11    H    H         0.000     -0.779   -0.489   -2.811
+ DSS           C2     C    CH2       0.000     -2.618    0.090    0.398
+ DSS           H21    H    H         0.000     -3.536   -0.337   -0.011
+ DSS           H22    H    H         0.000     -2.620    1.171    0.242
+ DSS           S3     S    S2        0.000     -2.521   -0.266    2.173
+ DSS           C4     C    CH3       0.000     -4.032    0.556    2.745
+ DSS           H43    H    H         0.000     -3.992    1.592    2.514
+ DSS           H42    H    H         0.000     -4.881    0.129    2.269
+ DSS           H41    H    H         0.000     -4.133    0.441    3.796
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DSS      O      n/a    S      START
+ DSS      S      O      C2     .
+ DSS      C1     S      H11    .
+ DSS      H13    C1     .      .
+ DSS      H12    C1     .      .
+ DSS      H11    C1     .      .
+ DSS      C2     S      S3     .
+ DSS      H21    C2     .      .
+ DSS      H22    C2     .      .
+ DSS      S3     C2     C4     .
+ DSS      C4     S3     H41    .
+ DSS      H43    C4     .      .
+ DSS      H42    C4     .      .
+ DSS      H41    C4     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DSS      S      O         double      1.480    0.020
+ DSS      C1     S         single      1.707    0.020
+ DSS      C2     S         single      1.707    0.020
+ DSS      H11    C1        single      1.059    0.020
+ DSS      H12    C1        single      1.059    0.020
+ DSS      H13    C1        single      1.059    0.020
+ DSS      S3     C2        single      1.762    0.020
+ DSS      H21    C2        single      1.092    0.020
+ DSS      H22    C2        single      1.092    0.020
+ DSS      C4     S3        single      1.762    0.020
+ DSS      H41    C4        single      1.059    0.020
+ DSS      H42    C4        single      1.059    0.020
+ DSS      H43    C4        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DSS      O      S      C1      109.495    3.000
+ DSS      O      S      C2      109.505    3.000
+ DSS      C1     S      C2      100.046    3.000
+ DSS      S      C1     H13     109.500    3.000
+ DSS      S      C1     H12     109.500    3.000
+ DSS      S      C1     H11     109.500    3.000
+ DSS      H13    C1     H12     109.470    3.000
+ DSS      H13    C1     H11     109.470    3.000
+ DSS      H12    C1     H11     109.470    3.000
+ DSS      S      C2     H21     109.500    3.000
+ DSS      S      C2     H22     109.500    3.000
+ DSS      S      C2     S3      109.500    3.000
+ DSS      H21    C2     H22     107.900    3.000
+ DSS      H21    C2     S3      109.500    3.000
+ DSS      H22    C2     S3      109.500    3.000
+ DSS      C2     S3     C4      100.107    3.000
+ DSS      S3     C4     H43     109.500    3.000
+ DSS      S3     C4     H42     109.500    3.000
+ DSS      S3     C4     H41     109.500    3.000
+ DSS      H43    C4     H42     109.470    3.000
+ DSS      H43    C4     H41     109.470    3.000
+ DSS      H42    C4     H41     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DSS      var_1    O      S      C1     H11       64.964   20.000   1
+ DSS      var_2    O      S      C2     S3       -65.009   20.000   1
+ DSS      var_3    S      C2     S3     C4      -179.981   20.000   1
+ DSS      var_4    C2     S3     C4     H41     -179.994   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DSS      chir_01  S      O      C1     C2        positiv
+# ------------------------------------------------------

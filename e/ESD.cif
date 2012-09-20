@@ -1,0 +1,155 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ESD      ESD '(2-AMINO-ETHYLSULFANYL)-ACETIC ACID ' non-polymer        16   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ESD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ESD           OXT    O    OC       -0.500      0.000    0.000    0.000
+ ESD           C      C    C         0.000     -0.957    0.564    0.575
+ ESD           O      O    OC       -0.500     -1.028    1.803    0.736
+ ESD           CA     C    CH2       0.000     -1.995   -0.407    1.060
+ ESD           HA2    H    H         0.000     -1.744   -0.733    2.072
+ ESD           HA1    H    H         0.000     -2.021   -1.274    0.396
+ ESD           SB     S    S2        0.000     -3.613    0.398    1.069
+ ESD           CG     C    CH2       0.000     -4.598   -1.002    1.684
+ ESD           HG1    H    H         0.000     -4.235   -1.258    2.682
+ ESD           HG2    H    H         0.000     -4.440   -1.848    1.013
+ ESD           CD     C    CH2       0.000     -6.083   -0.675    1.751
+ ESD           HD2    H    H         0.000     -6.402   -0.380    0.749
+ ESD           HD1    H    H         0.000     -6.205    0.168    2.434
+ ESD           N      N    NH2       0.000     -6.882   -1.781    2.205
+ ESD           HN2    H    H         0.000     -7.884   -1.749    2.103
+ ESD           H      H    H         0.000     -6.437   -2.583    2.622
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ESD      OXT    n/a    C      START
+ ESD      C      OXT    CA     .
+ ESD      O      C      .      .
+ ESD      CA     C      SB     .
+ ESD      HA2    CA     .      .
+ ESD      HA1    CA     .      .
+ ESD      SB     CA     CG     .
+ ESD      CG     SB     CD     .
+ ESD      HG1    CG     .      .
+ ESD      HG2    CG     .      .
+ ESD      CD     CG     N      .
+ ESD      HD2    CD     .      .
+ ESD      HD1    CD     .      .
+ ESD      N      CD     H      .
+ ESD      HN2    N      .      .
+ ESD      H      N      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ESD      N      CD        single      1.450    0.020
+ ESD      H      N         single      1.010    0.020
+ ESD      HN2    N         single      1.010    0.020
+ ESD      CG     SB        single      1.762    0.020
+ ESD      CD     CG        single      1.524    0.020
+ ESD      HG1    CG        single      1.092    0.020
+ ESD      HG2    CG        single      1.092    0.020
+ ESD      SB     CA        single      1.762    0.020
+ ESD      HD2    CD        single      1.092    0.020
+ ESD      HD1    CD        single      1.092    0.020
+ ESD      CA     C         single      1.510    0.020
+ ESD      HA2    CA        single      1.092    0.020
+ ESD      HA1    CA        single      1.092    0.020
+ ESD      O      C         deloc       1.250    0.020
+ ESD      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ESD      OXT    C      O       123.000    3.000
+ ESD      OXT    C      CA      118.500    3.000
+ ESD      O      C      CA      118.500    3.000
+ ESD      C      CA     HA2     109.470    3.000
+ ESD      C      CA     HA1     109.470    3.000
+ ESD      C      CA     SB      109.500    3.000
+ ESD      HA2    CA     HA1     107.900    3.000
+ ESD      HA2    CA     SB      109.500    3.000
+ ESD      HA1    CA     SB      109.500    3.000
+ ESD      CA     SB     CG       98.270    3.000
+ ESD      SB     CG     HG1     109.500    3.000
+ ESD      SB     CG     HG2     109.500    3.000
+ ESD      SB     CG     CD      109.500    3.000
+ ESD      HG1    CG     HG2     107.900    3.000
+ ESD      HG1    CG     CD      109.470    3.000
+ ESD      HG2    CG     CD      109.470    3.000
+ ESD      CG     CD     HD2     109.470    3.000
+ ESD      CG     CD     HD1     109.470    3.000
+ ESD      CG     CD     N       109.470    3.000
+ ESD      HD2    CD     HD1     107.900    3.000
+ ESD      HD2    CD     N       109.470    3.000
+ ESD      HD1    CD     N       109.470    3.000
+ ESD      CD     N      HN2     120.000    3.000
+ ESD      CD     N      H       120.000    3.000
+ ESD      HN2    N      H       120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ESD      var_1    OXT    C      CA     SB      -150.861   20.000   3
+ ESD      var_2    C      CA     SB     CG      -179.974   20.000   1
+ ESD      var_3    CA     SB     CG     CD      -177.162   20.000   1
+ ESD      var_4    SB     CG     CD     N        178.544   20.000   3
+ ESD      var_5    CG     CD     N      H         12.989   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ESD      plan-1    N         0.020
+ ESD      plan-1    CD        0.020
+ ESD      plan-1    H         0.020
+ ESD      plan-1    HN2       0.020
+ ESD      plan-2    C         0.020
+ ESD      plan-2    CA        0.020
+ ESD      plan-2    O         0.020
+ ESD      plan-2    OXT       0.020
+# ------------------------------------------------------

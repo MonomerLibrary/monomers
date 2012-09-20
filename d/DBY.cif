@@ -1,0 +1,216 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DBY      DBY '3,5 DIBROMOTYROSINE                 ' peptide            23  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DBY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DBY           N      N    NH2       0.000      0.000    0.000    0.000
+ DBY           HN1    H    H         0.000      1.010   -0.009   -0.084
+ DBY           HN2    H    H         0.000     -0.556    0.421   -0.735
+ DBY           CA     C    CH1       0.000     -0.651   -0.591    1.176
+ DBY           HA     H    H         0.000     -1.161    0.198    1.747
+ DBY           CB     C    CH2       0.000     -1.674   -1.634    0.723
+ DBY           HB2    H    H         0.000     -2.157   -2.073    1.598
+ DBY           HB3    H    H         0.000     -1.166   -2.418    0.157
+ DBY           CG     C    CR6       0.000     -2.712   -0.974   -0.148
+ DBY           CD2    C    CR16      0.000     -3.856   -0.445    0.421
+ DBY           HD2    H    H         0.000     -4.007   -0.509    1.492
+ DBY           CE2    C    CR6       0.000     -4.806    0.165   -0.375
+ DBY           BR2    BR   BR        0.000     -6.368    0.892    0.406
+ DBY           CZ     C    CR6       0.000     -4.618    0.236   -1.747
+ DBY           OH     O    OH1       0.000     -5.556    0.829   -2.533
+ DBY           HH     H    H         0.000     -6.201    0.168   -2.818
+ DBY           CE1    C    CR6       0.000     -3.472   -0.301   -2.316
+ DBY           BR1    BR   BR        0.000     -3.211   -0.206   -4.187
+ DBY           CD1    C    CR16      0.000     -2.522   -0.904   -1.514
+ DBY           HD1    H    H         0.000     -1.627   -1.323   -1.958
+ DBY           C      C    C         0.000      0.386   -1.250    2.048
+ DBY           O      O    OC       -0.500      1.420   -1.733    1.534
+ DBY           OXT    O    OC       -0.500      0.215   -1.313    3.285
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DBY      N      n/a    CA     START
+ DBY      HN1    N      .      .
+ DBY      HN2    N      .      .
+ DBY      CA     N      C      .
+ DBY      HA     CA     .      .
+ DBY      CB     CA     CG     .
+ DBY      HB2    CB     .      .
+ DBY      HB3    CB     .      .
+ DBY      CG     CB     CD2    .
+ DBY      CD2    CG     CE2    .
+ DBY      HD2    CD2    .      .
+ DBY      CE2    CD2    CZ     .
+ DBY      BR2    CE2    .      .
+ DBY      CZ     CE2    CE1    .
+ DBY      OH     CZ     HH     .
+ DBY      HH     OH     .      .
+ DBY      CE1    CZ     CD1    .
+ DBY      BR1    CE1    .      .
+ DBY      CD1    CE1    HD1    .
+ DBY      HD1    CD1    .      .
+ DBY      C      CA     .      END
+ DBY      O      C      .      .
+ DBY      OXT    C      .      .
+ DBY      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DBY      CA     N         single      1.450    0.020
+ DBY      C      CA        single      1.500    0.020
+ DBY      CB     CA        single      1.524    0.020
+ DBY      HA     CA        single      1.099    0.020
+ DBY      O      C         deloc       1.250    0.020
+ DBY      OXT    C         deloc       1.250    0.020
+ DBY      CG     CB        single      1.511    0.020
+ DBY      HB2    CB        single      1.092    0.020
+ DBY      HB3    CB        single      1.092    0.020
+ DBY      CG     CD1       double      1.390    0.020
+ DBY      CD2    CG        single      1.390    0.020
+ DBY      CD1    CE1       single      1.390    0.020
+ DBY      HD1    CD1       single      1.083    0.020
+ DBY      CE1    CZ        double      1.487    0.020
+ DBY      BR1    CE1       single      1.890    0.020
+ DBY      CE2    CD2       double      1.390    0.020
+ DBY      HD2    CD2       single      1.083    0.020
+ DBY      CZ     CE2       single      1.487    0.020
+ DBY      BR2    CE2       single      1.890    0.020
+ DBY      OH     CZ        single      1.362    0.020
+ DBY      HH     OH        single      0.967    0.020
+ DBY      HN1    N         single      1.010    0.020
+ DBY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DBY      HN1    N      HN2     120.000    3.000
+ DBY      HN1    N      CA      120.000    3.000
+ DBY      HN2    N      CA      120.000    3.000
+ DBY      N      CA     HA      109.470    3.000
+ DBY      N      CA     CB      109.470    3.000
+ DBY      N      CA     C       109.470    3.000
+ DBY      HA     CA     CB      108.340    3.000
+ DBY      HA     CA     C       108.810    3.000
+ DBY      CB     CA     C       109.470    3.000
+ DBY      CA     CB     HB2     109.470    3.000
+ DBY      CA     CB     HB3     109.470    3.000
+ DBY      CA     CB     CG      109.470    3.000
+ DBY      HB2    CB     HB3     107.900    3.000
+ DBY      HB2    CB     CG      109.470    3.000
+ DBY      HB3    CB     CG      109.470    3.000
+ DBY      CB     CG     CD2     120.000    3.000
+ DBY      CB     CG     CD1     120.000    3.000
+ DBY      CD2    CG     CD1     120.000    3.000
+ DBY      CG     CD2    HD2     120.000    3.000
+ DBY      CG     CD2    CE2     120.000    3.000
+ DBY      HD2    CD2    CE2     120.000    3.000
+ DBY      CD2    CE2    BR2     120.000    3.000
+ DBY      CD2    CE2    CZ      120.000    3.000
+ DBY      BR2    CE2    CZ      120.000    3.000
+ DBY      CE2    CZ     OH      120.000    3.000
+ DBY      CE2    CZ     CE1     120.000    3.000
+ DBY      OH     CZ     CE1     120.000    3.000
+ DBY      CZ     OH     HH      109.470    3.000
+ DBY      CZ     CE1    BR1     120.000    3.000
+ DBY      CZ     CE1    CD1     120.000    3.000
+ DBY      BR1    CE1    CD1     120.000    3.000
+ DBY      CE1    CD1    HD1     120.000    3.000
+ DBY      CE1    CD1    CG      120.000    3.000
+ DBY      HD1    CD1    CG      120.000    3.000
+ DBY      CA     C      O       118.500    3.000
+ DBY      CA     C      OXT     118.500    3.000
+ DBY      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DBY      var_1    HN2    N      CA     C        175.000   20.000   1
+ DBY      var_2    N      CA     CB     CG       -59.979   20.000   3
+ DBY      var_3    CA     CB     CG     CD2      -90.284   20.000   2
+ DBY      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ DBY      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ DBY      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ DBY      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ DBY      var_4    CE2    CZ     OH     HH       -89.980   20.000   1
+ DBY      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ DBY      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DBY      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DBY      plan-1    N         0.020
+ DBY      plan-1    CA        0.020
+ DBY      plan-1    HN1       0.020
+ DBY      plan-1    HN2       0.020
+ DBY      plan-2    C         0.020
+ DBY      plan-2    CA        0.020
+ DBY      plan-2    O         0.020
+ DBY      plan-2    OXT       0.020
+ DBY      plan-3    CG        0.020
+ DBY      plan-3    CB        0.020
+ DBY      plan-3    CD1       0.020
+ DBY      plan-3    CD2       0.020
+ DBY      plan-3    CE1       0.020
+ DBY      plan-3    CE2       0.020
+ DBY      plan-3    CZ        0.020
+ DBY      plan-3    HD1       0.020
+ DBY      plan-3    BR1       0.020
+ DBY      plan-3    HD2       0.020
+ DBY      plan-3    BR2       0.020
+ DBY      plan-3    OH        0.020
+# ------------------------------------------------------

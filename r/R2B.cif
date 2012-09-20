@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+R2B      R2B '1,4-anhydro-D-erythro-pent-1-enitol ' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_R2B
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ R2B           "O2'"  O    OH1       0.000      0.000    0.000    0.000
+ R2B           H8     H    H         0.000      0.388   -0.826    0.328
+ R2B           "C2'"  C    C         0.000     -1.314    0.063    0.345
+ R2B           "C1'"  C    C1        0.000     -1.988   -0.846    1.023
+ R2B           "H1'1" H    H         0.000     -1.550   -1.763    1.378
+ R2B           "C3'"  C    CH1       0.000     -2.277    1.192    0.020
+ R2B           "H3'"  H    H         0.000     -2.193    1.487   -1.036
+ R2B           "O3'"  O    OH1       0.000     -2.062    2.311    0.882
+ R2B           H3T    H    H         0.000     -1.202    2.707    0.686
+ R2B           "C4'"  C    CH1       0.000     -3.647    0.530    0.302
+ R2B           "H4'"  H    H         0.000     -4.341    1.245    0.766
+ R2B           "O4'"  O    O2        0.000     -3.285   -0.512    1.230
+ R2B           "C5'"  C    CH2       0.000     -4.244   -0.061   -0.977
+ R2B           "H5'1" H    H         0.000     -3.555   -0.801   -1.391
+ R2B           "H5'2" H    H         0.000     -4.401    0.736   -1.706
+ R2B           "O5'"  O    OH1       0.000     -5.493   -0.687   -0.676
+ R2B           "HO'5" H    H         0.000     -5.869   -1.059   -1.484
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ R2B      "O2'"  n/a    "C2'"  START
+ R2B      H8     "O2'"  .      .
+ R2B      "C2'"  "O2'"  "C3'"  .
+ R2B      "C1'"  "C2'"  "H1'1" .
+ R2B      "H1'1" "C1'"  .      .
+ R2B      "C3'"  "C2'"  "C4'"  .
+ R2B      "H3'"  "C3'"  .      .
+ R2B      "O3'"  "C3'"  H3T    .
+ R2B      H3T    "O3'"  .      .
+ R2B      "C4'"  "C3'"  "C5'"  .
+ R2B      "H4'"  "C4'"  .      .
+ R2B      "O4'"  "C4'"  .      .
+ R2B      "C5'"  "C4'"  "O5'"  .
+ R2B      "H5'1" "C5'"  .      .
+ R2B      "H5'2" "C5'"  .      .
+ R2B      "O5'"  "C5'"  "HO'5" .
+ R2B      "HO'5" "O5'"  .      END
+ R2B      "C1'"  "O4'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ R2B      "C1'"  "O4'"     single      1.454    0.020
+ R2B      "C1'"  "C2'"     double      1.340    0.020
+ R2B      "H1'1" "C1'"     single      1.077    0.020
+ R2B      "O4'"  "C4'"     single      1.426    0.020
+ R2B      "C5'"  "C4'"     single      1.524    0.020
+ R2B      "C4'"  "C3'"     single      1.524    0.020
+ R2B      "H4'"  "C4'"     single      1.099    0.020
+ R2B      "O5'"  "C5'"     single      1.432    0.020
+ R2B      "H5'1" "C5'"     single      1.092    0.020
+ R2B      "H5'2" "C5'"     single      1.092    0.020
+ R2B      "HO'5" "O5'"     single      0.967    0.020
+ R2B      "O3'"  "C3'"     single      1.432    0.020
+ R2B      "C3'"  "C2'"     single      1.500    0.020
+ R2B      "H3'"  "C3'"     single      1.099    0.020
+ R2B      H3T    "O3'"     single      0.967    0.020
+ R2B      "C2'"  "O2'"     single      1.330    0.020
+ R2B      H8     "O2'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ R2B      H8     "O2'"  "C2'"   109.470    3.000
+ R2B      "O2'"  "C2'"  "C1'"   120.000    3.000
+ R2B      "O2'"  "C2'"  "C3'"   120.000    3.000
+ R2B      "C1'"  "C2'"  "C3'"   120.000    3.000
+ R2B      "C2'"  "C1'"  "H1'1"  120.000    3.000
+ R2B      "C2'"  "C1'"  "O4'"   120.000    3.000
+ R2B      "H1'1" "C1'"  "O4'"   120.000    3.000
+ R2B      "C2'"  "C3'"  "H3'"   108.810    3.000
+ R2B      "C2'"  "C3'"  "O3'"   109.470    3.000
+ R2B      "C2'"  "C3'"  "C4'"   109.470    3.000
+ R2B      "H3'"  "C3'"  "O3'"   109.470    3.000
+ R2B      "H3'"  "C3'"  "C4'"   108.340    3.000
+ R2B      "O3'"  "C3'"  "C4'"   109.470    3.000
+ R2B      "C3'"  "O3'"  H3T     109.470    3.000
+ R2B      "C3'"  "C4'"  "H4'"   108.340    3.000
+ R2B      "C3'"  "C4'"  "O4'"   109.470    3.000
+ R2B      "C3'"  "C4'"  "C5'"   111.000    3.000
+ R2B      "H4'"  "C4'"  "O4'"   109.470    3.000
+ R2B      "H4'"  "C4'"  "C5'"   108.340    3.000
+ R2B      "O4'"  "C4'"  "C5'"   109.470    3.000
+ R2B      "C4'"  "O4'"  "C1'"   120.000    3.000
+ R2B      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ R2B      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ R2B      "C4'"  "C5'"  "O5'"   109.470    3.000
+ R2B      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ R2B      "H5'1" "C5'"  "O5'"   109.470    3.000
+ R2B      "H5'2" "C5'"  "O5'"   109.470    3.000
+ R2B      "C5'"  "O5'"  "HO'5"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ R2B      var_1    H8     "O2'"  "C2'"  "C3'"   -179.950   20.000   1
+ R2B      var_2    "O2'"  "C2'"  "C1'"  "O4'"    180.000   20.000   1
+ R2B      var_3    "C2'"  "C1'"  "O4'"  "C4'"     30.000   20.000   1
+ R2B      var_4    "O2'"  "C2'"  "C3'"  "C4'"    150.000   20.000   3
+ R2B      var_5    "C2'"  "C3'"  "O3'"  H3T       67.626   20.000   1
+ R2B      var_6    "C2'"  "C3'"  "C4'"  "C5'"    -90.000   20.000   3
+ R2B      var_7    "C3'"  "C4'"  "O4'"  "C1'"    -30.000   20.000   1
+ R2B      var_8    "C3'"  "C4'"  "C5'"  "O5'"    178.875   20.000   3
+ R2B      var_9    "C4'"  "C5'"  "O5'"  "HO'5"   179.992   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ R2B      chir_01  "C4'"  "O4'"  "C5'"  "C3'"     positiv
+ R2B      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ R2B      plan-1    "C1'"     0.020
+ R2B      plan-1    "O4'"     0.020
+ R2B      plan-1    "C2'"     0.020
+ R2B      plan-1    "H1'1"    0.020
+ R2B      plan-2    "C2'"     0.020
+ R2B      plan-2    "C1'"     0.020
+ R2B      plan-2    "C3'"     0.020
+ R2B      plan-2    "O2'"     0.020
+ R2B      plan-2    "H1'1"    0.020
+# ------------------------------------------------------

@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SGI      SGI '3-(4-hydroxyphenyl)propanamide      ' non-polymer        23  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SGI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SGI           O      O    O         0.000      0.000    0.000    0.000
+ SGI           C      C    C         0.000     -0.584   -0.010   -1.063
+ SGI           N      N    NH2       0.000      0.114   -0.025   -2.215
+ SGI           HN2    H    H         0.000     -0.369   -0.033   -3.106
+ SGI           HN1    H    H         0.000      1.127   -0.029   -2.199
+ SGI           CA     C    CH2       0.000     -2.091   -0.009   -1.094
+ SGI           HA1    H    H         0.000     -2.444   -0.905   -1.610
+ SGI           HA2    H    H         0.000     -2.443    0.878   -1.625
+ SGI           CB     C    CH2       0.000     -2.631    0.003    0.338
+ SGI           HB1    H    H         0.000     -2.276    0.899    0.852
+ SGI           HB2    H    H         0.000     -2.276   -0.884    0.867
+ SGI           CG     C    CR6       0.000     -4.137    0.002    0.307
+ SGI           CD2    C    CR16      0.000     -4.827    1.201    0.288
+ SGI           HD2    H    H         0.000     -4.284    2.138    0.299
+ SGI           CE2    C    CR16      0.000     -6.208    1.203    0.253
+ SGI           HE2    H    H         0.000     -6.748    2.142    0.229
+ SGI           CZ     C    CR6       0.000     -6.903    0.003    0.249
+ SGI           OH     O    OH1       0.000     -8.261    0.003    0.221
+ SGI           HOH    H    H         0.000     -8.602    0.010    1.126
+ SGI           CE1    C    CR16      0.000     -6.209   -1.198    0.273
+ SGI           HE1    H    H         0.000     -6.749   -2.136    0.270
+ SGI           CD1    C    CR16      0.000     -4.827   -1.195    0.303
+ SGI           HD1    H    H         0.000     -4.285   -2.132    0.323
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SGI      O      n/a    C      START
+ SGI      C      O      CA     .
+ SGI      N      C      HN1    .
+ SGI      HN2    N      .      .
+ SGI      HN1    N      .      .
+ SGI      CA     C      CB     .
+ SGI      HA1    CA     .      .
+ SGI      HA2    CA     .      .
+ SGI      CB     CA     CG     .
+ SGI      HB1    CB     .      .
+ SGI      HB2    CB     .      .
+ SGI      CG     CB     CD2    .
+ SGI      CD2    CG     CE2    .
+ SGI      HD2    CD2    .      .
+ SGI      CE2    CD2    CZ     .
+ SGI      HE2    CE2    .      .
+ SGI      CZ     CE2    CE1    .
+ SGI      OH     CZ     HOH    .
+ SGI      HOH    OH     .      .
+ SGI      CE1    CZ     CD1    .
+ SGI      HE1    CE1    .      .
+ SGI      CD1    CE1    HD1    .
+ SGI      HD1    CD1    .      END
+ SGI      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SGI      C      O         double      1.220    0.020
+ SGI      N      C         single      1.332    0.020
+ SGI      CA     C         single      1.510    0.020
+ SGI      CB     CA        single      1.524    0.020
+ SGI      CG     CB        single      1.511    0.020
+ SGI      CG     CD1       double      1.390    0.020
+ SGI      CD2    CG        single      1.390    0.020
+ SGI      CD1    CE1       single      1.390    0.020
+ SGI      CE1    CZ        double      1.390    0.020
+ SGI      OH     CZ        single      1.362    0.020
+ SGI      CZ     CE2       single      1.390    0.020
+ SGI      CE2    CD2       double      1.390    0.020
+ SGI      HN1    N         single      1.010    0.020
+ SGI      HN2    N         single      1.010    0.020
+ SGI      HA1    CA        single      1.092    0.020
+ SGI      HA2    CA        single      1.092    0.020
+ SGI      HB1    CB        single      1.092    0.020
+ SGI      HB2    CB        single      1.092    0.020
+ SGI      HD1    CD1       single      1.083    0.020
+ SGI      HE1    CE1       single      1.083    0.020
+ SGI      HOH    OH        single      0.967    0.020
+ SGI      HE2    CE2       single      1.083    0.020
+ SGI      HD2    CD2       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SGI      O      C      N       123.000    3.000
+ SGI      O      C      CA      120.500    3.000
+ SGI      N      C      CA      116.500    3.000
+ SGI      C      N      HN2     120.000    3.000
+ SGI      C      N      HN1     120.000    3.000
+ SGI      HN2    N      HN1     120.000    3.000
+ SGI      C      CA     HA1     109.470    3.000
+ SGI      C      CA     HA2     109.470    3.000
+ SGI      C      CA     CB      109.470    3.000
+ SGI      HA1    CA     HA2     107.900    3.000
+ SGI      HA1    CA     CB      109.470    3.000
+ SGI      HA2    CA     CB      109.470    3.000
+ SGI      CA     CB     HB1     109.470    3.000
+ SGI      CA     CB     HB2     109.470    3.000
+ SGI      CA     CB     CG      109.470    3.000
+ SGI      HB1    CB     HB2     107.900    3.000
+ SGI      HB1    CB     CG      109.470    3.000
+ SGI      HB2    CB     CG      109.470    3.000
+ SGI      CB     CG     CD2     120.000    3.000
+ SGI      CB     CG     CD1     120.000    3.000
+ SGI      CD2    CG     CD1     120.000    3.000
+ SGI      CG     CD2    HD2     120.000    3.000
+ SGI      CG     CD2    CE2     120.000    3.000
+ SGI      HD2    CD2    CE2     120.000    3.000
+ SGI      CD2    CE2    HE2     120.000    3.000
+ SGI      CD2    CE2    CZ      120.000    3.000
+ SGI      HE2    CE2    CZ      120.000    3.000
+ SGI      CE2    CZ     OH      120.000    3.000
+ SGI      CE2    CZ     CE1     120.000    3.000
+ SGI      OH     CZ     CE1     120.000    3.000
+ SGI      CZ     OH     HOH     109.470    3.000
+ SGI      CZ     CE1    HE1     120.000    3.000
+ SGI      CZ     CE1    CD1     120.000    3.000
+ SGI      HE1    CE1    CD1     120.000    3.000
+ SGI      CE1    CD1    HD1     120.000    3.000
+ SGI      CE1    CD1    CG      120.000    3.000
+ SGI      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SGI      CONST_1  O      C      N      HN1        0.000    0.000   0
+ SGI      var_1    O      C      CA     CB        -0.057   20.000   3
+ SGI      var_2    C      CA     CB     CG      -179.959   20.000   3
+ SGI      var_3    CA     CB     CG     CD2      -90.241   20.000   2
+ SGI      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
+ SGI      CONST_3  CB     CG     CD2    CE2      180.000    0.000   0
+ SGI      CONST_4  CG     CD2    CE2    CZ         0.000    0.000   0
+ SGI      CONST_5  CD2    CE2    CZ     CE1        0.000    0.000   0
+ SGI      var_4    CE2    CZ     OH     HOH      -90.030   20.000   1
+ SGI      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+ SGI      CONST_7  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SGI      plan-1    C         0.020
+ SGI      plan-1    O         0.020
+ SGI      plan-1    N         0.020
+ SGI      plan-1    CA        0.020
+ SGI      plan-1    HN2       0.020
+ SGI      plan-1    HN1       0.020
+ SGI      plan-2    N         0.020
+ SGI      plan-2    C         0.020
+ SGI      plan-2    HN1       0.020
+ SGI      plan-2    HN2       0.020
+ SGI      plan-3    CG        0.020
+ SGI      plan-3    CB        0.020
+ SGI      plan-3    CD1       0.020
+ SGI      plan-3    CD2       0.020
+ SGI      plan-3    CE1       0.020
+ SGI      plan-3    CZ        0.020
+ SGI      plan-3    CE2       0.020
+ SGI      plan-3    HD1       0.020
+ SGI      plan-3    HE1       0.020
+ SGI      plan-3    OH        0.020
+ SGI      plan-3    HE2       0.020
+ SGI      plan-3    HD2       0.020
+# ------------------------------------------------------

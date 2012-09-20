@@ -1,0 +1,266 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+B4N      B4N 'bis(4-nitrophenyl) hydrogen phosphat' non-polymer        31  23 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_B4N
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ B4N           OAB    O    O        -1.000      0.000    0.000    0.000
+ B4N           NAV    N    N         1.000     -0.734    0.348    0.907
+ B4N           OAE    O    O         0.000     -0.338    1.145    1.740
+ B4N           CAT    C    CR6       0.000     -2.107   -0.198    1.000
+ B4N           CAM    C    CR16      0.000     -2.939    0.199    2.031
+ B4N           HAM    H    H         0.000     -2.586    0.908    2.769
+ B4N           CAI    C    CR16      0.000     -4.221   -0.309    2.118
+ B4N           HAI    H    H         0.000     -4.873    0.001    2.925
+ B4N           CAN    C    CR16      0.000     -2.554   -1.102    0.054
+ B4N           HAN    H    H         0.000     -1.902   -1.406   -0.755
+ B4N           CAJ    C    CR16      0.000     -3.834   -1.617    0.142
+ B4N           HAJ    H    H         0.000     -4.181   -2.333   -0.593
+ B4N           CAR    C    CR6       0.000     -4.672   -1.217    1.171
+ B4N           OAP    O    O2        0.000     -5.934   -1.718    1.256
+ B4N           PAW    P    P         0.000     -7.037   -0.849    0.470
+ B4N           OAF    O    OP       -0.500     -6.753   -0.891   -0.985
+ B4N           OAC    O    OP       -0.500     -6.990    0.555    0.943
+ B4N           OAO    O    O2        0.000     -8.500   -1.462    0.749
+ B4N           CAQ    C    CR6       0.000     -9.515   -0.734    0.214
+ B4N           CAG    C    CR16      0.000     -9.959   -1.001   -1.073
+ B4N           HAG    H    H         0.000     -9.497   -1.790   -1.652
+ B4N           CAH    C    CR16      0.000    -10.108    0.278    0.953
+ B4N           HAH    H    H         0.000     -9.762    0.490    1.957
+ B4N           CAL    C    CR16      0.000    -11.142    1.017    0.408
+ B4N           HAL    H    H         0.000    -11.606    1.806    0.986
+ B4N           CAS    C    CR6       0.000    -11.582    0.748   -0.875
+ B4N           CAK    C    CR16      0.000    -10.992   -0.260   -1.615
+ B4N           HAK    H    H         0.000    -11.338   -0.468   -2.619
+ B4N           NAU    N    N         1.000    -12.688    1.541   -1.457
+ B4N           OAD    O    O         0.000    -13.078    1.304   -2.587
+ B4N           OAA    O    O        -1.000    -13.209    2.429   -0.806
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ B4N      OAB    n/a    NAV    START
+ B4N      NAV    OAB    CAT    .
+ B4N      OAE    NAV    .      .
+ B4N      CAT    NAV    CAN    .
+ B4N      CAM    CAT    CAI    .
+ B4N      HAM    CAM    .      .
+ B4N      CAI    CAM    HAI    .
+ B4N      HAI    CAI    .      .
+ B4N      CAN    CAT    CAJ    .
+ B4N      HAN    CAN    .      .
+ B4N      CAJ    CAN    CAR    .
+ B4N      HAJ    CAJ    .      .
+ B4N      CAR    CAJ    OAP    .
+ B4N      OAP    CAR    PAW    .
+ B4N      PAW    OAP    OAO    .
+ B4N      OAF    PAW    .      .
+ B4N      OAC    PAW    .      .
+ B4N      OAO    PAW    CAQ    .
+ B4N      CAQ    OAO    CAH    .
+ B4N      CAG    CAQ    HAG    .
+ B4N      HAG    CAG    .      .
+ B4N      CAH    CAQ    CAL    .
+ B4N      HAH    CAH    .      .
+ B4N      CAL    CAH    CAS    .
+ B4N      HAL    CAL    .      .
+ B4N      CAS    CAL    NAU    .
+ B4N      CAK    CAS    HAK    .
+ B4N      HAK    CAK    .      .
+ B4N      NAU    CAS    OAA    .
+ B4N      OAD    NAU    .      .
+ B4N      OAA    NAU    .      END
+ B4N      CAG    CAK    .    ADD
+ B4N      CAR    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ B4N      CAG    CAK       double      1.390    0.020
+ B4N      CAG    CAQ       single      1.390    0.020
+ B4N      CAK    CAS       single      1.390    0.020
+ B4N      NAU    CAS       single      1.400    0.020
+ B4N      CAS    CAL       double      1.390    0.020
+ B4N      OAD    NAU       double      1.220    0.020
+ B4N      OAA    NAU       single      1.400    0.020
+ B4N      CAL    CAH       single      1.390    0.020
+ B4N      CAH    CAQ       double      1.390    0.020
+ B4N      CAQ    OAO       single      1.370    0.020
+ B4N      OAO    PAW       single      1.610    0.020
+ B4N      OAF    PAW       deloc       1.510    0.020
+ B4N      OAC    PAW       deloc       1.510    0.020
+ B4N      PAW    OAP       single      1.610    0.020
+ B4N      OAP    CAR       single      1.370    0.020
+ B4N      CAR    CAI       double      1.390    0.020
+ B4N      CAR    CAJ       single      1.390    0.020
+ B4N      CAI    CAM       single      1.390    0.020
+ B4N      CAM    CAT       double      1.390    0.020
+ B4N      CAT    NAV       single      1.400    0.020
+ B4N      CAN    CAT       single      1.390    0.020
+ B4N      OAE    NAV       double      1.220    0.020
+ B4N      NAV    OAB       single      1.400    0.020
+ B4N      CAJ    CAN       double      1.390    0.020
+ B4N      HAG    CAG       single      1.083    0.020
+ B4N      HAK    CAK       single      1.083    0.020
+ B4N      HAL    CAL       single      1.083    0.020
+ B4N      HAH    CAH       single      1.083    0.020
+ B4N      HAI    CAI       single      1.083    0.020
+ B4N      HAM    CAM       single      1.083    0.020
+ B4N      HAN    CAN       single      1.083    0.020
+ B4N      HAJ    CAJ       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ B4N      OAB    NAV    OAE     120.000    3.000
+ B4N      OAB    NAV    CAT     120.000    3.000
+ B4N      OAE    NAV    CAT     120.000    3.000
+ B4N      NAV    CAT    CAM     120.000    3.000
+ B4N      NAV    CAT    CAN     120.000    3.000
+ B4N      CAM    CAT    CAN     120.000    3.000
+ B4N      CAT    CAM    HAM     120.000    3.000
+ B4N      CAT    CAM    CAI     120.000    3.000
+ B4N      HAM    CAM    CAI     120.000    3.000
+ B4N      CAM    CAI    HAI     120.000    3.000
+ B4N      CAM    CAI    CAR     120.000    3.000
+ B4N      HAI    CAI    CAR     120.000    3.000
+ B4N      CAT    CAN    HAN     120.000    3.000
+ B4N      CAT    CAN    CAJ     120.000    3.000
+ B4N      HAN    CAN    CAJ     120.000    3.000
+ B4N      CAN    CAJ    HAJ     120.000    3.000
+ B4N      CAN    CAJ    CAR     120.000    3.000
+ B4N      HAJ    CAJ    CAR     120.000    3.000
+ B4N      CAJ    CAR    OAP     120.000    3.000
+ B4N      CAJ    CAR    CAI     120.000    3.000
+ B4N      OAP    CAR    CAI     120.000    3.000
+ B4N      CAR    OAP    PAW     120.000    3.000
+ B4N      OAP    PAW    OAF     108.200    3.000
+ B4N      OAP    PAW    OAC     108.200    3.000
+ B4N      OAP    PAW    OAO     102.600    3.000
+ B4N      OAF    PAW    OAC     119.900    3.000
+ B4N      OAF    PAW    OAO     108.200    3.000
+ B4N      OAC    PAW    OAO     108.200    3.000
+ B4N      PAW    OAO    CAQ     120.000    3.000
+ B4N      OAO    CAQ    CAG     120.000    3.000
+ B4N      OAO    CAQ    CAH     120.000    3.000
+ B4N      CAG    CAQ    CAH     120.000    3.000
+ B4N      CAQ    CAG    HAG     120.000    3.000
+ B4N      CAQ    CAG    CAK     120.000    3.000
+ B4N      HAG    CAG    CAK     120.000    3.000
+ B4N      CAQ    CAH    HAH     120.000    3.000
+ B4N      CAQ    CAH    CAL     120.000    3.000
+ B4N      HAH    CAH    CAL     120.000    3.000
+ B4N      CAH    CAL    HAL     120.000    3.000
+ B4N      CAH    CAL    CAS     120.000    3.000
+ B4N      HAL    CAL    CAS     120.000    3.000
+ B4N      CAL    CAS    CAK     120.000    3.000
+ B4N      CAL    CAS    NAU     120.000    3.000
+ B4N      CAK    CAS    NAU     120.000    3.000
+ B4N      CAS    CAK    HAK     120.000    3.000
+ B4N      CAS    CAK    CAG     120.000    3.000
+ B4N      HAK    CAK    CAG     120.000    3.000
+ B4N      CAS    NAU    OAD     120.000    3.000
+ B4N      CAS    NAU    OAA     120.000    3.000
+ B4N      OAD    NAU    OAA     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ B4N      var_1    OAB    NAV    CAT    CAN        0.012   20.000   1
+ B4N      CONST_1  NAV    CAT    CAM    CAI      180.000    0.000   0
+ B4N      CONST_2  CAT    CAM    CAI    CAR        0.000    0.000   0
+ B4N      CONST_3  NAV    CAT    CAN    CAJ      180.000    0.000   0
+ B4N      CONST_4  CAT    CAN    CAJ    CAR        0.000    0.000   0
+ B4N      CONST_5  CAN    CAJ    CAR    OAP      180.000    0.000   0
+ B4N      CONST_6  CAJ    CAR    CAI    CAM        0.000    0.000   0
+ B4N      var_2    CAJ    CAR    OAP    PAW      -90.299   20.000   1
+ B4N      var_3    CAR    OAP    PAW    OAO     -175.022   20.000   1
+ B4N      var_4    OAP    PAW    OAO    CAQ      175.019   20.000   1
+ B4N      var_5    PAW    OAO    CAQ    CAH      -89.996   20.000   1
+ B4N      CONST_7  OAO    CAQ    CAG    CAK      180.000    0.000   0
+ B4N      CONST_8  CAQ    CAG    CAK    CAS        0.000    0.000   0
+ B4N      CONST_9  OAO    CAQ    CAH    CAL      180.000    0.000   0
+ B4N      CONST_10 CAQ    CAH    CAL    CAS        0.000    0.000   0
+ B4N      CONST_11 CAH    CAL    CAS    NAU      180.000    0.000   0
+ B4N      CONST_12 CAL    CAS    CAK    CAG        0.000    0.000   0
+ B4N      var_6    CAL    CAS    NAU    OAA       -0.043   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ B4N      plan-1    CAG       0.020
+ B4N      plan-1    CAK       0.020
+ B4N      plan-1    CAQ       0.020
+ B4N      plan-1    HAG       0.020
+ B4N      plan-1    CAS       0.020
+ B4N      plan-1    CAL       0.020
+ B4N      plan-1    CAH       0.020
+ B4N      plan-1    HAK       0.020
+ B4N      plan-1    NAU       0.020
+ B4N      plan-1    HAL       0.020
+ B4N      plan-1    HAH       0.020
+ B4N      plan-1    OAO       0.020
+ B4N      plan-2    NAU       0.020
+ B4N      plan-2    CAS       0.020
+ B4N      plan-2    OAD       0.020
+ B4N      plan-2    OAA       0.020
+ B4N      plan-3    CAR       0.020
+ B4N      plan-3    OAP       0.020
+ B4N      plan-3    CAI       0.020
+ B4N      plan-3    CAJ       0.020
+ B4N      plan-3    CAM       0.020
+ B4N      plan-3    CAT       0.020
+ B4N      plan-3    CAN       0.020
+ B4N      plan-3    HAI       0.020
+ B4N      plan-3    HAM       0.020
+ B4N      plan-3    NAV       0.020
+ B4N      plan-3    HAN       0.020
+ B4N      plan-3    HAJ       0.020
+ B4N      plan-4    NAV       0.020
+ B4N      plan-4    CAT       0.020
+ B4N      plan-4    OAE       0.020
+ B4N      plan-4    OAB       0.020
+# ------------------------------------------------------

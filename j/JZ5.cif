@@ -1,0 +1,151 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+JZ5      JZ5 '(NZ)-N-(thiophen-2-ylmethylidene)hyd' non-polymer        13   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_JZ5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ JZ5           OAB    O    OH1       0.000      0.000    0.000    0.000
+ JZ5           HOAB   H    H         0.000      0.954    0.166    0.000
+ JZ5           NAF    N    N         0.000     -0.243   -1.395    0.000
+ JZ5           CAH    C    C1        0.000     -1.461   -1.841    0.000
+ JZ5           HAH    H    H         0.000     -1.646   -2.902    0.000
+ JZ5           CAI    C    CR5       0.000     -2.586   -0.899    0.000
+ JZ5           SAG    S    S2        0.000     -2.447    0.854    0.000
+ JZ5           CAD    C    CR15      0.000     -4.197    1.027    0.000
+ JZ5           HAD    H    H         0.000     -4.728    1.970    0.000
+ JZ5           CAE    C    CR15      0.000     -3.904   -1.246    0.000
+ JZ5           HAE    H    H         0.000     -4.239   -2.276    0.000
+ JZ5           CAC    C    CR15      0.000     -4.774   -0.180    0.000
+ JZ5           HAC    H    H         0.000     -5.850   -0.309    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ JZ5      OAB    n/a    NAF    START
+ JZ5      HOAB   OAB    .      .
+ JZ5      NAF    OAB    CAH    .
+ JZ5      CAH    NAF    CAI    .
+ JZ5      HAH    CAH    .      .
+ JZ5      CAI    CAH    CAE    .
+ JZ5      SAG    CAI    CAD    .
+ JZ5      CAD    SAG    HAD    .
+ JZ5      HAD    CAD    .      .
+ JZ5      CAE    CAI    CAC    .
+ JZ5      HAE    CAE    .      .
+ JZ5      CAC    CAE    HAC    .
+ JZ5      HAC    CAC    .      END
+ JZ5      CAC    CAD    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ JZ5      NAF    OAB       single      1.392    0.020
+ JZ5      CAC    CAD       double      1.380    0.020
+ JZ5      CAC    CAE       single      1.380    0.020
+ JZ5      CAD    SAG       single      1.745    0.020
+ JZ5      CAE    CAI       double      1.387    0.020
+ JZ5      CAH    NAF       double      1.260    0.020
+ JZ5      SAG    CAI       single      1.745    0.020
+ JZ5      CAI    CAH       single      1.483    0.020
+ JZ5      HOAB   OAB       single      0.967    0.020
+ JZ5      HAC    CAC       single      1.083    0.020
+ JZ5      HAD    CAD       single      1.083    0.020
+ JZ5      HAE    CAE       single      1.083    0.020
+ JZ5      HAH    CAH       single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ JZ5      HOAB   OAB    NAF     109.470    3.000
+ JZ5      OAB    NAF    CAH     120.000    3.000
+ JZ5      NAF    CAH    HAH     120.000    3.000
+ JZ5      NAF    CAH    CAI     120.000    3.000
+ JZ5      HAH    CAH    CAI     120.000    3.000
+ JZ5      CAH    CAI    SAG     108.000    3.000
+ JZ5      CAH    CAI    CAE     108.000    3.000
+ JZ5      SAG    CAI    CAE     108.000    3.000
+ JZ5      CAI    SAG    CAD      91.087    3.000
+ JZ5      SAG    CAD    HAD     108.000    3.000
+ JZ5      SAG    CAD    CAC     108.000    3.000
+ JZ5      HAD    CAD    CAC     126.000    3.000
+ JZ5      CAI    CAE    HAE     126.000    3.000
+ JZ5      CAI    CAE    CAC     108.000    3.000
+ JZ5      HAE    CAE    CAC     126.000    3.000
+ JZ5      CAE    CAC    HAC     126.000    3.000
+ JZ5      CAE    CAC    CAD     108.000    3.000
+ JZ5      HAC    CAC    CAD     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ JZ5      var_1    HOAB   OAB    NAF    CAH      180.000   20.000   1
+ JZ5      CONST_1  OAB    NAF    CAH    CAI        0.000    0.000   0
+ JZ5      var_2    NAF    CAH    CAI    CAE      180.000   20.000   1
+ JZ5      CONST_2  CAH    CAI    SAG    CAD      180.000    0.000   0
+ JZ5      CONST_3  CAI    SAG    CAD    CAC        0.000    0.000   0
+ JZ5      CONST_4  CAH    CAI    CAE    CAC      180.000    0.000   0
+ JZ5      CONST_5  CAI    CAE    CAC    CAD        0.000    0.000   0
+ JZ5      CONST_6  CAE    CAC    CAD    SAG        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ JZ5      plan-1    CAC       0.020
+ JZ5      plan-1    CAD       0.020
+ JZ5      plan-1    CAE       0.020
+ JZ5      plan-1    HAC       0.020
+ JZ5      plan-1    SAG       0.020
+ JZ5      plan-1    CAI       0.020
+ JZ5      plan-1    HAD       0.020
+ JZ5      plan-1    HAE       0.020
+ JZ5      plan-1    CAH       0.020
+ JZ5      plan-1    HAH       0.020
+ JZ5      plan-2    NAF       0.020
+ JZ5      plan-2    OAB       0.020
+ JZ5      plan-2    CAH       0.020
+ JZ5      plan-2    CAI       0.020
+ JZ5      plan-2    HAH       0.020
+# ------------------------------------------------------

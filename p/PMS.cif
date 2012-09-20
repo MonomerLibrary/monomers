@@ -1,0 +1,189 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PMS      PMS 'phenylmethanesulfonic acid          ' non-polymer        19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PMS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PMS           O1S    O    OS        0.000      0.000    0.000    0.000
+ PMS           S      S    ST        0.000     -0.664    1.058   -0.676
+ PMS           O2S    O    OS        0.000     -0.994    2.266   -0.003
+ PMS           O3S    O    OH1       0.000      0.316    1.487   -1.759
+ PMS           HO3S   H    H         0.000      1.152    1.854   -1.490
+ PMS           C      C    CH2       0.000     -2.099    0.428   -1.591
+ PMS           H2A    H    H         0.000     -1.790   -0.411   -2.218
+ PMS           H1     H    H         0.000     -2.506    1.221   -2.221
+ PMS           C1     C    CR6       0.000     -3.153   -0.033   -0.616
+ PMS           C6     C    CR16      0.000     -3.158   -1.341   -0.173
+ PMS           H6     H    H         0.000     -2.408   -2.037   -0.529
+ PMS           C5     C    CR16      0.000     -4.121   -1.763    0.725
+ PMS           H5     H    H         0.000     -4.120   -2.787    1.080
+ PMS           C4     C    CR16      0.000     -5.086   -0.878    1.170
+ PMS           H4     H    H         0.000     -5.843   -1.209    1.870
+ PMS           C3     C    CR16      0.000     -5.083    0.430    0.722
+ PMS           H3     H    H         0.000     -5.838    1.124    1.072
+ PMS           C2     C    CR16      0.000     -4.117    0.852   -0.172
+ PMS           H2     H    H         0.000     -4.115    1.877   -0.523
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PMS      O1S    n/a    S      START
+ PMS      S      O1S    C      .
+ PMS      O2S    S      .      .
+ PMS      O3S    S      HO3S   .
+ PMS      HO3S   O3S    .      .
+ PMS      C      S      C1     .
+ PMS      H2A    C      .      .
+ PMS      H1     C      .      .
+ PMS      C1     C      C6     .
+ PMS      C6     C1     C5     .
+ PMS      H6     C6     .      .
+ PMS      C5     C6     C4     .
+ PMS      H5     C5     .      .
+ PMS      C4     C5     C3     .
+ PMS      H4     C4     .      .
+ PMS      C3     C4     C2     .
+ PMS      H3     C3     .      .
+ PMS      C2     C3     H2     .
+ PMS      H2     C2     .      END
+ PMS      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PMS      C1     C         single      1.511    0.020
+ PMS      C      S         single      1.662    0.020
+ PMS      H2A    C         single      1.092    0.020
+ PMS      H1     C         single      1.092    0.020
+ PMS      O2S    S         double      1.436    0.020
+ PMS      S      O1S       double      1.436    0.020
+ PMS      O3S    S         single      1.635    0.020
+ PMS      C6     C1        double      1.390    0.020
+ PMS      C1     C2        single      1.390    0.020
+ PMS      C2     C3        double      1.390    0.020
+ PMS      H2     C2        single      1.083    0.020
+ PMS      C3     C4        single      1.390    0.020
+ PMS      H3     C3        single      1.083    0.020
+ PMS      C4     C5        double      1.390    0.020
+ PMS      H4     C4        single      1.083    0.020
+ PMS      C5     C6        single      1.390    0.020
+ PMS      H5     C5        single      1.083    0.020
+ PMS      H6     C6        single      1.083    0.020
+ PMS      HO3S   O3S       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PMS      O1S    S      O2S     109.500    3.000
+ PMS      O1S    S      O3S     109.500    3.000
+ PMS      O1S    S      C       109.500    3.000
+ PMS      O2S    S      O3S     109.500    3.000
+ PMS      O2S    S      C       109.500    3.000
+ PMS      O3S    S      C       109.500    3.000
+ PMS      S      O3S    HO3S    120.000    3.000
+ PMS      S      C      H2A     109.500    3.000
+ PMS      S      C      H1      109.500    3.000
+ PMS      S      C      C1      109.500    3.000
+ PMS      H2A    C      H1      107.900    3.000
+ PMS      H2A    C      C1      109.470    3.000
+ PMS      H1     C      C1      109.470    3.000
+ PMS      C      C1     C6      120.000    3.000
+ PMS      C      C1     C2      120.000    3.000
+ PMS      C6     C1     C2      120.000    3.000
+ PMS      C1     C6     H6      120.000    3.000
+ PMS      C1     C6     C5      120.000    3.000
+ PMS      H6     C6     C5      120.000    3.000
+ PMS      C6     C5     H5      120.000    3.000
+ PMS      C6     C5     C4      120.000    3.000
+ PMS      H5     C5     C4      120.000    3.000
+ PMS      C5     C4     H4      120.000    3.000
+ PMS      C5     C4     C3      120.000    3.000
+ PMS      H4     C4     C3      120.000    3.000
+ PMS      C4     C3     H3      120.000    3.000
+ PMS      C4     C3     C2      120.000    3.000
+ PMS      H3     C3     C2      120.000    3.000
+ PMS      C3     C2     H2      120.000    3.000
+ PMS      C3     C2     C1      120.000    3.000
+ PMS      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PMS      var_1    O1S    S      O3S    HO3S     -63.970   20.000   1
+ PMS      var_2    O1S    S      C      C1        68.391   20.000   1
+ PMS      var_3    S      C      C1     C6       -90.273   20.000   2
+ PMS      CONST_1  C      C1     C2     C3       180.000    0.000   0
+ PMS      CONST_2  C      C1     C6     C5       180.000    0.000   0
+ PMS      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ PMS      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ PMS      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ PMS      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PMS      chir_01  S      C      O3S    O2S       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PMS      plan-1    C1        0.020
+ PMS      plan-1    C         0.020
+ PMS      plan-1    C2        0.020
+ PMS      plan-1    C6        0.020
+ PMS      plan-1    C3        0.020
+ PMS      plan-1    C4        0.020
+ PMS      plan-1    C5        0.020
+ PMS      plan-1    H2        0.020
+ PMS      plan-1    H3        0.020
+ PMS      plan-1    H4        0.020
+ PMS      plan-1    H5        0.020
+ PMS      plan-1    H6        0.020
+# ------------------------------------------------------

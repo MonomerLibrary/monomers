@@ -1,0 +1,164 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OCS      OCS 'CYSTEINESULFONIC ACID               ' peptide            16  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OCS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OCS           N      N    NH2       0.000      0.000    0.000    0.000
+ OCS           HN1    H    H         0.000      0.800   -0.321    0.532
+ OCS           HN2    H    H         0.000      0.116    0.234   -0.979
+ OCS           CA     C    CH1       0.000     -1.315    0.124    0.641
+ OCS           HA     H    H         0.000     -1.615    1.181    0.660
+ OCS           CB     C    CH2       0.000     -2.346   -0.684   -0.147
+ OCS           HB2    H    H         0.000     -3.323   -0.592    0.331
+ OCS           HB3    H    H         0.000     -2.047   -1.734   -0.164
+ OCS           SG     S    ST        0.000     -2.440   -0.054   -1.844
+ OCS           OD1    O    OS        0.000     -3.046    1.231   -1.892
+ OCS           OD2    O    OH1       0.000     -3.489   -0.946   -2.489
+ OCS           HD2    H    H         0.000     -3.709   -0.795   -3.402
+ OCS           OD3    O    OS        0.000     -1.267   -0.362   -2.583
+ OCS           C      C    C         0.000     -1.235   -0.400    2.052
+ OCS           O      O    OC       -0.500     -0.428   -1.312    2.337
+ OCS           OXT    O    OC       -0.500     -1.979    0.076    2.939
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OCS      N      n/a    CA     START
+ OCS      HN1    N      .      .
+ OCS      HN2    N      .      .
+ OCS      CA     N      C      .
+ OCS      HA     CA     .      .
+ OCS      CB     CA     SG     .
+ OCS      HB2    CB     .      .
+ OCS      HB3    CB     .      .
+ OCS      SG     CB     OD3    .
+ OCS      OD1    SG     .      .
+ OCS      OD2    SG     HD2    .
+ OCS      HD2    OD2    .      .
+ OCS      OD3    SG     .      .
+ OCS      C      CA     .      END
+ OCS      O      C      .      .
+ OCS      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OCS      CA     N         single      1.450    0.020
+ OCS      CB     CA        single      1.524    0.020
+ OCS      C      CA        single      1.500    0.020
+ OCS      HA     CA        single      1.099    0.020
+ OCS      SG     CB        single      1.662    0.020
+ OCS      HB2    CB        single      1.092    0.020
+ OCS      HB3    CB        single      1.092    0.020
+ OCS      OD1    SG        double      1.436    0.020
+ OCS      OD2    SG        single      1.635    0.020
+ OCS      OD3    SG        double      1.436    0.020
+ OCS      O      C         deloc       1.250    0.020
+ OCS      OXT    C         deloc       1.250    0.020
+ OCS      HD2    OD2       single      0.967    0.020
+ OCS      HN1    N         single      1.010    0.020
+ OCS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OCS      HN1    N      HN2     120.000    3.000
+ OCS      HN1    N      CA      120.000    3.000
+ OCS      HN2    N      CA      120.000    3.000
+ OCS      N      CA     HA      109.470    3.000
+ OCS      N      CA     CB      109.470    3.000
+ OCS      N      CA     C       109.470    3.000
+ OCS      HA     CA     CB      108.340    3.000
+ OCS      HA     CA     C       108.810    3.000
+ OCS      CB     CA     C       109.470    3.000
+ OCS      CA     CB     HB2     109.470    3.000
+ OCS      CA     CB     HB3     109.470    3.000
+ OCS      CA     CB     SG      109.500    3.000
+ OCS      HB2    CB     HB3     107.900    3.000
+ OCS      HB2    CB     SG      109.500    3.000
+ OCS      HB3    CB     SG      109.500    3.000
+ OCS      CB     SG     OD1     109.500    3.000
+ OCS      CB     SG     OD2     109.500    3.000
+ OCS      CB     SG     OD3     109.500    3.000
+ OCS      OD1    SG     OD2     109.500    3.000
+ OCS      OD1    SG     OD3     109.500    3.000
+ OCS      OD2    SG     OD3     109.500    3.000
+ OCS      SG     OD2    HD2     120.000    3.000
+ OCS      CA     C      O       118.500    3.000
+ OCS      CA     C      OXT     118.500    3.000
+ OCS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OCS      var_1    HN2    N      CA     C        175.000   20.000   1
+ OCS      var_2    N      CA     CB     SG       -59.991   20.000   3
+ OCS      var_3    CA     CB     SG     OD3       70.204   20.000   1
+ OCS      var_4    CB     SG     OD2    HD2      179.965   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OCS      chir_01  CA     N      CB     C         negativ
+ OCS      chir_02  SG     CB     OD1    OD2       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OCS      plan-1    N         0.020
+ OCS      plan-1    CA        0.020
+ OCS      plan-1    HN1       0.020
+ OCS      plan-1    HN2       0.020
+ OCS      plan-2    C         0.020
+ OCS      plan-2    CA        0.020
+ OCS      plan-2    O         0.020
+ OCS      plan-2    OXT       0.020
+# ------------------------------------------------------

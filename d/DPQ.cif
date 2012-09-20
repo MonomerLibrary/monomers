@@ -1,0 +1,221 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DPQ      DPQ '(S)-2-AMINO-3-(4-HYDROXY-3-OXOCYCLOH' peptide            24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DPQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DPQ           N      N    NH2       0.000      0.000    0.000    0.000
+ DPQ           HN1    H    H         0.000      0.880    0.076   -0.497
+ DPQ           HN2    H    H         0.000     -0.059    0.327    0.957
+ DPQ           CA     C    CH1       0.000     -1.178   -0.578   -0.661
+ DPQ           HA     H    H         0.000     -1.461   -1.512   -0.155
+ DPQ           CB     C    CH2       0.000     -2.341    0.414   -0.588
+ DPQ           HB1    H    H         0.000     -3.188    0.024   -1.156
+ DPQ           HB2    H    H         0.000     -2.029    1.371   -1.012
+ DPQ           CG     C    CR6       0.000     -2.745    0.609    0.851
+ DPQ           CD2    C    CR16      0.000     -2.229    1.631    1.519
+ DPQ           HD2    H    H         0.000     -1.541    2.311    1.032
+ DPQ           CE2    C    CR6       0.000     -2.598    1.835    2.932
+ DPQ           OE2    O    O         0.000     -2.396    2.898    3.488
+ DPQ           CZ     C    CR6       0.000     -3.223    0.705    3.649
+ DPQ           OH     O    OH1       0.000     -3.279    0.700    5.007
+ DPQ           HH     H    H         0.000     -2.872    1.508    5.349
+ DPQ           CE1    C    CR16      0.000     -3.726   -0.313    2.953
+ DPQ           HE1    H    H         0.000     -4.167   -1.141    3.494
+ DPQ           CD1    C    CH2       0.000     -3.708   -0.363    1.457
+ DPQ           HD12   H    H         0.000     -4.718   -0.143    1.107
+ DPQ           HD11   H    H         0.000     -3.435   -1.379    1.164
+ DPQ           C      C    C         0.000     -0.853   -0.866   -2.104
+ DPQ           O      O    OC       -0.500      0.111   -0.291   -2.655
+ DPQ           OXT    O    OC       -0.500     -1.548   -1.682   -2.750
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DPQ      N      n/a    CA     START
+ DPQ      HN1    N      .      .
+ DPQ      HN2    N      .      .
+ DPQ      CA     N      C      .
+ DPQ      HA     CA     .      .
+ DPQ      CB     CA     CG     .
+ DPQ      HB1    CB     .      .
+ DPQ      HB2    CB     .      .
+ DPQ      CG     CB     CD2    .
+ DPQ      CD2    CG     CE2    .
+ DPQ      HD2    CD2    .      .
+ DPQ      CE2    CD2    CZ     .
+ DPQ      OE2    CE2    .      .
+ DPQ      CZ     CE2    CE1    .
+ DPQ      OH     CZ     HH     .
+ DPQ      HH     OH     .      .
+ DPQ      CE1    CZ     CD1    .
+ DPQ      HE1    CE1    .      .
+ DPQ      CD1    CE1    HD11   .
+ DPQ      HD12   CD1    .      .
+ DPQ      HD11   CD1    .      .
+ DPQ      C      CA     .      END
+ DPQ      O      C      .      .
+ DPQ      OXT    C      .      .
+ DPQ      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DPQ      OE2    CE2       double      1.250    0.020
+ DPQ      CA     N         single      1.450    0.020
+ DPQ      C      CA        single      1.500    0.020
+ DPQ      CB     CA        single      1.524    0.020
+ DPQ      HA     CA        single      1.099    0.020
+ DPQ      O      C         deloc       1.250    0.020
+ DPQ      OXT    C         deloc       1.250    0.020
+ DPQ      CG     CB        single      1.511    0.020
+ DPQ      HB1    CB        single      1.092    0.020
+ DPQ      HB2    CB        single      1.092    0.020
+ DPQ      CG     CD1       single      1.511    0.020
+ DPQ      CD2    CG        double      1.390    0.020
+ DPQ      CD1    CE1       single      1.457    0.020
+ DPQ      HD11   CD1       single      1.092    0.020
+ DPQ      HD12   CD1       single      1.092    0.020
+ DPQ      CE2    CD2       single      1.390    0.020
+ DPQ      HD2    CD2       single      1.083    0.020
+ DPQ      CE1    CZ        double      1.390    0.020
+ DPQ      HE1    CE1       single      1.083    0.020
+ DPQ      CZ     CE2       single      1.487    0.020
+ DPQ      OH     CZ        single      1.362    0.020
+ DPQ      HH     OH        single      0.967    0.020
+ DPQ      HN1    N         single      1.010    0.020
+ DPQ      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DPQ      HN1    N      HN2     120.000    3.000
+ DPQ      HN1    N      CA      120.000    3.000
+ DPQ      HN2    N      CA      120.000    3.000
+ DPQ      N      CA     HA      109.470    3.000
+ DPQ      N      CA     CB      109.470    3.000
+ DPQ      N      CA     C       109.470    3.000
+ DPQ      HA     CA     CB      108.340    3.000
+ DPQ      HA     CA     C       108.810    3.000
+ DPQ      CB     CA     C       109.470    3.000
+ DPQ      CA     CB     HB1     109.470    3.000
+ DPQ      CA     CB     HB2     109.470    3.000
+ DPQ      CA     CB     CG      109.470    3.000
+ DPQ      HB1    CB     HB2     107.900    3.000
+ DPQ      HB1    CB     CG      109.470    3.000
+ DPQ      HB2    CB     CG      109.470    3.000
+ DPQ      CB     CG     CD2     120.000    3.000
+ DPQ      CB     CG     CD1     120.000    3.000
+ DPQ      CD2    CG     CD1     120.000    3.000
+ DPQ      CG     CD2    HD2     120.000    3.000
+ DPQ      CG     CD2    CE2     120.000    3.000
+ DPQ      HD2    CD2    CE2     120.000    3.000
+ DPQ      CD2    CE2    OE2     120.000    3.000
+ DPQ      CD2    CE2    CZ      120.000    3.000
+ DPQ      OE2    CE2    CZ      120.000    3.000
+ DPQ      CE2    CZ     OH      120.000    3.000
+ DPQ      CE2    CZ     CE1     120.000    3.000
+ DPQ      OH     CZ     CE1     120.000    3.000
+ DPQ      CZ     OH     HH      109.470    3.000
+ DPQ      CZ     CE1    HE1     120.000    3.000
+ DPQ      CZ     CE1    CD1     120.000    3.000
+ DPQ      HE1    CE1    CD1     120.000    3.000
+ DPQ      CE1    CD1    HD12    109.470    3.000
+ DPQ      CE1    CD1    HD11    109.470    3.000
+ DPQ      CE1    CD1    CG      109.500    3.000
+ DPQ      HD12   CD1    HD11    107.900    3.000
+ DPQ      HD12   CD1    CG      109.470    3.000
+ DPQ      HD11   CD1    CG      109.470    3.000
+ DPQ      CA     C      O       118.500    3.000
+ DPQ      CA     C      OXT     118.500    3.000
+ DPQ      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DPQ      var_1    HN2    N      CA     C        175.000   20.000   1
+ DPQ      var_2    N      CA     CB     CG       -65.011   20.000   3
+ DPQ      var_3    CA     CB     CG     CD2       94.773   20.000   2
+ DPQ      CONST_1  CB     CG     CD1    CE1      150.000    0.000   0
+ DPQ      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ DPQ      CONST_3  CG     CD2    CE2    CZ        30.000    0.000   0
+ DPQ      CONST_4  CD2    CE2    CZ     CE1      -30.000    0.000   0
+ DPQ      var_4    CE2    CZ     OH     HH         0.288   20.000   1
+ DPQ      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ DPQ      CONST_6  CZ     CE1    CD1    CG        30.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DPQ      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DPQ      plan-1    N         0.020
+ DPQ      plan-1    CA        0.020
+ DPQ      plan-1    HN1       0.020
+ DPQ      plan-1    HN2       0.020
+ DPQ      plan-2    C         0.020
+ DPQ      plan-2    CA        0.020
+ DPQ      plan-2    O         0.020
+ DPQ      plan-2    OXT       0.020
+ DPQ      plan-3    CG        0.020
+ DPQ      plan-3    CB        0.020
+ DPQ      plan-3    CD1       0.020
+ DPQ      plan-3    CD2       0.020
+ DPQ      plan-3    CE1       0.020
+ DPQ      plan-3    CE2       0.020
+ DPQ      plan-3    CZ        0.020
+ DPQ      plan-3    HD2       0.020
+ DPQ      plan-3    HE1       0.020
+ DPQ      plan-3    OE2       0.020
+ DPQ      plan-3    OH        0.020
+# ------------------------------------------------------

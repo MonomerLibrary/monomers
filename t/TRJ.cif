@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TRJ      TRJ 'META-DI(AMINOMETHYL)BENZENE         ' non-polymer        22  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TRJ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TRJ           N2     N    NH2       0.000      0.000    0.000    0.000
+ TRJ           HN21   H    H         0.000      0.659    0.239    0.732
+ TRJ           HN22   H    H         0.000      0.008    0.524   -0.867
+ TRJ           CB     C    CH2       0.000     -0.958   -1.096    0.194
+ TRJ           HB1    H    H         0.000     -0.740   -1.606    1.135
+ TRJ           HB2    H    H         0.000     -0.871   -1.805   -0.632
+ TRJ           CE1    C    CR6       0.000     -2.358   -0.539    0.235
+ TRJ           CD1    C    CR16      0.000     -2.910   -0.148    1.440
+ TRJ           HD11   H    H         0.000     -2.335   -0.238    2.354
+ TRJ           CZ     C    CR16      0.000     -3.087   -0.416   -0.931
+ TRJ           HZ1    H    H         0.000     -2.652   -0.720   -1.876
+ TRJ           CE2    C    CR16      0.000     -4.370    0.094   -0.894
+ TRJ           HE21   H    H         0.000     -4.942    0.190   -1.808
+ TRJ           CD2    C    CR16      0.000     -4.924    0.481    0.311
+ TRJ           HD21   H    H         0.000     -5.930    0.882    0.341
+ TRJ           CG     C    CR6       0.000     -4.195    0.358    1.479
+ TRJ           CA     C    CH2       0.000     -4.800    0.780    2.793
+ TRJ           HA1    H    H         0.000     -5.507    1.594    2.622
+ TRJ           HA2    H    H         0.000     -4.008    1.121    3.463
+ TRJ           N      N    NH2       0.000     -5.500   -0.360    3.399
+ TRJ           HN2    H    H         0.000     -5.519   -1.257    2.929
+ TRJ           HN1    H    H         0.000     -5.968   -0.256    4.292
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TRJ      N2     n/a    CB     START
+ TRJ      HN21   N2     .      .
+ TRJ      HN22   N2     .      .
+ TRJ      CB     N2     CE1    .
+ TRJ      HB1    CB     .      .
+ TRJ      HB2    CB     .      .
+ TRJ      CE1    CB     CZ     .
+ TRJ      CD1    CE1    HD11   .
+ TRJ      HD11   CD1    .      .
+ TRJ      CZ     CE1    CE2    .
+ TRJ      HZ1    CZ     .      .
+ TRJ      CE2    CZ     CD2    .
+ TRJ      HE21   CE2    .      .
+ TRJ      CD2    CE2    CG     .
+ TRJ      HD21   CD2    .      .
+ TRJ      CG     CD2    CA     .
+ TRJ      CA     CG     N      .
+ TRJ      HA1    CA     .      .
+ TRJ      HA2    CA     .      .
+ TRJ      N      CA     HN1    .
+ TRJ      HN2    N      .      .
+ TRJ      HN1    N      .      END
+ TRJ      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TRJ      N      CA        single      1.450    0.020
+ TRJ      HN1    N         single      1.010    0.020
+ TRJ      HN2    N         single      1.010    0.020
+ TRJ      CA     CG        single      1.511    0.020
+ TRJ      HA1    CA        single      1.092    0.020
+ TRJ      HA2    CA        single      1.092    0.020
+ TRJ      CG     CD1       double      1.390    0.020
+ TRJ      CG     CD2       single      1.390    0.020
+ TRJ      CD1    CE1       single      1.390    0.020
+ TRJ      HD11   CD1       single      1.083    0.020
+ TRJ      CD2    CE2       double      1.390    0.020
+ TRJ      HD21   CD2       single      1.083    0.020
+ TRJ      CZ     CE1       double      1.390    0.020
+ TRJ      CE1    CB        single      1.511    0.020
+ TRJ      CE2    CZ        single      1.390    0.020
+ TRJ      HE21   CE2       single      1.083    0.020
+ TRJ      HZ1    CZ        single      1.083    0.020
+ TRJ      CB     N2        single      1.450    0.020
+ TRJ      HB1    CB        single      1.092    0.020
+ TRJ      HB2    CB        single      1.092    0.020
+ TRJ      HN21   N2        single      1.010    0.020
+ TRJ      HN22   N2        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TRJ      HN21   N2     HN22    120.000    3.000
+ TRJ      HN21   N2     CB      120.000    3.000
+ TRJ      HN22   N2     CB      120.000    3.000
+ TRJ      N2     CB     HB1     109.470    3.000
+ TRJ      N2     CB     HB2     109.470    3.000
+ TRJ      N2     CB     CE1     109.500    3.000
+ TRJ      HB1    CB     HB2     107.900    3.000
+ TRJ      HB1    CB     CE1     109.470    3.000
+ TRJ      HB2    CB     CE1     109.470    3.000
+ TRJ      CB     CE1    CD1     120.000    3.000
+ TRJ      CB     CE1    CZ      120.000    3.000
+ TRJ      CD1    CE1    CZ      120.000    3.000
+ TRJ      CE1    CD1    HD11    120.000    3.000
+ TRJ      CE1    CD1    CG      120.000    3.000
+ TRJ      HD11   CD1    CG      120.000    3.000
+ TRJ      CE1    CZ     HZ1     120.000    3.000
+ TRJ      CE1    CZ     CE2     120.000    3.000
+ TRJ      HZ1    CZ     CE2     120.000    3.000
+ TRJ      CZ     CE2    HE21    120.000    3.000
+ TRJ      CZ     CE2    CD2     120.000    3.000
+ TRJ      HE21   CE2    CD2     120.000    3.000
+ TRJ      CE2    CD2    HD21    120.000    3.000
+ TRJ      CE2    CD2    CG      120.000    3.000
+ TRJ      HD21   CD2    CG      120.000    3.000
+ TRJ      CD2    CG     CA      120.000    3.000
+ TRJ      CD2    CG     CD1     120.000    3.000
+ TRJ      CA     CG     CD1     120.000    3.000
+ TRJ      CG     CA     HA1     109.470    3.000
+ TRJ      CG     CA     HA2     109.470    3.000
+ TRJ      CG     CA     N       109.500    3.000
+ TRJ      HA1    CA     HA2     107.900    3.000
+ TRJ      HA1    CA     N       109.470    3.000
+ TRJ      HA2    CA     N       109.470    3.000
+ TRJ      CA     N      HN2     120.000    3.000
+ TRJ      CA     N      HN1     120.000    3.000
+ TRJ      HN2    N      HN1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TRJ      var_1    HN22   N2     CB     CE1      -66.156   20.000   1
+ TRJ      var_2    N2     CB     CE1    CZ        89.957   20.000   2
+ TRJ      CONST_1  CB     CE1    CD1    CG       180.000    0.000   0
+ TRJ      CONST_2  CB     CE1    CZ     CE2      180.000    0.000   0
+ TRJ      CONST_3  CE1    CZ     CE2    CD2        0.000    0.000   0
+ TRJ      CONST_4  CZ     CE2    CD2    CG         0.000    0.000   0
+ TRJ      CONST_5  CE2    CD2    CG     CA       180.000    0.000   0
+ TRJ      CONST_6  CD2    CG     CD1    CE1        0.000    0.000   0
+ TRJ      var_3    CD2    CG     CA     N         89.992   20.000   2
+ TRJ      var_4    CG     CA     N      HN1      179.988   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TRJ      plan-1    N         0.020
+ TRJ      plan-1    CA        0.020
+ TRJ      plan-1    HN1       0.020
+ TRJ      plan-1    HN2       0.020
+ TRJ      plan-2    CG        0.020
+ TRJ      plan-2    CA        0.020
+ TRJ      plan-2    CD1       0.020
+ TRJ      plan-2    CD2       0.020
+ TRJ      plan-2    CE1       0.020
+ TRJ      plan-2    CE2       0.020
+ TRJ      plan-2    CZ        0.020
+ TRJ      plan-2    HD11      0.020
+ TRJ      plan-2    HD21      0.020
+ TRJ      plan-2    CB        0.020
+ TRJ      plan-2    HE21      0.020
+ TRJ      plan-2    HZ1       0.020
+ TRJ      plan-3    N2        0.020
+ TRJ      plan-3    CB        0.020
+ TRJ      plan-3    HN21      0.020
+ TRJ      plan-3    HN22      0.020
+# ------------------------------------------------------

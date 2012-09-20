@@ -1,0 +1,146 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3PP      3PP '3-PHOSPHONOPROPANOIC ACID           ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3PP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3PP           O2     O    O         0.000      0.000    0.000    0.000
+ 3PP           P      P    P         0.000     -0.830   -0.982    0.733
+ 3PP           O1     O    OH1       0.000      0.095   -1.799    1.767
+ 3PP           HO1    H    H         0.000      0.842   -2.319    1.441
+ 3PP           O3     O    OH1       0.000     -1.498   -2.007   -0.314
+ 3PP           HO3    H    H         0.000     -2.073   -2.716    0.004
+ 3PP           CB     C    CH2       0.000     -2.139   -0.107    1.647
+ 3PP           HCB1   H    H         0.000     -1.685    0.587    2.357
+ 3PP           HCB2   H    H         0.000     -2.750   -0.832    2.190
+ 3PP           CG     C    CH2       0.000     -3.018    0.668    0.664
+ 3PP           HCG1   H    H         0.000     -3.470   -0.028   -0.046
+ 3PP           HCG2   H    H         0.000     -2.405    1.392    0.122
+ 3PP           CD     C    C         0.000     -4.102    1.392    1.421
+ 3PP           OE1    O    OC       -0.500     -4.168    1.293    2.666
+ 3PP           OE2    O    OC       -0.500     -4.937    2.091    0.804
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3PP      O2     n/a    P      START
+ 3PP      P      O2     CB     .
+ 3PP      O1     P      HO1    .
+ 3PP      HO1    O1     .      .
+ 3PP      O3     P      HO3    .
+ 3PP      HO3    O3     .      .
+ 3PP      CB     P      CG     .
+ 3PP      HCB1   CB     .      .
+ 3PP      HCB2   CB     .      .
+ 3PP      CG     CB     CD     .
+ 3PP      HCG1   CG     .      .
+ 3PP      HCG2   CG     .      .
+ 3PP      CD     CG     OE2    .
+ 3PP      OE1    CD     .      .
+ 3PP      OE2    CD     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3PP      CG     CB        single      1.524    0.020
+ 3PP      CB     P         single      1.812    0.020
+ 3PP      HCB1   CB        single      1.092    0.020
+ 3PP      HCB2   CB        single      1.092    0.020
+ 3PP      CD     CG        single      1.510    0.020
+ 3PP      HCG1   CG        single      1.092    0.020
+ 3PP      HCG2   CG        single      1.092    0.020
+ 3PP      O1     P         single      1.610    0.020
+ 3PP      P      O2        double      1.480    0.020
+ 3PP      O3     P         single      1.610    0.020
+ 3PP      OE1    CD        deloc       1.250    0.020
+ 3PP      OE2    CD        deloc       1.250    0.020
+ 3PP      HO1    O1        single      0.967    0.020
+ 3PP      HO3    O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3PP      O2     P      O1      109.500    3.000
+ 3PP      O2     P      O3      109.500    3.000
+ 3PP      O2     P      CB      109.500    3.000
+ 3PP      O1     P      O3      109.500    3.000
+ 3PP      O1     P      CB      109.500    3.000
+ 3PP      O3     P      CB      109.500    3.000
+ 3PP      P      O1     HO1     120.000    3.000
+ 3PP      P      O3     HO3     120.000    3.000
+ 3PP      P      CB     HCB1    109.500    3.000
+ 3PP      P      CB     HCB2    109.500    3.000
+ 3PP      P      CB     CG      109.500    3.000
+ 3PP      HCB1   CB     HCB2    107.900    3.000
+ 3PP      HCB1   CB     CG      109.470    3.000
+ 3PP      HCB2   CB     CG      109.470    3.000
+ 3PP      CB     CG     HCG1    109.470    3.000
+ 3PP      CB     CG     HCG2    109.470    3.000
+ 3PP      CB     CG     CD      109.470    3.000
+ 3PP      HCG1   CG     HCG2    107.900    3.000
+ 3PP      HCG1   CG     CD      109.470    3.000
+ 3PP      HCG2   CG     CD      109.470    3.000
+ 3PP      CG     CD     OE1     118.500    3.000
+ 3PP      CG     CD     OE2     118.500    3.000
+ 3PP      OE1    CD     OE2     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3PP      var_1    O2     P      O1     HO1      -59.933   20.000   1
+ 3PP      var_2    O2     P      O3     HO3      179.956   20.000   1
+ 3PP      var_3    O2     P      CB     CG        60.055   20.000   1
+ 3PP      var_4    P      CB     CG     CD       179.973   20.000   3
+ 3PP      var_5    CB     CG     CD     OE2      179.975   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3PP      plan-1    CD        0.020
+ 3PP      plan-1    CG        0.000
+ 3PP      plan-1    OE1       0.000
+ 3PP      plan-1    OE2       0.000
+# ------------------------------------------------------

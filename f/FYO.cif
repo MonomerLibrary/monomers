@@ -1,0 +1,267 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FYO      FYO '4-[5-(2,6-dioxo-1,2,3,6-tetrahydropy' non-polymer        30  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FYO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FYO           OAD    O    O         0.000      0.000    0.000    0.000
+ FYO           CAQ    C    CR6       0.000     -0.802    0.920    0.003
+ FYO           NAL    N    NR16      0.000     -0.363    2.192    0.005
+ FYO           HNAL   H    H         0.000      0.659    2.381    0.012
+ FYO           CAR    C    CR6       0.000     -1.244    3.242   -0.003
+ FYO           CAE    C    CSP       0.000     -0.745    4.584   -0.013
+ FYO           NAA    N    NS        0.000     -0.351    5.650   -0.022
+ FYO           CAI    C    CR16      0.000     -2.590    3.022   -0.002
+ FYO           HAI    H    H         0.000     -3.278    3.858   -0.004
+ FYO           CAT    C    CR6       0.000     -3.081    1.698    0.002
+ FYO           CAH    C    CR16      0.000     -2.182    0.646    0.004
+ FYO           HAH    H    H         0.000     -2.536   -0.377    0.007
+ FYO           CAV    C    CR5       0.000     -4.541    1.439    0.004
+ FYO           NAN    N    NRD5      0.000     -5.487    2.355    0.011
+ FYO           NAM    N    NRD5      0.000     -5.122    0.234    0.007
+ FYO           CAU    C    CR5       0.000     -6.430    0.428    0.007
+ FYO           NAJ    N    NR15      0.000     -6.637    1.773    0.009
+ FYO           HNAJ   H    H         0.000     -7.562    2.249    0.009
+ FYO           CAS    C    CR6       0.000     -7.466   -0.613    0.005
+ FYO           CAF    C    CR16      0.000     -8.781   -0.290    0.006
+ FYO           HAF    H    H         0.000     -9.079    0.751    0.012
+ FYO           CAG    C    CH2       0.000     -7.099   -2.082    0.002
+ FYO           HAG    H    H         0.000     -6.484   -2.226    0.894
+ FYO           HAGA   H    H         0.000     -6.483   -2.222   -0.889
+ FYO           CAP    C    CR6       0.000     -8.230   -3.087    0.000
+ FYO           OAC    O    O         0.000     -7.995   -4.276   -0.009
+ FYO           NAK    N    NR16      0.000     -9.500   -2.641   -0.012
+ FYO           HNAK   H    H         0.000    -10.275   -3.334   -0.029
+ FYO           CAO    C    CR6       0.000     -9.800   -1.336   -0.003
+ FYO           OAB    O    O         0.000    -10.971   -1.006   -0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FYO      OAD    n/a    CAQ    START
+ FYO      CAQ    OAD    NAL    .
+ FYO      NAL    CAQ    CAR    .
+ FYO      HNAL   NAL    .      .
+ FYO      CAR    NAL    CAI    .
+ FYO      CAE    CAR    NAA    .
+ FYO      NAA    CAE    .      .
+ FYO      CAI    CAR    CAT    .
+ FYO      HAI    CAI    .      .
+ FYO      CAT    CAI    CAV    .
+ FYO      CAH    CAT    HAH    .
+ FYO      HAH    CAH    .      .
+ FYO      CAV    CAT    NAM    .
+ FYO      NAN    CAV    .      .
+ FYO      NAM    CAV    CAU    .
+ FYO      CAU    NAM    CAS    .
+ FYO      NAJ    CAU    HNAJ   .
+ FYO      HNAJ   NAJ    .      .
+ FYO      CAS    CAU    CAG    .
+ FYO      CAF    CAS    HAF    .
+ FYO      HAF    CAF    .      .
+ FYO      CAG    CAS    CAP    .
+ FYO      HAG    CAG    .      .
+ FYO      HAGA   CAG    .      .
+ FYO      CAP    CAG    NAK    .
+ FYO      OAC    CAP    .      .
+ FYO      NAK    CAP    CAO    .
+ FYO      HNAK   NAK    .      .
+ FYO      CAO    NAK    OAB    .
+ FYO      OAB    CAO    .      END
+ FYO      CAF    CAO    .    ADD
+ FYO      CAH    CAQ    .    ADD
+ FYO      NAJ    NAN    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FYO      NAA    CAE       triple      1.158    0.020
+ FYO      OAB    CAO       double      1.250    0.020
+ FYO      OAC    CAP       double      1.250    0.020
+ FYO      CAQ    OAD       double      1.250    0.020
+ FYO      CAE    CAR       single      1.285    0.020
+ FYO      CAF    CAO       single      1.390    0.020
+ FYO      CAF    CAS       double      1.390    0.020
+ FYO      HAF    CAF       single      1.083    0.020
+ FYO      CAP    CAG       single      1.511    0.020
+ FYO      CAG    CAS       single      1.511    0.020
+ FYO      HAG    CAG       single      1.092    0.020
+ FYO      HAGA   CAG       single      1.092    0.020
+ FYO      CAH    CAT       double      1.390    0.020
+ FYO      CAH    CAQ       single      1.390    0.020
+ FYO      HAH    CAH       single      1.083    0.020
+ FYO      CAT    CAI       single      1.390    0.020
+ FYO      CAI    CAR       double      1.390    0.020
+ FYO      HAI    CAI       single      1.083    0.020
+ FYO      NAJ    CAU       single      1.340    0.020
+ FYO      NAJ    NAN       single      1.402    0.020
+ FYO      CAO    NAK       single      1.337    0.020
+ FYO      NAK    CAP       single      1.337    0.020
+ FYO      HNAK   NAK       single      1.040    0.020
+ FYO      NAL    CAQ       single      1.337    0.020
+ FYO      CAR    NAL       single      1.337    0.020
+ FYO      HNAL   NAL       single      1.040    0.020
+ FYO      CAU    NAM       double      1.350    0.020
+ FYO      NAM    CAV       single      1.350    0.020
+ FYO      NAN    CAV       double      1.350    0.020
+ FYO      CAS    CAU       single      1.490    0.020
+ FYO      CAV    CAT       single      1.490    0.020
+ FYO      HNAJ   NAJ       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FYO      OAD    CAQ    NAL     120.000    3.000
+ FYO      OAD    CAQ    CAH     120.000    3.000
+ FYO      NAL    CAQ    CAH     120.000    3.000
+ FYO      CAQ    NAL    HNAL    120.000    3.000
+ FYO      CAQ    NAL    CAR     120.000    3.000
+ FYO      HNAL   NAL    CAR     120.000    3.000
+ FYO      NAL    CAR    CAE     120.000    3.000
+ FYO      NAL    CAR    CAI     120.000    3.000
+ FYO      CAE    CAR    CAI     120.000    3.000
+ FYO      CAR    CAE    NAA     180.000    3.000
+ FYO      CAR    CAI    HAI     120.000    3.000
+ FYO      CAR    CAI    CAT     120.000    3.000
+ FYO      HAI    CAI    CAT     120.000    3.000
+ FYO      CAI    CAT    CAH     120.000    3.000
+ FYO      CAI    CAT    CAV     120.000    3.000
+ FYO      CAH    CAT    CAV     120.000    3.000
+ FYO      CAT    CAH    HAH     120.000    3.000
+ FYO      CAT    CAH    CAQ     120.000    3.000
+ FYO      HAH    CAH    CAQ     120.000    3.000
+ FYO      CAT    CAV    NAN     126.000    3.000
+ FYO      CAT    CAV    NAM     126.000    3.000
+ FYO      NAN    CAV    NAM     108.000    3.000
+ FYO      CAV    NAN    NAJ     108.000    3.000
+ FYO      CAV    NAM    CAU     108.000    3.000
+ FYO      NAM    CAU    NAJ     108.000    3.000
+ FYO      NAM    CAU    CAS     126.000    3.000
+ FYO      NAJ    CAU    CAS     108.000    3.000
+ FYO      CAU    NAJ    HNAJ    126.000    3.000
+ FYO      CAU    NAJ    NAN     108.000    3.000
+ FYO      HNAJ   NAJ    NAN     108.000    3.000
+ FYO      CAU    CAS    CAF     120.000    3.000
+ FYO      CAU    CAS    CAG     120.000    3.000
+ FYO      CAF    CAS    CAG     120.000    3.000
+ FYO      CAS    CAF    HAF     120.000    3.000
+ FYO      CAS    CAF    CAO     120.000    3.000
+ FYO      HAF    CAF    CAO     120.000    3.000
+ FYO      CAS    CAG    HAG     109.470    3.000
+ FYO      CAS    CAG    HAGA    109.470    3.000
+ FYO      CAS    CAG    CAP     109.470    3.000
+ FYO      HAG    CAG    HAGA    107.900    3.000
+ FYO      HAG    CAG    CAP     109.470    3.000
+ FYO      HAGA   CAG    CAP     109.470    3.000
+ FYO      CAG    CAP    OAC     120.000    3.000
+ FYO      CAG    CAP    NAK     120.000    3.000
+ FYO      OAC    CAP    NAK     120.000    3.000
+ FYO      CAP    NAK    HNAK    120.000    3.000
+ FYO      CAP    NAK    CAO     120.000    3.000
+ FYO      HNAK   NAK    CAO     120.000    3.000
+ FYO      NAK    CAO    OAB     120.000    3.000
+ FYO      NAK    CAO    CAF     120.000    3.000
+ FYO      OAB    CAO    CAF     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FYO      CONST_1  OAD    CAQ    NAL    CAR      180.000    0.000   0
+ FYO      CONST_2  CAQ    NAL    CAR    CAI        0.000    0.000   0
+ FYO      var_1    NAL    CAR    CAE    NAA      177.399   20.000   1
+ FYO      CONST_3  NAL    CAR    CAI    CAT        0.000    0.000   0
+ FYO      CONST_4  CAR    CAI    CAT    CAV      180.000    0.000   0
+ FYO      CONST_5  CAI    CAT    CAH    CAQ        0.000    0.000   0
+ FYO      CONST_6  CAT    CAH    CAQ    OAD      180.000    0.000   0
+ FYO      var_2    CAI    CAT    CAV    NAM      179.965   20.000   1
+ FYO      CONST_7  CAT    CAV    NAN    NAJ      180.000    0.000   0
+ FYO      CONST_8  CAT    CAV    NAM    CAU      180.000    0.000   0
+ FYO      CONST_9  CAV    NAM    CAU    CAS      180.000    0.000   0
+ FYO      CONST_10 NAM    CAU    NAJ    NAN        0.000    0.000   0
+ FYO      CONST_11 CAU    NAJ    NAN    CAV        0.000    0.000   0
+ FYO      var_3    NAM    CAU    CAS    CAG       -0.028   20.000   1
+ FYO      CONST_12 CAU    CAS    CAF    CAO      180.000    0.000   0
+ FYO      CONST_13 CAS    CAF    CAO    NAK        0.000    0.000   0
+ FYO      CONST_14 CAU    CAS    CAG    CAP      180.000    0.000   0
+ FYO      CONST_15 CAS    CAG    CAP    NAK        0.000    0.000   0
+ FYO      CONST_16 CAG    CAP    NAK    CAO        0.000    0.000   0
+ FYO      CONST_17 CAP    NAK    CAO    OAB      180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FYO      plan-1    CAF       0.020
+ FYO      plan-1    CAO       0.020
+ FYO      plan-1    CAS       0.020
+ FYO      plan-1    HAF       0.020
+ FYO      plan-1    CAG       0.020
+ FYO      plan-1    NAK       0.020
+ FYO      plan-1    CAP       0.020
+ FYO      plan-1    HNAK      0.020
+ FYO      plan-1    OAB       0.020
+ FYO      plan-1    OAC       0.020
+ FYO      plan-1    CAU       0.020
+ FYO      plan-2    CAH       0.020
+ FYO      plan-2    CAQ       0.020
+ FYO      plan-2    CAT       0.020
+ FYO      plan-2    HAH       0.020
+ FYO      plan-2    CAI       0.020
+ FYO      plan-2    NAL       0.020
+ FYO      plan-2    CAR       0.020
+ FYO      plan-2    HAI       0.020
+ FYO      plan-2    HNAL      0.020
+ FYO      plan-2    OAD       0.020
+ FYO      plan-2    CAE       0.020
+ FYO      plan-2    CAV       0.020
+ FYO      plan-3    NAJ       0.020
+ FYO      plan-3    NAN       0.020
+ FYO      plan-3    CAU       0.020
+ FYO      plan-3    HNAJ      0.020
+ FYO      plan-3    NAM       0.020
+ FYO      plan-3    CAV       0.020
+ FYO      plan-3    CAS       0.020
+ FYO      plan-3    CAT       0.020
+# ------------------------------------------------------

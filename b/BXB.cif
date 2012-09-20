@@ -1,0 +1,280 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BXB      BXB 'N-(1,3-benzodioxol-5-ylmethyl)-2,6-d' non-polymer        32  21 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BXB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BXB           CL11   CL   CL        0.000      0.000    0.000    0.000
+ BXB           C6     C    CR6       0.000     -0.342   -1.500   -0.803
+ BXB           C5     C    CR16      0.000      0.466   -1.934   -1.835
+ BXB           H5     H    H         0.000      1.315   -1.336   -2.144
+ BXB           C4     C    CR16      0.000      0.195   -3.130   -2.476
+ BXB           H4     H    H         0.000      0.832   -3.465   -3.284
+ BXB           C3     C    CR16      0.000     -0.887   -3.900   -2.088
+ BXB           H3     H    H         0.000     -1.093   -4.835   -2.595
+ BXB           C2     C    CR6       0.000     -1.704   -3.481   -1.057
+ BXB           CL10   CL   CL        0.000     -3.059   -4.451   -0.572
+ BXB           C1     C    CR6       0.000     -1.436   -2.274   -0.405
+ BXB           C7     C    C         0.000     -2.309   -1.815    0.695
+ BXB           O9     O    O         0.000     -2.061   -2.136    1.841
+ BXB           N8     N    NH1       0.000     -3.379   -1.041    0.428
+ BXB           HN8    H    H         0.000     -3.584   -0.775   -0.525
+ BXB           C12    C    CH2       0.000     -4.245   -0.586    1.518
+ BXB           H12    H    H         0.000     -3.659    0.006    2.224
+ BXB           H12A   H    H         0.000     -4.666   -1.452    2.033
+ BXB           C13    C    CR6       0.000     -5.360    0.257    0.956
+ BXB           C18    C    CR16      0.000     -5.196    1.625    0.832
+ BXB           H18    H    H         0.000     -4.268    2.089    1.143
+ BXB           C17    C    CR6       0.000     -6.217    2.401    0.309
+ BXB           O19    O    O2        0.000     -6.308    3.744    0.082
+ BXB           C20    C    CH2       0.000     -7.714    4.015   -0.067
+ BXB           H20    H    H         0.000     -7.908    4.804   -0.796
+ BXB           H20A   H    H         0.000     -8.187    4.274    0.883
+ BXB           O21    O    O2        0.000     -8.253    2.770   -0.550
+ BXB           C16    C    CR6       0.000     -7.413    1.802   -0.079
+ BXB           C15    C    CR16      0.000     -7.573    0.433    0.053
+ BXB           H15    H    H         0.000     -8.502   -0.036   -0.248
+ BXB           C14    C    CR16      0.000     -6.547   -0.337    0.571
+ BXB           H14    H    H         0.000     -6.674   -1.407    0.675
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BXB      CL11   n/a    C6     START
+ BXB      C6     CL11   C1     .
+ BXB      C5     C6     C4     .
+ BXB      H5     C5     .      .
+ BXB      C4     C5     C3     .
+ BXB      H4     C4     .      .
+ BXB      C3     C4     C2     .
+ BXB      H3     C3     .      .
+ BXB      C2     C3     CL10   .
+ BXB      CL10   C2     .      .
+ BXB      C1     C6     C7     .
+ BXB      C7     C1     N8     .
+ BXB      O9     C7     .      .
+ BXB      N8     C7     C12    .
+ BXB      HN8    N8     .      .
+ BXB      C12    N8     C13    .
+ BXB      H12    C12    .      .
+ BXB      H12A   C12    .      .
+ BXB      C13    C12    C18    .
+ BXB      C18    C13    C17    .
+ BXB      H18    C18    .      .
+ BXB      C17    C18    O19    .
+ BXB      O19    C17    C20    .
+ BXB      C20    O19    O21    .
+ BXB      H20    C20    .      .
+ BXB      H20A   C20    .      .
+ BXB      O21    C20    C16    .
+ BXB      C16    O21    C15    .
+ BXB      C15    C16    C14    .
+ BXB      H15    C15    .      .
+ BXB      C14    C15    H14    .
+ BXB      H14    C14    .      END
+ BXB      C1     C2     .    ADD
+ BXB      C13    C14    .    ADD
+ BXB      C16    C17    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BXB      C1     C2        double      1.487    0.020
+ BXB      C1     C6        single      1.487    0.020
+ BXB      C7     C1        single      1.500    0.020
+ BXB      C2     C3        single      1.390    0.020
+ BXB      CL10   C2        single      1.795    0.020
+ BXB      C3     C4        double      1.390    0.020
+ BXB      C4     C5        single      1.390    0.020
+ BXB      C5     C6        double      1.390    0.020
+ BXB      C6     CL11      single      1.795    0.020
+ BXB      N8     C7        single      1.330    0.020
+ BXB      O9     C7        double      1.220    0.020
+ BXB      C12    N8        single      1.450    0.020
+ BXB      C13    C12       single      1.511    0.020
+ BXB      C13    C14       double      1.390    0.020
+ BXB      C18    C13       single      1.390    0.020
+ BXB      C14    C15       single      1.390    0.020
+ BXB      C15    C16       double      1.390    0.020
+ BXB      C16    C17       single      1.487    0.020
+ BXB      C16    O21       single      1.370    0.020
+ BXB      C17    C18       double      1.390    0.020
+ BXB      O19    C17       single      1.370    0.020
+ BXB      C20    O19       single      1.426    0.020
+ BXB      O21    C20       single      1.426    0.020
+ BXB      H3     C3        single      1.083    0.020
+ BXB      H4     C4        single      1.083    0.020
+ BXB      H5     C5        single      1.083    0.020
+ BXB      HN8    N8        single      1.010    0.020
+ BXB      H12    C12       single      1.092    0.020
+ BXB      H12A   C12       single      1.092    0.020
+ BXB      H14    C14       single      1.083    0.020
+ BXB      H15    C15       single      1.083    0.020
+ BXB      H18    C18       single      1.083    0.020
+ BXB      H20    C20       single      1.092    0.020
+ BXB      H20A   C20       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BXB      CL11   C6     C5      120.000    3.000
+ BXB      CL11   C6     C1      120.000    3.000
+ BXB      C5     C6     C1      120.000    3.000
+ BXB      C6     C5     H5      120.000    3.000
+ BXB      C6     C5     C4      120.000    3.000
+ BXB      H5     C5     C4      120.000    3.000
+ BXB      C5     C4     H4      120.000    3.000
+ BXB      C5     C4     C3      120.000    3.000
+ BXB      H4     C4     C3      120.000    3.000
+ BXB      C4     C3     H3      120.000    3.000
+ BXB      C4     C3     C2      120.000    3.000
+ BXB      H3     C3     C2      120.000    3.000
+ BXB      C3     C2     CL10    120.000    3.000
+ BXB      C3     C2     C1      120.000    3.000
+ BXB      CL10   C2     C1      120.000    3.000
+ BXB      C6     C1     C7      120.000    3.000
+ BXB      C6     C1     C2      120.000    3.000
+ BXB      C7     C1     C2      120.000    3.000
+ BXB      C1     C7     O9      120.500    3.000
+ BXB      C1     C7     N8      120.000    3.000
+ BXB      O9     C7     N8      123.000    3.000
+ BXB      C7     N8     HN8     120.000    3.000
+ BXB      C7     N8     C12     121.500    3.000
+ BXB      HN8    N8     C12     118.500    3.000
+ BXB      N8     C12    H12     109.470    3.000
+ BXB      N8     C12    H12A    109.470    3.000
+ BXB      N8     C12    C13     109.500    3.000
+ BXB      H12    C12    H12A    107.900    3.000
+ BXB      H12    C12    C13     109.470    3.000
+ BXB      H12A   C12    C13     109.470    3.000
+ BXB      C12    C13    C18     120.000    3.000
+ BXB      C12    C13    C14     120.000    3.000
+ BXB      C18    C13    C14     120.000    3.000
+ BXB      C13    C18    H18     120.000    3.000
+ BXB      C13    C18    C17     120.000    3.000
+ BXB      H18    C18    C17     120.000    3.000
+ BXB      C18    C17    O19     120.000    3.000
+ BXB      C18    C17    C16     120.000    3.000
+ BXB      O19    C17    C16     120.000    3.000
+ BXB      C17    O19    C20     120.000    3.000
+ BXB      O19    C20    H20     109.470    3.000
+ BXB      O19    C20    H20A    109.470    3.000
+ BXB      O19    C20    O21     109.500    3.000
+ BXB      H20    C20    H20A    107.900    3.000
+ BXB      H20    C20    O21     109.470    3.000
+ BXB      H20A   C20    O21     109.470    3.000
+ BXB      C20    O21    C16     120.000    3.000
+ BXB      O21    C16    C15     120.000    3.000
+ BXB      O21    C16    C17     120.000    3.000
+ BXB      C15    C16    C17     120.000    3.000
+ BXB      C16    C15    H15     120.000    3.000
+ BXB      C16    C15    C14     120.000    3.000
+ BXB      H15    C15    C14     120.000    3.000
+ BXB      C15    C14    H14     120.000    3.000
+ BXB      C15    C14    C13     120.000    3.000
+ BXB      H14    C14    C13     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BXB      CONST_1  CL11   C6     C5     C4       180.000    0.000   0
+ BXB      CONST_2  C6     C5     C4     C3         0.000    0.000   0
+ BXB      CONST_3  C5     C4     C3     C2         0.000    0.000   0
+ BXB      CONST_4  C4     C3     C2     CL10     180.000    0.000   0
+ BXB      CONST_5  CL11   C6     C1     C7         0.000    0.000   0
+ BXB      CONST_6  C6     C1     C2     C3         0.000    0.000   0
+ BXB      var_1    C6     C1     C7     N8        89.724   20.000   1
+ BXB      CONST_7  C1     C7     N8     C12      180.000    0.000   0
+ BXB      var_2    C7     N8     C12    C13      179.989   20.000   3
+ BXB      var_3    N8     C12    C13    C18      -90.268   20.000   2
+ BXB      CONST_8  C12    C13    C14    C15      180.000    0.000   0
+ BXB      CONST_9  C12    C13    C18    C17      180.000    0.000   0
+ BXB      CONST_10 C13    C18    C17    O19      180.000    0.000   0
+ BXB      var_4    C18    C17    O19    C20     -150.000   20.000   1
+ BXB      var_5    C17    O19    C20    O21      -30.000   20.000   1
+ BXB      var_6    O19    C20    O21    C16       30.000   20.000   1
+ BXB      var_7    C20    O21    C16    C15      150.000   20.000   1
+ BXB      CONST_11 O21    C16    C17    C18      180.000    0.000   0
+ BXB      CONST_12 O21    C16    C15    C14      180.000    0.000   0
+ BXB      CONST_13 C16    C15    C14    C13        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BXB      plan-1    C1        0.020
+ BXB      plan-1    C2        0.020
+ BXB      plan-1    C6        0.020
+ BXB      plan-1    C7        0.020
+ BXB      plan-1    C3        0.020
+ BXB      plan-1    C4        0.020
+ BXB      plan-1    C5        0.020
+ BXB      plan-1    CL10      0.020
+ BXB      plan-1    H3        0.020
+ BXB      plan-1    H4        0.020
+ BXB      plan-1    H5        0.020
+ BXB      plan-1    CL11      0.020
+ BXB      plan-2    C7        0.020
+ BXB      plan-2    C1        0.020
+ BXB      plan-2    N8        0.020
+ BXB      plan-2    O9        0.020
+ BXB      plan-2    HN8       0.020
+ BXB      plan-3    N8        0.020
+ BXB      plan-3    C7        0.020
+ BXB      plan-3    C12       0.020
+ BXB      plan-3    HN8       0.020
+ BXB      plan-4    C13       0.020
+ BXB      plan-4    C12       0.020
+ BXB      plan-4    C14       0.020
+ BXB      plan-4    C18       0.020
+ BXB      plan-4    C15       0.020
+ BXB      plan-4    C16       0.020
+ BXB      plan-4    C17       0.020
+ BXB      plan-4    H14       0.020
+ BXB      plan-4    H15       0.020
+ BXB      plan-4    O21       0.020
+ BXB      plan-4    O19       0.020
+ BXB      plan-4    H18       0.020
+# ------------------------------------------------------

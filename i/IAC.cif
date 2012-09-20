@@ -1,0 +1,204 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IAC      IAC '1H-INDOL-3-YLACETIC ACID            ' non-polymer        21  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IAC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IAC           O3     O    OC       -0.500      0.000    0.000    0.000
+ IAC           C18    C    C         0.000      0.298   -0.225   -1.194
+ IAC           O2     O    OC       -0.500      1.371    0.152   -1.715
+ IAC           C17    C    CH2       0.000     -0.612   -0.935   -2.173
+ IAC           H171   H    H         0.000     -0.065   -1.775   -2.604
+ IAC           H172   H    H         0.000     -0.881   -0.232   -2.964
+ IAC           C7     C    CR5       0.000     -1.837   -1.429   -1.515
+ IAC           C1     C    CR56      0.000     -3.065   -0.722   -1.368
+ IAC           C8     C    CR15      0.000     -1.994   -2.665   -0.932
+ IAC           H8     H    H         0.000     -1.242   -3.442   -0.875
+ IAC           N      N    NR15      0.000     -3.268   -2.739   -0.435
+ IAC           HN     H    H         0.000     -3.667   -3.561    0.062
+ IAC           C      C    CR56      0.000     -3.945   -1.567   -0.688
+ IAC           C5     C    CR16      0.000     -5.254   -1.192   -0.368
+ IAC           H5     H    H         0.000     -5.917   -1.865    0.162
+ IAC           C4     C    CR16      0.000     -5.676    0.082   -0.757
+ IAC           H4     H    H         0.000     -6.684    0.404   -0.526
+ IAC           C3     C    CR16      0.000     -4.819    0.946   -1.436
+ IAC           H3     H    H         0.000     -5.169    1.929   -1.725
+ IAC           C2     C    CR16      0.000     -3.511    0.558   -1.750
+ IAC           H2     H    H         0.000     -2.851    1.234   -2.279
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IAC      O3     n/a    C18    START
+ IAC      C18    O3     C17    .
+ IAC      O2     C18    .      .
+ IAC      C17    C18    C7     .
+ IAC      H171   C17    .      .
+ IAC      H172   C17    .      .
+ IAC      C7     C17    C8     .
+ IAC      C1     C7     .      .
+ IAC      C8     C7     N      .
+ IAC      H8     C8     .      .
+ IAC      N      C8     C      .
+ IAC      HN     N      .      .
+ IAC      C      N      C5     .
+ IAC      C5     C      C4     .
+ IAC      H5     C5     .      .
+ IAC      C4     C5     C3     .
+ IAC      H4     C4     .      .
+ IAC      C3     C4     C2     .
+ IAC      H3     C3     .      .
+ IAC      C2     C3     H2     .
+ IAC      H2     C2     .      END
+ IAC      C      C1     .    ADD
+ IAC      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IAC      C      N         single      1.340    0.020
+ IAC      C      C1        double      1.490    0.020
+ IAC      C5     C         single      1.390    0.020
+ IAC      C1     C7        single      1.490    0.020
+ IAC      C1     C2        single      1.390    0.020
+ IAC      C2     C3        double      1.390    0.020
+ IAC      H2     C2        single      1.083    0.020
+ IAC      C3     C4        single      1.390    0.020
+ IAC      H3     C3        single      1.083    0.020
+ IAC      C4     C5        double      1.390    0.020
+ IAC      H4     C4        single      1.083    0.020
+ IAC      H5     C5        single      1.083    0.020
+ IAC      C7     C17       single      1.510    0.020
+ IAC      C8     C7        double      1.387    0.020
+ IAC      N      C8        single      1.350    0.020
+ IAC      H8     C8        single      1.083    0.020
+ IAC      C17    C18       single      1.510    0.020
+ IAC      H171   C17       single      1.092    0.020
+ IAC      H172   C17       single      1.092    0.020
+ IAC      C18    O3        deloc       1.250    0.020
+ IAC      O2     C18       deloc       1.250    0.020
+ IAC      HN     N         single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IAC      O3     C18    O2      123.000    3.000
+ IAC      O3     C18    C17     118.500    3.000
+ IAC      O2     C18    C17     118.500    3.000
+ IAC      C18    C17    H171    109.470    3.000
+ IAC      C18    C17    H172    109.470    3.000
+ IAC      C18    C17    C7      109.500    3.000
+ IAC      H171   C17    H172    107.900    3.000
+ IAC      H171   C17    C7      109.470    3.000
+ IAC      H172   C17    C7      109.470    3.000
+ IAC      C17    C7     C1      126.000    3.000
+ IAC      C17    C7     C8      126.000    3.000
+ IAC      C1     C7     C8      108.000    3.000
+ IAC      C7     C1     C       108.000    3.000
+ IAC      C7     C1     C2      126.000    3.000
+ IAC      C      C1     C2      120.000    3.000
+ IAC      C7     C8     H8      126.000    3.000
+ IAC      C7     C8     N       108.000    3.000
+ IAC      H8     C8     N       126.000    3.000
+ IAC      C8     N      HN      126.000    3.000
+ IAC      C8     N      C       108.000    3.000
+ IAC      HN     N      C       126.000    3.000
+ IAC      N      C      C5      132.000    3.000
+ IAC      N      C      C1      108.000    3.000
+ IAC      C5     C      C1      120.000    3.000
+ IAC      C      C5     H5      120.000    3.000
+ IAC      C      C5     C4      120.000    3.000
+ IAC      H5     C5     C4      120.000    3.000
+ IAC      C5     C4     H4      120.000    3.000
+ IAC      C5     C4     C3      120.000    3.000
+ IAC      H4     C4     C3      120.000    3.000
+ IAC      C4     C3     H3      120.000    3.000
+ IAC      C4     C3     C2      120.000    3.000
+ IAC      H3     C3     C2      120.000    3.000
+ IAC      C3     C2     H2      120.000    3.000
+ IAC      C3     C2     C1      120.000    3.000
+ IAC      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IAC      var_1    O3     C18    C17    C7        -4.981   20.000   3
+ IAC      var_2    C18    C17    C7     C8       -90.020   20.000   2
+ IAC      CONST_1  C17    C7     C1     C        180.000    0.000   0
+ IAC      CONST_2  C7     C1     C2     C3       180.000    0.000   0
+ IAC      CONST_3  C17    C7     C8     N        180.000    0.000   0
+ IAC      CONST_4  C7     C8     N      C          0.000    0.000   0
+ IAC      CONST_5  C8     N      C      C5       180.000    0.000   0
+ IAC      CONST_6  N      C      C1     C7         0.000    0.000   0
+ IAC      CONST_7  N      C      C5     C4       180.000    0.000   0
+ IAC      CONST_8  C      C5     C4     C3         0.000    0.000   0
+ IAC      CONST_9  C5     C4     C3     C2         0.000    0.000   0
+ IAC      CONST_10 C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IAC      plan-1    C         0.020
+ IAC      plan-1    C1        0.020
+ IAC      plan-1    C5        0.020
+ IAC      plan-1    N         0.020
+ IAC      plan-1    C7        0.020
+ IAC      plan-1    C8        0.020
+ IAC      plan-1    C2        0.020
+ IAC      plan-1    C3        0.020
+ IAC      plan-1    H2        0.020
+ IAC      plan-1    C4        0.020
+ IAC      plan-1    H3        0.020
+ IAC      plan-1    H4        0.020
+ IAC      plan-1    H5        0.020
+ IAC      plan-1    C17       0.020
+ IAC      plan-1    H8        0.020
+ IAC      plan-1    HN        0.020
+ IAC      plan-2    C18       0.020
+ IAC      plan-2    C17       0.020
+ IAC      plan-2    O2        0.020
+ IAC      plan-2    O3        0.020
+# ------------------------------------------------------

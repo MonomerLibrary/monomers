@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TMZ      TMZ '3,4,5-TRIMETHYL-1,3-THIAZOLE        ' non-polymer        18   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TMZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TMZ           C8     C    CH3       0.000      0.000    0.000    0.000
+ TMZ           H81    H    H         0.000      0.596    0.875   -0.001
+ TMZ           H82    H    H         0.000      0.214   -0.572    0.865
+ TMZ           H83    H    H         0.000      0.214   -0.573   -0.864
+ TMZ           C5     C    CR5       0.000     -1.457    0.384    0.000
+ TMZ           S1     S    S2        0.000     -2.211    2.005   -0.002
+ TMZ           C4     C    CR5       0.000     -2.562   -0.404   -0.003
+ TMZ           C7     C    CH3       0.000     -2.438   -1.906   -0.002
+ TMZ           H73    H    H         0.000     -1.500   -2.183    0.404
+ TMZ           H72    H    H         0.000     -3.214   -2.324    0.586
+ TMZ           H71    H    H         0.000     -2.514   -2.268   -0.995
+ TMZ           N3     N    NR5       1.000     -3.744    0.175    0.001
+ TMZ           C6     C    CH3       0.000     -4.949   -0.657    0.003
+ TMZ           H63    H    H         0.000     -4.775   -1.520    0.588
+ TMZ           H62    H    H         0.000     -5.753   -0.105    0.412
+ TMZ           H61    H    H         0.000     -5.179   -0.939   -0.990
+ TMZ           C2     C    CR15      0.000     -3.866    1.483    0.000
+ TMZ           H2     H    H         0.000     -4.769    2.082    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TMZ      C8     n/a    C5     START
+ TMZ      H81    C8     .      .
+ TMZ      H82    C8     .      .
+ TMZ      H83    C8     .      .
+ TMZ      C5     C8     C4     .
+ TMZ      S1     C5     .      .
+ TMZ      C4     C5     N3     .
+ TMZ      C7     C4     H71    .
+ TMZ      H73    C7     .      .
+ TMZ      H72    C7     .      .
+ TMZ      H71    C7     .      .
+ TMZ      N3     C4     C2     .
+ TMZ      C6     N3     H61    .
+ TMZ      H63    C6     .      .
+ TMZ      H62    C6     .      .
+ TMZ      H61    C6     .      .
+ TMZ      C2     N3     H2     .
+ TMZ      H2     C2     .      END
+ TMZ      S1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TMZ      S1     C2        single      1.745    0.020
+ TMZ      S1     C5        single      1.745    0.020
+ TMZ      C2     N3        double      1.337    0.020
+ TMZ      H2     C2        single      1.083    0.020
+ TMZ      N3     C4        single      1.337    0.020
+ TMZ      C6     N3        single      1.485    0.020
+ TMZ      C4     C5        double      1.490    0.020
+ TMZ      C7     C4        single      1.506    0.020
+ TMZ      C5     C8        single      1.506    0.020
+ TMZ      H61    C6        single      1.059    0.020
+ TMZ      H62    C6        single      1.059    0.020
+ TMZ      H63    C6        single      1.059    0.020
+ TMZ      H71    C7        single      1.059    0.020
+ TMZ      H72    C7        single      1.059    0.020
+ TMZ      H73    C7        single      1.059    0.020
+ TMZ      H81    C8        single      1.059    0.020
+ TMZ      H82    C8        single      1.059    0.020
+ TMZ      H83    C8        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TMZ      H81    C8     H82     109.470    3.000
+ TMZ      H81    C8     H83     109.470    3.000
+ TMZ      H82    C8     H83     109.470    3.000
+ TMZ      H81    C8     C5      109.470    3.000
+ TMZ      H82    C8     C5      109.470    3.000
+ TMZ      H83    C8     C5      109.470    3.000
+ TMZ      C8     C5     S1      108.000    3.000
+ TMZ      C8     C5     C4      126.000    3.000
+ TMZ      S1     C5     C4      108.000    3.000
+ TMZ      C5     S1     C2       97.445    3.000
+ TMZ      C5     C4     C7      126.000    3.000
+ TMZ      C5     C4     N3      108.000    3.000
+ TMZ      C7     C4     N3      126.000    3.000
+ TMZ      C4     C7     H73     109.470    3.000
+ TMZ      C4     C7     H72     109.470    3.000
+ TMZ      C4     C7     H71     109.470    3.000
+ TMZ      H73    C7     H72     109.470    3.000
+ TMZ      H73    C7     H71     109.470    3.000
+ TMZ      H72    C7     H71     109.470    3.000
+ TMZ      C4     N3     C6      126.000    3.000
+ TMZ      C4     N3     C2      108.000    3.000
+ TMZ      C6     N3     C2      126.000    3.000
+ TMZ      N3     C6     H63     109.470    3.000
+ TMZ      N3     C6     H62     109.470    3.000
+ TMZ      N3     C6     H61     109.470    3.000
+ TMZ      H63    C6     H62     109.470    3.000
+ TMZ      H63    C6     H61     109.470    3.000
+ TMZ      H62    C6     H61     109.470    3.000
+ TMZ      N3     C2     H2      126.000    3.000
+ TMZ      N3     C2     S1      108.000    3.000
+ TMZ      H2     C2     S1      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TMZ      var_1    H83    C8     C5     C4        59.797   20.000   1
+ TMZ      CONST_1  C8     C5     S1     C2       180.000    0.000   0
+ TMZ      CONST_2  C5     S1     C2     N3         0.000    0.000   0
+ TMZ      CONST_3  C8     C5     C4     N3       180.000    0.000   0
+ TMZ      var_2    C5     C4     C7     H71      -96.228   20.000   1
+ TMZ      CONST_4  C5     C4     N3     C2         0.000    0.000   0
+ TMZ      var_3    C4     N3     C6     H61      -83.961   20.000   1
+ TMZ      CONST_5  C4     N3     C2     S1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TMZ      plan-1    C2        0.020
+ TMZ      plan-1    S1        0.020
+ TMZ      plan-1    N3        0.020
+ TMZ      plan-1    H2        0.020
+ TMZ      plan-1    C4        0.020
+ TMZ      plan-1    C5        0.020
+ TMZ      plan-1    C6        0.020
+ TMZ      plan-1    C7        0.020
+ TMZ      plan-1    C8        0.020
+# ------------------------------------------------------

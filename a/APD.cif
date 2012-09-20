@@ -1,0 +1,228 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+APD      APD '3-METHYLPHENYLALANINE               ' non-polymer        25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_APD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ APD           OXT    O    OC       -0.500      0.000    0.000    0.000
+ APD           C      C    C         0.000     -1.041    0.058   -0.691
+ APD           O      O    OC       -0.500     -0.991   -0.179   -1.918
+ APD           CA     C    CH1       0.000     -2.355    0.414   -0.045
+ APD           HA     H    H         0.000     -2.174    1.076    0.813
+ APD           N      N    NH2       0.000     -3.210    1.102   -1.022
+ APD           HN2    H    H         0.000     -3.535    2.045   -0.843
+ APD           HN1    H    H         0.000     -3.481    0.638   -1.881
+ APD           CB     C    CH2       0.000     -3.052   -0.860    0.433
+ APD           HBC1   H    H         0.000     -2.415   -1.372    1.157
+ APD           HBC2   H    H         0.000     -3.232   -1.517   -0.420
+ APD           CG     C    CR6       0.000     -4.364   -0.504    1.080
+ APD           CD2    C    CR16      0.000     -4.419   -0.238    2.434
+ APD           HD2    H    H         0.000     -3.516   -0.281    3.031
+ APD           CE2    C    CR6       0.000     -5.625    0.083    3.028
+ APD           C5     C    CH3       0.000     -5.686    0.368    4.507
+ APD           H5C3   H    H         0.000     -4.762    0.777    4.826
+ APD           H5C2   H    H         0.000     -6.463    1.060    4.701
+ APD           H5C1   H    H         0.000     -5.874   -0.532    5.032
+ APD           CZ     C    CR16      0.000     -6.775    0.149    2.264
+ APD           HZ     H    H         0.000     -7.719    0.405    2.728
+ APD           CE1    C    CR16      0.000     -6.720   -0.112    0.908
+ APD           HE1    H    H         0.000     -7.621   -0.060    0.310
+ APD           CD1    C    CR16      0.000     -5.515   -0.439    0.316
+ APD           HD1    H    H         0.000     -5.471   -0.644   -0.746
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ APD      OXT    n/a    C      START
+ APD      C      OXT    CA     .
+ APD      O      C      .      .
+ APD      CA     C      CB     .
+ APD      HA     CA     .      .
+ APD      N      CA     HN1    .
+ APD      HN2    N      .      .
+ APD      HN1    N      .      .
+ APD      CB     CA     CG     .
+ APD      HBC1   CB     .      .
+ APD      HBC2   CB     .      .
+ APD      CG     CB     CD2    .
+ APD      CD2    CG     CE2    .
+ APD      HD2    CD2    .      .
+ APD      CE2    CD2    CZ     .
+ APD      C5     CE2    H5C1   .
+ APD      H5C3   C5     .      .
+ APD      H5C2   C5     .      .
+ APD      H5C1   C5     .      .
+ APD      CZ     CE2    CE1    .
+ APD      HZ     CZ     .      .
+ APD      CE1    CZ     CD1    .
+ APD      HE1    CE1    .      .
+ APD      CD1    CE1    HD1    .
+ APD      HD1    CD1    .      END
+ APD      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ APD      O      C         deloc       1.250    0.020
+ APD      CA     C         single      1.500    0.020
+ APD      C      OXT       deloc       1.250    0.020
+ APD      N      CA        single      1.450    0.020
+ APD      CB     CA        single      1.524    0.020
+ APD      HA     CA        single      1.099    0.020
+ APD      HN1    N         single      1.010    0.020
+ APD      HN2    N         single      1.010    0.020
+ APD      CG     CB        single      1.511    0.020
+ APD      HBC1   CB        single      1.092    0.020
+ APD      HBC2   CB        single      1.092    0.020
+ APD      CG     CD1       double      1.390    0.020
+ APD      CD2    CG        single      1.390    0.020
+ APD      CD1    CE1       single      1.390    0.020
+ APD      HD1    CD1       single      1.083    0.020
+ APD      CE2    CD2       double      1.390    0.020
+ APD      HD2    CD2       single      1.083    0.020
+ APD      CE1    CZ        double      1.390    0.020
+ APD      HE1    CE1       single      1.083    0.020
+ APD      CZ     CE2       single      1.390    0.020
+ APD      C5     CE2       single      1.506    0.020
+ APD      HZ     CZ        single      1.083    0.020
+ APD      H5C1   C5        single      1.059    0.020
+ APD      H5C2   C5        single      1.059    0.020
+ APD      H5C3   C5        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ APD      OXT    C      O       123.000    3.000
+ APD      OXT    C      CA      118.500    3.000
+ APD      O      C      CA      118.500    3.000
+ APD      C      CA     HA      108.810    3.000
+ APD      C      CA     N       109.470    3.000
+ APD      C      CA     CB      109.470    3.000
+ APD      HA     CA     N       109.470    3.000
+ APD      HA     CA     CB      108.340    3.000
+ APD      N      CA     CB      109.470    3.000
+ APD      CA     N      HN2     120.000    3.000
+ APD      CA     N      HN1     120.000    3.000
+ APD      HN2    N      HN1     120.000    3.000
+ APD      CA     CB     HBC1    109.470    3.000
+ APD      CA     CB     HBC2    109.470    3.000
+ APD      CA     CB     CG      109.470    3.000
+ APD      HBC1   CB     HBC2    107.900    3.000
+ APD      HBC1   CB     CG      109.470    3.000
+ APD      HBC2   CB     CG      109.470    3.000
+ APD      CB     CG     CD2     120.000    3.000
+ APD      CB     CG     CD1     120.000    3.000
+ APD      CD2    CG     CD1     120.000    3.000
+ APD      CG     CD2    HD2     120.000    3.000
+ APD      CG     CD2    CE2     120.000    3.000
+ APD      HD2    CD2    CE2     120.000    3.000
+ APD      CD2    CE2    C5      120.000    3.000
+ APD      CD2    CE2    CZ      120.000    3.000
+ APD      C5     CE2    CZ      120.000    3.000
+ APD      CE2    C5     H5C3    109.470    3.000
+ APD      CE2    C5     H5C2    109.470    3.000
+ APD      CE2    C5     H5C1    109.470    3.000
+ APD      H5C3   C5     H5C2    109.470    3.000
+ APD      H5C3   C5     H5C1    109.470    3.000
+ APD      H5C2   C5     H5C1    109.470    3.000
+ APD      CE2    CZ     HZ      120.000    3.000
+ APD      CE2    CZ     CE1     120.000    3.000
+ APD      HZ     CZ     CE1     120.000    3.000
+ APD      CZ     CE1    HE1     120.000    3.000
+ APD      CZ     CE1    CD1     120.000    3.000
+ APD      HE1    CE1    CD1     120.000    3.000
+ APD      CE1    CD1    HD1     120.000    3.000
+ APD      CE1    CD1    CG      120.000    3.000
+ APD      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ APD      var_1    OXT    C      CA     CB       -90.053   20.000   3
+ APD      var_2    C      CA     N      HN1       60.028   20.000   1
+ APD      var_3    C      CA     CB     CG       179.920   20.000   3
+ APD      var_4    CA     CB     CG     CD2      -89.763   20.000   2
+ APD      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ APD      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ APD      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ APD      var_5    CD2    CE2    C5     H5C1     -90.283   20.000   1
+ APD      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ APD      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ APD      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ APD      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ APD      plan-1    C         0.020
+ APD      plan-1    O         0.020
+ APD      plan-1    CA        0.020
+ APD      plan-1    OXT       0.020
+ APD      plan-2    N         0.020
+ APD      plan-2    CA        0.020
+ APD      plan-2    HN1       0.020
+ APD      plan-2    HN2       0.020
+ APD      plan-3    CG        0.020
+ APD      plan-3    CB        0.020
+ APD      plan-3    CD1       0.020
+ APD      plan-3    CD2       0.020
+ APD      plan-3    CE1       0.020
+ APD      plan-3    CE2       0.020
+ APD      plan-3    CZ        0.020
+ APD      plan-3    HD1       0.020
+ APD      plan-3    HD2       0.020
+ APD      plan-3    HE1       0.020
+ APD      plan-3    C5        0.020
+ APD      plan-3    HZ        0.020
+# ------------------------------------------------------

@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+D4G      D4G '.                                   ' non-polymer        22  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_D4G
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ D4G           H10    H    H         0.000      0.002   -0.001   -0.003
+ D4G           C10    C    CR16      0.000     -0.642    0.430    0.754
+ D4G           C9     C    CR16      0.000     -0.207    1.489    1.521
+ D4G           H9     H    H         0.000      0.786    1.891    1.363
+ D4G           N_2    N    NRD6      0.000     -0.985    2.021    2.445
+ D4G           C8     C    CR16      0.000     -2.204    1.569    2.679
+ D4G           H8     H    H         0.000     -2.807    2.032    3.450
+ D4G           C7     C    CR16      0.000     -2.717    0.516    1.954
+ D4G           H7     H    H         0.000     -3.720    0.155    2.145
+ D4G           C6     C    CR6       0.000     -1.925   -0.080    0.968
+ D4G           S_2    S    S2        0.000     -2.531   -1.433    0.016
+ D4G           S_1    S    S2        0.000     -4.408   -1.638    0.841
+ D4G           C4     C    CR6       0.000     -5.291   -0.448   -0.111
+ D4G           C3     C    CR16      0.000     -6.655   -0.227    0.103
+ D4G           H3     H    H         0.000     -7.190   -0.788    0.860
+ D4G           C5     C    CR16      0.000     -4.647    0.305   -1.097
+ D4G           H5     H    H         0.000     -3.590    0.169   -1.288
+ D4G           C1     C    CR16      0.000     -5.376    1.222   -1.821
+ D4G           H1     H    H         0.000     -4.887    1.805   -2.592
+ D4G           N_1    N    NRD6      0.000     -6.663    1.400   -1.588
+ D4G           C2     C    CR16      0.000     -7.308    0.713   -0.664
+ D4G           H2     H    H         0.000     -8.364    0.891   -0.505
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ D4G      H10    n/a    C10    START
+ D4G      C10    H10    C6     .
+ D4G      C9     C10    N_2    .
+ D4G      H9     C9     .      .
+ D4G      N_2    C9     C8     .
+ D4G      C8     N_2    C7     .
+ D4G      H8     C8     .      .
+ D4G      C7     C8     H7     .
+ D4G      H7     C7     .      .
+ D4G      C6     C10    S_2    .
+ D4G      S_2    C6     S_1    .
+ D4G      S_1    S_2    C4     .
+ D4G      C4     S_1    C5     .
+ D4G      C3     C4     H3     .
+ D4G      H3     C3     .      .
+ D4G      C5     C4     C1     .
+ D4G      H5     C5     .      .
+ D4G      C1     C5     N_1    .
+ D4G      H1     C1     .      .
+ D4G      N_1    C1     C2     .
+ D4G      C2     N_1    H2     .
+ D4G      H2     C2     .      END
+ D4G      C3     C2     .    ADD
+ D4G      C6     C7     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ D4G      C3     C2        single      1.390    0.020
+ D4G      C3     C4        double      1.390    0.020
+ D4G      H3     C3        single      1.083    0.020
+ D4G      C2     N_1       double      1.337    0.020
+ D4G      H2     C2        single      1.083    0.020
+ D4G      N_1    C1        single      1.337    0.020
+ D4G      C1     C5        double      1.390    0.020
+ D4G      H1     C1        single      1.083    0.020
+ D4G      C5     C4        single      1.390    0.020
+ D4G      H5     C5        single      1.083    0.020
+ D4G      C4     S_1       single      1.695    0.020
+ D4G      S_1    S_2       single      2.000    0.020
+ D4G      S_2    C6        single      1.695    0.020
+ D4G      C6     C7        single      1.390    0.020
+ D4G      C6     C10       double      1.390    0.020
+ D4G      C7     C8        double      1.390    0.020
+ D4G      H7     C7        single      1.083    0.020
+ D4G      C8     N_2       single      1.337    0.020
+ D4G      H8     C8        single      1.083    0.020
+ D4G      N_2    C9        double      1.337    0.020
+ D4G      C9     C10       single      1.390    0.020
+ D4G      H9     C9        single      1.083    0.020
+ D4G      C10    H10       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ D4G      H10    C10    C9      120.000    3.000
+ D4G      H10    C10    C6      120.000    3.000
+ D4G      C9     C10    C6      120.000    3.000
+ D4G      C10    C9     H9      120.000    3.000
+ D4G      C10    C9     N_2     120.000    3.000
+ D4G      H9     C9     N_2     120.000    3.000
+ D4G      C9     N_2    C8      120.000    3.000
+ D4G      N_2    C8     H8      120.000    3.000
+ D4G      N_2    C8     C7      120.000    3.000
+ D4G      H8     C8     C7      120.000    3.000
+ D4G      C8     C7     H7      120.000    3.000
+ D4G      C8     C7     C6      120.000    3.000
+ D4G      H7     C7     C6      120.000    3.000
+ D4G      C10    C6     S_2     120.000    3.000
+ D4G      C10    C6     C7      120.000    3.000
+ D4G      S_2    C6     C7      120.000    3.000
+ D4G      C6     S_2    S_1      99.987    3.000
+ D4G      S_2    S_1    C4       99.987    3.000
+ D4G      S_1    C4     C3      120.000    3.000
+ D4G      S_1    C4     C5      120.000    3.000
+ D4G      C3     C4     C5      120.000    3.000
+ D4G      C4     C3     H3      120.000    3.000
+ D4G      C4     C3     C2      120.000    3.000
+ D4G      H3     C3     C2      120.000    3.000
+ D4G      C4     C5     H5      120.000    3.000
+ D4G      C4     C5     C1      120.000    3.000
+ D4G      H5     C5     C1      120.000    3.000
+ D4G      C5     C1     H1      120.000    3.000
+ D4G      C5     C1     N_1     120.000    3.000
+ D4G      H1     C1     N_1     120.000    3.000
+ D4G      C1     N_1    C2      120.000    3.000
+ D4G      N_1    C2     H2      120.000    3.000
+ D4G      N_1    C2     C3      120.000    3.000
+ D4G      H2     C2     C3      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ D4G      CONST_1  H10    C10    C9     N_2      180.000    0.000   0
+ D4G      CONST_2  C10    C9     N_2    C8         0.000    0.000   0
+ D4G      CONST_3  C9     N_2    C8     C7         0.000    0.000   0
+ D4G      CONST_4  N_2    C8     C7     C6         0.000    0.000   0
+ D4G      CONST_5  H10    C10    C6     S_2        0.000    0.000   0
+ D4G      CONST_6  C10    C6     C7     C8         0.000    0.000   0
+ D4G      var_1    C10    C6     S_2    S_1      179.989   20.000   1
+ D4G      var_2    C6     S_2    S_1    C4        85.018   20.000   1
+ D4G      var_3    S_2    S_1    C4     C5        -0.259   20.000   1
+ D4G      CONST_7  S_1    C4     C3     C2       180.000    0.000   0
+ D4G      CONST_8  C4     C3     C2     N_1        0.000    0.000   0
+ D4G      CONST_9  S_1    C4     C5     C1       180.000    0.000   0
+ D4G      CONST_10 C4     C5     C1     N_1        0.000    0.000   0
+ D4G      CONST_11 C5     C1     N_1    C2         0.000    0.000   0
+ D4G      CONST_12 C1     N_1    C2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ D4G      plan-1    C3        0.020
+ D4G      plan-1    C2        0.020
+ D4G      plan-1    C4        0.020
+ D4G      plan-1    H3        0.020
+ D4G      plan-1    N_1       0.020
+ D4G      plan-1    C1        0.020
+ D4G      plan-1    C5        0.020
+ D4G      plan-1    H2        0.020
+ D4G      plan-1    H1        0.020
+ D4G      plan-1    H5        0.020
+ D4G      plan-1    S_1       0.020
+ D4G      plan-2    C6        0.020
+ D4G      plan-2    S_2       0.020
+ D4G      plan-2    C7        0.020
+ D4G      plan-2    C10       0.020
+ D4G      plan-2    C8        0.020
+ D4G      plan-2    N_2       0.020
+ D4G      plan-2    C9        0.020
+ D4G      plan-2    H7        0.020
+ D4G      plan-2    H8        0.020
+ D4G      plan-2    H9        0.020
+ D4G      plan-2    H10       0.020
+# ------------------------------------------------------

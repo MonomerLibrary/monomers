@@ -1,0 +1,171 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PSE      PSE 'O-PHOSPHOETHANOLAMINE               ' non-polymer        18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PSE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PSE           O4P    O    OP       -0.666      0.000    0.000    0.000
+ PSE           P      P    P         0.000     -0.915    1.205    0.018
+ PSE           O2P    O    OP       -0.666     -1.592    1.345   -1.328
+ PSE           O3P    O    OP       -0.666     -0.105    2.449    0.308
+ PSE           O1P    O    O2        0.000     -2.031    1.012    1.162
+ PSE           C3     C    CH2       0.000     -2.759   -0.171    0.835
+ PSE           H31    H    H         0.000     -2.076   -1.022    0.811
+ PSE           H32    H    H         0.000     -3.224   -0.051   -0.146
+ PSE           C2     C    CH1       0.000     -3.842   -0.413    1.888
+ PSE           H2     H    H         0.000     -4.529    0.444    1.910
+ PSE           N2     N    NH2       0.000     -3.215   -0.572    3.206
+ PSE           HN22   H    H         0.000     -3.414   -1.389    3.772
+ PSE           HN21   H    H         0.000     -2.580    0.134    3.559
+ PSE           C1     C    CH2       0.000     -4.621   -1.682    1.537
+ PSE           H11    H    H         0.000     -3.938   -2.533    1.513
+ PSE           H12    H    H         0.000     -5.086   -1.563    0.556
+ PSE           O1     O    OH1       0.000     -5.632   -1.907    2.521
+ PSE           HO1    H    H         0.000     -6.125   -2.709    2.298
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PSE      O4P    n/a    P      START
+ PSE      P      O4P    O1P    .
+ PSE      O2P    P      .      .
+ PSE      O3P    P      .      .
+ PSE      O1P    P      C3     .
+ PSE      C3     O1P    C2     .
+ PSE      H31    C3     .      .
+ PSE      H32    C3     .      .
+ PSE      C2     C3     C1     .
+ PSE      H2     C2     .      .
+ PSE      N2     C2     HN21   .
+ PSE      HN22   N2     .      .
+ PSE      HN21   N2     .      .
+ PSE      C1     C2     O1     .
+ PSE      H11    C1     .      .
+ PSE      H12    C1     .      .
+ PSE      O1     C1     HO1    .
+ PSE      HO1    O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PSE      N2     C2        single      1.450    0.020
+ PSE      HN21   N2        single      1.010    0.020
+ PSE      HN22   N2        single      1.010    0.020
+ PSE      C1     C2        single      1.524    0.020
+ PSE      C2     C3        single      1.524    0.020
+ PSE      H2     C2        single      1.099    0.020
+ PSE      O1     C1        single      1.432    0.020
+ PSE      H11    C1        single      1.092    0.020
+ PSE      H12    C1        single      1.092    0.020
+ PSE      HO1    O1        single      0.967    0.020
+ PSE      C3     O1P       single      1.426    0.020
+ PSE      H31    C3        single      1.092    0.020
+ PSE      H32    C3        single      1.092    0.020
+ PSE      O1P    P         single      1.610    0.020
+ PSE      O2P    P         deloc       1.510    0.020
+ PSE      O3P    P         deloc       1.510    0.020
+ PSE      P      O4P       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PSE      O4P    P      O2P     119.900    3.000
+ PSE      O4P    P      O3P     119.900    3.000
+ PSE      O4P    P      O1P     108.200    3.000
+ PSE      O2P    P      O3P     119.900    3.000
+ PSE      O2P    P      O1P     108.200    3.000
+ PSE      O3P    P      O1P     108.200    3.000
+ PSE      P      O1P    C3      120.500    3.000
+ PSE      O1P    C3     H31     109.470    3.000
+ PSE      O1P    C3     H32     109.470    3.000
+ PSE      O1P    C3     C2      109.470    3.000
+ PSE      H31    C3     H32     107.900    3.000
+ PSE      H31    C3     C2      109.470    3.000
+ PSE      H32    C3     C2      109.470    3.000
+ PSE      C3     C2     H2      108.340    3.000
+ PSE      C3     C2     N2      109.470    3.000
+ PSE      C3     C2     C1      109.470    3.000
+ PSE      H2     C2     N2      109.470    3.000
+ PSE      H2     C2     C1      108.340    3.000
+ PSE      N2     C2     C1      109.470    3.000
+ PSE      C2     N2     HN22    120.000    3.000
+ PSE      C2     N2     HN21    120.000    3.000
+ PSE      HN22   N2     HN21    120.000    3.000
+ PSE      C2     C1     H11     109.470    3.000
+ PSE      C2     C1     H12     109.470    3.000
+ PSE      C2     C1     O1      109.470    3.000
+ PSE      H11    C1     H12     107.900    3.000
+ PSE      H11    C1     O1      109.470    3.000
+ PSE      H12    C1     O1      109.470    3.000
+ PSE      C1     O1     HO1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PSE      var_1    O4P    P      O1P    C3       -60.018   20.000   1
+ PSE      var_2    P      O1P    C3     C2      -180.000   20.000   1
+ PSE      var_3    O1P    C3     C2     C1      -179.978   20.000   3
+ PSE      var_4    C3     C2     N2     HN21      53.655   20.000   1
+ PSE      var_5    C3     C2     C1     O1       179.992   20.000   3
+ PSE      var_6    C2     C1     O1     HO1      179.966   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PSE      chir_01  C2     N2     C1     C3        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PSE      plan-1    N2        0.020
+ PSE      plan-1    C2        0.000
+ PSE      plan-1    HN21      0.000
+ PSE      plan-1    HN22      0.000
+# ------------------------------------------------------

@@ -1,0 +1,136 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ETN      ETN 'METHYLETHYLAMINE                    ' non-polymer        13   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ETN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ETN           C2     C    CH3       0.000      0.000    0.000    0.000
+ ETN           H21    H    H         0.000      0.988   -0.091   -0.373
+ ETN           H22    H    H         0.000     -0.097    0.922    0.514
+ ETN           H23    H    H         0.000     -0.195   -0.797    0.671
+ ETN           C1     C    CH2       0.000     -0.995   -0.049   -1.161
+ ETN           H11    H    H         0.000     -0.889   -0.999   -1.690
+ ETN           H12    H    H         0.000     -0.791    0.774   -1.849
+ ETN           N      N    NH1       0.000     -2.361    0.074   -0.640
+ ETN           HN     H    H         0.000     -2.630    0.176    0.329
+ ETN           C      C    CH3       0.000     -3.262    0.019   -1.799
+ ETN           H3     H    H         0.000     -3.039    0.815   -2.463
+ ETN           H2     H    H         0.000     -3.137   -0.904   -2.305
+ ETN           H1     H    H         0.000     -4.268    0.106   -1.474
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ETN      C2     n/a    C1     START
+ ETN      H21    C2     .      .
+ ETN      H22    C2     .      .
+ ETN      H23    C2     .      .
+ ETN      C1     C2     N      .
+ ETN      H11    C1     .      .
+ ETN      H12    C1     .      .
+ ETN      N      C1     C      .
+ ETN      HN     N      .      .
+ ETN      C      N      H1     .
+ ETN      H3     C      .      .
+ ETN      H2     C      .      .
+ ETN      H1     C      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ETN      C      N         single      1.450    0.020
+ ETN      N      C1        single      1.450    0.020
+ ETN      HN     N         single      1.010    0.020
+ ETN      H1     C         single      1.059    0.020
+ ETN      H2     C         single      1.059    0.020
+ ETN      H3     C         single      1.059    0.020
+ ETN      C1     C2        single      1.513    0.020
+ ETN      H11    C1        single      1.092    0.020
+ ETN      H12    C1        single      1.092    0.020
+ ETN      H21    C2        single      1.059    0.020
+ ETN      H22    C2        single      1.059    0.020
+ ETN      H23    C2        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ETN      H21    C2     H22     109.470    3.000
+ ETN      H21    C2     H23     109.470    3.000
+ ETN      H22    C2     H23     109.470    3.000
+ ETN      H21    C2     C1      109.470    3.000
+ ETN      H22    C2     C1      109.470    3.000
+ ETN      H23    C2     C1      109.470    3.000
+ ETN      C2     C1     H11     109.470    3.000
+ ETN      C2     C1     H12     109.470    3.000
+ ETN      C2     C1     N       112.000    3.000
+ ETN      H11    C1     H12     107.900    3.000
+ ETN      H11    C1     N       109.470    3.000
+ ETN      H12    C1     N       109.470    3.000
+ ETN      C1     N      HN      118.500    3.000
+ ETN      C1     N      C       120.000    3.000
+ ETN      HN     N      C       118.500    3.000
+ ETN      N      C      H3      109.470    3.000
+ ETN      N      C      H2      109.470    3.000
+ ETN      N      C      H1      109.470    3.000
+ ETN      H3     C      H2      109.470    3.000
+ ETN      H3     C      H1      109.470    3.000
+ ETN      H2     C      H1      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ETN      var_1    H23    C2     C1     N         59.878   20.000   3
+ ETN      var_2    C2     C1     N      C       -179.964   20.000   3
+ ETN      var_3    C1     N      C      H1      -179.900   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ETN      plan-1    N         0.020
+ ETN      plan-1    C         0.000
+ ETN      plan-1    C1        0.000
+ ETN      plan-1    HN        0.000
+# ------------------------------------------------------

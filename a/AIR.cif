@@ -1,0 +1,266 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AIR      AIR '5-AMINOIMIDAZOLE RIBONUCLEOTIDE     ' non-polymer        31  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AIR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AIR           O8     O    OP       -0.666      0.000    0.000    0.000
+ AIR           P      P    P         0.000     -0.331    1.340    0.620
+ AIR           O6     O    OP       -0.666      0.114    2.449   -0.309
+ AIR           O7     O    OP       -0.666      0.385    1.475    1.945
+ AIR           "O5'"  O    O2        0.000     -1.921    1.443    0.856
+ AIR           "C5'"  C    CH2       0.000     -2.278    0.376    1.734
+ AIR           HC51   H    H         0.000     -1.737    0.484    2.676
+ AIR           HC52   H    H         0.000     -2.015   -0.578    1.272
+ AIR           "C4'"  C    CH1       0.000     -3.784    0.416    2.001
+ AIR           "HC4'" H    H         0.000     -4.062    1.367    2.478
+ AIR           "C3'"  C    CH1       0.000     -4.208   -0.774    2.888
+ AIR           "HC3'" H    H         0.000     -3.492   -1.602    2.790
+ AIR           "O3'"  O    OH1       0.000     -4.318   -0.368    4.253
+ AIR           "HO'3" H    H         0.000     -4.584   -1.124    4.793
+ AIR           "C2'"  C    CH1       0.000     -5.591   -1.185    2.330
+ AIR           "HC2'" H    H         0.000     -5.563   -2.217    1.955
+ AIR           "O2'"  O    OH1       0.000     -6.597   -1.046    3.336
+ AIR           "HO'2" H    H         0.000     -6.393   -1.631    4.078
+ AIR           "O4'"  O    O2        0.000     -4.517    0.240    0.770
+ AIR           "C1'"  C    CH1       0.000     -5.835   -0.194    1.170
+ AIR           "HC1'" H    H         0.000     -6.430    0.662    1.518
+ AIR           N1     N    NR5       0.000     -6.511   -0.867    0.059
+ AIR           C5     C    CR5       0.000     -7.863   -0.957   -0.137
+ AIR           N6     N    NH2       0.000     -8.861   -0.422    0.680
+ AIR           HN62   H    H         0.000     -8.621    0.094    1.524
+ AIR           HN61   H    H         0.000     -9.844   -0.539    0.446
+ AIR           C4     C    CR15      0.000     -8.046   -1.659   -1.279
+ AIR           HC4    H    H         0.000     -9.001   -1.908   -1.727
+ AIR           N3     N    NRD5      0.000     -6.840   -1.992   -1.762
+ AIR           C2     C    CR15      0.000     -5.913   -1.527   -0.971
+ AIR           HC2    H    H         0.000     -4.846   -1.646   -1.110
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AIR      O8     n/a    P      START
+ AIR      P      O8     "O5'"  .
+ AIR      O6     P      .      .
+ AIR      O7     P      .      .
+ AIR      "O5'"  P      "C5'"  .
+ AIR      "C5'"  "O5'"  "C4'"  .
+ AIR      HC51   "C5'"  .      .
+ AIR      HC52   "C5'"  .      .
+ AIR      "C4'"  "C5'"  "O4'"  .
+ AIR      "HC4'" "C4'"  .      .
+ AIR      "C3'"  "C4'"  "C2'"  .
+ AIR      "HC3'" "C3'"  .      .
+ AIR      "O3'"  "C3'"  "HO'3" .
+ AIR      "HO'3" "O3'"  .      .
+ AIR      "C2'"  "C3'"  "O2'"  .
+ AIR      "HC2'" "C2'"  .      .
+ AIR      "O2'"  "C2'"  "HO'2" .
+ AIR      "HO'2" "O2'"  .      .
+ AIR      "O4'"  "C4'"  "C1'"  .
+ AIR      "C1'"  "O4'"  N1     .
+ AIR      "HC1'" "C1'"  .      .
+ AIR      N1     "C1'"  C5     .
+ AIR      C5     N1     C4     .
+ AIR      N6     C5     HN61   .
+ AIR      HN62   N6     .      .
+ AIR      HN61   N6     .      .
+ AIR      C4     C5     N3     .
+ AIR      HC4    C4     .      .
+ AIR      N3     C4     C2     .
+ AIR      C2     N3     HC2    .
+ AIR      HC2    C2     .      END
+ AIR      N1     C2     .    ADD
+ AIR      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AIR      N1     C2        single      1.337    0.020
+ AIR      C5     N1        single      1.337    0.020
+ AIR      N1     "C1'"     single      1.485    0.020
+ AIR      C2     N3        double      1.350    0.020
+ AIR      HC2    C2        single      1.083    0.020
+ AIR      N3     C4        single      1.350    0.020
+ AIR      C4     C5        double      1.387    0.020
+ AIR      HC4    C4        single      1.083    0.020
+ AIR      N6     C5        single      1.355    0.020
+ AIR      HN61   N6        single      1.010    0.020
+ AIR      HN62   N6        single      1.010    0.020
+ AIR      "C1'"  "C2'"     single      1.524    0.020
+ AIR      "C1'"  "O4'"     single      1.426    0.020
+ AIR      "HC1'" "C1'"     single      1.099    0.020
+ AIR      "C2'"  "C3'"     single      1.524    0.020
+ AIR      "O2'"  "C2'"     single      1.432    0.020
+ AIR      "HC2'" "C2'"     single      1.099    0.020
+ AIR      "C3'"  "C4'"     single      1.524    0.020
+ AIR      "O3'"  "C3'"     single      1.432    0.020
+ AIR      "HC3'" "C3'"     single      1.099    0.020
+ AIR      "O4'"  "C4'"     single      1.426    0.020
+ AIR      "C4'"  "C5'"     single      1.524    0.020
+ AIR      "HC4'" "C4'"     single      1.099    0.020
+ AIR      "HO'2" "O2'"     single      0.967    0.020
+ AIR      "HO'3" "O3'"     single      0.967    0.020
+ AIR      "C5'"  "O5'"     single      1.426    0.020
+ AIR      HC51   "C5'"     single      1.092    0.020
+ AIR      HC52   "C5'"     single      1.092    0.020
+ AIR      "O5'"  P         single      1.610    0.020
+ AIR      O6     P         deloc       1.510    0.020
+ AIR      O7     P         deloc       1.510    0.020
+ AIR      P      O8        deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AIR      O8     P      O6      119.900    3.000
+ AIR      O8     P      O7      119.900    3.000
+ AIR      O8     P      "O5'"   108.200    3.000
+ AIR      O6     P      O7      119.900    3.000
+ AIR      O6     P      "O5'"   108.200    3.000
+ AIR      O7     P      "O5'"   108.200    3.000
+ AIR      P      "O5'"  "C5'"   120.500    3.000
+ AIR      "O5'"  "C5'"  HC51    109.470    3.000
+ AIR      "O5'"  "C5'"  HC52    109.470    3.000
+ AIR      "O5'"  "C5'"  "C4'"   109.470    3.000
+ AIR      HC51   "C5'"  HC52    107.900    3.000
+ AIR      HC51   "C5'"  "C4'"   109.470    3.000
+ AIR      HC52   "C5'"  "C4'"   109.470    3.000
+ AIR      "C5'"  "C4'"  "HC4'"  108.340    3.000
+ AIR      "C5'"  "C4'"  "C3'"   111.000    3.000
+ AIR      "C5'"  "C4'"  "O4'"   109.470    3.000
+ AIR      "HC4'" "C4'"  "C3'"   108.340    3.000
+ AIR      "HC4'" "C4'"  "O4'"   109.470    3.000
+ AIR      "C3'"  "C4'"  "O4'"   109.470    3.000
+ AIR      "C4'"  "C3'"  "HC3'"  108.340    3.000
+ AIR      "C4'"  "C3'"  "O3'"   109.470    3.000
+ AIR      "C4'"  "C3'"  "C2'"   111.000    3.000
+ AIR      "HC3'" "C3'"  "O3'"   109.470    3.000
+ AIR      "HC3'" "C3'"  "C2'"   108.340    3.000
+ AIR      "O3'"  "C3'"  "C2'"   109.470    3.000
+ AIR      "C3'"  "O3'"  "HO'3"  109.470    3.000
+ AIR      "C3'"  "C2'"  "HC2'"  108.340    3.000
+ AIR      "C3'"  "C2'"  "O2'"   109.470    3.000
+ AIR      "C3'"  "C2'"  "C1'"   111.000    3.000
+ AIR      "HC2'" "C2'"  "O2'"   109.470    3.000
+ AIR      "HC2'" "C2'"  "C1'"   108.340    3.000
+ AIR      "O2'"  "C2'"  "C1'"   109.470    3.000
+ AIR      "C2'"  "O2'"  "HO'2"  109.470    3.000
+ AIR      "C4'"  "O4'"  "C1'"   111.800    3.000
+ AIR      "O4'"  "C1'"  "HC1'"  109.470    3.000
+ AIR      "O4'"  "C1'"  N1      109.470    3.000
+ AIR      "O4'"  "C1'"  "C2'"   109.470    3.000
+ AIR      "HC1'" "C1'"  N1      109.470    3.000
+ AIR      "HC1'" "C1'"  "C2'"   108.340    3.000
+ AIR      N1     "C1'"  "C2'"   109.470    3.000
+ AIR      "C1'"  N1     C5      126.000    3.000
+ AIR      "C1'"  N1     C2      126.000    3.000
+ AIR      C5     N1     C2      108.000    3.000
+ AIR      N1     C5     N6      108.000    3.000
+ AIR      N1     C5     C4      108.000    3.000
+ AIR      N6     C5     C4      108.000    3.000
+ AIR      C5     N6     HN62    120.000    3.000
+ AIR      C5     N6     HN61    120.000    3.000
+ AIR      HN62   N6     HN61    120.000    3.000
+ AIR      C5     C4     HC4     126.000    3.000
+ AIR      C5     C4     N3      108.000    3.000
+ AIR      HC4    C4     N3      126.000    3.000
+ AIR      C4     N3     C2      108.000    3.000
+ AIR      N3     C2     HC2     126.000    3.000
+ AIR      N3     C2     N1      108.000    3.000
+ AIR      HC2    C2     N1      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AIR      var_1    O8     P      "O5'"  "C5'"     59.959   20.000   1
+ AIR      var_2    P      "O5'"  "C5'"  "C4'"   -179.994   20.000   1
+ AIR      var_3    "O5'"  "C5'"  "C4'"  "O4'"     61.468   20.000   3
+ AIR      var_4    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ AIR      var_5    "C4'"  "C3'"  "O3'"  "HO'3"  -179.994   20.000   1
+ AIR      var_6    "C4'"  "C3'"  "C2'"  "O2'"   -120.000   20.000   3
+ AIR      var_7    "C3'"  "C2'"  "O2'"  "HO'2"   -61.498   20.000   1
+ AIR      var_8    "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ AIR      var_9    "C4'"  "O4'"  "C1'"  N1      -150.000   20.000   1
+ AIR      var_10   "O4'"  "C1'"  "C2'"  "C3'"     30.000   20.000   3
+ AIR      var_11   "O4'"  "C1'"  N1     C5      -153.403   20.000   1
+ AIR      CONST_1  "C1'"  N1     C2     N3       180.000    0.000   0
+ AIR      CONST_2  "C1'"  N1     C5     C4       180.000    0.000   0
+ AIR      CONST_3  N1     C5     N6     HN61     179.704    0.000   0
+ AIR      CONST_4  N1     C5     C4     N3         0.000    0.000   0
+ AIR      CONST_5  C5     C4     N3     C2         0.000    0.000   0
+ AIR      CONST_6  C4     N3     C2     N1         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AIR      chir_01  "C1'"  N1     "C2'"  "O4'"     negativ
+ AIR      chir_02  "C2'"  "C1'"  "C3'"  "O2'"     negativ
+ AIR      chir_03  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+ AIR      chir_04  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AIR      plan-1    N1        0.020
+ AIR      plan-1    C2        0.020
+ AIR      plan-1    C5        0.020
+ AIR      plan-1    "C1'"     0.020
+ AIR      plan-1    N3        0.020
+ AIR      plan-1    C4        0.020
+ AIR      plan-1    HC2       0.020
+ AIR      plan-1    HC4       0.020
+ AIR      plan-1    N6        0.020
+ AIR      plan-1    HN62      0.020
+ AIR      plan-1    HN61      0.020
+ AIR      plan-2    N6        0.020
+ AIR      plan-2    C5        0.020
+ AIR      plan-2    HN61      0.020
+ AIR      plan-2    HN62      0.020
+# ------------------------------------------------------

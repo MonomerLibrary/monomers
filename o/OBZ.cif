@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OBZ      OBZ 'O-benzylhydroxylamine               ' non-polymer        18   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OBZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OBZ           N1     N    NH2       0.000      0.000    0.000    0.000
+ OBZ           HN1    H    H         0.000      0.353   -0.002    0.973
+ OBZ           HN1A   H    H         0.000      0.728    0.001   -0.736
+ OBZ           O2     O    O2        0.000     -1.429    0.001   -0.313
+ OBZ           C3     C    CH2       0.000     -2.277   -0.002    0.837
+ OBZ           H3     H    H         0.000     -2.077    0.888    1.437
+ OBZ           H3A    H    H         0.000     -2.077   -0.894    1.434
+ OBZ           C4     C    CR6       0.000     -3.719   -0.001    0.399
+ OBZ           C5     C    CR16      0.000     -4.381    1.196    0.204
+ OBZ           H5     H    H         0.000     -3.865    2.134    0.370
+ OBZ           C6     C    CR16      0.000     -5.703    1.197   -0.201
+ OBZ           H6     H    H         0.000     -6.220    2.136   -0.359
+ OBZ           C7     C    CR16      0.000     -6.363    0.001   -0.405
+ OBZ           H7     H    H         0.000     -7.399    0.001   -0.721
+ OBZ           C8     C    CR16      0.000     -5.702   -1.197   -0.206
+ OBZ           H8     H    H         0.000     -6.221   -2.134   -0.365
+ OBZ           C9     C    CR16      0.000     -4.380   -1.198    0.195
+ OBZ           H9     H    H         0.000     -3.861   -2.136    0.351
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OBZ      N1     n/a    O2     START
+ OBZ      HN1    N1     .      .
+ OBZ      HN1A   N1     .      .
+ OBZ      O2     N1     C3     .
+ OBZ      C3     O2     C4     .
+ OBZ      H3     C3     .      .
+ OBZ      H3A    C3     .      .
+ OBZ      C4     C3     C5     .
+ OBZ      C5     C4     C6     .
+ OBZ      H5     C5     .      .
+ OBZ      C6     C5     C7     .
+ OBZ      H6     C6     .      .
+ OBZ      C7     C6     C8     .
+ OBZ      H7     C7     .      .
+ OBZ      C8     C7     C9     .
+ OBZ      H8     C8     .      .
+ OBZ      C9     C8     H9     .
+ OBZ      H9     C9     .      END
+ OBZ      C4     C9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OBZ      C3     O2        single      1.426    0.020
+ OBZ      C4     C3        single      1.511    0.020
+ OBZ      C4     C9        double      1.390    0.020
+ OBZ      C5     C4        single      1.390    0.020
+ OBZ      C9     C8        single      1.390    0.020
+ OBZ      C8     C7        double      1.390    0.020
+ OBZ      C7     C6        single      1.390    0.020
+ OBZ      C6     C5        double      1.390    0.020
+ OBZ      O2     N1        single      1.335    0.020
+ OBZ      H3     C3        single      1.092    0.020
+ OBZ      H3A    C3        single      1.092    0.020
+ OBZ      H9     C9        single      1.083    0.020
+ OBZ      H8     C8        single      1.083    0.020
+ OBZ      H7     C7        single      1.083    0.020
+ OBZ      H6     C6        single      1.083    0.020
+ OBZ      H5     C5        single      1.083    0.020
+ OBZ      HN1    N1        single      1.010    0.020
+ OBZ      HN1A   N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OBZ      HN1    N1     HN1A    120.000    3.000
+ OBZ      HN1    N1     O2      120.000    3.000
+ OBZ      HN1A   N1     O2      120.000    3.000
+ OBZ      N1     O2     C3      120.000    3.000
+ OBZ      O2     C3     H3      109.470    3.000
+ OBZ      O2     C3     H3A     109.470    3.000
+ OBZ      O2     C3     C4      109.470    3.000
+ OBZ      H3     C3     H3A     107.900    3.000
+ OBZ      H3     C3     C4      109.470    3.000
+ OBZ      H3A    C3     C4      109.470    3.000
+ OBZ      C3     C4     C5      120.000    3.000
+ OBZ      C3     C4     C9      120.000    3.000
+ OBZ      C5     C4     C9      120.000    3.000
+ OBZ      C4     C5     H5      120.000    3.000
+ OBZ      C4     C5     C6      120.000    3.000
+ OBZ      H5     C5     C6      120.000    3.000
+ OBZ      C5     C6     H6      120.000    3.000
+ OBZ      C5     C6     C7      120.000    3.000
+ OBZ      H6     C6     C7      120.000    3.000
+ OBZ      C6     C7     H7      120.000    3.000
+ OBZ      C6     C7     C8      120.000    3.000
+ OBZ      H7     C7     C8      120.000    3.000
+ OBZ      C7     C8     H8      120.000    3.000
+ OBZ      C7     C8     C9      120.000    3.000
+ OBZ      H8     C8     C9      120.000    3.000
+ OBZ      C8     C9     H9      120.000    3.000
+ OBZ      C8     C9     C4      120.000    3.000
+ OBZ      H9     C9     C4      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OBZ      var_1    HN1A   N1     O2     C3       179.975   20.000   1
+ OBZ      var_2    N1     O2     C3     C4      -179.994   20.000   1
+ OBZ      var_3    O2     C3     C4     C5       -90.212   20.000   2
+ OBZ      CONST_1  C3     C4     C9     C8       180.000    0.000   0
+ OBZ      CONST_2  C3     C4     C5     C6       180.000    0.000   0
+ OBZ      CONST_3  C4     C5     C6     C7         0.000    0.000   0
+ OBZ      CONST_4  C5     C6     C7     C8         0.000    0.000   0
+ OBZ      CONST_5  C6     C7     C8     C9         0.000    0.000   0
+ OBZ      CONST_6  C7     C8     C9     C4         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OBZ      plan-1    C4        0.020
+ OBZ      plan-1    C3        0.020
+ OBZ      plan-1    C9        0.020
+ OBZ      plan-1    C5        0.020
+ OBZ      plan-1    C8        0.020
+ OBZ      plan-1    C7        0.020
+ OBZ      plan-1    C6        0.020
+ OBZ      plan-1    H9        0.020
+ OBZ      plan-1    H8        0.020
+ OBZ      plan-1    H7        0.020
+ OBZ      plan-1    H6        0.020
+ OBZ      plan-1    H5        0.020
+ OBZ      plan-2    N1        0.020
+ OBZ      plan-2    O2        0.020
+ OBZ      plan-2    HN1       0.020
+ OBZ      plan-2    HN1A      0.020
+# ------------------------------------------------------

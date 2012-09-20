@@ -1,0 +1,264 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+01I      01I '.                                   ' non-polymer        28  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_01I
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 01I           OAV    O    OC       -0.500      0.000    0.000    0.000
+ 01I           CAR    C    C         0.000     -0.551    1.123    0.000
+ 01I           OAS    O    OC       -0.500      0.147    2.161   -0.001
+ 01I           CAL    C    CR5       0.000     -2.015    1.223    0.000
+ 01I           CAK    C    CR15      0.000     -2.717    2.384    0.000
+ 01I           HAK    H    H         0.000     -2.312    3.389    0.000
+ 01I           CAB    C    CR56      0.000     -4.132    2.006    0.000
+ 01I           OAM    O    O2        0.000     -2.863    0.173    0.001
+ 01I           CAC    C    CR56      0.000     -4.147    0.591    0.000
+ 01I           CAD    C    CR16      0.000     -5.351   -0.086    0.000
+ 01I           HAD    H    H         0.000     -5.364   -1.169    0.000
+ 01I           CAE    C    CR66      0.000     -6.549    0.626    0.000
+ 01I           CAG    C    CR56      0.000     -7.840   -0.061    0.000
+ 01I           CAN    C    CR15      0.000     -8.231   -1.416    0.000
+ 01I           HAN    H    H         0.000     -7.573   -2.276    0.000
+ 01I           CAO    C    CR5       0.000     -9.593   -1.434    0.000
+ 01I           CAQ    C    C         0.000    -10.425   -2.641    0.000
+ 01I           OAU    O    OC       -0.500     -9.889   -3.771    0.001
+ 01I           OAT    O    OC       -0.500    -11.672   -2.540    0.000
+ 01I           OAP    O    O2        0.000    -10.054   -0.165   -0.001
+ 01I           CAH    C    CR56      0.000     -9.019    0.698   -0.001
+ 01I           CAI    C    CR16      0.000     -8.948    2.097   -0.002
+ 01I           HAI    H    H         0.000     -9.867    2.671   -0.008
+ 01I           CAJ    C    CR16      0.000     -7.762    2.750    0.004
+ 01I           HAJ    H    H         0.000     -7.752    3.833    0.013
+ 01I           CAF    C    CR66      0.000     -6.538    2.047   -0.001
+ 01I           CAA    C    CR16      0.000     -5.318    2.728   -0.001
+ 01I           HAA    H    H         0.000     -5.297    3.811   -0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 01I      OAV    n/a    CAR    START
+ 01I      CAR    OAV    CAL    .
+ 01I      OAS    CAR    .      .
+ 01I      CAL    CAR    OAM    .
+ 01I      CAK    CAL    CAB    .
+ 01I      HAK    CAK    .      .
+ 01I      CAB    CAK    .      .
+ 01I      OAM    CAL    CAC    .
+ 01I      CAC    OAM    CAD    .
+ 01I      CAD    CAC    CAE    .
+ 01I      HAD    CAD    .      .
+ 01I      CAE    CAD    CAG    .
+ 01I      CAG    CAE    CAN    .
+ 01I      CAN    CAG    CAO    .
+ 01I      HAN    CAN    .      .
+ 01I      CAO    CAN    OAP    .
+ 01I      CAQ    CAO    OAT    .
+ 01I      OAU    CAQ    .      .
+ 01I      OAT    CAQ    .      .
+ 01I      OAP    CAO    CAH    .
+ 01I      CAH    OAP    CAI    .
+ 01I      CAI    CAH    CAJ    .
+ 01I      HAI    CAI    .      .
+ 01I      CAJ    CAI    CAF    .
+ 01I      HAJ    CAJ    .      .
+ 01I      CAF    CAJ    CAA    .
+ 01I      CAA    CAF    HAA    .
+ 01I      HAA    CAA    .      END
+ 01I      CAA    CAB    .    ADD
+ 01I      CAB    CAC    .    ADD
+ 01I      CAE    CAF    .    ADD
+ 01I      CAG    CAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 01I      CAA    CAB       double      1.390    0.020
+ 01I      CAA    CAF       single      1.390    0.020
+ 01I      HAA    CAA       single      1.083    0.020
+ 01I      CAB    CAK       single      1.440    0.020
+ 01I      CAB    CAC       single      1.490    0.020
+ 01I      CAC    OAM       single      1.329    0.020
+ 01I      CAD    CAC       double      1.390    0.020
+ 01I      CAE    CAD       single      1.390    0.020
+ 01I      HAD    CAD       single      1.083    0.020
+ 01I      CAG    CAE       double      1.390    0.020
+ 01I      CAE    CAF       single      1.490    0.020
+ 01I      CAF    CAJ       double      1.390    0.020
+ 01I      CAN    CAG       single      1.440    0.020
+ 01I      CAG    CAH       single      1.490    0.020
+ 01I      CAH    OAP       single      1.329    0.020
+ 01I      CAI    CAH       double      1.390    0.020
+ 01I      CAJ    CAI       single      1.390    0.020
+ 01I      HAI    CAI       single      1.083    0.020
+ 01I      HAJ    CAJ       single      1.083    0.020
+ 01I      CAK    CAL       double      1.387    0.020
+ 01I      HAK    CAK       single      1.083    0.020
+ 01I      CAL    CAR       single      1.490    0.020
+ 01I      OAM    CAL       single      1.370    0.020
+ 01I      CAO    CAN       double      1.387    0.020
+ 01I      HAN    CAN       single      1.083    0.020
+ 01I      CAQ    CAO       single      1.490    0.020
+ 01I      OAP    CAO       single      1.370    0.020
+ 01I      OAU    CAQ       deloc       1.250    0.020
+ 01I      OAT    CAQ       deloc       1.250    0.020
+ 01I      OAS    CAR       deloc       1.250    0.020
+ 01I      CAR    OAV       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 01I      OAV    CAR    OAS     123.000    3.000
+ 01I      OAV    CAR    CAL     120.000    3.000
+ 01I      OAS    CAR    CAL     120.000    3.000
+ 01I      CAR    CAL    CAK     126.000    3.000
+ 01I      CAR    CAL    OAM     108.000    3.000
+ 01I      CAK    CAL    OAM     108.000    3.000
+ 01I      CAL    CAK    HAK     126.000    3.000
+ 01I      CAL    CAK    CAB     108.000    3.000
+ 01I      HAK    CAK    CAB     108.000    3.000
+ 01I      CAK    CAB    CAA     126.000    3.000
+ 01I      CAK    CAB    CAC     120.000    3.000
+ 01I      CAA    CAB    CAC     120.000    3.000
+ 01I      CAL    OAM    CAC     120.000    3.000
+ 01I      OAM    CAC    CAD     120.000    3.000
+ 01I      OAM    CAC    CAB     120.000    3.000
+ 01I      CAD    CAC    CAB     120.000    3.000
+ 01I      CAC    CAD    HAD     120.000    3.000
+ 01I      CAC    CAD    CAE     120.000    3.000
+ 01I      HAD    CAD    CAE     120.000    3.000
+ 01I      CAD    CAE    CAG     120.000    3.000
+ 01I      CAD    CAE    CAF     120.000    3.000
+ 01I      CAG    CAE    CAF     120.000    3.000
+ 01I      CAE    CAG    CAN     120.000    3.000
+ 01I      CAE    CAG    CAH     120.000    3.000
+ 01I      CAN    CAG    CAH     120.000    3.000
+ 01I      CAG    CAN    HAN     108.000    3.000
+ 01I      CAG    CAN    CAO     108.000    3.000
+ 01I      HAN    CAN    CAO     126.000    3.000
+ 01I      CAN    CAO    CAQ     126.000    3.000
+ 01I      CAN    CAO    OAP     108.000    3.000
+ 01I      CAQ    CAO    OAP     108.000    3.000
+ 01I      CAO    CAQ    OAU     120.000    3.000
+ 01I      CAO    CAQ    OAT     120.000    3.000
+ 01I      OAU    CAQ    OAT     123.000    3.000
+ 01I      CAO    OAP    CAH     120.000    3.000
+ 01I      OAP    CAH    CAI     120.000    3.000
+ 01I      OAP    CAH    CAG     120.000    3.000
+ 01I      CAI    CAH    CAG     120.000    3.000
+ 01I      CAH    CAI    HAI     120.000    3.000
+ 01I      CAH    CAI    CAJ     120.000    3.000
+ 01I      HAI    CAI    CAJ     120.000    3.000
+ 01I      CAI    CAJ    HAJ     120.000    3.000
+ 01I      CAI    CAJ    CAF     120.000    3.000
+ 01I      HAJ    CAJ    CAF     120.000    3.000
+ 01I      CAJ    CAF    CAA     120.000    3.000
+ 01I      CAJ    CAF    CAE     120.000    3.000
+ 01I      CAA    CAF    CAE     120.000    3.000
+ 01I      CAF    CAA    HAA     120.000    3.000
+ 01I      CAF    CAA    CAB     120.000    3.000
+ 01I      HAA    CAA    CAB     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 01I      var_1    OAV    CAR    CAL    OAM        0.052   20.000   1
+ 01I      CONST_1  CAR    CAL    CAK    CAB      180.000    0.000   0
+ 01I      CONST_2  CAL    CAK    CAB    CAA      180.000    0.000   0
+ 01I      CONST_3  CAK    CAB    CAC    OAM        0.000    0.000   0
+ 01I      CONST_4  CAR    CAL    OAM    CAC      180.000    0.000   0
+ 01I      CONST_5  CAL    OAM    CAC    CAD      180.000    0.000   0
+ 01I      CONST_6  OAM    CAC    CAD    CAE      180.000    0.000   0
+ 01I      CONST_7  CAC    CAD    CAE    CAG      180.000    0.000   0
+ 01I      CONST_8  CAD    CAE    CAF    CAJ      180.000    0.000   0
+ 01I      CONST_9  CAD    CAE    CAG    CAN        0.000    0.000   0
+ 01I      CONST_10 CAE    CAG    CAH    OAP      180.000    0.000   0
+ 01I      CONST_11 CAE    CAG    CAN    CAO      180.000    0.000   0
+ 01I      CONST_12 CAG    CAN    CAO    OAP        0.000    0.000   0
+ 01I      var_2    CAN    CAO    CAQ    OAT      180.000   20.000   1
+ 01I      CONST_13 CAN    CAO    OAP    CAH        0.000    0.000   0
+ 01I      CONST_14 CAO    OAP    CAH    CAI      180.000    0.000   0
+ 01I      CONST_15 OAP    CAH    CAI    CAJ      180.000    0.000   0
+ 01I      CONST_16 CAH    CAI    CAJ    CAF        0.000    0.000   0
+ 01I      CONST_17 CAI    CAJ    CAF    CAA      180.000    0.000   0
+ 01I      CONST_18 CAJ    CAF    CAA    CAB      180.000    0.000   0
+ 01I      CONST_19 CAF    CAA    CAB    CAK      180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 01I      plan-1    CAA       0.020
+ 01I      plan-1    CAB       0.020
+ 01I      plan-1    CAF       0.020
+ 01I      plan-1    HAA       0.020
+ 01I      plan-1    CAC       0.020
+ 01I      plan-1    CAK       0.020
+ 01I      plan-1    CAL       0.020
+ 01I      plan-1    OAM       0.020
+ 01I      plan-1    CAD       0.020
+ 01I      plan-1    CAE       0.020
+ 01I      plan-1    HAD       0.020
+ 01I      plan-1    CAG       0.020
+ 01I      plan-1    CAI       0.020
+ 01I      plan-1    CAJ       0.020
+ 01I      plan-1    CAH       0.020
+ 01I      plan-1    CAN       0.020
+ 01I      plan-1    CAO       0.020
+ 01I      plan-1    OAP       0.020
+ 01I      plan-1    HAI       0.020
+ 01I      plan-1    HAJ       0.020
+ 01I      plan-1    HAK       0.020
+ 01I      plan-1    CAR       0.020
+ 01I      plan-1    HAN       0.020
+ 01I      plan-1    CAQ       0.020
+ 01I      plan-2    CAQ       0.020
+ 01I      plan-2    CAO       0.020
+ 01I      plan-2    OAT       0.020
+ 01I      plan-2    OAU       0.020
+ 01I      plan-3    CAR       0.020
+ 01I      plan-3    CAL       0.020
+ 01I      plan-3    OAS       0.020
+ 01I      plan-3    OAV       0.020
+# ------------------------------------------------------

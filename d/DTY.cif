@@ -1,0 +1,216 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DTY      DTY 'D-TYROSINE                          ' peptide            23  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DTY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DTY           N      N    NH2       0.000      0.000    0.000    0.000
+ DTY           HN1    H    H         0.000      0.746   -0.622    0.272
+ DTY           HN2    H    H         0.000     -0.569    0.449    0.702
+ DTY           CA     C    CH1       0.000     -0.254    0.249   -1.398
+ DTY           HA     H    H         0.000     -0.193    1.332   -1.569
+ DTY           CB     C    CH2       0.000     -1.657   -0.221   -1.802
+ DTY           HB2    H    H         0.000     -2.331   -0.008   -0.970
+ DTY           HB3    H    H         0.000     -1.612   -1.300   -1.966
+ DTY           CG     C    CR6       0.000     -2.168    0.458   -3.051
+ DTY           CD2    C    CR16      0.000     -1.910   -0.111   -4.287
+ DTY           HD2    H    H         0.000     -1.347   -1.034   -4.357
+ DTY           CE2    C    CR16      0.000     -2.383    0.516   -5.441
+ DTY           HE2    H    H         0.000     -2.188    0.079   -6.413
+ DTY           CZ     C    CR6       0.000     -3.105    1.704   -5.342
+ DTY           OH     O    OH1       0.000     -3.568    2.315   -6.467
+ DTY           HH     H    H         0.000     -3.062    3.124   -6.625
+ DTY           CE1    C    CR16      0.000     -3.357    2.265   -4.090
+ DTY           HE1    H    H         0.000     -3.919    3.188   -4.014
+ DTY           CD1    C    CR16      0.000     -2.885    1.638   -2.937
+ DTY           HD1    H    H         0.000     -3.077    2.069   -1.962
+ DTY           C      C    C         0.000      0.793   -0.428   -2.271
+ DTY           O      O    OC       -0.500      1.312   -1.529   -1.982
+ DTY           OXT    O    OC       -0.500      1.094    0.198   -3.311
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DTY      N      n/a    CA     START
+ DTY      HN1    N      .      .
+ DTY      HN2    N      .      .
+ DTY      CA     N      C      .
+ DTY      HA     CA     .      .
+ DTY      CB     CA     CG     .
+ DTY      HB2    CB     .      .
+ DTY      HB3    CB     .      .
+ DTY      CG     CB     CD2    .
+ DTY      CD2    CG     CE2    .
+ DTY      HD2    CD2    .      .
+ DTY      CE2    CD2    CZ     .
+ DTY      HE2    CE2    .      .
+ DTY      CZ     CE2    CE1    .
+ DTY      OH     CZ     HH     .
+ DTY      HH     OH     .      .
+ DTY      CE1    CZ     CD1    .
+ DTY      HE1    CE1    .      .
+ DTY      CD1    CE1    HD1    .
+ DTY      HD1    CD1    .      .
+ DTY      C      CA     .      END
+ DTY      O      C      .      .
+ DTY      OXT    C      .      .
+ DTY      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DTY      CA     N         single      1.450    0.020
+ DTY      C      CA        single      1.500    0.020
+ DTY      CB     CA        single      1.524    0.020
+ DTY      HA     CA        single      1.099    0.020
+ DTY      O      C         deloc       1.250    0.020
+ DTY      OXT    C         deloc       1.250    0.020
+ DTY      CG     CB        single      1.511    0.020
+ DTY      HB2    CB        single      1.092    0.020
+ DTY      HB3    CB        single      1.092    0.020
+ DTY      CG     CD1       double      1.390    0.020
+ DTY      CD2    CG        single      1.390    0.020
+ DTY      CD1    CE1       single      1.390    0.020
+ DTY      HD1    CD1       single      1.083    0.020
+ DTY      CE2    CD2       double      1.390    0.020
+ DTY      HD2    CD2       single      1.083    0.020
+ DTY      CE1    CZ        double      1.390    0.020
+ DTY      HE1    CE1       single      1.083    0.020
+ DTY      CZ     CE2       single      1.390    0.020
+ DTY      HE2    CE2       single      1.083    0.020
+ DTY      OH     CZ        single      1.362    0.020
+ DTY      HH     OH        single      0.967    0.020
+ DTY      HN1    N         single      1.010    0.020
+ DTY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DTY      HN1    N      HN2     120.000    3.000
+ DTY      HN1    N      CA      120.000    3.000
+ DTY      HN2    N      CA      120.000    3.000
+ DTY      N      CA     HA      109.470    3.000
+ DTY      N      CA     CB      109.470    3.000
+ DTY      N      CA     C       109.470    3.000
+ DTY      HA     CA     CB      108.340    3.000
+ DTY      HA     CA     C       108.810    3.000
+ DTY      CB     CA     C       109.470    3.000
+ DTY      CA     CB     HB2     109.470    3.000
+ DTY      CA     CB     HB3     109.470    3.000
+ DTY      CA     CB     CG      109.470    3.000
+ DTY      HB2    CB     HB3     107.900    3.000
+ DTY      HB2    CB     CG      109.470    3.000
+ DTY      HB3    CB     CG      109.470    3.000
+ DTY      CB     CG     CD2     120.000    3.000
+ DTY      CB     CG     CD1     120.000    3.000
+ DTY      CD2    CG     CD1     120.000    3.000
+ DTY      CG     CD2    HD2     120.000    3.000
+ DTY      CG     CD2    CE2     120.000    3.000
+ DTY      HD2    CD2    CE2     120.000    3.000
+ DTY      CD2    CE2    HE2     120.000    3.000
+ DTY      CD2    CE2    CZ      120.000    3.000
+ DTY      HE2    CE2    CZ      120.000    3.000
+ DTY      CE2    CZ     OH      120.000    3.000
+ DTY      CE2    CZ     CE1     120.000    3.000
+ DTY      OH     CZ     CE1     120.000    3.000
+ DTY      CZ     OH     HH      109.470    3.000
+ DTY      CZ     CE1    HE1     120.000    3.000
+ DTY      CZ     CE1    CD1     120.000    3.000
+ DTY      HE1    CE1    CD1     120.000    3.000
+ DTY      CE1    CD1    HD1     120.000    3.000
+ DTY      CE1    CD1    CG      120.000    3.000
+ DTY      HD1    CD1    CG      120.000    3.000
+ DTY      CA     C      O       118.500    3.000
+ DTY      CA     C      OXT     118.500    3.000
+ DTY      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DTY      var_1    HN2    N      CA     C        175.000   20.000   1
+ DTY      var_2    N      CA     CB     CG       158.210   20.000   3
+ DTY      var_3    CA     CB     CG     CD2       89.995   20.000   2
+ DTY      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ DTY      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ DTY      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ DTY      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ DTY      var_4    CE2    CZ     OH     HH      -108.788   20.000   1
+ DTY      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ DTY      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DTY      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DTY      plan-1    N         0.020
+ DTY      plan-1    CA        0.020
+ DTY      plan-1    HN1       0.020
+ DTY      plan-1    HN2       0.020
+ DTY      plan-2    C         0.020
+ DTY      plan-2    CA        0.020
+ DTY      plan-2    O         0.020
+ DTY      plan-2    OXT       0.020
+ DTY      plan-3    CG        0.020
+ DTY      plan-3    CB        0.020
+ DTY      plan-3    CD1       0.020
+ DTY      plan-3    CD2       0.020
+ DTY      plan-3    CE1       0.020
+ DTY      plan-3    CE2       0.020
+ DTY      plan-3    CZ        0.020
+ DTY      plan-3    HD1       0.020
+ DTY      plan-3    HD2       0.020
+ DTY      plan-3    HE1       0.020
+ DTY      plan-3    HE2       0.020
+ DTY      plan-3    OH        0.020
+# ------------------------------------------------------

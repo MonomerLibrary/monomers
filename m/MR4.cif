@@ -1,0 +1,268 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MR4      MR4 '4-(1,3-BENZOXAZOL-2-YL)-2,6-DIMETHYL' non-polymer        31  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MR4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MR4           OAC    O    OH1       0.000      0.000    0.000    0.000
+ MR4           HOAC   H    H         0.000      0.322   -0.002    0.912
+ MR4           CAO    C    CR6       0.000     -1.358   -0.004    0.001
+ MR4           CAL    C    CR6       0.000     -2.053    1.199    0.005
+ MR4           CAA    C    CH3       0.000     -1.299    2.504    0.007
+ MR4           HAA3   H    H         0.000     -0.372    2.378   -0.489
+ MR4           HAA2   H    H         0.000     -1.870    3.242   -0.494
+ MR4           HAA1   H    H         0.000     -1.126    2.810    1.006
+ MR4           CAM    C    CR6       0.000     -2.047   -1.209   -0.001
+ MR4           CAB    C    CH3       0.000     -1.288   -2.511   -0.005
+ MR4           HAB3   H    H         0.000     -1.857   -3.250   -0.506
+ MR4           HAB2   H    H         0.000     -0.363   -2.379   -0.504
+ MR4           HAB1   H    H         0.000     -1.109   -2.818    0.993
+ MR4           CAI    C    CR16      0.000     -3.425   -1.217    0.000
+ MR4           HAI    H    H         0.000     -3.963   -2.157    0.004
+ MR4           CAN    C    CR6       0.000     -4.128   -0.009   -0.003
+ MR4           CAH    C    CR16      0.000     -3.431    1.200    0.000
+ MR4           HAH    H    H         0.000     -3.972    2.138   -0.001
+ MR4           CAP    C    CR5       0.000     -5.605   -0.013   -0.008
+ MR4           NAJ    N    NRD5      0.000     -6.353   -1.087   -0.010
+ MR4           CAQ    C    CR56      0.000     -7.659   -0.711   -0.012
+ MR4           CAR    C    CR56      0.000     -7.672    0.694   -0.019
+ MR4           OAK    O    O2        0.000     -6.380    1.089   -0.016
+ MR4           CAF    C    CR16      0.000     -8.865   -1.414   -0.013
+ MR4           HAF    H    H         0.000     -8.864   -2.497   -0.006
+ MR4           CAD    C    CR16      0.000    -10.057   -0.724   -0.021
+ MR4           HAD    H    H         0.000    -10.993   -1.268   -0.022
+ MR4           CAE    C    CR16      0.000    -10.066    0.662   -0.028
+ MR4           HAE    H    H         0.000    -11.010    1.193   -0.035
+ MR4           CAG    C    CR16      0.000     -8.882    1.370   -0.027
+ MR4           HAG    H    H         0.000     -8.897    2.453   -0.031
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MR4      OAC    n/a    CAO    START
+ MR4      HOAC   OAC    .      .
+ MR4      CAO    OAC    CAM    .
+ MR4      CAL    CAO    CAA    .
+ MR4      CAA    CAL    HAA1   .
+ MR4      HAA3   CAA    .      .
+ MR4      HAA2   CAA    .      .
+ MR4      HAA1   CAA    .      .
+ MR4      CAM    CAO    CAI    .
+ MR4      CAB    CAM    HAB1   .
+ MR4      HAB3   CAB    .      .
+ MR4      HAB2   CAB    .      .
+ MR4      HAB1   CAB    .      .
+ MR4      CAI    CAM    CAN    .
+ MR4      HAI    CAI    .      .
+ MR4      CAN    CAI    CAP    .
+ MR4      CAH    CAN    HAH    .
+ MR4      HAH    CAH    .      .
+ MR4      CAP    CAN    NAJ    .
+ MR4      NAJ    CAP    CAQ    .
+ MR4      CAQ    NAJ    CAF    .
+ MR4      CAR    CAQ    OAK    .
+ MR4      OAK    CAR    .      .
+ MR4      CAF    CAQ    CAD    .
+ MR4      HAF    CAF    .      .
+ MR4      CAD    CAF    CAE    .
+ MR4      HAD    CAD    .      .
+ MR4      CAE    CAD    CAG    .
+ MR4      HAE    CAE    .      .
+ MR4      CAG    CAE    HAG    .
+ MR4      HAG    CAG    .      END
+ MR4      CAL    CAH    .    ADD
+ MR4      CAP    OAK    .    ADD
+ MR4      CAR    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MR4      CAA    CAL       single      1.506    0.020
+ MR4      HAA1   CAA       single      1.059    0.020
+ MR4      HAA2   CAA       single      1.059    0.020
+ MR4      HAA3   CAA       single      1.059    0.020
+ MR4      CAL    CAH       double      1.390    0.020
+ MR4      CAL    CAO       single      1.487    0.020
+ MR4      CAH    CAN       single      1.390    0.020
+ MR4      HAH    CAH       single      1.083    0.020
+ MR4      CAM    CAO       double      1.487    0.020
+ MR4      CAO    OAC       single      1.362    0.020
+ MR4      HOAC   OAC       single      0.967    0.020
+ MR4      CAI    CAM       single      1.390    0.020
+ MR4      CAB    CAM       single      1.506    0.020
+ MR4      HAB1   CAB       single      1.059    0.020
+ MR4      HAB2   CAB       single      1.059    0.020
+ MR4      HAB3   CAB       single      1.059    0.020
+ MR4      CAN    CAI       double      1.390    0.020
+ MR4      HAI    CAI       single      1.083    0.020
+ MR4      CAP    CAN       single      1.490    0.020
+ MR4      NAJ    CAP       double      1.350    0.020
+ MR4      CAP    OAK       single      1.370    0.020
+ MR4      OAK    CAR       single      1.329    0.020
+ MR4      CAR    CAG       double      1.390    0.020
+ MR4      CAR    CAQ       single      1.490    0.020
+ MR4      CAG    CAE       single      1.390    0.020
+ MR4      HAG    CAG       single      1.083    0.020
+ MR4      CAE    CAD       double      1.390    0.020
+ MR4      HAE    CAE       single      1.083    0.020
+ MR4      CAD    CAF       single      1.390    0.020
+ MR4      HAD    CAD       single      1.083    0.020
+ MR4      CAF    CAQ       double      1.390    0.020
+ MR4      HAF    CAF       single      1.083    0.020
+ MR4      CAQ    NAJ       single      1.350    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MR4      HOAC   OAC    CAO     109.470    3.000
+ MR4      OAC    CAO    CAL     120.000    3.000
+ MR4      OAC    CAO    CAM     120.000    3.000
+ MR4      CAL    CAO    CAM     120.000    3.000
+ MR4      CAO    CAL    CAA     120.000    3.000
+ MR4      CAO    CAL    CAH     120.000    3.000
+ MR4      CAA    CAL    CAH     120.000    3.000
+ MR4      CAL    CAA    HAA3    109.470    3.000
+ MR4      CAL    CAA    HAA2    109.470    3.000
+ MR4      CAL    CAA    HAA1    109.470    3.000
+ MR4      HAA3   CAA    HAA2    109.470    3.000
+ MR4      HAA3   CAA    HAA1    109.470    3.000
+ MR4      HAA2   CAA    HAA1    109.470    3.000
+ MR4      CAO    CAM    CAB     120.000    3.000
+ MR4      CAO    CAM    CAI     120.000    3.000
+ MR4      CAB    CAM    CAI     120.000    3.000
+ MR4      CAM    CAB    HAB3    109.470    3.000
+ MR4      CAM    CAB    HAB2    109.470    3.000
+ MR4      CAM    CAB    HAB1    109.470    3.000
+ MR4      HAB3   CAB    HAB2    109.470    3.000
+ MR4      HAB3   CAB    HAB1    109.470    3.000
+ MR4      HAB2   CAB    HAB1    109.470    3.000
+ MR4      CAM    CAI    HAI     120.000    3.000
+ MR4      CAM    CAI    CAN     120.000    3.000
+ MR4      HAI    CAI    CAN     120.000    3.000
+ MR4      CAI    CAN    CAH     120.000    3.000
+ MR4      CAI    CAN    CAP     120.000    3.000
+ MR4      CAH    CAN    CAP     120.000    3.000
+ MR4      CAN    CAH    HAH     120.000    3.000
+ MR4      CAN    CAH    CAL     120.000    3.000
+ MR4      HAH    CAH    CAL     120.000    3.000
+ MR4      CAN    CAP    NAJ     126.000    3.000
+ MR4      CAN    CAP    OAK     126.000    3.000
+ MR4      NAJ    CAP    OAK     108.000    3.000
+ MR4      CAP    NAJ    CAQ     108.000    3.000
+ MR4      NAJ    CAQ    CAR     108.000    3.000
+ MR4      NAJ    CAQ    CAF     132.000    3.000
+ MR4      CAR    CAQ    CAF     120.000    3.000
+ MR4      CAQ    CAR    OAK     120.000    3.000
+ MR4      CAQ    CAR    CAG     120.000    3.000
+ MR4      OAK    CAR    CAG     120.000    3.000
+ MR4      CAR    OAK    CAP     120.000    3.000
+ MR4      CAQ    CAF    HAF     120.000    3.000
+ MR4      CAQ    CAF    CAD     120.000    3.000
+ MR4      HAF    CAF    CAD     120.000    3.000
+ MR4      CAF    CAD    HAD     120.000    3.000
+ MR4      CAF    CAD    CAE     120.000    3.000
+ MR4      HAD    CAD    CAE     120.000    3.000
+ MR4      CAD    CAE    HAE     120.000    3.000
+ MR4      CAD    CAE    CAG     120.000    3.000
+ MR4      HAE    CAE    CAG     120.000    3.000
+ MR4      CAE    CAG    HAG     120.000    3.000
+ MR4      CAE    CAG    CAR     120.000    3.000
+ MR4      HAG    CAG    CAR     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MR4      var_1    HOAC   OAC    CAO    CAM      -89.936   20.000   1
+ MR4      CONST_1  OAC    CAO    CAL    CAA        0.000    0.000   0
+ MR4      CONST_2  CAO    CAL    CAH    CAN        0.000    0.000   0
+ MR4      var_2    CAO    CAL    CAA    HAA1     -90.307   20.000   1
+ MR4      CONST_3  OAC    CAO    CAM    CAI      180.000    0.000   0
+ MR4      var_3    CAO    CAM    CAB    HAB1      90.019   20.000   1
+ MR4      CONST_4  CAO    CAM    CAI    CAN        0.000    0.000   0
+ MR4      CONST_5  CAM    CAI    CAN    CAP      180.000    0.000   0
+ MR4      CONST_6  CAI    CAN    CAH    CAL        0.000    0.000   0
+ MR4      var_4    CAI    CAN    CAP    NAJ       -0.046   20.000   1
+ MR4      CONST_7  CAN    CAP    OAK    CAR      180.000    0.000   0
+ MR4      CONST_8  CAN    CAP    NAJ    CAQ      180.000    0.000   0
+ MR4      CONST_9  CAP    NAJ    CAQ    CAF      180.000    0.000   0
+ MR4      CONST_10 NAJ    CAQ    CAR    OAK        0.000    0.000   0
+ MR4      CONST_11 CAQ    CAR    CAG    CAE        0.000    0.000   0
+ MR4      CONST_12 CAQ    CAR    OAK    CAP        0.000    0.000   0
+ MR4      CONST_13 NAJ    CAQ    CAF    CAD      180.000    0.000   0
+ MR4      CONST_14 CAQ    CAF    CAD    CAE        0.000    0.000   0
+ MR4      CONST_15 CAF    CAD    CAE    CAG        0.000    0.000   0
+ MR4      CONST_16 CAD    CAE    CAG    CAR        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MR4      plan-1    CAL       0.020
+ MR4      plan-1    CAA       0.020
+ MR4      plan-1    CAH       0.020
+ MR4      plan-1    CAO       0.020
+ MR4      plan-1    CAM       0.020
+ MR4      plan-1    CAI       0.020
+ MR4      plan-1    CAN       0.020
+ MR4      plan-1    HAH       0.020
+ MR4      plan-1    OAC       0.020
+ MR4      plan-1    CAB       0.020
+ MR4      plan-1    HAI       0.020
+ MR4      plan-1    CAP       0.020
+ MR4      plan-2    CAP       0.020
+ MR4      plan-2    CAN       0.020
+ MR4      plan-2    OAK       0.020
+ MR4      plan-2    NAJ       0.020
+ MR4      plan-2    CAQ       0.020
+ MR4      plan-2    CAR       0.020
+ MR4      plan-2    CAG       0.020
+ MR4      plan-2    CAE       0.020
+ MR4      plan-2    CAD       0.020
+ MR4      plan-2    CAF       0.020
+ MR4      plan-2    HAG       0.020
+ MR4      plan-2    HAE       0.020
+ MR4      plan-2    HAD       0.020
+ MR4      plan-2    HAF       0.020
+# ------------------------------------------------------

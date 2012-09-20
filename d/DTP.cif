@@ -1,0 +1,333 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DTP      DTP '.                                   ' non-polymer        42  30 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DTP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DTP           O2A    O    OP       -0.500      0.000    0.000    0.000
+ DTP           PA     P    P         0.000     -1.103   -0.183    0.975
+ DTP           O1A    O    OP       -0.500     -1.394    1.110    1.639
+ DTP           O3A    O    O2        0.000     -0.666   -1.269    2.078
+ DTP           PB     P    P         0.000      0.649   -0.690    2.806
+ DTP           O1B    O    OP       -0.500      1.725   -0.499    1.803
+ DTP           O2B    O    OP       -0.500      0.329    0.610    3.443
+ DTP           O3B    O    O2        0.000      1.143   -1.733    3.930
+ DTP           PG     P    P         0.000      2.454   -1.093    4.613
+ DTP           O3G    O    OP       -0.666      3.523   -0.891    3.561
+ DTP           O2G    O    OP       -0.666      2.971   -2.028    5.684
+ DTP           O1G    O    OP       -0.666      2.100    0.240    5.235
+ DTP           "O5'"  O    O2        0.000     -2.418   -0.699    0.204
+ DTP           "C5'"  C    CH2       0.000     -2.753    0.301   -0.758
+ DTP           "H5'1" H    H         0.000     -1.922    0.428   -1.454
+ DTP           "H5'2" H    H         0.000     -2.947    1.246   -0.246
+ DTP           "C4'"  C    CH1       0.000     -4.003   -0.130   -1.528
+ DTP           "H4'"  H    H         0.000     -3.843   -1.105   -2.010
+ DTP           "C3'"  C    CH1       0.000     -4.391    0.939   -2.581
+ DTP           "H3'"  H    H         0.000     -4.216    1.953   -2.193
+ DTP           "O3'"  O    OH1       0.000     -3.682    0.732   -3.804
+ DTP           "HO3'" H    H         0.000     -4.006    1.352   -4.472
+ DTP           "C2'"  C    CH2       0.000     -5.905    0.675   -2.769
+ DTP           "H2'1" H    H         0.000     -6.106    0.051   -3.643
+ DTP           "H2'2" H    H         0.000     -6.476    1.602   -2.846
+ DTP           "C1'"  C    CH1       0.000     -6.318   -0.080   -1.491
+ DTP           "H1'"  H    H         0.000     -6.677   -1.086   -1.751
+ DTP           "O4'"  O    O2        0.000     -5.153   -0.178   -0.654
+ DTP           N9     N    NR5       0.000     -7.371    0.661   -0.794
+ DTP           C4     C    CR56      0.000     -8.723    0.516   -0.978
+ DTP           C5     C    CR56      0.000     -9.333    1.430   -0.103
+ DTP           N7     N    NRD5      0.000     -8.341    2.068    0.563
+ DTP           C8     C    CR15      0.000     -7.188    1.620    0.157
+ DTP           H8     H    H         0.000     -6.226    1.960    0.521
+ DTP           N3     N    NRD6      0.000     -9.489   -0.247   -1.749
+ DTP           C2     C    CR16      0.000    -10.801   -0.154   -1.697
+ DTP           H2     H    H         0.000    -11.395   -0.790   -2.341
+ DTP           N1     N    NRD6      0.000    -11.419    0.687   -0.888
+ DTP           C6     C    CR6       0.000    -10.737    1.489   -0.078
+ DTP           N6     N    NH2       0.000    -11.393    2.366    0.768
+ DTP           HN62   H    H         0.000    -10.868    2.977    1.385
+ DTP           HN61   H    H         0.000    -12.407    2.409    0.780
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DTP      O2A    n/a    PA     START
+ DTP      PA     O2A    "O5'"  .
+ DTP      O1A    PA     .      .
+ DTP      O3A    PA     PB     .
+ DTP      PB     O3A    O3B    .
+ DTP      O1B    PB     .      .
+ DTP      O2B    PB     .      .
+ DTP      O3B    PB     PG     .
+ DTP      PG     O3B    O1G    .
+ DTP      O3G    PG     .      .
+ DTP      O2G    PG     .      .
+ DTP      O1G    PG     .      .
+ DTP      "O5'"  PA     "C5'"  .
+ DTP      "C5'"  "O5'"  "C4'"  .
+ DTP      "H5'1" "C5'"  .      .
+ DTP      "H5'2" "C5'"  .      .
+ DTP      "C4'"  "C5'"  "C3'"  .
+ DTP      "H4'"  "C4'"  .      .
+ DTP      "C3'"  "C4'"  "C2'"  .
+ DTP      "H3'"  "C3'"  .      .
+ DTP      "O3'"  "C3'"  "HO3'" .
+ DTP      "HO3'" "O3'"  .      .
+ DTP      "C2'"  "C3'"  "C1'"  .
+ DTP      "H2'1" "C2'"  .      .
+ DTP      "H2'2" "C2'"  .      .
+ DTP      "C1'"  "C2'"  N9     .
+ DTP      "H1'"  "C1'"  .      .
+ DTP      "O4'"  "C1'"  .      .
+ DTP      N9     "C1'"  C4     .
+ DTP      C4     N9     N3     .
+ DTP      C5     C4     N7     .
+ DTP      N7     C5     C8     .
+ DTP      C8     N7     H8     .
+ DTP      H8     C8     .      .
+ DTP      N3     C4     C2     .
+ DTP      C2     N3     N1     .
+ DTP      H2     C2     .      .
+ DTP      N1     C2     C6     .
+ DTP      C6     N1     N6     .
+ DTP      N6     C6     HN61   .
+ DTP      HN62   N6     .      .
+ DTP      HN61   N6     .      END
+ DTP      "C4'"  "O4'"  .    ADD
+ DTP      N9     C8     .    ADD
+ DTP      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DTP      O1G    PG        deloc       1.510    0.020
+ DTP      O2G    PG        deloc       1.510    0.020
+ DTP      O3G    PG        deloc       1.510    0.020
+ DTP      PG     O3B       single      1.610    0.020
+ DTP      O1B    PB        deloc       1.510    0.020
+ DTP      O2B    PB        deloc       1.510    0.020
+ DTP      O3B    PB        single      1.610    0.020
+ DTP      PB     O3A       single      1.610    0.020
+ DTP      O1A    PA        deloc       1.510    0.020
+ DTP      PA     O2A       deloc       1.510    0.020
+ DTP      O3A    PA        single      1.610    0.020
+ DTP      "O5'"  PA        single      1.610    0.020
+ DTP      "C5'"  "O5'"     single      1.426    0.020
+ DTP      "C4'"  "C5'"     single      1.524    0.020
+ DTP      "H5'1" "C5'"     single      1.092    0.020
+ DTP      "H5'2" "C5'"     single      1.092    0.020
+ DTP      "C4'"  "O4'"     single      1.426    0.020
+ DTP      "C3'"  "C4'"     single      1.524    0.020
+ DTP      "H4'"  "C4'"     single      1.099    0.020
+ DTP      "O4'"  "C1'"     single      1.426    0.020
+ DTP      "O3'"  "C3'"     single      1.432    0.020
+ DTP      "C2'"  "C3'"     single      1.524    0.020
+ DTP      "H3'"  "C3'"     single      1.099    0.020
+ DTP      "HO3'" "O3'"     single      0.967    0.020
+ DTP      "C1'"  "C2'"     single      1.524    0.020
+ DTP      "H2'1" "C2'"     single      1.092    0.020
+ DTP      "H2'2" "C2'"     single      1.092    0.020
+ DTP      N9     "C1'"     single      1.485    0.020
+ DTP      "H1'"  "C1'"     single      1.099    0.020
+ DTP      N9     C8        single      1.337    0.020
+ DTP      C4     N9        single      1.337    0.020
+ DTP      C8     N7        double      1.350    0.020
+ DTP      H8     C8        single      1.083    0.020
+ DTP      N7     C5        single      1.350    0.020
+ DTP      C5     C6        single      1.490    0.020
+ DTP      C5     C4        double      1.490    0.020
+ DTP      N6     C6        single      1.355    0.020
+ DTP      C6     N1        double      1.350    0.020
+ DTP      HN61   N6        single      1.010    0.020
+ DTP      HN62   N6        single      1.010    0.020
+ DTP      N1     C2        single      1.337    0.020
+ DTP      C2     N3        double      1.337    0.020
+ DTP      H2     C2        single      1.083    0.020
+ DTP      N3     C4        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DTP      O2A    PA     O1A     119.900    3.000
+ DTP      O2A    PA     O3A     108.200    3.000
+ DTP      O2A    PA     "O5'"   108.200    3.000
+ DTP      O1A    PA     O3A     108.200    3.000
+ DTP      O1A    PA     "O5'"   108.200    3.000
+ DTP      O3A    PA     "O5'"   102.600    3.000
+ DTP      PA     O3A    PB      120.500    3.000
+ DTP      O3A    PB     O1B     108.200    3.000
+ DTP      O3A    PB     O2B     108.200    3.000
+ DTP      O3A    PB     O3B     102.600    3.000
+ DTP      O1B    PB     O2B     119.900    3.000
+ DTP      O1B    PB     O3B     108.200    3.000
+ DTP      O2B    PB     O3B     108.200    3.000
+ DTP      PB     O3B    PG      120.500    3.000
+ DTP      O3B    PG     O3G     108.200    3.000
+ DTP      O3B    PG     O2G     108.200    3.000
+ DTP      O3B    PG     O1G     108.200    3.000
+ DTP      O3G    PG     O2G     119.900    3.000
+ DTP      O3G    PG     O1G     119.900    3.000
+ DTP      O2G    PG     O1G     119.900    3.000
+ DTP      PA     "O5'"  "C5'"   120.500    3.000
+ DTP      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ DTP      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ DTP      "O5'"  "C5'"  "C4'"   109.470    3.000
+ DTP      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ DTP      "H5'1" "C5'"  "C4'"   109.470    3.000
+ DTP      "H5'2" "C5'"  "C4'"   109.470    3.000
+ DTP      "C5'"  "C4'"  "H4'"   108.340    3.000
+ DTP      "C5'"  "C4'"  "C3'"   111.000    3.000
+ DTP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ DTP      "H4'"  "C4'"  "C3'"   108.340    3.000
+ DTP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ DTP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ DTP      "C4'"  "C3'"  "H3'"   108.340    3.000
+ DTP      "C4'"  "C3'"  "O3'"   109.470    3.000
+ DTP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ DTP      "H3'"  "C3'"  "O3'"   109.470    3.000
+ DTP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ DTP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ DTP      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ DTP      "C3'"  "C2'"  "H2'1"  109.470    3.000
+ DTP      "C3'"  "C2'"  "H2'2"  109.470    3.000
+ DTP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ DTP      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ DTP      "H2'1" "C2'"  "C1'"   109.470    3.000
+ DTP      "H2'2" "C2'"  "C1'"   109.470    3.000
+ DTP      "C2'"  "C1'"  "H1'"   108.340    3.000
+ DTP      "C2'"  "C1'"  "O4'"   109.470    3.000
+ DTP      "C2'"  "C1'"  N9      109.470    3.000
+ DTP      "H1'"  "C1'"  "O4'"   109.470    3.000
+ DTP      "H1'"  "C1'"  N9      109.470    3.000
+ DTP      "O4'"  "C1'"  N9      109.470    3.000
+ DTP      "C1'"  "O4'"  "C4'"   111.800    3.000
+ DTP      "C1'"  N9     C4      126.000    3.000
+ DTP      "C1'"  N9     C8      126.000    3.000
+ DTP      C4     N9     C8      108.000    3.000
+ DTP      N9     C4     C5      108.000    3.000
+ DTP      N9     C4     N3      132.000    3.000
+ DTP      C5     C4     N3      120.000    3.000
+ DTP      C4     C5     N7      108.000    3.000
+ DTP      C4     C5     C6      120.000    3.000
+ DTP      N7     C5     C6      132.000    3.000
+ DTP      C5     N7     C8      108.000    3.000
+ DTP      N7     C8     H8      126.000    3.000
+ DTP      N7     C8     N9      108.000    3.000
+ DTP      H8     C8     N9      126.000    3.000
+ DTP      C4     N3     C2      120.000    3.000
+ DTP      N3     C2     H2      120.000    3.000
+ DTP      N3     C2     N1      120.000    3.000
+ DTP      H2     C2     N1      120.000    3.000
+ DTP      C2     N1     C6      120.000    3.000
+ DTP      N1     C6     N6      120.000    3.000
+ DTP      N1     C6     C5      120.000    3.000
+ DTP      N6     C6     C5      120.000    3.000
+ DTP      C6     N6     HN62    120.000    3.000
+ DTP      C6     N6     HN61    120.000    3.000
+ DTP      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DTP      var_1    O2A    PA     O3A    PB        60.075   20.000   1
+ DTP      var_2    PA     O3A    PB     O3B      179.980   20.000   1
+ DTP      var_3    O3A    PB     O3B    PG       179.984   20.000   1
+ DTP      var_4    PB     O3B    PG     O1G       59.982   20.000   1
+ DTP      var_5    O2A    PA     "O5'"  "C5'"    -60.007   20.000   1
+ DTP      var_6    PA     "O5'"  "C5'"  "C4'"   -179.942   20.000   1
+ DTP      var_7    "O5'"  "C5'"  "C4'"  "C3'"    179.981   20.000   3
+ DTP      var_8    "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ DTP      var_9    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ DTP      var_10   "C4'"  "C3'"  "O3'"  "HO3'"   174.193   20.000   1
+ DTP      var_11   "C4'"  "C3'"  "C2'"  "C1'"     30.000   20.000   3
+ DTP      var_12   "C3'"  "C2'"  "C1'"  N9       120.000   20.000   3
+ DTP      var_13   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ DTP      var_14   "C2'"  "C1'"  N9     C4        90.346   20.000   1
+ DTP      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ DTP      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ DTP      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ DTP      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ DTP      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ DTP      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ DTP      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ DTP      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ DTP      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ DTP      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ DTP      CONST_11 N1     C6     N6     HN61      -0.032    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DTP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ DTP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ DTP      chir_03  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DTP      plan-1    N9        0.020
+ DTP      plan-1    "C1'"     0.020
+ DTP      plan-1    C8        0.020
+ DTP      plan-1    C4        0.020
+ DTP      plan-1    N7        0.020
+ DTP      plan-1    H8        0.020
+ DTP      plan-1    C5        0.020
+ DTP      plan-1    C6        0.020
+ DTP      plan-1    N1        0.020
+ DTP      plan-1    C2        0.020
+ DTP      plan-1    N3        0.020
+ DTP      plan-1    N6        0.020
+ DTP      plan-1    H2        0.020
+ DTP      plan-1    HN62      0.020
+ DTP      plan-1    HN61      0.020
+ DTP      plan-2    N6        0.020
+ DTP      plan-2    C6        0.020
+ DTP      plan-2    HN61      0.020
+ DTP      plan-2    HN62      0.020
+# ------------------------------------------------------

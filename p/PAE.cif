@@ -1,0 +1,130 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PAE      PAE 'PHOSPHONOACETIC ACID                ' non-polymer        12   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PAE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PAE           O2     O    OC       -0.500      0.000    0.000    0.000
+ PAE           C1     C    C         0.000     -0.566   -0.271   -1.082
+ PAE           O1     O    OC       -0.500     -0.079    0.133   -2.161
+ PAE           C1P    C    CH2       0.000     -1.834   -1.085   -1.085
+ PAE           H11    H    H         0.000     -1.828   -1.769   -0.233
+ PAE           H12    H    H         0.000     -1.894   -1.661   -2.011
+ PAE           P      P    P         0.000     -3.271    0.027   -0.964
+ PAE           O3P    O    O         0.000     -3.276    0.953   -2.118
+ PAE           O2P    O    OH1       0.000     -3.180    0.874    0.402
+ PAE           HOP2   H    H         0.000     -3.166    0.417    1.254
+ PAE           O1P    O    OH1       0.000     -4.625   -0.841   -0.967
+ PAE           HOP1   H    H         0.000     -5.483   -0.399   -0.909
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PAE      O2     n/a    C1     START
+ PAE      C1     O2     C1P    .
+ PAE      O1     C1     .      .
+ PAE      C1P    C1     P      .
+ PAE      H11    C1P    .      .
+ PAE      H12    C1P    .      .
+ PAE      P      C1P    O1P    .
+ PAE      O3P    P      .      .
+ PAE      O2P    P      HOP2   .
+ PAE      HOP2   O2P    .      .
+ PAE      O1P    P      HOP1   .
+ PAE      HOP1   O1P    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PAE      O1P    P         single      1.610    0.020
+ PAE      O2P    P         single      1.610    0.020
+ PAE      O3P    P         double      1.480    0.020
+ PAE      P      C1P       single      1.812    0.020
+ PAE      HOP1   O1P       single      0.967    0.020
+ PAE      HOP2   O2P       single      0.967    0.020
+ PAE      C1P    C1        single      1.510    0.020
+ PAE      H11    C1P       single      1.092    0.020
+ PAE      H12    C1P       single      1.092    0.020
+ PAE      O1     C1        deloc       1.250    0.020
+ PAE      C1     O2        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PAE      O2     C1     O1      123.000    3.000
+ PAE      O2     C1     C1P     118.500    3.000
+ PAE      O1     C1     C1P     118.500    3.000
+ PAE      C1     C1P    H11     109.470    3.000
+ PAE      C1     C1P    H12     109.470    3.000
+ PAE      C1     C1P    P       109.500    3.000
+ PAE      H11    C1P    H12     107.900    3.000
+ PAE      H11    C1P    P       109.500    3.000
+ PAE      H12    C1P    P       109.500    3.000
+ PAE      C1P    P      O3P     109.500    3.000
+ PAE      C1P    P      O2P     109.500    3.000
+ PAE      C1P    P      O1P     109.500    3.000
+ PAE      O3P    P      O2P     109.500    3.000
+ PAE      O3P    P      O1P     109.500    3.000
+ PAE      O2P    P      O1P     109.500    3.000
+ PAE      P      O2P    HOP2    120.000    3.000
+ PAE      P      O1P    HOP1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PAE      var_1    O2     C1     C1P    P         90.062   20.000   3
+ PAE      var_2    C1     C1P    P      O1P      179.971   20.000   1
+ PAE      var_3    C1P    P      O2P    HOP2     -59.997   20.000   1
+ PAE      var_4    C1P    P      O1P    HOP1     179.997   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PAE      plan-1    C1        0.020
+ PAE      plan-1    C1P       0.000
+ PAE      plan-1    O1        0.000
+ PAE      plan-1    O2        0.000
+# ------------------------------------------------------

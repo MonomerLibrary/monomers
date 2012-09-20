@@ -1,0 +1,273 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2BE      2BE '4-chloro-N'-[(1E)-(3,5-dibromo-2,4-d' non-polymer        31  22 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2BE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2BE           BRAF   BR   BR        0.000      0.000    0.000    0.000
+ 2BE           CAV    C    CR6       0.000     -1.425    1.242   -0.001
+ 2BE           CAQ    C    CR6       0.000     -1.158    2.605   -0.002
+ 2BE           OAB    O    OH1       0.000      0.129    3.042   -0.002
+ 2BE           HOAB   H    H         0.000      0.433    3.146    0.910
+ 2BE           CAS    C    CR6       0.000     -2.201    3.523   -0.002
+ 2BE           BRAE   BR   BR        0.000     -1.826    5.376   -0.003
+ 2BE           CAL    C    CR16      0.000     -3.510    3.087   -0.002
+ 2BE           HAL    H    H         0.000     -4.321    3.806   -0.003
+ 2BE           CAR    C    CR6       0.000     -2.735    0.793    0.006
+ 2BE           OAC    O    OH1       0.000     -2.998   -0.539    0.012
+ 2BE           HOAC   H    H         0.000     -3.058   -0.860   -0.898
+ 2BE           CAU    C    CR6       0.000     -3.789    1.719   -0.002
+ 2BE           CAG    C    C1        0.000     -5.185    1.248   -0.001
+ 2BE           HAG    H    H         0.000     -5.993    1.960   -0.001
+ 2BE           NAM    N    N         0.000     -5.442   -0.024    0.000
+ 2BE           NAN    N    NH1       0.000     -6.769   -0.472    0.000
+ 2BE           HNAN   H    H         0.000     -7.527    0.196   -0.002
+ 2BE           CAO    C    C         0.000     -7.036   -1.793    0.001
+ 2BE           OAA    O    O         0.000     -6.123   -2.597    0.002
+ 2BE           CAT    C    CR6       0.000     -8.436   -2.264    0.001
+ 2BE           CAJ    C    CR16      0.000     -8.715   -3.632    0.002
+ 2BE           HAJ    H    H         0.000     -7.905   -4.351    0.002
+ 2BE           CAK    C    CR16      0.000     -9.485   -1.343    0.000
+ 2BE           HAK    H    H         0.000     -9.275   -0.281   -0.001
+ 2BE           CAI    C    CR16      0.000    -10.790   -1.789    0.000
+ 2BE           HAI    H    H         0.000    -11.605   -1.076   -0.001
+ 2BE           CAP    C    CR6       0.000    -11.061   -3.148    0.001
+ 2BE           CLAD   CL   CL        0.000    -12.706   -3.702    0.001
+ 2BE           CAH    C    CR16      0.000    -10.024   -4.066    0.003
+ 2BE           HAH    H    H         0.000    -10.241   -5.127    0.005
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2BE      BRAF   n/a    CAV    START
+ 2BE      CAV    BRAF   CAR    .
+ 2BE      CAQ    CAV    CAS    .
+ 2BE      OAB    CAQ    HOAB   .
+ 2BE      HOAB   OAB    .      .
+ 2BE      CAS    CAQ    CAL    .
+ 2BE      BRAE   CAS    .      .
+ 2BE      CAL    CAS    HAL    .
+ 2BE      HAL    CAL    .      .
+ 2BE      CAR    CAV    CAU    .
+ 2BE      OAC    CAR    HOAC   .
+ 2BE      HOAC   OAC    .      .
+ 2BE      CAU    CAR    CAG    .
+ 2BE      CAG    CAU    NAM    .
+ 2BE      HAG    CAG    .      .
+ 2BE      NAM    CAG    NAN    .
+ 2BE      NAN    NAM    CAO    .
+ 2BE      HNAN   NAN    .      .
+ 2BE      CAO    NAN    CAT    .
+ 2BE      OAA    CAO    .      .
+ 2BE      CAT    CAO    CAK    .
+ 2BE      CAJ    CAT    HAJ    .
+ 2BE      HAJ    CAJ    .      .
+ 2BE      CAK    CAT    CAI    .
+ 2BE      HAK    CAK    .      .
+ 2BE      CAI    CAK    CAP    .
+ 2BE      HAI    CAI    .      .
+ 2BE      CAP    CAI    CAH    .
+ 2BE      CLAD   CAP    .      .
+ 2BE      CAH    CAP    HAH    .
+ 2BE      HAH    CAH    .      END
+ 2BE      CAJ    CAH    .    ADD
+ 2BE      CAU    CAL    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2BE      CAJ    CAH       double      1.390    0.020
+ 2BE      CAJ    CAT       single      1.390    0.020
+ 2BE      CAH    CAP       single      1.390    0.020
+ 2BE      CLAD   CAP       single      1.795    0.020
+ 2BE      CAP    CAI       double      1.390    0.020
+ 2BE      CAI    CAK       single      1.390    0.020
+ 2BE      CAK    CAT       double      1.390    0.020
+ 2BE      CAT    CAO       single      1.500    0.020
+ 2BE      OAA    CAO       double      1.220    0.020
+ 2BE      CAO    NAN       single      1.330    0.020
+ 2BE      NAN    NAM       single      1.320    0.020
+ 2BE      NAM    CAG       double      1.260    0.020
+ 2BE      CAG    CAU       single      1.480    0.020
+ 2BE      CAU    CAL       double      1.390    0.020
+ 2BE      CAU    CAR       single      1.487    0.020
+ 2BE      CAL    CAS       single      1.390    0.020
+ 2BE      BRAE   CAS       single      1.890    0.020
+ 2BE      CAS    CAQ       double      1.487    0.020
+ 2BE      OAB    CAQ       single      1.362    0.020
+ 2BE      CAQ    CAV       single      1.487    0.020
+ 2BE      CAV    BRAF      single      1.890    0.020
+ 2BE      CAR    CAV       double      1.487    0.020
+ 2BE      OAC    CAR       single      1.362    0.020
+ 2BE      HAJ    CAJ       single      1.083    0.020
+ 2BE      HAH    CAH       single      1.083    0.020
+ 2BE      HAI    CAI       single      1.083    0.020
+ 2BE      HAK    CAK       single      1.083    0.020
+ 2BE      HNAN   NAN       single      1.010    0.020
+ 2BE      HAG    CAG       single      1.077    0.020
+ 2BE      HAL    CAL       single      1.083    0.020
+ 2BE      HOAB   OAB       single      0.967    0.020
+ 2BE      HOAC   OAC       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2BE      BRAF   CAV    CAQ     120.000    3.000
+ 2BE      BRAF   CAV    CAR     120.000    3.000
+ 2BE      CAQ    CAV    CAR     120.000    3.000
+ 2BE      CAV    CAQ    OAB     120.000    3.000
+ 2BE      CAV    CAQ    CAS     120.000    3.000
+ 2BE      OAB    CAQ    CAS     120.000    3.000
+ 2BE      CAQ    OAB    HOAB    109.470    3.000
+ 2BE      CAQ    CAS    BRAE    120.000    3.000
+ 2BE      CAQ    CAS    CAL     120.000    3.000
+ 2BE      BRAE   CAS    CAL     120.000    3.000
+ 2BE      CAS    CAL    HAL     120.000    3.000
+ 2BE      CAS    CAL    CAU     120.000    3.000
+ 2BE      HAL    CAL    CAU     120.000    3.000
+ 2BE      CAV    CAR    OAC     120.000    3.000
+ 2BE      CAV    CAR    CAU     120.000    3.000
+ 2BE      OAC    CAR    CAU     120.000    3.000
+ 2BE      CAR    OAC    HOAC    109.470    3.000
+ 2BE      CAR    CAU    CAG     120.000    3.000
+ 2BE      CAR    CAU    CAL     120.000    3.000
+ 2BE      CAG    CAU    CAL     120.000    3.000
+ 2BE      CAU    CAG    HAG     120.000    3.000
+ 2BE      CAU    CAG    NAM     120.000    3.000
+ 2BE      HAG    CAG    NAM     120.000    3.000
+ 2BE      CAG    NAM    NAN     120.000    3.000
+ 2BE      NAM    NAN    HNAN    120.000    3.000
+ 2BE      NAM    NAN    CAO     120.000    3.000
+ 2BE      HNAN   NAN    CAO     120.000    3.000
+ 2BE      NAN    CAO    OAA     123.000    3.000
+ 2BE      NAN    CAO    CAT     120.000    3.000
+ 2BE      OAA    CAO    CAT     120.500    3.000
+ 2BE      CAO    CAT    CAJ     120.000    3.000
+ 2BE      CAO    CAT    CAK     120.000    3.000
+ 2BE      CAJ    CAT    CAK     120.000    3.000
+ 2BE      CAT    CAJ    HAJ     120.000    3.000
+ 2BE      CAT    CAJ    CAH     120.000    3.000
+ 2BE      HAJ    CAJ    CAH     120.000    3.000
+ 2BE      CAT    CAK    HAK     120.000    3.000
+ 2BE      CAT    CAK    CAI     120.000    3.000
+ 2BE      HAK    CAK    CAI     120.000    3.000
+ 2BE      CAK    CAI    HAI     120.000    3.000
+ 2BE      CAK    CAI    CAP     120.000    3.000
+ 2BE      HAI    CAI    CAP     120.000    3.000
+ 2BE      CAI    CAP    CLAD    120.000    3.000
+ 2BE      CAI    CAP    CAH     120.000    3.000
+ 2BE      CLAD   CAP    CAH     120.000    3.000
+ 2BE      CAP    CAH    HAH     120.000    3.000
+ 2BE      CAP    CAH    CAJ     120.000    3.000
+ 2BE      HAH    CAH    CAJ     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 2BE      CONST_1  BRAF   CAV    CAQ    CAS      180.000    0.000   0
+ 2BE      var_1    CAV    CAQ    OAB    HOAB     -90.000   20.000   1
+ 2BE      CONST_2  CAV    CAQ    CAS    CAL        0.000    0.000   0
+ 2BE      CONST_3  CAQ    CAS    CAL    CAU        0.000    0.000   0
+ 2BE      CONST_4  BRAF   CAV    CAR    CAU      180.000    0.000   0
+ 2BE      var_2    CAV    CAR    OAC    HOAC     -89.693   20.000   1
+ 2BE      CONST_5  CAV    CAR    CAU    CAG      180.000    0.000   0
+ 2BE      CONST_6  CAR    CAU    CAL    CAS        0.000    0.000   0
+ 2BE      var_3    CAR    CAU    CAG    NAM       -0.324   20.000   1
+ 2BE      CONST_7  CAU    CAG    NAM    NAN     -179.955    0.000   0
+ 2BE      var_4    CAG    NAM    NAN    CAO     -179.953   20.000   1
+ 2BE      CONST_8  NAM    NAN    CAO    CAT      180.000    0.000   0
+ 2BE      var_5    NAN    CAO    CAT    CAK       -0.051   20.000   1
+ 2BE      CONST_9  CAO    CAT    CAJ    CAH      180.000    0.000   0
+ 2BE      CONST_10 CAT    CAJ    CAH    CAP        0.000    0.000   0
+ 2BE      CONST_11 CAO    CAT    CAK    CAI      180.000    0.000   0
+ 2BE      CONST_12 CAT    CAK    CAI    CAP        0.000    0.000   0
+ 2BE      CONST_13 CAK    CAI    CAP    CAH        0.000    0.000   0
+ 2BE      CONST_14 CAI    CAP    CAH    CAJ        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 2BE      plan-1    CAJ       0.020
+ 2BE      plan-1    CAH       0.020
+ 2BE      plan-1    CAT       0.020
+ 2BE      plan-1    HAJ       0.020
+ 2BE      plan-1    CAP       0.020
+ 2BE      plan-1    CAI       0.020
+ 2BE      plan-1    CAK       0.020
+ 2BE      plan-1    HAH       0.020
+ 2BE      plan-1    CLAD      0.020
+ 2BE      plan-1    HAI       0.020
+ 2BE      plan-1    HAK       0.020
+ 2BE      plan-1    CAO       0.020
+ 2BE      plan-2    CAO       0.020
+ 2BE      plan-2    CAT       0.020
+ 2BE      plan-2    OAA       0.020
+ 2BE      plan-2    NAN       0.020
+ 2BE      plan-2    HNAN      0.020
+ 2BE      plan-3    NAN       0.020
+ 2BE      plan-3    CAO       0.020
+ 2BE      plan-3    NAM       0.020
+ 2BE      plan-3    HNAN      0.020
+ 2BE      plan-4    NAM       0.020
+ 2BE      plan-4    NAN       0.020
+ 2BE      plan-4    CAG       0.020
+ 2BE      plan-4    CAU       0.020
+ 2BE      plan-4    HAG       0.020
+ 2BE      plan-4    HNAN      0.020
+ 2BE      plan-5    CAU       0.020
+ 2BE      plan-5    CAG       0.020
+ 2BE      plan-5    CAL       0.020
+ 2BE      plan-5    CAR       0.020
+ 2BE      plan-5    CAS       0.020
+ 2BE      plan-5    CAQ       0.020
+ 2BE      plan-5    CAV       0.020
+ 2BE      plan-5    HAL       0.020
+ 2BE      plan-5    BRAE      0.020
+ 2BE      plan-5    OAB       0.020
+ 2BE      plan-5    BRAF      0.020
+ 2BE      plan-5    OAC       0.020
+ 2BE      plan-5    HAG       0.020
+# ------------------------------------------------------

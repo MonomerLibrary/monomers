@@ -1,0 +1,194 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3MB      3MB '3-METHOXYBENZAMIDE                  ' non-polymer        20  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3MB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3MB           O      O    O         0.000      0.000    0.000    0.000
+ 3MB           C      C    C         0.000     -1.004    0.001   -0.686
+ 3MB           N      N    NH2       0.000     -0.900    0.001   -2.029
+ 3MB           HN2    H    H         0.000     -1.732    0.001   -2.606
+ 3MB           HN1    H    H         0.000      0.012    0.000   -2.471
+ 3MB           C1     C    CR6       0.000     -2.336    0.000   -0.045
+ 3MB           C2     C    CR16      0.000     -2.445    0.004    1.344
+ 3MB           H2     H    H         0.000     -1.553    0.011    1.958
+ 3MB           C6     C    CR16      0.000     -3.490    0.000   -0.832
+ 3MB           H6     H    H         0.000     -3.409    0.000   -1.912
+ 3MB           C5     C    CR16      0.000     -4.732    0.000   -0.232
+ 3MB           H5     H    H         0.000     -5.626   -0.001   -0.842
+ 3MB           C4     C    CR16      0.000     -4.838    0.000    1.147
+ 3MB           H4     H    H         0.000     -5.816   -0.001    1.613
+ 3MB           C3     C    CR6       0.000     -3.696    0.000    1.936
+ 3MB           O3     O    O2        0.000     -3.807    0.000    3.291
+ 3MB           C7     C    CH3       0.000     -5.204    0.000    3.590
+ 3MB           H73    H    H         0.000     -5.655    0.864    3.176
+ 3MB           H72    H    H         0.000     -5.655   -0.865    3.176
+ 3MB           H71    H    H         0.000     -5.341    0.000    4.641
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3MB      O      n/a    C      START
+ 3MB      C      O      C1     .
+ 3MB      N      C      HN1    .
+ 3MB      HN2    N      .      .
+ 3MB      HN1    N      .      .
+ 3MB      C1     C      C6     .
+ 3MB      C2     C1     H2     .
+ 3MB      H2     C2     .      .
+ 3MB      C6     C1     C5     .
+ 3MB      H6     C6     .      .
+ 3MB      C5     C6     C4     .
+ 3MB      H5     C5     .      .
+ 3MB      C4     C5     C3     .
+ 3MB      H4     C4     .      .
+ 3MB      C3     C4     O3     .
+ 3MB      O3     C3     C7     .
+ 3MB      C7     O3     H71    .
+ 3MB      H73    C7     .      .
+ 3MB      H72    C7     .      .
+ 3MB      H71    C7     .      END
+ 3MB      C3     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3MB      O3     C3        single      1.370    0.020
+ 3MB      C3     C2        double      1.390    0.020
+ 3MB      C3     C4        single      1.390    0.020
+ 3MB      C7     O3        single      1.426    0.020
+ 3MB      H71    C7        single      1.059    0.020
+ 3MB      H72    C7        single      1.059    0.020
+ 3MB      H73    C7        single      1.059    0.020
+ 3MB      C2     C1        single      1.390    0.020
+ 3MB      H2     C2        single      1.083    0.020
+ 3MB      C1     C         single      1.500    0.020
+ 3MB      C6     C1        double      1.390    0.020
+ 3MB      C      O         double      1.220    0.020
+ 3MB      N      C         single      1.332    0.020
+ 3MB      HN1    N         single      1.010    0.020
+ 3MB      HN2    N         single      1.010    0.020
+ 3MB      C5     C6        single      1.390    0.020
+ 3MB      H6     C6        single      1.083    0.020
+ 3MB      C4     C5        double      1.390    0.020
+ 3MB      H5     C5        single      1.083    0.020
+ 3MB      H4     C4        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3MB      O      C      N       123.000    3.000
+ 3MB      O      C      C1      120.500    3.000
+ 3MB      N      C      C1      120.000    3.000
+ 3MB      C      N      HN2     120.000    3.000
+ 3MB      C      N      HN1     120.000    3.000
+ 3MB      HN2    N      HN1     120.000    3.000
+ 3MB      C      C1     C2      120.000    3.000
+ 3MB      C      C1     C6      120.000    3.000
+ 3MB      C2     C1     C6      120.000    3.000
+ 3MB      C1     C2     H2      120.000    3.000
+ 3MB      C1     C2     C3      120.000    3.000
+ 3MB      H2     C2     C3      120.000    3.000
+ 3MB      C1     C6     H6      120.000    3.000
+ 3MB      C1     C6     C5      120.000    3.000
+ 3MB      H6     C6     C5      120.000    3.000
+ 3MB      C6     C5     H5      120.000    3.000
+ 3MB      C6     C5     C4      120.000    3.000
+ 3MB      H5     C5     C4      120.000    3.000
+ 3MB      C5     C4     H4      120.000    3.000
+ 3MB      C5     C4     C3      120.000    3.000
+ 3MB      H4     C4     C3      120.000    3.000
+ 3MB      C4     C3     O3      120.000    3.000
+ 3MB      C4     C3     C2      120.000    3.000
+ 3MB      O3     C3     C2      120.000    3.000
+ 3MB      C3     O3     C7      120.000    3.000
+ 3MB      O3     C7     H73     109.470    3.000
+ 3MB      O3     C7     H72     109.470    3.000
+ 3MB      O3     C7     H71     109.470    3.000
+ 3MB      H73    C7     H72     109.470    3.000
+ 3MB      H73    C7     H71     109.470    3.000
+ 3MB      H72    C7     H71     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3MB      CONST_1  O      C      N      HN1        0.000    0.000   0
+ 3MB      var_1    O      C      C1     C6      -179.946   20.000   1
+ 3MB      CONST_2  C      C1     C2     C3       180.000    0.000   0
+ 3MB      CONST_3  C      C1     C6     C5       180.000    0.000   0
+ 3MB      CONST_4  C1     C6     C5     C4         0.000    0.000   0
+ 3MB      CONST_5  C6     C5     C4     C3         0.000    0.000   0
+ 3MB      CONST_6  C5     C4     C3     O3       180.000    0.000   0
+ 3MB      CONST_7  C4     C3     C2     C1         0.000    0.000   0
+ 3MB      var_2    C4     C3     O3     C7         0.000   20.000   1
+ 3MB      var_3    C3     O3     C7     H71      180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3MB      plan-1    C3        0.020
+ 3MB      plan-1    O3        0.020
+ 3MB      plan-1    C2        0.020
+ 3MB      plan-1    C4        0.020
+ 3MB      plan-1    C1        0.020
+ 3MB      plan-1    C6        0.020
+ 3MB      plan-1    C5        0.020
+ 3MB      plan-1    H2        0.020
+ 3MB      plan-1    C         0.020
+ 3MB      plan-1    H6        0.020
+ 3MB      plan-1    H5        0.020
+ 3MB      plan-1    H4        0.020
+ 3MB      plan-2    C         0.020
+ 3MB      plan-2    C1        0.020
+ 3MB      plan-2    O         0.020
+ 3MB      plan-2    N         0.020
+ 3MB      plan-2    HN2       0.020
+ 3MB      plan-2    HN1       0.020
+ 3MB      plan-3    N         0.020
+ 3MB      plan-3    C         0.020
+ 3MB      plan-3    HN1       0.020
+ 3MB      plan-3    HN2       0.020
+# ------------------------------------------------------

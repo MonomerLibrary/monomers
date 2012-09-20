@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HY1      HY1 'PHENYLACETALDEHYDE                  ' non-polymer        17   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HY1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HY1           O      O    O         0.000      0.000    0.000    0.000
+ HY1           C      C    C1        0.000     -0.740   -0.015    0.954
+ HY1           H      H    H         0.000     -0.655   -0.797    1.689
+ HY1           CA     C    CH2       0.000     -1.784    1.059    1.115
+ HY1           HA1    H    H         0.000     -1.718    1.758    0.278
+ HY1           HA2    H    H         0.000     -1.612    1.596    2.050
+ HY1           "C1'"  C    CR6       0.000     -3.154    0.430    1.139
+ HY1           "C6'"  C    CR16      0.000     -3.854    0.256   -0.037
+ HY1           H6     H    H         0.000     -3.421    0.574   -0.978
+ HY1           "C5'"  C    CR16      0.000     -5.109   -0.323   -0.015
+ HY1           H5     H    H         0.000     -5.656   -0.465   -0.939
+ HY1           "C4'"  C    CR16      0.000     -5.665   -0.722    1.185
+ HY1           H4     H    H         0.000     -6.648   -1.174    1.203
+ HY1           "C3'"  C    CR16      0.000     -4.966   -0.543    2.363
+ HY1           H3     H    H         0.000     -5.402   -0.855    3.304
+ HY1           "C2'"  C    CR16      0.000     -3.709    0.034    2.341
+ HY1           H2     H    H         0.000     -3.160    0.174    3.264
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HY1      O      n/a    C      START
+ HY1      C      O      CA     .
+ HY1      H      C      .      .
+ HY1      CA     C      "C1'"  .
+ HY1      HA1    CA     .      .
+ HY1      HA2    CA     .      .
+ HY1      "C1'"  CA     "C6'"  .
+ HY1      "C6'"  "C1'"  "C5'"  .
+ HY1      H6     "C6'"  .      .
+ HY1      "C5'"  "C6'"  "C4'"  .
+ HY1      H5     "C5'"  .      .
+ HY1      "C4'"  "C5'"  "C3'"  .
+ HY1      H4     "C4'"  .      .
+ HY1      "C3'"  "C4'"  "C2'"  .
+ HY1      H3     "C3'"  .      .
+ HY1      "C2'"  "C3'"  H2     .
+ HY1      H2     "C2'"  .      END
+ HY1      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HY1      "C1'"  "C2'"     double      1.390    0.020
+ HY1      "C6'"  "C1'"     single      1.390    0.020
+ HY1      "C1'"  CA        single      1.511    0.020
+ HY1      "C2'"  "C3'"     single      1.390    0.020
+ HY1      H2     "C2'"     single      1.083    0.020
+ HY1      "C3'"  "C4'"     double      1.390    0.020
+ HY1      H3     "C3'"     single      1.083    0.020
+ HY1      "C4'"  "C5'"     single      1.390    0.020
+ HY1      H4     "C4'"     single      1.083    0.020
+ HY1      "C5'"  "C6'"     double      1.390    0.020
+ HY1      H5     "C5'"     single      1.083    0.020
+ HY1      H6     "C6'"     single      1.083    0.020
+ HY1      CA     C         single      1.510    0.020
+ HY1      HA1    CA        single      1.092    0.020
+ HY1      HA2    CA        single      1.092    0.020
+ HY1      C      O         double      1.220    0.020
+ HY1      H      C         single      1.077    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HY1      O      C      H       123.000    3.000
+ HY1      O      C      CA      120.500    3.000
+ HY1      H      C      CA      120.000    3.000
+ HY1      C      CA     HA1     109.470    3.000
+ HY1      C      CA     HA2     109.470    3.000
+ HY1      C      CA     "C1'"   109.470    3.000
+ HY1      HA1    CA     HA2     107.900    3.000
+ HY1      HA1    CA     "C1'"   109.470    3.000
+ HY1      HA2    CA     "C1'"   109.470    3.000
+ HY1      CA     "C1'"  "C6'"   120.000    3.000
+ HY1      CA     "C1'"  "C2'"   120.000    3.000
+ HY1      "C6'"  "C1'"  "C2'"   120.000    3.000
+ HY1      "C1'"  "C6'"  H6      120.000    3.000
+ HY1      "C1'"  "C6'"  "C5'"   120.000    3.000
+ HY1      H6     "C6'"  "C5'"   120.000    3.000
+ HY1      "C6'"  "C5'"  H5      120.000    3.000
+ HY1      "C6'"  "C5'"  "C4'"   120.000    3.000
+ HY1      H5     "C5'"  "C4'"   120.000    3.000
+ HY1      "C5'"  "C4'"  H4      120.000    3.000
+ HY1      "C5'"  "C4'"  "C3'"   120.000    3.000
+ HY1      H4     "C4'"  "C3'"   120.000    3.000
+ HY1      "C4'"  "C3'"  H3      120.000    3.000
+ HY1      "C4'"  "C3'"  "C2'"   120.000    3.000
+ HY1      H3     "C3'"  "C2'"   120.000    3.000
+ HY1      "C3'"  "C2'"  H2      120.000    3.000
+ HY1      "C3'"  "C2'"  "C1'"   120.000    3.000
+ HY1      H2     "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HY1      var_1    O      C      CA     "C1'"    120.017   20.000   1
+ HY1      var_2    C      CA     "C1'"  "C6'"    -90.279   20.000   2
+ HY1      CONST_1  CA     "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ HY1      CONST_2  CA     "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ HY1      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ HY1      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ HY1      CONST_5  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ HY1      CONST_6  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HY1      plan-1    "C1'"     0.020
+ HY1      plan-1    "C2'"     0.020
+ HY1      plan-1    "C6'"     0.020
+ HY1      plan-1    CA        0.020
+ HY1      plan-1    "C3'"     0.020
+ HY1      plan-1    "C4'"     0.020
+ HY1      plan-1    "C5'"     0.020
+ HY1      plan-1    H2        0.020
+ HY1      plan-1    H3        0.020
+ HY1      plan-1    H4        0.020
+ HY1      plan-1    H5        0.020
+ HY1      plan-1    H6        0.020
+ HY1      plan-2    C         0.020
+ HY1      plan-2    CA        0.020
+ HY1      plan-2    O         0.020
+ HY1      plan-2    H         0.020
+# ------------------------------------------------------

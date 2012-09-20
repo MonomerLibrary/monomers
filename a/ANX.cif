@@ -1,0 +1,176 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ANX      ANX '2,5-DINITROPHENOL                   ' non-polymer        17  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ANX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ANX           O42    O    O         0.000      0.000    0.000    0.000
+ ANX           N1     N    N         1.000     -1.114    0.070   -0.573
+ ANX           O41    O    O        -1.000     -1.222    0.051   -1.822
+ ANX           C5     C    CR6       0.000     -2.289    0.174    0.218
+ ANX           C6     C    CR16      0.000     -2.194    0.195    1.610
+ ANX           H6     H    H         0.000     -1.224    0.133    2.087
+ ANX           C1     C    CR6       0.000     -3.347    0.295    2.387
+ ANX           O1     O    OH1       0.000     -3.229    0.313    3.745
+ ANX           H5     H    H         0.000     -4.073    0.573    4.139
+ ANX           C4     C    CR16      0.000     -3.538    0.254   -0.396
+ ANX           H4     H    H         0.000     -3.613    0.239   -1.477
+ ANX           C3     C    CR16      0.000     -4.692    0.354    0.380
+ ANX           H3     H    H         0.000     -5.662    0.416   -0.098
+ ANX           C2     C    CR6       0.000     -4.597    0.375    1.771
+ ANX           N2     N    N         1.000     -5.785    0.478    2.547
+ ANX           O21    O    O        -1.000     -6.889    0.548    1.959
+ ANX           O22    O    O         0.000     -5.692    0.495    3.797
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ANX      O42    n/a    N1     START
+ ANX      N1     O42    C5     .
+ ANX      O41    N1     .      .
+ ANX      C5     N1     C4     .
+ ANX      C6     C5     C1     .
+ ANX      H6     C6     .      .
+ ANX      C1     C6     O1     .
+ ANX      O1     C1     H5     .
+ ANX      H5     O1     .      .
+ ANX      C4     C5     C3     .
+ ANX      H4     C4     .      .
+ ANX      C3     C4     C2     .
+ ANX      H3     C3     .      .
+ ANX      C2     C3     N2     .
+ ANX      N2     C2     O22    .
+ ANX      O21    N2     .      .
+ ANX      O22    N2     .      END
+ ANX      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ANX      O1     C1        single      1.362    0.020
+ ANX      H5     O1        single      0.967    0.020
+ ANX      C1     C2        single      1.487    0.020
+ ANX      C1     C6        double      1.390    0.020
+ ANX      N2     C2        single      1.400    0.020
+ ANX      C2     C3        double      1.390    0.020
+ ANX      O21    N2        single      1.400    0.020
+ ANX      O22    N2        double      1.220    0.020
+ ANX      C3     C4        single      1.390    0.020
+ ANX      H3     C3        single      1.083    0.020
+ ANX      C4     C5        double      1.390    0.020
+ ANX      H4     C4        single      1.083    0.020
+ ANX      O41    N1        single      1.400    0.020
+ ANX      N1     O42       double      1.220    0.020
+ ANX      C5     N1        single      1.400    0.020
+ ANX      C6     C5        single      1.390    0.020
+ ANX      H6     C6        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ANX      O42    N1     O41     120.000    3.000
+ ANX      O42    N1     C5      120.000    3.000
+ ANX      O41    N1     C5      120.000    3.000
+ ANX      N1     C5     C6      120.000    3.000
+ ANX      N1     C5     C4      120.000    3.000
+ ANX      C6     C5     C4      120.000    3.000
+ ANX      C5     C6     H6      120.000    3.000
+ ANX      C5     C6     C1      120.000    3.000
+ ANX      H6     C6     C1      120.000    3.000
+ ANX      C6     C1     O1      120.000    3.000
+ ANX      C6     C1     C2      120.000    3.000
+ ANX      O1     C1     C2      120.000    3.000
+ ANX      C1     O1     H5      109.470    3.000
+ ANX      C5     C4     H4      120.000    3.000
+ ANX      C5     C4     C3      120.000    3.000
+ ANX      H4     C4     C3      120.000    3.000
+ ANX      C4     C3     H3      120.000    3.000
+ ANX      C4     C3     C2      120.000    3.000
+ ANX      H3     C3     C2      120.000    3.000
+ ANX      C3     C2     N2      120.000    3.000
+ ANX      C3     C2     C1      120.000    3.000
+ ANX      N2     C2     C1      120.000    3.000
+ ANX      C2     N2     O21     120.000    3.000
+ ANX      C2     N2     O22     120.000    3.000
+ ANX      O21    N2     O22     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ANX      var_1    O42    N1     C5     C4       179.940   20.000   1
+ ANX      CONST_1  N1     C5     C6     C1       180.000    0.000   0
+ ANX      CONST_2  C5     C6     C1     O1       180.000    0.000   0
+ ANX      CONST_3  C6     C1     C2     C3         0.000    0.000   0
+ ANX      var_2    C6     C1     O1     H5       167.982   20.000   1
+ ANX      CONST_4  N1     C5     C4     C3       180.000    0.000   0
+ ANX      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ ANX      CONST_6  C4     C3     C2     N2       180.000    0.000   0
+ ANX      var_3    C3     C2     N2     O22      179.979   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ANX      plan-1    C1        0.020
+ ANX      plan-1    O1        0.020
+ ANX      plan-1    C2        0.020
+ ANX      plan-1    C6        0.020
+ ANX      plan-1    C3        0.020
+ ANX      plan-1    C4        0.020
+ ANX      plan-1    C5        0.020
+ ANX      plan-1    N2        0.020
+ ANX      plan-1    H3        0.020
+ ANX      plan-1    H4        0.020
+ ANX      plan-1    N1        0.020
+ ANX      plan-1    H6        0.020
+ ANX      plan-2    N2        0.020
+ ANX      plan-2    C2        0.020
+ ANX      plan-2    O21       0.020
+ ANX      plan-2    O22       0.020
+ ANX      plan-3    N1        0.020
+ ANX      plan-3    O41       0.020
+ ANX      plan-3    O42       0.020
+ ANX      plan-3    C5        0.020
+# ------------------------------------------------------

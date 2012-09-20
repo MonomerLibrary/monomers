@@ -1,0 +1,287 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FPM      FPM '"(5R,6S)-6-(1-hydroxyethyl)-7-oxo-3-' non-polymer        33  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FPM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FPM           O31    O    OC       -0.500      0.000    0.000    0.000
+ FPM           C31    C    C         0.000     -0.647   -1.036   -0.270
+ FPM           O32    O    OC       -0.500     -0.050   -2.127   -0.412
+ FPM           C3     C    C         0.000     -2.053   -0.975   -0.414
+ FPM           N4     N    NT        0.000     -2.763   -2.092   -0.836
+ FPM           C7     C    C         0.000     -2.963   -3.111    0.050
+ FPM           O7     O    O         0.000     -2.229   -3.887    0.624
+ FPM           C6     C    CH1       0.000     -4.462   -2.891    0.038
+ FPM           H6     H    H         0.000     -4.850   -2.472    0.977
+ FPM           C61    C    CH1       0.000     -5.257   -4.098   -0.464
+ FPM           H61    H    H         0.000     -4.720   -4.570   -1.298
+ FPM           C62    C    CH3       0.000     -5.420   -5.108    0.674
+ FPM           H362   H    H         0.000     -4.465   -5.427    1.005
+ FPM           H262   H    H         0.000     -5.938   -4.654    1.479
+ FPM           H162   H    H         0.000     -5.970   -5.945    0.329
+ FPM           O62    O    OH1       0.000     -6.545   -3.669   -0.908
+ FPM           HO62   H    H         0.000     -7.047   -4.432   -1.225
+ FPM           C2     C    C         0.000     -2.711    0.162   -0.144
+ FPM           S1     S    S2        0.000     -4.427   -0.118   -0.478
+ FPM           C5     C    CH1       0.000     -4.201   -1.833   -1.041
+ FPM           H5     H    H         0.000     -4.591   -2.064   -2.043
+ FPM           C14    C    CH1       0.000     -2.100    1.445    0.359
+ FPM           H14    H    H         0.000     -1.053    1.274    0.645
+ FPM           O18    O    O2        0.000     -2.844    1.929    1.491
+ FPM           C17    C    CH2       0.000     -2.815    3.372    1.425
+ FPM           H117   H    H         0.000     -1.865    3.784    1.774
+ FPM           H217   H    H         0.000     -3.635    3.829    1.983
+ FPM           C16    C    CH2       0.000     -2.985    3.672   -0.086
+ FPM           H116   H    H         0.000     -2.559    4.634   -0.381
+ FPM           H216   H    H         0.000     -4.024    3.618   -0.417
+ FPM           C15    C    CH2       0.000     -2.174    2.526   -0.737
+ FPM           H215   H    H         0.000     -1.164    2.841   -1.007
+ FPM           H115   H    H         0.000     -2.675    2.119   -1.618
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FPM      O31    n/a    C31    START
+ FPM      C31    O31    C3     .
+ FPM      O32    C31    .      .
+ FPM      C3     C31    C2     .
+ FPM      N4     C3     C7     .
+ FPM      C7     N4     C6     .
+ FPM      O7     C7     .      .
+ FPM      C6     C7     C61    .
+ FPM      H6     C6     .      .
+ FPM      C61    C6     O62    .
+ FPM      H61    C61    .      .
+ FPM      C62    C61    H162   .
+ FPM      H362   C62    .      .
+ FPM      H262   C62    .      .
+ FPM      H162   C62    .      .
+ FPM      O62    C61    HO62   .
+ FPM      HO62   O62    .      .
+ FPM      C2     C3     C14    .
+ FPM      S1     C2     C5     .
+ FPM      C5     S1     H5     .
+ FPM      H5     C5     .      .
+ FPM      C14    C2     O18    .
+ FPM      H14    C14    .      .
+ FPM      O18    C14    C17    .
+ FPM      C17    O18    C16    .
+ FPM      H117   C17    .      .
+ FPM      H217   C17    .      .
+ FPM      C16    C17    C15    .
+ FPM      H116   C16    .      .
+ FPM      H216   C16    .      .
+ FPM      C15    C16    H115   .
+ FPM      H215   C15    .      .
+ FPM      H115   C15    .      END
+ FPM      C6     C5     .    ADD
+ FPM      C5     N4     .    ADD
+ FPM      C14    C15    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FPM      C16    C17       single      1.524    0.020
+ FPM      C15    C16       single      1.524    0.020
+ FPM      C17    O18       single      1.426    0.020
+ FPM      C31    O31       deloc       1.250    0.020
+ FPM      C14    C15       single      1.524    0.020
+ FPM      O18    C14       single      1.426    0.020
+ FPM      C14    C2        single      1.500    0.020
+ FPM      O32    C31       deloc       1.250    0.020
+ FPM      C3     C31       single      1.460    0.020
+ FPM      C2     C3        double      1.330    0.020
+ FPM      S1     C2        single      1.665    0.020
+ FPM      N4     C3        single      1.416    0.020
+ FPM      C5     S1        single      1.765    0.020
+ FPM      C7     N4        single      1.416    0.020
+ FPM      C5     N4        single      1.469    0.020
+ FPM      O7     C7        double      1.220    0.020
+ FPM      C6     C7        single      1.500    0.020
+ FPM      C6     C5        single      1.524    0.020
+ FPM      C61    C6        single      1.524    0.020
+ FPM      O62    C61       single      1.432    0.020
+ FPM      C62    C61       single      1.524    0.020
+ FPM      H6     C6        single      1.099    0.020
+ FPM      H5     C5        single      1.099    0.020
+ FPM      H61    C61       single      1.099    0.020
+ FPM      HO62   O62       single      0.967    0.020
+ FPM      H162   C62       single      1.059    0.020
+ FPM      H262   C62       single      1.059    0.020
+ FPM      H362   C62       single      1.059    0.020
+ FPM      H14    C14       single      1.099    0.020
+ FPM      H115   C15       single      1.092    0.020
+ FPM      H215   C15       single      1.092    0.020
+ FPM      H116   C16       single      1.092    0.020
+ FPM      H216   C16       single      1.092    0.020
+ FPM      H117   C17       single      1.092    0.020
+ FPM      H217   C17       single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FPM      O31    C31    O32     123.000    3.000
+ FPM      O31    C31    C3      120.000    3.000
+ FPM      O32    C31    C3      120.000    3.000
+ FPM      C31    C3     N4      120.000    3.000
+ FPM      C31    C3     C2      120.000    3.000
+ FPM      N4     C3     C2      120.000    3.000
+ FPM      C3     N4     C7      109.470    3.000
+ FPM      C3     N4     C5      109.470    3.000
+ FPM      C7     N4     C5      109.470    3.000
+ FPM      N4     C7     O7      120.000    3.000
+ FPM      N4     C7     C6      120.000    3.000
+ FPM      O7     C7     C6      120.500    3.000
+ FPM      C7     C6     H6      108.810    3.000
+ FPM      C7     C6     C61     109.470    3.000
+ FPM      C7     C6     C5      109.470    3.000
+ FPM      H6     C6     C61     108.340    3.000
+ FPM      H6     C6     C5      108.340    3.000
+ FPM      C61    C6     C5      111.000    3.000
+ FPM      C6     C61    H61     108.340    3.000
+ FPM      C6     C61    C62     111.000    3.000
+ FPM      C6     C61    O62     109.470    3.000
+ FPM      H61    C61    C62     108.340    3.000
+ FPM      H61    C61    O62     109.470    3.000
+ FPM      C62    C61    O62     109.470    3.000
+ FPM      C61    C62    H362    109.470    3.000
+ FPM      C61    C62    H262    109.470    3.000
+ FPM      C61    C62    H162    109.470    3.000
+ FPM      H362   C62    H262    109.470    3.000
+ FPM      H362   C62    H162    109.470    3.000
+ FPM      H262   C62    H162    109.470    3.000
+ FPM      C61    O62    HO62    109.470    3.000
+ FPM      C3     C2     S1      120.000    3.000
+ FPM      C3     C2     C14     120.000    3.000
+ FPM      S1     C2     C14     120.000    3.000
+ FPM      C2     S1     C5       95.031    3.000
+ FPM      S1     C5     H5      109.500    3.000
+ FPM      S1     C5     C6      109.500    3.000
+ FPM      S1     C5     N4      109.500    3.000
+ FPM      C6     C5     N4      109.500    3.000
+ FPM      H5     C5     C6      108.340    3.000
+ FPM      H5     C5     N4      109.500    3.000
+ FPM      C2     C14    H14     108.810    3.000
+ FPM      C2     C14    O18     109.470    3.000
+ FPM      C2     C14    C15     109.470    3.000
+ FPM      H14    C14    O18     109.470    3.000
+ FPM      H14    C14    C15     108.340    3.000
+ FPM      O18    C14    C15     109.470    3.000
+ FPM      C14    O18    C17     111.800    3.000
+ FPM      O18    C17    H117    109.470    3.000
+ FPM      O18    C17    H217    109.470    3.000
+ FPM      O18    C17    C16     109.470    3.000
+ FPM      H117   C17    H217    107.900    3.000
+ FPM      H117   C17    C16     109.470    3.000
+ FPM      H217   C17    C16     109.470    3.000
+ FPM      C17    C16    H116    109.470    3.000
+ FPM      C17    C16    H216    109.470    3.000
+ FPM      C17    C16    C15     111.000    3.000
+ FPM      H116   C16    H216    107.900    3.000
+ FPM      H116   C16    C15     109.470    3.000
+ FPM      H216   C16    C15     109.470    3.000
+ FPM      C16    C15    H215    109.470    3.000
+ FPM      C16    C15    H115    109.470    3.000
+ FPM      C16    C15    C14     111.000    3.000
+ FPM      H215   C15    H115    107.900    3.000
+ FPM      H215   C15    C14     109.470    3.000
+ FPM      H115   C15    C14     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FPM      var_1    O31    C31    C3     C2        -6.082   20.000   1
+ FPM      var_2    C31    C3     N4     C7        90.000   20.000   1
+ FPM      var_3    C3     N4     C7     C6       115.355   20.000   1
+ FPM      var_4    N4     C7     C6     C61      118.690   20.000   3
+ FPM      var_5    C7     C6     C5     S1      -108.104   20.000   3
+ FPM      var_6    C7     C6     C61    O62     -158.675   20.000   3
+ FPM      var_7    C6     C61    C62    H162    -179.992   20.000   3
+ FPM      var_8    C6     C61    O62    HO62     179.992   20.000   1
+ FPM      var_9    C31    C3     C2     C14        0.000   20.000   1
+ FPM      var_10   C3     C2     S1     C5         0.000   20.000   1
+ FPM      var_11   C2     S1     C5     C6        90.000   20.000   1
+ FPM      var_12   S1     C5     N4     C3         0.000   20.000   1
+ FPM      var_13   C3     C2     C14    O18     -130.925   20.000   3
+ FPM      var_14   C2     C14    C15    C16      120.000   20.000   3
+ FPM      var_15   C2     C14    O18    C17     -150.000   20.000   1
+ FPM      var_16   C14    O18    C17    C16       30.000   20.000   1
+ FPM      var_17   O18    C17    C16    C15      -30.000   20.000   3
+ FPM      var_18   C17    C16    C15    C14       30.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FPM      chir_01  C6     C5     C7     C61       positiv
+ FPM      chir_02  C5     C6     N4     S1        positiv
+ FPM      chir_03  N4     C5     C7     C3        positiv
+ FPM      chir_04  C61    C6     O62    C62       positiv
+ FPM      chir_05  C14    C2     C15    O18       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FPM      plan-1    C2        0.020
+ FPM      plan-1    C3        0.020
+ FPM      plan-1    S1        0.020
+ FPM      plan-1    C14       0.020
+ FPM      plan-2    C7        0.020
+ FPM      plan-2    C6        0.020
+ FPM      plan-2    N4        0.020
+ FPM      plan-2    O7        0.020
+ FPM      plan-3    C3        0.020
+ FPM      plan-3    C2        0.020
+ FPM      plan-3    N4        0.020
+ FPM      plan-3    C31       0.020
+ FPM      plan-4    C31       0.020
+ FPM      plan-4    C3        0.020
+ FPM      plan-4    O32       0.020
+ FPM      plan-4    O31       0.020
+# ------------------------------------------------------

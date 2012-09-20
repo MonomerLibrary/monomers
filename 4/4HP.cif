@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4HP      4HP '4-HYDROXYPHENYLACETATE              ' non-polymer        18  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4HP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4HP           O2     O    OC       -0.500      0.000    0.000    0.000
+ 4HP           C8     C    C         0.000     -1.201    0.145   -0.320
+ 4HP           O1     O    OC       -0.500     -1.679    1.292   -0.458
+ 4HP           C7     C    CH2       0.000     -2.072   -1.064   -0.542
+ 4HP           H71    H    H         0.000     -2.111   -1.657    0.374
+ 4HP           H72    H    H         0.000     -1.652   -1.671   -1.348
+ 4HP           C1     C    CR6       0.000     -3.462   -0.621   -0.916
+ 4HP           C6     C    CR16      0.000     -4.408   -0.412    0.070
+ 4HP           H6     H    H         0.000     -4.150   -0.571    1.109
+ 4HP           C5     C    CR16      0.000     -5.682    0.000   -0.271
+ 4HP           H5     H    H         0.000     -6.421    0.171    0.502
+ 4HP           C4     C    CR6       0.000     -6.015    0.194   -1.602
+ 4HP           O4     O    OH1       0.000     -7.268    0.593   -1.940
+ 4HP           HO4    H    H         0.000     -7.826   -0.184   -2.083
+ 4HP           C3     C    CR16      0.000     -5.065   -0.021   -2.590
+ 4HP           H3     H    H         0.000     -5.322    0.130   -3.631
+ 4HP           C2     C    CR16      0.000     -3.791   -0.428   -2.245
+ 4HP           H2     H    H         0.000     -3.049   -0.596   -3.015
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4HP      O2     n/a    C8     START
+ 4HP      C8     O2     C7     .
+ 4HP      O1     C8     .      .
+ 4HP      C7     C8     C1     .
+ 4HP      H71    C7     .      .
+ 4HP      H72    C7     .      .
+ 4HP      C1     C7     C6     .
+ 4HP      C6     C1     C5     .
+ 4HP      H6     C6     .      .
+ 4HP      C5     C6     C4     .
+ 4HP      H5     C5     .      .
+ 4HP      C4     C5     C3     .
+ 4HP      O4     C4     HO4    .
+ 4HP      HO4    O4     .      .
+ 4HP      C3     C4     C2     .
+ 4HP      H3     C3     .      .
+ 4HP      C2     C3     H2     .
+ 4HP      H2     C2     .      END
+ 4HP      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4HP      O1     C8        deloc       1.250    0.020
+ 4HP      C8     O2        deloc       1.250    0.020
+ 4HP      C7     C8        single      1.510    0.020
+ 4HP      C1     C7        single      1.511    0.020
+ 4HP      H71    C7        single      1.092    0.020
+ 4HP      H72    C7        single      1.092    0.020
+ 4HP      C1     C2        single      1.390    0.020
+ 4HP      C6     C1        double      1.390    0.020
+ 4HP      C2     C3        double      1.390    0.020
+ 4HP      H2     C2        single      1.083    0.020
+ 4HP      C3     C4        single      1.390    0.020
+ 4HP      H3     C3        single      1.083    0.020
+ 4HP      C4     C5        double      1.390    0.020
+ 4HP      O4     C4        single      1.362    0.020
+ 4HP      C5     C6        single      1.390    0.020
+ 4HP      H5     C5        single      1.083    0.020
+ 4HP      H6     C6        single      1.083    0.020
+ 4HP      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4HP      O2     C8     O1      123.000    3.000
+ 4HP      O2     C8     C7      118.500    3.000
+ 4HP      O1     C8     C7      118.500    3.000
+ 4HP      C8     C7     H71     109.470    3.000
+ 4HP      C8     C7     H72     109.470    3.000
+ 4HP      C8     C7     C1      109.470    3.000
+ 4HP      H71    C7     H72     107.900    3.000
+ 4HP      H71    C7     C1      109.470    3.000
+ 4HP      H72    C7     C1      109.470    3.000
+ 4HP      C7     C1     C6      120.000    3.000
+ 4HP      C7     C1     C2      120.000    3.000
+ 4HP      C6     C1     C2      120.000    3.000
+ 4HP      C1     C6     H6      120.000    3.000
+ 4HP      C1     C6     C5      120.000    3.000
+ 4HP      H6     C6     C5      120.000    3.000
+ 4HP      C6     C5     H5      120.000    3.000
+ 4HP      C6     C5     C4      120.000    3.000
+ 4HP      H5     C5     C4      120.000    3.000
+ 4HP      C5     C4     O4      120.000    3.000
+ 4HP      C5     C4     C3      120.000    3.000
+ 4HP      O4     C4     C3      120.000    3.000
+ 4HP      C4     O4     HO4     109.470    3.000
+ 4HP      C4     C3     H3      120.000    3.000
+ 4HP      C4     C3     C2      120.000    3.000
+ 4HP      H3     C3     C2      120.000    3.000
+ 4HP      C3     C2     H2      120.000    3.000
+ 4HP      C3     C2     C1      120.000    3.000
+ 4HP      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4HP      var_1    O2     C8     C7     C1      -179.985   20.000   3
+ 4HP      var_2    C8     C7     C1     C6       -90.167   20.000   2
+ 4HP      CONST_1  C7     C1     C2     C3       180.000    0.000   0
+ 4HP      CONST_2  C7     C1     C6     C5       180.000    0.000   0
+ 4HP      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ 4HP      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ 4HP      var_3    C5     C4     O4     HO4      -90.024   20.000   1
+ 4HP      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ 4HP      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4HP      plan-1    C8        0.020
+ 4HP      plan-1    O1        0.020
+ 4HP      plan-1    O2        0.020
+ 4HP      plan-1    C7        0.020
+ 4HP      plan-2    C1        0.020
+ 4HP      plan-2    C7        0.020
+ 4HP      plan-2    C2        0.020
+ 4HP      plan-2    C6        0.020
+ 4HP      plan-2    C3        0.020
+ 4HP      plan-2    C4        0.020
+ 4HP      plan-2    C5        0.020
+ 4HP      plan-2    H2        0.020
+ 4HP      plan-2    H3        0.020
+ 4HP      plan-2    O4        0.020
+ 4HP      plan-2    H5        0.020
+ 4HP      plan-2    H6        0.020
+# ------------------------------------------------------

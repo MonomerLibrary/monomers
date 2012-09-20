@@ -1,0 +1,320 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CTP      CTP 'CYTIDINE-5'-TRIPHOSPHATE            ' non-polymer        41  29 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CTP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CTP           O3G    O    OP       -0.666      0.000    0.000    0.000
+ CTP           PG     P    P         0.000     -0.352    0.245   -1.451
+ CTP           O1G    O    OP       -0.666     -0.510   -1.080   -2.164
+ CTP           O2G    O    OP       -0.666      0.753    1.044   -2.108
+ CTP           O3B    O    O2        0.000     -1.732    1.068   -1.536
+ CTP           PB     P    P         0.000     -2.858    0.165   -0.822
+ CTP           O1B    O    OP       -0.500     -2.974   -1.132   -1.530
+ CTP           O2B    O    OP       -0.500     -2.475   -0.074    0.591
+ CTP           O3A    O    O2        0.000     -4.272    0.932   -0.871
+ CTP           PA     P    P         0.000     -5.345   -0.021   -0.143
+ CTP           O1A    O    OP       -0.500     -5.423   -1.316   -0.862
+ CTP           O2A    O    OP       -0.500     -4.924   -0.259    1.258
+ CTP           "O5'"  O    O2        0.000     -6.791    0.686   -0.156
+ CTP           "C5'"  C    CH2       0.000     -7.693   -0.204    0.501
+ CTP           "H5'1" H    H         0.000     -7.353   -0.376    1.524
+ CTP           "H5'2" H    H         0.000     -7.720   -1.155   -0.036
+ CTP           "C4'"  C    CH1       0.000     -9.093    0.412    0.523
+ CTP           "H4'"  H    H         0.000     -9.083    1.363    1.073
+ CTP           "C3'"  C    CH1       0.000    -10.104   -0.567    1.159
+ CTP           "H3'"  H    H         0.000     -9.749   -1.603    1.067
+ CTP           "O3'"  O    OH1       0.000    -10.327   -0.234    2.532
+ CTP           "HO3'" H    H         0.000    -10.961   -0.855    2.914
+ CTP           "C2'"  C    CH1       0.000    -11.397   -0.361    0.334
+ CTP           "H2'"  H    H         0.000    -11.684   -1.295   -0.169
+ CTP           "O2'"  O    OH1       0.000    -12.457    0.101    1.173
+ CTP           "HO2'" H    H         0.000    -12.642   -0.562    1.852
+ CTP           "O4'"  O    O2        0.000     -9.573    0.615   -0.824
+ CTP           "C1'"  C    CH1       0.000    -11.010    0.715   -0.704
+ CTP           "H1'"  H    H         0.000    -11.295    1.713   -0.345
+ CTP           N1     N    NR6       0.000    -11.649    0.433   -1.991
+ CTP           C6     C    CR16      0.000    -12.476    1.360   -2.553
+ CTP           H6     H    H         0.000    -12.666    2.300   -2.050
+ CTP           C5     C    CR16      0.000    -13.057    1.091   -3.747
+ CTP           H5     H    H         0.000    -13.711    1.817   -4.216
+ CTP           C4     C    CR6       0.000    -12.798   -0.146   -4.369
+ CTP           N4     N    NH2       0.000    -13.378   -0.447   -5.579
+ CTP           HN42   H    H         0.000    -13.999    0.216   -6.030
+ CTP           HN41   H    H         0.000    -13.190   -1.335   -6.031
+ CTP           N3     N    NRD6      0.000    -11.986   -1.018   -3.784
+ CTP           C2     C    CR6       0.000    -11.417   -0.736   -2.612
+ CTP           O2     O    O         0.000    -10.674   -1.553   -2.095
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CTP      O3G    n/a    PG     START
+ CTP      PG     O3G    O3B    .
+ CTP      O1G    PG     .      .
+ CTP      O2G    PG     .      .
+ CTP      O3B    PG     PB     .
+ CTP      PB     O3B    O3A    .
+ CTP      O1B    PB     .      .
+ CTP      O2B    PB     .      .
+ CTP      O3A    PB     PA     .
+ CTP      PA     O3A    "O5'"  .
+ CTP      O1A    PA     .      .
+ CTP      O2A    PA     .      .
+ CTP      "O5'"  PA     "C5'"  .
+ CTP      "C5'"  "O5'"  "C4'"  .
+ CTP      "H5'1" "C5'"  .      .
+ CTP      "H5'2" "C5'"  .      .
+ CTP      "C4'"  "C5'"  "O4'"  .
+ CTP      "H4'"  "C4'"  .      .
+ CTP      "C3'"  "C4'"  "C2'"  .
+ CTP      "H3'"  "C3'"  .      .
+ CTP      "O3'"  "C3'"  "HO3'" .
+ CTP      "HO3'" "O3'"  .      .
+ CTP      "C2'"  "C3'"  "O2'"  .
+ CTP      "H2'"  "C2'"  .      .
+ CTP      "O2'"  "C2'"  "HO2'" .
+ CTP      "HO2'" "O2'"  .      .
+ CTP      "O4'"  "C4'"  "C1'"  .
+ CTP      "C1'"  "O4'"  N1     .
+ CTP      "H1'"  "C1'"  .      .
+ CTP      N1     "C1'"  C6     .
+ CTP      C6     N1     C5     .
+ CTP      H6     C6     .      .
+ CTP      C5     C6     C4     .
+ CTP      H5     C5     .      .
+ CTP      C4     C5     N3     .
+ CTP      N4     C4     HN41   .
+ CTP      HN42   N4     .      .
+ CTP      HN41   N4     .      .
+ CTP      N3     C4     C2     .
+ CTP      C2     N3     O2     .
+ CTP      O2     C2     .      END
+ CTP      N1     C2     .    ADD
+ CTP      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CTP      N1     C2        single      1.410    0.020
+ CTP      C6     N1        single      1.337    0.020
+ CTP      N1     "C1'"     single      1.465    0.020
+ CTP      C2     N3        single      1.350    0.020
+ CTP      O2     C2        double      1.250    0.020
+ CTP      N3     C4        double      1.350    0.020
+ CTP      C4     C5        single      1.390    0.020
+ CTP      N4     C4        single      1.355    0.020
+ CTP      C5     C6        double      1.390    0.020
+ CTP      H5     C5        single      1.083    0.020
+ CTP      H6     C6        single      1.083    0.020
+ CTP      HN41   N4        single      1.010    0.020
+ CTP      HN42   N4        single      1.010    0.020
+ CTP      "C1'"  "C2'"     single      1.524    0.020
+ CTP      "C1'"  "O4'"     single      1.426    0.020
+ CTP      "H1'"  "C1'"     single      1.099    0.020
+ CTP      "O2'"  "C2'"     single      1.432    0.020
+ CTP      "C2'"  "C3'"     single      1.524    0.020
+ CTP      "H2'"  "C2'"     single      1.099    0.020
+ CTP      "HO2'" "O2'"     single      0.967    0.020
+ CTP      "C3'"  "C4'"     single      1.524    0.020
+ CTP      "O3'"  "C3'"     single      1.432    0.020
+ CTP      "H3'"  "C3'"     single      1.099    0.020
+ CTP      "O4'"  "C4'"     single      1.426    0.020
+ CTP      "C4'"  "C5'"     single      1.524    0.020
+ CTP      "H4'"  "C4'"     single      1.099    0.020
+ CTP      "HO3'" "O3'"     single      0.967    0.020
+ CTP      "C5'"  "O5'"     single      1.426    0.020
+ CTP      "H5'1" "C5'"     single      1.092    0.020
+ CTP      "H5'2" "C5'"     single      1.092    0.020
+ CTP      "O5'"  PA        single      1.610    0.020
+ CTP      O1A    PA        deloc       1.510    0.020
+ CTP      O2A    PA        deloc       1.510    0.020
+ CTP      PA     O3A       single      1.610    0.020
+ CTP      O3A    PB        single      1.610    0.020
+ CTP      O1B    PB        deloc       1.510    0.020
+ CTP      O2B    PB        deloc       1.510    0.020
+ CTP      PB     O3B       single      1.610    0.020
+ CTP      O3B    PG        single      1.610    0.020
+ CTP      O1G    PG        deloc       1.510    0.020
+ CTP      O2G    PG        deloc       1.510    0.020
+ CTP      PG     O3G       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CTP      O3G    PG     O1G     119.900    3.000
+ CTP      O3G    PG     O2G     119.900    3.000
+ CTP      O3G    PG     O3B     108.200    3.000
+ CTP      O1G    PG     O2G     119.900    3.000
+ CTP      O1G    PG     O3B     108.200    3.000
+ CTP      O2G    PG     O3B     108.200    3.000
+ CTP      PG     O3B    PB      120.500    3.000
+ CTP      O3B    PB     O1B     108.200    3.000
+ CTP      O3B    PB     O2B     108.200    3.000
+ CTP      O3B    PB     O3A     102.600    3.000
+ CTP      O1B    PB     O2B     119.900    3.000
+ CTP      O1B    PB     O3A     108.200    3.000
+ CTP      O2B    PB     O3A     108.200    3.000
+ CTP      PB     O3A    PA      120.500    3.000
+ CTP      O3A    PA     O1A     108.200    3.000
+ CTP      O3A    PA     O2A     108.200    3.000
+ CTP      O3A    PA     "O5'"   102.600    3.000
+ CTP      O1A    PA     O2A     119.900    3.000
+ CTP      O1A    PA     "O5'"   108.200    3.000
+ CTP      O2A    PA     "O5'"   108.200    3.000
+ CTP      PA     "O5'"  "C5'"   120.500    3.000
+ CTP      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ CTP      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ CTP      "O5'"  "C5'"  "C4'"   109.470    3.000
+ CTP      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ CTP      "H5'1" "C5'"  "C4'"   109.470    3.000
+ CTP      "H5'2" "C5'"  "C4'"   109.470    3.000
+ CTP      "C5'"  "C4'"  "H4'"   108.340    3.000
+ CTP      "C5'"  "C4'"  "C3'"   111.000    3.000
+ CTP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ CTP      "H4'"  "C4'"  "C3'"   108.340    3.000
+ CTP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ CTP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ CTP      "C4'"  "C3'"  "H3'"   108.340    3.000
+ CTP      "C4'"  "C3'"  "O3'"   109.470    3.000
+ CTP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ CTP      "H3'"  "C3'"  "O3'"   109.470    3.000
+ CTP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ CTP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ CTP      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ CTP      "C3'"  "C2'"  "H2'"   108.340    3.000
+ CTP      "C3'"  "C2'"  "O2'"   109.470    3.000
+ CTP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ CTP      "H2'"  "C2'"  "O2'"   109.470    3.000
+ CTP      "H2'"  "C2'"  "C1'"   108.340    3.000
+ CTP      "O2'"  "C2'"  "C1'"   109.470    3.000
+ CTP      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ CTP      "C4'"  "O4'"  "C1'"   111.800    3.000
+ CTP      "O4'"  "C1'"  "H1'"   109.470    3.000
+ CTP      "O4'"  "C1'"  N1      109.470    3.000
+ CTP      "O4'"  "C1'"  "C2'"   109.470    3.000
+ CTP      "H1'"  "C1'"  N1      109.470    3.000
+ CTP      "H1'"  "C1'"  "C2'"   108.340    3.000
+ CTP      N1     "C1'"  "C2'"   109.470    3.000
+ CTP      "C1'"  N1     C6      120.000    3.000
+ CTP      "C1'"  N1     C2      120.000    3.000
+ CTP      C6     N1     C2      120.000    3.000
+ CTP      N1     C6     H6      120.000    3.000
+ CTP      N1     C6     C5      120.000    3.000
+ CTP      H6     C6     C5      120.000    3.000
+ CTP      C6     C5     H5      120.000    3.000
+ CTP      C6     C5     C4      120.000    3.000
+ CTP      H5     C5     C4      120.000    3.000
+ CTP      C5     C4     N4      120.000    3.000
+ CTP      C5     C4     N3      120.000    3.000
+ CTP      N4     C4     N3      120.000    3.000
+ CTP      C4     N4     HN42    120.000    3.000
+ CTP      C4     N4     HN41    120.000    3.000
+ CTP      HN42   N4     HN41    120.000    3.000
+ CTP      C4     N3     C2      120.000    3.000
+ CTP      N3     C2     O2      120.000    3.000
+ CTP      N3     C2     N1      120.000    3.000
+ CTP      O2     C2     N1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CTP      var_1    O3G    PG     O3B    PB       -60.092   20.000   1
+ CTP      var_2    PG     O3B    PB     O3A      179.996   20.000   1
+ CTP      var_3    O3B    PB     O3A    PA      -179.998   20.000   1
+ CTP      var_4    PB     O3A    PA     "O5'"   -179.976   20.000   1
+ CTP      var_5    O3A    PA     "O5'"  "C5'"   -179.957   20.000   1
+ CTP      var_6    PA     "O5'"  "C5'"  "C4'"    179.996   20.000   1
+ CTP      var_7    "O5'"  "C5'"  "C4'"  "O4'"     61.435   20.000   3
+ CTP      var_8    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ CTP      var_9    "C4'"  "C3'"  "O3'"  "HO3'"  -179.989   20.000   1
+ CTP      var_10   "C4'"  "C3'"  "C2'"  "O2'"   -120.000   20.000   3
+ CTP      var_11   "C3'"  "C2'"  "O2'"  "HO2'"   -61.415   20.000   1
+ CTP      var_12   "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ CTP      var_13   "C4'"  "O4'"  "C1'"  N1      -150.000   20.000   1
+ CTP      var_14   "O4'"  "C1'"  "C2'"  "C3'"     30.000   20.000   3
+ CTP      var_15   "O4'"  "C1'"  N1     C6      -122.984   20.000   1
+ CTP      CONST_1  "C1'"  N1     C2     N3       180.000    0.000   0
+ CTP      CONST_2  "C1'"  N1     C6     C5       180.000    0.000   0
+ CTP      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ CTP      CONST_4  C6     C5     C4     N3         0.000    0.000   0
+ CTP      CONST_5  C5     C4     N4     HN41     179.724    0.000   0
+ CTP      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ CTP      CONST_7  C4     N3     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CTP      chir_01  "C1'"  N1     "C2'"  "O4'"     negativ
+ CTP      chir_02  "C2'"  "C1'"  "O2'"  "C3'"     positiv
+ CTP      chir_03  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+ CTP      chir_04  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CTP      plan-1    N1        0.020
+ CTP      plan-1    C2        0.020
+ CTP      plan-1    C6        0.020
+ CTP      plan-1    "C1'"     0.020
+ CTP      plan-1    N3        0.020
+ CTP      plan-1    C4        0.020
+ CTP      plan-1    C5        0.020
+ CTP      plan-1    O2        0.020
+ CTP      plan-1    N4        0.020
+ CTP      plan-1    H5        0.020
+ CTP      plan-1    H6        0.020
+ CTP      plan-1    HN42      0.020
+ CTP      plan-1    HN41      0.020
+ CTP      plan-2    N4        0.020
+ CTP      plan-2    C4        0.020
+ CTP      plan-2    HN41      0.020
+ CTP      plan-2    HN42      0.020
+# ------------------------------------------------------

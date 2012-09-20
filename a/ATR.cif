@@ -1,0 +1,334 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ATR      ATR '2'-MONOPHOSPHOADENOSINE-5'-DIPHOSPHA' non-polymer        42  31 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ATR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ATR           O3P    O    OP       -0.666      0.000    0.000    0.000
+ ATR           "P2'"  P    P         0.000     -0.648   -0.317    1.330
+ ATR           O1P    O    OP       -0.666     -0.946    0.972    2.065
+ ATR           O2P    O    OP       -0.666      0.292   -1.164    2.160
+ ATR           "O2'"  O    O2        0.000     -2.019   -1.122    1.080
+ ATR           "C2'"  C    CH1       0.000     -2.859   -0.274    0.295
+ ATR           "H2'"  H    H         0.000     -2.345    0.669    0.064
+ ATR           "C3'"  C    CH1       0.000     -4.191    0.003    1.033
+ ATR           "H3'"  H    H         0.000     -4.338    1.083    1.168
+ ATR           "O3'"  O    OH1       0.000     -4.213   -0.667    2.295
+ ATR           "HO3'" H    H         0.000     -5.073   -0.534    2.715
+ ATR           "C4'"  C    CH1       0.000     -5.269   -0.577    0.092
+ ATR           "H4'"  H    H         0.000     -5.522   -1.605    0.388
+ ATR           "C5'"  C    CH2       0.000     -6.519    0.304    0.104
+ ATR           "H5'1" H    H         0.000     -6.248    1.324   -0.177
+ ATR           "H5'2" H    H         0.000     -6.952    0.307    1.107
+ ATR           "O5'"  O    O2        0.000     -7.473   -0.210   -0.826
+ ATR           PA     P    P         0.000     -8.756    0.760   -0.760
+ ATR           O1A    O    OP       -0.500     -9.309    0.758    0.616
+ ATR           O2A    O    OP       -0.500     -8.353    2.139   -1.128
+ ATR           O3A    O    O2        0.000     -9.879    0.237   -1.789
+ ATR           PB     P    P         0.000    -11.126    1.248   -1.672
+ ATR           O3B    O    OP       -0.666    -11.652    1.238   -0.253
+ ATR           O2B    O    OP       -0.666    -12.222    0.809   -2.618
+ ATR           O1B    O    OP       -0.666    -10.676    2.647   -2.033
+ ATR           "C1'"  C    CH1       0.000     -3.295   -0.984   -1.006
+ ATR           "H1'"  H    H         0.000     -3.243   -2.075   -0.881
+ ATR           "O4'"  O    O2        0.000     -4.660   -0.567   -1.217
+ ATR           N9     N    NR5       0.000     -2.452   -0.560   -2.125
+ ATR           C4     C    CR56      0.000     -1.296   -1.168   -2.547
+ ATR           C5     C    CR56      0.000     -0.838   -0.412   -3.640
+ ATR           N7     N    NRD5      0.000     -1.724    0.595   -3.828
+ ATR           C8     C    CR15      0.000     -2.671    0.511   -2.938
+ ATR           H8     H    H         0.000     -3.509    1.193   -2.856
+ ATR           N3     N    NRD6      0.000     -0.597   -2.228   -2.157
+ ATR           C2     C    CR16      0.000      0.508   -2.571   -2.786
+ ATR           H2     H    H         0.000      1.055   -3.441   -2.442
+ ATR           N1     N    NRD6      0.000      0.975   -1.895   -3.819
+ ATR           C6     C    CR6       0.000      0.344   -0.821   -4.281
+ ATR           N6     N    NH2       0.000      0.841   -0.119   -5.364
+ ATR           HN62   H    H         0.000      0.355    0.701   -5.713
+ ATR           HN61   H    H         0.000      1.697   -0.416   -5.822
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ATR      O3P    n/a    "P2'"  START
+ ATR      "P2'"  O3P    "O2'"  .
+ ATR      O1P    "P2'"  .      .
+ ATR      O2P    "P2'"  .      .
+ ATR      "O2'"  "P2'"  "C2'"  .
+ ATR      "C2'"  "O2'"  "C1'"  .
+ ATR      "H2'"  "C2'"  .      .
+ ATR      "C3'"  "C2'"  "C4'"  .
+ ATR      "H3'"  "C3'"  .      .
+ ATR      "O3'"  "C3'"  "HO3'" .
+ ATR      "HO3'" "O3'"  .      .
+ ATR      "C4'"  "C3'"  "C5'"  .
+ ATR      "H4'"  "C4'"  .      .
+ ATR      "C5'"  "C4'"  "O5'"  .
+ ATR      "H5'1" "C5'"  .      .
+ ATR      "H5'2" "C5'"  .      .
+ ATR      "O5'"  "C5'"  PA     .
+ ATR      PA     "O5'"  O3A    .
+ ATR      O1A    PA     .      .
+ ATR      O2A    PA     .      .
+ ATR      O3A    PA     PB     .
+ ATR      PB     O3A    O1B    .
+ ATR      O3B    PB     .      .
+ ATR      O2B    PB     .      .
+ ATR      O1B    PB     .      .
+ ATR      "C1'"  "C2'"  N9     .
+ ATR      "H1'"  "C1'"  .      .
+ ATR      "O4'"  "C1'"  .      .
+ ATR      N9     "C1'"  C4     .
+ ATR      C4     N9     N3     .
+ ATR      C5     C4     N7     .
+ ATR      N7     C5     C8     .
+ ATR      C8     N7     H8     .
+ ATR      H8     C8     .      .
+ ATR      N3     C4     C2     .
+ ATR      C2     N3     N1     .
+ ATR      H2     C2     .      .
+ ATR      N1     C2     C6     .
+ ATR      C6     N1     N6     .
+ ATR      N6     C6     HN61   .
+ ATR      HN62   N6     .      .
+ ATR      HN61   N6     .      END
+ ATR      "C4'"  "O4'"  .    ADD
+ ATR      N9     C8     .    ADD
+ ATR      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ATR      O1B    PB        deloc       1.510    0.020
+ ATR      O2B    PB        deloc       1.510    0.020
+ ATR      O3B    PB        deloc       1.510    0.020
+ ATR      PB     O3A       single      1.610    0.020
+ ATR      O1A    PA        deloc       1.510    0.020
+ ATR      O2A    PA        deloc       1.510    0.020
+ ATR      O3A    PA        single      1.610    0.020
+ ATR      PA     "O5'"     single      1.610    0.020
+ ATR      "O5'"  "C5'"     single      1.426    0.020
+ ATR      "C5'"  "C4'"     single      1.524    0.020
+ ATR      "H5'1" "C5'"     single      1.092    0.020
+ ATR      "H5'2" "C5'"     single      1.092    0.020
+ ATR      "C4'"  "O4'"     single      1.426    0.020
+ ATR      "C4'"  "C3'"     single      1.524    0.020
+ ATR      "H4'"  "C4'"     single      1.099    0.020
+ ATR      "O4'"  "C1'"     single      1.426    0.020
+ ATR      "O3'"  "C3'"     single      1.432    0.020
+ ATR      "C3'"  "C2'"     single      1.524    0.020
+ ATR      "H3'"  "C3'"     single      1.099    0.020
+ ATR      "HO3'" "O3'"     single      0.967    0.020
+ ATR      "C2'"  "O2'"     single      1.426    0.020
+ ATR      "C1'"  "C2'"     single      1.524    0.020
+ ATR      "H2'"  "C2'"     single      1.099    0.020
+ ATR      "O2'"  "P2'"     single      1.610    0.020
+ ATR      O1P    "P2'"     deloc       1.510    0.020
+ ATR      O2P    "P2'"     deloc       1.510    0.020
+ ATR      "P2'"  O3P       deloc       1.510    0.020
+ ATR      N9     "C1'"     single      1.485    0.020
+ ATR      "H1'"  "C1'"     single      1.099    0.020
+ ATR      N9     C8        single      1.337    0.020
+ ATR      C4     N9        single      1.337    0.020
+ ATR      C8     N7        double      1.350    0.020
+ ATR      H8     C8        single      1.083    0.020
+ ATR      N7     C5        single      1.350    0.020
+ ATR      C5     C6        single      1.490    0.020
+ ATR      C5     C4        double      1.490    0.020
+ ATR      N6     C6        single      1.355    0.020
+ ATR      C6     N1        double      1.350    0.020
+ ATR      HN61   N6        single      1.010    0.020
+ ATR      HN62   N6        single      1.010    0.020
+ ATR      N1     C2        single      1.337    0.020
+ ATR      C2     N3        double      1.337    0.020
+ ATR      H2     C2        single      1.083    0.020
+ ATR      N3     C4        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ATR      O3P    "P2'"  O1P     119.900    3.000
+ ATR      O3P    "P2'"  O2P     119.900    3.000
+ ATR      O3P    "P2'"  "O2'"   108.200    3.000
+ ATR      O1P    "P2'"  O2P     119.900    3.000
+ ATR      O1P    "P2'"  "O2'"   108.200    3.000
+ ATR      O2P    "P2'"  "O2'"   108.200    3.000
+ ATR      "P2'"  "O2'"  "C2'"   120.500    3.000
+ ATR      "O2'"  "C2'"  "H2'"   109.470    3.000
+ ATR      "O2'"  "C2'"  "C3'"   109.470    3.000
+ ATR      "O2'"  "C2'"  "C1'"   109.470    3.000
+ ATR      "H2'"  "C2'"  "C3'"   108.340    3.000
+ ATR      "H2'"  "C2'"  "C1'"   108.340    3.000
+ ATR      "C3'"  "C2'"  "C1'"   111.000    3.000
+ ATR      "C2'"  "C3'"  "H3'"   108.340    3.000
+ ATR      "C2'"  "C3'"  "O3'"   109.470    3.000
+ ATR      "C2'"  "C3'"  "C4'"   111.000    3.000
+ ATR      "H3'"  "C3'"  "O3'"   109.470    3.000
+ ATR      "H3'"  "C3'"  "C4'"   108.340    3.000
+ ATR      "O3'"  "C3'"  "C4'"   109.470    3.000
+ ATR      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ ATR      "C3'"  "C4'"  "H4'"   108.340    3.000
+ ATR      "C3'"  "C4'"  "C5'"   111.000    3.000
+ ATR      "C3'"  "C4'"  "O4'"   109.470    3.000
+ ATR      "H4'"  "C4'"  "C5'"   108.340    3.000
+ ATR      "H4'"  "C4'"  "O4'"   109.470    3.000
+ ATR      "C5'"  "C4'"  "O4'"   109.470    3.000
+ ATR      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ ATR      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ ATR      "C4'"  "C5'"  "O5'"   109.470    3.000
+ ATR      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ ATR      "H5'1" "C5'"  "O5'"   109.470    3.000
+ ATR      "H5'2" "C5'"  "O5'"   109.470    3.000
+ ATR      "C5'"  "O5'"  PA      120.500    3.000
+ ATR      "O5'"  PA     O1A     108.200    3.000
+ ATR      "O5'"  PA     O2A     108.200    3.000
+ ATR      "O5'"  PA     O3A     102.600    3.000
+ ATR      O1A    PA     O2A     119.900    3.000
+ ATR      O1A    PA     O3A     108.200    3.000
+ ATR      O2A    PA     O3A     108.200    3.000
+ ATR      PA     O3A    PB      120.500    3.000
+ ATR      O3A    PB     O3B     108.200    3.000
+ ATR      O3A    PB     O2B     108.200    3.000
+ ATR      O3A    PB     O1B     108.200    3.000
+ ATR      O3B    PB     O2B     119.900    3.000
+ ATR      O3B    PB     O1B     119.900    3.000
+ ATR      O2B    PB     O1B     119.900    3.000
+ ATR      "C2'"  "C1'"  "H1'"   108.340    3.000
+ ATR      "C2'"  "C1'"  "O4'"   109.470    3.000
+ ATR      "C2'"  "C1'"  N9      109.470    3.000
+ ATR      "H1'"  "C1'"  "O4'"   109.470    3.000
+ ATR      "H1'"  "C1'"  N9      109.470    3.000
+ ATR      "O4'"  "C1'"  N9      109.470    3.000
+ ATR      "C1'"  "O4'"  "C4'"   111.800    3.000
+ ATR      "C1'"  N9     C4      126.000    3.000
+ ATR      "C1'"  N9     C8      126.000    3.000
+ ATR      C4     N9     C8      108.000    3.000
+ ATR      N9     C4     C5      108.000    3.000
+ ATR      N9     C4     N3      132.000    3.000
+ ATR      C5     C4     N3      120.000    3.000
+ ATR      C4     C5     N7      108.000    3.000
+ ATR      C4     C5     C6      120.000    3.000
+ ATR      N7     C5     C6      132.000    3.000
+ ATR      C5     N7     C8      108.000    3.000
+ ATR      N7     C8     H8      126.000    3.000
+ ATR      N7     C8     N9      108.000    3.000
+ ATR      H8     C8     N9      126.000    3.000
+ ATR      C4     N3     C2      120.000    3.000
+ ATR      N3     C2     H2      120.000    3.000
+ ATR      N3     C2     N1      120.000    3.000
+ ATR      H2     C2     N1      120.000    3.000
+ ATR      C2     N1     C6      120.000    3.000
+ ATR      N1     C6     N6      120.000    3.000
+ ATR      N1     C6     C5      120.000    3.000
+ ATR      N6     C6     C5      120.000    3.000
+ ATR      C6     N6     HN62    120.000    3.000
+ ATR      C6     N6     HN61    120.000    3.000
+ ATR      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ATR      var_1    O3P    "P2'"  "O2'"  "C2'"    -59.975   20.000   1
+ ATR      var_2    "P2'"  "O2'"  "C2'"  "C1'"    123.832   20.000   1
+ ATR      var_3    "O2'"  "C2'"  "C3'"  "C4'"   -120.000   20.000   3
+ ATR      var_4    "C2'"  "C3'"  "O3'"  "HO3'"  -176.136   20.000   1
+ ATR      var_5    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ ATR      var_6    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ ATR      var_7    "C3'"  "C4'"  "C5'"  "O5'"    176.877   20.000   3
+ ATR      var_8    "C4'"  "C5'"  "O5'"  PA       179.983   20.000   1
+ ATR      var_9    "C5'"  "O5'"  PA     O3A     -179.970   20.000   1
+ ATR      var_10   "O5'"  PA     O3A    PB      -179.986   20.000   1
+ ATR      var_11   PA     O3A    PB     O1B       59.967   20.000   1
+ ATR      var_12   "O2'"  "C2'"  "C1'"  N9       -90.000   20.000   3
+ ATR      var_13   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ ATR      var_14   "C2'"  "C1'"  N9     C4        91.514   20.000   1
+ ATR      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ ATR      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ ATR      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ ATR      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ ATR      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ ATR      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ ATR      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ ATR      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ ATR      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ ATR      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ ATR      CONST_11 N1     C6     N6     HN61       0.034    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ATR      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ ATR      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ ATR      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ ATR      chir_04  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ATR      plan-1    N9        0.020
+ ATR      plan-1    "C1'"     0.020
+ ATR      plan-1    C8        0.020
+ ATR      plan-1    C4        0.020
+ ATR      plan-1    N7        0.020
+ ATR      plan-1    H8        0.020
+ ATR      plan-1    C5        0.020
+ ATR      plan-1    C6        0.020
+ ATR      plan-1    N1        0.020
+ ATR      plan-1    C2        0.020
+ ATR      plan-1    N3        0.020
+ ATR      plan-1    N6        0.020
+ ATR      plan-1    H2        0.020
+ ATR      plan-1    HN62      0.020
+ ATR      plan-1    HN61      0.020
+ ATR      plan-2    N6        0.020
+ ATR      plan-2    C6        0.020
+ ATR      plan-2    HN61      0.020
+ ATR      plan-2    HN62      0.020
+# ------------------------------------------------------

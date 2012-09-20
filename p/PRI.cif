@@ -1,0 +1,172 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PRI      PRI 'PYRROLIDINE-2-CARBALDEHYDE          ' non-polymer        16   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PRI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PRI           OT1    O    O         0.000      0.000    0.000    0.000
+ PRI           C      C    C1        0.000     -0.469    0.560    0.960
+ PRI           "HO'T" H    H         0.000      0.181    0.961    1.719
+ PRI           CA     C    CH1       0.000     -1.963    0.697    1.099
+ PRI           HCA    H    H         0.000     -2.248    1.758    1.130
+ PRI           CB     C    CH2       0.000     -2.455   -0.029    2.368
+ PRI           HCB2   H    H         0.000     -2.602    0.666    3.197
+ PRI           HCB1   H    H         0.000     -1.765   -0.818    2.673
+ PRI           N      N    NH1       0.000     -2.651    0.009   -0.022
+ PRI           HN     H    H         0.000     -2.276   -0.228   -0.929
+ PRI           CD     C    CH2       0.000     -4.020   -0.251    0.497
+ PRI           HCD1   H    H         0.000     -4.508   -1.068   -0.038
+ PRI           HCD2   H    H         0.000     -4.648    0.641    0.448
+ PRI           CG     C    CH2       0.000     -3.809   -0.653    1.972
+ PRI           HCG2   H    H         0.000     -3.760   -1.737    2.090
+ PRI           HCG1   H    H         0.000     -4.597   -0.253    2.614
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PRI      OT1    n/a    C      START
+ PRI      C      OT1    CA     .
+ PRI      "HO'T" C      .      .
+ PRI      CA     C      N      .
+ PRI      HCA    CA     .      .
+ PRI      CB     CA     HCB1   .
+ PRI      HCB2   CB     .      .
+ PRI      HCB1   CB     .      .
+ PRI      N      CA     CD     .
+ PRI      HN     N      .      .
+ PRI      CD     N      CG     .
+ PRI      HCD1   CD     .      .
+ PRI      HCD2   CD     .      .
+ PRI      CG     CD     HCG1   .
+ PRI      HCG2   CG     .      .
+ PRI      HCG1   CG     .      END
+ PRI      CB     CG     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PRI      CB     CG        single      1.524    0.020
+ PRI      CB     CA        single      1.524    0.020
+ PRI      HCB1   CB        single      1.092    0.020
+ PRI      HCB2   CB        single      1.092    0.020
+ PRI      CG     CD        single      1.524    0.020
+ PRI      HCG1   CG        single      1.092    0.020
+ PRI      HCG2   CG        single      1.092    0.020
+ PRI      C      OT1       double      1.220    0.020
+ PRI      CA     C         single      1.510    0.020
+ PRI      "HO'T" C         single      1.077    0.020
+ PRI      CD     N         single      1.450    0.020
+ PRI      N      CA        single      1.450    0.020
+ PRI      HN     N         single      1.010    0.020
+ PRI      HCD1   CD        single      1.092    0.020
+ PRI      HCD2   CD        single      1.092    0.020
+ PRI      HCA    CA        single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PRI      OT1    C      "HO'T"  123.000    3.000
+ PRI      OT1    C      CA      120.500    3.000
+ PRI      "HO'T" C      CA      120.000    3.000
+ PRI      C      CA     HCA     108.810    3.000
+ PRI      C      CA     CB      109.470    3.000
+ PRI      C      CA     N       111.600    3.000
+ PRI      HCA    CA     CB      108.340    3.000
+ PRI      HCA    CA     N       108.550    3.000
+ PRI      CB     CA     N       110.000    3.000
+ PRI      CA     CB     HCB2    109.470    3.000
+ PRI      CA     CB     HCB1    109.470    3.000
+ PRI      CA     CB     CG      111.000    3.000
+ PRI      HCB2   CB     HCB1    107.900    3.000
+ PRI      HCB2   CB     CG      109.470    3.000
+ PRI      HCB1   CB     CG      109.470    3.000
+ PRI      CA     N      HN      118.500    3.000
+ PRI      CA     N      CD      120.000    3.000
+ PRI      HN     N      CD      118.500    3.000
+ PRI      N      CD     HCD1    109.470    3.000
+ PRI      N      CD     HCD2    109.470    3.000
+ PRI      N      CD     CG      112.000    3.000
+ PRI      HCD1   CD     HCD2    107.900    3.000
+ PRI      HCD1   CD     CG      109.470    3.000
+ PRI      HCD2   CD     CG      109.470    3.000
+ PRI      CD     CG     HCG2    109.470    3.000
+ PRI      CD     CG     HCG1    109.470    3.000
+ PRI      CD     CG     CB      111.000    3.000
+ PRI      HCG2   CG     HCG1    107.900    3.000
+ PRI      HCG2   CG     CB      109.470    3.000
+ PRI      HCG1   CG     CB      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PRI      var_1    OT1    C      CA     N          3.037   20.000   1
+ PRI      var_2    C      CA     CB     CG      -150.000   20.000   3
+ PRI      var_3    CA     CB     CG     CD         0.000   20.000   3
+ PRI      var_4    C      CA     N      CD       150.000   20.000   3
+ PRI      var_5    CA     N      CD     CG       -30.000   20.000   3
+ PRI      var_6    N      CD     CG     CB        30.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PRI      chir_01  CA     CB     C      N         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PRI      plan-1    C         0.020
+ PRI      plan-1    OT1       0.020
+ PRI      plan-1    CA        0.020
+ PRI      plan-1    "HO'T"    0.020
+ PRI      plan-2    N         0.020
+ PRI      plan-2    CD        0.020
+ PRI      plan-2    CA        0.020
+ PRI      plan-2    HN        0.020
+# ------------------------------------------------------

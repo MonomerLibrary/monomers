@@ -1,0 +1,189 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DBP      DBP '1,3-DIAMINOBENZYL PHENYLALANINE     ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DBP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DBP           NE2    N    NH2       0.000      0.000    0.000    0.000
+ DBP           HE21   H    H         0.000      0.503   -0.160   -0.870
+ DBP           HE22   H    H         0.000      0.538    0.131    0.854
+ DBP           CE2    C    CR6       0.000     -1.395    0.040    0.022
+ DBP           CZ     C    CR16      0.000     -2.115   -0.141   -1.152
+ DBP           HCZ1   H    H         0.000     -1.594   -0.315   -2.086
+ DBP           CE1    C    CR16      0.000     -3.495   -0.100   -1.127
+ DBP           HC11   H    H         0.000     -4.057   -0.240   -2.043
+ DBP           CD1    C    CR16      0.000     -4.160    0.120    0.063
+ DBP           HD11   H    H         0.000     -5.243    0.151    0.080
+ DBP           CD2    C    CR16      0.000     -2.067    0.267    1.216
+ DBP           HC21   H    H         0.000     -1.509    0.417    2.132
+ DBP           CG     C    CR6       0.000     -3.446    0.301    1.234
+ DBP           CB     C    CH2       0.000     -4.177    0.541    2.530
+ DBP           HB11   H    H         0.000     -5.119    1.055    2.325
+ DBP           HB21   H    H         0.000     -3.560    1.160    3.185
+ DBP           N      N    NH2       0.000     -4.451   -0.745    3.184
+ DBP           HN21   H    H         0.000     -4.005   -0.976    4.064
+ DBP           HN1    H    H         0.000     -5.087   -1.409    2.760
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DBP      NE2    n/a    CE2    START
+ DBP      HE21   NE2    .      .
+ DBP      HE22   NE2    .      .
+ DBP      CE2    NE2    CD2    .
+ DBP      CZ     CE2    CE1    .
+ DBP      HCZ1   CZ     .      .
+ DBP      CE1    CZ     CD1    .
+ DBP      HC11   CE1    .      .
+ DBP      CD1    CE1    HD11   .
+ DBP      HD11   CD1    .      .
+ DBP      CD2    CE2    CG     .
+ DBP      HC21   CD2    .      .
+ DBP      CG     CD2    CB     .
+ DBP      CB     CG     N      .
+ DBP      HB11   CB     .      .
+ DBP      HB21   CB     .      .
+ DBP      N      CB     HN1    .
+ DBP      HN21   N      .      .
+ DBP      HN1    N      .      END
+ DBP      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DBP      N      CB        single      1.450    0.020
+ DBP      HN1    N         single      1.010    0.020
+ DBP      HN21   N         single      1.010    0.020
+ DBP      CB     CG        single      1.511    0.020
+ DBP      HB11   CB        single      1.092    0.020
+ DBP      HB21   CB        single      1.092    0.020
+ DBP      CG     CD1       double      1.390    0.020
+ DBP      CG     CD2       single      1.390    0.020
+ DBP      CD1    CE1       single      1.390    0.020
+ DBP      HD11   CD1       single      1.083    0.020
+ DBP      CE1    CZ        double      1.390    0.020
+ DBP      HC11   CE1       single      1.083    0.020
+ DBP      CD2    CE2       double      1.390    0.020
+ DBP      HC21   CD2       single      1.083    0.020
+ DBP      CZ     CE2       single      1.390    0.020
+ DBP      CE2    NE2       single      1.355    0.020
+ DBP      HCZ1   CZ        single      1.083    0.020
+ DBP      HE21   NE2       single      1.010    0.020
+ DBP      HE22   NE2       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DBP      HE21   NE2    HE22    120.000    3.000
+ DBP      HE21   NE2    CE2     120.000    3.000
+ DBP      HE22   NE2    CE2     120.000    3.000
+ DBP      NE2    CE2    CZ      120.000    3.000
+ DBP      NE2    CE2    CD2     120.000    3.000
+ DBP      CZ     CE2    CD2     120.000    3.000
+ DBP      CE2    CZ     HCZ1    120.000    3.000
+ DBP      CE2    CZ     CE1     120.000    3.000
+ DBP      HCZ1   CZ     CE1     120.000    3.000
+ DBP      CZ     CE1    HC11    120.000    3.000
+ DBP      CZ     CE1    CD1     120.000    3.000
+ DBP      HC11   CE1    CD1     120.000    3.000
+ DBP      CE1    CD1    HD11    120.000    3.000
+ DBP      CE1    CD1    CG      120.000    3.000
+ DBP      HD11   CD1    CG      120.000    3.000
+ DBP      CE2    CD2    HC21    120.000    3.000
+ DBP      CE2    CD2    CG      120.000    3.000
+ DBP      HC21   CD2    CG      120.000    3.000
+ DBP      CD2    CG     CB      120.000    3.000
+ DBP      CD2    CG     CD1     120.000    3.000
+ DBP      CB     CG     CD1     120.000    3.000
+ DBP      CG     CB     HB11    109.470    3.000
+ DBP      CG     CB     HB21    109.470    3.000
+ DBP      CG     CB     N       109.500    3.000
+ DBP      HB11   CB     HB21    107.900    3.000
+ DBP      HB11   CB     N       109.470    3.000
+ DBP      HB21   CB     N       109.470    3.000
+ DBP      CB     N      HN21    120.000    3.000
+ DBP      CB     N      HN1     120.000    3.000
+ DBP      HN21   N      HN1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DBP      CONST_1  HE22   NE2    CE2    CD2        0.338    0.000   0
+ DBP      CONST_2  NE2    CE2    CZ     CE1      180.000    0.000   0
+ DBP      CONST_3  CE2    CZ     CE1    CD1        0.000    0.000   0
+ DBP      CONST_4  CZ     CE1    CD1    CG         0.000    0.000   0
+ DBP      CONST_5  NE2    CE2    CD2    CG       180.000    0.000   0
+ DBP      CONST_6  CE2    CD2    CG     CB       180.000    0.000   0
+ DBP      CONST_7  CD2    CG     CD1    CE1        0.000    0.000   0
+ DBP      var_1    CD2    CG     CB     N        -90.285   20.000   2
+ DBP      var_2    CG     CB     N      HN1      -66.205   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DBP      plan-1    N         0.020
+ DBP      plan-1    CB        0.020
+ DBP      plan-1    HN1       0.020
+ DBP      plan-1    HN21      0.020
+ DBP      plan-2    CG        0.020
+ DBP      plan-2    CB        0.020
+ DBP      plan-2    CD1       0.020
+ DBP      plan-2    CD2       0.020
+ DBP      plan-2    CE1       0.020
+ DBP      plan-2    CE2       0.020
+ DBP      plan-2    CZ        0.020
+ DBP      plan-2    HD11      0.020
+ DBP      plan-2    HC11      0.020
+ DBP      plan-2    HC21      0.020
+ DBP      plan-2    NE2       0.020
+ DBP      plan-2    HCZ1      0.020
+ DBP      plan-2    HE21      0.020
+ DBP      plan-2    HE22      0.020
+ DBP      plan-3    NE2       0.020
+ DBP      plan-3    CE2       0.020
+ DBP      plan-3    HE21      0.020
+ DBP      plan-3    HE22      0.020
+# ------------------------------------------------------

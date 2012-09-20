@@ -1,0 +1,242 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OTA      OTA '2-(OXALYL-AMINO)-4,5,6,7-TETRAHYDRO-' non-polymer        26  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OTA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OTA           O24    O    O         0.000      0.000    0.000    0.000
+ OTA           C20    C    C         0.000     -0.060    0.030   -1.212
+ OTA           C21    C    C         0.000      1.195    0.058   -2.021
+ OTA           O23    O    OC       -0.500      1.134    0.088   -3.270
+ OTA           O22    O    OC       -0.500      2.307    0.051   -1.449
+ OTA           N19    N    NH1       0.000     -1.258    0.037   -1.827
+ OTA           H19    H    H         0.000     -1.307    0.062   -2.835
+ OTA           C14    C    CR5       0.000     -2.421    0.010   -1.078
+ OTA           S13    S    S2        0.000     -2.589   -0.032    0.646
+ OTA           C3     C    CR5       0.000     -4.353   -0.046    0.760
+ OTA           C2     C    CH2       0.000     -5.220   -0.076    1.979
+ OTA           H22A   H    H         0.000     -4.821    0.603    2.735
+ OTA           H21    H    H         0.000     -5.255   -1.089    2.384
+ OTA           C15    C    CR5       0.000     -3.737    0.020   -1.526
+ OTA           C16    C    C         0.000     -4.055    0.060   -2.955
+ OTA           O18    O    OC       -0.500     -4.199    1.161   -3.532
+ OTA           O17    O    OC       -0.500     -4.183   -1.005   -3.599
+ OTA           C4     C    CR5       0.000     -4.781   -0.019   -0.523
+ OTA           C5     C    CH2       0.000     -6.278   -0.025   -0.813
+ OTA           H51    H    H         0.000     -6.505   -0.719   -1.625
+ OTA           H52    H    H         0.000     -6.616    0.977   -1.087
+ OTA           C6     C    CH2       0.000     -6.995   -0.476    0.463
+ OTA           H61    H    H         0.000     -6.747   -1.521    0.660
+ OTA           H62    H    H         0.000     -8.074   -0.381    0.318
+ OTA           N1     N    NH1       0.000     -6.578    0.350    1.600
+ OTA           H1     H    H         0.000     -7.121    1.078    2.042
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OTA      O24    n/a    C20    START
+ OTA      C20    O24    N19    .
+ OTA      C21    C20    O22    .
+ OTA      O23    C21    .      .
+ OTA      O22    C21    .      .
+ OTA      N19    C20    C14    .
+ OTA      H19    N19    .      .
+ OTA      C14    N19    C15    .
+ OTA      S13    C14    C3     .
+ OTA      C3     S13    C2     .
+ OTA      C2     C3     H21    .
+ OTA      H22A   C2     .      .
+ OTA      H21    C2     .      .
+ OTA      C15    C14    C4     .
+ OTA      C16    C15    O17    .
+ OTA      O18    C16    .      .
+ OTA      O17    C16    .      .
+ OTA      C4     C15    C5     .
+ OTA      C5     C4     C6     .
+ OTA      H51    C5     .      .
+ OTA      H52    C5     .      .
+ OTA      C6     C5     N1     .
+ OTA      H61    C6     .      .
+ OTA      H62    C6     .      .
+ OTA      N1     C6     H1     .
+ OTA      H1     N1     .      END
+ OTA      N1     C2     .    ADD
+ OTA      C3     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OTA      N1     C2        single      1.450    0.020
+ OTA      N1     C6        single      1.450    0.020
+ OTA      H1     N1        single      1.010    0.020
+ OTA      C2     C3        single      1.510    0.020
+ OTA      H21    C2        single      1.092    0.020
+ OTA      H22A   C2        single      1.092    0.020
+ OTA      C3     C4        double      1.490    0.020
+ OTA      C3     S13       single      1.745    0.020
+ OTA      C5     C4        single      1.510    0.020
+ OTA      C4     C15       single      1.490    0.020
+ OTA      C6     C5        single      1.524    0.020
+ OTA      H51    C5        single      1.092    0.020
+ OTA      H52    C5        single      1.092    0.020
+ OTA      H61    C6        single      1.092    0.020
+ OTA      H62    C6        single      1.092    0.020
+ OTA      S13    C14       single      1.745    0.020
+ OTA      C15    C14       double      1.490    0.020
+ OTA      C14    N19       single      1.350    0.020
+ OTA      C16    C15       single      1.490    0.020
+ OTA      O17    C16       deloc       1.250    0.020
+ OTA      O18    C16       deloc       1.250    0.020
+ OTA      N19    C20       single      1.330    0.020
+ OTA      H19    N19       single      1.010    0.020
+ OTA      C21    C20       single      1.460    0.020
+ OTA      C20    O24       double      1.220    0.020
+ OTA      O22    C21       deloc       1.250    0.020
+ OTA      O23    C21       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OTA      O24    C20    C21     120.500    3.000
+ OTA      O24    C20    N19     123.000    3.000
+ OTA      C21    C20    N19     120.000    3.000
+ OTA      C20    C21    O23     120.000    3.000
+ OTA      C20    C21    O22     120.000    3.000
+ OTA      O23    C21    O22     123.000    3.000
+ OTA      C20    N19    H19     120.000    3.000
+ OTA      C20    N19    C14     120.000    3.000
+ OTA      H19    N19    C14     120.000    3.000
+ OTA      N19    C14    S13     108.000    3.000
+ OTA      N19    C14    C15     108.000    3.000
+ OTA      S13    C14    C15     108.000    3.000
+ OTA      C14    S13    C3       99.271    3.000
+ OTA      S13    C3     C2      108.000    3.000
+ OTA      S13    C3     C4      108.000    3.000
+ OTA      C2     C3     C4      126.000    3.000
+ OTA      C3     C2     H22A    109.470    3.000
+ OTA      C3     C2     H21     109.470    3.000
+ OTA      C3     C2     N1      109.500    3.000
+ OTA      H22A   C2     H21     107.900    3.000
+ OTA      H22A   C2     N1      109.470    3.000
+ OTA      H21    C2     N1      109.470    3.000
+ OTA      C14    C15    C16     117.000    3.000
+ OTA      C14    C15    C4      108.000    3.000
+ OTA      C16    C15    C4      117.000    3.000
+ OTA      C15    C16    O18     120.000    3.000
+ OTA      C15    C16    O17     120.000    3.000
+ OTA      O18    C16    O17     123.000    3.000
+ OTA      C15    C4     C5      126.000    3.000
+ OTA      C15    C4     C3      108.000    3.000
+ OTA      C5     C4     C3      126.000    3.000
+ OTA      C4     C5     H51     109.470    3.000
+ OTA      C4     C5     H52     109.470    3.000
+ OTA      C4     C5     C6      109.470    3.000
+ OTA      H51    C5     H52     107.900    3.000
+ OTA      H51    C5     C6      109.470    3.000
+ OTA      H52    C5     C6      109.470    3.000
+ OTA      C5     C6     H61     109.470    3.000
+ OTA      C5     C6     H62     109.470    3.000
+ OTA      C5     C6     N1      112.000    3.000
+ OTA      H61    C6     H62     107.900    3.000
+ OTA      H61    C6     N1      109.470    3.000
+ OTA      H62    C6     N1      109.470    3.000
+ OTA      C6     N1     H1      118.500    3.000
+ OTA      C6     N1     C2      120.000    3.000
+ OTA      H1     N1     C2      118.500    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OTA      var_1    O24    C20    C21    O22       -0.008   20.000   1
+ OTA      CONST_1  O24    C20    N19    C14        0.000    0.000   0
+ OTA      var_2    C20    N19    C14    C15      179.629   20.000   1
+ OTA      CONST_2  N19    C14    S13    C3       180.000    0.000   0
+ OTA      CONST_3  C14    S13    C3     C2       180.000    0.000   0
+ OTA      CONST_4  S13    C3     C4     C15        0.000    0.000   0
+ OTA      var_3    S13    C3     C2     N1       150.000   20.000   2
+ OTA      CONST_5  N19    C14    C15    C4       180.000    0.000   0
+ OTA      var_4    C14    C15    C16    O17       89.709   20.000   1
+ OTA      CONST_6  C14    C15    C4     C5       180.000    0.000   0
+ OTA      var_5    C15    C4     C5     C6       150.000   20.000   2
+ OTA      var_6    C4     C5     C6     N1        60.000   20.000   3
+ OTA      var_7    C5     C6     N1     C2       -60.000   20.000   3
+ OTA      var_8    C6     N1     C2     C3        60.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OTA      plan-1    N1        0.020
+ OTA      plan-1    C2        0.020
+ OTA      plan-1    C6        0.020
+ OTA      plan-1    H1        0.020
+ OTA      plan-2    C3        0.020
+ OTA      plan-2    C2        0.020
+ OTA      plan-2    C4        0.020
+ OTA      plan-2    S13       0.020
+ OTA      plan-2    C14       0.020
+ OTA      plan-2    C15       0.020
+ OTA      plan-2    C5        0.020
+ OTA      plan-2    N19       0.020
+ OTA      plan-2    C16       0.020
+ OTA      plan-2    H19       0.020
+ OTA      plan-3    C16       0.020
+ OTA      plan-3    C15       0.020
+ OTA      plan-3    O17       0.020
+ OTA      plan-3    O18       0.020
+ OTA      plan-4    N19       0.020
+ OTA      plan-4    C14       0.020
+ OTA      plan-4    C20       0.020
+ OTA      plan-4    H19       0.020
+ OTA      plan-5    C20       0.020
+ OTA      plan-5    N19       0.020
+ OTA      plan-5    C21       0.020
+ OTA      plan-5    O24       0.020
+ OTA      plan-5    H19       0.020
+ OTA      plan-6    C21       0.020
+ OTA      plan-6    C20       0.020
+ OTA      plan-6    O22       0.020
+ OTA      plan-6    O23       0.020
+# ------------------------------------------------------

@@ -1,0 +1,227 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HMF      HMF '2-AMINO-4-PHENYL-BUTYRIC ACID       ' peptide            25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HMF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HMF           N      N    NH2       0.000      0.000    0.000    0.000
+ HMF           HN1    H    H         0.000      0.699   -0.710   -0.186
+ HMF           HN2    H    H         0.000      0.147    0.656    0.758
+ HMF           CA     C    CH1       0.000     -1.215    0.077   -0.822
+ HMF           HA     H    H         0.000     -1.311    1.089   -1.240
+ HMF           CB     C    CH2       0.000     -2.436   -0.234    0.046
+ HMF           HB2    H    H         0.000     -2.340   -1.240    0.461
+ HMF           HB3    H    H         0.000     -3.340   -0.179   -0.565
+ HMF           CG     C    CH2       0.000     -2.526    0.782    1.184
+ HMF           HG2    H    H         0.000     -2.620    1.787    0.768
+ HMF           HG3    H    H         0.000     -1.622    0.725    1.794
+ HMF           C1     C    CR6       0.000     -3.730    0.475    2.038
+ HMF           C6     C    CR16      0.000     -4.950    1.052    1.744
+ HMF           H6     H    H         0.000     -5.042    1.727    0.902
+ HMF           C5     C    CR16      0.000     -6.055    0.767    2.525
+ HMF           H5     H    H         0.000     -7.014    1.214    2.291
+ HMF           C4     C    CR16      0.000     -5.937   -0.087    3.605
+ HMF           H4     H    H         0.000     -6.801   -0.307    4.219
+ HMF           C3     C    CR16      0.000     -4.714   -0.660    3.901
+ HMF           H3     H    H         0.000     -4.621   -1.330    4.746
+ HMF           C2     C    CR16      0.000     -3.610   -0.378    3.118
+ HMF           HC2    H    H         0.000     -2.652   -0.826    3.352
+ HMF           C      C    C         0.000     -1.126   -0.924   -1.944
+ HMF           O      O    OC       -0.500     -0.483   -1.985   -1.787
+ HMF           OXT    O    OC       -0.500     -1.697   -0.694   -3.033
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HMF      N      n/a    CA     START
+ HMF      HN1    N      .      .
+ HMF      HN2    N      .      .
+ HMF      CA     N      C      .
+ HMF      HA     CA     .      .
+ HMF      CB     CA     CG     .
+ HMF      HB2    CB     .      .
+ HMF      HB3    CB     .      .
+ HMF      CG     CB     C1     .
+ HMF      HG2    CG     .      .
+ HMF      HG3    CG     .      .
+ HMF      C1     CG     C6     .
+ HMF      C6     C1     C5     .
+ HMF      H6     C6     .      .
+ HMF      C5     C6     C4     .
+ HMF      H5     C5     .      .
+ HMF      C4     C5     C3     .
+ HMF      H4     C4     .      .
+ HMF      C3     C4     C2     .
+ HMF      H3     C3     .      .
+ HMF      C2     C3     HC2    .
+ HMF      HC2    C2     .      .
+ HMF      C      CA     .      END
+ HMF      O      C      .      .
+ HMF      OXT    C      .      .
+ HMF      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HMF      CA     N         single      1.450    0.020
+ HMF      C      CA        single      1.500    0.020
+ HMF      CB     CA        single      1.524    0.020
+ HMF      HA     CA        single      1.099    0.020
+ HMF      O      C         deloc       1.250    0.020
+ HMF      OXT    C         deloc       1.250    0.020
+ HMF      CG     CB        single      1.524    0.020
+ HMF      HB2    CB        single      1.092    0.020
+ HMF      HB3    CB        single      1.092    0.020
+ HMF      C1     CG        single      1.511    0.020
+ HMF      HG2    CG        single      1.092    0.020
+ HMF      HG3    CG        single      1.092    0.020
+ HMF      C1     C2        double      1.390    0.020
+ HMF      C6     C1        single      1.390    0.020
+ HMF      C2     C3        single      1.390    0.020
+ HMF      HC2    C2        single      1.083    0.020
+ HMF      C5     C6        double      1.390    0.020
+ HMF      H6     C6        single      1.083    0.020
+ HMF      C3     C4        double      1.390    0.020
+ HMF      H3     C3        single      1.083    0.020
+ HMF      C4     C5        single      1.390    0.020
+ HMF      H5     C5        single      1.083    0.020
+ HMF      H4     C4        single      1.083    0.020
+ HMF      HN1    N         single      1.010    0.020
+ HMF      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HMF      HN1    N      HN2     120.000    3.000
+ HMF      HN1    N      CA      120.000    3.000
+ HMF      HN2    N      CA      120.000    3.000
+ HMF      N      CA     HA      109.470    3.000
+ HMF      N      CA     CB      109.470    3.000
+ HMF      N      CA     C       109.470    3.000
+ HMF      HA     CA     CB      108.340    3.000
+ HMF      HA     CA     C       108.810    3.000
+ HMF      CB     CA     C       109.470    3.000
+ HMF      CA     CB     HB2     109.470    3.000
+ HMF      CA     CB     HB3     109.470    3.000
+ HMF      CA     CB     CG      111.000    3.000
+ HMF      HB2    CB     HB3     107.900    3.000
+ HMF      HB2    CB     CG      109.470    3.000
+ HMF      HB3    CB     CG      109.470    3.000
+ HMF      CB     CG     HG2     109.470    3.000
+ HMF      CB     CG     HG3     109.470    3.000
+ HMF      CB     CG     C1      109.470    3.000
+ HMF      HG2    CG     HG3     107.900    3.000
+ HMF      HG2    CG     C1      109.470    3.000
+ HMF      HG3    CG     C1      109.470    3.000
+ HMF      CG     C1     C6      120.000    3.000
+ HMF      CG     C1     C2      120.000    3.000
+ HMF      C6     C1     C2      120.000    3.000
+ HMF      C1     C6     H6      120.000    3.000
+ HMF      C1     C6     C5      120.000    3.000
+ HMF      H6     C6     C5      120.000    3.000
+ HMF      C6     C5     H5      120.000    3.000
+ HMF      C6     C5     C4      120.000    3.000
+ HMF      H5     C5     C4      120.000    3.000
+ HMF      C5     C4     H4      120.000    3.000
+ HMF      C5     C4     C3      120.000    3.000
+ HMF      H4     C4     C3      120.000    3.000
+ HMF      C4     C3     H3      120.000    3.000
+ HMF      C4     C3     C2      120.000    3.000
+ HMF      H3     C3     C2      120.000    3.000
+ HMF      C3     C2     HC2     120.000    3.000
+ HMF      C3     C2     C1      120.000    3.000
+ HMF      HC2    C2     C1      120.000    3.000
+ HMF      CA     C      O       118.500    3.000
+ HMF      CA     C      OXT     118.500    3.000
+ HMF      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HMF      var_1    HN2    N      CA     C        175.000   20.000   1
+ HMF      var_2    N      CA     CB     CG        60.022   20.000   3
+ HMF      var_3    CA     CB     CG     C1       179.948   20.000   3
+ HMF      var_4    CB     CG     C1     C6       -90.308   20.000   2
+ HMF      CONST_1  CG     C1     C2     C3       180.000    0.000   0
+ HMF      CONST_2  CG     C1     C6     C5       180.000    0.000   0
+ HMF      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ HMF      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ HMF      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ HMF      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HMF      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HMF      plan-1    N         0.020
+ HMF      plan-1    CA        0.020
+ HMF      plan-1    HN1       0.020
+ HMF      plan-1    HN2       0.020
+ HMF      plan-2    C         0.020
+ HMF      plan-2    CA        0.020
+ HMF      plan-2    O         0.020
+ HMF      plan-2    OXT       0.020
+ HMF      plan-3    C1        0.020
+ HMF      plan-3    CG        0.020
+ HMF      plan-3    C2        0.020
+ HMF      plan-3    C6        0.020
+ HMF      plan-3    C3        0.020
+ HMF      plan-3    C5        0.020
+ HMF      plan-3    C4        0.020
+ HMF      plan-3    HC2       0.020
+ HMF      plan-3    H6        0.020
+ HMF      plan-3    H3        0.020
+ HMF      plan-3    H5        0.020
+ HMF      plan-3    H4        0.020
+# ------------------------------------------------------

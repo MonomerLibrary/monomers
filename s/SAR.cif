@@ -1,0 +1,134 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SAR      SAR 'SARCOSINE                           ' non-polymer        12   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SAR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SAR           OXT    O    OC       -0.500      0.000    0.000    0.000
+ SAR           C      C    C         0.000     -1.251   -0.022    0.005
+ SAR           O      O    OC       -0.500     -1.856   -1.117    0.029
+ SAR           CA     C    CH2       0.000     -2.028    1.269   -0.018
+ SAR           HA2    H    H         0.000     -1.776    1.828   -0.922
+ SAR           HA3    H    H         0.000     -1.770    1.864    0.860
+ SAR           N      N    NH1       0.000     -3.467    0.974   -0.007
+ SAR           H      H    H         0.000     -3.861    0.044    0.014
+ SAR           CN     C    CH3       0.000     -4.258    2.212   -0.030
+ SAR           HN3    H    H         0.000     -4.032    2.764   -0.906
+ SAR           HN2    H    H         0.000     -5.292    1.976   -0.022
+ SAR           HN1    H    H         0.000     -4.028    2.800    0.823
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SAR      OXT    n/a    C      START
+ SAR      C      OXT    CA     .
+ SAR      O      C      .      .
+ SAR      CA     C      N      .
+ SAR      HA2    CA     .      .
+ SAR      HA3    CA     .      .
+ SAR      N      CA     CN     .
+ SAR      H      N      .      .
+ SAR      CN     N      HN1    .
+ SAR      HN3    CN     .      .
+ SAR      HN2    CN     .      .
+ SAR      HN1    CN     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SAR      N      CA        single      1.450    0.020
+ SAR      CN     N         single      1.450    0.020
+ SAR      H      N         single      1.010    0.020
+ SAR      CA     C         single      1.510    0.020
+ SAR      HA2    CA        single      1.092    0.020
+ SAR      HA3    CA        single      1.092    0.020
+ SAR      O      C         deloc       1.250    0.020
+ SAR      C      OXT       deloc       1.250    0.020
+ SAR      HN1    CN        single      1.059    0.020
+ SAR      HN2    CN        single      1.059    0.020
+ SAR      HN3    CN        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SAR      OXT    C      O       123.000    3.000
+ SAR      OXT    C      CA      118.500    3.000
+ SAR      O      C      CA      118.500    3.000
+ SAR      C      CA     HA2     109.470    3.000
+ SAR      C      CA     HA3     109.470    3.000
+ SAR      C      CA     N       111.600    3.000
+ SAR      HA2    CA     HA3     107.900    3.000
+ SAR      HA2    CA     N       109.470    3.000
+ SAR      HA3    CA     N       109.470    3.000
+ SAR      CA     N      H       118.500    3.000
+ SAR      CA     N      CN      120.000    3.000
+ SAR      H      N      CN      118.500    3.000
+ SAR      N      CN     HN3     109.470    3.000
+ SAR      N      CN     HN2     109.470    3.000
+ SAR      N      CN     HN1     109.470    3.000
+ SAR      HN3    CN     HN2     109.470    3.000
+ SAR      HN3    CN     HN1     109.470    3.000
+ SAR      HN2    CN     HN1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SAR      var_1    OXT    C      CA     N        179.997   20.000   3
+ SAR      var_2    C      CA     N      CN      -179.961   20.000   3
+ SAR      var_3    CA     N      CN     HN1      -60.062   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SAR      plan-1    N         0.020
+ SAR      plan-1    CA        0.020
+ SAR      plan-1    CN        0.020
+ SAR      plan-1    H         0.020
+ SAR      plan-2    C         0.020
+ SAR      plan-2    CA        0.020
+ SAR      plan-2    O         0.020
+ SAR      plan-2    OXT       0.020
+# ------------------------------------------------------

@@ -1,0 +1,160 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PPO      PPO '3H-PYRAZOLO[4,3-D]PYRIMIDIN-7-OL    ' non-polymer        14  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PPO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PPO           O6     O    OH1       0.000      0.000    0.000    0.000
+ PPO           HO6    H    H         0.000      0.319   -0.911   -0.044
+ PPO           C6     C    CR6       0.000     -1.341   -0.003    0.187
+ PPO           N1     N    NRD6      0.000     -1.854   -0.003    1.411
+ PPO           C2     C    CR16      0.000     -3.157   -0.003    1.607
+ PPO           HC2    H    H         0.000     -3.536   -0.003    2.622
+ PPO           N3     N    NRD6      0.000     -4.017   -0.004    0.602
+ PPO           C4     C    CR56      0.000     -3.592   -0.003   -0.637
+ PPO           C5     C    CR56      0.000     -2.219    0.003   -0.911
+ PPO           C9     C    CH2       0.000     -4.234   -0.002   -2.005
+ PPO           HC92   H    H         0.000     -4.840    0.889   -2.181
+ PPO           HC91   H    H         0.000     -4.839   -0.894   -2.182
+ PPO           N8     N    NRD5      0.000     -3.079   -0.002   -2.918
+ PPO           N7     N    NRD5      0.000     -2.038   -0.001   -2.256
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PPO      O6     n/a    C6     START
+ PPO      HO6    O6     .      .
+ PPO      C6     O6     N1     .
+ PPO      N1     C6     C2     .
+ PPO      C2     N1     N3     .
+ PPO      HC2    C2     .      .
+ PPO      N3     C2     C4     .
+ PPO      C4     N3     C9     .
+ PPO      C5     C4     .      .
+ PPO      C9     C4     N8     .
+ PPO      HC92   C9     .      .
+ PPO      HC91   C9     .      .
+ PPO      N8     C9     N7     .
+ PPO      N7     N8     .      END
+ PPO      C6     C5     .    ADD
+ PPO      C5     N7     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PPO      C6     O6        single      1.362    0.020
+ PPO      HO6    O6        single      0.967    0.020
+ PPO      C6     C5        single      1.490    0.020
+ PPO      N1     C6        double      1.350    0.020
+ PPO      C5     N7        single      1.350    0.020
+ PPO      C5     C4        double      1.490    0.020
+ PPO      N7     N8        double      1.404    0.020
+ PPO      N8     C9        single      1.464    0.020
+ PPO      C9     C4        single      1.457    0.020
+ PPO      HC91   C9        single      1.092    0.020
+ PPO      HC92   C9        single      1.092    0.020
+ PPO      C4     N3        single      1.355    0.020
+ PPO      N3     C2        double      1.337    0.020
+ PPO      C2     N1        single      1.337    0.020
+ PPO      HC2    C2        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PPO      HO6    O6     C6      109.470    3.000
+ PPO      O6     C6     N1      120.000    3.000
+ PPO      O6     C6     C5      120.000    3.000
+ PPO      N1     C6     C5      120.000    3.000
+ PPO      C6     N1     C2      120.000    3.000
+ PPO      N1     C2     HC2     120.000    3.000
+ PPO      N1     C2     N3      120.000    3.000
+ PPO      HC2    C2     N3      120.000    3.000
+ PPO      C2     N3     C4      120.000    3.000
+ PPO      N3     C4     C5      120.000    3.000
+ PPO      N3     C4     C9      120.000    3.000
+ PPO      C5     C4     C9      120.000    3.000
+ PPO      C4     C5     C6      120.000    3.000
+ PPO      C4     C5     N7      108.000    3.000
+ PPO      C6     C5     N7      132.000    3.000
+ PPO      C4     C9     HC92    109.500    3.000
+ PPO      C4     C9     HC91    109.500    3.000
+ PPO      C4     C9     N8      109.500    3.000
+ PPO      HC92   C9     HC91    107.900    3.000
+ PPO      HC92   C9     N8      109.500    3.000
+ PPO      HC91   C9     N8      109.500    3.000
+ PPO      C9     N8     N7      108.000    3.000
+ PPO      N8     N7     C5      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PPO      var_1    HO6    O6     C6     N1        90.021   20.000   1
+ PPO      CONST_1  O6     C6     C5     C4       180.000    0.000   0
+ PPO      CONST_2  O6     C6     N1     C2       180.000    0.000   0
+ PPO      CONST_3  C6     N1     C2     N3         0.000    0.000   0
+ PPO      CONST_4  N1     C2     N3     C4         0.000    0.000   0
+ PPO      CONST_5  C2     N3     C4     C9       180.000    0.000   0
+ PPO      CONST_6  N3     C4     C5     C6         0.000    0.000   0
+ PPO      CONST_7  C4     C5     N7     N8         0.000    0.000   0
+ PPO      CONST_8  N3     C4     C9     N8       180.000    0.000   0
+ PPO      CONST_9  C4     C9     N8     N7         0.000    0.000   0
+ PPO      CONST_10 C9     N8     N7     C5         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PPO      plan-1    C6        0.020
+ PPO      plan-1    O6        0.020
+ PPO      plan-1    C5        0.020
+ PPO      plan-1    N1        0.020
+ PPO      plan-1    N3        0.020
+ PPO      plan-1    C2        0.020
+ PPO      plan-1    N7        0.020
+ PPO      plan-1    C4        0.020
+ PPO      plan-1    N8        0.020
+ PPO      plan-1    C9        0.020
+ PPO      plan-1    HC2       0.020
+# ------------------------------------------------------

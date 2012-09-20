@@ -1,0 +1,271 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ST4      ST4 '4-(ACETYLAMINO)-3-GUANIDINOBENZOIC A' non-polymer        30  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ST4
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ST4           O4     O    O         0.000      0.000    0.000    0.000
+ ST4           "C4'"  C    C         0.000     -0.538   -0.530    0.950
+ ST4           CM4    C    CH3       0.000      0.272   -0.889    2.169
+ ST4           HM43   H    H         0.000     -0.113   -0.379    3.014
+ ST4           HM42   H    H         0.000      0.219   -1.934    2.336
+ ST4           HM41   H    H         0.000      1.283   -0.608    2.019
+ ST4           N4     N    NH1       0.000     -1.857   -0.797    0.914
+ ST4           HN4    H    H         0.000     -2.323   -1.154    1.737
+ ST4           C4     C    CR6       0.000     -2.582   -0.580   -0.259
+ ST4           C3     C    CR6       0.000     -3.937   -0.246   -0.191
+ ST4           N3     N    NH1       0.000     -4.565   -0.125    1.053
+ ST4           HN3    H    H         0.000     -4.041   -0.286    1.901
+ ST4           "C3'"  C    CH1       0.000     -5.982    0.237    1.125
+ ST4           "H3'"  H    H         0.000     -6.501   -0.136    0.231
+ ST4           N2     N    NH2       0.000     -6.112    1.698    1.192
+ ST4           HN22   H    H         0.000     -6.622    2.200    0.475
+ ST4           HN21   H    H         0.000     -5.692    2.215    1.956
+ ST4           N1     N    NH2       0.000     -6.581   -0.362    2.325
+ ST4           HN12   H    H         0.000     -6.018   -0.928    2.950
+ ST4           HN11   H    H         0.000     -7.561   -0.215    2.535
+ ST4           C2     C    CR16      0.000     -4.653   -0.026   -1.352
+ ST4           H2     H    H         0.000     -5.701    0.241   -1.301
+ ST4           C5     C    CR16      0.000     -1.956   -0.702   -1.494
+ ST4           H5     H    H         0.000     -0.907   -0.967   -1.543
+ ST4           C6     C    CR16      0.000     -2.666   -0.488   -2.654
+ ST4           H6     H    H         0.000     -2.175   -0.584   -3.614
+ ST4           C1     C    CR6       0.000     -4.021   -0.148   -2.593
+ ST4           "C'"   C    C         0.000     -4.781    0.081   -3.835
+ ST4           "O1'"  O    OC       -0.500     -5.994    0.385   -3.779
+ ST4           "O2'"  O    OC       -0.500     -4.215   -0.028   -4.944
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ST4      O4     n/a    "C4'"  START
+ ST4      "C4'"  O4     N4     .
+ ST4      CM4    "C4'"  HM41   .
+ ST4      HM43   CM4    .      .
+ ST4      HM42   CM4    .      .
+ ST4      HM41   CM4    .      .
+ ST4      N4     "C4'"  C4     .
+ ST4      HN4    N4     .      .
+ ST4      C4     N4     C5     .
+ ST4      C3     C4     C2     .
+ ST4      N3     C3     "C3'"  .
+ ST4      HN3    N3     .      .
+ ST4      "C3'"  N3     N1     .
+ ST4      "H3'"  "C3'"  .      .
+ ST4      N2     "C3'"  HN21   .
+ ST4      HN22   N2     .      .
+ ST4      HN21   N2     .      .
+ ST4      N1     "C3'"  HN11   .
+ ST4      HN12   N1     .      .
+ ST4      HN11   N1     .      .
+ ST4      C2     C3     H2     .
+ ST4      H2     C2     .      .
+ ST4      C5     C4     C6     .
+ ST4      H5     C5     .      .
+ ST4      C6     C5     C1     .
+ ST4      H6     C6     .      .
+ ST4      C1     C6     "C'"   .
+ ST4      "C'"   C1     "O2'"  .
+ ST4      "O1'"  "C'"   .      .
+ ST4      "O2'"  "C'"   .      END
+ ST4      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ST4      "O1'"  "C'"      deloc       1.250    0.020
+ ST4      "O2'"  "C'"      deloc       1.250    0.020
+ ST4      "C'"   C1        single      1.500    0.020
+ ST4      C1     C2        double      1.390    0.020
+ ST4      C1     C6        single      1.390    0.020
+ ST4      C2     C3        single      1.390    0.020
+ ST4      H2     C2        single      1.083    0.020
+ ST4      N3     C3        single      1.350    0.020
+ ST4      C3     C4        double      1.487    0.020
+ ST4      "C3'"  N3        single      1.450    0.020
+ ST4      HN3    N3        single      1.010    0.020
+ ST4      N1     "C3'"     single      1.450    0.020
+ ST4      N2     "C3'"     single      1.450    0.020
+ ST4      "H3'"  "C3'"     single      1.099    0.020
+ ST4      HN11   N1        single      1.010    0.020
+ ST4      HN12   N1        single      1.010    0.020
+ ST4      HN21   N2        single      1.010    0.020
+ ST4      HN22   N2        single      1.010    0.020
+ ST4      C4     N4        single      1.350    0.020
+ ST4      C5     C4        single      1.390    0.020
+ ST4      N4     "C4'"     single      1.330    0.020
+ ST4      HN4    N4        single      1.010    0.020
+ ST4      "C4'"  O4        double      1.220    0.020
+ ST4      CM4    "C4'"     single      1.500    0.020
+ ST4      HM41   CM4       single      1.059    0.020
+ ST4      HM42   CM4       single      1.059    0.020
+ ST4      HM43   CM4       single      1.059    0.020
+ ST4      C6     C5        double      1.390    0.020
+ ST4      H5     C5        single      1.083    0.020
+ ST4      H6     C6        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ST4      O4     "C4'"  CM4     123.000    3.000
+ ST4      O4     "C4'"  N4      123.000    3.000
+ ST4      CM4    "C4'"  N4      116.500    3.000
+ ST4      "C4'"  CM4    HM43    109.470    3.000
+ ST4      "C4'"  CM4    HM42    109.470    3.000
+ ST4      "C4'"  CM4    HM41    109.470    3.000
+ ST4      HM43   CM4    HM42    109.470    3.000
+ ST4      HM43   CM4    HM41    109.470    3.000
+ ST4      HM42   CM4    HM41    109.470    3.000
+ ST4      "C4'"  N4     HN4     120.000    3.000
+ ST4      "C4'"  N4     C4      120.000    3.000
+ ST4      HN4    N4     C4      120.000    3.000
+ ST4      N4     C4     C3      120.000    3.000
+ ST4      N4     C4     C5      120.000    3.000
+ ST4      C3     C4     C5      120.000    3.000
+ ST4      C4     C3     N3      120.000    3.000
+ ST4      C4     C3     C2      120.000    3.000
+ ST4      N3     C3     C2      120.000    3.000
+ ST4      C3     N3     HN3     120.000    3.000
+ ST4      C3     N3     "C3'"   120.000    3.000
+ ST4      HN3    N3     "C3'"   118.500    3.000
+ ST4      N3     "C3'"  "H3'"   108.550    3.000
+ ST4      N3     "C3'"  N2      109.500    3.000
+ ST4      N3     "C3'"  N1      109.500    3.000
+ ST4      "H3'"  "C3'"  N2      109.470    3.000
+ ST4      "H3'"  "C3'"  N1      109.470    3.000
+ ST4      N2     "C3'"  N1      109.470    3.000
+ ST4      "C3'"  N2     HN22    120.000    3.000
+ ST4      "C3'"  N2     HN21    120.000    3.000
+ ST4      HN22   N2     HN21    120.000    3.000
+ ST4      "C3'"  N1     HN12    120.000    3.000
+ ST4      "C3'"  N1     HN11    120.000    3.000
+ ST4      HN12   N1     HN11    120.000    3.000
+ ST4      C3     C2     H2      120.000    3.000
+ ST4      C3     C2     C1      120.000    3.000
+ ST4      H2     C2     C1      120.000    3.000
+ ST4      C4     C5     H5      120.000    3.000
+ ST4      C4     C5     C6      120.000    3.000
+ ST4      H5     C5     C6      120.000    3.000
+ ST4      C5     C6     H6      120.000    3.000
+ ST4      C5     C6     C1      120.000    3.000
+ ST4      H6     C6     C1      120.000    3.000
+ ST4      C6     C1     "C'"    120.000    3.000
+ ST4      C6     C1     C2      120.000    3.000
+ ST4      "C'"   C1     C2      120.000    3.000
+ ST4      C1     "C'"   "O1'"   120.000    3.000
+ ST4      C1     "C'"   "O2'"   120.000    3.000
+ ST4      "O1'"  "C'"   "O2'"   123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ST4      var_1    O4     "C4'"  CM4    HM41      -0.061   20.000   1
+ ST4      CONST_1  O4     "C4'"  N4     C4         0.000    0.000   0
+ ST4      var_2    "C4'"  N4     C4     C5        29.943   20.000   1
+ ST4      CONST_2  N4     C4     C3     C2       180.000    0.000   0
+ ST4      var_3    C4     C3     N3     "C3'"    179.477   20.000   1
+ ST4      var_4    C3     N3     "C3'"  N1       149.991   20.000   3
+ ST4      var_5    N3     "C3'"  N2     HN21     -60.052   20.000   1
+ ST4      var_6    N3     "C3'"  N1     HN11     179.976   20.000   1
+ ST4      CONST_3  C4     C3     C2     C1         0.000    0.000   0
+ ST4      CONST_4  N4     C4     C5     C6       180.000    0.000   0
+ ST4      CONST_5  C4     C5     C6     C1         0.000    0.000   0
+ ST4      CONST_6  C5     C6     C1     "C'"     180.000    0.000   0
+ ST4      CONST_7  C6     C1     C2     C3         0.000    0.000   0
+ ST4      var_7    C6     C1     "C'"   "O2'"     -0.014   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ST4      chir_01  "C3'"  N3     N1     N2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ST4      plan-1    "C'"      0.020
+ ST4      plan-1    "O1'"     0.020
+ ST4      plan-1    "O2'"     0.020
+ ST4      plan-1    C1        0.020
+ ST4      plan-2    C1        0.020
+ ST4      plan-2    "C'"      0.020
+ ST4      plan-2    C2        0.020
+ ST4      plan-2    C6        0.020
+ ST4      plan-2    C3        0.020
+ ST4      plan-2    C4        0.020
+ ST4      plan-2    C5        0.020
+ ST4      plan-2    H2        0.020
+ ST4      plan-2    N3        0.020
+ ST4      plan-2    N4        0.020
+ ST4      plan-2    H5        0.020
+ ST4      plan-2    H6        0.020
+ ST4      plan-2    HN3       0.020
+ ST4      plan-2    HN4       0.020
+ ST4      plan-3    N3        0.020
+ ST4      plan-3    C3        0.020
+ ST4      plan-3    "C3'"     0.020
+ ST4      plan-3    HN3       0.020
+ ST4      plan-4    N1        0.020
+ ST4      plan-4    "C3'"     0.020
+ ST4      plan-4    HN11      0.020
+ ST4      plan-4    HN12      0.020
+ ST4      plan-5    N2        0.020
+ ST4      plan-5    "C3'"     0.020
+ ST4      plan-5    HN21      0.020
+ ST4      plan-5    HN22      0.020
+ ST4      plan-6    N4        0.020
+ ST4      plan-6    C4        0.020
+ ST4      plan-6    "C4'"     0.020
+ ST4      plan-6    HN4       0.020
+ ST4      plan-7    "C4'"     0.020
+ ST4      plan-7    N4        0.020
+ ST4      plan-7    O4        0.020
+ ST4      plan-7    CM4       0.020
+ ST4      plan-7    HN4       0.020
+# ------------------------------------------------------

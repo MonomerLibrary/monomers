@@ -1,0 +1,230 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AZY      AZY '3-AZIDO-L-TYROSINE                  ' peptide            25  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AZY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AZY           N      N    NH2       0.000      0.000    0.000    0.000
+ AZY           HN1    H    H         0.000      1.011   -0.044    0.046
+ AZY           HN2    H    H         0.000     -0.510   -0.749   -0.454
+ AZY           CA     C    CH1       0.000     -0.720    1.138    0.585
+ AZY           HA     H    H         0.000     -1.223    1.702   -0.212
+ AZY           CB     C    CH2       0.000     -1.761    0.624    1.583
+ AZY           HB1    H    H         0.000     -2.234    1.472    2.084
+ AZY           HB2    H    H         0.000     -1.272   -0.009    2.325
+ AZY           CG     C    CR6       0.000     -2.807   -0.174    0.849
+ AZY           CD1    C    CR16      0.000     -2.627   -1.542    0.681
+ AZY           HD1    H    H         0.000     -1.736   -2.012    1.080
+ AZY           CE1    C    CR16      0.000     -3.560   -2.316    0.014
+ AZY           HE1    H    H         0.000     -3.397   -3.380   -0.103
+ AZY           CZ     C    CR6       0.000     -4.703   -1.731   -0.503
+ AZY           OH     O    OH1       0.000     -5.624   -2.479   -1.158
+ AZY           HOH    H    H         0.000     -6.277   -2.809   -0.526
+ AZY           CE2    C    CR6       0.000     -4.898   -0.286   -0.334
+ AZY           CD2    C    CR16      0.000     -3.908    0.458    0.358
+ AZY           HD2    H    H         0.000     -4.027    1.526    0.496
+ AZY           N1     N    N         0.000     -5.976    0.312   -0.817
+ AZY           N2     N    N         1.000     -6.113    1.419   -0.681
+ AZY           N3     N    NS       -1.000     -6.251    2.527   -0.545
+ AZY           C      C    C         0.000      0.257    2.038    1.298
+ AZY           OXT    O    OC       -0.500     -0.050    3.226    1.543
+ AZY           O      O    OC       -0.500      1.375    1.596    1.646
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AZY      N      n/a    CA     START
+ AZY      HN1    N      .      .
+ AZY      HN2    N      .      .
+ AZY      CA     N      C      .
+ AZY      HA     CA     .      .
+ AZY      CB     CA     CG     .
+ AZY      HB1    CB     .      .
+ AZY      HB2    CB     .      .
+ AZY      CG     CB     CD1    .
+ AZY      CD1    CG     CE1    .
+ AZY      HD1    CD1    .      .
+ AZY      CE1    CD1    CZ     .
+ AZY      HE1    CE1    .      .
+ AZY      CZ     CE1    CE2    .
+ AZY      OH     CZ     HOH    .
+ AZY      HOH    OH     .      .
+ AZY      CE2    CZ     N1     .
+ AZY      CD2    CE2    HD2    .
+ AZY      HD2    CD2    .      .
+ AZY      N1     CE2    N2     .
+ AZY      N2     N1     N3     .
+ AZY      N3     N2     .      .
+ AZY      C      CA     .      END
+ AZY      OXT    C      .      .
+ AZY      O      C      .      .
+ AZY      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AZY      OXT    C         deloc       1.250    0.020
+ AZY      O      C         deloc       1.250    0.020
+ AZY      C      CA        single      1.500    0.020
+ AZY      CA     N         single      1.450    0.020
+ AZY      CB     CA        single      1.524    0.020
+ AZY      HA     CA        single      1.099    0.020
+ AZY      CG     CB        single      1.511    0.020
+ AZY      HB1    CB        single      1.092    0.020
+ AZY      HB2    CB        single      1.092    0.020
+ AZY      CD1    CG        single      1.390    0.020
+ AZY      CG     CD2       double      1.390    0.020
+ AZY      CD2    CE2       single      1.390    0.020
+ AZY      HD2    CD2       single      1.083    0.020
+ AZY      CE1    CD1       double      1.390    0.020
+ AZY      HD1    CD1       single      1.083    0.020
+ AZY      CZ     CE1       single      1.390    0.020
+ AZY      HE1    CE1       single      1.083    0.020
+ AZY      OH     CZ        single      1.362    0.020
+ AZY      CE2    CZ        double      1.487    0.020
+ AZY      HOH    OH        single      0.967    0.020
+ AZY      N1     CE2       single      1.400    0.020
+ AZY      N2     N1        double      1.240    0.020
+ AZY      N3     N2        double      1.295    0.020
+ AZY      HN1    N         single      1.010    0.020
+ AZY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AZY      HN1    N      HN2     120.000    3.000
+ AZY      HN1    N      CA      120.000    3.000
+ AZY      HN2    N      CA      120.000    3.000
+ AZY      N      CA     HA      109.470    3.000
+ AZY      N      CA     CB      109.470    3.000
+ AZY      N      CA     C       109.470    3.000
+ AZY      HA     CA     CB      108.340    3.000
+ AZY      HA     CA     C       108.810    3.000
+ AZY      CB     CA     C       109.470    3.000
+ AZY      CA     CB     HB1     109.470    3.000
+ AZY      CA     CB     HB2     109.470    3.000
+ AZY      CA     CB     CG      109.470    3.000
+ AZY      HB1    CB     HB2     107.900    3.000
+ AZY      HB1    CB     CG      109.470    3.000
+ AZY      HB2    CB     CG      109.470    3.000
+ AZY      CB     CG     CD1     120.000    3.000
+ AZY      CB     CG     CD2     120.000    3.000
+ AZY      CD1    CG     CD2     120.000    3.000
+ AZY      CG     CD1    HD1     120.000    3.000
+ AZY      CG     CD1    CE1     120.000    3.000
+ AZY      HD1    CD1    CE1     120.000    3.000
+ AZY      CD1    CE1    HE1     120.000    3.000
+ AZY      CD1    CE1    CZ      120.000    3.000
+ AZY      HE1    CE1    CZ      120.000    3.000
+ AZY      CE1    CZ     OH      120.000    3.000
+ AZY      CE1    CZ     CE2     120.000    3.000
+ AZY      OH     CZ     CE2     120.000    3.000
+ AZY      CZ     OH     HOH     109.470    3.000
+ AZY      CZ     CE2    CD2     120.000    3.000
+ AZY      CZ     CE2    N1      120.000    3.000
+ AZY      CD2    CE2    N1      120.000    3.000
+ AZY      CE2    CD2    HD2     120.000    3.000
+ AZY      CE2    CD2    CG      120.000    3.000
+ AZY      HD2    CD2    CG      120.000    3.000
+ AZY      CE2    N1     N2      120.000    3.000
+ AZY      N1     N2     N3      120.000    3.000
+ AZY      CA     C      OXT     118.500    3.000
+ AZY      CA     C      O       118.500    3.000
+ AZY      OXT    C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AZY      var_1    HN2    N      CA     C        175.000   20.000   1
+ AZY      var_2    N      CA     CB     CG       -65.008   20.000   3
+ AZY      var_3    CA     CB     CG     CD1       90.000   20.000   2
+ AZY      CONST_1  CB     CG     CD2    CE2      180.000    0.000   0
+ AZY      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
+ AZY      CONST_3  CG     CD1    CE1    CZ         0.000    0.000   0
+ AZY      CONST_4  CD1    CE1    CZ     CE2        0.000    0.000   0
+ AZY      var_4    CE1    CZ     OH     HOH       89.993   20.000   1
+ AZY      CONST_5  CE1    CZ     CE2    N1       180.000    0.000   0
+ AZY      CONST_6  CZ     CE2    CD2    CG         0.000    0.000   0
+ AZY      var_5    CZ     CE2    N1     N2       179.992   20.000   1
+ AZY      CONST_7  CE2    N1     N2     N3      -175.781    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AZY      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AZY      plan-1    C         0.020
+ AZY      plan-1    OXT       0.020
+ AZY      plan-1    O         0.020
+ AZY      plan-1    CA        0.020
+ AZY      plan-2    N         0.020
+ AZY      plan-2    CA        0.020
+ AZY      plan-2    HN1       0.020
+ AZY      plan-2    HN2       0.020
+ AZY      plan-3    CG        0.020
+ AZY      plan-3    CB        0.020
+ AZY      plan-3    CD2       0.020
+ AZY      plan-3    CD1       0.020
+ AZY      plan-3    CE1       0.020
+ AZY      plan-3    CZ        0.020
+ AZY      plan-3    CE2       0.020
+ AZY      plan-3    HD2       0.020
+ AZY      plan-3    HD1       0.020
+ AZY      plan-3    HE1       0.020
+ AZY      plan-3    OH        0.020
+ AZY      plan-3    N1        0.020
+ AZY      plan-4    N1        0.020
+ AZY      plan-4    CE2       0.020
+ AZY      plan-4    N2        0.020
+ AZY      plan-4    N3        0.020
+# ------------------------------------------------------

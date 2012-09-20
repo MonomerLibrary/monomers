@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NTC      NTC '2-HYDROXY-2-NITROMETHYL SUCCINIC ACI' non-polymer        18  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NTC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NTC           O6     O    OC       -0.500      0.000    0.000    0.000
+ NTC           C6     C    C         0.000     -1.013   -0.099    0.727
+ NTC           O5     O    OC       -0.500     -1.090   -1.019    1.571
+ NTC           C3     C    CT        0.000     -2.142    0.889    0.584
+ NTC           O7     O    OH1       0.000     -3.176    0.568    1.515
+ NTC           HO7    H    H         0.000     -3.899    1.203    1.424
+ NTC           C2     C    CH2       0.000     -2.699    0.826   -0.839
+ NTC           H21    H    H         0.000     -1.908    1.073   -1.550
+ NTC           H22    H    H         0.000     -3.516    1.544   -0.941
+ NTC           N1     N    N         1.000     -3.197   -0.525   -1.109
+ NTC           O2     O    O         0.000     -2.930   -1.074   -2.163
+ NTC           O1     O    O        -1.000     -3.878   -1.100   -0.279
+ NTC           C4     C    CH2       0.000     -1.622    2.300    0.866
+ NTC           H41    H    H         0.000     -2.456    3.005    0.849
+ NTC           H42    H    H         0.000     -0.895    2.579    0.100
+ NTC           C5     C    C         0.000     -0.962    2.332    2.221
+ NTC           O3     O    OC       -0.500     -0.912    1.293    2.916
+ NTC           O4     O    OC       -0.500     -0.465    3.397    2.650
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NTC      O6     n/a    C6     START
+ NTC      C6     O6     C3     .
+ NTC      O5     C6     .      .
+ NTC      C3     C6     C4     .
+ NTC      O7     C3     HO7    .
+ NTC      HO7    O7     .      .
+ NTC      C2     C3     N1     .
+ NTC      H21    C2     .      .
+ NTC      H22    C2     .      .
+ NTC      N1     C2     O1     .
+ NTC      O2     N1     .      .
+ NTC      O1     N1     .      .
+ NTC      C4     C3     C5     .
+ NTC      H41    C4     .      .
+ NTC      H42    C4     .      .
+ NTC      C5     C4     O4     .
+ NTC      O3     C5     .      .
+ NTC      O4     C5     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NTC      O1     N1        single      1.400    0.020
+ NTC      O2     N1        double      1.220    0.020
+ NTC      N1     C2        single      1.455    0.020
+ NTC      C2     C3        single      1.524    0.020
+ NTC      H21    C2        single      1.092    0.020
+ NTC      H22    C2        single      1.092    0.020
+ NTC      O7     C3        single      1.432    0.020
+ NTC      C4     C3        single      1.524    0.020
+ NTC      C3     C6        single      1.507    0.020
+ NTC      HO7    O7        single      0.967    0.020
+ NTC      C5     C4        single      1.510    0.020
+ NTC      H41    C4        single      1.092    0.020
+ NTC      H42    C4        single      1.092    0.020
+ NTC      O3     C5        deloc       1.250    0.020
+ NTC      O4     C5        deloc       1.250    0.020
+ NTC      O5     C6        deloc       1.250    0.020
+ NTC      C6     O6        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NTC      O6     C6     O5      123.000    3.000
+ NTC      O6     C6     C3      118.500    3.000
+ NTC      O5     C6     C3      118.500    3.000
+ NTC      C6     C3     C2      109.470    3.000
+ NTC      C6     C3     O7      109.470    3.000
+ NTC      C6     C3     C4      109.470    3.000
+ NTC      C2     C3     O7      109.470    3.000
+ NTC      C2     C3     C4      111.000    3.000
+ NTC      O7     C3     C4      109.470    3.000
+ NTC      C3     C2     H21     109.470    3.000
+ NTC      C3     C2     H22     109.470    3.000
+ NTC      C3     C2     N1      109.500    3.000
+ NTC      H21    C2     H22     107.900    3.000
+ NTC      H21    C2     N1      109.470    3.000
+ NTC      H22    C2     N1      109.470    3.000
+ NTC      C2     N1     O2      120.000    3.000
+ NTC      C2     N1     O1      120.000    3.000
+ NTC      O2     N1     O1      120.000    3.000
+ NTC      C3     O7     HO7     109.470    3.000
+ NTC      C3     C4     H41     109.470    3.000
+ NTC      C3     C4     H42     109.470    3.000
+ NTC      C3     C4     C5      109.470    3.000
+ NTC      H41    C4     H42     107.900    3.000
+ NTC      H41    C4     C5      109.470    3.000
+ NTC      H42    C4     C5      109.470    3.000
+ NTC      C4     C5     O3      118.500    3.000
+ NTC      C4     C5     O4      118.500    3.000
+ NTC      O3     C5     O4      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NTC      var_1    O6     C6     C3     C4       -60.051   20.000   1
+ NTC      var_2    C6     C3     C2     N1        60.042   20.000   1
+ NTC      var_3    C3     C2     N1     O1        44.977   20.000   1
+ NTC      var_4    C6     C3     O7     HO7      179.922   20.000   1
+ NTC      var_5    C6     C3     C4     C5       -55.000   20.000   1
+ NTC      var_6    C3     C4     C5     O4      -180.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ NTC      chir_01  C3     C2     O7     C4        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NTC      plan-1    N1        0.020
+ NTC      plan-1    O1        0.020
+ NTC      plan-1    O2        0.020
+ NTC      plan-1    C2        0.020
+ NTC      plan-2    C5        0.020
+ NTC      plan-2    C4        0.020
+ NTC      plan-2    O3        0.020
+ NTC      plan-2    O4        0.020
+ NTC      plan-3    C6        0.020
+ NTC      plan-3    C3        0.020
+ NTC      plan-3    O5        0.020
+ NTC      plan-3    O6        0.020
+# ------------------------------------------------------

@@ -1,0 +1,125 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+UVW      UVW 'ACETYLPHOSPHATE                     ' non-polymer        11   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_UVW
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ UVW           O3P    O    OP       -0.666      0.000    0.000    0.000
+ UVW           P      P    P         0.000     -1.347   -0.589   -0.356
+ UVW           O1P    O    OP       -0.666     -1.327   -2.082   -0.111
+ UVW           O2P    O    OP       -0.666     -1.646   -0.322   -1.815
+ UVW           O2     O    O2       -0.500     -2.482    0.080    0.648
+ UVW           C1     C    C         0.000     -2.428   -0.021    1.893
+ UVW           O1     O    O        -0.500     -1.487   -0.648    2.430
+ UVW           C1M    C    CH3       0.000     -3.495    0.613    2.749
+ UVW           H1M3   H    H         0.000     -3.511    1.659    2.579
+ UVW           H1M2   H    H         0.000     -4.440    0.202    2.501
+ UVW           H1M1   H    H         0.000     -3.288    0.426    3.771
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ UVW      O3P    n/a    P      START
+ UVW      P      O3P    O2     .
+ UVW      O1P    P      .      .
+ UVW      O2P    P      .      .
+ UVW      O2     P      C1     .
+ UVW      C1     O2     C1M    .
+ UVW      O1     C1     .      .
+ UVW      C1M    C1     H1M1   .
+ UVW      H1M3   C1M    .      .
+ UVW      H1M2   C1M    .      .
+ UVW      H1M1   C1M    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ UVW      O1     C1        deloc       1.220    0.020
+ UVW      C1M    C1        single      1.500    0.020
+ UVW      C1     O2        deloc       1.454    0.020
+ UVW      H1M1   C1M       single      1.059    0.020
+ UVW      H1M2   C1M       single      1.059    0.020
+ UVW      H1M3   C1M       single      1.059    0.020
+ UVW      O2     P         single      1.610    0.020
+ UVW      O1P    P         deloc       1.510    0.020
+ UVW      O2P    P         deloc       1.510    0.020
+ UVW      P      O3P       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ UVW      O3P    P      O1P     119.900    3.000
+ UVW      O3P    P      O2P     119.900    3.000
+ UVW      O3P    P      O2      108.200    3.000
+ UVW      O1P    P      O2P     119.900    3.000
+ UVW      O1P    P      O2      108.200    3.000
+ UVW      O2P    P      O2      108.200    3.000
+ UVW      P      O2     C1      120.000    3.000
+ UVW      O2     C1     O1      119.000    3.000
+ UVW      O2     C1     C1M     120.000    3.000
+ UVW      O1     C1     C1M     123.000    3.000
+ UVW      C1     C1M    H1M3    109.470    3.000
+ UVW      C1     C1M    H1M2    109.470    3.000
+ UVW      C1     C1M    H1M1    109.470    3.000
+ UVW      H1M3   C1M    H1M2    109.470    3.000
+ UVW      H1M3   C1M    H1M1    109.470    3.000
+ UVW      H1M2   C1M    H1M1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ UVW      var_1    O3P    P      O2     C1       -59.205   20.000   1
+ UVW      var_2    P      O2     C1     C1M      179.969   20.000   1
+ UVW      var_3    O2     C1     C1M    H1M1     179.992   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ UVW      plan-1    C1        0.020
+ UVW      plan-1    O1        0.000
+ UVW      plan-1    C1M       0.000
+ UVW      plan-1    O2        0.000
+# ------------------------------------------------------

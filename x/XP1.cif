@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XP1      XP1 '4-(DIMETHYLAMINO)BENZOIC ACID       ' non-polymer        22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XP1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XP1           OXT    O    OC       -0.500      0.000    0.000    0.000
+ XP1           CAC    C    C         0.000     -0.268   -0.742   -0.971
+ XP1           OAH    O    OC       -0.500     -0.116   -1.981   -1.044
+ XP1           CAD    C    CR6       0.000     -1.171   -0.023   -1.967
+ XP1           CAI    C    CR16      0.000     -1.291    1.379   -1.905
+ XP1           HAI    H    H         0.000     -0.736    1.937   -1.162
+ XP1           CAJ    C    CR16      0.000     -2.130    2.050   -2.805
+ XP1           HAJ    H    H         0.000     -2.233    3.126   -2.744
+ XP1           CAA    C    CR16      0.000     -1.875   -0.765   -2.927
+ XP1           HAA    H    H         0.000     -1.793   -1.844   -2.970
+ XP1           CAB    C    CR16      0.000     -2.689   -0.066   -3.830
+ XP1           HAB    H    H         0.000     -3.225   -0.621   -4.590
+ XP1           CAE    C    CR6       0.000     -2.832    1.341   -3.778
+ XP1           NAF    N    N         0.000     -3.653    1.979   -4.672
+ XP1           CAK    C    CH3       0.000     -3.868    3.450   -4.698
+ XP1           HAK3   H    H         0.000     -3.770    3.846   -3.718
+ XP1           HAK2   H    H         0.000     -3.149    3.908   -5.331
+ XP1           HAK1   H    H         0.000     -4.840    3.666   -5.064
+ XP1           CAG    C    CH3       0.000     -4.382    1.160   -5.657
+ XP1           HAG3   H    H         0.000     -5.085    1.763   -6.173
+ XP1           HAG2   H    H         0.000     -3.698    0.746   -6.354
+ XP1           HAG1   H    H         0.000     -4.894    0.375   -5.160
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XP1      OXT    n/a    CAC    START
+ XP1      CAC    OXT    CAD    .
+ XP1      OAH    CAC    .      .
+ XP1      CAD    CAC    CAA    .
+ XP1      CAI    CAD    CAJ    .
+ XP1      HAI    CAI    .      .
+ XP1      CAJ    CAI    HAJ    .
+ XP1      HAJ    CAJ    .      .
+ XP1      CAA    CAD    CAB    .
+ XP1      HAA    CAA    .      .
+ XP1      CAB    CAA    CAE    .
+ XP1      HAB    CAB    .      .
+ XP1      CAE    CAB    NAF    .
+ XP1      NAF    CAE    CAG    .
+ XP1      CAK    NAF    HAK1   .
+ XP1      HAK3   CAK    .      .
+ XP1      HAK2   CAK    .      .
+ XP1      HAK1   CAK    .      .
+ XP1      CAG    NAF    HAG1   .
+ XP1      HAG3   CAG    .      .
+ XP1      HAG2   CAG    .      .
+ XP1      HAG1   CAG    .      END
+ XP1      CAE    CAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XP1      CAG    NAF       single      1.455    0.020
+ XP1      CAK    NAF       single      1.455    0.020
+ XP1      NAF    CAE       single      1.400    0.020
+ XP1      CAE    CAJ       single      1.390    0.020
+ XP1      CAE    CAB       double      1.390    0.020
+ XP1      CAJ    CAI       double      1.390    0.020
+ XP1      CAI    CAD       single      1.390    0.020
+ XP1      CAD    CAC       single      1.500    0.020
+ XP1      CAA    CAD       double      1.390    0.020
+ XP1      OAH    CAC       deloc       1.250    0.020
+ XP1      CAB    CAA       single      1.390    0.020
+ XP1      CAC    OXT       deloc       1.250    0.020
+ XP1      HAG1   CAG       single      1.059    0.020
+ XP1      HAG2   CAG       single      1.059    0.020
+ XP1      HAG3   CAG       single      1.059    0.020
+ XP1      HAK1   CAK       single      1.059    0.020
+ XP1      HAK2   CAK       single      1.059    0.020
+ XP1      HAK3   CAK       single      1.059    0.020
+ XP1      HAJ    CAJ       single      1.083    0.020
+ XP1      HAB    CAB       single      1.083    0.020
+ XP1      HAI    CAI       single      1.083    0.020
+ XP1      HAA    CAA       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XP1      OXT    CAC    OAH     123.000    3.000
+ XP1      OXT    CAC    CAD     120.000    3.000
+ XP1      OAH    CAC    CAD     120.000    3.000
+ XP1      CAC    CAD    CAI     120.000    3.000
+ XP1      CAC    CAD    CAA     120.000    3.000
+ XP1      CAI    CAD    CAA     120.000    3.000
+ XP1      CAD    CAI    HAI     120.000    3.000
+ XP1      CAD    CAI    CAJ     120.000    3.000
+ XP1      HAI    CAI    CAJ     120.000    3.000
+ XP1      CAI    CAJ    HAJ     120.000    3.000
+ XP1      CAI    CAJ    CAE     120.000    3.000
+ XP1      HAJ    CAJ    CAE     120.000    3.000
+ XP1      CAD    CAA    HAA     120.000    3.000
+ XP1      CAD    CAA    CAB     120.000    3.000
+ XP1      HAA    CAA    CAB     120.000    3.000
+ XP1      CAA    CAB    HAB     120.000    3.000
+ XP1      CAA    CAB    CAE     120.000    3.000
+ XP1      HAB    CAB    CAE     120.000    3.000
+ XP1      CAB    CAE    NAF     120.000    3.000
+ XP1      CAB    CAE    CAJ     120.000    3.000
+ XP1      NAF    CAE    CAJ     120.000    3.000
+ XP1      CAE    NAF    CAK     120.000    3.000
+ XP1      CAE    NAF    CAG     120.000    3.000
+ XP1      CAK    NAF    CAG     120.000    3.000
+ XP1      NAF    CAK    HAK3    109.470    3.000
+ XP1      NAF    CAK    HAK2    109.470    3.000
+ XP1      NAF    CAK    HAK1    109.470    3.000
+ XP1      HAK3   CAK    HAK2    109.470    3.000
+ XP1      HAK3   CAK    HAK1    109.470    3.000
+ XP1      HAK2   CAK    HAK1    109.470    3.000
+ XP1      NAF    CAG    HAG3    109.470    3.000
+ XP1      NAF    CAG    HAG2    109.470    3.000
+ XP1      NAF    CAG    HAG1    109.470    3.000
+ XP1      HAG3   CAG    HAG2    109.470    3.000
+ XP1      HAG3   CAG    HAG1    109.470    3.000
+ XP1      HAG2   CAG    HAG1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XP1      var_1    OXT    CAC    CAD    CAA     -162.975   20.000   1
+ XP1      CONST_1  CAC    CAD    CAI    CAJ      180.000    0.000   0
+ XP1      CONST_2  CAD    CAI    CAJ    CAE        0.000    0.000   0
+ XP1      CONST_3  CAC    CAD    CAA    CAB      180.000    0.000   0
+ XP1      CONST_4  CAD    CAA    CAB    CAE        0.000    0.000   0
+ XP1      CONST_5  CAA    CAB    CAE    NAF      180.000    0.000   0
+ XP1      CONST_6  CAB    CAE    CAJ    CAI        0.000    0.000   0
+ XP1      var_2    CAB    CAE    NAF    CAG        0.862   20.000   1
+ XP1      var_3    CAE    NAF    CAK    HAK1    -150.388   20.000   1
+ XP1      var_4    CAE    NAF    CAG    HAG1      51.111   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ XP1      plan-1    NAF       0.020
+ XP1      plan-1    CAG       0.020
+ XP1      plan-1    CAK       0.020
+ XP1      plan-1    CAE       0.020
+ XP1      plan-2    CAE       0.020
+ XP1      plan-2    NAF       0.020
+ XP1      plan-2    CAJ       0.020
+ XP1      plan-2    CAB       0.020
+ XP1      plan-2    CAI       0.020
+ XP1      plan-2    CAD       0.020
+ XP1      plan-2    CAA       0.020
+ XP1      plan-2    HAJ       0.020
+ XP1      plan-2    HAI       0.020
+ XP1      plan-2    CAC       0.020
+ XP1      plan-2    HAA       0.020
+ XP1      plan-2    HAB       0.020
+ XP1      plan-3    CAC       0.020
+ XP1      plan-3    CAD       0.020
+ XP1      plan-3    OAH       0.020
+ XP1      plan-3    OXT       0.020
+# ------------------------------------------------------

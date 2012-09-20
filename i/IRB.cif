@@ -1,0 +1,299 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IRB      IRB '.                                   ' non-polymer        34  25 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IRB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IRB           BRAE   BR   BR        0.000      0.000    0.000    0.000
+ IRB           CAQ    C    CR6       0.000     -1.755    0.697   -0.091
+ IRB           CAG    C    CR16      0.000     -1.951    2.057   -0.231
+ IRB           HAG    H    H         0.000     -1.095    2.718   -0.287
+ IRB           CAY    C    CR56      0.000     -2.848   -0.162   -0.019
+ IRB           NAM    N    NR15      0.000     -2.933   -1.541    0.120
+ IRB           HNAM   H    H         0.000     -2.112   -2.175    0.194
+ IRB           CAW    C    CR56      0.000     -4.141    0.375   -0.089
+ IRB           CAI    C    CR16      0.000     -4.327    1.747   -0.229
+ IRB           HAI    H    H         0.000     -5.327    2.158   -0.283
+ IRB           CAF    C    CR16      0.000     -3.230    2.583   -0.300
+ IRB           HAF    H    H         0.000     -3.371    3.651   -0.409
+ IRB           CAU    C    CR5       0.000     -5.073   -0.769    0.014
+ IRB           CAR    C    CR5       0.000     -4.213   -1.952    0.145
+ IRB           OAB    O    O         0.000     -4.593   -3.104    0.256
+ IRB           CAS    C    CR5       0.000     -6.459   -0.732   -0.007
+ IRB           CAT    C    CR5       0.000     -7.304    0.477    0.102
+ IRB           NAL    N    N         0.000     -6.908    1.715    0.234
+ IRB           OAC    O    OH1       0.000     -7.861    2.757    0.324
+ IRB           HOAC   H    H         0.000     -7.408    3.608    0.419
+ IRB           CAX    C    CR56      0.000     -8.699   -0.022    0.026
+ IRB           CAV    C    CR56      0.000     -8.624   -1.415   -0.114
+ IRB           NAN    N    NR15      0.000     -7.297   -1.809   -0.130
+ IRB           HNAN   H    H         0.000     -6.978   -2.794   -0.223
+ IRB           CAJ    C    CR16      0.000     -9.802   -2.156   -0.209
+ IRB           HAJ    H    H         0.000     -9.754   -3.233   -0.316
+ IRB           CAK    C    CR16      0.000     -9.929    0.616    0.069
+ IRB           HAK    H    H         0.000     -9.981    1.692    0.177
+ IRB           CAP    C    CR6       0.000    -11.101   -0.136   -0.027
+ IRB           CAH    C    CR16      0.000    -11.024   -1.527   -0.167
+ IRB           HAH    H    H         0.000    -11.933   -2.111   -0.243
+ IRB           CAO    C    C         0.000    -12.415    0.532    0.017
+ IRB           OAA    O    OC       -0.500    -12.482    1.775    0.141
+ IRB           OAD    O    OC       -0.500    -13.464   -0.144   -0.072
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IRB      BRAE   n/a    CAQ    START
+ IRB      CAQ    BRAE   CAY    .
+ IRB      CAG    CAQ    HAG    .
+ IRB      HAG    CAG    .      .
+ IRB      CAY    CAQ    CAW    .
+ IRB      NAM    CAY    HNAM   .
+ IRB      HNAM   NAM    .      .
+ IRB      CAW    CAY    CAU    .
+ IRB      CAI    CAW    CAF    .
+ IRB      HAI    CAI    .      .
+ IRB      CAF    CAI    HAF    .
+ IRB      HAF    CAF    .      .
+ IRB      CAU    CAW    CAS    .
+ IRB      CAR    CAU    OAB    .
+ IRB      OAB    CAR    .      .
+ IRB      CAS    CAU    CAT    .
+ IRB      CAT    CAS    CAX    .
+ IRB      NAL    CAT    OAC    .
+ IRB      OAC    NAL    HOAC   .
+ IRB      HOAC   OAC    .      .
+ IRB      CAX    CAT    CAK    .
+ IRB      CAV    CAX    CAJ    .
+ IRB      NAN    CAV    HNAN   .
+ IRB      HNAN   NAN    .      .
+ IRB      CAJ    CAV    HAJ    .
+ IRB      HAJ    CAJ    .      .
+ IRB      CAK    CAX    CAP    .
+ IRB      HAK    CAK    .      .
+ IRB      CAP    CAK    CAO    .
+ IRB      CAH    CAP    HAH    .
+ IRB      HAH    CAH    .      .
+ IRB      CAO    CAP    OAD    .
+ IRB      OAA    CAO    .      .
+ IRB      OAD    CAO    .      END
+ IRB      CAF    CAG    .    ADD
+ IRB      CAH    CAJ    .    ADD
+ IRB      NAM    CAR    .    ADD
+ IRB      NAN    CAS    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IRB      OAA    CAO       deloc       1.250    0.020
+ IRB      OAB    CAR       double      1.285    0.020
+ IRB      OAC    NAL       single      1.392    0.020
+ IRB      OAD    CAO       deloc       1.250    0.020
+ IRB      CAQ    BRAE      single      1.890    0.020
+ IRB      CAF    CAG       double      1.390    0.020
+ IRB      CAF    CAI       single      1.390    0.020
+ IRB      CAG    CAQ       single      1.390    0.020
+ IRB      CAH    CAJ       double      1.390    0.020
+ IRB      CAH    CAP       single      1.390    0.020
+ IRB      CAI    CAW       double      1.390    0.020
+ IRB      CAJ    CAV       single      1.390    0.020
+ IRB      CAP    CAK       double      1.390    0.020
+ IRB      CAK    CAX       single      1.390    0.020
+ IRB      NAL    CAT       double      1.365    0.020
+ IRB      NAM    CAR       single      1.340    0.020
+ IRB      NAM    CAY       single      1.340    0.020
+ IRB      NAN    CAS       single      1.340    0.020
+ IRB      NAN    CAV       single      1.340    0.020
+ IRB      CAO    CAP       single      1.500    0.020
+ IRB      CAY    CAQ       double      1.490    0.020
+ IRB      CAR    CAU       single      1.490    0.020
+ IRB      CAT    CAS       single      1.490    0.020
+ IRB      CAS    CAU       double      1.490    0.020
+ IRB      CAX    CAT       single      1.490    0.020
+ IRB      CAU    CAW       single      1.490    0.020
+ IRB      CAV    CAX       double      1.490    0.020
+ IRB      CAW    CAY       single      1.490    0.020
+ IRB      HOAC   OAC       single      0.967    0.020
+ IRB      HAF    CAF       single      1.083    0.020
+ IRB      HAG    CAG       single      1.083    0.020
+ IRB      HAH    CAH       single      1.083    0.020
+ IRB      HAI    CAI       single      1.083    0.020
+ IRB      HAJ    CAJ       single      1.083    0.020
+ IRB      HAK    CAK       single      1.083    0.020
+ IRB      HNAM   NAM       single      1.040    0.020
+ IRB      HNAN   NAN       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IRB      BRAE   CAQ    CAG     120.000    3.000
+ IRB      BRAE   CAQ    CAY     120.000    3.000
+ IRB      CAG    CAQ    CAY     120.000    3.000
+ IRB      CAQ    CAG    HAG     120.000    3.000
+ IRB      CAQ    CAG    CAF     120.000    3.000
+ IRB      HAG    CAG    CAF     120.000    3.000
+ IRB      CAQ    CAY    NAM     132.000    3.000
+ IRB      CAQ    CAY    CAW     120.000    3.000
+ IRB      NAM    CAY    CAW     108.000    3.000
+ IRB      CAY    NAM    HNAM    126.000    3.000
+ IRB      CAY    NAM    CAR     108.000    3.000
+ IRB      HNAM   NAM    CAR     126.000    3.000
+ IRB      CAY    CAW    CAI     120.000    3.000
+ IRB      CAY    CAW    CAU     108.000    3.000
+ IRB      CAI    CAW    CAU     126.000    3.000
+ IRB      CAW    CAI    HAI     120.000    3.000
+ IRB      CAW    CAI    CAF     120.000    3.000
+ IRB      HAI    CAI    CAF     120.000    3.000
+ IRB      CAI    CAF    HAF     120.000    3.000
+ IRB      CAI    CAF    CAG     120.000    3.000
+ IRB      HAF    CAF    CAG     120.000    3.000
+ IRB      CAW    CAU    CAR     108.000    3.000
+ IRB      CAW    CAU    CAS     108.000    3.000
+ IRB      CAR    CAU    CAS     108.000    3.000
+ IRB      CAU    CAR    OAB     108.000    3.000
+ IRB      CAU    CAR    NAM     108.000    3.000
+ IRB      OAB    CAR    NAM     108.000    3.000
+ IRB      CAU    CAS    CAT     108.000    3.000
+ IRB      CAU    CAS    NAN     108.000    3.000
+ IRB      CAT    CAS    NAN     108.000    3.000
+ IRB      CAS    CAT    NAL     108.000    3.000
+ IRB      CAS    CAT    CAX     108.000    3.000
+ IRB      NAL    CAT    CAX     108.000    3.000
+ IRB      CAT    NAL    OAC     120.000    3.000
+ IRB      NAL    OAC    HOAC    109.470    3.000
+ IRB      CAT    CAX    CAV     108.000    3.000
+ IRB      CAT    CAX    CAK     126.000    3.000
+ IRB      CAV    CAX    CAK     120.000    3.000
+ IRB      CAX    CAV    NAN     108.000    3.000
+ IRB      CAX    CAV    CAJ     120.000    3.000
+ IRB      NAN    CAV    CAJ     132.000    3.000
+ IRB      CAV    NAN    HNAN    126.000    3.000
+ IRB      CAV    NAN    CAS     108.000    3.000
+ IRB      HNAN   NAN    CAS     126.000    3.000
+ IRB      CAV    CAJ    HAJ     120.000    3.000
+ IRB      CAV    CAJ    CAH     120.000    3.000
+ IRB      HAJ    CAJ    CAH     120.000    3.000
+ IRB      CAX    CAK    HAK     120.000    3.000
+ IRB      CAX    CAK    CAP     120.000    3.000
+ IRB      HAK    CAK    CAP     120.000    3.000
+ IRB      CAK    CAP    CAH     120.000    3.000
+ IRB      CAK    CAP    CAO     120.000    3.000
+ IRB      CAH    CAP    CAO     120.000    3.000
+ IRB      CAP    CAH    HAH     120.000    3.000
+ IRB      CAP    CAH    CAJ     120.000    3.000
+ IRB      HAH    CAH    CAJ     120.000    3.000
+ IRB      CAP    CAO    OAA     120.000    3.000
+ IRB      CAP    CAO    OAD     120.000    3.000
+ IRB      OAA    CAO    OAD     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IRB      CONST_1  BRAE   CAQ    CAG    CAF      180.000    0.000   0
+ IRB      CONST_2  BRAE   CAQ    CAY    CAW      180.000    0.000   0
+ IRB      CONST_3  CAQ    CAY    NAM    CAR      180.000    0.000   0
+ IRB      CONST_4  CAY    NAM    CAR    CAU        0.000    0.000   0
+ IRB      CONST_5  CAQ    CAY    CAW    CAU      180.000    0.000   0
+ IRB      CONST_6  CAY    CAW    CAI    CAF        0.000    0.000   0
+ IRB      CONST_7  CAW    CAI    CAF    CAG        0.000    0.000   0
+ IRB      CONST_8  CAI    CAF    CAG    CAQ        0.000    0.000   0
+ IRB      CONST_9  CAY    CAW    CAU    CAS      180.000    0.000   0
+ IRB      CONST_10 CAW    CAU    CAR    OAB      180.000    0.000   0
+ IRB      CONST_11 CAW    CAU    CAS    CAT        0.000    0.000   0
+ IRB      CONST_12 CAU    CAS    CAT    CAX      180.000    0.000   0
+ IRB      var_1    CAS    CAT    NAL    OAC      179.950   20.000   1
+ IRB      var_2    CAT    NAL    OAC    HOAC     179.915   20.000   1
+ IRB      CONST_13 CAS    CAT    CAX    CAK      180.000    0.000   0
+ IRB      CONST_14 CAT    CAX    CAV    CAJ      180.000    0.000   0
+ IRB      CONST_15 CAX    CAV    NAN    CAS        0.000    0.000   0
+ IRB      CONST_16 CAV    NAN    CAS    CAU      180.000    0.000   0
+ IRB      CONST_17 CAX    CAV    CAJ    CAH        0.000    0.000   0
+ IRB      CONST_18 CAT    CAX    CAK    CAP      180.000    0.000   0
+ IRB      CONST_19 CAX    CAK    CAP    CAO      180.000    0.000   0
+ IRB      CONST_20 CAK    CAP    CAH    CAJ        0.000    0.000   0
+ IRB      CONST_21 CAP    CAH    CAJ    CAV        0.000    0.000   0
+ IRB      var_3    CAK    CAP    CAO    OAD      179.896   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IRB      plan-1    CAF       0.020
+ IRB      plan-1    CAG       0.020
+ IRB      plan-1    CAI       0.020
+ IRB      plan-1    HAF       0.020
+ IRB      plan-1    CAQ       0.020
+ IRB      plan-1    HAG       0.020
+ IRB      plan-1    CAW       0.020
+ IRB      plan-1    HAI       0.020
+ IRB      plan-1    BRAE      0.020
+ IRB      plan-1    CAY       0.020
+ IRB      plan-1    CAU       0.020
+ IRB      plan-1    NAM       0.020
+ IRB      plan-1    CAR       0.020
+ IRB      plan-1    CAH       0.020
+ IRB      plan-1    CAJ       0.020
+ IRB      plan-1    CAP       0.020
+ IRB      plan-1    HAH       0.020
+ IRB      plan-1    CAK       0.020
+ IRB      plan-1    CAV       0.020
+ IRB      plan-1    HAJ       0.020
+ IRB      plan-1    CAX       0.020
+ IRB      plan-1    HAK       0.020
+ IRB      plan-1    NAN       0.020
+ IRB      plan-1    CAS       0.020
+ IRB      plan-1    HNAN      0.020
+ IRB      plan-1    CAT       0.020
+ IRB      plan-1    CAO       0.020
+ IRB      plan-1    NAL       0.020
+ IRB      plan-1    HNAM      0.020
+ IRB      plan-1    OAB       0.020
+ IRB      plan-2    NAL       0.020
+ IRB      plan-2    OAC       0.020
+ IRB      plan-2    CAT       0.020
+ IRB      plan-3    CAO       0.020
+ IRB      plan-3    OAA       0.020
+ IRB      plan-3    OAD       0.020
+ IRB      plan-3    CAP       0.020
+# ------------------------------------------------------

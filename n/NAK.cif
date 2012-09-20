@@ -1,0 +1,130 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NAK      NAK 'AMINO-ACRYLATE                      ' non-polymer        11   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NAK
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NAK           OAD    O    OC       -0.500      0.000    0.000    0.000
+ NAK           CAF    C    C         0.000     -1.237   -0.187    0.000
+ NAK           OAC    O    OC       -0.500     -2.016    0.792    0.000
+ NAK           CAG    C    C         0.000     -1.779   -1.566    0.000
+ NAK           NAB    N    NH2       1.000     -0.981   -2.567    0.000
+ NAK           HAB2   H    H         0.000     -1.363   -3.492    0.000
+ NAK           HAB1   H    H         0.000      0.005   -2.402    0.000
+ NAK           CAE    C    CH3       0.000     -3.269   -1.790    0.000
+ NAK           HAE3   H    H         0.000     -3.749   -0.988   -0.499
+ NAK           HAE2   H    H         0.000     -3.492   -2.698   -0.499
+ NAK           HAE1   H    H         0.000     -3.620   -1.843    0.998
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NAK      OAD    n/a    CAF    START
+ NAK      CAF    OAD    CAG    .
+ NAK      OAC    CAF    .      .
+ NAK      CAG    CAF    CAE    .
+ NAK      NAB    CAG    HAB1   .
+ NAK      HAB2   NAB    .      .
+ NAK      HAB1   NAB    .      .
+ NAK      CAE    CAG    HAE1   .
+ NAK      HAE3   CAE    .      .
+ NAK      HAE2   CAE    .      .
+ NAK      HAE1   CAE    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NAK      OAC    CAF       deloc       1.250    0.020
+ NAK      CAF    OAD       deloc       1.250    0.020
+ NAK      CAG    CAF       single      1.460    0.020
+ NAK      CAE    CAG       single      1.500    0.020
+ NAK      NAB    CAG       double      1.332    0.020
+ NAK      HAE1   CAE       single      1.059    0.020
+ NAK      HAE2   CAE       single      1.059    0.020
+ NAK      HAE3   CAE       single      1.059    0.020
+ NAK      HAB1   NAB       single      1.010    0.020
+ NAK      HAB2   NAB       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NAK      OAD    CAF    OAC     123.000    3.000
+ NAK      OAD    CAF    CAG     120.000    3.000
+ NAK      OAC    CAF    CAG     120.000    3.000
+ NAK      CAF    CAG    NAB     120.000    3.000
+ NAK      CAF    CAG    CAE     120.000    3.000
+ NAK      NAB    CAG    CAE     120.000    3.000
+ NAK      CAG    NAB    HAB2    120.000    3.000
+ NAK      CAG    NAB    HAB1    120.000    3.000
+ NAK      HAB2   NAB    HAB1    120.000    3.000
+ NAK      CAG    CAE    HAE3    109.470    3.000
+ NAK      CAG    CAE    HAE2    109.470    3.000
+ NAK      CAG    CAE    HAE1    109.470    3.000
+ NAK      HAE3   CAE    HAE2    109.470    3.000
+ NAK      HAE3   CAE    HAE1    109.470    3.000
+ NAK      HAE2   CAE    HAE1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NAK      var_1    OAD    CAF    CAG    CAE      180.000   20.000   1
+ NAK      CONST_1  CAF    CAG    NAB    HAB1       0.000    0.000   0
+ NAK      var_2    CAF    CAG    CAE    HAE1     -90.004   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NAK      plan-1    CAF       0.020
+ NAK      plan-1    OAC       0.020
+ NAK      plan-1    OAD       0.020
+ NAK      plan-1    CAG       0.020
+ NAK      plan-2    CAG       0.020
+ NAK      plan-2    CAF       0.020
+ NAK      plan-2    CAE       0.020
+ NAK      plan-2    NAB       0.020
+ NAK      plan-2    HAB1      0.020
+ NAK      plan-2    HAB2      0.020
+# ------------------------------------------------------

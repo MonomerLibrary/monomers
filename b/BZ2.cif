@@ -1,0 +1,182 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BZ2      BZ2 '1-benzofuran-2-carboxylic acid      ' non-polymer        17  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BZ2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BZ2           OAB    O    OC       -0.500      0.000    0.000    0.000
+ BZ2           CAI    C    C         0.000     -1.051   -0.679    0.000
+ BZ2           OAA    O    OC       -0.500     -0.989   -1.928    0.002
+ BZ2           CAJ    C    CR5       0.000     -2.358   -0.010    0.000
+ BZ2           OAH    O    O2        0.000     -3.552   -0.637    0.003
+ BZ2           CAL    C    CR56      0.000     -4.563    0.254    0.000
+ BZ2           CAF    C    CR16      0.000     -5.947    0.124   -0.006
+ BZ2           HAF    H    H         0.000     -6.400   -0.859   -0.010
+ BZ2           CAD    C    CR16      0.000     -6.741    1.251   -0.007
+ BZ2           HAD    H    H         0.000     -7.819    1.146   -0.012
+ BZ2           CAK    C    CR56      0.000     -3.993    1.542   -0.001
+ BZ2           CAG    C    CR15      0.000     -2.546    1.336   -0.001
+ BZ2           HAG    H    H         0.000     -1.780    2.101   -0.001
+ BZ2           CAE    C    CR16      0.000     -4.817    2.671   -0.002
+ BZ2           HAE    H    H         0.000     -4.381    3.662   -0.003
+ BZ2           CAC    C    CR16      0.000     -6.175    2.518   -0.002
+ BZ2           HAC    H    H         0.000     -6.814    3.393    0.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BZ2      OAB    n/a    CAI    START
+ BZ2      CAI    OAB    CAJ    .
+ BZ2      OAA    CAI    .      .
+ BZ2      CAJ    CAI    OAH    .
+ BZ2      OAH    CAJ    CAL    .
+ BZ2      CAL    OAH    CAK    .
+ BZ2      CAF    CAL    CAD    .
+ BZ2      HAF    CAF    .      .
+ BZ2      CAD    CAF    HAD    .
+ BZ2      HAD    CAD    .      .
+ BZ2      CAK    CAL    CAE    .
+ BZ2      CAG    CAK    HAG    .
+ BZ2      HAG    CAG    .      .
+ BZ2      CAE    CAK    CAC    .
+ BZ2      HAE    CAE    .      .
+ BZ2      CAC    CAE    HAC    .
+ BZ2      HAC    CAC    .      END
+ BZ2      CAC    CAD    .    ADD
+ BZ2      CAG    CAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BZ2      OAA    CAI       deloc       1.250    0.020
+ BZ2      CAI    OAB       deloc       1.250    0.020
+ BZ2      CAC    CAD       double      1.390    0.020
+ BZ2      CAC    CAE       single      1.390    0.020
+ BZ2      HAC    CAC       single      1.083    0.020
+ BZ2      CAD    CAF       single      1.390    0.020
+ BZ2      HAD    CAD       single      1.083    0.020
+ BZ2      CAE    CAK       double      1.390    0.020
+ BZ2      HAE    CAE       single      1.083    0.020
+ BZ2      CAF    CAL       double      1.390    0.020
+ BZ2      HAF    CAF       single      1.083    0.020
+ BZ2      CAG    CAJ       double      1.387    0.020
+ BZ2      CAG    CAK       single      1.440    0.020
+ BZ2      HAG    CAG       single      1.083    0.020
+ BZ2      OAH    CAJ       single      1.370    0.020
+ BZ2      CAL    OAH       single      1.329    0.020
+ BZ2      CAJ    CAI       single      1.490    0.020
+ BZ2      CAK    CAL       single      1.490    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BZ2      OAB    CAI    OAA     123.000    3.000
+ BZ2      OAB    CAI    CAJ     120.000    3.000
+ BZ2      OAA    CAI    CAJ     120.000    3.000
+ BZ2      CAI    CAJ    OAH     108.000    3.000
+ BZ2      CAI    CAJ    CAG     126.000    3.000
+ BZ2      OAH    CAJ    CAG     108.000    3.000
+ BZ2      CAJ    OAH    CAL     120.000    3.000
+ BZ2      OAH    CAL    CAF     120.000    3.000
+ BZ2      OAH    CAL    CAK     120.000    3.000
+ BZ2      CAF    CAL    CAK     120.000    3.000
+ BZ2      CAL    CAF    HAF     120.000    3.000
+ BZ2      CAL    CAF    CAD     120.000    3.000
+ BZ2      HAF    CAF    CAD     120.000    3.000
+ BZ2      CAF    CAD    HAD     120.000    3.000
+ BZ2      CAF    CAD    CAC     120.000    3.000
+ BZ2      HAD    CAD    CAC     120.000    3.000
+ BZ2      CAL    CAK    CAG     120.000    3.000
+ BZ2      CAL    CAK    CAE     120.000    3.000
+ BZ2      CAG    CAK    CAE     126.000    3.000
+ BZ2      CAK    CAG    HAG     108.000    3.000
+ BZ2      CAK    CAG    CAJ     108.000    3.000
+ BZ2      HAG    CAG    CAJ     126.000    3.000
+ BZ2      CAK    CAE    HAE     120.000    3.000
+ BZ2      CAK    CAE    CAC     120.000    3.000
+ BZ2      HAE    CAE    CAC     120.000    3.000
+ BZ2      CAE    CAC    HAC     120.000    3.000
+ BZ2      CAE    CAC    CAD     120.000    3.000
+ BZ2      HAC    CAC    CAD     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BZ2      var_1    OAB    CAI    CAJ    OAH     -179.850   20.000   1
+ BZ2      CONST_1  CAI    CAJ    OAH    CAL      180.000    0.000   0
+ BZ2      CONST_2  CAJ    OAH    CAL    CAK        0.000    0.000   0
+ BZ2      CONST_3  OAH    CAL    CAF    CAD      180.000    0.000   0
+ BZ2      CONST_4  CAL    CAF    CAD    CAC        0.000    0.000   0
+ BZ2      CONST_5  OAH    CAL    CAK    CAE      180.000    0.000   0
+ BZ2      CONST_6  CAL    CAK    CAG    CAJ        0.000    0.000   0
+ BZ2      CONST_7  CAK    CAG    CAJ    CAI      180.000    0.000   0
+ BZ2      CONST_8  CAL    CAK    CAE    CAC        0.000    0.000   0
+ BZ2      CONST_9  CAK    CAE    CAC    CAD        0.000    0.000   0
+ BZ2      CONST_10 CAE    CAC    CAD    CAF        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BZ2      plan-1    CAC       0.020
+ BZ2      plan-1    CAD       0.020
+ BZ2      plan-1    CAE       0.020
+ BZ2      plan-1    HAC       0.020
+ BZ2      plan-1    CAF       0.020
+ BZ2      plan-1    HAD       0.020
+ BZ2      plan-1    CAK       0.020
+ BZ2      plan-1    HAE       0.020
+ BZ2      plan-1    CAL       0.020
+ BZ2      plan-1    HAF       0.020
+ BZ2      plan-1    CAG       0.020
+ BZ2      plan-1    CAJ       0.020
+ BZ2      plan-1    HAG       0.020
+ BZ2      plan-1    OAH       0.020
+ BZ2      plan-1    CAI       0.020
+ BZ2      plan-2    CAI       0.020
+ BZ2      plan-2    OAA       0.020
+ BZ2      plan-2    OAB       0.020
+ BZ2      plan-2    CAJ       0.020
+# ------------------------------------------------------

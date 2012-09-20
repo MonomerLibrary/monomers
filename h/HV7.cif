@@ -1,0 +1,199 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HV7      HV7 '1-METHYLAMINE-2-HYDROXY-4-METHOXY-BE' non-polymer        22  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HV7
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HV7           OH     O    OH1       0.000      0.000    0.000    0.000
+ HV7           HOH    H    H         0.000      0.305   -0.913   -0.084
+ HV7           CD1    C    CR6       0.000     -1.325    0.008    0.299
+ HV7           CE1    C    CR16      0.000     -2.266    0.027   -0.720
+ HV7           HE1    H    H         0.000     -1.945    0.031   -1.754
+ HV7           CZ     C    CR6       0.000     -3.617    0.040   -0.412
+ HV7           OE     O    O2        0.000     -4.541    0.064   -1.408
+ HV7           CM     C    CH3       0.000     -5.824    0.067   -0.781
+ HV7           HM3    H    H         0.000     -5.931   -0.806   -0.190
+ HV7           HM2    H    H         0.000     -5.914    0.924   -0.165
+ HV7           HM1    H    H         0.000     -6.580    0.085   -1.523
+ HV7           CE2    C    CR16      0.000     -4.025    0.026    0.914
+ HV7           HE2    H    H         0.000     -5.081    0.033    1.155
+ HV7           CD2    C    CR16      0.000     -3.087    0.002    1.927
+ HV7           HD2    H    H         0.000     -3.407   -0.012    2.961
+ HV7           CG     C    CR6       0.000     -1.738   -0.006    1.622
+ HV7           CB     C    CH2       0.000     -0.717   -0.031    2.729
+ HV7           HB1    H    H         0.000     -0.083    0.855    2.660
+ HV7           HB2    H    H         0.000     -0.099   -0.927    2.633
+ HV7           N      N    NH2       0.000     -1.403   -0.045    4.028
+ HV7           HN2    H    H         0.000     -1.337   -0.855    4.633
+ HV7           HN1    H    H         0.000     -1.947    0.756    4.327
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HV7      OH     n/a    CD1    START
+ HV7      HOH    OH     .      .
+ HV7      CD1    OH     CE1    .
+ HV7      CE1    CD1    CZ     .
+ HV7      HE1    CE1    .      .
+ HV7      CZ     CE1    CE2    .
+ HV7      OE     CZ     CM     .
+ HV7      CM     OE     HM1    .
+ HV7      HM3    CM     .      .
+ HV7      HM2    CM     .      .
+ HV7      HM1    CM     .      .
+ HV7      CE2    CZ     CD2    .
+ HV7      HE2    CE2    .      .
+ HV7      CD2    CE2    CG     .
+ HV7      HD2    CD2    .      .
+ HV7      CG     CD2    CB     .
+ HV7      CB     CG     N      .
+ HV7      HB1    CB     .      .
+ HV7      HB2    CB     .      .
+ HV7      N      CB     HN1    .
+ HV7      HN2    N      .      .
+ HV7      HN1    N      .      END
+ HV7      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HV7      N      CB        single      1.450    0.020
+ HV7      HN1    N         single      1.010    0.020
+ HV7      HN2    N         single      1.010    0.020
+ HV7      CB     CG        single      1.511    0.020
+ HV7      HB1    CB        single      1.092    0.020
+ HV7      HB2    CB        single      1.092    0.020
+ HV7      CG     CD1       double      1.487    0.020
+ HV7      CG     CD2       single      1.390    0.020
+ HV7      CE1    CD1       single      1.390    0.020
+ HV7      CD1    OH        single      1.362    0.020
+ HV7      CZ     CE1       double      1.390    0.020
+ HV7      HE1    CE1       single      1.083    0.020
+ HV7      CD2    CE2       double      1.390    0.020
+ HV7      HD2    CD2       single      1.083    0.020
+ HV7      CE2    CZ        single      1.390    0.020
+ HV7      HE2    CE2       single      1.083    0.020
+ HV7      OE     CZ        single      1.370    0.020
+ HV7      CM     OE        single      1.426    0.020
+ HV7      HM1    CM        single      1.059    0.020
+ HV7      HM2    CM        single      1.059    0.020
+ HV7      HM3    CM        single      1.059    0.020
+ HV7      HOH    OH        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HV7      HOH    OH     CD1     109.470    3.000
+ HV7      OH     CD1    CE1     120.000    3.000
+ HV7      OH     CD1    CG      120.000    3.000
+ HV7      CE1    CD1    CG      120.000    3.000
+ HV7      CD1    CE1    HE1     120.000    3.000
+ HV7      CD1    CE1    CZ      120.000    3.000
+ HV7      HE1    CE1    CZ      120.000    3.000
+ HV7      CE1    CZ     OE      120.000    3.000
+ HV7      CE1    CZ     CE2     120.000    3.000
+ HV7      OE     CZ     CE2     120.000    3.000
+ HV7      CZ     OE     CM      120.000    3.000
+ HV7      OE     CM     HM3     109.470    3.000
+ HV7      OE     CM     HM2     109.470    3.000
+ HV7      OE     CM     HM1     109.470    3.000
+ HV7      HM3    CM     HM2     109.470    3.000
+ HV7      HM3    CM     HM1     109.470    3.000
+ HV7      HM2    CM     HM1     109.470    3.000
+ HV7      CZ     CE2    HE2     120.000    3.000
+ HV7      CZ     CE2    CD2     120.000    3.000
+ HV7      HE2    CE2    CD2     120.000    3.000
+ HV7      CE2    CD2    HD2     120.000    3.000
+ HV7      CE2    CD2    CG      120.000    3.000
+ HV7      HD2    CD2    CG      120.000    3.000
+ HV7      CD2    CG     CB      120.000    3.000
+ HV7      CD2    CG     CD1     120.000    3.000
+ HV7      CB     CG     CD1     120.000    3.000
+ HV7      CG     CB     HB1     109.470    3.000
+ HV7      CG     CB     HB2     109.470    3.000
+ HV7      CG     CB     N       109.500    3.000
+ HV7      HB1    CB     HB2     107.900    3.000
+ HV7      HB1    CB     N       109.470    3.000
+ HV7      HB2    CB     N       109.470    3.000
+ HV7      CB     N      HN2     120.000    3.000
+ HV7      CB     N      HN1     120.000    3.000
+ HV7      HN2    N      HN1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HV7      var_1    HOH    OH     CD1    CE1      -89.780   20.000   1
+ HV7      CONST_1  OH     CD1    CE1    CZ       180.000    0.000   0
+ HV7      CONST_2  CD1    CE1    CZ     CE2        0.000    0.000   0
+ HV7      var_2    CE1    CZ     OE     CM       179.763   20.000   1
+ HV7      var_3    CZ     OE     CM     HM1     -179.995   20.000   1
+ HV7      CONST_3  CE1    CZ     CE2    CD2        0.000    0.000   0
+ HV7      CONST_4  CZ     CE2    CD2    CG         0.000    0.000   0
+ HV7      CONST_5  CE2    CD2    CG     CB       180.000    0.000   0
+ HV7      CONST_6  CD2    CG     CD1    OH       180.000    0.000   0
+ HV7      var_4    CD2    CG     CB     N         -0.016   20.000   2
+ HV7      var_5    CG     CB     N      HN1      -66.205   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HV7      plan-1    N         0.020
+ HV7      plan-1    CB        0.020
+ HV7      plan-1    HN1       0.020
+ HV7      plan-1    HN2       0.020
+ HV7      plan-2    CG        0.020
+ HV7      plan-2    CB        0.020
+ HV7      plan-2    CD1       0.020
+ HV7      plan-2    CD2       0.020
+ HV7      plan-2    CE1       0.020
+ HV7      plan-2    CE2       0.020
+ HV7      plan-2    CZ        0.020
+ HV7      plan-2    OH        0.020
+ HV7      plan-2    HE1       0.020
+ HV7      plan-2    HD2       0.020
+ HV7      plan-2    HE2       0.020
+ HV7      plan-2    OE        0.020
+# ------------------------------------------------------

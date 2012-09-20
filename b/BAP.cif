@@ -1,0 +1,335 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BAP      BAP '1,2,3-TRIHYDROXY-1,2,3,4-TETRAHYDROB' non-polymer        39  23 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BAP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BAP           "O3'"  O    OH1       0.000      0.000    0.000    0.000
+ BAP           HO3    H    H         0.000      0.354    0.336   -0.835
+ BAP           "C3'"  C    CH1       0.000     -0.420   -1.355   -0.172
+ BAP           "H3'"  H    H         0.000      0.436   -1.972   -0.480
+ BAP           "C4'"  C    CH2       0.000     -1.513   -1.423   -1.235
+ BAP           "H4'2" H    H         0.000     -1.707   -2.471   -1.473
+ BAP           "H4'1" H    H         0.000     -1.164   -0.906   -2.132
+ BAP           C6     C    CR6       0.000     -2.780   -0.775   -0.741
+ BAP           "C2'"  C    CH1       0.000     -0.994   -1.889    1.145
+ BAP           "H2'"  H    H         0.000     -1.485   -2.856    0.970
+ BAP           "O2'"  O    OH1       0.000      0.057   -2.049    2.100
+ BAP           HO2    H    H         0.000     -0.312   -2.369    2.934
+ BAP           "C1'"  C    CH1       0.000     -2.015   -0.881    1.666
+ BAP           "H1'"  H    H         0.000     -1.492    0.033    1.982
+ BAP           "O1'"  O    OH1       0.000     -2.700   -1.442    2.787
+ BAP           HO1    H    H         0.000     -3.334   -0.799    3.132
+ BAP           C7     C    CR6       0.000     -3.017   -0.533    0.594
+ BAP           C8     C    CR16      0.000     -4.203    0.059    1.012
+ BAP           H8     H    H         0.000     -4.368    0.237    2.068
+ BAP           C8A    C    CR66      0.000     -5.183    0.425    0.093
+ BAP           C5B    C    CR66      0.000     -4.946    0.183   -1.278
+ BAP           C5A    C    CR66      0.000     -3.741   -0.417   -1.698
+ BAP           C5     C    CR16      0.000     -3.526   -0.651   -3.078
+ BAP           H5     H    H         0.000     -2.602   -1.112   -3.405
+ BAP           C4     C    CR16      0.000     -4.460   -0.307   -3.994
+ BAP           H4     H    H         0.000     -4.273   -0.495   -5.044
+ BAP           C3B    C    CR66      0.000     -5.918    0.542   -2.228
+ BAP           C1A    C    CR66      0.000     -7.124    1.142   -1.804
+ BAP           C10    C    CR16      0.000     -7.336    1.375   -0.424
+ BAP           H10    H    H         0.000     -8.259    1.835   -0.095
+ BAP           C9     C    CR16      0.000     -6.400    1.030    0.491
+ BAP           H9     H    H         0.000     -6.584    1.218    1.541
+ BAP           C1     C    CR16      0.000     -8.077    1.488   -2.765
+ BAP           H1     H    H         0.000     -9.009    1.949   -2.460
+ BAP           C3A    C    CR66      0.000     -5.678    0.296   -3.599
+ BAP           C3     C    CR16      0.000     -6.657    0.659   -4.528
+ BAP           H3     H    H         0.000     -6.492    0.480   -5.583
+ BAP           C2     C    CR16      0.000     -7.834    1.245   -4.102
+ BAP           H2     H    H         0.000     -8.583    1.519   -4.834
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BAP      "O3'"  n/a    "C3'"  START
+ BAP      HO3    "O3'"  .      .
+ BAP      "C3'"  "O3'"  "C2'"  .
+ BAP      "H3'"  "C3'"  .      .
+ BAP      "C4'"  "C3'"  C6     .
+ BAP      "H4'2" "C4'"  .      .
+ BAP      "H4'1" "C4'"  .      .
+ BAP      C6     "C4'"  .      .
+ BAP      "C2'"  "C3'"  "C1'"  .
+ BAP      "H2'"  "C2'"  .      .
+ BAP      "O2'"  "C2'"  HO2    .
+ BAP      HO2    "O2'"  .      .
+ BAP      "C1'"  "C2'"  C7     .
+ BAP      "H1'"  "C1'"  .      .
+ BAP      "O1'"  "C1'"  HO1    .
+ BAP      HO1    "O1'"  .      .
+ BAP      C7     "C1'"  C8     .
+ BAP      C8     C7     C8A    .
+ BAP      H8     C8     .      .
+ BAP      C8A    C8     C5B    .
+ BAP      C5B    C8A    C3B    .
+ BAP      C5A    C5B    C5     .
+ BAP      C5     C5A    C4     .
+ BAP      H5     C5     .      .
+ BAP      C4     C5     H4     .
+ BAP      H4     C4     .      .
+ BAP      C3B    C5B    C3A    .
+ BAP      C1A    C3B    C1     .
+ BAP      C10    C1A    C9     .
+ BAP      H10    C10    .      .
+ BAP      C9     C10    H9     .
+ BAP      H9     C9     .      .
+ BAP      C1     C1A    H1     .
+ BAP      H1     C1     .      .
+ BAP      C3A    C3B    C3     .
+ BAP      C3     C3A    C2     .
+ BAP      H3     C3     .      .
+ BAP      C2     C3     H2     .
+ BAP      H2     C2     .      END
+ BAP      C1     C2     .    ADD
+ BAP      C3A    C4     .    ADD
+ BAP      C5A    C6     .    ADD
+ BAP      C6     C7     .    ADD
+ BAP      C8A    C9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BAP      C1     C2        double      1.390    0.020
+ BAP      C1     C1A       single      1.390    0.020
+ BAP      H1     C1        single      1.083    0.020
+ BAP      C2     C3        single      1.390    0.020
+ BAP      H2     C2        single      1.083    0.020
+ BAP      C3     C3A       double      1.390    0.020
+ BAP      H3     C3        single      1.083    0.020
+ BAP      C3A    C4        single      1.390    0.020
+ BAP      C3A    C3B       single      1.490    0.020
+ BAP      C4     C5        double      1.390    0.020
+ BAP      H4     C4        single      1.083    0.020
+ BAP      C5     C5A       single      1.390    0.020
+ BAP      H5     C5        single      1.083    0.020
+ BAP      C5A    C6        double      1.490    0.020
+ BAP      C5A    C5B       single      1.490    0.020
+ BAP      C6     C7        single      1.487    0.020
+ BAP      C6     "C4'"     single      1.511    0.020
+ BAP      C8     C7        double      1.390    0.020
+ BAP      C7     "C1'"     single      1.480    0.020
+ BAP      C8A    C8        single      1.390    0.020
+ BAP      H8     C8        single      1.083    0.020
+ BAP      C8A    C9        double      1.390    0.020
+ BAP      C5B    C8A       single      1.490    0.020
+ BAP      C9     C10       single      1.390    0.020
+ BAP      H9     C9        single      1.083    0.020
+ BAP      C10    C1A       double      1.390    0.020
+ BAP      H10    C10       single      1.083    0.020
+ BAP      C1A    C3B       single      1.490    0.020
+ BAP      C3B    C5B       double      1.490    0.020
+ BAP      "O1'"  "C1'"     single      1.432    0.020
+ BAP      "C1'"  "C2'"     single      1.524    0.020
+ BAP      "H1'"  "C1'"     single      1.099    0.020
+ BAP      HO1    "O1'"     single      0.967    0.020
+ BAP      "O2'"  "C2'"     single      1.432    0.020
+ BAP      "C2'"  "C3'"     single      1.524    0.020
+ BAP      "H2'"  "C2'"     single      1.099    0.020
+ BAP      HO2    "O2'"     single      0.967    0.020
+ BAP      "C3'"  "O3'"     single      1.432    0.020
+ BAP      "C4'"  "C3'"     single      1.524    0.020
+ BAP      "H3'"  "C3'"     single      1.099    0.020
+ BAP      HO3    "O3'"     single      0.967    0.020
+ BAP      "H4'1" "C4'"     single      1.092    0.020
+ BAP      "H4'2" "C4'"     single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BAP      HO3    "O3'"  "C3'"   109.470    3.000
+ BAP      "O3'"  "C3'"  "H3'"   109.470    3.000
+ BAP      "O3'"  "C3'"  "C4'"   109.470    3.000
+ BAP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ BAP      "H3'"  "C3'"  "C4'"   108.340    3.000
+ BAP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ BAP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ BAP      "C3'"  "C4'"  "H4'2"  109.470    3.000
+ BAP      "C3'"  "C4'"  "H4'1"  109.470    3.000
+ BAP      "C3'"  "C4'"  C6      109.470    3.000
+ BAP      "H4'2" "C4'"  "H4'1"  107.900    3.000
+ BAP      "H4'2" "C4'"  C6      109.470    3.000
+ BAP      "H4'1" "C4'"  C6      109.470    3.000
+ BAP      "C4'"  C6     C5A     120.000    3.000
+ BAP      "C4'"  C6     C7      120.000    3.000
+ BAP      C5A    C6     C7      120.000    3.000
+ BAP      "C3'"  "C2'"  "H2'"   108.340    3.000
+ BAP      "C3'"  "C2'"  "O2'"   109.470    3.000
+ BAP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ BAP      "H2'"  "C2'"  "O2'"   109.470    3.000
+ BAP      "H2'"  "C2'"  "C1'"   108.340    3.000
+ BAP      "O2'"  "C2'"  "C1'"   109.470    3.000
+ BAP      "C2'"  "O2'"  HO2     109.470    3.000
+ BAP      "C2'"  "C1'"  "H1'"   108.340    3.000
+ BAP      "C2'"  "C1'"  "O1'"   109.470    3.000
+ BAP      "C2'"  "C1'"  C7      109.470    3.000
+ BAP      "H1'"  "C1'"  "O1'"   109.470    3.000
+ BAP      "H1'"  "C1'"  C7      109.470    3.000
+ BAP      "O1'"  "C1'"  C7      109.470    3.000
+ BAP      "C1'"  "O1'"  HO1     109.470    3.000
+ BAP      "C1'"  C7     C8      120.000    3.000
+ BAP      "C1'"  C7     C6      120.000    3.000
+ BAP      C8     C7     C6      120.000    3.000
+ BAP      C7     C8     H8      120.000    3.000
+ BAP      C7     C8     C8A     120.000    3.000
+ BAP      H8     C8     C8A     120.000    3.000
+ BAP      C8     C8A    C5B     120.000    3.000
+ BAP      C8     C8A    C9      120.000    3.000
+ BAP      C5B    C8A    C9      120.000    3.000
+ BAP      C8A    C5B    C5A     120.000    3.000
+ BAP      C8A    C5B    C3B     120.000    3.000
+ BAP      C5A    C5B    C3B     120.000    3.000
+ BAP      C5B    C5A    C5      120.000    3.000
+ BAP      C5B    C5A    C6      120.000    3.000
+ BAP      C5     C5A    C6      120.000    3.000
+ BAP      C5A    C5     H5      120.000    3.000
+ BAP      C5A    C5     C4      120.000    3.000
+ BAP      H5     C5     C4      120.000    3.000
+ BAP      C5     C4     H4      120.000    3.000
+ BAP      C5     C4     C3A     120.000    3.000
+ BAP      H4     C4     C3A     120.000    3.000
+ BAP      C5B    C3B    C1A     120.000    3.000
+ BAP      C5B    C3B    C3A     120.000    3.000
+ BAP      C1A    C3B    C3A     120.000    3.000
+ BAP      C3B    C1A    C10     120.000    3.000
+ BAP      C3B    C1A    C1      120.000    3.000
+ BAP      C10    C1A    C1      120.000    3.000
+ BAP      C1A    C10    H10     120.000    3.000
+ BAP      C1A    C10    C9      120.000    3.000
+ BAP      H10    C10    C9      120.000    3.000
+ BAP      C10    C9     H9      120.000    3.000
+ BAP      C10    C9     C8A     120.000    3.000
+ BAP      H9     C9     C8A     120.000    3.000
+ BAP      C1A    C1     H1      120.000    3.000
+ BAP      C1A    C1     C2      120.000    3.000
+ BAP      H1     C1     C2      120.000    3.000
+ BAP      C3B    C3A    C3      120.000    3.000
+ BAP      C3B    C3A    C4      120.000    3.000
+ BAP      C3     C3A    C4      120.000    3.000
+ BAP      C3A    C3     H3      120.000    3.000
+ BAP      C3A    C3     C2      120.000    3.000
+ BAP      H3     C3     C2      120.000    3.000
+ BAP      C3     C2     H2      120.000    3.000
+ BAP      C3     C2     C1      120.000    3.000
+ BAP      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BAP      var_1    HO3    "O3'"  "C3'"  "C2'"   -179.474   20.000   1
+ BAP      var_2    "O3'"  "C3'"  "C4'"  C6       -60.000   20.000   3
+ BAP      var_3    "C3'"  "C4'"  C6     C5A      150.000   20.000   2
+ BAP      CONST_1  "C4'"  C6     C7     "C1'"      0.000    0.000   0
+ BAP      var_4    "O3'"  "C3'"  "C2'"  "C1'"     60.000   20.000   3
+ BAP      var_5    "C3'"  "C2'"  "O2'"  HO2      178.910   20.000   1
+ BAP      var_6    "C3'"  "C2'"  "C1'"  C7        60.000   20.000   3
+ BAP      var_7    "C2'"  "C1'"  "O1'"  HO1      178.769   20.000   1
+ BAP      var_8    "C2'"  "C1'"  C7     C8       150.000   20.000   1
+ BAP      CONST_2  "C1'"  C7     C8     C8A      180.000    0.000   0
+ BAP      CONST_3  C7     C8     C8A    C5B        0.000    0.000   0
+ BAP      CONST_4  C8     C8A    C9     C10      180.000    0.000   0
+ BAP      CONST_5  C8     C8A    C5B    C3B      180.000    0.000   0
+ BAP      CONST_6  C8A    C5B    C5A    C5       180.000    0.000   0
+ BAP      CONST_7  C5B    C5A    C6     "C4'"    180.000    0.000   0
+ BAP      CONST_8  C5B    C5A    C5     C4         0.000    0.000   0
+ BAP      CONST_9  C5A    C5     C4     C3A        0.000    0.000   0
+ BAP      CONST_10 C8A    C5B    C3B    C3A      180.000    0.000   0
+ BAP      CONST_11 C5B    C3B    C1A    C1       180.000    0.000   0
+ BAP      CONST_12 C3B    C1A    C10    C9         0.000    0.000   0
+ BAP      CONST_13 C1A    C10    C9     C8A        0.000    0.000   0
+ BAP      CONST_14 C3B    C1A    C1     C2         0.000    0.000   0
+ BAP      CONST_15 C1A    C1     C2     C3         0.000    0.000   0
+ BAP      CONST_16 C5B    C3B    C3A    C3       180.000    0.000   0
+ BAP      CONST_17 C3B    C3A    C4     C5         0.000    0.000   0
+ BAP      CONST_18 C3B    C3A    C3     C2         0.000    0.000   0
+ BAP      CONST_19 C3A    C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BAP      chir_01  "C1'"  C7     "O1'"  "C2'"     negativ
+ BAP      chir_02  "C2'"  "C1'"  "O2'"  "C3'"     positiv
+ BAP      chir_03  "C3'"  "C2'"  "O3'"  "C4'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BAP      plan-1    C1        0.020
+ BAP      plan-1    C2        0.020
+ BAP      plan-1    C1A       0.020
+ BAP      plan-1    H1        0.020
+ BAP      plan-1    C3        0.020
+ BAP      plan-1    H2        0.020
+ BAP      plan-1    C3A       0.020
+ BAP      plan-1    H3        0.020
+ BAP      plan-1    C4        0.020
+ BAP      plan-1    C3B       0.020
+ BAP      plan-1    C5        0.020
+ BAP      plan-1    H4        0.020
+ BAP      plan-1    C5A       0.020
+ BAP      plan-1    H5        0.020
+ BAP      plan-1    C6        0.020
+ BAP      plan-1    C5B       0.020
+ BAP      plan-1    C7        0.020
+ BAP      plan-1    C8        0.020
+ BAP      plan-1    "C4'"     0.020
+ BAP      plan-1    "C1'"     0.020
+ BAP      plan-1    C8A       0.020
+ BAP      plan-1    H8        0.020
+ BAP      plan-1    C9        0.020
+ BAP      plan-1    C10       0.020
+ BAP      plan-1    H9        0.020
+ BAP      plan-1    H10       0.020
+# ------------------------------------------------------

@@ -1,0 +1,193 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SHI      SHI '(S)-2-AMINO-3-(3-HYDROXY-ISOXAZOL-4-' non-polymer        19  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SHI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SHI           O42    O    OC       -0.500      0.000    0.000    0.000
+ SHI           C43    C    C         0.000     -0.589   -0.049   -1.103
+ SHI           O41    O    OC       -0.500      0.019   -0.455   -2.118
+ SHI           C42    C    CH1       0.000     -2.028    0.382   -1.208
+ SHI           HC42   H    H         0.000     -2.233    1.160   -0.459
+ SHI           N1     N    NH2       0.000     -2.282    0.916   -2.552
+ SHI           HN12   H    H         0.000     -2.597    1.872   -2.671
+ SHI           HN11   H    H         0.000     -2.144    0.333   -3.369
+ SHI           C41    C    CH2       0.000     -2.940   -0.819   -0.957
+ SHI           H411   H    H         0.000     -2.750   -1.217    0.042
+ SHI           H412   H    H         0.000     -2.735   -1.592   -1.701
+ SHI           C4     C    CR5       0.000     -4.380   -0.388   -1.062
+ SHI           C5     C    CR15      0.000     -5.167   -0.375   -2.162
+ SHI           HC5    H    H         0.000     -4.886   -0.677   -3.163
+ SHI           O1     O    O2        0.000     -6.364    0.085   -1.770
+ SHI           C3     C    CR5       0.000     -5.226    0.091   -0.029
+ SHI           N2     N    NRD5      0.000     -6.380    0.341   -0.589
+ SHI           O31    O    OH1       0.000     -4.900    0.264    1.276
+ SHI           H31    H    H         0.000     -5.044   -0.460    1.870
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SHI      O42    n/a    C43    START
+ SHI      C43    O42    C42    .
+ SHI      O41    C43    .      .
+ SHI      C42    C43    C41    .
+ SHI      HC42   C42    .      .
+ SHI      N1     C42    HN11   .
+ SHI      HN12   N1     .      .
+ SHI      HN11   N1     .      .
+ SHI      C41    C42    C4     .
+ SHI      H411   C41    .      .
+ SHI      H412   C41    .      .
+ SHI      C4     C41    C3     .
+ SHI      C5     C4     O1     .
+ SHI      HC5    C5     .      .
+ SHI      O1     C5     .      .
+ SHI      C3     C4     O31    .
+ SHI      N2     C3     .      .
+ SHI      O31    C3     H31    .
+ SHI      H31    O31    .      END
+ SHI      O1     N2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SHI      O1     N2        single      1.337    0.020
+ SHI      O1     C5        single      1.380    0.020
+ SHI      N2     C3        double      1.350    0.020
+ SHI      C5     C4        double      1.387    0.020
+ SHI      HC5    C5        single      1.083    0.020
+ SHI      C3     C4        single      1.490    0.020
+ SHI      C4     C41       single      1.510    0.020
+ SHI      O31    C3        single      1.480    0.020
+ SHI      H31    O31       single      0.967    0.020
+ SHI      C41    C42       single      1.524    0.020
+ SHI      H411   C41       single      1.092    0.020
+ SHI      H412   C41       single      1.092    0.020
+ SHI      N1     C42       single      1.450    0.020
+ SHI      C42    C43       single      1.500    0.020
+ SHI      HC42   C42       single      1.099    0.020
+ SHI      HN11   N1        single      1.010    0.020
+ SHI      HN12   N1        single      1.010    0.020
+ SHI      O41    C43       deloc       1.250    0.020
+ SHI      C43    O42       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SHI      O42    C43    O41     123.000    3.000
+ SHI      O42    C43    C42     118.500    3.000
+ SHI      O41    C43    C42     118.500    3.000
+ SHI      C43    C42    HC42    108.810    3.000
+ SHI      C43    C42    N1      109.470    3.000
+ SHI      C43    C42    C41     109.470    3.000
+ SHI      HC42   C42    N1      109.470    3.000
+ SHI      HC42   C42    C41     108.340    3.000
+ SHI      N1     C42    C41     109.470    3.000
+ SHI      C42    N1     HN12    120.000    3.000
+ SHI      C42    N1     HN11    120.000    3.000
+ SHI      HN12   N1     HN11    120.000    3.000
+ SHI      C42    C41    H411    109.470    3.000
+ SHI      C42    C41    H412    109.470    3.000
+ SHI      C42    C41    C4      109.470    3.000
+ SHI      H411   C41    H412    107.900    3.000
+ SHI      H411   C41    C4      109.470    3.000
+ SHI      H412   C41    C4      109.470    3.000
+ SHI      C41    C4     C5      126.000    3.000
+ SHI      C41    C4     C3      126.000    3.000
+ SHI      C5     C4     C3      108.000    3.000
+ SHI      C4     C5     HC5     126.000    3.000
+ SHI      C4     C5     O1      108.000    3.000
+ SHI      HC5    C5     O1      126.000    3.000
+ SHI      C5     O1     N2      120.000    3.000
+ SHI      C4     C3     N2      108.000    3.000
+ SHI      C4     C3     O31     108.000    3.000
+ SHI      N2     C3     O31     108.000    3.000
+ SHI      C3     N2     O1      108.000    3.000
+ SHI      C3     O31    H31     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SHI      var_1    O42    C43    C42    C41      -90.018   20.000   3
+ SHI      var_2    C43    C42    N1     HN11      59.989   20.000   1
+ SHI      var_3    C43    C42    C41    C4       180.000   20.000   3
+ SHI      var_4    C42    C41    C4     C3       -90.344   20.000   2
+ SHI      CONST_1  C41    C4     C5     O1       180.000    0.000   0
+ SHI      CONST_2  C4     C5     O1     N2         0.000    0.000   0
+ SHI      CONST_3  C5     O1     N2     C3         0.000    0.000   0
+ SHI      CONST_4  C41    C4     C3     O31        0.000    0.000   0
+ SHI      CONST_5  C4     C3     N2     O1         0.000    0.000   0
+ SHI      var_5    C4     C3     O31    H31      -90.624   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SHI      chir_01  C42    C41    N1     C43       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SHI      plan-1    N2        0.020
+ SHI      plan-1    O1        0.020
+ SHI      plan-1    C3        0.020
+ SHI      plan-1    C5        0.020
+ SHI      plan-1    C4        0.020
+ SHI      plan-1    HC5       0.020
+ SHI      plan-1    C41       0.020
+ SHI      plan-1    O31       0.020
+ SHI      plan-2    N1        0.020
+ SHI      plan-2    C42       0.020
+ SHI      plan-2    HN11      0.020
+ SHI      plan-2    HN12      0.020
+ SHI      plan-3    C43       0.020
+ SHI      plan-3    C42       0.020
+ SHI      plan-3    O41       0.020
+ SHI      plan-3    O42       0.020
+# ------------------------------------------------------

@@ -1,0 +1,225 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SRO      SRO 'SEROTONIN                           ' non-polymer        25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SRO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SRO           OH     O    OH1       0.000      0.000    0.000    0.000
+ SRO           HOH    H    H         0.000      0.338   -0.171    0.890
+ SRO           CZ3    C    CR6       0.000     -1.337   -0.247   -0.032
+ SRO           CE3    C    CR16      0.000     -2.230    0.766    0.252
+ SRO           HE3    H    H         0.000     -1.869    1.756    0.504
+ SRO           CD2    C    CR56      0.000     -3.602    0.508    0.213
+ SRO           CE2    C    CR56      0.000     -4.066   -0.782   -0.104
+ SRO           CZ2    C    CR16      0.000     -3.149   -1.791   -0.382
+ SRO           HZ2    H    H         0.000     -3.497   -2.786   -0.629
+ SRO           CH2    C    CR16      0.000     -1.799   -1.524   -0.345
+ SRO           HH2    H    H         0.000     -1.090   -2.313   -0.561
+ SRO           CG     C    CR5       0.000     -4.797    1.321    0.449
+ SRO           CD1    C    CR15      0.000     -5.859    0.520    0.270
+ SRO           HD1    H    H         0.000     -6.893    0.827    0.372
+ SRO           NE1    N    NR15      0.000     -5.443   -0.741   -0.060
+ SRO           HNE1   H    H         0.000     -6.071   -1.547   -0.250
+ SRO           CB     C    CH2       0.000     -4.828    2.781    0.819
+ SRO           HB1    H    H         0.000     -3.980    3.009    1.468
+ SRO           HB2    H    H         0.000     -5.758    3.002    1.347
+ SRO           CA     C    CH2       0.000     -4.745    3.632   -0.449
+ SRO           HA1    H    H         0.000     -5.594    3.402   -1.097
+ SRO           HA2    H    H         0.000     -3.815    3.409   -0.976
+ SRO           NZ     N    NH2       0.000     -4.776    5.055   -0.087
+ SRO           HNZ2   H    H         0.000     -5.479    5.669   -0.482
+ SRO           HNZ1   H    H         0.000     -4.094    5.433    0.560
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SRO      OH     n/a    CZ3    START
+ SRO      HOH    OH     .      .
+ SRO      CZ3    OH     CE3    .
+ SRO      CE3    CZ3    CD2    .
+ SRO      HE3    CE3    .      .
+ SRO      CD2    CE3    CG     .
+ SRO      CE2    CD2    CZ2    .
+ SRO      CZ2    CE2    CH2    .
+ SRO      HZ2    CZ2    .      .
+ SRO      CH2    CZ2    HH2    .
+ SRO      HH2    CH2    .      .
+ SRO      CG     CD2    CB     .
+ SRO      CD1    CG     NE1    .
+ SRO      HD1    CD1    .      .
+ SRO      NE1    CD1    HNE1   .
+ SRO      HNE1   NE1    .      .
+ SRO      CB     CG     CA     .
+ SRO      HB1    CB     .      .
+ SRO      HB2    CB     .      .
+ SRO      CA     CB     NZ     .
+ SRO      HA1    CA     .      .
+ SRO      HA2    CA     .      .
+ SRO      NZ     CA     HNZ1   .
+ SRO      HNZ2   NZ     .      .
+ SRO      HNZ1   NZ     .      END
+ SRO      CZ3    CH2    .    ADD
+ SRO      CE2    NE1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SRO      CZ3    OH        single      1.362    0.020
+ SRO      HOH    OH        single      0.967    0.020
+ SRO      CE3    CZ3       double      1.390    0.020
+ SRO      CZ3    CH2       single      1.390    0.020
+ SRO      CH2    CZ2       double      1.390    0.020
+ SRO      HH2    CH2       single      1.083    0.020
+ SRO      CZ2    CE2       single      1.390    0.020
+ SRO      HZ2    CZ2       single      1.083    0.020
+ SRO      CE2    NE1       single      1.340    0.020
+ SRO      CE2    CD2       double      1.490    0.020
+ SRO      NE1    CD1       single      1.350    0.020
+ SRO      HNE1   NE1       single      1.040    0.020
+ SRO      CD1    CG        double      1.387    0.020
+ SRO      HD1    CD1       single      1.083    0.020
+ SRO      CB     CG        single      1.510    0.020
+ SRO      CG     CD2       single      1.490    0.020
+ SRO      CD2    CE3       single      1.390    0.020
+ SRO      HE3    CE3       single      1.083    0.020
+ SRO      CA     CB        single      1.524    0.020
+ SRO      HB1    CB        single      1.092    0.020
+ SRO      HB2    CB        single      1.092    0.020
+ SRO      NZ     CA        single      1.450    0.020
+ SRO      HA1    CA        single      1.092    0.020
+ SRO      HA2    CA        single      1.092    0.020
+ SRO      HNZ1   NZ        single      1.010    0.020
+ SRO      HNZ2   NZ        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SRO      HOH    OH     CZ3     109.470    3.000
+ SRO      OH     CZ3    CE3     120.000    3.000
+ SRO      OH     CZ3    CH2     120.000    3.000
+ SRO      CE3    CZ3    CH2     120.000    3.000
+ SRO      CZ3    CE3    HE3     120.000    3.000
+ SRO      CZ3    CE3    CD2     120.000    3.000
+ SRO      HE3    CE3    CD2     120.000    3.000
+ SRO      CE3    CD2    CE2     120.000    3.000
+ SRO      CE3    CD2    CG      126.000    3.000
+ SRO      CE2    CD2    CG      108.000    3.000
+ SRO      CD2    CE2    CZ2     120.000    3.000
+ SRO      CD2    CE2    NE1     108.000    3.000
+ SRO      CZ2    CE2    NE1     132.000    3.000
+ SRO      CE2    CZ2    HZ2     120.000    3.000
+ SRO      CE2    CZ2    CH2     120.000    3.000
+ SRO      HZ2    CZ2    CH2     120.000    3.000
+ SRO      CZ2    CH2    HH2     120.000    3.000
+ SRO      CZ2    CH2    CZ3     120.000    3.000
+ SRO      HH2    CH2    CZ3     120.000    3.000
+ SRO      CD2    CG     CD1     108.000    3.000
+ SRO      CD2    CG     CB      126.000    3.000
+ SRO      CD1    CG     CB      126.000    3.000
+ SRO      CG     CD1    HD1     126.000    3.000
+ SRO      CG     CD1    NE1     108.000    3.000
+ SRO      HD1    CD1    NE1     126.000    3.000
+ SRO      CD1    NE1    HNE1    126.000    3.000
+ SRO      CD1    NE1    CE2     108.000    3.000
+ SRO      HNE1   NE1    CE2     126.000    3.000
+ SRO      CG     CB     HB1     109.470    3.000
+ SRO      CG     CB     HB2     109.470    3.000
+ SRO      CG     CB     CA      109.470    3.000
+ SRO      HB1    CB     HB2     107.900    3.000
+ SRO      HB1    CB     CA      109.470    3.000
+ SRO      HB2    CB     CA      109.470    3.000
+ SRO      CB     CA     HA1     109.470    3.000
+ SRO      CB     CA     HA2     109.470    3.000
+ SRO      CB     CA     NZ      109.470    3.000
+ SRO      HA1    CA     HA2     107.900    3.000
+ SRO      HA1    CA     NZ      109.470    3.000
+ SRO      HA2    CA     NZ      109.470    3.000
+ SRO      CA     NZ     HNZ2    120.000    3.000
+ SRO      CA     NZ     HNZ1    120.000    3.000
+ SRO      HNZ2   NZ     HNZ1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SRO      var_1    HOH    OH     CZ3    CE3       90.033   20.000   1
+ SRO      CONST_1  OH     CZ3    CH2    CZ2      180.000    0.000   0
+ SRO      CONST_2  OH     CZ3    CE3    CD2      180.000    0.000   0
+ SRO      CONST_3  CZ3    CE3    CD2    CG       180.000    0.000   0
+ SRO      CONST_4  CE3    CD2    CE2    CZ2        0.000    0.000   0
+ SRO      CONST_5  CD2    CE2    NE1    CD1        0.000    0.000   0
+ SRO      CONST_6  CD2    CE2    CZ2    CH2        0.000    0.000   0
+ SRO      CONST_7  CE2    CZ2    CH2    CZ3        0.000    0.000   0
+ SRO      CONST_8  CE3    CD2    CG     CB         0.000    0.000   0
+ SRO      CONST_9  CD2    CG     CD1    NE1        0.000    0.000   0
+ SRO      CONST_10 CG     CD1    NE1    CE2        0.000    0.000   0
+ SRO      var_2    CD2    CG     CB     CA        84.905   20.000   2
+ SRO      var_3    CG     CB     CA     NZ       179.990   20.000   3
+ SRO      var_4    CB     CA     NZ     HNZ1      56.084   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SRO      plan-1    CZ3       0.020
+ SRO      plan-1    OH        0.020
+ SRO      plan-1    CH2       0.020
+ SRO      plan-1    CE3       0.020
+ SRO      plan-1    CZ2       0.020
+ SRO      plan-1    HH2       0.020
+ SRO      plan-1    CE2       0.020
+ SRO      plan-1    HZ2       0.020
+ SRO      plan-1    NE1       0.020
+ SRO      plan-1    CD2       0.020
+ SRO      plan-1    CD1       0.020
+ SRO      plan-1    CG        0.020
+ SRO      plan-1    HNE1      0.020
+ SRO      plan-1    HD1       0.020
+ SRO      plan-1    CB        0.020
+ SRO      plan-1    HE3       0.020
+ SRO      plan-2    NZ        0.020
+ SRO      plan-2    CA        0.020
+ SRO      plan-2    HNZ1      0.020
+ SRO      plan-2    HNZ2      0.020
+# ------------------------------------------------------

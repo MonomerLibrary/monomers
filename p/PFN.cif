@@ -1,0 +1,272 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PFN      PFN 'FENOPROFEN                          ' non-polymer        31  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PFN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PFN           OAA    O    OC       -0.500      0.000    0.000    0.000
+ PFN           CAO    C    C         0.000     -1.225   -0.023    0.251
+ PFN           OAB    O    OC       -0.500     -1.639   -0.579    1.293
+ PFN           C13    C    CH1       0.000     -2.202    0.619   -0.699
+ PFN           H13    H    H         0.000     -2.125    0.137   -1.684
+ PFN           CAM    C    CH3       0.000     -1.881    2.108   -0.834
+ PFN           HAM3   H    H         0.000     -2.567    2.559   -1.503
+ PFN           HAM2   H    H         0.000     -1.956    2.573    0.115
+ PFN           HAM1   H    H         0.000     -0.896    2.225   -1.207
+ PFN           CAE    C    CR6       0.000     -3.603    0.453   -0.168
+ PFN           CAD    C    CR16      0.000     -3.941    0.980    1.064
+ PFN           HAD    H    H         0.000     -3.199    1.511    1.647
+ PFN           CAF    C    CR16      0.000     -5.226    0.829    1.554
+ PFN           HAF    H    H         0.000     -5.488    1.242    2.520
+ PFN           CAG    C    CR16      0.000     -4.549   -0.221   -0.916
+ PFN           HAG    H    H         0.000     -4.286   -0.626   -1.885
+ PFN           C2     C    CR6       0.000     -5.837   -0.377   -0.424
+ PFN           CAH    C    CR16      0.000     -6.174    0.152    0.813
+ PFN           HAH    H    H         0.000     -7.180    0.034    1.197
+ PFN           OAN    O    O2        0.000     -6.767   -1.049   -1.154
+ PFN           CAR    C    CR6       0.000     -8.046   -1.070   -0.693
+ PFN           CAL    C    CR16      0.000     -8.793    0.099   -0.665
+ PFN           HAL    H    H         0.000     -8.357    1.030   -1.005
+ PFN           CAK    C    CR16      0.000     -8.607   -2.260   -0.256
+ PFN           HAK    H    H         0.000     -8.026   -3.174   -0.277
+ PFN           CAI    C    CR16      0.000     -9.909   -2.280    0.206
+ PFN           HAI    H    H         0.000    -10.348   -3.209    0.547
+ PFN           CAP    C    CR16      0.000    -10.652   -1.114    0.234
+ PFN           HAP    H    H         0.000    -11.672   -1.132    0.597
+ PFN           CAJ    C    CR16      0.000    -10.095    0.074   -0.202
+ PFN           HAJ    H    H         0.000    -10.679    0.986   -0.181
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PFN      OAA    n/a    CAO    START
+ PFN      CAO    OAA    C13    .
+ PFN      OAB    CAO    .      .
+ PFN      C13    CAO    CAE    .
+ PFN      H13    C13    .      .
+ PFN      CAM    C13    HAM1   .
+ PFN      HAM3   CAM    .      .
+ PFN      HAM2   CAM    .      .
+ PFN      HAM1   CAM    .      .
+ PFN      CAE    C13    CAG    .
+ PFN      CAD    CAE    CAF    .
+ PFN      HAD    CAD    .      .
+ PFN      CAF    CAD    HAF    .
+ PFN      HAF    CAF    .      .
+ PFN      CAG    CAE    C2     .
+ PFN      HAG    CAG    .      .
+ PFN      C2     CAG    OAN    .
+ PFN      CAH    C2     HAH    .
+ PFN      HAH    CAH    .      .
+ PFN      OAN    C2     CAR    .
+ PFN      CAR    OAN    CAK    .
+ PFN      CAL    CAR    HAL    .
+ PFN      HAL    CAL    .      .
+ PFN      CAK    CAR    CAI    .
+ PFN      HAK    CAK    .      .
+ PFN      CAI    CAK    CAP    .
+ PFN      HAI    CAI    .      .
+ PFN      CAP    CAI    CAJ    .
+ PFN      HAP    CAP    .      .
+ PFN      CAJ    CAP    HAJ    .
+ PFN      HAJ    CAJ    .      END
+ PFN      CAL    CAJ    .    ADD
+ PFN      CAH    CAF    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PFN      CAI    CAK       double      1.390    0.020
+ PFN      CAK    CAR       single      1.390    0.020
+ PFN      CAP    CAI       single      1.390    0.020
+ PFN      CAJ    CAP       double      1.390    0.020
+ PFN      CAL    CAJ       single      1.390    0.020
+ PFN      CAL    CAR       double      1.390    0.020
+ PFN      CAR    OAN       single      1.370    0.020
+ PFN      OAN    C2        single      1.370    0.020
+ PFN      OAB    CAO       deloc       1.250    0.020
+ PFN      CAO    OAA       deloc       1.250    0.020
+ PFN      C13    CAO       single      1.500    0.020
+ PFN      CAM    C13       single      1.524    0.020
+ PFN      CAG    CAE       single      1.390    0.020
+ PFN      C2     CAG       double      1.390    0.020
+ PFN      CAD    CAE       double      1.390    0.020
+ PFN      CAE    C13       single      1.480    0.020
+ PFN      CAF    CAD       single      1.390    0.020
+ PFN      CAH    CAF       double      1.390    0.020
+ PFN      CAH    C2        single      1.390    0.020
+ PFN      HAK    CAK       single      1.083    0.020
+ PFN      HAI    CAI       single      1.083    0.020
+ PFN      HAP    CAP       single      1.083    0.020
+ PFN      HAJ    CAJ       single      1.083    0.020
+ PFN      HAL    CAL       single      1.083    0.020
+ PFN      H13    C13       single      1.099    0.020
+ PFN      HAM1   CAM       single      1.059    0.020
+ PFN      HAM2   CAM       single      1.059    0.020
+ PFN      HAM3   CAM       single      1.059    0.020
+ PFN      HAG    CAG       single      1.083    0.020
+ PFN      HAD    CAD       single      1.083    0.020
+ PFN      HAF    CAF       single      1.083    0.020
+ PFN      HAH    CAH       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PFN      OAA    CAO    OAB     123.000    3.000
+ PFN      OAA    CAO    C13     118.500    3.000
+ PFN      OAB    CAO    C13     118.500    3.000
+ PFN      CAO    C13    H13     108.810    3.000
+ PFN      CAO    C13    CAM     109.470    3.000
+ PFN      CAO    C13    CAE     109.500    3.000
+ PFN      H13    C13    CAM     108.340    3.000
+ PFN      H13    C13    CAE     109.470    3.000
+ PFN      CAM    C13    CAE     109.470    3.000
+ PFN      C13    CAM    HAM3    109.470    3.000
+ PFN      C13    CAM    HAM2    109.470    3.000
+ PFN      C13    CAM    HAM1    109.470    3.000
+ PFN      HAM3   CAM    HAM2    109.470    3.000
+ PFN      HAM3   CAM    HAM1    109.470    3.000
+ PFN      HAM2   CAM    HAM1    109.470    3.000
+ PFN      C13    CAE    CAD     120.000    3.000
+ PFN      C13    CAE    CAG     120.000    3.000
+ PFN      CAD    CAE    CAG     120.000    3.000
+ PFN      CAE    CAD    HAD     120.000    3.000
+ PFN      CAE    CAD    CAF     120.000    3.000
+ PFN      HAD    CAD    CAF     120.000    3.000
+ PFN      CAD    CAF    HAF     120.000    3.000
+ PFN      CAD    CAF    CAH     120.000    3.000
+ PFN      HAF    CAF    CAH     120.000    3.000
+ PFN      CAE    CAG    HAG     120.000    3.000
+ PFN      CAE    CAG    C2      120.000    3.000
+ PFN      HAG    CAG    C2      120.000    3.000
+ PFN      CAG    C2     CAH     120.000    3.000
+ PFN      CAG    C2     OAN     120.000    3.000
+ PFN      CAH    C2     OAN     120.000    3.000
+ PFN      C2     CAH    HAH     120.000    3.000
+ PFN      C2     CAH    CAF     120.000    3.000
+ PFN      HAH    CAH    CAF     120.000    3.000
+ PFN      C2     OAN    CAR     120.000    3.000
+ PFN      OAN    CAR    CAL     120.000    3.000
+ PFN      OAN    CAR    CAK     120.000    3.000
+ PFN      CAL    CAR    CAK     120.000    3.000
+ PFN      CAR    CAL    HAL     120.000    3.000
+ PFN      CAR    CAL    CAJ     120.000    3.000
+ PFN      HAL    CAL    CAJ     120.000    3.000
+ PFN      CAR    CAK    HAK     120.000    3.000
+ PFN      CAR    CAK    CAI     120.000    3.000
+ PFN      HAK    CAK    CAI     120.000    3.000
+ PFN      CAK    CAI    HAI     120.000    3.000
+ PFN      CAK    CAI    CAP     120.000    3.000
+ PFN      HAI    CAI    CAP     120.000    3.000
+ PFN      CAI    CAP    HAP     120.000    3.000
+ PFN      CAI    CAP    CAJ     120.000    3.000
+ PFN      HAP    CAP    CAJ     120.000    3.000
+ PFN      CAP    CAJ    HAJ     120.000    3.000
+ PFN      CAP    CAJ    CAL     120.000    3.000
+ PFN      HAJ    CAJ    CAL     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PFN      var_1    OAA    CAO    C13    CAE     -179.989   20.000   3
+ PFN      var_2    CAO    C13    CAM    HAM1      59.961   20.000   3
+ PFN      var_3    CAO    C13    CAE    CAG     -120.271   20.000   1
+ PFN      CONST_1  C13    CAE    CAD    CAF      180.000    0.000   0
+ PFN      CONST_2  CAE    CAD    CAF    CAH        0.000    0.000   0
+ PFN      CONST_3  C13    CAE    CAG    C2       180.000    0.000   0
+ PFN      CONST_4  CAE    CAG    C2     OAN      180.000    0.000   0
+ PFN      CONST_5  CAG    C2     CAH    CAF        0.000    0.000   0
+ PFN      CONST_6  C2     CAH    CAF    CAD        0.000    0.000   0
+ PFN      var_4    CAG    C2     OAN    CAR     -173.935   20.000   1
+ PFN      var_5    C2     OAN    CAR    CAK     -112.860   20.000   1
+ PFN      CONST_7  OAN    CAR    CAL    CAJ      180.000    0.000   0
+ PFN      CONST_8  CAR    CAL    CAJ    CAP        0.000    0.000   0
+ PFN      CONST_9  OAN    CAR    CAK    CAI      180.000    0.000   0
+ PFN      CONST_10 CAR    CAK    CAI    CAP        0.000    0.000   0
+ PFN      CONST_11 CAK    CAI    CAP    CAJ        0.000    0.000   0
+ PFN      CONST_12 CAI    CAP    CAJ    CAL        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PFN      chir_01  C13    CAO    CAM    CAE       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PFN      plan-1    CAL       0.020
+ PFN      plan-1    CAJ       0.020
+ PFN      plan-1    CAR       0.020
+ PFN      plan-1    HAL       0.020
+ PFN      plan-1    CAP       0.020
+ PFN      plan-1    CAI       0.020
+ PFN      plan-1    CAK       0.020
+ PFN      plan-1    HAJ       0.020
+ PFN      plan-1    HAP       0.020
+ PFN      plan-1    HAI       0.020
+ PFN      plan-1    HAK       0.020
+ PFN      plan-1    OAN       0.020
+ PFN      plan-2    CAO       0.020
+ PFN      plan-2    OAB       0.020
+ PFN      plan-2    OAA       0.020
+ PFN      plan-2    C13       0.020
+ PFN      plan-3    CAH       0.020
+ PFN      plan-3    CAF       0.020
+ PFN      plan-3    C2        0.020
+ PFN      plan-3    HAH       0.020
+ PFN      plan-3    CAD       0.020
+ PFN      plan-3    CAE       0.020
+ PFN      plan-3    CAG       0.020
+ PFN      plan-3    HAF       0.020
+ PFN      plan-3    OAN       0.020
+ PFN      plan-3    HAD       0.020
+ PFN      plan-3    C13       0.020
+ PFN      plan-3    HAG       0.020
+# ------------------------------------------------------

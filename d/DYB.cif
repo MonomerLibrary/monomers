@@ -1,0 +1,203 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DYB      DYB '4-(1,3,2-DIOXABOROLAN-2-YLOXY)BUTAN-' non-polymer        26  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DYB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DYB           NK     N    NT3       1.000      0.000    0.000    0.000
+ DYB           HK1    H    H         0.000      0.003   -0.486   -0.910
+ DYB           HK2    H    H         0.000      0.840    0.593    0.081
+ DYB           HK3    H    H         0.000     -0.011   -0.693    0.764
+ DYB           CI     C    CH2       0.000     -1.199    0.844    0.094
+ DYB           HI2    H    H         0.000     -1.190    1.580   -0.712
+ DYB           HI3    H    H         0.000     -1.205    1.361    1.056
+ DYB           CQ     C    CH2       0.000     -2.449   -0.030   -0.025
+ DYB           HQ2    H    H         0.000     -2.456   -0.766    0.782
+ DYB           HQ3    H    H         0.000     -2.441   -0.546   -0.987
+ DYB           CH     C    CH2       0.000     -3.697    0.849    0.074
+ DYB           HH2    H    H         0.000     -3.688    1.585   -0.732
+ DYB           HH3    H    H         0.000     -3.703    1.365    1.037
+ DYB           CZ1    C    CH2       0.000     -4.948   -0.025   -0.045
+ DYB           HZ12   H    H         0.000     -4.954   -0.761    0.762
+ DYB           HZ13   H    H         0.000     -4.939   -0.542   -1.007
+ DYB           OE1    O    O2        0.000     -6.114    0.795    0.047
+ DYB           BD     B    B         0.000     -7.234   -0.069   -0.071
+ DYB           OE3    O    O2        0.000     -7.173   -1.484   -0.252
+ DYB           CZ3    C    CH2       0.000     -8.433   -1.977    0.271
+ DYB           HZ32   H    H         0.000     -8.440   -2.074    1.359
+ DYB           HZ33   H    H         0.000     -8.747   -2.921   -0.179
+ DYB           CZ2    C    CH2       0.000     -9.406   -0.851   -0.155
+ DYB           HZ23   H    H         0.000    -10.273   -0.773    0.504
+ DYB           HZ22   H    H         0.000     -9.744   -0.956   -1.188
+ DYB           OE2    O    O2        0.000     -8.598    0.338   -0.031
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DYB      NK     n/a    CI     START
+ DYB      HK1    NK     .      .
+ DYB      HK2    NK     .      .
+ DYB      HK3    NK     .      .
+ DYB      CI     NK     CQ     .
+ DYB      HI2    CI     .      .
+ DYB      HI3    CI     .      .
+ DYB      CQ     CI     CH     .
+ DYB      HQ2    CQ     .      .
+ DYB      HQ3    CQ     .      .
+ DYB      CH     CQ     CZ1    .
+ DYB      HH2    CH     .      .
+ DYB      HH3    CH     .      .
+ DYB      CZ1    CH     OE1    .
+ DYB      HZ12   CZ1    .      .
+ DYB      HZ13   CZ1    .      .
+ DYB      OE1    CZ1    BD     .
+ DYB      BD     OE1    OE3    .
+ DYB      OE3    BD     CZ3    .
+ DYB      CZ3    OE3    CZ2    .
+ DYB      HZ32   CZ3    .      .
+ DYB      HZ33   CZ3    .      .
+ DYB      CZ2    CZ3    OE2    .
+ DYB      HZ23   CZ2    .      .
+ DYB      HZ22   CZ2    .      .
+ DYB      OE2    CZ2    .      END
+ DYB      BD     OE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DYB      BD     OE1       single      1.434    0.020
+ DYB      BD     OE2       single      1.434    0.020
+ DYB      OE3    BD        single      1.434    0.020
+ DYB      OE1    CZ1       single      1.426    0.020
+ DYB      OE2    CZ2       single      1.426    0.020
+ DYB      CZ2    CZ3       single      1.524    0.020
+ DYB      HZ22   CZ2       single      1.092    0.020
+ DYB      HZ23   CZ2       single      1.092    0.020
+ DYB      CZ3    OE3       single      1.426    0.020
+ DYB      HZ32   CZ3       single      1.092    0.020
+ DYB      HZ33   CZ3       single      1.092    0.020
+ DYB      CZ1    CH        single      1.524    0.020
+ DYB      HZ12   CZ1       single      1.092    0.020
+ DYB      HZ13   CZ1       single      1.092    0.020
+ DYB      CH     CQ        single      1.524    0.020
+ DYB      HH2    CH        single      1.092    0.020
+ DYB      HH3    CH        single      1.092    0.020
+ DYB      CQ     CI        single      1.524    0.020
+ DYB      HQ2    CQ        single      1.092    0.020
+ DYB      HQ3    CQ        single      1.092    0.020
+ DYB      CI     NK        single      1.488    0.020
+ DYB      HI2    CI        single      1.092    0.020
+ DYB      HI3    CI        single      1.092    0.020
+ DYB      HK1    NK        single      1.033    0.020
+ DYB      HK2    NK        single      1.033    0.020
+ DYB      HK3    NK        single      1.033    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DYB      HK1    NK     HK2     109.470    3.000
+ DYB      HK1    NK     HK3     109.470    3.000
+ DYB      HK2    NK     HK3     109.470    3.000
+ DYB      HK1    NK     CI      109.470    3.000
+ DYB      HK2    NK     CI      109.470    3.000
+ DYB      HK3    NK     CI      109.470    3.000
+ DYB      NK     CI     HI2     109.470    3.000
+ DYB      NK     CI     HI3     109.470    3.000
+ DYB      NK     CI     CQ      110.000    3.000
+ DYB      HI2    CI     HI3     107.900    3.000
+ DYB      HI2    CI     CQ      109.470    3.000
+ DYB      HI3    CI     CQ      109.470    3.000
+ DYB      CI     CQ     HQ2     109.470    3.000
+ DYB      CI     CQ     HQ3     109.470    3.000
+ DYB      CI     CQ     CH      111.000    3.000
+ DYB      HQ2    CQ     HQ3     107.900    3.000
+ DYB      HQ2    CQ     CH      109.470    3.000
+ DYB      HQ3    CQ     CH      109.470    3.000
+ DYB      CQ     CH     HH2     109.470    3.000
+ DYB      CQ     CH     HH3     109.470    3.000
+ DYB      CQ     CH     CZ1     111.000    3.000
+ DYB      HH2    CH     HH3     107.900    3.000
+ DYB      HH2    CH     CZ1     109.470    3.000
+ DYB      HH3    CH     CZ1     109.470    3.000
+ DYB      CH     CZ1    HZ12    109.470    3.000
+ DYB      CH     CZ1    HZ13    109.470    3.000
+ DYB      CH     CZ1    OE1     109.470    3.000
+ DYB      HZ12   CZ1    HZ13    107.900    3.000
+ DYB      HZ12   CZ1    OE1     109.470    3.000
+ DYB      HZ13   CZ1    OE1     109.470    3.000
+ DYB      CZ1    OE1    BD      120.000    3.000
+ DYB      OE1    BD     OE3     120.000    3.000
+ DYB      OE1    BD     OE2     120.000    3.000
+ DYB      OE3    BD     OE2     120.000    3.000
+ DYB      BD     OE3    CZ3     120.000    3.000
+ DYB      OE3    CZ3    HZ32    109.470    3.000
+ DYB      OE3    CZ3    HZ33    109.470    3.000
+ DYB      OE3    CZ3    CZ2     109.470    3.000
+ DYB      HZ32   CZ3    HZ33    107.900    3.000
+ DYB      HZ32   CZ3    CZ2     109.470    3.000
+ DYB      HZ33   CZ3    CZ2     109.470    3.000
+ DYB      CZ3    CZ2    HZ23    109.470    3.000
+ DYB      CZ3    CZ2    HZ22    109.470    3.000
+ DYB      CZ3    CZ2    OE2     109.470    3.000
+ DYB      HZ23   CZ2    HZ22    107.900    3.000
+ DYB      HZ23   CZ2    OE2     109.470    3.000
+ DYB      HZ22   CZ2    OE2     109.470    3.000
+ DYB      CZ2    OE2    BD      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DYB      var_1    HK3    NK     CI     CQ       -60.002   20.000   1
+ DYB      var_2    NK     CI     CQ     CH       179.970   20.000   3
+ DYB      var_3    CI     CQ     CH     CZ1     -179.999   20.000   3
+ DYB      var_4    CQ     CH     CZ1    OE1     -179.968   20.000   3
+ DYB      var_5    CH     CZ1    OE1    BD       179.986   20.000   1
+ DYB      var_6    CZ1    OE1    BD     OE3       -0.302   20.000   1
+ DYB      var_7    OE1    BD     OE2    CZ2      180.000   20.000   1
+ DYB      var_8    OE1    BD     OE3    CZ3      150.000   20.000   1
+ DYB      var_9    BD     OE3    CZ3    CZ2       30.000   20.000   1
+ DYB      var_10   OE3    CZ3    CZ2    OE2      -30.000   20.000   3
+ DYB      var_11   CZ3    CZ2    OE2    BD        30.000   20.000   1
+# ------------------------------------------------------

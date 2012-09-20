@@ -1,0 +1,155 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SNC      SNC 'S-NITROSO-CYSTEINE                  ' peptide            14   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SNC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SNC           N      N    NH2       0.000      0.000    0.000    0.000
+ SNC           HN1    H    H         0.000      0.691   -0.453    0.587
+ SNC           HN2    H    H         0.000      0.223    0.196   -0.969
+ SNC           CA     C    CH1       0.000     -1.312    0.368    0.549
+ SNC           HA     H    H         0.000     -1.417    1.462    0.545
+ SNC           CB     C    CH2       0.000     -2.414   -0.252   -0.310
+ SNC           HB2    H    H         0.000     -3.389    0.021    0.099
+ SNC           HB3    H    H         0.000     -2.309   -1.339   -0.304
+ SNC           SG     S    S2        0.000     -2.276    0.361   -2.006
+ SNC           ND     N    N         0.000     -3.472   -0.392   -2.666
+ SNC           OE     O    O         0.000     -3.715   -0.234   -3.848
+ SNC           C      C    C         0.000     -1.426   -0.142    1.961
+ SNC           O      O    OC       -0.500     -0.819   -1.181    2.303
+ SNC           OXT    O    OC       -0.500     -2.130    0.472    2.793
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SNC      N      n/a    CA     START
+ SNC      HN1    N      .      .
+ SNC      HN2    N      .      .
+ SNC      CA     N      C      .
+ SNC      HA     CA     .      .
+ SNC      CB     CA     SG     .
+ SNC      HB2    CB     .      .
+ SNC      HB3    CB     .      .
+ SNC      SG     CB     ND     .
+ SNC      ND     SG     OE     .
+ SNC      OE     ND     .      .
+ SNC      C      CA     .      END
+ SNC      O      C      .      .
+ SNC      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SNC      CA     N         single      1.450    0.020
+ SNC      CB     CA        single      1.524    0.020
+ SNC      C      CA        single      1.500    0.020
+ SNC      HA     CA        single      1.099    0.020
+ SNC      SG     CB        single      1.762    0.020
+ SNC      HB2    CB        single      1.092    0.020
+ SNC      HB3    CB        single      1.092    0.020
+ SNC      ND     SG        single      1.620    0.020
+ SNC      OE     ND        double      1.220    0.020
+ SNC      O      C         deloc       1.250    0.020
+ SNC      OXT    C         deloc       1.250    0.020
+ SNC      HN1    N         single      1.010    0.020
+ SNC      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SNC      HN1    N      HN2     120.000    3.000
+ SNC      HN1    N      CA      120.000    3.000
+ SNC      HN2    N      CA      120.000    3.000
+ SNC      N      CA     HA      109.470    3.000
+ SNC      N      CA     CB      109.470    3.000
+ SNC      N      CA     C       109.470    3.000
+ SNC      HA     CA     CB      108.340    3.000
+ SNC      HA     CA     C       108.810    3.000
+ SNC      CB     CA     C       109.470    3.000
+ SNC      CA     CB     HB2     109.470    3.000
+ SNC      CA     CB     HB3     109.470    3.000
+ SNC      CA     CB     SG      109.500    3.000
+ SNC      HB2    CB     HB3     107.900    3.000
+ SNC      HB2    CB     SG      109.500    3.000
+ SNC      HB3    CB     SG      109.500    3.000
+ SNC      CB     SG     ND      100.073    3.000
+ SNC      SG     ND     OE      120.000    3.000
+ SNC      CA     C      O       118.500    3.000
+ SNC      CA     C      OXT     118.500    3.000
+ SNC      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SNC      var_1    HN2    N      CA     C        175.000   20.000   1
+ SNC      var_2    N      CA     CB     SG       -59.997   20.000   3
+ SNC      var_3    CA     CB     SG     ND      -179.963   20.000   1
+ SNC      var_4    CB     SG     ND     OE      -179.966   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SNC      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SNC      plan-1    N         0.020
+ SNC      plan-1    CA        0.020
+ SNC      plan-1    HN1       0.020
+ SNC      plan-1    HN2       0.020
+ SNC      plan-2    ND        0.020
+ SNC      plan-2    SG        0.020
+ SNC      plan-2    OE        0.020
+ SNC      plan-3    C         0.020
+ SNC      plan-3    CA        0.020
+ SNC      plan-3    O         0.020
+ SNC      plan-3    OXT       0.020
+# ------------------------------------------------------

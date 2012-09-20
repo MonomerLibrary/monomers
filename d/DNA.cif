@@ -1,0 +1,210 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DNA      DNA '1,4-dihydroxy-2-naphthoic acid      ' non-polymer        22  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DNA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DNA           O1B    O    OC       -0.500      0.000    0.000    0.000
+ DNA           C1J    C    C         0.000     -1.057    0.668    0.010
+ DNA           O1A    O    OC       -0.500     -1.006    1.918    0.032
+ DNA           C1L    C    CR6       0.000     -2.361   -0.015   -0.004
+ DNA           C1I    C    CR16      0.000     -2.413   -1.422   -0.029
+ DNA           H1I    H    H         0.000     -1.491   -1.990   -0.052
+ DNA           C1M    C    CR6       0.000     -3.535    0.734    0.007
+ DNA           O1D    O    OH1       0.000     -3.482    2.088    0.020
+ DNA           HO1D   H    H         0.000     -3.473    2.418   -0.889
+ DNA           C1O    C    CR66      0.000     -4.779    0.070    0.005
+ DNA           C1H    C    CR16      0.000     -5.985    0.790    0.017
+ DNA           H1H    H    H         0.000     -5.972    1.873    0.028
+ DNA           C1F    C    CR16      0.000     -7.171    0.120    0.015
+ DNA           H1F    H    H         0.000     -8.099    0.677    0.023
+ DNA           C1N    C    CR66      0.000     -4.814   -1.346   -0.014
+ DNA           C1G    C    CR16      0.000     -6.054   -2.002   -0.009
+ DNA           H1G    H    H         0.000     -6.096   -3.084   -0.014
+ DNA           C1E    C    CR16      0.000     -7.205   -1.272    0.002
+ DNA           H1E    H    H         0.000     -8.160   -1.783    0.000
+ DNA           C1K    C    CR6       0.000     -3.605   -2.076   -0.025
+ DNA           O1C    O    OH1       0.000     -3.633   -3.435   -0.032
+ DNA           HO1C   H    H         0.000     -3.635   -3.761    0.878
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DNA      O1B    n/a    C1J    START
+ DNA      C1J    O1B    C1L    .
+ DNA      O1A    C1J    .      .
+ DNA      C1L    C1J    C1M    .
+ DNA      C1I    C1L    H1I    .
+ DNA      H1I    C1I    .      .
+ DNA      C1M    C1L    C1O    .
+ DNA      O1D    C1M    HO1D   .
+ DNA      HO1D   O1D    .      .
+ DNA      C1O    C1M    C1N    .
+ DNA      C1H    C1O    C1F    .
+ DNA      H1H    C1H    .      .
+ DNA      C1F    C1H    H1F    .
+ DNA      H1F    C1F    .      .
+ DNA      C1N    C1O    C1K    .
+ DNA      C1G    C1N    C1E    .
+ DNA      H1G    C1G    .      .
+ DNA      C1E    C1G    H1E    .
+ DNA      H1E    C1E    .      .
+ DNA      C1K    C1N    O1C    .
+ DNA      O1C    C1K    HO1C   .
+ DNA      HO1C   O1C    .      END
+ DNA      C1E    C1F    .    ADD
+ DNA      C1I    C1K    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DNA      O1A    C1J       deloc       1.250    0.020
+ DNA      C1J    O1B       deloc       1.250    0.020
+ DNA      O1C    C1K       single      1.362    0.020
+ DNA      HO1C   O1C       single      0.967    0.020
+ DNA      O1D    C1M       single      1.362    0.020
+ DNA      HO1D   O1D       single      0.967    0.020
+ DNA      C1E    C1F       double      1.390    0.020
+ DNA      C1E    C1G       single      1.390    0.020
+ DNA      H1E    C1E       single      1.083    0.020
+ DNA      C1F    C1H       single      1.390    0.020
+ DNA      H1F    C1F       single      1.083    0.020
+ DNA      C1G    C1N       double      1.390    0.020
+ DNA      H1G    C1G       single      1.083    0.020
+ DNA      C1H    C1O       double      1.390    0.020
+ DNA      H1H    C1H       single      1.083    0.020
+ DNA      C1I    C1L       single      1.390    0.020
+ DNA      C1I    C1K       double      1.390    0.020
+ DNA      H1I    C1I       single      1.083    0.020
+ DNA      C1L    C1J       single      1.500    0.020
+ DNA      C1K    C1N       single      1.490    0.020
+ DNA      C1M    C1L       double      1.487    0.020
+ DNA      C1O    C1M       single      1.490    0.020
+ DNA      C1N    C1O       single      1.490    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DNA      O1B    C1J    O1A     123.000    3.000
+ DNA      O1B    C1J    C1L     120.000    3.000
+ DNA      O1A    C1J    C1L     120.000    3.000
+ DNA      C1J    C1L    C1I     120.000    3.000
+ DNA      C1J    C1L    C1M     120.000    3.000
+ DNA      C1I    C1L    C1M     120.000    3.000
+ DNA      C1L    C1I    H1I     120.000    3.000
+ DNA      C1L    C1I    C1K     120.000    3.000
+ DNA      H1I    C1I    C1K     120.000    3.000
+ DNA      C1L    C1M    O1D     120.000    3.000
+ DNA      C1L    C1M    C1O     120.000    3.000
+ DNA      O1D    C1M    C1O     120.000    3.000
+ DNA      C1M    O1D    HO1D    109.470    3.000
+ DNA      C1M    C1O    C1H     120.000    3.000
+ DNA      C1M    C1O    C1N     120.000    3.000
+ DNA      C1H    C1O    C1N     120.000    3.000
+ DNA      C1O    C1H    H1H     120.000    3.000
+ DNA      C1O    C1H    C1F     120.000    3.000
+ DNA      H1H    C1H    C1F     120.000    3.000
+ DNA      C1H    C1F    H1F     120.000    3.000
+ DNA      C1H    C1F    C1E     120.000    3.000
+ DNA      H1F    C1F    C1E     120.000    3.000
+ DNA      C1O    C1N    C1G     120.000    3.000
+ DNA      C1O    C1N    C1K     120.000    3.000
+ DNA      C1G    C1N    C1K     120.000    3.000
+ DNA      C1N    C1G    H1G     120.000    3.000
+ DNA      C1N    C1G    C1E     120.000    3.000
+ DNA      H1G    C1G    C1E     120.000    3.000
+ DNA      C1G    C1E    H1E     120.000    3.000
+ DNA      C1G    C1E    C1F     120.000    3.000
+ DNA      H1E    C1E    C1F     120.000    3.000
+ DNA      C1N    C1K    O1C     120.000    3.000
+ DNA      C1N    C1K    C1I     120.000    3.000
+ DNA      O1C    C1K    C1I     120.000    3.000
+ DNA      C1K    O1C    HO1C    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DNA      var_1    O1B    C1J    C1L    C1M     -179.979   20.000   1
+ DNA      CONST_1  C1J    C1L    C1I    C1K      180.000    0.000   0
+ DNA      CONST_2  C1L    C1I    C1K    C1N        0.000    0.000   0
+ DNA      CONST_3  C1J    C1L    C1M    C1O      180.000    0.000   0
+ DNA      var_2    C1L    C1M    O1D    HO1D      90.067   20.000   1
+ DNA      CONST_4  C1L    C1M    C1O    C1N        0.000    0.000   0
+ DNA      CONST_5  C1M    C1O    C1H    C1F      180.000    0.000   0
+ DNA      CONST_6  C1O    C1H    C1F    C1E        0.000    0.000   0
+ DNA      CONST_7  C1M    C1O    C1N    C1K        0.000    0.000   0
+ DNA      CONST_8  C1O    C1N    C1G    C1E        0.000    0.000   0
+ DNA      CONST_9  C1N    C1G    C1E    C1F        0.000    0.000   0
+ DNA      CONST_10 C1G    C1E    C1F    C1H        0.000    0.000   0
+ DNA      CONST_11 C1O    C1N    C1K    O1C      180.000    0.000   0
+ DNA      var_3    C1N    C1K    O1C    HO1C     -89.996   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DNA      plan-1    C1E       0.020
+ DNA      plan-1    C1F       0.020
+ DNA      plan-1    C1G       0.020
+ DNA      plan-1    H1E       0.020
+ DNA      plan-1    C1H       0.020
+ DNA      plan-1    H1F       0.020
+ DNA      plan-1    C1N       0.020
+ DNA      plan-1    H1G       0.020
+ DNA      plan-1    C1O       0.020
+ DNA      plan-1    H1H       0.020
+ DNA      plan-1    C1I       0.020
+ DNA      plan-1    C1K       0.020
+ DNA      plan-1    C1L       0.020
+ DNA      plan-1    H1I       0.020
+ DNA      plan-1    C1M       0.020
+ DNA      plan-1    O1C       0.020
+ DNA      plan-1    C1J       0.020
+ DNA      plan-1    O1D       0.020
+ DNA      plan-2    C1J       0.020
+ DNA      plan-2    O1A       0.020
+ DNA      plan-2    O1B       0.020
+ DNA      plan-2    C1L       0.020
+# ------------------------------------------------------

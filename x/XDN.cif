@@ -1,0 +1,191 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XDN      XDN 'PIPERIDINE-3,4,5-TRIOL              ' non-polymer        20   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XDN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XDN           O4     O    OH1       0.000      0.000    0.000    0.000
+ XDN           HO4    H    H         0.000      0.800    0.399    0.367
+ XDN           C4     C    CH1       0.000     -1.133    0.415    0.766
+ XDN           H4     H    H         0.000     -1.221    1.510    0.726
+ XDN           C3     C    CH1       0.000     -2.401   -0.220    0.192
+ XDN           H3     H    H         0.000     -2.284   -1.312    0.162
+ XDN           O3     O    OH1       0.000     -2.628    0.273   -1.131
+ XDN           HO3    H    H         0.000     -3.430   -0.129   -1.491
+ XDN           C2     C    CH1       0.000     -3.589    0.143    1.089
+ XDN           H2     H    H         0.000     -3.752    1.230    1.060
+ XDN           O2     O    OH1       0.000     -4.762   -0.528    0.625
+ XDN           HO2    H    H         0.000     -5.509   -0.301    1.194
+ XDN           C5     C    CH2       0.000     -0.958   -0.030    2.219
+ XDN           H51    H    H         0.000     -0.039    0.402    2.620
+ XDN           H52    H    H         0.000     -0.893   -1.119    2.256
+ XDN           N5     N    NH1       0.000     -2.103    0.421    3.017
+ XDN           HN5    H    H         0.000     -2.079    1.096    3.769
+ XDN           C1     C    CH2       0.000     -3.286   -0.288    2.524
+ XDN           H12    H    H         0.000     -4.139   -0.053    3.164
+ XDN           H11    H    H         0.000     -3.098   -1.363    2.551
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XDN      O4     n/a    C4     START
+ XDN      HO4    O4     .      .
+ XDN      C4     O4     C5     .
+ XDN      H4     C4     .      .
+ XDN      C3     C4     C2     .
+ XDN      H3     C3     .      .
+ XDN      O3     C3     HO3    .
+ XDN      HO3    O3     .      .
+ XDN      C2     C3     O2     .
+ XDN      H2     C2     .      .
+ XDN      O2     C2     HO2    .
+ XDN      HO2    O2     .      .
+ XDN      C5     C4     N5     .
+ XDN      H51    C5     .      .
+ XDN      H52    C5     .      .
+ XDN      N5     C5     C1     .
+ XDN      HN5    N5     .      .
+ XDN      C1     N5     H11    .
+ XDN      H12    C1     .      .
+ XDN      H11    C1     .      END
+ XDN      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XDN      C1     C2        single      1.524    0.020
+ XDN      C1     N5        single      1.450    0.020
+ XDN      H11    C1        single      1.092    0.020
+ XDN      H12    C1        single      1.092    0.020
+ XDN      O2     C2        single      1.432    0.020
+ XDN      C2     C3        single      1.524    0.020
+ XDN      H2     C2        single      1.099    0.020
+ XDN      HO2    O2        single      0.967    0.020
+ XDN      O3     C3        single      1.432    0.020
+ XDN      C3     C4        single      1.524    0.020
+ XDN      H3     C3        single      1.099    0.020
+ XDN      HO3    O3        single      0.967    0.020
+ XDN      C4     O4        single      1.432    0.020
+ XDN      C5     C4        single      1.524    0.020
+ XDN      H4     C4        single      1.099    0.020
+ XDN      HO4    O4        single      0.967    0.020
+ XDN      N5     C5        single      1.450    0.020
+ XDN      H51    C5        single      1.092    0.020
+ XDN      H52    C5        single      1.092    0.020
+ XDN      HN5    N5        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XDN      HO4    O4     C4      109.470    3.000
+ XDN      O4     C4     H4      109.470    3.000
+ XDN      O4     C4     C3      109.470    3.000
+ XDN      O4     C4     C5      109.470    3.000
+ XDN      H4     C4     C3      108.340    3.000
+ XDN      H4     C4     C5      108.340    3.000
+ XDN      C3     C4     C5      111.000    3.000
+ XDN      C4     C3     H3      108.340    3.000
+ XDN      C4     C3     O3      109.470    3.000
+ XDN      C4     C3     C2      111.000    3.000
+ XDN      H3     C3     O3      109.470    3.000
+ XDN      H3     C3     C2      108.340    3.000
+ XDN      O3     C3     C2      109.470    3.000
+ XDN      C3     O3     HO3     109.470    3.000
+ XDN      C3     C2     H2      108.340    3.000
+ XDN      C3     C2     O2      109.470    3.000
+ XDN      C3     C2     C1      111.000    3.000
+ XDN      H2     C2     O2      109.470    3.000
+ XDN      H2     C2     C1      108.340    3.000
+ XDN      O2     C2     C1      109.470    3.000
+ XDN      C2     O2     HO2     109.470    3.000
+ XDN      C4     C5     H51     109.470    3.000
+ XDN      C4     C5     H52     109.470    3.000
+ XDN      C4     C5     N5      110.000    3.000
+ XDN      H51    C5     H52     107.900    3.000
+ XDN      H51    C5     N5      109.470    3.000
+ XDN      H52    C5     N5      109.470    3.000
+ XDN      C5     N5     HN5     118.500    3.000
+ XDN      C5     N5     C1      120.000    3.000
+ XDN      HN5    N5     C1      118.500    3.000
+ XDN      N5     C1     H12     109.470    3.000
+ XDN      N5     C1     H11     109.470    3.000
+ XDN      N5     C1     C2      110.000    3.000
+ XDN      H12    C1     H11     107.900    3.000
+ XDN      H12    C1     C2      109.470    3.000
+ XDN      H11    C1     C2      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XDN      var_1    HO4    O4     C4     C5       -59.907   20.000   1
+ XDN      var_2    O4     C4     C3     C2       180.000   20.000   3
+ XDN      var_3    C4     C3     O3     HO3      179.993   20.000   1
+ XDN      var_4    C4     C3     C2     O2       180.000   20.000   3
+ XDN      var_5    C3     C2     O2     HO2      179.810   20.000   1
+ XDN      var_6    O4     C4     C5     N5       180.000   20.000   3
+ XDN      var_7    C4     C5     N5     C1        60.000   20.000   3
+ XDN      var_8    C5     N5     C1     C2       -60.000   20.000   3
+ XDN      var_9    N5     C1     C2     C3        60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ XDN      chir_01  C2     C1     O2     C3        positiv
+ XDN      chir_02  C3     C2     O3     C4        negativ
+ XDN      chir_03  C4     C3     O4     C5        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ XDN      plan-1    N5        0.020
+ XDN      plan-1    C1        0.000
+ XDN      plan-1    C5        0.000
+ XDN      plan-1    HN5       0.000
+# ------------------------------------------------------

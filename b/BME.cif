@@ -1,0 +1,111 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BME      BME 'BETA-MERCAPTOETHANOL                ' non-polymer        10   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BME
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BME           S2     S    SH1       0.000      0.000    0.000    0.000
+ BME           HS2    H    H         0.000     -0.088    0.000   -1.327
+ BME           C2     C    CH2       0.000     -1.787    0.000    0.308
+ BME           H21    H    H         0.000     -2.233   -0.891   -0.138
+ BME           H22    H    H         0.000     -2.233    0.891   -0.138
+ BME           C1     C    CH2       0.000     -2.045    0.000    1.815
+ BME           H11    H    H         0.000     -1.597    0.891    2.260
+ BME           H12    H    H         0.000     -1.597   -0.891    2.260
+ BME           O1     O    OH1       0.000     -3.453    0.000    2.057
+ BME           HO1    H    H         0.000     -3.616    0.000    3.010
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BME      S2     n/a    C2     START
+ BME      HS2    S2     .      .
+ BME      C2     S2     C1     .
+ BME      H21    C2     .      .
+ BME      H22    C2     .      .
+ BME      C1     C2     O1     .
+ BME      H11    C1     .      .
+ BME      H12    C1     .      .
+ BME      O1     C1     HO1    .
+ BME      HO1    O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BME      C1     C2        single      1.524    0.020
+ BME      O1     C1        single      1.432    0.020
+ BME      H11    C1        single      1.092    0.020
+ BME      H12    C1        single      1.092    0.020
+ BME      C2     S2        single      1.810    0.020
+ BME      H21    C2        single      1.092    0.020
+ BME      H22    C2        single      1.092    0.020
+ BME      HO1    O1        single      0.967    0.020
+ BME      HS2    S2        single      1.330    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BME      HS2    S2     C2       96.000    3.000
+ BME      S2     C2     H21     109.470    3.000
+ BME      S2     C2     H22     109.470    3.000
+ BME      S2     C2     C1      109.470    3.000
+ BME      H21    C2     H22     107.900    3.000
+ BME      H21    C2     C1      109.470    3.000
+ BME      H22    C2     C1      109.470    3.000
+ BME      C2     C1     H11     109.470    3.000
+ BME      C2     C1     H12     109.470    3.000
+ BME      C2     C1     O1      109.470    3.000
+ BME      H11    C1     H12     107.900    3.000
+ BME      H11    C1     O1      109.470    3.000
+ BME      H12    C1     O1      109.470    3.000
+ BME      C1     O1     HO1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BME      var_1    HS2    S2     C2     C1       180.000   20.000   1
+ BME      var_2    S2     C2     C1     O1       180.000   20.000   3
+ BME      var_3    C2     C1     O1     HO1      180.000   20.000   1
+# ------------------------------------------------------

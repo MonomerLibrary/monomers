@@ -1,0 +1,122 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+EFS      EFS 'ETHYL DIHYDROGEN PHOSPHATE          ' non-polymer        12   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_EFS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ EFS           O3     O    OP       -0.666      0.000    0.000    0.000
+ EFS           P      P    P         0.000     -1.183    0.925    0.185
+ EFS           O4     O    OP       -0.666     -1.603    1.480   -1.158
+ EFS           O1     O    OP       -0.666     -0.794    2.063    1.103
+ EFS           O2     O    O2        0.000     -2.406    0.107    0.835
+ EFS           C11    C    CH2       0.000     -1.950   -0.390    2.094
+ EFS           H111   H    H         0.000     -1.661    0.448    2.731
+ EFS           H112   H    H         0.000     -1.088   -1.041    1.936
+ EFS           C12    C    CH3       0.000     -3.072   -1.181    2.767
+ EFS           H123   H    H         0.000     -3.910   -0.551    2.922
+ EFS           H122   H    H         0.000     -3.356   -1.995    2.150
+ EFS           H121   H    H         0.000     -2.736   -1.552    3.702
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ EFS      O3     n/a    P      START
+ EFS      P      O3     O2     .
+ EFS      O4     P      .      .
+ EFS      O1     P      .      .
+ EFS      O2     P      C11    .
+ EFS      C11    O2     C12    .
+ EFS      H111   C11    .      .
+ EFS      H112   C11    .      .
+ EFS      C12    C11    H121   .
+ EFS      H123   C12    .      .
+ EFS      H122   C12    .      .
+ EFS      H121   C12    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ EFS      C12    C11       single      1.513    0.020
+ EFS      H121   C12       single      1.059    0.020
+ EFS      H122   C12       single      1.059    0.020
+ EFS      H123   C12       single      1.059    0.020
+ EFS      C11    O2        single      1.426    0.020
+ EFS      H111   C11       single      1.092    0.020
+ EFS      H112   C11       single      1.092    0.020
+ EFS      O2     P         single      1.610    0.020
+ EFS      O4     P         deloc       1.510    0.020
+ EFS      O1     P         deloc       1.510    0.020
+ EFS      P      O3        deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ EFS      O3     P      O4      119.900    3.000
+ EFS      O3     P      O1      119.900    3.000
+ EFS      O3     P      O2      108.200    3.000
+ EFS      O4     P      O1      119.900    3.000
+ EFS      O4     P      O2      108.200    3.000
+ EFS      O1     P      O2      108.200    3.000
+ EFS      P      O2     C11     120.500    3.000
+ EFS      O2     C11    H111    109.470    3.000
+ EFS      O2     C11    H112    109.470    3.000
+ EFS      O2     C11    C12     109.470    3.000
+ EFS      H111   C11    H112    107.900    3.000
+ EFS      H111   C11    C12     109.470    3.000
+ EFS      H112   C11    C12     109.470    3.000
+ EFS      C11    C12    H123    109.470    3.000
+ EFS      C11    C12    H122    109.470    3.000
+ EFS      C11    C12    H121    109.470    3.000
+ EFS      H123   C12    H122    109.470    3.000
+ EFS      H123   C12    H121    109.470    3.000
+ EFS      H122   C12    H121    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ EFS      var_1    O3     P      O2     C11       59.996   20.000   1
+ EFS      var_2    P      O2     C11    C12      179.985   20.000   1
+ EFS      var_3    O2     C11    C12    H121     179.963   20.000   3
+# ------------------------------------------------------

@@ -1,0 +1,183 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NIZ      NIZ 'pyridine-4-carbohydrazide           ' non-polymer        17  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NIZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NIZ           O1     O    O         0.000      0.000    0.000    0.000
+ NIZ           C      C    C         0.000     -1.213    0.074    0.010
+ NIZ           N2     N    NH1       0.000     -1.814    1.281   -0.006
+ NIZ           H6     H    H         0.000     -2.822    1.343    0.002
+ NIZ           N3     N    NH2       0.000     -1.060    2.419   -0.034
+ NIZ           H7     H    H         0.000     -1.188    3.113    0.681
+ NIZ           HN3    H    H         0.000     -0.387    2.548   -0.768
+ NIZ           C1     C    CR6       0.000     -2.032   -1.160    0.034
+ NIZ           C5     C    CR16      0.000     -1.428   -2.422    0.045
+ NIZ           H5     H    H         0.000     -0.349   -2.515    0.036
+ NIZ           C4     C    CR16      0.000     -2.229   -3.547    0.068
+ NIZ           H4     H    H         0.000     -1.771   -4.528    0.077
+ NIZ           N1     N    NRD6      0.000     -3.543   -3.442    0.078
+ NIZ           C3     C    CR16      0.000     -4.152   -2.273    0.062
+ NIZ           H3     H    H         0.000     -5.234   -2.235    0.067
+ NIZ           C2     C    CR16      0.000     -3.428   -1.097    0.040
+ NIZ           H2     H    H         0.000     -3.935   -0.140    0.029
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NIZ      O1     n/a    C      START
+ NIZ      C      O1     C1     .
+ NIZ      N2     C      N3     .
+ NIZ      H6     N2     .      .
+ NIZ      N3     N2     HN3    .
+ NIZ      H7     N3     .      .
+ NIZ      HN3    N3     .      .
+ NIZ      C1     C      C5     .
+ NIZ      C5     C1     C4     .
+ NIZ      H5     C5     .      .
+ NIZ      C4     C5     N1     .
+ NIZ      H4     C4     .      .
+ NIZ      N1     C4     C3     .
+ NIZ      C3     N1     C2     .
+ NIZ      H3     C3     .      .
+ NIZ      C2     C3     H2     .
+ NIZ      H2     C2     .      END
+ NIZ      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NIZ      C      O1        double      1.220    0.020
+ NIZ      C1     C         single      1.500    0.020
+ NIZ      C5     C1        single      1.390    0.020
+ NIZ      N1     C4        single      1.337    0.020
+ NIZ      C1     C2        double      1.390    0.020
+ NIZ      H2     C2        single      1.083    0.020
+ NIZ      N2     C         single      1.330    0.020
+ NIZ      N3     N2        single      1.400    0.020
+ NIZ      C3     N1        double      1.337    0.020
+ NIZ      C2     C3        single      1.390    0.020
+ NIZ      H3     C3        single      1.083    0.020
+ NIZ      HN3    N3        single      1.010    0.020
+ NIZ      C4     C5        double      1.390    0.020
+ NIZ      H4     C4        single      1.083    0.020
+ NIZ      H5     C5        single      1.083    0.020
+ NIZ      H6     N2        single      1.010    0.020
+ NIZ      H7     N3        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NIZ      O1     C      N2      123.000    3.000
+ NIZ      O1     C      C1      120.500    3.000
+ NIZ      N2     C      C1      120.000    3.000
+ NIZ      C      N2     H6      120.000    3.000
+ NIZ      C      N2     N3      120.000    3.000
+ NIZ      H6     N2     N3      120.000    3.000
+ NIZ      N2     N3     H7      120.000    3.000
+ NIZ      N2     N3     HN3     120.000    3.000
+ NIZ      H7     N3     HN3     120.000    3.000
+ NIZ      C      C1     C5      120.000    3.000
+ NIZ      C      C1     C2      120.000    3.000
+ NIZ      C5     C1     C2      120.000    3.000
+ NIZ      C1     C5     H5      120.000    3.000
+ NIZ      C1     C5     C4      120.000    3.000
+ NIZ      H5     C5     C4      120.000    3.000
+ NIZ      C5     C4     H4      120.000    3.000
+ NIZ      C5     C4     N1      120.000    3.000
+ NIZ      H4     C4     N1      120.000    3.000
+ NIZ      C4     N1     C3      120.000    3.000
+ NIZ      N1     C3     H3      120.000    3.000
+ NIZ      N1     C3     C2      120.000    3.000
+ NIZ      H3     C3     C2      120.000    3.000
+ NIZ      C3     C2     H2      120.000    3.000
+ NIZ      C3     C2     C1      120.000    3.000
+ NIZ      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NIZ      CONST_1  O1     C      N2     N3         0.000    0.000   0
+ NIZ      CONST_2  C      N2     N3     HN3       56.082    0.000   0
+ NIZ      var_1    O1     C      C1     C5        -0.018   20.000   1
+ NIZ      CONST_3  C      C1     C2     C3       180.000    0.000   0
+ NIZ      CONST_4  C      C1     C5     C4       180.000    0.000   0
+ NIZ      CONST_5  C1     C5     C4     N1         0.000    0.000   0
+ NIZ      CONST_6  C5     C4     N1     C3         0.000    0.000   0
+ NIZ      CONST_7  C4     N1     C3     C2         0.000    0.000   0
+ NIZ      CONST_8  N1     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NIZ      plan-1    C         0.020
+ NIZ      plan-1    C1        0.020
+ NIZ      plan-1    O1        0.020
+ NIZ      plan-1    N2        0.020
+ NIZ      plan-1    H6        0.020
+ NIZ      plan-2    C1        0.020
+ NIZ      plan-2    C         0.020
+ NIZ      plan-2    C2        0.020
+ NIZ      plan-2    C5        0.020
+ NIZ      plan-2    N1        0.020
+ NIZ      plan-2    C3        0.020
+ NIZ      plan-2    C4        0.020
+ NIZ      plan-2    H2        0.020
+ NIZ      plan-2    H3        0.020
+ NIZ      plan-2    H4        0.020
+ NIZ      plan-2    H5        0.020
+ NIZ      plan-3    N2        0.020
+ NIZ      plan-3    C         0.020
+ NIZ      plan-3    N3        0.020
+ NIZ      plan-3    H6        0.020
+ NIZ      plan-3    H7        0.020
+ NIZ      plan-3    HN3       0.020
+ NIZ      plan-4    N3        0.020
+ NIZ      plan-4    N2        0.020
+ NIZ      plan-4    HN3       0.020
+ NIZ      plan-4    H7        0.020
+ NIZ      plan-4    H6        0.020
+# ------------------------------------------------------

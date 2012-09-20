@@ -1,0 +1,250 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NP1      NP1 'N-(3-AMINOPROPYL)-4-METHYL-2-NITROBE' non-polymer        30  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NP1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NP1           OC2    O    O        -1.000      0.000    0.000    0.000
+ NP1           NO2    N    N         1.000     -0.114    0.722   -0.975
+ NP1           OC1    O    O         0.000      0.731    0.696   -1.852
+ NP1           CE2    C    CR6       0.000     -1.277    1.629   -1.092
+ NP1           CR2    C    CR16      0.000     -1.119    2.888   -1.637
+ NP1           HR2    H    H         0.000     -0.144    3.209   -1.983
+ NP1           CZ     C    CR6       0.000     -2.203    3.739   -1.743
+ NP1           CM     C    CH3       0.000     -2.027    5.114   -2.335
+ NP1           HM3    H    H         0.000     -1.239    5.095   -3.043
+ NP1           HM2    H    H         0.000     -2.924    5.411   -2.812
+ NP1           HM1    H    H         0.000     -1.793    5.802   -1.564
+ NP1           CR1    C    CR16      0.000     -3.452    3.328   -1.313
+ NP1           HR1    H    H         0.000     -4.301    3.995   -1.400
+ NP1           CE1    C    CR16      0.000     -3.618    2.069   -0.772
+ NP1           HE1    H    H         0.000     -4.597    1.748   -0.436
+ NP1           CD     C    CR6       0.000     -2.529    1.214   -0.659
+ NP1           NE     N    NH1       0.000     -2.693   -0.061   -0.113
+ NP1           HNE    H    H         0.000     -1.922   -0.714   -0.113
+ NP1           CG     C    CH2       0.000     -3.984   -0.451    0.461
+ NP1           HG1    H    H         0.000     -4.757   -0.391   -0.308
+ NP1           HG2    H    H         0.000     -4.236    0.224    1.282
+ NP1           CB     C    CH2       0.000     -3.896   -1.886    0.987
+ NP1           HB1    H    H         0.000     -3.122   -1.944    1.756
+ NP1           HB2    H    H         0.000     -3.642   -2.559    0.166
+ NP1           CA     C    CH2       0.000     -5.243   -2.293    1.585
+ NP1           HA1    H    H         0.000     -6.016   -2.234    0.815
+ NP1           HA2    H    H         0.000     -5.496   -1.618    2.406
+ NP1           NZ     N    NH2       0.000     -5.157   -3.670    2.090
+ NP1           HNZ2   H    H         0.000     -5.697   -4.409    1.655
+ NP1           HNZ1   H    H         0.000     -4.558   -3.890    2.877
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NP1      OC2    n/a    NO2    START
+ NP1      NO2    OC2    CE2    .
+ NP1      OC1    NO2    .      .
+ NP1      CE2    NO2    CD     .
+ NP1      CR2    CE2    CZ     .
+ NP1      HR2    CR2    .      .
+ NP1      CZ     CR2    CR1    .
+ NP1      CM     CZ     HM1    .
+ NP1      HM3    CM     .      .
+ NP1      HM2    CM     .      .
+ NP1      HM1    CM     .      .
+ NP1      CR1    CZ     CE1    .
+ NP1      HR1    CR1    .      .
+ NP1      CE1    CR1    HE1    .
+ NP1      HE1    CE1    .      .
+ NP1      CD     CE2    NE     .
+ NP1      NE     CD     CG     .
+ NP1      HNE    NE     .      .
+ NP1      CG     NE     CB     .
+ NP1      HG1    CG     .      .
+ NP1      HG2    CG     .      .
+ NP1      CB     CG     CA     .
+ NP1      HB1    CB     .      .
+ NP1      HB2    CB     .      .
+ NP1      CA     CB     NZ     .
+ NP1      HA1    CA     .      .
+ NP1      HA2    CA     .      .
+ NP1      NZ     CA     HNZ1   .
+ NP1      HNZ2   NZ     .      .
+ NP1      HNZ1   NZ     .      END
+ NP1      CD     CE1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NP1      NZ     CA        single      1.450    0.020
+ NP1      HNZ1   NZ        single      1.010    0.020
+ NP1      HNZ2   NZ        single      1.010    0.020
+ NP1      CA     CB        single      1.524    0.020
+ NP1      HA1    CA        single      1.092    0.020
+ NP1      HA2    CA        single      1.092    0.020
+ NP1      CB     CG        single      1.524    0.020
+ NP1      HB1    CB        single      1.092    0.020
+ NP1      HB2    CB        single      1.092    0.020
+ NP1      CG     NE        single      1.450    0.020
+ NP1      HG1    CG        single      1.092    0.020
+ NP1      HG2    CG        single      1.092    0.020
+ NP1      NE     CD        single      1.350    0.020
+ NP1      HNE    NE        single      1.010    0.020
+ NP1      CD     CE1       double      1.390    0.020
+ NP1      CD     CE2       single      1.487    0.020
+ NP1      CE1    CR1       single      1.390    0.020
+ NP1      HE1    CE1       single      1.083    0.020
+ NP1      CE2    NO2       single      1.400    0.020
+ NP1      CR2    CE2       double      1.390    0.020
+ NP1      OC1    NO2       double      1.220    0.020
+ NP1      NO2    OC2       single      1.400    0.020
+ NP1      CR1    CZ        double      1.390    0.020
+ NP1      HR1    CR1       single      1.083    0.020
+ NP1      CZ     CR2       single      1.390    0.020
+ NP1      HR2    CR2       single      1.083    0.020
+ NP1      CM     CZ        single      1.506    0.020
+ NP1      HM1    CM        single      1.059    0.020
+ NP1      HM2    CM        single      1.059    0.020
+ NP1      HM3    CM        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NP1      OC2    NO2    OC1     120.000    3.000
+ NP1      OC2    NO2    CE2     120.000    3.000
+ NP1      OC1    NO2    CE2     120.000    3.000
+ NP1      NO2    CE2    CR2     120.000    3.000
+ NP1      NO2    CE2    CD      120.000    3.000
+ NP1      CR2    CE2    CD      120.000    3.000
+ NP1      CE2    CR2    HR2     120.000    3.000
+ NP1      CE2    CR2    CZ      120.000    3.000
+ NP1      HR2    CR2    CZ      120.000    3.000
+ NP1      CR2    CZ     CM      120.000    3.000
+ NP1      CR2    CZ     CR1     120.000    3.000
+ NP1      CM     CZ     CR1     120.000    3.000
+ NP1      CZ     CM     HM3     109.470    3.000
+ NP1      CZ     CM     HM2     109.470    3.000
+ NP1      CZ     CM     HM1     109.470    3.000
+ NP1      HM3    CM     HM2     109.470    3.000
+ NP1      HM3    CM     HM1     109.470    3.000
+ NP1      HM2    CM     HM1     109.470    3.000
+ NP1      CZ     CR1    HR1     120.000    3.000
+ NP1      CZ     CR1    CE1     120.000    3.000
+ NP1      HR1    CR1    CE1     120.000    3.000
+ NP1      CR1    CE1    HE1     120.000    3.000
+ NP1      CR1    CE1    CD      120.000    3.000
+ NP1      HE1    CE1    CD      120.000    3.000
+ NP1      CE2    CD     NE      120.000    3.000
+ NP1      CE2    CD     CE1     120.000    3.000
+ NP1      NE     CD     CE1     120.000    3.000
+ NP1      CD     NE     HNE     120.000    3.000
+ NP1      CD     NE     CG      120.000    3.000
+ NP1      HNE    NE     CG      118.500    3.000
+ NP1      NE     CG     HG1     109.470    3.000
+ NP1      NE     CG     HG2     109.470    3.000
+ NP1      NE     CG     CB      112.000    3.000
+ NP1      HG1    CG     HG2     107.900    3.000
+ NP1      HG1    CG     CB      109.470    3.000
+ NP1      HG2    CG     CB      109.470    3.000
+ NP1      CG     CB     HB1     109.470    3.000
+ NP1      CG     CB     HB2     109.470    3.000
+ NP1      CG     CB     CA      111.000    3.000
+ NP1      HB1    CB     HB2     107.900    3.000
+ NP1      HB1    CB     CA      109.470    3.000
+ NP1      HB2    CB     CA      109.470    3.000
+ NP1      CB     CA     HA1     109.470    3.000
+ NP1      CB     CA     HA2     109.470    3.000
+ NP1      CB     CA     NZ      109.470    3.000
+ NP1      HA1    CA     HA2     107.900    3.000
+ NP1      HA1    CA     NZ      109.470    3.000
+ NP1      HA2    CA     NZ      109.470    3.000
+ NP1      CA     NZ     HNZ2    120.000    3.000
+ NP1      CA     NZ     HNZ1    120.000    3.000
+ NP1      HNZ2   NZ     HNZ1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NP1      var_1    OC2    NO2    CE2    CD       -37.733   20.000   1
+ NP1      CONST_1  NO2    CE2    CR2    CZ       180.000    0.000   0
+ NP1      CONST_2  CE2    CR2    CZ     CR1        0.000    0.000   0
+ NP1      var_2    CR2    CZ     CM     HM1      -90.308   20.000   1
+ NP1      CONST_3  CR2    CZ     CR1    CE1        0.000    0.000   0
+ NP1      CONST_4  CZ     CR1    CE1    CD         0.000    0.000   0
+ NP1      CONST_5  NO2    CE2    CD     NE         0.000    0.000   0
+ NP1      CONST_6  CE2    CD     CE1    CR1        0.000    0.000   0
+ NP1      var_3    CE2    CD     NE     CG       174.126   20.000   1
+ NP1      var_4    CD     NE     CG     CB      -179.957   20.000   3
+ NP1      var_5    NE     CG     CB     CA      -179.956   20.000   3
+ NP1      var_6    CG     CB     CA     NZ      -179.983   20.000   3
+ NP1      var_7    CB     CA     NZ     HNZ1      66.227   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NP1      plan-1    NZ        0.020
+ NP1      plan-1    CA        0.020
+ NP1      plan-1    HNZ1      0.020
+ NP1      plan-1    HNZ2      0.020
+ NP1      plan-2    NE        0.020
+ NP1      plan-2    CG        0.020
+ NP1      plan-2    CD        0.020
+ NP1      plan-2    HNE       0.020
+ NP1      plan-3    CD        0.020
+ NP1      plan-3    NE        0.020
+ NP1      plan-3    CE1       0.020
+ NP1      plan-3    CE2       0.020
+ NP1      plan-3    CR1       0.020
+ NP1      plan-3    CR2       0.020
+ NP1      plan-3    CZ        0.020
+ NP1      plan-3    HE1       0.020
+ NP1      plan-3    NO2       0.020
+ NP1      plan-3    HR1       0.020
+ NP1      plan-3    HR2       0.020
+ NP1      plan-3    CM        0.020
+ NP1      plan-3    HNE       0.020
+ NP1      plan-4    NO2       0.020
+ NP1      plan-4    CE2       0.020
+ NP1      plan-4    OC1       0.020
+ NP1      plan-4    OC2       0.020
+# ------------------------------------------------------

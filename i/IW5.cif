@@ -1,0 +1,272 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IW5      IW5 '4-[(E)-2-(4-aminophenyl)ethenyl]-2,6' non-polymer        30  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IW5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IW5           BRAD   BR   BR        0.000      0.000    0.000    0.000
+ IW5           CAO    C    CR6       0.000     -1.887    0.110    0.002
+ IW5           CAP    C    CR6       0.000     -2.512    1.354    0.002
+ IW5           CAN    C    CR6       0.000     -3.900    1.439   -0.001
+ IW5           BRAC   BR   BR        0.000     -4.742    3.133   -0.002
+ IW5           NAB    N    NH2       0.000     -1.741    2.519    0.005
+ IW5           HNAD   H    H         0.000     -0.725    2.470    0.007
+ IW5           HNAC   H    H         0.000     -2.184    3.435    0.004
+ IW5           CAL    C    CR16      0.000     -2.644   -1.043   -0.006
+ IW5           HAL    H    H         0.000     -2.158   -2.011   -0.014
+ IW5           CAR    C    CR6       0.000     -4.039   -0.960   -0.004
+ IW5           CAK    C    CR16      0.000     -4.663    0.291   -0.004
+ IW5           HAK    H    H         0.000     -5.744    0.359   -0.006
+ IW5           CAF    C    C1        0.000     -4.851   -2.189   -0.001
+ IW5           HAF    H    H         0.000     -5.926   -2.124    0.002
+ IW5           CAE    C    C1        0.000     -4.251   -3.391   -0.001
+ IW5           HAE    H    H         0.000     -3.176   -3.456   -0.004
+ IW5           CAQ    C    CR6       0.000     -5.063   -4.620    0.002
+ IW5           CAI    C    CR16      0.000     -4.440   -5.872    0.003
+ IW5           HAI    H    H         0.000     -3.359   -5.940    0.001
+ IW5           CAJ    C    CR16      0.000     -6.459   -4.538    0.005
+ IW5           HAJ    H    H         0.000     -6.945   -3.570    0.001
+ IW5           CAH    C    CR16      0.000     -7.214   -5.690    0.014
+ IW5           HAH    H    H         0.000     -8.295   -5.628    0.026
+ IW5           CAM    C    CR6       0.000     -6.591   -6.933    0.009
+ IW5           CAG    C    CR16      0.000     -5.203   -7.019    0.006
+ IW5           HAG    H    H         0.000     -4.721   -7.989    0.006
+ IW5           NAA    N    NH2       0.000     -7.361   -8.098    0.006
+ IW5           HNAB   H    H         0.000     -8.377   -8.050    0.008
+ IW5           HNAA   H    H         0.000     -6.917   -9.014    0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IW5      BRAD   n/a    CAO    START
+ IW5      CAO    BRAD   CAL    .
+ IW5      CAP    CAO    NAB    .
+ IW5      CAN    CAP    BRAC   .
+ IW5      BRAC   CAN    .      .
+ IW5      NAB    CAP    HNAC   .
+ IW5      HNAD   NAB    .      .
+ IW5      HNAC   NAB    .      .
+ IW5      CAL    CAO    CAR    .
+ IW5      HAL    CAL    .      .
+ IW5      CAR    CAL    CAF    .
+ IW5      CAK    CAR    HAK    .
+ IW5      HAK    CAK    .      .
+ IW5      CAF    CAR    CAE    .
+ IW5      HAF    CAF    .      .
+ IW5      CAE    CAF    CAQ    .
+ IW5      HAE    CAE    .      .
+ IW5      CAQ    CAE    CAJ    .
+ IW5      CAI    CAQ    HAI    .
+ IW5      HAI    CAI    .      .
+ IW5      CAJ    CAQ    CAH    .
+ IW5      HAJ    CAJ    .      .
+ IW5      CAH    CAJ    CAM    .
+ IW5      HAH    CAH    .      .
+ IW5      CAM    CAH    NAA    .
+ IW5      CAG    CAM    HAG    .
+ IW5      HAG    CAG    .      .
+ IW5      NAA    CAM    HNAA   .
+ IW5      HNAB   NAA    .      .
+ IW5      HNAA   NAA    .      END
+ IW5      CAG    CAI    .    ADD
+ IW5      CAK    CAN    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IW5      NAA    CAM       single      1.355    0.020
+ IW5      HNAA   NAA       single      1.010    0.020
+ IW5      HNAB   NAA       single      1.010    0.020
+ IW5      NAB    CAP       single      1.355    0.020
+ IW5      HNAC   NAB       single      1.010    0.020
+ IW5      HNAD   NAB       single      1.010    0.020
+ IW5      BRAC   CAN       single      1.890    0.020
+ IW5      CAO    BRAD      single      1.890    0.020
+ IW5      CAE    CAF       double      1.330    0.020
+ IW5      CAQ    CAE       single      1.480    0.020
+ IW5      HAE    CAE       single      1.077    0.020
+ IW5      CAF    CAR       single      1.480    0.020
+ IW5      HAF    CAF       single      1.077    0.020
+ IW5      CAG    CAI       double      1.390    0.020
+ IW5      CAG    CAM       single      1.390    0.020
+ IW5      HAG    CAG       single      1.083    0.020
+ IW5      CAH    CAJ       single      1.390    0.020
+ IW5      CAM    CAH       double      1.390    0.020
+ IW5      HAH    CAH       single      1.083    0.020
+ IW5      CAI    CAQ       single      1.390    0.020
+ IW5      HAI    CAI       single      1.083    0.020
+ IW5      CAJ    CAQ       double      1.390    0.020
+ IW5      HAJ    CAJ       single      1.083    0.020
+ IW5      CAK    CAN       double      1.390    0.020
+ IW5      CAK    CAR       single      1.390    0.020
+ IW5      HAK    CAK       single      1.083    0.020
+ IW5      CAL    CAO       single      1.390    0.020
+ IW5      CAR    CAL       double      1.390    0.020
+ IW5      HAL    CAL       single      1.083    0.020
+ IW5      CAN    CAP       single      1.487    0.020
+ IW5      CAP    CAO       double      1.487    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IW5      BRAD   CAO    CAP     120.000    3.000
+ IW5      BRAD   CAO    CAL     120.000    3.000
+ IW5      CAP    CAO    CAL     120.000    3.000
+ IW5      CAO    CAP    CAN     120.000    3.000
+ IW5      CAO    CAP    NAB     120.000    3.000
+ IW5      CAN    CAP    NAB     120.000    3.000
+ IW5      CAP    CAN    BRAC    120.000    3.000
+ IW5      CAP    CAN    CAK     120.000    3.000
+ IW5      BRAC   CAN    CAK     120.000    3.000
+ IW5      CAP    NAB    HNAD    120.000    3.000
+ IW5      CAP    NAB    HNAC    120.000    3.000
+ IW5      HNAD   NAB    HNAC    120.000    3.000
+ IW5      CAO    CAL    HAL     120.000    3.000
+ IW5      CAO    CAL    CAR     120.000    3.000
+ IW5      HAL    CAL    CAR     120.000    3.000
+ IW5      CAL    CAR    CAK     120.000    3.000
+ IW5      CAL    CAR    CAF     120.000    3.000
+ IW5      CAK    CAR    CAF     120.000    3.000
+ IW5      CAR    CAK    HAK     120.000    3.000
+ IW5      CAR    CAK    CAN     120.000    3.000
+ IW5      HAK    CAK    CAN     120.000    3.000
+ IW5      CAR    CAF    HAF     120.000    3.000
+ IW5      CAR    CAF    CAE     120.000    3.000
+ IW5      HAF    CAF    CAE     120.000    3.000
+ IW5      CAF    CAE    HAE     120.000    3.000
+ IW5      CAF    CAE    CAQ     120.000    3.000
+ IW5      HAE    CAE    CAQ     120.000    3.000
+ IW5      CAE    CAQ    CAI     120.000    3.000
+ IW5      CAE    CAQ    CAJ     120.000    3.000
+ IW5      CAI    CAQ    CAJ     120.000    3.000
+ IW5      CAQ    CAI    HAI     120.000    3.000
+ IW5      CAQ    CAI    CAG     120.000    3.000
+ IW5      HAI    CAI    CAG     120.000    3.000
+ IW5      CAQ    CAJ    HAJ     120.000    3.000
+ IW5      CAQ    CAJ    CAH     120.000    3.000
+ IW5      HAJ    CAJ    CAH     120.000    3.000
+ IW5      CAJ    CAH    HAH     120.000    3.000
+ IW5      CAJ    CAH    CAM     120.000    3.000
+ IW5      HAH    CAH    CAM     120.000    3.000
+ IW5      CAH    CAM    CAG     120.000    3.000
+ IW5      CAH    CAM    NAA     120.000    3.000
+ IW5      CAG    CAM    NAA     120.000    3.000
+ IW5      CAM    CAG    HAG     120.000    3.000
+ IW5      CAM    CAG    CAI     120.000    3.000
+ IW5      HAG    CAG    CAI     120.000    3.000
+ IW5      CAM    NAA    HNAB    120.000    3.000
+ IW5      CAM    NAA    HNAA    120.000    3.000
+ IW5      HNAB   NAA    HNAA    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IW5      CONST_1  BRAD   CAO    CAP    NAB        0.000    0.000   0
+ IW5      CONST_2  CAO    CAP    CAN    BRAC     180.000    0.000   0
+ IW5      CONST_3  CAO    CAP    NAB    HNAC     179.952    0.000   0
+ IW5      CONST_4  BRAD   CAO    CAL    CAR      180.000    0.000   0
+ IW5      CONST_5  CAO    CAL    CAR    CAF      180.000    0.000   0
+ IW5      CONST_6  CAL    CAR    CAK    CAN        0.000    0.000   0
+ IW5      CONST_7  CAR    CAK    CAN    CAP        0.000    0.000   0
+ IW5      var_1    CAL    CAR    CAF    CAE       -0.045   20.000   1
+ IW5      CONST_8  CAR    CAF    CAE    CAQ      180.000    0.000   0
+ IW5      var_2    CAF    CAE    CAQ    CAJ       -0.003   20.000   1
+ IW5      CONST_9  CAE    CAQ    CAI    CAG      180.000    0.000   0
+ IW5      CONST_10 CAE    CAQ    CAJ    CAH      180.000    0.000   0
+ IW5      CONST_11 CAQ    CAJ    CAH    CAM        0.000    0.000   0
+ IW5      CONST_12 CAJ    CAH    CAM    NAA      180.000    0.000   0
+ IW5      CONST_13 CAH    CAM    CAG    CAI        0.000    0.000   0
+ IW5      CONST_14 CAM    CAG    CAI    CAQ        0.000    0.000   0
+ IW5      CONST_15 CAH    CAM    NAA    HNAA    -179.987    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IW5      plan-1    NAA       0.020
+ IW5      plan-1    CAM       0.020
+ IW5      plan-1    HNAA      0.020
+ IW5      plan-1    HNAB      0.020
+ IW5      plan-2    NAB       0.020
+ IW5      plan-2    CAP       0.020
+ IW5      plan-2    HNAC      0.020
+ IW5      plan-2    HNAD      0.020
+ IW5      plan-3    CAE       0.020
+ IW5      plan-3    CAF       0.020
+ IW5      plan-3    CAQ       0.020
+ IW5      plan-3    HAE       0.020
+ IW5      plan-3    CAR       0.020
+ IW5      plan-3    HAF       0.020
+ IW5      plan-4    CAG       0.020
+ IW5      plan-4    CAI       0.020
+ IW5      plan-4    CAM       0.020
+ IW5      plan-4    HAG       0.020
+ IW5      plan-4    CAH       0.020
+ IW5      plan-4    CAJ       0.020
+ IW5      plan-4    CAQ       0.020
+ IW5      plan-4    HAH       0.020
+ IW5      plan-4    HAI       0.020
+ IW5      plan-4    HAJ       0.020
+ IW5      plan-4    NAA       0.020
+ IW5      plan-4    CAE       0.020
+ IW5      plan-4    HNAB      0.020
+ IW5      plan-4    HNAA      0.020
+ IW5      plan-4    HAE       0.020
+ IW5      plan-5    CAK       0.020
+ IW5      plan-5    CAN       0.020
+ IW5      plan-5    CAR       0.020
+ IW5      plan-5    HAK       0.020
+ IW5      plan-5    CAL       0.020
+ IW5      plan-5    CAO       0.020
+ IW5      plan-5    CAP       0.020
+ IW5      plan-5    HAL       0.020
+ IW5      plan-5    BRAC      0.020
+ IW5      plan-5    BRAD      0.020
+ IW5      plan-5    NAB       0.020
+ IW5      plan-5    CAF       0.020
+ IW5      plan-5    HNAD      0.020
+ IW5      plan-5    HNAC      0.020
+ IW5      plan-5    HAF       0.020
+# ------------------------------------------------------

@@ -1,0 +1,262 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DX3      DX3 '6,7,7-trimethyl-7,8-dihydropteridine' non-polymer        29  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DX3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DX3           NAE    N    NH2       0.000      0.000    0.000    0.000
+ DX3           HNAE   H    H         0.000     -0.197   -0.996   -0.021
+ DX3           HNAB   H    H         0.000      0.963    0.312   -0.078
+ DX3           C6     C    CR6       0.000     -1.028    0.918    0.132
+ DX3           N1     N    NRD6      0.000     -0.774    2.224    0.160
+ DX3           C2     C    CR6       0.000     -1.751    3.110    0.287
+ DX3           NAD    N    NH2       0.000     -1.434    4.457    0.313
+ DX3           HNAA   H    H         0.000     -2.163    5.157    0.409
+ DX3           HNAD   H    H         0.000     -0.468    4.762    0.237
+ DX3           N3     N    NRD6      0.000     -3.024    2.750    0.389
+ DX3           C4     C    CR66      0.000     -3.361    1.470    0.366
+ DX3           NAI    N    NR16      0.000     -4.680    1.050    0.456
+ DX3           HNAI   H    H         0.000     -5.395    1.612    0.959
+ DX3           CAO    C    CT        0.000     -5.023   -0.227   -0.192
+ DX3           CAB    C    CH3       0.000     -5.201   -0.007   -1.696
+ DX3           HABB   H    H         0.000     -5.449   -0.926   -2.161
+ DX3           HABA   H    H         0.000     -5.979    0.692   -1.862
+ DX3           HAB    H    H         0.000     -4.299    0.365   -2.109
+ DX3           CAC    C    CH3       0.000     -6.325   -0.769    0.404
+ DX3           HACB   H    H         0.000     -6.573   -1.688   -0.062
+ DX3           HACA   H    H         0.000     -6.200   -0.924    1.444
+ DX3           HAC    H    H         0.000     -7.106   -0.071    0.243
+ DX3           CAJ    C    CR6       0.000     -3.911   -1.214    0.044
+ DX3           CAA    C    CH3       0.000     -4.226   -2.688    0.061
+ DX3           HAAB   H    H         0.000     -3.550   -3.187    0.706
+ DX3           HAAA   H    H         0.000     -5.216   -2.834    0.408
+ DX3           HAA    H    H         0.000     -4.133   -3.081   -0.918
+ DX3           NAF    N    NRD6      0.000     -2.695   -0.830    0.231
+ DX3           C5     C    CR66      0.000     -2.359    0.492    0.239
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DX3      NAE    n/a    C6     START
+ DX3      HNAE   NAE    .      .
+ DX3      HNAB   NAE    .      .
+ DX3      C6     NAE    N1     .
+ DX3      N1     C6     C2     .
+ DX3      C2     N1     N3     .
+ DX3      NAD    C2     HNAD   .
+ DX3      HNAA   NAD    .      .
+ DX3      HNAD   NAD    .      .
+ DX3      N3     C2     C4     .
+ DX3      C4     N3     NAI    .
+ DX3      NAI    C4     CAO    .
+ DX3      HNAI   NAI    .      .
+ DX3      CAO    NAI    CAJ    .
+ DX3      CAB    CAO    HAB    .
+ DX3      HABB   CAB    .      .
+ DX3      HABA   CAB    .      .
+ DX3      HAB    CAB    .      .
+ DX3      CAC    CAO    HAC    .
+ DX3      HACB   CAC    .      .
+ DX3      HACA   CAC    .      .
+ DX3      HAC    CAC    .      .
+ DX3      CAJ    CAO    NAF    .
+ DX3      CAA    CAJ    HAA    .
+ DX3      HAAB   CAA    .      .
+ DX3      HAAA   CAA    .      .
+ DX3      HAA    CAA    .      .
+ DX3      NAF    CAJ    C5     .
+ DX3      C5     NAF    .      END
+ DX3      C4     C5     .    ADD
+ DX3      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DX3      C4     C5        double      1.490    0.020
+ DX3      C4     N3        single      1.350    0.020
+ DX3      NAI    C4        single      1.337    0.020
+ DX3      C5     C6        single      1.490    0.020
+ DX3      C5     NAF       single      1.350    0.020
+ DX3      N1     C6        double      1.350    0.020
+ DX3      C6     NAE       single      1.355    0.020
+ DX3      C2     N1        single      1.350    0.020
+ DX3      N3     C2        double      1.350    0.020
+ DX3      CAO    NAI       single      1.462    0.020
+ DX3      CAB    CAO       single      1.524    0.020
+ DX3      CAC    CAO       single      1.524    0.020
+ DX3      CAJ    CAO       single      1.500    0.020
+ DX3      CAA    CAJ       single      1.506    0.020
+ DX3      NAF    CAJ       double      1.350    0.020
+ DX3      NAD    C2        single      1.355    0.020
+ DX3      HNAI   NAI       single      1.040    0.020
+ DX3      HAB    CAB       single      1.059    0.020
+ DX3      HABA   CAB       single      1.059    0.020
+ DX3      HABB   CAB       single      1.059    0.020
+ DX3      HAC    CAC       single      1.059    0.020
+ DX3      HACA   CAC       single      1.059    0.020
+ DX3      HACB   CAC       single      1.059    0.020
+ DX3      HAA    CAA       single      1.059    0.020
+ DX3      HAAA   CAA       single      1.059    0.020
+ DX3      HAAB   CAA       single      1.059    0.020
+ DX3      HNAD   NAD       single      1.010    0.020
+ DX3      HNAA   NAD       single      1.010    0.020
+ DX3      HNAE   NAE       single      1.010    0.020
+ DX3      HNAB   NAE       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DX3      HNAE   NAE    HNAB    120.000    3.000
+ DX3      HNAE   NAE    C6      120.000    3.000
+ DX3      HNAB   NAE    C6      120.000    3.000
+ DX3      NAE    C6     N1      120.000    3.000
+ DX3      NAE    C6     C5      120.000    3.000
+ DX3      N1     C6     C5      120.000    3.000
+ DX3      C6     N1     C2      120.000    3.000
+ DX3      N1     C2     NAD     120.000    3.000
+ DX3      N1     C2     N3      120.000    3.000
+ DX3      NAD    C2     N3      120.000    3.000
+ DX3      C2     NAD    HNAA    120.000    3.000
+ DX3      C2     NAD    HNAD    120.000    3.000
+ DX3      HNAA   NAD    HNAD    120.000    3.000
+ DX3      C2     N3     C4      120.000    3.000
+ DX3      N3     C4     NAI     120.000    3.000
+ DX3      N3     C4     C5      120.000    3.000
+ DX3      NAI    C4     C5      120.000    3.000
+ DX3      C4     NAI    HNAI    120.000    3.000
+ DX3      C4     NAI    CAO     120.000    3.000
+ DX3      HNAI   NAI    CAO     120.000    3.000
+ DX3      NAI    CAO    CAB     109.500    3.000
+ DX3      NAI    CAO    CAC     109.500    3.000
+ DX3      NAI    CAO    CAJ     109.500    3.000
+ DX3      CAB    CAO    CAC     111.000    3.000
+ DX3      CAB    CAO    CAJ     109.500    3.000
+ DX3      CAC    CAO    CAJ     109.500    3.000
+ DX3      CAO    CAB    HABB    109.470    3.000
+ DX3      CAO    CAB    HABA    109.470    3.000
+ DX3      CAO    CAB    HAB     109.470    3.000
+ DX3      HABB   CAB    HABA    109.470    3.000
+ DX3      HABB   CAB    HAB     109.470    3.000
+ DX3      HABA   CAB    HAB     109.470    3.000
+ DX3      CAO    CAC    HACB    109.470    3.000
+ DX3      CAO    CAC    HACA    109.470    3.000
+ DX3      CAO    CAC    HAC     109.470    3.000
+ DX3      HACB   CAC    HACA    109.470    3.000
+ DX3      HACB   CAC    HAC     109.470    3.000
+ DX3      HACA   CAC    HAC     109.470    3.000
+ DX3      CAO    CAJ    CAA     120.000    3.000
+ DX3      CAO    CAJ    NAF     120.000    3.000
+ DX3      CAA    CAJ    NAF     120.000    3.000
+ DX3      CAJ    CAA    HAAB    109.470    3.000
+ DX3      CAJ    CAA    HAAA    109.470    3.000
+ DX3      CAJ    CAA    HAA     109.470    3.000
+ DX3      HAAB   CAA    HAAA    109.470    3.000
+ DX3      HAAB   CAA    HAA     109.470    3.000
+ DX3      HAAA   CAA    HAA     109.470    3.000
+ DX3      CAJ    NAF    C5      120.000    3.000
+ DX3      NAF    C5     C4      120.000    3.000
+ DX3      NAF    C5     C6      120.000    3.000
+ DX3      C4     C5     C6      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DX3      CONST_1  HNAB   NAE    C6     N1         0.004    0.000   0
+ DX3      CONST_2  NAE    C6     N1     C2       180.000    0.000   0
+ DX3      CONST_3  C6     N1     C2     N3         0.000    0.000   0
+ DX3      CONST_4  N1     C2     NAD    HNAD      -0.024    0.000   0
+ DX3      CONST_5  N1     C2     N3     C4         0.000    0.000   0
+ DX3      CONST_6  C2     N3     C4     NAI      180.000    0.000   0
+ DX3      CONST_7  N3     C4     C5     NAF      180.000    0.000   0
+ DX3      CONST_8  N3     C4     NAI    CAO      150.000    0.000   0
+ DX3      CONST_9  C4     NAI    CAO    CAJ       30.000    0.000   0
+ DX3      var_1    NAI    CAO    CAB    HAB       60.025   20.000   1
+ DX3      var_2    NAI    CAO    CAC    HAC       60.012   20.000   1
+ DX3      CONST_10 NAI    CAO    CAJ    NAF      -30.000    0.000   0
+ DX3      var_3    CAO    CAJ    CAA    HAA       89.958   20.000   1
+ DX3      CONST_11 CAO    CAJ    NAF    C5         0.000    0.000   0
+ DX3      CONST_12 CAJ    NAF    C5     C4        30.000    0.000   0
+ DX3      CONST_13 NAF    C5     C6     NAE        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DX3      chir_01  CAO    NAI    CAB    CAC       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DX3      plan-1    C4        0.020
+ DX3      plan-1    C5        0.020
+ DX3      plan-1    N3        0.020
+ DX3      plan-1    NAI       0.020
+ DX3      plan-1    CAO       0.020
+ DX3      plan-1    CAJ       0.020
+ DX3      plan-1    NAF       0.020
+ DX3      plan-1    C6        0.020
+ DX3      plan-1    N1        0.020
+ DX3      plan-1    NAE       0.020
+ DX3      plan-1    C2        0.020
+ DX3      plan-1    HNAI      0.020
+ DX3      plan-1    CAA       0.020
+ DX3      plan-1    NAD       0.020
+ DX3      plan-1    HNAE      0.020
+ DX3      plan-1    HNAB      0.020
+ DX3      plan-1    HNAA      0.020
+ DX3      plan-1    HNAD      0.020
+ DX3      plan-2    NAD       0.020
+ DX3      plan-2    C2        0.020
+ DX3      plan-2    HNAD      0.020
+ DX3      plan-2    HNAA      0.020
+ DX3      plan-3    NAE       0.020
+ DX3      plan-3    C6        0.020
+ DX3      plan-3    HNAE      0.020
+ DX3      plan-3    HNAB      0.020
+# ------------------------------------------------------

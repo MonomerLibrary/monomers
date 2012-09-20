@@ -1,0 +1,156 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3SL      3SL '(2R)-3-SULFOLACTIC ACID             ' non-polymer        15  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3SL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3SL           O1S    O    OS        0.000      0.000    0.000    0.000
+ 3SL           S      S    ST        0.000     -0.875   -0.938    0.610
+ 3SL           O3S    O    OS        0.000     -0.597   -1.517    1.876
+ 3SL           O2S    O    OH1       0.000     -0.796   -2.132   -0.332
+ 3SL           H2S    H    H         0.000      0.039   -2.576   -0.426
+ 3SL           C3     C    CH2       0.000     -2.607   -0.420    0.478
+ 3SL           H31    H    H         0.000     -3.257   -1.242    0.787
+ 3SL           H32    H    H         0.000     -2.828   -0.154   -0.558
+ 3SL           C2     C    CH1       0.000     -2.849    0.790    1.380
+ 3SL           H2     H    H         0.000     -2.195    1.617    1.067
+ 3SL           O2     O    OH1       0.000     -2.558    0.439    2.734
+ 3SL           HO2    H    H         0.000     -3.133   -0.287    3.009
+ 3SL           C1     C    C         0.000     -4.288    1.220    1.271
+ 3SL           O11    O    OC       -0.500     -4.754    1.572    0.165
+ 3SL           O12    O    OC       -0.500     -5.019    1.227    2.286
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3SL      O1S    n/a    S      START
+ 3SL      S      O1S    C3     .
+ 3SL      O3S    S      .      .
+ 3SL      O2S    S      H2S    .
+ 3SL      H2S    O2S    .      .
+ 3SL      C3     S      C2     .
+ 3SL      H31    C3     .      .
+ 3SL      H32    C3     .      .
+ 3SL      C2     C3     C1     .
+ 3SL      H2     C2     .      .
+ 3SL      O2     C2     HO2    .
+ 3SL      HO2    O2     .      .
+ 3SL      C1     C2     O12    .
+ 3SL      O11    C1     .      .
+ 3SL      O12    C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3SL      O11    C1        deloc       1.250    0.020
+ 3SL      O12    C1        deloc       1.250    0.020
+ 3SL      C1     C2        single      1.500    0.020
+ 3SL      O2     C2        single      1.432    0.020
+ 3SL      C2     C3        single      1.524    0.020
+ 3SL      H2     C2        single      1.099    0.020
+ 3SL      HO2    O2        single      0.967    0.020
+ 3SL      C3     S         single      1.662    0.020
+ 3SL      H31    C3        single      1.092    0.020
+ 3SL      H32    C3        single      1.092    0.020
+ 3SL      O3S    S         double      1.436    0.020
+ 3SL      S      O1S       double      1.436    0.020
+ 3SL      O2S    S         single      1.635    0.020
+ 3SL      H2S    O2S       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3SL      O1S    S      O3S     109.500    3.000
+ 3SL      O1S    S      O2S     109.500    3.000
+ 3SL      O1S    S      C3      109.500    3.000
+ 3SL      O3S    S      O2S     109.500    3.000
+ 3SL      O3S    S      C3      109.500    3.000
+ 3SL      O2S    S      C3      109.500    3.000
+ 3SL      S      O2S    H2S     120.000    3.000
+ 3SL      S      C3     H31     109.500    3.000
+ 3SL      S      C3     H32     109.500    3.000
+ 3SL      S      C3     C2      109.500    3.000
+ 3SL      H31    C3     H32     107.900    3.000
+ 3SL      H31    C3     C2      109.470    3.000
+ 3SL      H32    C3     C2      109.470    3.000
+ 3SL      C3     C2     H2      108.340    3.000
+ 3SL      C3     C2     O2      109.470    3.000
+ 3SL      C3     C2     C1      109.470    3.000
+ 3SL      H2     C2     O2      109.470    3.000
+ 3SL      H2     C2     C1      108.810    3.000
+ 3SL      O2     C2     C1      109.470    3.000
+ 3SL      C2     O2     HO2     109.470    3.000
+ 3SL      C2     C1     O11     118.500    3.000
+ 3SL      C2     C1     O12     118.500    3.000
+ 3SL      O11    C1     O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3SL      var_1    O1S    S      O2S    H2S       63.818   20.000   1
+ 3SL      var_2    O1S    S      C3     C2       -70.277   20.000   1
+ 3SL      var_3    S      C3     C2     C1      -179.945   20.000   3
+ 3SL      var_4    C3     C2     O2     HO2      -60.057   20.000   1
+ 3SL      var_5    C3     C2     C1     O12      120.031   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 3SL      chir_01  C2     C1     O2     C3        negativ
+ 3SL      chir_02  S      C3     O3S    O1S       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3SL      plan-1    C1        0.020
+ 3SL      plan-1    O11       0.000
+ 3SL      plan-1    O12       0.000
+ 3SL      plan-1    C2        0.000
+# ------------------------------------------------------

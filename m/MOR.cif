@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MOR      MOR 'morpholine-4-carboxylic acid        ' non-polymer        18   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MOR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MOR           O      O    O         0.000      0.000    0.000    0.000
+ MOR           C      C    C         0.000     -0.892    0.816   -0.125
+ MOR           O3     O    OH1       0.000     -0.622    2.131   -0.013
+ MOR           H9     H    H         0.000      0.322    2.256    0.165
+ MOR           N4     N    N         0.000     -2.151    0.405   -0.373
+ MOR           C3     C    CH2       0.000     -2.471   -1.026   -0.500
+ MOR           H31    H    H         0.000     -1.612   -1.629   -0.195
+ MOR           H32    H    H         0.000     -2.730   -1.261   -1.534
+ MOR           C2     C    CH2       0.000     -3.663   -1.336    0.411
+ MOR           H22    H    H         0.000     -3.362   -1.232    1.456
+ MOR           H21    H    H         0.000     -4.004   -2.358    0.232
+ MOR           C5     C    CH2       0.000     -3.248    1.374   -0.528
+ MOR           H51    H    H         0.000     -3.588    1.391   -1.565
+ MOR           H52    H    H         0.000     -2.907    2.372   -0.242
+ MOR           C6     C    CH2       0.000     -4.403    0.946    0.384
+ MOR           H62    H    H         0.000     -5.276    1.571    0.185
+ MOR           H61    H    H         0.000     -4.106    1.060    1.429
+ MOR           O1     O    O2        0.000     -4.725   -0.422    0.125
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MOR      O      n/a    C      START
+ MOR      C      O      N4     .
+ MOR      O3     C      H9     .
+ MOR      H9     O3     .      .
+ MOR      N4     C      C5     .
+ MOR      C3     N4     C2     .
+ MOR      H31    C3     .      .
+ MOR      H32    C3     .      .
+ MOR      C2     C3     H21    .
+ MOR      H22    C2     .      .
+ MOR      H21    C2     .      .
+ MOR      C5     N4     C6     .
+ MOR      H51    C5     .      .
+ MOR      H52    C5     .      .
+ MOR      C6     C5     O1     .
+ MOR      H62    C6     .      .
+ MOR      H61    C6     .      .
+ MOR      O1     C6     .      END
+ MOR      O1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MOR      O1     C2        single      1.426    0.020
+ MOR      O1     C6        single      1.426    0.020
+ MOR      C2     C3        single      1.524    0.020
+ MOR      H21    C2        single      1.092    0.020
+ MOR      H22    C2        single      1.092    0.020
+ MOR      C3     N4        single      1.455    0.020
+ MOR      H31    C3        single      1.092    0.020
+ MOR      H32    C3        single      1.092    0.020
+ MOR      C5     N4        single      1.455    0.020
+ MOR      N4     C         single      1.330    0.020
+ MOR      C6     C5        single      1.524    0.020
+ MOR      H51    C5        single      1.092    0.020
+ MOR      H52    C5        single      1.092    0.020
+ MOR      H61    C6        single      1.092    0.020
+ MOR      H62    C6        single      1.092    0.020
+ MOR      C      O         double      1.220    0.020
+ MOR      O3     C         single      1.330    0.020
+ MOR      H9     O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MOR      O      C      O3      119.000    3.000
+ MOR      O      C      N4      123.000    3.000
+ MOR      O3     C      N4      120.000    3.000
+ MOR      C      O3     H9      109.470    3.000
+ MOR      C      N4     C3      127.000    3.000
+ MOR      C      N4     C5      127.000    3.000
+ MOR      C3     N4     C5      120.000    3.000
+ MOR      N4     C3     H31     109.470    3.000
+ MOR      N4     C3     H32     109.470    3.000
+ MOR      N4     C3     C2      105.000    3.000
+ MOR      H31    C3     H32     107.900    3.000
+ MOR      H31    C3     C2      109.470    3.000
+ MOR      H32    C3     C2      109.470    3.000
+ MOR      C3     C2     H22     109.470    3.000
+ MOR      C3     C2     H21     109.470    3.000
+ MOR      C3     C2     O1      109.470    3.000
+ MOR      H22    C2     H21     107.900    3.000
+ MOR      H22    C2     O1      109.470    3.000
+ MOR      H21    C2     O1      109.470    3.000
+ MOR      N4     C5     H51     109.470    3.000
+ MOR      N4     C5     H52     109.470    3.000
+ MOR      N4     C5     C6      105.000    3.000
+ MOR      H51    C5     H52     107.900    3.000
+ MOR      H51    C5     C6      109.470    3.000
+ MOR      H52    C5     C6      109.470    3.000
+ MOR      C5     C6     H62     109.470    3.000
+ MOR      C5     C6     H61     109.470    3.000
+ MOR      C5     C6     O1      109.470    3.000
+ MOR      H62    C6     H61     107.900    3.000
+ MOR      H62    C6     O1      109.470    3.000
+ MOR      H61    C6     O1      109.470    3.000
+ MOR      C6     O1     C2      111.800    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MOR      var_1    O      C      O3     H9         0.041   20.000   1
+ MOR      CONST_1  O      C      N4     C5       180.000    0.000   0
+ MOR      var_2    C      N4     C3     C2       120.000   20.000   1
+ MOR      var_3    N4     C3     C2     O1        60.000   20.000   3
+ MOR      var_4    C      N4     C5     C6      -120.000   20.000   1
+ MOR      var_5    N4     C5     C6     O1       -60.000   20.000   3
+ MOR      var_6    C5     C6     O1     C2        60.000   20.000   1
+ MOR      var_7    C6     O1     C2     C3       -60.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MOR      plan-1    N4        0.020
+ MOR      plan-1    C3        0.020
+ MOR      plan-1    C5        0.020
+ MOR      plan-1    C         0.020
+ MOR      plan-2    C         0.020
+ MOR      plan-2    N4        0.020
+ MOR      plan-2    O         0.020
+ MOR      plan-2    O3        0.020
+# ------------------------------------------------------

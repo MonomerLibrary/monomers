@@ -1,0 +1,180 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+JZ1      JZ1 '2-ethylphenol                       ' non-polymer        19   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_JZ1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ JZ1           OAB    O    OH1       0.000      0.000    0.000    0.000
+ JZ1           HOAB   H    H         0.000      0.320    0.079   -0.909
+ JZ1           C10    C    CR6       0.000     -1.357    0.072    0.009
+ JZ1           C9     C    CR16      0.000     -2.114   -1.084   -0.113
+ JZ1           H9     H    H         0.000     -1.625   -2.045   -0.216
+ JZ1           C8     C    CR16      0.000     -3.494   -1.008   -0.103
+ JZ1           H8     H    H         0.000     -4.086   -1.910   -0.197
+ JZ1           C12    C    CR6       0.000     -1.987    1.301    0.140
+ JZ1           C13    C    CH2       0.000     -1.167    2.558    0.273
+ JZ1           H13    H    H         0.000     -0.262    2.343    0.844
+ JZ1           H13A   H    H         0.000     -1.752    3.320    0.793
+ JZ1           C14    C    CH3       0.000     -0.785    3.068   -1.119
+ JZ1           H14B   H    H         0.000     -1.663    3.278   -1.676
+ JZ1           H14A   H    H         0.000     -0.207    3.953   -1.030
+ JZ1           H14    H    H         0.000     -0.217    2.330   -1.626
+ JZ1           C11    C    CR16      0.000     -3.366    1.370    0.149
+ JZ1           H11    H    H         0.000     -3.859    2.330    0.251
+ JZ1           C7     C    CR16      0.000     -4.119    0.218    0.027
+ JZ1           H7     H    H         0.000     -5.201    0.275    0.033
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ JZ1      OAB    n/a    C10    START
+ JZ1      HOAB   OAB    .      .
+ JZ1      C10    OAB    C12    .
+ JZ1      C9     C10    C8     .
+ JZ1      H9     C9     .      .
+ JZ1      C8     C9     H8     .
+ JZ1      H8     C8     .      .
+ JZ1      C12    C10    C11    .
+ JZ1      C13    C12    C14    .
+ JZ1      H13    C13    .      .
+ JZ1      H13A   C13    .      .
+ JZ1      C14    C13    H14    .
+ JZ1      H14B   C14    .      .
+ JZ1      H14A   C14    .      .
+ JZ1      H14    C14    .      .
+ JZ1      C11    C12    C7     .
+ JZ1      H11    C11    .      .
+ JZ1      C7     C11    H7     .
+ JZ1      H7     C7     .      END
+ JZ1      C7     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ JZ1      C7     C8        double      1.390    0.020
+ JZ1      C7     C11       single      1.390    0.020
+ JZ1      C8     C9        single      1.390    0.020
+ JZ1      C9     C10       double      1.390    0.020
+ JZ1      C12    C10       single      1.487    0.020
+ JZ1      C10    OAB       single      1.362    0.020
+ JZ1      C11    C12       double      1.390    0.020
+ JZ1      C13    C12       single      1.511    0.020
+ JZ1      C14    C13       single      1.513    0.020
+ JZ1      H7     C7        single      1.083    0.020
+ JZ1      H8     C8        single      1.083    0.020
+ JZ1      H9     C9        single      1.083    0.020
+ JZ1      H11    C11       single      1.083    0.020
+ JZ1      H13    C13       single      1.092    0.020
+ JZ1      H13A   C13       single      1.092    0.020
+ JZ1      H14    C14       single      1.059    0.020
+ JZ1      H14A   C14       single      1.059    0.020
+ JZ1      H14B   C14       single      1.059    0.020
+ JZ1      HOAB   OAB       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ JZ1      HOAB   OAB    C10     109.470    3.000
+ JZ1      OAB    C10    C9      120.000    3.000
+ JZ1      OAB    C10    C12     120.000    3.000
+ JZ1      C9     C10    C12     120.000    3.000
+ JZ1      C10    C9     H9      120.000    3.000
+ JZ1      C10    C9     C8      120.000    3.000
+ JZ1      H9     C9     C8      120.000    3.000
+ JZ1      C9     C8     H8      120.000    3.000
+ JZ1      C9     C8     C7      120.000    3.000
+ JZ1      H8     C8     C7      120.000    3.000
+ JZ1      C10    C12    C13     120.000    3.000
+ JZ1      C10    C12    C11     120.000    3.000
+ JZ1      C13    C12    C11     120.000    3.000
+ JZ1      C12    C13    H13     109.470    3.000
+ JZ1      C12    C13    H13A    109.470    3.000
+ JZ1      C12    C13    C14     109.500    3.000
+ JZ1      H13    C13    H13A    107.900    3.000
+ JZ1      H13    C13    C14     109.470    3.000
+ JZ1      H13A   C13    C14     109.470    3.000
+ JZ1      C13    C14    H14B    109.470    3.000
+ JZ1      C13    C14    H14A    109.470    3.000
+ JZ1      C13    C14    H14     109.470    3.000
+ JZ1      H14B   C14    H14A    109.470    3.000
+ JZ1      H14B   C14    H14     109.470    3.000
+ JZ1      H14A   C14    H14     109.470    3.000
+ JZ1      C12    C11    H11     120.000    3.000
+ JZ1      C12    C11    C7      120.000    3.000
+ JZ1      H11    C11    C7      120.000    3.000
+ JZ1      C11    C7     H7      120.000    3.000
+ JZ1      C11    C7     C8      120.000    3.000
+ JZ1      H7     C7     C8      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ JZ1      var_1    HOAB   OAB    C10    C12      -90.011   20.000   1
+ JZ1      CONST_1  OAB    C10    C9     C8       180.000    0.000   0
+ JZ1      CONST_2  C10    C9     C8     C7         0.000    0.000   0
+ JZ1      CONST_3  OAB    C10    C12    C11      180.000    0.000   0
+ JZ1      var_2    C10    C12    C13    C14       84.993   20.000   2
+ JZ1      var_3    C12    C13    C14    H14      -59.961   20.000   3
+ JZ1      CONST_4  C10    C12    C11    C7         0.000    0.000   0
+ JZ1      CONST_5  C12    C11    C7     C8         0.000    0.000   0
+ JZ1      CONST_6  C11    C7     C8     C9         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ JZ1      plan-1    C7        0.020
+ JZ1      plan-1    C8        0.020
+ JZ1      plan-1    C11       0.020
+ JZ1      plan-1    H7        0.020
+ JZ1      plan-1    C9        0.020
+ JZ1      plan-1    C10       0.020
+ JZ1      plan-1    C12       0.020
+ JZ1      plan-1    H8        0.020
+ JZ1      plan-1    H9        0.020
+ JZ1      plan-1    OAB       0.020
+ JZ1      plan-1    H11       0.020
+ JZ1      plan-1    C13       0.020
+# ------------------------------------------------------

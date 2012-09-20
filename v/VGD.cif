@@ -1,0 +1,184 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+VGD      VGD '6-chloro-1H-benzimidazol-2-amine    ' non-polymer        17  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_VGD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ VGD           CLA    CL   CL        0.000      0.000    0.000    0.000
+ VGD           CAH    C    CR6       0.000     -1.728    0.170    0.001
+ VGD           CAE    C    CR16      0.000     -2.528   -0.956   -0.004
+ VGD           HAE    H    H         0.000     -2.079   -1.941   -0.012
+ VGD           CAJ    C    CR56      0.000     -3.908   -0.822    0.002
+ VGD           NAF    N    NR15      0.000     -4.961   -1.723    0.002
+ VGD           HNAF   H    H         0.000     -4.885   -2.760    0.003
+ VGD           CAI    C    CR5       0.000     -6.116   -0.995    0.002
+ VGD           NAA    N    NH2       0.000     -7.388   -1.528    0.002
+ VGD           HNAB   H    H         0.000     -7.524   -2.533    0.003
+ VGD           HNAA   H    H         0.000     -8.200   -0.920    0.001
+ VGD           NAG    N    NRD5      0.000     -5.837    0.285    0.001
+ VGD           CAK    C    CR56      0.000     -4.488    0.458    0.001
+ VGD           CAD    C    CR16      0.000     -3.666    1.586    0.000
+ VGD           HAD    H    H         0.000     -4.103    2.577    0.000
+ VGD           CAC    C    CR16      0.000     -2.296    1.436    0.000
+ VGD           HAC    H    H         0.000     -1.659    2.311   -0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ VGD      CLA    n/a    CAH    START
+ VGD      CAH    CLA    CAE    .
+ VGD      CAE    CAH    CAJ    .
+ VGD      HAE    CAE    .      .
+ VGD      CAJ    CAE    NAF    .
+ VGD      NAF    CAJ    CAI    .
+ VGD      HNAF   NAF    .      .
+ VGD      CAI    NAF    NAG    .
+ VGD      NAA    CAI    HNAA   .
+ VGD      HNAB   NAA    .      .
+ VGD      HNAA   NAA    .      .
+ VGD      NAG    CAI    CAK    .
+ VGD      CAK    NAG    CAD    .
+ VGD      CAD    CAK    CAC    .
+ VGD      HAD    CAD    .      .
+ VGD      CAC    CAD    HAC    .
+ VGD      HAC    CAC    .      END
+ VGD      CAH    CAC    .    ADD
+ VGD      CAK    CAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ VGD      CAH    CLA       single      1.795    0.020
+ VGD      CAH    CAC       double      1.390    0.020
+ VGD      CAE    CAH       single      1.390    0.020
+ VGD      CAC    CAD       single      1.390    0.020
+ VGD      CAD    CAK       double      1.390    0.020
+ VGD      CAK    CAJ       single      1.490    0.020
+ VGD      CAK    NAG       single      1.350    0.020
+ VGD      CAJ    CAE       double      1.390    0.020
+ VGD      NAF    CAJ       single      1.340    0.020
+ VGD      NAG    CAI       double      1.350    0.020
+ VGD      CAI    NAF       single      1.340    0.020
+ VGD      NAA    CAI       single      1.355    0.020
+ VGD      HAC    CAC       single      1.083    0.020
+ VGD      HAD    CAD       single      1.083    0.020
+ VGD      HAE    CAE       single      1.083    0.020
+ VGD      HNAF   NAF       single      1.040    0.020
+ VGD      HNAA   NAA       single      1.010    0.020
+ VGD      HNAB   NAA       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ VGD      CLA    CAH    CAE     120.000    3.000
+ VGD      CLA    CAH    CAC     120.000    3.000
+ VGD      CAE    CAH    CAC     120.000    3.000
+ VGD      CAH    CAE    HAE     120.000    3.000
+ VGD      CAH    CAE    CAJ     120.000    3.000
+ VGD      HAE    CAE    CAJ     120.000    3.000
+ VGD      CAE    CAJ    NAF     132.000    3.000
+ VGD      CAE    CAJ    CAK     120.000    3.000
+ VGD      NAF    CAJ    CAK     108.000    3.000
+ VGD      CAJ    NAF    HNAF    126.000    3.000
+ VGD      CAJ    NAF    CAI     108.000    3.000
+ VGD      HNAF   NAF    CAI     126.000    3.000
+ VGD      NAF    CAI    NAA     108.000    3.000
+ VGD      NAF    CAI    NAG     108.000    3.000
+ VGD      NAA    CAI    NAG     108.000    3.000
+ VGD      CAI    NAA    HNAB    120.000    3.000
+ VGD      CAI    NAA    HNAA    120.000    3.000
+ VGD      HNAB   NAA    HNAA    120.000    3.000
+ VGD      CAI    NAG    CAK     108.000    3.000
+ VGD      NAG    CAK    CAD     132.000    3.000
+ VGD      NAG    CAK    CAJ     108.000    3.000
+ VGD      CAD    CAK    CAJ     120.000    3.000
+ VGD      CAK    CAD    HAD     120.000    3.000
+ VGD      CAK    CAD    CAC     120.000    3.000
+ VGD      HAD    CAD    CAC     120.000    3.000
+ VGD      CAD    CAC    HAC     120.000    3.000
+ VGD      CAD    CAC    CAH     120.000    3.000
+ VGD      HAC    CAC    CAH     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ VGD      CONST_1  CLA    CAH    CAC    CAD      180.000    0.000   0
+ VGD      CONST_2  CLA    CAH    CAE    CAJ      180.000    0.000   0
+ VGD      CONST_3  CAH    CAE    CAJ    NAF      180.000    0.000   0
+ VGD      CONST_4  CAE    CAJ    NAF    CAI      180.000    0.000   0
+ VGD      CONST_5  CAJ    NAF    CAI    NAG        0.000    0.000   0
+ VGD      CONST_6  NAF    CAI    NAA    HNAA    -179.983    0.000   0
+ VGD      CONST_7  NAF    CAI    NAG    CAK        0.000    0.000   0
+ VGD      CONST_8  CAI    NAG    CAK    CAD      180.000    0.000   0
+ VGD      CONST_9  NAG    CAK    CAJ    CAE      180.000    0.000   0
+ VGD      CONST_10 NAG    CAK    CAD    CAC      180.000    0.000   0
+ VGD      CONST_11 CAK    CAD    CAC    CAH        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ VGD      plan-1    CAH       0.020
+ VGD      plan-1    CLA       0.020
+ VGD      plan-1    CAC       0.020
+ VGD      plan-1    CAE       0.020
+ VGD      plan-1    CAD       0.020
+ VGD      plan-1    HAC       0.020
+ VGD      plan-1    CAK       0.020
+ VGD      plan-1    HAD       0.020
+ VGD      plan-1    CAJ       0.020
+ VGD      plan-1    NAG       0.020
+ VGD      plan-1    CAI       0.020
+ VGD      plan-1    NAF       0.020
+ VGD      plan-1    HAE       0.020
+ VGD      plan-1    NAA       0.020
+ VGD      plan-1    HNAF      0.020
+ VGD      plan-1    HNAB      0.020
+ VGD      plan-1    HNAA      0.020
+ VGD      plan-2    NAA       0.020
+ VGD      plan-2    CAI       0.020
+ VGD      plan-2    HNAA      0.020
+ VGD      plan-2    HNAB      0.020
+# ------------------------------------------------------

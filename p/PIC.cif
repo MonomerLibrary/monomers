@@ -1,0 +1,251 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PIC      PIC '6-(DIFLUORO-PHOSPHONO-METHYL)-NAPHTH' non-polymer        28  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PIC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PIC           OP3    O    O         0.000      0.000    0.000    0.000
+ PIC           P      P    P         0.000     -1.420   -0.393    0.141
+ PIC           OP1    O    OH1       0.000     -1.635   -1.126    1.559
+ PIC           HOP1   H    H         0.000     -1.147   -1.935    1.764
+ PIC           OP2    O    OH1       0.000     -1.818   -1.400   -1.049
+ PIC           HOP2   H    H         0.000     -2.716   -1.755   -1.102
+ PIC           C1     C    CT        0.000     -2.472    1.092    0.060
+ PIC           F1     F    F         0.000     -2.355    1.677   -1.206
+ PIC           F2     F    F         0.000     -2.064    2.007    1.036
+ PIC           C2     C    CR6       0.000     -3.908    0.705    0.303
+ PIC           C11    C    CR16      0.000     -4.397    0.707    1.574
+ PIC           HC11   H    H         0.000     -3.758    0.986    2.402
+ PIC           C10    C    CR66      0.000     -5.734    0.348    1.807
+ PIC           C9     C    CR16      0.000     -6.267    0.341    3.108
+ PIC           HC9    H    H         0.000     -5.644    0.617    3.949
+ PIC           C8     C    CR16      0.000     -7.562   -0.011    3.310
+ PIC           HC8    H    H         0.000     -7.966   -0.013    4.315
+ PIC           C5     C    CR66      0.000     -6.554   -0.015    0.710
+ PIC           C4     C    CR16      0.000     -6.015   -0.006   -0.589
+ PIC           HC4    H    H         0.000     -6.632   -0.280   -1.437
+ PIC           C3     C    CR16      0.000     -4.715    0.348   -0.775
+ PIC           HC3    H    H         0.000     -4.301    0.353   -1.776
+ PIC           C6     C    CR16      0.000     -7.890   -0.381    0.936
+ PIC           HC6    H    H         0.000     -8.526   -0.668    0.108
+ PIC           C7     C    CR6       0.000     -8.388   -0.372    2.229
+ PIC           C12    C    C         0.000     -9.793   -0.751    2.476
+ PIC           O1     O    OC       -0.500    -10.247   -0.749    3.642
+ PIC           O2     O    OC       -0.500    -10.532   -1.073    1.519
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PIC      OP3    n/a    P      START
+ PIC      P      OP3    C1     .
+ PIC      OP1    P      HOP1   .
+ PIC      HOP1   OP1    .      .
+ PIC      OP2    P      HOP2   .
+ PIC      HOP2   OP2    .      .
+ PIC      C1     P      C2     .
+ PIC      F1     C1     .      .
+ PIC      F2     C1     .      .
+ PIC      C2     C1     C11    .
+ PIC      C11    C2     C10    .
+ PIC      HC11   C11    .      .
+ PIC      C10    C11    C5     .
+ PIC      C9     C10    C8     .
+ PIC      HC9    C9     .      .
+ PIC      C8     C9     HC8    .
+ PIC      HC8    C8     .      .
+ PIC      C5     C10    C6     .
+ PIC      C4     C5     C3     .
+ PIC      HC4    C4     .      .
+ PIC      C3     C4     HC3    .
+ PIC      HC3    C3     .      .
+ PIC      C6     C5     C7     .
+ PIC      HC6    C6     .      .
+ PIC      C7     C6     C12    .
+ PIC      C12    C7     O2     .
+ PIC      O1     C12    .      .
+ PIC      O2     C12    .      END
+ PIC      C2     C3     .    ADD
+ PIC      C7     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PIC      C2     C1        single      1.500    0.020
+ PIC      F1     C1        single      1.320    0.020
+ PIC      F2     C1        single      1.320    0.020
+ PIC      C1     P         single      1.812    0.020
+ PIC      C2     C3        single      1.390    0.020
+ PIC      C11    C2        double      1.390    0.020
+ PIC      C3     C4        double      1.390    0.020
+ PIC      HC3    C3        single      1.083    0.020
+ PIC      C7     C8        single      1.390    0.020
+ PIC      C12    C7        single      1.500    0.020
+ PIC      C7     C6        double      1.390    0.020
+ PIC      C8     C9        double      1.390    0.020
+ PIC      HC8    C8        single      1.083    0.020
+ PIC      C9     C10       single      1.390    0.020
+ PIC      HC9    C9        single      1.083    0.020
+ PIC      C10    C11       single      1.390    0.020
+ PIC      C5     C10       double      1.490    0.020
+ PIC      HC11   C11       single      1.083    0.020
+ PIC      O1     C12       deloc       1.250    0.020
+ PIC      O2     C12       deloc       1.250    0.020
+ PIC      C4     C5        single      1.390    0.020
+ PIC      HC4    C4        single      1.083    0.020
+ PIC      C6     C5        single      1.390    0.020
+ PIC      HC6    C6        single      1.083    0.020
+ PIC      OP1    P         single      1.610    0.020
+ PIC      OP2    P         single      1.610    0.020
+ PIC      P      OP3       double      1.480    0.020
+ PIC      HOP1   OP1       single      0.967    0.020
+ PIC      HOP2   OP2       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PIC      OP3    P      OP1     109.500    3.000
+ PIC      OP3    P      OP2     109.500    3.000
+ PIC      OP3    P      C1      109.500    3.000
+ PIC      OP1    P      OP2     109.500    3.000
+ PIC      OP1    P      C1      109.500    3.000
+ PIC      OP2    P      C1      109.500    3.000
+ PIC      P      OP1    HOP1    120.000    3.000
+ PIC      P      OP2    HOP2    120.000    3.000
+ PIC      P      C1     F1      109.500    3.000
+ PIC      P      C1     F2      109.500    3.000
+ PIC      P      C1     C2      109.500    3.000
+ PIC      F1     C1     F2      109.470    3.000
+ PIC      F1     C1     C2      109.470    3.000
+ PIC      F2     C1     C2      109.470    3.000
+ PIC      C1     C2     C11     120.000    3.000
+ PIC      C1     C2     C3      120.000    3.000
+ PIC      C11    C2     C3      120.000    3.000
+ PIC      C2     C11    HC11    120.000    3.000
+ PIC      C2     C11    C10     120.000    3.000
+ PIC      HC11   C11    C10     120.000    3.000
+ PIC      C11    C10    C9      120.000    3.000
+ PIC      C11    C10    C5      120.000    3.000
+ PIC      C9     C10    C5      120.000    3.000
+ PIC      C10    C9     HC9     120.000    3.000
+ PIC      C10    C9     C8      120.000    3.000
+ PIC      HC9    C9     C8      120.000    3.000
+ PIC      C9     C8     HC8     120.000    3.000
+ PIC      C9     C8     C7      120.000    3.000
+ PIC      HC8    C8     C7      120.000    3.000
+ PIC      C10    C5     C4      120.000    3.000
+ PIC      C10    C5     C6      120.000    3.000
+ PIC      C4     C5     C6      120.000    3.000
+ PIC      C5     C4     HC4     120.000    3.000
+ PIC      C5     C4     C3      120.000    3.000
+ PIC      HC4    C4     C3      120.000    3.000
+ PIC      C4     C3     HC3     120.000    3.000
+ PIC      C4     C3     C2      120.000    3.000
+ PIC      HC3    C3     C2      120.000    3.000
+ PIC      C5     C6     HC6     120.000    3.000
+ PIC      C5     C6     C7      120.000    3.000
+ PIC      HC6    C6     C7      120.000    3.000
+ PIC      C6     C7     C12     120.000    3.000
+ PIC      C6     C7     C8      120.000    3.000
+ PIC      C12    C7     C8      120.000    3.000
+ PIC      C7     C12    O1      120.000    3.000
+ PIC      C7     C12    O2      120.000    3.000
+ PIC      O1     C12    O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PIC      var_1    OP3    P      OP1    HOP1     -59.967   20.000   1
+ PIC      var_2    OP3    P      OP2    HOP2     179.888   20.000   1
+ PIC      var_3    OP3    P      C1     C2      -175.914   20.000   1
+ PIC      var_4    P      C1     C2     C11       90.247   20.000   1
+ PIC      CONST_1  C1     C2     C3     C4       180.000    0.000   0
+ PIC      CONST_2  C1     C2     C11    C10      180.000    0.000   0
+ PIC      CONST_3  C2     C11    C10    C5         0.000    0.000   0
+ PIC      CONST_4  C11    C10    C9     C8       180.000    0.000   0
+ PIC      CONST_5  C10    C9     C8     C7         0.000    0.000   0
+ PIC      CONST_6  C11    C10    C5     C6       180.000    0.000   0
+ PIC      CONST_7  C10    C5     C4     C3         0.000    0.000   0
+ PIC      CONST_8  C5     C4     C3     C2         0.000    0.000   0
+ PIC      CONST_9  C10    C5     C6     C7         0.000    0.000   0
+ PIC      CONST_10 C5     C6     C7     C12      180.000    0.000   0
+ PIC      CONST_11 C6     C7     C8     C9         0.000    0.000   0
+ PIC      var_5    C6     C7     C12    O2        -0.296   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PIC      chir_01  C1     C2     F1     F2        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PIC      plan-1    C2        0.020
+ PIC      plan-1    C1        0.020
+ PIC      plan-1    C3        0.020
+ PIC      plan-1    C11       0.020
+ PIC      plan-1    C4        0.020
+ PIC      plan-1    HC3       0.020
+ PIC      plan-1    C10       0.020
+ PIC      plan-1    HC11      0.020
+ PIC      plan-1    C5        0.020
+ PIC      plan-1    HC4       0.020
+ PIC      plan-1    C6        0.020
+ PIC      plan-1    C7        0.020
+ PIC      plan-1    HC6       0.020
+ PIC      plan-1    C8        0.020
+ PIC      plan-1    C9        0.020
+ PIC      plan-1    C12       0.020
+ PIC      plan-1    HC8       0.020
+ PIC      plan-1    HC9       0.020
+ PIC      plan-2    C12       0.020
+ PIC      plan-2    C7        0.020
+ PIC      plan-2    O1        0.020
+ PIC      plan-2    O2        0.020
+# ------------------------------------------------------

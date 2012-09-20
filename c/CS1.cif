@@ -1,0 +1,237 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CS1      CS1 'S-(2-ANILINYL-SULFANYL)-CYSTEINE    ' peptide            26  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CS1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CS1           N      N    NH2       0.000      0.000    0.000    0.000
+ CS1           HN1    H    H         0.000      0.523   -0.148    0.855
+ CS1           HN2    H    H         0.000     -0.531   -0.767   -0.397
+ CS1           CA     C    CH1       0.000      0.011    1.313   -0.659
+ CS1           HA     H    H         0.000      0.499    1.226   -1.639
+ CS1           CB     C    CH2       0.000     -1.427    1.800   -0.847
+ CS1           HB2    H    H         0.000     -1.416    2.815   -1.250
+ CS1           HB3    H    H         0.000     -1.940    1.799    0.118
+ CS1           SG     S    S2        0.000     -2.295    0.699   -1.997
+ CS1           SD     S    S2        0.000     -2.720   -0.937   -0.837
+ CS1           CE     C    CR6       0.000     -4.228   -0.482   -0.048
+ CS1           C1     C    CR6       0.000     -4.848   -1.364    0.837
+ CS1           N1     N    NH2       0.000     -4.275   -2.613    1.101
+ CS1           HN12   H    H         0.000     -3.403   -2.892    0.654
+ CS1           HN11   H    H         0.000     -4.719   -3.265    1.745
+ CS1           C2     C    CR16      0.000     -6.032   -0.998    1.459
+ CS1           HC2    H    H         0.000     -6.512   -1.676    2.153
+ CS1           C3     C    CR16      0.000     -6.600    0.235    1.193
+ CS1           H3     H    H         0.000     -7.527    0.518    1.677
+ CS1           C4     C    CR16      0.000     -5.989    1.106    0.311
+ CS1           H4     H    H         0.000     -6.438    2.070    0.105
+ CS1           C5     C    CR16      0.000     -4.805    0.752   -0.309
+ CS1           H5     H    H         0.000     -4.328    1.438   -0.999
+ CS1           C      C    C         0.000      0.768    2.298    0.194
+ CS1           O      O    OC       -0.500      0.942    2.066    1.412
+ CS1           OXT    O    OC       -0.500      1.219    3.348   -0.313
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CS1      N      n/a    CA     START
+ CS1      HN1    N      .      .
+ CS1      HN2    N      .      .
+ CS1      CA     N      C      .
+ CS1      HA     CA     .      .
+ CS1      CB     CA     SG     .
+ CS1      HB2    CB     .      .
+ CS1      HB3    CB     .      .
+ CS1      SG     CB     SD     .
+ CS1      SD     SG     CE     .
+ CS1      CE     SD     C1     .
+ CS1      C1     CE     C2     .
+ CS1      N1     C1     HN11   .
+ CS1      HN12   N1     .      .
+ CS1      HN11   N1     .      .
+ CS1      C2     C1     C3     .
+ CS1      HC2    C2     .      .
+ CS1      C3     C2     C4     .
+ CS1      H3     C3     .      .
+ CS1      C4     C3     C5     .
+ CS1      H4     C4     .      .
+ CS1      C5     C4     H5     .
+ CS1      H5     C5     .      .
+ CS1      C      CA     .      END
+ CS1      O      C      .      .
+ CS1      OXT    C      .      .
+ CS1      CE     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CS1      O      C         deloc       1.250    0.020
+ CS1      OXT    C         deloc       1.250    0.020
+ CS1      C      CA        single      1.500    0.020
+ CS1      CA     N         single      1.450    0.020
+ CS1      CB     CA        single      1.524    0.020
+ CS1      HA     CA        single      1.099    0.020
+ CS1      SG     CB        single      1.762    0.020
+ CS1      HB2    CB        single      1.092    0.020
+ CS1      HB3    CB        single      1.092    0.020
+ CS1      SD     SG        single      2.000    0.020
+ CS1      CE     SD        single      1.695    0.020
+ CS1      CE     C5        single      1.390    0.020
+ CS1      C1     CE        double      1.487    0.020
+ CS1      C5     C4        double      1.390    0.020
+ CS1      H5     C5        single      1.083    0.020
+ CS1      C4     C3        single      1.390    0.020
+ CS1      H4     C4        single      1.083    0.020
+ CS1      C3     C2        double      1.390    0.020
+ CS1      H3     C3        single      1.083    0.020
+ CS1      C2     C1        single      1.390    0.020
+ CS1      HC2    C2        single      1.083    0.020
+ CS1      N1     C1        single      1.355    0.020
+ CS1      HN1    N         single      1.010    0.020
+ CS1      HN2    N         single      1.010    0.020
+ CS1      HN11   N1        single      1.010    0.020
+ CS1      HN12   N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CS1      HN1    N      HN2     120.000    3.000
+ CS1      HN1    N      CA      120.000    3.000
+ CS1      HN2    N      CA      120.000    3.000
+ CS1      N      CA     HA      109.470    3.000
+ CS1      N      CA     CB      109.470    3.000
+ CS1      N      CA     C       109.470    3.000
+ CS1      HA     CA     CB      108.340    3.000
+ CS1      HA     CA     C       108.810    3.000
+ CS1      CB     CA     C       109.470    3.000
+ CS1      CA     CB     HB2     109.470    3.000
+ CS1      CA     CB     HB3     109.470    3.000
+ CS1      CA     CB     SG      109.500    3.000
+ CS1      HB2    CB     HB3     107.900    3.000
+ CS1      HB2    CB     SG      109.500    3.000
+ CS1      HB3    CB     SG      109.500    3.000
+ CS1      CB     SG     SD      102.998    3.000
+ CS1      SG     SD     CE      103.011    3.000
+ CS1      SD     CE     C1      120.000    3.000
+ CS1      SD     CE     C5      120.000    3.000
+ CS1      C1     CE     C5      120.000    3.000
+ CS1      CE     C1     N1      120.000    3.000
+ CS1      CE     C1     C2      120.000    3.000
+ CS1      N1     C1     C2      120.000    3.000
+ CS1      C1     N1     HN12    120.000    3.000
+ CS1      C1     N1     HN11    120.000    3.000
+ CS1      HN12   N1     HN11    120.000    3.000
+ CS1      C1     C2     HC2     120.000    3.000
+ CS1      C1     C2     C3      120.000    3.000
+ CS1      HC2    C2     C3      120.000    3.000
+ CS1      C2     C3     H3      120.000    3.000
+ CS1      C2     C3     C4      120.000    3.000
+ CS1      H3     C3     C4      120.000    3.000
+ CS1      C3     C4     H4      120.000    3.000
+ CS1      C3     C4     C5      120.000    3.000
+ CS1      H4     C4     C5      120.000    3.000
+ CS1      C4     C5     H5      120.000    3.000
+ CS1      C4     C5     CE      120.000    3.000
+ CS1      H5     C5     CE      120.000    3.000
+ CS1      CA     C      O       118.500    3.000
+ CS1      CA     C      OXT     118.500    3.000
+ CS1      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CS1      var_1    HN2    N      CA     C        175.000   20.000   1
+ CS1      var_2    N      CA     CB     SG       -65.178   20.000   3
+ CS1      var_3    CA     CB     SG     SD        77.170   20.000   1
+ CS1      var_4    CB     SG     SD     CE        85.038   20.000   1
+ CS1      var_5    SG     SD     CE     C1       179.699   20.000   1
+ CS1      CONST_1  SD     CE     C5     C4       180.000    0.000   0
+ CS1      CONST_2  SD     CE     C1     C2       180.000    0.000   0
+ CS1      CONST_3  CE     C1     N1     HN11     180.000    0.000   0
+ CS1      CONST_4  CE     C1     C2     C3         0.000    0.000   0
+ CS1      CONST_5  C1     C2     C3     C4         0.000    0.000   0
+ CS1      CONST_6  C2     C3     C4     C5         0.000    0.000   0
+ CS1      CONST_7  C3     C4     C5     CE         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CS1      chir_01  CA     C      N      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CS1      plan-1    C         0.020
+ CS1      plan-1    O         0.020
+ CS1      plan-1    CA        0.020
+ CS1      plan-1    OXT       0.020
+ CS1      plan-2    N         0.020
+ CS1      plan-2    CA        0.020
+ CS1      plan-2    HN1       0.020
+ CS1      plan-2    HN2       0.020
+ CS1      plan-3    CE        0.020
+ CS1      plan-3    SD        0.020
+ CS1      plan-3    C5        0.020
+ CS1      plan-3    C1        0.020
+ CS1      plan-3    C4        0.020
+ CS1      plan-3    C3        0.020
+ CS1      plan-3    C2        0.020
+ CS1      plan-3    H5        0.020
+ CS1      plan-3    H4        0.020
+ CS1      plan-3    H3        0.020
+ CS1      plan-3    HC2       0.020
+ CS1      plan-3    N1        0.020
+ CS1      plan-3    HN12      0.020
+ CS1      plan-3    HN11      0.020
+ CS1      plan-4    N1        0.020
+ CS1      plan-4    C1        0.020
+ CS1      plan-4    HN11      0.020
+ CS1      plan-4    HN12      0.020
+# ------------------------------------------------------

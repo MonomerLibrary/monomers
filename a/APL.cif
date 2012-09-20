@@ -1,0 +1,273 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+APL      APL 'N-(1-BENZYL-3,3,3-TRIFLUORO-2,2-DIHY' non-polymer        33  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_APL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ APL           F13    F    F         0.000      0.000    0.000    0.000
+ APL           C1     C    CT        0.000     -0.560    1.274   -0.150
+ APL           F11    F    F         0.000      0.115    1.964   -1.163
+ APL           F12    F    F         0.000     -0.442    1.977    1.053
+ APL           C2     C    CT        0.000     -2.038    1.141   -0.520
+ APL           OY     O    OH1       0.000     -2.153    0.555   -1.818
+ APL           HY     H    H         0.000     -1.742   -0.320   -1.814
+ APL           OX     O    OH1       0.000     -2.646    2.433   -0.525
+ APL           HX     H    H         0.000     -2.568    2.829    0.353
+ APL           C3     C    CH1       0.000     -2.743    0.250    0.505
+ APL           H3     H    H         0.000     -2.214   -0.711    0.582
+ APL           N3     N    NH1       0.000     -2.741    0.913    1.811
+ APL           HN3    H    H         0.000     -3.503    1.524    2.068
+ APL           CN1    C    C         0.000     -1.722    0.710    2.669
+ APL           ON1    O    O         0.000     -0.807   -0.023    2.360
+ APL           CN2    C    CH3       0.000     -1.720    1.391    4.012
+ APL           HC23   H    H         0.000     -1.733    2.442    3.877
+ APL           HC22   H    H         0.000     -2.577    1.096    4.561
+ APL           HC21   H    H         0.000     -0.848    1.116    4.548
+ APL           C4     C    CH2       0.000     -4.185    0.003    0.060
+ APL           H41    H    H         0.000     -4.189   -0.401   -0.954
+ APL           H42    H    H         0.000     -4.737    0.946    0.077
+ APL           CP1    C    CR6       0.000     -4.838   -0.980    0.997
+ APL           CP6    C    CR16      0.000     -4.775   -2.334    0.732
+ APL           HP6    H    H         0.000     -4.259   -2.689   -0.151
+ APL           CP5    C    CR16      0.000     -5.372   -3.236    1.594
+ APL           HP5    H    H         0.000     -5.316   -4.298    1.390
+ APL           CP4    C    CR16      0.000     -6.038   -2.781    2.716
+ APL           HP4    H    H         0.000     -6.508   -3.487    3.390
+ APL           CP3    C    CR16      0.000     -6.106   -1.427    2.978
+ APL           HP3    H    H         0.000     -6.628   -1.071    3.857
+ APL           CP2    C    CR16      0.000     -5.507   -0.525    2.119
+ APL           HP2    H    H         0.000     -5.561    0.537    2.324
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ APL      F13    n/a    C1     START
+ APL      C1     F13    C2     .
+ APL      F11    C1     .      .
+ APL      F12    C1     .      .
+ APL      C2     C1     C3     .
+ APL      OY     C2     HY     .
+ APL      HY     OY     .      .
+ APL      OX     C2     HX     .
+ APL      HX     OX     .      .
+ APL      C3     C2     C4     .
+ APL      H3     C3     .      .
+ APL      N3     C3     CN1    .
+ APL      HN3    N3     .      .
+ APL      CN1    N3     CN2    .
+ APL      ON1    CN1    .      .
+ APL      CN2    CN1    HC21   .
+ APL      HC23   CN2    .      .
+ APL      HC22   CN2    .      .
+ APL      HC21   CN2    .      .
+ APL      C4     C3     CP1    .
+ APL      H41    C4     .      .
+ APL      H42    C4     .      .
+ APL      CP1    C4     CP6    .
+ APL      CP6    CP1    CP5    .
+ APL      HP6    CP6    .      .
+ APL      CP5    CP6    CP4    .
+ APL      HP5    CP5    .      .
+ APL      CP4    CP5    CP3    .
+ APL      HP4    CP4    .      .
+ APL      CP3    CP4    CP2    .
+ APL      HP3    CP3    .      .
+ APL      CP2    CP3    HP2    .
+ APL      HP2    CP2    .      END
+ APL      CP1    CP2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ APL      CN2    CN1       single      1.500    0.020
+ APL      HC21   CN2       single      1.059    0.020
+ APL      HC22   CN2       single      1.059    0.020
+ APL      HC23   CN2       single      1.059    0.020
+ APL      ON1    CN1       double      1.220    0.020
+ APL      CN1    N3        single      1.330    0.020
+ APL      N3     C3        single      1.450    0.020
+ APL      HN3    N3        single      1.010    0.020
+ APL      C3     C2        single      1.524    0.020
+ APL      C4     C3        single      1.524    0.020
+ APL      H3     C3        single      1.099    0.020
+ APL      C2     C1        single      1.524    0.020
+ APL      OY     C2        single      1.432    0.020
+ APL      OX     C2        single      1.432    0.020
+ APL      F11    C1        single      1.320    0.020
+ APL      F12    C1        single      1.320    0.020
+ APL      C1     F13       single      1.320    0.020
+ APL      CP1    C4        single      1.511    0.020
+ APL      H41    C4        single      1.092    0.020
+ APL      H42    C4        single      1.092    0.020
+ APL      HY     OY        single      0.967    0.020
+ APL      HX     OX        single      0.967    0.020
+ APL      CP1    CP2       double      1.390    0.020
+ APL      CP6    CP1       single      1.390    0.020
+ APL      CP2    CP3       single      1.390    0.020
+ APL      HP2    CP2       single      1.083    0.020
+ APL      CP3    CP4       double      1.390    0.020
+ APL      HP3    CP3       single      1.083    0.020
+ APL      CP4    CP5       single      1.390    0.020
+ APL      HP4    CP4       single      1.083    0.020
+ APL      CP5    CP6       double      1.390    0.020
+ APL      HP5    CP5       single      1.083    0.020
+ APL      HP6    CP6       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ APL      F13    C1     F11     109.470    3.000
+ APL      F13    C1     F12     109.470    3.000
+ APL      F13    C1     C2      109.470    3.000
+ APL      F11    C1     F12     109.470    3.000
+ APL      F11    C1     C2      109.470    3.000
+ APL      F12    C1     C2      109.470    3.000
+ APL      C1     C2     OY      109.470    3.000
+ APL      C1     C2     OX      109.470    3.000
+ APL      C1     C2     C3      111.000    3.000
+ APL      OY     C2     OX      109.470    3.000
+ APL      OY     C2     C3      109.470    3.000
+ APL      OX     C2     C3      109.470    3.000
+ APL      C2     OY     HY      109.470    3.000
+ APL      C2     OX     HX      109.470    3.000
+ APL      C2     C3     H3      108.340    3.000
+ APL      C2     C3     N3      110.000    3.000
+ APL      C2     C3     C4      111.000    3.000
+ APL      H3     C3     N3      108.550    3.000
+ APL      H3     C3     C4      108.340    3.000
+ APL      N3     C3     C4      110.000    3.000
+ APL      C3     N3     HN3     118.500    3.000
+ APL      C3     N3     CN1     121.500    3.000
+ APL      HN3    N3     CN1     120.000    3.000
+ APL      N3     CN1    ON1     123.000    3.000
+ APL      N3     CN1    CN2     116.500    3.000
+ APL      ON1    CN1    CN2     123.000    3.000
+ APL      CN1    CN2    HC23    109.470    3.000
+ APL      CN1    CN2    HC22    109.470    3.000
+ APL      CN1    CN2    HC21    109.470    3.000
+ APL      HC23   CN2    HC22    109.470    3.000
+ APL      HC23   CN2    HC21    109.470    3.000
+ APL      HC22   CN2    HC21    109.470    3.000
+ APL      C3     C4     H41     109.470    3.000
+ APL      C3     C4     H42     109.470    3.000
+ APL      C3     C4     CP1     109.470    3.000
+ APL      H41    C4     H42     107.900    3.000
+ APL      H41    C4     CP1     109.470    3.000
+ APL      H42    C4     CP1     109.470    3.000
+ APL      C4     CP1    CP6     120.000    3.000
+ APL      C4     CP1    CP2     120.000    3.000
+ APL      CP6    CP1    CP2     120.000    3.000
+ APL      CP1    CP6    HP6     120.000    3.000
+ APL      CP1    CP6    CP5     120.000    3.000
+ APL      HP6    CP6    CP5     120.000    3.000
+ APL      CP6    CP5    HP5     120.000    3.000
+ APL      CP6    CP5    CP4     120.000    3.000
+ APL      HP5    CP5    CP4     120.000    3.000
+ APL      CP5    CP4    HP4     120.000    3.000
+ APL      CP5    CP4    CP3     120.000    3.000
+ APL      HP4    CP4    CP3     120.000    3.000
+ APL      CP4    CP3    HP3     120.000    3.000
+ APL      CP4    CP3    CP2     120.000    3.000
+ APL      HP3    CP3    CP2     120.000    3.000
+ APL      CP3    CP2    HP2     120.000    3.000
+ APL      CP3    CP2    CP1     120.000    3.000
+ APL      HP2    CP2    CP1     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ APL      var_1    F13    C1     C2     C3        53.528   20.000   1
+ APL      var_2    C1     C2     OY     HY        60.054   20.000   1
+ APL      var_3    C1     C2     OX     HX       -60.012   20.000   1
+ APL      var_4    C1     C2     C3     C4      -174.443   20.000   1
+ APL      var_5    C2     C3     N3     CN1      -90.009   20.000   3
+ APL      CONST_1  C3     N3     CN1    CN2      180.000    0.000   0
+ APL      var_6    N3     CN1    CN2    HC21    -179.994   20.000   1
+ APL      var_7    C2     C3     C4     CP1      174.564   20.000   3
+ APL      var_8    C3     C4     CP1    CP6      -90.285   20.000   2
+ APL      CONST_2  C4     CP1    CP2    CP3      180.000    0.000   0
+ APL      CONST_3  C4     CP1    CP6    CP5      180.000    0.000   0
+ APL      CONST_4  CP1    CP6    CP5    CP4        0.000    0.000   0
+ APL      CONST_5  CP6    CP5    CP4    CP3        0.000    0.000   0
+ APL      CONST_6  CP5    CP4    CP3    CP2        0.000    0.000   0
+ APL      CONST_7  CP4    CP3    CP2    CP1        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ APL      chir_01  C3     N3     C2     C4        positiv
+ APL      chir_02  C2     C3     C1     OY        negativ
+ APL      chir_03  C1     C2     F11    F12       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ APL      plan-1    CN1       0.020
+ APL      plan-1    CN2       0.020
+ APL      plan-1    ON1       0.020
+ APL      plan-1    N3        0.020
+ APL      plan-1    HN3       0.020
+ APL      plan-2    N3        0.020
+ APL      plan-2    CN1       0.020
+ APL      plan-2    C3        0.020
+ APL      plan-2    HN3       0.020
+ APL      plan-3    CP1       0.020
+ APL      plan-3    C4        0.020
+ APL      plan-3    CP2       0.020
+ APL      plan-3    CP6       0.020
+ APL      plan-3    CP3       0.020
+ APL      plan-3    CP4       0.020
+ APL      plan-3    CP5       0.020
+ APL      plan-3    HP2       0.020
+ APL      plan-3    HP3       0.020
+ APL      plan-3    HP4       0.020
+ APL      plan-3    HP5       0.020
+ APL      plan-3    HP6       0.020
+# ------------------------------------------------------

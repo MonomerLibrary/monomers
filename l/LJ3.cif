@@ -1,0 +1,217 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+LJ3      LJ3 '3,5-dibromobiphenyl-4-ol            ' non-polymer        23  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_LJ3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ LJ3           BRAC   BR   BR        0.000      0.000    0.000    0.000
+ LJ3           CAM    C    CR6       0.000     -1.819    0.521    0.005
+ LJ3           CAK    C    CR6       0.000     -2.817   -0.444    0.003
+ LJ3           OAA    O    OH1       0.000     -2.486   -1.762   -0.003
+ LJ3           HOAA   H    H         0.000     -2.408   -2.070   -0.916
+ LJ3           CAL    C    CR6       0.000     -4.152   -0.065    0.006
+ LJ3           BRAB   BR   BR        0.000     -5.509   -1.383    0.001
+ LJ3           CAJ    C    CR16      0.000     -2.152    1.860    0.012
+ LJ3           HAJ    H    H         0.000     -1.373    2.612    0.015
+ LJ3           CAO    C    CR6       0.000     -3.491    2.243    0.015
+ LJ3           CAI    C    CR16      0.000     -4.491    1.273    0.012
+ LJ3           HAI    H    H         0.000     -5.533    1.568    0.014
+ LJ3           CAN    C    CR6       0.000     -3.853    3.683    0.021
+ LJ3           CAH    C    CR16      0.000     -5.192    4.067    0.018
+ LJ3           HAH    H    H         0.000     -5.972    3.316    0.007
+ LJ3           CAF    C    CR16      0.000     -5.522    5.407    0.030
+ LJ3           HAF    H    H         0.000     -6.562    5.707    0.037
+ LJ3           CAD    C    CR16      0.000     -4.527    6.367    0.033
+ LJ3           HAD    H    H         0.000     -4.790    7.418    0.037
+ LJ3           CAE    C    CR16      0.000     -3.196    5.991    0.030
+ LJ3           HAE    H    H         0.000     -2.421    6.747    0.032
+ LJ3           CAG    C    CR16      0.000     -2.854    4.654    0.024
+ LJ3           HAG    H    H         0.000     -1.812    4.361    0.022
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ LJ3      BRAC   n/a    CAM    START
+ LJ3      CAM    BRAC   CAJ    .
+ LJ3      CAK    CAM    CAL    .
+ LJ3      OAA    CAK    HOAA   .
+ LJ3      HOAA   OAA    .      .
+ LJ3      CAL    CAK    BRAB   .
+ LJ3      BRAB   CAL    .      .
+ LJ3      CAJ    CAM    CAO    .
+ LJ3      HAJ    CAJ    .      .
+ LJ3      CAO    CAJ    CAN    .
+ LJ3      CAI    CAO    HAI    .
+ LJ3      HAI    CAI    .      .
+ LJ3      CAN    CAO    CAH    .
+ LJ3      CAH    CAN    CAF    .
+ LJ3      HAH    CAH    .      .
+ LJ3      CAF    CAH    CAD    .
+ LJ3      HAF    CAF    .      .
+ LJ3      CAD    CAF    CAE    .
+ LJ3      HAD    CAD    .      .
+ LJ3      CAE    CAD    CAG    .
+ LJ3      HAE    CAE    .      .
+ LJ3      CAG    CAE    HAG    .
+ LJ3      HAG    CAG    .      END
+ LJ3      CAI    CAL    .    ADD
+ LJ3      CAN    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ LJ3      CAI    CAL       double      1.390    0.020
+ LJ3      CAI    CAO       single      1.390    0.020
+ LJ3      BRAB   CAL       single      1.890    0.020
+ LJ3      CAL    CAK       single      1.487    0.020
+ LJ3      OAA    CAK       single      1.362    0.020
+ LJ3      CAK    CAM       double      1.487    0.020
+ LJ3      CAM    BRAC      single      1.890    0.020
+ LJ3      CAJ    CAM       single      1.390    0.020
+ LJ3      CAO    CAJ       double      1.390    0.020
+ LJ3      CAN    CAO       single      1.487    0.020
+ LJ3      CAN    CAG       double      1.390    0.020
+ LJ3      CAH    CAN       single      1.390    0.020
+ LJ3      CAG    CAE       single      1.390    0.020
+ LJ3      CAE    CAD       double      1.390    0.020
+ LJ3      CAD    CAF       single      1.390    0.020
+ LJ3      CAF    CAH       double      1.390    0.020
+ LJ3      HAI    CAI       single      1.083    0.020
+ LJ3      HOAA   OAA       single      0.967    0.020
+ LJ3      HAJ    CAJ       single      1.083    0.020
+ LJ3      HAG    CAG       single      1.083    0.020
+ LJ3      HAE    CAE       single      1.083    0.020
+ LJ3      HAD    CAD       single      1.083    0.020
+ LJ3      HAF    CAF       single      1.083    0.020
+ LJ3      HAH    CAH       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ LJ3      BRAC   CAM    CAK     120.000    3.000
+ LJ3      BRAC   CAM    CAJ     120.000    3.000
+ LJ3      CAK    CAM    CAJ     120.000    3.000
+ LJ3      CAM    CAK    OAA     120.000    3.000
+ LJ3      CAM    CAK    CAL     120.000    3.000
+ LJ3      OAA    CAK    CAL     120.000    3.000
+ LJ3      CAK    OAA    HOAA    109.470    3.000
+ LJ3      CAK    CAL    BRAB    120.000    3.000
+ LJ3      CAK    CAL    CAI     120.000    3.000
+ LJ3      BRAB   CAL    CAI     120.000    3.000
+ LJ3      CAM    CAJ    HAJ     120.000    3.000
+ LJ3      CAM    CAJ    CAO     120.000    3.000
+ LJ3      HAJ    CAJ    CAO     120.000    3.000
+ LJ3      CAJ    CAO    CAI     120.000    3.000
+ LJ3      CAJ    CAO    CAN     120.000    3.000
+ LJ3      CAI    CAO    CAN     120.000    3.000
+ LJ3      CAO    CAI    HAI     120.000    3.000
+ LJ3      CAO    CAI    CAL     120.000    3.000
+ LJ3      HAI    CAI    CAL     120.000    3.000
+ LJ3      CAO    CAN    CAH     120.000    3.000
+ LJ3      CAO    CAN    CAG     120.000    3.000
+ LJ3      CAH    CAN    CAG     120.000    3.000
+ LJ3      CAN    CAH    HAH     120.000    3.000
+ LJ3      CAN    CAH    CAF     120.000    3.000
+ LJ3      HAH    CAH    CAF     120.000    3.000
+ LJ3      CAH    CAF    HAF     120.000    3.000
+ LJ3      CAH    CAF    CAD     120.000    3.000
+ LJ3      HAF    CAF    CAD     120.000    3.000
+ LJ3      CAF    CAD    HAD     120.000    3.000
+ LJ3      CAF    CAD    CAE     120.000    3.000
+ LJ3      HAD    CAD    CAE     120.000    3.000
+ LJ3      CAD    CAE    HAE     120.000    3.000
+ LJ3      CAD    CAE    CAG     120.000    3.000
+ LJ3      HAE    CAE    CAG     120.000    3.000
+ LJ3      CAE    CAG    HAG     120.000    3.000
+ LJ3      CAE    CAG    CAN     120.000    3.000
+ LJ3      HAG    CAG    CAN     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ LJ3      CONST_1  BRAC   CAM    CAK    CAL      180.000    0.000   0
+ LJ3      var_1    CAM    CAK    OAA    HOAA     -89.929   20.000   1
+ LJ3      CONST_2  CAM    CAK    CAL    BRAB     180.000    0.000   0
+ LJ3      CONST_3  BRAC   CAM    CAJ    CAO      180.000    0.000   0
+ LJ3      CONST_4  CAM    CAJ    CAO    CAN      180.000    0.000   0
+ LJ3      CONST_5  CAJ    CAO    CAI    CAL        0.000    0.000   0
+ LJ3      CONST_6  CAO    CAI    CAL    CAK        0.000    0.000   0
+ LJ3      CONST_7  CAJ    CAO    CAN    CAH      180.000    0.000   0
+ LJ3      CONST_8  CAO    CAN    CAG    CAE      180.000    0.000   0
+ LJ3      CONST_9  CAO    CAN    CAH    CAF      180.000    0.000   0
+ LJ3      CONST_10 CAN    CAH    CAF    CAD        0.000    0.000   0
+ LJ3      CONST_11 CAH    CAF    CAD    CAE        0.000    0.000   0
+ LJ3      CONST_12 CAF    CAD    CAE    CAG        0.000    0.000   0
+ LJ3      CONST_13 CAD    CAE    CAG    CAN        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ LJ3      plan-1    CAI       0.020
+ LJ3      plan-1    CAL       0.020
+ LJ3      plan-1    CAO       0.020
+ LJ3      plan-1    HAI       0.020
+ LJ3      plan-1    CAK       0.020
+ LJ3      plan-1    CAM       0.020
+ LJ3      plan-1    CAJ       0.020
+ LJ3      plan-1    BRAB      0.020
+ LJ3      plan-1    OAA       0.020
+ LJ3      plan-1    BRAC      0.020
+ LJ3      plan-1    HAJ       0.020
+ LJ3      plan-1    CAN       0.020
+ LJ3      plan-2    CAN       0.020
+ LJ3      plan-2    CAO       0.020
+ LJ3      plan-2    CAG       0.020
+ LJ3      plan-2    CAH       0.020
+ LJ3      plan-2    CAE       0.020
+ LJ3      plan-2    CAD       0.020
+ LJ3      plan-2    CAF       0.020
+ LJ3      plan-2    HAG       0.020
+ LJ3      plan-2    HAE       0.020
+ LJ3      plan-2    HAD       0.020
+ LJ3      plan-2    HAF       0.020
+ LJ3      plan-2    HAH       0.020
+# ------------------------------------------------------

@@ -1,0 +1,230 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+B40      B40 '(2S)-N-methyl-1-phenylpropan-2-amine' non-polymer        26  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_B40
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ B40           CM     C    CH3       0.000      0.000    0.000    0.000
+ B40           HM     H    H         0.000      0.407    0.916   -0.345
+ B40           HMA    H    H         0.000     -0.119    0.045    1.053
+ B40           HMB    H    H         0.000      0.663   -0.791   -0.244
+ B40           N      N    NH1       0.000     -1.303   -0.233   -0.636
+ B40           HN     H    H         0.000     -1.522   -1.031   -1.215
+ B40           CA     C    CH1       0.000     -2.246    0.846   -0.317
+ B40           HA     H    H         0.000     -2.064    1.201    0.707
+ B40           C      C    CH3       0.000     -2.048    2.002   -1.300
+ B40           HC     H    H         0.000     -1.056    2.366   -1.223
+ B40           HB     H    H         0.000     -2.223    1.661   -2.287
+ B40           H      H    H         0.000     -2.728    2.782   -1.071
+ B40           CB     C    CH2       0.000     -3.679    0.323   -0.429
+ B40           HBA    H    H         0.000     -3.832   -0.110   -1.419
+ B40           HBB    H    H         0.000     -4.379    1.147   -0.280
+ B40           CG     C    CR6       0.000     -3.911   -0.732    0.623
+ B40           CD2    C    CR16      0.000     -3.655   -2.059    0.338
+ B40           HD2    H    H         0.000     -3.287   -2.342   -0.640
+ B40           CE2    C    CR16      0.000     -3.868   -3.027    1.303
+ B40           HE2    H    H         0.000     -3.668   -4.068    1.079
+ B40           CZ     C    CR16      0.000     -4.337   -2.666    2.552
+ B40           HZ     H    H         0.000     -4.499   -3.424    3.309
+ B40           CE1    C    CR16      0.000     -4.599   -1.338    2.835
+ B40           HE1    H    H         0.000     -4.971   -1.056    3.813
+ B40           CD1    C    CR16      0.000     -4.386   -0.371    1.871
+ B40           HD1    H    H         0.000     -4.591    0.669    2.092
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ B40      CM     n/a    N      START
+ B40      HM     CM     .      .
+ B40      HMA    CM     .      .
+ B40      HMB    CM     .      .
+ B40      N      CM     CA     .
+ B40      HN     N      .      .
+ B40      CA     N      CB     .
+ B40      HA     CA     .      .
+ B40      C      CA     H      .
+ B40      HC     C      .      .
+ B40      HB     C      .      .
+ B40      H      C      .      .
+ B40      CB     CA     CG     .
+ B40      HBA    CB     .      .
+ B40      HBB    CB     .      .
+ B40      CG     CB     CD2    .
+ B40      CD2    CG     CE2    .
+ B40      HD2    CD2    .      .
+ B40      CE2    CD2    CZ     .
+ B40      HE2    CE2    .      .
+ B40      CZ     CE2    CE1    .
+ B40      HZ     CZ     .      .
+ B40      CE1    CZ     CD1    .
+ B40      HE1    CE1    .      .
+ B40      CD1    CE1    HD1    .
+ B40      HD1    CD1    .      END
+ B40      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ B40      N      CM        single      1.450    0.020
+ B40      CA     N         single      1.450    0.020
+ B40      HN     N         single      1.010    0.020
+ B40      C      CA        single      1.524    0.020
+ B40      CB     CA        single      1.524    0.020
+ B40      HA     CA        single      1.099    0.020
+ B40      H      C         single      1.059    0.020
+ B40      HB     C         single      1.059    0.020
+ B40      HC     C         single      1.059    0.020
+ B40      CG     CB        single      1.511    0.020
+ B40      HBA    CB        single      1.092    0.020
+ B40      HBB    CB        single      1.092    0.020
+ B40      CD2    CG        double      1.390    0.020
+ B40      CG     CD1       single      1.390    0.020
+ B40      CD1    CE1       double      1.390    0.020
+ B40      HD1    CD1       single      1.083    0.020
+ B40      CE2    CD2       single      1.390    0.020
+ B40      HD2    CD2       single      1.083    0.020
+ B40      CE1    CZ        single      1.390    0.020
+ B40      HE1    CE1       single      1.083    0.020
+ B40      CZ     CE2       double      1.390    0.020
+ B40      HE2    CE2       single      1.083    0.020
+ B40      HZ     CZ        single      1.083    0.020
+ B40      HM     CM        single      1.059    0.020
+ B40      HMA    CM        single      1.059    0.020
+ B40      HMB    CM        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ B40      HM     CM     HMA     109.470    3.000
+ B40      HM     CM     HMB     109.470    3.000
+ B40      HMA    CM     HMB     109.470    3.000
+ B40      HM     CM     N       109.470    3.000
+ B40      HMA    CM     N       109.470    3.000
+ B40      HMB    CM     N       109.470    3.000
+ B40      CM     N      HN      118.500    3.000
+ B40      CM     N      CA      120.000    3.000
+ B40      HN     N      CA      118.500    3.000
+ B40      N      CA     HA      108.550    3.000
+ B40      N      CA     C       110.000    3.000
+ B40      N      CA     CB      110.000    3.000
+ B40      HA     CA     C       108.340    3.000
+ B40      HA     CA     CB      108.340    3.000
+ B40      C      CA     CB      111.000    3.000
+ B40      CA     C      HC      109.470    3.000
+ B40      CA     C      HB      109.470    3.000
+ B40      CA     C      H       109.470    3.000
+ B40      HC     C      HB      109.470    3.000
+ B40      HC     C      H       109.470    3.000
+ B40      HB     C      H       109.470    3.000
+ B40      CA     CB     HBA     109.470    3.000
+ B40      CA     CB     HBB     109.470    3.000
+ B40      CA     CB     CG      109.470    3.000
+ B40      HBA    CB     HBB     107.900    3.000
+ B40      HBA    CB     CG      109.470    3.000
+ B40      HBB    CB     CG      109.470    3.000
+ B40      CB     CG     CD2     120.000    3.000
+ B40      CB     CG     CD1     120.000    3.000
+ B40      CD2    CG     CD1     120.000    3.000
+ B40      CG     CD2    HD2     120.000    3.000
+ B40      CG     CD2    CE2     120.000    3.000
+ B40      HD2    CD2    CE2     120.000    3.000
+ B40      CD2    CE2    HE2     120.000    3.000
+ B40      CD2    CE2    CZ      120.000    3.000
+ B40      HE2    CE2    CZ      120.000    3.000
+ B40      CE2    CZ     HZ      120.000    3.000
+ B40      CE2    CZ     CE1     120.000    3.000
+ B40      HZ     CZ     CE1     120.000    3.000
+ B40      CZ     CE1    HE1     120.000    3.000
+ B40      CZ     CE1    CD1     120.000    3.000
+ B40      HE1    CE1    CD1     120.000    3.000
+ B40      CE1    CD1    HD1     120.000    3.000
+ B40      CE1    CD1    CG      120.000    3.000
+ B40      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ B40      var_1    HMB    CM     N      CA      -179.977   20.000   1
+ B40      var_2    CM     N      CA     CB      -154.983   20.000   3
+ B40      var_3    N      CA     C      H        179.997   20.000   3
+ B40      var_4    N      CA     CB     CG        65.003   20.000   3
+ B40      var_5    CA     CB     CG     CD2      -90.260   20.000   2
+ B40      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ B40      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ B40      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ B40      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ B40      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ B40      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ B40      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ B40      plan-1    N         0.020
+ B40      plan-1    CA        0.020
+ B40      plan-1    CM        0.020
+ B40      plan-1    HN        0.020
+ B40      plan-2    CG        0.020
+ B40      plan-2    CB        0.020
+ B40      plan-2    CD1       0.020
+ B40      plan-2    CD2       0.020
+ B40      plan-2    CE1       0.020
+ B40      plan-2    CE2       0.020
+ B40      plan-2    CZ        0.020
+ B40      plan-2    HD1       0.020
+ B40      plan-2    HD2       0.020
+ B40      plan-2    HE1       0.020
+ B40      plan-2    HE2       0.020
+ B40      plan-2    HZ        0.020
+# ------------------------------------------------------

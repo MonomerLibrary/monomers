@@ -1,0 +1,172 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3HM      3HM '5-hydroxy-6-methylpyridine-3-carboxy' non-polymer        17  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3HM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3HM           OAG    O    OC       -0.500      0.000    0.000    0.000
+ 3HM           CAF    C    C         0.000     -1.062   -0.662    0.005
+ 3HM           OAA    O    OC       -0.500     -1.019   -1.912    0.018
+ 3HM           CAE    C    CR6       0.000     -2.366    0.033   -0.002
+ 3HM           CAK    C    CR16      0.000     -3.557   -0.695    0.004
+ 3HM           HAK    H    H         0.000     -3.524   -1.778    0.015
+ 3HM           NAJ    N    NRD6      0.000     -4.721   -0.080   -0.003
+ 3HM           CAD    C    CR16      0.000     -2.428    1.431   -0.016
+ 3HM           HAD    H    H         0.000     -1.523    2.027   -0.018
+ 3HM           CAC    C    CR6       0.000     -3.677    2.034   -0.029
+ 3HM           OAB    O    OH1       0.000     -3.788    3.388   -0.047
+ 3HM           HOAB   H    H         0.000     -3.814    3.721    0.860
+ 3HM           CAI    C    CR6       0.000     -4.814    1.235   -0.015
+ 3HM           CAH    C    CH3       0.000     -6.175    1.883   -0.023
+ 3HM           HAHB   H    H         0.000     -6.865    1.262    0.486
+ 3HM           HAHA   H    H         0.000     -6.122    2.823    0.462
+ 3HM           HAH    H    H         0.000     -6.495    2.020   -1.024
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3HM      OAG    n/a    CAF    START
+ 3HM      CAF    OAG    CAE    .
+ 3HM      OAA    CAF    .      .
+ 3HM      CAE    CAF    CAD    .
+ 3HM      CAK    CAE    NAJ    .
+ 3HM      HAK    CAK    .      .
+ 3HM      NAJ    CAK    .      .
+ 3HM      CAD    CAE    CAC    .
+ 3HM      HAD    CAD    .      .
+ 3HM      CAC    CAD    CAI    .
+ 3HM      OAB    CAC    HOAB   .
+ 3HM      HOAB   OAB    .      .
+ 3HM      CAI    CAC    CAH    .
+ 3HM      CAH    CAI    HAH    .
+ 3HM      HAHB   CAH    .      .
+ 3HM      HAHA   CAH    .      .
+ 3HM      HAH    CAH    .      END
+ 3HM      CAI    NAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3HM      CAH    CAI       single      1.506    0.020
+ 3HM      HAH    CAH       single      1.059    0.020
+ 3HM      HAHA   CAH       single      1.059    0.020
+ 3HM      HAHB   CAH       single      1.059    0.020
+ 3HM      CAI    NAJ       double      1.350    0.020
+ 3HM      CAI    CAC       single      1.487    0.020
+ 3HM      NAJ    CAK       single      1.337    0.020
+ 3HM      CAK    CAE       double      1.390    0.020
+ 3HM      HAK    CAK       single      1.083    0.020
+ 3HM      CAD    CAE       single      1.390    0.020
+ 3HM      CAE    CAF       single      1.500    0.020
+ 3HM      CAF    OAG       deloc       1.250    0.020
+ 3HM      OAA    CAF       deloc       1.250    0.020
+ 3HM      CAC    CAD       double      1.390    0.020
+ 3HM      HAD    CAD       single      1.083    0.020
+ 3HM      OAB    CAC       single      1.362    0.020
+ 3HM      HOAB   OAB       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3HM      OAG    CAF    OAA     123.000    3.000
+ 3HM      OAG    CAF    CAE     120.000    3.000
+ 3HM      OAA    CAF    CAE     120.000    3.000
+ 3HM      CAF    CAE    CAK     120.000    3.000
+ 3HM      CAF    CAE    CAD     120.000    3.000
+ 3HM      CAK    CAE    CAD     120.000    3.000
+ 3HM      CAE    CAK    HAK     120.000    3.000
+ 3HM      CAE    CAK    NAJ     120.000    3.000
+ 3HM      HAK    CAK    NAJ     120.000    3.000
+ 3HM      CAK    NAJ    CAI     120.000    3.000
+ 3HM      CAE    CAD    HAD     120.000    3.000
+ 3HM      CAE    CAD    CAC     120.000    3.000
+ 3HM      HAD    CAD    CAC     120.000    3.000
+ 3HM      CAD    CAC    OAB     120.000    3.000
+ 3HM      CAD    CAC    CAI     120.000    3.000
+ 3HM      OAB    CAC    CAI     120.000    3.000
+ 3HM      CAC    OAB    HOAB    109.470    3.000
+ 3HM      CAC    CAI    CAH     120.000    3.000
+ 3HM      CAC    CAI    NAJ     120.000    3.000
+ 3HM      CAH    CAI    NAJ     120.000    3.000
+ 3HM      CAI    CAH    HAHB    109.470    3.000
+ 3HM      CAI    CAH    HAHA    109.470    3.000
+ 3HM      CAI    CAH    HAH     109.470    3.000
+ 3HM      HAHB   CAH    HAHA    109.470    3.000
+ 3HM      HAHB   CAH    HAH     109.470    3.000
+ 3HM      HAHA   CAH    HAH     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3HM      var_1    OAG    CAF    CAE    CAD        0.097   20.000   1
+ 3HM      CONST_1  CAF    CAE    CAK    NAJ      180.000    0.000   0
+ 3HM      CONST_2  CAE    CAK    NAJ    CAI        0.000    0.000   0
+ 3HM      CONST_3  CAF    CAE    CAD    CAC      180.000    0.000   0
+ 3HM      CONST_4  CAE    CAD    CAC    CAI        0.000    0.000   0
+ 3HM      var_2    CAD    CAC    OAB    HOAB     -89.789   20.000   1
+ 3HM      CONST_5  CAD    CAC    CAI    CAH      180.000    0.000   0
+ 3HM      CONST_6  CAC    CAI    NAJ    CAK        0.000    0.000   0
+ 3HM      var_3    CAC    CAI    CAH    HAH       89.987   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3HM      plan-1    CAI       0.020
+ 3HM      plan-1    CAH       0.020
+ 3HM      plan-1    NAJ       0.020
+ 3HM      plan-1    CAC       0.020
+ 3HM      plan-1    CAK       0.020
+ 3HM      plan-1    CAE       0.020
+ 3HM      plan-1    CAD       0.020
+ 3HM      plan-1    HAK       0.020
+ 3HM      plan-1    CAF       0.020
+ 3HM      plan-1    HAD       0.020
+ 3HM      plan-1    OAB       0.020
+ 3HM      plan-2    CAF       0.020
+ 3HM      plan-2    CAE       0.020
+ 3HM      plan-2    OAA       0.020
+ 3HM      plan-2    OAG       0.020
+# ------------------------------------------------------

@@ -1,0 +1,171 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+5AC      5AC '5-amino-1H-imidazole-4-carboxamide  ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_5AC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 5AC           OAC    O    O         0.000      0.000    0.000    0.000
+ 5AC           CAG    C    C         0.000     -0.804    0.915   -0.001
+ 5AC           NAA    N    NH2       0.000     -0.373    2.191   -0.002
+ 5AC           HNAB   H    H         0.000     -1.039    2.954   -0.003
+ 5AC           HNAA   H    H         0.000      0.619    2.395   -0.002
+ 5AC           CAI    C    CR5       0.000     -2.241    0.627   -0.001
+ 5AC           NAE    N    NRD5      0.000     -3.247    1.543    0.004
+ 5AC           CAD    C    CR15      0.000     -4.389    0.922   -0.001
+ 5AC           HAD    H    H         0.000     -5.361    1.401   -0.004
+ 5AC           NAF    N    NR15      0.000     -4.176   -0.425   -0.001
+ 5AC           HNAF   H    H         0.000     -4.909   -1.162    0.000
+ 5AC           CAH    C    CR5       0.000     -2.828   -0.630   -0.001
+ 5AC           NAB    N    NH2       0.000     -2.177   -1.847    0.000
+ 5AC           HNAD   H    H         0.000     -2.706   -2.713    0.000
+ 5AC           HNAC   H    H         0.000     -1.163   -1.888    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 5AC      OAC    n/a    CAG    START
+ 5AC      CAG    OAC    CAI    .
+ 5AC      NAA    CAG    HNAA   .
+ 5AC      HNAB   NAA    .      .
+ 5AC      HNAA   NAA    .      .
+ 5AC      CAI    CAG    NAE    .
+ 5AC      NAE    CAI    CAD    .
+ 5AC      CAD    NAE    NAF    .
+ 5AC      HAD    CAD    .      .
+ 5AC      NAF    CAD    CAH    .
+ 5AC      HNAF   NAF    .      .
+ 5AC      CAH    NAF    NAB    .
+ 5AC      NAB    CAH    HNAC   .
+ 5AC      HNAD   NAB    .      .
+ 5AC      HNAC   NAB    .      END
+ 5AC      CAI    CAH    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 5AC      NAA    CAG       single      1.332    0.020
+ 5AC      CAG    OAC       double      1.220    0.020
+ 5AC      CAI    CAG       single      1.490    0.020
+ 5AC      CAI    CAH       double      1.490    0.020
+ 5AC      NAE    CAI       single      1.350    0.020
+ 5AC      NAB    CAH       single      1.355    0.020
+ 5AC      CAH    NAF       single      1.340    0.020
+ 5AC      NAF    CAD       single      1.350    0.020
+ 5AC      CAD    NAE       double      1.350    0.020
+ 5AC      HNAA   NAA       single      1.010    0.020
+ 5AC      HNAB   NAA       single      1.010    0.020
+ 5AC      HNAC   NAB       single      1.010    0.020
+ 5AC      HNAD   NAB       single      1.010    0.020
+ 5AC      HNAF   NAF       single      1.040    0.020
+ 5AC      HAD    CAD       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 5AC      OAC    CAG    NAA     123.000    3.000
+ 5AC      OAC    CAG    CAI     120.500    3.000
+ 5AC      NAA    CAG    CAI     120.000    3.000
+ 5AC      CAG    NAA    HNAB    120.000    3.000
+ 5AC      CAG    NAA    HNAA    120.000    3.000
+ 5AC      HNAB   NAA    HNAA    120.000    3.000
+ 5AC      CAG    CAI    NAE     126.000    3.000
+ 5AC      CAG    CAI    CAH     117.000    3.000
+ 5AC      NAE    CAI    CAH     108.000    3.000
+ 5AC      CAI    NAE    CAD     108.000    3.000
+ 5AC      NAE    CAD    HAD     126.000    3.000
+ 5AC      NAE    CAD    NAF     108.000    3.000
+ 5AC      HAD    CAD    NAF     126.000    3.000
+ 5AC      CAD    NAF    HNAF    126.000    3.000
+ 5AC      CAD    NAF    CAH     108.000    3.000
+ 5AC      HNAF   NAF    CAH     126.000    3.000
+ 5AC      NAF    CAH    NAB     108.000    3.000
+ 5AC      NAF    CAH    CAI     108.000    3.000
+ 5AC      NAB    CAH    CAI     108.000    3.000
+ 5AC      CAH    NAB    HNAD    120.000    3.000
+ 5AC      CAH    NAB    HNAC    120.000    3.000
+ 5AC      HNAD   NAB    HNAC    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 5AC      CONST_1  OAC    CAG    NAA    HNAA       0.000    0.000   0
+ 5AC      var_1    OAC    CAG    CAI    NAE      179.678   20.000   1
+ 5AC      CONST_2  CAG    CAI    CAH    NAF      180.000    0.000   0
+ 5AC      CONST_3  CAG    CAI    NAE    CAD      180.000    0.000   0
+ 5AC      CONST_4  CAI    NAE    CAD    NAF        0.000    0.000   0
+ 5AC      CONST_5  NAE    CAD    NAF    CAH        0.000    0.000   0
+ 5AC      CONST_6  CAD    NAF    CAH    NAB      180.000    0.000   0
+ 5AC      CONST_7  NAF    CAH    NAB    HNAC    -179.925    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 5AC      plan-1    NAA       0.020
+ 5AC      plan-1    CAG       0.020
+ 5AC      plan-1    HNAA      0.020
+ 5AC      plan-1    HNAB      0.020
+ 5AC      plan-2    CAG       0.020
+ 5AC      plan-2    NAA       0.020
+ 5AC      plan-2    OAC       0.020
+ 5AC      plan-2    CAI       0.020
+ 5AC      plan-2    HNAB      0.020
+ 5AC      plan-2    HNAA      0.020
+ 5AC      plan-3    CAI       0.020
+ 5AC      plan-3    CAG       0.020
+ 5AC      plan-3    CAH       0.020
+ 5AC      plan-3    NAE       0.020
+ 5AC      plan-3    NAF       0.020
+ 5AC      plan-3    CAD       0.020
+ 5AC      plan-3    NAB       0.020
+ 5AC      plan-3    HNAF      0.020
+ 5AC      plan-3    HAD       0.020
+ 5AC      plan-3    HNAD      0.020
+ 5AC      plan-3    HNAC      0.020
+ 5AC      plan-4    NAB       0.020
+ 5AC      plan-4    CAH       0.020
+ 5AC      plan-4    HNAC      0.020
+ 5AC      plan-4    HNAD      0.020
+# ------------------------------------------------------

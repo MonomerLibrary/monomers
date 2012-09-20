@@ -1,0 +1,243 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DTE      DTE '7-CL-D-TRYPTOPHAN                   ' non-polymer        26  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DTE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DTE           CL     CL   CL        0.000      0.000    0.000    0.000
+ DTE           CZ2    C    CR6       0.000     -1.461   -0.127   -0.920
+ DTE           CH2    C    CR16      0.000     -1.894    0.896   -1.770
+ DTE           HH2    H    H         0.000     -1.313    1.805   -1.867
+ DTE           CZ3    C    CR16      0.000     -3.080    0.739   -2.493
+ DTE           HZ3    H    H         0.000     -3.419    1.530   -3.150
+ DTE           CE3    C    CR16      0.000     -3.831   -0.434   -2.370
+ DTE           HE3    H    H         0.000     -4.748   -0.556   -2.933
+ DTE           CD2    C    CR56      0.000     -3.390   -1.447   -1.515
+ DTE           CE2    C    CR56      0.000     -2.209   -1.291   -0.797
+ DTE           NE1    N    NR15      0.000     -2.013   -2.390   -0.075
+ DTE           HE1    H    H         0.000     -1.208   -2.565    0.559
+ DTE           CD1    C    CR15      0.000     -3.024   -3.229   -0.302
+ DTE           HD1    H    H         0.000     -3.130   -4.207    0.152
+ DTE           CG     C    CR5       0.000     -3.883   -2.695   -1.166
+ DTE           CB     C    CH2       0.000     -5.162   -3.364   -1.695
+ DTE           HBC1   H    H         0.000     -4.887   -4.383   -1.977
+ DTE           HBC2   H    H         0.000     -5.457   -2.809   -2.588
+ DTE           CA     C    CH1       0.000     -6.338   -3.405   -0.700
+ DTE           HA     H    H         0.000     -7.178   -3.912   -1.194
+ DTE           N      N    NH2       0.000     -6.003   -4.166    0.515
+ DTE           HN2    H    H         0.000     -6.736   -4.584    1.078
+ DTE           HN1    H    H         0.000     -5.036   -4.280    0.800
+ DTE           C      C    C         0.000     -6.789   -1.986   -0.350
+ DTE           OXT    O    OC       -0.500     -7.154   -1.192   -1.245
+ DTE           O      O    OC       -0.500     -6.809   -1.612    0.844
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DTE      CL     n/a    CZ2    START
+ DTE      CZ2    CL     CE2    .
+ DTE      CH2    CZ2    CZ3    .
+ DTE      HH2    CH2    .      .
+ DTE      CZ3    CH2    CE3    .
+ DTE      HZ3    CZ3    .      .
+ DTE      CE3    CZ3    CD2    .
+ DTE      HE3    CE3    .      .
+ DTE      CD2    CE3    .      .
+ DTE      CE2    CZ2    NE1    .
+ DTE      NE1    CE2    CD1    .
+ DTE      HE1    NE1    .      .
+ DTE      CD1    NE1    CG     .
+ DTE      HD1    CD1    .      .
+ DTE      CG     CD1    CB     .
+ DTE      CB     CG     CA     .
+ DTE      HBC1   CB     .      .
+ DTE      HBC2   CB     .      .
+ DTE      CA     CB     C      .
+ DTE      HA     CA     .      .
+ DTE      N      CA     HN1    .
+ DTE      HN2    N      .      .
+ DTE      HN1    N      .      .
+ DTE      C      CA     O      .
+ DTE      OXT    C      .      .
+ DTE      O      C      .      END
+ DTE      CG     CD2    .    ADD
+ DTE      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DTE      N      CA        single      1.450    0.020
+ DTE      C      CA        single      1.500    0.020
+ DTE      CA     CB        single      1.524    0.020
+ DTE      OXT    C         deloc       1.250    0.020
+ DTE      O      C         deloc       1.250    0.020
+ DTE      CB     CG        single      1.510    0.020
+ DTE      CG     CD2       single      1.490    0.020
+ DTE      CG     CD1       double      1.387    0.020
+ DTE      CD2    CE2       single      1.490    0.020
+ DTE      CD2    CE3       double      1.390    0.020
+ DTE      CD1    NE1       single      1.350    0.020
+ DTE      NE1    CE2       single      1.340    0.020
+ DTE      CE2    CZ2       double      1.490    0.020
+ DTE      CH2    CZ2       single      1.390    0.020
+ DTE      CZ2    CL        single      1.795    0.020
+ DTE      CZ3    CH2       double      1.390    0.020
+ DTE      CE3    CZ3       single      1.390    0.020
+ DTE      HN1    N         single      1.010    0.020
+ DTE      HN2    N         single      1.010    0.020
+ DTE      HA     CA        single      1.099    0.020
+ DTE      HBC1   CB        single      1.092    0.020
+ DTE      HBC2   CB        single      1.092    0.020
+ DTE      HD1    CD1       single      1.083    0.020
+ DTE      HE3    CE3       single      1.083    0.020
+ DTE      HE1    NE1       single      1.040    0.020
+ DTE      HH2    CH2       single      1.083    0.020
+ DTE      HZ3    CZ3       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DTE      CL     CZ2    CH2     120.000    3.000
+ DTE      CL     CZ2    CE2     120.000    3.000
+ DTE      CH2    CZ2    CE2     120.000    3.000
+ DTE      CZ2    CH2    HH2     120.000    3.000
+ DTE      CZ2    CH2    CZ3     120.000    3.000
+ DTE      HH2    CH2    CZ3     120.000    3.000
+ DTE      CH2    CZ3    HZ3     120.000    3.000
+ DTE      CH2    CZ3    CE3     120.000    3.000
+ DTE      HZ3    CZ3    CE3     120.000    3.000
+ DTE      CZ3    CE3    HE3     120.000    3.000
+ DTE      CZ3    CE3    CD2     120.000    3.000
+ DTE      HE3    CE3    CD2     120.000    3.000
+ DTE      CE3    CD2    CG      126.000    3.000
+ DTE      CE3    CD2    CE2     120.000    3.000
+ DTE      CG     CD2    CE2     108.000    3.000
+ DTE      CZ2    CE2    NE1     132.000    3.000
+ DTE      CZ2    CE2    CD2     120.000    3.000
+ DTE      NE1    CE2    CD2     108.000    3.000
+ DTE      CE2    NE1    HE1     126.000    3.000
+ DTE      CE2    NE1    CD1     108.000    3.000
+ DTE      HE1    NE1    CD1     126.000    3.000
+ DTE      NE1    CD1    HD1     126.000    3.000
+ DTE      NE1    CD1    CG      108.000    3.000
+ DTE      HD1    CD1    CG      126.000    3.000
+ DTE      CD1    CG     CB      126.000    3.000
+ DTE      CD1    CG     CD2     108.000    3.000
+ DTE      CB     CG     CD2     126.000    3.000
+ DTE      CG     CB     HBC1    109.470    3.000
+ DTE      CG     CB     HBC2    109.470    3.000
+ DTE      CG     CB     CA      109.470    3.000
+ DTE      HBC1   CB     HBC2    107.900    3.000
+ DTE      HBC1   CB     CA      109.470    3.000
+ DTE      HBC2   CB     CA      109.470    3.000
+ DTE      CB     CA     HA      108.340    3.000
+ DTE      CB     CA     N       109.470    3.000
+ DTE      CB     CA     C       109.470    3.000
+ DTE      HA     CA     N       109.470    3.000
+ DTE      HA     CA     C       108.810    3.000
+ DTE      N      CA     C       109.470    3.000
+ DTE      CA     N      HN2     120.000    3.000
+ DTE      CA     N      HN1     120.000    3.000
+ DTE      HN2    N      HN1     120.000    3.000
+ DTE      CA     C      OXT     118.500    3.000
+ DTE      CA     C      O       118.500    3.000
+ DTE      OXT    C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DTE      CONST_1  CL     CZ2    CH2    CZ3      180.000    0.000   0
+ DTE      CONST_2  CZ2    CH2    CZ3    CE3        0.000    0.000   0
+ DTE      CONST_3  CH2    CZ3    CE3    CD2        0.000    0.000   0
+ DTE      CONST_4  CZ3    CE3    CD2    CG       180.000    0.000   0
+ DTE      CONST_5  CE3    CD2    CE2    CZ2        0.000    0.000   0
+ DTE      CONST_6  CL     CZ2    CE2    NE1        0.000    0.000   0
+ DTE      CONST_7  CZ2    CE2    NE1    CD1      180.000    0.000   0
+ DTE      CONST_8  CE2    NE1    CD1    CG         0.000    0.000   0
+ DTE      CONST_9  NE1    CD1    CG     CB       180.000    0.000   0
+ DTE      CONST_10 CD1    CG     CD2    CE3      180.000    0.000   0
+ DTE      var_1    CD1    CG     CB     CA        75.371   20.000   2
+ DTE      var_2    CG     CB     CA     C         63.008   20.000   3
+ DTE      var_3    CB     CA     N      HN1       23.809   20.000   1
+ DTE      var_4    CB     CA     C      O       -123.351   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DTE      chir_01  CA     N      C      CB        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DTE      plan-1    N         0.020
+ DTE      plan-1    CA        0.020
+ DTE      plan-1    HN1       0.020
+ DTE      plan-1    HN2       0.020
+ DTE      plan-2    C         0.020
+ DTE      plan-2    CA        0.020
+ DTE      plan-2    OXT       0.020
+ DTE      plan-2    O         0.020
+ DTE      plan-3    CG        0.020
+ DTE      plan-3    CB        0.020
+ DTE      plan-3    CD2       0.020
+ DTE      plan-3    CD1       0.020
+ DTE      plan-3    NE1       0.020
+ DTE      plan-3    CE2       0.020
+ DTE      plan-3    CE3       0.020
+ DTE      plan-3    CZ2       0.020
+ DTE      plan-3    CH2       0.020
+ DTE      plan-3    CZ3       0.020
+ DTE      plan-3    HD1       0.020
+ DTE      plan-3    HE1       0.020
+ DTE      plan-3    CL        0.020
+ DTE      plan-3    HH2       0.020
+ DTE      plan-3    HZ3       0.020
+ DTE      plan-3    HE3       0.020
+# ------------------------------------------------------

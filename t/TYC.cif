@@ -1,0 +1,233 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TYC      TYC 'L-TYROSINAMIDE                      ' non-polymer        25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TYC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TYC           O      O    O         0.000      0.000    0.000    0.000
+ TYC           C      C    C         0.000     -0.997    0.287    0.626
+ TYC           NXT    N    NH2       0.000     -0.948    0.374    1.969
+ TYC           HT22   H    H         0.000     -1.779    0.613    2.496
+ TYC           HT21   H    H         0.000     -0.080    0.200    2.461
+ TYC           CA     C    CH1       0.000     -2.293    0.546   -0.099
+ TYC           HA     H    H         0.000     -2.893    1.268    0.471
+ TYC           N      N    NH2       0.000     -2.007    1.092   -1.432
+ TYC           H      H    H         0.000     -2.355    2.007   -1.695
+ TYC           H0     H    H         0.000     -1.461    0.558   -2.098
+ TYC           CB     C    CH2       0.000     -3.070   -0.763   -0.241
+ TYC           HB1    H    H         0.000     -3.281   -1.169    0.751
+ TYC           HB2    H    H         0.000     -2.472   -1.481   -0.807
+ TYC           CG     C    CR6       0.000     -4.364   -0.504   -0.965
+ TYC           CD2    C    CR16      0.000     -5.503   -0.182   -0.250
+ TYC           HD2    H    H         0.000     -5.464   -0.120    0.831
+ TYC           CE2    C    CR16      0.000     -6.690    0.061   -0.912
+ TYC           HE2    H    H         0.000     -7.580    0.321   -0.352
+ TYC           CZ     C    CR6       0.000     -6.742   -0.028   -2.296
+ TYC           OH     O    OH1       0.000     -7.911    0.207   -2.949
+ TYC           HH     H    H         0.000     -8.401   -0.622   -3.039
+ TYC           CE1    C    CR16      0.000     -5.600   -0.356   -3.010
+ TYC           HE1    H    H         0.000     -5.639   -0.426   -4.090
+ TYC           CD1    C    CR16      0.000     -4.413   -0.594   -2.344
+ TYC           HD1    H    H         0.000     -3.521   -0.852   -2.901
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TYC      O      n/a    C      START
+ TYC      C      O      CA     .
+ TYC      NXT    C      HT21   .
+ TYC      HT22   NXT    .      .
+ TYC      HT21   NXT    .      .
+ TYC      CA     C      CB     .
+ TYC      HA     CA     .      .
+ TYC      N      CA     H0     .
+ TYC      H      N      .      .
+ TYC      H0     N      .      .
+ TYC      CB     CA     CG     .
+ TYC      HB1    CB     .      .
+ TYC      HB2    CB     .      .
+ TYC      CG     CB     CD2    .
+ TYC      CD2    CG     CE2    .
+ TYC      HD2    CD2    .      .
+ TYC      CE2    CD2    CZ     .
+ TYC      HE2    CE2    .      .
+ TYC      CZ     CE2    CE1    .
+ TYC      OH     CZ     HH     .
+ TYC      HH     OH     .      .
+ TYC      CE1    CZ     CD1    .
+ TYC      HE1    CE1    .      .
+ TYC      CD1    CE1    HD1    .
+ TYC      HD1    CD1    .      END
+ TYC      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TYC      N      CA        single      1.450    0.020
+ TYC      H0     N         single      1.010    0.020
+ TYC      H      N         single      1.010    0.020
+ TYC      CA     C         single      1.500    0.020
+ TYC      CB     CA        single      1.524    0.020
+ TYC      HA     CA        single      1.099    0.020
+ TYC      C      O         double      1.220    0.020
+ TYC      NXT    C         single      1.332    0.020
+ TYC      CG     CB        single      1.511    0.020
+ TYC      HB1    CB        single      1.092    0.020
+ TYC      HB2    CB        single      1.092    0.020
+ TYC      CG     CD1       double      1.390    0.020
+ TYC      CD2    CG        single      1.390    0.020
+ TYC      CD1    CE1       single      1.390    0.020
+ TYC      HD1    CD1       single      1.083    0.020
+ TYC      CE2    CD2       double      1.390    0.020
+ TYC      HD2    CD2       single      1.083    0.020
+ TYC      CE1    CZ        double      1.390    0.020
+ TYC      HE1    CE1       single      1.083    0.020
+ TYC      CZ     CE2       single      1.390    0.020
+ TYC      HE2    CE2       single      1.083    0.020
+ TYC      OH     CZ        single      1.362    0.020
+ TYC      HH     OH        single      0.967    0.020
+ TYC      HT21   NXT       single      1.010    0.020
+ TYC      HT22   NXT       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TYC      O      C      NXT     123.000    3.000
+ TYC      O      C      CA      120.500    3.000
+ TYC      NXT    C      CA      120.000    3.000
+ TYC      C      NXT    HT22    120.000    3.000
+ TYC      C      NXT    HT21    120.000    3.000
+ TYC      HT22   NXT    HT21    120.000    3.000
+ TYC      C      CA     HA      108.810    3.000
+ TYC      C      CA     N       109.470    3.000
+ TYC      C      CA     CB      109.470    3.000
+ TYC      HA     CA     N       109.470    3.000
+ TYC      HA     CA     CB      108.340    3.000
+ TYC      N      CA     CB      109.470    3.000
+ TYC      CA     N      H       120.000    3.000
+ TYC      CA     N      H0      120.000    3.000
+ TYC      H      N      H0      120.000    3.000
+ TYC      CA     CB     HB1     109.470    3.000
+ TYC      CA     CB     HB2     109.470    3.000
+ TYC      CA     CB     CG      109.470    3.000
+ TYC      HB1    CB     HB2     107.900    3.000
+ TYC      HB1    CB     CG      109.470    3.000
+ TYC      HB2    CB     CG      109.470    3.000
+ TYC      CB     CG     CD2     120.000    3.000
+ TYC      CB     CG     CD1     120.000    3.000
+ TYC      CD2    CG     CD1     120.000    3.000
+ TYC      CG     CD2    HD2     120.000    3.000
+ TYC      CG     CD2    CE2     120.000    3.000
+ TYC      HD2    CD2    CE2     120.000    3.000
+ TYC      CD2    CE2    HE2     120.000    3.000
+ TYC      CD2    CE2    CZ      120.000    3.000
+ TYC      HE2    CE2    CZ      120.000    3.000
+ TYC      CE2    CZ     OH      120.000    3.000
+ TYC      CE2    CZ     CE1     120.000    3.000
+ TYC      OH     CZ     CE1     120.000    3.000
+ TYC      CZ     OH     HH      109.470    3.000
+ TYC      CZ     CE1    HE1     120.000    3.000
+ TYC      CZ     CE1    CD1     120.000    3.000
+ TYC      HE1    CE1    CD1     120.000    3.000
+ TYC      CE1    CD1    HD1     120.000    3.000
+ TYC      CE1    CD1    CG      120.000    3.000
+ TYC      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TYC      CONST_1  O      C      NXT    HT21       0.000    0.000   0
+ TYC      var_1    O      C      CA     CB        90.047   20.000   3
+ TYC      var_2    C      CA     N      H0        60.053   20.000   1
+ TYC      var_3    C      CA     CB     CG      -179.999   20.000   3
+ TYC      var_4    CA     CB     CG     CD2      -90.299   20.000   2
+ TYC      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
+ TYC      CONST_3  CB     CG     CD2    CE2      180.000    0.000   0
+ TYC      CONST_4  CG     CD2    CE2    CZ         0.000    0.000   0
+ TYC      CONST_5  CD2    CE2    CZ     CE1        0.000    0.000   0
+ TYC      var_5    CE2    CZ     OH     HH       -90.053   20.000   1
+ TYC      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+ TYC      CONST_7  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ TYC      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TYC      plan-1    N         0.020
+ TYC      plan-1    CA        0.020
+ TYC      plan-1    H0        0.020
+ TYC      plan-1    H         0.020
+ TYC      plan-2    C         0.020
+ TYC      plan-2    CA        0.020
+ TYC      plan-2    O         0.020
+ TYC      plan-2    NXT       0.020
+ TYC      plan-2    HT22      0.020
+ TYC      plan-2    HT21      0.020
+ TYC      plan-3    CG        0.020
+ TYC      plan-3    CB        0.020
+ TYC      plan-3    CD1       0.020
+ TYC      plan-3    CD2       0.020
+ TYC      plan-3    CE1       0.020
+ TYC      plan-3    CE2       0.020
+ TYC      plan-3    CZ        0.020
+ TYC      plan-3    HD1       0.020
+ TYC      plan-3    HD2       0.020
+ TYC      plan-3    HE1       0.020
+ TYC      plan-3    HE2       0.020
+ TYC      plan-3    OH        0.020
+ TYC      plan-4    NXT       0.020
+ TYC      plan-4    C         0.020
+ TYC      plan-4    HT21      0.020
+ TYC      plan-4    HT22      0.020
+# ------------------------------------------------------

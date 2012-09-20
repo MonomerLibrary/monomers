@@ -1,0 +1,225 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PRZ      PRZ '2-ISOBUTYL-3-METHOXYPYRAZINE        ' non-polymer        26  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PRZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PRZ           C31    C    CH3       0.000      0.000    0.000    0.000
+ PRZ           H313   H    H         0.000      0.846   -0.060   -0.634
+ PRZ           H312   H    H         0.000     -0.090    0.987    0.375
+ PRZ           H311   H    H         0.000      0.117   -0.675    0.808
+ PRZ           O31    O    O2        0.000     -1.175   -0.339   -0.739
+ PRZ           C3     C    CR6       0.000     -2.219   -0.245    0.121
+ PRZ           N4     N    NRD6      0.000     -2.012    0.109    1.382
+ PRZ           C5     C    CR16      0.000     -3.032    0.199    2.217
+ PRZ           H5     H    H         0.000     -2.863    0.488    3.247
+ PRZ           C6     C    CR16      0.000     -4.314   -0.073    1.778
+ PRZ           H6     H    H         0.000     -5.148    0.004    2.465
+ PRZ           N1     N    NRD6      0.000     -4.524   -0.428    0.522
+ PRZ           C2     C    CR6       0.000     -3.510   -0.515   -0.318
+ PRZ           C21    C    CH2       0.000     -3.751   -0.919   -1.750
+ PRZ           H212   H    H         0.000     -4.618   -1.581   -1.799
+ PRZ           H211   H    H         0.000     -2.872   -1.442   -2.133
+ PRZ           C22    C    CH1       0.000     -4.012    0.329   -2.594
+ PRZ           H22    H    H         0.000     -3.139    0.995   -2.542
+ PRZ           C24    C    CH3       0.000     -5.243    1.060   -2.057
+ PRZ           H241   H    H         0.000     -5.075    1.345   -1.051
+ PRZ           H242   H    H         0.000     -5.424    1.924   -2.642
+ PRZ           H243   H    H         0.000     -6.085    0.419   -2.106
+ PRZ           C23    C    CH3       0.000     -4.256   -0.080   -4.049
+ PRZ           H231   H    H         0.000     -3.403   -0.586   -4.423
+ PRZ           H232   H    H         0.000     -5.097   -0.722   -4.101
+ PRZ           H233   H    H         0.000     -4.437    0.785   -4.634
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PRZ      C31    n/a    O31    START
+ PRZ      H313   C31    .      .
+ PRZ      H312   C31    .      .
+ PRZ      H311   C31    .      .
+ PRZ      O31    C31    C3     .
+ PRZ      C3     O31    C2     .
+ PRZ      N4     C3     C5     .
+ PRZ      C5     N4     C6     .
+ PRZ      H5     C5     .      .
+ PRZ      C6     C5     N1     .
+ PRZ      H6     C6     .      .
+ PRZ      N1     C6     .      .
+ PRZ      C2     C3     C21    .
+ PRZ      C21    C2     C22    .
+ PRZ      H212   C21    .      .
+ PRZ      H211   C21    .      .
+ PRZ      C22    C21    C23    .
+ PRZ      H22    C22    .      .
+ PRZ      C24    C22    H243   .
+ PRZ      H241   C24    .      .
+ PRZ      H242   C24    .      .
+ PRZ      H243   C24    .      .
+ PRZ      C23    C22    H233   .
+ PRZ      H231   C23    .      .
+ PRZ      H232   C23    .      .
+ PRZ      H233   C23    .      END
+ PRZ      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PRZ      N1     C2        double      1.350    0.020
+ PRZ      N1     C6        single      1.337    0.020
+ PRZ      C2     C3        single      1.487    0.020
+ PRZ      C21    C2        single      1.511    0.020
+ PRZ      N4     C3        double      1.350    0.020
+ PRZ      C3     O31       single      1.370    0.020
+ PRZ      C5     N4        single      1.337    0.020
+ PRZ      C6     C5        double      1.390    0.020
+ PRZ      H5     C5        single      1.083    0.020
+ PRZ      H6     C6        single      1.083    0.020
+ PRZ      C22    C21       single      1.524    0.020
+ PRZ      H212   C21       single      1.092    0.020
+ PRZ      H211   C21       single      1.092    0.020
+ PRZ      C23    C22       single      1.524    0.020
+ PRZ      C24    C22       single      1.524    0.020
+ PRZ      H22    C22       single      1.099    0.020
+ PRZ      H233   C23       single      1.059    0.020
+ PRZ      H232   C23       single      1.059    0.020
+ PRZ      H231   C23       single      1.059    0.020
+ PRZ      H243   C24       single      1.059    0.020
+ PRZ      H242   C24       single      1.059    0.020
+ PRZ      H241   C24       single      1.059    0.020
+ PRZ      O31    C31       single      1.426    0.020
+ PRZ      H313   C31       single      1.059    0.020
+ PRZ      H312   C31       single      1.059    0.020
+ PRZ      H311   C31       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PRZ      H313   C31    H312    109.470    3.000
+ PRZ      H313   C31    H311    109.470    3.000
+ PRZ      H312   C31    H311    109.470    3.000
+ PRZ      H313   C31    O31     109.470    3.000
+ PRZ      H312   C31    O31     109.470    3.000
+ PRZ      H311   C31    O31     109.470    3.000
+ PRZ      C31    O31    C3      120.000    3.000
+ PRZ      O31    C3     N4      120.000    3.000
+ PRZ      O31    C3     C2      120.000    3.000
+ PRZ      N4     C3     C2      120.000    3.000
+ PRZ      C3     N4     C5      120.000    3.000
+ PRZ      N4     C5     H5      120.000    3.000
+ PRZ      N4     C5     C6      120.000    3.000
+ PRZ      H5     C5     C6      120.000    3.000
+ PRZ      C5     C6     H6      120.000    3.000
+ PRZ      C5     C6     N1      120.000    3.000
+ PRZ      H6     C6     N1      120.000    3.000
+ PRZ      C6     N1     C2      120.000    3.000
+ PRZ      C3     C2     C21     120.000    3.000
+ PRZ      C3     C2     N1      120.000    3.000
+ PRZ      C21    C2     N1      120.000    3.000
+ PRZ      C2     C21    H212    109.470    3.000
+ PRZ      C2     C21    H211    109.470    3.000
+ PRZ      C2     C21    C22     109.470    3.000
+ PRZ      H212   C21    H211    107.900    3.000
+ PRZ      H212   C21    C22     109.470    3.000
+ PRZ      H211   C21    C22     109.470    3.000
+ PRZ      C21    C22    H22     108.340    3.000
+ PRZ      C21    C22    C24     111.000    3.000
+ PRZ      C21    C22    C23     111.000    3.000
+ PRZ      H22    C22    C24     108.340    3.000
+ PRZ      H22    C22    C23     108.340    3.000
+ PRZ      C24    C22    C23     111.000    3.000
+ PRZ      C22    C24    H241    109.470    3.000
+ PRZ      C22    C24    H242    109.470    3.000
+ PRZ      C22    C24    H243    109.470    3.000
+ PRZ      H241   C24    H242    109.470    3.000
+ PRZ      H241   C24    H243    109.470    3.000
+ PRZ      H242   C24    H243    109.470    3.000
+ PRZ      C22    C23    H231    109.470    3.000
+ PRZ      C22    C23    H232    109.470    3.000
+ PRZ      C22    C23    H233    109.470    3.000
+ PRZ      H231   C23    H232    109.470    3.000
+ PRZ      H231   C23    H233    109.470    3.000
+ PRZ      H232   C23    H233    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PRZ      var_1    H311   C31    O31    C3        60.004   20.000   1
+ PRZ      var_2    C31    O31    C3     C2       179.757   20.000   1
+ PRZ      CONST_1  O31    C3     N4     C5       180.000    0.000   0
+ PRZ      CONST_2  C3     N4     C5     C6         0.000    0.000   0
+ PRZ      CONST_3  N4     C5     C6     N1         0.000    0.000   0
+ PRZ      CONST_4  C5     C6     N1     C2         0.000    0.000   0
+ PRZ      CONST_5  C6     N1     C2     C3         0.000    0.000   0
+ PRZ      CONST_6  O31    C3     C2     C21        0.000    0.000   0
+ PRZ      var_3    C3     C2     C21    C22      -90.526   20.000   2
+ PRZ      var_4    C2     C21    C22    C23      179.937   20.000   3
+ PRZ      var_5    C21    C22    C24    H243     -59.990   20.000   3
+ PRZ      var_6    C21    C22    C23    H233     179.994   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PRZ      chir_01  C22    C21    C23    C24       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PRZ      plan-1    N1        0.020
+ PRZ      plan-1    C2        0.020
+ PRZ      plan-1    C6        0.020
+ PRZ      plan-1    C3        0.020
+ PRZ      plan-1    N4        0.020
+ PRZ      plan-1    C5        0.020
+ PRZ      plan-1    C21       0.020
+ PRZ      plan-1    O31       0.020
+ PRZ      plan-1    H5        0.020
+ PRZ      plan-1    H6        0.020
+# ------------------------------------------------------

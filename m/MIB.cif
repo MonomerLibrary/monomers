@@ -1,0 +1,248 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MIB      MIB '(3E)-4-(1-METHYL-1H-INDOL-3-YL)BUT-3' non-polymer        28  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MIB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MIB           O1     O    O         0.000      0.000    0.000    0.000
+ MIB           CO     C    C         0.000     -0.451    1.129    0.000
+ MIB           CM     C    CH3       0.000      0.482    2.313    0.000
+ MIB           HM3    H    H         0.000      1.380    2.056   -0.500
+ MIB           HM2    H    H         0.000      0.022    3.127   -0.499
+ MIB           HM1    H    H         0.000      0.702    2.591    0.998
+ MIB           CA     C    C1        0.000     -1.839    1.330    0.000
+ MIB           HA     H    H         0.000     -2.238    2.331    0.000
+ MIB           CB     C    C1        0.000     -2.681    0.261    0.000
+ MIB           HB     H    H         0.000     -2.282   -0.739    0.000
+ MIB           CG     C    CR5       0.000     -4.084    0.464    0.000
+ MIB           CD2    C    CR56      0.000     -5.131   -0.577   -0.001
+ MIB           CE3    C    CR16      0.000     -5.106   -1.969    0.000
+ MIB           HE3    H    H         0.000     -4.160   -2.497    0.001
+ MIB           CZ3    C    CR16      0.000     -6.292   -2.671    0.000
+ MIB           HZ3    H    H         0.000     -6.277   -3.754    0.001
+ MIB           CH2    C    CR16      0.000     -7.503   -1.998   -0.001
+ MIB           HH2    H    H         0.000     -8.429   -2.561   -0.001
+ MIB           CZ2    C    CR16      0.000     -7.542   -0.620   -0.002
+ MIB           HZ2    H    H         0.000     -8.494   -0.105   -0.008
+ MIB           CE2    C    CR56      0.000     -6.356    0.107    0.005
+ MIB           NE1    N    NR5       0.000     -6.082    1.460   -0.001
+ MIB           CN1    C    CH3       0.000     -7.097    2.517   -0.001
+ MIB           HN3    H    H         0.000     -7.961    2.170    0.499
+ MIB           HN2    H    H         0.000     -6.714    3.367    0.498
+ MIB           HN1    H    H         0.000     -7.338    2.768   -0.999
+ MIB           CD1    C    CR15      0.000     -4.745    1.675    0.000
+ MIB           HD1    H    H         0.000     -4.268    2.647    0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MIB      O1     n/a    CO     START
+ MIB      CO     O1     CA     .
+ MIB      CM     CO     HM1    .
+ MIB      HM3    CM     .      .
+ MIB      HM2    CM     .      .
+ MIB      HM1    CM     .      .
+ MIB      CA     CO     CB     .
+ MIB      HA     CA     .      .
+ MIB      CB     CA     CG     .
+ MIB      HB     CB     .      .
+ MIB      CG     CB     CD2    .
+ MIB      CD2    CG     CE3    .
+ MIB      CE3    CD2    CZ3    .
+ MIB      HE3    CE3    .      .
+ MIB      CZ3    CE3    CH2    .
+ MIB      HZ3    CZ3    .      .
+ MIB      CH2    CZ3    CZ2    .
+ MIB      HH2    CH2    .      .
+ MIB      CZ2    CH2    CE2    .
+ MIB      HZ2    CZ2    .      .
+ MIB      CE2    CZ2    NE1    .
+ MIB      NE1    CE2    CD1    .
+ MIB      CN1    NE1    HN1    .
+ MIB      HN3    CN1    .      .
+ MIB      HN2    CN1    .      .
+ MIB      HN1    CN1    .      .
+ MIB      CD1    NE1    HD1    .
+ MIB      HD1    CD1    .      END
+ MIB      CG     CD1    .    ADD
+ MIB      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MIB      CO     O1        double      1.220    0.020
+ MIB      CM     CO        single      1.500    0.020
+ MIB      CA     CO        single      1.475    0.020
+ MIB      HM1    CM        single      1.059    0.020
+ MIB      HM2    CM        single      1.059    0.020
+ MIB      HM3    CM        single      1.059    0.020
+ MIB      CB     CA        double      1.330    0.020
+ MIB      HA     CA        single      1.077    0.020
+ MIB      CG     CB        single      1.483    0.020
+ MIB      HB     CB        single      1.077    0.020
+ MIB      CG     CD1       double      1.387    0.020
+ MIB      CD2    CG        single      1.490    0.020
+ MIB      CD1    NE1       single      1.337    0.020
+ MIB      HD1    CD1       single      1.083    0.020
+ MIB      CD2    CE2       single      1.490    0.020
+ MIB      CE3    CD2       double      1.390    0.020
+ MIB      CN1    NE1       single      1.485    0.020
+ MIB      NE1    CE2       single      1.337    0.020
+ MIB      HN1    CN1       single      1.059    0.020
+ MIB      HN2    CN1       single      1.059    0.020
+ MIB      HN3    CN1       single      1.059    0.020
+ MIB      CE2    CZ2       double      1.390    0.020
+ MIB      CZ3    CE3       single      1.390    0.020
+ MIB      HE3    CE3       single      1.083    0.020
+ MIB      CZ2    CH2       single      1.390    0.020
+ MIB      HZ2    CZ2       single      1.083    0.020
+ MIB      CH2    CZ3       double      1.390    0.020
+ MIB      HZ3    CZ3       single      1.083    0.020
+ MIB      HH2    CH2       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MIB      O1     CO     CM      123.000    3.000
+ MIB      O1     CO     CA      120.500    3.000
+ MIB      CM     CO     CA      120.000    3.000
+ MIB      CO     CM     HM3     109.470    3.000
+ MIB      CO     CM     HM2     109.470    3.000
+ MIB      CO     CM     HM1     109.470    3.000
+ MIB      HM3    CM     HM2     109.470    3.000
+ MIB      HM3    CM     HM1     109.470    3.000
+ MIB      HM2    CM     HM1     109.470    3.000
+ MIB      CO     CA     HA      120.000    3.000
+ MIB      CO     CA     CB      120.000    3.000
+ MIB      HA     CA     CB      120.000    3.000
+ MIB      CA     CB     HB      120.000    3.000
+ MIB      CA     CB     CG      120.000    3.000
+ MIB      HB     CB     CG      120.000    3.000
+ MIB      CB     CG     CD2     108.000    3.000
+ MIB      CB     CG     CD1     108.000    3.000
+ MIB      CD2    CG     CD1     108.000    3.000
+ MIB      CG     CD2    CE3     126.000    3.000
+ MIB      CG     CD2    CE2     108.000    3.000
+ MIB      CE3    CD2    CE2     120.000    3.000
+ MIB      CD2    CE3    HE3     120.000    3.000
+ MIB      CD2    CE3    CZ3     120.000    3.000
+ MIB      HE3    CE3    CZ3     120.000    3.000
+ MIB      CE3    CZ3    HZ3     120.000    3.000
+ MIB      CE3    CZ3    CH2     120.000    3.000
+ MIB      HZ3    CZ3    CH2     120.000    3.000
+ MIB      CZ3    CH2    HH2     120.000    3.000
+ MIB      CZ3    CH2    CZ2     120.000    3.000
+ MIB      HH2    CH2    CZ2     120.000    3.000
+ MIB      CH2    CZ2    HZ2     120.000    3.000
+ MIB      CH2    CZ2    CE2     120.000    3.000
+ MIB      HZ2    CZ2    CE2     120.000    3.000
+ MIB      CZ2    CE2    NE1     132.000    3.000
+ MIB      CZ2    CE2    CD2     120.000    3.000
+ MIB      NE1    CE2    CD2     108.000    3.000
+ MIB      CE2    NE1    CN1     126.000    3.000
+ MIB      CE2    NE1    CD1     108.000    3.000
+ MIB      CN1    NE1    CD1     126.000    3.000
+ MIB      NE1    CN1    HN3     109.470    3.000
+ MIB      NE1    CN1    HN2     109.470    3.000
+ MIB      NE1    CN1    HN1     109.470    3.000
+ MIB      HN3    CN1    HN2     109.470    3.000
+ MIB      HN3    CN1    HN1     109.470    3.000
+ MIB      HN2    CN1    HN1     109.470    3.000
+ MIB      NE1    CD1    HD1     126.000    3.000
+ MIB      NE1    CD1    CG      108.000    3.000
+ MIB      HD1    CD1    CG      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MIB      var_1    O1     CO     CM     HM1      -89.966   20.000   1
+ MIB      var_2    O1     CO     CA     CB         0.000   20.000   1
+ MIB      CONST_1  CO     CA     CB     CG       180.000    0.000   0
+ MIB      var_3    CA     CB     CG     CD2      179.951   20.000   1
+ MIB      CONST_2  CB     CG     CD1    NE1      180.000    0.000   0
+ MIB      CONST_3  CB     CG     CD2    CE3        0.000    0.000   0
+ MIB      CONST_4  CG     CD2    CE2    CZ2      180.000    0.000   0
+ MIB      CONST_5  CG     CD2    CE3    CZ3      180.000    0.000   0
+ MIB      CONST_6  CD2    CE3    CZ3    CH2        0.000    0.000   0
+ MIB      CONST_7  CE3    CZ3    CH2    CZ2        0.000    0.000   0
+ MIB      CONST_8  CZ3    CH2    CZ2    CE2        0.000    0.000   0
+ MIB      CONST_9  CH2    CZ2    CE2    NE1      180.000    0.000   0
+ MIB      CONST_10 CZ2    CE2    NE1    CD1      180.000    0.000   0
+ MIB      var_4    CE2    NE1    CN1    HN1      -90.262   20.000   1
+ MIB      CONST_11 CE2    NE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MIB      plan-1    CO        0.020
+ MIB      plan-1    O1        0.020
+ MIB      plan-1    CM        0.020
+ MIB      plan-1    CA        0.020
+ MIB      plan-1    HA        0.020
+ MIB      plan-2    CA        0.020
+ MIB      plan-2    CO        0.020
+ MIB      plan-2    CB        0.020
+ MIB      plan-2    HA        0.020
+ MIB      plan-2    CG        0.020
+ MIB      plan-2    HB        0.020
+ MIB      plan-3    CG        0.020
+ MIB      plan-3    CB        0.020
+ MIB      plan-3    CD1       0.020
+ MIB      plan-3    CD2       0.020
+ MIB      plan-3    NE1       0.020
+ MIB      plan-3    HD1       0.020
+ MIB      plan-3    CE2       0.020
+ MIB      plan-3    CE3       0.020
+ MIB      plan-3    CZ2       0.020
+ MIB      plan-3    CZ3       0.020
+ MIB      plan-3    CH2       0.020
+ MIB      plan-3    CN1       0.020
+ MIB      plan-3    HE3       0.020
+ MIB      plan-3    HZ2       0.020
+ MIB      plan-3    HZ3       0.020
+ MIB      plan-3    HH2       0.020
+ MIB      plan-3    HB        0.020
+# ------------------------------------------------------

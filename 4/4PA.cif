@@ -1,0 +1,157 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4PA      4PA 'PROPYL ACETATE                      ' non-polymer        17   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4PA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4PA           OAD    O    O        -0.500      0.000    0.000    0.000
+ 4PA           CAI    C    C         0.000     -0.321    0.000    1.209
+ 4PA           CAC    C    CH3       0.000      0.747    0.000    2.272
+ 4PA           HAC3   H    H         0.000      0.646    0.865    2.876
+ 4PA           HAC2   H    H         0.000      0.646   -0.865    2.876
+ 4PA           HAC1   H    H         0.000      1.702    0.000    1.814
+ 4PA           OAH    O    O2       -0.500     -1.529    0.000    1.534
+ 4PA           CAF    C    CH2       0.000     -2.645    0.000    0.534
+ 4PA           HAF1   H    H         0.000     -2.539   -0.891   -0.088
+ 4PA           HAF2   H    H         0.000     -2.539    0.891   -0.088
+ 4PA           CAE    C    CH2       0.000     -4.024    0.000    1.196
+ 4PA           HAE1   H    H         0.000     -4.128    0.891    1.818
+ 4PA           HAE2   H    H         0.000     -4.128   -0.891    1.818
+ 4PA           CAA    C    CH3       0.000     -5.109    0.000    0.116
+ 4PA           HAA3   H    H         0.000     -5.010    0.865   -0.489
+ 4PA           HAA2   H    H         0.000     -5.010   -0.865   -0.489
+ 4PA           HAA1   H    H         0.000     -6.066    0.000    0.572
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4PA      OAD    n/a    CAI    START
+ 4PA      CAI    OAD    OAH    .
+ 4PA      CAC    CAI    HAC1   .
+ 4PA      HAC3   CAC    .      .
+ 4PA      HAC2   CAC    .      .
+ 4PA      HAC1   CAC    .      .
+ 4PA      OAH    CAI    CAF    .
+ 4PA      CAF    OAH    CAE    .
+ 4PA      HAF1   CAF    .      .
+ 4PA      HAF2   CAF    .      .
+ 4PA      CAE    CAF    CAA    .
+ 4PA      HAE1   CAE    .      .
+ 4PA      HAE2   CAE    .      .
+ 4PA      CAA    CAE    HAA1   .
+ 4PA      HAA3   CAA    .      .
+ 4PA      HAA2   CAA    .      .
+ 4PA      HAA1   CAA    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4PA      CAI    OAD       deloc       1.220    0.020
+ 4PA      CAC    CAI       single      1.500    0.020
+ 4PA      OAH    CAI       deloc       1.454    0.020
+ 4PA      HAC1   CAC       single      1.059    0.020
+ 4PA      HAC2   CAC       single      1.059    0.020
+ 4PA      HAC3   CAC       single      1.059    0.020
+ 4PA      CAF    OAH       single      1.426    0.020
+ 4PA      CAE    CAF       single      1.524    0.020
+ 4PA      HAF1   CAF       single      1.092    0.020
+ 4PA      HAF2   CAF       single      1.092    0.020
+ 4PA      CAA    CAE       single      1.513    0.020
+ 4PA      HAE1   CAE       single      1.092    0.020
+ 4PA      HAE2   CAE       single      1.092    0.020
+ 4PA      HAA1   CAA       single      1.059    0.020
+ 4PA      HAA2   CAA       single      1.059    0.020
+ 4PA      HAA3   CAA       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4PA      OAD    CAI    CAC     123.000    3.000
+ 4PA      OAD    CAI    OAH     119.000    3.000
+ 4PA      CAC    CAI    OAH     120.000    3.000
+ 4PA      CAI    CAC    HAC3    109.470    3.000
+ 4PA      CAI    CAC    HAC2    109.470    3.000
+ 4PA      CAI    CAC    HAC1    109.470    3.000
+ 4PA      HAC3   CAC    HAC2    109.470    3.000
+ 4PA      HAC3   CAC    HAC1    109.470    3.000
+ 4PA      HAC2   CAC    HAC1    109.470    3.000
+ 4PA      CAI    OAH    CAF     120.000    3.000
+ 4PA      OAH    CAF    HAF1    109.470    3.000
+ 4PA      OAH    CAF    HAF2    109.470    3.000
+ 4PA      OAH    CAF    CAE     109.470    3.000
+ 4PA      HAF1   CAF    HAF2    107.900    3.000
+ 4PA      HAF1   CAF    CAE     109.470    3.000
+ 4PA      HAF2   CAF    CAE     109.470    3.000
+ 4PA      CAF    CAE    HAE1    109.470    3.000
+ 4PA      CAF    CAE    HAE2    109.470    3.000
+ 4PA      CAF    CAE    CAA     111.000    3.000
+ 4PA      HAE1   CAE    HAE2    107.900    3.000
+ 4PA      HAE1   CAE    CAA     109.470    3.000
+ 4PA      HAE2   CAE    CAA     109.470    3.000
+ 4PA      CAE    CAA    HAA3    109.470    3.000
+ 4PA      CAE    CAA    HAA2    109.470    3.000
+ 4PA      CAE    CAA    HAA1    109.470    3.000
+ 4PA      HAA3   CAA    HAA2    109.470    3.000
+ 4PA      HAA3   CAA    HAA1    109.470    3.000
+ 4PA      HAA2   CAA    HAA1    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4PA      var_1    OAD    CAI    CAC    HAC1       0.000   20.000   1
+ 4PA      var_2    OAD    CAI    OAH    CAF        0.000   20.000   1
+ 4PA      var_3    CAI    OAH    CAF    CAE      180.000   20.000   1
+ 4PA      var_4    OAH    CAF    CAE    CAA      180.000   20.000   3
+ 4PA      var_5    CAF    CAE    CAA    HAA1     180.000   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4PA      plan-1    CAI       0.020
+ 4PA      plan-1    OAD       0.000
+ 4PA      plan-1    CAC       0.000
+ 4PA      plan-1    OAH       0.000
+# ------------------------------------------------------

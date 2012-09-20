@@ -1,0 +1,281 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ADN      ADN 'ADENOSINE                           ' non-polymer        32  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ADN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ADN           "O2'"  O    OH1       0.000      0.000    0.000    0.000
+ ADN           "HO2'" H    H         0.000      0.731   -0.600   -0.203
+ ADN           "C2'"  C    CH1       0.000     -1.179   -0.442   -0.676
+ ADN           "H2'"  H    H         0.000     -1.460   -1.449   -0.340
+ ADN           "C3'"  C    CH1       0.000     -0.963   -0.423   -2.208
+ ADN           "H3'"  H    H         0.000     -1.137   -1.422   -2.633
+ ADN           "O3'"  O    OH1       0.000      0.355    0.032   -2.524
+ ADN           "HO3'" H    H         0.000      0.452    0.095   -3.483
+ ADN           "C4'"  C    CH1       0.000     -2.020    0.576   -2.724
+ ADN           "H4'"  H    H         0.000     -1.580    1.578   -2.828
+ ADN           "C5'"  C    CH2       0.000     -2.593    0.106   -4.062
+ ADN           "H5'1" H    H         0.000     -3.011   -0.896   -3.946
+ ADN           "H5'2" H    H         0.000     -1.797    0.082   -4.810
+ ADN           "O5'"  O    OH1       0.000     -3.619    1.007   -4.485
+ ADN           "HO5'" H    H         0.000     -3.980    0.709   -5.330
+ ADN           "C1'"  C    CH1       0.000     -2.343    0.547   -0.451
+ ADN           "H1'"  H    H         0.000     -1.955    1.545   -0.204
+ ADN           "O4'"  O    O2        0.000     -3.048    0.581   -1.710
+ ADN           N9     N    NR5       0.000     -3.223    0.064    0.614
+ ADN           C4     C    CR56      0.000     -3.123    0.365    1.949
+ ADN           C5     C    CR56      0.000     -4.171   -0.324    2.581
+ ADN           N7     N    NRD5      0.000     -4.851   -0.990    1.616
+ ADN           C8     C    CR15      0.000     -4.294   -0.765    0.461
+ ADN           H8     H    H         0.000     -4.631   -1.176   -0.482
+ ADN           N3     N    NRD6      0.000     -2.301    1.106    2.684
+ ADN           C2     C    CR16      0.000     -2.468    1.200    3.987
+ ADN           H2     H    H         0.000     -1.780    1.812    4.557
+ ADN           N1     N    NRD6      0.000     -3.442    0.576    4.624
+ ADN           C6     C    CR6       0.000     -4.311   -0.187    3.973
+ ADN           N6     N    NH2       0.000     -5.328   -0.837    4.649
+ ADN           HN62   H    H         0.000     -5.990   -1.421    4.147
+ ADN           HN61   H    H         0.000     -5.423   -0.739    5.655
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ADN      "O2'"  n/a    "C2'"  START
+ ADN      "HO2'" "O2'"  .      .
+ ADN      "C2'"  "O2'"  "C1'"  .
+ ADN      "H2'"  "C2'"  .      .
+ ADN      "C3'"  "C2'"  "C4'"  .
+ ADN      "H3'"  "C3'"  .      .
+ ADN      "O3'"  "C3'"  "HO3'" .
+ ADN      "HO3'" "O3'"  .      .
+ ADN      "C4'"  "C3'"  "C5'"  .
+ ADN      "H4'"  "C4'"  .      .
+ ADN      "C5'"  "C4'"  "O5'"  .
+ ADN      "H5'1" "C5'"  .      .
+ ADN      "H5'2" "C5'"  .      .
+ ADN      "O5'"  "C5'"  "HO5'" .
+ ADN      "HO5'" "O5'"  .      .
+ ADN      "C1'"  "C2'"  N9     .
+ ADN      "H1'"  "C1'"  .      .
+ ADN      "O4'"  "C1'"  .      .
+ ADN      N9     "C1'"  C4     .
+ ADN      C4     N9     N3     .
+ ADN      C5     C4     N7     .
+ ADN      N7     C5     C8     .
+ ADN      C8     N7     H8     .
+ ADN      H8     C8     .      .
+ ADN      N3     C4     C2     .
+ ADN      C2     N3     N1     .
+ ADN      H2     C2     .      .
+ ADN      N1     C2     C6     .
+ ADN      C6     N1     N6     .
+ ADN      N6     C6     HN61   .
+ ADN      HN62   N6     .      .
+ ADN      HN61   N6     .      END
+ ADN      "C4'"  "O4'"  .    ADD
+ ADN      N9     C8     .    ADD
+ ADN      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ADN      "O5'"  "C5'"     single      1.432    0.020
+ ADN      "HO5'" "O5'"     single      0.967    0.020
+ ADN      "C5'"  "C4'"     single      1.524    0.020
+ ADN      "H5'1" "C5'"     single      1.092    0.020
+ ADN      "H5'2" "C5'"     single      1.092    0.020
+ ADN      "C4'"  "O4'"     single      1.426    0.020
+ ADN      "C4'"  "C3'"     single      1.524    0.020
+ ADN      "H4'"  "C4'"     single      1.099    0.020
+ ADN      "O4'"  "C1'"     single      1.426    0.020
+ ADN      "O3'"  "C3'"     single      1.432    0.020
+ ADN      "C3'"  "C2'"     single      1.524    0.020
+ ADN      "H3'"  "C3'"     single      1.099    0.020
+ ADN      "HO3'" "O3'"     single      0.967    0.020
+ ADN      "C2'"  "O2'"     single      1.432    0.020
+ ADN      "C1'"  "C2'"     single      1.524    0.020
+ ADN      "H2'"  "C2'"     single      1.099    0.020
+ ADN      "HO2'" "O2'"     single      0.967    0.020
+ ADN      N9     "C1'"     single      1.485    0.020
+ ADN      "H1'"  "C1'"     single      1.099    0.020
+ ADN      N9     C8        single      1.337    0.020
+ ADN      C4     N9        single      1.337    0.020
+ ADN      C8     N7        double      1.350    0.020
+ ADN      H8     C8        single      1.083    0.020
+ ADN      N7     C5        single      1.350    0.020
+ ADN      C5     C6        single      1.490    0.020
+ ADN      C5     C4        double      1.490    0.020
+ ADN      N6     C6        single      1.355    0.020
+ ADN      C6     N1        double      1.350    0.020
+ ADN      HN61   N6        single      1.010    0.020
+ ADN      HN62   N6        single      1.010    0.020
+ ADN      N1     C2        single      1.337    0.020
+ ADN      C2     N3        double      1.337    0.020
+ ADN      H2     C2        single      1.083    0.020
+ ADN      N3     C4        single      1.355    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ADN      "HO2'" "O2'"  "C2'"   109.470    3.000
+ ADN      "O2'"  "C2'"  "H2'"   109.470    3.000
+ ADN      "O2'"  "C2'"  "C3'"   109.470    3.000
+ ADN      "O2'"  "C2'"  "C1'"   109.470    3.000
+ ADN      "H2'"  "C2'"  "C3'"   108.340    3.000
+ ADN      "H2'"  "C2'"  "C1'"   108.340    3.000
+ ADN      "C3'"  "C2'"  "C1'"   111.000    3.000
+ ADN      "C2'"  "C3'"  "H3'"   108.340    3.000
+ ADN      "C2'"  "C3'"  "O3'"   109.470    3.000
+ ADN      "C2'"  "C3'"  "C4'"   111.000    3.000
+ ADN      "H3'"  "C3'"  "O3'"   109.470    3.000
+ ADN      "H3'"  "C3'"  "C4'"   108.340    3.000
+ ADN      "O3'"  "C3'"  "C4'"   109.470    3.000
+ ADN      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ ADN      "C3'"  "C4'"  "H4'"   108.340    3.000
+ ADN      "C3'"  "C4'"  "C5'"   111.000    3.000
+ ADN      "C3'"  "C4'"  "O4'"   109.470    3.000
+ ADN      "H4'"  "C4'"  "C5'"   108.340    3.000
+ ADN      "H4'"  "C4'"  "O4'"   109.470    3.000
+ ADN      "C5'"  "C4'"  "O4'"   109.470    3.000
+ ADN      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ ADN      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ ADN      "C4'"  "C5'"  "O5'"   109.470    3.000
+ ADN      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ ADN      "H5'1" "C5'"  "O5'"   109.470    3.000
+ ADN      "H5'2" "C5'"  "O5'"   109.470    3.000
+ ADN      "C5'"  "O5'"  "HO5'"  109.470    3.000
+ ADN      "C2'"  "C1'"  "H1'"   108.340    3.000
+ ADN      "C2'"  "C1'"  "O4'"   109.470    3.000
+ ADN      "C2'"  "C1'"  N9      109.470    3.000
+ ADN      "H1'"  "C1'"  "O4'"   109.470    3.000
+ ADN      "H1'"  "C1'"  N9      109.470    3.000
+ ADN      "O4'"  "C1'"  N9      109.470    3.000
+ ADN      "C1'"  "O4'"  "C4'"   111.800    3.000
+ ADN      "C1'"  N9     C4      126.000    3.000
+ ADN      "C1'"  N9     C8      126.000    3.000
+ ADN      C4     N9     C8      108.000    3.000
+ ADN      N9     C4     C5      108.000    3.000
+ ADN      N9     C4     N3      132.000    3.000
+ ADN      C5     C4     N3      120.000    3.000
+ ADN      C4     C5     N7      108.000    3.000
+ ADN      C4     C5     C6      120.000    3.000
+ ADN      N7     C5     C6      132.000    3.000
+ ADN      C5     N7     C8      108.000    3.000
+ ADN      N7     C8     H8      126.000    3.000
+ ADN      N7     C8     N9      108.000    3.000
+ ADN      H8     C8     N9      126.000    3.000
+ ADN      C4     N3     C2      120.000    3.000
+ ADN      N3     C2     H2      120.000    3.000
+ ADN      N3     C2     N1      120.000    3.000
+ ADN      H2     C2     N1      120.000    3.000
+ ADN      C2     N1     C6      120.000    3.000
+ ADN      N1     C6     N6      120.000    3.000
+ ADN      N1     C6     C5      120.000    3.000
+ ADN      N6     C6     C5      120.000    3.000
+ ADN      C6     N6     HN62    120.000    3.000
+ ADN      C6     N6     HN61    120.000    3.000
+ ADN      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ADN      var_1    "HO2'" "O2'"  "C2'"  "C1'"   -176.171   20.000   1
+ ADN      var_2    "O2'"  "C2'"  "C3'"  "C4'"   -120.000   20.000   3
+ ADN      var_3    "C2'"  "C3'"  "O3'"  "HO3'"  -176.131   20.000   1
+ ADN      var_4    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ ADN      var_5    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ ADN      var_6    "C3'"  "C4'"  "C5'"  "O5'"    176.860   20.000   3
+ ADN      var_7    "C4'"  "C5'"  "O5'"  "HO5'"   179.965   20.000   1
+ ADN      var_8    "O2'"  "C2'"  "C1'"  N9       -90.000   20.000   3
+ ADN      var_9    "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ ADN      var_10   "C2'"  "C1'"  N9     C4        91.576   20.000   1
+ ADN      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ ADN      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ ADN      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ ADN      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ ADN      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ ADN      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ ADN      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ ADN      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ ADN      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ ADN      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ ADN      CONST_11 N1     C6     N6     HN61       0.114    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ADN      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ ADN      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ ADN      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ ADN      chir_04  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ADN      plan-1    N9        0.020
+ ADN      plan-1    "C1'"     0.020
+ ADN      plan-1    C8        0.020
+ ADN      plan-1    C4        0.020
+ ADN      plan-1    N7        0.020
+ ADN      plan-1    H8        0.020
+ ADN      plan-1    C5        0.020
+ ADN      plan-1    C6        0.020
+ ADN      plan-1    N1        0.020
+ ADN      plan-1    C2        0.020
+ ADN      plan-1    N3        0.020
+ ADN      plan-1    N6        0.020
+ ADN      plan-1    H2        0.020
+ ADN      plan-1    HN62      0.020
+ ADN      plan-1    HN61      0.020
+ ADN      plan-2    N6        0.020
+ ADN      plan-2    C6        0.020
+ ADN      plan-2    HN61      0.020
+ ADN      plan-2    HN62      0.020
+# ------------------------------------------------------

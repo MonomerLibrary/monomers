@@ -1,0 +1,386 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SAM      SAM 'S-ADENOSYLMETHIONINE                ' non-polymer        50  27 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SAM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SAM           OXT    O    OC       -0.500      0.000    0.000    0.000
+ SAM           C      C    C         0.000     -0.484   -1.142    0.162
+ SAM           O      O    OC       -0.500      0.088   -1.965    0.911
+ SAM           CA     C    CH1       0.000     -1.758   -1.527   -0.547
+ SAM           HA     H    H         0.000     -1.827   -0.981   -1.498
+ SAM           N      N    NH2       0.000     -1.753   -2.973   -0.811
+ SAM           HN2    H    H         0.000     -2.526   -3.551   -0.505
+ SAM           HN1    H    H         0.000     -0.976   -3.401   -1.300
+ SAM           CB     C    CH2       0.000     -2.958   -1.174    0.333
+ SAM           HB1    H    H         0.000     -2.911   -0.117    0.604
+ SAM           HB2    H    H         0.000     -2.935   -1.782    1.240
+ SAM           CG     C    CH2       0.000     -4.253   -1.449   -0.435
+ SAM           HG1    H    H         0.000     -4.297   -2.506   -0.705
+ SAM           HG2    H    H         0.000     -4.273   -0.842   -1.342
+ SAM           SD     S    ST        1.000     -5.676   -1.029    0.608
+ SAM           HSD    H    H         0.000     -5.691    0.084    1.140
+ SAM           CE     C    CH3       0.000     -5.714   -2.485    1.690
+ SAM           HE3    H    H         0.000     -5.852   -3.382    1.124
+ SAM           HE2    H    H         0.000     -4.800   -2.582    2.238
+ SAM           HE1    H    H         0.000     -6.513   -2.419    2.398
+ SAM           "C5'"  C    CH2       0.000     -7.030   -1.443   -0.525
+ SAM           "H5'1" H    H         0.000     -6.971   -2.501   -0.791
+ SAM           "H5'2" H    H         0.000     -6.947   -0.836   -1.429
+ SAM           "C4'"  C    CH1       0.000     -8.370   -1.163    0.157
+ SAM           "H4'"  H    H         0.000     -8.418   -1.693    1.119
+ SAM           "C3'"  C    CH1       0.000     -9.527   -1.621   -0.751
+ SAM           "H3'"  H    H         0.000     -9.139   -2.000   -1.707
+ SAM           "O3'"  O    OH1       0.000    -10.317   -2.619   -0.102
+ SAM           "HO3'" H    H         0.000    -11.070   -2.850   -0.664
+ SAM           "C2'"  C    CH1       0.000    -10.361   -0.332   -0.977
+ SAM           "H2'"  H    H         0.000    -10.094    0.146   -1.931
+ SAM           "O2'"  O    OH1       0.000    -11.761   -0.616   -0.924
+ SAM           "HO2'" H    H         0.000    -12.007   -1.165   -1.681
+ SAM           "C1'"  C    CH1       0.000     -9.928    0.549    0.223
+ SAM           "H1'"  H    H         0.000    -10.481    0.265    1.129
+ SAM           "O4'"  O    O2        0.000     -8.524    0.251    0.370
+ SAM           N9     N    NR5       0.000    -10.126    1.969   -0.079
+ SAM           C4     C    CR56      0.000    -11.266    2.696    0.148
+ SAM           C5     C    CR56      0.000    -10.988    4.001   -0.294
+ SAM           N7     N    NRD5      0.000     -9.719    4.000   -0.767
+ SAM           C8     C    CR15      0.000     -9.211    2.809   -0.642
+ SAM           H8     H    H         0.000     -8.210    2.526   -0.942
+ SAM           N3     N    NRD6      0.000    -12.460    2.432    0.670
+ SAM           C2     C    CR16      0.000    -13.375    3.374    0.762
+ SAM           H2     H    H         0.000    -14.339    3.123    1.188
+ SAM           N1     N    NRD6      0.000    -13.162    4.612    0.356
+ SAM           C6     C    CR6       0.000    -11.997    4.972   -0.173
+ SAM           N6     N    NH2       0.000    -11.783    6.271   -0.598
+ SAM           HN62   H    H         0.000    -12.516    6.969   -0.510
+ SAM           HN61   H    H         0.000    -10.892    6.542   -1.002
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SAM      OXT    n/a    C      START
+ SAM      C      OXT    CA     .
+ SAM      O      C      .      .
+ SAM      CA     C      CB     .
+ SAM      HA     CA     .      .
+ SAM      N      CA     HN1    .
+ SAM      HN2    N      .      .
+ SAM      HN1    N      .      .
+ SAM      CB     CA     CG     .
+ SAM      HB1    CB     .      .
+ SAM      HB2    CB     .      .
+ SAM      CG     CB     SD     .
+ SAM      HG1    CG     .      .
+ SAM      HG2    CG     .      .
+ SAM      SD     CG     "C5'"  .
+ SAM      HSD    SD     .      .
+ SAM      CE     SD     HE1    .
+ SAM      HE3    CE     .      .
+ SAM      HE2    CE     .      .
+ SAM      HE1    CE     .      .
+ SAM      "C5'"  SD     "C4'"  .
+ SAM      "H5'1" "C5'"  .      .
+ SAM      "H5'2" "C5'"  .      .
+ SAM      "C4'"  "C5'"  "C3'"  .
+ SAM      "H4'"  "C4'"  .      .
+ SAM      "C3'"  "C4'"  "C2'"  .
+ SAM      "H3'"  "C3'"  .      .
+ SAM      "O3'"  "C3'"  "HO3'" .
+ SAM      "HO3'" "O3'"  .      .
+ SAM      "C2'"  "C3'"  "C1'"  .
+ SAM      "H2'"  "C2'"  .      .
+ SAM      "O2'"  "C2'"  "HO2'" .
+ SAM      "HO2'" "O2'"  .      .
+ SAM      "C1'"  "C2'"  N9     .
+ SAM      "H1'"  "C1'"  .      .
+ SAM      "O4'"  "C1'"  .      .
+ SAM      N9     "C1'"  C4     .
+ SAM      C4     N9     N3     .
+ SAM      C5     C4     N7     .
+ SAM      N7     C5     C8     .
+ SAM      C8     N7     H8     .
+ SAM      H8     C8     .      .
+ SAM      N3     C4     C2     .
+ SAM      C2     N3     N1     .
+ SAM      H2     C2     .      .
+ SAM      N1     C2     C6     .
+ SAM      C6     N1     N6     .
+ SAM      N6     C6     HN61   .
+ SAM      HN62   N6     .      .
+ SAM      HN61   N6     .      END
+ SAM      "C4'"  "O4'"  .    ADD
+ SAM      N9     C8     .    ADD
+ SAM      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SAM      N      CA        single      1.450    0.020
+ SAM      HN1    N         single      1.010    0.020
+ SAM      HN2    N         single      1.010    0.020
+ SAM      CA     C         single      1.500    0.020
+ SAM      CB     CA        single      1.524    0.020
+ SAM      HA     CA        single      1.099    0.020
+ SAM      O      C         deloc       1.250    0.020
+ SAM      C      OXT       deloc       1.250    0.020
+ SAM      CG     CB        single      1.524    0.020
+ SAM      HB1    CB        single      1.092    0.020
+ SAM      HB2    CB        single      1.092    0.020
+ SAM      SD     CG        single      1.662    0.020
+ SAM      HG1    CG        single      1.092    0.020
+ SAM      HG2    CG        single      1.092    0.020
+ SAM      CE     SD        single      1.662    0.020
+ SAM      "C5'"  SD        single      1.662    0.020
+ SAM      HE1    CE        single      1.059    0.020
+ SAM      HE2    CE        single      1.059    0.020
+ SAM      HE3    CE        single      1.059    0.020
+ SAM      "C4'"  "C5'"     single      1.524    0.020
+ SAM      "H5'1" "C5'"     single      1.092    0.020
+ SAM      "H5'2" "C5'"     single      1.092    0.020
+ SAM      "C4'"  "O4'"     single      1.426    0.020
+ SAM      "C3'"  "C4'"     single      1.524    0.020
+ SAM      "H4'"  "C4'"     single      1.099    0.020
+ SAM      "O4'"  "C1'"     single      1.426    0.020
+ SAM      "O3'"  "C3'"     single      1.432    0.020
+ SAM      "C2'"  "C3'"     single      1.524    0.020
+ SAM      "H3'"  "C3'"     single      1.099    0.020
+ SAM      "HO3'" "O3'"     single      0.967    0.020
+ SAM      "O2'"  "C2'"     single      1.432    0.020
+ SAM      "C1'"  "C2'"     single      1.524    0.020
+ SAM      "H2'"  "C2'"     single      1.099    0.020
+ SAM      "HO2'" "O2'"     single      0.967    0.020
+ SAM      N9     "C1'"     single      1.485    0.020
+ SAM      "H1'"  "C1'"     single      1.099    0.020
+ SAM      N9     C8        single      1.337    0.020
+ SAM      C4     N9        single      1.337    0.020
+ SAM      C8     N7        double      1.350    0.020
+ SAM      H8     C8        single      1.083    0.020
+ SAM      N7     C5        single      1.350    0.020
+ SAM      C5     C6        single      1.490    0.020
+ SAM      C5     C4        double      1.490    0.020
+ SAM      N6     C6        single      1.355    0.020
+ SAM      C6     N1        double      1.350    0.020
+ SAM      HN61   N6        single      1.010    0.020
+ SAM      HN62   N6        single      1.010    0.020
+ SAM      N1     C2        single      1.337    0.020
+ SAM      C2     N3        double      1.337    0.020
+ SAM      H2     C2        single      1.083    0.020
+ SAM      N3     C4        single      1.355    0.020
+ SAM      HSD    SD        single      1.234    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SAM      OXT    C      O       123.000    3.000
+ SAM      OXT    C      CA      118.500    3.000
+ SAM      O      C      CA      118.500    3.000
+ SAM      C      CA     HA      108.810    3.000
+ SAM      C      CA     N       109.470    3.000
+ SAM      C      CA     CB      109.470    3.000
+ SAM      HA     CA     N       109.470    3.000
+ SAM      HA     CA     CB      108.340    3.000
+ SAM      N      CA     CB      109.470    3.000
+ SAM      CA     N      HN2     120.000    3.000
+ SAM      CA     N      HN1     120.000    3.000
+ SAM      HN2    N      HN1     120.000    3.000
+ SAM      CA     CB     HB1     109.470    3.000
+ SAM      CA     CB     HB2     109.470    3.000
+ SAM      CA     CB     CG      111.000    3.000
+ SAM      HB1    CB     HB2     107.900    3.000
+ SAM      HB1    CB     CG      109.470    3.000
+ SAM      HB2    CB     CG      109.470    3.000
+ SAM      CB     CG     HG1     109.470    3.000
+ SAM      CB     CG     HG2     109.470    3.000
+ SAM      CB     CG     SD      109.500    3.000
+ SAM      HG1    CG     HG2     107.900    3.000
+ SAM      HG1    CG     SD      109.500    3.000
+ SAM      HG2    CG     SD      109.500    3.000
+ SAM      CG     SD     HSD     109.500    3.000
+ SAM      CG     SD     CE      109.500    3.000
+ SAM      CG     SD     "C5'"   109.500    3.000
+ SAM      HSD    SD     CE      109.500    3.000
+ SAM      HSD    SD     "C5'"   109.500    3.000
+ SAM      CE     SD     "C5'"   109.500    3.000
+ SAM      SD     CE     HE3     109.500    3.000
+ SAM      SD     CE     HE2     109.500    3.000
+ SAM      SD     CE     HE1     109.500    3.000
+ SAM      HE3    CE     HE2     109.470    3.000
+ SAM      HE3    CE     HE1     109.470    3.000
+ SAM      HE2    CE     HE1     109.470    3.000
+ SAM      SD     "C5'"  "H5'1"  109.500    3.000
+ SAM      SD     "C5'"  "H5'2"  109.500    3.000
+ SAM      SD     "C5'"  "C4'"   109.500    3.000
+ SAM      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ SAM      "H5'1" "C5'"  "C4'"   109.470    3.000
+ SAM      "H5'2" "C5'"  "C4'"   109.470    3.000
+ SAM      "C5'"  "C4'"  "H4'"   108.340    3.000
+ SAM      "C5'"  "C4'"  "C3'"   111.000    3.000
+ SAM      "C5'"  "C4'"  "O4'"   109.470    3.000
+ SAM      "H4'"  "C4'"  "C3'"   108.340    3.000
+ SAM      "H4'"  "C4'"  "O4'"   109.470    3.000
+ SAM      "C3'"  "C4'"  "O4'"   109.470    3.000
+ SAM      "C4'"  "C3'"  "H3'"   108.340    3.000
+ SAM      "C4'"  "C3'"  "O3'"   109.470    3.000
+ SAM      "C4'"  "C3'"  "C2'"   111.000    3.000
+ SAM      "H3'"  "C3'"  "O3'"   109.470    3.000
+ SAM      "H3'"  "C3'"  "C2'"   108.340    3.000
+ SAM      "O3'"  "C3'"  "C2'"   109.470    3.000
+ SAM      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ SAM      "C3'"  "C2'"  "H2'"   108.340    3.000
+ SAM      "C3'"  "C2'"  "O2'"   109.470    3.000
+ SAM      "C3'"  "C2'"  "C1'"   111.000    3.000
+ SAM      "H2'"  "C2'"  "O2'"   109.470    3.000
+ SAM      "H2'"  "C2'"  "C1'"   108.340    3.000
+ SAM      "O2'"  "C2'"  "C1'"   109.470    3.000
+ SAM      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ SAM      "C2'"  "C1'"  "H1'"   108.340    3.000
+ SAM      "C2'"  "C1'"  "O4'"   109.470    3.000
+ SAM      "C2'"  "C1'"  N9      109.470    3.000
+ SAM      "H1'"  "C1'"  "O4'"   109.470    3.000
+ SAM      "H1'"  "C1'"  N9      109.470    3.000
+ SAM      "O4'"  "C1'"  N9      109.470    3.000
+ SAM      "C1'"  "O4'"  "C4'"   111.800    3.000
+ SAM      "C1'"  N9     C4      126.000    3.000
+ SAM      "C1'"  N9     C8      126.000    3.000
+ SAM      C4     N9     C8      108.000    3.000
+ SAM      N9     C4     C5      108.000    3.000
+ SAM      N9     C4     N3      132.000    3.000
+ SAM      C5     C4     N3      120.000    3.000
+ SAM      C4     C5     N7      108.000    3.000
+ SAM      C4     C5     C6      120.000    3.000
+ SAM      N7     C5     C6      132.000    3.000
+ SAM      C5     N7     C8      108.000    3.000
+ SAM      N7     C8     H8      126.000    3.000
+ SAM      N7     C8     N9      108.000    3.000
+ SAM      H8     C8     N9      126.000    3.000
+ SAM      C4     N3     C2      120.000    3.000
+ SAM      N3     C2     H2      120.000    3.000
+ SAM      N3     C2     N1      120.000    3.000
+ SAM      H2     C2     N1      120.000    3.000
+ SAM      C2     N1     C6      120.000    3.000
+ SAM      N1     C6     N6      120.000    3.000
+ SAM      N1     C6     C5      120.000    3.000
+ SAM      N6     C6     C5      120.000    3.000
+ SAM      C6     N6     HN62    120.000    3.000
+ SAM      C6     N6     HN61    120.000    3.000
+ SAM      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SAM      var_1    OXT    C      CA     CB       -90.029   20.000   3
+ SAM      var_2    C      CA     N      HN1      -53.780   20.000   1
+ SAM      var_3    C      CA     CB     CG       175.015   20.000   3
+ SAM      var_4    CA     CB     CG     SD      -179.964   20.000   3
+ SAM      var_5    CB     CG     SD     "C5'"   -179.999   20.000   1
+ SAM      var_6    CG     SD     CE     HE1     -179.988   20.000   1
+ SAM      var_7    CG     SD     "C5'"  "C4'"   -180.000   20.000   1
+ SAM      var_8    SD     "C5'"  "C4'"  "C3'"   -175.312   20.000   3
+ SAM      var_9    "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ SAM      var_10   "C5'"  "C4'"  "C3'"  "C2'"   -120.000   20.000   3
+ SAM      var_11   "C4'"  "C3'"  "O3'"  "HO3'"   176.263   20.000   1
+ SAM      var_12   "C4'"  "C3'"  "C2'"  "C1'"    -30.000   20.000   3
+ SAM      var_13   "C3'"  "C2'"  "O2'"  "HO2'"   -67.320   20.000   1
+ SAM      var_14   "C3'"  "C2'"  "C1'"  N9       150.000   20.000   3
+ SAM      var_15   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ SAM      var_16   "C2'"  "C1'"  N9     C4        89.120   20.000   1
+ SAM      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ SAM      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ SAM      CONST_3  N9     C4     C5     N7         0.000    0.000   0
+ SAM      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ SAM      CONST_5  C4     C5     N7     C8         0.000    0.000   0
+ SAM      CONST_6  C5     N7     C8     N9         0.000    0.000   0
+ SAM      CONST_7  N9     C4     N3     C2       180.000    0.000   0
+ SAM      CONST_8  C4     N3     C2     N1         0.000    0.000   0
+ SAM      CONST_9  N3     C2     N1     C6         0.000    0.000   0
+ SAM      CONST_10 C2     N1     C6     N6       180.000    0.000   0
+ SAM      CONST_11 N1     C6     N6     HN61    -179.999    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SAM      chir_01  CA     N      C      CB        positiv
+ SAM      chir_02  SD     CG     CE     "C5'"     positiv
+ SAM      chir_03  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ SAM      chir_04  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ SAM      chir_05  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ SAM      chir_06  "C1'"  "O4'"  "C2'"  N9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SAM      plan-1    N         0.020
+ SAM      plan-1    CA        0.020
+ SAM      plan-1    HN1       0.020
+ SAM      plan-1    HN2       0.020
+ SAM      plan-2    C         0.020
+ SAM      plan-2    CA        0.020
+ SAM      plan-2    O         0.020
+ SAM      plan-2    OXT       0.020
+ SAM      plan-3    N9        0.020
+ SAM      plan-3    "C1'"     0.020
+ SAM      plan-3    C8        0.020
+ SAM      plan-3    C4        0.020
+ SAM      plan-3    N7        0.020
+ SAM      plan-3    H8        0.020
+ SAM      plan-3    C5        0.020
+ SAM      plan-3    C6        0.020
+ SAM      plan-3    N1        0.020
+ SAM      plan-3    C2        0.020
+ SAM      plan-3    N3        0.020
+ SAM      plan-3    N6        0.020
+ SAM      plan-3    H2        0.020
+ SAM      plan-3    HN62      0.020
+ SAM      plan-3    HN61      0.020
+ SAM      plan-4    N6        0.020
+ SAM      plan-4    C6        0.020
+ SAM      plan-4    HN61      0.020
+ SAM      plan-4    HN62      0.020
+# ------------------------------------------------------

@@ -1,0 +1,276 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BSO      BSO 'BIOTIN-D-SULFOXIDE                  ' non-polymer        32  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BSO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BSO           O10    O    O         0.000      0.000    0.000    0.000
+ BSO           S1     S    S3        0.000     -1.299    0.136   -0.558
+ BSO           C6     C    CH2       0.000     -1.346   -0.672   -2.203
+ BSO           H6C1   H    H         0.000     -0.635   -1.495   -2.296
+ BSO           H6C2   H    H         0.000     -1.202    0.028   -3.028
+ BSO           C5     C    CH1       0.000     -2.786   -1.227   -2.242
+ BSO           H5     H    H         0.000     -2.805   -2.180   -2.789
+ BSO           C4     C    CH1       0.000     -3.407   -1.409   -0.854
+ BSO           H4     H    H         0.000     -3.738   -2.449   -0.723
+ BSO           N2     N    NH1       0.000     -4.569   -0.508   -0.871
+ BSO           HA     H    H         0.000     -5.216   -0.371   -0.107
+ BSO           C3     C    C         0.000     -4.633    0.101   -2.063
+ BSO           O3     O    O         0.000     -5.500    0.903   -2.352
+ BSO           N1     N    NH1       0.000     -3.655   -0.254   -2.906
+ BSO           H1     H    H         0.000     -3.535    0.094   -3.847
+ BSO           C2     C    CH1       0.000     -2.469   -1.003    0.302
+ BSO           H2     H    H         0.000     -1.941   -1.877    0.706
+ BSO           C7     C    CH2       0.000     -3.240   -0.271    1.403
+ BSO           H7C1   H    H         0.000     -4.039   -0.914    1.776
+ BSO           H7C2   H    H         0.000     -3.672    0.646    0.996
+ BSO           C8     C    CH2       0.000     -2.287    0.077    2.548
+ BSO           H8C1   H    H         0.000     -1.487    0.719    2.173
+ BSO           H8C2   H    H         0.000     -1.856   -0.840    2.953
+ BSO           C9     C    CH2       0.000     -3.058    0.810    3.647
+ BSO           H9C1   H    H         0.000     -3.858    0.167    4.020
+ BSO           H9C2   H    H         0.000     -3.489    1.727    3.240
+ BSO           C10    C    CH2       0.000     -2.105    1.158    4.793
+ BSO           H101   H    H         0.000     -1.305    1.800    4.418
+ BSO           H102   H    H         0.000     -1.674    0.240    5.199
+ BSO           C11    C    C         0.000     -2.864    1.880    5.877
+ BSO           O11    O    OC       -0.500     -2.271    2.257    6.912
+ BSO           O12    O    OC       -0.500     -4.088    2.102    5.742
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BSO      O10    n/a    S1     START
+ BSO      S1     O10    C6     .
+ BSO      C6     S1     C5     .
+ BSO      H6C1   C6     .      .
+ BSO      H6C2   C6     .      .
+ BSO      C5     C6     C4     .
+ BSO      H5     C5     .      .
+ BSO      C4     C5     C2     .
+ BSO      H4     C4     .      .
+ BSO      N2     C4     C3     .
+ BSO      HA     N2     .      .
+ BSO      C3     N2     N1     .
+ BSO      O3     C3     .      .
+ BSO      N1     C3     H1     .
+ BSO      H1     N1     .      .
+ BSO      C2     C4     C7     .
+ BSO      H2     C2     .      .
+ BSO      C7     C2     C8     .
+ BSO      H7C1   C7     .      .
+ BSO      H7C2   C7     .      .
+ BSO      C8     C7     C9     .
+ BSO      H8C1   C8     .      .
+ BSO      H8C2   C8     .      .
+ BSO      C9     C8     C10    .
+ BSO      H9C1   C9     .      .
+ BSO      H9C2   C9     .      .
+ BSO      C10    C9     C11    .
+ BSO      H101   C10    .      .
+ BSO      H102   C10    .      .
+ BSO      C11    C10    O12    .
+ BSO      O11    C11    .      .
+ BSO      O12    C11    .      END
+ BSO      C2     S1     .    ADD
+ BSO      C5     N1     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BSO      O11    C11       deloc       1.250    0.020
+ BSO      O12    C11       deloc       1.250    0.020
+ BSO      C11    C10       single      1.510    0.020
+ BSO      C10    C9        single      1.524    0.020
+ BSO      H101   C10       single      1.092    0.020
+ BSO      H102   C10       single      1.092    0.020
+ BSO      C9     C8        single      1.524    0.020
+ BSO      H9C1   C9        single      1.092    0.020
+ BSO      H9C2   C9        single      1.092    0.020
+ BSO      C8     C7        single      1.524    0.020
+ BSO      H8C1   C8        single      1.092    0.020
+ BSO      H8C2   C8        single      1.092    0.020
+ BSO      C7     C2        single      1.524    0.020
+ BSO      H7C1   C7        single      1.092    0.020
+ BSO      H7C2   C7        single      1.092    0.020
+ BSO      C2     S1        single      1.710    0.020
+ BSO      C2     C4        single      1.524    0.020
+ BSO      H2     C2        single      1.099    0.020
+ BSO      C6     S1        single      1.707    0.020
+ BSO      S1     O10       double      1.480    0.020
+ BSO      C5     C6        single      1.524    0.020
+ BSO      H6C1   C6        single      1.092    0.020
+ BSO      H6C2   C6        single      1.092    0.020
+ BSO      C5     N1        single      1.450    0.020
+ BSO      C4     C5        single      1.524    0.020
+ BSO      H5     C5        single      1.099    0.020
+ BSO      N1     C3        single      1.330    0.020
+ BSO      H1     N1        single      1.010    0.020
+ BSO      O3     C3        double      1.220    0.020
+ BSO      C3     N2        single      1.330    0.020
+ BSO      N2     C4        single      1.450    0.020
+ BSO      HA     N2        single      1.010    0.020
+ BSO      H4     C4        single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BSO      O10    S1     C6      109.505    3.000
+ BSO      O10    S1     C2      109.769    3.000
+ BSO      C6     S1     C2       97.477    3.000
+ BSO      S1     C6     H6C1    109.500    3.000
+ BSO      S1     C6     H6C2    109.500    3.000
+ BSO      S1     C6     C5      109.500    3.000
+ BSO      H6C1   C6     H6C2    107.900    3.000
+ BSO      H6C1   C6     C5      109.470    3.000
+ BSO      H6C2   C6     C5      109.470    3.000
+ BSO      C6     C5     H5      108.340    3.000
+ BSO      C6     C5     C4      111.000    3.000
+ BSO      C6     C5     N1      110.000    3.000
+ BSO      H5     C5     C4      108.340    3.000
+ BSO      H5     C5     N1      108.550    3.000
+ BSO      C4     C5     N1      110.000    3.000
+ BSO      C5     C4     H4      108.340    3.000
+ BSO      C5     C4     N2      110.000    3.000
+ BSO      C5     C4     C2      111.000    3.000
+ BSO      H4     C4     N2      108.550    3.000
+ BSO      H4     C4     C2      108.340    3.000
+ BSO      N2     C4     C2      110.000    3.000
+ BSO      C4     N2     HA      118.500    3.000
+ BSO      C4     N2     C3      121.500    3.000
+ BSO      HA     N2     C3      120.000    3.000
+ BSO      N2     C3     O3      123.000    3.000
+ BSO      N2     C3     N1      120.000    3.000
+ BSO      O3     C3     N1      123.000    3.000
+ BSO      C3     N1     H1      120.000    3.000
+ BSO      C3     N1     C5      121.500    3.000
+ BSO      H1     N1     C5      118.500    3.000
+ BSO      C4     C2     H2      108.340    3.000
+ BSO      C4     C2     C7      111.000    3.000
+ BSO      C4     C2     S1      109.500    3.000
+ BSO      H2     C2     C7      108.340    3.000
+ BSO      H2     C2     S1      109.500    3.000
+ BSO      C7     C2     S1      109.500    3.000
+ BSO      C2     C7     H7C1    109.470    3.000
+ BSO      C2     C7     H7C2    109.470    3.000
+ BSO      C2     C7     C8      111.000    3.000
+ BSO      H7C1   C7     H7C2    107.900    3.000
+ BSO      H7C1   C7     C8      109.470    3.000
+ BSO      H7C2   C7     C8      109.470    3.000
+ BSO      C7     C8     H8C1    109.470    3.000
+ BSO      C7     C8     H8C2    109.470    3.000
+ BSO      C7     C8     C9      111.000    3.000
+ BSO      H8C1   C8     H8C2    107.900    3.000
+ BSO      H8C1   C8     C9      109.470    3.000
+ BSO      H8C2   C8     C9      109.470    3.000
+ BSO      C8     C9     H9C1    109.470    3.000
+ BSO      C8     C9     H9C2    109.470    3.000
+ BSO      C8     C9     C10     111.000    3.000
+ BSO      H9C1   C9     H9C2    107.900    3.000
+ BSO      H9C1   C9     C10     109.470    3.000
+ BSO      H9C2   C9     C10     109.470    3.000
+ BSO      C9     C10    H101    109.470    3.000
+ BSO      C9     C10    H102    109.470    3.000
+ BSO      C9     C10    C11     109.470    3.000
+ BSO      H101   C10    H102    107.900    3.000
+ BSO      H101   C10    C11     109.470    3.000
+ BSO      H102   C10    C11     109.470    3.000
+ BSO      C10    C11    O11     118.500    3.000
+ BSO      C10    C11    O12     118.500    3.000
+ BSO      O11    C11    O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BSO      var_1    O10    S1     C6     C5       150.000   20.000   1
+ BSO      var_2    S1     C6     C5     C4       -30.000   20.000   3
+ BSO      var_3    C6     C5     N1     C3      -120.000   20.000   3
+ BSO      var_4    C6     C5     C4     C2         0.000   20.000   3
+ BSO      var_5    C5     C4     N2     C3         0.000   20.000   3
+ BSO      CONST_1  C4     N2     C3     N1         0.000    0.000   0
+ BSO      CONST_2  N2     C3     N1     C5         0.000    0.000   0
+ BSO      var_6    C5     C4     C2     C7       150.000   20.000   3
+ BSO      var_7    C4     C2     S1     O10     -150.000   20.000   1
+ BSO      var_8    C4     C2     C7     C8       178.270   20.000   3
+ BSO      var_9    C2     C7     C8     C9       179.954   20.000   3
+ BSO      var_10   C7     C8     C9     C10      179.993   20.000   3
+ BSO      var_11   C8     C9     C10    C11     -179.993   20.000   3
+ BSO      var_12   C9     C10    C11    O12       -0.016   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BSO      chir_01  C2     C7     S1     C4        positiv
+ BSO      chir_02  S1     C2     C6     O10       positiv
+ BSO      chir_03  C5     C6     N1     C4        positiv
+ BSO      chir_04  C4     C2     C5     N2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BSO      plan-1    C11       0.020
+ BSO      plan-1    O11       0.020
+ BSO      plan-1    O12       0.020
+ BSO      plan-1    C10       0.020
+ BSO      plan-2    N1        0.020
+ BSO      plan-2    C5        0.020
+ BSO      plan-2    C3        0.020
+ BSO      plan-2    H1        0.020
+ BSO      plan-3    C3        0.020
+ BSO      plan-3    N1        0.020
+ BSO      plan-3    O3        0.020
+ BSO      plan-3    N2        0.020
+ BSO      plan-3    H1        0.020
+ BSO      plan-3    HA        0.020
+ BSO      plan-4    N2        0.020
+ BSO      plan-4    C3        0.020
+ BSO      plan-4    C4        0.020
+ BSO      plan-4    HA        0.020
+# ------------------------------------------------------

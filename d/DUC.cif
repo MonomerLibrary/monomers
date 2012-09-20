@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DUC      DUC 'DIHYDROPYRIMIDINE-2,4(1H,3H)-DIONE  ' non-polymer        14   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DUC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DUC           O4     O    O         0.000      0.000    0.000    0.000
+ DUC           C4     C    C         0.000     -1.043   -0.103    0.609
+ DUC           N3     N    NH1       0.000     -2.215    0.086   -0.025
+ DUC           HN3    H    H         0.000     -2.220    0.249   -1.022
+ DUC           C5     C    CH2       0.000     -1.028   -0.437    2.079
+ DUC           H51    H    H         0.000     -0.083   -0.109    2.519
+ DUC           H52    H    H         0.000     -1.133   -1.516    2.210
+ DUC           C6     C    CH2       0.000     -2.189    0.278    2.770
+ DUC           H61    H    H         0.000     -1.965    1.344    2.848
+ DUC           H62    H    H         0.000     -2.328   -0.137    3.770
+ DUC           N1     N    NH1       0.000     -3.413    0.092    1.988
+ DUC           HN1    H    H         0.000     -4.298   -0.013    2.464
+ DUC           C2     C    C         0.000     -3.376    0.059    0.647
+ DUC           O2     O    O         0.000     -4.419    0.007    0.026
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DUC      O4     n/a    C4     START
+ DUC      C4     O4     C5     .
+ DUC      N3     C4     HN3    .
+ DUC      HN3    N3     .      .
+ DUC      C5     C4     C6     .
+ DUC      H51    C5     .      .
+ DUC      H52    C5     .      .
+ DUC      C6     C5     N1     .
+ DUC      H61    C6     .      .
+ DUC      H62    C6     .      .
+ DUC      N1     C6     C2     .
+ DUC      HN1    N1     .      .
+ DUC      C2     N1     O2     .
+ DUC      O2     C2     .      END
+ DUC      N3     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DUC      N3     C2        single      1.330    0.020
+ DUC      N3     C4        single      1.330    0.020
+ DUC      HN3    N3        single      1.010    0.020
+ DUC      O2     C2        double      1.220    0.020
+ DUC      C2     N1        single      1.330    0.020
+ DUC      N1     C6        single      1.450    0.020
+ DUC      HN1    N1        single      1.010    0.020
+ DUC      C6     C5        single      1.524    0.020
+ DUC      H61    C6        single      1.092    0.020
+ DUC      H62    C6        single      1.092    0.020
+ DUC      C5     C4        single      1.510    0.020
+ DUC      H51    C5        single      1.092    0.020
+ DUC      H52    C5        single      1.092    0.020
+ DUC      C4     O4        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DUC      O4     C4     N3      123.000    3.000
+ DUC      O4     C4     C5      120.500    3.000
+ DUC      N3     C4     C5      116.500    3.000
+ DUC      C4     N3     HN3     120.000    3.000
+ DUC      C4     N3     C2      120.000    3.000
+ DUC      HN3    N3     C2      120.000    3.000
+ DUC      C4     C5     H51     109.470    3.000
+ DUC      C4     C5     H52     109.470    3.000
+ DUC      C4     C5     C6      109.470    3.000
+ DUC      H51    C5     H52     107.900    3.000
+ DUC      H51    C5     C6      109.470    3.000
+ DUC      H52    C5     C6      109.470    3.000
+ DUC      C5     C6     H61     109.470    3.000
+ DUC      C5     C6     H62     109.470    3.000
+ DUC      C5     C6     N1      112.000    3.000
+ DUC      H61    C6     H62     107.900    3.000
+ DUC      H61    C6     N1      109.470    3.000
+ DUC      H62    C6     N1      109.470    3.000
+ DUC      C6     N1     HN1     118.500    3.000
+ DUC      C6     N1     C2      121.500    3.000
+ DUC      HN1    N1     C2      120.000    3.000
+ DUC      N1     C2     O2      123.000    3.000
+ DUC      N1     C2     N3      120.000    3.000
+ DUC      O2     C2     N3      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DUC      CONST_1  O4     C4     N3     C2       180.000    0.000   0
+ DUC      CONST_2  C4     N3     C2     N1         0.000    0.000   0
+ DUC      var_1    O4     C4     C5     C6       150.000   20.000   3
+ DUC      var_2    C4     C5     C6     N1        60.000   20.000   3
+ DUC      var_3    C5     C6     N1     C2       -30.000   20.000   3
+ DUC      CONST_3  C6     N1     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DUC      plan-1    N3        0.020
+ DUC      plan-1    C2        0.020
+ DUC      plan-1    C4        0.020
+ DUC      plan-1    HN3       0.020
+ DUC      plan-2    C2        0.020
+ DUC      plan-2    N3        0.020
+ DUC      plan-2    O2        0.020
+ DUC      plan-2    N1        0.020
+ DUC      plan-2    HN3       0.020
+ DUC      plan-2    HN1       0.020
+ DUC      plan-3    N1        0.020
+ DUC      plan-3    C2        0.020
+ DUC      plan-3    C6        0.020
+ DUC      plan-3    HN1       0.020
+ DUC      plan-4    C4        0.020
+ DUC      plan-4    N3        0.020
+ DUC      plan-4    C5        0.020
+ DUC      plan-4    O4        0.020
+ DUC      plan-4    HN3       0.020
+# ------------------------------------------------------

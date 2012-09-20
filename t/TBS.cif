@@ -1,0 +1,162 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TBS      TBS '4,5,6,7-TETRABROMOBENZOTRIAZOLE     ' non-polymer        14  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TBS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TBS           BR13   BR   BR        0.000      0.000    0.000    0.000
+ TBS           C3     C    CR6       0.000     -1.662    0.003   -0.902
+ TBS           C2     C    CR6       0.000     -2.826    0.003   -0.190
+ TBS           BR12   BR   BR        0.000     -2.765    0.001    1.701
+ TBS           C7     C    CR56      0.000     -1.700    0.005   -2.303
+ TBS           N8     N    NRD5      0.000     -0.740    0.005   -3.250
+ TBS           N9     N    NRD5      0.000     -1.268    0.008   -4.422
+ TBS           N5     N    NR15      0.000     -2.665    0.009   -4.304
+ TBS           H51    H    H         0.000     -3.356    0.011   -5.081
+ TBS           C6     C    CR56      0.000     -2.943    0.007   -2.957
+ TBS           C4     C    CR6       0.000     -4.119    0.001   -2.213
+ TBS           BR10   BR   BR        0.000     -5.796   -0.008   -3.088
+ TBS           C1     C    CR6       0.000     -4.056    0.004   -0.837
+ TBS           BR11   BR   BR        0.000     -5.652    0.002    0.177
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TBS      BR13   n/a    C3     START
+ TBS      C3     BR13   C7     .
+ TBS      C2     C3     BR12   .
+ TBS      BR12   C2     .      .
+ TBS      C7     C3     C6     .
+ TBS      N8     C7     N9     .
+ TBS      N9     N8     N5     .
+ TBS      N5     N9     H51    .
+ TBS      H51    N5     .      .
+ TBS      C6     C7     C4     .
+ TBS      C4     C6     C1     .
+ TBS      BR10   C4     .      .
+ TBS      C1     C4     BR11   .
+ TBS      BR11   C1     .      END
+ TBS      C1     C2     .    ADD
+ TBS      N5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TBS      C1     C2        double      1.487    0.020
+ TBS      C1     C4        single      1.487    0.020
+ TBS      BR11   C1        single      1.890    0.020
+ TBS      C2     C3        single      1.487    0.020
+ TBS      BR12   C2        single      1.890    0.020
+ TBS      C7     C3        double      1.490    0.020
+ TBS      C3     BR13      single      1.890    0.020
+ TBS      C4     C6        double      1.490    0.020
+ TBS      BR10   C4        single      1.890    0.020
+ TBS      N5     C6        single      1.340    0.020
+ TBS      N5     N9        single      1.402    0.020
+ TBS      H51    N5        single      1.040    0.020
+ TBS      C6     C7        single      1.490    0.020
+ TBS      N8     C7        single      1.350    0.020
+ TBS      N9     N8        double      1.404    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TBS      BR13   C3     C2      120.000    3.000
+ TBS      BR13   C3     C7      120.000    3.000
+ TBS      C2     C3     C7      120.000    3.000
+ TBS      C3     C2     BR12    120.000    3.000
+ TBS      C3     C2     C1      120.000    3.000
+ TBS      BR12   C2     C1      120.000    3.000
+ TBS      C3     C7     N8      132.000    3.000
+ TBS      C3     C7     C6      120.000    3.000
+ TBS      N8     C7     C6      108.000    3.000
+ TBS      C7     N8     N9      108.000    3.000
+ TBS      N8     N9     N5      108.000    3.000
+ TBS      N9     N5     H51     108.000    3.000
+ TBS      N9     N5     C6      108.000    3.000
+ TBS      H51    N5     C6      126.000    3.000
+ TBS      C7     C6     C4      120.000    3.000
+ TBS      C7     C6     N5      108.000    3.000
+ TBS      C4     C6     N5      132.000    3.000
+ TBS      C6     C4     BR10    120.000    3.000
+ TBS      C6     C4     C1      120.000    3.000
+ TBS      BR10   C4     C1      120.000    3.000
+ TBS      C4     C1     BR11    120.000    3.000
+ TBS      C4     C1     C2      120.000    3.000
+ TBS      BR11   C1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TBS      CONST_1  BR13   C3     C2     BR12       0.000    0.000   0
+ TBS      CONST_2  BR13   C3     C7     C6       180.000    0.000   0
+ TBS      CONST_3  C3     C7     N8     N9       180.000    0.000   0
+ TBS      CONST_4  C7     N8     N9     N5         0.000    0.000   0
+ TBS      CONST_5  N8     N9     N5     C6         0.000    0.000   0
+ TBS      CONST_6  N9     N5     C6     C7         0.000    0.000   0
+ TBS      CONST_7  C3     C7     C6     C4         0.000    0.000   0
+ TBS      CONST_8  C7     C6     C4     C1         0.000    0.000   0
+ TBS      CONST_9  C6     C4     C1     BR11     180.000    0.000   0
+ TBS      CONST_10 C4     C1     C2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TBS      plan-1    C1        0.020
+ TBS      plan-1    C2        0.020
+ TBS      plan-1    C4        0.020
+ TBS      plan-1    BR11      0.020
+ TBS      plan-1    C3        0.020
+ TBS      plan-1    BR12      0.020
+ TBS      plan-1    C7        0.020
+ TBS      plan-1    BR13      0.020
+ TBS      plan-1    C6        0.020
+ TBS      plan-1    BR10      0.020
+ TBS      plan-1    N5        0.020
+ TBS      plan-1    N9        0.020
+ TBS      plan-1    H51       0.020
+ TBS      plan-1    N8        0.020
+# ------------------------------------------------------

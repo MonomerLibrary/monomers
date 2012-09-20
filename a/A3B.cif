@@ -1,0 +1,155 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+A3B      A3B 'D-VINYLGLYCINE                      ' non-polymer        14   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_A3B
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ A3B           OAC    O    OC       -0.500      0.000    0.000    0.000
+ A3B           CAF    C    C         0.000     -1.245    0.093    0.078
+ A3B           OAD    O    OC       -0.500     -1.762    0.994    0.775
+ A3B           CAG    C    CH1       0.000     -2.121   -0.880   -0.669
+ A3B           HAG    H    H         0.000     -2.873   -1.295    0.016
+ A3B           NAB    N    NT3       1.000     -1.296   -1.968   -1.208
+ A3B           HAB3   H    H         0.000     -0.823   -2.454   -0.430
+ A3B           HAB2   H    H         0.000     -1.899   -2.632   -1.717
+ A3B           HAB1   H    H         0.000     -0.591   -1.574   -1.850
+ A3B           CAE    C    C1        0.000     -2.813   -0.166   -1.801
+ A3B           HAE    H    H         0.000     -3.400    0.715   -1.603
+ A3B           CAA    C    C2        0.000     -2.701   -0.616   -3.026
+ A3B           HAA2   H    H         0.000     -3.197   -0.105   -3.831
+ A3B           HAA1   H    H         0.000     -2.114   -1.495   -3.221
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ A3B      OAC    n/a    CAF    START
+ A3B      CAF    OAC    CAG    .
+ A3B      OAD    CAF    .      .
+ A3B      CAG    CAF    CAE    .
+ A3B      HAG    CAG    .      .
+ A3B      NAB    CAG    HAB1   .
+ A3B      HAB3   NAB    .      .
+ A3B      HAB2   NAB    .      .
+ A3B      HAB1   NAB    .      .
+ A3B      CAE    CAG    CAA    .
+ A3B      HAE    CAE    .      .
+ A3B      CAA    CAE    HAA1   .
+ A3B      HAA2   CAA    .      .
+ A3B      HAA1   CAA    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ A3B      CAA    CAE       double      1.320    0.020
+ A3B      HAA1   CAA       single      1.077    0.020
+ A3B      HAA2   CAA       single      1.077    0.020
+ A3B      CAE    CAG       single      1.510    0.020
+ A3B      HAE    CAE       single      1.077    0.020
+ A3B      CAG    CAF       single      1.500    0.020
+ A3B      NAB    CAG       single      1.488    0.020
+ A3B      HAG    CAG       single      1.099    0.020
+ A3B      OAD    CAF       deloc       1.250    0.020
+ A3B      CAF    OAC       deloc       1.250    0.020
+ A3B      HAB1   NAB       single      1.033    0.020
+ A3B      HAB2   NAB       single      1.033    0.020
+ A3B      HAB3   NAB       single      1.033    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ A3B      OAC    CAF    OAD     123.000    3.000
+ A3B      OAC    CAF    CAG     118.500    3.000
+ A3B      OAD    CAF    CAG     118.500    3.000
+ A3B      CAF    CAG    HAG     108.810    3.000
+ A3B      CAF    CAG    NAB     111.600    3.000
+ A3B      CAF    CAG    CAE     109.470    3.000
+ A3B      HAG    CAG    NAB     108.550    3.000
+ A3B      HAG    CAG    CAE     108.810    3.000
+ A3B      NAB    CAG    CAE     111.600    3.000
+ A3B      CAG    NAB    HAB3    109.470    3.000
+ A3B      CAG    NAB    HAB2    109.470    3.000
+ A3B      CAG    NAB    HAB1    109.470    3.000
+ A3B      HAB3   NAB    HAB2    109.470    3.000
+ A3B      HAB3   NAB    HAB1    109.470    3.000
+ A3B      HAB2   NAB    HAB1    109.470    3.000
+ A3B      CAG    CAE    HAE     120.000    3.000
+ A3B      CAG    CAE    CAA     120.000    3.000
+ A3B      HAE    CAE    CAA     120.000    3.000
+ A3B      CAE    CAA    HAA2    120.000    3.000
+ A3B      CAE    CAA    HAA1    120.000    3.000
+ A3B      HAA2   CAA    HAA1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ A3B      var_1    OAC    CAF    CAG    CAE     -109.986   20.000   3
+ A3B      var_2    CAF    CAG    NAB    HAB1     -60.032   20.000   1
+ A3B      var_3    CAF    CAG    CAE    CAA      125.033   20.000   1
+ A3B      CONST_1  CAG    CAE    CAA    HAA1      -0.066    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ A3B      chir_01  CAG    CAE    CAF    NAB       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ A3B      plan-1    CAA       0.020
+ A3B      plan-1    CAE       0.020
+ A3B      plan-1    HAA1      0.020
+ A3B      plan-1    HAA2      0.020
+ A3B      plan-1    CAG       0.020
+ A3B      plan-1    HAE       0.020
+ A3B      plan-2    CAF       0.020
+ A3B      plan-2    CAG       0.020
+ A3B      plan-2    OAD       0.020
+ A3B      plan-2    OAC       0.020
+# ------------------------------------------------------

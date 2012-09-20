@@ -1,0 +1,233 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CTL      CTL 'CIS-(1R,2S)-2-AMINO-1,2,3,4-TETRAHYD' non-polymer        25  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CTL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CTL           O11    O    OH1       0.000      0.000    0.000    0.000
+ CTL           H11    H    H         0.000     -0.011   -0.877   -0.406
+ CTL           C1     C    CH1       0.000     -1.017    0.073    1.001
+ CTL           H1     H    H         0.000     -0.832   -0.697    1.763
+ CTL           C6     C    CR6       0.000     -2.359   -0.173    0.362
+ CTL           C7     C    CR16      0.000     -2.697   -1.484    0.051
+ CTL           H7     H    H         0.000     -2.005   -2.285    0.278
+ CTL           C8     C    CR16      0.000     -3.907   -1.773   -0.544
+ CTL           H8     H    H         0.000     -4.163   -2.798   -0.784
+ CTL           C9     C    CR16      0.000     -4.792   -0.751   -0.835
+ CTL           H9     H    H         0.000     -5.743   -0.972   -1.304
+ CTL           C10    C    CR16      0.000     -4.460    0.551   -0.524
+ CTL           H10    H    H         0.000     -5.153    1.351   -0.751
+ CTL           C5     C    CR6       0.000     -3.243    0.845    0.077
+ CTL           C4     C    CH2       0.000     -2.946    2.287    0.395
+ CTL           H41    H    H         0.000     -3.499    2.572    1.292
+ CTL           H42    H    H         0.000     -3.271    2.907   -0.444
+ CTL           C3     C    CH2       0.000     -1.451    2.489    0.631
+ CTL           H31    H    H         0.000     -1.267    3.494    1.016
+ CTL           H32    H    H         0.000     -0.904    2.353   -0.305
+ CTL           C2     C    CH1       0.000     -0.979    1.452    1.657
+ CTL           H2     H    H         0.000     -1.646    1.465    2.530
+ CTL           N12    N    NH2       0.000      0.394    1.761    2.078
+ CTL           H122   H    H         0.000      1.139    1.093    1.922
+ CTL           H121   H    H         0.000      0.604    2.645    2.527
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CTL      O11    n/a    C1     START
+ CTL      H11    O11    .      .
+ CTL      C1     O11    C6     .
+ CTL      H1     C1     .      .
+ CTL      C6     C1     C5     .
+ CTL      C7     C6     C8     .
+ CTL      H7     C7     .      .
+ CTL      C8     C7     C9     .
+ CTL      H8     C8     .      .
+ CTL      C9     C8     C10    .
+ CTL      H9     C9     .      .
+ CTL      C10    C9     H10    .
+ CTL      H10    C10    .      .
+ CTL      C5     C6     C4     .
+ CTL      C4     C5     C3     .
+ CTL      H41    C4     .      .
+ CTL      H42    C4     .      .
+ CTL      C3     C4     C2     .
+ CTL      H31    C3     .      .
+ CTL      H32    C3     .      .
+ CTL      C2     C3     N12    .
+ CTL      H2     C2     .      .
+ CTL      N12    C2     H121   .
+ CTL      H122   N12    .      .
+ CTL      H121   N12    .      END
+ CTL      C1     C2     .    ADD
+ CTL      C5     C10    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CTL      C1     C2        single      1.524    0.020
+ CTL      C6     C1        single      1.480    0.020
+ CTL      C1     O11       single      1.432    0.020
+ CTL      H1     C1        single      1.099    0.020
+ CTL      C2     C3        single      1.524    0.020
+ CTL      N12    C2        single      1.450    0.020
+ CTL      H2     C2        single      1.099    0.020
+ CTL      C3     C4        single      1.524    0.020
+ CTL      H31    C3        single      1.092    0.020
+ CTL      H32    C3        single      1.092    0.020
+ CTL      C4     C5        single      1.511    0.020
+ CTL      H41    C4        single      1.092    0.020
+ CTL      H42    C4        single      1.092    0.020
+ CTL      C5     C10       double      1.390    0.020
+ CTL      C5     C6        single      1.487    0.020
+ CTL      C10    C9        single      1.390    0.020
+ CTL      H10    C10       single      1.083    0.020
+ CTL      C7     C6        double      1.390    0.020
+ CTL      C8     C7        single      1.390    0.020
+ CTL      H7     C7        single      1.083    0.020
+ CTL      C9     C8        double      1.390    0.020
+ CTL      H8     C8        single      1.083    0.020
+ CTL      H9     C9        single      1.083    0.020
+ CTL      H11    O11       single      0.967    0.020
+ CTL      H121   N12       single      1.010    0.020
+ CTL      H122   N12       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CTL      H11    O11    C1      109.470    3.000
+ CTL      O11    C1     H1      109.470    3.000
+ CTL      O11    C1     C6      109.470    3.000
+ CTL      O11    C1     C2      109.470    3.000
+ CTL      H1     C1     C6      109.470    3.000
+ CTL      H1     C1     C2      108.340    3.000
+ CTL      C6     C1     C2      109.470    3.000
+ CTL      C1     C6     C7      120.000    3.000
+ CTL      C1     C6     C5      120.000    3.000
+ CTL      C7     C6     C5      120.000    3.000
+ CTL      C6     C7     H7      120.000    3.000
+ CTL      C6     C7     C8      120.000    3.000
+ CTL      H7     C7     C8      120.000    3.000
+ CTL      C7     C8     H8      120.000    3.000
+ CTL      C7     C8     C9      120.000    3.000
+ CTL      H8     C8     C9      120.000    3.000
+ CTL      C8     C9     H9      120.000    3.000
+ CTL      C8     C9     C10     120.000    3.000
+ CTL      H9     C9     C10     120.000    3.000
+ CTL      C9     C10    H10     120.000    3.000
+ CTL      C9     C10    C5      120.000    3.000
+ CTL      H10    C10    C5      120.000    3.000
+ CTL      C6     C5     C4      120.000    3.000
+ CTL      C6     C5     C10     120.000    3.000
+ CTL      C4     C5     C10     120.000    3.000
+ CTL      C5     C4     H41     109.470    3.000
+ CTL      C5     C4     H42     109.470    3.000
+ CTL      C5     C4     C3      109.470    3.000
+ CTL      H41    C4     H42     107.900    3.000
+ CTL      H41    C4     C3      109.470    3.000
+ CTL      H42    C4     C3      109.470    3.000
+ CTL      C4     C3     H31     109.470    3.000
+ CTL      C4     C3     H32     109.470    3.000
+ CTL      C4     C3     C2      111.000    3.000
+ CTL      H31    C3     H32     107.900    3.000
+ CTL      H31    C3     C2      109.470    3.000
+ CTL      H32    C3     C2      109.470    3.000
+ CTL      C3     C2     H2      108.340    3.000
+ CTL      C3     C2     N12     109.470    3.000
+ CTL      C3     C2     C1      111.000    3.000
+ CTL      H2     C2     N12     109.470    3.000
+ CTL      H2     C2     C1      108.340    3.000
+ CTL      N12    C2     C1      109.470    3.000
+ CTL      C2     N12    H122    120.000    3.000
+ CTL      C2     N12    H121    120.000    3.000
+ CTL      H122   N12    H121    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CTL      var_1    H11    O11    C1     C6       -60.017   20.000   1
+ CTL      var_2    O11    C1     C2     C3        60.000   20.000   3
+ CTL      var_3    O11    C1     C6     C5       -90.000   20.000   1
+ CTL      CONST_1  C1     C6     C7     C8       180.000    0.000   0
+ CTL      CONST_2  C6     C7     C8     C9         0.000    0.000   0
+ CTL      CONST_3  C7     C8     C9     C10        0.000    0.000   0
+ CTL      CONST_4  C8     C9     C10    C5         0.000    0.000   0
+ CTL      CONST_5  C1     C6     C5     C4         0.000    0.000   0
+ CTL      CONST_6  C6     C5     C10    C9         0.000    0.000   0
+ CTL      var_4    C6     C5     C4     C3        30.000   20.000   2
+ CTL      var_5    C5     C4     C3     C2       -60.000   20.000   3
+ CTL      var_6    C4     C3     C2     N12      180.000   20.000   3
+ CTL      var_7    C3     C2     N12    H121      60.577   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CTL      chir_01  C1     C2     C6     O11       negativ
+ CTL      chir_02  C2     C1     C3     N12       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CTL      plan-1    C5        0.020
+ CTL      plan-1    C4        0.020
+ CTL      plan-1    C10       0.020
+ CTL      plan-1    C6        0.020
+ CTL      plan-1    C7        0.020
+ CTL      plan-1    C8        0.020
+ CTL      plan-1    C9        0.020
+ CTL      plan-1    H10       0.020
+ CTL      plan-1    C1        0.020
+ CTL      plan-1    H7        0.020
+ CTL      plan-1    H8        0.020
+ CTL      plan-1    H9        0.020
+ CTL      plan-2    N12       0.020
+ CTL      plan-2    C2        0.020
+ CTL      plan-2    H121      0.020
+ CTL      plan-2    H122      0.020
+# ------------------------------------------------------

@@ -1,0 +1,148 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2BR      2BR '2-BROMOPHENOL                       ' non-polymer        13   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2BR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2BR           BR1    BR   BR        0.000      0.000    0.000    0.000
+ 2BR           C15    C    CR6       0.000     -1.811   -0.544   -0.012
+ 2BR           C14    C    CR16      0.000     -2.130   -1.889    0.007
+ 2BR           H14    H    H         0.000     -1.342   -2.632    0.029
+ 2BR           C16    C    CR6       0.000     -2.822    0.407   -0.026
+ 2BR           O3     O    OH1       0.000     -2.512    1.730   -0.038
+ 2BR           HO3    H    H         0.000     -2.448    2.053    0.871
+ 2BR           C17    C    CR16      0.000     -4.150    0.004   -0.034
+ 2BR           H17    H    H         0.000     -4.940    0.744   -0.050
+ 2BR           C18    C    CR16      0.000     -4.462   -1.342   -0.022
+ 2BR           H18    H    H         0.000     -5.499   -1.656   -0.030
+ 2BR           C13    C    CR16      0.000     -3.453   -2.287   -0.001
+ 2BR           H13    H    H         0.000     -3.700   -3.341    0.009
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2BR      BR1    n/a    C15    START
+ 2BR      C15    BR1    C16    .
+ 2BR      C14    C15    H14    .
+ 2BR      H14    C14    .      .
+ 2BR      C16    C15    C17    .
+ 2BR      O3     C16    HO3    .
+ 2BR      HO3    O3     .      .
+ 2BR      C17    C16    C18    .
+ 2BR      H17    C17    .      .
+ 2BR      C18    C17    C13    .
+ 2BR      H18    C18    .      .
+ 2BR      C13    C18    H13    .
+ 2BR      H13    C13    .      END
+ 2BR      C13    C14    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2BR      C13    C14       double      1.390    0.020
+ 2BR      C13    C18       single      1.390    0.020
+ 2BR      H13    C13       single      1.083    0.020
+ 2BR      C14    C15       single      1.390    0.020
+ 2BR      H14    C14       single      1.083    0.020
+ 2BR      C16    C15       double      1.487    0.020
+ 2BR      C15    BR1       single      1.890    0.020
+ 2BR      C17    C16       single      1.390    0.020
+ 2BR      O3     C16       single      1.362    0.020
+ 2BR      C18    C17       double      1.390    0.020
+ 2BR      H17    C17       single      1.083    0.020
+ 2BR      H18    C18       single      1.083    0.020
+ 2BR      HO3    O3        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2BR      BR1    C15    C14     120.000    3.000
+ 2BR      BR1    C15    C16     120.000    3.000
+ 2BR      C14    C15    C16     120.000    3.000
+ 2BR      C15    C14    H14     120.000    3.000
+ 2BR      C15    C14    C13     120.000    3.000
+ 2BR      H14    C14    C13     120.000    3.000
+ 2BR      C15    C16    O3      120.000    3.000
+ 2BR      C15    C16    C17     120.000    3.000
+ 2BR      O3     C16    C17     120.000    3.000
+ 2BR      C16    O3     HO3     109.470    3.000
+ 2BR      C16    C17    H17     120.000    3.000
+ 2BR      C16    C17    C18     120.000    3.000
+ 2BR      H17    C17    C18     120.000    3.000
+ 2BR      C17    C18    H18     120.000    3.000
+ 2BR      C17    C18    C13     120.000    3.000
+ 2BR      H18    C18    C13     120.000    3.000
+ 2BR      C18    C13    H13     120.000    3.000
+ 2BR      C18    C13    C14     120.000    3.000
+ 2BR      H13    C13    C14     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 2BR      CONST_1  BR1    C15    C14    C13      180.000    0.000   0
+ 2BR      CONST_2  BR1    C15    C16    C17      180.000    0.000   0
+ 2BR      var_1    C15    C16    O3     HO3      -90.303   20.000   1
+ 2BR      CONST_3  C15    C16    C17    C18        0.000    0.000   0
+ 2BR      CONST_4  C16    C17    C18    C13        0.000    0.000   0
+ 2BR      CONST_5  C17    C18    C13    C14        0.000    0.000   0
+ 2BR      CONST_6  C18    C13    C14    C15        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 2BR      plan-1    C13       0.020
+ 2BR      plan-1    C14       0.020
+ 2BR      plan-1    C18       0.020
+ 2BR      plan-1    H13       0.020
+ 2BR      plan-1    C15       0.020
+ 2BR      plan-1    C16       0.020
+ 2BR      plan-1    C17       0.020
+ 2BR      plan-1    H14       0.020
+ 2BR      plan-1    BR1       0.020
+ 2BR      plan-1    O3        0.020
+ 2BR      plan-1    H17       0.020
+ 2BR      plan-1    H18       0.020
+# ------------------------------------------------------

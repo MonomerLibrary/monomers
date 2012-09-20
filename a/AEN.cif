@@ -1,0 +1,308 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AEN      AEN '5-(1-SULFONAPHTHYL)-ACETYLAMINO-ETHY' non-polymer        37  21 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AEN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AEN           O2S    O    OS        0.000      0.000    0.000    0.000
+ AEN           S      S    ST        0.000     -0.055    0.703    1.233
+ AEN           O1S    O    OS        0.000      0.821    0.503    2.334
+ AEN           O3S    O    OH1       0.000      0.064    2.177    0.874
+ AEN           HOS3   H    H         0.000      0.889    2.488    0.517
+ AEN           C1     C    CR6       0.000     -1.680    0.444    1.859
+ AEN           C9     C    CR66      0.000     -2.757    0.257    0.977
+ AEN           C8     C    CR16      0.000     -2.569    0.281   -0.416
+ AEN           H8     H    H         0.000     -1.580    0.444   -0.827
+ AEN           C7     C    CR16      0.000     -3.631    0.099   -1.249
+ AEN           H7     H    H         0.000     -3.476    0.119   -2.321
+ AEN           C6     C    CR16      0.000     -4.910   -0.113   -0.747
+ AEN           H6     H    H         0.000     -5.737   -0.257   -1.431
+ AEN           C10    C    CR66      0.000     -4.057    0.049    1.500
+ AEN           C4     C    CR16      0.000     -4.244    0.027    2.891
+ AEN           H4     H    H         0.000     -5.232   -0.132    3.304
+ AEN           C3     C    CR16      0.000     -3.177    0.206    3.717
+ AEN           H3     H    H         0.000     -3.324    0.189    4.790
+ AEN           C2     C    CR16      0.000     -1.899    0.410    3.202
+ AEN           H2     H    H         0.000     -1.066    0.545    3.881
+ AEN           C5     C    CR6       0.000     -5.137   -0.143    0.614
+ AEN           "N6'"  N    NH1       0.000     -6.423   -0.356    1.106
+ AEN           "HN'6" H    H         0.000     -6.584   -0.377    2.103
+ AEN           "C5'"  C    CH2       0.000     -7.540   -0.549    0.179
+ AEN           "H5'1" H    H         0.000     -7.347   -1.424   -0.445
+ AEN           "H5'2" H    H         0.000     -7.642    0.334   -0.455
+ AEN           "C4'"  C    CH2       0.000     -8.830   -0.761    0.972
+ AEN           "H4'1" H    H         0.000     -9.021    0.115    1.597
+ AEN           "H4'2" H    H         0.000     -8.726   -1.643    1.607
+ AEN           "N3'"  N    NH1       0.000     -9.948   -0.953    0.046
+ AEN           "HN'3" H    H         0.000     -9.787   -0.932   -0.951
+ AEN           "C2'"  C    C         0.000    -11.192   -1.159    0.522
+ AEN           "O2'"  O    O         0.000    -11.386   -1.184    1.719
+ AEN           "C1'"  C    CH3       0.000    -12.342   -1.358   -0.431
+ AEN           "H1'3" H    H         0.000    -12.444   -0.502   -1.047
+ AEN           "H1'2" H    H         0.000    -12.158   -2.207   -1.037
+ AEN           "H1'1" H    H         0.000    -13.236   -1.504    0.118
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AEN      O2S    n/a    S      START
+ AEN      S      O2S    C1     .
+ AEN      O1S    S      .      .
+ AEN      O3S    S      HOS3   .
+ AEN      HOS3   O3S    .      .
+ AEN      C1     S      C9     .
+ AEN      C9     C1     C10    .
+ AEN      C8     C9     C7     .
+ AEN      H8     C8     .      .
+ AEN      C7     C8     C6     .
+ AEN      H7     C7     .      .
+ AEN      C6     C7     H6     .
+ AEN      H6     C6     .      .
+ AEN      C10    C9     C5     .
+ AEN      C4     C10    C3     .
+ AEN      H4     C4     .      .
+ AEN      C3     C4     C2     .
+ AEN      H3     C3     .      .
+ AEN      C2     C3     H2     .
+ AEN      H2     C2     .      .
+ AEN      C5     C10    "N6'"  .
+ AEN      "N6'"  C5     "C5'"  .
+ AEN      "HN'6" "N6'"  .      .
+ AEN      "C5'"  "N6'"  "C4'"  .
+ AEN      "H5'1" "C5'"  .      .
+ AEN      "H5'2" "C5'"  .      .
+ AEN      "C4'"  "C5'"  "N3'"  .
+ AEN      "H4'1" "C4'"  .      .
+ AEN      "H4'2" "C4'"  .      .
+ AEN      "N3'"  "C4'"  "C2'"  .
+ AEN      "HN'3" "N3'"  .      .
+ AEN      "C2'"  "N3'"  "C1'"  .
+ AEN      "O2'"  "C2'"  .      .
+ AEN      "C1'"  "C2'"  "H1'1" .
+ AEN      "H1'3" "C1'"  .      .
+ AEN      "H1'2" "C1'"  .      .
+ AEN      "H1'1" "C1'"  .      END
+ AEN      C1     C2     .    ADD
+ AEN      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AEN      C1     C2        double      1.390    0.020
+ AEN      C9     C1        single      1.490    0.020
+ AEN      C1     S         single      1.595    0.020
+ AEN      C2     C3        single      1.390    0.020
+ AEN      H2     C2        single      1.083    0.020
+ AEN      C3     C4        double      1.390    0.020
+ AEN      H3     C3        single      1.083    0.020
+ AEN      C4     C10       single      1.390    0.020
+ AEN      H4     C4        single      1.083    0.020
+ AEN      C5     C6        double      1.390    0.020
+ AEN      C5     C10       single      1.490    0.020
+ AEN      "N6'"  C5        single      1.350    0.020
+ AEN      C6     C7        single      1.390    0.020
+ AEN      H6     C6        single      1.083    0.020
+ AEN      C7     C8        double      1.390    0.020
+ AEN      H7     C7        single      1.083    0.020
+ AEN      C8     C9        single      1.390    0.020
+ AEN      H8     C8        single      1.083    0.020
+ AEN      C10    C9        double      1.490    0.020
+ AEN      "C1'"  "C2'"     single      1.500    0.020
+ AEN      "H1'1" "C1'"     single      1.059    0.020
+ AEN      "H1'2" "C1'"     single      1.059    0.020
+ AEN      "H1'3" "C1'"     single      1.059    0.020
+ AEN      "O2'"  "C2'"     double      1.220    0.020
+ AEN      "C2'"  "N3'"     single      1.330    0.020
+ AEN      "N3'"  "C4'"     single      1.450    0.020
+ AEN      "HN'3" "N3'"     single      1.010    0.020
+ AEN      "C4'"  "C5'"     single      1.524    0.020
+ AEN      "H4'1" "C4'"     single      1.092    0.020
+ AEN      "H4'2" "C4'"     single      1.092    0.020
+ AEN      "C5'"  "N6'"     single      1.450    0.020
+ AEN      "H5'1" "C5'"     single      1.092    0.020
+ AEN      "H5'2" "C5'"     single      1.092    0.020
+ AEN      "HN'6" "N6'"     single      1.010    0.020
+ AEN      O1S    S         double      1.436    0.020
+ AEN      S      O2S       double      1.436    0.020
+ AEN      O3S    S         single      1.635    0.020
+ AEN      HOS3   O3S       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AEN      O2S    S      O1S     109.500    3.000
+ AEN      O2S    S      O3S     109.500    3.000
+ AEN      O2S    S      C1      109.500    3.000
+ AEN      O1S    S      O3S     109.500    3.000
+ AEN      O1S    S      C1      109.500    3.000
+ AEN      O3S    S      C1      109.500    3.000
+ AEN      S      O3S    HOS3    120.000    3.000
+ AEN      S      C1     C9      120.000    3.000
+ AEN      S      C1     C2      120.000    3.000
+ AEN      C9     C1     C2      120.000    3.000
+ AEN      C1     C9     C8      120.000    3.000
+ AEN      C1     C9     C10     120.000    3.000
+ AEN      C8     C9     C10     120.000    3.000
+ AEN      C9     C8     H8      120.000    3.000
+ AEN      C9     C8     C7      120.000    3.000
+ AEN      H8     C8     C7      120.000    3.000
+ AEN      C8     C7     H7      120.000    3.000
+ AEN      C8     C7     C6      120.000    3.000
+ AEN      H7     C7     C6      120.000    3.000
+ AEN      C7     C6     H6      120.000    3.000
+ AEN      C7     C6     C5      120.000    3.000
+ AEN      H6     C6     C5      120.000    3.000
+ AEN      C9     C10    C4      120.000    3.000
+ AEN      C9     C10    C5      120.000    3.000
+ AEN      C4     C10    C5      120.000    3.000
+ AEN      C10    C4     H4      120.000    3.000
+ AEN      C10    C4     C3      120.000    3.000
+ AEN      H4     C4     C3      120.000    3.000
+ AEN      C4     C3     H3      120.000    3.000
+ AEN      C4     C3     C2      120.000    3.000
+ AEN      H3     C3     C2      120.000    3.000
+ AEN      C3     C2     H2      120.000    3.000
+ AEN      C3     C2     C1      120.000    3.000
+ AEN      H2     C2     C1      120.000    3.000
+ AEN      C10    C5     "N6'"   120.000    3.000
+ AEN      C10    C5     C6      120.000    3.000
+ AEN      "N6'"  C5     C6      120.000    3.000
+ AEN      C5     "N6'"  "HN'6"  120.000    3.000
+ AEN      C5     "N6'"  "C5'"   120.000    3.000
+ AEN      "HN'6" "N6'"  "C5'"   118.500    3.000
+ AEN      "N6'"  "C5'"  "H5'1"  109.470    3.000
+ AEN      "N6'"  "C5'"  "H5'2"  109.470    3.000
+ AEN      "N6'"  "C5'"  "C4'"   112.000    3.000
+ AEN      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ AEN      "H5'1" "C5'"  "C4'"   109.470    3.000
+ AEN      "H5'2" "C5'"  "C4'"   109.470    3.000
+ AEN      "C5'"  "C4'"  "H4'1"  109.470    3.000
+ AEN      "C5'"  "C4'"  "H4'2"  109.470    3.000
+ AEN      "C5'"  "C4'"  "N3'"   112.000    3.000
+ AEN      "H4'1" "C4'"  "H4'2"  107.900    3.000
+ AEN      "H4'1" "C4'"  "N3'"   109.470    3.000
+ AEN      "H4'2" "C4'"  "N3'"   109.470    3.000
+ AEN      "C4'"  "N3'"  "HN'3"  118.500    3.000
+ AEN      "C4'"  "N3'"  "C2'"   121.500    3.000
+ AEN      "HN'3" "N3'"  "C2'"   120.000    3.000
+ AEN      "N3'"  "C2'"  "O2'"   123.000    3.000
+ AEN      "N3'"  "C2'"  "C1'"   116.500    3.000
+ AEN      "O2'"  "C2'"  "C1'"   123.000    3.000
+ AEN      "C2'"  "C1'"  "H1'3"  109.470    3.000
+ AEN      "C2'"  "C1'"  "H1'2"  109.470    3.000
+ AEN      "C2'"  "C1'"  "H1'1"  109.470    3.000
+ AEN      "H1'3" "C1'"  "H1'2"  109.470    3.000
+ AEN      "H1'3" "C1'"  "H1'1"  109.470    3.000
+ AEN      "H1'2" "C1'"  "H1'1"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AEN      var_1    O2S    S      O3S    HOS3     -67.388   20.000   1
+ AEN      var_2    O2S    S      C1     C9       -30.240   20.000   1
+ AEN      CONST_1  S      C1     C2     C3       180.000    0.000   0
+ AEN      CONST_2  S      C1     C9     C10      180.000    0.000   0
+ AEN      CONST_3  C1     C9     C8     C7       180.000    0.000   0
+ AEN      CONST_4  C9     C8     C7     C6         0.000    0.000   0
+ AEN      CONST_5  C8     C7     C6     C5         0.000    0.000   0
+ AEN      CONST_6  C1     C9     C10    C5       180.000    0.000   0
+ AEN      CONST_7  C9     C10    C4     C3         0.000    0.000   0
+ AEN      CONST_8  C10    C4     C3     C2         0.000    0.000   0
+ AEN      CONST_9  C4     C3     C2     C1         0.000    0.000   0
+ AEN      CONST_10 C9     C10    C5     "N6'"    180.000    0.000   0
+ AEN      CONST_11 C10    C5     C6     C7         0.000    0.000   0
+ AEN      var_3    C10    C5     "N6'"  "C5'"    179.720   20.000   1
+ AEN      var_4    C5     "N6'"  "C5'"  "C4'"   -179.987   20.000   3
+ AEN      var_5    "N6'"  "C5'"  "C4'"  "N3'"    180.000   20.000   3
+ AEN      var_6    "C5'"  "C4'"  "N3'"  "C2'"   -179.994   20.000   3
+ AEN      CONST_12 "C4'"  "N3'"  "C2'"  "C1'"    180.000    0.000   0
+ AEN      var_7    "N3'"  "C2'"  "C1'"  "H1'1"   179.994   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AEN      chir_01  S      C1     O1S    O2S       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AEN      plan-1    C1        0.020
+ AEN      plan-1    C2        0.020
+ AEN      plan-1    C9        0.020
+ AEN      plan-1    S         0.020
+ AEN      plan-1    C3        0.020
+ AEN      plan-1    C4        0.020
+ AEN      plan-1    H2        0.020
+ AEN      plan-1    H3        0.020
+ AEN      plan-1    C10       0.020
+ AEN      plan-1    H4        0.020
+ AEN      plan-1    C5        0.020
+ AEN      plan-1    C6        0.020
+ AEN      plan-1    "N6'"     0.020
+ AEN      plan-1    C7        0.020
+ AEN      plan-1    C8        0.020
+ AEN      plan-1    H6        0.020
+ AEN      plan-1    H7        0.020
+ AEN      plan-1    H8        0.020
+ AEN      plan-1    "HN'6"    0.020
+ AEN      plan-2    "C2'"     0.020
+ AEN      plan-2    "C1'"     0.020
+ AEN      plan-2    "O2'"     0.020
+ AEN      plan-2    "N3'"     0.020
+ AEN      plan-2    "HN'3"    0.020
+ AEN      plan-3    "N3'"     0.020
+ AEN      plan-3    "C2'"     0.020
+ AEN      plan-3    "C4'"     0.020
+ AEN      plan-3    "HN'3"    0.020
+ AEN      plan-4    "N6'"     0.020
+ AEN      plan-4    C5        0.020
+ AEN      plan-4    "C5'"     0.020
+ AEN      plan-4    "HN'6"    0.020
+# ------------------------------------------------------

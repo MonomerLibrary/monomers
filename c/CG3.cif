@@ -1,0 +1,167 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CG3      CG3 'HYDROXY(2-HYDROXYPHENYL)OXOAMMONIUM ' non-polymer        16  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CG3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CG3           OBI    O    O         0.000      0.000    0.000    0.000
+ CG3           NBG    N    N         1.000     -1.095    0.534    0.003
+ CG3           OBH    O    OH1       0.000     -1.180    1.749    0.032
+ CG3           HBO    H    H         0.000     -0.290    2.093    0.050
+ CG3           CBB    C    CR6       0.000     -2.205   -0.215   -0.021
+ CG3           CBA    C    CR16      0.000     -3.473    0.396   -0.018
+ CG3           HBA    H    H         0.000     -3.555    1.476    0.009
+ CG3           CAZ    C    CR16      0.000     -4.599   -0.374   -0.049
+ CG3           HAZ    H    H         0.000     -5.573    0.100   -0.056
+ CG3           CAY    C    CR16      0.000     -4.508   -1.759   -0.071
+ CG3           HAY    H    H         0.000     -5.411   -2.357   -0.090
+ CG3           CAX    C    CR16      0.000     -3.276   -2.382   -0.068
+ CG3           HAX    H    H         0.000     -3.216   -3.463   -0.086
+ CG3           CAW    C    CR6       0.000     -2.115   -1.625   -0.044
+ CG3           OAO    O    OH1       0.000     -0.904   -2.231   -0.042
+ CG3           HAO    H    H         0.000     -0.626   -2.390    0.870
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CG3      OBI    n/a    NBG    START
+ CG3      NBG    OBI    CBB    .
+ CG3      OBH    NBG    HBO    .
+ CG3      HBO    OBH    .      .
+ CG3      CBB    NBG    CBA    .
+ CG3      CBA    CBB    CAZ    .
+ CG3      HBA    CBA    .      .
+ CG3      CAZ    CBA    CAY    .
+ CG3      HAZ    CAZ    .      .
+ CG3      CAY    CAZ    CAX    .
+ CG3      HAY    CAY    .      .
+ CG3      CAX    CAY    CAW    .
+ CG3      HAX    CAX    .      .
+ CG3      CAW    CAX    OAO    .
+ CG3      OAO    CAW    HAO    .
+ CG3      HAO    OAO    .      END
+ CG3      CBB    CAW    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CG3      OBH    NBG       single      1.392    0.020
+ CG3      NBG    OBI       double      1.220    0.020
+ CG3      CBB    NBG       single      1.400    0.020
+ CG3      CBA    CBB       double      1.390    0.020
+ CG3      CBB    CAW       single      1.487    0.020
+ CG3      CAZ    CBA       single      1.390    0.020
+ CG3      CAY    CAZ       double      1.390    0.020
+ CG3      CAX    CAY       single      1.390    0.020
+ CG3      CAW    CAX       double      1.390    0.020
+ CG3      OAO    CAW       single      1.362    0.020
+ CG3      HBA    CBA       single      1.083    0.020
+ CG3      HAZ    CAZ       single      1.083    0.020
+ CG3      HAY    CAY       single      1.083    0.020
+ CG3      HAX    CAX       single      1.083    0.020
+ CG3      HAO    OAO       single      0.967    0.020
+ CG3      HBO    OBH       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CG3      OBI    NBG    OBH     120.000    3.000
+ CG3      OBI    NBG    CBB     120.000    3.000
+ CG3      OBH    NBG    CBB     120.000    3.000
+ CG3      NBG    OBH    HBO     109.470    3.000
+ CG3      NBG    CBB    CBA     120.000    3.000
+ CG3      NBG    CBB    CAW     120.000    3.000
+ CG3      CBA    CBB    CAW     120.000    3.000
+ CG3      CBB    CBA    HBA     120.000    3.000
+ CG3      CBB    CBA    CAZ     120.000    3.000
+ CG3      HBA    CBA    CAZ     120.000    3.000
+ CG3      CBA    CAZ    HAZ     120.000    3.000
+ CG3      CBA    CAZ    CAY     120.000    3.000
+ CG3      HAZ    CAZ    CAY     120.000    3.000
+ CG3      CAZ    CAY    HAY     120.000    3.000
+ CG3      CAZ    CAY    CAX     120.000    3.000
+ CG3      HAY    CAY    CAX     120.000    3.000
+ CG3      CAY    CAX    HAX     120.000    3.000
+ CG3      CAY    CAX    CAW     120.000    3.000
+ CG3      HAX    CAX    CAW     120.000    3.000
+ CG3      CAX    CAW    OAO     120.000    3.000
+ CG3      CAX    CAW    CBB     120.000    3.000
+ CG3      OAO    CAW    CBB     120.000    3.000
+ CG3      CAW    OAO    HAO     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CG3      var_1    OBI    NBG    OBH    HBO       -0.028   20.000   1
+ CG3      var_2    OBI    NBG    CBB    CBA     -179.986   20.000   1
+ CG3      CONST_1  NBG    CBB    CAW    CAX      180.000    0.000   0
+ CG3      CONST_2  NBG    CBB    CBA    CAZ      180.000    0.000   0
+ CG3      CONST_3  CBB    CBA    CAZ    CAY        0.000    0.000   0
+ CG3      CONST_4  CBA    CAZ    CAY    CAX        0.000    0.000   0
+ CG3      CONST_5  CAZ    CAY    CAX    CAW        0.000    0.000   0
+ CG3      CONST_6  CAY    CAX    CAW    OAO      180.000    0.000   0
+ CG3      var_3    CAX    CAW    OAO    HAO      -90.019   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CG3      plan-1    NBG       0.020
+ CG3      plan-1    OBH       0.020
+ CG3      plan-1    OBI       0.020
+ CG3      plan-1    CBB       0.020
+ CG3      plan-2    CBB       0.020
+ CG3      plan-2    NBG       0.020
+ CG3      plan-2    CAW       0.020
+ CG3      plan-2    CBA       0.020
+ CG3      plan-2    CAX       0.020
+ CG3      plan-2    CAY       0.020
+ CG3      plan-2    CAZ       0.020
+ CG3      plan-2    OAO       0.020
+ CG3      plan-2    HAX       0.020
+ CG3      plan-2    HAY       0.020
+ CG3      plan-2    HAZ       0.020
+ CG3      plan-2    HBA       0.020
+# ------------------------------------------------------

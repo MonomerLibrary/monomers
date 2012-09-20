@@ -1,0 +1,171 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AZG      AZG '5-AMINO-1H-[1,2,3]TRIAZOLO[4,5-D]PYR' non-polymer        15  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AZG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AZG           O6     O    OH1       0.000      0.000    0.000    0.000
+ AZG           HO6    H    H         0.000      0.316   -0.911   -0.059
+ AZG           C6     C    CR6       0.000     -1.332   -0.001    0.250
+ AZG           N1     N    NRD6      0.000     -1.787   -0.002    1.496
+ AZG           C2     C    CR6       0.000     -3.090   -0.004    1.751
+ AZG           N2     N    NH2       0.000     -3.513   -0.003    3.070
+ AZG           HN22   H    H         0.000     -4.503   -0.003    3.295
+ AZG           HN21   H    H         0.000     -2.837   -0.003    3.829
+ AZG           N3     N    NRD6      0.000     -3.998   -0.009    0.791
+ AZG           C5     C    CR56      0.000     -2.254   -0.003   -0.798
+ AZG           N7     N    NR15      0.000     -2.189   -0.002   -2.169
+ AZG           HN7    H    H         0.000     -1.319   -0.001   -2.740
+ AZG           N8     N    NRD5      0.000     -3.394   -0.003   -2.625
+ AZG           N9     N    NRD5      0.000     -4.261   -0.004   -1.674
+ AZG           C4     C    CR56      0.000     -3.625   -0.003   -0.490
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AZG      O6     n/a    C6     START
+ AZG      HO6    O6     .      .
+ AZG      C6     O6     C5     .
+ AZG      N1     C6     C2     .
+ AZG      C2     N1     N3     .
+ AZG      N2     C2     HN21   .
+ AZG      HN22   N2     .      .
+ AZG      HN21   N2     .      .
+ AZG      N3     C2     .      .
+ AZG      C5     C6     N7     .
+ AZG      N7     C5     N8     .
+ AZG      HN7    N7     .      .
+ AZG      N8     N7     N9     .
+ AZG      N9     N8     C4     .
+ AZG      C4     N9     .      END
+ AZG      C4     N3     .    ADD
+ AZG      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AZG      C4     N3        single      1.355    0.020
+ AZG      C4     C5        double      1.490    0.020
+ AZG      C4     N9        single      1.350    0.020
+ AZG      N3     C2        double      1.350    0.020
+ AZG      N2     C2        single      1.355    0.020
+ AZG      C2     N1        single      1.350    0.020
+ AZG      HN21   N2        single      1.010    0.020
+ AZG      HN22   N2        single      1.010    0.020
+ AZG      N1     C6        double      1.350    0.020
+ AZG      C6     O6        single      1.362    0.020
+ AZG      C5     C6        single      1.490    0.020
+ AZG      HO6    O6        single      0.967    0.020
+ AZG      N7     C5        single      1.340    0.020
+ AZG      N8     N7        single      1.402    0.020
+ AZG      HN7    N7        single      1.040    0.020
+ AZG      N9     N8        double      1.404    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AZG      HO6    O6     C6      109.470    3.000
+ AZG      O6     C6     N1      120.000    3.000
+ AZG      O6     C6     C5      120.000    3.000
+ AZG      N1     C6     C5      120.000    3.000
+ AZG      C6     N1     C2      120.000    3.000
+ AZG      N1     C2     N2      120.000    3.000
+ AZG      N1     C2     N3      120.000    3.000
+ AZG      N2     C2     N3      120.000    3.000
+ AZG      C2     N2     HN22    120.000    3.000
+ AZG      C2     N2     HN21    120.000    3.000
+ AZG      HN22   N2     HN21    120.000    3.000
+ AZG      C2     N3     C4      120.000    3.000
+ AZG      C6     C5     N7      132.000    3.000
+ AZG      C6     C5     C4      120.000    3.000
+ AZG      N7     C5     C4      108.000    3.000
+ AZG      C5     N7     HN7     126.000    3.000
+ AZG      C5     N7     N8      108.000    3.000
+ AZG      HN7    N7     N8      108.000    3.000
+ AZG      N7     N8     N9      108.000    3.000
+ AZG      N8     N9     C4      108.000    3.000
+ AZG      N9     C4     N3      120.000    3.000
+ AZG      N9     C4     C5      108.000    3.000
+ AZG      N3     C4     C5      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AZG      var_1    HO6    O6     C6     C5       -89.923   20.000   1
+ AZG      CONST_1  O6     C6     N1     C2       180.000    0.000   0
+ AZG      CONST_2  C6     N1     C2     N3         0.000    0.000   0
+ AZG      CONST_3  N1     C2     N2     HN21      -0.141    0.000   0
+ AZG      CONST_4  N1     C2     N3     C4         0.000    0.000   0
+ AZG      CONST_5  O6     C6     C5     N7         0.000    0.000   0
+ AZG      CONST_6  C6     C5     N7     N8       180.000    0.000   0
+ AZG      CONST_7  C5     N7     N8     N9         0.000    0.000   0
+ AZG      CONST_8  N7     N8     N9     C4         0.000    0.000   0
+ AZG      CONST_9  N8     N9     C4     N3       180.000    0.000   0
+ AZG      CONST_10 N9     C4     N3     C2       180.000    0.000   0
+ AZG      CONST_11 N9     C4     C5     C6       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AZG      plan-1    C4        0.020
+ AZG      plan-1    N3        0.020
+ AZG      plan-1    C5        0.020
+ AZG      plan-1    N9        0.020
+ AZG      plan-1    N7        0.020
+ AZG      plan-1    N8        0.020
+ AZG      plan-1    C2        0.020
+ AZG      plan-1    N1        0.020
+ AZG      plan-1    C6        0.020
+ AZG      plan-1    N2        0.020
+ AZG      plan-1    O6        0.020
+ AZG      plan-1    HN7       0.020
+ AZG      plan-1    HN22      0.020
+ AZG      plan-1    HN21      0.020
+ AZG      plan-2    N2        0.020
+ AZG      plan-2    C2        0.020
+ AZG      plan-2    HN21      0.020
+ AZG      plan-2    HN22      0.020
+# ------------------------------------------------------

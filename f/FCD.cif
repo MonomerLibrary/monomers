@@ -1,0 +1,208 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FCD      FCD '5-(2-CHLOROPHENYL)FURAN-2-CARBOXYLIC' non-polymer        21  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FCD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FCD           CL2    CL   CL        0.000      0.000    0.000    0.000
+ FCD           C6     C    CR6       0.000     -1.386   -0.293   -0.991
+ FCD           C5     C    CR16      0.000     -2.639    0.054   -0.484
+ FCD           H5     H    H         0.000     -2.721    0.492    0.503
+ FCD           C4     C    CR16      0.000     -3.785   -0.163   -1.248
+ FCD           H4     H    H         0.000     -4.758    0.106   -0.855
+ FCD           C3     C    CR16      0.000     -3.680   -0.727   -2.519
+ FCD           H3     H    H         0.000     -4.570   -0.895   -3.112
+ FCD           C2     C    CR16      0.000     -2.428   -1.074   -3.027
+ FCD           H2     H    H         0.000     -2.346   -1.511   -4.014
+ FCD           C1     C    CR6       0.000     -1.281   -0.856   -2.263
+ FCD           CD     C    CR5       0.000     -0.003   -1.230   -2.828
+ FCD           OA     O    O2        0.000      0.614   -0.257   -3.539
+ FCD           CG     C    CR15      0.000      0.741   -2.378   -2.805
+ FCD           HG     H    H         0.000      0.490   -3.310   -2.313
+ FCD           CB     C    CR15      0.000      1.907   -2.096   -3.555
+ FCD           HB     H    H         0.000      2.731   -2.770   -3.754
+ FCD           CA     C    CR5       0.000      1.782   -0.794   -3.981
+ FCD           C      C    C         0.000      2.639    0.028   -4.767
+ FCD           OB     O    OC       -0.500      3.690   -0.545   -5.130
+ FCD           OXT    O    OC       -0.500      2.430    1.215   -5.102
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FCD      CL2    n/a    C6     START
+ FCD      C6     CL2    C1     .
+ FCD      C5     C6     C4     .
+ FCD      H5     C5     .      .
+ FCD      C4     C5     C3     .
+ FCD      H4     C4     .      .
+ FCD      C3     C4     C2     .
+ FCD      H3     C3     .      .
+ FCD      C2     C3     H2     .
+ FCD      H2     C2     .      .
+ FCD      C1     C6     CD     .
+ FCD      CD     C1     CG     .
+ FCD      OA     CD     .      .
+ FCD      CG     CD     CB     .
+ FCD      HG     CG     .      .
+ FCD      CB     CG     CA     .
+ FCD      HB     CB     .      .
+ FCD      CA     CB     C      .
+ FCD      C      CA     OXT    .
+ FCD      OB     C      .      .
+ FCD      OXT    C      .      END
+ FCD      OA     CA     .    ADD
+ FCD      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FCD      OA     CA        single      1.370    0.020
+ FCD      OA     CD        single      1.370    0.020
+ FCD      C      CA        single      1.490    0.020
+ FCD      CA     CB        double      1.387    0.020
+ FCD      OB     C         deloc       1.250    0.020
+ FCD      OXT    C         deloc       1.250    0.020
+ FCD      CB     CG        single      1.380    0.020
+ FCD      HB     CB        single      1.083    0.020
+ FCD      CG     CD        double      1.387    0.020
+ FCD      HG     CG        single      1.083    0.020
+ FCD      CD     C1        single      1.490    0.020
+ FCD      C1     C2        double      1.390    0.020
+ FCD      C1     C6        single      1.487    0.020
+ FCD      C2     C3        single      1.390    0.020
+ FCD      H2     C2        single      1.083    0.020
+ FCD      C3     C4        double      1.390    0.020
+ FCD      H3     C3        single      1.083    0.020
+ FCD      C4     C5        single      1.390    0.020
+ FCD      H4     C4        single      1.083    0.020
+ FCD      C5     C6        double      1.390    0.020
+ FCD      H5     C5        single      1.083    0.020
+ FCD      C6     CL2       single      1.795    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FCD      CL2    C6     C5      120.000    3.000
+ FCD      CL2    C6     C1      120.000    3.000
+ FCD      C5     C6     C1      120.000    3.000
+ FCD      C6     C5     H5      120.000    3.000
+ FCD      C6     C5     C4      120.000    3.000
+ FCD      H5     C5     C4      120.000    3.000
+ FCD      C5     C4     H4      120.000    3.000
+ FCD      C5     C4     C3      120.000    3.000
+ FCD      H4     C4     C3      120.000    3.000
+ FCD      C4     C3     H3      120.000    3.000
+ FCD      C4     C3     C2      120.000    3.000
+ FCD      H3     C3     C2      120.000    3.000
+ FCD      C3     C2     H2      120.000    3.000
+ FCD      C3     C2     C1      120.000    3.000
+ FCD      H2     C2     C1      120.000    3.000
+ FCD      C6     C1     CD      120.000    3.000
+ FCD      C6     C1     C2      120.000    3.000
+ FCD      CD     C1     C2      120.000    3.000
+ FCD      C1     CD     OA      126.000    3.000
+ FCD      C1     CD     CG      126.000    3.000
+ FCD      OA     CD     CG      108.000    3.000
+ FCD      CD     OA     CA      108.000    3.000
+ FCD      CD     CG     HG      126.000    3.000
+ FCD      CD     CG     CB      108.000    3.000
+ FCD      HG     CG     CB      126.000    3.000
+ FCD      CG     CB     HB      126.000    3.000
+ FCD      CG     CB     CA      108.000    3.000
+ FCD      HB     CB     CA      126.000    3.000
+ FCD      CB     CA     C       126.000    3.000
+ FCD      CB     CA     OA      108.000    3.000
+ FCD      C      CA     OA      108.000    3.000
+ FCD      CA     C      OB      120.000    3.000
+ FCD      CA     C      OXT     120.000    3.000
+ FCD      OB     C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FCD      CONST_1  CL2    C6     C5     C4       180.000    0.000   0
+ FCD      CONST_2  C6     C5     C4     C3         0.000    0.000   0
+ FCD      CONST_3  C5     C4     C3     C2         0.000    0.000   0
+ FCD      CONST_4  C4     C3     C2     C1         0.000    0.000   0
+ FCD      CONST_5  CL2    C6     C1     CD         0.000    0.000   0
+ FCD      CONST_6  C6     C1     C2     C3         0.000    0.000   0
+ FCD      var_1    C6     C1     CD     CG        89.994   20.000   1
+ FCD      CONST_7  C1     CD     OA     CA       180.000    0.000   0
+ FCD      CONST_8  CD     OA     CA     CB         0.000    0.000   0
+ FCD      CONST_9  C1     CD     CG     CB       180.000    0.000   0
+ FCD      CONST_10 CD     CG     CB     CA         0.000    0.000   0
+ FCD      CONST_11 CG     CB     CA     C        180.000    0.000   0
+ FCD      var_2    CB     CA     C      OXT     -179.977   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FCD      plan-1    CA        0.020
+ FCD      plan-1    OA        0.020
+ FCD      plan-1    C         0.020
+ FCD      plan-1    CB        0.020
+ FCD      plan-1    CG        0.020
+ FCD      plan-1    CD        0.020
+ FCD      plan-1    HB        0.020
+ FCD      plan-1    HG        0.020
+ FCD      plan-1    C1        0.020
+ FCD      plan-2    C         0.020
+ FCD      plan-2    CA        0.020
+ FCD      plan-2    OB        0.020
+ FCD      plan-2    OXT       0.020
+ FCD      plan-3    C1        0.020
+ FCD      plan-3    CD        0.020
+ FCD      plan-3    C2        0.020
+ FCD      plan-3    C6        0.020
+ FCD      plan-3    C3        0.020
+ FCD      plan-3    C4        0.020
+ FCD      plan-3    C5        0.020
+ FCD      plan-3    H2        0.020
+ FCD      plan-3    H3        0.020
+ FCD      plan-3    H4        0.020
+ FCD      plan-3    H5        0.020
+ FCD      plan-3    CL2       0.020
+# ------------------------------------------------------

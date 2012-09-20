@@ -1,0 +1,350 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PRX      PRX '.                                   ' non-polymer        45  26 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PRX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PRX           O2P    O    OP       -0.500      0.000    0.000    0.000
+ PRX           P      P    P         0.000     -0.873    0.121   -1.192
+ PRX           O1P    O    OP       -0.500     -1.114   -1.225   -1.766
+ PRX           O3P    O    O2        0.000     -0.154    1.052   -2.290
+ PRX           C1P    C    CH2       0.000      1.080    0.416   -2.627
+ PRX           H1P1   H    H         0.000      0.879   -0.578   -3.032
+ PRX           H1P2   H    H         0.000      1.698    0.325   -1.732
+ PRX           C2P    C    CH2       0.000      1.817    1.255   -3.674
+ PRX           H2P1   H    H         0.000      2.018    2.249   -3.268
+ PRX           H2P2   H    H         0.000      1.197    1.347   -4.568
+ PRX           C3P    C    CH3       0.000      3.138    0.573   -4.035
+ PRX           H3P3   H    H         0.000      3.741    0.482   -3.167
+ PRX           H3P2   H    H         0.000      2.946   -0.392   -4.430
+ PRX           H3P1   H    H         0.000      3.652    1.152   -4.759
+ PRX           "O5'"  O    O2        0.000     -2.278    0.781   -0.765
+ PRX           "C5'"  C    CH2       0.000     -2.864   -0.087    0.208
+ PRX           "H5'1" H    H         0.000     -2.197   -0.171    1.068
+ PRX           "H5'2" H    H         0.000     -3.016   -1.075   -0.232
+ PRX           "C4'"  C    CH1       0.000     -4.209    0.485    0.658
+ PRX           "H4'"  H    H         0.000     -4.064    1.484    1.091
+ PRX           "C3'"  C    CH1       0.000     -4.853   -0.448    1.701
+ PRX           "H3'"  H    H         0.000     -4.231   -1.342    1.853
+ PRX           "O3'"  O    OH1       0.000     -5.053    0.236    2.939
+ PRX           H2     H    H         0.000     -5.511   -0.347    3.559
+ PRX           "C2'"  C    CH1       0.000     -6.215   -0.836    1.067
+ PRX           H1     H    H         0.000     -6.149   -1.810    0.562
+ PRX           "O2'"  O    OH1       0.000     -7.249   -0.843    2.053
+ PRX           "H2'"  H    H         0.000     -7.092   -1.563    2.679
+ PRX           "O4'"  O    O2        0.000     -5.106    0.564   -0.462
+ PRX           "C1'"  C    CH1       0.000     -6.434    0.305    0.043
+ PRX           "H1'"  H    H         0.000     -6.839    1.197    0.540
+ PRX           N9     N    NR5       0.000     -7.321   -0.130   -1.037
+ PRX           C4     C    CR56      0.000     -8.679    0.048   -1.093
+ PRX           N3     N    NRD6      0.000     -9.585    0.619   -0.306
+ PRX           C2     C    CR16      0.000    -10.856    0.639   -0.647
+ PRX           H3     H    H         0.000    -11.568    1.109    0.020
+ PRX           N1     N    NRD6      0.000    -11.295    0.108   -1.774
+ PRX           C6     C    CR6       0.000    -10.463   -0.479   -2.627
+ PRX           N6     N    NH2       0.000    -10.932   -1.034   -3.805
+ PRX           HN62   H    H         0.000    -10.293   -1.483   -4.454
+ PRX           HN61   H    H         0.000    -11.921   -0.999   -4.034
+ PRX           C5     C    CR56      0.000     -9.097   -0.525   -2.307
+ PRX           N7     N    NRD5      0.000     -7.991   -1.024   -2.912
+ PRX           C8     C    CR15      0.000     -6.949   -0.792   -2.169
+ PRX           H8     H    H         0.000     -5.935   -1.083   -2.413
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PRX      O2P    n/a    P      START
+ PRX      P      O2P    "O5'"  .
+ PRX      O1P    P      .      .
+ PRX      O3P    P      C1P    .
+ PRX      C1P    O3P    C2P    .
+ PRX      H1P1   C1P    .      .
+ PRX      H1P2   C1P    .      .
+ PRX      C2P    C1P    C3P    .
+ PRX      H2P1   C2P    .      .
+ PRX      H2P2   C2P    .      .
+ PRX      C3P    C2P    H3P1   .
+ PRX      H3P3   C3P    .      .
+ PRX      H3P2   C3P    .      .
+ PRX      H3P1   C3P    .      .
+ PRX      "O5'"  P      "C5'"  .
+ PRX      "C5'"  "O5'"  "C4'"  .
+ PRX      "H5'1" "C5'"  .      .
+ PRX      "H5'2" "C5'"  .      .
+ PRX      "C4'"  "C5'"  "O4'"  .
+ PRX      "H4'"  "C4'"  .      .
+ PRX      "C3'"  "C4'"  "C2'"  .
+ PRX      "H3'"  "C3'"  .      .
+ PRX      "O3'"  "C3'"  H2     .
+ PRX      H2     "O3'"  .      .
+ PRX      "C2'"  "C3'"  "O2'"  .
+ PRX      H1     "C2'"  .      .
+ PRX      "O2'"  "C2'"  "H2'"  .
+ PRX      "H2'"  "O2'"  .      .
+ PRX      "O4'"  "C4'"  "C1'"  .
+ PRX      "C1'"  "O4'"  N9     .
+ PRX      "H1'"  "C1'"  .      .
+ PRX      N9     "C1'"  C4     .
+ PRX      C4     N9     N3     .
+ PRX      N3     C4     C2     .
+ PRX      C2     N3     N1     .
+ PRX      H3     C2     .      .
+ PRX      N1     C2     C6     .
+ PRX      C6     N1     C5     .
+ PRX      N6     C6     HN61   .
+ PRX      HN62   N6     .      .
+ PRX      HN61   N6     .      .
+ PRX      C5     C6     N7     .
+ PRX      N7     C5     C8     .
+ PRX      C8     N7     H8     .
+ PRX      H8     C8     .      END
+ PRX      "C2'"  "C1'"  .    ADD
+ PRX      N9     C8     .    ADD
+ PRX      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PRX      "O2'"  "C2'"     single      1.432    0.020
+ PRX      "H2'"  "O2'"     single      0.967    0.020
+ PRX      "C2'"  "C1'"     single      1.524    0.020
+ PRX      "C2'"  "C3'"     single      1.524    0.020
+ PRX      H1     "C2'"     single      1.099    0.020
+ PRX      "C1'"  "O4'"     single      1.426    0.020
+ PRX      N9     "C1'"     single      1.485    0.020
+ PRX      "H1'"  "C1'"     single      1.099    0.020
+ PRX      "O4'"  "C4'"     single      1.426    0.020
+ PRX      "C4'"  "C5'"     single      1.524    0.020
+ PRX      "C3'"  "C4'"     single      1.524    0.020
+ PRX      "H4'"  "C4'"     single      1.099    0.020
+ PRX      "C5'"  "O5'"     single      1.426    0.020
+ PRX      "H5'1" "C5'"     single      1.092    0.020
+ PRX      "H5'2" "C5'"     single      1.092    0.020
+ PRX      "O5'"  P         single      1.610    0.020
+ PRX      O1P    P         deloc       1.510    0.020
+ PRX      P      O2P       deloc       1.510    0.020
+ PRX      O3P    P         single      1.610    0.020
+ PRX      C1P    O3P       single      1.426    0.020
+ PRX      C2P    C1P       single      1.524    0.020
+ PRX      H1P1   C1P       single      1.092    0.020
+ PRX      H1P2   C1P       single      1.092    0.020
+ PRX      C3P    C2P       single      1.513    0.020
+ PRX      H2P1   C2P       single      1.092    0.020
+ PRX      H2P2   C2P       single      1.092    0.020
+ PRX      H3P1   C3P       single      1.059    0.020
+ PRX      H3P2   C3P       single      1.059    0.020
+ PRX      H3P3   C3P       single      1.059    0.020
+ PRX      "O3'"  "C3'"     single      1.432    0.020
+ PRX      "H3'"  "C3'"     single      1.099    0.020
+ PRX      H2     "O3'"     single      0.967    0.020
+ PRX      N9     C8        single      1.337    0.020
+ PRX      C4     N9        single      1.337    0.020
+ PRX      C8     N7        double      1.350    0.020
+ PRX      H8     C8        single      1.083    0.020
+ PRX      N7     C5        single      1.350    0.020
+ PRX      C5     C4        double      1.490    0.020
+ PRX      C5     C6        single      1.490    0.020
+ PRX      N3     C4        single      1.355    0.020
+ PRX      C2     N3        double      1.337    0.020
+ PRX      N1     C2        single      1.337    0.020
+ PRX      H3     C2        single      1.083    0.020
+ PRX      C6     N1        double      1.350    0.020
+ PRX      N6     C6        single      1.355    0.020
+ PRX      HN61   N6        single      1.010    0.020
+ PRX      HN62   N6        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PRX      O2P    P      O1P     119.900    3.000
+ PRX      O2P    P      O3P     108.200    3.000
+ PRX      O2P    P      "O5'"   108.200    3.000
+ PRX      O1P    P      O3P     108.200    3.000
+ PRX      O1P    P      "O5'"   108.200    3.000
+ PRX      O3P    P      "O5'"   102.600    3.000
+ PRX      P      O3P    C1P     120.500    3.000
+ PRX      O3P    C1P    H1P1    109.470    3.000
+ PRX      O3P    C1P    H1P2    109.470    3.000
+ PRX      O3P    C1P    C2P     109.470    3.000
+ PRX      H1P1   C1P    H1P2    107.900    3.000
+ PRX      H1P1   C1P    C2P     109.470    3.000
+ PRX      H1P2   C1P    C2P     109.470    3.000
+ PRX      C1P    C2P    H2P1    109.470    3.000
+ PRX      C1P    C2P    H2P2    109.470    3.000
+ PRX      C1P    C2P    C3P     111.000    3.000
+ PRX      H2P1   C2P    H2P2    107.900    3.000
+ PRX      H2P1   C2P    C3P     109.470    3.000
+ PRX      H2P2   C2P    C3P     109.470    3.000
+ PRX      C2P    C3P    H3P3    109.470    3.000
+ PRX      C2P    C3P    H3P2    109.470    3.000
+ PRX      C2P    C3P    H3P1    109.470    3.000
+ PRX      H3P3   C3P    H3P2    109.470    3.000
+ PRX      H3P3   C3P    H3P1    109.470    3.000
+ PRX      H3P2   C3P    H3P1    109.470    3.000
+ PRX      P      "O5'"  "C5'"   120.500    3.000
+ PRX      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ PRX      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ PRX      "O5'"  "C5'"  "C4'"   109.470    3.000
+ PRX      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ PRX      "H5'1" "C5'"  "C4'"   109.470    3.000
+ PRX      "H5'2" "C5'"  "C4'"   109.470    3.000
+ PRX      "C5'"  "C4'"  "H4'"   108.340    3.000
+ PRX      "C5'"  "C4'"  "C3'"   111.000    3.000
+ PRX      "C5'"  "C4'"  "O4'"   109.470    3.000
+ PRX      "H4'"  "C4'"  "C3'"   108.340    3.000
+ PRX      "H4'"  "C4'"  "O4'"   109.470    3.000
+ PRX      "C3'"  "C4'"  "O4'"   109.470    3.000
+ PRX      "C4'"  "C3'"  "H3'"   108.340    3.000
+ PRX      "C4'"  "C3'"  "O3'"   109.470    3.000
+ PRX      "C4'"  "C3'"  "C2'"   111.000    3.000
+ PRX      "H3'"  "C3'"  "O3'"   109.470    3.000
+ PRX      "H3'"  "C3'"  "C2'"   108.340    3.000
+ PRX      "O3'"  "C3'"  "C2'"   109.470    3.000
+ PRX      "C3'"  "O3'"  H2      109.470    3.000
+ PRX      "C3'"  "C2'"  H1      108.340    3.000
+ PRX      "C3'"  "C2'"  "O2'"   109.470    3.000
+ PRX      "C3'"  "C2'"  "C1'"   111.000    3.000
+ PRX      H1     "C2'"  "O2'"   109.470    3.000
+ PRX      H1     "C2'"  "C1'"   108.340    3.000
+ PRX      "O2'"  "C2'"  "C1'"   109.470    3.000
+ PRX      "C2'"  "O2'"  "H2'"   109.470    3.000
+ PRX      "C4'"  "O4'"  "C1'"   111.800    3.000
+ PRX      "O4'"  "C1'"  "H1'"   109.470    3.000
+ PRX      "O4'"  "C1'"  N9      109.470    3.000
+ PRX      "O4'"  "C1'"  "C2'"   109.470    3.000
+ PRX      "H1'"  "C1'"  N9      109.470    3.000
+ PRX      "H1'"  "C1'"  "C2'"   108.340    3.000
+ PRX      N9     "C1'"  "C2'"   109.470    3.000
+ PRX      "C1'"  N9     C4      126.000    3.000
+ PRX      "C1'"  N9     C8      126.000    3.000
+ PRX      C4     N9     C8      108.000    3.000
+ PRX      N9     C4     N3      132.000    3.000
+ PRX      N9     C4     C5      108.000    3.000
+ PRX      N3     C4     C5      120.000    3.000
+ PRX      C4     N3     C2      120.000    3.000
+ PRX      N3     C2     H3      120.000    3.000
+ PRX      N3     C2     N1      120.000    3.000
+ PRX      H3     C2     N1      120.000    3.000
+ PRX      C2     N1     C6      120.000    3.000
+ PRX      N1     C6     N6      120.000    3.000
+ PRX      N1     C6     C5      120.000    3.000
+ PRX      N6     C6     C5      120.000    3.000
+ PRX      C6     N6     HN62    120.000    3.000
+ PRX      C6     N6     HN61    120.000    3.000
+ PRX      HN62   N6     HN61    120.000    3.000
+ PRX      C6     C5     N7      132.000    3.000
+ PRX      C6     C5     C4      120.000    3.000
+ PRX      N7     C5     C4      108.000    3.000
+ PRX      C5     N7     C8      108.000    3.000
+ PRX      N7     C8     H8      126.000    3.000
+ PRX      N7     C8     N9      108.000    3.000
+ PRX      H8     C8     N9      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PRX      var_1    O2P    P      O3P    C1P       59.958   20.000   1
+ PRX      var_2    P      O3P    C1P    C2P      179.961   20.000   1
+ PRX      var_3    O3P    C1P    C2P    C3P     -179.958   20.000   3
+ PRX      var_4    C1P    C2P    C3P    H3P1    -179.937   20.000   3
+ PRX      var_5    O2P    P      "O5'"  "C5'"    -59.945   20.000   1
+ PRX      var_6    P      "O5'"  "C5'"  "C4'"   -179.958   20.000   1
+ PRX      var_7    "O5'"  "C5'"  "C4'"  "O4'"     61.583   20.000   3
+ PRX      var_8    "C5'"  "C4'"  "C3'"  "C2'"   -120.000   20.000   3
+ PRX      var_9    "C4'"  "C3'"  "O3'"  H2       176.134   20.000   1
+ PRX      var_10   "C4'"  "C3'"  "C2'"  "O2'"   -150.000   20.000   3
+ PRX      var_11   "C3'"  "C2'"  "C1'"  "O4'"     30.000   20.000   3
+ PRX      var_12   "C3'"  "C2'"  "O2'"  "H2'"    -67.386   20.000   1
+ PRX      var_13   "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ PRX      var_14   "C4'"  "O4'"  "C1'"  N9      -150.000   20.000   1
+ PRX      var_15   "O4'"  "C1'"  N9     C4      -151.759   20.000   1
+ PRX      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
+ PRX      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
+ PRX      CONST_3  N9     C4     N3     C2       180.000    0.000   0
+ PRX      CONST_4  C4     N3     C2     N1         0.000    0.000   0
+ PRX      CONST_5  N3     C2     N1     C6         0.000    0.000   0
+ PRX      CONST_6  C2     N1     C6     C5         0.000    0.000   0
+ PRX      CONST_7  N1     C6     N6     HN61       0.083    0.000   0
+ PRX      CONST_8  N1     C6     C5     N7       180.000    0.000   0
+ PRX      CONST_9  C6     C5     C4     N9       180.000    0.000   0
+ PRX      CONST_10 C6     C5     N7     C8       180.000    0.000   0
+ PRX      CONST_11 C5     N7     C8     N9         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PRX      chir_01  "C2'"  "O2'"  "C1'"  "C3'"     negativ
+ PRX      chir_02  "C1'"  "C2'"  "O4'"  N9        negativ
+ PRX      chir_03  "C4'"  "O4'"  "C5'"  "C3'"     positiv
+ PRX      chir_04  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PRX      plan-1    N9        0.020
+ PRX      plan-1    "C1'"     0.020
+ PRX      plan-1    C8        0.020
+ PRX      plan-1    C4        0.020
+ PRX      plan-1    N7        0.020
+ PRX      plan-1    H8        0.020
+ PRX      plan-1    C5        0.020
+ PRX      plan-1    C6        0.020
+ PRX      plan-1    N3        0.020
+ PRX      plan-1    C2        0.020
+ PRX      plan-1    N1        0.020
+ PRX      plan-1    H3        0.020
+ PRX      plan-1    N6        0.020
+ PRX      plan-1    HN62      0.020
+ PRX      plan-1    HN61      0.020
+ PRX      plan-2    N6        0.020
+ PRX      plan-2    C6        0.020
+ PRX      plan-2    HN61      0.020
+ PRX      plan-2    HN62      0.020
+# ------------------------------------------------------

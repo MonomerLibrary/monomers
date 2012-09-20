@@ -1,0 +1,286 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BAU      BAU '1-((2-HYDROXYETHOXY)METHYL)-5-BENZYL' non-polymer        36  20 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BAU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BAU           OAA    O    O         0.000      0.000    0.000    0.000
+ BAU           CAR    C    CR6       0.000     -0.818    0.660   -0.616
+ BAU           NAN    N    NR16      0.000     -0.672    0.860   -1.942
+ BAU           HAN    H    H         0.000      0.146    0.453   -2.440
+ BAU           CAS    C    CR6       0.000     -1.579    1.584   -2.623
+ BAU           OAB    O    O         0.000     -1.433    1.756   -3.817
+ BAU           CAQ    C    CR6       0.000     -1.932    1.222    0.053
+ BAU           CAL    C    CH2       0.000     -2.120    1.012    1.532
+ BAU           HAL1   H    H         0.000     -2.718    1.829    1.942
+ BAU           HAL2   H    H         0.000     -1.145    0.994    2.024
+ BAU           CG     C    CR6       0.000     -2.827   -0.298    1.769
+ BAU           CD1    C    CR16      0.000     -4.207   -0.338    1.828
+ BAU           HD1    H    H         0.000     -4.781    0.572    1.707
+ BAU           CE1    C    CR16      0.000     -4.856   -1.540    2.040
+ BAU           HE1    H    H         0.000     -5.938   -1.573    2.080
+ BAU           CZ     C    CR16      0.000     -4.122   -2.702    2.202
+ BAU           HZ     H    H         0.000     -4.630   -3.643    2.371
+ BAU           CE2    C    CR16      0.000     -2.742   -2.660    2.148
+ BAU           HE2    H    H         0.000     -2.167   -3.570    2.275
+ BAU           CD2    C    CR16      0.000     -2.094   -1.459    1.932
+ BAU           HD2    H    H         0.000     -1.012   -1.426    1.890
+ BAU           CAI    C    CR16      0.000     -2.825    1.948   -0.654
+ BAU           HAI    H    H         0.000     -3.684    2.385   -0.160
+ BAU           NAT    N    NR6       0.000     -2.639    2.128   -1.998
+ BAU           CAM    C    CH2       0.000     -3.607    2.915   -2.765
+ BAU           HAM1   H    H         0.000     -3.075    3.606   -3.423
+ BAU           HAM2   H    H         0.000     -4.240    3.482   -2.079
+ BAU           OAO    O    O2        0.000     -4.420    2.039   -3.550
+ BAU           CAK    C    CH2       0.000     -5.386    1.469   -2.665
+ BAU           HAK1   H    H         0.000     -5.927    2.268   -2.155
+ BAU           HAK2   H    H         0.000     -4.880    0.845   -1.926
+ BAU           CAJ    C    CH2       0.000     -6.371    0.615   -3.467
+ BAU           HAJ1   H    H         0.000     -6.812    1.219   -4.263
+ BAU           HAJ2   H    H         0.000     -7.161    0.254   -2.806
+ BAU           OAC    O    OH1       0.000     -5.680   -0.497   -4.039
+ BAU           HAC    H    H         0.000     -6.302   -1.036   -4.546
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BAU      OAA    n/a    CAR    START
+ BAU      CAR    OAA    CAQ    .
+ BAU      NAN    CAR    CAS    .
+ BAU      HAN    NAN    .      .
+ BAU      CAS    NAN    OAB    .
+ BAU      OAB    CAS    .      .
+ BAU      CAQ    CAR    CAI    .
+ BAU      CAL    CAQ    CG     .
+ BAU      HAL1   CAL    .      .
+ BAU      HAL2   CAL    .      .
+ BAU      CG     CAL    CD1    .
+ BAU      CD1    CG     CE1    .
+ BAU      HD1    CD1    .      .
+ BAU      CE1    CD1    CZ     .
+ BAU      HE1    CE1    .      .
+ BAU      CZ     CE1    CE2    .
+ BAU      HZ     CZ     .      .
+ BAU      CE2    CZ     CD2    .
+ BAU      HE2    CE2    .      .
+ BAU      CD2    CE2    HD2    .
+ BAU      HD2    CD2    .      .
+ BAU      CAI    CAQ    NAT    .
+ BAU      HAI    CAI    .      .
+ BAU      NAT    CAI    CAM    .
+ BAU      CAM    NAT    OAO    .
+ BAU      HAM1   CAM    .      .
+ BAU      HAM2   CAM    .      .
+ BAU      OAO    CAM    CAK    .
+ BAU      CAK    OAO    CAJ    .
+ BAU      HAK1   CAK    .      .
+ BAU      HAK2   CAK    .      .
+ BAU      CAJ    CAK    OAC    .
+ BAU      HAJ1   CAJ    .      .
+ BAU      HAJ2   CAJ    .      .
+ BAU      OAC    CAJ    HAC    .
+ BAU      HAC    OAC    .      END
+ BAU      NAT    CAS    .    ADD
+ BAU      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BAU      OAC    CAJ       single      1.432    0.020
+ BAU      HAC    OAC       single      0.967    0.020
+ BAU      CAJ    CAK       single      1.524    0.020
+ BAU      HAJ1   CAJ       single      1.092    0.020
+ BAU      HAJ2   CAJ       single      1.092    0.020
+ BAU      CAK    OAO       single      1.426    0.020
+ BAU      HAK1   CAK       single      1.092    0.020
+ BAU      HAK2   CAK       single      1.092    0.020
+ BAU      OAO    CAM       single      1.426    0.020
+ BAU      CAM    NAT       single      1.465    0.020
+ BAU      HAM1   CAM       single      1.092    0.020
+ BAU      HAM2   CAM       single      1.092    0.020
+ BAU      NAT    CAS       single      1.410    0.020
+ BAU      NAT    CAI       single      1.337    0.020
+ BAU      OAB    CAS       double      1.250    0.020
+ BAU      CAS    NAN       single      1.337    0.020
+ BAU      NAN    CAR       single      1.337    0.020
+ BAU      HAN    NAN       single      1.040    0.020
+ BAU      CAR    OAA       double      1.250    0.020
+ BAU      CAQ    CAR       single      1.487    0.020
+ BAU      CAI    CAQ       double      1.390    0.020
+ BAU      HAI    CAI       single      1.083    0.020
+ BAU      CAL    CAQ       single      1.511    0.020
+ BAU      CG     CAL       single      1.511    0.020
+ BAU      HAL1   CAL       single      1.092    0.020
+ BAU      HAL2   CAL       single      1.092    0.020
+ BAU      CG     CD2       double      1.390    0.020
+ BAU      CD1    CG        single      1.390    0.020
+ BAU      CD2    CE2       single      1.390    0.020
+ BAU      HD2    CD2       single      1.083    0.020
+ BAU      CE2    CZ        double      1.390    0.020
+ BAU      HE2    CE2       single      1.083    0.020
+ BAU      CZ     CE1       single      1.390    0.020
+ BAU      HZ     CZ        single      1.083    0.020
+ BAU      CE1    CD1       double      1.390    0.020
+ BAU      HE1    CE1       single      1.083    0.020
+ BAU      HD1    CD1       single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BAU      OAA    CAR    NAN     120.000    3.000
+ BAU      OAA    CAR    CAQ     120.000    3.000
+ BAU      NAN    CAR    CAQ     120.000    3.000
+ BAU      CAR    NAN    HAN     120.000    3.000
+ BAU      CAR    NAN    CAS     120.000    3.000
+ BAU      HAN    NAN    CAS     120.000    3.000
+ BAU      NAN    CAS    OAB     120.000    3.000
+ BAU      NAN    CAS    NAT     120.000    3.000
+ BAU      OAB    CAS    NAT     120.000    3.000
+ BAU      CAR    CAQ    CAL     120.000    3.000
+ BAU      CAR    CAQ    CAI     120.000    3.000
+ BAU      CAL    CAQ    CAI     120.000    3.000
+ BAU      CAQ    CAL    HAL1    109.470    3.000
+ BAU      CAQ    CAL    HAL2    109.470    3.000
+ BAU      CAQ    CAL    CG      109.470    3.000
+ BAU      HAL1   CAL    HAL2    107.900    3.000
+ BAU      HAL1   CAL    CG      109.470    3.000
+ BAU      HAL2   CAL    CG      109.470    3.000
+ BAU      CAL    CG     CD1     120.000    3.000
+ BAU      CAL    CG     CD2     120.000    3.000
+ BAU      CD1    CG     CD2     120.000    3.000
+ BAU      CG     CD1    HD1     120.000    3.000
+ BAU      CG     CD1    CE1     120.000    3.000
+ BAU      HD1    CD1    CE1     120.000    3.000
+ BAU      CD1    CE1    HE1     120.000    3.000
+ BAU      CD1    CE1    CZ      120.000    3.000
+ BAU      HE1    CE1    CZ      120.000    3.000
+ BAU      CE1    CZ     HZ      120.000    3.000
+ BAU      CE1    CZ     CE2     120.000    3.000
+ BAU      HZ     CZ     CE2     120.000    3.000
+ BAU      CZ     CE2    HE2     120.000    3.000
+ BAU      CZ     CE2    CD2     120.000    3.000
+ BAU      HE2    CE2    CD2     120.000    3.000
+ BAU      CE2    CD2    HD2     120.000    3.000
+ BAU      CE2    CD2    CG      120.000    3.000
+ BAU      HD2    CD2    CG      120.000    3.000
+ BAU      CAQ    CAI    HAI     120.000    3.000
+ BAU      CAQ    CAI    NAT     120.000    3.000
+ BAU      HAI    CAI    NAT     120.000    3.000
+ BAU      CAI    NAT    CAM     120.000    3.000
+ BAU      CAI    NAT    CAS     120.000    3.000
+ BAU      CAM    NAT    CAS     120.000    3.000
+ BAU      NAT    CAM    HAM1    109.470    3.000
+ BAU      NAT    CAM    HAM2    109.470    3.000
+ BAU      NAT    CAM    OAO     109.500    3.000
+ BAU      HAM1   CAM    HAM2    107.900    3.000
+ BAU      HAM1   CAM    OAO     109.470    3.000
+ BAU      HAM2   CAM    OAO     109.470    3.000
+ BAU      CAM    OAO    CAK     111.800    3.000
+ BAU      OAO    CAK    HAK1    109.470    3.000
+ BAU      OAO    CAK    HAK2    109.470    3.000
+ BAU      OAO    CAK    CAJ     109.470    3.000
+ BAU      HAK1   CAK    HAK2    107.900    3.000
+ BAU      HAK1   CAK    CAJ     109.470    3.000
+ BAU      HAK2   CAK    CAJ     109.470    3.000
+ BAU      CAK    CAJ    HAJ1    109.470    3.000
+ BAU      CAK    CAJ    HAJ2    109.470    3.000
+ BAU      CAK    CAJ    OAC     109.470    3.000
+ BAU      HAJ1   CAJ    HAJ2    107.900    3.000
+ BAU      HAJ1   CAJ    OAC     109.470    3.000
+ BAU      HAJ2   CAJ    OAC     109.470    3.000
+ BAU      CAJ    OAC    HAC     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BAU      CONST_1  OAA    CAR    NAN    CAS      180.000    0.000   0
+ BAU      CONST_2  CAR    NAN    CAS    OAB      180.000    0.000   0
+ BAU      CONST_3  OAA    CAR    CAQ    CAI      180.000    0.000   0
+ BAU      var_1    CAR    CAQ    CAL    CG       -84.975   20.000   2
+ BAU      var_2    CAQ    CAL    CG     CD1      -90.260   20.000   2
+ BAU      CONST_4  CAL    CG     CD2    CE2      180.000    0.000   0
+ BAU      CONST_5  CAL    CG     CD1    CE1      180.000    0.000   0
+ BAU      CONST_6  CG     CD1    CE1    CZ         0.000    0.000   0
+ BAU      CONST_7  CD1    CE1    CZ     CE2        0.000    0.000   0
+ BAU      CONST_8  CE1    CZ     CE2    CD2        0.000    0.000   0
+ BAU      CONST_9  CZ     CE2    CD2    CG         0.000    0.000   0
+ BAU      CONST_10 CAR    CAQ    CAI    NAT        0.000    0.000   0
+ BAU      CONST_11 CAQ    CAI    NAT    CAM      180.000    0.000   0
+ BAU      CONST_12 CAI    NAT    CAS    NAN        0.000    0.000   0
+ BAU      var_3    CAI    NAT    CAM    OAO     -105.262   20.000   1
+ BAU      var_4    NAT    CAM    OAO    CAK       78.012   20.000   1
+ BAU      var_5    CAM    OAO    CAK    CAJ      174.893   20.000   1
+ BAU      var_6    OAO    CAK    CAJ    OAC       65.027   20.000   3
+ BAU      var_7    CAK    CAJ    OAC    HAC     -179.993   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BAU      plan-1    NAT       0.020
+ BAU      plan-1    CAM       0.020
+ BAU      plan-1    CAS       0.020
+ BAU      plan-1    CAI       0.020
+ BAU      plan-1    NAN       0.020
+ BAU      plan-1    CAR       0.020
+ BAU      plan-1    CAQ       0.020
+ BAU      plan-1    OAB       0.020
+ BAU      plan-1    HAN       0.020
+ BAU      plan-1    OAA       0.020
+ BAU      plan-1    HAI       0.020
+ BAU      plan-1    CAL       0.020
+ BAU      plan-2    CG        0.020
+ BAU      plan-2    CAL       0.020
+ BAU      plan-2    CD2       0.020
+ BAU      plan-2    CD1       0.020
+ BAU      plan-2    CE2       0.020
+ BAU      plan-2    CZ        0.020
+ BAU      plan-2    CE1       0.020
+ BAU      plan-2    HD2       0.020
+ BAU      plan-2    HE2       0.020
+ BAU      plan-2    HZ        0.020
+ BAU      plan-2    HE1       0.020
+ BAU      plan-2    HD1       0.020
+# ------------------------------------------------------

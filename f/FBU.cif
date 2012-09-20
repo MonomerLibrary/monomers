@@ -1,0 +1,182 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FBU      FBU '3,5-DIFLUOROBENZENESULFONAMIDE      ' non-polymer        17  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FBU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FBU           F12    F    F         0.000      0.000    0.000    0.000
+ FBU           C02    C    CR6       0.000     -1.153    0.009    0.705
+ FBU           C03    C    CR16      0.000     -2.369    0.039    0.043
+ FBU           HC3    H    H         0.000     -2.395    0.055   -1.040
+ FBU           C04    C    CR6       0.000     -3.547    0.048    0.763
+ FBU           S07    S    ST        0.000     -5.093    0.088   -0.080
+ FBU           O09    O    OS        0.000     -6.028    0.614    0.851
+ FBU           NP0    N    NH2       0.000     -5.556   -1.479   -0.343
+ FBU           HN02   H    H         0.000     -4.975   -2.255   -0.030
+ FBU           HN01   H    H         0.000     -6.430   -1.693   -0.821
+ FBU           O08    O    OS        0.000     -4.819    0.630   -1.365
+ FBU           C05    C    CR16      0.000     -3.516    0.030    2.144
+ FBU           HC5    H    H         0.000     -4.440    0.045    2.707
+ FBU           C06    C    CR6       0.000     -2.301   -0.006    2.808
+ FBU           F11    F    F         0.000     -2.269   -0.027    4.158
+ FBU           C01    C    CR16      0.000     -1.119   -0.014    2.088
+ FBU           HC1    H    H         0.000     -0.169   -0.038    2.607
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FBU      F12    n/a    C02    START
+ FBU      C02    F12    C03    .
+ FBU      C03    C02    C04    .
+ FBU      HC3    C03    .      .
+ FBU      C04    C03    C05    .
+ FBU      S07    C04    O08    .
+ FBU      O09    S07    .      .
+ FBU      NP0    S07    HN01   .
+ FBU      HN02   NP0    .      .
+ FBU      HN01   NP0    .      .
+ FBU      O08    S07    .      .
+ FBU      C05    C04    C06    .
+ FBU      HC5    C05    .      .
+ FBU      C06    C05    C01    .
+ FBU      F11    C06    .      .
+ FBU      C01    C06    HC1    .
+ FBU      HC1    C01    .      END
+ FBU      C01    C02    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FBU      C01    C02       double      1.390    0.020
+ FBU      C01    C06       single      1.390    0.020
+ FBU      HC1    C01       single      1.083    0.020
+ FBU      C03    C02       single      1.390    0.020
+ FBU      C02    F12       single      1.345    0.020
+ FBU      C04    C03       double      1.390    0.020
+ FBU      HC3    C03       single      1.083    0.020
+ FBU      C05    C04       single      1.390    0.020
+ FBU      S07    C04       single      1.595    0.020
+ FBU      C06    C05       double      1.390    0.020
+ FBU      HC5    C05       single      1.083    0.020
+ FBU      F11    C06       single      1.345    0.020
+ FBU      O08    S07       double      1.436    0.020
+ FBU      O09    S07       double      1.436    0.020
+ FBU      NP0    S07       single      1.600    0.020
+ FBU      HN01   NP0       single      1.010    0.020
+ FBU      HN02   NP0       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FBU      F12    C02    C03     120.000    3.000
+ FBU      F12    C02    C01     120.000    3.000
+ FBU      C03    C02    C01     120.000    3.000
+ FBU      C02    C03    HC3     120.000    3.000
+ FBU      C02    C03    C04     120.000    3.000
+ FBU      HC3    C03    C04     120.000    3.000
+ FBU      C03    C04    S07     120.000    3.000
+ FBU      C03    C04    C05     120.000    3.000
+ FBU      S07    C04    C05     120.000    3.000
+ FBU      C04    S07    NP0     109.500    3.000
+ FBU      C04    S07    O09     109.500    3.000
+ FBU      C04    S07    O08     109.500    3.000
+ FBU      NP0    S07    O09     109.500    3.000
+ FBU      NP0    S07    O08     109.500    3.000
+ FBU      O09    S07    O08     109.500    3.000
+ FBU      S07    NP0    HN02    120.000    3.000
+ FBU      S07    NP0    HN01    120.000    3.000
+ FBU      HN02   NP0    HN01    120.000    3.000
+ FBU      C04    C05    HC5     120.000    3.000
+ FBU      C04    C05    C06     120.000    3.000
+ FBU      HC5    C05    C06     120.000    3.000
+ FBU      C05    C06    F11     120.000    3.000
+ FBU      C05    C06    C01     120.000    3.000
+ FBU      F11    C06    C01     120.000    3.000
+ FBU      C06    C01    HC1     120.000    3.000
+ FBU      C06    C01    C02     120.000    3.000
+ FBU      HC1    C01    C02     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FBU      CONST_1  F12    C02    C03    C04      180.000    0.000   0
+ FBU      CONST_2  C02    C03    C04    C05        0.000    0.000   0
+ FBU      var_1    C03    C04    S07    O08      -22.663   20.000   1
+ FBU      var_2    C04    S07    NP0    HN01     180.000   20.000   1
+ FBU      CONST_3  C03    C04    C05    C06        0.000    0.000   0
+ FBU      CONST_4  C04    C05    C06    C01        0.000    0.000   0
+ FBU      CONST_5  C05    C06    C01    C02        0.000    0.000   0
+ FBU      CONST_6  C06    C01    C02    F12      180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FBU      chir_01  S07    C04    O08    O09       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FBU      plan-1    C01       0.020
+ FBU      plan-1    C02       0.020
+ FBU      plan-1    C06       0.020
+ FBU      plan-1    HC1       0.020
+ FBU      plan-1    C03       0.020
+ FBU      plan-1    C04       0.020
+ FBU      plan-1    C05       0.020
+ FBU      plan-1    F12       0.020
+ FBU      plan-1    HC3       0.020
+ FBU      plan-1    S07       0.020
+ FBU      plan-1    HC5       0.020
+ FBU      plan-1    F11       0.020
+ FBU      plan-2    NP0       0.020
+ FBU      plan-2    S07       0.020
+ FBU      plan-2    HN01      0.020
+ FBU      plan-2    HN02      0.020
+# ------------------------------------------------------

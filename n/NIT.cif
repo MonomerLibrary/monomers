@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NIT      NIT '4-NITROANILINE                      ' non-polymer        16  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NIT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NIT           ON2    O    O         0.000      0.000    0.000    0.000
+ NIT           N4     N    N         1.000     -1.073    0.577    0.001
+ NIT           ON1    O    O        -1.000     -1.110    1.795    0.002
+ NIT           C4     C    CR6       0.000     -2.332   -0.201   -0.001
+ NIT           C3     C    CR16      0.000     -3.549    0.455   -0.001
+ NIT           H3     H    H         0.000     -3.580    1.538    0.000
+ NIT           C2     C    CR16      0.000     -4.725   -0.268   -0.001
+ NIT           H2     H    H         0.000     -5.678    0.246   -0.001
+ NIT           C5     C    CR16      0.000     -2.288   -1.584   -0.003
+ NIT           H5     H    H         0.000     -1.333   -2.095   -0.008
+ NIT           C6     C    CR16      0.000     -3.461   -2.313    0.003
+ NIT           H6     H    H         0.000     -3.426   -3.395    0.011
+ NIT           C1     C    CR6       0.000     -4.685   -1.657   -0.003
+ NIT           N1     N    NH2       0.000     -5.873   -2.392   -0.004
+ NIT           HN12   H    H         0.000     -5.856   -3.409   -0.005
+ NIT           HN11   H    H         0.000     -6.776   -1.921   -0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NIT      ON2    n/a    N4     START
+ NIT      N4     ON2    C4     .
+ NIT      ON1    N4     .      .
+ NIT      C4     N4     C5     .
+ NIT      C3     C4     C2     .
+ NIT      H3     C3     .      .
+ NIT      C2     C3     H2     .
+ NIT      H2     C2     .      .
+ NIT      C5     C4     C6     .
+ NIT      H5     C5     .      .
+ NIT      C6     C5     C1     .
+ NIT      H6     C6     .      .
+ NIT      C1     C6     N1     .
+ NIT      N1     C1     HN11   .
+ NIT      HN12   N1     .      .
+ NIT      HN11   N1     .      END
+ NIT      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NIT      N1     C1        single      1.355    0.020
+ NIT      HN11   N1        single      1.010    0.020
+ NIT      HN12   N1        single      1.010    0.020
+ NIT      C1     C2        double      1.390    0.020
+ NIT      C1     C6        single      1.390    0.020
+ NIT      C2     C3        single      1.390    0.020
+ NIT      H2     C2        single      1.083    0.020
+ NIT      C3     C4        double      1.390    0.020
+ NIT      H3     C3        single      1.083    0.020
+ NIT      C4     N4        single      1.400    0.020
+ NIT      C5     C4        single      1.390    0.020
+ NIT      ON1    N4        single      1.400    0.020
+ NIT      N4     ON2       double      1.220    0.020
+ NIT      C6     C5        double      1.390    0.020
+ NIT      H5     C5        single      1.083    0.020
+ NIT      H6     C6        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NIT      ON2    N4     ON1     120.000    3.000
+ NIT      ON2    N4     C4      120.000    3.000
+ NIT      ON1    N4     C4      120.000    3.000
+ NIT      N4     C4     C3      120.000    3.000
+ NIT      N4     C4     C5      120.000    3.000
+ NIT      C3     C4     C5      120.000    3.000
+ NIT      C4     C3     H3      120.000    3.000
+ NIT      C4     C3     C2      120.000    3.000
+ NIT      H3     C3     C2      120.000    3.000
+ NIT      C3     C2     H2      120.000    3.000
+ NIT      C3     C2     C1      120.000    3.000
+ NIT      H2     C2     C1      120.000    3.000
+ NIT      C4     C5     H5      120.000    3.000
+ NIT      C4     C5     C6      120.000    3.000
+ NIT      H5     C5     C6      120.000    3.000
+ NIT      C5     C6     H6      120.000    3.000
+ NIT      C5     C6     C1      120.000    3.000
+ NIT      H6     C6     C1      120.000    3.000
+ NIT      C6     C1     N1      120.000    3.000
+ NIT      C6     C1     C2      120.000    3.000
+ NIT      N1     C1     C2      120.000    3.000
+ NIT      C1     N1     HN12    120.000    3.000
+ NIT      C1     N1     HN11    120.000    3.000
+ NIT      HN12   N1     HN11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NIT      var_1    ON2    N4     C4     C5         0.051   20.000   1
+ NIT      CONST_1  N4     C4     C3     C2       180.000    0.000   0
+ NIT      CONST_2  C4     C3     C2     C1         0.000    0.000   0
+ NIT      CONST_3  N4     C4     C5     C6       180.000    0.000   0
+ NIT      CONST_4  C4     C5     C6     C1         0.000    0.000   0
+ NIT      CONST_5  C5     C6     C1     N1       180.000    0.000   0
+ NIT      CONST_6  C6     C1     C2     C3         0.000    0.000   0
+ NIT      CONST_7  C6     C1     N1     HN11     179.693    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NIT      plan-1    N1        0.020
+ NIT      plan-1    C1        0.020
+ NIT      plan-1    HN11      0.020
+ NIT      plan-1    HN12      0.020
+ NIT      plan-2    C1        0.020
+ NIT      plan-2    N1        0.020
+ NIT      plan-2    C2        0.020
+ NIT      plan-2    C6        0.020
+ NIT      plan-2    C3        0.020
+ NIT      plan-2    C4        0.020
+ NIT      plan-2    C5        0.020
+ NIT      plan-2    H2        0.020
+ NIT      plan-2    H3        0.020
+ NIT      plan-2    N4        0.020
+ NIT      plan-2    H5        0.020
+ NIT      plan-2    H6        0.020
+ NIT      plan-2    HN12      0.020
+ NIT      plan-2    HN11      0.020
+ NIT      plan-3    N4        0.020
+ NIT      plan-3    C4        0.020
+ NIT      plan-3    ON1       0.020
+ NIT      plan-3    ON2       0.020
+# ------------------------------------------------------

@@ -1,0 +1,269 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AX8      AX8 '1-(3,4-dichlorobenzyl)-1H-benzimidaz' non-polymer        30  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AX8
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AX8           CLAB   CL   CL        0.000      0.000    0.000    0.000
+ AX8           CAN    C    CR6       0.000     -1.689    0.113   -0.386
+ AX8           CAO    C    CR6       0.000     -2.466   -1.032   -0.436
+ AX8           CLAC   CL   CL        0.000     -1.752   -2.581   -0.113
+ AX8           CAG    C    CR16      0.000     -2.260    1.346   -0.644
+ AX8           HAG    H    H         0.000     -1.653    2.242   -0.605
+ AX8           CAF    C    CR16      0.000     -3.604    1.436   -0.951
+ AX8           HAF    H    H         0.000     -4.051    2.401   -1.152
+ AX8           CAM    C    CR6       0.000     -4.380    0.292   -1.000
+ AX8           CAJ    C    CR16      0.000     -3.811   -0.941   -0.743
+ AX8           HAJ    H    H         0.000     -4.419   -1.837   -0.783
+ AX8           CAK    C    CH2       0.000     -5.846    0.391   -1.336
+ AX8           HAK    H    H         0.000     -6.166   -0.523   -1.840
+ AX8           HAKA   H    H         0.000     -6.011    1.246   -1.994
+ AX8           NAS    N    NR5       0.000     -6.618    0.566   -0.103
+ AX8           CAP    C    CR5       0.000     -7.145   -0.429    0.670
+ AX8           NAA    N    NH2       0.000     -7.033   -1.778    0.410
+ AX8           HNAB   H    H         0.000     -7.453   -2.459    1.034
+ AX8           HNAA   H    H         0.000     -6.529   -2.104   -0.408
+ AX8           NAL    N    NRD5      0.000     -7.770    0.091    1.697
+ AX8           CAQ    C    CR56      0.000     -7.691    1.446    1.643
+ AX8           CAR    C    CR56      0.000     -6.954    1.771    0.492
+ AX8           CAH    C    CR16      0.000     -8.174    2.470    2.461
+ AX8           HAH    H    H         0.000     -8.742    2.231    3.352
+ AX8           CAD    C    CR16      0.000     -7.925    3.784    2.132
+ AX8           HAD    H    H         0.000     -8.302    4.577    2.766
+ AX8           CAE    C    CR16      0.000     -7.197    4.098    0.995
+ AX8           HAE    H    H         0.000     -7.006    5.136    0.748
+ AX8           CAI    C    CR16      0.000     -6.713    3.099    0.176
+ AX8           HAI    H    H         0.000     -6.146    3.351   -0.711
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AX8      CLAB   n/a    CAN    START
+ AX8      CAN    CLAB   CAG    .
+ AX8      CAO    CAN    CLAC   .
+ AX8      CLAC   CAO    .      .
+ AX8      CAG    CAN    CAF    .
+ AX8      HAG    CAG    .      .
+ AX8      CAF    CAG    CAM    .
+ AX8      HAF    CAF    .      .
+ AX8      CAM    CAF    CAK    .
+ AX8      CAJ    CAM    HAJ    .
+ AX8      HAJ    CAJ    .      .
+ AX8      CAK    CAM    NAS    .
+ AX8      HAK    CAK    .      .
+ AX8      HAKA   CAK    .      .
+ AX8      NAS    CAK    CAP    .
+ AX8      CAP    NAS    NAL    .
+ AX8      NAA    CAP    HNAA   .
+ AX8      HNAB   NAA    .      .
+ AX8      HNAA   NAA    .      .
+ AX8      NAL    CAP    CAQ    .
+ AX8      CAQ    NAL    CAH    .
+ AX8      CAR    CAQ    .      .
+ AX8      CAH    CAQ    CAD    .
+ AX8      HAH    CAH    .      .
+ AX8      CAD    CAH    CAE    .
+ AX8      HAD    CAD    .      .
+ AX8      CAE    CAD    CAI    .
+ AX8      HAE    CAE    .      .
+ AX8      CAI    CAE    HAI    .
+ AX8      HAI    CAI    .      END
+ AX8      CAJ    CAO    .    ADD
+ AX8      NAS    CAR    .    ADD
+ AX8      CAR    CAI    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AX8      CAJ    CAO       double      1.390    0.020
+ AX8      CAJ    CAM       single      1.390    0.020
+ AX8      CLAC   CAO       single      1.795    0.020
+ AX8      CAO    CAN       single      1.487    0.020
+ AX8      CAN    CLAB      single      1.795    0.020
+ AX8      CAG    CAN       double      1.390    0.020
+ AX8      CAF    CAG       single      1.390    0.020
+ AX8      CAM    CAF       double      1.390    0.020
+ AX8      CAK    CAM       single      1.511    0.020
+ AX8      NAS    CAK       single      1.462    0.020
+ AX8      NAS    CAR       single      1.337    0.020
+ AX8      CAP    NAS       single      1.337    0.020
+ AX8      CAR    CAI       double      1.390    0.020
+ AX8      CAR    CAQ       single      1.490    0.020
+ AX8      CAI    CAE       single      1.390    0.020
+ AX8      CAE    CAD       double      1.390    0.020
+ AX8      CAD    CAH       single      1.390    0.020
+ AX8      CAH    CAQ       double      1.390    0.020
+ AX8      CAQ    NAL       single      1.350    0.020
+ AX8      NAL    CAP       double      1.350    0.020
+ AX8      NAA    CAP       single      1.355    0.020
+ AX8      HAJ    CAJ       single      1.083    0.020
+ AX8      HAG    CAG       single      1.083    0.020
+ AX8      HAF    CAF       single      1.083    0.020
+ AX8      HAK    CAK       single      1.092    0.020
+ AX8      HAKA   CAK       single      1.092    0.020
+ AX8      HAI    CAI       single      1.083    0.020
+ AX8      HAE    CAE       single      1.083    0.020
+ AX8      HAD    CAD       single      1.083    0.020
+ AX8      HAH    CAH       single      1.083    0.020
+ AX8      HNAA   NAA       single      1.010    0.020
+ AX8      HNAB   NAA       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AX8      CLAB   CAN    CAO     120.000    3.000
+ AX8      CLAB   CAN    CAG     120.000    3.000
+ AX8      CAO    CAN    CAG     120.000    3.000
+ AX8      CAN    CAO    CLAC    120.000    3.000
+ AX8      CAN    CAO    CAJ     120.000    3.000
+ AX8      CLAC   CAO    CAJ     120.000    3.000
+ AX8      CAN    CAG    HAG     120.000    3.000
+ AX8      CAN    CAG    CAF     120.000    3.000
+ AX8      HAG    CAG    CAF     120.000    3.000
+ AX8      CAG    CAF    HAF     120.000    3.000
+ AX8      CAG    CAF    CAM     120.000    3.000
+ AX8      HAF    CAF    CAM     120.000    3.000
+ AX8      CAF    CAM    CAJ     120.000    3.000
+ AX8      CAF    CAM    CAK     120.000    3.000
+ AX8      CAJ    CAM    CAK     120.000    3.000
+ AX8      CAM    CAJ    HAJ     120.000    3.000
+ AX8      CAM    CAJ    CAO     120.000    3.000
+ AX8      HAJ    CAJ    CAO     120.000    3.000
+ AX8      CAM    CAK    HAK     109.470    3.000
+ AX8      CAM    CAK    HAKA    109.470    3.000
+ AX8      CAM    CAK    NAS     109.500    3.000
+ AX8      HAK    CAK    HAKA    107.900    3.000
+ AX8      HAK    CAK    NAS     109.500    3.000
+ AX8      HAKA   CAK    NAS     109.500    3.000
+ AX8      CAK    NAS    CAP     126.000    3.000
+ AX8      CAK    NAS    CAR     126.000    3.000
+ AX8      CAP    NAS    CAR     108.000    3.000
+ AX8      NAS    CAP    NAA     108.000    3.000
+ AX8      NAS    CAP    NAL     108.000    3.000
+ AX8      NAA    CAP    NAL     108.000    3.000
+ AX8      CAP    NAA    HNAB    120.000    3.000
+ AX8      CAP    NAA    HNAA    120.000    3.000
+ AX8      HNAB   NAA    HNAA    120.000    3.000
+ AX8      CAP    NAL    CAQ     108.000    3.000
+ AX8      NAL    CAQ    CAR     108.000    3.000
+ AX8      NAL    CAQ    CAH     132.000    3.000
+ AX8      CAR    CAQ    CAH     120.000    3.000
+ AX8      CAQ    CAR    NAS     108.000    3.000
+ AX8      CAQ    CAR    CAI     120.000    3.000
+ AX8      NAS    CAR    CAI     132.000    3.000
+ AX8      CAQ    CAH    HAH     120.000    3.000
+ AX8      CAQ    CAH    CAD     120.000    3.000
+ AX8      HAH    CAH    CAD     120.000    3.000
+ AX8      CAH    CAD    HAD     120.000    3.000
+ AX8      CAH    CAD    CAE     120.000    3.000
+ AX8      HAD    CAD    CAE     120.000    3.000
+ AX8      CAD    CAE    HAE     120.000    3.000
+ AX8      CAD    CAE    CAI     120.000    3.000
+ AX8      HAE    CAE    CAI     120.000    3.000
+ AX8      CAE    CAI    HAI     120.000    3.000
+ AX8      CAE    CAI    CAR     120.000    3.000
+ AX8      HAI    CAI    CAR     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AX8      CONST_1  CLAB   CAN    CAO    CLAC       0.000    0.000   0
+ AX8      CONST_2  CLAB   CAN    CAG    CAF      180.000    0.000   0
+ AX8      CONST_3  CAN    CAG    CAF    CAM        0.000    0.000   0
+ AX8      CONST_4  CAG    CAF    CAM    CAK      180.000    0.000   0
+ AX8      CONST_5  CAF    CAM    CAJ    CAO        0.000    0.000   0
+ AX8      CONST_6  CAM    CAJ    CAO    CAN        0.000    0.000   0
+ AX8      var_1    CAF    CAM    CAK    NAS      -90.012   20.000   2
+ AX8      var_2    CAM    CAK    NAS    CAP      -90.315   20.000   1
+ AX8      CONST_7  CAK    NAS    CAR    CAQ      180.000    0.000   0
+ AX8      CONST_8  CAK    NAS    CAP    NAL      180.000    0.000   0
+ AX8      CONST_9  NAS    CAP    NAA    HNAA      -0.013    0.000   0
+ AX8      CONST_10 NAS    CAP    NAL    CAQ        0.000    0.000   0
+ AX8      CONST_11 CAP    NAL    CAQ    CAH      180.000    0.000   0
+ AX8      CONST_12 NAL    CAQ    CAR    NAS        0.000    0.000   0
+ AX8      CONST_13 CAQ    CAR    CAI    CAE        0.000    0.000   0
+ AX8      CONST_14 NAL    CAQ    CAH    CAD      180.000    0.000   0
+ AX8      CONST_15 CAQ    CAH    CAD    CAE        0.000    0.000   0
+ AX8      CONST_16 CAH    CAD    CAE    CAI        0.000    0.000   0
+ AX8      CONST_17 CAD    CAE    CAI    CAR        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AX8      plan-1    CAJ       0.020
+ AX8      plan-1    CAO       0.020
+ AX8      plan-1    CAM       0.020
+ AX8      plan-1    HAJ       0.020
+ AX8      plan-1    CAN       0.020
+ AX8      plan-1    CAG       0.020
+ AX8      plan-1    CAF       0.020
+ AX8      plan-1    CLAC      0.020
+ AX8      plan-1    CLAB      0.020
+ AX8      plan-1    HAG       0.020
+ AX8      plan-1    HAF       0.020
+ AX8      plan-1    CAK       0.020
+ AX8      plan-2    NAS       0.020
+ AX8      plan-2    CAK       0.020
+ AX8      plan-2    CAR       0.020
+ AX8      plan-2    CAP       0.020
+ AX8      plan-2    NAL       0.020
+ AX8      plan-2    CAI       0.020
+ AX8      plan-2    CAQ       0.020
+ AX8      plan-2    CAE       0.020
+ AX8      plan-2    CAD       0.020
+ AX8      plan-2    CAH       0.020
+ AX8      plan-2    HAI       0.020
+ AX8      plan-2    HAE       0.020
+ AX8      plan-2    HAD       0.020
+ AX8      plan-2    HAH       0.020
+ AX8      plan-2    NAA       0.020
+ AX8      plan-2    HNAB      0.020
+ AX8      plan-2    HNAA      0.020
+ AX8      plan-3    NAA       0.020
+ AX8      plan-3    CAP       0.020
+ AX8      plan-3    HNAA      0.020
+ AX8      plan-3    HNAB      0.020
+# ------------------------------------------------------

@@ -1,0 +1,257 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+IBM      IBM '3-ISOBUTYL-1-METHYLXANTHINE         ' non-polymer        30  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_IBM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ IBM           O2     O    O         0.000      0.000    0.000    0.000
+ IBM           C2     C    CR6       0.000     -1.106    0.012   -0.504
+ IBM           N3     N    NR6       0.000     -2.172   -0.271    0.264
+ IBM           C11    C    CH2       0.000     -1.979   -0.586    1.682
+ IBM           H111   H    H         0.000     -1.003   -1.057    1.821
+ IBM           H112   H    H         0.000     -2.762   -1.271    2.013
+ IBM           C12    C    CH1       0.000     -2.046    0.702    2.504
+ IBM           H12    H    H         0.000     -3.028    1.175    2.364
+ IBM           C14    C    CH3       0.000     -0.949    1.661    2.041
+ IBM           H143   H    H         0.000     -1.087    1.889    1.016
+ IBM           H142   H    H         0.000     -0.995    2.553    2.611
+ IBM           H141   H    H         0.000     -0.001    1.206    2.176
+ IBM           C13    C    CH3       0.000     -1.845    0.373    3.985
+ IBM           H133   H    H         0.000     -2.605   -0.291    4.307
+ IBM           H132   H    H         0.000     -0.898   -0.083    4.121
+ IBM           H131   H    H         0.000     -1.891    1.264    4.555
+ IBM           C4     C    CR56      0.000     -3.441   -0.274   -0.265
+ IBM           N9     N    NR15      0.000     -4.682   -0.506    0.238
+ IBM           HN9    H    H         0.000     -4.909   -0.754    1.222
+ IBM           N1     N    NR6       0.000     -1.220    0.308   -1.809
+ IBM           C10    C    CH3       0.000     -0.017    0.606   -2.589
+ IBM           H103   H    H         0.000      0.474    1.448   -2.174
+ IBM           H102   H    H         0.000      0.635   -0.229   -2.566
+ IBM           H101   H    H         0.000     -0.288    0.815   -3.591
+ IBM           C6     C    CR6       0.000     -2.428    0.331   -2.412
+ IBM           O6     O    O         0.000     -2.529    0.599   -3.595
+ IBM           C5     C    CR56      0.000     -3.614    0.028   -1.610
+ IBM           N7     N    NRD5      0.000     -4.942   -0.037   -1.872
+ IBM           C8     C    CR15      0.000     -5.576   -0.353   -0.781
+ IBM           H8     H    H         0.000     -6.649   -0.477   -0.695
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ IBM      O2     n/a    C2     START
+ IBM      C2     O2     N1     .
+ IBM      N3     C2     C4     .
+ IBM      C11    N3     C12    .
+ IBM      H111   C11    .      .
+ IBM      H112   C11    .      .
+ IBM      C12    C11    C13    .
+ IBM      H12    C12    .      .
+ IBM      C14    C12    H141   .
+ IBM      H143   C14    .      .
+ IBM      H142   C14    .      .
+ IBM      H141   C14    .      .
+ IBM      C13    C12    H131   .
+ IBM      H133   C13    .      .
+ IBM      H132   C13    .      .
+ IBM      H131   C13    .      .
+ IBM      C4     N3     N9     .
+ IBM      N9     C4     HN9    .
+ IBM      HN9    N9     .      .
+ IBM      N1     C2     C6     .
+ IBM      C10    N1     H101   .
+ IBM      H103   C10    .      .
+ IBM      H102   C10    .      .
+ IBM      H101   C10    .      .
+ IBM      C6     N1     C5     .
+ IBM      O6     C6     .      .
+ IBM      C5     C6     N7     .
+ IBM      N7     C5     C8     .
+ IBM      C8     N7     H8     .
+ IBM      H8     C8     .      END
+ IBM      N9     C8     .    ADD
+ IBM      C5     C4     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ IBM      N9     C8        single      1.350    0.020
+ IBM      N9     C4        single      1.340    0.020
+ IBM      HN9    N9        single      1.040    0.020
+ IBM      C8     N7        double      1.350    0.020
+ IBM      H8     C8        single      1.083    0.020
+ IBM      N7     C5        single      1.350    0.020
+ IBM      C5     C4        double      1.490    0.020
+ IBM      C5     C6        single      1.490    0.020
+ IBM      C4     N3        single      1.337    0.020
+ IBM      N3     C2        single      1.410    0.020
+ IBM      C11    N3        single      1.465    0.020
+ IBM      N1     C2        single      1.410    0.020
+ IBM      C2     O2        double      1.250    0.020
+ IBM      C6     N1        single      1.410    0.020
+ IBM      C10    N1        single      1.465    0.020
+ IBM      O6     C6        double      1.250    0.020
+ IBM      H101   C10       single      1.059    0.020
+ IBM      H102   C10       single      1.059    0.020
+ IBM      H103   C10       single      1.059    0.020
+ IBM      C12    C11       single      1.524    0.020
+ IBM      H111   C11       single      1.092    0.020
+ IBM      H112   C11       single      1.092    0.020
+ IBM      C13    C12       single      1.524    0.020
+ IBM      C14    C12       single      1.524    0.020
+ IBM      H12    C12       single      1.099    0.020
+ IBM      H131   C13       single      1.059    0.020
+ IBM      H132   C13       single      1.059    0.020
+ IBM      H133   C13       single      1.059    0.020
+ IBM      H141   C14       single      1.059    0.020
+ IBM      H142   C14       single      1.059    0.020
+ IBM      H143   C14       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ IBM      O2     C2     N3      120.000    3.000
+ IBM      O2     C2     N1      120.000    3.000
+ IBM      N3     C2     N1      120.000    3.000
+ IBM      C2     N3     C11     120.000    3.000
+ IBM      C2     N3     C4      120.000    3.000
+ IBM      C11    N3     C4      120.000    3.000
+ IBM      N3     C11    H111    109.470    3.000
+ IBM      N3     C11    H112    109.470    3.000
+ IBM      N3     C11    C12     109.470    3.000
+ IBM      H111   C11    H112    107.900    3.000
+ IBM      H111   C11    C12     109.470    3.000
+ IBM      H112   C11    C12     109.470    3.000
+ IBM      C11    C12    H12     108.340    3.000
+ IBM      C11    C12    C14     111.000    3.000
+ IBM      C11    C12    C13     111.000    3.000
+ IBM      H12    C12    C14     108.340    3.000
+ IBM      H12    C12    C13     108.340    3.000
+ IBM      C14    C12    C13     111.000    3.000
+ IBM      C12    C14    H143    109.470    3.000
+ IBM      C12    C14    H142    109.470    3.000
+ IBM      C12    C14    H141    109.470    3.000
+ IBM      H143   C14    H142    109.470    3.000
+ IBM      H143   C14    H141    109.470    3.000
+ IBM      H142   C14    H141    109.470    3.000
+ IBM      C12    C13    H133    109.470    3.000
+ IBM      C12    C13    H132    109.470    3.000
+ IBM      C12    C13    H131    109.470    3.000
+ IBM      H133   C13    H132    109.470    3.000
+ IBM      H133   C13    H131    109.470    3.000
+ IBM      H132   C13    H131    109.470    3.000
+ IBM      N3     C4     N9      132.000    3.000
+ IBM      N3     C4     C5      120.000    3.000
+ IBM      N9     C4     C5      108.000    3.000
+ IBM      C4     N9     HN9     126.000    3.000
+ IBM      C4     N9     C8      108.000    3.000
+ IBM      HN9    N9     C8      126.000    3.000
+ IBM      C2     N1     C10     120.000    3.000
+ IBM      C2     N1     C6      120.000    3.000
+ IBM      C10    N1     C6      120.000    3.000
+ IBM      N1     C10    H103    109.470    3.000
+ IBM      N1     C10    H102    109.470    3.000
+ IBM      N1     C10    H101    109.470    3.000
+ IBM      H103   C10    H102    109.470    3.000
+ IBM      H103   C10    H101    109.470    3.000
+ IBM      H102   C10    H101    109.470    3.000
+ IBM      N1     C6     O6      120.000    3.000
+ IBM      N1     C6     C5      120.000    3.000
+ IBM      O6     C6     C5      120.000    3.000
+ IBM      C6     C5     N7      132.000    3.000
+ IBM      C6     C5     C4      120.000    3.000
+ IBM      N7     C5     C4      108.000    3.000
+ IBM      C5     N7     C8      108.000    3.000
+ IBM      N7     C8     H8      126.000    3.000
+ IBM      N7     C8     N9      108.000    3.000
+ IBM      H8     C8     N9      126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ IBM      CONST_1  O2     C2     N3     C4       180.000    0.000   0
+ IBM      var_1    C2     N3     C11    C12       90.010   20.000   1
+ IBM      var_2    N3     C11    C12    C13      179.973   20.000   3
+ IBM      var_3    C11    C12    C14    H141     -59.976   20.000   3
+ IBM      var_4    C11    C12    C13    H131    -179.971   20.000   3
+ IBM      CONST_2  C2     N3     C4     N9       180.000    0.000   0
+ IBM      CONST_3  N3     C4     N9     C8       180.000    0.000   0
+ IBM      CONST_4  C4     N9     C8     N7         0.000    0.000   0
+ IBM      CONST_5  O2     C2     N1     C6       180.000    0.000   0
+ IBM      var_5    C2     N1     C10    H101     179.929   20.000   1
+ IBM      CONST_6  C2     N1     C6     C5         0.000    0.000   0
+ IBM      CONST_7  N1     C6     C5     N7       180.000    0.000   0
+ IBM      CONST_8  C6     C5     C4     N3         0.000    0.000   0
+ IBM      CONST_9  C6     C5     N7     C8       180.000    0.000   0
+ IBM      CONST_10 C5     N7     C8     N9         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ IBM      chir_01  C12    C11    C13    C14       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ IBM      plan-1    N9        0.020
+ IBM      plan-1    C8        0.020
+ IBM      plan-1    C4        0.020
+ IBM      plan-1    HN9       0.020
+ IBM      plan-1    N7        0.020
+ IBM      plan-1    H8        0.020
+ IBM      plan-1    C5        0.020
+ IBM      plan-1    C6        0.020
+ IBM      plan-1    N3        0.020
+ IBM      plan-1    C2        0.020
+ IBM      plan-1    N1        0.020
+ IBM      plan-1    C11       0.020
+ IBM      plan-1    O2        0.020
+ IBM      plan-1    C10       0.020
+ IBM      plan-1    O6        0.020
+# ------------------------------------------------------

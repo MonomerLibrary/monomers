@@ -1,0 +1,268 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CTD      CTD '3-DEAZACYTIDINE                     ' non-polymer        31  17 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CTD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CTD           O2     O    O         0.000      0.000    0.000    0.000
+ CTD           C2     C    CR6       0.000     -0.606    0.879   -0.593
+ CTD           C3     C    CR16      0.000      0.032    2.087   -0.889
+ CTD           H3     H    H         0.000      1.062    2.250   -0.595
+ CTD           C4     C    CR6       0.000     -0.670    3.073   -1.562
+ CTD           N4     N    NH2       0.000     -0.068    4.280   -1.868
+ CTD           HN42   H    H         0.000      0.896    4.457   -1.604
+ CTD           HN41   H    H         0.000     -0.584    5.002   -2.361
+ CTD           C5     C    CR16      0.000     -2.012    2.827   -1.924
+ CTD           H5     H    H         0.000     -2.582    3.587   -2.443
+ CTD           C6     C    CR16      0.000     -2.582    1.642   -1.621
+ CTD           H6     H    H         0.000     -3.610    1.455   -1.907
+ CTD           N1     N    NR6       0.000     -1.885    0.681   -0.961
+ CTD           "C1'"  C    CH1       0.000     -2.537   -0.590   -0.643
+ CTD           "H1'"  H    H         0.000     -1.837   -1.259   -0.123
+ CTD           "O4'"  O    O2        0.000     -3.029   -1.217   -1.846
+ CTD           "C4'"  C    CH1       0.000     -4.041   -2.148   -1.404
+ CTD           "H4'"  H    H         0.000     -3.575   -3.057   -1.000
+ CTD           "C5'"  C    CH2       0.000     -4.981   -2.500   -2.559
+ CTD           "H5'1" H    H         0.000     -5.448   -1.589   -2.938
+ CTD           "H5'2" H    H         0.000     -5.755   -3.183   -2.202
+ CTD           "O5'"  O    OH1       0.000     -4.238   -3.127   -3.605
+ CTD           "HO5'" H    H         0.000     -4.833   -3.349   -4.334
+ CTD           "C3'"  C    CH1       0.000     -4.808   -1.398   -0.294
+ CTD           "H3'"  H    H         0.000     -5.697   -0.902   -0.707
+ CTD           "O3'"  O    OH1       0.000     -5.177   -2.297    0.754
+ CTD           "HO3'" H    H         0.000     -5.763   -2.980    0.400
+ CTD           "C2'"  C    CH1       0.000     -3.793   -0.350    0.222
+ CTD           "H2'"  H    H         0.000     -4.178    0.667    0.065
+ CTD           "O2'"  O    OH1       0.000     -3.507   -0.569    1.605
+ CTD           "HO2'" H    H         0.000     -4.319   -0.472    2.120
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CTD      O2     n/a    C2     START
+ CTD      C2     O2     C3     .
+ CTD      C3     C2     C4     .
+ CTD      H3     C3     .      .
+ CTD      C4     C3     C5     .
+ CTD      N4     C4     HN41   .
+ CTD      HN42   N4     .      .
+ CTD      HN41   N4     .      .
+ CTD      C5     C4     C6     .
+ CTD      H5     C5     .      .
+ CTD      C6     C5     N1     .
+ CTD      H6     C6     .      .
+ CTD      N1     C6     "C1'"  .
+ CTD      "C1'"  N1     "O4'"  .
+ CTD      "H1'"  "C1'"  .      .
+ CTD      "O4'"  "C1'"  "C4'"  .
+ CTD      "C4'"  "O4'"  "C3'"  .
+ CTD      "H4'"  "C4'"  .      .
+ CTD      "C5'"  "C4'"  "O5'"  .
+ CTD      "H5'1" "C5'"  .      .
+ CTD      "H5'2" "C5'"  .      .
+ CTD      "O5'"  "C5'"  "HO5'" .
+ CTD      "HO5'" "O5'"  .      .
+ CTD      "C3'"  "C4'"  "C2'"  .
+ CTD      "H3'"  "C3'"  .      .
+ CTD      "O3'"  "C3'"  "HO3'" .
+ CTD      "HO3'" "O3'"  .      .
+ CTD      "C2'"  "C3'"  "O2'"  .
+ CTD      "H2'"  "C2'"  .      .
+ CTD      "O2'"  "C2'"  "HO2'" .
+ CTD      "HO2'" "O2'"  .      END
+ CTD      N1     C2     .    ADD
+ CTD      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CTD      N1     C2        single      1.410    0.020
+ CTD      N1     C6        single      1.337    0.020
+ CTD      "C1'"  N1        single      1.465    0.020
+ CTD      C3     C2        single      1.390    0.020
+ CTD      C2     O2        double      1.250    0.020
+ CTD      C4     C3        double      1.390    0.020
+ CTD      H3     C3        single      1.083    0.020
+ CTD      C5     C4        single      1.390    0.020
+ CTD      N4     C4        single      1.355    0.020
+ CTD      C6     C5        double      1.390    0.020
+ CTD      H5     C5        single      1.083    0.020
+ CTD      H6     C6        single      1.083    0.020
+ CTD      HN41   N4        single      1.010    0.020
+ CTD      HN42   N4        single      1.010    0.020
+ CTD      "C1'"  "C2'"     single      1.524    0.020
+ CTD      "O4'"  "C1'"     single      1.426    0.020
+ CTD      "H1'"  "C1'"     single      1.099    0.020
+ CTD      "O2'"  "C2'"     single      1.432    0.020
+ CTD      "C2'"  "C3'"     single      1.524    0.020
+ CTD      "H2'"  "C2'"     single      1.099    0.020
+ CTD      "HO2'" "O2'"     single      0.967    0.020
+ CTD      "C3'"  "C4'"     single      1.524    0.020
+ CTD      "O3'"  "C3'"     single      1.432    0.020
+ CTD      "H3'"  "C3'"     single      1.099    0.020
+ CTD      "C4'"  "O4'"     single      1.426    0.020
+ CTD      "C5'"  "C4'"     single      1.524    0.020
+ CTD      "H4'"  "C4'"     single      1.099    0.020
+ CTD      "HO3'" "O3'"     single      0.967    0.020
+ CTD      "O5'"  "C5'"     single      1.432    0.020
+ CTD      "H5'1" "C5'"     single      1.092    0.020
+ CTD      "H5'2" "C5'"     single      1.092    0.020
+ CTD      "HO5'" "O5'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CTD      O2     C2     C3      120.000    3.000
+ CTD      O2     C2     N1      120.000    3.000
+ CTD      C3     C2     N1      120.000    3.000
+ CTD      C2     C3     H3      120.000    3.000
+ CTD      C2     C3     C4      120.000    3.000
+ CTD      H3     C3     C4      120.000    3.000
+ CTD      C3     C4     N4      120.000    3.000
+ CTD      C3     C4     C5      120.000    3.000
+ CTD      N4     C4     C5      120.000    3.000
+ CTD      C4     N4     HN42    120.000    3.000
+ CTD      C4     N4     HN41    120.000    3.000
+ CTD      HN42   N4     HN41    120.000    3.000
+ CTD      C4     C5     H5      120.000    3.000
+ CTD      C4     C5     C6      120.000    3.000
+ CTD      H5     C5     C6      120.000    3.000
+ CTD      C5     C6     H6      120.000    3.000
+ CTD      C5     C6     N1      120.000    3.000
+ CTD      H6     C6     N1      120.000    3.000
+ CTD      C6     N1     "C1'"   120.000    3.000
+ CTD      C6     N1     C2      120.000    3.000
+ CTD      "C1'"  N1     C2      120.000    3.000
+ CTD      N1     "C1'"  "H1'"   109.470    3.000
+ CTD      N1     "C1'"  "O4'"   109.470    3.000
+ CTD      N1     "C1'"  "C2'"   109.470    3.000
+ CTD      "H1'"  "C1'"  "O4'"   109.470    3.000
+ CTD      "H1'"  "C1'"  "C2'"   108.340    3.000
+ CTD      "O4'"  "C1'"  "C2'"   109.470    3.000
+ CTD      "C1'"  "O4'"  "C4'"   111.800    3.000
+ CTD      "O4'"  "C4'"  "H4'"   109.470    3.000
+ CTD      "O4'"  "C4'"  "C5'"   109.470    3.000
+ CTD      "O4'"  "C4'"  "C3'"   109.470    3.000
+ CTD      "H4'"  "C4'"  "C5'"   108.340    3.000
+ CTD      "H4'"  "C4'"  "C3'"   108.340    3.000
+ CTD      "C5'"  "C4'"  "C3'"   111.000    3.000
+ CTD      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ CTD      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ CTD      "C4'"  "C5'"  "O5'"   109.470    3.000
+ CTD      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ CTD      "H5'1" "C5'"  "O5'"   109.470    3.000
+ CTD      "H5'2" "C5'"  "O5'"   109.470    3.000
+ CTD      "C5'"  "O5'"  "HO5'"  109.470    3.000
+ CTD      "C4'"  "C3'"  "H3'"   108.340    3.000
+ CTD      "C4'"  "C3'"  "O3'"   109.470    3.000
+ CTD      "C4'"  "C3'"  "C2'"   111.000    3.000
+ CTD      "H3'"  "C3'"  "O3'"   109.470    3.000
+ CTD      "H3'"  "C3'"  "C2'"   108.340    3.000
+ CTD      "O3'"  "C3'"  "C2'"   109.470    3.000
+ CTD      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ CTD      "C3'"  "C2'"  "H2'"   108.340    3.000
+ CTD      "C3'"  "C2'"  "O2'"   109.470    3.000
+ CTD      "C3'"  "C2'"  "C1'"   111.000    3.000
+ CTD      "H2'"  "C2'"  "O2'"   109.470    3.000
+ CTD      "H2'"  "C2'"  "C1'"   108.340    3.000
+ CTD      "O2'"  "C2'"  "C1'"   109.470    3.000
+ CTD      "C2'"  "O2'"  "HO2'"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CTD      CONST_1  O2     C2     C3     C4       180.000    0.000   0
+ CTD      CONST_2  C2     C3     C4     C5         0.000    0.000   0
+ CTD      CONST_3  C3     C4     N4     HN41    -179.973    0.000   0
+ CTD      CONST_4  C3     C4     C5     C6         0.000    0.000   0
+ CTD      CONST_5  C4     C5     C6     N1         0.000    0.000   0
+ CTD      CONST_6  C5     C6     N1     "C1'"    180.000    0.000   0
+ CTD      CONST_7  C6     N1     C2     O2       180.000    0.000   0
+ CTD      var_1    C6     N1     "C1'"  "O4'"     57.069   20.000   1
+ CTD      var_2    N1     "C1'"  "C2'"  "C3'"    150.000   20.000   3
+ CTD      var_3    N1     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ CTD      var_4    "C1'"  "O4'"  "C4'"  "C3'"     30.000   20.000   1
+ CTD      var_5    "O4'"  "C4'"  "C5'"  "O5'"     61.429   20.000   3
+ CTD      var_6    "C4'"  "C5'"  "O5'"  "HO5'"  -179.985   20.000   1
+ CTD      var_7    "O4'"  "C4'"  "C3'"  "C2'"    -30.000   20.000   3
+ CTD      var_8    "C4'"  "C3'"  "O3'"  "HO3'"   -61.421   20.000   1
+ CTD      var_9    "C4'"  "C3'"  "C2'"  "O2'"   -120.000   20.000   3
+ CTD      var_10   "C3'"  "C2'"  "O2'"  "HO2'"   -61.462   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CTD      chir_01  "C1'"  N1     "C2'"  "O4'"     negativ
+ CTD      chir_02  "C2'"  "C1'"  "O2'"  "C3'"     positiv
+ CTD      chir_03  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+ CTD      chir_04  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CTD      plan-1    N1        0.020
+ CTD      plan-1    C2        0.020
+ CTD      plan-1    C6        0.020
+ CTD      plan-1    "C1'"     0.020
+ CTD      plan-1    C3        0.020
+ CTD      plan-1    C4        0.020
+ CTD      plan-1    C5        0.020
+ CTD      plan-1    O2        0.020
+ CTD      plan-1    H3        0.020
+ CTD      plan-1    N4        0.020
+ CTD      plan-1    H5        0.020
+ CTD      plan-1    H6        0.020
+ CTD      plan-1    HN42      0.020
+ CTD      plan-1    HN41      0.020
+ CTD      plan-2    N4        0.020
+ CTD      plan-2    C4        0.020
+ CTD      plan-2    HN41      0.020
+ CTD      plan-2    HN42      0.020
+# ------------------------------------------------------

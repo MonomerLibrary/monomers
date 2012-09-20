@@ -1,0 +1,156 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PPK      PPK '(DIPHOSPHONO)AMINOPHOSPHONIC ACID   ' non-polymer        17  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PPK
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PPK           O4A    O    OP       -0.666      0.000    0.000    0.000
+ PPK           PA     P    P         0.000     -0.901   -0.933   -0.779
+ PPK           O1A    O    OP       -0.666     -0.071   -2.038   -1.396
+ PPK           O2A    O    OP       -0.666     -1.602   -0.160   -1.875
+ PPK           O3A    O    O2        0.000     -1.996   -1.573    0.212
+ PPK           PB     P    P         0.000     -2.839   -0.346    0.828
+ PPK           O2B    O    O         0.000     -1.928    0.556    1.565
+ PPK           O1B    O    OH1       0.000     -3.552    0.465   -0.364
+ PPK           H1B    H    H         0.000     -4.182    0.017   -0.944
+ PPK           N3B    N    NH1       0.000     -4.009   -0.944    1.879
+ PPK           H3B    H    H         0.000     -4.178   -1.913    2.105
+ PPK           PG     P    P         0.000     -4.843    0.389    2.479
+ PPK           O3G    O    O         0.000     -3.902    1.281    3.191
+ PPK           O2G    O    OH1       0.000     -5.524    1.189    1.260
+ PPK           H2G    H    H         0.000     -6.169    0.746    0.692
+ PPK           O1G    O    OH1       0.000     -5.987   -0.109    3.498
+ PPK           H1G    H    H         0.000     -6.561    0.537    3.934
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PPK      O4A    n/a    PA     START
+ PPK      PA     O4A    O3A    .
+ PPK      O1A    PA     .      .
+ PPK      O2A    PA     .      .
+ PPK      O3A    PA     PB     .
+ PPK      PB     O3A    N3B    .
+ PPK      O2B    PB     .      .
+ PPK      O1B    PB     H1B    .
+ PPK      H1B    O1B    .      .
+ PPK      N3B    PB     PG     .
+ PPK      H3B    N3B    .      .
+ PPK      PG     N3B    O1G    .
+ PPK      O3G    PG     .      .
+ PPK      O2G    PG     H2G    .
+ PPK      H2G    O2G    .      .
+ PPK      O1G    PG     H1G    .
+ PPK      H1G    O1G    .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PPK      O1G    PG        single      1.610    0.020
+ PPK      H1G    O1G       single      0.967    0.020
+ PPK      O2G    PG        single      1.610    0.020
+ PPK      O3G    PG        double      1.480    0.020
+ PPK      PG     N3B       single      1.750    0.020
+ PPK      H2G    O2G       single      0.967    0.020
+ PPK      N3B    PB        single      1.750    0.020
+ PPK      H3B    N3B       single      1.010    0.020
+ PPK      O1B    PB        single      1.610    0.020
+ PPK      O2B    PB        double      1.480    0.020
+ PPK      PB     O3A       single      1.610    0.020
+ PPK      H1B    O1B       single      0.967    0.020
+ PPK      O3A    PA        single      1.610    0.020
+ PPK      O1A    PA        deloc       1.510    0.020
+ PPK      O2A    PA        deloc       1.510    0.020
+ PPK      PA     O4A       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PPK      O4A    PA     O1A     119.900    3.000
+ PPK      O4A    PA     O2A     119.900    3.000
+ PPK      O4A    PA     O3A     108.200    3.000
+ PPK      O1A    PA     O2A     119.900    3.000
+ PPK      O1A    PA     O3A     108.200    3.000
+ PPK      O2A    PA     O3A     108.200    3.000
+ PPK      PA     O3A    PB      120.500    3.000
+ PPK      O3A    PB     O2B     109.500    3.000
+ PPK      O3A    PB     O1B     109.500    3.000
+ PPK      O3A    PB     N3B     109.500    3.000
+ PPK      O2B    PB     O1B     109.500    3.000
+ PPK      O2B    PB     N3B     109.500    3.000
+ PPK      O1B    PB     N3B     109.500    3.000
+ PPK      PB     O1B    H1B     120.000    3.000
+ PPK      PB     N3B    H3B     120.000    3.000
+ PPK      PB     N3B    PG      120.000    3.000
+ PPK      H3B    N3B    PG      120.000    3.000
+ PPK      N3B    PG     O3G     109.500    3.000
+ PPK      N3B    PG     O2G     109.500    3.000
+ PPK      N3B    PG     O1G     109.500    3.000
+ PPK      O3G    PG     O2G     109.500    3.000
+ PPK      O3G    PG     O1G     109.500    3.000
+ PPK      O2G    PG     O1G     109.500    3.000
+ PPK      PG     O2G    H2G     120.000    3.000
+ PPK      PG     O1G    H1G     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PPK      var_1    O4A    PA     O3A    PB        60.016   20.000   1
+ PPK      var_2    PA     O3A    PB     N3B      179.994   20.000   1
+ PPK      var_3    O3A    PB     O1B    H1B       60.012   20.000   1
+ PPK      var_4    O3A    PB     N3B    PG       179.979   20.000   1
+ PPK      var_5    PB     N3B    PG     O1G      179.984   20.000   1
+ PPK      var_6    N3B    PG     O2G    H2G       60.002   20.000   1
+ PPK      var_7    N3B    PG     O1G    H1G      180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PPK      plan-1    N3B       0.020
+ PPK      plan-1    PG        0.000
+ PPK      plan-1    PB        0.000
+ PPK      plan-1    H3B       0.000
+# ------------------------------------------------------

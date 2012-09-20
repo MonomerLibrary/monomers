@@ -1,0 +1,102 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OXL      OXL 'OXALATE ION                         ' non-polymer         6   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OXL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OXL           O4     O    OC       -0.500      0.000    0.000    0.000
+ OXL           C2     C    C         0.000     -1.228    0.239   -0.001
+ OXL           O2     O    OC       -0.500     -2.049   -0.705    0.003
+ OXL           C1     C    C         0.000     -1.714    1.652   -0.007
+ OXL           O1     O    OC       -0.500     -2.942    1.891   -0.007
+ OXL           O3     O    OC       -0.500     -0.893    2.596   -0.004
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OXL      O4     n/a    C2     START
+ OXL      C2     O4     C1     .
+ OXL      O2     C2     .      .
+ OXL      C1     C2     O3     .
+ OXL      O1     C1     .      .
+ OXL      O3     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OXL      C1     C2        single      1.460    0.020
+ OXL      O1     C1        deloc       1.250    0.020
+ OXL      O3     C1        deloc       1.250    0.020
+ OXL      O2     C2        deloc       1.250    0.020
+ OXL      C2     O4        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OXL      O4     C2     O2      123.000    3.000
+ OXL      O4     C2     C1      120.000    3.000
+ OXL      O2     C2     C1      120.000    3.000
+ OXL      C2     C1     O1      120.000    3.000
+ OXL      C2     C1     O3      120.000    3.000
+ OXL      O1     C1     O3      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OXL      var_1    O4     C2     C1     O3        -0.348   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OXL      plan-1    C1        0.020
+ OXL      plan-1    C2        0.020
+ OXL      plan-1    O1        0.020
+ OXL      plan-1    O3        0.020
+ OXL      plan-2    C2        0.020
+ OXL      plan-2    C1        0.020
+ OXL      plan-2    O2        0.020
+ OXL      plan-2    O4        0.020
+# ------------------------------------------------------

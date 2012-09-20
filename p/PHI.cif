@@ -1,0 +1,211 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PHI      PHI 'IODO-PHENYLALANINE                  ' peptide            22  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PHI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PHI           N      N    NH2       0.000      0.000    0.000    0.000
+ PHI           HN1    H    H         0.000      1.002   -0.024   -0.150
+ PHI           HN2    H    H         0.000     -0.610    0.280   -0.759
+ PHI           CA     C    CH1       0.000     -0.562   -0.369    1.305
+ PHI           HA     H    H         0.000     -1.042    0.510    1.758
+ PHI           CB     C    CH2       0.000     -1.600   -1.476    1.119
+ PHI           HB2    H    H         0.000     -2.017   -1.749    2.090
+ PHI           HB3    H    H         0.000     -1.122   -2.349    0.670
+ PHI           CG     C    CR6       0.000     -2.703   -0.986    0.217
+ PHI           CD2    C    CR16      0.000     -3.812   -0.363    0.759
+ PHI           HD2    H    H         0.000     -3.890   -0.232    1.831
+ PHI           CE2    C    CR16      0.000     -4.821    0.091   -0.068
+ PHI           HE2    H    H         0.000     -5.686    0.587    0.356
+ PHI           CZ     C    CR6       0.000     -4.727   -0.086   -1.436
+ PHI           I      I    I         0.000     -6.262    0.595   -2.689
+ PHI           CE1    C    CR16      0.000     -3.620   -0.713   -1.976
+ PHI           HE1    H    H         0.000     -3.545   -0.852   -3.048
+ PHI           CD1    C    CR16      0.000     -2.609   -1.163   -1.150
+ PHI           HD1    H    H         0.000     -1.742   -1.655   -1.573
+ PHI           C      C    C         0.000      0.541   -0.859    2.207
+ PHI           O      O    OC       -0.500      1.543   -1.427    1.718
+ PHI           OXT    O    OC       -0.500      0.455   -0.698    3.445
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PHI      N      n/a    CA     START
+ PHI      HN1    N      .      .
+ PHI      HN2    N      .      .
+ PHI      CA     N      C      .
+ PHI      HA     CA     .      .
+ PHI      CB     CA     CG     .
+ PHI      HB2    CB     .      .
+ PHI      HB3    CB     .      .
+ PHI      CG     CB     CD2    .
+ PHI      CD2    CG     CE2    .
+ PHI      HD2    CD2    .      .
+ PHI      CE2    CD2    CZ     .
+ PHI      HE2    CE2    .      .
+ PHI      CZ     CE2    CE1    .
+ PHI      I      CZ     .      .
+ PHI      CE1    CZ     CD1    .
+ PHI      HE1    CE1    .      .
+ PHI      CD1    CE1    HD1    .
+ PHI      HD1    CD1    .      .
+ PHI      C      CA     .      END
+ PHI      O      C      .      .
+ PHI      OXT    C      .      .
+ PHI      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PHI      CA     N         single      1.450    0.020
+ PHI      CB     CA        single      1.524    0.020
+ PHI      C      CA        single      1.500    0.020
+ PHI      HA     CA        single      1.099    0.020
+ PHI      CG     CB        single      1.511    0.020
+ PHI      HB2    CB        single      1.092    0.020
+ PHI      HB3    CB        single      1.092    0.020
+ PHI      CG     CD1       double      1.390    0.020
+ PHI      CD2    CG        single      1.390    0.020
+ PHI      CD1    CE1       single      1.390    0.020
+ PHI      HD1    CD1       single      1.083    0.020
+ PHI      CE2    CD2       double      1.390    0.020
+ PHI      HD2    CD2       single      1.083    0.020
+ PHI      CE1    CZ        double      1.390    0.020
+ PHI      HE1    CE1       single      1.083    0.020
+ PHI      CZ     CE2       single      1.390    0.020
+ PHI      HE2    CE2       single      1.083    0.020
+ PHI      I      CZ        single      2.090    0.020
+ PHI      O      C         deloc       1.250    0.020
+ PHI      OXT    C         deloc       1.250    0.020
+ PHI      HN1    N         single      1.010    0.020
+ PHI      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PHI      HN1    N      HN2     120.000    3.000
+ PHI      HN1    N      CA      120.000    3.000
+ PHI      HN2    N      CA      120.000    3.000
+ PHI      N      CA     HA      109.470    3.000
+ PHI      N      CA     CB      109.470    3.000
+ PHI      N      CA     C       109.470    3.000
+ PHI      HA     CA     CB      108.340    3.000
+ PHI      HA     CA     C       108.810    3.000
+ PHI      CB     CA     C       109.470    3.000
+ PHI      CA     CB     HB2     109.470    3.000
+ PHI      CA     CB     HB3     109.470    3.000
+ PHI      CA     CB     CG      109.470    3.000
+ PHI      HB2    CB     HB3     107.900    3.000
+ PHI      HB2    CB     CG      109.470    3.000
+ PHI      HB3    CB     CG      109.470    3.000
+ PHI      CB     CG     CD2     120.000    3.000
+ PHI      CB     CG     CD1     120.000    3.000
+ PHI      CD2    CG     CD1     120.000    3.000
+ PHI      CG     CD2    HD2     120.000    3.000
+ PHI      CG     CD2    CE2     120.000    3.000
+ PHI      HD2    CD2    CE2     120.000    3.000
+ PHI      CD2    CE2    HE2     120.000    3.000
+ PHI      CD2    CE2    CZ      120.000    3.000
+ PHI      HE2    CE2    CZ      120.000    3.000
+ PHI      CE2    CZ     I       120.000    3.000
+ PHI      CE2    CZ     CE1     120.000    3.000
+ PHI      I      CZ     CE1     120.000    3.000
+ PHI      CZ     CE1    HE1     120.000    3.000
+ PHI      CZ     CE1    CD1     120.000    3.000
+ PHI      HE1    CE1    CD1     120.000    3.000
+ PHI      CE1    CD1    HD1     120.000    3.000
+ PHI      CE1    CD1    CG      120.000    3.000
+ PHI      HD1    CD1    CG      120.000    3.000
+ PHI      CA     C      O       118.500    3.000
+ PHI      CA     C      OXT     118.500    3.000
+ PHI      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PHI      var_1    HN2    N      CA     C        175.000   20.000   1
+ PHI      var_2    N      CA     CB     CG       -59.946   20.000   3
+ PHI      var_3    CA     CB     CG     CD2      -90.267   20.000   2
+ PHI      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ PHI      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ PHI      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ PHI      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ PHI      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ PHI      CONST_6  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PHI      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PHI      plan-1    N         0.020
+ PHI      plan-1    CA        0.020
+ PHI      plan-1    HN1       0.020
+ PHI      plan-1    HN2       0.020
+ PHI      plan-2    CG        0.020
+ PHI      plan-2    CB        0.020
+ PHI      plan-2    CD1       0.020
+ PHI      plan-2    CD2       0.020
+ PHI      plan-2    CE1       0.020
+ PHI      plan-2    CE2       0.020
+ PHI      plan-2    CZ        0.020
+ PHI      plan-2    HD1       0.020
+ PHI      plan-2    HD2       0.020
+ PHI      plan-2    HE1       0.020
+ PHI      plan-2    HE2       0.020
+ PHI      plan-2    I         0.020
+ PHI      plan-3    C         0.020
+ PHI      plan-3    CA        0.020
+ PHI      plan-3    O         0.020
+ PHI      plan-3    OXT       0.020
+# ------------------------------------------------------

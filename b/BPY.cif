@@ -1,0 +1,222 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BPY      BPY 'BIPHENYL-2,3-DIOL                   ' non-polymer        24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BPY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BPY           OK2    O    OH1       0.000      0.000    0.000    0.000
+ BPY           HOK2   H    H         0.000      0.203    0.934   -0.147
+ BPY           CK3    C    CR6       0.000     -1.120   -0.105    0.763
+ BPY           CK4    C    CR6       0.000     -1.018   -0.160    2.148
+ BPY           OK1    O    OH1       0.000      0.203   -0.102    2.743
+ BPY           H0K1   H    H         0.000      0.552   -0.998    2.848
+ BPY           CK5    C    CR16      0.000     -2.162   -0.265    2.923
+ BPY           HCK5   H    H         0.000     -2.080   -0.301    4.002
+ BPY           CK6    C    CR16      0.000     -3.407   -0.323    2.323
+ BPY           HCK6   H    H         0.000     -4.297   -0.406    2.935
+ BPY           CK1    C    CR16      0.000     -3.519   -0.276    0.949
+ BPY           HCK1   H    H         0.000     -4.496   -0.323    0.484
+ BPY           CK2    C    CR6       0.000     -2.376   -0.168    0.158
+ BPY           CK7    C    CR6       0.000     -2.495   -0.117   -1.319
+ BPY           CKC    C    CR16      0.000     -1.878   -1.089   -2.104
+ BPY           HC12   H    H         0.000     -1.307   -1.881   -1.638
+ BPY           CKB    C    CR16      0.000     -1.997   -1.039   -3.478
+ BPY           HC11   H    H         0.000     -1.525   -1.798   -4.090
+ BPY           CKA    C    CR16      0.000     -2.717   -0.021   -4.076
+ BPY           HC10   H    H         0.000     -2.804    0.016   -5.155
+ BPY           CK9    C    CR16      0.000     -3.326    0.949   -3.302
+ BPY           HCK9   H    H         0.000     -3.888    1.744   -3.776
+ BPY           CK8    C    CR16      0.000     -3.218    0.906   -1.927
+ BPY           HCK8   H    H         0.000     -3.696    1.666   -1.322
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BPY      OK2    n/a    CK3    START
+ BPY      HOK2   OK2    .      .
+ BPY      CK3    OK2    CK2    .
+ BPY      CK4    CK3    CK5    .
+ BPY      OK1    CK4    H0K1   .
+ BPY      H0K1   OK1    .      .
+ BPY      CK5    CK4    CK6    .
+ BPY      HCK5   CK5    .      .
+ BPY      CK6    CK5    CK1    .
+ BPY      HCK6   CK6    .      .
+ BPY      CK1    CK6    HCK1   .
+ BPY      HCK1   CK1    .      .
+ BPY      CK2    CK3    CK7    .
+ BPY      CK7    CK2    CKC    .
+ BPY      CKC    CK7    CKB    .
+ BPY      HC12   CKC    .      .
+ BPY      CKB    CKC    CKA    .
+ BPY      HC11   CKB    .      .
+ BPY      CKA    CKB    CK9    .
+ BPY      HC10   CKA    .      .
+ BPY      CK9    CKA    CK8    .
+ BPY      HCK9   CK9    .      .
+ BPY      CK8    CK9    HCK8   .
+ BPY      HCK8   CK8    .      END
+ BPY      CK1    CK2    .    ADD
+ BPY      CK7    CK8    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BPY      CK1    CK2       double      1.390    0.020
+ BPY      CK1    CK6       single      1.390    0.020
+ BPY      HCK1   CK1       single      1.083    0.020
+ BPY      CK2    CK3       single      1.487    0.020
+ BPY      CK7    CK2       single      1.487    0.020
+ BPY      CK4    CK3       double      1.487    0.020
+ BPY      CK3    OK2       single      1.362    0.020
+ BPY      CK5    CK4       single      1.390    0.020
+ BPY      OK1    CK4       single      1.362    0.020
+ BPY      CK6    CK5       double      1.390    0.020
+ BPY      HCK5   CK5       single      1.083    0.020
+ BPY      HCK6   CK6       single      1.083    0.020
+ BPY      CK7    CK8       double      1.390    0.020
+ BPY      CKC    CK7       single      1.390    0.020
+ BPY      CK8    CK9       single      1.390    0.020
+ BPY      HCK8   CK8       single      1.083    0.020
+ BPY      CK9    CKA       double      1.390    0.020
+ BPY      HCK9   CK9       single      1.083    0.020
+ BPY      CKA    CKB       single      1.390    0.020
+ BPY      HC10   CKA       single      1.083    0.020
+ BPY      CKB    CKC       double      1.390    0.020
+ BPY      HC11   CKB       single      1.083    0.020
+ BPY      HC12   CKC       single      1.083    0.020
+ BPY      H0K1   OK1       single      0.967    0.020
+ BPY      HOK2   OK2       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BPY      HOK2   OK2    CK3     109.470    3.000
+ BPY      OK2    CK3    CK4     120.000    3.000
+ BPY      OK2    CK3    CK2     120.000    3.000
+ BPY      CK4    CK3    CK2     120.000    3.000
+ BPY      CK3    CK4    OK1     120.000    3.000
+ BPY      CK3    CK4    CK5     120.000    3.000
+ BPY      OK1    CK4    CK5     120.000    3.000
+ BPY      CK4    OK1    H0K1    109.470    3.000
+ BPY      CK4    CK5    HCK5    120.000    3.000
+ BPY      CK4    CK5    CK6     120.000    3.000
+ BPY      HCK5   CK5    CK6     120.000    3.000
+ BPY      CK5    CK6    HCK6    120.000    3.000
+ BPY      CK5    CK6    CK1     120.000    3.000
+ BPY      HCK6   CK6    CK1     120.000    3.000
+ BPY      CK6    CK1    HCK1    120.000    3.000
+ BPY      CK6    CK1    CK2     120.000    3.000
+ BPY      HCK1   CK1    CK2     120.000    3.000
+ BPY      CK3    CK2    CK7     120.000    3.000
+ BPY      CK3    CK2    CK1     120.000    3.000
+ BPY      CK7    CK2    CK1     120.000    3.000
+ BPY      CK2    CK7    CKC     120.000    3.000
+ BPY      CK2    CK7    CK8     120.000    3.000
+ BPY      CKC    CK7    CK8     120.000    3.000
+ BPY      CK7    CKC    HC12    120.000    3.000
+ BPY      CK7    CKC    CKB     120.000    3.000
+ BPY      HC12   CKC    CKB     120.000    3.000
+ BPY      CKC    CKB    HC11    120.000    3.000
+ BPY      CKC    CKB    CKA     120.000    3.000
+ BPY      HC11   CKB    CKA     120.000    3.000
+ BPY      CKB    CKA    HC10    120.000    3.000
+ BPY      CKB    CKA    CK9     120.000    3.000
+ BPY      HC10   CKA    CK9     120.000    3.000
+ BPY      CKA    CK9    HCK9    120.000    3.000
+ BPY      CKA    CK9    CK8     120.000    3.000
+ BPY      HCK9   CK9    CK8     120.000    3.000
+ BPY      CK9    CK8    HCK8    120.000    3.000
+ BPY      CK9    CK8    CK7     120.000    3.000
+ BPY      HCK8   CK8    CK7     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BPY      var_1    HOK2   OK2    CK3    CK2       89.945   20.000   1
+ BPY      CONST_1  OK2    CK3    CK4    CK5      180.000    0.000   0
+ BPY      var_2    CK3    CK4    OK1    H0K1     -90.311   20.000   1
+ BPY      CONST_2  CK3    CK4    CK5    CK6        0.000    0.000   0
+ BPY      CONST_3  CK4    CK5    CK6    CK1        0.000    0.000   0
+ BPY      CONST_4  CK5    CK6    CK1    CK2        0.000    0.000   0
+ BPY      CONST_5  CK6    CK1    CK2    CK3        0.000    0.000   0
+ BPY      CONST_6  OK2    CK3    CK2    CK7        0.000    0.000   0
+ BPY      CONST_7  CK3    CK2    CK7    CKC        0.000    0.000   0
+ BPY      CONST_8  CK2    CK7    CK8    CK9      180.000    0.000   0
+ BPY      CONST_9  CK2    CK7    CKC    CKB      180.000    0.000   0
+ BPY      CONST_10 CK7    CKC    CKB    CKA        0.000    0.000   0
+ BPY      CONST_11 CKC    CKB    CKA    CK9        0.000    0.000   0
+ BPY      CONST_12 CKB    CKA    CK9    CK8        0.000    0.000   0
+ BPY      CONST_13 CKA    CK9    CK8    CK7        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BPY      plan-1    CK1       0.020
+ BPY      plan-1    CK2       0.020
+ BPY      plan-1    CK6       0.020
+ BPY      plan-1    HCK1      0.020
+ BPY      plan-1    CK3       0.020
+ BPY      plan-1    CK4       0.020
+ BPY      plan-1    CK5       0.020
+ BPY      plan-1    CK7       0.020
+ BPY      plan-1    OK2       0.020
+ BPY      plan-1    OK1       0.020
+ BPY      plan-1    HCK5      0.020
+ BPY      plan-1    HCK6      0.020
+ BPY      plan-2    CK7       0.020
+ BPY      plan-2    CK2       0.020
+ BPY      plan-2    CK8       0.020
+ BPY      plan-2    CKC       0.020
+ BPY      plan-2    CK9       0.020
+ BPY      plan-2    CKA       0.020
+ BPY      plan-2    CKB       0.020
+ BPY      plan-2    HCK8      0.020
+ BPY      plan-2    HCK9      0.020
+ BPY      plan-2    HC10      0.020
+ BPY      plan-2    HC11      0.020
+ BPY      plan-2    HC12      0.020
+# ------------------------------------------------------

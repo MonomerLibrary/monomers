@@ -1,0 +1,163 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SEP      SEP 'PHOSPHOSERINE                       ' peptide            16  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SEP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SEP           N      N    NH2       0.000      0.000    0.000    0.000
+ SEP           HN1    H    H         0.000      0.712   -0.553    0.463
+ SEP           HN2    H    H         0.000      0.151    0.305   -0.955
+ SEP           CA     C    CH1       0.000     -1.238    0.356    0.706
+ SEP           HA     H    H         0.000     -1.281    1.446    0.842
+ SEP           CB     C    CH2       0.000     -2.443   -0.102   -0.117
+ SEP           HB2    H    H         0.000     -3.363    0.160    0.409
+ SEP           HB3    H    H         0.000     -2.399   -1.185   -0.253
+ SEP           OG     O    O2        0.000     -2.422    0.540   -1.392
+ SEP           P      P    P         0.000     -3.711    0.015   -2.200
+ SEP           O1P    O    OP       -0.666     -4.966    0.378   -1.437
+ SEP           O2P    O    OP       -0.666     -3.747    0.660   -3.568
+ SEP           O3P    O    OP       -0.666     -3.632   -1.488   -2.353
+ SEP           C      C    C         0.000     -1.260   -0.319    2.051
+ SEP           O      O    OC       -0.500     -0.685   -1.419    2.209
+ SEP           OXT    O    OC       -0.500     -1.855    0.218    3.012
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SEP      N      n/a    CA     START
+ SEP      HN1    N      .      .
+ SEP      HN2    N      .      .
+ SEP      CA     N      C      .
+ SEP      HA     CA     .      .
+ SEP      CB     CA     OG     .
+ SEP      HB2    CB     .      .
+ SEP      HB3    CB     .      .
+ SEP      OG     CB     P      .
+ SEP      P      OG     O3P    .
+ SEP      O1P    P      .      .
+ SEP      O2P    P      .      .
+ SEP      O3P    P      .      .
+ SEP      C      CA     .      END
+ SEP      O      C      .      .
+ SEP      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SEP      CA     N         single      1.450    0.020
+ SEP      CB     CA        single      1.524    0.020
+ SEP      C      CA        single      1.500    0.020
+ SEP      HA     CA        single      1.099    0.020
+ SEP      OG     CB        single      1.426    0.020
+ SEP      HB2    CB        single      1.092    0.020
+ SEP      HB3    CB        single      1.092    0.020
+ SEP      P      OG        single      1.610    0.020
+ SEP      O      C         deloc       1.250    0.020
+ SEP      OXT    C         deloc       1.250    0.020
+ SEP      O1P    P         deloc       1.510    0.020
+ SEP      O2P    P         deloc       1.510    0.020
+ SEP      O3P    P         deloc       1.510    0.020
+ SEP      HN1    N         single      1.010    0.020
+ SEP      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SEP      HN1    N      HN2     120.000    3.000
+ SEP      HN1    N      CA      120.000    3.000
+ SEP      HN2    N      CA      120.000    3.000
+ SEP      N      CA     HA      109.470    3.000
+ SEP      N      CA     CB      109.470    3.000
+ SEP      N      CA     C       109.470    3.000
+ SEP      HA     CA     CB      108.340    3.000
+ SEP      HA     CA     C       108.810    3.000
+ SEP      CB     CA     C       109.470    3.000
+ SEP      CA     CB     HB2     109.470    3.000
+ SEP      CA     CB     HB3     109.470    3.000
+ SEP      CA     CB     OG      109.470    3.000
+ SEP      HB2    CB     HB3     107.900    3.000
+ SEP      HB2    CB     OG      109.470    3.000
+ SEP      HB3    CB     OG      109.470    3.000
+ SEP      CB     OG     P       120.500    3.000
+ SEP      OG     P      O1P     108.200    3.000
+ SEP      OG     P      O2P     108.200    3.000
+ SEP      OG     P      O3P     108.200    3.000
+ SEP      O1P    P      O2P     119.900    3.000
+ SEP      O1P    P      O3P     119.900    3.000
+ SEP      O2P    P      O3P     119.900    3.000
+ SEP      CA     C      O       118.500    3.000
+ SEP      CA     C      OXT     118.500    3.000
+ SEP      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SEP      var_1    HN2    N      CA     C        175.000   20.000   1
+ SEP      var_2    N      CA     CB     OG       -60.077   20.000   3
+ SEP      var_3    CA     CB     OG     P       -179.978   20.000   1
+ SEP      var_4    CB     OG     P      O3P      -59.907   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SEP      chir_01  CA     N      CB     C         negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SEP      plan-1    N         0.020
+ SEP      plan-1    CA        0.020
+ SEP      plan-1    HN1       0.020
+ SEP      plan-1    HN2       0.020
+ SEP      plan-2    C         0.020
+ SEP      plan-2    CA        0.020
+ SEP      plan-2    O         0.020
+ SEP      plan-2    OXT       0.020
+# ------------------------------------------------------

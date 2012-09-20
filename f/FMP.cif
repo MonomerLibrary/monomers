@@ -1,0 +1,297 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FMP      FMP 'FORMYCIN-5'-MONOPHOSPHATE           ' non-polymer        35  23 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FMP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FMP           O3P    O    OP       -0.666      0.000    0.000    0.000
+ FMP           P      P    P         0.000     -1.223   -0.017   -0.890
+ FMP           O1P    O    OP       -0.666     -1.531   -1.441   -1.298
+ FMP           O2P    O    OP       -0.666     -0.959    0.815   -2.127
+ FMP           "O5'"  O    O2        0.000     -2.478    0.595   -0.090
+ FMP           "C5'"  C    CH2       0.000     -2.677   -0.229    1.059
+ FMP           "H5'1" H    H         0.000     -1.777   -0.214    1.677
+ FMP           "H5'2" H    H         0.000     -2.882   -1.253    0.740
+ FMP           "C4'"  C    CH1       0.000     -3.862    0.302    1.868
+ FMP           "H4'"  H    H         0.000     -3.665    1.328    2.207
+ FMP           "C3'"  C    CH1       0.000     -4.147   -0.618    3.076
+ FMP           "H3'"  H    H         0.000     -3.771   -1.633    2.884
+ FMP           "O3'"  O    OH1       0.000     -3.558   -0.083    4.264
+ FMP           "HO3'" H    H         0.000     -3.745   -0.670    5.008
+ FMP           "C2'"  C    CH1       0.000     -5.688   -0.623    3.190
+ FMP           "H2'"  H    H         0.000     -6.079   -1.641    3.055
+ FMP           "O2'"  O    OH1       0.000     -6.099   -0.094    4.452
+ FMP           "HO2'" H    H         0.000     -5.748   -0.647    5.163
+ FMP           "C1'"  C    CH1       0.000     -6.151    0.290    2.035
+ FMP           "H1'"  H    H         0.000     -6.308    1.316    2.398
+ FMP           "O4'"  O    O2        0.000     -5.071    0.257    1.078
+ FMP           C9     C    CR5       0.000     -7.416   -0.245    1.416
+ FMP           C4     C    CR56      0.000     -8.640    0.450    1.315
+ FMP           C5     C    CR56      0.000     -9.547   -0.413    0.674
+ FMP           N7     N    NR15      0.000     -8.869   -1.572    0.408
+ FMP           HN7    H    H         0.000     -9.259   -2.414   -0.061
+ FMP           N8     N    NRD5      0.000     -7.558   -1.424    0.880
+ FMP           N3     N    NRD6      0.000     -9.060    1.667    1.684
+ FMP           C2     C    CR16      0.000    -10.294    2.046    1.449
+ FMP           H2     H    H         0.000    -10.603    3.036    1.762
+ FMP           N1     N    NRD6      0.000    -11.176    1.268    0.845
+ FMP           C6     C    CR6       0.000    -10.851    0.045    0.441
+ FMP           N6     N    NH2       0.000    -11.783   -0.762   -0.189
+ FMP           HN62   H    H         0.000    -11.531   -1.697   -0.495
+ FMP           HN61   H    H         0.000    -12.728   -0.429   -0.352
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FMP      O3P    n/a    P      START
+ FMP      P      O3P    "O5'"  .
+ FMP      O1P    P      .      .
+ FMP      O2P    P      .      .
+ FMP      "O5'"  P      "C5'"  .
+ FMP      "C5'"  "O5'"  "C4'"  .
+ FMP      "H5'1" "C5'"  .      .
+ FMP      "H5'2" "C5'"  .      .
+ FMP      "C4'"  "C5'"  "C3'"  .
+ FMP      "H4'"  "C4'"  .      .
+ FMP      "C3'"  "C4'"  "C2'"  .
+ FMP      "H3'"  "C3'"  .      .
+ FMP      "O3'"  "C3'"  "HO3'" .
+ FMP      "HO3'" "O3'"  .      .
+ FMP      "C2'"  "C3'"  "C1'"  .
+ FMP      "H2'"  "C2'"  .      .
+ FMP      "O2'"  "C2'"  "HO2'" .
+ FMP      "HO2'" "O2'"  .      .
+ FMP      "C1'"  "C2'"  C9     .
+ FMP      "H1'"  "C1'"  .      .
+ FMP      "O4'"  "C1'"  .      .
+ FMP      C9     "C1'"  C4     .
+ FMP      C4     C9     N3     .
+ FMP      C5     C4     N7     .
+ FMP      N7     C5     N8     .
+ FMP      HN7    N7     .      .
+ FMP      N8     N7     .      .
+ FMP      N3     C4     C2     .
+ FMP      C2     N3     N1     .
+ FMP      H2     C2     .      .
+ FMP      N1     C2     C6     .
+ FMP      C6     N1     N6     .
+ FMP      N6     C6     HN61   .
+ FMP      HN62   N6     .      .
+ FMP      HN61   N6     .      END
+ FMP      "C4'"  "O4'"  .    ADD
+ FMP      C9     N8     .    ADD
+ FMP      C6     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FMP      O1P    P         deloc       1.510    0.020
+ FMP      O2P    P         deloc       1.510    0.020
+ FMP      P      O3P       deloc       1.510    0.020
+ FMP      "O5'"  P         single      1.610    0.020
+ FMP      "C5'"  "O5'"     single      1.426    0.020
+ FMP      "C4'"  "C5'"     single      1.524    0.020
+ FMP      "H5'1" "C5'"     single      1.092    0.020
+ FMP      "H5'2" "C5'"     single      1.092    0.020
+ FMP      "C4'"  "O4'"     single      1.426    0.020
+ FMP      "C3'"  "C4'"     single      1.524    0.020
+ FMP      "H4'"  "C4'"     single      1.099    0.020
+ FMP      "O4'"  "C1'"     single      1.426    0.020
+ FMP      "O3'"  "C3'"     single      1.432    0.020
+ FMP      "C2'"  "C3'"     single      1.524    0.020
+ FMP      "H3'"  "C3'"     single      1.099    0.020
+ FMP      "HO3'" "O3'"     single      0.967    0.020
+ FMP      "O2'"  "C2'"     single      1.432    0.020
+ FMP      "C1'"  "C2'"     single      1.524    0.020
+ FMP      "H2'"  "C2'"     single      1.099    0.020
+ FMP      "HO2'" "O2'"     single      0.967    0.020
+ FMP      C9     "C1'"     single      1.480    0.020
+ FMP      "H1'"  "C1'"     single      1.099    0.020
+ FMP      C9     N8        double      1.350    0.020
+ FMP      C4     C9        single      1.490    0.020
+ FMP      N8     N7        single      1.402    0.020
+ FMP      N7     C5        single      1.340    0.020
+ FMP      HN7    N7        single      1.040    0.020
+ FMP      N6     C6        single      1.355    0.020
+ FMP      C6     C5        single      1.490    0.020
+ FMP      C6     N1        double      1.350    0.020
+ FMP      HN61   N6        single      1.010    0.020
+ FMP      HN62   N6        single      1.010    0.020
+ FMP      C5     C4        double      1.490    0.020
+ FMP      N3     C4        single      1.355    0.020
+ FMP      C2     N3        double      1.337    0.020
+ FMP      N1     C2        single      1.337    0.020
+ FMP      H2     C2        single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FMP      O3P    P      O1P     119.900    3.000
+ FMP      O3P    P      O2P     119.900    3.000
+ FMP      O3P    P      "O5'"   108.200    3.000
+ FMP      O1P    P      O2P     119.900    3.000
+ FMP      O1P    P      "O5'"   108.200    3.000
+ FMP      O2P    P      "O5'"   108.200    3.000
+ FMP      P      "O5'"  "C5'"   120.500    3.000
+ FMP      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ FMP      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ FMP      "O5'"  "C5'"  "C4'"   109.470    3.000
+ FMP      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ FMP      "H5'1" "C5'"  "C4'"   109.470    3.000
+ FMP      "H5'2" "C5'"  "C4'"   109.470    3.000
+ FMP      "C5'"  "C4'"  "H4'"   108.340    3.000
+ FMP      "C5'"  "C4'"  "C3'"   111.000    3.000
+ FMP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ FMP      "H4'"  "C4'"  "C3'"   108.340    3.000
+ FMP      "H4'"  "C4'"  "O4'"   109.470    3.000
+ FMP      "C3'"  "C4'"  "O4'"   109.470    3.000
+ FMP      "C4'"  "C3'"  "H3'"   108.340    3.000
+ FMP      "C4'"  "C3'"  "O3'"   109.470    3.000
+ FMP      "C4'"  "C3'"  "C2'"   111.000    3.000
+ FMP      "H3'"  "C3'"  "O3'"   109.470    3.000
+ FMP      "H3'"  "C3'"  "C2'"   108.340    3.000
+ FMP      "O3'"  "C3'"  "C2'"   109.470    3.000
+ FMP      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ FMP      "C3'"  "C2'"  "H2'"   108.340    3.000
+ FMP      "C3'"  "C2'"  "O2'"   109.470    3.000
+ FMP      "C3'"  "C2'"  "C1'"   111.000    3.000
+ FMP      "H2'"  "C2'"  "O2'"   109.470    3.000
+ FMP      "H2'"  "C2'"  "C1'"   108.340    3.000
+ FMP      "O2'"  "C2'"  "C1'"   109.470    3.000
+ FMP      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ FMP      "C2'"  "C1'"  "H1'"   108.340    3.000
+ FMP      "C2'"  "C1'"  "O4'"   109.470    3.000
+ FMP      "C2'"  "C1'"  C9      109.470    3.000
+ FMP      "H1'"  "C1'"  "O4'"   109.470    3.000
+ FMP      "H1'"  "C1'"  C9      109.470    3.000
+ FMP      "O4'"  "C1'"  C9      109.500    3.000
+ FMP      "C1'"  "O4'"  "C4'"   111.800    3.000
+ FMP      "C1'"  C9     C4      108.000    3.000
+ FMP      "C1'"  C9     N8      126.000    3.000
+ FMP      C4     C9     N8      108.000    3.000
+ FMP      C9     C4     C5      108.000    3.000
+ FMP      C9     C4     N3      120.000    3.000
+ FMP      C5     C4     N3      120.000    3.000
+ FMP      C4     C5     N7      108.000    3.000
+ FMP      C4     C5     C6      120.000    3.000
+ FMP      N7     C5     C6      132.000    3.000
+ FMP      C5     N7     HN7     126.000    3.000
+ FMP      C5     N7     N8      108.000    3.000
+ FMP      HN7    N7     N8      108.000    3.000
+ FMP      N7     N8     C9      108.000    3.000
+ FMP      C4     N3     C2      120.000    3.000
+ FMP      N3     C2     H2      120.000    3.000
+ FMP      N3     C2     N1      120.000    3.000
+ FMP      H2     C2     N1      120.000    3.000
+ FMP      C2     N1     C6      120.000    3.000
+ FMP      N1     C6     N6      120.000    3.000
+ FMP      N1     C6     C5      120.000    3.000
+ FMP      N6     C6     C5      120.000    3.000
+ FMP      C6     N6     HN62    120.000    3.000
+ FMP      C6     N6     HN61    120.000    3.000
+ FMP      HN62   N6     HN61    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FMP      var_1    O3P    P      "O5'"  "C5'"    -60.023   20.000   1
+ FMP      var_2    P      "O5'"  "C5'"  "C4'"    179.995   20.000   1
+ FMP      var_3    "O5'"  "C5'"  "C4'"  "C3'"    176.938   20.000   3
+ FMP      var_4    "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ FMP      var_5    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
+ FMP      var_6    "C4'"  "C3'"  "O3'"  "HO3'"  -179.986   20.000   1
+ FMP      var_7    "C4'"  "C3'"  "C2'"  "C1'"      0.000   20.000   3
+ FMP      var_8    "C3'"  "C2'"  "O2'"  "HO2'"   -61.376   20.000   1
+ FMP      var_9    "C3'"  "C2'"  "C1'"  C9       150.000   20.000   3
+ FMP      var_10   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ FMP      var_11   "C2'"  "C1'"  C9     C4       121.828   20.000   1
+ FMP      CONST_1  "C1'"  C9     N8     N7       180.000    0.000   0
+ FMP      CONST_2  "C1'"  C9     C4     N3         0.000    0.000   0
+ FMP      CONST_3  C9     C4     C5     N7         0.000    0.000   0
+ FMP      CONST_4  C4     C5     N7     N8         0.000    0.000   0
+ FMP      CONST_5  C5     N7     N8     C9         0.000    0.000   0
+ FMP      CONST_6  C9     C4     N3     C2       180.000    0.000   0
+ FMP      CONST_7  C4     N3     C2     N1         0.000    0.000   0
+ FMP      CONST_8  N3     C2     N1     C6         0.000    0.000   0
+ FMP      CONST_9  C2     N1     C6     N6       180.000    0.000   0
+ FMP      CONST_10 N1     C6     C5     C4         0.000    0.000   0
+ FMP      CONST_11 N1     C6     N6     HN61       0.089    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ FMP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ FMP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ FMP      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ FMP      chir_04  "C1'"  "O4'"  "C2'"  C9        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FMP      plan-1    C9        0.020
+ FMP      plan-1    "C1'"     0.020
+ FMP      plan-1    N8        0.020
+ FMP      plan-1    C4        0.020
+ FMP      plan-1    N7        0.020
+ FMP      plan-1    C5        0.020
+ FMP      plan-1    HN7       0.020
+ FMP      plan-1    C6        0.020
+ FMP      plan-1    N6        0.020
+ FMP      plan-1    N1        0.020
+ FMP      plan-1    N3        0.020
+ FMP      plan-1    C2        0.020
+ FMP      plan-1    H2        0.020
+ FMP      plan-1    HN62      0.020
+ FMP      plan-1    HN61      0.020
+ FMP      plan-2    N6        0.020
+ FMP      plan-2    C6        0.020
+ FMP      plan-2    HN61      0.020
+ FMP      plan-2    HN62      0.020
+# ------------------------------------------------------

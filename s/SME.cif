@@ -1,0 +1,185 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SME      SME 'METHIONINE SULFOXIDE                ' peptide            20  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SME
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SME           N      N    NH2       0.000      0.000    0.000    0.000
+ SME           HN1    H    H         0.000      0.916   -0.407    0.150
+ SME           HN2    H    H         0.000     -0.420   -0.047   -0.921
+ SME           CA     C    CH1       0.000     -0.712    0.652    1.107
+ SME           HA     H    H         0.000     -0.821    1.724    0.891
+ SME           CB     C    CH2       0.000     -2.095    0.021    1.267
+ SME           HB2    H    H         0.000     -2.622    0.506    2.091
+ SME           HB3    H    H         0.000     -1.985   -1.044    1.483
+ SME           CG     C    CH2       0.000     -2.891    0.201   -0.027
+ SME           HG2    H    H         0.000     -2.361   -0.284   -0.849
+ SME           HG3    H    H         0.000     -2.998    1.266   -0.242
+ SME           S      S    S3        0.000     -4.532   -0.548    0.164
+ SME           OE     O    O         0.000     -4.395   -1.952    0.327
+ SME           CE     C    CH3       0.000     -5.231   -0.195   -1.473
+ SME           HE3    H    H         0.000     -5.260    0.856   -1.650
+ SME           HE2    H    H         0.000     -4.642   -0.647   -2.238
+ SME           HE1    H    H         0.000     -6.225   -0.575   -1.546
+ SME           C      C    C         0.000      0.073    0.476    2.381
+ SME           O      O    OC       -0.500      0.785   -0.540    2.542
+ SME           OXT    O    OC       -0.500      0.011    1.345    3.279
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SME      N      n/a    CA     START
+ SME      HN1    N      .      .
+ SME      HN2    N      .      .
+ SME      CA     N      C      .
+ SME      HA     CA     .      .
+ SME      CB     CA     CG     .
+ SME      HB2    CB     .      .
+ SME      HB3    CB     .      .
+ SME      CG     CB     S      .
+ SME      HG2    CG     .      .
+ SME      HG3    CG     .      .
+ SME      S      CG     CE     .
+ SME      OE     S      .      .
+ SME      CE     S      HE1    .
+ SME      HE3    CE     .      .
+ SME      HE2    CE     .      .
+ SME      HE1    CE     .      .
+ SME      C      CA     .      END
+ SME      O      C      .      .
+ SME      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SME      CA     N         single      1.450    0.020
+ SME      CB     CA        single      1.524    0.020
+ SME      C      CA        single      1.500    0.020
+ SME      HA     CA        single      1.099    0.020
+ SME      CG     CB        single      1.524    0.020
+ SME      HB2    CB        single      1.092    0.020
+ SME      HB3    CB        single      1.092    0.020
+ SME      S      CG        single      1.707    0.020
+ SME      HG2    CG        single      1.092    0.020
+ SME      HG3    CG        single      1.092    0.020
+ SME      OE     S         double      1.480    0.020
+ SME      CE     S         single      1.707    0.020
+ SME      HE1    CE        single      1.059    0.020
+ SME      HE2    CE        single      1.059    0.020
+ SME      HE3    CE        single      1.059    0.020
+ SME      O      C         deloc       1.250    0.020
+ SME      OXT    C         deloc       1.250    0.020
+ SME      HN1    N         single      1.010    0.020
+ SME      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SME      HN1    N      HN2     120.000    3.000
+ SME      HN1    N      CA      120.000    3.000
+ SME      HN2    N      CA      120.000    3.000
+ SME      N      CA     HA      109.470    3.000
+ SME      N      CA     CB      109.470    3.000
+ SME      N      CA     C       109.470    3.000
+ SME      HA     CA     CB      108.340    3.000
+ SME      HA     CA     C       108.810    3.000
+ SME      CB     CA     C       109.470    3.000
+ SME      CA     CB     HB2     109.470    3.000
+ SME      CA     CB     HB3     109.470    3.000
+ SME      CA     CB     CG      111.000    3.000
+ SME      HB2    CB     HB3     107.900    3.000
+ SME      HB2    CB     CG      109.470    3.000
+ SME      HB3    CB     CG      109.470    3.000
+ SME      CB     CG     HG2     109.470    3.000
+ SME      CB     CG     HG3     109.470    3.000
+ SME      CB     CG     S       109.500    3.000
+ SME      HG2    CG     HG3     107.900    3.000
+ SME      HG2    CG     S       109.500    3.000
+ SME      HG3    CG     S       109.500    3.000
+ SME      CG     S      OE      109.462    3.000
+ SME      CG     S      CE      100.012    3.000
+ SME      OE     S      CE      109.487    3.000
+ SME      S      CE     HE3     109.500    3.000
+ SME      S      CE     HE2     109.500    3.000
+ SME      S      CE     HE1     109.500    3.000
+ SME      HE3    CE     HE2     109.470    3.000
+ SME      HE3    CE     HE1     109.470    3.000
+ SME      HE2    CE     HE1     109.470    3.000
+ SME      CA     C      O       118.500    3.000
+ SME      CA     C      OXT     118.500    3.000
+ SME      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SME      var_1    HN2    N      CA     C        175.000   20.000   1
+ SME      var_2    N      CA     CB     CG       -59.991   20.000   3
+ SME      var_3    CA     CB     CG     S       -179.976   20.000   3
+ SME      var_4    CB     CG     S      CE      -179.981   20.000   1
+ SME      var_5    CG     S      CE     HE1     -179.992   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SME      chir_01  CA     N      CB     C         negativ
+ SME      chir_02  S      CG     OE     CE        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SME      plan-1    N         0.020
+ SME      plan-1    CA        0.020
+ SME      plan-1    HN1       0.020
+ SME      plan-1    HN2       0.020
+ SME      plan-2    C         0.020
+ SME      plan-2    CA        0.020
+ SME      plan-2    O         0.020
+ SME      plan-2    OXT       0.020
+# ------------------------------------------------------

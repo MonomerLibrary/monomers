@@ -1,0 +1,268 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PAT      PAT 'ALPHA-PHOSPHONO-TRYPTOPHAN          ' peptide            31  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PAT
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PAT           N      N    NH2       0.000      0.000    0.000    0.000
+ PAT           HN1    H    H         0.000      0.924   -0.368   -0.182
+ PAT           HN2    H    H         0.000     -0.289    0.867   -0.433
+ PAT           CA     C    CT        0.000     -0.919   -0.722    0.890
+ PAT           CB     C    CH2       0.000     -2.234   -0.969    0.122
+ PAT           HB2    H    H         0.000     -1.967   -1.496   -0.796
+ PAT           HB3    H    H         0.000     -2.642    0.013   -0.128
+ PAT           CG     C    CR5       0.000     -3.266   -1.764    0.877
+ PAT           CD2    C    CR56      0.000     -4.260   -1.229    1.718
+ PAT           CE3    C    CR16      0.000     -4.629    0.067    2.126
+ PAT           HE3    H    H         0.000     -4.084    0.931    1.766
+ PAT           CZ3    C    CR16      0.000     -5.708    0.226    3.001
+ PAT           HZ3    H    H         0.000     -5.999    1.220    3.319
+ PAT           CH2    C    CR16      0.000     -6.415   -0.881    3.471
+ PAT           HH2    H    H         0.000     -7.247   -0.734    4.148
+ PAT           CZ2    C    CR16      0.000     -6.066   -2.177    3.079
+ PAT           HZ2    H    H         0.000     -6.613   -3.039    3.442
+ PAT           CE2    C    CR56      0.000     -4.985   -2.320    2.204
+ PAT           NE1    N    NR15      0.000     -4.426   -3.454    1.659
+ PAT           HNE1   H    H         0.000     -4.754   -4.425    1.838
+ PAT           CD1    C    CR15      0.000     -3.375   -3.120    0.847
+ PAT           HD1    H    H         0.000     -2.750   -3.804    0.288
+ PAT           P      P    P         0.000     -1.051    0.474    2.233
+ PAT           O2P    O    OH1       0.000     -1.761   -0.345    3.437
+ PAT           HOP2   H    H         0.000     -1.981    0.103    4.266
+ PAT           O3P    O    OH1       0.000      0.463    0.646    2.775
+ PAT           HOP3   H    H         0.000      0.658    1.282    3.478
+ PAT           O1P    O    O         0.000     -1.729    1.762    1.868
+ PAT           C      C    C         0.000     -0.231   -2.026    1.263
+ PAT           O      O    OC       -0.500      0.018   -2.375    2.439
+ PAT           OXT    O    OC       -0.500      0.096   -2.722    0.277
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PAT      N      n/a    CA     START
+ PAT      HN1    N      .      .
+ PAT      HN2    N      .      .
+ PAT      CA     N      C      .
+ PAT      CB     CA     CG     .
+ PAT      HB2    CB     .      .
+ PAT      HB3    CB     .      .
+ PAT      CG     CB     CD2    .
+ PAT      CD2    CG     CE3    .
+ PAT      CE3    CD2    CZ3    .
+ PAT      HE3    CE3    .      .
+ PAT      CZ3    CE3    CH2    .
+ PAT      HZ3    CZ3    .      .
+ PAT      CH2    CZ3    CZ2    .
+ PAT      HH2    CH2    .      .
+ PAT      CZ2    CH2    CE2    .
+ PAT      HZ2    CZ2    .      .
+ PAT      CE2    CZ2    NE1    .
+ PAT      NE1    CE2    CD1    .
+ PAT      HNE1   NE1    .      .
+ PAT      CD1    NE1    HD1    .
+ PAT      HD1    CD1    .      .
+ PAT      P      CA     O1P    .
+ PAT      O2P    P      HOP2   .
+ PAT      HOP2   O2P    .      .
+ PAT      O3P    P      HOP3   .
+ PAT      HOP3   O3P    .      .
+ PAT      O1P    P      .      .
+ PAT      C      CA     .      END
+ PAT      O      C      .      .
+ PAT      OXT    C      .      .
+ PAT      CG     CD1    .    ADD
+ PAT      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PAT      CA     N         single      1.462    0.020
+ PAT      C      CA        single      1.507    0.020
+ PAT      CB     CA        single      1.524    0.020
+ PAT      P      CA        single      1.812    0.020
+ PAT      O      C         deloc       1.250    0.020
+ PAT      OXT    C         deloc       1.250    0.020
+ PAT      CG     CB        single      1.510    0.020
+ PAT      HB2    CB        single      1.092    0.020
+ PAT      HB3    CB        single      1.092    0.020
+ PAT      CG     CD1       double      1.387    0.020
+ PAT      CD2    CG        single      1.490    0.020
+ PAT      CD1    NE1       single      1.350    0.020
+ PAT      HD1    CD1       single      1.083    0.020
+ PAT      CD2    CE2       double      1.490    0.020
+ PAT      CE3    CD2       single      1.390    0.020
+ PAT      NE1    CE2       single      1.340    0.020
+ PAT      CE2    CZ2       single      1.390    0.020
+ PAT      CZ3    CE3       double      1.390    0.020
+ PAT      HE3    CE3       single      1.083    0.020
+ PAT      CZ2    CH2       double      1.390    0.020
+ PAT      HZ2    CZ2       single      1.083    0.020
+ PAT      CH2    CZ3       single      1.390    0.020
+ PAT      HZ3    CZ3       single      1.083    0.020
+ PAT      HH2    CH2       single      1.083    0.020
+ PAT      O1P    P         double      1.480    0.020
+ PAT      O2P    P         single      1.610    0.020
+ PAT      O3P    P         single      1.610    0.020
+ PAT      HOP2   O2P       single      0.967    0.020
+ PAT      HOP3   O3P       single      0.967    0.020
+ PAT      HN1    N         single      1.010    0.020
+ PAT      HN2    N         single      1.010    0.020
+ PAT      HNE1   NE1       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PAT      HN1    N      HN2     120.000    3.000
+ PAT      HN1    N      CA      120.000    3.000
+ PAT      HN2    N      CA      120.000    3.000
+ PAT      N      CA     CB      109.500    3.000
+ PAT      N      CA     P       109.500    3.000
+ PAT      N      CA     C       109.500    3.000
+ PAT      CB     CA     P       109.500    3.000
+ PAT      CB     CA     C       109.470    3.000
+ PAT      P      CA     C       109.500    3.000
+ PAT      CA     CB     HB2     109.470    3.000
+ PAT      CA     CB     HB3     109.470    3.000
+ PAT      CA     CB     CG      109.470    3.000
+ PAT      HB2    CB     HB3     107.900    3.000
+ PAT      HB2    CB     CG      109.470    3.000
+ PAT      HB3    CB     CG      109.470    3.000
+ PAT      CB     CG     CD2     126.000    3.000
+ PAT      CB     CG     CD1     126.000    3.000
+ PAT      CD2    CG     CD1     108.000    3.000
+ PAT      CG     CD2    CE3     126.000    3.000
+ PAT      CG     CD2    CE2     108.000    3.000
+ PAT      CE3    CD2    CE2     120.000    3.000
+ PAT      CD2    CE3    HE3     120.000    3.000
+ PAT      CD2    CE3    CZ3     120.000    3.000
+ PAT      HE3    CE3    CZ3     120.000    3.000
+ PAT      CE3    CZ3    HZ3     120.000    3.000
+ PAT      CE3    CZ3    CH2     120.000    3.000
+ PAT      HZ3    CZ3    CH2     120.000    3.000
+ PAT      CZ3    CH2    HH2     120.000    3.000
+ PAT      CZ3    CH2    CZ2     120.000    3.000
+ PAT      HH2    CH2    CZ2     120.000    3.000
+ PAT      CH2    CZ2    HZ2     120.000    3.000
+ PAT      CH2    CZ2    CE2     120.000    3.000
+ PAT      HZ2    CZ2    CE2     120.000    3.000
+ PAT      CZ2    CE2    NE1     132.000    3.000
+ PAT      CZ2    CE2    CD2     120.000    3.000
+ PAT      NE1    CE2    CD2     108.000    3.000
+ PAT      CE2    NE1    HNE1    126.000    3.000
+ PAT      CE2    NE1    CD1     108.000    3.000
+ PAT      HNE1   NE1    CD1     126.000    3.000
+ PAT      NE1    CD1    HD1     126.000    3.000
+ PAT      NE1    CD1    CG      108.000    3.000
+ PAT      HD1    CD1    CG      126.000    3.000
+ PAT      CA     P      O3P     109.500    3.000
+ PAT      CA     P      O2P     109.500    3.000
+ PAT      CA     P      O1P     109.500    3.000
+ PAT      O3P    P      O2P     109.500    3.000
+ PAT      O3P    P      O1P     109.500    3.000
+ PAT      O2P    P      O1P     109.500    3.000
+ PAT      P      O3P    HOP3    120.000    3.000
+ PAT      P      O2P    HOP2    120.000    3.000
+ PAT      CA     C      O       118.500    3.000
+ PAT      CA     C      OXT     118.500    3.000
+ PAT      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PAT      var_1    HN2    N      CA     C        175.000   20.000   1
+ PAT      var_2    N      CA     CB     CG       177.108   20.000   1
+ PAT      var_3    CA     CB     CG     CD2       89.948   20.000   2
+ PAT      CONST_1  CB     CG     CD1    NE1      180.000    0.000   0
+ PAT      CONST_2  CB     CG     CD2    CE3        0.000    0.000   0
+ PAT      CONST_3  CG     CD2    CE2    CZ2      180.000    0.000   0
+ PAT      CONST_4  CG     CD2    CE3    CZ3      180.000    0.000   0
+ PAT      CONST_5  CD2    CE3    CZ3    CH2        0.000    0.000   0
+ PAT      CONST_6  CE3    CZ3    CH2    CZ2        0.000    0.000   0
+ PAT      CONST_7  CZ3    CH2    CZ2    CE2        0.000    0.000   0
+ PAT      CONST_8  CH2    CZ2    CE2    NE1      180.000    0.000   0
+ PAT      CONST_9  CZ2    CE2    NE1    CD1      180.000    0.000   0
+ PAT      CONST_10 CE2    NE1    CD1    CG         0.000    0.000   0
+ PAT      var_4    N      CA     P      O1P       66.382   20.000   1
+ PAT      var_5    CA     P      O3P    HOP3     176.858   20.000   1
+ PAT      var_6    CA     P      O2P    HOP2    -177.030   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PAT      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PAT      plan-1    N         0.020
+ PAT      plan-1    CA        0.020
+ PAT      plan-1    HN1       0.020
+ PAT      plan-1    HN2       0.020
+ PAT      plan-2    C         0.020
+ PAT      plan-2    CA        0.020
+ PAT      plan-2    O         0.020
+ PAT      plan-2    OXT       0.020
+ PAT      plan-3    CG        0.020
+ PAT      plan-3    CB        0.020
+ PAT      plan-3    CD1       0.020
+ PAT      plan-3    CD2       0.020
+ PAT      plan-3    NE1       0.020
+ PAT      plan-3    HD1       0.020
+ PAT      plan-3    CE2       0.020
+ PAT      plan-3    CE3       0.020
+ PAT      plan-3    CZ2       0.020
+ PAT      plan-3    CZ3       0.020
+ PAT      plan-3    CH2       0.020
+ PAT      plan-3    HNE1      0.020
+ PAT      plan-3    HE3       0.020
+ PAT      plan-3    HZ2       0.020
+ PAT      plan-3    HZ3       0.020
+ PAT      plan-3    HH2       0.020
+# ------------------------------------------------------

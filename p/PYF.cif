@@ -1,0 +1,158 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PYF      PYF '3-PYRIDINYLCARBINOL                 ' non-polymer        15   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PYF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PYF           O7     O    OH1       0.000      0.000    0.000    0.000
+ PYF           HO7    H    H         0.000      0.825    0.381    0.330
+ PYF           C7     C    CH2       0.000     -0.939    1.047   -0.252
+ PYF           H71    H    H         0.000     -0.529    1.731   -0.997
+ PYF           H72    H    H         0.000     -1.132    1.592    0.674
+ PYF           C3     C    CR6       0.000     -2.226    0.454   -0.766
+ PYF           C2     C    CR16      0.000     -2.422    0.278   -2.120
+ PYF           H2     H    H         0.000     -1.646    0.572   -2.816
+ PYF           C4     C    CR16      0.000     -3.230    0.085    0.116
+ PYF           H4     H    H         0.000     -3.105    0.215    1.184
+ PYF           C5     C    CR16      0.000     -4.397   -0.454   -0.401
+ PYF           H5     H    H         0.000     -5.203   -0.752    0.259
+ PYF           C6     C    CR16      0.000     -4.519   -0.607   -1.768
+ PYF           H6     H    H         0.000     -5.427   -1.029   -2.181
+ PYF           N1     N    NRD6      0.000     -3.543   -0.245   -2.577
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PYF      O7     n/a    C7     START
+ PYF      HO7    O7     .      .
+ PYF      C7     O7     C3     .
+ PYF      H71    C7     .      .
+ PYF      H72    C7     .      .
+ PYF      C3     C7     C4     .
+ PYF      C2     C3     H2     .
+ PYF      H2     C2     .      .
+ PYF      C4     C3     C5     .
+ PYF      H4     C4     .      .
+ PYF      C5     C4     C6     .
+ PYF      H5     C5     .      .
+ PYF      C6     C5     N1     .
+ PYF      H6     C6     .      .
+ PYF      N1     C6     .      END
+ PYF      N1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PYF      N1     C2        double      1.337    0.020
+ PYF      N1     C6        single      1.337    0.020
+ PYF      C2     C3        single      1.390    0.020
+ PYF      H2     C2        single      1.083    0.020
+ PYF      C4     C3        double      1.390    0.020
+ PYF      C3     C7        single      1.511    0.020
+ PYF      C5     C4        single      1.390    0.020
+ PYF      H4     C4        single      1.083    0.020
+ PYF      C6     C5        double      1.390    0.020
+ PYF      H5     C5        single      1.083    0.020
+ PYF      H6     C6        single      1.083    0.020
+ PYF      C7     O7        single      1.432    0.020
+ PYF      H71    C7        single      1.092    0.020
+ PYF      H72    C7        single      1.092    0.020
+ PYF      HO7    O7        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PYF      HO7    O7     C7      109.470    3.000
+ PYF      O7     C7     H71     109.470    3.000
+ PYF      O7     C7     H72     109.470    3.000
+ PYF      O7     C7     C3      109.500    3.000
+ PYF      H71    C7     H72     107.900    3.000
+ PYF      H71    C7     C3      109.470    3.000
+ PYF      H72    C7     C3      109.470    3.000
+ PYF      C7     C3     C2      120.000    3.000
+ PYF      C7     C3     C4      120.000    3.000
+ PYF      C2     C3     C4      120.000    3.000
+ PYF      C3     C2     H2      120.000    3.000
+ PYF      C3     C2     N1      120.000    3.000
+ PYF      H2     C2     N1      120.000    3.000
+ PYF      C3     C4     H4      120.000    3.000
+ PYF      C3     C4     C5      120.000    3.000
+ PYF      H4     C4     C5      120.000    3.000
+ PYF      C4     C5     H5      120.000    3.000
+ PYF      C4     C5     C6      120.000    3.000
+ PYF      H5     C5     C6      120.000    3.000
+ PYF      C5     C6     H6      120.000    3.000
+ PYF      C5     C6     N1      120.000    3.000
+ PYF      H6     C6     N1      120.000    3.000
+ PYF      C6     N1     C2      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PYF      var_1    HO7    O7     C7     C3      -179.954   20.000   1
+ PYF      var_2    O7     C7     C3     C4        89.997   20.000   2
+ PYF      CONST_1  C7     C3     C2     N1       180.000    0.000   0
+ PYF      CONST_2  C7     C3     C4     C5       180.000    0.000   0
+ PYF      CONST_3  C3     C4     C5     C6         0.000    0.000   0
+ PYF      CONST_4  C4     C5     C6     N1         0.000    0.000   0
+ PYF      CONST_5  C5     C6     N1     C2         0.000    0.000   0
+ PYF      CONST_6  C6     N1     C2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PYF      plan-1    N1        0.020
+ PYF      plan-1    C2        0.020
+ PYF      plan-1    C6        0.020
+ PYF      plan-1    C3        0.020
+ PYF      plan-1    C4        0.020
+ PYF      plan-1    C5        0.020
+ PYF      plan-1    H2        0.020
+ PYF      plan-1    C7        0.020
+ PYF      plan-1    H4        0.020
+ PYF      plan-1    H5        0.020
+ PYF      plan-1    H6        0.020
+# ------------------------------------------------------

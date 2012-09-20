@@ -1,0 +1,398 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ANZ      ANZ '.                                   ' non-polymer        48  33 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ANZ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ANZ           F      F    F         0.000      0.000    0.000    0.000
+ ANZ           CE1    C    CR6       0.000     -1.330    0.060    0.226
+ ANZ           CD1    C    CR16      0.000     -1.832   -0.213    1.489
+ ANZ           HD1    H    H         0.000     -1.158   -0.475    2.296
+ ANZ           CZ     C    CR16      0.000     -2.194    0.395   -0.804
+ ANZ           HZ     H    H         0.000     -1.802    0.608   -1.791
+ ANZ           CE2    C    CR16      0.000     -3.556    0.458   -0.574
+ ANZ           HE2    H    H         0.000     -4.231    0.721   -1.379
+ ANZ           CD2    C    CR6       0.000     -4.053    0.185    0.683
+ ANZ           CG     C    CR6       0.000     -3.189   -0.151    1.716
+ ANZ           B      B    B        -1.000     -5.482    0.164    1.294
+ ANZ           "O3'"  O    O2        0.000     -6.146   -0.982    0.931
+ ANZ           O1     O    O2        0.000     -5.327    0.221    2.654
+ ANZ           CB     C    CH2       0.000     -4.052   -0.384    2.934
+ ANZ           HBC2   H    H         0.000     -4.160   -1.457    3.106
+ ANZ           HBC1   H    H         0.000     -3.585    0.078    3.806
+ ANZ           "O2'"  O    O2        0.000     -6.221    1.228    0.844
+ ANZ           "C2'"  C    CH1       0.000     -7.596    0.863    1.092
+ ANZ           "H2'"  H    H         0.000     -8.014    1.323    1.999
+ ANZ           "C3'"  C    CH1       0.000     -7.544   -0.693    1.152
+ ANZ           "H3'"  H    H         0.000     -7.934   -1.108    2.092
+ ANZ           "C4'"  C    CH1       0.000     -8.341   -1.136   -0.093
+ ANZ           "H4'"  H    H         0.000     -7.661   -1.318   -0.937
+ ANZ           "C5'"  C    CH2       0.000     -9.155   -2.394    0.217
+ ANZ           "H5'1" H    H         0.000     -9.876   -2.174    1.007
+ ANZ           "H5'2" H    H         0.000     -8.483   -3.189    0.549
+ ANZ           "O5'"  O    O2        0.000     -9.849   -2.815   -0.960
+ ANZ           P      P    P         0.000    -10.805   -4.108   -0.998
+ ANZ           O3P    O    OP       -0.666    -11.859   -3.990    0.081
+ ANZ           O2P    O    OP       -0.666    -11.476   -4.200   -2.351
+ ANZ           O1P    O    OP       -0.666     -9.978   -5.353   -0.761
+ ANZ           "C1'"  C    CH1       0.000     -8.420    1.155   -0.180
+ ANZ           "H1'"  H    H         0.000     -7.754    1.321   -1.038
+ ANZ           "O4'"  O    O2        0.000     -9.219   -0.029   -0.386
+ ANZ           N9     N    NR5       0.000     -9.282    2.321    0.029
+ ANZ           C4     C    CR56      0.000     -8.940    3.633   -0.184
+ ANZ           C5     C    CR56      0.000    -10.074    4.390    0.154
+ ANZ           N7     N    NRD5      0.000    -11.033    3.517    0.549
+ ANZ           C8     C    CR15      0.000    -10.570    2.303    0.475
+ ANZ           H8     H    H         0.000    -11.126    1.410    0.731
+ ANZ           N3     N    NRD6      0.000     -7.847    4.260   -0.607
+ ANZ           C2     C    CR16      0.000     -7.825    5.572   -0.710
+ ANZ           H2     H    H         0.000     -6.919    6.052   -1.059
+ ANZ           N1     N    NRD6      0.000     -8.866    6.325   -0.403
+ ANZ           C6     C    CR6       0.000    -10.002    5.786    0.028
+ ANZ           N6     N    NH2       0.000    -11.087    6.585    0.346
+ ANZ           H6N2   H    H         0.000    -11.029    7.594    0.253
+ ANZ           H6N1   H    H         0.000    -11.953    6.170    0.676
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ANZ      F      n/a    CE1    START
+ ANZ      CE1    F      CZ     .
+ ANZ      CD1    CE1    HD1    .
+ ANZ      HD1    CD1    .      .
+ ANZ      CZ     CE1    CE2    .
+ ANZ      HZ     CZ     .      .
+ ANZ      CE2    CZ     CD2    .
+ ANZ      HE2    CE2    .      .
+ ANZ      CD2    CE2    B      .
+ ANZ      CG     CD2    .      .
+ ANZ      B      CD2    "O2'"  .
+ ANZ      "O3'"  B      .      .
+ ANZ      O1     B      CB     .
+ ANZ      CB     O1     HBC1   .
+ ANZ      HBC2   CB     .      .
+ ANZ      HBC1   CB     .      .
+ ANZ      "O2'"  B      "C2'"  .
+ ANZ      "C2'"  "O2'"  "C1'"  .
+ ANZ      "H2'"  "C2'"  .      .
+ ANZ      "C3'"  "C2'"  "C4'"  .
+ ANZ      "H3'"  "C3'"  .      .
+ ANZ      "C4'"  "C3'"  "C5'"  .
+ ANZ      "H4'"  "C4'"  .      .
+ ANZ      "C5'"  "C4'"  "O5'"  .
+ ANZ      "H5'1" "C5'"  .      .
+ ANZ      "H5'2" "C5'"  .      .
+ ANZ      "O5'"  "C5'"  P      .
+ ANZ      P      "O5'"  O1P    .
+ ANZ      O3P    P      .      .
+ ANZ      O2P    P      .      .
+ ANZ      O1P    P      .      .
+ ANZ      "C1'"  "C2'"  N9     .
+ ANZ      "H1'"  "C1'"  .      .
+ ANZ      "O4'"  "C1'"  .      .
+ ANZ      N9     "C1'"  C4     .
+ ANZ      C4     N9     N3     .
+ ANZ      C5     C4     N7     .
+ ANZ      N7     C5     C8     .
+ ANZ      C8     N7     H8     .
+ ANZ      H8     C8     .      .
+ ANZ      N3     C4     C2     .
+ ANZ      C2     N3     N1     .
+ ANZ      H2     C2     .      .
+ ANZ      N1     C2     C6     .
+ ANZ      C6     N1     N6     .
+ ANZ      N6     C6     H6N1   .
+ ANZ      H6N2   N6     .      .
+ ANZ      H6N1   N6     .      END
+ ANZ      CB     CG     .    ADD
+ ANZ      CG     CD1    .    ADD
+ ANZ      N9     C8     .    ADD
+ ANZ      C5     C6     .    ADD
+ ANZ      "C4'"  "O4'"  .    ADD
+ ANZ      "C3'"  "O3'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ANZ      CB     CG        single      1.511    0.020
+ ANZ      CG     CD1       single      1.390    0.020
+ ANZ      CG     CD2       double      1.487    0.020
+ ANZ      CD1    CE1       double      1.390    0.020
+ ANZ      CD2    CE2       single      1.390    0.020
+ ANZ      CZ     CE1       single      1.390    0.020
+ ANZ      CE2    CZ        double      1.390    0.020
+ ANZ      O1P    P         deloc       1.510    0.020
+ ANZ      O2P    P         deloc       1.510    0.020
+ ANZ      O3P    P         deloc       1.510    0.020
+ ANZ      N9     C8        single      1.337    0.020
+ ANZ      C8     N7        double      1.350    0.020
+ ANZ      N7     C5        single      1.350    0.020
+ ANZ      C5     C6        double      1.490    0.020
+ ANZ      N6     C6        single      1.355    0.020
+ ANZ      C6     N1        single      1.350    0.020
+ ANZ      N1     C2        double      1.337    0.020
+ ANZ      C2     N3        single      1.337    0.020
+ ANZ      C4     N9        single      1.337    0.020
+ ANZ      C5     C4        single      1.490    0.020
+ ANZ      N3     C4        double      1.355    0.020
+ ANZ      P      "O5'"     single      1.610    0.020
+ ANZ      "O5'"  "C5'"     single      1.426    0.020
+ ANZ      "C5'"  "C4'"     single      1.524    0.020
+ ANZ      "C4'"  "O4'"     single      1.426    0.020
+ ANZ      "C4'"  "C3'"     single      1.524    0.020
+ ANZ      "C3'"  "O3'"     single      1.426    0.020
+ ANZ      "C3'"  "C2'"     single      1.524    0.020
+ ANZ      "C2'"  "O2'"     single      1.426    0.020
+ ANZ      N9     "C1'"     single      1.485    0.020
+ ANZ      "O4'"  "C1'"     single      1.426    0.020
+ ANZ      "C1'"  "C2'"     single      1.524    0.020
+ ANZ      CE1    F         single      1.345    0.020
+ ANZ      CB     O1        single      1.426    0.020
+ ANZ      B      CD2       single      1.560    0.020
+ ANZ      "O3'"  B         single      1.434    0.020
+ ANZ      "O2'"  B         single      1.434    0.020
+ ANZ      O1     B         single      1.434    0.020
+ ANZ      HBC1   CB        single      1.092    0.020
+ ANZ      HBC2   CB        single      1.092    0.020
+ ANZ      HD1    CD1       single      1.083    0.020
+ ANZ      HE2    CE2       single      1.083    0.020
+ ANZ      HZ     CZ        single      1.083    0.020
+ ANZ      H8     C8        single      1.083    0.020
+ ANZ      "H1'"  "C1'"     single      1.099    0.020
+ ANZ      H6N1   N6        single      1.010    0.020
+ ANZ      H6N2   N6        single      1.010    0.020
+ ANZ      H2     C2        single      1.083    0.020
+ ANZ      "H5'1" "C5'"     single      1.092    0.020
+ ANZ      "H5'2" "C5'"     single      1.092    0.020
+ ANZ      "H4'"  "C4'"     single      1.099    0.020
+ ANZ      "H3'"  "C3'"     single      1.099    0.020
+ ANZ      "H2'"  "C2'"     single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ANZ      F      CE1    CD1     120.000    3.000
+ ANZ      F      CE1    CZ      120.000    3.000
+ ANZ      CD1    CE1    CZ      120.000    3.000
+ ANZ      CE1    CD1    HD1     120.000    3.000
+ ANZ      CE1    CD1    CG      120.000    3.000
+ ANZ      HD1    CD1    CG      120.000    3.000
+ ANZ      CE1    CZ     HZ      120.000    3.000
+ ANZ      CE1    CZ     CE2     120.000    3.000
+ ANZ      HZ     CZ     CE2     120.000    3.000
+ ANZ      CZ     CE2    HE2     120.000    3.000
+ ANZ      CZ     CE2    CD2     120.000    3.000
+ ANZ      HE2    CE2    CD2     120.000    3.000
+ ANZ      CE2    CD2    CG      120.000    3.000
+ ANZ      CE2    CD2    B       120.000    3.000
+ ANZ      CG     CD2    B       120.000    3.000
+ ANZ      CD2    CG     CB      120.000    3.000
+ ANZ      CD2    CG     CD1     120.000    3.000
+ ANZ      CB     CG     CD1     120.000    3.000
+ ANZ      CD2    B      "O3'"   120.000    3.000
+ ANZ      CD2    B      O1      120.000    3.000
+ ANZ      CD2    B      "O2'"   120.000    3.000
+ ANZ      "O3'"  B      O1      120.000    3.000
+ ANZ      "O3'"  B      "O2'"   120.000    3.000
+ ANZ      O1     B      "O2'"   120.000    3.000
+ ANZ      B      "O3'"  "C3'"   120.000    3.000
+ ANZ      B      O1     CB      120.000    3.000
+ ANZ      O1     CB     HBC2    109.470    3.000
+ ANZ      O1     CB     HBC1    109.470    3.000
+ ANZ      O1     CB     CG      109.470    3.000
+ ANZ      HBC2   CB     HBC1    107.900    3.000
+ ANZ      HBC2   CB     CG      109.470    3.000
+ ANZ      HBC1   CB     CG      109.470    3.000
+ ANZ      B      "O2'"  "C2'"   120.000    3.000
+ ANZ      "O2'"  "C2'"  "H2'"   109.470    3.000
+ ANZ      "O2'"  "C2'"  "C3'"   109.470    3.000
+ ANZ      "O2'"  "C2'"  "C1'"   109.470    3.000
+ ANZ      "H2'"  "C2'"  "C3'"   108.340    3.000
+ ANZ      "H2'"  "C2'"  "C1'"   108.340    3.000
+ ANZ      "C3'"  "C2'"  "C1'"   111.000    3.000
+ ANZ      "C2'"  "C3'"  "H3'"   108.340    3.000
+ ANZ      "C2'"  "C3'"  "C4'"   111.000    3.000
+ ANZ      "C2'"  "C3'"  "O3'"   109.470    3.000
+ ANZ      "H3'"  "C3'"  "C4'"   108.340    3.000
+ ANZ      "H3'"  "C3'"  "O3'"   109.470    3.000
+ ANZ      "C4'"  "C3'"  "O3'"   109.470    3.000
+ ANZ      "C3'"  "C4'"  "H4'"   108.340    3.000
+ ANZ      "C3'"  "C4'"  "C5'"   111.000    3.000
+ ANZ      "C3'"  "C4'"  "O4'"   109.470    3.000
+ ANZ      "H4'"  "C4'"  "C5'"   108.340    3.000
+ ANZ      "H4'"  "C4'"  "O4'"   109.470    3.000
+ ANZ      "C5'"  "C4'"  "O4'"   109.470    3.000
+ ANZ      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ ANZ      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ ANZ      "C4'"  "C5'"  "O5'"   109.470    3.000
+ ANZ      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ ANZ      "H5'1" "C5'"  "O5'"   109.470    3.000
+ ANZ      "H5'2" "C5'"  "O5'"   109.470    3.000
+ ANZ      "C5'"  "O5'"  P       120.500    3.000
+ ANZ      "O5'"  P      O3P     108.200    3.000
+ ANZ      "O5'"  P      O2P     108.200    3.000
+ ANZ      "O5'"  P      O1P     108.200    3.000
+ ANZ      O3P    P      O2P     119.900    3.000
+ ANZ      O3P    P      O1P     119.900    3.000
+ ANZ      O2P    P      O1P     119.900    3.000
+ ANZ      "C2'"  "C1'"  "H1'"   108.340    3.000
+ ANZ      "C2'"  "C1'"  "O4'"   109.470    3.000
+ ANZ      "C2'"  "C1'"  N9      109.470    3.000
+ ANZ      "H1'"  "C1'"  "O4'"   109.470    3.000
+ ANZ      "H1'"  "C1'"  N9      109.470    3.000
+ ANZ      "O4'"  "C1'"  N9      109.470    3.000
+ ANZ      "C1'"  "O4'"  "C4'"   111.800    3.000
+ ANZ      "C1'"  N9     C4      126.000    3.000
+ ANZ      "C1'"  N9     C8      126.000    3.000
+ ANZ      C4     N9     C8      108.000    3.000
+ ANZ      N9     C4     C5      108.000    3.000
+ ANZ      N9     C4     N3      132.000    3.000
+ ANZ      C5     C4     N3      120.000    3.000
+ ANZ      C4     C5     N7      108.000    3.000
+ ANZ      C4     C5     C6      120.000    3.000
+ ANZ      N7     C5     C6      132.000    3.000
+ ANZ      C5     N7     C8      108.000    3.000
+ ANZ      N7     C8     H8      126.000    3.000
+ ANZ      N7     C8     N9      108.000    3.000
+ ANZ      H8     C8     N9      126.000    3.000
+ ANZ      C4     N3     C2      120.000    3.000
+ ANZ      N3     C2     H2      120.000    3.000
+ ANZ      N3     C2     N1      120.000    3.000
+ ANZ      H2     C2     N1      120.000    3.000
+ ANZ      C2     N1     C6      120.000    3.000
+ ANZ      N1     C6     N6      120.000    3.000
+ ANZ      N1     C6     C5      120.000    3.000
+ ANZ      N6     C6     C5      120.000    3.000
+ ANZ      C6     N6     H6N2    120.000    3.000
+ ANZ      C6     N6     H6N1    120.000    3.000
+ ANZ      H6N2   N6     H6N1    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ANZ      CONST_1  F      CE1    CD1    CG       180.000    0.000   0
+ ANZ      CONST_2  F      CE1    CZ     CE2      180.000    0.000   0
+ ANZ      CONST_3  CE1    CZ     CE2    CD2        0.000    0.000   0
+ ANZ      CONST_4  CZ     CE2    CD2    B        180.000    0.000   0
+ ANZ      CONST_5  CE2    CD2    CG     CB       180.000    0.000   0
+ ANZ      CONST_6  CD2    CG     CD1    CE1        0.000    0.000   0
+ ANZ      var_1    CE2    CD2    B      "O2'"    -30.000   20.000   1
+ ANZ      var_2    CD2    B      "O3'"  "C3'"   -150.000   20.000   1
+ ANZ      var_3    CD2    B      O1     CB       -30.000   20.000   1
+ ANZ      var_4    B      O1     CB     CG        30.000   20.000   1
+ ANZ      var_5    O1     CB     CG     CD2      -30.000   20.000   2
+ ANZ      var_6    CD2    B      "O2'"  "C2'"    150.000   20.000   1
+ ANZ      var_7    B      "O2'"  "C2'"  "C1'"   -120.000   20.000   1
+ ANZ      var_8    "O2'"  "C2'"  "C3'"  "C4'"   -120.000   20.000   3
+ ANZ      var_9    "C2'"  "C3'"  "O3'"  B         30.000   20.000   1
+ ANZ      var_10   "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ ANZ      var_11   "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ ANZ      var_12   "C3'"  "C4'"  "C5'"  "O5'"   -178.045   20.000   3
+ ANZ      var_13   "C4'"  "C5'"  "O5'"  P       -179.977   20.000   1
+ ANZ      var_14   "C5'"  "O5'"  P      O1P      -65.032   20.000   1
+ ANZ      var_15   "O2'"  "C2'"  "C1'"  N9      -120.000   20.000   3
+ ANZ      var_16   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ ANZ      var_17   "C2'"  "C1'"  N9     C4        87.722   20.000   1
+ ANZ      CONST_7  "C1'"  N9     C8     N7       180.000    0.000   0
+ ANZ      CONST_8  "C1'"  N9     C4     N3         0.000    0.000   0
+ ANZ      CONST_9  N9     C4     C5     N7         0.000    0.000   0
+ ANZ      CONST_10 C4     C5     C6     N1         0.000    0.000   0
+ ANZ      CONST_11 C4     C5     N7     C8         0.000    0.000   0
+ ANZ      CONST_12 C5     N7     C8     N9         0.000    0.000   0
+ ANZ      CONST_13 N9     C4     N3     C2       180.000    0.000   0
+ ANZ      CONST_14 C4     N3     C2     N1         0.000    0.000   0
+ ANZ      CONST_15 N3     C2     N1     C6         0.000    0.000   0
+ ANZ      CONST_16 C2     N1     C6     N6       180.000    0.000   0
+ ANZ      CONST_17 N1     C6     N6     H6N1    -179.984    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ ANZ      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ ANZ      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ ANZ      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
+ ANZ      chir_04  "C1'"  N9     "O4'"  "C2'"     positiv
+ ANZ      chir_05  B      CD2    "O3'"  "O2'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ANZ      plan-1    CG        0.020
+ ANZ      plan-1    CB        0.020
+ ANZ      plan-1    CD1       0.020
+ ANZ      plan-1    CD2       0.020
+ ANZ      plan-1    CE1       0.020
+ ANZ      plan-1    CE2       0.020
+ ANZ      plan-1    CZ        0.020
+ ANZ      plan-1    HD1       0.020
+ ANZ      plan-1    B         0.020
+ ANZ      plan-1    F         0.020
+ ANZ      plan-1    HE2       0.020
+ ANZ      plan-1    HZ        0.020
+ ANZ      plan-2    N9        0.020
+ ANZ      plan-2    C8        0.020
+ ANZ      plan-2    C4        0.020
+ ANZ      plan-2    "C1'"     0.020
+ ANZ      plan-2    N7        0.020
+ ANZ      plan-2    H8        0.020
+ ANZ      plan-2    C5        0.020
+ ANZ      plan-2    C6        0.020
+ ANZ      plan-2    N1        0.020
+ ANZ      plan-2    C2        0.020
+ ANZ      plan-2    N3        0.020
+ ANZ      plan-2    N6        0.020
+ ANZ      plan-2    H2        0.020
+ ANZ      plan-2    H6N2      0.020
+ ANZ      plan-2    H6N1      0.020
+ ANZ      plan-3    N6        0.020
+ ANZ      plan-3    C6        0.020
+ ANZ      plan-3    H6N1      0.020
+ ANZ      plan-3    H6N2      0.020
+# ------------------------------------------------------

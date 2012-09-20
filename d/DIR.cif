@@ -1,0 +1,198 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DIR      DIR '3-{[(E)-AMINO(HYDROXYIMINO)METHYL]AM' peptide            20  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DIR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DIR           N      N    NH2       0.000      0.000    0.000    0.000
+ DIR           HN1    H    H         0.000      0.859   -0.196   -0.500
+ DIR           HN2    H    H         0.000     -0.320    0.958    0.082
+ DIR           CA     C    CH1       0.000     -0.774   -1.094    0.601
+ DIR           HA     H    H         0.000     -0.776   -0.984    1.694
+ DIR           CB     C    CH2       0.000     -2.213   -1.045    0.080
+ DIR           HB2    H    H         0.000     -2.811   -1.803    0.592
+ DIR           HB3    H    H         0.000     -2.218   -1.244   -0.993
+ DIR           NG     N    NH1       0.000     -2.780    0.281    0.336
+ DIR           HNG    H    H         0.000     -2.224    0.989    0.794
+ DIR           CD     C    C         0.000     -4.075    0.564   -0.049
+ DIR           NH2    N    NH2       0.000     -4.836   -0.404   -0.673
+ DIR           HH22   H    H         0.000     -4.455   -1.332   -0.855
+ DIR           HH21   H    H         0.000     -5.793   -0.210   -0.963
+ DIR           NH1    N    N         0.000     -4.579    1.741    0.177
+ DIR           OH1    O    OH1       0.000     -5.907    2.030   -0.217
+ DIR           HH1    H    H         0.000     -6.128    2.943    0.021
+ DIR           C      C    C         0.000     -0.150   -2.414    0.230
+ DIR           OXT    O    OC       -0.500     -0.397   -3.435    0.910
+ DIR           O      O    OC       -0.500      0.615   -2.490   -0.756
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DIR      N      n/a    CA     START
+ DIR      HN1    N      .      .
+ DIR      HN2    N      .      .
+ DIR      CA     N      C      .
+ DIR      HA     CA     .      .
+ DIR      CB     CA     NG     .
+ DIR      HB2    CB     .      .
+ DIR      HB3    CB     .      .
+ DIR      NG     CB     CD     .
+ DIR      HNG    NG     .      .
+ DIR      CD     NG     NH1    .
+ DIR      NH2    CD     HH21   .
+ DIR      HH22   NH2    .      .
+ DIR      HH21   NH2    .      .
+ DIR      NH1    CD     OH1    .
+ DIR      OH1    NH1    HH1    .
+ DIR      HH1    OH1    .      .
+ DIR      C      CA     .      END
+ DIR      OXT    C      .      .
+ DIR      O      C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DIR      CB     CA        single      1.524    0.020
+ DIR      CA     N         single      1.450    0.020
+ DIR      C      CA        single      1.500    0.020
+ DIR      HA     CA        single      1.099    0.020
+ DIR      NG     CB        single      1.450    0.020
+ DIR      HB2    CB        single      1.092    0.020
+ DIR      HB3    CB        single      1.092    0.020
+ DIR      OXT    C         deloc       1.250    0.020
+ DIR      O      C         deloc       1.250    0.020
+ DIR      CD     NG        single      1.330    0.020
+ DIR      NH1    CD        double      1.260    0.020
+ DIR      NH2    CD        single      1.332    0.020
+ DIR      OH1    NH1       single      1.392    0.020
+ DIR      HH1    OH1       single      0.967    0.020
+ DIR      HN1    N         single      1.010    0.020
+ DIR      HN2    N         single      1.010    0.020
+ DIR      HNG    NG        single      1.010    0.020
+ DIR      HH21   NH2       single      1.010    0.020
+ DIR      HH22   NH2       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DIR      HN1    N      HN2     120.000    3.000
+ DIR      HN1    N      CA      120.000    3.000
+ DIR      HN2    N      CA      120.000    3.000
+ DIR      N      CA     HA      109.470    3.000
+ DIR      N      CA     CB      109.470    3.000
+ DIR      N      CA     C       109.470    3.000
+ DIR      HA     CA     CB      108.340    3.000
+ DIR      HA     CA     C       108.810    3.000
+ DIR      CB     CA     C       109.470    3.000
+ DIR      CA     CB     HB2     109.470    3.000
+ DIR      CA     CB     HB3     109.470    3.000
+ DIR      CA     CB     NG      110.000    3.000
+ DIR      HB2    CB     HB3     107.900    3.000
+ DIR      HB2    CB     NG      109.470    3.000
+ DIR      HB3    CB     NG      109.470    3.000
+ DIR      CB     NG     HNG     118.500    3.000
+ DIR      CB     NG     CD      121.500    3.000
+ DIR      HNG    NG     CD      120.000    3.000
+ DIR      NG     CD     NH2     120.000    3.000
+ DIR      NG     CD     NH1     120.000    3.000
+ DIR      NH2    CD     NH1     120.000    3.000
+ DIR      CD     NH2    HH22    120.000    3.000
+ DIR      CD     NH2    HH21    120.000    3.000
+ DIR      HH22   NH2    HH21    120.000    3.000
+ DIR      CD     NH1    OH1     120.000    3.000
+ DIR      NH1    OH1    HH1     109.470    3.000
+ DIR      CA     C      OXT     118.500    3.000
+ DIR      CA     C      O       118.500    3.000
+ DIR      OXT    C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DIR      var_1    HN2    N      CA     C        175.000   20.000   1
+ DIR      var_2    N      CA     CB     NG       -54.997   20.000   3
+ DIR      var_3    CA     CB     NG     CD       179.953   20.000   3
+ DIR      CONST_1  CB     NG     CD     NH1      180.000    0.000   0
+ DIR      CONST_2  NG     CD     NH2    HH21     180.000    0.000   0
+ DIR      CONST_3  NG     CD     NH1    OH1      180.000    0.000   0
+ DIR      var_4    CD     NH1    OH1    HH1      179.998   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DIR      chir_01  CA     CB     N      C         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DIR      plan-1    N         0.020
+ DIR      plan-1    CA        0.020
+ DIR      plan-1    HN1       0.020
+ DIR      plan-1    HN2       0.020
+ DIR      plan-2    C         0.020
+ DIR      plan-2    CA        0.020
+ DIR      plan-2    OXT       0.020
+ DIR      plan-2    O         0.020
+ DIR      plan-3    NG        0.020
+ DIR      plan-3    CB        0.020
+ DIR      plan-3    CD        0.020
+ DIR      plan-3    HNG       0.020
+ DIR      plan-4    CD        0.020
+ DIR      plan-4    NG        0.020
+ DIR      plan-4    NH1       0.020
+ DIR      plan-4    NH2       0.020
+ DIR      plan-4    OH1       0.020
+ DIR      plan-4    HNG       0.020
+ DIR      plan-4    HH22      0.020
+ DIR      plan-4    HH21      0.020
+ DIR      plan-5    NH2       0.020
+ DIR      plan-5    CD        0.020
+ DIR      plan-5    HH21      0.020
+ DIR      plan-5    HH22      0.020
+# ------------------------------------------------------

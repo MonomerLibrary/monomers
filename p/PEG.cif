@@ -1,0 +1,148 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PEG      PEG 'DI(HYDROXYETHYL)ETHER               ' non-polymer        17   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PEG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PEG           O4     O    OH1       0.000      0.000    0.000    0.000
+ PEG           HO4    H    H         0.000      0.811   -0.431    0.303
+ PEG           C4     C    CH2       0.000     -0.653    0.621    1.110
+ PEG           H41    H    H         0.000      0.012    1.365    1.553
+ PEG           H42    H    H         0.000     -0.898   -0.137    1.857
+ PEG           C3     C    CH2       0.000     -1.936    1.302    0.631
+ PEG           H31    H    H         0.000     -1.699    1.996   -0.178
+ PEG           H32    H    H         0.000     -2.387    1.851    1.460
+ PEG           O2     O    O2        0.000     -2.853    0.314    0.159
+ PEG           C2     C    CH2       0.000     -4.091    0.847   -0.314
+ PEG           H21    H    H         0.000     -3.898    1.533   -1.142
+ PEG           H22    H    H         0.000     -4.586    1.387    0.496
+ PEG           C1     C    CH2       0.000     -4.989   -0.295   -0.793
+ PEG           H11    H    H         0.000     -4.457   -0.886   -1.541
+ PEG           H12    H    H         0.000     -5.897    0.119   -1.237
+ PEG           O1     O    OH1       0.000     -5.336   -1.126    0.316
+ PEG           HO1    H    H         0.000     -5.903   -1.848    0.013
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PEG      O4     n/a    C4     START
+ PEG      HO4    O4     .      .
+ PEG      C4     O4     C3     .
+ PEG      H41    C4     .      .
+ PEG      H42    C4     .      .
+ PEG      C3     C4     O2     .
+ PEG      H31    C3     .      .
+ PEG      H32    C3     .      .
+ PEG      O2     C3     C2     .
+ PEG      C2     O2     C1     .
+ PEG      H21    C2     .      .
+ PEG      H22    C2     .      .
+ PEG      C1     C2     O1     .
+ PEG      H11    C1     .      .
+ PEG      H12    C1     .      .
+ PEG      O1     C1     HO1    .
+ PEG      HO1    O1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PEG      O1     C1        single      1.432    0.020
+ PEG      C1     C2        single      1.524    0.020
+ PEG      H11    C1        single      1.092    0.020
+ PEG      H12    C1        single      1.092    0.020
+ PEG      HO1    O1        single      0.967    0.020
+ PEG      C2     O2        single      1.426    0.020
+ PEG      H21    C2        single      1.092    0.020
+ PEG      H22    C2        single      1.092    0.020
+ PEG      O2     C3        single      1.426    0.020
+ PEG      C3     C4        single      1.524    0.020
+ PEG      H31    C3        single      1.092    0.020
+ PEG      H32    C3        single      1.092    0.020
+ PEG      C4     O4        single      1.432    0.020
+ PEG      H41    C4        single      1.092    0.020
+ PEG      H42    C4        single      1.092    0.020
+ PEG      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PEG      HO4    O4     C4      109.470    3.000
+ PEG      O4     C4     H41     109.470    3.000
+ PEG      O4     C4     H42     109.470    3.000
+ PEG      O4     C4     C3      109.470    3.000
+ PEG      H41    C4     H42     107.900    3.000
+ PEG      H41    C4     C3      109.470    3.000
+ PEG      H42    C4     C3      109.470    3.000
+ PEG      C4     C3     H31     109.470    3.000
+ PEG      C4     C3     H32     109.470    3.000
+ PEG      C4     C3     O2      109.470    3.000
+ PEG      H31    C3     H32     107.900    3.000
+ PEG      H31    C3     O2      109.470    3.000
+ PEG      H32    C3     O2      109.470    3.000
+ PEG      C3     O2     C2      111.800    3.000
+ PEG      O2     C2     H21     109.470    3.000
+ PEG      O2     C2     H22     109.470    3.000
+ PEG      O2     C2     C1      109.470    3.000
+ PEG      H21    C2     H22     107.900    3.000
+ PEG      H21    C2     C1      109.470    3.000
+ PEG      H22    C2     C1      109.470    3.000
+ PEG      C2     C1     H11     109.470    3.000
+ PEG      C2     C1     H12     109.470    3.000
+ PEG      C2     C1     O1      109.470    3.000
+ PEG      H11    C1     H12     107.900    3.000
+ PEG      H11    C1     O1      109.470    3.000
+ PEG      H12    C1     O1      109.470    3.000
+ PEG      C1     O1     HO1     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PEG      var_1    HO4    O4     C4     C3      -179.967   20.000   1
+ PEG      var_2    O4     C4     C3     O2        65.009   20.000   3
+ PEG      var_3    C4     C3     O2     C2       179.991   20.000   1
+ PEG      var_4    C3     O2     C2     C1       179.991   20.000   1
+ PEG      var_5    O2     C2     C1     O1        64.997   20.000   3
+ PEG      var_6    C2     C1     O1     HO1     -179.968   20.000   1
+# ------------------------------------------------------

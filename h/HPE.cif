@@ -1,0 +1,227 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HPE      HPE 'HOMOPHENYLALANINE                   ' peptide            25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HPE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HPE           N      N    NH2       0.000      0.000    0.000    0.000
+ HPE           HN1    H    H         0.000      0.765   -0.604    0.277
+ HPE           HN2    H    H         0.000      0.080    0.544   -0.851
+ HPE           CA     C    CH1       0.000     -1.214    0.086    0.824
+ HPE           HA     H    H         0.000     -1.307    1.101    1.235
+ HPE           CB     C    CH2       0.000     -2.438   -0.230   -0.038
+ HPE           HB2    H    H         0.000     -3.339   -0.169    0.575
+ HPE           HB3    H    H         0.000     -2.344   -1.239   -0.446
+ HPE           CG     C    CH2       0.000     -2.528    0.779   -1.183
+ HPE           HG2    H    H         0.000     -1.626    0.716   -1.795
+ HPE           HG3    H    H         0.000     -2.619    1.787   -0.774
+ HPE           CD     C    CR6       0.000     -3.735    0.467   -2.032
+ HPE           CE2    C    CR16      0.000     -3.619   -0.389   -3.109
+ HPE           HE2    H    H         0.000     -2.661   -0.834   -3.347
+ HPE           CZ2    C    CR16      0.000     -4.727   -0.678   -3.884
+ HPE           HZ2    H    H         0.000     -4.639   -1.357   -4.723
+ HPE           CH     C    CR16      0.000     -5.947   -0.102   -3.587
+ HPE           HH     H    H         0.000     -6.814   -0.325   -4.197
+ HPE           CZ1    C    CR16      0.000     -6.062    0.760   -2.513
+ HPE           HZ1    H    H         0.000     -7.018    1.211   -2.281
+ HPE           CE1    C    CR16      0.000     -4.955    1.045   -1.735
+ HPE           HE1    H    H         0.000     -5.044    1.721   -0.894
+ HPE           C      C    C         0.000     -1.124   -0.907    1.953
+ HPE           O      O    OC       -0.500     -0.483   -1.970    1.802
+ HPE           OXT    O    OC       -0.500     -1.691   -0.667    3.043
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HPE      N      n/a    CA     START
+ HPE      HN1    N      .      .
+ HPE      HN2    N      .      .
+ HPE      CA     N      C      .
+ HPE      HA     CA     .      .
+ HPE      CB     CA     CG     .
+ HPE      HB2    CB     .      .
+ HPE      HB3    CB     .      .
+ HPE      CG     CB     CD     .
+ HPE      HG2    CG     .      .
+ HPE      HG3    CG     .      .
+ HPE      CD     CG     CE2    .
+ HPE      CE2    CD     CZ2    .
+ HPE      HE2    CE2    .      .
+ HPE      CZ2    CE2    CH     .
+ HPE      HZ2    CZ2    .      .
+ HPE      CH     CZ2    CZ1    .
+ HPE      HH     CH     .      .
+ HPE      CZ1    CH     CE1    .
+ HPE      HZ1    CZ1    .      .
+ HPE      CE1    CZ1    HE1    .
+ HPE      HE1    CE1    .      .
+ HPE      C      CA     .      END
+ HPE      O      C      .      .
+ HPE      OXT    C      .      .
+ HPE      CD     CE1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HPE      CA     N         single      1.450    0.020
+ HPE      C      CA        single      1.500    0.020
+ HPE      CB     CA        single      1.524    0.020
+ HPE      HA     CA        single      1.099    0.020
+ HPE      O      C         deloc       1.250    0.020
+ HPE      OXT    C         deloc       1.250    0.020
+ HPE      CG     CB        single      1.524    0.020
+ HPE      HB2    CB        single      1.092    0.020
+ HPE      HB3    CB        single      1.092    0.020
+ HPE      CD     CG        single      1.511    0.020
+ HPE      HG2    CG        single      1.092    0.020
+ HPE      HG3    CG        single      1.092    0.020
+ HPE      CD     CE1       double      1.390    0.020
+ HPE      CE2    CD        single      1.390    0.020
+ HPE      CE1    CZ1       single      1.390    0.020
+ HPE      HE1    CE1       single      1.083    0.020
+ HPE      CZ2    CE2       double      1.390    0.020
+ HPE      HE2    CE2       single      1.083    0.020
+ HPE      CZ1    CH        double      1.390    0.020
+ HPE      HZ1    CZ1       single      1.083    0.020
+ HPE      CH     CZ2       single      1.390    0.020
+ HPE      HZ2    CZ2       single      1.083    0.020
+ HPE      HH     CH        single      1.083    0.020
+ HPE      HN1    N         single      1.010    0.020
+ HPE      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HPE      HN1    N      HN2     120.000    3.000
+ HPE      HN1    N      CA      120.000    3.000
+ HPE      HN2    N      CA      120.000    3.000
+ HPE      N      CA     HA      109.470    3.000
+ HPE      N      CA     CB      109.470    3.000
+ HPE      N      CA     C       109.470    3.000
+ HPE      HA     CA     CB      108.340    3.000
+ HPE      HA     CA     C       108.810    3.000
+ HPE      CB     CA     C       109.470    3.000
+ HPE      CA     CB     HB2     109.470    3.000
+ HPE      CA     CB     HB3     109.470    3.000
+ HPE      CA     CB     CG      111.000    3.000
+ HPE      HB2    CB     HB3     107.900    3.000
+ HPE      HB2    CB     CG      109.470    3.000
+ HPE      HB3    CB     CG      109.470    3.000
+ HPE      CB     CG     HG2     109.470    3.000
+ HPE      CB     CG     HG3     109.470    3.000
+ HPE      CB     CG     CD      109.470    3.000
+ HPE      HG2    CG     HG3     107.900    3.000
+ HPE      HG2    CG     CD      109.470    3.000
+ HPE      HG3    CG     CD      109.470    3.000
+ HPE      CG     CD     CE2     120.000    3.000
+ HPE      CG     CD     CE1     120.000    3.000
+ HPE      CE2    CD     CE1     120.000    3.000
+ HPE      CD     CE2    HE2     120.000    3.000
+ HPE      CD     CE2    CZ2     120.000    3.000
+ HPE      HE2    CE2    CZ2     120.000    3.000
+ HPE      CE2    CZ2    HZ2     120.000    3.000
+ HPE      CE2    CZ2    CH      120.000    3.000
+ HPE      HZ2    CZ2    CH      120.000    3.000
+ HPE      CZ2    CH     HH      120.000    3.000
+ HPE      CZ2    CH     CZ1     120.000    3.000
+ HPE      HH     CH     CZ1     120.000    3.000
+ HPE      CH     CZ1    HZ1     120.000    3.000
+ HPE      CH     CZ1    CE1     120.000    3.000
+ HPE      HZ1    CZ1    CE1     120.000    3.000
+ HPE      CZ1    CE1    HE1     120.000    3.000
+ HPE      CZ1    CE1    CD      120.000    3.000
+ HPE      HE1    CE1    CD      120.000    3.000
+ HPE      CA     C      O       118.500    3.000
+ HPE      CA     C      OXT     118.500    3.000
+ HPE      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HPE      var_1    HN2    N      CA     C        175.000   20.000   1
+ HPE      var_2    N      CA     CB     CG       -60.061   20.000   3
+ HPE      var_3    CA     CB     CG     CD      -179.943   20.000   3
+ HPE      var_4    CB     CG     CD     CE2      -90.301   20.000   2
+ HPE      CONST_1  CG     CD     CE1    CZ1      180.000    0.000   0
+ HPE      CONST_2  CG     CD     CE2    CZ2      180.000    0.000   0
+ HPE      CONST_3  CD     CE2    CZ2    CH         0.000    0.000   0
+ HPE      CONST_4  CE2    CZ2    CH     CZ1        0.000    0.000   0
+ HPE      CONST_5  CZ2    CH     CZ1    CE1        0.000    0.000   0
+ HPE      CONST_6  CH     CZ1    CE1    CD         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HPE      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HPE      plan-1    N         0.020
+ HPE      plan-1    CA        0.020
+ HPE      plan-1    HN1       0.020
+ HPE      plan-1    HN2       0.020
+ HPE      plan-2    C         0.020
+ HPE      plan-2    CA        0.020
+ HPE      plan-2    O         0.020
+ HPE      plan-2    OXT       0.020
+ HPE      plan-3    CD        0.020
+ HPE      plan-3    CG        0.020
+ HPE      plan-3    CE1       0.020
+ HPE      plan-3    CE2       0.020
+ HPE      plan-3    CZ1       0.020
+ HPE      plan-3    CZ2       0.020
+ HPE      plan-3    CH        0.020
+ HPE      plan-3    HE1       0.020
+ HPE      plan-3    HE2       0.020
+ HPE      plan-3    HZ1       0.020
+ HPE      plan-3    HZ2       0.020
+ HPE      plan-3    HH        0.020
+# ------------------------------------------------------

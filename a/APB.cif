@@ -1,0 +1,179 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+APB      APB 'M-AMINOPHENYLBORONIC ACID           ' non-polymer        18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_APB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ APB           O2     O    OH1       0.000      0.000    0.000    0.000
+ APB           HO2    H    H         0.000     -0.507    0.000   -0.803
+ APB           B      B    B         0.000     -0.702   -0.001    1.234
+ APB           O1     O    OH1       0.000      0.015   -0.001    2.458
+ APB           HO1    H    H         0.000      0.964   -0.001    2.421
+ APB           C1     C    CR6       0.000     -2.272    0.000    1.243
+ APB           C6     C    CR16      0.000     -2.963    0.000    2.453
+ APB           H6     H    H         0.000     -2.417    0.000    3.388
+ APB           C5     C    CR16      0.000     -4.343    0.001    2.461
+ APB           H5     H    H         0.000     -4.878    0.001    3.403
+ APB           C4     C    CR16      0.000     -5.045    0.001    1.271
+ APB           H4     H    H         0.000     -6.128    0.002    1.282
+ APB           C3     C    CR6       0.000     -4.364    0.001    0.059
+ APB           N1     N    NH2       0.000     -5.077    0.002   -1.143
+ APB           HN12   H    H         0.000     -4.591    0.003   -2.037
+ APB           HN11   H    H         0.000     -6.095    0.003   -1.144
+ APB           C2     C    CR16      0.000     -2.977   -0.005    0.044
+ APB           H2     H    H         0.000     -2.445   -0.013   -0.899
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ APB      O2     n/a    B      START
+ APB      HO2    O2     .      .
+ APB      B      O2     C1     .
+ APB      O1     B      HO1    .
+ APB      HO1    O1     .      .
+ APB      C1     B      C6     .
+ APB      C6     C1     C5     .
+ APB      H6     C6     .      .
+ APB      C5     C6     C4     .
+ APB      H5     C5     .      .
+ APB      C4     C5     C3     .
+ APB      H4     C4     .      .
+ APB      C3     C4     C2     .
+ APB      N1     C3     HN11   .
+ APB      HN12   N1     .      .
+ APB      HN11   N1     .      .
+ APB      C2     C3     H2     .
+ APB      H2     C2     .      END
+ APB      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ APB      O1     B         single      1.535    0.020
+ APB      B      O2        single      1.535    0.020
+ APB      C1     B         single      1.560    0.020
+ APB      HO1    O1        single      0.967    0.020
+ APB      HO2    O2        single      0.967    0.020
+ APB      C1     C2        single      1.390    0.020
+ APB      C6     C1        double      1.390    0.020
+ APB      C2     C3        double      1.390    0.020
+ APB      H2     C2        single      1.083    0.020
+ APB      C3     C4        single      1.390    0.020
+ APB      N1     C3        single      1.355    0.020
+ APB      C4     C5        double      1.390    0.020
+ APB      H4     C4        single      1.083    0.020
+ APB      C5     C6        single      1.390    0.020
+ APB      H5     C5        single      1.083    0.020
+ APB      H6     C6        single      1.083    0.020
+ APB      HN11   N1        single      1.010    0.020
+ APB      HN12   N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ APB      HO2    O2     B       120.000    3.000
+ APB      O2     B      O1      120.000    3.000
+ APB      O2     B      C1      120.000    3.000
+ APB      O1     B      C1      120.000    3.000
+ APB      B      O1     HO1     120.000    3.000
+ APB      B      C1     C6      120.000    3.000
+ APB      B      C1     C2      120.000    3.000
+ APB      C6     C1     C2      120.000    3.000
+ APB      C1     C6     H6      120.000    3.000
+ APB      C1     C6     C5      120.000    3.000
+ APB      H6     C6     C5      120.000    3.000
+ APB      C6     C5     H5      120.000    3.000
+ APB      C6     C5     C4      120.000    3.000
+ APB      H5     C5     C4      120.000    3.000
+ APB      C5     C4     H4      120.000    3.000
+ APB      C5     C4     C3      120.000    3.000
+ APB      H4     C4     C3      120.000    3.000
+ APB      C4     C3     N1      120.000    3.000
+ APB      C4     C3     C2      120.000    3.000
+ APB      N1     C3     C2      120.000    3.000
+ APB      C3     N1     HN12    120.000    3.000
+ APB      C3     N1     HN11    120.000    3.000
+ APB      HN12   N1     HN11    120.000    3.000
+ APB      C3     C2     H2      120.000    3.000
+ APB      C3     C2     C1      120.000    3.000
+ APB      H2     C2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ APB      var_1    HO2    O2     B      C1        -0.035   20.000   1
+ APB      var_2    O2     B      O1     HO1       -0.047   20.000   1
+ APB      var_3    O2     B      C1     C6      -179.953   20.000   1
+ APB      CONST_1  B      C1     C2     C3       180.000    0.000   0
+ APB      CONST_2  B      C1     C6     C5       180.000    0.000   0
+ APB      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ APB      CONST_4  C6     C5     C4     C3         0.000    0.000   0
+ APB      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ APB      CONST_6  C4     C3     N1     HN11      -0.047    0.000   0
+ APB      CONST_7  C4     C3     C2     C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ APB      plan-1    C1        0.020
+ APB      plan-1    B         0.020
+ APB      plan-1    C2        0.020
+ APB      plan-1    C6        0.020
+ APB      plan-1    C3        0.020
+ APB      plan-1    C4        0.020
+ APB      plan-1    C5        0.020
+ APB      plan-1    H2        0.020
+ APB      plan-1    N1        0.020
+ APB      plan-1    H4        0.020
+ APB      plan-1    H5        0.020
+ APB      plan-1    H6        0.020
+ APB      plan-1    HN12      0.020
+ APB      plan-1    HN11      0.020
+ APB      plan-2    N1        0.020
+ APB      plan-2    C3        0.020
+ APB      plan-2    HN11      0.020
+ APB      plan-2    HN12      0.020
+# ------------------------------------------------------

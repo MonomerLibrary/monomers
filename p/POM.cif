@@ -1,0 +1,187 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+POM      POM 'CIS-5-METHYL-4-OXOPROLINE           ' P-peptide          18  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_POM
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ POM           OG     O    O         0.000      0.000    0.000    0.000
+ POM           CG     C    C         0.000     -1.095   -0.075   -0.504
+ POM           CD     C    CH1       0.000     -1.439   -0.631   -1.871
+ POM           HD     H    H         0.000     -1.156   -1.692   -1.924
+ POM           CD1    C    CH3       0.000     -0.702    0.157   -2.954
+ POM           HD13   H    H         0.000     -0.967   -0.219   -3.908
+ POM           HD12   H    H         0.000     -0.969    1.180   -2.892
+ POM           HD11   H    H         0.000      0.344    0.058   -2.815
+ POM           N      N    NH1       0.000     -2.900   -0.491   -2.053
+ POM           H      H    H         0.000     -3.405   -0.430   -2.925
+ POM           CB     C    CH2       0.000     -2.419    0.373    0.103
+ POM           HB2    H    H         0.000     -2.610    1.438   -0.050
+ POM           HB3    H    H         0.000     -2.491    0.141    1.167
+ POM           CA     C    CH1       0.000     -3.465   -0.458   -0.680
+ POM           HA     H    H         0.000     -3.543   -1.473   -0.268
+ POM           C      C    C         0.000     -4.808    0.225   -0.673
+ POM           O      O    OC       -0.500     -5.067    1.104   -1.524
+ POM           OXT    O    OC       -0.500     -5.665   -0.087    0.184
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ POM      OG     n/a    CG     START
+ POM      CG     OG     CB     .
+ POM      CD     CG     N      .
+ POM      HD     CD     .      .
+ POM      CD1    CD     HD11   .
+ POM      HD13   CD1    .      .
+ POM      HD12   CD1    .      .
+ POM      HD11   CD1    .      .
+ POM      N      CD     H      .
+ POM      H      N      .      .
+ POM      CB     CG     CA     .
+ POM      HB2    CB     .      .
+ POM      HB3    CB     .      .
+ POM      CA     CB     C      .
+ POM      HA     CA     .      .
+ POM      C      CA     OXT    .
+ POM      O      C      .      .
+ POM      OXT    C      .      END
+ POM      N      CA     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ POM      N      CA        single      1.450    0.020
+ POM      N      CD        single      1.450    0.020
+ POM      H      N         single      1.010    0.020
+ POM      C      CA        single      1.500    0.020
+ POM      CA     CB        single      1.524    0.020
+ POM      HA     CA        single      1.099    0.020
+ POM      O      C         deloc       1.250    0.020
+ POM      OXT    C         deloc       1.250    0.020
+ POM      CB     CG        single      1.510    0.020
+ POM      HB2    CB        single      1.092    0.020
+ POM      HB3    CB        single      1.092    0.020
+ POM      CD     CG        single      1.500    0.020
+ POM      CG     OG        double      1.220    0.020
+ POM      CD1    CD        single      1.524    0.020
+ POM      HD     CD        single      1.099    0.020
+ POM      HD11   CD1       single      1.059    0.020
+ POM      HD12   CD1       single      1.059    0.020
+ POM      HD13   CD1       single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ POM      OG     CG     CD      120.500    3.000
+ POM      OG     CG     CB      120.500    3.000
+ POM      CD     CG     CB      120.000    3.000
+ POM      CG     CD     HD      108.810    3.000
+ POM      CG     CD     CD1     109.470    3.000
+ POM      CG     CD     N       111.600    3.000
+ POM      HD     CD     CD1     108.340    3.000
+ POM      HD     CD     N       108.550    3.000
+ POM      CD1    CD     N       110.000    3.000
+ POM      CD     CD1    HD13    109.470    3.000
+ POM      CD     CD1    HD12    109.470    3.000
+ POM      CD     CD1    HD11    109.470    3.000
+ POM      HD13   CD1    HD12    109.470    3.000
+ POM      HD13   CD1    HD11    109.470    3.000
+ POM      HD12   CD1    HD11    109.470    3.000
+ POM      CD     N      H       118.500    3.000
+ POM      CD     N      CA      120.000    3.000
+ POM      H      N      CA      118.500    3.000
+ POM      CG     CB     HB2     109.470    3.000
+ POM      CG     CB     HB3     109.470    3.000
+ POM      CG     CB     CA      109.470    3.000
+ POM      HB2    CB     HB3     107.900    3.000
+ POM      HB2    CB     CA      109.470    3.000
+ POM      HB3    CB     CA      109.470    3.000
+ POM      CB     CA     HA      108.340    3.000
+ POM      CB     CA     C       109.470    3.000
+ POM      CB     CA     N       110.000    3.000
+ POM      HA     CA     C       108.810    3.000
+ POM      HA     CA     N       108.550    3.000
+ POM      C      CA     N       111.600    3.000
+ POM      CA     C      O       118.500    3.000
+ POM      CA     C      OXT     118.500    3.000
+ POM      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ POM      var_1    OG     CG     CD     N        180.000   20.000   3
+ POM      var_2    CG     CD     CD1    HD11      61.586   20.000   3
+ POM      var_3    CG     CD     N      CA       -30.000   20.000   3
+ POM      var_4    CD     N      CA     CB        30.000   20.000   3
+ POM      var_5    OG     CG     CB     CA      -150.000   20.000   3
+ POM      var_6    CG     CB     CA     C       -150.000   20.000   3
+ POM      var_7    CB     CA     C      OXT      -95.059   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ POM      chir_01  CA     N      C      CB        positiv
+ POM      chir_02  CD     N      CG     CD1       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ POM      plan-1    N         0.020
+ POM      plan-1    CA        0.020
+ POM      plan-1    CD        0.020
+ POM      plan-1    H         0.020
+ POM      plan-2    C         0.020
+ POM      plan-2    CA        0.020
+ POM      plan-2    O         0.020
+ POM      plan-2    OXT       0.020
+ POM      plan-3    CG        0.020
+ POM      plan-3    CB        0.020
+ POM      plan-3    CD        0.020
+ POM      plan-3    OG        0.020
+# ------------------------------------------------------

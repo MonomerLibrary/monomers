@@ -1,0 +1,147 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OGA      OGA 'N-OXALYLGLYCINE                     ' non-polymer        13  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OGA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OGA           O4     O    OC       -0.500      0.000    0.000    0.000
+ OGA           C5     C    C         0.000     -0.779    0.000    0.979
+ OGA           O3     O    OC       -0.500     -0.319    0.000    2.142
+ OGA           C4     C    CH2       0.000     -2.269    0.000    0.756
+ OGA           H4C1   H    H         0.000     -2.704    0.891    1.213
+ OGA           H4C2   H    H         0.000     -2.704   -0.891    1.213
+ OGA           N1     N    NH1       0.000     -2.549    0.000   -0.681
+ OGA           H1     H    H         0.000     -1.786    0.000   -1.344
+ OGA           C2     C    C         0.000     -3.822    0.000   -1.121
+ OGA           "O2'"  O    O         0.000     -4.738    0.000   -0.324
+ OGA           C1     C    C         0.000     -4.107    0.000   -2.587
+ OGA           O1     O    OC       -0.500     -3.163    0.000   -3.408
+ OGA           O2     O    OC       -0.500     -5.289    0.000   -2.995
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OGA      O4     n/a    C5     START
+ OGA      C5     O4     C4     .
+ OGA      O3     C5     .      .
+ OGA      C4     C5     N1     .
+ OGA      H4C1   C4     .      .
+ OGA      H4C2   C4     .      .
+ OGA      N1     C4     C2     .
+ OGA      H1     N1     .      .
+ OGA      C2     N1     C1     .
+ OGA      "O2'"  C2     .      .
+ OGA      C1     C2     O2     .
+ OGA      O1     C1     .      .
+ OGA      O2     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OGA      C1     C2        single      1.460    0.020
+ OGA      O1     C1        deloc       1.250    0.020
+ OGA      O2     C1        deloc       1.250    0.020
+ OGA      "O2'"  C2        double      1.220    0.020
+ OGA      C2     N1        single      1.330    0.020
+ OGA      C4     C5        single      1.510    0.020
+ OGA      N1     C4        single      1.450    0.020
+ OGA      H4C1   C4        single      1.092    0.020
+ OGA      H4C2   C4        single      1.092    0.020
+ OGA      O3     C5        deloc       1.250    0.020
+ OGA      C5     O4        deloc       1.250    0.020
+ OGA      H1     N1        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OGA      O4     C5     O3      123.000    3.000
+ OGA      O4     C5     C4      118.500    3.000
+ OGA      O3     C5     C4      118.500    3.000
+ OGA      C5     C4     H4C1    109.470    3.000
+ OGA      C5     C4     H4C2    109.470    3.000
+ OGA      C5     C4     N1      111.600    3.000
+ OGA      H4C1   C4     H4C2    107.900    3.000
+ OGA      H4C1   C4     N1      109.470    3.000
+ OGA      H4C2   C4     N1      109.470    3.000
+ OGA      C4     N1     H1      118.500    3.000
+ OGA      C4     N1     C2      121.500    3.000
+ OGA      H1     N1     C2      120.000    3.000
+ OGA      N1     C2     "O2'"   123.000    3.000
+ OGA      N1     C2     C1      120.000    3.000
+ OGA      "O2'"  C2     C1      120.500    3.000
+ OGA      C2     C1     O1      120.000    3.000
+ OGA      C2     C1     O2      120.000    3.000
+ OGA      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OGA      var_1    O4     C5     C4     N1         0.000   20.000   3
+ OGA      var_2    C5     C4     N1     C2       180.000   20.000   3
+ OGA      CONST_1  C4     N1     C2     C1       180.000    0.000   0
+ OGA      var_3    N1     C2     C1     O2       180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OGA      plan-1    C1        0.020
+ OGA      plan-1    C2        0.020
+ OGA      plan-1    O1        0.020
+ OGA      plan-1    O2        0.020
+ OGA      plan-2    C2        0.020
+ OGA      plan-2    C1        0.020
+ OGA      plan-2    "O2'"     0.020
+ OGA      plan-2    N1        0.020
+ OGA      plan-2    H1        0.020
+ OGA      plan-3    C5        0.020
+ OGA      plan-3    C4        0.020
+ OGA      plan-3    O3        0.020
+ OGA      plan-3    O4        0.020
+ OGA      plan-4    N1        0.020
+ OGA      plan-4    C2        0.020
+ OGA      plan-4    C4        0.020
+ OGA      plan-4    H1        0.020
+# ------------------------------------------------------

@@ -1,0 +1,199 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SNO      SNO '(S)-PARA-NITROSTYRENE OXIDE         ' non-polymer        19  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SNO
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SNO           O2     O    O         0.000      0.000    0.000    0.000
+ SNO           N1     N    N         1.000     -0.792   -0.924   -0.020
+ SNO           O1     O    O        -1.000     -0.390   -2.073    0.019
+ SNO           C1     C    CR6       0.000     -2.245   -0.652   -0.097
+ SNO           C6     C    CR16      0.000     -2.703    0.651   -0.136
+ SNO           H66    H    H         0.000     -1.999    1.473   -0.108
+ SNO           C5     C    CR16      0.000     -4.060    0.906   -0.212
+ SNO           H55    H    H         0.000     -4.418    1.927   -0.249
+ SNO           C4     C    CR6       0.000     -4.959   -0.143   -0.241
+ SNO           C3     C    CR16      0.000     -4.502   -1.448   -0.197
+ SNO           H33    H    H         0.000     -5.207   -2.270   -0.219
+ SNO           C2     C    CR16      0.000     -3.145   -1.701   -0.125
+ SNO           H22    H    H         0.000     -2.787   -2.723   -0.090
+ SNO           C7     C    CH1       0.000     -6.439    0.134   -0.321
+ SNO           H77    H    H         0.000     -7.017   -0.460   -1.043
+ SNO           O3     O    O2        0.000     -6.878    1.474   -0.090
+ SNO           C8     C    CH2       0.000     -7.157    0.549    0.965
+ SNO           H82    H    H         0.000     -8.078   -0.027    1.070
+ SNO           H81    H    H         0.000     -6.509    0.357    1.823
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SNO      O2     n/a    N1     START
+ SNO      N1     O2     C1     .
+ SNO      O1     N1     .      .
+ SNO      C1     N1     C6     .
+ SNO      C6     C1     C5     .
+ SNO      H66    C6     .      .
+ SNO      C5     C6     C4     .
+ SNO      H55    C5     .      .
+ SNO      C4     C5     C7     .
+ SNO      C3     C4     C2     .
+ SNO      H33    C3     .      .
+ SNO      C2     C3     H22    .
+ SNO      H22    C2     .      .
+ SNO      C7     C4     O3     .
+ SNO      H77    C7     .      .
+ SNO      O3     C7     C8     .
+ SNO      C8     O3     H81    .
+ SNO      H82    C8     .      .
+ SNO      H81    C8     .      END
+ SNO      C1     C2     .    ADD
+ SNO      C7     C8     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SNO      C1     C2        double      1.390    0.020
+ SNO      C6     C1        single      1.390    0.020
+ SNO      C1     N1        single      1.400    0.020
+ SNO      C2     C3        single      1.390    0.020
+ SNO      H22    C2        single      1.083    0.020
+ SNO      C3     C4        double      1.390    0.020
+ SNO      H33    C3        single      1.083    0.020
+ SNO      C4     C5        single      1.390    0.020
+ SNO      C7     C4        single      1.480    0.020
+ SNO      C5     C6        double      1.390    0.020
+ SNO      H55    C5        single      1.083    0.020
+ SNO      H66    C6        single      1.083    0.020
+ SNO      C7     C8        single      1.524    0.020
+ SNO      O3     C7        single      1.426    0.020
+ SNO      H77    C7        single      1.099    0.020
+ SNO      C8     O3        single      1.426    0.020
+ SNO      H81    C8        single      1.092    0.020
+ SNO      H82    C8        single      1.092    0.020
+ SNO      O1     N1        single      1.400    0.020
+ SNO      N1     O2        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SNO      O2     N1     O1      120.000    3.000
+ SNO      O2     N1     C1      120.000    3.000
+ SNO      O1     N1     C1      120.000    3.000
+ SNO      N1     C1     C6      120.000    3.000
+ SNO      N1     C1     C2      120.000    3.000
+ SNO      C6     C1     C2      120.000    3.000
+ SNO      C1     C6     H66     120.000    3.000
+ SNO      C1     C6     C5      120.000    3.000
+ SNO      H66    C6     C5      120.000    3.000
+ SNO      C6     C5     H55     120.000    3.000
+ SNO      C6     C5     C4      120.000    3.000
+ SNO      H55    C5     C4      120.000    3.000
+ SNO      C5     C4     C3      120.000    3.000
+ SNO      C5     C4     C7      120.000    3.000
+ SNO      C3     C4     C7      120.000    3.000
+ SNO      C4     C3     H33     120.000    3.000
+ SNO      C4     C3     C2      120.000    3.000
+ SNO      H33    C3     C2      120.000    3.000
+ SNO      C3     C2     H22     120.000    3.000
+ SNO      C3     C2     C1      120.000    3.000
+ SNO      H22    C2     C1      120.000    3.000
+ SNO      C4     C7     H77     109.470    3.000
+ SNO      C4     C7     O3      109.470    3.000
+ SNO      C4     C7     C8      109.470    3.000
+ SNO      H77    C7     O3      109.470    3.000
+ SNO      H77    C7     C8      108.340    3.000
+ SNO      O3     C7     C8       57.699    3.000
+ SNO      C7     O3     C8       64.601    3.000
+ SNO      O3     C8     H82     109.470    3.000
+ SNO      O3     C8     H81     109.470    3.000
+ SNO      O3     C8     C7       57.699    3.000
+ SNO      H82    C8     H81     107.900    3.000
+ SNO      H82    C8     C7      109.470    3.000
+ SNO      H81    C8     C7      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SNO      var_1    O2     N1     C1     C6        -0.509   20.000   1
+ SNO      CONST_1  N1     C1     C2     C3       180.000    0.000   0
+ SNO      CONST_2  N1     C1     C6     C5       180.000    0.000   0
+ SNO      CONST_3  C1     C6     C5     C4         0.000    0.000   0
+ SNO      CONST_4  C6     C5     C4     C7       180.000    0.000   0
+ SNO      CONST_5  C5     C4     C3     C2         0.000    0.000   0
+ SNO      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+ SNO      var_2    C5     C4     C7     O3       -12.522   20.000   1
+ SNO      var_3    C4     C7     C8     O3       106.853   20.000   3
+ SNO      var_4    C4     C7     O3     C8      -106.892   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ SNO      chir_01  C7     C4     C8     O3        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SNO      plan-1    C1        0.020
+ SNO      plan-1    C2        0.020
+ SNO      plan-1    C6        0.020
+ SNO      plan-1    N1        0.020
+ SNO      plan-1    C3        0.020
+ SNO      plan-1    C4        0.020
+ SNO      plan-1    C5        0.020
+ SNO      plan-1    H22       0.020
+ SNO      plan-1    H33       0.020
+ SNO      plan-1    C7        0.020
+ SNO      plan-1    H55       0.020
+ SNO      plan-1    H66       0.020
+ SNO      plan-2    N1        0.020
+ SNO      plan-2    C1        0.020
+ SNO      plan-2    O1        0.020
+ SNO      plan-2    O2        0.020
+# ------------------------------------------------------

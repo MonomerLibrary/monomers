@@ -1,0 +1,204 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+VXX      VXX 'VANILLATE                           ' non-polymer        23  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_VXX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ VXX           O1     O    O        -0.500      0.000    0.000    0.000
+ VXX           CC     C    C         0.000     -0.425    0.356    1.122
+ VXX           O2     O    O2       -0.500      0.302    0.817    2.029
+ VXX           C9     C    CH3       0.000      1.767    0.977    1.828
+ VXX           H9C3   H    H         0.000      2.028    2.009    1.827
+ VXX           H9C2   H    H         0.000      2.302    0.492    2.610
+ VXX           H9C1   H    H         0.000      2.060    0.551    0.899
+ VXX           C1     C    CR6       0.000     -1.818    0.289    1.533
+ VXX           CO2    C    CR16      0.000     -2.140    0.092    2.876
+ VXX           HO2    H    H         0.000     -1.353   -0.010    3.612
+ VXX           CM2    C    CR6       0.000     -3.476    0.027    3.271
+ VXX           OM     O    O2        0.000     -3.778   -0.165    4.584
+ VXX           CV     C    CH3       0.000     -3.930    1.000    5.393
+ VXX           HVC3   H    H         0.000     -3.781    0.746    6.410
+ VXX           HVC2   H    H         0.000     -3.217    1.727    5.103
+ VXX           HVC1   H    H         0.000     -4.906    1.393    5.266
+ VXX           CZ     C    CR6       0.000     -4.491    0.159    2.322
+ VXX           O3     O    OH1       0.000     -5.800    0.098    2.694
+ VXX           H3     H    H         0.000     -6.316    0.719    2.163
+ VXX           CM1    C    CR16      0.000     -4.168    0.356    0.979
+ VXX           HM1    H    H         0.000     -4.956    0.458    0.242
+ VXX           CO1    C    CR16      0.000     -2.833    0.420    0.585
+ VXX           HO1    H    H         0.000     -2.583    0.573   -0.458
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ VXX      O1     n/a    CC     START
+ VXX      CC     O1     C1     .
+ VXX      O2     CC     C9     .
+ VXX      C9     O2     H9C1   .
+ VXX      H9C3   C9     .      .
+ VXX      H9C2   C9     .      .
+ VXX      H9C1   C9     .      .
+ VXX      C1     CC     CO2    .
+ VXX      CO2    C1     CM2    .
+ VXX      HO2    CO2    .      .
+ VXX      CM2    CO2    CZ     .
+ VXX      OM     CM2    CV     .
+ VXX      CV     OM     HVC1   .
+ VXX      HVC3   CV     .      .
+ VXX      HVC2   CV     .      .
+ VXX      HVC1   CV     .      .
+ VXX      CZ     CM2    CM1    .
+ VXX      O3     CZ     H3     .
+ VXX      H3     O3     .      .
+ VXX      CM1    CZ     CO1    .
+ VXX      HM1    CM1    .      .
+ VXX      CO1    CM1    HO1    .
+ VXX      HO1    CO1    .      END
+ VXX      C1     CO1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ VXX      C1     CO1       single      1.390    0.020
+ VXX      CO2    C1        double      1.390    0.020
+ VXX      C1     CC        single      1.500    0.020
+ VXX      CO1    CM1       double      1.390    0.020
+ VXX      HO1    CO1       single      1.083    0.020
+ VXX      CM2    CO2       single      1.390    0.020
+ VXX      HO2    CO2       single      1.083    0.020
+ VXX      CM1    CZ        single      1.390    0.020
+ VXX      HM1    CM1       single      1.083    0.020
+ VXX      OM     CM2       single      1.370    0.020
+ VXX      CZ     CM2       double      1.487    0.020
+ VXX      CV     OM        single      1.426    0.020
+ VXX      O3     CZ        single      1.362    0.020
+ VXX      CC     O1        deloc       1.220    0.020
+ VXX      O2     CC        deloc       1.454    0.020
+ VXX      HVC1   CV        single      1.059    0.020
+ VXX      HVC2   CV        single      1.059    0.020
+ VXX      HVC3   CV        single      1.059    0.020
+ VXX      C9     O2        single      1.426    0.020
+ VXX      H3     O3        single      0.967    0.020
+ VXX      H9C1   C9        single      1.059    0.020
+ VXX      H9C2   C9        single      1.059    0.020
+ VXX      H9C3   C9        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ VXX      O1     CC     O2      119.000    3.000
+ VXX      O1     CC     C1      120.500    3.000
+ VXX      O2     CC     C1      120.000    3.000
+ VXX      CC     O2     C9      120.000    3.000
+ VXX      O2     C9     H9C3    109.470    3.000
+ VXX      O2     C9     H9C2    109.470    3.000
+ VXX      O2     C9     H9C1    109.470    3.000
+ VXX      H9C3   C9     H9C2    109.470    3.000
+ VXX      H9C3   C9     H9C1    109.470    3.000
+ VXX      H9C2   C9     H9C1    109.470    3.000
+ VXX      CC     C1     CO2     120.000    3.000
+ VXX      CC     C1     CO1     120.000    3.000
+ VXX      CO2    C1     CO1     120.000    3.000
+ VXX      C1     CO2    HO2     120.000    3.000
+ VXX      C1     CO2    CM2     120.000    3.000
+ VXX      HO2    CO2    CM2     120.000    3.000
+ VXX      CO2    CM2    OM      120.000    3.000
+ VXX      CO2    CM2    CZ      120.000    3.000
+ VXX      OM     CM2    CZ      120.000    3.000
+ VXX      CM2    OM     CV      120.000    3.000
+ VXX      OM     CV     HVC3    109.470    3.000
+ VXX      OM     CV     HVC2    109.470    3.000
+ VXX      OM     CV     HVC1    109.470    3.000
+ VXX      HVC3   CV     HVC2    109.470    3.000
+ VXX      HVC3   CV     HVC1    109.470    3.000
+ VXX      HVC2   CV     HVC1    109.470    3.000
+ VXX      CM2    CZ     O3      120.000    3.000
+ VXX      CM2    CZ     CM1     120.000    3.000
+ VXX      O3     CZ     CM1     120.000    3.000
+ VXX      CZ     O3     H3      109.470    3.000
+ VXX      CZ     CM1    HM1     120.000    3.000
+ VXX      CZ     CM1    CO1     120.000    3.000
+ VXX      HM1    CM1    CO1     120.000    3.000
+ VXX      CM1    CO1    HO1     120.000    3.000
+ VXX      CM1    CO1    C1      120.000    3.000
+ VXX      HO1    CO1    C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ VXX      var_1    O1     CC     O2     C9        -0.047   20.000   1
+ VXX      var_2    CC     O2     C9     H9C1      -6.463   20.000   1
+ VXX      var_3    O1     CC     C1     CO2      150.040   20.000   1
+ VXX      CONST_1  CC     C1     CO1    CM1      180.000    0.000   0
+ VXX      CONST_2  CC     C1     CO2    CM2      180.000    0.000   0
+ VXX      CONST_3  C1     CO2    CM2    CZ         0.000    0.000   0
+ VXX      var_4    CO2    CM2    OM     CV        90.030   20.000   1
+ VXX      var_5    CM2    OM     CV     HVC1      82.132   20.000   1
+ VXX      CONST_4  CO2    CM2    CZ     CM1        0.000    0.000   0
+ VXX      var_6    CM2    CZ     O3     H3       143.558   20.000   1
+ VXX      CONST_5  CM2    CZ     CM1    CO1        0.000    0.000   0
+ VXX      CONST_6  CZ     CM1    CO1    C1         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ VXX      plan-1    C1        0.020
+ VXX      plan-1    CO1       0.020
+ VXX      plan-1    CO2       0.020
+ VXX      plan-1    CC        0.020
+ VXX      plan-1    CM1       0.020
+ VXX      plan-1    CM2       0.020
+ VXX      plan-1    CZ        0.020
+ VXX      plan-1    HO1       0.020
+ VXX      plan-1    HO2       0.020
+ VXX      plan-1    HM1       0.020
+ VXX      plan-1    OM        0.020
+ VXX      plan-1    O3        0.020
+ VXX      plan-2    CC        0.020
+ VXX      plan-2    C1        0.020
+ VXX      plan-2    O1        0.020
+ VXX      plan-2    O2        0.020
+# ------------------------------------------------------

@@ -1,0 +1,265 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CKI      CKI 'N-(2-AMINOETHYL)-5-CHLOROISOQUINOLIN' non-polymer        30  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CKI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CKI           O2S    O    OS        0.000      0.000    0.000    0.000
+ CKI           S      S    ST        0.000     -0.819   -0.389   -1.094
+ CKI           O1S    O    OS        0.000     -0.582   -1.506   -1.941
+ CKI           "N1'"  N    NH1       0.000     -0.891    0.929   -2.094
+ CKI           HN1    H    H         0.000     -0.735    0.819   -3.086
+ CKI           "C1'"  C    CH2       0.000     -1.179    2.252   -1.540
+ CKI           "H1'1" H    H         0.000     -0.464    2.478   -0.747
+ CKI           "H1'2" H    H         0.000     -2.191    2.261   -1.130
+ CKI           "C2'"  C    CH2       0.000     -1.065    3.304   -2.647
+ CKI           "H2'1" H    H         0.000     -1.780    3.075   -3.440
+ CKI           "H2'2" H    H         0.000     -0.053    3.292   -3.056
+ CKI           "N2'"  N    NH2       0.000     -1.355    4.632   -2.092
+ CKI           HN22   H    H         0.000     -1.586    4.737   -1.111
+ CKI           HN21   H    H         0.000     -1.326    5.452   -2.686
+ CKI           C8     C    CR6       0.000     -2.430   -0.631   -0.423
+ CKI           C7     C    CR16      0.000     -2.641   -0.503    0.916
+ CKI           H7     H    H         0.000     -1.811   -0.252    1.564
+ CKI           C6     C    CR16      0.000     -3.907   -0.690    1.466
+ CKI           H6     H    H         0.000     -4.045   -0.583    2.535
+ CKI           C9     C    CR66      0.000     -3.505   -0.948   -1.266
+ CKI           C1     C    CR16      0.000     -3.347   -1.098   -2.654
+ CKI           H1     H    H         0.000     -2.372   -0.965   -3.106
+ CKI           C10    C    CR66      0.000     -4.794   -1.144   -0.705
+ CKI           C5     C    CR6       0.000     -4.974   -1.005    0.678
+ CKI           CL5    CL   CL        0.000     -6.544   -1.232    1.383
+ CKI           C4     C    CR16      0.000     -5.854   -1.468   -1.571
+ CKI           H4     H    H         0.000     -6.855   -1.621   -1.186
+ CKI           C3     C    CR16      0.000     -5.597   -1.584   -2.904
+ CKI           H3     H    H         0.000     -6.408   -1.834   -3.576
+ CKI           N2     N    NRD6      0.000     -4.382   -1.401   -3.401
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CKI      O2S    n/a    S      START
+ CKI      S      O2S    C8     .
+ CKI      O1S    S      .      .
+ CKI      "N1'"  S      "C1'"  .
+ CKI      HN1    "N1'"  .      .
+ CKI      "C1'"  "N1'"  "C2'"  .
+ CKI      "H1'1" "C1'"  .      .
+ CKI      "H1'2" "C1'"  .      .
+ CKI      "C2'"  "C1'"  "N2'"  .
+ CKI      "H2'1" "C2'"  .      .
+ CKI      "H2'2" "C2'"  .      .
+ CKI      "N2'"  "C2'"  HN21   .
+ CKI      HN22   "N2'"  .      .
+ CKI      HN21   "N2'"  .      .
+ CKI      C8     S      C9     .
+ CKI      C7     C8     C6     .
+ CKI      H7     C7     .      .
+ CKI      C6     C7     H6     .
+ CKI      H6     C6     .      .
+ CKI      C9     C8     C10    .
+ CKI      C1     C9     H1     .
+ CKI      H1     C1     .      .
+ CKI      C10    C9     C4     .
+ CKI      C5     C10    CL5    .
+ CKI      CL5    C5     .      .
+ CKI      C4     C10    C3     .
+ CKI      H4     C4     .      .
+ CKI      C3     C4     N2     .
+ CKI      H3     C3     .      .
+ CKI      N2     C3     .      END
+ CKI      C1     N2     .    ADD
+ CKI      C5     C6     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CKI      C1     N2        double      1.337    0.020
+ CKI      C1     C9        single      1.390    0.020
+ CKI      H1     C1        single      1.083    0.020
+ CKI      N2     C3        single      1.337    0.020
+ CKI      C3     C4        double      1.390    0.020
+ CKI      H3     C3        single      1.083    0.020
+ CKI      C4     C10       single      1.390    0.020
+ CKI      H4     C4        single      1.083    0.020
+ CKI      CL5    C5        single      1.795    0.020
+ CKI      C5     C6        double      1.390    0.020
+ CKI      C5     C10       single      1.490    0.020
+ CKI      C6     C7        single      1.390    0.020
+ CKI      H6     C6        single      1.083    0.020
+ CKI      C7     C8        double      1.390    0.020
+ CKI      H7     C7        single      1.083    0.020
+ CKI      C9     C8        single      1.490    0.020
+ CKI      C8     S         single      1.595    0.020
+ CKI      C10    C9        double      1.490    0.020
+ CKI      O1S    S         double      1.436    0.020
+ CKI      S      O2S       double      1.436    0.020
+ CKI      "N1'"  S         single      1.600    0.020
+ CKI      "C1'"  "N1'"     single      1.450    0.020
+ CKI      HN1    "N1'"     single      1.010    0.020
+ CKI      "C2'"  "C1'"     single      1.524    0.020
+ CKI      "H1'1" "C1'"     single      1.092    0.020
+ CKI      "H1'2" "C1'"     single      1.092    0.020
+ CKI      "N2'"  "C2'"     single      1.450    0.020
+ CKI      "H2'1" "C2'"     single      1.092    0.020
+ CKI      "H2'2" "C2'"     single      1.092    0.020
+ CKI      HN21   "N2'"     single      1.010    0.020
+ CKI      HN22   "N2'"     single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CKI      O2S    S      O1S     109.500    3.000
+ CKI      O2S    S      "N1'"   109.500    3.000
+ CKI      O2S    S      C8      109.500    3.000
+ CKI      O1S    S      "N1'"   109.500    3.000
+ CKI      O1S    S      C8      109.500    3.000
+ CKI      "N1'"  S      C8      109.500    3.000
+ CKI      S      "N1'"  HN1     120.000    3.000
+ CKI      S      "N1'"  "C1'"   120.000    3.000
+ CKI      HN1    "N1'"  "C1'"   118.500    3.000
+ CKI      "N1'"  "C1'"  "H1'1"  109.470    3.000
+ CKI      "N1'"  "C1'"  "H1'2"  109.470    3.000
+ CKI      "N1'"  "C1'"  "C2'"   112.000    3.000
+ CKI      "H1'1" "C1'"  "H1'2"  107.900    3.000
+ CKI      "H1'1" "C1'"  "C2'"   109.470    3.000
+ CKI      "H1'2" "C1'"  "C2'"   109.470    3.000
+ CKI      "C1'"  "C2'"  "H2'1"  109.470    3.000
+ CKI      "C1'"  "C2'"  "H2'2"  109.470    3.000
+ CKI      "C1'"  "C2'"  "N2'"   109.470    3.000
+ CKI      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ CKI      "H2'1" "C2'"  "N2'"   109.470    3.000
+ CKI      "H2'2" "C2'"  "N2'"   109.470    3.000
+ CKI      "C2'"  "N2'"  HN22    120.000    3.000
+ CKI      "C2'"  "N2'"  HN21    120.000    3.000
+ CKI      HN22   "N2'"  HN21    120.000    3.000
+ CKI      S      C8     C7      120.000    3.000
+ CKI      S      C8     C9      120.000    3.000
+ CKI      C7     C8     C9      120.000    3.000
+ CKI      C8     C7     H7      120.000    3.000
+ CKI      C8     C7     C6      120.000    3.000
+ CKI      H7     C7     C6      120.000    3.000
+ CKI      C7     C6     H6      120.000    3.000
+ CKI      C7     C6     C5      120.000    3.000
+ CKI      H6     C6     C5      120.000    3.000
+ CKI      C8     C9     C1      120.000    3.000
+ CKI      C8     C9     C10     120.000    3.000
+ CKI      C1     C9     C10     120.000    3.000
+ CKI      C9     C1     H1      120.000    3.000
+ CKI      C9     C1     N2      120.000    3.000
+ CKI      H1     C1     N2      120.000    3.000
+ CKI      C9     C10    C5      120.000    3.000
+ CKI      C9     C10    C4      120.000    3.000
+ CKI      C5     C10    C4      120.000    3.000
+ CKI      C10    C5     CL5     120.000    3.000
+ CKI      C10    C5     C6      120.000    3.000
+ CKI      CL5    C5     C6      120.000    3.000
+ CKI      C10    C4     H4      120.000    3.000
+ CKI      C10    C4     C3      120.000    3.000
+ CKI      H4     C4     C3      120.000    3.000
+ CKI      C4     C3     H3      120.000    3.000
+ CKI      C4     C3     N2      120.000    3.000
+ CKI      H3     C3     N2      120.000    3.000
+ CKI      C3     N2     C1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CKI      var_1    O2S    S      "N1'"  "C1'"    -47.645   20.000   1
+ CKI      var_2    S      "N1'"  "C1'"  "C2'"    175.005   20.000   3
+ CKI      var_3    "N1'"  "C1'"  "C2'"  "N2'"    179.987   20.000   3
+ CKI      var_4    "C1'"  "C2'"  "N2'"  HN21    -179.984   20.000   1
+ CKI      var_5    O2S    S      C8     C9       176.237   20.000   1
+ CKI      CONST_1  S      C8     C7     C6       180.000    0.000   0
+ CKI      CONST_2  C8     C7     C6     C5         0.000    0.000   0
+ CKI      CONST_3  S      C8     C9     C10      180.000    0.000   0
+ CKI      CONST_4  C8     C9     C1     N2       180.000    0.000   0
+ CKI      CONST_5  C9     C1     N2     C3         0.000    0.000   0
+ CKI      CONST_6  C8     C9     C10    C4       180.000    0.000   0
+ CKI      CONST_7  C9     C10    C5     CL5      180.000    0.000   0
+ CKI      CONST_8  C10    C5     C6     C7         0.000    0.000   0
+ CKI      CONST_9  C9     C10    C4     C3         0.000    0.000   0
+ CKI      CONST_10 C10    C4     C3     N2         0.000    0.000   0
+ CKI      CONST_11 C4     C3     N2     C1         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CKI      chir_01  S      C8     O1S    O2S       positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CKI      plan-1    C1        0.020
+ CKI      plan-1    N2        0.020
+ CKI      plan-1    C9        0.020
+ CKI      plan-1    H1        0.020
+ CKI      plan-1    C3        0.020
+ CKI      plan-1    C4        0.020
+ CKI      plan-1    H3        0.020
+ CKI      plan-1    C10       0.020
+ CKI      plan-1    H4        0.020
+ CKI      plan-1    C5        0.020
+ CKI      plan-1    CL5       0.020
+ CKI      plan-1    C6        0.020
+ CKI      plan-1    C7        0.020
+ CKI      plan-1    C8        0.020
+ CKI      plan-1    H6        0.020
+ CKI      plan-1    H7        0.020
+ CKI      plan-1    S         0.020
+ CKI      plan-2    "N1'"     0.020
+ CKI      plan-2    S         0.020
+ CKI      plan-2    "C1'"     0.020
+ CKI      plan-2    HN1       0.020
+ CKI      plan-3    "N2'"     0.020
+ CKI      plan-3    "C2'"     0.020
+ CKI      plan-3    HN21      0.020
+ CKI      plan-3    HN22      0.020
+# ------------------------------------------------------

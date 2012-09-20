@@ -1,0 +1,218 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HCX      HCX '(SOUTH) BICYCLO[3.1.0]HEXANE        ' non-polymer        25  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HCX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HCX           O1P    O    O         0.000      0.000    0.000    0.000
+ HCX           P      P    P         0.000     -0.567   -1.045   -0.924
+ HCX           HP1    H    H         0.000      0.019   -0.955   -2.175
+ HCX           O2P    O    OH1       0.000     -0.383   -2.542   -0.316
+ HCX           H2P    H    H         0.000     -0.598   -2.722    0.612
+ HCX           "O5'"  O    O2        0.000     -2.186   -0.939   -1.044
+ HCX           "C5'"  C    CH2       0.000     -2.889   -2.018   -1.631
+ HCX           "H5'1" H    H         0.000     -3.175   -2.739   -0.862
+ HCX           "H5'2" H    H         0.000     -2.260   -2.512   -2.375
+ HCX           "C4'"  C    CH1       0.000     -4.143   -1.468   -2.307
+ HCX           "H4'"  H    H         0.000     -4.688   -2.280   -2.809
+ HCX           "C3'"  C    CH1       0.000     -3.785   -0.360   -3.324
+ HCX           H1     H    H         0.000     -2.753   -0.479   -3.682
+ HCX           "O3'"  O    OH1       0.000     -4.702   -0.385   -4.415
+ HCX           "H3'"  H    H         0.000     -4.457   -1.094   -5.024
+ HCX           "C2'"  C    CH2       0.000     -3.948    0.971   -2.571
+ HCX           "H2'1" H    H         0.000     -4.355    1.748   -3.220
+ HCX           "H2'2" H    H         0.000     -2.999    1.309   -2.150
+ HCX           "C1'"  C    CH1       0.000     -4.918    0.687   -1.458
+ HCX           "H1'"  H    H         0.000     -4.818    1.287   -0.543
+ HCX           C7     C    CH2       0.000     -6.244    0.016   -1.696
+ HCX           H72    H    H         0.000     -6.608   -0.333   -2.666
+ HCX           H71    H    H         0.000     -7.031   -0.105   -0.949
+ HCX           C4     C    CH1       0.000     -5.037   -0.790   -1.292
+ HCX           H4     H    H         0.000     -5.017   -1.182   -0.266
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HCX      O1P    n/a    P      START
+ HCX      P      O1P    "O5'"  .
+ HCX      HP1    P      .      .
+ HCX      O2P    P      H2P    .
+ HCX      H2P    O2P    .      .
+ HCX      "O5'"  P      "C5'"  .
+ HCX      "C5'"  "O5'"  "C4'"  .
+ HCX      "H5'1" "C5'"  .      .
+ HCX      "H5'2" "C5'"  .      .
+ HCX      "C4'"  "C5'"  "C3'"  .
+ HCX      "H4'"  "C4'"  .      .
+ HCX      "C3'"  "C4'"  "C2'"  .
+ HCX      H1     "C3'"  .      .
+ HCX      "O3'"  "C3'"  "H3'"  .
+ HCX      "H3'"  "O3'"  .      .
+ HCX      "C2'"  "C3'"  "C1'"  .
+ HCX      "H2'1" "C2'"  .      .
+ HCX      "H2'2" "C2'"  .      .
+ HCX      "C1'"  "C2'"  C4     .
+ HCX      "H1'"  "C1'"  .      .
+ HCX      C7     "C1'"  H71    .
+ HCX      H72    C7     .      .
+ HCX      H71    C7     .      .
+ HCX      C4     "C1'"  H4     .
+ HCX      H4     C4     .      END
+ HCX      C4     C7     .    ADD
+ HCX      C4     "C4'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HCX      P      O1P       double      1.480    0.020
+ HCX      O2P    P         single      1.610    0.020
+ HCX      "O5'"  P         single      1.610    0.020
+ HCX      H2P    O2P       single      0.967    0.020
+ HCX      "C5'"  "O5'"     single      1.426    0.020
+ HCX      C4     C7        single      1.524    0.020
+ HCX      C4     "C4'"     single      1.524    0.020
+ HCX      C4     "C1'"     single      1.524    0.020
+ HCX      H4     C4        single      1.099    0.020
+ HCX      C7     "C1'"     single      1.524    0.020
+ HCX      H71    C7        single      1.092    0.020
+ HCX      H72    C7        single      1.092    0.020
+ HCX      "C1'"  "C2'"     single      1.524    0.020
+ HCX      "C2'"  "C3'"     single      1.524    0.020
+ HCX      "H2'1" "C2'"     single      1.092    0.020
+ HCX      "H2'2" "C2'"     single      1.092    0.020
+ HCX      "C4'"  "C5'"     single      1.524    0.020
+ HCX      "H5'1" "C5'"     single      1.092    0.020
+ HCX      "H5'2" "C5'"     single      1.092    0.020
+ HCX      "C3'"  "C4'"     single      1.524    0.020
+ HCX      "H4'"  "C4'"     single      1.099    0.020
+ HCX      "H1'"  "C1'"     single      1.099    0.020
+ HCX      "O3'"  "C3'"     single      1.432    0.020
+ HCX      H1     "C3'"     single      1.099    0.020
+ HCX      "H3'"  "O3'"     single      0.967    0.020
+ HCX      HP1    P         single      1.383    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HCX      O1P    P      HP1     109.500    3.000
+ HCX      O1P    P      O2P     109.500    3.000
+ HCX      O1P    P      "O5'"   109.500    3.000
+ HCX      HP1    P      O2P     109.500    3.000
+ HCX      HP1    P      "O5'"   109.500    3.000
+ HCX      O2P    P      "O5'"   109.500    3.000
+ HCX      P      O2P    H2P     120.000    3.000
+ HCX      P      "O5'"  "C5'"   120.500    3.000
+ HCX      "O5'"  "C5'"  "H5'1"  109.470    3.000
+ HCX      "O5'"  "C5'"  "H5'2"  109.470    3.000
+ HCX      "O5'"  "C5'"  "C4'"   109.470    3.000
+ HCX      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ HCX      "H5'1" "C5'"  "C4'"   109.470    3.000
+ HCX      "H5'2" "C5'"  "C4'"   109.470    3.000
+ HCX      "C5'"  "C4'"  "H4'"   108.340    3.000
+ HCX      "C5'"  "C4'"  "C3'"   111.000    3.000
+ HCX      "C5'"  "C4'"  C4      111.000    3.000
+ HCX      "H4'"  "C4'"  "C3'"   108.340    3.000
+ HCX      "H4'"  "C4'"  C4      108.340    3.000
+ HCX      "C3'"  "C4'"  C4      111.000    3.000
+ HCX      "C4'"  "C3'"  H1      108.340    3.000
+ HCX      "C4'"  "C3'"  "O3'"   109.470    3.000
+ HCX      "C4'"  "C3'"  "C2'"   111.000    3.000
+ HCX      H1     "C3'"  "O3'"   109.470    3.000
+ HCX      H1     "C3'"  "C2'"   108.340    3.000
+ HCX      "O3'"  "C3'"  "C2'"   109.470    3.000
+ HCX      "C3'"  "O3'"  "H3'"   109.470    3.000
+ HCX      "C3'"  "C2'"  "H2'1"  109.470    3.000
+ HCX      "C3'"  "C2'"  "H2'2"  109.470    3.000
+ HCX      "C3'"  "C2'"  "C1'"   111.000    3.000
+ HCX      "H2'1" "C2'"  "H2'2"  107.900    3.000
+ HCX      "H2'1" "C2'"  "C1'"   109.470    3.000
+ HCX      "H2'2" "C2'"  "C1'"   109.470    3.000
+ HCX      "C2'"  "C1'"  "H1'"   108.340    3.000
+ HCX      "C2'"  "C1'"  C7      109.470    3.000
+ HCX      "C2'"  "C1'"  C4      111.000    3.000
+ HCX      "H1'"  "C1'"  C7      108.340    3.000
+ HCX      "H1'"  "C1'"  C4      108.340    3.000
+ HCX      C7     "C1'"  C4       60.000    3.000
+ HCX      "C1'"  C7     H72     109.470    3.000
+ HCX      "C1'"  C7     H71     109.470    3.000
+ HCX      "C1'"  C7     C4       60.000    3.000
+ HCX      H72    C7     H71     107.900    3.000
+ HCX      H72    C7     C4      109.470    3.000
+ HCX      H71    C7     C4      109.470    3.000
+ HCX      "C1'"  C4     H4      108.340    3.000
+ HCX      "C1'"  C4     C7       60.000    3.000
+ HCX      "C1'"  C4     "C4'"   111.000    3.000
+ HCX      C7     C4     "C4'"   111.000    3.000
+ HCX      H4     C4     C7      108.340    3.000
+ HCX      H4     C4     "C4'"   108.340    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HCX      var_1    O1P    P      O2P    H2P       45.823   20.000   1
+ HCX      var_2    O1P    P      "O5'"  "C5'"   -166.304   20.000   1
+ HCX      var_3    P      "O5'"  "C5'"  "C4'"   -149.995   20.000   1
+ HCX      var_4    "O5'"  "C5'"  "C4'"  "C3'"     55.398   20.000   3
+ HCX      var_5    "C5'"  "C4'"  "C3'"  "C2'"    -90.000   20.000   3
+ HCX      var_6    "C4'"  "C3'"  "O3'"  "H3'"    -79.209   20.000   1
+ HCX      var_7    "C4'"  "C3'"  "C2'"  "C1'"    -30.000   20.000   3
+ HCX      var_8    "C3'"  "C2'"  "C1'"  C4        30.000   20.000   3
+ HCX      var_9    "C2'"  "C1'"  C7     C4        90.000   20.000   3
+ HCX      var_10   "C2'"  "C1'"  C4     C7      -117.248   20.000   3
+ HCX      var_11   "C1'"  C4     "C4'"  "C5'"     90.000   20.000   3
+ HCX      var_1    "C4'"  C4     C7     "C1'"      0.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HCX      chir_01  C4     C7     "C4'"  "C1'"     negativ
+ HCX      chir_02  "C4'"  C4     "C5'"  "C3'"     positiv
+ HCX      chir_03  "C1'"  C4     C7     "C2'"     positiv
+ HCX      chir_04  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+# ------------------------------------------------------

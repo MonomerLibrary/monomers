@@ -1,0 +1,221 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OTY      OTY '2-AMINO-3-(4-HYDROXY-6-OXOCYCLOHEXA-' peptide            24  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OTY
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OTY           N      N    NH2       0.000      0.000    0.000    0.000
+ OTY           HN1    H    H         0.000      0.077   -0.753   -0.672
+ OTY           HN2    H    H         0.000      0.706    0.725    0.021
+ OTY           CA     C    CH1       0.000     -1.124    0.041    0.934
+ OTY           HA     H    H         0.000     -0.751   -0.125    1.954
+ OTY           CB     C    CH2       0.000     -1.819    1.406    0.867
+ OTY           HB2    H    H         0.000     -2.155    1.565   -0.160
+ OTY           HB3    H    H         0.000     -1.087    2.171    1.132
+ OTY           CG     C    CR6       0.000     -2.990    1.490    1.795
+ OTY           CD2    C    CR16      0.000     -4.247    1.210    1.423
+ OTY           HD2    H    H         0.000     -4.411    0.908    0.396
+ OTY           CE2    C    CH2       0.000     -5.441    1.284    2.323
+ OTY           HE23   H    H         0.000     -5.897    0.292    2.344
+ OTY           HE22   H    H         0.000     -6.141    1.996    1.880
+ OTY           CZ     C    CR6       0.000     -5.110    1.712    3.720
+ OTY           OH     O    OH1       0.000     -6.200    1.786    4.564
+ OTY           HH     H    H         0.000     -6.481    2.708    4.656
+ OTY           CE1    C    CR16      0.000     -3.872    2.001    4.133
+ OTY           HE1    H    H         0.000     -3.707    2.303    5.160
+ OTY           CD1    C    CR6       0.000     -2.724    1.910    3.201
+ OTY           OD1    O    O         0.000     -1.591    2.176    3.592
+ OTY           C      C    C         0.000     -2.042   -1.108    0.546
+ OTY           O      O    OC       -0.500     -2.207   -1.538   -0.617
+ OTY           OXT    O    OC       -0.500     -2.628   -1.595    1.538
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OTY      N      n/a    CA     START
+ OTY      HN1    N      .      .
+ OTY      HN2    N      .      .
+ OTY      CA     N      C      .
+ OTY      HA     CA     .      .
+ OTY      CB     CA     CG     .
+ OTY      HB2    CB     .      .
+ OTY      HB3    CB     .      .
+ OTY      CG     CB     CD2    .
+ OTY      CD2    CG     CE2    .
+ OTY      HD2    CD2    .      .
+ OTY      CE2    CD2    CZ     .
+ OTY      HE23   CE2    .      .
+ OTY      HE22   CE2    .      .
+ OTY      CZ     CE2    CE1    .
+ OTY      OH     CZ     HH     .
+ OTY      HH     OH     .      .
+ OTY      CE1    CZ     CD1    .
+ OTY      HE1    CE1    .      .
+ OTY      CD1    CE1    OD1    .
+ OTY      OD1    CD1    .      .
+ OTY      C      CA     .      END
+ OTY      O      C      .      .
+ OTY      OXT    C      .      .
+ OTY      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OTY      OD1    CD1       double      1.250    0.020
+ OTY      CA     N         single      1.450    0.020
+ OTY      C      CA        single      1.500    0.020
+ OTY      CB     CA        single      1.524    0.020
+ OTY      HA     CA        single      1.099    0.020
+ OTY      O      C         deloc       1.250    0.020
+ OTY      OXT    C         deloc       1.250    0.020
+ OTY      CG     CB        single      1.511    0.020
+ OTY      HB2    CB        single      1.092    0.020
+ OTY      HB3    CB        single      1.092    0.020
+ OTY      CD2    CG        double      1.390    0.020
+ OTY      CG     CD1       single      1.487    0.020
+ OTY      CD1    CE1       single      1.390    0.020
+ OTY      CE2    CD2       single      1.457    0.020
+ OTY      HD2    CD2       single      1.083    0.020
+ OTY      CE1    CZ        double      1.390    0.020
+ OTY      HE1    CE1       single      1.083    0.020
+ OTY      CZ     CE2       single      1.511    0.020
+ OTY      HE23   CE2       single      1.092    0.020
+ OTY      HE22   CE2       single      1.092    0.020
+ OTY      OH     CZ        single      1.362    0.020
+ OTY      HH     OH        single      0.967    0.020
+ OTY      HN1    N         single      1.010    0.020
+ OTY      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OTY      HN1    N      HN2     120.000    3.000
+ OTY      HN1    N      CA      120.000    3.000
+ OTY      HN2    N      CA      120.000    3.000
+ OTY      N      CA     HA      109.470    3.000
+ OTY      N      CA     CB      109.470    3.000
+ OTY      N      CA     C       109.470    3.000
+ OTY      HA     CA     CB      108.340    3.000
+ OTY      HA     CA     C       108.810    3.000
+ OTY      CB     CA     C       109.470    3.000
+ OTY      CA     CB     HB2     109.470    3.000
+ OTY      CA     CB     HB3     109.470    3.000
+ OTY      CA     CB     CG      109.470    3.000
+ OTY      HB2    CB     HB3     107.900    3.000
+ OTY      HB2    CB     CG      109.470    3.000
+ OTY      HB3    CB     CG      109.470    3.000
+ OTY      CB     CG     CD2     120.000    3.000
+ OTY      CB     CG     CD1     120.000    3.000
+ OTY      CD2    CG     CD1     120.000    3.000
+ OTY      CG     CD2    HD2     120.000    3.000
+ OTY      CG     CD2    CE2     120.000    3.000
+ OTY      HD2    CD2    CE2     120.000    3.000
+ OTY      CD2    CE2    HE23    109.470    3.000
+ OTY      CD2    CE2    HE22    109.470    3.000
+ OTY      CD2    CE2    CZ      109.500    3.000
+ OTY      HE23   CE2    HE22    107.900    3.000
+ OTY      HE23   CE2    CZ      109.470    3.000
+ OTY      HE22   CE2    CZ      109.470    3.000
+ OTY      CE2    CZ     OH      120.000    3.000
+ OTY      CE2    CZ     CE1     120.000    3.000
+ OTY      OH     CZ     CE1     120.000    3.000
+ OTY      CZ     OH     HH      109.470    3.000
+ OTY      CZ     CE1    HE1     120.000    3.000
+ OTY      CZ     CE1    CD1     120.000    3.000
+ OTY      HE1    CE1    CD1     120.000    3.000
+ OTY      CE1    CD1    OD1     120.000    3.000
+ OTY      CE1    CD1    CG      120.000    3.000
+ OTY      OD1    CD1    CG      120.000    3.000
+ OTY      CA     C      O       118.500    3.000
+ OTY      CA     C      OXT     118.500    3.000
+ OTY      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OTY      var_1    HN2    N      CA     C        175.000   20.000   1
+ OTY      var_2    N      CA     CB     CG       179.287   20.000   3
+ OTY      var_3    CA     CB     CG     CD2      -93.196   20.000   2
+ OTY      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ OTY      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ OTY      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ OTY      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ OTY      var_4    CE2    CZ     OH     HH      -100.602   20.000   1
+ OTY      CONST_5  CE2    CZ     CE1    CD1        0.000    0.000   0
+ OTY      CONST_6  CZ     CE1    CD1    OD1      180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OTY      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OTY      plan-1    N         0.020
+ OTY      plan-1    CA        0.020
+ OTY      plan-1    HN1       0.020
+ OTY      plan-1    HN2       0.020
+ OTY      plan-2    C         0.020
+ OTY      plan-2    CA        0.020
+ OTY      plan-2    O         0.020
+ OTY      plan-2    OXT       0.020
+ OTY      plan-3    CG        0.020
+ OTY      plan-3    CB        0.020
+ OTY      plan-3    CD1       0.020
+ OTY      plan-3    CD2       0.020
+ OTY      plan-3    CE1       0.020
+ OTY      plan-3    CE2       0.020
+ OTY      plan-3    CZ        0.020
+ OTY      plan-3    OD1       0.020
+ OTY      plan-3    HD2       0.020
+ OTY      plan-3    HE1       0.020
+ OTY      plan-3    OH        0.020
+# ------------------------------------------------------

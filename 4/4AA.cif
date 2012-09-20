@@ -1,0 +1,178 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+4AA      4AA '4-CHLORO-3-HYDROXYANTHRANILIC ACID  ' non-polymer        17  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_4AA
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 4AA           CLAE   CL   CL        0.000      0.000    0.000    0.000
+ 4AA           CAJ    C    CR6       0.000     -1.707   -0.006   -0.322
+ 4AA           CAF    C    CR16      0.000     -2.608   -0.017    0.734
+ 4AA           HAF    H    H         0.000     -2.243   -0.021    1.754
+ 4AA           CAG    C    CR16      0.000     -3.961   -0.022    0.492
+ 4AA           HAG    H    H         0.000     -4.659   -0.036    1.320
+ 4AA           CAK    C    CR6       0.000     -2.161    0.002   -1.629
+ 4AA           OAD    O    OH1       0.000     -1.270    0.013   -2.657
+ 4AA           HAD    H    H         0.000     -1.064    0.928   -2.894
+ 4AA           CAI    C    CR6       0.000     -3.528   -0.003   -1.890
+ 4AA           NAA    N    NH2       0.000     -3.989    0.004   -3.202
+ 4AA           HAA2   H    H         0.000     -4.981   -0.088   -3.404
+ 4AA           HAA1   H    H         0.000     -3.340    0.101   -3.979
+ 4AA           CAL    C    CR6       0.000     -4.438   -0.008   -0.824
+ 4AA           CAH    C    C         0.000     -5.887   -0.013   -1.087
+ 4AA           OAB    O    OC       -0.500     -6.695    0.082   -0.137
+ 4AA           OAC    O    OC       -0.500     -6.310   -0.113   -2.260
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 4AA      CLAE   n/a    CAJ    START
+ 4AA      CAJ    CLAE   CAK    .
+ 4AA      CAF    CAJ    CAG    .
+ 4AA      HAF    CAF    .      .
+ 4AA      CAG    CAF    HAG    .
+ 4AA      HAG    CAG    .      .
+ 4AA      CAK    CAJ    CAI    .
+ 4AA      OAD    CAK    HAD    .
+ 4AA      HAD    OAD    .      .
+ 4AA      CAI    CAK    CAL    .
+ 4AA      NAA    CAI    HAA1   .
+ 4AA      HAA2   NAA    .      .
+ 4AA      HAA1   NAA    .      .
+ 4AA      CAL    CAI    CAH    .
+ 4AA      CAH    CAL    OAC    .
+ 4AA      OAB    CAH    .      .
+ 4AA      OAC    CAH    .      END
+ 4AA      CAL    CAG    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 4AA      OAB    CAH       deloc       1.250    0.020
+ 4AA      OAC    CAH       deloc       1.250    0.020
+ 4AA      CAH    CAL       single      1.500    0.020
+ 4AA      CAL    CAG       double      1.390    0.020
+ 4AA      CAL    CAI       single      1.487    0.020
+ 4AA      CAG    CAF       single      1.390    0.020
+ 4AA      HAG    CAG       single      1.083    0.020
+ 4AA      CAF    CAJ       double      1.390    0.020
+ 4AA      HAF    CAF       single      1.083    0.020
+ 4AA      CAJ    CLAE      single      1.795    0.020
+ 4AA      CAK    CAJ       single      1.487    0.020
+ 4AA      OAD    CAK       single      1.362    0.020
+ 4AA      CAI    CAK       double      1.487    0.020
+ 4AA      HAD    OAD       single      0.967    0.020
+ 4AA      NAA    CAI       single      1.355    0.020
+ 4AA      HAA1   NAA       single      1.010    0.020
+ 4AA      HAA2   NAA       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 4AA      CLAE   CAJ    CAF     120.000    3.000
+ 4AA      CLAE   CAJ    CAK     120.000    3.000
+ 4AA      CAF    CAJ    CAK     120.000    3.000
+ 4AA      CAJ    CAF    HAF     120.000    3.000
+ 4AA      CAJ    CAF    CAG     120.000    3.000
+ 4AA      HAF    CAF    CAG     120.000    3.000
+ 4AA      CAF    CAG    HAG     120.000    3.000
+ 4AA      CAF    CAG    CAL     120.000    3.000
+ 4AA      HAG    CAG    CAL     120.000    3.000
+ 4AA      CAJ    CAK    OAD     120.000    3.000
+ 4AA      CAJ    CAK    CAI     120.000    3.000
+ 4AA      OAD    CAK    CAI     120.000    3.000
+ 4AA      CAK    OAD    HAD     109.470    3.000
+ 4AA      CAK    CAI    NAA     120.000    3.000
+ 4AA      CAK    CAI    CAL     120.000    3.000
+ 4AA      NAA    CAI    CAL     120.000    3.000
+ 4AA      CAI    NAA    HAA2    120.000    3.000
+ 4AA      CAI    NAA    HAA1    120.000    3.000
+ 4AA      HAA2   NAA    HAA1    120.000    3.000
+ 4AA      CAI    CAL    CAH     120.000    3.000
+ 4AA      CAI    CAL    CAG     120.000    3.000
+ 4AA      CAH    CAL    CAG     120.000    3.000
+ 4AA      CAL    CAH    OAB     120.000    3.000
+ 4AA      CAL    CAH    OAC     120.000    3.000
+ 4AA      OAB    CAH    OAC     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 4AA      CONST_1  CLAE   CAJ    CAF    CAG      180.000    0.000   0
+ 4AA      CONST_2  CAJ    CAF    CAG    CAL        0.000    0.000   0
+ 4AA      CONST_3  CLAE   CAJ    CAK    CAI      180.000    0.000   0
+ 4AA      var_1    CAJ    CAK    OAD    HAD      -90.015   20.000   1
+ 4AA      CONST_4  CAJ    CAK    CAI    CAL        0.000    0.000   0
+ 4AA      CONST_5  CAK    CAI    NAA    HAA1      -5.837    0.000   0
+ 4AA      CONST_6  CAK    CAI    CAL    CAH      180.000    0.000   0
+ 4AA      CONST_7  CAI    CAL    CAG    CAF        0.000    0.000   0
+ 4AA      var_2    CAI    CAL    CAH    OAC        5.381   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 4AA      plan-1    CAH       0.020
+ 4AA      plan-1    OAB       0.020
+ 4AA      plan-1    OAC       0.020
+ 4AA      plan-1    CAL       0.020
+ 4AA      plan-2    CAL       0.020
+ 4AA      plan-2    CAH       0.020
+ 4AA      plan-2    CAG       0.020
+ 4AA      plan-2    CAI       0.020
+ 4AA      plan-2    CAF       0.020
+ 4AA      plan-2    CAJ       0.020
+ 4AA      plan-2    CAK       0.020
+ 4AA      plan-2    HAG       0.020
+ 4AA      plan-2    HAF       0.020
+ 4AA      plan-2    CLAE      0.020
+ 4AA      plan-2    OAD       0.020
+ 4AA      plan-2    NAA       0.020
+ 4AA      plan-2    HAA2      0.020
+ 4AA      plan-2    HAA1      0.020
+ 4AA      plan-3    NAA       0.020
+ 4AA      plan-3    CAI       0.020
+ 4AA      plan-3    HAA1      0.020
+ 4AA      plan-3    HAA2      0.020
+# ------------------------------------------------------

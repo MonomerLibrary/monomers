@@ -1,0 +1,242 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DTR      DTR 'D-TRYPTOPHAN                        ' peptide            26  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_DTR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ DTR           N      N    NH2       0.000      0.000    0.000    0.000
+ DTR           HN1    H    H         0.000      0.956   -0.278    0.162
+ DTR           HN2    H    H         0.000     -0.207    0.909   -0.384
+ DTR           CA     C    CH1       0.000     -1.074   -0.906    0.319
+ DTR           HA     H    H         0.000     -1.665   -1.064   -0.595
+ DTR           CB     C    CH2       0.000     -2.011   -0.298    1.390
+ DTR           HB2    H    H         0.000     -2.070    0.774    1.192
+ DTR           HB3    H    H         0.000     -1.537   -0.463    2.360
+ DTR           CG     C    CR5       0.000     -3.369   -0.875    1.400
+ DTR           CD2    C    CR56      0.000     -4.493   -0.411    0.658
+ DTR           CE2    C    CR56      0.000     -5.565   -1.249    0.971
+ DTR           NE1    N    NR15      0.000     -5.102   -2.181    1.872
+ DTR           HNE1   H    H         0.000     -5.675   -2.941    2.290
+ DTR           CD1    C    CR15      0.000     -3.776   -1.963    2.137
+ DTR           HD1    H    H         0.000     -3.156   -2.545    2.808
+ DTR           CE3    C    CR16      0.000     -4.698    0.643   -0.254
+ DTR           HE3    H    H         0.000     -3.885    1.308   -0.516
+ DTR           CZ3    C    CR16      0.000     -5.968    0.821   -0.816
+ DTR           HZ3    H    H         0.000     -6.134    1.630   -1.516
+ DTR           CH2    C    CR16      0.000     -7.020   -0.031   -0.485
+ DTR           HH2    H    H         0.000     -7.993    0.125   -0.933
+ DTR           CZ2    C    CR16      0.000     -6.839   -1.082    0.417
+ DTR           HZ2    H    H         0.000     -7.655   -1.745    0.677
+ DTR           C      C    C         0.000     -0.535   -2.257    0.766
+ DTR           O      O    OC       -0.500      0.520   -2.383    1.426
+ DTR           OXT    O    OC       -0.500     -1.233   -3.239    0.429
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ DTR      N      n/a    CA     START
+ DTR      HN1    N      .      .
+ DTR      HN2    N      .      .
+ DTR      CA     N      C      .
+ DTR      HA     CA     .      .
+ DTR      CB     CA     CG     .
+ DTR      HB2    CB     .      .
+ DTR      HB3    CB     .      .
+ DTR      CG     CB     CD2    .
+ DTR      CD2    CG     CE3    .
+ DTR      CE2    CD2    NE1    .
+ DTR      NE1    CE2    CD1    .
+ DTR      HNE1   NE1    .      .
+ DTR      CD1    NE1    HD1    .
+ DTR      HD1    CD1    .      .
+ DTR      CE3    CD2    CZ3    .
+ DTR      HE3    CE3    .      .
+ DTR      CZ3    CE3    CH2    .
+ DTR      HZ3    CZ3    .      .
+ DTR      CH2    CZ3    CZ2    .
+ DTR      HH2    CH2    .      .
+ DTR      CZ2    CH2    HZ2    .
+ DTR      HZ2    CZ2    .      .
+ DTR      C      CA     .      END
+ DTR      O      C      .      .
+ DTR      OXT    C      .      .
+ DTR      CG     CD1    .    ADD
+ DTR      CE2    CZ2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ DTR      CA     N         single      1.450    0.020
+ DTR      CB     CA        single      1.524    0.020
+ DTR      C      CA        single      1.500    0.020
+ DTR      HA     CA        single      1.099    0.020
+ DTR      CG     CB        single      1.510    0.020
+ DTR      HB2    CB        single      1.092    0.020
+ DTR      HB3    CB        single      1.092    0.020
+ DTR      CG     CD1       double      1.387    0.020
+ DTR      CD2    CG        single      1.490    0.020
+ DTR      CD1    NE1       single      1.350    0.020
+ DTR      HD1    CD1       single      1.083    0.020
+ DTR      NE1    CE2       single      1.340    0.020
+ DTR      CE2    CZ2       double      1.390    0.020
+ DTR      CE2    CD2       single      1.490    0.020
+ DTR      CZ2    CH2       single      1.390    0.020
+ DTR      HZ2    CZ2       single      1.083    0.020
+ DTR      CH2    CZ3       double      1.390    0.020
+ DTR      HH2    CH2       single      1.083    0.020
+ DTR      CZ3    CE3       single      1.390    0.020
+ DTR      HZ3    CZ3       single      1.083    0.020
+ DTR      CE3    CD2       double      1.390    0.020
+ DTR      HE3    CE3       single      1.083    0.020
+ DTR      O      C         deloc       1.250    0.020
+ DTR      OXT    C         deloc       1.250    0.020
+ DTR      HN1    N         single      1.010    0.020
+ DTR      HN2    N         single      1.010    0.020
+ DTR      HNE1   NE1       single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ DTR      HN1    N      HN2     120.000    3.000
+ DTR      HN1    N      CA      120.000    3.000
+ DTR      HN2    N      CA      120.000    3.000
+ DTR      N      CA     HA      109.470    3.000
+ DTR      N      CA     CB      109.470    3.000
+ DTR      N      CA     C       109.470    3.000
+ DTR      HA     CA     CB      108.340    3.000
+ DTR      HA     CA     C       108.810    3.000
+ DTR      CB     CA     C       109.470    3.000
+ DTR      CA     CB     HB2     109.470    3.000
+ DTR      CA     CB     HB3     109.470    3.000
+ DTR      CA     CB     CG      109.470    3.000
+ DTR      HB2    CB     HB3     107.900    3.000
+ DTR      HB2    CB     CG      109.470    3.000
+ DTR      HB3    CB     CG      109.470    3.000
+ DTR      CB     CG     CD2     126.000    3.000
+ DTR      CB     CG     CD1     126.000    3.000
+ DTR      CD2    CG     CD1     108.000    3.000
+ DTR      CG     CD2    CE2     108.000    3.000
+ DTR      CG     CD2    CE3     126.000    3.000
+ DTR      CE2    CD2    CE3     120.000    3.000
+ DTR      CD2    CE2    NE1     108.000    3.000
+ DTR      CD2    CE2    CZ2     120.000    3.000
+ DTR      NE1    CE2    CZ2     132.000    3.000
+ DTR      CE2    NE1    HNE1    126.000    3.000
+ DTR      CE2    NE1    CD1     108.000    3.000
+ DTR      HNE1   NE1    CD1     126.000    3.000
+ DTR      NE1    CD1    HD1     126.000    3.000
+ DTR      NE1    CD1    CG      108.000    3.000
+ DTR      HD1    CD1    CG      126.000    3.000
+ DTR      CD2    CE3    HE3     120.000    3.000
+ DTR      CD2    CE3    CZ3     120.000    3.000
+ DTR      HE3    CE3    CZ3     120.000    3.000
+ DTR      CE3    CZ3    HZ3     120.000    3.000
+ DTR      CE3    CZ3    CH2     120.000    3.000
+ DTR      HZ3    CZ3    CH2     120.000    3.000
+ DTR      CZ3    CH2    HH2     120.000    3.000
+ DTR      CZ3    CH2    CZ2     120.000    3.000
+ DTR      HH2    CH2    CZ2     120.000    3.000
+ DTR      CH2    CZ2    HZ2     120.000    3.000
+ DTR      CH2    CZ2    CE2     120.000    3.000
+ DTR      HZ2    CZ2    CE2     120.000    3.000
+ DTR      CA     C      O       118.500    3.000
+ DTR      CA     C      OXT     118.500    3.000
+ DTR      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DTR      var_1    HN2    N      CA     C        175.000   20.000   1
+ DTR      var_2    N      CA     CB     CG       157.459   20.000   3
+ DTR      var_3    CA     CB     CG     CD2      -90.048   20.000   2
+ DTR      CONST_1  CB     CG     CD1    NE1      180.000    0.000   0
+ DTR      CONST_2  CB     CG     CD2    CE3        0.000    0.000   0
+ DTR      CONST_3  CG     CD2    CE2    NE1        0.000    0.000   0
+ DTR      CONST_4  CD2    CE2    CZ2    CH2        0.000    0.000   0
+ DTR      CONST_5  CD2    CE2    NE1    CD1        0.000    0.000   0
+ DTR      CONST_6  CE2    NE1    CD1    CG         0.000    0.000   0
+ DTR      CONST_7  CG     CD2    CE3    CZ3      180.000    0.000   0
+ DTR      CONST_8  CD2    CE3    CZ3    CH2        0.000    0.000   0
+ DTR      CONST_9  CE3    CZ3    CH2    CZ2        0.000    0.000   0
+ DTR      CONST_10 CZ3    CH2    CZ2    CE2        0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ DTR      chir_01  CA     N      CB     C         positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ DTR      plan-1    N         0.020
+ DTR      plan-1    CA        0.020
+ DTR      plan-1    HN1       0.020
+ DTR      plan-1    HN2       0.020
+ DTR      plan-2    CG        0.020
+ DTR      plan-2    CB        0.020
+ DTR      plan-2    CD1       0.020
+ DTR      plan-2    CD2       0.020
+ DTR      plan-2    NE1       0.020
+ DTR      plan-2    HD1       0.020
+ DTR      plan-2    CE2       0.020
+ DTR      plan-2    HNE1      0.020
+ DTR      plan-2    CZ2       0.020
+ DTR      plan-2    CH2       0.020
+ DTR      plan-2    CZ3       0.020
+ DTR      plan-2    CE3       0.020
+ DTR      plan-2    HZ2       0.020
+ DTR      plan-2    HH2       0.020
+ DTR      plan-2    HZ3       0.020
+ DTR      plan-2    HE3       0.020
+ DTR      plan-3    C         0.020
+ DTR      plan-3    CA        0.020
+ DTR      plan-3    O         0.020
+ DTR      plan-3    OXT       0.020
+# ------------------------------------------------------

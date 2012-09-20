@@ -1,0 +1,209 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+HIC      HIC '4-METHYL-HISTIDINE                  ' peptide            22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_HIC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ HIC           N      N    NH2       0.000      0.000    0.000    0.000
+ HIC           HN1    H    H         0.000      0.691   -0.389   -0.631
+ HIC           HN2    H    H         0.000     -0.409    0.904   -0.206
+ HIC           CA     C    CH1       0.000     -0.405   -0.740    1.201
+ HIC           HA     H    H         0.000     -0.098   -0.181    2.096
+ HIC           CB     C    CH2       0.000     -1.925   -0.912    1.207
+ HIC           HB2    H    H         0.000     -2.225   -1.463    2.100
+ HIC           HB3    H    H         0.000     -2.230   -1.468    0.318
+ HIC           CG     C    CR5       0.000     -2.584    0.443    1.205
+ HIC           CD2    C    CR15      0.000     -3.427    0.911    0.265
+ HIC           HD2    H    H         0.000     -3.758    0.388   -0.623
+ HIC           NE2    N    NR5       0.000     -3.785    2.175    0.650
+ HIC           CZ     C    CH3       0.000     -4.689    3.078   -0.068
+ HIC           HZ3    H    H         0.000     -5.401    2.506   -0.602
+ HIC           HZ2    H    H         0.000     -5.183    3.702    0.628
+ HIC           HZ1    H    H         0.000     -4.128    3.669   -0.742
+ HIC           CE1    C    CR15      0.000     -3.156    2.431    1.815
+ HIC           HE1    H    H         0.000     -3.233    3.349    2.385
+ HIC           ND1    N    NRD5      0.000     -2.439    1.390    2.141
+ HIC           C      C    C         0.000      0.254   -2.094    1.205
+ HIC           O      O    OC       -0.500      0.526   -2.660    0.123
+ HIC           OXT    O    OC       -0.500      0.531   -2.654    2.289
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ HIC      N      n/a    CA     START
+ HIC      HN1    N      .      .
+ HIC      HN2    N      .      .
+ HIC      CA     N      C      .
+ HIC      HA     CA     .      .
+ HIC      CB     CA     CG     .
+ HIC      HB2    CB     .      .
+ HIC      HB3    CB     .      .
+ HIC      CG     CB     CD2    .
+ HIC      CD2    CG     NE2    .
+ HIC      HD2    CD2    .      .
+ HIC      NE2    CD2    CE1    .
+ HIC      CZ     NE2    HZ1    .
+ HIC      HZ3    CZ     .      .
+ HIC      HZ2    CZ     .      .
+ HIC      HZ1    CZ     .      .
+ HIC      CE1    NE2    ND1    .
+ HIC      HE1    CE1    .      .
+ HIC      ND1    CE1    .      .
+ HIC      C      CA     .      END
+ HIC      O      C      .      .
+ HIC      OXT    C      .      .
+ HIC      CG     ND1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ HIC      CA     N         single      1.450    0.020
+ HIC      C      CA        single      1.500    0.020
+ HIC      CB     CA        single      1.524    0.020
+ HIC      HA     CA        single      1.099    0.020
+ HIC      O      C         deloc       1.250    0.020
+ HIC      OXT    C         deloc       1.250    0.020
+ HIC      CG     CB        single      1.510    0.020
+ HIC      HB2    CB        single      1.092    0.020
+ HIC      HB3    CB        single      1.092    0.020
+ HIC      CG     ND1       single      1.350    0.020
+ HIC      CD2    CG        double      1.387    0.020
+ HIC      ND1    CE1       double      1.350    0.020
+ HIC      NE2    CD2       single      1.337    0.020
+ HIC      HD2    CD2       single      1.083    0.020
+ HIC      CE1    NE2       single      1.337    0.020
+ HIC      HE1    CE1       single      1.083    0.020
+ HIC      CZ     NE2       single      1.485    0.020
+ HIC      HZ1    CZ        single      1.059    0.020
+ HIC      HZ2    CZ        single      1.059    0.020
+ HIC      HZ3    CZ        single      1.059    0.020
+ HIC      HN1    N         single      1.010    0.020
+ HIC      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ HIC      HN1    N      HN2     120.000    3.000
+ HIC      HN1    N      CA      120.000    3.000
+ HIC      HN2    N      CA      120.000    3.000
+ HIC      N      CA     HA      109.470    3.000
+ HIC      N      CA     CB      109.470    3.000
+ HIC      N      CA     C       109.470    3.000
+ HIC      HA     CA     CB      108.340    3.000
+ HIC      HA     CA     C       108.810    3.000
+ HIC      CB     CA     C       109.470    3.000
+ HIC      CA     CB     HB2     109.470    3.000
+ HIC      CA     CB     HB3     109.470    3.000
+ HIC      CA     CB     CG      109.470    3.000
+ HIC      HB2    CB     HB3     107.900    3.000
+ HIC      HB2    CB     CG      109.470    3.000
+ HIC      HB3    CB     CG      109.470    3.000
+ HIC      CB     CG     CD2     126.000    3.000
+ HIC      CB     CG     ND1     126.000    3.000
+ HIC      CD2    CG     ND1     108.000    3.000
+ HIC      CG     CD2    HD2     126.000    3.000
+ HIC      CG     CD2    NE2     108.000    3.000
+ HIC      HD2    CD2    NE2     126.000    3.000
+ HIC      CD2    NE2    CZ      126.000    3.000
+ HIC      CD2    NE2    CE1     108.000    3.000
+ HIC      CZ     NE2    CE1     126.000    3.000
+ HIC      NE2    CZ     HZ3     109.470    3.000
+ HIC      NE2    CZ     HZ2     109.470    3.000
+ HIC      NE2    CZ     HZ1     109.470    3.000
+ HIC      HZ3    CZ     HZ2     109.470    3.000
+ HIC      HZ3    CZ     HZ1     109.470    3.000
+ HIC      HZ2    CZ     HZ1     109.470    3.000
+ HIC      NE2    CE1    HE1     126.000    3.000
+ HIC      NE2    CE1    ND1     108.000    3.000
+ HIC      HE1    CE1    ND1     126.000    3.000
+ HIC      CE1    ND1    CG      108.000    3.000
+ HIC      CA     C      O       118.500    3.000
+ HIC      CA     C      OXT     118.500    3.000
+ HIC      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ HIC      var_1    HN2    N      CA     C        175.000   20.000   1
+ HIC      var_2    N      CA     CB     CG       -59.960   20.000   3
+ HIC      var_3    CA     CB     CG     CD2      120.320   20.000   2
+ HIC      CONST_1  CB     CG     ND1    CE1      180.000    0.000   0
+ HIC      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
+ HIC      CONST_3  CG     CD2    NE2    CE1        0.000    0.000   0
+ HIC      var_4    CD2    NE2    CZ     HZ1      -90.270   20.000   1
+ HIC      CONST_4  CD2    NE2    CE1    ND1        0.000    0.000   0
+ HIC      CONST_5  NE2    CE1    ND1    CG         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ HIC      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ HIC      plan-1    N         0.020
+ HIC      plan-1    CA        0.020
+ HIC      plan-1    HN1       0.020
+ HIC      plan-1    HN2       0.020
+ HIC      plan-2    C         0.020
+ HIC      plan-2    CA        0.020
+ HIC      plan-2    O         0.020
+ HIC      plan-2    OXT       0.020
+ HIC      plan-3    CG        0.020
+ HIC      plan-3    CB        0.020
+ HIC      plan-3    ND1       0.020
+ HIC      plan-3    CD2       0.020
+ HIC      plan-3    CE1       0.020
+ HIC      plan-3    NE2       0.020
+ HIC      plan-3    HD2       0.020
+ HIC      plan-3    HE1       0.020
+ HIC      plan-3    CZ        0.020
+# ------------------------------------------------------

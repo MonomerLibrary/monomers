@@ -1,0 +1,133 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CFH      CFH '1,1,1,3,3,3-hexafluoropropan-2-ol   ' non-polymer        12  10 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CFH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CFH           F9     F    F         0.000      0.000    0.000    0.000
+ CFH           C3     C    CT        0.000     -0.714   -0.126   -1.196
+ CFH           F10    F    F         0.000     -0.893   -1.480   -1.492
+ CFH           F8     F    F         0.000     -0.001    0.488   -2.231
+ CFH           C2     C    CH1       0.000     -2.079    0.550   -1.048
+ CFH           H2     H    H         0.000     -2.640    0.452   -1.988
+ CFH           O4     O    OH1       0.000     -1.895    1.934   -0.745
+ CFH           HO4    H    H         0.000     -1.402    2.019    0.082
+ CFH           C1     C    CT        0.000     -2.859   -0.122    0.084
+ CFH           F7     F    F         0.000     -4.107    0.496    0.219
+ CFH           F5     F    F         0.000     -2.145    0.004    1.280
+ CFH           F6     F    F         0.000     -3.039   -1.476   -0.212
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CFH      F9     n/a    C3     START
+ CFH      C3     F9     C2     .
+ CFH      F10    C3     .      .
+ CFH      F8     C3     .      .
+ CFH      C2     C3     C1     .
+ CFH      H2     C2     .      .
+ CFH      O4     C2     HO4    .
+ CFH      HO4    O4     .      .
+ CFH      C1     C2     F6     .
+ CFH      F7     C1     .      .
+ CFH      F5     C1     .      .
+ CFH      F6     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CFH      F7     C1        single      1.320    0.020
+ CFH      F5     C1        single      1.320    0.020
+ CFH      F6     C1        single      1.320    0.020
+ CFH      C1     C2        single      1.524    0.020
+ CFH      O4     C2        single      1.432    0.020
+ CFH      C2     C3        single      1.524    0.020
+ CFH      F10    C3        single      1.320    0.020
+ CFH      F8     C3        single      1.320    0.020
+ CFH      C3     F9        single      1.320    0.020
+ CFH      H2     C2        single      1.099    0.020
+ CFH      HO4    O4        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CFH      F9     C3     F10     109.470    3.000
+ CFH      F9     C3     F8      109.470    3.000
+ CFH      F9     C3     C2      109.470    3.000
+ CFH      F10    C3     F8      109.470    3.000
+ CFH      F10    C3     C2      109.470    3.000
+ CFH      F8     C3     C2      109.470    3.000
+ CFH      C3     C2     H2      108.340    3.000
+ CFH      C3     C2     O4      109.470    3.000
+ CFH      C3     C2     C1      109.500    3.000
+ CFH      H2     C2     O4      109.470    3.000
+ CFH      H2     C2     C1      108.340    3.000
+ CFH      O4     C2     C1      109.470    3.000
+ CFH      C2     O4     HO4     109.470    3.000
+ CFH      C2     C1     F7      109.470    3.000
+ CFH      C2     C1     F5      109.470    3.000
+ CFH      C2     C1     F6      109.470    3.000
+ CFH      F7     C1     F5      109.470    3.000
+ CFH      F7     C1     F6      109.470    3.000
+ CFH      F5     C1     F6      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CFH      var_1    F9     C3     C2     C1       -60.064   20.000   1
+ CFH      var_2    C3     C2     O4     HO4      -59.985   20.000   1
+ CFH      var_3    C3     C2     C1     F6       -59.970   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CFH      chir_01  C1     F7     F5     F6        negativ
+ CFH      chir_02  C2     C1     O4     C3        negativ
+ CFH      chir_03  C3     C2     F10    F8        negativ
+# ------------------------------------------------------

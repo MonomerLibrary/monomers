@@ -1,0 +1,257 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MPU      MPU 'D-MONAPTERIN                        ' non-polymer        29  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MPU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MPU           O11    O    O         0.000      0.000    0.000    0.000
+ MPU           C1     C    CR6       0.000     -0.428    1.068   -0.397
+ MPU           C10    C    CR66      0.000     -1.866    1.380   -0.348
+ MPU           C5     C    CR66      0.000     -2.289    2.642   -0.826
+ MPU           N4     N    NRD6      0.000     -1.372    3.503   -1.304
+ MPU           C3     C    CR6       0.000     -0.097    3.204   -1.339
+ MPU           N13    N    NH2       0.000      0.778    4.132   -1.839
+ MPU           H132   H    H         0.000      1.770    3.929   -1.878
+ MPU           H131   H    H         0.000      0.439    5.025   -2.173
+ MPU           N2     N    NR16      0.000      0.400    2.011   -0.904
+ MPU           HN2    H    H         0.000      1.421    1.825   -0.961
+ MPU           N6     N    NRD6      0.000     -3.585    2.953   -0.794
+ MPU           C7     C    CR16      0.000     -4.452    2.082   -0.317
+ MPU           H7     H    H         0.000     -5.505    2.335   -0.290
+ MPU           C8     C    CR6       0.000     -4.030    0.842    0.153
+ MPU           N9     N    NRD6      0.000     -2.753    0.517    0.129
+ MPU           C16    C    CH1       0.000     -5.041   -0.136    0.693
+ MPU           H16    H    H         0.000     -6.053    0.267    0.552
+ MPU           O21    O    OH1       0.000     -4.801   -0.347    2.087
+ MPU           H21    H    H         0.000     -3.910   -0.702    2.210
+ MPU           C26    C    CH1       0.000     -4.912   -1.466   -0.053
+ MPU           H26    H    H         0.000     -5.183   -1.321   -1.108
+ MPU           O22    O    OH1       0.000     -3.564   -1.933    0.033
+ MPU           H22    H    H         0.000     -3.326   -2.059    0.962
+ MPU           C28    C    CH2       0.000     -5.850   -2.497    0.578
+ MPU           H281   H    H         0.000     -6.867   -2.101    0.594
+ MPU           H282   H    H         0.000     -5.526   -2.705    1.600
+ MPU           O24    O    OH1       0.000     -5.817   -3.703   -0.189
+ MPU           H24    H    H         0.000     -6.410   -4.354    0.210
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MPU      O11    n/a    C1     START
+ MPU      C1     O11    C10    .
+ MPU      C10    C1     C5     .
+ MPU      C5     C10    N6     .
+ MPU      N4     C5     C3     .
+ MPU      C3     N4     N2     .
+ MPU      N13    C3     H131   .
+ MPU      H132   N13    .      .
+ MPU      H131   N13    .      .
+ MPU      N2     C3     HN2    .
+ MPU      HN2    N2     .      .
+ MPU      N6     C5     C7     .
+ MPU      C7     N6     C8     .
+ MPU      H7     C7     .      .
+ MPU      C8     C7     C16    .
+ MPU      N9     C8     .      .
+ MPU      C16    C8     C26    .
+ MPU      H16    C16    .      .
+ MPU      O21    C16    H21    .
+ MPU      H21    O21    .      .
+ MPU      C26    C16    C28    .
+ MPU      H26    C26    .      .
+ MPU      O22    C26    H22    .
+ MPU      H22    O22    .      .
+ MPU      C28    C26    O24    .
+ MPU      H281   C28    .      .
+ MPU      H282   C28    .      .
+ MPU      O24    C28    H24    .
+ MPU      H24    O24    .      END
+ MPU      N2     C1     .    ADD
+ MPU      C10    N9     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MPU      N2     C1        single      1.337    0.020
+ MPU      N2     C3        single      1.337    0.020
+ MPU      HN2    N2        single      1.040    0.020
+ MPU      C1     O11       double      1.250    0.020
+ MPU      C10    C1        single      1.490    0.020
+ MPU      C10    N9        single      1.350    0.020
+ MPU      C5     C10       double      1.490    0.020
+ MPU      N9     C8        double      1.350    0.020
+ MPU      C8     C7        single      1.390    0.020
+ MPU      C16    C8        single      1.480    0.020
+ MPU      C7     N6        double      1.337    0.020
+ MPU      H7     C7        single      1.083    0.020
+ MPU      N6     C5        single      1.350    0.020
+ MPU      N4     C5        single      1.350    0.020
+ MPU      C3     N4        double      1.350    0.020
+ MPU      N13    C3        single      1.355    0.020
+ MPU      H131   N13       single      1.010    0.020
+ MPU      H132   N13       single      1.010    0.020
+ MPU      O21    C16       single      1.432    0.020
+ MPU      C26    C16       single      1.524    0.020
+ MPU      H16    C16       single      1.099    0.020
+ MPU      H21    O21       single      0.967    0.020
+ MPU      O22    C26       single      1.432    0.020
+ MPU      C28    C26       single      1.524    0.020
+ MPU      H26    C26       single      1.099    0.020
+ MPU      H22    O22       single      0.967    0.020
+ MPU      O24    C28       single      1.432    0.020
+ MPU      H281   C28       single      1.092    0.020
+ MPU      H282   C28       single      1.092    0.020
+ MPU      H24    O24       single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MPU      O11    C1     C10     120.000    3.000
+ MPU      O11    C1     N2      120.000    3.000
+ MPU      C10    C1     N2      120.000    3.000
+ MPU      C1     C10    C5      120.000    3.000
+ MPU      C1     C10    N9      120.000    3.000
+ MPU      C5     C10    N9      120.000    3.000
+ MPU      C10    C5     N4      120.000    3.000
+ MPU      C10    C5     N6      120.000    3.000
+ MPU      N4     C5     N6      120.000    3.000
+ MPU      C5     N4     C3      120.000    3.000
+ MPU      N4     C3     N13     120.000    3.000
+ MPU      N4     C3     N2      120.000    3.000
+ MPU      N13    C3     N2      120.000    3.000
+ MPU      C3     N13    H132    120.000    3.000
+ MPU      C3     N13    H131    120.000    3.000
+ MPU      H132   N13    H131    120.000    3.000
+ MPU      C3     N2     HN2     120.000    3.000
+ MPU      C3     N2     C1      120.000    3.000
+ MPU      HN2    N2     C1      120.000    3.000
+ MPU      C5     N6     C7      120.000    3.000
+ MPU      N6     C7     H7      120.000    3.000
+ MPU      N6     C7     C8      120.000    3.000
+ MPU      H7     C7     C8      120.000    3.000
+ MPU      C7     C8     N9      120.000    3.000
+ MPU      C7     C8     C16     120.000    3.000
+ MPU      N9     C8     C16     120.000    3.000
+ MPU      C8     N9     C10     120.000    3.000
+ MPU      C8     C16    H16     109.470    3.000
+ MPU      C8     C16    O21     109.470    3.000
+ MPU      C8     C16    C26     109.470    3.000
+ MPU      H16    C16    O21     109.470    3.000
+ MPU      H16    C16    C26     108.340    3.000
+ MPU      O21    C16    C26     109.470    3.000
+ MPU      C16    O21    H21     109.470    3.000
+ MPU      C16    C26    H26     108.340    3.000
+ MPU      C16    C26    O22     109.470    3.000
+ MPU      C16    C26    C28     111.000    3.000
+ MPU      H26    C26    O22     109.470    3.000
+ MPU      H26    C26    C28     108.340    3.000
+ MPU      O22    C26    C28     109.470    3.000
+ MPU      C26    O22    H22     109.470    3.000
+ MPU      C26    C28    H281    109.470    3.000
+ MPU      C26    C28    H282    109.470    3.000
+ MPU      C26    C28    O24     109.470    3.000
+ MPU      H281   C28    H282    107.900    3.000
+ MPU      H281   C28    O24     109.470    3.000
+ MPU      H282   C28    O24     109.470    3.000
+ MPU      C28    O24    H24     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MPU      CONST_1  O11    C1     C10    C5       180.000    0.000   0
+ MPU      CONST_2  C1     C10    N9     C8       180.000    0.000   0
+ MPU      CONST_3  C1     C10    C5     N6       180.000    0.000   0
+ MPU      CONST_4  C10    C5     N4     C3         0.000    0.000   0
+ MPU      CONST_5  C5     N4     C3     N2         0.000    0.000   0
+ MPU      CONST_6  N4     C3     N13    H131      -0.074    0.000   0
+ MPU      CONST_7  N4     C3     N2     C1         0.000    0.000   0
+ MPU      CONST_8  C3     N2     C1     O11      180.000    0.000   0
+ MPU      CONST_9  C10    C5     N6     C7         0.000    0.000   0
+ MPU      CONST_10 C5     N6     C7     C8         0.000    0.000   0
+ MPU      CONST_11 N6     C7     C8     C16      180.000    0.000   0
+ MPU      CONST_12 C7     C8     N9     C10        0.000    0.000   0
+ MPU      var_1    C7     C8     C16    C26      125.011   20.000   1
+ MPU      var_2    C8     C16    O21    H21      -60.002   20.000   1
+ MPU      var_3    C8     C16    C26    C28      174.953   20.000   3
+ MPU      var_4    C16    C26    O22    H22       59.935   20.000   1
+ MPU      var_5    C16    C26    C28    O24      175.003   20.000   3
+ MPU      var_6    C26    C28    O24    H24     -179.941   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MPU      chir_01  C16    C8     O21    C26       positiv
+ MPU      chir_02  C26    C16    O22    C28       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MPU      plan-1    N2        0.020
+ MPU      plan-1    C1        0.020
+ MPU      plan-1    C3        0.020
+ MPU      plan-1    HN2       0.020
+ MPU      plan-1    N4        0.020
+ MPU      plan-1    O11       0.020
+ MPU      plan-1    C10       0.020
+ MPU      plan-1    N9        0.020
+ MPU      plan-1    C5        0.020
+ MPU      plan-1    C8        0.020
+ MPU      plan-1    C7        0.020
+ MPU      plan-1    N6        0.020
+ MPU      plan-1    C16       0.020
+ MPU      plan-1    H7        0.020
+ MPU      plan-1    N13       0.020
+ MPU      plan-1    H132      0.020
+ MPU      plan-1    H131      0.020
+ MPU      plan-2    N13       0.020
+ MPU      plan-2    C3        0.020
+ MPU      plan-2    H131      0.020
+ MPU      plan-2    H132      0.020
+# ------------------------------------------------------

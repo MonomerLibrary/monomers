@@ -1,0 +1,195 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SN1      SN1 '2,4-DIHYDROXY-TRANS CINNAMIC ACID   ' non-polymer        20  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SN1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SN1           O1     O    OC       -0.500      0.000    0.000    0.000
+ SN1           C2     C    C         0.000     -1.174    0.008    0.433
+ SN1           O2     O    OC       -0.500     -1.385    0.014    1.666
+ SN1           CA2    C    C1        0.000     -2.263    0.007   -0.472
+ SN1           HA2    H    H         0.000     -2.080    0.002   -1.534
+ SN1           CB2    C    C1        0.000     -3.531    0.014   -0.004
+ SN1           HB2    H    H         0.000     -3.714    0.019    1.057
+ SN1           CG     C    CR6       0.000     -4.658    0.013   -0.942
+ SN1           CD2    C    CR16      0.000     -4.425    0.005   -2.323
+ SN1           HD2    H    H         0.000     -3.410   -0.001   -2.701
+ SN1           CE2    C    CR16      0.000     -5.477    0.004   -3.194
+ SN1           HE2    H    H         0.000     -5.292   -0.003   -4.261
+ SN1           CZ     C    CR6       0.000     -6.785    0.012   -2.719
+ SN1           OH1    O    OH1       0.000     -7.821    0.012   -3.595
+ SN1           HH1    H    H         0.000     -8.071   -0.900   -3.797
+ SN1           CE1    C    CR16      0.000     -7.033    0.020   -1.355
+ SN1           HE1    H    H         0.000     -8.053    0.031   -0.990
+ SN1           CD1    C    CR6       0.000     -5.978    0.015   -0.460
+ SN1           OH2    O    OH1       0.000     -6.216    0.024    0.876
+ SN1           HH2    H    H         0.000     -6.280   -0.886    1.197
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SN1      O1     n/a    C2     START
+ SN1      C2     O1     CA2    .
+ SN1      O2     C2     .      .
+ SN1      CA2    C2     CB2    .
+ SN1      HA2    CA2    .      .
+ SN1      CB2    CA2    CG     .
+ SN1      HB2    CB2    .      .
+ SN1      CG     CB2    CD2    .
+ SN1      CD2    CG     CE2    .
+ SN1      HD2    CD2    .      .
+ SN1      CE2    CD2    CZ     .
+ SN1      HE2    CE2    .      .
+ SN1      CZ     CE2    CE1    .
+ SN1      OH1    CZ     HH1    .
+ SN1      HH1    OH1    .      .
+ SN1      CE1    CZ     CD1    .
+ SN1      HE1    CE1    .      .
+ SN1      CD1    CE1    OH2    .
+ SN1      OH2    CD1    HH2    .
+ SN1      HH2    OH2    .      END
+ SN1      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SN1      CB2    CA2       double      1.330    0.020
+ SN1      CA2    C2        single      1.475    0.020
+ SN1      HA2    CA2       single      1.077    0.020
+ SN1      CG     CB2       single      1.480    0.020
+ SN1      HB2    CB2       single      1.077    0.020
+ SN1      CG     CD1       double      1.487    0.020
+ SN1      CD2    CG        single      1.390    0.020
+ SN1      CD1    CE1       single      1.390    0.020
+ SN1      OH2    CD1       single      1.362    0.020
+ SN1      CE1    CZ        double      1.390    0.020
+ SN1      HE1    CE1       single      1.083    0.020
+ SN1      CE2    CD2       double      1.390    0.020
+ SN1      HD2    CD2       single      1.083    0.020
+ SN1      CZ     CE2       single      1.390    0.020
+ SN1      HE2    CE2       single      1.083    0.020
+ SN1      OH1    CZ        single      1.362    0.020
+ SN1      HH1    OH1       single      0.967    0.020
+ SN1      HH2    OH2       single      0.967    0.020
+ SN1      O2     C2        deloc       1.250    0.020
+ SN1      C2     O1        deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SN1      O1     C2     O2      123.000    3.000
+ SN1      O1     C2     CA2     120.000    3.000
+ SN1      O2     C2     CA2     120.000    3.000
+ SN1      C2     CA2    HA2     120.000    3.000
+ SN1      C2     CA2    CB2     120.000    3.000
+ SN1      HA2    CA2    CB2     120.000    3.000
+ SN1      CA2    CB2    HB2     120.000    3.000
+ SN1      CA2    CB2    CG      120.000    3.000
+ SN1      HB2    CB2    CG      120.000    3.000
+ SN1      CB2    CG     CD2     120.000    3.000
+ SN1      CB2    CG     CD1     120.000    3.000
+ SN1      CD2    CG     CD1     120.000    3.000
+ SN1      CG     CD2    HD2     120.000    3.000
+ SN1      CG     CD2    CE2     120.000    3.000
+ SN1      HD2    CD2    CE2     120.000    3.000
+ SN1      CD2    CE2    HE2     120.000    3.000
+ SN1      CD2    CE2    CZ      120.000    3.000
+ SN1      HE2    CE2    CZ      120.000    3.000
+ SN1      CE2    CZ     OH1     120.000    3.000
+ SN1      CE2    CZ     CE1     120.000    3.000
+ SN1      OH1    CZ     CE1     120.000    3.000
+ SN1      CZ     OH1    HH1     109.470    3.000
+ SN1      CZ     CE1    HE1     120.000    3.000
+ SN1      CZ     CE1    CD1     120.000    3.000
+ SN1      HE1    CE1    CD1     120.000    3.000
+ SN1      CE1    CD1    OH2     120.000    3.000
+ SN1      CE1    CD1    CG      120.000    3.000
+ SN1      OH2    CD1    CG      120.000    3.000
+ SN1      CD1    OH2    HH2     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SN1      var_1    O1     C2     CA2    CB2      179.902   20.000   1
+ SN1      CONST_1  C2     CA2    CB2    CG      -179.996    0.000   0
+ SN1      var_2    CA2    CB2    CG     CD2        0.073   20.000   1
+ SN1      CONST_2  CB2    CG     CD1    CE1      180.000    0.000   0
+ SN1      CONST_3  CB2    CG     CD2    CE2      180.000    0.000   0
+ SN1      CONST_4  CG     CD2    CE2    CZ         0.000    0.000   0
+ SN1      CONST_5  CD2    CE2    CZ     CE1        0.000    0.000   0
+ SN1      var_3    CE2    CZ     OH1    HH1       90.049   20.000   1
+ SN1      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+ SN1      CONST_7  CZ     CE1    CD1    OH2      180.000    0.000   0
+ SN1      var_4    CE1    CD1    OH2    HH2       90.036   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SN1      plan-1    CA2       0.020
+ SN1      plan-1    CB2       0.020
+ SN1      plan-1    C2        0.020
+ SN1      plan-1    HA2       0.020
+ SN1      plan-1    CG        0.020
+ SN1      plan-1    HB2       0.020
+ SN1      plan-2    CG        0.020
+ SN1      plan-2    CB2       0.020
+ SN1      plan-2    CD1       0.020
+ SN1      plan-2    CD2       0.020
+ SN1      plan-2    CE1       0.020
+ SN1      plan-2    CE2       0.020
+ SN1      plan-2    CZ        0.020
+ SN1      plan-2    OH2       0.020
+ SN1      plan-2    HE1       0.020
+ SN1      plan-2    HD2       0.020
+ SN1      plan-2    HE2       0.020
+ SN1      plan-2    OH1       0.020
+ SN1      plan-2    HB2       0.020
+ SN1      plan-3    C2        0.020
+ SN1      plan-3    CA2       0.020
+ SN1      plan-3    O2        0.020
+ SN1      plan-3    O1        0.020
+ SN1      plan-3    HA2       0.020
+# ------------------------------------------------------

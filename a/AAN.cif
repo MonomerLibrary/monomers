@@ -1,0 +1,187 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AAN      AAN '2-(4-NITROPHENYL)ACETIC ACID        ' non-polymer        19  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AAN
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AAN           O2     O    OC       -0.500      0.000    0.000    0.000
+ AAN           C1     C    C         0.000     -1.216    0.104   -0.274
+ AAN           O1     O    OC       -0.500     -1.736    1.236   -0.395
+ AAN           C2     C    CH2       0.000     -2.056   -1.133   -0.457
+ AAN           H21    H    H         0.000     -2.041   -1.722    0.462
+ AAN           H22    H    H         0.000     -1.651   -1.729   -1.277
+ AAN           "C1'"  C    CR6       0.000     -3.474   -0.735   -0.777
+ AAN           "C6'"  C    CR16      0.000     -4.386   -0.554    0.249
+ AAN           "H6'"  H    H         0.000     -4.079   -0.703    1.277
+ AAN           "C5'"  C    CR16      0.000     -5.682   -0.185   -0.031
+ AAN           "H5'"  H    H         0.000     -6.391   -0.036    0.774
+ AAN           "C4'"  C    CR6       0.000     -6.082   -0.002   -1.365
+ AAN           "N4'"  N    N         1.000     -7.347    0.352   -1.651
+ AAN           "O4'"  O    O        -1.000     -7.688    0.510   -2.809
+ AAN           "O3'"  O    O         0.000     -8.151    0.517   -0.753
+ AAN           "C3'"  C    CR16      0.000     -5.149   -0.194   -2.400
+ AAN           "H3'"  H    H         0.000     -5.447   -0.056   -3.432
+ AAN           "C2'"  C    CR16      0.000     -3.858   -0.558   -2.096
+ AAN           "H2'"  H    H         0.000     -3.138   -0.706   -2.892
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AAN      O2     n/a    C1     START
+ AAN      C1     O2     C2     .
+ AAN      O1     C1     .      .
+ AAN      C2     C1     "C1'"  .
+ AAN      H21    C2     .      .
+ AAN      H22    C2     .      .
+ AAN      "C1'"  C2     "C6'"  .
+ AAN      "C6'"  "C1'"  "C5'"  .
+ AAN      "H6'"  "C6'"  .      .
+ AAN      "C5'"  "C6'"  "C4'"  .
+ AAN      "H5'"  "C5'"  .      .
+ AAN      "C4'"  "C5'"  "C3'"  .
+ AAN      "N4'"  "C4'"  "O3'"  .
+ AAN      "O4'"  "N4'"  .      .
+ AAN      "O3'"  "N4'"  .      .
+ AAN      "C3'"  "C4'"  "C2'"  .
+ AAN      "H3'"  "C3'"  .      .
+ AAN      "C2'"  "C3'"  "H2'"  .
+ AAN      "H2'"  "C2'"  .      END
+ AAN      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AAN      C2     C1        single      1.510    0.020
+ AAN      O1     C1        deloc       1.250    0.020
+ AAN      C1     O2        deloc       1.250    0.020
+ AAN      "C1'"  C2        single      1.511    0.020
+ AAN      H21    C2        single      1.092    0.020
+ AAN      H22    C2        single      1.092    0.020
+ AAN      "C1'"  "C2'"     double      1.390    0.020
+ AAN      "C6'"  "C1'"     single      1.390    0.020
+ AAN      "C2'"  "C3'"     single      1.390    0.020
+ AAN      "H2'"  "C2'"     single      1.083    0.020
+ AAN      "C3'"  "C4'"     double      1.390    0.020
+ AAN      "H3'"  "C3'"     single      1.083    0.020
+ AAN      "N4'"  "C4'"     single      1.400    0.020
+ AAN      "C4'"  "C5'"     single      1.390    0.020
+ AAN      "O3'"  "N4'"     double      1.220    0.020
+ AAN      "O4'"  "N4'"     single      1.400    0.020
+ AAN      "C5'"  "C6'"     double      1.390    0.020
+ AAN      "H5'"  "C5'"     single      1.083    0.020
+ AAN      "H6'"  "C6'"     single      1.083    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AAN      O2     C1     O1      123.000    3.000
+ AAN      O2     C1     C2      118.500    3.000
+ AAN      O1     C1     C2      118.500    3.000
+ AAN      C1     C2     H21     109.470    3.000
+ AAN      C1     C2     H22     109.470    3.000
+ AAN      C1     C2     "C1'"   109.470    3.000
+ AAN      H21    C2     H22     107.900    3.000
+ AAN      H21    C2     "C1'"   109.470    3.000
+ AAN      H22    C2     "C1'"   109.470    3.000
+ AAN      C2     "C1'"  "C6'"   120.000    3.000
+ AAN      C2     "C1'"  "C2'"   120.000    3.000
+ AAN      "C6'"  "C1'"  "C2'"   120.000    3.000
+ AAN      "C1'"  "C6'"  "H6'"   120.000    3.000
+ AAN      "C1'"  "C6'"  "C5'"   120.000    3.000
+ AAN      "H6'"  "C6'"  "C5'"   120.000    3.000
+ AAN      "C6'"  "C5'"  "H5'"   120.000    3.000
+ AAN      "C6'"  "C5'"  "C4'"   120.000    3.000
+ AAN      "H5'"  "C5'"  "C4'"   120.000    3.000
+ AAN      "C5'"  "C4'"  "N4'"   120.000    3.000
+ AAN      "C5'"  "C4'"  "C3'"   120.000    3.000
+ AAN      "N4'"  "C4'"  "C3'"   120.000    3.000
+ AAN      "C4'"  "N4'"  "O4'"   120.000    3.000
+ AAN      "C4'"  "N4'"  "O3'"   120.000    3.000
+ AAN      "O4'"  "N4'"  "O3'"   120.000    3.000
+ AAN      "C4'"  "C3'"  "H3'"   120.000    3.000
+ AAN      "C4'"  "C3'"  "C2'"   120.000    3.000
+ AAN      "H3'"  "C3'"  "C2'"   120.000    3.000
+ AAN      "C3'"  "C2'"  "H2'"   120.000    3.000
+ AAN      "C3'"  "C2'"  "C1'"   120.000    3.000
+ AAN      "H2'"  "C2'"  "C1'"   120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AAN      var_1    O2     C1     C2     "C1'"    179.983   20.000   3
+ AAN      var_2    C1     C2     "C1'"  "C6'"    -90.296   20.000   2
+ AAN      CONST_1  C2     "C1'"  "C2'"  "C3'"    180.000    0.000   0
+ AAN      CONST_2  C2     "C1'"  "C6'"  "C5'"    180.000    0.000   0
+ AAN      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
+ AAN      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
+ AAN      var_3    "C5'"  "C4'"  "N4'"  "O3'"      0.079   20.000   1
+ AAN      CONST_5  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
+ AAN      CONST_6  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AAN      plan-1    C1        0.020
+ AAN      plan-1    C2        0.020
+ AAN      plan-1    O1        0.020
+ AAN      plan-1    O2        0.020
+ AAN      plan-2    "C1'"     0.020
+ AAN      plan-2    C2        0.020
+ AAN      plan-2    "C2'"     0.020
+ AAN      plan-2    "C6'"     0.020
+ AAN      plan-2    "C3'"     0.020
+ AAN      plan-2    "C4'"     0.020
+ AAN      plan-2    "C5'"     0.020
+ AAN      plan-2    "H2'"     0.020
+ AAN      plan-2    "H3'"     0.020
+ AAN      plan-2    "N4'"     0.020
+ AAN      plan-2    "H5'"     0.020
+ AAN      plan-2    "H6'"     0.020
+ AAN      plan-3    "N4'"     0.020
+ AAN      plan-3    "C4'"     0.020
+ AAN      plan-3    "O3'"     0.020
+ AAN      plan-3    "O4'"     0.020
+# ------------------------------------------------------

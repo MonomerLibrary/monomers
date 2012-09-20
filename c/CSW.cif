@@ -1,0 +1,159 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CSW      CSW 'CYSTEINE-S-DIOXIDE                  ' peptide            15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CSW
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CSW           N      N    NH2       0.000      0.000    0.000    0.000
+ CSW           HN1    H    H         0.000      0.917    0.429   -0.002
+ CSW           HN2    H    H         0.000     -0.615    0.143    0.791
+ CSW           CA     C    CH1       0.000     -0.433   -0.820   -1.133
+ CSW           HA     H    H         0.000     -0.555   -1.864   -0.813
+ CSW           CB     C    CH2       0.000     -1.756   -0.283   -1.669
+ CSW           HB2    H    H         0.000     -1.609    0.766   -1.933
+ CSW           HB3    H    H         0.000     -2.496   -0.356   -0.868
+ CSW           SG     S    ST        0.000     -2.326   -1.175   -3.083
+ CSW           HG     H    H         0.000     -1.447   -1.049   -3.938
+ CSW           OD1    O    OS        0.000     -2.358   -2.587   -2.750
+ CSW           OD2    O    OS        0.000     -3.494   -0.497   -3.610
+ CSW           C      C    C         0.000      0.658   -0.725   -2.184
+ CSW           O      O    OC       -0.500      1.003    0.325   -2.768
+ CSW           OXT    O    OC       -0.500      1.177   -1.836   -2.431
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CSW      N      n/a    CA     START
+ CSW      HN1    N      .      .
+ CSW      HN2    N      .      .
+ CSW      CA     N      C      .
+ CSW      HA     CA     .      .
+ CSW      CB     CA     SG     .
+ CSW      HB2    CB     .      .
+ CSW      HB3    CB     .      .
+ CSW      SG     CB     OD2    .
+ CSW      HG     SG     .      .
+ CSW      OD1    SG     .      .
+ CSW      OD2    SG     .      .
+ CSW      C      CA     .      END
+ CSW      O      C      .      .
+ CSW      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CSW      CA     N         single      1.450    0.020
+ CSW      CB     CA        single      1.524    0.020
+ CSW      C      CA        single      1.500    0.020
+ CSW      HA     CA        single      1.099    0.020
+ CSW      SG     CB        single      1.662    0.020
+ CSW      HB2    CB        single      1.092    0.020
+ CSW      HB3    CB        single      1.092    0.020
+ CSW      OD1    SG        double      1.436    0.020
+ CSW      OD2    SG        double      1.436    0.020
+ CSW      HG     SG        single      1.234    0.020
+ CSW      O      C         deloc       1.250    0.020
+ CSW      OXT    C         deloc       1.250    0.020
+ CSW      HN1    N         single      1.010    0.020
+ CSW      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CSW      HN1    N      HN2     120.000    3.000
+ CSW      HN1    N      CA      120.000    3.000
+ CSW      HN2    N      CA      120.000    3.000
+ CSW      N      CA     HA      109.470    3.000
+ CSW      N      CA     CB      109.470    3.000
+ CSW      N      CA     C       109.470    3.000
+ CSW      HA     CA     CB      108.340    3.000
+ CSW      HA     CA     C       108.810    3.000
+ CSW      CB     CA     C       109.470    3.000
+ CSW      CA     CB     HB2     109.470    3.000
+ CSW      CA     CB     HB3     109.470    3.000
+ CSW      CA     CB     SG      109.500    3.000
+ CSW      HB2    CB     HB3     107.900    3.000
+ CSW      HB2    CB     SG      109.500    3.000
+ CSW      HB3    CB     SG      109.500    3.000
+ CSW      CB     SG     HG      109.500    3.000
+ CSW      CB     SG     OD1     109.500    3.000
+ CSW      CB     SG     OD2     109.500    3.000
+ CSW      HG     SG     OD1     109.500    3.000
+ CSW      HG     SG     OD2     109.500    3.000
+ CSW      OD1    SG     OD2     109.500    3.000
+ CSW      CA     C      O       118.500    3.000
+ CSW      CA     C      OXT     118.500    3.000
+ CSW      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CSW      var_1    HN2    N      CA     C        175.000   20.000   1
+ CSW      var_2    N      CA     CB     SG       177.717   20.000   3
+ CSW      var_3    CA     CB     SG     OD2     -173.268   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ CSW      chir_01  CA     N      CB     C         negativ
+ CSW      chir_02  SG     CB     OD1    OD2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CSW      plan-1    N         0.020
+ CSW      plan-1    CA        0.020
+ CSW      plan-1    HN1       0.020
+ CSW      plan-1    HN2       0.020
+ CSW      plan-2    C         0.020
+ CSW      plan-2    CA        0.020
+ CSW      plan-2    O         0.020
+ CSW      plan-2    OXT       0.020
+# ------------------------------------------------------

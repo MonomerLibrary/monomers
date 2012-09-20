@@ -1,0 +1,173 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+VDL      VDL '(2R,3R)-2,3-DIAMINOBUTANOIC ACID    ' peptide            17   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_VDL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ VDL           N      N    NH2       0.000      0.000    0.000    0.000
+ VDL           HN1    H    H         0.000     -0.021    0.974   -0.279
+ VDL           HN2    H    H         0.000      0.893   -0.463    0.119
+ VDL           CA     C    CH1       0.000     -1.252   -0.733    0.229
+ VDL           HA     H    H         0.000     -1.241   -1.171    1.237
+ VDL           CB     C    CH1       0.000     -1.387   -1.849   -0.810
+ VDL           HB     H    H         0.000     -1.398   -1.411   -1.818
+ VDL           NG2    N    NH2       0.000     -2.639   -2.582   -0.581
+ VDL           HG22   H    H         0.000     -3.219   -2.366    0.221
+ VDL           HG21   H    H         0.000     -2.931   -3.309   -1.224
+ VDL           CG1    C    CH3       0.000     -0.203   -2.809   -0.683
+ VDL           HG13   H    H         0.000      0.701   -2.281   -0.847
+ VDL           HG12   H    H         0.000     -0.192   -3.231    0.289
+ VDL           HG11   H    H         0.000     -0.295   -3.582   -1.402
+ VDL           C      C    C         0.000     -2.419    0.213    0.104
+ VDL           OXT    O    OC       -0.500     -3.522   -0.085    0.613
+ VDL           O      O    OC       -0.500     -2.283    1.296   -0.507
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ VDL      N      n/a    CA     START
+ VDL      HN1    N      .      .
+ VDL      HN2    N      .      .
+ VDL      CA     N      C      .
+ VDL      HA     CA     .      .
+ VDL      CB     CA     CG1    .
+ VDL      HB     CB     .      .
+ VDL      NG2    CB     HG21   .
+ VDL      HG22   NG2    .      .
+ VDL      HG21   NG2    .      .
+ VDL      CG1    CB     HG11   .
+ VDL      HG13   CG1    .      .
+ VDL      HG12   CG1    .      .
+ VDL      HG11   CG1    .      .
+ VDL      C      CA     .      END
+ VDL      OXT    C      .      .
+ VDL      O      C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ VDL      CA     N         single      1.450    0.020
+ VDL      CB     CA        single      1.524    0.020
+ VDL      C      CA        single      1.500    0.020
+ VDL      HA     CA        single      1.099    0.020
+ VDL      CG1    CB        single      1.524    0.020
+ VDL      NG2    CB        single      1.450    0.020
+ VDL      HB     CB        single      1.099    0.020
+ VDL      HG11   CG1       single      1.059    0.020
+ VDL      HG12   CG1       single      1.059    0.020
+ VDL      HG13   CG1       single      1.059    0.020
+ VDL      OXT    C         deloc       1.250    0.020
+ VDL      O      C         deloc       1.250    0.020
+ VDL      HN1    N         single      1.010    0.020
+ VDL      HN2    N         single      1.010    0.020
+ VDL      HG21   NG2       single      1.010    0.020
+ VDL      HG22   NG2       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ VDL      HN1    N      HN2     120.000    3.000
+ VDL      HN1    N      CA      120.000    3.000
+ VDL      HN2    N      CA      120.000    3.000
+ VDL      N      CA     HA      109.470    3.000
+ VDL      N      CA     CB      109.470    3.000
+ VDL      N      CA     C       109.470    3.000
+ VDL      HA     CA     CB      108.340    3.000
+ VDL      HA     CA     C       108.810    3.000
+ VDL      CB     CA     C       109.470    3.000
+ VDL      CA     CB     HB      108.340    3.000
+ VDL      CA     CB     NG2     109.470    3.000
+ VDL      CA     CB     CG1     111.000    3.000
+ VDL      HB     CB     NG2     109.470    3.000
+ VDL      HB     CB     CG1     108.340    3.000
+ VDL      NG2    CB     CG1     109.470    3.000
+ VDL      CB     NG2    HG22    120.000    3.000
+ VDL      CB     NG2    HG21    120.000    3.000
+ VDL      HG22   NG2    HG21    120.000    3.000
+ VDL      CB     CG1    HG13    109.470    3.000
+ VDL      CB     CG1    HG12    109.470    3.000
+ VDL      CB     CG1    HG11    109.470    3.000
+ VDL      HG13   CG1    HG12    109.470    3.000
+ VDL      HG13   CG1    HG11    109.470    3.000
+ VDL      HG12   CG1    HG11    109.470    3.000
+ VDL      CA     C      OXT     118.500    3.000
+ VDL      CA     C      O       118.500    3.000
+ VDL      OXT    C      O       123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ VDL      var_1    HN2    N      CA     C        175.000   20.000   1
+ VDL      var_2    N      CA     CB     CG1       60.026   20.000   3
+ VDL      var_3    CA     CB     NG2    HG21     175.000   20.000   1
+ VDL      var_4    CA     CB     CG1    HG11    -179.975   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ VDL      chir_01  CA     N      CB     C         positiv
+ VDL      chir_02  CB     CA     CG1    NG2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ VDL      plan-1    N         0.020
+ VDL      plan-1    CA        0.020
+ VDL      plan-1    HN1       0.020
+ VDL      plan-1    HN2       0.020
+ VDL      plan-2    C         0.020
+ VDL      plan-2    CA        0.020
+ VDL      plan-2    OXT       0.020
+ VDL      plan-2    O         0.020
+ VDL      plan-3    NG2       0.020
+ VDL      plan-3    CB        0.020
+ VDL      plan-3    HG21      0.020
+ VDL      plan-3    HG22      0.020
+# ------------------------------------------------------

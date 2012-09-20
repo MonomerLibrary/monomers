@@ -1,0 +1,281 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+RAB      RAB '2-(6-AMINO-PURIN-9-YL)-5-HYDROXYMETH' non-polymer        32  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_RAB
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ RAB           "O3'"  O    OH1       0.000      0.000    0.000    0.000
+ RAB           H3     H    H         0.000      0.605    0.747    0.106
+ RAB           "C3'"  C    CH1       0.000     -1.278    0.479   -0.424
+ RAB           "H3'"  H    H         0.000     -1.196    0.990   -1.394
+ RAB           "C4'"  C    CH1       0.000     -1.880    1.426    0.637
+ RAB           "H4'"  H    H         0.000     -1.451    1.214    1.627
+ RAB           "C5'"  C    CH2       0.000     -1.634    2.886    0.253
+ RAB           "H5'1" H    H         0.000     -2.129    3.100   -0.696
+ RAB           "H5'2" H    H         0.000     -0.561    3.058    0.150
+ RAB           "O5'"  O    OH1       0.000     -2.160    3.742    1.269
+ RAB           "H5'"  H    H         0.000     -2.004    4.664    1.025
+ RAB           "C2'"  C    CH1       0.000     -2.292   -0.686   -0.508
+ RAB           "H2'"  H    H         0.000     -1.816   -1.634   -0.222
+ RAB           "O2'"  O    OH1       0.000     -2.841   -0.778   -1.825
+ RAB           H1     H    H         0.000     -2.131   -0.957   -2.457
+ RAB           "C1'"  C    CH1       0.000     -3.388   -0.300    0.511
+ RAB           "H1'"  H    H         0.000     -3.194   -0.778    1.481
+ RAB           "O4'"  O    O2        0.000     -3.295    1.136    0.630
+ RAB           N9     N    NR5       0.000     -4.710   -0.685    0.008
+ RAB           C8     C    CR15      0.000     -5.568    0.107   -0.695
+ RAB           H8     H    H         0.000     -5.376    1.136   -0.975
+ RAB           N7     N    NRD5      0.000     -6.651   -0.555   -0.981
+ RAB           C5     C    CR56      0.000     -6.555   -1.813   -0.487
+ RAB           C4     C    CR56      0.000     -5.311   -1.910    0.158
+ RAB           C6     C    CR6       0.000     -7.395   -2.939   -0.481
+ RAB           N6     N    NH2       0.000     -8.634   -2.901   -1.096
+ RAB           HN62   H    H         0.000     -8.955   -2.055   -1.558
+ RAB           HN61   H    H         0.000     -9.237   -3.718   -1.093
+ RAB           N1     N    NRD6      0.000     -6.970   -4.043    0.125
+ RAB           C2     C    CR16      0.000     -5.789   -4.088    0.714
+ RAB           H2     H    H         0.000     -5.482   -5.008    1.195
+ RAB           N3     N    NRD6      0.000     -4.971   -3.057    0.738
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ RAB      "O3'"  n/a    "C3'"  START
+ RAB      H3     "O3'"  .      .
+ RAB      "C3'"  "O3'"  "C2'"  .
+ RAB      "H3'"  "C3'"  .      .
+ RAB      "C4'"  "C3'"  "C5'"  .
+ RAB      "H4'"  "C4'"  .      .
+ RAB      "C5'"  "C4'"  "O5'"  .
+ RAB      "H5'1" "C5'"  .      .
+ RAB      "H5'2" "C5'"  .      .
+ RAB      "O5'"  "C5'"  "H5'"  .
+ RAB      "H5'"  "O5'"  .      .
+ RAB      "C2'"  "C3'"  "C1'"  .
+ RAB      "H2'"  "C2'"  .      .
+ RAB      "O2'"  "C2'"  H1     .
+ RAB      H1     "O2'"  .      .
+ RAB      "C1'"  "C2'"  N9     .
+ RAB      "H1'"  "C1'"  .      .
+ RAB      "O4'"  "C1'"  .      .
+ RAB      N9     "C1'"  C8     .
+ RAB      C8     N9     N7     .
+ RAB      H8     C8     .      .
+ RAB      N7     C8     C5     .
+ RAB      C5     N7     C6     .
+ RAB      C4     C5     .      .
+ RAB      C6     C5     N1     .
+ RAB      N6     C6     HN61   .
+ RAB      HN62   N6     .      .
+ RAB      HN61   N6     .      .
+ RAB      N1     C6     C2     .
+ RAB      C2     N1     N3     .
+ RAB      H2     C2     .      .
+ RAB      N3     C2     .      END
+ RAB      "C4'"  "O4'"  .    ADD
+ RAB      N9     C4     .    ADD
+ RAB      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ RAB      "O5'"  "C5'"     single      1.432    0.020
+ RAB      "H5'"  "O5'"     single      0.967    0.020
+ RAB      "C5'"  "C4'"     single      1.524    0.020
+ RAB      "H5'1" "C5'"     single      1.092    0.020
+ RAB      "H5'2" "C5'"     single      1.092    0.020
+ RAB      "C4'"  "O4'"     single      1.426    0.020
+ RAB      "C4'"  "C3'"     single      1.524    0.020
+ RAB      "H4'"  "C4'"     single      1.099    0.020
+ RAB      "O4'"  "C1'"     single      1.426    0.020
+ RAB      N9     "C1'"     single      1.485    0.020
+ RAB      "C1'"  "C2'"     single      1.524    0.020
+ RAB      "H1'"  "C1'"     single      1.099    0.020
+ RAB      N9     C4        single      1.337    0.020
+ RAB      C8     N9        single      1.337    0.020
+ RAB      C4     N3        double      1.355    0.020
+ RAB      C4     C5        single      1.490    0.020
+ RAB      N3     C2        single      1.337    0.020
+ RAB      C2     N1        double      1.337    0.020
+ RAB      H2     C2        single      1.083    0.020
+ RAB      N1     C6        single      1.350    0.020
+ RAB      N6     C6        single      1.355    0.020
+ RAB      C6     C5        double      1.490    0.020
+ RAB      HN61   N6        single      1.010    0.020
+ RAB      HN62   N6        single      1.010    0.020
+ RAB      C5     N7        single      1.350    0.020
+ RAB      N7     C8        double      1.350    0.020
+ RAB      H8     C8        single      1.083    0.020
+ RAB      "O2'"  "C2'"     single      1.432    0.020
+ RAB      "C2'"  "C3'"     single      1.524    0.020
+ RAB      "H2'"  "C2'"     single      1.099    0.020
+ RAB      H1     "O2'"     single      0.967    0.020
+ RAB      "C3'"  "O3'"     single      1.432    0.020
+ RAB      "H3'"  "C3'"     single      1.099    0.020
+ RAB      H3     "O3'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ RAB      H3     "O3'"  "C3'"   109.470    3.000
+ RAB      "O3'"  "C3'"  "H3'"   109.470    3.000
+ RAB      "O3'"  "C3'"  "C4'"   109.470    3.000
+ RAB      "O3'"  "C3'"  "C2'"   109.470    3.000
+ RAB      "H3'"  "C3'"  "C4'"   108.340    3.000
+ RAB      "H3'"  "C3'"  "C2'"   108.340    3.000
+ RAB      "C4'"  "C3'"  "C2'"   111.000    3.000
+ RAB      "C3'"  "C4'"  "H4'"   108.340    3.000
+ RAB      "C3'"  "C4'"  "C5'"   111.000    3.000
+ RAB      "C3'"  "C4'"  "O4'"   109.470    3.000
+ RAB      "H4'"  "C4'"  "C5'"   108.340    3.000
+ RAB      "H4'"  "C4'"  "O4'"   109.470    3.000
+ RAB      "C5'"  "C4'"  "O4'"   109.470    3.000
+ RAB      "C4'"  "C5'"  "H5'1"  109.470    3.000
+ RAB      "C4'"  "C5'"  "H5'2"  109.470    3.000
+ RAB      "C4'"  "C5'"  "O5'"   109.470    3.000
+ RAB      "H5'1" "C5'"  "H5'2"  107.900    3.000
+ RAB      "H5'1" "C5'"  "O5'"   109.470    3.000
+ RAB      "H5'2" "C5'"  "O5'"   109.470    3.000
+ RAB      "C5'"  "O5'"  "H5'"   109.470    3.000
+ RAB      "C3'"  "C2'"  "H2'"   108.340    3.000
+ RAB      "C3'"  "C2'"  "O2'"   109.470    3.000
+ RAB      "C3'"  "C2'"  "C1'"   111.000    3.000
+ RAB      "H2'"  "C2'"  "O2'"   109.470    3.000
+ RAB      "H2'"  "C2'"  "C1'"   108.340    3.000
+ RAB      "O2'"  "C2'"  "C1'"   109.470    3.000
+ RAB      "C2'"  "O2'"  H1      109.470    3.000
+ RAB      "C2'"  "C1'"  "H1'"   108.340    3.000
+ RAB      "C2'"  "C1'"  "O4'"   109.470    3.000
+ RAB      "C2'"  "C1'"  N9      109.470    3.000
+ RAB      "H1'"  "C1'"  "O4'"   109.470    3.000
+ RAB      "H1'"  "C1'"  N9      109.470    3.000
+ RAB      "O4'"  "C1'"  N9      109.470    3.000
+ RAB      "C1'"  "O4'"  "C4'"   111.800    3.000
+ RAB      "C1'"  N9     C8      126.000    3.000
+ RAB      "C1'"  N9     C4      126.000    3.000
+ RAB      C8     N9     C4      108.000    3.000
+ RAB      N9     C8     H8      126.000    3.000
+ RAB      N9     C8     N7      108.000    3.000
+ RAB      H8     C8     N7      126.000    3.000
+ RAB      C8     N7     C5      108.000    3.000
+ RAB      N7     C5     C4      108.000    3.000
+ RAB      N7     C5     C6      132.000    3.000
+ RAB      C4     C5     C6      120.000    3.000
+ RAB      C5     C4     N9      108.000    3.000
+ RAB      C5     C4     N3      120.000    3.000
+ RAB      N9     C4     N3      132.000    3.000
+ RAB      C5     C6     N6      120.000    3.000
+ RAB      C5     C6     N1      120.000    3.000
+ RAB      N6     C6     N1      120.000    3.000
+ RAB      C6     N6     HN62    120.000    3.000
+ RAB      C6     N6     HN61    120.000    3.000
+ RAB      HN62   N6     HN61    120.000    3.000
+ RAB      C6     N1     C2      120.000    3.000
+ RAB      N1     C2     H2      120.000    3.000
+ RAB      N1     C2     N3      120.000    3.000
+ RAB      H2     C2     N3      120.000    3.000
+ RAB      C2     N3     C4      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ RAB      var_1    H3     "O3'"  "C3'"  "C2'"   -176.177   20.000   1
+ RAB      var_2    "O3'"  "C3'"  "C4'"  "C5'"     90.000   20.000   3
+ RAB      var_3    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ RAB      var_4    "C3'"  "C4'"  "C5'"  "O5'"   -178.102   20.000   3
+ RAB      var_5    "C4'"  "C5'"  "O5'"  "H5'"    179.994   20.000   1
+ RAB      var_6    "O3'"  "C3'"  "C2'"  "C1'"    120.000   20.000   3
+ RAB      var_7    "C3'"  "C2'"  "O2'"  H1        61.467   20.000   1
+ RAB      var_8    "C3'"  "C2'"  "C1'"  N9       150.000   20.000   3
+ RAB      var_9    "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
+ RAB      var_10   "C2'"  "C1'"  N9     C8       -93.482   20.000   1
+ RAB      CONST_1  "C1'"  N9     C4     C5       180.000    0.000   0
+ RAB      CONST_2  "C1'"  N9     C8     N7       180.000    0.000   0
+ RAB      CONST_3  N9     C8     N7     C5         0.000    0.000   0
+ RAB      CONST_4  C8     N7     C5     C6       180.000    0.000   0
+ RAB      CONST_5  N7     C5     C4     N9         0.000    0.000   0
+ RAB      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ RAB      CONST_7  N7     C5     C6     N1       180.000    0.000   0
+ RAB      CONST_8  C5     C6     N6     HN61     179.756    0.000   0
+ RAB      CONST_9  C5     C6     N1     C2         0.000    0.000   0
+ RAB      CONST_10 C6     N1     C2     N3         0.000    0.000   0
+ RAB      CONST_11 N1     C2     N3     C4         0.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ RAB      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
+ RAB      chir_02  "C1'"  "O4'"  N9     "C2'"     negativ
+ RAB      chir_03  "C2'"  "C1'"  "O2'"  "C3'"     negativ
+ RAB      chir_04  "C3'"  "C4'"  "C2'"  "O3'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ RAB      plan-1    N9        0.020
+ RAB      plan-1    "C1'"     0.020
+ RAB      plan-1    C4        0.020
+ RAB      plan-1    C8        0.020
+ RAB      plan-1    N7        0.020
+ RAB      plan-1    N3        0.020
+ RAB      plan-1    C5        0.020
+ RAB      plan-1    C2        0.020
+ RAB      plan-1    N1        0.020
+ RAB      plan-1    C6        0.020
+ RAB      plan-1    H2        0.020
+ RAB      plan-1    N6        0.020
+ RAB      plan-1    H8        0.020
+ RAB      plan-1    HN62      0.020
+ RAB      plan-1    HN61      0.020
+ RAB      plan-2    N6        0.020
+ RAB      plan-2    C6        0.020
+ RAB      plan-2    HN61      0.020
+ RAB      plan-2    HN62      0.020
+# ------------------------------------------------------

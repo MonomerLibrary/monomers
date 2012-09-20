@@ -1,0 +1,161 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+FUX      FUX '5-HYDROXYMETHYL-FURFURAL            ' non-polymer        15   9 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_FUX
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ FUX           OXT    O    O         0.000      0.000    0.000    0.000
+ FUX           C1     C    C1        0.000     -0.767   -0.988   -0.040
+ FUX           H1     H    H         0.000     -0.339   -1.948   -0.278
+ FUX           C2     C    CR5       0.000     -2.166   -0.928    0.209
+ FUX           C6     C    CR15      0.000     -2.991    0.125    0.531
+ FUX           H6     H    H         0.000     -2.703    1.161    0.660
+ FUX           C5     C    CR15      0.000     -4.291   -0.419    0.659
+ FUX           H5     H    H         0.000     -5.199    0.117    0.906
+ FUX           C4     C    CR5       0.000     -4.169   -1.765    0.406
+ FUX           O3     O    O2        0.000     -2.877   -2.083    0.130
+ FUX           C7     C    CH2       0.000     -5.132   -2.875    0.378
+ FUX           H71    H    H         0.000     -5.937   -2.666    1.086
+ FUX           H72    H    H         0.000     -4.623   -3.796    0.669
+ FUX           O8     O    OH1       0.000     -5.677   -3.023   -0.935
+ FUX           HO8    H    H         0.000     -6.593   -3.326   -0.871
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ FUX      OXT    n/a    C1     START
+ FUX      C1     OXT    C2     .
+ FUX      H1     C1     .      .
+ FUX      C2     C1     C6     .
+ FUX      C6     C2     C5     .
+ FUX      H6     C6     .      .
+ FUX      C5     C6     C4     .
+ FUX      H5     C5     .      .
+ FUX      C4     C5     C7     .
+ FUX      O3     C4     .      .
+ FUX      C7     C4     O8     .
+ FUX      H71    C7     .      .
+ FUX      H72    C7     .      .
+ FUX      O8     C7     HO8    .
+ FUX      HO8    O8     .      END
+ FUX      C2     O3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ FUX      C2     C1        single      1.483    0.020
+ FUX      C1     OXT       double      1.220    0.020
+ FUX      H1     C1        single      1.077    0.020
+ FUX      C2     O3        single      1.370    0.020
+ FUX      C6     C2        double      1.387    0.020
+ FUX      O3     C4        single      1.370    0.020
+ FUX      C4     C5        double      1.387    0.020
+ FUX      C7     C4        single      1.510    0.020
+ FUX      C5     C6        single      1.380    0.020
+ FUX      H5     C5        single      1.083    0.020
+ FUX      H6     C6        single      1.083    0.020
+ FUX      O8     C7        single      1.432    0.020
+ FUX      H71    C7        single      1.092    0.020
+ FUX      H72    C7        single      1.092    0.020
+ FUX      HO8    O8        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ FUX      OXT    C1     H1      123.000    3.000
+ FUX      OXT    C1     C2      120.000    3.000
+ FUX      H1     C1     C2      120.000    3.000
+ FUX      C1     C2     C6      108.000    3.000
+ FUX      C1     C2     O3      108.000    3.000
+ FUX      C6     C2     O3      108.000    3.000
+ FUX      C2     C6     H6      126.000    3.000
+ FUX      C2     C6     C5      108.000    3.000
+ FUX      H6     C6     C5      126.000    3.000
+ FUX      C6     C5     H5      126.000    3.000
+ FUX      C6     C5     C4      108.000    3.000
+ FUX      H5     C5     C4      126.000    3.000
+ FUX      C5     C4     O3      108.000    3.000
+ FUX      C5     C4     C7      126.000    3.000
+ FUX      O3     C4     C7      126.000    3.000
+ FUX      C4     O3     C2      108.000    3.000
+ FUX      C4     C7     H71     109.470    3.000
+ FUX      C4     C7     H72     109.470    3.000
+ FUX      C4     C7     O8      109.500    3.000
+ FUX      H71    C7     H72     107.900    3.000
+ FUX      H71    C7     O8      109.470    3.000
+ FUX      H72    C7     O8      109.470    3.000
+ FUX      C7     O8     HO8     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ FUX      var_1    OXT    C1     C2     C6        -0.008   20.000   1
+ FUX      CONST_1  C1     C2     O3     C4       180.000    0.000   0
+ FUX      CONST_2  C1     C2     C6     C5       180.000    0.000   0
+ FUX      CONST_3  C2     C6     C5     C4         0.000    0.000   0
+ FUX      CONST_4  C6     C5     C4     C7       180.000    0.000   0
+ FUX      CONST_5  C5     C4     O3     C2         0.000    0.000   0
+ FUX      var_2    C5     C4     C7     O8        90.001   20.000   2
+ FUX      var_3    C4     C7     O8     HO8     -146.895   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ FUX      plan-1    C1        0.020
+ FUX      plan-1    C2        0.020
+ FUX      plan-1    OXT       0.020
+ FUX      plan-1    H1        0.020
+ FUX      plan-2    C2        0.020
+ FUX      plan-2    C1        0.020
+ FUX      plan-2    O3        0.020
+ FUX      plan-2    C6        0.020
+ FUX      plan-2    C4        0.020
+ FUX      plan-2    C5        0.020
+ FUX      plan-2    C7        0.020
+ FUX      plan-2    H5        0.020
+ FUX      plan-2    H6        0.020
+ FUX      plan-2    H1        0.020
+# ------------------------------------------------------

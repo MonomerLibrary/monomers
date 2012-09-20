@@ -1,0 +1,224 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ITR      ITR 'IMINO-TRYPTOPHAN                    ' non-polymer        24  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ITR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ITR           OXT    O    OC       -0.500      0.000    0.000    0.000
+ ITR           C      C    C         0.000     -0.961    0.800   -0.015
+ ITR           O      O    OC       -0.500     -0.752    2.031    0.069
+ ITR           CA     C    C         0.000     -2.348    0.291   -0.136
+ ITR           N      N    N         0.000     -2.563   -0.968   -0.222
+ ITR           HN     H    H         0.000     -3.456   -1.303   -0.300
+ ITR           CB     C    CH2       0.000     -3.506    1.256   -0.154
+ ITR           HB1    H    H         0.000     -3.400    1.935   -1.003
+ ITR           HB2    H    H         0.000     -3.514    1.833    0.773
+ ITR           CG     C    CR5       0.000     -4.796    0.489   -0.282
+ ITR           CD2    C    CR56      0.000     -5.470    0.118   -1.528
+ ITR           CE2    C    CR56      0.000     -6.628   -0.585   -1.150
+ ITR           NE1    N    NR15      0.000     -6.649   -0.623    0.226
+ ITR           HE1    H    H         0.000     -7.389   -1.074    0.800
+ ITR           CD1    C    CR15      0.000     -5.549    0.021    0.726
+ ITR           HD1    H    H         0.000     -5.321    0.136    1.779
+ ITR           CE3    C    CR16      0.000     -5.182    0.309   -2.880
+ ITR           HE3    H    H         0.000     -4.286    0.842   -3.174
+ ITR           CZ3    C    CR16      0.000     -6.034   -0.179   -3.831
+ ITR           HZ3    H    H         0.000     -5.812   -0.026   -4.880
+ ITR           CH2    C    CR16      0.000     -7.181   -0.868   -3.462
+ ITR           HH2    H    H         0.000     -7.847   -1.249   -4.227
+ ITR           CZ2    C    CR16      0.000     -7.481   -1.073   -2.134
+ ITR           HZ2    H    H         0.000     -8.379   -1.612   -1.856
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ITR      OXT    n/a    C      START
+ ITR      C      OXT    CA     .
+ ITR      O      C      .      .
+ ITR      CA     C      CB     .
+ ITR      N      CA     HN     .
+ ITR      HN     N      .      .
+ ITR      CB     CA     CG     .
+ ITR      HB1    CB     .      .
+ ITR      HB2    CB     .      .
+ ITR      CG     CB     CD2    .
+ ITR      CD2    CG     CE3    .
+ ITR      CE2    CD2    NE1    .
+ ITR      NE1    CE2    CD1    .
+ ITR      HE1    NE1    .      .
+ ITR      CD1    NE1    HD1    .
+ ITR      HD1    CD1    .      .
+ ITR      CE3    CD2    CZ3    .
+ ITR      HE3    CE3    .      .
+ ITR      CZ3    CE3    CH2    .
+ ITR      HZ3    CZ3    .      .
+ ITR      CH2    CZ3    CZ2    .
+ ITR      HH2    CH2    .      .
+ ITR      CZ2    CH2    HZ2    .
+ ITR      HZ2    CZ2    .      END
+ ITR      CG     CD1    .    ADD
+ ITR      CE2    CZ2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ITR      N      CA        double      1.260    0.020
+ ITR      HN     N         single      0.954    0.020
+ ITR      CB     CA        single      1.510    0.020
+ ITR      CA     C         single      1.460    0.020
+ ITR      CG     CB        single      1.510    0.020
+ ITR      HB1    CB        single      1.092    0.020
+ ITR      HB2    CB        single      1.092    0.020
+ ITR      CG     CD1       double      1.387    0.020
+ ITR      CD2    CG        single      1.490    0.020
+ ITR      CD1    NE1       single      1.350    0.020
+ ITR      HD1    CD1       single      1.083    0.020
+ ITR      NE1    CE2       single      1.340    0.020
+ ITR      HE1    NE1       single      1.040    0.020
+ ITR      CE2    CZ2       double      1.390    0.020
+ ITR      CE2    CD2       single      1.490    0.020
+ ITR      CZ2    CH2       single      1.390    0.020
+ ITR      HZ2    CZ2       single      1.083    0.020
+ ITR      CH2    CZ3       double      1.390    0.020
+ ITR      HH2    CH2       single      1.083    0.020
+ ITR      CZ3    CE3       single      1.390    0.020
+ ITR      HZ3    CZ3       single      1.083    0.020
+ ITR      CE3    CD2       double      1.390    0.020
+ ITR      HE3    CE3       single      1.083    0.020
+ ITR      O      C         deloc       1.250    0.020
+ ITR      C      OXT       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ITR      OXT    C      O       123.000    3.000
+ ITR      OXT    C      CA      120.000    3.000
+ ITR      O      C      CA      120.000    3.000
+ ITR      C      CA     N       116.500    3.000
+ ITR      C      CA     CB      120.000    3.000
+ ITR      N      CA     CB      116.500    3.000
+ ITR      CA     N      HN      120.000    3.000
+ ITR      CA     CB     HB1     109.470    3.000
+ ITR      CA     CB     HB2     109.470    3.000
+ ITR      CA     CB     CG      109.500    3.000
+ ITR      HB1    CB     HB2     107.900    3.000
+ ITR      HB1    CB     CG      109.470    3.000
+ ITR      HB2    CB     CG      109.470    3.000
+ ITR      CB     CG     CD2     126.000    3.000
+ ITR      CB     CG     CD1     126.000    3.000
+ ITR      CD2    CG     CD1     108.000    3.000
+ ITR      CG     CD2    CE2     108.000    3.000
+ ITR      CG     CD2    CE3     126.000    3.000
+ ITR      CE2    CD2    CE3     120.000    3.000
+ ITR      CD2    CE2    NE1     108.000    3.000
+ ITR      CD2    CE2    CZ2     120.000    3.000
+ ITR      NE1    CE2    CZ2     132.000    3.000
+ ITR      CE2    NE1    HE1     126.000    3.000
+ ITR      CE2    NE1    CD1     108.000    3.000
+ ITR      HE1    NE1    CD1     126.000    3.000
+ ITR      NE1    CD1    HD1     126.000    3.000
+ ITR      NE1    CD1    CG      108.000    3.000
+ ITR      HD1    CD1    CG      126.000    3.000
+ ITR      CD2    CE3    HE3     120.000    3.000
+ ITR      CD2    CE3    CZ3     120.000    3.000
+ ITR      HE3    CE3    CZ3     120.000    3.000
+ ITR      CE3    CZ3    HZ3     120.000    3.000
+ ITR      CE3    CZ3    CH2     120.000    3.000
+ ITR      HZ3    CZ3    CH2     120.000    3.000
+ ITR      CZ3    CH2    HH2     120.000    3.000
+ ITR      CZ3    CH2    CZ2     120.000    3.000
+ ITR      HH2    CH2    CZ2     120.000    3.000
+ ITR      CH2    CZ2    HZ2     120.000    3.000
+ ITR      CH2    CZ2    CE2     120.000    3.000
+ ITR      HZ2    CZ2    CE2     120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ITR      var_1    OXT    C      CA     CB      -179.973   20.000   1
+ ITR      CONST_1  C      CA     N      HN       180.000    0.000   0
+ ITR      var_2    C      CA     CB     CG      -179.915   20.000   3
+ ITR      var_3    CA     CB     CG     CD2      -90.314   20.000   2
+ ITR      CONST_2  CB     CG     CD1    NE1      180.000    0.000   0
+ ITR      CONST_3  CB     CG     CD2    CE3        0.000    0.000   0
+ ITR      CONST_4  CG     CD2    CE2    NE1        0.000    0.000   0
+ ITR      CONST_5  CD2    CE2    CZ2    CH2        0.000    0.000   0
+ ITR      CONST_6  CD2    CE2    NE1    CD1        0.000    0.000   0
+ ITR      CONST_7  CE2    NE1    CD1    CG         0.000    0.000   0
+ ITR      CONST_8  CG     CD2    CE3    CZ3      180.000    0.000   0
+ ITR      CONST_9  CD2    CE3    CZ3    CH2        0.000    0.000   0
+ ITR      CONST_10 CE3    CZ3    CH2    CZ2        0.000    0.000   0
+ ITR      CONST_11 CZ3    CH2    CZ2    CE2        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ITR      plan-1    N         0.020
+ ITR      plan-1    CA        0.020
+ ITR      plan-1    HN        0.020
+ ITR      plan-1    CB        0.020
+ ITR      plan-1    C         0.020
+ ITR      plan-2    CG        0.020
+ ITR      plan-2    CB        0.020
+ ITR      plan-2    CD1       0.020
+ ITR      plan-2    CD2       0.020
+ ITR      plan-2    NE1       0.020
+ ITR      plan-2    HD1       0.020
+ ITR      plan-2    CE2       0.020
+ ITR      plan-2    HE1       0.020
+ ITR      plan-2    CZ2       0.020
+ ITR      plan-2    CH2       0.020
+ ITR      plan-2    CZ3       0.020
+ ITR      plan-2    CE3       0.020
+ ITR      plan-2    HZ2       0.020
+ ITR      plan-2    HH2       0.020
+ ITR      plan-2    HZ3       0.020
+ ITR      plan-2    HE3       0.020
+ ITR      plan-3    C         0.020
+ ITR      plan-3    CA        0.020
+ ITR      plan-3    O         0.020
+ ITR      plan-3    OXT       0.020
+# ------------------------------------------------------

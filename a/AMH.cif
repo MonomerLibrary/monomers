@@ -1,0 +1,221 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AMH      AMH 'TRANS-4-AMINOMETHYLCYCLOHEXANE-1-CAR' non-polymer        25  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AMH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AMH           O2     O    OC       -0.500      0.000    0.000    0.000
+ AMH           C8     C    C         0.000     -1.137   -0.189   -0.486
+ AMH           O1     O    OC       -0.500     -1.260   -0.808   -1.566
+ AMH           C1     C    CH1       0.000     -2.358    0.327    0.230
+ AMH           H1     H    H         0.000     -2.291    1.420    0.328
+ AMH           C6     C    CH2       0.000     -2.441   -0.305    1.620
+ AMH           H61    H    H         0.000     -1.546   -0.046    2.190
+ AMH           H62    H    H         0.000     -2.506   -1.391    1.522
+ AMH           C5     C    CH2       0.000     -3.680    0.219    2.347
+ AMH           H51    H    H         0.000     -3.611    1.304    2.446
+ AMH           H52    H    H         0.000     -3.737   -0.233    3.339
+ AMH           C4     C    CH1       0.000     -4.932   -0.144    1.547
+ AMH           H4     H    H         0.000     -5.000   -1.236    1.448
+ AMH           C7     C    CH2       0.000     -6.172    0.380    2.274
+ AMH           H71    H    H         0.000     -7.065    0.121    1.701
+ AMH           H72    H    H         0.000     -6.104    1.466    2.370
+ AMH           N      N    NH2       0.000     -6.251   -0.227    3.608
+ AMH           HN2    H    H         0.000     -5.543   -0.885    3.913
+ AMH           HN1    H    H         0.000     -7.014    0.008    4.232
+ AMH           C3     C    CH2       0.000     -4.850    0.488    0.156
+ AMH           H31    H    H         0.000     -4.784    1.574    0.254
+ AMH           H32    H    H         0.000     -5.744    0.229   -0.414
+ AMH           C2     C    CH2       0.000     -3.611   -0.036   -0.570
+ AMH           H22    H    H         0.000     -3.553    0.414   -1.563
+ AMH           H21    H    H         0.000     -3.679   -1.122   -0.668
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AMH      O2     n/a    C8     START
+ AMH      C8     O2     C1     .
+ AMH      O1     C8     .      .
+ AMH      C1     C8     C6     .
+ AMH      H1     C1     .      .
+ AMH      C6     C1     C5     .
+ AMH      H61    C6     .      .
+ AMH      H62    C6     .      .
+ AMH      C5     C6     C4     .
+ AMH      H51    C5     .      .
+ AMH      H52    C5     .      .
+ AMH      C4     C5     C3     .
+ AMH      H4     C4     .      .
+ AMH      C7     C4     N      .
+ AMH      H71    C7     .      .
+ AMH      H72    C7     .      .
+ AMH      N      C7     HN1    .
+ AMH      HN2    N      .      .
+ AMH      HN1    N      .      .
+ AMH      C3     C4     C2     .
+ AMH      H31    C3     .      .
+ AMH      H32    C3     .      .
+ AMH      C2     C3     H21    .
+ AMH      H22    C2     .      .
+ AMH      H21    C2     .      END
+ AMH      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AMH      C1     C2        single      1.524    0.020
+ AMH      C6     C1        single      1.524    0.020
+ AMH      C1     C8        single      1.500    0.020
+ AMH      H1     C1        single      1.099    0.020
+ AMH      C2     C3        single      1.524    0.020
+ AMH      H21    C2        single      1.092    0.020
+ AMH      H22    C2        single      1.092    0.020
+ AMH      C3     C4        single      1.524    0.020
+ AMH      H31    C3        single      1.092    0.020
+ AMH      H32    C3        single      1.092    0.020
+ AMH      C4     C5        single      1.524    0.020
+ AMH      C7     C4        single      1.524    0.020
+ AMH      H4     C4        single      1.099    0.020
+ AMH      C5     C6        single      1.524    0.020
+ AMH      H51    C5        single      1.092    0.020
+ AMH      H52    C5        single      1.092    0.020
+ AMH      H61    C6        single      1.092    0.020
+ AMH      H62    C6        single      1.092    0.020
+ AMH      N      C7        single      1.450    0.020
+ AMH      H71    C7        single      1.092    0.020
+ AMH      H72    C7        single      1.092    0.020
+ AMH      O1     C8        deloc       1.250    0.020
+ AMH      C8     O2        deloc       1.250    0.020
+ AMH      HN1    N         single      1.010    0.020
+ AMH      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AMH      O2     C8     O1      123.000    3.000
+ AMH      O2     C8     C1      118.500    3.000
+ AMH      O1     C8     C1      118.500    3.000
+ AMH      C8     C1     H1      108.810    3.000
+ AMH      C8     C1     C6      109.470    3.000
+ AMH      C8     C1     C2      109.470    3.000
+ AMH      H1     C1     C6      108.340    3.000
+ AMH      H1     C1     C2      108.340    3.000
+ AMH      C6     C1     C2      109.470    3.000
+ AMH      C1     C6     H61     109.470    3.000
+ AMH      C1     C6     H62     109.470    3.000
+ AMH      C1     C6     C5      111.000    3.000
+ AMH      H61    C6     H62     107.900    3.000
+ AMH      H61    C6     C5      109.470    3.000
+ AMH      H62    C6     C5      109.470    3.000
+ AMH      C6     C5     H51     109.470    3.000
+ AMH      C6     C5     H52     109.470    3.000
+ AMH      C6     C5     C4      111.000    3.000
+ AMH      H51    C5     H52     107.900    3.000
+ AMH      H51    C5     C4      109.470    3.000
+ AMH      H52    C5     C4      109.470    3.000
+ AMH      C5     C4     H4      108.340    3.000
+ AMH      C5     C4     C7      109.470    3.000
+ AMH      C5     C4     C3      109.470    3.000
+ AMH      H4     C4     C7      108.340    3.000
+ AMH      H4     C4     C3      108.340    3.000
+ AMH      C7     C4     C3      109.470    3.000
+ AMH      C4     C7     H71     109.470    3.000
+ AMH      C4     C7     H72     109.470    3.000
+ AMH      C4     C7     N       109.470    3.000
+ AMH      H71    C7     H72     107.900    3.000
+ AMH      H71    C7     N       109.470    3.000
+ AMH      H72    C7     N       109.470    3.000
+ AMH      C7     N      HN2     120.000    3.000
+ AMH      C7     N      HN1     120.000    3.000
+ AMH      HN2    N      HN1     120.000    3.000
+ AMH      C4     C3     H31     109.470    3.000
+ AMH      C4     C3     H32     109.470    3.000
+ AMH      C4     C3     C2      111.000    3.000
+ AMH      H31    C3     H32     107.900    3.000
+ AMH      H31    C3     C2      109.470    3.000
+ AMH      H32    C3     C2      109.470    3.000
+ AMH      C3     C2     H22     109.470    3.000
+ AMH      C3     C2     H21     109.470    3.000
+ AMH      C3     C2     C1      111.000    3.000
+ AMH      H22    C2     H21     107.900    3.000
+ AMH      H22    C2     C1      109.470    3.000
+ AMH      H21    C2     C1      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AMH      var_1    O2     C8     C1     C6       -59.973   20.000   3
+ AMH      var_2    C8     C1     C2     C3       180.000   20.000   3
+ AMH      var_3    C8     C1     C6     C5       180.000   20.000   3
+ AMH      var_4    C1     C6     C5     C4        60.000   20.000   3
+ AMH      var_5    C6     C5     C4     C3       -60.000   20.000   3
+ AMH      var_6    C5     C4     C7     N        -59.962   20.000   3
+ AMH      var_7    C4     C7     N      HN1      179.977   20.000   1
+ AMH      var_8    C5     C4     C3     C2        60.000   20.000   3
+ AMH      var_9    C4     C3     C2     C1       -60.000   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ AMH      chir_01  C1     C2     C6     C8        negativ
+ AMH      chir_02  C4     C3     C5     C7        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AMH      plan-1    C8        0.020
+ AMH      plan-1    C1        0.020
+ AMH      plan-1    O1        0.020
+ AMH      plan-1    O2        0.020
+ AMH      plan-2    N         0.020
+ AMH      plan-2    C7        0.020
+ AMH      plan-2    HN1       0.020
+ AMH      plan-2    HN2       0.020
+# ------------------------------------------------------

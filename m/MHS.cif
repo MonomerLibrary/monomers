@@ -1,0 +1,209 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MHS      MHS 'N1-METHYLATED HISTIDINE             ' peptide            22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MHS
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MHS           N      N    NH2       0.000      0.000    0.000    0.000
+ MHS           HN1    H    H         0.000      0.836   -0.530   -0.217
+ MHS           HN2    H    H         0.000     -0.377    0.637   -0.692
+ MHS           CA     C    CH1       0.000     -0.659   -0.154    1.304
+ MHS           HA     H    H         0.000     -0.598    0.792    1.860
+ MHS           CB     C    CH2       0.000     -2.127   -0.528    1.092
+ MHS           HB2    H    H         0.000     -2.616   -0.645    2.061
+ MHS           HB3    H    H         0.000     -2.186   -1.468    0.540
+ MHS           CG     C    CR5       0.000     -2.814    0.560    0.309
+ MHS           CD2    C    CR15      0.000     -2.920    0.640   -1.031
+ MHS           HD2    H    H         0.000     -2.522   -0.071   -1.744
+ MHS           NE2    N    NRD5      0.000     -3.602    1.755   -1.327
+ MHS           CE1    C    CR15      0.000     -3.929    2.367   -0.223
+ MHS           HE1    H    H         0.000     -4.484    3.294   -0.155
+ MHS           ND1    N    NR5       0.000     -3.459    1.652    0.822
+ MHS           CM     C    CH3       0.000     -3.606    1.987    2.241
+ MHS           HM3    H    H         0.000     -2.776    1.609    2.776
+ MHS           HM2    H    H         0.000     -3.651    3.038    2.348
+ MHS           HM1    H    H         0.000     -4.497    1.552    2.611
+ MHS           C      C    C         0.000      0.029   -1.243    2.087
+ MHS           O      O    OC       -0.500      0.576   -2.195    1.488
+ MHS           OXT    O    OC       -0.500      0.054   -1.193    3.337
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MHS      N      n/a    CA     START
+ MHS      HN1    N      .      .
+ MHS      HN2    N      .      .
+ MHS      CA     N      C      .
+ MHS      HA     CA     .      .
+ MHS      CB     CA     CG     .
+ MHS      HB2    CB     .      .
+ MHS      HB3    CB     .      .
+ MHS      CG     CB     CD2    .
+ MHS      CD2    CG     NE2    .
+ MHS      HD2    CD2    .      .
+ MHS      NE2    CD2    CE1    .
+ MHS      CE1    NE2    ND1    .
+ MHS      HE1    CE1    .      .
+ MHS      ND1    CE1    CM     .
+ MHS      CM     ND1    HM1    .
+ MHS      HM3    CM     .      .
+ MHS      HM2    CM     .      .
+ MHS      HM1    CM     .      .
+ MHS      C      CA     .      END
+ MHS      O      C      .      .
+ MHS      OXT    C      .      .
+ MHS      CG     ND1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MHS      CA     N         single      1.450    0.020
+ MHS      C      CA        single      1.500    0.020
+ MHS      CB     CA        single      1.524    0.020
+ MHS      HA     CA        single      1.099    0.020
+ MHS      O      C         deloc       1.250    0.020
+ MHS      OXT    C         deloc       1.250    0.020
+ MHS      CG     CB        single      1.510    0.020
+ MHS      HB2    CB        single      1.092    0.020
+ MHS      HB3    CB        single      1.092    0.020
+ MHS      CG     ND1       single      1.337    0.020
+ MHS      CD2    CG        double      1.387    0.020
+ MHS      ND1    CE1       single      1.337    0.020
+ MHS      CM     ND1       single      1.485    0.020
+ MHS      NE2    CD2       single      1.350    0.020
+ MHS      HD2    CD2       single      1.083    0.020
+ MHS      CE1    NE2       double      1.350    0.020
+ MHS      HE1    CE1       single      1.083    0.020
+ MHS      HM1    CM        single      1.059    0.020
+ MHS      HM2    CM        single      1.059    0.020
+ MHS      HM3    CM        single      1.059    0.020
+ MHS      HN1    N         single      1.010    0.020
+ MHS      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MHS      HN1    N      HN2     120.000    3.000
+ MHS      HN1    N      CA      120.000    3.000
+ MHS      HN2    N      CA      120.000    3.000
+ MHS      N      CA     HA      109.470    3.000
+ MHS      N      CA     CB      109.470    3.000
+ MHS      N      CA     C       109.470    3.000
+ MHS      HA     CA     CB      108.340    3.000
+ MHS      HA     CA     C       108.810    3.000
+ MHS      CB     CA     C       109.470    3.000
+ MHS      CA     CB     HB2     109.470    3.000
+ MHS      CA     CB     HB3     109.470    3.000
+ MHS      CA     CB     CG      109.470    3.000
+ MHS      HB2    CB     HB3     107.900    3.000
+ MHS      HB2    CB     CG      109.470    3.000
+ MHS      HB3    CB     CG      109.470    3.000
+ MHS      CB     CG     CD2     126.000    3.000
+ MHS      CB     CG     ND1     126.000    3.000
+ MHS      CD2    CG     ND1     108.000    3.000
+ MHS      CG     CD2    HD2     126.000    3.000
+ MHS      CG     CD2    NE2     108.000    3.000
+ MHS      HD2    CD2    NE2     126.000    3.000
+ MHS      CD2    NE2    CE1     108.000    3.000
+ MHS      NE2    CE1    HE1     126.000    3.000
+ MHS      NE2    CE1    ND1     108.000    3.000
+ MHS      HE1    CE1    ND1     126.000    3.000
+ MHS      CE1    ND1    CM      126.000    3.000
+ MHS      CE1    ND1    CG      108.000    3.000
+ MHS      CM     ND1    CG      126.000    3.000
+ MHS      ND1    CM     HM3     109.470    3.000
+ MHS      ND1    CM     HM2     109.470    3.000
+ MHS      ND1    CM     HM1     109.470    3.000
+ MHS      HM3    CM     HM2     109.470    3.000
+ MHS      HM3    CM     HM1     109.470    3.000
+ MHS      HM2    CM     HM1     109.470    3.000
+ MHS      CA     C      O       118.500    3.000
+ MHS      CA     C      OXT     118.500    3.000
+ MHS      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MHS      var_1    HN2    N      CA     C        175.000   20.000   1
+ MHS      var_2    N      CA     CB     CG       -60.095   20.000   3
+ MHS      var_3    CA     CB     CG     CD2       90.034   20.000   2
+ MHS      CONST_1  CB     CG     ND1    CE1      180.000    0.000   0
+ MHS      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
+ MHS      CONST_3  CG     CD2    NE2    CE1        0.000    0.000   0
+ MHS      CONST_4  CD2    NE2    CE1    ND1        0.000    0.000   0
+ MHS      CONST_5  NE2    CE1    ND1    CM       180.000    0.000   0
+ MHS      var_4    CE1    ND1    CM     HM1       89.947   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MHS      chir_01  CA     N      C      CB        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MHS      plan-1    N         0.020
+ MHS      plan-1    CA        0.020
+ MHS      plan-1    HN1       0.020
+ MHS      plan-1    HN2       0.020
+ MHS      plan-2    C         0.020
+ MHS      plan-2    CA        0.020
+ MHS      plan-2    O         0.020
+ MHS      plan-2    OXT       0.020
+ MHS      plan-3    CG        0.020
+ MHS      plan-3    CB        0.020
+ MHS      plan-3    ND1       0.020
+ MHS      plan-3    CD2       0.020
+ MHS      plan-3    CE1       0.020
+ MHS      plan-3    NE2       0.020
+ MHS      plan-3    CM        0.020
+ MHS      plan-3    HD2       0.020
+ MHS      plan-3    HE1       0.020
+# ------------------------------------------------------

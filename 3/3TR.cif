@@ -1,0 +1,135 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3TR      3TR '3-AMINO-1,2,4-TRIAZOLE              ' non-polymer        10   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3TR
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3TR           N3A    N    NH2       0.000      0.000    0.000    0.000
+ 3TR           H3A1   H    H         0.000      0.524    0.872   -0.007
+ 3TR           H3A2   H    H         0.000      0.516   -0.877    0.006
+ 3TR           C3     C    CR5       0.000     -1.396    0.006    0.001
+ 3TR           N2     N    NRD5      0.000     -2.155    1.076   -0.001
+ 3TR           N4     N    NRD5      0.000     -2.179   -1.077   -0.003
+ 3TR           C5     C    CR15      0.000     -3.436   -0.714    0.002
+ 3TR           H5     H    H         0.000     -4.289   -1.382    0.007
+ 3TR           N1     N    NR15      0.000     -3.486    0.628    0.000
+ 3TR           HN1    H    H         0.000     -4.341    1.220   -0.001
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3TR      N3A    n/a    C3     START
+ 3TR      H3A1   N3A    .      .
+ 3TR      H3A2   N3A    .      .
+ 3TR      C3     N3A    N4     .
+ 3TR      N2     C3     .      .
+ 3TR      N4     C3     C5     .
+ 3TR      C5     N4     N1     .
+ 3TR      H5     C5     .      .
+ 3TR      N1     C5     HN1    .
+ 3TR      HN1    N1     .      END
+ 3TR      N1     N2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3TR      N1     N2        single      1.402    0.020
+ 3TR      N1     C5        single      1.350    0.020
+ 3TR      HN1    N1        single      1.040    0.020
+ 3TR      N2     C3        double      1.350    0.020
+ 3TR      N4     C3        single      1.350    0.020
+ 3TR      C3     N3A       single      1.355    0.020
+ 3TR      C5     N4        double      1.350    0.020
+ 3TR      H5     C5        single      1.083    0.020
+ 3TR      H3A1   N3A       single      1.010    0.020
+ 3TR      H3A2   N3A       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3TR      H3A1   N3A    H3A2    120.000    3.000
+ 3TR      H3A1   N3A    C3      120.000    3.000
+ 3TR      H3A2   N3A    C3      120.000    3.000
+ 3TR      N3A    C3     N2      108.000    3.000
+ 3TR      N3A    C3     N4      108.000    3.000
+ 3TR      N2     C3     N4      108.000    3.000
+ 3TR      C3     N2     N1      108.000    3.000
+ 3TR      C3     N4     C5      108.000    3.000
+ 3TR      N4     C5     H5      126.000    3.000
+ 3TR      N4     C5     N1      108.000    3.000
+ 3TR      H5     C5     N1      126.000    3.000
+ 3TR      C5     N1     HN1     126.000    3.000
+ 3TR      C5     N1     N2      108.000    3.000
+ 3TR      HN1    N1     N2      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3TR      CONST_1  H3A2   N3A    C3     N4        -0.674    0.000   0
+ 3TR      CONST_2  N3A    C3     N2     N1       180.000    0.000   0
+ 3TR      CONST_3  N3A    C3     N4     C5       180.000    0.000   0
+ 3TR      CONST_4  C3     N4     C5     N1         0.000    0.000   0
+ 3TR      CONST_5  N4     C5     N1     N2         0.000    0.000   0
+ 3TR      CONST_6  C5     N1     N2     C3         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3TR      plan-1    N1        0.020
+ 3TR      plan-1    N2        0.020
+ 3TR      plan-1    C5        0.020
+ 3TR      plan-1    HN1       0.020
+ 3TR      plan-1    C3        0.020
+ 3TR      plan-1    N4        0.020
+ 3TR      plan-1    N3A       0.020
+ 3TR      plan-1    H5        0.020
+ 3TR      plan-1    H3A1      0.020
+ 3TR      plan-1    H3A2      0.020
+ 3TR      plan-2    N3A       0.020
+ 3TR      plan-2    C3        0.020
+ 3TR      plan-2    H3A1      0.020
+ 3TR      plan-2    H3A2      0.020
+# ------------------------------------------------------

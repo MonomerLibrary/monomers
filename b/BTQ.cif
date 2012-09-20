@@ -1,0 +1,270 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+BTQ      BTQ 'EPI-BIOTIN                          ' non-polymer        31  16 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_BTQ
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ BTQ           O3     O    O         0.000      0.000    0.000    0.000
+ BTQ           C3     C    C         0.000     -1.119   -0.304   -0.367
+ BTQ           N1     N    NH1       0.000     -1.438   -1.533   -0.796
+ BTQ           HN1    H    H         0.000     -0.803   -2.316   -0.858
+ BTQ           N2     N    NH1       0.000     -2.144    0.558   -0.382
+ BTQ           HN2    H    H         0.000     -2.099    1.526   -0.097
+ BTQ           C4     C    CH1       0.000     -3.344   -0.130   -0.878
+ BTQ           H4     H    H         0.000     -3.688    0.341   -1.810
+ BTQ           C5     C    CH1       0.000     -2.863   -1.558   -1.162
+ BTQ           H5     H    H         0.000     -2.972   -1.785   -2.231
+ BTQ           C6     C    CH2       0.000     -3.582   -2.633   -0.319
+ BTQ           H62    H    H         0.000     -3.041   -2.903    0.591
+ BTQ           H61    H    H         0.000     -3.817   -3.538   -0.883
+ BTQ           S1     S    S2        0.000     -5.146   -1.761    0.128
+ BTQ           C2     C    CH1       0.000     -4.452   -0.052    0.193
+ BTQ           H2     H    H         0.000     -4.028    0.164    1.183
+ BTQ           C7     C    CH2       0.000     -5.511    0.985   -0.188
+ BTQ           H71    H    H         0.000     -5.985    0.692   -1.127
+ BTQ           H72    H    H         0.000     -5.037    1.961   -0.310
+ BTQ           C8     C    CH2       0.000     -6.568    1.065    0.915
+ BTQ           H81    H    H         0.000     -6.092    1.356    1.854
+ BTQ           H82    H    H         0.000     -7.040    0.088    1.037
+ BTQ           C9     C    CH2       0.000     -7.627    2.101    0.535
+ BTQ           H91    H    H         0.000     -8.101    1.808   -0.404
+ BTQ           H92    H    H         0.000     -7.152    3.077    0.412
+ BTQ           C10    C    CH2       0.000     -8.683    2.181    1.639
+ BTQ           H101   H    H         0.000     -8.206    2.475    2.577
+ BTQ           H102   H    H         0.000     -9.155    1.204    1.762
+ BTQ           C11    C    C         0.000     -9.726    3.202    1.264
+ BTQ           O11    O    OC       -0.500     -9.630    3.826    0.184
+ BTQ           O12    O    OC       -0.500    -10.687    3.426    2.032
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ BTQ      O3     n/a    C3     START
+ BTQ      C3     O3     N2     .
+ BTQ      N1     C3     HN1    .
+ BTQ      HN1    N1     .      .
+ BTQ      N2     C3     C4     .
+ BTQ      HN2    N2     .      .
+ BTQ      C4     N2     C2     .
+ BTQ      H4     C4     .      .
+ BTQ      C5     C4     C6     .
+ BTQ      H5     C5     .      .
+ BTQ      C6     C5     S1     .
+ BTQ      H62    C6     .      .
+ BTQ      H61    C6     .      .
+ BTQ      S1     C6     .      .
+ BTQ      C2     C4     C7     .
+ BTQ      H2     C2     .      .
+ BTQ      C7     C2     C8     .
+ BTQ      H71    C7     .      .
+ BTQ      H72    C7     .      .
+ BTQ      C8     C7     C9     .
+ BTQ      H81    C8     .      .
+ BTQ      H82    C8     .      .
+ BTQ      C9     C8     C10    .
+ BTQ      H91    C9     .      .
+ BTQ      H92    C9     .      .
+ BTQ      C10    C9     C11    .
+ BTQ      H101   C10    .      .
+ BTQ      H102   C10    .      .
+ BTQ      C11    C10    O12    .
+ BTQ      O11    C11    .      .
+ BTQ      O12    C11    .      END
+ BTQ      C2     S1     .    ADD
+ BTQ      C5     N1     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ BTQ      O11    C11       deloc       1.250    0.020
+ BTQ      O12    C11       deloc       1.250    0.020
+ BTQ      C11    C10       single      1.510    0.020
+ BTQ      C10    C9        single      1.524    0.020
+ BTQ      H101   C10       single      1.092    0.020
+ BTQ      H102   C10       single      1.092    0.020
+ BTQ      C9     C8        single      1.524    0.020
+ BTQ      H91    C9        single      1.092    0.020
+ BTQ      H92    C9        single      1.092    0.020
+ BTQ      C8     C7        single      1.524    0.020
+ BTQ      H81    C8        single      1.092    0.020
+ BTQ      H82    C8        single      1.092    0.020
+ BTQ      C7     C2        single      1.524    0.020
+ BTQ      H71    C7        single      1.092    0.020
+ BTQ      H72    C7        single      1.092    0.020
+ BTQ      C2     S1        single      1.765    0.020
+ BTQ      C2     C4        single      1.524    0.020
+ BTQ      H2     C2        single      1.099    0.020
+ BTQ      S1     C6        single      1.762    0.020
+ BTQ      C6     C5        single      1.524    0.020
+ BTQ      H61    C6        single      1.092    0.020
+ BTQ      H62    C6        single      1.092    0.020
+ BTQ      C5     N1        single      1.450    0.020
+ BTQ      C5     C4        single      1.524    0.020
+ BTQ      H5     C5        single      1.099    0.020
+ BTQ      N1     C3        single      1.330    0.020
+ BTQ      HN1    N1        single      1.010    0.020
+ BTQ      C3     O3        double      1.220    0.020
+ BTQ      N2     C3        single      1.330    0.020
+ BTQ      C4     N2        single      1.450    0.020
+ BTQ      HN2    N2        single      1.010    0.020
+ BTQ      H4     C4        single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ BTQ      O3     C3     N1      123.000    3.000
+ BTQ      O3     C3     N2      123.000    3.000
+ BTQ      N1     C3     N2      120.000    3.000
+ BTQ      C3     N1     HN1     120.000    3.000
+ BTQ      C3     N1     C5      121.500    3.000
+ BTQ      HN1    N1     C5      118.500    3.000
+ BTQ      C3     N2     HN2     120.000    3.000
+ BTQ      C3     N2     C4      121.500    3.000
+ BTQ      HN2    N2     C4      118.500    3.000
+ BTQ      N2     C4     H4      108.550    3.000
+ BTQ      N2     C4     C5      110.000    3.000
+ BTQ      N2     C4     C2      110.000    3.000
+ BTQ      H4     C4     C5      108.340    3.000
+ BTQ      H4     C4     C2      108.340    3.000
+ BTQ      C5     C4     C2      111.000    3.000
+ BTQ      C4     C5     H5      108.340    3.000
+ BTQ      C4     C5     C6      111.000    3.000
+ BTQ      C4     C5     N1      110.000    3.000
+ BTQ      H5     C5     C6      108.340    3.000
+ BTQ      H5     C5     N1      108.550    3.000
+ BTQ      C6     C5     N1      110.000    3.000
+ BTQ      C5     C6     H62     109.470    3.000
+ BTQ      C5     C6     H61     109.470    3.000
+ BTQ      C5     C6     S1      109.500    3.000
+ BTQ      H62    C6     H61     107.900    3.000
+ BTQ      H62    C6     S1      109.500    3.000
+ BTQ      H61    C6     S1      109.500    3.000
+ BTQ      C6     S1     C2       97.338    3.000
+ BTQ      C4     C2     H2      108.340    3.000
+ BTQ      C4     C2     C7      111.000    3.000
+ BTQ      C4     C2     S1      109.500    3.000
+ BTQ      H2     C2     C7      108.340    3.000
+ BTQ      H2     C2     S1      109.500    3.000
+ BTQ      C7     C2     S1      109.500    3.000
+ BTQ      C2     C7     H71     109.470    3.000
+ BTQ      C2     C7     H72     109.470    3.000
+ BTQ      C2     C7     C8      111.000    3.000
+ BTQ      H71    C7     H72     107.900    3.000
+ BTQ      H71    C7     C8      109.470    3.000
+ BTQ      H72    C7     C8      109.470    3.000
+ BTQ      C7     C8     H81     109.470    3.000
+ BTQ      C7     C8     H82     109.470    3.000
+ BTQ      C7     C8     C9      111.000    3.000
+ BTQ      H81    C8     H82     107.900    3.000
+ BTQ      H81    C8     C9      109.470    3.000
+ BTQ      H82    C8     C9      109.470    3.000
+ BTQ      C8     C9     H91     109.470    3.000
+ BTQ      C8     C9     H92     109.470    3.000
+ BTQ      C8     C9     C10     111.000    3.000
+ BTQ      H91    C9     H92     107.900    3.000
+ BTQ      H91    C9     C10     109.470    3.000
+ BTQ      H92    C9     C10     109.470    3.000
+ BTQ      C9     C10    H101    109.470    3.000
+ BTQ      C9     C10    H102    109.470    3.000
+ BTQ      C9     C10    C11     109.470    3.000
+ BTQ      H101   C10    H102    107.900    3.000
+ BTQ      H101   C10    C11     109.470    3.000
+ BTQ      H102   C10    C11     109.470    3.000
+ BTQ      C10    C11    O11     118.500    3.000
+ BTQ      C10    C11    O12     118.500    3.000
+ BTQ      O11    C11    O12     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ BTQ      CONST_1  O3     C3     N1     C5       180.000    0.000   0
+ BTQ      CONST_2  O3     C3     N2     C4       180.000    0.000   0
+ BTQ      var_1    C3     N2     C4     C2       120.000   20.000   3
+ BTQ      var_2    N2     C4     C5     C6       120.000   20.000   3
+ BTQ      var_3    C4     C5     N1     C3         0.000   20.000   3
+ BTQ      var_4    C4     C5     C6     S1        30.000   20.000   3
+ BTQ      var_5    C5     C6     S1     C2       -30.000   20.000   1
+ BTQ      var_6    N2     C4     C2     C7        90.000   20.000   3
+ BTQ      var_7    C4     C2     S1     C6        30.000   20.000   1
+ BTQ      var_8    C4     C2     C7     C8      -178.284   20.000   3
+ BTQ      var_9    C2     C7     C8     C9       180.000   20.000   3
+ BTQ      var_10   C7     C8     C9     C10     -179.946   20.000   3
+ BTQ      var_11   C8     C9     C10    C11     -179.960   20.000   3
+ BTQ      var_12   C9     C10    C11    O12      179.964   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ BTQ      chir_01  C2     C7     S1     C4        negativ
+ BTQ      chir_02  C5     C6     N1     C4        positiv
+ BTQ      chir_03  C4     C2     C5     N2        positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ BTQ      plan-1    C11       0.020
+ BTQ      plan-1    O11       0.020
+ BTQ      plan-1    O12       0.020
+ BTQ      plan-1    C10       0.020
+ BTQ      plan-2    N1        0.020
+ BTQ      plan-2    C5        0.020
+ BTQ      plan-2    C3        0.020
+ BTQ      plan-2    HN1       0.020
+ BTQ      plan-3    C3        0.020
+ BTQ      plan-3    N1        0.020
+ BTQ      plan-3    O3        0.020
+ BTQ      plan-3    N2        0.020
+ BTQ      plan-3    HN1       0.020
+ BTQ      plan-3    HN2       0.020
+ BTQ      plan-4    N2        0.020
+ BTQ      plan-4    C3        0.020
+ BTQ      plan-4    C4        0.020
+ BTQ      plan-4    HN2       0.020
+# ------------------------------------------------------

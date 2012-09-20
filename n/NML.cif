@@ -1,0 +1,135 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NML      NML 'N-METHYLACETAMIDE                   ' non-polymer        12   5 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NML
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NML           O2     O    O         0.000      0.000    0.000    0.000
+ NML           C2     C    C         0.000     -0.516    0.997   -0.492
+ NML           C1     C    CH3       0.000     -1.718    0.848   -1.365
+ NML           H13    H    H         0.000     -2.503    0.406   -0.809
+ NML           H12    H    H         0.000     -2.022    1.801   -1.710
+ NML           H11    H    H         0.000     -1.478    0.231   -2.191
+ NML           N3     N    NH1       0.000     -0.100    2.304   -0.327
+ NML           HN3    H    H         0.000     -0.618    3.036   -0.791
+ NML           C3     C    CH3       0.000      1.042    2.673    0.480
+ NML           H33    H    H         0.000      1.788    1.926    0.397
+ NML           H32    H    H         0.000      1.429    3.598    0.139
+ NML           H31    H    H         0.000      0.744    2.765    1.491
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NML      O2     n/a    C2     START
+ NML      C2     O2     N3     .
+ NML      C1     C2     H11    .
+ NML      H13    C1     .      .
+ NML      H12    C1     .      .
+ NML      H11    C1     .      .
+ NML      N3     C2     C3     .
+ NML      HN3    N3     .      .
+ NML      C3     N3     H31    .
+ NML      H33    C3     .      .
+ NML      H32    C3     .      .
+ NML      H31    C3     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NML      C1     C2        single      1.500    0.020
+ NML      H11    C1        single      1.059    0.020
+ NML      H12    C1        single      1.059    0.020
+ NML      H13    C1        single      1.059    0.020
+ NML      N3     C2        single      1.330    0.020
+ NML      C2     O2        double      1.220    0.020
+ NML      HN3    N3        single      1.010    0.020
+ NML      C3     N3        single      1.450    0.020
+ NML      H31    C3        single      1.059    0.020
+ NML      H32    C3        single      1.059    0.020
+ NML      H33    C3        single      1.059    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NML      O2     C2     C1      123.000    3.000
+ NML      O2     C2     N3      123.000    3.000
+ NML      C1     C2     N3      116.500    3.000
+ NML      C2     C1     H13     109.470    3.000
+ NML      C2     C1     H12     109.470    3.000
+ NML      C2     C1     H11     109.470    3.000
+ NML      H13    C1     H12     109.470    3.000
+ NML      H13    C1     H11     109.470    3.000
+ NML      H12    C1     H11     109.470    3.000
+ NML      C2     N3     HN3     120.000    3.000
+ NML      C2     N3     C3      121.500    3.000
+ NML      HN3    N3     C3      118.500    3.000
+ NML      N3     C3     H33     109.470    3.000
+ NML      N3     C3     H32     109.470    3.000
+ NML      N3     C3     H31     109.470    3.000
+ NML      H33    C3     H32     109.470    3.000
+ NML      H33    C3     H31     109.470    3.000
+ NML      H32    C3     H31     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NML      var_1    O2     C2     C1     H11      -59.260   20.000   1
+ NML      CONST_1  O2     C2     N3     C3         0.000    0.000   0
+ NML      var_2    C2     N3     C3     H31      -84.905   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NML      plan-1    C2        0.020
+ NML      plan-1    C1        0.020
+ NML      plan-1    O2        0.020
+ NML      plan-1    N3        0.020
+ NML      plan-1    HN3       0.020
+ NML      plan-2    N3        0.020
+ NML      plan-2    C2        0.020
+ NML      plan-2    C3        0.020
+ NML      plan-2    HN3       0.020
+# ------------------------------------------------------

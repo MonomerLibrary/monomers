@@ -1,0 +1,122 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+XL3      XL3 'propane-1-thiol                     ' non-polymer        12   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_XL3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ XL3           SG     S    SH1       0.000      0.000    0.000    0.000
+ XL3           HSG    H    H         0.000      0.417   -1.263    0.000
+ XL3           CC     C    CH2       0.000     -1.773   -0.386    0.000
+ XL3           HC     H    H         0.000     -2.019   -0.967    0.891
+ XL3           HCA    H    H         0.000     -2.019   -0.967   -0.891
+ XL3           CB     C    CH2       0.000     -2.578    0.915    0.000
+ XL3           HB     H    H         0.000     -2.330    1.495   -0.891
+ XL3           HBA    H    H         0.000     -2.330    1.495    0.891
+ XL3           CA     C    CH3       0.000     -4.073    0.590    0.000
+ XL3           HAB    H    H         0.000     -4.316    0.027   -0.865
+ XL3           HAA    H    H         0.000     -4.316    0.027    0.865
+ XL3           HA     H    H         0.000     -4.634    1.490    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ XL3      SG     n/a    CC     START
+ XL3      HSG    SG     .      .
+ XL3      CC     SG     CB     .
+ XL3      HC     CC     .      .
+ XL3      HCA    CC     .      .
+ XL3      CB     CC     CA     .
+ XL3      HB     CB     .      .
+ XL3      HBA    CB     .      .
+ XL3      CA     CB     HA     .
+ XL3      HAB    CA     .      .
+ XL3      HAA    CA     .      .
+ XL3      HA     CA     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ XL3      CA     CB        single      1.513    0.020
+ XL3      HA     CA        single      1.059    0.020
+ XL3      HAA    CA        single      1.059    0.020
+ XL3      HAB    CA        single      1.059    0.020
+ XL3      CB     CC        single      1.524    0.020
+ XL3      HB     CB        single      1.092    0.020
+ XL3      HBA    CB        single      1.092    0.020
+ XL3      CC     SG        single      1.810    0.020
+ XL3      HC     CC        single      1.092    0.020
+ XL3      HCA    CC        single      1.092    0.020
+ XL3      HSG    SG        single      1.330    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ XL3      HSG    SG     CC       96.000    3.000
+ XL3      SG     CC     HC      109.470    3.000
+ XL3      SG     CC     HCA     109.470    3.000
+ XL3      SG     CC     CB      109.470    3.000
+ XL3      HC     CC     HCA     107.900    3.000
+ XL3      HC     CC     CB      109.470    3.000
+ XL3      HCA    CC     CB      109.470    3.000
+ XL3      CC     CB     HB      109.470    3.000
+ XL3      CC     CB     HBA     109.470    3.000
+ XL3      CC     CB     CA      111.000    3.000
+ XL3      HB     CB     HBA     107.900    3.000
+ XL3      HB     CB     CA      109.470    3.000
+ XL3      HBA    CB     CA      109.470    3.000
+ XL3      CB     CA     HAB     109.470    3.000
+ XL3      CB     CA     HAA     109.470    3.000
+ XL3      CB     CA     HA      109.470    3.000
+ XL3      HAB    CA     HAA     109.470    3.000
+ XL3      HAB    CA     HA      109.470    3.000
+ XL3      HAA    CA     HA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ XL3      var_1    HSG    SG     CC     CB       180.000   20.000   1
+ XL3      var_2    SG     CC     CB     CA       180.000   20.000   3
+ XL3      var_3    CC     CB     CA     HA       180.000   20.000   3
+# ------------------------------------------------------

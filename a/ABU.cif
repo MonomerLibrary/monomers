@@ -1,0 +1,150 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+ABU      ABU 'GAMMA-AMINO-BUTANOIC ACID           ' non-polymer        15   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_ABU
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ ABU           OE2    O    OC       -0.500      0.000    0.000    0.000
+ ABU           CD     C    C         0.000     -1.230    0.228    0.005
+ ABU           OE1    O    OC       -0.500     -1.647    1.407    0.025
+ ABU           CG     C    CH2       0.000     -2.209   -0.918   -0.013
+ ABU           HG1    H    H         0.000     -2.052   -1.544    0.868
+ ABU           HG2    H    H         0.000     -2.054   -1.515   -0.914
+ ABU           CB     C    CH2       0.000     -3.637   -0.369   -0.003
+ ABU           HB1    H    H         0.000     -3.791    0.258   -0.883
+ ABU           HB2    H    H         0.000     -3.790    0.228    0.899
+ ABU           CA     C    CH2       0.000     -4.631   -1.532   -0.022
+ ABU           HA1    H    H         0.000     -4.473   -2.158    0.859
+ ABU           HA2    H    H         0.000     -4.475   -2.128   -0.923
+ ABU           N      N    NH2       0.000     -6.002   -1.005   -0.011
+ ABU           HN2    H    H         0.000     -6.654   -1.290    0.710
+ ABU           H      H    H         0.000     -6.305   -0.353   -0.725
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ ABU      OE2    n/a    CD     START
+ ABU      CD     OE2    CG     .
+ ABU      OE1    CD     .      .
+ ABU      CG     CD     CB     .
+ ABU      HG1    CG     .      .
+ ABU      HG2    CG     .      .
+ ABU      CB     CG     CA     .
+ ABU      HB1    CB     .      .
+ ABU      HB2    CB     .      .
+ ABU      CA     CB     N      .
+ ABU      HA1    CA     .      .
+ ABU      HA2    CA     .      .
+ ABU      N      CA     H      .
+ ABU      HN2    N      .      .
+ ABU      H      N      .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ ABU      N      CA        single      1.450    0.020
+ ABU      H      N         single      1.010    0.020
+ ABU      HN2    N         single      1.010    0.020
+ ABU      CA     CB        single      1.524    0.020
+ ABU      HA1    CA        single      1.092    0.020
+ ABU      HA2    CA        single      1.092    0.020
+ ABU      CB     CG        single      1.524    0.020
+ ABU      HB1    CB        single      1.092    0.020
+ ABU      HB2    CB        single      1.092    0.020
+ ABU      CG     CD        single      1.510    0.020
+ ABU      HG1    CG        single      1.092    0.020
+ ABU      HG2    CG        single      1.092    0.020
+ ABU      OE1    CD        deloc       1.250    0.020
+ ABU      CD     OE2       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ ABU      OE2    CD     OE1     123.000    3.000
+ ABU      OE2    CD     CG      118.500    3.000
+ ABU      OE1    CD     CG      118.500    3.000
+ ABU      CD     CG     HG1     109.470    3.000
+ ABU      CD     CG     HG2     109.470    3.000
+ ABU      CD     CG     CB      109.470    3.000
+ ABU      HG1    CG     HG2     107.900    3.000
+ ABU      HG1    CG     CB      109.470    3.000
+ ABU      HG2    CG     CB      109.470    3.000
+ ABU      CG     CB     HB1     109.470    3.000
+ ABU      CG     CB     HB2     109.470    3.000
+ ABU      CG     CB     CA      111.000    3.000
+ ABU      HB1    CB     HB2     107.900    3.000
+ ABU      HB1    CB     CA      109.470    3.000
+ ABU      HB2    CB     CA      109.470    3.000
+ ABU      CB     CA     HA1     109.470    3.000
+ ABU      CB     CA     HA2     109.470    3.000
+ ABU      CB     CA     N       109.470    3.000
+ ABU      HA1    CA     HA2     107.900    3.000
+ ABU      HA1    CA     N       109.470    3.000
+ ABU      HA2    CA     N       109.470    3.000
+ ABU      CA     N      HN2     120.000    3.000
+ ABU      CA     N      H       120.000    3.000
+ ABU      HN2    N      H       120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ ABU      var_1    OE2    CD     CG     CB      -179.990   20.000   3
+ ABU      var_2    CD     CG     CB     CA       179.963   20.000   3
+ ABU      var_3    CG     CB     CA     N        179.963   20.000   3
+ ABU      var_4    CB     CA     N      H         56.032   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ ABU      plan-1    N         0.020
+ ABU      plan-1    CA        0.020
+ ABU      plan-1    H         0.020
+ ABU      plan-1    HN2       0.020
+ ABU      plan-2    CD        0.020
+ ABU      plan-2    CG        0.020
+ ABU      plan-2    OE1       0.020
+ ABU      plan-2    OE2       0.020
+# ------------------------------------------------------

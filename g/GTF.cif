@@ -1,0 +1,315 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GTF      GTF '.                                   ' non-polymer        40  30 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GTF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GTF           O3G    O    OP       -0.666      0.000    0.000    0.000
+ GTF           PG     P    P         0.000     -0.923   -0.382    1.136
+ GTF           O1G    O    OP       -0.666     -0.687    0.542    2.311
+ GTF           O2G    O    OP       -0.666     -0.647   -1.810    1.553
+ GTF           O3B    O    O2        0.000     -2.453   -0.252    0.650
+ GTF           PB     P    P         0.000     -3.247   -0.699   -0.678
+ GTF           O1B    O    OP       -0.500     -2.862   -2.084   -1.041
+ GTF           O2B    O    OP       -0.500     -2.903    0.218   -1.791
+ GTF           O3A    O    O2        0.000     -4.832   -0.637   -0.402
+ GTF           PA     P    P         0.000     -6.117   -1.305   -1.105
+ GTF           O1A    O    OP       -0.500     -6.397   -0.611   -2.385
+ GTF           O2A    O    OP       -0.500     -5.846   -2.738   -1.370
+ GTF           "O5'"  O    O2        0.000     -7.392   -1.171   -0.132
+ GTF           "C5'"  C    CH2       0.000     -8.660   -1.759   -0.426
+ GTF           "H5'"  H    H         0.000     -8.547   -2.842   -0.517
+ GTF           "H5'A" H    H         0.000     -9.040   -1.354   -1.366
+ GTF           "C4'"  C    CH1       0.000     -9.644   -1.442    0.702
+ GTF           "H4'"  H    H         0.000     -9.219   -1.750    1.668
+ GTF           "C3'"  C    CH1       0.000    -10.977   -2.174    0.457
+ GTF           "H3'"  H    H         0.000    -10.946   -2.722   -0.495
+ GTF           "O3'"  O    OH1       0.000    -11.266   -3.063    1.537
+ GTF           "HO3'" H    H         0.000    -12.132   -3.469    1.397
+ GTF           "C2'"  C    CT        0.000    -12.029   -1.039    0.394
+ GTF           F2     F    F         0.000    -13.200   -1.404    1.067
+ GTF           F1     F    F         0.000    -12.306   -0.688   -0.931
+ GTF           "O4'"  O    O2        0.000     -9.928   -0.032    0.720
+ GTF           "C1'"  C    CH1       0.000    -11.304    0.115    1.132
+ GTF           "H1'"  H    H         0.000    -11.397   -0.002    2.221
+ GTF           N1     N    NR6       0.000    -11.833    1.413    0.706
+ GTF           C6     C    CR16      0.000    -12.496    2.201    1.598
+ GTF           H6     H    H         0.000    -12.638    1.871    2.620
+ GTF           C5     C    CR16      0.000    -12.977    3.400    1.194
+ GTF           H5     H    H         0.000    -13.499    4.046    1.889
+ GTF           C4     C    CR6       0.000    -12.787    3.796   -0.146
+ GTF           N4     N    NH2       0.000    -13.270    5.007   -0.585
+ GTF           HN4A   H    H         0.000    -13.765    5.622    0.050
+ GTF           HN4    H    H         0.000    -13.135    5.294   -1.548
+ GTF           N3     N    NRD6      0.000    -12.139    2.994   -0.981
+ GTF           C2     C    CR6       0.000    -11.668    1.819   -0.566
+ GTF           O2     O    O         0.000    -11.075    1.099   -1.354
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GTF      O3G    n/a    PG     START
+ GTF      PG     O3G    O3B    .
+ GTF      O1G    PG     .      .
+ GTF      O2G    PG     .      .
+ GTF      O3B    PG     PB     .
+ GTF      PB     O3B    O3A    .
+ GTF      O1B    PB     .      .
+ GTF      O2B    PB     .      .
+ GTF      O3A    PB     PA     .
+ GTF      PA     O3A    "O5'"  .
+ GTF      O1A    PA     .      .
+ GTF      O2A    PA     .      .
+ GTF      "O5'"  PA     "C5'"  .
+ GTF      "C5'"  "O5'"  "C4'"  .
+ GTF      "H5'"  "C5'"  .      .
+ GTF      "H5'A" "C5'"  .      .
+ GTF      "C4'"  "C5'"  "O4'"  .
+ GTF      "H4'"  "C4'"  .      .
+ GTF      "C3'"  "C4'"  "C2'"  .
+ GTF      "H3'"  "C3'"  .      .
+ GTF      "O3'"  "C3'"  "HO3'" .
+ GTF      "HO3'" "O3'"  .      .
+ GTF      "C2'"  "C3'"  F1     .
+ GTF      F2     "C2'"  .      .
+ GTF      F1     "C2'"  .      .
+ GTF      "O4'"  "C4'"  "C1'"  .
+ GTF      "C1'"  "O4'"  N1     .
+ GTF      "H1'"  "C1'"  .      .
+ GTF      N1     "C1'"  C6     .
+ GTF      C6     N1     C5     .
+ GTF      H6     C6     .      .
+ GTF      C5     C6     C4     .
+ GTF      H5     C5     .      .
+ GTF      C4     C5     N3     .
+ GTF      N4     C4     HN4    .
+ GTF      HN4A   N4     .      .
+ GTF      HN4    N4     .      .
+ GTF      N3     C4     C2     .
+ GTF      C2     N3     O2     .
+ GTF      O2     C2     .      END
+ GTF      N1     C2     .    ADD
+ GTF      "C1'"  "C2'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GTF      F1     "C2'"     single      1.320    0.020
+ GTF      C6     N1        single      1.337    0.020
+ GTF      N1     "C1'"     single      1.465    0.020
+ GTF      N1     C2        single      1.410    0.020
+ GTF      C2     N3        single      1.350    0.020
+ GTF      O2     C2        double      1.250    0.020
+ GTF      F2     "C2'"     single      1.320    0.020
+ GTF      N3     C4        double      1.350    0.020
+ GTF      C4     C5        single      1.390    0.020
+ GTF      N4     C4        single      1.355    0.020
+ GTF      HN4    N4        single      1.010    0.020
+ GTF      HN4A   N4        single      1.010    0.020
+ GTF      C5     C6        double      1.390    0.020
+ GTF      H5     C5        single      1.083    0.020
+ GTF      H6     C6        single      1.083    0.020
+ GTF      O2A    PA        deloc       1.510    0.020
+ GTF      O1A    PA        deloc       1.510    0.020
+ GTF      "O5'"  PA        single      1.610    0.020
+ GTF      PA     O3A       single      1.610    0.020
+ GTF      O3A    PB        single      1.610    0.020
+ GTF      O1B    PB        deloc       1.510    0.020
+ GTF      PB     O3B       single      1.610    0.020
+ GTF      O2B    PB        deloc       1.510    0.020
+ GTF      PG     O3G       deloc       1.510    0.020
+ GTF      O2G    PG        deloc       1.510    0.020
+ GTF      O1G    PG        deloc       1.510    0.020
+ GTF      O3B    PG        single      1.610    0.020
+ GTF      "C1'"  "O4'"     single      1.426    0.020
+ GTF      "C1'"  "C2'"     single      1.524    0.020
+ GTF      "H1'"  "C1'"     single      1.099    0.020
+ GTF      "C2'"  "C3'"     single      1.524    0.020
+ GTF      "C3'"  "C4'"     single      1.524    0.020
+ GTF      "O3'"  "C3'"     single      1.432    0.020
+ GTF      "H3'"  "C3'"     single      1.099    0.020
+ GTF      "HO3'" "O3'"     single      0.967    0.020
+ GTF      "C4'"  "C5'"     single      1.524    0.020
+ GTF      "O4'"  "C4'"     single      1.426    0.020
+ GTF      "H4'"  "C4'"     single      1.099    0.020
+ GTF      "C5'"  "O5'"     single      1.426    0.020
+ GTF      "H5'"  "C5'"     single      1.092    0.020
+ GTF      "H5'A" "C5'"     single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GTF      O3G    PG     O1G     119.900    3.000
+ GTF      O3G    PG     O2G     119.900    3.000
+ GTF      O3G    PG     O3B     108.200    3.000
+ GTF      O1G    PG     O2G     119.900    3.000
+ GTF      O1G    PG     O3B     108.200    3.000
+ GTF      O2G    PG     O3B     108.200    3.000
+ GTF      PG     O3B    PB      120.500    3.000
+ GTF      O3B    PB     O1B     108.200    3.000
+ GTF      O3B    PB     O2B     108.200    3.000
+ GTF      O3B    PB     O3A     102.600    3.000
+ GTF      O1B    PB     O2B     119.900    3.000
+ GTF      O1B    PB     O3A     108.200    3.000
+ GTF      O2B    PB     O3A     108.200    3.000
+ GTF      PB     O3A    PA      120.500    3.000
+ GTF      O3A    PA     O1A     108.200    3.000
+ GTF      O3A    PA     O2A     108.200    3.000
+ GTF      O3A    PA     "O5'"   102.600    3.000
+ GTF      O1A    PA     O2A     119.900    3.000
+ GTF      O1A    PA     "O5'"   108.200    3.000
+ GTF      O2A    PA     "O5'"   108.200    3.000
+ GTF      PA     "O5'"  "C5'"   120.500    3.000
+ GTF      "O5'"  "C5'"  "H5'"   109.470    3.000
+ GTF      "O5'"  "C5'"  "H5'A"  109.470    3.000
+ GTF      "O5'"  "C5'"  "C4'"   109.470    3.000
+ GTF      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ GTF      "H5'"  "C5'"  "C4'"   109.470    3.000
+ GTF      "H5'A" "C5'"  "C4'"   109.470    3.000
+ GTF      "C5'"  "C4'"  "H4'"   108.340    3.000
+ GTF      "C5'"  "C4'"  "C3'"   111.000    3.000
+ GTF      "C5'"  "C4'"  "O4'"   109.470    3.000
+ GTF      "H4'"  "C4'"  "C3'"   108.340    3.000
+ GTF      "H4'"  "C4'"  "O4'"   109.470    3.000
+ GTF      "C3'"  "C4'"  "O4'"   109.470    3.000
+ GTF      "C4'"  "C3'"  "H3'"   108.340    3.000
+ GTF      "C4'"  "C3'"  "O3'"   109.470    3.000
+ GTF      "C4'"  "C3'"  "C2'"   111.000    3.000
+ GTF      "H3'"  "C3'"  "O3'"   109.470    3.000
+ GTF      "H3'"  "C3'"  "C2'"   108.340    3.000
+ GTF      "O3'"  "C3'"  "C2'"   109.470    3.000
+ GTF      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ GTF      "C3'"  "C2'"  F2      109.470    3.000
+ GTF      "C3'"  "C2'"  F1      109.470    3.000
+ GTF      "C3'"  "C2'"  "C1'"   111.000    3.000
+ GTF      F2     "C2'"  F1      109.470    3.000
+ GTF      F2     "C2'"  "C1'"   109.470    3.000
+ GTF      F1     "C2'"  "C1'"   109.470    3.000
+ GTF      "C4'"  "O4'"  "C1'"   111.800    3.000
+ GTF      "O4'"  "C1'"  "H1'"   109.470    3.000
+ GTF      "O4'"  "C1'"  N1      109.470    3.000
+ GTF      "O4'"  "C1'"  "C2'"   109.470    3.000
+ GTF      "H1'"  "C1'"  N1      109.470    3.000
+ GTF      "H1'"  "C1'"  "C2'"   108.340    3.000
+ GTF      N1     "C1'"  "C2'"   109.500    3.000
+ GTF      "C1'"  N1     C6      120.000    3.000
+ GTF      "C1'"  N1     C2      120.000    3.000
+ GTF      C6     N1     C2      120.000    3.000
+ GTF      N1     C6     H6      120.000    3.000
+ GTF      N1     C6     C5      120.000    3.000
+ GTF      H6     C6     C5      120.000    3.000
+ GTF      C6     C5     H5      120.000    3.000
+ GTF      C6     C5     C4      120.000    3.000
+ GTF      H5     C5     C4      120.000    3.000
+ GTF      C5     C4     N4      120.000    3.000
+ GTF      C5     C4     N3      120.000    3.000
+ GTF      N4     C4     N3      120.000    3.000
+ GTF      C4     N4     HN4A    120.000    3.000
+ GTF      C4     N4     HN4     120.000    3.000
+ GTF      HN4A   N4     HN4     120.000    3.000
+ GTF      C4     N3     C2      120.000    3.000
+ GTF      N3     C2     O2      120.000    3.000
+ GTF      N3     C2     N1      120.000    3.000
+ GTF      O2     C2     N1      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GTF      var_1    O3G    PG     O3B    PB        45.066   20.000   1
+ GTF      var_2    PG     O3B    PB     O3A      164.960   20.000   1
+ GTF      var_3    O3B    PB     O3A    PA      -160.071   20.000   1
+ GTF      var_4    PB     O3A    PA     "O5'"    165.013   20.000   1
+ GTF      var_5    O3A    PA     "O5'"  "C5'"   -174.954   20.000   1
+ GTF      var_6    PA     "O5'"  "C5'"  "C4'"    179.977   20.000   1
+ GTF      var_7    "O5'"  "C5'"  "C4'"  "O4'"     67.165   20.000   3
+ GTF      var_8    "C5'"  "C4'"  "C3'"  "C2'"   -120.000   20.000   3
+ GTF      var_9    "C4'"  "C3'"  "O3'"  "HO3'"   176.247   20.000   1
+ GTF      var_10   "C4'"  "C3'"  "C2'"  F1        90.000   20.000   1
+ GTF      var_11   "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
+ GTF      var_12   "C4'"  "O4'"  "C1'"  N1      -150.000   20.000   1
+ GTF      var_13   "O4'"  "C1'"  "C2'"  "C3'"     30.000   20.000   1
+ GTF      var_14   "O4'"  "C1'"  N1     C6      -131.212   20.000   1
+ GTF      CONST_1  "C1'"  N1     C2     N3       180.000    0.000   0
+ GTF      CONST_2  "C1'"  N1     C6     C5       180.000    0.000   0
+ GTF      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ GTF      CONST_4  C6     C5     C4     N3         0.000    0.000   0
+ GTF      CONST_5  C5     C4     N4     HN4     -179.986    0.000   0
+ GTF      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ GTF      CONST_7  C4     N3     C2     O2       180.000    0.000   0
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GTF      chir_01  "C1'"  N1     "C2'"  "O4'"     negativ
+ GTF      chir_02  "C2'"  F1     F2     "C1'"     positiv
+ GTF      chir_03  "C3'"  "C2'"  "O3'"  "C4'"     positiv
+ GTF      chir_04  "C4'"  "C3'"  "O4'"  "C5'"     positiv
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GTF      plan-1    N1        0.020
+ GTF      plan-1    C2        0.020
+ GTF      plan-1    C6        0.020
+ GTF      plan-1    "C1'"     0.020
+ GTF      plan-1    N3        0.020
+ GTF      plan-1    C4        0.020
+ GTF      plan-1    C5        0.020
+ GTF      plan-1    O2        0.020
+ GTF      plan-1    N4        0.020
+ GTF      plan-1    H5        0.020
+ GTF      plan-1    H6        0.020
+ GTF      plan-1    HN4A      0.020
+ GTF      plan-1    HN4       0.020
+ GTF      plan-2    N4        0.020
+ GTF      plan-2    C4        0.020
+ GTF      plan-2    HN4       0.020
+ GTF      plan-2    HN4A      0.020
+# ------------------------------------------------------

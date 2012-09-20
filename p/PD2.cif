@@ -1,0 +1,165 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PD2      PD2 'PYRIDINE-2,4-DICARBOXYLIC ACID      ' non-polymer        15  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PD2
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PD2           O22    O    OC       -0.500      0.000    0.000    0.000
+ PD2           C21    C    C         0.000     -1.095    0.605    0.000
+ PD2           O21    O    OC       -0.500     -1.118    1.856    0.000
+ PD2           C2     C    CR6       0.000     -2.363   -0.159    0.000
+ PD2           N1     N    NRD6      0.000     -2.331   -1.486    0.000
+ PD2           C6     C    CR16      0.000     -3.428   -2.208    0.000
+ PD2           H6     H    H         0.000     -3.355   -3.289    0.000
+ PD2           C5     C    CR16      0.000     -4.677   -1.611    0.001
+ PD2           H5     H    H         0.000     -5.575   -2.217    0.001
+ PD2           C3     C    CR16      0.000     -3.579    0.523   -0.006
+ PD2           H3     H    H         0.000     -3.603    1.605   -0.015
+ PD2           C4     C    CR6       0.000     -4.766   -0.214    0.001
+ PD2           C41    C    C         0.000     -6.082    0.464    0.002
+ PD2           O42    O    OC       -0.500     -6.141    1.713    0.002
+ PD2           O41    O    OC       -0.500     -7.134   -0.213    0.003
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PD2      O22    n/a    C21    START
+ PD2      C21    O22    C2     .
+ PD2      O21    C21    .      .
+ PD2      C2     C21    C3     .
+ PD2      N1     C2     C6     .
+ PD2      C6     N1     C5     .
+ PD2      H6     C6     .      .
+ PD2      C5     C6     H5     .
+ PD2      H5     C5     .      .
+ PD2      C3     C2     C4     .
+ PD2      H3     C3     .      .
+ PD2      C4     C3     C41    .
+ PD2      C41    C4     O41    .
+ PD2      O42    C41    .      .
+ PD2      O41    C41    .      END
+ PD2      C4     C5     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PD2      O42    C41       deloc       1.250    0.020
+ PD2      O41    C41       deloc       1.250    0.020
+ PD2      C41    C4        single      1.500    0.020
+ PD2      C4     C5        double      1.390    0.020
+ PD2      C4     C3        single      1.390    0.020
+ PD2      C5     C6        single      1.390    0.020
+ PD2      H5     C5        single      1.083    0.020
+ PD2      C6     N1        double      1.337    0.020
+ PD2      H6     C6        single      1.083    0.020
+ PD2      C3     C2        double      1.390    0.020
+ PD2      H3     C3        single      1.083    0.020
+ PD2      N1     C2        single      1.350    0.020
+ PD2      C2     C21       single      1.500    0.020
+ PD2      O21    C21       deloc       1.250    0.020
+ PD2      C21    O22       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PD2      O22    C21    O21     123.000    3.000
+ PD2      O22    C21    C2      120.000    3.000
+ PD2      O21    C21    C2      120.000    3.000
+ PD2      C21    C2     N1      120.000    3.000
+ PD2      C21    C2     C3      120.000    3.000
+ PD2      N1     C2     C3      120.000    3.000
+ PD2      C2     N1     C6      120.000    3.000
+ PD2      N1     C6     H6      120.000    3.000
+ PD2      N1     C6     C5      120.000    3.000
+ PD2      H6     C6     C5      120.000    3.000
+ PD2      C6     C5     H5      120.000    3.000
+ PD2      C6     C5     C4      120.000    3.000
+ PD2      H5     C5     C4      120.000    3.000
+ PD2      C2     C3     H3      120.000    3.000
+ PD2      C2     C3     C4      120.000    3.000
+ PD2      H3     C3     C4      120.000    3.000
+ PD2      C3     C4     C41     120.000    3.000
+ PD2      C3     C4     C5      120.000    3.000
+ PD2      C41    C4     C5      120.000    3.000
+ PD2      C4     C41    O42     120.000    3.000
+ PD2      C4     C41    O41     120.000    3.000
+ PD2      O42    C41    O41     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PD2      var_1    O22    C21    C2     C3      -179.716   20.000   1
+ PD2      CONST_1  C21    C2     N1     C6       180.000    0.000   0
+ PD2      CONST_2  C2     N1     C6     C5         0.000    0.000   0
+ PD2      CONST_3  N1     C6     C5     C4         0.000    0.000   0
+ PD2      CONST_4  C21    C2     C3     C4       180.000    0.000   0
+ PD2      CONST_5  C2     C3     C4     C41      180.000    0.000   0
+ PD2      CONST_6  C3     C4     C5     C6         0.000    0.000   0
+ PD2      var_2    C3     C4     C41    O41      179.714   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PD2      plan-1    C41       0.020
+ PD2      plan-1    O42       0.020
+ PD2      plan-1    O41       0.020
+ PD2      plan-1    C4        0.020
+ PD2      plan-2    C4        0.020
+ PD2      plan-2    C41       0.020
+ PD2      plan-2    C5        0.020
+ PD2      plan-2    C3        0.020
+ PD2      plan-2    C6        0.020
+ PD2      plan-2    C2        0.020
+ PD2      plan-2    N1        0.020
+ PD2      plan-2    H5        0.020
+ PD2      plan-2    H6        0.020
+ PD2      plan-2    H3        0.020
+ PD2      plan-2    C21       0.020
+ PD2      plan-3    C21       0.020
+ PD2      plan-3    C2        0.020
+ PD2      plan-3    O21       0.020
+ PD2      plan-3    O22       0.020
+# ------------------------------------------------------

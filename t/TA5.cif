@@ -1,0 +1,140 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+TA5      TA5 '2H-1,2,3-TRIAZOL-4-YLMETHANOL       ' non-polymer        12   7 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_TA5
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ TA5           OG     O    OH1       0.000      0.000    0.000    0.000
+ TA5           HG     H    H         0.000      0.302   -0.835   -0.383
+ TA5           CB     C    CH2       0.000     -1.236    0.382   -0.608
+ TA5           HBC1   H    H         0.000     -1.890   -0.490   -0.664
+ TA5           HBC2   H    H         0.000     -1.038    0.753   -1.616
+ TA5           CA     C    CR5       0.000     -1.887    1.435    0.184
+ TA5           C      C    CR15      0.000     -1.761    2.827    0.082
+ TA5           H      H    H         0.000     -1.132    3.344   -0.632
+ TA5           NT     N    NRD5      0.000     -2.532    3.421    0.997
+ TA5           N2     N    NR15      0.000     -3.078    2.353    1.600
+ TA5           H2     H    H         0.000     -3.749    2.472    2.386
+ TA5           N      N    NRD5      0.000     -2.740    1.128    1.166
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ TA5      OG     n/a    CB     START
+ TA5      HG     OG     .      .
+ TA5      CB     OG     CA     .
+ TA5      HBC1   CB     .      .
+ TA5      HBC2   CB     .      .
+ TA5      CA     CB     C      .
+ TA5      C      CA     NT     .
+ TA5      H      C      .      .
+ TA5      NT     C      N2     .
+ TA5      N2     NT     N      .
+ TA5      H2     N2     .      .
+ TA5      N      N2     .      END
+ TA5      N      CA     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ TA5      N      CA        double      1.350    0.020
+ TA5      N      N2        single      1.402    0.020
+ TA5      CA     CB        single      1.510    0.020
+ TA5      C      CA        single      1.387    0.020
+ TA5      CB     OG        single      1.432    0.020
+ TA5      HBC1   CB        single      1.092    0.020
+ TA5      HBC2   CB        single      1.092    0.020
+ TA5      HG     OG        single      0.967    0.020
+ TA5      NT     C         double      1.350    0.020
+ TA5      N2     NT        single      1.402    0.020
+ TA5      H      C         single      1.083    0.020
+ TA5      H2     N2        single      1.040    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ TA5      HG     OG     CB      109.470    3.000
+ TA5      OG     CB     HBC1    109.470    3.000
+ TA5      OG     CB     HBC2    109.470    3.000
+ TA5      OG     CB     CA      109.500    3.000
+ TA5      HBC1   CB     HBC2    107.900    3.000
+ TA5      HBC1   CB     CA      109.470    3.000
+ TA5      HBC2   CB     CA      109.470    3.000
+ TA5      CB     CA     C       126.000    3.000
+ TA5      CB     CA     N       126.000    3.000
+ TA5      C      CA     N       108.000    3.000
+ TA5      CA     C      H       126.000    3.000
+ TA5      CA     C      NT      108.000    3.000
+ TA5      H      C      NT      126.000    3.000
+ TA5      C      NT     N2      108.000    3.000
+ TA5      NT     N2     H2      108.000    3.000
+ TA5      NT     N2     N       108.000    3.000
+ TA5      H2     N2     N       108.000    3.000
+ TA5      N2     N      CA      108.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ TA5      var_1    HG     OG     CB     CA       165.213   20.000   1
+ TA5      var_2    OG     CB     CA     C         89.986   20.000   2
+ TA5      CONST_1  CB     CA     C      NT       180.000    0.000   0
+ TA5      CONST_2  CA     C      NT     N2         0.000    0.000   0
+ TA5      CONST_3  C      NT     N2     N          0.000    0.000   0
+ TA5      CONST_4  NT     N2     N      CA         0.000    0.000   0
+ TA5      CONST_5  N2     N      CA     CB       180.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ TA5      plan-1    N         0.020
+ TA5      plan-1    CA        0.020
+ TA5      plan-1    N2        0.020
+ TA5      plan-1    NT        0.020
+ TA5      plan-1    C         0.020
+ TA5      plan-1    CB        0.020
+ TA5      plan-1    H         0.020
+ TA5      plan-1    H2        0.020
+# ------------------------------------------------------

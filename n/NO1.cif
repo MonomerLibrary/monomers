@@ -1,0 +1,225 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NO1      NO1 '4-(hydroxymethyl)-3-methyl-1H-indole' non-polymer        25  15 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NO1
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NO1           OXT    O    OC       -0.500      0.000    0.000    0.000
+ NO1           C      C    C         0.000     -1.058   -0.667    0.006
+ NO1           O      O    OC       -0.500     -1.009   -1.917    0.010
+ NO1           CD1    C    CR5       0.000     -2.358    0.016    0.004
+ NO1           NE1    N    NR15      0.000     -2.544    1.385    0.001
+ NO1           HE1    H    H         0.000     -1.787    2.099   -0.001
+ NO1           CE2    C    CR56      0.000     -3.892    1.650   -0.001
+ NO1           CZ2    C    CR16      0.000     -4.632    2.829   -0.003
+ NO1           HZ2    H    H         0.000     -4.126    3.787   -0.004
+ NO1           CH2    C    CR16      0.000     -6.008    2.775   -0.003
+ NO1           HH2    H    H         0.000     -6.581    3.694    0.011
+ NO1           CZ3    C    CR16      0.000     -6.668    1.552   -0.020
+ NO1           HZ3    H    H         0.000     -7.750    1.528   -0.040
+ NO1           CE3    C    CR6       0.000     -5.965    0.383   -0.012
+ NO1           CF     C    CH2       0.000     -6.693   -0.936   -0.013
+ NO1           HF1C   H    H         0.000     -6.422   -1.501    0.882
+ NO1           HF2C   H    H         0.000     -6.413   -1.506   -0.901
+ NO1           OH     O    OH1       0.000     -8.103   -0.702   -0.021
+ NO1           HH     H    H         0.000     -8.570   -1.548   -0.022
+ NO1           CD2    C    CR56      0.000     -4.565    0.412   -0.004
+ NO1           CG     C    CR5       0.000     -3.571   -0.597    0.005
+ NO1           CB     C    CH3       0.000     -3.816   -2.084    0.008
+ NO1           HB3C   H    H         0.000     -4.726   -2.294   -0.492
+ NO1           HB2C   H    H         0.000     -3.019   -2.574   -0.489
+ NO1           HB1C   H    H         0.000     -3.874   -2.431    1.007
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NO1      OXT    n/a    C      START
+ NO1      C      OXT    CD1    .
+ NO1      O      C      .      .
+ NO1      CD1    C      NE1    .
+ NO1      NE1    CD1    CE2    .
+ NO1      HE1    NE1    .      .
+ NO1      CE2    NE1    CZ2    .
+ NO1      CZ2    CE2    CH2    .
+ NO1      HZ2    CZ2    .      .
+ NO1      CH2    CZ2    CZ3    .
+ NO1      HH2    CH2    .      .
+ NO1      CZ3    CH2    CE3    .
+ NO1      HZ3    CZ3    .      .
+ NO1      CE3    CZ3    CD2    .
+ NO1      CF     CE3    OH     .
+ NO1      HF1C   CF     .      .
+ NO1      HF2C   CF     .      .
+ NO1      OH     CF     HH     .
+ NO1      HH     OH     .      .
+ NO1      CD2    CE3    CG     .
+ NO1      CG     CD2    CB     .
+ NO1      CB     CG     HB1C   .
+ NO1      HB3C   CB     .      .
+ NO1      HB2C   CB     .      .
+ NO1      HB1C   CB     .      END
+ NO1      CG     CD1    .    ADD
+ NO1      CD2    CE2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NO1      O      C         deloc       1.250    0.020
+ NO1      CD1    C         single      1.490    0.020
+ NO1      CB     CG        single      1.506    0.020
+ NO1      CG     CD1       double      1.490    0.020
+ NO1      CG     CD2       single      1.490    0.020
+ NO1      NE1    CD1       single      1.340    0.020
+ NO1      CE2    NE1       single      1.340    0.020
+ NO1      CD2    CE2       single      1.490    0.020
+ NO1      CD2    CE3       double      1.490    0.020
+ NO1      CZ2    CE2       double      1.390    0.020
+ NO1      CE3    CZ3       single      1.390    0.020
+ NO1      CF     CE3       single      1.511    0.020
+ NO1      CH2    CZ2       single      1.390    0.020
+ NO1      CZ3    CH2       double      1.390    0.020
+ NO1      OH     CF        single      1.432    0.020
+ NO1      C      OXT       deloc       1.250    0.020
+ NO1      HB1C   CB        single      1.059    0.020
+ NO1      HB2C   CB        single      1.059    0.020
+ NO1      HB3C   CB        single      1.059    0.020
+ NO1      HE1    NE1       single      1.040    0.020
+ NO1      HZ2    CZ2       single      1.083    0.020
+ NO1      HZ3    CZ3       single      1.083    0.020
+ NO1      HF1C   CF        single      1.092    0.020
+ NO1      HF2C   CF        single      1.092    0.020
+ NO1      HH2    CH2       single      1.083    0.020
+ NO1      HH     OH        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NO1      OXT    C      O       123.000    3.000
+ NO1      OXT    C      CD1     120.000    3.000
+ NO1      O      C      CD1     120.000    3.000
+ NO1      C      CD1    NE1     126.000    3.000
+ NO1      C      CD1    CG      117.000    3.000
+ NO1      NE1    CD1    CG      108.000    3.000
+ NO1      CD1    NE1    HE1     126.000    3.000
+ NO1      CD1    NE1    CE2     108.000    3.000
+ NO1      HE1    NE1    CE2     126.000    3.000
+ NO1      NE1    CE2    CZ2     132.000    3.000
+ NO1      NE1    CE2    CD2     108.000    3.000
+ NO1      CZ2    CE2    CD2     120.000    3.000
+ NO1      CE2    CZ2    HZ2     120.000    3.000
+ NO1      CE2    CZ2    CH2     120.000    3.000
+ NO1      HZ2    CZ2    CH2     120.000    3.000
+ NO1      CZ2    CH2    HH2     120.000    3.000
+ NO1      CZ2    CH2    CZ3     120.000    3.000
+ NO1      HH2    CH2    CZ3     120.000    3.000
+ NO1      CH2    CZ3    HZ3     120.000    3.000
+ NO1      CH2    CZ3    CE3     120.000    3.000
+ NO1      HZ3    CZ3    CE3     120.000    3.000
+ NO1      CZ3    CE3    CF      120.000    3.000
+ NO1      CZ3    CE3    CD2     120.000    3.000
+ NO1      CF     CE3    CD2     120.000    3.000
+ NO1      CE3    CF     HF1C    109.470    3.000
+ NO1      CE3    CF     HF2C    109.470    3.000
+ NO1      CE3    CF     OH      109.500    3.000
+ NO1      HF1C   CF     HF2C    107.900    3.000
+ NO1      HF1C   CF     OH      109.470    3.000
+ NO1      HF2C   CF     OH      109.470    3.000
+ NO1      CF     OH     HH      109.470    3.000
+ NO1      CE3    CD2    CG      132.000    3.000
+ NO1      CE3    CD2    CE2     120.000    3.000
+ NO1      CG     CD2    CE2     108.000    3.000
+ NO1      CD2    CG     CB      108.000    3.000
+ NO1      CD2    CG     CD1     108.000    3.000
+ NO1      CB     CG     CD1     126.000    3.000
+ NO1      CG     CB     HB3C    109.470    3.000
+ NO1      CG     CB     HB2C    109.470    3.000
+ NO1      CG     CB     HB1C    109.470    3.000
+ NO1      HB3C   CB     HB2C    109.470    3.000
+ NO1      HB3C   CB     HB1C    109.470    3.000
+ NO1      HB2C   CB     HB1C    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NO1      var_1    OXT    C      CD1    NE1       -0.290   20.000   1
+ NO1      CONST_1  C      CD1    NE1    CE2      180.000    0.000   0
+ NO1      CONST_2  CD1    NE1    CE2    CZ2      180.000    0.000   0
+ NO1      CONST_3  NE1    CE2    CZ2    CH2      180.000    0.000   0
+ NO1      CONST_4  CE2    CZ2    CH2    CZ3        0.000    0.000   0
+ NO1      CONST_5  CZ2    CH2    CZ3    CE3        0.000    0.000   0
+ NO1      CONST_6  CH2    CZ3    CE3    CD2        0.000    0.000   0
+ NO1      var_2    CZ3    CE3    CF     OH        -0.037   20.000   2
+ NO1      var_3    CE3    CF     OH     HH       179.975   20.000   1
+ NO1      CONST_7  CZ3    CE3    CD2    CG       180.000    0.000   0
+ NO1      CONST_8  CE3    CD2    CE2    NE1      180.000    0.000   0
+ NO1      CONST_9  CE3    CD2    CG     CB         0.000    0.000   0
+ NO1      CONST_10 CD2    CG     CD1    C        180.000    0.000   0
+ NO1      var_4    CD2    CG     CB     HB1C     -90.273   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NO1      plan-1    C         0.020
+ NO1      plan-1    O         0.020
+ NO1      plan-1    OXT       0.020
+ NO1      plan-1    CD1       0.020
+ NO1      plan-2    CG        0.020
+ NO1      plan-2    CB        0.020
+ NO1      plan-2    CD1       0.020
+ NO1      plan-2    CD2       0.020
+ NO1      plan-2    NE1       0.020
+ NO1      plan-2    C         0.020
+ NO1      plan-2    CE2       0.020
+ NO1      plan-2    HE1       0.020
+ NO1      plan-2    CE3       0.020
+ NO1      plan-2    CZ2       0.020
+ NO1      plan-2    CZ3       0.020
+ NO1      plan-2    CH2       0.020
+ NO1      plan-2    CF        0.020
+ NO1      plan-2    HZ2       0.020
+ NO1      plan-2    HZ3       0.020
+ NO1      plan-2    HH2       0.020
+# ------------------------------------------------------

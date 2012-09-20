@@ -1,0 +1,294 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AVP      AVP 'ACYCLOVIR TRIPHOSPHATE              ' non-polymer        38  28 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AVP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AVP           O3G    O    OP       -0.666      0.000    0.000    0.000
+ AVP           PG     P    P         0.000     -0.258    1.458    0.309
+ AVP           O1G    O    OP       -0.666      0.503    2.323   -0.671
+ AVP           O2G    O    OP       -0.666      0.207    1.764    1.716
+ AVP           O3B    O    O2        0.000     -1.833    1.763    0.186
+ AVP           PB     P    P         0.000     -2.576    0.812    1.251
+ AVP           O1B    O    OP       -0.500     -2.288   -0.607    0.934
+ AVP           O2B    O    OP       -0.500     -2.086    1.123    2.616
+ AVP           O3A    O    O2        0.000     -4.165    1.067    1.181
+ AVP           PA     P    P         0.000     -4.842    0.090    2.267
+ AVP           O1A    O    OP       -0.500     -4.316    0.411    3.616
+ AVP           O2A    O    OP       -0.500     -4.518   -1.318    1.933
+ AVP           "O5'"  O    O2        0.000     -6.438    0.292    2.250
+ AVP           "C5'"  C    CH2       0.000     -6.976   -0.597    3.230
+ AVP           "H'51" H    H         0.000     -6.563   -0.351    4.210
+ AVP           "H'52" H    H         0.000     -6.712   -1.625    2.972
+ AVP           "C4'"  C    CH2       0.000     -8.499   -0.454    3.266
+ AVP           "H'41" H    H         0.000     -8.761    0.574    3.525
+ AVP           "H'42" H    H         0.000     -8.911   -1.134    4.015
+ AVP           "O4'"  O    O2        0.000     -9.039   -0.775    1.981
+ AVP           "C1'"  C    CH2       0.000    -10.456   -0.625    2.079
+ AVP           "H'11" H    H         0.000    -10.694    0.405    2.354
+ AVP           "H'12" H    H         0.000    -10.841   -1.303    2.842
+ AVP           N9     N    NR5       0.000    -11.071   -0.940    0.787
+ AVP           C8     C    CR15      0.000    -10.415   -1.324   -0.345
+ AVP           HC81   H    H         0.000     -9.343   -1.444   -0.434
+ AVP           N7     N    NRD5      0.000    -11.272   -1.525   -1.304
+ AVP           C5     C    CR56      0.000    -12.524   -1.283   -0.845
+ AVP           C4     C    CR56      0.000    -12.408   -0.908    0.498
+ AVP           C6     C    CR6       0.000    -13.813   -1.337   -1.425
+ AVP           O6     O    O         0.000    -13.961   -1.660   -2.591
+ AVP           N1     N    NR16      0.000    -14.877   -1.028   -0.651
+ AVP           HN11   H    H         0.000    -15.837   -1.069   -1.051
+ AVP           C2     C    CR6       0.000    -14.700   -0.664    0.650
+ AVP           N3     N    NRD6      0.000    -13.508   -0.610    1.199
+ AVP           N2     N    NH2       0.000    -15.799   -0.349    1.408
+ AVP           HN22   H    H         0.000    -16.727   -0.384    1.003
+ AVP           HN21   H    H         0.000    -15.689   -0.080    2.379
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AVP      O3G    n/a    PG     START
+ AVP      PG     O3G    O3B    .
+ AVP      O1G    PG     .      .
+ AVP      O2G    PG     .      .
+ AVP      O3B    PG     PB     .
+ AVP      PB     O3B    O3A    .
+ AVP      O1B    PB     .      .
+ AVP      O2B    PB     .      .
+ AVP      O3A    PB     PA     .
+ AVP      PA     O3A    "O5'"  .
+ AVP      O1A    PA     .      .
+ AVP      O2A    PA     .      .
+ AVP      "O5'"  PA     "C5'"  .
+ AVP      "C5'"  "O5'"  "C4'"  .
+ AVP      "H'51" "C5'"  .      .
+ AVP      "H'52" "C5'"  .      .
+ AVP      "C4'"  "C5'"  "O4'"  .
+ AVP      "H'41" "C4'"  .      .
+ AVP      "H'42" "C4'"  .      .
+ AVP      "O4'"  "C4'"  "C1'"  .
+ AVP      "C1'"  "O4'"  N9     .
+ AVP      "H'11" "C1'"  .      .
+ AVP      "H'12" "C1'"  .      .
+ AVP      N9     "C1'"  C8     .
+ AVP      C8     N9     N7     .
+ AVP      HC81   C8     .      .
+ AVP      N7     C8     C5     .
+ AVP      C5     N7     C6     .
+ AVP      C4     C5     .      .
+ AVP      C6     C5     N1     .
+ AVP      O6     C6     .      .
+ AVP      N1     C6     C2     .
+ AVP      HN11   N1     .      .
+ AVP      C2     N1     N2     .
+ AVP      N3     C2     .      .
+ AVP      N2     C2     HN21   .
+ AVP      HN22   N2     .      .
+ AVP      HN21   N2     .      END
+ AVP      N9     C4     .    ADD
+ AVP      C4     N3     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AVP      O1A    PA        deloc       1.510    0.020
+ AVP      O2A    PA        deloc       1.510    0.020
+ AVP      "O5'"  PA        single      1.610    0.020
+ AVP      PA     O3A       single      1.610    0.020
+ AVP      "C5'"  "O5'"     single      1.426    0.020
+ AVP      "C4'"  "C5'"     single      1.524    0.020
+ AVP      "H'51" "C5'"     single      1.092    0.020
+ AVP      "H'52" "C5'"     single      1.092    0.020
+ AVP      "O4'"  "C4'"     single      1.426    0.020
+ AVP      "H'41" "C4'"     single      1.092    0.020
+ AVP      "H'42" "C4'"     single      1.092    0.020
+ AVP      "C1'"  "O4'"     single      1.426    0.020
+ AVP      N9     "C1'"     single      1.462    0.020
+ AVP      "H'11" "C1'"     single      1.092    0.020
+ AVP      "H'12" "C1'"     single      1.092    0.020
+ AVP      N9     C4        single      1.337    0.020
+ AVP      C8     N9        single      1.337    0.020
+ AVP      C4     N3        single      1.355    0.020
+ AVP      C4     C5        double      1.490    0.020
+ AVP      N3     C2        double      1.350    0.020
+ AVP      N2     C2        single      1.355    0.020
+ AVP      C2     N1        single      1.337    0.020
+ AVP      HN21   N2        single      1.010    0.020
+ AVP      HN22   N2        single      1.010    0.020
+ AVP      N1     C6        single      1.337    0.020
+ AVP      HN11   N1        single      1.040    0.020
+ AVP      O6     C6        double      1.250    0.020
+ AVP      C6     C5        single      1.490    0.020
+ AVP      C5     N7        single      1.350    0.020
+ AVP      N7     C8        double      1.350    0.020
+ AVP      HC81   C8        single      1.083    0.020
+ AVP      O3A    PB        single      1.610    0.020
+ AVP      O1B    PB        deloc       1.510    0.020
+ AVP      O2B    PB        deloc       1.510    0.020
+ AVP      PB     O3B       single      1.610    0.020
+ AVP      O3B    PG        single      1.610    0.020
+ AVP      O1G    PG        deloc       1.510    0.020
+ AVP      O2G    PG        deloc       1.510    0.020
+ AVP      PG     O3G       deloc       1.510    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AVP      O3G    PG     O1G     119.900    3.000
+ AVP      O3G    PG     O2G     119.900    3.000
+ AVP      O3G    PG     O3B     108.200    3.000
+ AVP      O1G    PG     O2G     119.900    3.000
+ AVP      O1G    PG     O3B     108.200    3.000
+ AVP      O2G    PG     O3B     108.200    3.000
+ AVP      PG     O3B    PB      120.500    3.000
+ AVP      O3B    PB     O1B     108.200    3.000
+ AVP      O3B    PB     O2B     108.200    3.000
+ AVP      O3B    PB     O3A     102.600    3.000
+ AVP      O1B    PB     O2B     119.900    3.000
+ AVP      O1B    PB     O3A     108.200    3.000
+ AVP      O2B    PB     O3A     108.200    3.000
+ AVP      PB     O3A    PA      120.500    3.000
+ AVP      O3A    PA     O1A     108.200    3.000
+ AVP      O3A    PA     O2A     108.200    3.000
+ AVP      O3A    PA     "O5'"   102.600    3.000
+ AVP      O1A    PA     O2A     119.900    3.000
+ AVP      O1A    PA     "O5'"   108.200    3.000
+ AVP      O2A    PA     "O5'"   108.200    3.000
+ AVP      PA     "O5'"  "C5'"   120.500    3.000
+ AVP      "O5'"  "C5'"  "H'51"  109.470    3.000
+ AVP      "O5'"  "C5'"  "H'52"  109.470    3.000
+ AVP      "O5'"  "C5'"  "C4'"   109.470    3.000
+ AVP      "H'51" "C5'"  "H'52"  107.900    3.000
+ AVP      "H'51" "C5'"  "C4'"   109.470    3.000
+ AVP      "H'52" "C5'"  "C4'"   109.470    3.000
+ AVP      "C5'"  "C4'"  "H'41"  109.470    3.000
+ AVP      "C5'"  "C4'"  "H'42"  109.470    3.000
+ AVP      "C5'"  "C4'"  "O4'"   109.470    3.000
+ AVP      "H'41" "C4'"  "H'42"  107.900    3.000
+ AVP      "H'41" "C4'"  "O4'"   109.470    3.000
+ AVP      "H'42" "C4'"  "O4'"   109.470    3.000
+ AVP      "C4'"  "O4'"  "C1'"   111.800    3.000
+ AVP      "O4'"  "C1'"  "H'11"  109.470    3.000
+ AVP      "O4'"  "C1'"  "H'12"  109.470    3.000
+ AVP      "O4'"  "C1'"  N9      109.500    3.000
+ AVP      "H'11" "C1'"  "H'12"  107.900    3.000
+ AVP      "H'11" "C1'"  N9      109.500    3.000
+ AVP      "H'12" "C1'"  N9      109.500    3.000
+ AVP      "C1'"  N9     C8      126.000    3.000
+ AVP      "C1'"  N9     C4      126.000    3.000
+ AVP      C8     N9     C4      108.000    3.000
+ AVP      N9     C8     HC81    126.000    3.000
+ AVP      N9     C8     N7      108.000    3.000
+ AVP      HC81   C8     N7      126.000    3.000
+ AVP      C8     N7     C5      108.000    3.000
+ AVP      N7     C5     C4      108.000    3.000
+ AVP      N7     C5     C6      132.000    3.000
+ AVP      C4     C5     C6      120.000    3.000
+ AVP      C5     C4     N9      108.000    3.000
+ AVP      C5     C4     N3      120.000    3.000
+ AVP      N9     C4     N3      132.000    3.000
+ AVP      C5     C6     O6      120.000    3.000
+ AVP      C5     C6     N1      120.000    3.000
+ AVP      O6     C6     N1      120.000    3.000
+ AVP      C6     N1     HN11    120.000    3.000
+ AVP      C6     N1     C2      120.000    3.000
+ AVP      HN11   N1     C2      120.000    3.000
+ AVP      N1     C2     N3      120.000    3.000
+ AVP      N1     C2     N2      120.000    3.000
+ AVP      N3     C2     N2      120.000    3.000
+ AVP      C2     N3     C4      120.000    3.000
+ AVP      C2     N2     HN22    120.000    3.000
+ AVP      C2     N2     HN21    120.000    3.000
+ AVP      HN22   N2     HN21    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AVP      var_1    O3G    PG     O3B    PB        59.958   20.000   1
+ AVP      var_2    PG     O3B    PB     O3A      179.983   20.000   1
+ AVP      var_3    O3B    PB     O3A    PA      -179.976   20.000   1
+ AVP      var_4    PB     O3A    PA     "O5'"   -179.925   20.000   1
+ AVP      var_5    O3A    PA     "O5'"  "C5'"   -179.954   20.000   1
+ AVP      var_6    PA     "O5'"  "C5'"  "C4'"    179.948   20.000   1
+ AVP      var_7    "O5'"  "C5'"  "C4'"  "O4'"     59.921   20.000   3
+ AVP      var_8    "C5'"  "C4'"  "O4'"  "C1'"    179.944   20.000   1
+ AVP      var_9    "C4'"  "O4'"  "C1'"  N9       179.972   20.000   1
+ AVP      var_10   "O4'"  "C1'"  N9     C8         0.179   20.000   1
+ AVP      CONST_1  "C1'"  N9     C4     C5       180.000    0.000   0
+ AVP      CONST_2  "C1'"  N9     C8     N7       180.000    0.000   0
+ AVP      CONST_3  N9     C8     N7     C5         0.000    0.000   0
+ AVP      CONST_4  C8     N7     C5     C6       180.000    0.000   0
+ AVP      CONST_5  N7     C5     C4     N9         0.000    0.000   0
+ AVP      CONST_6  C5     C4     N3     C2         0.000    0.000   0
+ AVP      CONST_7  N7     C5     C6     N1       180.000    0.000   0
+ AVP      CONST_8  C5     C6     N1     C2         0.000    0.000   0
+ AVP      CONST_9  C6     N1     C2     N2       180.000    0.000   0
+ AVP      CONST_10 N1     C2     N3     C4         0.000    0.000   0
+ AVP      CONST_11 N1     C2     N2     HN21     179.721    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AVP      plan-1    N9        0.020
+ AVP      plan-1    "C1'"     0.020
+ AVP      plan-1    C4        0.020
+ AVP      plan-1    C8        0.020
+ AVP      plan-1    N7        0.020
+ AVP      plan-1    N3        0.020
+ AVP      plan-1    C5        0.020
+ AVP      plan-1    C2        0.020
+ AVP      plan-1    N1        0.020
+ AVP      plan-1    C6        0.020
+ AVP      plan-1    N2        0.020
+ AVP      plan-1    HN11      0.020
+ AVP      plan-1    O6        0.020
+ AVP      plan-1    HC81      0.020
+ AVP      plan-1    HN22      0.020
+ AVP      plan-1    HN21      0.020
+ AVP      plan-2    N2        0.020
+ AVP      plan-2    C2        0.020
+ AVP      plan-2    HN21      0.020
+ AVP      plan-2    HN22      0.020
+# ------------------------------------------------------

@@ -1,0 +1,150 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+SHF      SHF 'LAEVULINIC ACID                     ' non-polymer        15   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_SHF
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ SHF           OH1    O    OC       -0.500      0.000    0.000    0.000
+ SHF           C1     C    C         0.000     -1.245    0.000   -0.122
+ SHF           O1     O    OC       -0.500     -1.762    0.000   -1.262
+ SHF           C2     C    CH2       0.000     -2.123    0.000    1.102
+ SHF           H21    H    H         0.000     -1.915    0.891    1.698
+ SHF           H22    H    H         0.000     -1.915   -0.891    1.698
+ SHF           C3     C    CH2       0.000     -3.592    0.000    0.677
+ SHF           H31    H    H         0.000     -3.797   -0.891    0.081
+ SHF           H32    H    H         0.000     -3.797    0.891    0.081
+ SHF           C4     C    C         0.000     -4.470    0.000    1.902
+ SHF           O4     O    O         0.000     -3.971    0.000    3.001
+ SHF           C5     C    CH3       0.000     -5.969    0.000    1.755
+ SHF           H53    H    H         0.000     -6.273    0.865    1.224
+ SHF           H52    H    H         0.000     -6.273   -0.865    1.224
+ SHF           H51    H    H         0.000     -6.419    0.000    2.714
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ SHF      OH1    n/a    C1     START
+ SHF      C1     OH1    C2     .
+ SHF      O1     C1     .      .
+ SHF      C2     C1     C3     .
+ SHF      H21    C2     .      .
+ SHF      H22    C2     .      .
+ SHF      C3     C2     C4     .
+ SHF      H31    C3     .      .
+ SHF      H32    C3     .      .
+ SHF      C4     C3     C5     .
+ SHF      O4     C4     .      .
+ SHF      C5     C4     H51    .
+ SHF      H53    C5     .      .
+ SHF      H52    C5     .      .
+ SHF      H51    C5     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ SHF      C5     C4        single      1.500    0.020
+ SHF      C4     C3        single      1.510    0.020
+ SHF      O4     C4        double      1.220    0.020
+ SHF      H51    C5        single      1.059    0.020
+ SHF      H52    C5        single      1.059    0.020
+ SHF      H53    C5        single      1.059    0.020
+ SHF      C3     C2        single      1.524    0.020
+ SHF      H31    C3        single      1.092    0.020
+ SHF      H32    C3        single      1.092    0.020
+ SHF      C2     C1        single      1.510    0.020
+ SHF      H21    C2        single      1.092    0.020
+ SHF      H22    C2        single      1.092    0.020
+ SHF      O1     C1        deloc       1.250    0.020
+ SHF      C1     OH1       deloc       1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ SHF      OH1    C1     O1      123.000    3.000
+ SHF      OH1    C1     C2      118.500    3.000
+ SHF      O1     C1     C2      118.500    3.000
+ SHF      C1     C2     H21     109.470    3.000
+ SHF      C1     C2     H22     109.470    3.000
+ SHF      C1     C2     C3      109.470    3.000
+ SHF      H21    C2     H22     107.900    3.000
+ SHF      H21    C2     C3      109.470    3.000
+ SHF      H22    C2     C3      109.470    3.000
+ SHF      C2     C3     H31     109.470    3.000
+ SHF      C2     C3     H32     109.470    3.000
+ SHF      C2     C3     C4      109.470    3.000
+ SHF      H31    C3     H32     107.900    3.000
+ SHF      H31    C3     C4      109.470    3.000
+ SHF      H32    C3     C4      109.470    3.000
+ SHF      C3     C4     O4      120.500    3.000
+ SHF      C3     C4     C5      120.000    3.000
+ SHF      O4     C4     C5      123.000    3.000
+ SHF      C4     C5     H53     109.470    3.000
+ SHF      C4     C5     H52     109.470    3.000
+ SHF      C4     C5     H51     109.470    3.000
+ SHF      H53    C5     H52     109.470    3.000
+ SHF      H53    C5     H51     109.470    3.000
+ SHF      H52    C5     H51     109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ SHF      var_1    OH1    C1     C2     C3       180.000   20.000   3
+ SHF      var_2    C1     C2     C3     C4       180.000   20.000   3
+ SHF      var_3    C2     C3     C4     C5       180.000   20.000   3
+ SHF      var_4    C3     C4     C5     H51      180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ SHF      plan-1    C4        0.020
+ SHF      plan-1    C5        0.020
+ SHF      plan-1    C3        0.020
+ SHF      plan-1    O4        0.020
+ SHF      plan-2    C1        0.020
+ SHF      plan-2    C2        0.020
+ SHF      plan-2    O1        0.020
+ SHF      plan-2    OH1       0.020
+# ------------------------------------------------------

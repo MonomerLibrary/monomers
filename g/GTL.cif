@@ -1,0 +1,223 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+GTL      GTL '(2E,3R,4R,5R,6S)-3,4,5-TRIHYDROXY-6-' non-polymer        25  13 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_GTL
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ GTL           O6     O    OH1       0.000      0.000    0.000    0.000
+ GTL           H6     H    H         0.000      0.868   -0.233   -0.356
+ GTL           C6     C    CH2       0.000     -0.929   -1.045   -0.292
+ GTL           H6C1   H    H         0.000     -0.585   -1.975    0.165
+ GTL           H6C2   H    H         0.000     -0.999   -1.177   -1.374
+ GTL           C5     C    CH1       0.000     -2.304   -0.678    0.269
+ GTL           HB     H    H         0.000     -2.217   -0.457    1.342
+ GTL           C4     C    CH1       0.000     -3.273   -1.846    0.062
+ GTL           H4     H    H         0.000     -2.923   -2.718    0.631
+ GTL           O4     O    OH1       0.000     -3.326   -2.173   -1.329
+ GTL           HD     H    H         0.000     -3.938   -2.909   -1.463
+ GTL           C3     C    CH1       0.000     -4.669   -1.445    0.546
+ GTL           H3     H    H         0.000     -4.619   -1.151    1.603
+ GTL           O3     O    OH1       0.000     -5.561   -2.552    0.401
+ GTL           HC     H    H         0.000     -6.442   -2.297    0.707
+ GTL           C2     C    CH1       0.000     -5.179   -0.265   -0.289
+ GTL           H2     H    H         0.000     -5.314   -0.581   -1.333
+ GTL           O2     O    OH1       0.000     -6.424    0.197    0.238
+ GTL           HA     H    H         0.000     -7.100   -0.481    0.107
+ GTL           N5     N    NH1       0.000     -2.825    0.504   -0.436
+ GTL           H5     H    H         0.000     -2.237    1.046   -1.053
+ GTL           C1     C    C         0.000     -4.152    0.847   -0.222
+ GTL           N1     N    N         0.000     -4.500    2.066    0.023
+ GTL           O7     O    OH1       0.000     -5.871    2.409    0.108
+ GTL           H7     H    H         0.000     -5.961    3.355    0.296
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ GTL      O6     n/a    C6     START
+ GTL      H6     O6     .      .
+ GTL      C6     O6     C5     .
+ GTL      H6C1   C6     .      .
+ GTL      H6C2   C6     .      .
+ GTL      C5     C6     N5     .
+ GTL      HB     C5     .      .
+ GTL      C4     C5     C3     .
+ GTL      H4     C4     .      .
+ GTL      O4     C4     HD     .
+ GTL      HD     O4     .      .
+ GTL      C3     C4     C2     .
+ GTL      H3     C3     .      .
+ GTL      O3     C3     HC     .
+ GTL      HC     O3     .      .
+ GTL      C2     C3     O2     .
+ GTL      H2     C2     .      .
+ GTL      O2     C2     HA     .
+ GTL      HA     O2     .      .
+ GTL      N5     C5     C1     .
+ GTL      H5     N5     .      .
+ GTL      C1     N5     N1     .
+ GTL      N1     C1     O7     .
+ GTL      O7     N1     H7     .
+ GTL      H7     O7     .      END
+ GTL      C1     C2     .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ GTL      N1     C1        double      1.260    0.020
+ GTL      C1     C2        single      1.500    0.020
+ GTL      C1     N5        single      1.330    0.020
+ GTL      O7     N1        single      1.392    0.020
+ GTL      O2     C2        single      1.432    0.020
+ GTL      C2     C3        single      1.524    0.020
+ GTL      H2     C2        single      1.099    0.020
+ GTL      N5     C5        single      1.450    0.020
+ GTL      H5     N5        single      1.010    0.020
+ GTL      H7     O7        single      0.967    0.020
+ GTL      HA     O2        single      0.967    0.020
+ GTL      O3     C3        single      1.432    0.020
+ GTL      C3     C4        single      1.524    0.020
+ GTL      H3     C3        single      1.099    0.020
+ GTL      HC     O3        single      0.967    0.020
+ GTL      O4     C4        single      1.432    0.020
+ GTL      C4     C5        single      1.524    0.020
+ GTL      H4     C4        single      1.099    0.020
+ GTL      HD     O4        single      0.967    0.020
+ GTL      C5     C6        single      1.524    0.020
+ GTL      HB     C5        single      1.099    0.020
+ GTL      C6     O6        single      1.432    0.020
+ GTL      H6C1   C6        single      1.092    0.020
+ GTL      H6C2   C6        single      1.092    0.020
+ GTL      H6     O6        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ GTL      H6     O6     C6      109.470    3.000
+ GTL      O6     C6     H6C1    109.470    3.000
+ GTL      O6     C6     H6C2    109.470    3.000
+ GTL      O6     C6     C5      109.470    3.000
+ GTL      H6C1   C6     H6C2    107.900    3.000
+ GTL      H6C1   C6     C5      109.470    3.000
+ GTL      H6C2   C6     C5      109.470    3.000
+ GTL      C6     C5     HB      108.340    3.000
+ GTL      C6     C5     C4      111.000    3.000
+ GTL      C6     C5     N5      110.000    3.000
+ GTL      HB     C5     C4      108.340    3.000
+ GTL      HB     C5     N5      108.550    3.000
+ GTL      C4     C5     N5      110.000    3.000
+ GTL      C5     C4     H4      108.340    3.000
+ GTL      C5     C4     O4      109.470    3.000
+ GTL      C5     C4     C3      111.000    3.000
+ GTL      H4     C4     O4      109.470    3.000
+ GTL      H4     C4     C3      108.340    3.000
+ GTL      O4     C4     C3      109.470    3.000
+ GTL      C4     O4     HD      109.470    3.000
+ GTL      C4     C3     H3      108.340    3.000
+ GTL      C4     C3     O3      109.470    3.000
+ GTL      C4     C3     C2      111.000    3.000
+ GTL      H3     C3     O3      109.470    3.000
+ GTL      H3     C3     C2      108.340    3.000
+ GTL      O3     C3     C2      109.470    3.000
+ GTL      C3     O3     HC      109.470    3.000
+ GTL      C3     C2     H2      108.340    3.000
+ GTL      C3     C2     O2      109.470    3.000
+ GTL      C3     C2     C1      109.470    3.000
+ GTL      H2     C2     O2      109.470    3.000
+ GTL      H2     C2     C1      108.810    3.000
+ GTL      O2     C2     C1      109.470    3.000
+ GTL      C2     O2     HA      109.470    3.000
+ GTL      C5     N5     H5      118.500    3.000
+ GTL      C5     N5     C1      121.500    3.000
+ GTL      H5     N5     C1      120.000    3.000
+ GTL      N5     C1     N1      120.000    3.000
+ GTL      N5     C1     C2      116.500    3.000
+ GTL      N1     C1     C2      116.500    3.000
+ GTL      C1     N1     O7      120.000    3.000
+ GTL      N1     O7     H7      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ GTL      var_1    H6     O6     C6     C5      -179.943   20.000   1
+ GTL      var_2    O6     C6     C5     N5        65.278   20.000   3
+ GTL      var_3    C6     C5     C4     C3       180.000   20.000   3
+ GTL      var_4    C5     C4     O4     HD      -179.905   20.000   1
+ GTL      var_5    C5     C4     C3     C2        60.000   20.000   3
+ GTL      var_6    C4     C3     O3     HC       179.967   20.000   1
+ GTL      var_7    C4     C3     C2     O2       180.000   20.000   3
+ GTL      var_8    C3     C2     O2     HA       -67.076   20.000   1
+ GTL      var_9    C6     C5     N5     C1       180.000   20.000   3
+ GTL      CONST_1  C5     N5     C1     N1       120.000    0.000   0
+ GTL      var_10   N5     C1     C2     C3        60.000   20.000   3
+ GTL      CONST_2  N5     C1     N1     O7       180.000    0.000   0
+ GTL      var_11   C1     N1     O7     H7      -179.999   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ GTL      chir_01  C2     C1     O2     C3        positiv
+ GTL      chir_02  C3     C2     O3     C4        negativ
+ GTL      chir_03  C4     C3     O4     C5        negativ
+ GTL      chir_04  C5     N5     C4     C6        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ GTL      plan-1    C1        0.020
+ GTL      plan-1    N1        0.020
+ GTL      plan-1    C2        0.020
+ GTL      plan-1    N5        0.020
+ GTL      plan-1    O7        0.020
+ GTL      plan-1    H5        0.020
+ GTL      plan-2    N5        0.020
+ GTL      plan-2    C1        0.020
+ GTL      plan-2    C5        0.020
+ GTL      plan-2    H5        0.020
+# ------------------------------------------------------

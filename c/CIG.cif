@@ -1,0 +1,147 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+CIG      CIG '2-AMINO-6-CHLOROPYRAZINE            ' non-polymer        12   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_CIG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ CIG           CL07   CL   CL        0.000      0.000    0.000    0.000
+ CIG           C06    C    CR6       0.000     -1.680    0.000    0.434
+ CIG           C05    C    CR16      0.000     -2.649    0.000   -0.553
+ CIG           H05    H    H         0.000     -2.357    0.000   -1.596
+ CIG           N04    N    NRD6      0.000     -3.930    0.000   -0.229
+ CIG           C03    C    CR16      0.000     -4.290    0.000    1.041
+ CIG           H03    H    H         0.000     -5.340    0.001    1.306
+ CIG           N08    N    NRD6      0.000     -2.034    0.004    1.709
+ CIG           C02    C    CR6       0.000     -3.319   -0.001    2.038
+ CIG           N01    N    NH2       0.000     -3.694   -0.001    3.377
+ CIG           H012   H    H         0.000     -4.676    0.000    3.640
+ CIG           H011   H    H         0.000     -2.991   -0.002    4.112
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ CIG      CL07   n/a    C06    START
+ CIG      C06    CL07   N08    .
+ CIG      C05    C06    N04    .
+ CIG      H05    C05    .      .
+ CIG      N04    C05    C03    .
+ CIG      C03    N04    H03    .
+ CIG      H03    C03    .      .
+ CIG      N08    C06    C02    .
+ CIG      C02    N08    N01    .
+ CIG      N01    C02    H011   .
+ CIG      H012   N01    .      .
+ CIG      H011   N01    .      END
+ CIG      C02    C03    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ CIG      N01    C02       single      1.355    0.020
+ CIG      H011   N01       single      1.010    0.020
+ CIG      H012   N01       single      1.010    0.020
+ CIG      C02    C03       double      1.390    0.020
+ CIG      C02    N08       single      1.350    0.020
+ CIG      C03    N04       single      1.337    0.020
+ CIG      H03    C03       single      1.083    0.020
+ CIG      N04    C05       double      1.337    0.020
+ CIG      C05    C06       single      1.390    0.020
+ CIG      H05    C05       single      1.083    0.020
+ CIG      C06    CL07      single      1.795    0.020
+ CIG      N08    C06       double      1.350    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ CIG      CL07   C06    C05     120.000    3.000
+ CIG      CL07   C06    N08     120.000    3.000
+ CIG      C05    C06    N08     120.000    3.000
+ CIG      C06    C05    H05     120.000    3.000
+ CIG      C06    C05    N04     120.000    3.000
+ CIG      H05    C05    N04     120.000    3.000
+ CIG      C05    N04    C03     120.000    3.000
+ CIG      N04    C03    H03     120.000    3.000
+ CIG      N04    C03    C02     120.000    3.000
+ CIG      H03    C03    C02     120.000    3.000
+ CIG      C06    N08    C02     120.000    3.000
+ CIG      N08    C02    N01     120.000    3.000
+ CIG      N08    C02    C03     120.000    3.000
+ CIG      N01    C02    C03     120.000    3.000
+ CIG      C02    N01    H012    120.000    3.000
+ CIG      C02    N01    H011    120.000    3.000
+ CIG      H012   N01    H011    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ CIG      CONST_1  CL07   C06    C05    N04      180.000    0.000   0
+ CIG      CONST_2  C06    C05    N04    C03        0.000    0.000   0
+ CIG      CONST_3  C05    N04    C03    C02        0.000    0.000   0
+ CIG      CONST_4  CL07   C06    N08    C02      180.000    0.000   0
+ CIG      CONST_5  C06    N08    C02    N01      180.000    0.000   0
+ CIG      CONST_6  N08    C02    C03    N04        0.000    0.000   0
+ CIG      CONST_7  N08    C02    N01    H011      -0.318    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ CIG      plan-1    N01       0.020
+ CIG      plan-1    C02       0.020
+ CIG      plan-1    H011      0.020
+ CIG      plan-1    H012      0.020
+ CIG      plan-2    C02       0.020
+ CIG      plan-2    N01       0.020
+ CIG      plan-2    C03       0.020
+ CIG      plan-2    N08       0.020
+ CIG      plan-2    N04       0.020
+ CIG      plan-2    C05       0.020
+ CIG      plan-2    C06       0.020
+ CIG      plan-2    H03       0.020
+ CIG      plan-2    H05       0.020
+ CIG      plan-2    CL07      0.020
+ CIG      plan-2    H012      0.020
+ CIG      plan-2    H011      0.020
+# ------------------------------------------------------

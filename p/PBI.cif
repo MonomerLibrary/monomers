@@ -1,0 +1,290 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PBI      PBI '"[2-AMINOMETHYL-5-OXO-4-(4-OXO-CYCLO' non-polymer        34  19 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PBI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PBI           OH     O    O         0.000      0.000    0.000    0.000
+ PBI           CZ     C    CR6       0.000     -0.983   -0.191    0.692
+ PBI           CE1    C    CR16      0.000     -1.504   -1.552    0.915
+ PBI           HE1    H    H         0.000     -0.886   -2.416    0.701
+ PBI           CD1    C    CR16      0.000     -2.736   -1.710    1.380
+ PBI           HD1    H    H         0.000     -3.100   -2.716    1.546
+ PBI           CE2    C    CR16      0.000     -1.692    0.929    1.335
+ PBI           HE2    H    H         0.000     -1.214    1.896    1.429
+ PBI           CD2    C    CR16      0.000     -2.922    0.742    1.797
+ PBI           HD2    H    H         0.000     -3.424    1.573    2.277
+ PBI           CG2    C    CH1       0.000     -3.645   -0.561    1.687
+ PBI           HG2    H    H         0.000     -4.159   -0.762    2.637
+ PBI           CB2    C    CH2       0.000     -4.691   -0.453    0.577
+ PBI           HB21   H    H         0.000     -5.267   -1.379    0.528
+ PBI           HB22   H    H         0.000     -4.191   -0.286   -0.379
+ PBI           CA2    C    CH1       0.000     -5.630    0.718    0.873
+ PBI           HA2    H    H         0.000     -5.070    1.663    0.904
+ PBI           N2     N    NRD5      0.000     -6.343    0.499    2.141
+ PBI           C2     C    CR5       0.000     -6.739    0.789   -0.157
+ PBI           O2     O    O         0.000     -6.628    0.960   -1.352
+ PBI           N3     N    NR5       0.000     -7.878    0.616    0.548
+ PBI           CA3    C    CH2       0.000     -9.224    0.608   -0.030
+ PBI           HA31   H    H         0.000     -9.245    1.252   -0.912
+ PBI           HA32   H    H         0.000     -9.939    0.980    0.707
+ PBI           C3     C    C1        0.000     -9.593   -0.797   -0.425
+ PBI           HC3    H    H         0.000     -8.995   -1.328   -1.148
+ PBI           O3     O    O         0.000    -10.557   -1.330    0.068
+ PBI           C1     C    CR5       0.000     -7.602    0.456    1.878
+ PBI           CA1    C    CH2       0.000     -8.663    0.245    2.927
+ PBI           HA11   H    H         0.000     -9.228   -0.660    2.695
+ PBI           HA12   H    H         0.000     -9.339    1.102    2.937
+ PBI           N1     N    NH2       0.000     -8.029    0.103    4.243
+ PBI           HN12   H    H         0.000     -8.176    0.804    4.960
+ PBI           HN11   H    H         0.000     -7.440   -0.697    4.444
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PBI      OH     n/a    CZ     START
+ PBI      CZ     OH     CE2    .
+ PBI      CE1    CZ     CD1    .
+ PBI      HE1    CE1    .      .
+ PBI      CD1    CE1    HD1    .
+ PBI      HD1    CD1    .      .
+ PBI      CE2    CZ     CD2    .
+ PBI      HE2    CE2    .      .
+ PBI      CD2    CE2    CG2    .
+ PBI      HD2    CD2    .      .
+ PBI      CG2    CD2    CB2    .
+ PBI      HG2    CG2    .      .
+ PBI      CB2    CG2    CA2    .
+ PBI      HB21   CB2    .      .
+ PBI      HB22   CB2    .      .
+ PBI      CA2    CB2    C2     .
+ PBI      HA2    CA2    .      .
+ PBI      N2     CA2    .      .
+ PBI      C2     CA2    N3     .
+ PBI      O2     C2     .      .
+ PBI      N3     C2     C1     .
+ PBI      CA3    N3     C3     .
+ PBI      HA31   CA3    .      .
+ PBI      HA32   CA3    .      .
+ PBI      C3     CA3    O3     .
+ PBI      HC3    C3     .      .
+ PBI      O3     C3     .      .
+ PBI      C1     N3     CA1    .
+ PBI      CA1    C1     N1     .
+ PBI      HA11   CA1    .      .
+ PBI      HA12   CA1    .      .
+ PBI      N1     CA1    HN11   .
+ PBI      HN12   N1     .      .
+ PBI      HN11   N1     .      END
+ PBI      C1     N2     .    ADD
+ PBI      CG2    CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PBI      N1     CA1       single      1.450    0.020
+ PBI      HN11   N1        single      1.010    0.020
+ PBI      HN12   N1        single      1.010    0.020
+ PBI      CA1    C1        single      1.510    0.020
+ PBI      HA11   CA1       single      1.092    0.020
+ PBI      HA12   CA1       single      1.092    0.020
+ PBI      C1     N2        double      1.350    0.020
+ PBI      C1     N3        single      1.337    0.020
+ PBI      N2     CA2       single      1.467    0.020
+ PBI      N3     C2        single      1.337    0.020
+ PBI      CA3    N3        single      1.462    0.020
+ PBI      O2     C2        double      1.285    0.020
+ PBI      C2     CA2       single      1.480    0.020
+ PBI      CA2    CB2       single      1.524    0.020
+ PBI      HA2    CA2       single      1.099    0.020
+ PBI      C3     CA3       single      1.510    0.020
+ PBI      HA31   CA3       single      1.092    0.020
+ PBI      HA32   CA3       single      1.092    0.020
+ PBI      O3     C3        double      1.220    0.020
+ PBI      HC3    C3        single      1.077    0.020
+ PBI      CB2    CG2       single      1.524    0.020
+ PBI      HB21   CB2       single      1.092    0.020
+ PBI      HB22   CB2       single      1.092    0.020
+ PBI      CG2    CD1       single      1.460    0.020
+ PBI      CG2    CD2       single      1.460    0.020
+ PBI      HG2    CG2       single      1.099    0.020
+ PBI      CD1    CE1       double      1.390    0.020
+ PBI      HD1    CD1       single      1.083    0.020
+ PBI      CD2    CE2       double      1.390    0.020
+ PBI      HD2    CD2       single      1.083    0.020
+ PBI      CE1    CZ        single      1.390    0.020
+ PBI      HE1    CE1       single      1.083    0.020
+ PBI      CE2    CZ        single      1.390    0.020
+ PBI      HE2    CE2       single      1.083    0.020
+ PBI      CZ     OH        double      1.250    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PBI      OH     CZ     CE1     120.000    3.000
+ PBI      OH     CZ     CE2     120.000    3.000
+ PBI      CE1    CZ     CE2     120.000    3.000
+ PBI      CZ     CE1    HE1     120.000    3.000
+ PBI      CZ     CE1    CD1     120.000    3.000
+ PBI      HE1    CE1    CD1     120.000    3.000
+ PBI      CE1    CD1    HD1     120.000    3.000
+ PBI      CE1    CD1    CG2     120.000    3.000
+ PBI      HD1    CD1    CG2     120.000    3.000
+ PBI      CZ     CE2    HE2     120.000    3.000
+ PBI      CZ     CE2    CD2     120.000    3.000
+ PBI      HE2    CE2    CD2     120.000    3.000
+ PBI      CE2    CD2    HD2     120.000    3.000
+ PBI      CE2    CD2    CG2     120.000    3.000
+ PBI      HD2    CD2    CG2     120.000    3.000
+ PBI      CD2    CG2    HG2     109.500    3.000
+ PBI      CD2    CG2    CB2     109.500    3.000
+ PBI      CD2    CG2    CD1     109.500    3.000
+ PBI      HG2    CG2    CB2     108.340    3.000
+ PBI      HG2    CG2    CD1     109.500    3.000
+ PBI      CB2    CG2    CD1     109.500    3.000
+ PBI      CG2    CB2    HB21    109.470    3.000
+ PBI      CG2    CB2    HB22    109.470    3.000
+ PBI      CG2    CB2    CA2     111.000    3.000
+ PBI      HB21   CB2    HB22    107.900    3.000
+ PBI      HB21   CB2    CA2     109.470    3.000
+ PBI      HB22   CB2    CA2     109.470    3.000
+ PBI      CB2    CA2    HA2     108.340    3.000
+ PBI      CB2    CA2    N2      109.500    3.000
+ PBI      CB2    CA2    C2      109.470    3.000
+ PBI      HA2    CA2    N2      109.500    3.000
+ PBI      HA2    CA2    C2      109.470    3.000
+ PBI      N2     CA2    C2      109.500    3.000
+ PBI      CA2    N2     C1      108.000    3.000
+ PBI      CA2    C2     O2      108.000    3.000
+ PBI      CA2    C2     N3      126.000    3.000
+ PBI      O2     C2     N3      108.000    3.000
+ PBI      C2     N3     CA3     126.000    3.000
+ PBI      C2     N3     C1      108.000    3.000
+ PBI      CA3    N3     C1      126.000    3.000
+ PBI      N3     CA3    HA31    109.500    3.000
+ PBI      N3     CA3    HA32    109.500    3.000
+ PBI      N3     CA3    C3      109.500    3.000
+ PBI      HA31   CA3    HA32    107.900    3.000
+ PBI      HA31   CA3    C3      109.470    3.000
+ PBI      HA32   CA3    C3      109.470    3.000
+ PBI      CA3    C3     HC3     120.000    3.000
+ PBI      CA3    C3     O3      120.500    3.000
+ PBI      HC3    C3     O3      123.000    3.000
+ PBI      N3     C1     CA1     126.000    3.000
+ PBI      N3     C1     N2      108.000    3.000
+ PBI      CA1    C1     N2      126.000    3.000
+ PBI      C1     CA1    HA11    109.470    3.000
+ PBI      C1     CA1    HA12    109.470    3.000
+ PBI      C1     CA1    N1      109.500    3.000
+ PBI      HA11   CA1    HA12    107.900    3.000
+ PBI      HA11   CA1    N1      109.470    3.000
+ PBI      HA12   CA1    N1      109.470    3.000
+ PBI      CA1    N1     HN12    120.000    3.000
+ PBI      CA1    N1     HN11    120.000    3.000
+ PBI      HN12   N1     HN11    120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PBI      CONST_1  OH     CZ     CE1    CD1     -150.000    0.000   0
+ PBI      CONST_2  CZ     CE1    CD1    CG2        0.000    0.000   0
+ PBI      CONST_3  OH     CZ     CE2    CD2      150.000    0.000   0
+ PBI      CONST_4  CZ     CE2    CD2    CG2        0.000    0.000   0
+ PBI      CONST_5  CE2    CD2    CG2    CB2      -90.000    0.000   0
+ PBI      CONST_6  CD2    CG2    CD1    CE1      -30.000    0.000   0
+ PBI      var_1    CD2    CG2    CB2    CA2      -56.527   20.000   3
+ PBI      var_2    CG2    CB2    CA2    C2      -175.890   20.000   3
+ PBI      CONST_7  CB2    CA2    N2     C1      -120.000    0.000   0
+ PBI      CONST_8  CB2    CA2    C2     N3       120.000    0.000   0
+ PBI      CONST_9  CA2    C2     N3     C1         0.000    0.000   0
+ PBI      var_3    C2     N3     CA3    C3        89.929   20.000   1
+ PBI      var_4    N3     CA3    C3     O3       120.004   20.000   1
+ PBI      CONST_10 C2     N3     C1     CA1      180.000    0.000   0
+ PBI      CONST_11 N3     C1     N2     CA2        0.000    0.000   0
+ PBI      var_5    N3     C1     CA1    N1       179.750   20.000   2
+ PBI      var_6    C1     CA1    N1     HN11     -66.138   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ PBI      chir_01  CA2    N2     C2     CB2       positiv
+ PBI      chir_02  CG2    CB2    CD1    CD2       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PBI      plan-1    N1        0.020
+ PBI      plan-1    CA1       0.020
+ PBI      plan-1    HN11      0.020
+ PBI      plan-1    HN12      0.020
+ PBI      plan-2    C1        0.020
+ PBI      plan-2    CA1       0.020
+ PBI      plan-2    N2        0.020
+ PBI      plan-2    N3        0.020
+ PBI      plan-2    C2        0.020
+ PBI      plan-2    CA2       0.020
+ PBI      plan-2    CA3       0.020
+ PBI      plan-2    O2        0.020
+ PBI      plan-3    C3        0.020
+ PBI      plan-3    CA3       0.020
+ PBI      plan-3    O3        0.020
+ PBI      plan-3    HC3       0.020
+ PBI      plan-4    CD1       0.020
+ PBI      plan-4    CG2       0.020
+ PBI      plan-4    CE1       0.020
+ PBI      plan-4    HD1       0.020
+ PBI      plan-4    CD2       0.020
+ PBI      plan-4    CE2       0.020
+ PBI      plan-4    CZ        0.020
+ PBI      plan-4    HD2       0.020
+ PBI      plan-4    HE1       0.020
+ PBI      plan-4    HE2       0.020
+ PBI      plan-4    OH        0.020
+# ------------------------------------------------------

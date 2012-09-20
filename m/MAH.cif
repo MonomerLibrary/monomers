@@ -1,0 +1,180 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MAH      MAH '3-HYDROXY-3-METHYL-GLUTARIC ACID    ' non-polymer        19  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MAH
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MAH           O4     O    OC       -0.500      0.000    0.000    0.000
+ MAH           C5     C    C         0.000     -1.251   -0.010    0.003
+ MAH           O3     O    OC       -0.500     -1.874   -0.050    1.087
+ MAH           C4     C    CH2       0.000     -2.007    0.027   -1.300
+ MAH           H41    H    H         0.000     -1.737   -0.842   -1.902
+ MAH           H42    H    H         0.000     -1.750    0.939   -1.843
+ MAH           C3     C    CT        0.000     -3.510    0.007   -1.017
+ MAH           O7     O    OH1       0.000     -3.844   -1.186   -0.307
+ MAH           HO7    H    H         0.000     -3.606   -1.956   -0.841
+ MAH           C6     C    CH3       0.000     -3.888    1.225   -0.174
+ MAH           H63    H    H         0.000     -4.929    1.212    0.023
+ MAH           H62    H    H         0.000     -3.356    1.200    0.743
+ MAH           H61    H    H         0.000     -3.640    2.111   -0.700
+ MAH           C2     C    CH2       0.000     -4.279    0.044   -2.339
+ MAH           H21    H    H         0.000     -4.008   -0.825   -2.942
+ MAH           H22    H    H         0.000     -4.022    0.956   -2.883
+ MAH           C1     C    C         0.000     -5.759    0.023   -2.061
+ MAH           O1     O    OC       -0.500     -6.574    0.049   -3.009
+ MAH           O2     O    OC       -0.500     -6.173   -0.018   -0.881
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MAH      O4     n/a    C5     START
+ MAH      C5     O4     C4     .
+ MAH      O3     C5     .      .
+ MAH      C4     C5     C3     .
+ MAH      H41    C4     .      .
+ MAH      H42    C4     .      .
+ MAH      C3     C4     C2     .
+ MAH      O7     C3     HO7    .
+ MAH      HO7    O7     .      .
+ MAH      C6     C3     H61    .
+ MAH      H63    C6     .      .
+ MAH      H62    C6     .      .
+ MAH      H61    C6     .      .
+ MAH      C2     C3     C1     .
+ MAH      H21    C2     .      .
+ MAH      H22    C2     .      .
+ MAH      C1     C2     O2     .
+ MAH      O1     C1     .      .
+ MAH      O2     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MAH      C1     C2        single      1.510    0.020
+ MAH      O1     C1        deloc       1.250    0.020
+ MAH      O2     C1        deloc       1.250    0.020
+ MAH      C2     C3        single      1.524    0.020
+ MAH      H21    C2        single      1.092    0.020
+ MAH      H22    C2        single      1.092    0.020
+ MAH      C3     C4        single      1.524    0.020
+ MAH      C6     C3        single      1.524    0.020
+ MAH      O7     C3        single      1.432    0.020
+ MAH      C4     C5        single      1.510    0.020
+ MAH      H41    C4        single      1.092    0.020
+ MAH      H42    C4        single      1.092    0.020
+ MAH      O3     C5        deloc       1.250    0.020
+ MAH      C5     O4        deloc       1.250    0.020
+ MAH      H61    C6        single      1.059    0.020
+ MAH      H62    C6        single      1.059    0.020
+ MAH      H63    C6        single      1.059    0.020
+ MAH      HO7    O7        single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MAH      O4     C5     O3      123.000    3.000
+ MAH      O4     C5     C4      118.500    3.000
+ MAH      O3     C5     C4      118.500    3.000
+ MAH      C5     C4     H41     109.470    3.000
+ MAH      C5     C4     H42     109.470    3.000
+ MAH      C5     C4     C3      109.470    3.000
+ MAH      H41    C4     H42     107.900    3.000
+ MAH      H41    C4     C3      109.470    3.000
+ MAH      H42    C4     C3      109.470    3.000
+ MAH      C4     C3     O7      109.470    3.000
+ MAH      C4     C3     C6      111.000    3.000
+ MAH      C4     C3     C2      111.000    3.000
+ MAH      O7     C3     C6      109.470    3.000
+ MAH      O7     C3     C2      109.470    3.000
+ MAH      C6     C3     C2      111.000    3.000
+ MAH      C3     O7     HO7     109.470    3.000
+ MAH      C3     C6     H63     109.470    3.000
+ MAH      C3     C6     H62     109.470    3.000
+ MAH      C3     C6     H61     109.470    3.000
+ MAH      H63    C6     H62     109.470    3.000
+ MAH      H63    C6     H61     109.470    3.000
+ MAH      H62    C6     H61     109.470    3.000
+ MAH      C3     C2     H21     109.470    3.000
+ MAH      C3     C2     H22     109.470    3.000
+ MAH      C3     C2     C1      109.470    3.000
+ MAH      H21    C2     H22     107.900    3.000
+ MAH      H21    C2     C1      109.470    3.000
+ MAH      H22    C2     C1      109.470    3.000
+ MAH      C2     C1     O1      118.500    3.000
+ MAH      C2     C1     O2      118.500    3.000
+ MAH      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MAH      var_1    O4     C5     C4     C3      -179.963   20.000   3
+ MAH      var_2    C5     C4     C3     C2      -179.981   20.000   1
+ MAH      var_3    C4     C3     O7     HO7      -60.011   20.000   1
+ MAH      var_4    C4     C3     C6     H61       60.019   20.000   1
+ MAH      var_5    C4     C3     C2     C1       179.981   20.000   1
+ MAH      var_6    C3     C2     C1     O2         0.052   20.000   3
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MAH      chir_01  C3     C2     C4     C6        negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ MAH      plan-1    C1        0.020
+ MAH      plan-1    C2        0.020
+ MAH      plan-1    O1        0.020
+ MAH      plan-1    O2        0.020
+ MAH      plan-2    C5        0.020
+ MAH      plan-2    C4        0.020
+ MAH      plan-2    O3        0.020
+ MAH      plan-2    O4        0.020
+# ------------------------------------------------------

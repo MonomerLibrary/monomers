@@ -1,0 +1,242 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+MIG      MIG '(2R,3R,4R,5S)-1-(2-hydroxyethyl)-2-(' non-polymer        31  14 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_MIG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ MIG           OAE    O    OH1       0.000      0.000    0.000    0.000
+ MIG           HOAE   H    H         0.000      0.345   -0.339    0.837
+ MIG           CAL    C    CH1       0.000     -1.347   -0.444   -0.174
+ MIG           HAL    H    H         0.000     -1.373   -1.542   -0.188
+ MIG           CAK    C    CH1       0.000     -2.209    0.075    0.980
+ MIG           HAK    H    H         0.000     -2.151    1.171    1.019
+ MIG           OAD    O    OH1       0.000     -1.736   -0.472    2.212
+ MIG           HOAD   H    H         0.000     -2.284   -0.148    2.939
+ MIG           CAJ    C    CH1       0.000     -3.662   -0.353    0.754
+ MIG           HAJ    H    H         0.000     -3.726   -1.450    0.756
+ MIG           OAC    O    OH1       0.000     -4.483    0.174    1.798
+ MIG           HOAC   H    H         0.000     -5.400   -0.095    1.653
+ MIG           CAM    C    CH1       0.000     -1.895    0.097   -1.497
+ MIG           HAM    H    H         0.000     -1.856    1.196   -1.489
+ MIG           CAG    C    CH2       0.000     -1.049   -0.435   -2.655
+ MIG           HAG    H    H         0.000     -1.211   -1.510   -2.760
+ MIG           HAGA   H    H         0.000      0.007   -0.245   -2.450
+ MIG           OAB    O    OH1       0.000     -1.428    0.226   -3.864
+ MIG           HOAB   H    H         0.000     -0.893   -0.111   -4.595
+ MIG           NAN    N    NT        0.000     -3.287   -0.341   -1.667
+ MIG           CAI    C    CH2       0.000     -4.143    0.184   -0.596
+ MIG           HAIA   H    H         0.000     -5.174   -0.132   -0.768
+ MIG           HAI    H    H         0.000     -4.093    1.275   -0.594
+ MIG           CAH    C    CH2       0.000     -3.802    0.042   -2.988
+ MIG           HAH    H    H         0.000     -4.794   -0.391   -3.131
+ MIG           HAHA   H    H         0.000     -3.129   -0.330   -3.763
+ MIG           CAF    C    CH2       0.000     -3.892    1.567   -3.077
+ MIG           HAF    H    H         0.000     -4.468    1.948   -2.231
+ MIG           HAFA   H    H         0.000     -4.388    1.849   -4.009
+ MIG           OAA    O    OH1       0.000     -2.576    2.124   -3.049
+ MIG           HOAA   H    H         0.000     -2.634    3.088   -3.105
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ MIG      OAE    n/a    CAL    START
+ MIG      HOAE   OAE    .      .
+ MIG      CAL    OAE    CAM    .
+ MIG      HAL    CAL    .      .
+ MIG      CAK    CAL    CAJ    .
+ MIG      HAK    CAK    .      .
+ MIG      OAD    CAK    HOAD   .
+ MIG      HOAD   OAD    .      .
+ MIG      CAJ    CAK    OAC    .
+ MIG      HAJ    CAJ    .      .
+ MIG      OAC    CAJ    HOAC   .
+ MIG      HOAC   OAC    .      .
+ MIG      CAM    CAL    NAN    .
+ MIG      HAM    CAM    .      .
+ MIG      CAG    CAM    OAB    .
+ MIG      HAG    CAG    .      .
+ MIG      HAGA   CAG    .      .
+ MIG      OAB    CAG    HOAB   .
+ MIG      HOAB   OAB    .      .
+ MIG      NAN    CAM    CAH    .
+ MIG      CAI    NAN    HAI    .
+ MIG      HAIA   CAI    .      .
+ MIG      HAI    CAI    .      .
+ MIG      CAH    NAN    CAF    .
+ MIG      HAH    CAH    .      .
+ MIG      HAHA   CAH    .      .
+ MIG      CAF    CAH    OAA    .
+ MIG      HAF    CAF    .      .
+ MIG      HAFA   CAF    .      .
+ MIG      OAA    CAF    HOAA   .
+ MIG      HOAA   OAA    .      END
+ MIG      CAI    CAJ    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ MIG      OAA    CAF       single      1.432    0.020
+ MIG      OAB    CAG       single      1.432    0.020
+ MIG      OAC    CAJ       single      1.432    0.020
+ MIG      OAD    CAK       single      1.432    0.020
+ MIG      CAL    OAE       single      1.432    0.020
+ MIG      CAF    CAH       single      1.524    0.020
+ MIG      CAG    CAM       single      1.524    0.020
+ MIG      CAH    NAN       single      1.469    0.020
+ MIG      CAI    CAJ       single      1.524    0.020
+ MIG      CAI    NAN       single      1.469    0.020
+ MIG      CAJ    CAK       single      1.524    0.020
+ MIG      CAK    CAL       single      1.524    0.020
+ MIG      CAM    CAL       single      1.524    0.020
+ MIG      NAN    CAM       single      1.469    0.020
+ MIG      HOAA   OAA       single      0.967    0.020
+ MIG      HOAB   OAB       single      0.967    0.020
+ MIG      HOAC   OAC       single      0.967    0.020
+ MIG      HOAD   OAD       single      0.967    0.020
+ MIG      HOAE   OAE       single      0.967    0.020
+ MIG      HAF    CAF       single      1.092    0.020
+ MIG      HAFA   CAF       single      1.092    0.020
+ MIG      HAG    CAG       single      1.092    0.020
+ MIG      HAGA   CAG       single      1.092    0.020
+ MIG      HAH    CAH       single      1.092    0.020
+ MIG      HAHA   CAH       single      1.092    0.020
+ MIG      HAI    CAI       single      1.092    0.020
+ MIG      HAIA   CAI       single      1.092    0.020
+ MIG      HAJ    CAJ       single      1.099    0.020
+ MIG      HAK    CAK       single      1.099    0.020
+ MIG      HAL    CAL       single      1.099    0.020
+ MIG      HAM    CAM       single      1.099    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ MIG      HOAE   OAE    CAL     109.470    3.000
+ MIG      OAE    CAL    HAL     109.470    3.000
+ MIG      OAE    CAL    CAK     109.470    3.000
+ MIG      OAE    CAL    CAM     109.470    3.000
+ MIG      HAL    CAL    CAK     108.340    3.000
+ MIG      HAL    CAL    CAM     108.340    3.000
+ MIG      CAK    CAL    CAM     111.000    3.000
+ MIG      CAL    CAK    HAK     108.340    3.000
+ MIG      CAL    CAK    OAD     109.470    3.000
+ MIG      CAL    CAK    CAJ     111.000    3.000
+ MIG      HAK    CAK    OAD     109.470    3.000
+ MIG      HAK    CAK    CAJ     108.340    3.000
+ MIG      OAD    CAK    CAJ     109.470    3.000
+ MIG      CAK    OAD    HOAD    109.470    3.000
+ MIG      CAK    CAJ    HAJ     108.340    3.000
+ MIG      CAK    CAJ    OAC     109.470    3.000
+ MIG      CAK    CAJ    CAI     111.000    3.000
+ MIG      HAJ    CAJ    OAC     109.470    3.000
+ MIG      HAJ    CAJ    CAI     108.340    3.000
+ MIG      OAC    CAJ    CAI     109.470    3.000
+ MIG      CAJ    OAC    HOAC    109.470    3.000
+ MIG      CAL    CAM    HAM     108.340    3.000
+ MIG      CAL    CAM    CAG     111.000    3.000
+ MIG      CAL    CAM    NAN     109.500    3.000
+ MIG      HAM    CAM    CAG     108.340    3.000
+ MIG      HAM    CAM    NAN     109.500    3.000
+ MIG      CAG    CAM    NAN     109.500    3.000
+ MIG      CAM    CAG    HAG     109.470    3.000
+ MIG      CAM    CAG    HAGA    109.470    3.000
+ MIG      CAM    CAG    OAB     109.470    3.000
+ MIG      HAG    CAG    HAGA    107.900    3.000
+ MIG      HAG    CAG    OAB     109.470    3.000
+ MIG      HAGA   CAG    OAB     109.470    3.000
+ MIG      CAG    OAB    HOAB    109.470    3.000
+ MIG      CAM    NAN    CAI     109.470    3.000
+ MIG      CAM    NAN    CAH     109.470    3.000
+ MIG      CAI    NAN    CAH     109.470    3.000
+ MIG      NAN    CAI    HAIA    109.470    3.000
+ MIG      NAN    CAI    HAI     109.470    3.000
+ MIG      NAN    CAI    CAJ     109.500    3.000
+ MIG      HAIA   CAI    HAI     107.900    3.000
+ MIG      HAIA   CAI    CAJ     109.470    3.000
+ MIG      HAI    CAI    CAJ     109.470    3.000
+ MIG      NAN    CAH    HAH     109.470    3.000
+ MIG      NAN    CAH    HAHA    109.470    3.000
+ MIG      NAN    CAH    CAF     109.470    3.000
+ MIG      HAH    CAH    HAHA    107.900    3.000
+ MIG      HAH    CAH    CAF     109.470    3.000
+ MIG      HAHA   CAH    CAF     109.470    3.000
+ MIG      CAH    CAF    HAF     109.470    3.000
+ MIG      CAH    CAF    HAFA    109.470    3.000
+ MIG      CAH    CAF    OAA     109.470    3.000
+ MIG      HAF    CAF    HAFA    107.900    3.000
+ MIG      HAF    CAF    OAA     109.470    3.000
+ MIG      HAFA   CAF    OAA     109.470    3.000
+ MIG      CAF    OAA    HOAA    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ MIG      var_1    HOAE   OAE    CAL    CAM      179.812   20.000   1
+ MIG      var_2    OAE    CAL    CAK    CAJ      180.000   20.000   3
+ MIG      var_3    CAL    CAK    OAD    HOAD    -179.717   20.000   1
+ MIG      var_4    CAL    CAK    CAJ    OAC      180.000   20.000   3
+ MIG      var_5    CAK    CAJ    OAC    HOAC     179.834   20.000   1
+ MIG      var_6    OAE    CAL    CAM    NAN      180.000   20.000   3
+ MIG      var_7    CAL    CAM    CAG    OAB     -171.199   20.000   3
+ MIG      var_8    CAM    CAG    OAB    HOAB    -179.992   20.000   1
+ MIG      var_9    CAL    CAM    NAN    CAH      180.000   20.000   1
+ MIG      var_10   CAM    NAN    CAI    CAJ      -60.000   20.000   1
+ MIG      var_11   NAN    CAI    CAJ    CAK       60.000   20.000   3
+ MIG      var_12   CAM    NAN    CAH    CAF      -66.252   20.000   1
+ MIG      var_13   NAN    CAH    CAF    OAA       66.817   20.000   3
+ MIG      var_14   CAH    CAF    OAA    HOAA     179.989   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ MIG      chir_01  CAJ    OAC    CAI    CAK       negativ
+ MIG      chir_02  CAK    OAD    CAJ    CAL       positiv
+ MIG      chir_03  CAL    OAE    CAK    CAM       negativ
+ MIG      chir_04  CAM    CAG    CAL    NAN       positiv
+ MIG      chir_05  NAN    CAH    CAI    CAM       positiv
+# ------------------------------------------------------

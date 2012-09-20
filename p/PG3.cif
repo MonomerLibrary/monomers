@@ -1,0 +1,184 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+PG3      PG3 'GUANIDINE-3-PROPANOL                ' non-polymer        20   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_PG3
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ PG3           NH2    N    NH2       0.000      0.000    0.000    0.000
+ PG3           HH21   H    H         0.000      0.742    0.687    0.000
+ PG3           HH22   H    H         0.000      0.228   -0.985    0.000
+ PG3           CZ     C    C         0.000     -1.280    0.394    0.000
+ PG3           NH1    N    NH2       1.000     -1.578    1.698    0.000
+ PG3           HH12   H    H         0.000     -0.839    2.388    0.000
+ PG3           HH11   H    H         0.000     -2.544    1.998    0.000
+ PG3           NE     N    NH1       0.000     -2.287   -0.543    0.000
+ PG3           HE     H    H         0.000     -2.061   -1.527    0.000
+ PG3           CD     C    CH2       0.000     -3.687   -0.112    0.000
+ PG3           HD1    H    H         0.000     -3.882    0.488   -0.891
+ PG3           HD2    H    H         0.000     -3.882    0.488    0.891
+ PG3           CG     C    CH2       0.000     -4.598   -1.340    0.000
+ PG3           HG1    H    H         0.000     -4.401   -1.940    0.891
+ PG3           HG2    H    H         0.000     -4.401   -1.940   -0.891
+ PG3           CB     C    CH2       0.000     -6.061   -0.890    0.000
+ PG3           HB1    H    H         0.000     -6.257   -0.290   -0.891
+ PG3           HB2    H    H         0.000     -6.257   -0.290    0.891
+ PG3           OA     O    OH1       0.000     -6.912   -2.038    0.000
+ PG3           HA     H    H         0.000     -7.836   -1.754    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ PG3      NH2    n/a    CZ     START
+ PG3      HH21   NH2    .      .
+ PG3      HH22   NH2    .      .
+ PG3      CZ     NH2    NE     .
+ PG3      NH1    CZ     HH11   .
+ PG3      HH12   NH1    .      .
+ PG3      HH11   NH1    .      .
+ PG3      NE     CZ     CD     .
+ PG3      HE     NE     .      .
+ PG3      CD     NE     CG     .
+ PG3      HD1    CD     .      .
+ PG3      HD2    CD     .      .
+ PG3      CG     CD     CB     .
+ PG3      HG1    CG     .      .
+ PG3      HG2    CG     .      .
+ PG3      CB     CG     OA     .
+ PG3      HB1    CB     .      .
+ PG3      HB2    CB     .      .
+ PG3      OA     CB     HA     .
+ PG3      HA     OA     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ PG3      OA     CB        single      1.432    0.020
+ PG3      HA     OA        single      0.967    0.020
+ PG3      CB     CG        single      1.524    0.020
+ PG3      HB1    CB        single      1.092    0.020
+ PG3      HB2    CB        single      1.092    0.020
+ PG3      CG     CD        single      1.524    0.020
+ PG3      HG1    CG        single      1.092    0.020
+ PG3      HG2    CG        single      1.092    0.020
+ PG3      CD     NE        single      1.450    0.020
+ PG3      HD1    CD        single      1.092    0.020
+ PG3      HD2    CD        single      1.092    0.020
+ PG3      NE     CZ        single      1.330    0.020
+ PG3      HE     NE        single      1.010    0.020
+ PG3      NH1    CZ        double      1.332    0.020
+ PG3      CZ     NH2       single      1.332    0.020
+ PG3      HH11   NH1       single      1.010    0.020
+ PG3      HH12   NH1       single      1.010    0.020
+ PG3      HH21   NH2       single      1.010    0.020
+ PG3      HH22   NH2       single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ PG3      HH21   NH2    HH22    120.000    3.000
+ PG3      HH21   NH2    CZ      120.000    3.000
+ PG3      HH22   NH2    CZ      120.000    3.000
+ PG3      NH2    CZ     NH1     120.000    3.000
+ PG3      NH2    CZ     NE      120.000    3.000
+ PG3      NH1    CZ     NE      120.000    3.000
+ PG3      CZ     NH1    HH12    120.000    3.000
+ PG3      CZ     NH1    HH11    120.000    3.000
+ PG3      HH12   NH1    HH11    120.000    3.000
+ PG3      CZ     NE     HE      120.000    3.000
+ PG3      CZ     NE     CD      121.500    3.000
+ PG3      HE     NE     CD      118.500    3.000
+ PG3      NE     CD     HD1     109.470    3.000
+ PG3      NE     CD     HD2     109.470    3.000
+ PG3      NE     CD     CG      112.000    3.000
+ PG3      HD1    CD     HD2     107.900    3.000
+ PG3      HD1    CD     CG      109.470    3.000
+ PG3      HD2    CD     CG      109.470    3.000
+ PG3      CD     CG     HG1     109.470    3.000
+ PG3      CD     CG     HG2     109.470    3.000
+ PG3      CD     CG     CB      111.000    3.000
+ PG3      HG1    CG     HG2     107.900    3.000
+ PG3      HG1    CG     CB      109.470    3.000
+ PG3      HG2    CG     CB      109.470    3.000
+ PG3      CG     CB     HB1     109.470    3.000
+ PG3      CG     CB     HB2     109.470    3.000
+ PG3      CG     CB     OA      109.470    3.000
+ PG3      HB1    CB     HB2     107.900    3.000
+ PG3      HB1    CB     OA      109.470    3.000
+ PG3      HB2    CB     OA      109.470    3.000
+ PG3      CB     OA     HA      109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ PG3      CONST_1  HH22   NH2    CZ     NE         0.000    0.000   0
+ PG3      CONST_2  NH2    CZ     NH1    HH11     180.000    0.000   0
+ PG3      CONST_3  NH2    CZ     NE     CD       180.000    0.000   0
+ PG3      var_1    CZ     NE     CD     CG       180.000   20.000   3
+ PG3      var_2    NE     CD     CG     CB       180.000   20.000   3
+ PG3      var_3    CD     CG     CB     OA       180.000   20.000   3
+ PG3      var_4    CG     CB     OA     HA       180.000   20.000   1
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ PG3      plan-1    NE        0.020
+ PG3      plan-1    CD        0.020
+ PG3      plan-1    CZ        0.020
+ PG3      plan-1    HE        0.020
+ PG3      plan-2    CZ        0.020
+ PG3      plan-2    NE        0.020
+ PG3      plan-2    NH1       0.020
+ PG3      plan-2    NH2       0.020
+ PG3      plan-2    HH11      0.020
+ PG3      plan-2    HH12      0.020
+ PG3      plan-2    HE        0.020
+ PG3      plan-2    HH21      0.020
+ PG3      plan-2    HH22      0.020
+ PG3      plan-3    NH2       0.020
+ PG3      plan-3    CZ        0.020
+ PG3      plan-3    HH21      0.020
+ PG3      plan-3    HH22      0.020
+# ------------------------------------------------------

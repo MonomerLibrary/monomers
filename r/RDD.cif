@@ -1,0 +1,252 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+RDD      RDD '1-beta-D-ribofuranosyl-1,3,5-triazin' non-polymer        29  18 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_RDD
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ RDD           O2     O    O         0.000      0.000    0.000    0.000
+ RDD           C2     C    CR6       0.000     -1.061    0.183    0.565
+ RDD           N1     N    NR6       0.000     -2.218    0.016   -0.105
+ RDD           C6     C    CR6       0.000     -3.394    0.214    0.523
+ RDD           O6     O    O         0.000     -4.438    0.063   -0.081
+ RDD           N5     N    NR16      0.000     -3.413    0.578    1.820
+ RDD           HN5    H    H         0.000     -4.321    0.726    2.306
+ RDD           C4     C    CR6       0.000     -2.255    0.751    2.488
+ RDD           N3     N    NR16      0.000     -1.078    0.548    1.862
+ RDD           HN3    H    H         0.000     -0.185    0.674    2.379
+ RDD           O4     O    O         0.000     -2.272    1.080    3.658
+ RDD           "C1'"  C    CH1       0.000     -2.198   -0.380   -1.515
+ RDD           "H1'"  H    H         0.000     -1.165   -0.425   -1.885
+ RDD           "C2'"  C    CH1       0.000     -2.896   -1.746   -1.700
+ RDD           "H2'"  H    H         0.000     -3.609   -1.928   -0.884
+ RDD           "O2'"  O    OH1       0.000     -1.931   -2.797   -1.765
+ RDD           "HO2'" H    H         0.000     -2.384   -3.643   -1.881
+ RDD           "C3'"  C    CH1       0.000     -3.639   -1.608   -3.048
+ RDD           "H3'"  H    H         0.000     -4.723   -1.721   -2.904
+ RDD           "O3'"  O    OH1       0.000     -3.155   -2.570   -3.987
+ RDD           "HO3'" H    H         0.000     -3.585   -2.431   -4.842
+ RDD           "C4'"  C    CH1       0.000     -3.301   -0.176   -3.518
+ RDD           "H4'"  H    H         0.000     -2.438   -0.190   -4.198
+ RDD           "O4'"  O    O2        0.000     -2.976    0.542   -2.307
+ RDD           "C5'"  C    CH2       0.000     -4.512    0.458   -4.205
+ RDD           "H5'"  H    H         0.000     -5.338    0.530   -3.493
+ RDD           "H5'A" H    H         0.000     -4.816   -0.161   -5.051
+ RDD           "O5'"  O    OH1       0.000     -4.167    1.764   -4.668
+ RDD           "HO5'" H    H         0.000     -4.933    2.164   -5.102
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ RDD      O2     n/a    C2     START
+ RDD      C2     O2     N1     .
+ RDD      N1     C2     "C1'"  .
+ RDD      C6     N1     N5     .
+ RDD      O6     C6     .      .
+ RDD      N5     C6     C4     .
+ RDD      HN5    N5     .      .
+ RDD      C4     N5     O4     .
+ RDD      N3     C4     HN3    .
+ RDD      HN3    N3     .      .
+ RDD      O4     C4     .      .
+ RDD      "C1'"  N1     "C2'"  .
+ RDD      "H1'"  "C1'"  .      .
+ RDD      "C2'"  "C1'"  "C3'"  .
+ RDD      "H2'"  "C2'"  .      .
+ RDD      "O2'"  "C2'"  "HO2'" .
+ RDD      "HO2'" "O2'"  .      .
+ RDD      "C3'"  "C2'"  "C4'"  .
+ RDD      "H3'"  "C3'"  .      .
+ RDD      "O3'"  "C3'"  "HO3'" .
+ RDD      "HO3'" "O3'"  .      .
+ RDD      "C4'"  "C3'"  "C5'"  .
+ RDD      "H4'"  "C4'"  .      .
+ RDD      "O4'"  "C4'"  .      .
+ RDD      "C5'"  "C4'"  "O5'"  .
+ RDD      "H5'"  "C5'"  .      .
+ RDD      "H5'A" "C5'"  .      .
+ RDD      "O5'"  "C5'"  "HO5'" .
+ RDD      "HO5'" "O5'"  .      END
+ RDD      C2     N3     .    ADD
+ RDD      "C1'"  "O4'"  .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ RDD      C2     N3        single      1.337    0.020
+ RDD      C2     O2        double      1.250    0.020
+ RDD      N1     C2        single      1.410    0.020
+ RDD      O6     C6        double      1.250    0.020
+ RDD      N5     C6        single      1.337    0.020
+ RDD      C6     N1        single      1.410    0.020
+ RDD      C4     N5        single      1.337    0.020
+ RDD      O4     C4        double      1.250    0.020
+ RDD      N3     C4        single      1.337    0.020
+ RDD      "C1'"  N1        single      1.465    0.020
+ RDD      "C1'"  "O4'"     single      1.426    0.020
+ RDD      "C2'"  "C1'"     single      1.524    0.020
+ RDD      "O4'"  "C4'"     single      1.426    0.020
+ RDD      "C5'"  "C4'"     single      1.524    0.020
+ RDD      "C4'"  "C3'"     single      1.524    0.020
+ RDD      "O5'"  "C5'"     single      1.432    0.020
+ RDD      "O3'"  "C3'"     single      1.432    0.020
+ RDD      "C3'"  "C2'"     single      1.524    0.020
+ RDD      "O2'"  "C2'"     single      1.432    0.020
+ RDD      HN5    N5        single      1.040    0.020
+ RDD      HN3    N3        single      1.040    0.020
+ RDD      "H1'"  "C1'"     single      1.099    0.020
+ RDD      "H4'"  "C4'"     single      1.099    0.020
+ RDD      "H5'"  "C5'"     single      1.092    0.020
+ RDD      "H5'A" "C5'"     single      1.092    0.020
+ RDD      "HO5'" "O5'"     single      0.967    0.020
+ RDD      "H3'"  "C3'"     single      1.099    0.020
+ RDD      "HO3'" "O3'"     single      0.967    0.020
+ RDD      "H2'"  "C2'"     single      1.099    0.020
+ RDD      "HO2'" "O2'"     single      0.967    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ RDD      O2     C2     N1      120.000    3.000
+ RDD      O2     C2     N3      120.000    3.000
+ RDD      N1     C2     N3      120.000    3.000
+ RDD      C2     N1     C6      120.000    3.000
+ RDD      C2     N1     "C1'"   120.000    3.000
+ RDD      C6     N1     "C1'"   120.000    3.000
+ RDD      N1     C6     O6      120.000    3.000
+ RDD      N1     C6     N5      120.000    3.000
+ RDD      O6     C6     N5      120.000    3.000
+ RDD      C6     N5     HN5     120.000    3.000
+ RDD      C6     N5     C4      120.000    3.000
+ RDD      HN5    N5     C4      120.000    3.000
+ RDD      N5     C4     N3      120.000    3.000
+ RDD      N5     C4     O4      120.000    3.000
+ RDD      N3     C4     O4      120.000    3.000
+ RDD      C4     N3     HN3     120.000    3.000
+ RDD      C4     N3     C2      120.000    3.000
+ RDD      HN3    N3     C2      120.000    3.000
+ RDD      N1     "C1'"  "H1'"   109.470    3.000
+ RDD      N1     "C1'"  "C2'"   109.470    3.000
+ RDD      N1     "C1'"  "O4'"   109.470    3.000
+ RDD      "H1'"  "C1'"  "C2'"   108.340    3.000
+ RDD      "H1'"  "C1'"  "O4'"   109.470    3.000
+ RDD      "C2'"  "C1'"  "O4'"   109.470    3.000
+ RDD      "C1'"  "C2'"  "H2'"   108.340    3.000
+ RDD      "C1'"  "C2'"  "O2'"   109.470    3.000
+ RDD      "C1'"  "C2'"  "C3'"   111.000    3.000
+ RDD      "H2'"  "C2'"  "O2'"   109.470    3.000
+ RDD      "H2'"  "C2'"  "C3'"   108.340    3.000
+ RDD      "O2'"  "C2'"  "C3'"   109.470    3.000
+ RDD      "C2'"  "O2'"  "HO2'"  109.470    3.000
+ RDD      "C2'"  "C3'"  "H3'"   108.340    3.000
+ RDD      "C2'"  "C3'"  "O3'"   109.470    3.000
+ RDD      "C2'"  "C3'"  "C4'"   111.000    3.000
+ RDD      "H3'"  "C3'"  "O3'"   109.470    3.000
+ RDD      "H3'"  "C3'"  "C4'"   108.340    3.000
+ RDD      "O3'"  "C3'"  "C4'"   109.470    3.000
+ RDD      "C3'"  "O3'"  "HO3'"  109.470    3.000
+ RDD      "C3'"  "C4'"  "H4'"   108.340    3.000
+ RDD      "C3'"  "C4'"  "O4'"   109.470    3.000
+ RDD      "C3'"  "C4'"  "C5'"   111.000    3.000
+ RDD      "H4'"  "C4'"  "O4'"   109.470    3.000
+ RDD      "H4'"  "C4'"  "C5'"   108.340    3.000
+ RDD      "O4'"  "C4'"  "C5'"   109.470    3.000
+ RDD      "C4'"  "O4'"  "C1'"   111.800    3.000
+ RDD      "C4'"  "C5'"  "H5'"   109.470    3.000
+ RDD      "C4'"  "C5'"  "H5'A"  109.470    3.000
+ RDD      "C4'"  "C5'"  "O5'"   109.470    3.000
+ RDD      "H5'"  "C5'"  "H5'A"  107.900    3.000
+ RDD      "H5'"  "C5'"  "O5'"   109.470    3.000
+ RDD      "H5'A" "C5'"  "O5'"   109.470    3.000
+ RDD      "C5'"  "O5'"  "HO5'"  109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ RDD      CONST_1  O2     C2     N3     C4       180.000    0.000   0
+ RDD      CONST_2  O2     C2     N1     "C1'"      0.000    0.000   0
+ RDD      CONST_3  C2     N1     C6     N5         0.000    0.000   0
+ RDD      CONST_4  N1     C6     N5     C4         0.000    0.000   0
+ RDD      CONST_5  C6     N5     C4     O4       180.000    0.000   0
+ RDD      CONST_6  N5     C4     N3     C2         0.000    0.000   0
+ RDD      var_1    C2     N1     "C1'"  "C2'"    118.133   20.000   1
+ RDD      var_2    N1     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
+ RDD      var_3    N1     "C1'"  "C2'"  "C3'"    150.000   20.000   3
+ RDD      var_4    "C1'"  "C2'"  "O2'"  "HO2'"  -179.998   20.000   1
+ RDD      var_5    "C1'"  "C2'"  "C3'"  "C4'"      0.000   20.000   3
+ RDD      var_6    "C2'"  "C3'"  "O3'"  "HO3'"  -176.098   20.000   1
+ RDD      var_7    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
+ RDD      var_8    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
+ RDD      var_9    "C3'"  "C4'"  "C5'"  "O5'"   -178.185   20.000   3
+ RDD      var_10   "C4'"  "C5'"  "O5'"  "HO5'"  -179.998   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ RDD      chir_01  "C1'"  N1     "O4'"  "C2'"     positiv
+ RDD      chir_02  "C4'"  "O4'"  "C5'"  "C3'"     positiv
+ RDD      chir_03  "C3'"  "C4'"  "O3'"  "C2'"     negativ
+ RDD      chir_04  "C2'"  "C1'"  "C3'"  "O2'"     negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ RDD      plan-1    C2        0.020
+ RDD      plan-1    N3        0.020
+ RDD      plan-1    O2        0.020
+ RDD      plan-1    N1        0.020
+ RDD      plan-1    C6        0.020
+ RDD      plan-1    C4        0.020
+ RDD      plan-1    N5        0.020
+ RDD      plan-1    O6        0.020
+ RDD      plan-1    O4        0.020
+ RDD      plan-1    HN5       0.020
+ RDD      plan-1    HN3       0.020
+ RDD      plan-1    "C1'"     0.020
+# ------------------------------------------------------

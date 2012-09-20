@@ -1,0 +1,141 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+2AI      2AI '1H-imidazol-2-amine                 ' non-polymer        11   6 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_2AI
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 2AI           NT     N    NH2       0.000      0.000    0.000    0.000
+ 2AI           HNT    H    H         0.000      0.525   -0.870    0.000
+ 2AI           HNTA   H    H         0.000      0.508    0.880    0.000
+ 2AI           CE1    C    CR5       0.000     -1.385   -0.013    0.000
+ 2AI           NE2    N    NRD5      0.000     -2.143   -1.084    0.000
+ 2AI           CD2    C    CR15      0.000     -3.435   -0.714    0.000
+ 2AI           HD2    H    H         0.000     -4.286   -1.384    0.000
+ 2AI           ND1    N    NR15      0.000     -2.191    1.083    0.000
+ 2AI           HND1   H    H         0.000     -1.883    2.077    0.000
+ 2AI           CG     C    CR15      0.000     -3.490    0.628    0.000
+ 2AI           HG     H    H         0.000     -4.386    1.237    0.000
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 2AI      NT     n/a    CE1    START
+ 2AI      HNT    NT     .      .
+ 2AI      HNTA   NT     .      .
+ 2AI      CE1    NT     ND1    .
+ 2AI      NE2    CE1    CD2    .
+ 2AI      CD2    NE2    HD2    .
+ 2AI      HD2    CD2    .      .
+ 2AI      ND1    CE1    CG     .
+ 2AI      HND1   ND1    .      .
+ 2AI      CG     ND1    HG     .
+ 2AI      HG     CG     .      END
+ 2AI      CG     CD2    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 2AI      CG     CD2       double      1.380    0.020
+ 2AI      CG     ND1       single      1.350    0.020
+ 2AI      CD2    NE2       single      1.350    0.020
+ 2AI      NE2    CE1       double      1.350    0.020
+ 2AI      ND1    CE1       single      1.340    0.020
+ 2AI      CE1    NT        single      1.355    0.020
+ 2AI      HG     CG        single      1.083    0.020
+ 2AI      HD2    CD2       single      1.083    0.020
+ 2AI      HND1   ND1       single      1.040    0.020
+ 2AI      HNT    NT        single      1.010    0.020
+ 2AI      HNTA   NT        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 2AI      HNT    NT     HNTA    120.000    3.000
+ 2AI      HNT    NT     CE1     120.000    3.000
+ 2AI      HNTA   NT     CE1     120.000    3.000
+ 2AI      NT     CE1    NE2     108.000    3.000
+ 2AI      NT     CE1    ND1     108.000    3.000
+ 2AI      NE2    CE1    ND1     108.000    3.000
+ 2AI      CE1    NE2    CD2     108.000    3.000
+ 2AI      NE2    CD2    HD2     126.000    3.000
+ 2AI      NE2    CD2    CG      108.000    3.000
+ 2AI      HD2    CD2    CG      126.000    3.000
+ 2AI      CE1    ND1    HND1    126.000    3.000
+ 2AI      CE1    ND1    CG      108.000    3.000
+ 2AI      HND1   ND1    CG      126.000    3.000
+ 2AI      ND1    CG     HG      126.000    3.000
+ 2AI      ND1    CG     CD2     108.000    3.000
+ 2AI      HG     CG     CD2     126.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 2AI      CONST_1  HNTA   NT     CE1    ND1        0.000    0.000   0
+ 2AI      CONST_2  NT     CE1    NE2    CD2      180.000    0.000   0
+ 2AI      CONST_3  CE1    NE2    CD2    CG         0.000    0.000   0
+ 2AI      CONST_4  NT     CE1    ND1    CG       180.000    0.000   0
+ 2AI      CONST_5  CE1    ND1    CG     CD2        0.000    0.000   0
+ 2AI      CONST_6  ND1    CG     CD2    NE2        0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 2AI      plan-1    CG        0.020
+ 2AI      plan-1    CD2       0.020
+ 2AI      plan-1    ND1       0.020
+ 2AI      plan-1    HG        0.020
+ 2AI      plan-1    NE2       0.020
+ 2AI      plan-1    CE1       0.020
+ 2AI      plan-1    HD2       0.020
+ 2AI      plan-1    NT        0.020
+ 2AI      plan-1    HND1      0.020
+ 2AI      plan-1    HNT       0.020
+ 2AI      plan-1    HNTA      0.020
+ 2AI      plan-2    NT        0.020
+ 2AI      plan-2    CE1       0.020
+ 2AI      plan-2    HNT       0.020
+ 2AI      plan-2    HNTA      0.020
+# ------------------------------------------------------

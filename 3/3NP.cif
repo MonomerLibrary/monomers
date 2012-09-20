@@ -1,0 +1,134 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+3NP      3NP '3-NITROPROPANOIC ACID               ' non-polymer        12   8 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_3NP
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ 3NP           O3     O    O        -1.000      0.000    0.000    0.000
+ 3NP           N1     N    N         1.000     -1.036    0.570    0.290
+ 3NP           O4     O    O         0.000     -1.026    1.471    1.110
+ 3NP           C3     C    CH2       0.000     -2.294    0.172   -0.345
+ 3NP           H31    H    H         0.000     -2.319    0.548   -1.370
+ 3NP           H32    H    H         0.000     -3.133    0.590    0.215
+ 3NP           C2     C    CH2       0.000     -2.398   -1.354   -0.358
+ 3NP           H22    H    H         0.000     -2.373   -1.729    0.667
+ 3NP           H21    H    H         0.000     -1.558   -1.771   -0.917
+ 3NP           C1     C    C         0.000     -3.693   -1.764   -1.013
+ 3NP           O1     O    OC       -0.500     -3.980   -2.977   -1.127
+ 3NP           O2     O    OC       -0.500     -4.481   -0.892   -1.441
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ 3NP      O3     n/a    N1     START
+ 3NP      N1     O3     C3     .
+ 3NP      O4     N1     .      .
+ 3NP      C3     N1     C2     .
+ 3NP      H31    C3     .      .
+ 3NP      H32    C3     .      .
+ 3NP      C2     C3     C1     .
+ 3NP      H22    C2     .      .
+ 3NP      H21    C2     .      .
+ 3NP      C1     C2     O2     .
+ 3NP      O1     C1     .      .
+ 3NP      O2     C1     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ 3NP      O1     C1        deloc       1.250    0.020
+ 3NP      O2     C1        deloc       1.250    0.020
+ 3NP      O4     N1        double      1.220    0.020
+ 3NP      N1     O3        single      1.400    0.020
+ 3NP      C1     C2        single      1.510    0.020
+ 3NP      C2     C3        single      1.524    0.020
+ 3NP      H21    C2        single      1.092    0.020
+ 3NP      H22    C2        single      1.092    0.020
+ 3NP      C3     N1        single      1.455    0.020
+ 3NP      H31    C3        single      1.092    0.020
+ 3NP      H32    C3        single      1.092    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ 3NP      O3     N1     O4      120.000    3.000
+ 3NP      O3     N1     C3      120.000    3.000
+ 3NP      O4     N1     C3      120.000    3.000
+ 3NP      N1     C3     H31     109.470    3.000
+ 3NP      N1     C3     H32     109.470    3.000
+ 3NP      N1     C3     C2      105.000    3.000
+ 3NP      H31    C3     H32     107.900    3.000
+ 3NP      H31    C3     C2      109.470    3.000
+ 3NP      H32    C3     C2      109.470    3.000
+ 3NP      C3     C2     H22     109.470    3.000
+ 3NP      C3     C2     H21     109.470    3.000
+ 3NP      C3     C2     C1      109.470    3.000
+ 3NP      H22    C2     H21     107.900    3.000
+ 3NP      H22    C2     C1      109.470    3.000
+ 3NP      H21    C2     C1      109.470    3.000
+ 3NP      C2     C1     O1      118.500    3.000
+ 3NP      C2     C1     O2      118.500    3.000
+ 3NP      O1     C1     O2      123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 3NP      var_1    O3     N1     C3     C2        44.921   20.000   1
+ 3NP      var_2    N1     C3     C2     C1      -179.942   20.000   3
+ 3NP      var_3    C3     C2     C1     O2        -0.049   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ 3NP      plan-1    C1        0.020
+ 3NP      plan-1    O1        0.020
+ 3NP      plan-1    O2        0.020
+ 3NP      plan-1    C2        0.020
+ 3NP      plan-2    N1        0.020
+ 3NP      plan-2    O4        0.020
+ 3NP      plan-2    O3        0.020
+ 3NP      plan-2    C3        0.020
+# ------------------------------------------------------

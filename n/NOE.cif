@@ -1,0 +1,114 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+NOE      NOE 'NITROSOETHANE                       ' non-polymer         9   4 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_NOE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ NOE           O1     O    O         0.000      0.000    0.000    0.000
+ NOE           N      N    N         0.000     -0.925   -0.578    0.541
+ NOE           C1     C    CH2       0.000     -1.600    0.032    1.688
+ NOE           HC11   H    H         0.000     -1.136    0.995    1.911
+ NOE           HC12   H    H         0.000     -1.506   -0.625    2.555
+ NOE           C2     C    CH3       0.000     -3.079    0.239    1.360
+ NOE           HC23   H    H         0.000     -3.172    0.877    0.518
+ NOE           HC22   H    H         0.000     -3.531   -0.695    1.143
+ NOE           HC21   H    H         0.000     -3.570    0.681    2.190
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ NOE      O1     n/a    N      START
+ NOE      N      O1     C1     .
+ NOE      C1     N      C2     .
+ NOE      HC11   C1     .      .
+ NOE      HC12   C1     .      .
+ NOE      C2     C1     HC21   .
+ NOE      HC23   C2     .      .
+ NOE      HC22   C2     .      .
+ NOE      HC21   C2     .      END
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ NOE      C2     C1        single      1.513    0.020
+ NOE      C1     N         single      1.455    0.020
+ NOE      HC11   C1        single      1.092    0.020
+ NOE      HC12   C1        single      1.092    0.020
+ NOE      HC21   C2        single      1.059    0.020
+ NOE      HC22   C2        single      1.059    0.020
+ NOE      HC23   C2        single      1.059    0.020
+ NOE      N      O1        double      1.220    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ NOE      O1     N      C1      120.000    3.000
+ NOE      N      C1     HC11    109.470    3.000
+ NOE      N      C1     HC12    109.470    3.000
+ NOE      N      C1     C2      109.500    3.000
+ NOE      HC11   C1     HC12    107.900    3.000
+ NOE      HC11   C1     C2      109.470    3.000
+ NOE      HC12   C1     C2      109.470    3.000
+ NOE      C1     C2     HC23    109.470    3.000
+ NOE      C1     C2     HC22    109.470    3.000
+ NOE      C1     C2     HC21    109.470    3.000
+ NOE      HC23   C2     HC22    109.470    3.000
+ NOE      HC23   C2     HC21    109.470    3.000
+ NOE      HC22   C2     HC21    109.470    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ NOE      var_1    O1     N      C1     C2       120.024   20.000   1
+ NOE      var_2    N      C1     C2     HC21    -179.996   20.000   3
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ NOE      plan-1    N         0.020
+ NOE      plan-1    C1        0.000
+ NOE      plan-1    O1        0.000
+# ------------------------------------------------------

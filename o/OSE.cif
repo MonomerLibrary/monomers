@@ -1,0 +1,169 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+OSE      OSE 'O-SULFO-L-SERINE                    ' peptide            17  11 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_OSE
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OSE           N      N    NH2       0.000      0.000    0.000    0.000
+ OSE           HN1    H    H         0.000      0.703   -0.157   -0.706
+ OSE           HN2    H    H         0.000     -0.186    0.934    0.333
+ OSE           CA     C    CH1       0.000     -0.743   -1.115    0.535
+ OSE           HA     H    H         0.000     -0.475   -1.251    1.592
+ OSE           CB     C    CH2       0.000     -2.245   -0.892    0.427
+ OSE           HB2    H    H         0.000     -2.517   -0.734   -0.619
+ OSE           HB3    H    H         0.000     -2.527   -0.014    1.011
+ OSE           OG     O    O2        0.000     -2.924   -2.036    0.929
+ OSE           S      S    ST        0.000     -4.558   -2.071    0.934
+ OSE           O1S    O    OS        0.000     -5.016   -0.964    1.752
+ OSE           O2S    O    OS        0.000     -5.030   -2.214   -0.430
+ OSE           O3S    O    OH1       0.000     -4.908   -3.450    1.733
+ OSE           H3S    H    H         0.000     -4.507   -4.284    1.455
+ OSE           C      C    C         0.000     -0.331   -2.346   -0.244
+ OSE           O      O    OC       -0.500     -0.056   -2.369   -1.464
+ OSE           OXT    O    OC       -0.500     -0.337   -3.374    0.470
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ OSE      N      n/a    CA     START
+ OSE      HN1    N      .      .
+ OSE      HN2    N      .      .
+ OSE      CA     N      C      .
+ OSE      HA     CA     .      .
+ OSE      CB     CA     OG     .
+ OSE      HB2    CB     .      .
+ OSE      HB3    CB     .      .
+ OSE      OG     CB     S      .
+ OSE      S      OG     O3S    .
+ OSE      O1S    S      .      .
+ OSE      O2S    S      .      .
+ OSE      O3S    S      H3S    .
+ OSE      H3S    O3S    .      .
+ OSE      C      CA     .      END
+ OSE      O      C      .      .
+ OSE      OXT    C      .      .
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ OSE      CA     N         single      1.450    0.020
+ OSE      CB     CA        single      1.524    0.020
+ OSE      C      CA        single      1.500    0.020
+ OSE      HA     CA        single      1.099    0.020
+ OSE      OG     CB        single      1.426    0.020
+ OSE      HB2    CB        single      1.092    0.020
+ OSE      HB3    CB        single      1.092    0.020
+ OSE      S      OG        single      1.535    0.020
+ OSE      O      C         deloc       1.250    0.020
+ OSE      OXT    C         deloc       1.250    0.020
+ OSE      O1S    S         double      1.436    0.020
+ OSE      O2S    S         double      1.436    0.020
+ OSE      O3S    S         single      1.635    0.020
+ OSE      H3S    O3S       single      0.967    0.020
+ OSE      HN1    N         single      1.010    0.020
+ OSE      HN2    N         single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OSE      HN1    N      HN2     120.000    3.000
+ OSE      HN1    N      CA      120.000    3.000
+ OSE      HN2    N      CA      120.000    3.000
+ OSE      N      CA     HA      109.470    3.000
+ OSE      N      CA     CB      109.470    3.000
+ OSE      N      CA     C       109.470    3.000
+ OSE      HA     CA     CB      108.340    3.000
+ OSE      HA     CA     C       108.810    3.000
+ OSE      CB     CA     C       109.470    3.000
+ OSE      CA     CB     HB2     109.470    3.000
+ OSE      CA     CB     HB3     109.470    3.000
+ OSE      CA     CB     OG      109.470    3.000
+ OSE      HB2    CB     HB3     107.900    3.000
+ OSE      HB2    CB     OG      109.470    3.000
+ OSE      HB3    CB     OG      109.470    3.000
+ OSE      CB     OG     S       120.000    3.000
+ OSE      OG     S      O1S     109.500    3.000
+ OSE      OG     S      O2S     109.500    3.000
+ OSE      OG     S      O3S     109.500    3.000
+ OSE      O1S    S      O2S     109.500    3.000
+ OSE      O1S    S      O3S     109.500    3.000
+ OSE      O2S    S      O3S     109.500    3.000
+ OSE      S      O3S    H3S     120.000    3.000
+ OSE      CA     C      O       118.500    3.000
+ OSE      CA     C      OXT     118.500    3.000
+ OSE      O      C      OXT     123.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ OSE      var_1    HN2    N      CA     C        175.000   20.000   1
+ OSE      var_2    N      CA     CB     OG       178.189   20.000   3
+ OSE      var_3    CA     CB     OG     S       -179.980   20.000   1
+ OSE      var_4    CB     OG     S      O3S     -173.648   20.000   1
+ OSE      var_5    OG     S      O3S    H3S      -52.352   20.000   1
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ OSE      chir_01  CA     N      CB     C         negativ
+ OSE      chir_02  S      OG     O1S    O2S       negativ
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ OSE      plan-1    N         0.020
+ OSE      plan-1    CA        0.020
+ OSE      plan-1    HN1       0.020
+ OSE      plan-1    HN2       0.020
+ OSE      plan-2    C         0.020
+ OSE      plan-2    CA        0.020
+ OSE      plan-2    O         0.020
+ OSE      plan-2    OXT       0.020
+# ------------------------------------------------------

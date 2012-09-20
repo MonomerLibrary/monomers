@@ -1,0 +1,205 @@
+global_
+_lib_name         ?
+_lib_version      ?
+_lib_update       ?
+# ------------------------------------------------
+#
+# ---   LIST OF MONOMERS ---
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+AHC      AHC '4-AMINOHYDROCINNAMIC ACID           ' non-polymer        22  12 .
+# ------------------------------------------------------
+# ------------------------------------------------------
+#
+# --- DESCRIPTION OF MONOMERS ---
+#
+data_comp_AHC
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ AHC           OT2    O    OC       -0.500      0.000    0.000    0.000
+ AHC           C      C    C         0.000     -1.030   -0.683    0.197
+ AHC           OT1    O    OC       -0.500     -0.979   -1.929    0.107
+ AHC           CA     C    CH2       0.000     -2.329   -0.003    0.543
+ AHC           HA1    H    H         0.000     -2.612    0.674   -0.266
+ AHC           HA2    H    H         0.000     -2.207    0.566    1.467
+ AHC           CB     C    CH2       0.000     -3.422   -1.057    0.732
+ AHC           HB1    H    H         0.000     -3.137   -1.734    1.541
+ AHC           HB2    H    H         0.000     -3.542   -1.626   -0.192
+ AHC           CG     C    CR6       0.000     -4.720   -0.377    1.078
+ AHC           CD2    C    CR16      0.000     -5.043   -0.141    2.401
+ AHC           HD2    H    H         0.000     -4.364   -0.448    3.187
+ AHC           CE2    C    CR16      0.000     -6.231    0.486    2.722
+ AHC           HE2    H    H         0.000     -6.480    0.678    3.758
+ AHC           CZ     C    CR6       0.000     -7.107    0.870    1.713
+ AHC           NH     N    NH2       0.000     -8.312    1.501    2.034
+ AHC           HNH2   H    H         0.000     -8.959    1.790    1.304
+ AHC           HNH1   H    H         0.000     -8.562    1.681    3.004
+ AHC           CE1    C    CR16      0.000     -6.780    0.630    0.386
+ AHC           HE1    H    H         0.000     -7.459    0.929   -0.403
+ AHC           CD1    C    CR16      0.000     -5.588    0.008    0.072
+ AHC           HD1    H    H         0.000     -5.331   -0.179   -0.963
+loop_
+_chem_comp_tree.comp_id
+_chem_comp_tree.atom_id
+_chem_comp_tree.atom_back
+_chem_comp_tree.atom_forward
+_chem_comp_tree.connect_type
+ AHC      OT2    n/a    C      START
+ AHC      C      OT2    CA     .
+ AHC      OT1    C      .      .
+ AHC      CA     C      CB     .
+ AHC      HA1    CA     .      .
+ AHC      HA2    CA     .      .
+ AHC      CB     CA     CG     .
+ AHC      HB1    CB     .      .
+ AHC      HB2    CB     .      .
+ AHC      CG     CB     CD2    .
+ AHC      CD2    CG     CE2    .
+ AHC      HD2    CD2    .      .
+ AHC      CE2    CD2    CZ     .
+ AHC      HE2    CE2    .      .
+ AHC      CZ     CE2    CE1    .
+ AHC      NH     CZ     HNH1   .
+ AHC      HNH2   NH     .      .
+ AHC      HNH1   NH     .      .
+ AHC      CE1    CZ     CD1    .
+ AHC      HE1    CE1    .      .
+ AHC      CD1    CE1    HD1    .
+ AHC      HD1    CD1    .      END
+ AHC      CG     CD1    .    ADD
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+ AHC      CA     C         single      1.510    0.020
+ AHC      CB     CA        single      1.524    0.020
+ AHC      HA1    CA        single      1.092    0.020
+ AHC      HA2    CA        single      1.092    0.020
+ AHC      OT1    C         deloc       1.250    0.020
+ AHC      C      OT2       deloc       1.250    0.020
+ AHC      CG     CB        single      1.511    0.020
+ AHC      HB1    CB        single      1.092    0.020
+ AHC      HB2    CB        single      1.092    0.020
+ AHC      CG     CD1       double      1.390    0.020
+ AHC      CD2    CG        single      1.390    0.020
+ AHC      CD1    CE1       single      1.390    0.020
+ AHC      HD1    CD1       single      1.083    0.020
+ AHC      CE2    CD2       double      1.390    0.020
+ AHC      HD2    CD2       single      1.083    0.020
+ AHC      CE1    CZ        double      1.390    0.020
+ AHC      HE1    CE1       single      1.083    0.020
+ AHC      CZ     CE2       single      1.390    0.020
+ AHC      HE2    CE2       single      1.083    0.020
+ AHC      NH     CZ        single      1.355    0.020
+ AHC      HNH1   NH        single      1.010    0.020
+ AHC      HNH2   NH        single      1.010    0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ AHC      OT2    C      OT1     123.000    3.000
+ AHC      OT2    C      CA      118.500    3.000
+ AHC      OT1    C      CA      118.500    3.000
+ AHC      C      CA     HA1     109.470    3.000
+ AHC      C      CA     HA2     109.470    3.000
+ AHC      C      CA     CB      109.470    3.000
+ AHC      HA1    CA     HA2     107.900    3.000
+ AHC      HA1    CA     CB      109.470    3.000
+ AHC      HA2    CA     CB      109.470    3.000
+ AHC      CA     CB     HB1     109.470    3.000
+ AHC      CA     CB     HB2     109.470    3.000
+ AHC      CA     CB     CG      109.470    3.000
+ AHC      HB1    CB     HB2     107.900    3.000
+ AHC      HB1    CB     CG      109.470    3.000
+ AHC      HB2    CB     CG      109.470    3.000
+ AHC      CB     CG     CD2     120.000    3.000
+ AHC      CB     CG     CD1     120.000    3.000
+ AHC      CD2    CG     CD1     120.000    3.000
+ AHC      CG     CD2    HD2     120.000    3.000
+ AHC      CG     CD2    CE2     120.000    3.000
+ AHC      HD2    CD2    CE2     120.000    3.000
+ AHC      CD2    CE2    HE2     120.000    3.000
+ AHC      CD2    CE2    CZ      120.000    3.000
+ AHC      HE2    CE2    CZ      120.000    3.000
+ AHC      CE2    CZ     NH      120.000    3.000
+ AHC      CE2    CZ     CE1     120.000    3.000
+ AHC      NH     CZ     CE1     120.000    3.000
+ AHC      CZ     NH     HNH2    120.000    3.000
+ AHC      CZ     NH     HNH1    120.000    3.000
+ AHC      HNH2   NH     HNH1    120.000    3.000
+ AHC      CZ     CE1    HE1     120.000    3.000
+ AHC      CZ     CE1    CD1     120.000    3.000
+ AHC      HE1    CE1    CD1     120.000    3.000
+ AHC      CE1    CD1    HD1     120.000    3.000
+ AHC      CE1    CD1    CG      120.000    3.000
+ AHC      HD1    CD1    CG      120.000    3.000
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ AHC      var_1    OT2    C      CA     CB      -179.915   20.000   3
+ AHC      var_2    C      CA     CB     CG      -180.000   20.000   3
+ AHC      var_3    CA     CB     CG     CD2      -90.113   20.000   2
+ AHC      CONST_1  CB     CG     CD1    CE1      180.000    0.000   0
+ AHC      CONST_2  CB     CG     CD2    CE2      180.000    0.000   0
+ AHC      CONST_3  CG     CD2    CE2    CZ         0.000    0.000   0
+ AHC      CONST_4  CD2    CE2    CZ     CE1        0.000    0.000   0
+ AHC      CONST_5  CE2    CZ     NH     HNH1      -0.243    0.000   0
+ AHC      CONST_6  CE2    CZ     CE1    CD1        0.000    0.000   0
+ AHC      CONST_7  CZ     CE1    CD1    CG         0.000    0.000   0
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+ AHC      plan-1    C         0.020
+ AHC      plan-1    CA        0.020
+ AHC      plan-1    OT1       0.020
+ AHC      plan-1    OT2       0.020
+ AHC      plan-2    CG        0.020
+ AHC      plan-2    CB        0.020
+ AHC      plan-2    CD1       0.020
+ AHC      plan-2    CD2       0.020
+ AHC      plan-2    CE1       0.020
+ AHC      plan-2    CE2       0.020
+ AHC      plan-2    CZ        0.020
+ AHC      plan-2    HD1       0.020
+ AHC      plan-2    HD2       0.020
+ AHC      plan-2    HE1       0.020
+ AHC      plan-2    HE2       0.020
+ AHC      plan-2    NH        0.020
+ AHC      plan-2    HNH2      0.020
+ AHC      plan-2    HNH1      0.020
+ AHC      plan-3    NH        0.020
+ AHC      plan-3    CZ        0.020
+ AHC      plan-3    HNH1      0.020
+ AHC      plan-3    HNH2      0.020
+# ------------------------------------------------------
