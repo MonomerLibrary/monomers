@@ -1,12 +1,20 @@
+# Created using JLigand 1.0.40
+# and
+# dictionary  5.41    ( 11/02/2013 )
+# libcheck    5.2.1   ( 10/04/2013 )
+# refmac      5.8.73  ( 25/05/2014 )
+#
+# Authors: Andrey Lebedev, Paul Young, Alexei Vagin, Garib Murshudov
+# E-mail: andrey.lebedev@stfc.ac.uk
+#
+
 global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
-#
+_lib_name         mon_lib
+_lib_version      5.41
+_lib_update       11/02/2013
+
 data_comp_list
+
 loop_
 _chem_comp.id
 _chem_comp.three_letter_code
@@ -15,14 +23,10 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-EUG      EUG '2-METHOXY-4-VINYL-PHENOL            ' non-polymer        21  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
-#
+EUG      EUG '2-METHOXY-4-VINYL-PHENOL            ' non-polymer        24  12 .
+
 data_comp_EUG
-#
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
@@ -32,55 +36,31 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- EUG           O4     O    OH1       0.000      0.000    0.000    0.000
- EUG           HO4    H    H         0.000      0.313   -0.912    0.065
- EUG           C4     C    CR6       0.000     -1.341    0.003   -0.227
- EUG           C3     C    CR6       0.000     -1.824    0.003   -1.532
- EUG           O3     O    O2        0.000     -0.955   -0.005   -2.580
- EUG           C9     C    CH3       0.000     -1.743   -0.008   -3.771
- EUG           H93    H    H         0.000     -2.359   -0.869   -3.786
- EUG           H92    H    H         0.000     -2.350    0.860   -3.794
- EUG           H91    H    H         0.000     -1.106   -0.015   -4.617
- EUG           C2     C    CR16      0.000     -3.186    0.008   -1.766
- EUG           H2     H    H         0.000     -3.563    0.004   -2.781
- EUG           C5     C    CR16      0.000     -2.223    0.018    0.841
- EUG           H5     H    H         0.000     -1.843    0.027    1.856
- EUG           C6     C    CR16      0.000     -3.585    0.022    0.616
- EUG           H6     H    H         0.000     -4.272    0.028    1.452
- EUG           C1     C    CR6       0.000     -4.074    0.017   -0.690
- EUG           C7     C    C1        0.000     -5.532    0.020   -0.933
- EUG           H7     H    H         0.000     -5.909    0.016   -1.942
- EUG           C8     C    C2        0.000     -6.376    0.029    0.090
- EUG           H82    H    H         0.000     -6.000    0.033    1.100
- EUG           H81    H    H         0.000     -7.439    0.031   -0.087
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- EUG      O4     n/a    C4     START
- EUG      HO4    O4     .      .
- EUG      C4     O4     C5     .
- EUG      C3     C4     C2     .
- EUG      O3     C3     C9     .
- EUG      C9     O3     H91    .
- EUG      H93    C9     .      .
- EUG      H92    C9     .      .
- EUG      H91    C9     .      .
- EUG      C2     C3     H2     .
- EUG      H2     C2     .      .
- EUG      C5     C4     C6     .
- EUG      H5     C5     .      .
- EUG      C6     C5     C1     .
- EUG      H6     C6     .      .
- EUG      C1     C6     C7     .
- EUG      C7     C1     C8     .
- EUG      H7     C7     .      .
- EUG      C8     C7     H81    .
- EUG      H82    C8     .      .
- EUG      H81    C8     .      END
- EUG      C1     C2     .    ADD
+ EUG           O4     O    OH1       0.000      2.837    1.367    0.960
+ EUG           HO4    H    H         0.000      3.151    0.921    1.757
+ EUG           C4     C    CR6       0.000      1.551    0.994    0.707
+ EUG           C3     C    CR6       0.000      1.251   -0.329    0.418
+ EUG           O3     O    O2        0.000      2.249   -1.268    0.385
+ EUG           C9     C    CH3       0.000      3.067   -1.402   -0.775
+ EUG           H93    H    H         0.000      3.913   -1.996   -0.544
+ EUG           H92    H    H         0.000      2.511   -1.866   -1.547
+ EUG           H91    H    H         0.000      3.385   -0.445   -1.097
+ EUG           C2     C    CR16      0.000     -0.065   -0.711    0.158
+ EUG           H2     H    H         0.000     -0.273   -1.748   -0.064
+ EUG           C5     C    CR16      0.000      0.533    1.943    0.738
+ EUG           H5     H    H         0.000      0.765    2.977    0.963
+ EUG           C6     C    CR16      0.000     -0.782    1.565    0.480
+ EUG           H6     H    H         0.000     -1.569    2.309    0.505
+ EUG           C1     C    CR6       0.000     -1.093    0.238    0.188
+ EUG           C7     C    C1        0.000     -2.519   -0.097   -0.078
+ EUG           H7     H    H         0.000     -3.244    0.698   -0.034
+ EUG           C8     C    C1        0.000     -2.948   -1.325   -0.368
+ EUG           C10    C    CH3       0.000     -4.420   -1.554   -0.620
+ EUG           H81    H    H         0.000     -2.270   -2.157   -0.426
+ EUG           H12    H    H         0.000     -4.957   -1.426    0.284
+ EUG           H11    H    H         0.000     -4.767   -0.858   -1.338
+ EUG           H10    H    H         0.000     -4.568   -2.538   -0.982
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
@@ -88,27 +68,31 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- EUG      C1     C2        double      1.390    0.020
- EUG      C1     C6        single      1.390    0.020
- EUG      C7     C1        single      1.480    0.020
- EUG      C2     C3        single      1.390    0.020
- EUG      H2     C2        single      1.083    0.020
- EUG      C3     C4        double      1.487    0.020
- EUG      O3     C3        single      1.370    0.020
- EUG      C5     C4        single      1.390    0.020
- EUG      C4     O4        single      1.362    0.020
- EUG      C6     C5        double      1.390    0.020
- EUG      H5     C5        single      1.083    0.020
- EUG      H6     C6        single      1.083    0.020
- EUG      C8     C7        double      1.320    0.020
- EUG      H7     C7        single      1.077    0.020
- EUG      H81    C8        single      1.077    0.020
- EUG      H82    C8        single      1.077    0.020
- EUG      C9     O3        single      1.426    0.020
- EUG      H91    C9        single      1.059    0.020
- EUG      H92    C9        single      1.059    0.020
- EUG      H93    C9        single      1.059    0.020
- EUG      HO4    O4        single      0.967    0.020
+ EUG      O4     HO4       single      0.967    0.020
+ EUG      O4     C4        single      1.362    0.020
+ EUG      C4     C3        aromatic    1.384    0.020
+ EUG      C4     C5        aromatic    1.390    0.020
+ EUG      C3     O3        single      1.370    0.020
+ EUG      C3     C2        aromatic    1.390    0.020
+ EUG      O3     C9        single      1.426    0.020
+ EUG      C9     H93       single      1.059    0.020
+ EUG      C9     H92       single      1.059    0.020
+ EUG      C9     H91       single      1.059    0.020
+ EUG      C2     H2        single      1.083    0.020
+ EUG      C2     C1        aromatic    1.390    0.020
+ EUG      C5     H5        single      1.083    0.020
+ EUG      C5     C6        aromatic    1.390    0.020
+ EUG      C6     H6        single      1.083    0.020
+ EUG      C6     C1        aromatic    1.390    0.020
+ EUG      C1     C7        single      1.480    0.020
+ EUG      C7     H7        single      1.077    0.020
+ EUG      C7     C8        double      1.330    0.020
+ EUG      C8     C10       single      1.510    0.020
+ EUG      C8     H81       single      1.077    0.020
+ EUG      C10    H12       single      1.059    0.020
+ EUG      C10    H11       single      1.059    0.020
+ EUG      C10    H10       single      1.059    0.020
+
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -116,38 +100,45 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- EUG      HO4    O4     C4      109.470    3.000
  EUG      O4     C4     C3      120.000    3.000
  EUG      O4     C4     C5      120.000    3.000
- EUG      C3     C4     C5      120.000    3.000
+ EUG      HO4    O4     C4      109.470    3.000
  EUG      C4     C3     O3      120.000    3.000
  EUG      C4     C3     C2      120.000    3.000
- EUG      O3     C3     C2      120.000    3.000
+ EUG      C4     C5     H5      120.000    3.000
+ EUG      C4     C5     C6      120.000    3.000
+ EUG      C3     C4     C5      120.000    3.000
  EUG      C3     O3     C9      120.000    3.000
+ EUG      C3     C2     H2      120.000    3.000
+ EUG      C3     C2     C1      120.000    3.000
+ EUG      O3     C3     C2      120.000    3.000
  EUG      O3     C9     H93     109.470    3.000
  EUG      O3     C9     H92     109.470    3.000
  EUG      O3     C9     H91     109.470    3.000
  EUG      H93    C9     H92     109.470    3.000
  EUG      H93    C9     H91     109.470    3.000
  EUG      H92    C9     H91     109.470    3.000
- EUG      C3     C2     H2      120.000    3.000
- EUG      C3     C2     C1      120.000    3.000
+ EUG      C2     C1     C6      120.000    3.000
+ EUG      C2     C1     C7      120.000    3.000
  EUG      H2     C2     C1      120.000    3.000
- EUG      C4     C5     H5      120.000    3.000
- EUG      C4     C5     C6      120.000    3.000
- EUG      H5     C5     C6      120.000    3.000
  EUG      C5     C6     H6      120.000    3.000
  EUG      C5     C6     C1      120.000    3.000
- EUG      H6     C6     C1      120.000    3.000
+ EUG      H5     C5     C6      120.000    3.000
  EUG      C6     C1     C7      120.000    3.000
- EUG      C6     C1     C2      120.000    3.000
- EUG      C7     C1     C2      120.000    3.000
+ EUG      H6     C6     C1      120.000    3.000
  EUG      C1     C7     H7      120.000    3.000
  EUG      C1     C7     C8      120.000    3.000
- EUG      H7     C7     C8      120.000    3.000
- EUG      C7     C8     H82     120.000    3.000
+ EUG      C7     C8     C10     120.000    3.000
  EUG      C7     C8     H81     120.000    3.000
- EUG      H82    C8     H81     120.000    3.000
+ EUG      H7     C7     C8      120.000    3.000
+ EUG      C8     C10    H12     109.470    3.000
+ EUG      C8     C10    H11     109.470    3.000
+ EUG      C8     C10    H10     109.470    3.000
+ EUG      C10    C8     H81     120.000    3.000
+ EUG      H12    C10    H11     109.470    3.000
+ EUG      H12    C10    H10     109.470    3.000
+ EUG      H11    C10    H10     109.470    3.000
+
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -158,39 +149,41 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EUG      var_1    HO4    O4     C4     C5        89.913   20.000   1
- EUG      CONST_1  O4     C4     C3     C2       180.000    0.000   0
- EUG      var_2    C4     C3     O3     C9       179.819   20.000   1
- EUG      var_3    C3     O3     C9     H91     -179.965   20.000   1
- EUG      CONST_2  C4     C3     C2     C1         0.000    0.000   0
- EUG      CONST_3  O4     C4     C5     C6       180.000    0.000   0
- EUG      CONST_4  C4     C5     C6     C1         0.000    0.000   0
- EUG      CONST_5  C5     C6     C1     C7       180.000    0.000   0
- EUG      CONST_6  C6     C1     C2     C3         0.000    0.000   0
- EUG      var_4    C6     C1     C7     C8         0.019   20.000   1
- EUG      CONST_7  C1     C7     C8     H81      179.998    0.000   0
+ EUG      CONST_1  O4     C4     C3     C2         0.000    0.000   0
+ EUG      CONST_2  O4     C4     C5     C6         0.000    0.000   0
+ EUG      var_1    HO4    O4     C4     C5       180.000   20.000   3
+ EUG      CONST_3  C4     C5     C6     C1         0.000    0.000   0
+ EUG      var_5    C3     O3     C9     H91      180.000   20.000   3
+ EUG      CONST_6  C3     C2     C1     C6         0.000    0.000   0
+ EUG      CONST_7  O3     C3     C2     C1         0.000    0.000   0
+ EUG      var_4    C9     O3     C3     C2       180.000   20.000   3
+ EUG      CONST_4  C2     C1     C6     C5         0.000    0.000   0
+ EUG      var_2    C6     C1     C7     C8       180.000   20.000   3
+ EUG      CONST_5  C1     C7     C8     C10      180.000    0.000   0
+ EUG      var_3    C7     C8     C10    H10      180.000   20.000   3
+
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- EUG      plan-1    C1        0.020
- EUG      plan-1    C2        0.020
- EUG      plan-1    C6        0.020
- EUG      plan-1    C7        0.020
- EUG      plan-1    C3        0.020
- EUG      plan-1    C4        0.020
- EUG      plan-1    C5        0.020
- EUG      plan-1    H2        0.020
- EUG      plan-1    O3        0.020
- EUG      plan-1    O4        0.020
- EUG      plan-1    H5        0.020
- EUG      plan-1    H6        0.020
- EUG      plan-1    H7        0.020
- EUG      plan-2    C7        0.020
  EUG      plan-2    C1        0.020
- EUG      plan-2    C8        0.020
+ EUG      plan-2    C7        0.020
  EUG      plan-2    H7        0.020
+ EUG      plan-2    C8        0.020
+ EUG      plan-2    C10       0.020
  EUG      plan-2    H81       0.020
- EUG      plan-2    H82       0.020
-# ------------------------------------------------------
+ EUG      plan-1    O4        0.020
+ EUG      plan-1    C4        0.020
+ EUG      plan-1    C3        0.020
+ EUG      plan-1    O3        0.020
+ EUG      plan-1    C2        0.020
+ EUG      plan-1    H2        0.020
+ EUG      plan-1    C5        0.020
+ EUG      plan-1    H5        0.020
+ EUG      plan-1    C6        0.020
+ EUG      plan-1    H6        0.020
+ EUG      plan-1    C1        0.020
+ EUG      plan-1    C7        0.020
+ EUG      plan-1    H7        0.020
+

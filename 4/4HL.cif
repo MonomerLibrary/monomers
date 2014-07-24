@@ -1,7 +1,7 @@
 global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
+_lib_name         mon_lib
+_lib_version      5.41
+_lib_update       11/02/2013
 # ------------------------------------------------
 #
 # ---   LIST OF MONOMERS ---
@@ -15,7 +15,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-4HL      4HL '4-(HYDRAZINOMETHYL)PHENOL           ' non-polymer        20  10 .
+4HL      4HL '(6E)-4-[(2S)-2-amino-2-carboxyethyl]' peptide            40  24 .
 # ------------------------------------------------------
 # ------------------------------------------------------
 #
@@ -32,53 +32,94 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 4HL           "OH'"  O    OH1       0.000      0.000    0.000    0.000
- 4HL           "HOH'" H    H         0.000     -0.265    0.550    0.750
- 4HL           "C6'"  C    CR6       0.000     -1.077   -0.222   -0.801
- 4HL           "C5'"  C    CR16      0.000     -2.359    0.100   -0.353
- 4HL           "H5'"  H    H         0.000     -2.496    0.525    0.633
- 4HL           "C1'"  C    CR16      0.000     -0.901   -0.770   -2.072
- 4HL           "H1'"  H    H         0.000      0.094   -1.020   -2.420
- 4HL           "C2'"  C    CR16      0.000     -2.005   -0.996   -2.894
- 4HL           "H2'"  H    H         0.000     -1.867   -1.422   -3.880
- 4HL           "C3'"  C    CR6       0.000     -3.285   -0.674   -2.445
- 4HL           "C4'"  C    CR16      0.000     -3.462   -0.127   -1.175
- 4HL           "H4'"  H    H         0.000     -4.457    0.123   -0.827
- 4HL           C1     C    CH2       0.000     -4.466   -0.916   -3.324
- 4HL           H11    H    H         0.000     -5.323   -1.139   -2.685
- 4HL           H12    H    H         0.000     -4.247   -1.782   -3.953
- 4HL           NX1    N    NH1       0.000     -4.770    0.220   -4.157
- 4HL           HNX1   H    H         0.000     -4.252    1.088   -4.179
- 4HL           NX2    N    NH2       0.000     -5.924   -0.081   -4.950
- 4HL           HX22   H    H         0.000     -5.845   -0.195   -5.956
- 4HL           HX21   H    H         0.000     -6.837   -0.185   -4.515
+ 4HL           N      N    NT3      -1.000      0.000    0.000    0.000
+ 4HL           H      H    HNT3      0.000     -0.483    0.771    0.305
+ 4HL           H2     H    HNT3      0.000     -0.207   -0.165   -0.922
+ 4HL           CA     C    CH1       0.000      1.456    0.244    0.141
+ 4HL           HA     H    H         0.000      1.760    0.342    1.192
+ 4HL           CB     C    CH2       0.000      2.004   -1.006   -0.496
+ 4HL           HB2    H    H         0.000      3.079   -0.818   -0.529
+ 4HL           HB3    H    H         0.000      1.598   -0.969   -1.509
+ 4HL           CG     C    CR6       0.000      1.718   -2.527    0.170
+ 4HL           CD1    C    CR6       0.000      1.401   -3.477   -1.078
+ 4HL           OX1    O    O         0.000      0.181   -3.212   -1.532
+ 4HL           CE1    C    CR16      0.000      1.411   -4.772   -0.740
+ 4HL           HE1    H    H         0.000      2.111   -5.483   -1.161
+ 4HL           CZ     C    CR6       0.000      0.535   -5.098    0.112
+ 4HL           OH     O    O        -1.000      0.646   -6.343    0.530
+ 4HL           CE2    C    CR6       0.000      0.311   -4.116    1.199
+ 4HL           CD2    C    CR16      0.000      1.245   -3.170    1.360
+ 4HL           HD2    H    H         0.000      1.624   -2.905    2.339
+ 4HL           NX2    N    NH1       1.000     -0.784   -3.177    1.160
+ 4HL           H4     H    H         0.000     -1.260   -3.112    0.272
+ 4HL           NX1    N    NH1       0.000     -1.338   -2.260    2.268
+ 4HL           H3     H    HNH1      0.000     -0.247   -0.763    0.526
+ 4HL           C1     C    CH2       0.000     -1.165   -0.746    2.764
+ 4HL           H11    H    H         0.000     -2.108   -0.364    2.367
+ 4HL           H12    H    H         0.000     -0.351   -0.473    2.090
+ 4HL           "C3'"  C    CR6       0.000     -0.901   -0.122    4.195
+ 4HL           "C2'"  C    CR16      0.000     -1.545   -0.585    5.335
+ 4HL           "H2'"  H    H         0.000     -1.923   -0.002    6.166
+ 4HL           "C1'"  C    CR16      0.000     -1.596   -1.974    5.168
+ 4HL           "H1'"  H    H         0.000     -2.188   -2.623    5.801
+ 4HL           "C6'"  C    CR6       0.000     -0.785   -2.464    4.073
+ 4HL           "OH'"  O    OH1       0.000     -0.765   -3.820    3.979
+ 4HL           H5     H    H         0.000     -0.209   -4.082    3.232
+ 4HL           "C5'"  C    CR16      0.000      0.448   -1.709    3.931
+ 4HL           "H5'"  H    H         0.000      1.336   -2.175    3.521
+ 4HL           "C4'"  C    CR16      0.000      0.469   -0.337    4.344
+ 4HL           "H4'"  H    H         0.000      1.275    0.313    4.663
+ 4HL           C      C    C         0.000      1.858    1.442   -0.682
+ 4HL           O      O    OC       -0.500      1.069    2.376   -0.899
+ 4HL           OXT    O    OC       -0.500      2.911    1.976   -0.304
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
- 4HL      "OH'"  n/a    "C6'"  START
- 4HL      "HOH'" "OH'"  .      .
- 4HL      "C6'"  "OH'"  "C1'"  .
- 4HL      "C5'"  "C6'"  "H5'"  .
- 4HL      "H5'"  "C5'"  .      .
- 4HL      "C1'"  "C6'"  "C2'"  .
- 4HL      "H1'"  "C1'"  .      .
- 4HL      "C2'"  "C1'"  "C3'"  .
- 4HL      "H2'"  "C2'"  .      .
- 4HL      "C3'"  "C2'"  C1     .
- 4HL      "C4'"  "C3'"  "H4'"  .
- 4HL      "H4'"  "C4'"  .      .
- 4HL      C1     "C3'"  NX1    .
+ 4HL      N      n/a    CA     START
+ 4HL      H      N      .      .
+ 4HL      H2     N      .      .
+ 4HL      CA     N      C      .
+ 4HL      HA     CA     .      .
+ 4HL      CB     CA     CG     .
+ 4HL      HB2    CB     .      .
+ 4HL      HB3    CB     .      .
+ 4HL      CG     CB     CD1    .
+ 4HL      CD1    CG     CE1    .
+ 4HL      OX1    CD1    .      .
+ 4HL      CE1    CD1    CZ     .
+ 4HL      HE1    CE1    .      .
+ 4HL      CZ     CE1    CE2    .
+ 4HL      OH     CZ     .      .
+ 4HL      CE2    CZ     NX2    .
+ 4HL      CD2    CE2    HD2    .
+ 4HL      HD2    CD2    .      .
+ 4HL      NX2    CE2    NX1    .
+ 4HL      H4     NX2    .      .
+ 4HL      NX1    NX2    C1     .
+ 4HL      H3     NX1    .      .
+ 4HL      C1     NX1    "C3'"  .
  4HL      H11    C1     .      .
  4HL      H12    C1     .      .
- 4HL      NX1    C1     NX2    .
- 4HL      HNX1   NX1    .      .
- 4HL      NX2    NX1    HX21   .
- 4HL      HX22   NX2    .      .
- 4HL      HX21   NX2    .      END
- 4HL      "C4'"  "C5'"  .    ADD
+ 4HL      "C3'"  C1     "C2'"  .
+ 4HL      "C2'"  "C3'"  "C1'"  .
+ 4HL      "H2'"  "C2'"  .      .
+ 4HL      "C1'"  "C2'"  "C6'"  .
+ 4HL      "H1'"  "C1'"  .      .
+ 4HL      "C6'"  "C1'"  "C5'"  .
+ 4HL      "OH'"  "C6'"  H5     .
+ 4HL      H5     "OH'"  .      .
+ 4HL      "C5'"  "C6'"  "C4'"  .
+ 4HL      "H5'"  "C5'"  .      .
+ 4HL      "C4'"  "C5'"  "H4'"  .
+ 4HL      "H4'"  "C4'"  .      .
+ 4HL      C      CA     OXT    .
+ 4HL      O      C      .      .
+ 4HL      OXT    C      .      END
+ 4HL      CG     CD2    .    ADD
+ 4HL      "C3'"  "C4'"  .    ADD
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
@@ -86,26 +127,47 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- 4HL      NX1    C1        single      1.450    0.020
+ 4HL      N      CA        single      1.491    0.021
+ 4HL      CA     HA        single      1.099    0.020
+ 4HL      CA     CB        single      1.524    0.020
+ 4HL      CB     HB2       single      1.092    0.020
+ 4HL      CB     HB3       single      1.092    0.020
+ 4HL      CB     CG        single      1.511    0.020
+ 4HL      CG     CD2       double      1.390    0.020
+ 4HL      CG     CD1       single      1.487    0.020
+ 4HL      CD2    HD2       single      1.083    0.020
+ 4HL      CD2    CE2       single      1.390    0.020
+ 4HL      CE2    CZ        single      1.487    0.020
+ 4HL      CE2    NX2       double      1.350    0.020
+ 4HL      CZ     OH        single      1.330    0.020
+ 4HL      CZ     CE1       double      1.390    0.020
+ 4HL      CE1    HE1       single      1.083    0.020
+ 4HL      CE1    CD1       single      1.390    0.020
+ 4HL      CD1    OX1       double      1.250    0.020
+ 4HL      NX2    H4        single      1.010    0.020
+ 4HL      NX2    NX1       single      1.410    0.020
+ 4HL      NX1    C1        single      1.472    0.020
+ 4HL      NX1    H3        single      0.960    0.020
+ 4HL      C1     H11       single      1.092    0.020
+ 4HL      C1     H12       single      1.092    0.020
  4HL      C1     "C3'"     single      1.511    0.020
- 4HL      H11    C1        single      1.092    0.020
- 4HL      H12    C1        single      1.092    0.020
- 4HL      NX2    NX1       single      1.400    0.020
- 4HL      HNX1   NX1       single      1.010    0.020
- 4HL      HX21   NX2       single      1.010    0.020
- 4HL      HX22   NX2       single      1.010    0.020
- 4HL      "C4'"  "C5'"     double      1.390    0.020
- 4HL      "C4'"  "C3'"     single      1.390    0.020
- 4HL      "H4'"  "C4'"     single      1.083    0.020
- 4HL      "C5'"  "C6'"     single      1.390    0.020
- 4HL      "H5'"  "C5'"     single      1.083    0.020
- 4HL      "C1'"  "C6'"     double      1.390    0.020
+ 4HL      "C3'"  "C4'"     aromatic    1.390    0.020
+ 4HL      "C3'"  "C2'"     aromatic    1.390    0.020
+ 4HL      "C4'"  "H4'"     single      1.083    0.020
+ 4HL      "C4'"  "C5'"     aromatic    1.390    0.020
+ 4HL      "C2'"  "H2'"     single      1.083    0.020
+ 4HL      "C2'"  "C1'"     aromatic    1.390    0.020
+ 4HL      "C1'"  "H1'"     single      1.083    0.020
+ 4HL      "C1'"  "C6'"     aromatic    1.390    0.020
  4HL      "C6'"  "OH'"     single      1.362    0.020
- 4HL      "C2'"  "C1'"     single      1.390    0.020
- 4HL      "H1'"  "C1'"     single      1.083    0.020
- 4HL      "C3'"  "C2'"     double      1.390    0.020
- 4HL      "H2'"  "C2'"     single      1.083    0.020
- 4HL      "HOH'" "OH'"     single      0.967    0.020
+ 4HL      "C6'"  "C5'"     aromatic    1.390    0.020
+ 4HL      "OH'"  H5        single      0.967    0.020
+ 4HL      "C5'"  "H5'"     single      1.083    0.020
+ 4HL      CA     C         single      1.500    0.020
+ 4HL      C      O         deloc       1.231    0.020
+ 4HL      N      H         single      0.960    0.020
+ 4HL      N      H2        single      0.960    0.020
+ 4HL      C      OXT       deloc       1.231    0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,37 +175,73 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 4HL      "HOH'" "OH'"  "C6'"   109.470    3.000
- 4HL      "OH'"  "C6'"  "C5'"   120.000    3.000
- 4HL      "OH'"  "C6'"  "C1'"   120.000    3.000
- 4HL      "C5'"  "C6'"  "C1'"   120.000    3.000
- 4HL      "C6'"  "C5'"  "H5'"   120.000    3.000
- 4HL      "C6'"  "C5'"  "C4'"   120.000    3.000
- 4HL      "H5'"  "C5'"  "C4'"   120.000    3.000
- 4HL      "C6'"  "C1'"  "H1'"   120.000    3.000
- 4HL      "C6'"  "C1'"  "C2'"   120.000    3.000
- 4HL      "H1'"  "C1'"  "C2'"   120.000    3.000
- 4HL      "C1'"  "C2'"  "H2'"   120.000    3.000
- 4HL      "C1'"  "C2'"  "C3'"   120.000    3.000
- 4HL      "H2'"  "C2'"  "C3'"   120.000    3.000
- 4HL      "C2'"  "C3'"  "C4'"   120.000    3.000
- 4HL      "C2'"  "C3'"  C1      120.000    3.000
- 4HL      "C4'"  "C3'"  C1      120.000    3.000
+ 4HL      O      C      CA      121.000    3.000
+ 4HL      C      CA     HA      108.810    3.000
+ 4HL      C      CA     N       109.500    3.000
+ 4HL      C      CA     CB      109.470    3.000
+ 4HL      CA     CB     HB2     109.470    3.000
+ 4HL      CA     CB     HB3     109.470    3.000
+ 4HL      CA     CB     CG      109.470    3.000
+ 4HL      HA     CA     N       109.500    3.000
+ 4HL      HA     CA     CB      108.340    3.000
+ 4HL      N      CA     CB      109.500    3.000
+ 4HL      CB     CG     CD2     120.000    3.000
+ 4HL      CB     CG     CD1     120.000    3.000
+ 4HL      HB2    CB     HB3     107.900    3.000
+ 4HL      HB2    CB     CG      109.470    3.000
+ 4HL      HB3    CB     CG      109.470    3.000
+ 4HL      CG     CD2    HD2     120.000    3.000
+ 4HL      CG     CD2    CE2     120.000    3.000
+ 4HL      CG     CD1    CE1     120.000    3.000
+ 4HL      CG     CD1    OX1     120.000    3.000
+ 4HL      CD2    CG     CD1     120.000    3.000
+ 4HL      CD2    CE2    CZ      120.000    3.000
+ 4HL      CD2    CE2    NX2     120.000    3.000
+ 4HL      HD2    CD2    CE2     120.000    3.000
+ 4HL      CE2    CZ     OH      120.000    3.000
+ 4HL      CE2    CZ     CE1     120.000    3.000
+ 4HL      CE2    NX2    H4      120.000    3.000
+ 4HL      CE2    NX2    NX1     120.000    3.000
+ 4HL      CZ     CE2    NX2     120.000    3.000
+ 4HL      CZ     CE1    HE1     120.000    3.000
+ 4HL      CZ     CE1    CD1     120.000    3.000
+ 4HL      OH     CZ     CE1     120.000    3.000
+ 4HL      CE1    CD1    OX1     120.000    3.000
+ 4HL      HE1    CE1    CD1     120.000    3.000
+ 4HL      NX2    NX1    C1      109.500    3.000
+ 4HL      H4     NX2    NX1     120.000    3.000
+ 4HL      NX1    C1     H11     109.500    3.000
+ 4HL      NX1    C1     H12     109.500    3.000
+ 4HL      NX1    C1     "C3'"   109.500    3.000
+ 4HL      NX2    NX1    H3      109.470    3.000
+ 4HL      H3     NX1    C1      109.470    3.000
+ 4HL      C1     "C3'"  "C4'"   120.000    3.000
+ 4HL      C1     "C3'"  "C2'"   120.000    3.000
+ 4HL      H11    C1     H12     107.900    3.000
+ 4HL      H11    C1     "C3'"   109.470    3.000
+ 4HL      H12    C1     "C3'"   109.470    3.000
  4HL      "C3'"  "C4'"  "H4'"   120.000    3.000
  4HL      "C3'"  "C4'"  "C5'"   120.000    3.000
+ 4HL      "C3'"  "C2'"  "H2'"   120.000    3.000
+ 4HL      "C3'"  "C2'"  "C1'"   120.000    3.000
+ 4HL      "C4'"  "C3'"  "C2'"   120.000    3.000
+ 4HL      "C4'"  "C5'"  "C6'"   120.000    3.000
+ 4HL      "C4'"  "C5'"  "H5'"   120.000    3.000
  4HL      "H4'"  "C4'"  "C5'"   120.000    3.000
- 4HL      "C3'"  C1     H11     109.470    3.000
- 4HL      "C3'"  C1     H12     109.470    3.000
- 4HL      "C3'"  C1     NX1     109.500    3.000
- 4HL      H11    C1     H12     107.900    3.000
- 4HL      H11    C1     NX1     109.470    3.000
- 4HL      H12    C1     NX1     109.470    3.000
- 4HL      C1     NX1    HNX1    118.500    3.000
- 4HL      C1     NX1    NX2     120.000    3.000
- 4HL      HNX1   NX1    NX2     120.000    3.000
- 4HL      NX1    NX2    HX22    120.000    3.000
- 4HL      NX1    NX2    HX21    120.000    3.000
- 4HL      HX22   NX2    HX21    120.000    3.000
+ 4HL      "C2'"  "C1'"  "H1'"   120.000    3.000
+ 4HL      "C2'"  "C1'"  "C6'"   120.000    3.000
+ 4HL      "H2'"  "C2'"  "C1'"   120.000    3.000
+ 4HL      "C1'"  "C6'"  "OH'"   120.000    3.000
+ 4HL      "C1'"  "C6'"  "C5'"   120.000    3.000
+ 4HL      "H1'"  "C1'"  "C6'"   120.000    3.000
+ 4HL      "C6'"  "OH'"  H5      109.470    3.000
+ 4HL      "C6'"  "C5'"  "H5'"   120.000    3.000
+ 4HL      "OH'"  "C6'"  "C5'"   120.000    3.000
+ 4HL      H2     N      CA      109.470    3.000
+ 4HL      H      N      H2      109.470    3.000
+ 4HL      H      N      CA      109.470    3.000
+ 4HL      CA     C      OXT     121.000    3.000
+ 4HL      O      C      OXT     118.000    3.000
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -154,42 +252,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4HL      var_1    "HOH'" "OH'"  "C6'"  "C1'"    167.748   20.000   1
- 4HL      CONST_1  "OH'"  "C6'"  "C5'"  "C4'"    180.000    0.000   0
- 4HL      CONST_2  "OH'"  "C6'"  "C1'"  "C2'"    180.000    0.000   0
- 4HL      CONST_3  "C6'"  "C1'"  "C2'"  "C3'"      0.000    0.000   0
- 4HL      CONST_4  "C1'"  "C2'"  "C3'"  C1       180.000    0.000   0
- 4HL      CONST_5  "C2'"  "C3'"  "C4'"  "C5'"      0.000    0.000   0
- 4HL      CONST_6  "C3'"  "C4'"  "C5'"  "C6'"      0.000    0.000   0
- 4HL      var_2    "C2'"  "C3'"  C1     NX1      -89.983   20.000   2
- 4HL      var_3    "C3'"  C1     NX1    NX2     -178.953   20.000   3
- 4HL      CONST_7  C1     NX1    NX2    HX21      68.121    0.000   0
+ 4HL      var_4            O      C      CA     CB               180.000           20.000   3
+ 4HL      var_2            C      CA     CB     CG               180.000           20.000   3
+ 4HL      var_1            CA     CB     CG     CD1                0.000           20.000   2
+ 4HL      CONST_1          CB     CG     CD1    OX1                0.000            0.000   0
+ 4HL      CONST_6          CG     CD2    CE2    CZ                 0.000            0.000   0
+ 4HL      CONST_2          CE2    CD2    CG     CD1                0.000            0.000   0
+ 4HL      CONST_4          CE2    CZ     CE1    CD1                0.000            0.000   0
+ 4HL      var_6            CE2    NX2    NX1    C1               180.000           20.000   3
+ 4HL      CONST_7          CZ     CE2    NX2    NX1              180.000            0.000   0
+ 4HL      CONST_3          CZ     CE1    CD1    OX1                0.000            0.000   0
+ 4HL      CONST_5          CE1    CZ     CE2    NX2                0.000            0.000   0
+ 4HL      var_7            NX2    NX1    C1     "C3'"            180.000           20.000   3
+ 4HL      var_8            NX1    C1     "C3'"  "C2'"              0.000           20.000   2
+ 4HL      CONST_8          C1     "C3'"  "C4'"  "C5'"              0.000            0.000   0
+ 4HL      CONST_9          C1     "C3'"  "C2'"  "C1'"              0.000            0.000   0
+ 4HL      CONST_13         "C3'"  "C4'"  "C5'"  "C6'"              0.000            0.000   0
+ 4HL      CONST_10         "C3'"  "C2'"  "C1'"  "C6'"              0.000            0.000   0
+ 4HL      CONST_12         "C4'"  "C5'"  "C6'"  "C1'"              0.000            0.000   0
+ 4HL      CONST_11         "C2'"  "C1'"  "C6'"  "C5'"              0.000            0.000   0
+ 4HL      var_9            "C1'"  "C6'"  "OH'"  H5               180.000           20.000   3
+ 4HL      psi              N      CA     C      OXT              160.000           30.000   2
+loop_
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+ 4HL      chir_01          CA     C      CB     N         positiv
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 4HL      plan-1    NX1       0.020
- 4HL      plan-1    C1        0.020
- 4HL      plan-1    NX2       0.020
- 4HL      plan-1    HNX1      0.020
- 4HL      plan-1    HX22      0.020
- 4HL      plan-1    HX21      0.020
- 4HL      plan-2    NX2       0.020
- 4HL      plan-2    NX1       0.020
- 4HL      plan-2    HX21      0.020
- 4HL      plan-2    HX22      0.020
- 4HL      plan-2    HNX1      0.020
- 4HL      plan-3    "C4'"     0.020
- 4HL      plan-3    "C5'"     0.020
- 4HL      plan-3    "C3'"     0.020
- 4HL      plan-3    "H4'"     0.020
- 4HL      plan-3    "C6'"     0.020
- 4HL      plan-3    "C1'"     0.020
- 4HL      plan-3    "C2'"     0.020
- 4HL      plan-3    "H5'"     0.020
- 4HL      plan-3    "OH'"     0.020
- 4HL      plan-3    "H1'"     0.020
- 4HL      plan-3    "H2'"     0.020
- 4HL      plan-3    C1        0.020
+ 4HL      plan-3            C1        0.020
+ 4HL      plan-3            "C3'"     0.020
+ 4HL      plan-3            "C4'"     0.020
+ 4HL      plan-3            "H4'"     0.020
+ 4HL      plan-3            "C2'"     0.020
+ 4HL      plan-3            "H2'"     0.020
+ 4HL      plan-3            "C1'"     0.020
+ 4HL      plan-3            "H1'"     0.020
+ 4HL      plan-3            "C6'"     0.020
+ 4HL      plan-3            "OH'"     0.020
+ 4HL      plan-3            "C5'"     0.020
+ 4HL      plan-3            "H5'"     0.020
+ 4HL      plan-2            CB        0.020
+ 4HL      plan-2            CG        0.020
+ 4HL      plan-2            CD2       0.020
+ 4HL      plan-2            HD2       0.020
+ 4HL      plan-2            CE2       0.020
+ 4HL      plan-2            CZ        0.020
+ 4HL      plan-2            OH        0.020
+ 4HL      plan-2            CE1       0.020
+ 4HL      plan-2            HE1       0.020
+ 4HL      plan-2            CD1       0.020
+ 4HL      plan-2            OX1       0.020
+ 4HL      plan-2            NX2       0.020
+ 4HL      plan-2            H4        0.020
+ 4HL      plan-2            NX1       0.020
+ 4HL      oxt               C         0.020
+ 4HL      oxt               CA        0.020
+ 4HL      oxt               O         0.020
+ 4HL      oxt               OXT       0.020
 # ------------------------------------------------------
