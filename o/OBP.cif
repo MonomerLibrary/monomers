@@ -1,12 +1,20 @@
+# Created using JLigand 1.0.37
+# and
+# dictionary  5.41    ( 11/02/2013 )
+# libcheck    5.2.1   ( 10/04/2013 )
+# refmac      5.8.49  ( 13/08/2013 )
+#
+# Authors: Andrey Lebedev, Paul Young, Alexei Vagin, Garib Murshudov
+# E-mail: andrey.lebedev@stfc.ac.uk
+#
+
 global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
-#
+_lib_name         mon_lib
+_lib_version      5.41
+_lib_update       11/02/2013
+
 data_comp_list
+
 loop_
 _chem_comp.id
 _chem_comp.three_letter_code
@@ -15,14 +23,10 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-OBP      OBP '.                                   ' non-polymer        26  16 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
-#
+OBP      OBP '.                                   ' .                  26  16 .
+
 data_comp_OBP
-#
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
@@ -32,66 +36,33 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- OBP           OX1    O    O         0.000      0.000    0.000    0.000
- OBP           SX1    S    S3        0.000     -0.734    1.114   -0.489
- OBP           OX2    O    OH1       0.000     -0.722    2.003    0.747
- OBP           HX2    H    H         0.000      0.071    2.483    0.934
- OBP           CX3    C    CR6       0.000     -2.372    0.470   -0.386
- OBP           CX4    C    CR16      0.000     -3.388    1.044   -1.123
- OBP           HX4    H    H         0.000     -3.178    1.891   -1.765
- OBP           CX5    C    CR16      0.000     -4.673    0.540   -1.043
- OBP           HX5    H    H         0.000     -5.469    0.996   -1.619
- OBP           CX6    C    CR16      0.000     -4.947   -0.544   -0.229
- OBP           HX6    H    H         0.000     -5.955   -0.934   -0.169
- OBP           CX1    C    CR16      0.000     -3.937   -1.130    0.507
- OBP           HX1    H    H         0.000     -4.153   -1.980    1.143
- OBP           CX2    C    CR6       0.000     -2.640   -0.626    0.430
- OBP           CX7    C    CR6       0.000     -1.551   -1.252    1.219
- OBP           CXC    C    CR6       0.000     -1.001   -2.472    0.813
- OBP           OH     O    OH1       0.000     -1.459   -3.086   -0.309
- OBP           HOH    H    H         0.000     -2.131   -3.738   -0.067
- OBP           CXB    C    CR16      0.000      0.016   -3.048    1.556
- OBP           HX11   H    H         0.000      0.448   -3.991    1.242
- OBP           CXA    C    CR16      0.000      0.481   -2.422    2.697
- OBP           HX10   H    H         0.000      1.276   -2.877    3.276
- OBP           CX9    C    CR16      0.000     -0.064   -1.218    3.104
- OBP           HX9    H    H         0.000      0.306   -0.733    3.999
- OBP           CX8    C    CR16      0.000     -1.079   -0.632    2.374
- OBP           HX8    H    H         0.000     -1.507    0.308    2.699
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- OBP      OX1    n/a    SX1    START
- OBP      SX1    OX1    CX3    .
- OBP      OX2    SX1    HX2    .
- OBP      HX2    OX2    .      .
- OBP      CX3    SX1    CX2    .
- OBP      CX4    CX3    CX5    .
- OBP      HX4    CX4    .      .
- OBP      CX5    CX4    CX6    .
- OBP      HX5    CX5    .      .
- OBP      CX6    CX5    CX1    .
- OBP      HX6    CX6    .      .
- OBP      CX1    CX6    HX1    .
- OBP      HX1    CX1    .      .
- OBP      CX2    CX3    CX7    .
- OBP      CX7    CX2    CXC    .
- OBP      CXC    CX7    CXB    .
- OBP      OH     CXC    HOH    .
- OBP      HOH    OH     .      .
- OBP      CXB    CXC    CXA    .
- OBP      HX11   CXB    .      .
- OBP      CXA    CXB    CX9    .
- OBP      HX10   CXA    .      .
- OBP      CX9    CXA    CX8    .
- OBP      HX9    CX9    .      .
- OBP      CX8    CX9    HX8    .
- OBP      HX8    CX8    .      END
- OBP      CX1    CX2    .    ADD
- OBP      CX7    CX8    .    ADD
+ OBP           OX1    O    O         0.000     -1.938    3.256    0.719
+ OBP           SX1    S    S3        0.000     -0.952    2.269    0.219
+ OBP           OX2    O    OH1       0.000      0.583    2.949    0.231
+ OBP           HX2    H    H         0.000      1.099    2.985   -0.587
+ OBP           CX3    C    CR6       0.000     -0.959    0.908    1.145
+ OBP           CX4    C    CR16      0.000     -1.475    0.984    2.438
+ OBP           HX4    H    H         0.000     -1.861    1.921    2.816
+ OBP           CX5    C    CR16      0.000     -1.501   -0.140    3.259
+ OBP           HX5    H    H         0.000     -1.906   -0.062    4.261
+ OBP           CX6    C    CR16      0.000     -1.011   -1.362    2.809
+ OBP           HX6    H    H         0.000     -1.042   -2.224    3.465
+ OBP           CX1    C    CR16      0.000     -0.486   -1.496    1.525
+ OBP           HX1    H    H         0.000     -0.116   -2.464    1.211
+ OBP           CX2    C    CR6       0.000     -0.429   -0.407    0.652
+ OBP           CX7    C    CR6       0.000      0.147   -0.594   -0.722
+ OBP           CXC    C    CR6       0.000      1.366   -1.429   -0.952
+ OBP           OH     O    OH1       0.000      2.013   -2.053    0.073
+ OBP           HOH    H    H         0.000      2.748   -1.503    0.373
+ OBP           CXB    C    CR16      0.000      1.859   -1.577   -2.245
+ OBP           HX11   H    H         0.000      2.743   -2.178   -2.419
+ OBP           CXA    C    CR16      0.000      1.224   -0.954   -3.316
+ OBP           HX10   H    H         0.000      1.619   -1.076   -4.318
+ OBP           CX9    C    CR16      0.000      0.087   -0.175   -3.113
+ OBP           HX9    H    H         0.000     -0.392    0.300   -3.961
+ OBP           CX8    C    CR16      0.000     -0.447   -0.001   -1.838
+ OBP           HX8    H    H         0.000     -1.332    0.610   -1.723
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
@@ -99,33 +70,34 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
+ OBP      OX1    SX1       double      1.480    0.020
+ OBP      SX1    OX2       single      1.679    0.020
+ OBP      SX1    CX3       single      1.640    0.020
+ OBP      OX2    HX2       single      0.967    0.020
+ OBP      CX3    CX4       double      1.390    0.020
+ OBP      CX3    CX2       single      1.487    0.020
+ OBP      CX4    HX4       single      1.083    0.020
+ OBP      CX4    CX5       single      1.390    0.020
+ OBP      CX5    HX5       single      1.083    0.020
+ OBP      CX5    CX6       double      1.390    0.020
+ OBP      CX6    HX6       single      1.083    0.020
+ OBP      CX6    CX1       single      1.390    0.020
+ OBP      CX1    HX1       single      1.083    0.020
  OBP      CX1    CX2       double      1.390    0.020
- OBP      CX1    CX6       single      1.390    0.020
- OBP      HX1    CX1       single      1.083    0.020
- OBP      CX2    CX3       single      1.487    0.020
- OBP      CX7    CX2       single      1.487    0.020
- OBP      CX4    CX3       double      1.390    0.020
- OBP      CX3    SX1       single      1.640    0.020
- OBP      CX5    CX4       single      1.390    0.020
- OBP      HX4    CX4       single      1.083    0.020
- OBP      CX6    CX5       double      1.390    0.020
- OBP      HX5    CX5       single      1.083    0.020
- OBP      HX6    CX6       single      1.083    0.020
+ OBP      CX2    CX7       single      1.487    0.020
+ OBP      CX7    CXC       single      1.487    0.020
  OBP      CX7    CX8       double      1.390    0.020
- OBP      CXC    CX7       single      1.487    0.020
- OBP      CX8    CX9       single      1.390    0.020
- OBP      HX8    CX8       single      1.083    0.020
- OBP      CX9    CXA       double      1.390    0.020
- OBP      HX9    CX9       single      1.083    0.020
- OBP      CXA    CXB       single      1.390    0.020
- OBP      HX10   CXA       single      1.083    0.020
- OBP      CXB    CXC       double      1.390    0.020
- OBP      HX11   CXB       single      1.083    0.020
- OBP      OH     CXC       single      1.362    0.020
- OBP      HOH    OH        single      0.967    0.020
- OBP      SX1    OX1       double      1.480    0.020
- OBP      OX2    SX1       single      1.679    0.020
- OBP      HX2    OX2       single      0.967    0.020
+ OBP      CXC    OH        single      1.362    0.020
+ OBP      CXC    CXB       double      1.390    0.020
+ OBP      OH     HOH       single      0.967    0.020
+ OBP      CXB    HX11      single      1.083    0.020
+ OBP      CXB    CXA       single      1.390    0.020
+ OBP      CXA    HX10      single      1.083    0.020
+ OBP      CXA    CX9       double      1.390    0.020
+ OBP      CX9    HX9       single      1.083    0.020
+ OBP      CX9    CX8       single      1.390    0.020
+ OBP      CX8    HX8       single      1.083    0.020
+
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -133,47 +105,48 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- OBP      OX1    SX1    OX2      99.991    3.000
- OBP      OX1    SX1    CX3     100.014    3.000
- OBP      OX2    SX1    CX3      99.973    3.000
+ OBP      OX1    SX1    OX2     109.470    3.000
+ OBP      OX1    SX1    CX3     109.470    3.000
  OBP      SX1    OX2    HX2     120.000    3.000
  OBP      SX1    CX3    CX4     120.000    3.000
  OBP      SX1    CX3    CX2     120.000    3.000
- OBP      CX4    CX3    CX2     120.000    3.000
+ OBP      OX2    SX1    CX3     109.470    3.000
  OBP      CX3    CX4    HX4     120.000    3.000
  OBP      CX3    CX4    CX5     120.000    3.000
- OBP      HX4    CX4    CX5     120.000    3.000
+ OBP      CX3    CX2    CX1     120.000    3.000
+ OBP      CX3    CX2    CX7     120.000    3.000
+ OBP      CX4    CX3    CX2     120.000    3.000
  OBP      CX4    CX5    HX5     120.000    3.000
  OBP      CX4    CX5    CX6     120.000    3.000
- OBP      HX5    CX5    CX6     120.000    3.000
+ OBP      HX4    CX4    CX5     120.000    3.000
  OBP      CX5    CX6    HX6     120.000    3.000
  OBP      CX5    CX6    CX1     120.000    3.000
- OBP      HX6    CX6    CX1     120.000    3.000
+ OBP      HX5    CX5    CX6     120.000    3.000
  OBP      CX6    CX1    HX1     120.000    3.000
  OBP      CX6    CX1    CX2     120.000    3.000
+ OBP      HX6    CX6    CX1     120.000    3.000
+ OBP      CX1    CX2    CX7     120.000    3.000
  OBP      HX1    CX1    CX2     120.000    3.000
- OBP      CX3    CX2    CX7     120.000    3.000
- OBP      CX3    CX2    CX1     120.000    3.000
- OBP      CX7    CX2    CX1     120.000    3.000
  OBP      CX2    CX7    CXC     120.000    3.000
  OBP      CX2    CX7    CX8     120.000    3.000
- OBP      CXC    CX7    CX8     120.000    3.000
  OBP      CX7    CXC    OH      120.000    3.000
  OBP      CX7    CXC    CXB     120.000    3.000
- OBP      OH     CXC    CXB     120.000    3.000
+ OBP      CX7    CX8    CX9     120.000    3.000
+ OBP      CX7    CX8    HX8     120.000    3.000
+ OBP      CXC    CX7    CX8     120.000    3.000
  OBP      CXC    OH     HOH     109.470    3.000
  OBP      CXC    CXB    HX11    120.000    3.000
  OBP      CXC    CXB    CXA     120.000    3.000
- OBP      HX11   CXB    CXA     120.000    3.000
+ OBP      OH     CXC    CXB     120.000    3.000
  OBP      CXB    CXA    HX10    120.000    3.000
  OBP      CXB    CXA    CX9     120.000    3.000
- OBP      HX10   CXA    CX9     120.000    3.000
+ OBP      HX11   CXB    CXA     120.000    3.000
  OBP      CXA    CX9    HX9     120.000    3.000
  OBP      CXA    CX9    CX8     120.000    3.000
- OBP      HX9    CX9    CX8     120.000    3.000
+ OBP      HX10   CXA    CX9     120.000    3.000
  OBP      CX9    CX8    HX8     120.000    3.000
- OBP      CX9    CX8    CX7     120.000    3.000
- OBP      HX8    CX8    CX7     120.000    3.000
+ OBP      HX9    CX9    CX8     120.000    3.000
+
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -184,22 +157,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OBP      var_1    OX1    SX1    OX2    HX2       77.915   20.000   1
- OBP      var_2    OX1    SX1    CX3    CX2       18.956   20.000   1
- OBP      CONST_1  SX1    CX3    CX4    CX5      180.000    0.000   0
- OBP      CONST_2  CX3    CX4    CX5    CX6        0.000    0.000   0
- OBP      CONST_3  CX4    CX5    CX6    CX1        0.000    0.000   0
+ OBP      var_1    OX1    SX1    OX2    HX2      180.000   20.000   3
+ OBP      var_2    OX1    SX1    CX3    CX2      180.000   20.000   3
+ OBP      CONST_1  SX1    CX3    CX4    CX5        0.000    0.000   0
+ OBP      CONST_2  SX1    CX3    CX2    CX7        0.000    0.000   0
+ OBP      CONST_6  CX3    CX4    CX5    CX6        0.000    0.000   0
+ OBP      CONST_3  CX3    CX2    CX1    CX6        0.000    0.000   0
+ OBP      var_3    CX3    CX2    CX7    CX8        0.000   20.000   2
+ OBP      CONST_5  CX4    CX5    CX6    CX1        0.000    0.000   0
  OBP      CONST_4  CX5    CX6    CX1    CX2        0.000    0.000   0
- OBP      CONST_5  CX6    CX1    CX2    CX3        0.000    0.000   0
- OBP      CONST_6  SX1    CX3    CX2    CX7        0.000    0.000   0
- OBP      CONST_7  CX3    CX2    CX7    CXC      180.000    0.000   0
- OBP      CONST_8  CX2    CX7    CX8    CX9      180.000    0.000   0
- OBP      CONST_9  CX2    CX7    CXC    CXB      180.000    0.000   0
- OBP      var_3    CX7    CXC    OH     HOH      -95.297   20.000   1
- OBP      CONST_10 CX7    CXC    CXB    CXA        0.000    0.000   0
+ OBP      CONST_7  CX2    CX7    CXC    CXB        0.000    0.000   0
+ OBP      CONST_8  CX2    CX7    CX8    CX9        0.000    0.000   0
+ OBP      CONST_9  CX7    CX8    CX9    CXA        0.000    0.000   0
  OBP      CONST_11 CXC    CXB    CXA    CX9        0.000    0.000   0
- OBP      CONST_12 CXB    CXA    CX9    CX8        0.000    0.000   0
- OBP      CONST_13 CXA    CX9    CX8    CX7        0.000    0.000   0
+ OBP      CONST_12 OH     CXC    CXB    CXA        0.000    0.000   0
+ OBP      var_4    HOH    OH     CXC    CXB      180.000   20.000   3
+ OBP      CONST_10 CXB    CXA    CX9    CX8        0.000    0.000   0
+
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -208,34 +182,35 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- OBP      chir_01  SX1    CX3    OX1    OX2       positiv
+ OBP      chir_01  SX1    OX1    OX2    CX3       negativ
+
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- OBP      plan-1    CX1       0.020
- OBP      plan-1    CX2       0.020
- OBP      plan-1    CX6       0.020
- OBP      plan-1    HX1       0.020
+ OBP      plan-1    SX1       0.020
  OBP      plan-1    CX3       0.020
  OBP      plan-1    CX4       0.020
- OBP      plan-1    CX5       0.020
- OBP      plan-1    CX7       0.020
- OBP      plan-1    SX1       0.020
  OBP      plan-1    HX4       0.020
+ OBP      plan-1    CX5       0.020
  OBP      plan-1    HX5       0.020
+ OBP      plan-1    CX6       0.020
  OBP      plan-1    HX6       0.020
- OBP      plan-2    CX7       0.020
+ OBP      plan-1    CX1       0.020
+ OBP      plan-1    HX1       0.020
+ OBP      plan-1    CX2       0.020
+ OBP      plan-1    CX7       0.020
  OBP      plan-2    CX2       0.020
- OBP      plan-2    CX8       0.020
+ OBP      plan-2    CX7       0.020
  OBP      plan-2    CXC       0.020
- OBP      plan-2    CX9       0.020
- OBP      plan-2    CXA       0.020
- OBP      plan-2    CXB       0.020
- OBP      plan-2    HX8       0.020
- OBP      plan-2    HX9       0.020
- OBP      plan-2    HX10      0.020
- OBP      plan-2    HX11      0.020
  OBP      plan-2    OH        0.020
-# ------------------------------------------------------
+ OBP      plan-2    CXB       0.020
+ OBP      plan-2    HX11      0.020
+ OBP      plan-2    CXA       0.020
+ OBP      plan-2    HX10      0.020
+ OBP      plan-2    CX9       0.020
+ OBP      plan-2    HX9       0.020
+ OBP      plan-2    CX8       0.020
+ OBP      plan-2    HX8       0.020
+
