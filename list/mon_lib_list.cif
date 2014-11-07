@@ -11657,16 +11657,16 @@ BEZ         BOX      .
 ATA         AMT      .
 GTT         GSH      .
 #PLM         PAM      .
-NAG-b-D     NGA      .
+#NAG-b-D     NGA      .
 #NAG-b-D     NAG      .
 #MAN-b-D     MAN      .
-GAL-b-D     GAL      .
-GLC-b-D     GLC      .
-FUC-a-L     FUC      .
-FUC-a-D     FCA      .
-FUC-b-D     FCB      .
-GCU-b-D     GCU      .
-CEG-b-D     CEG      .
+#GAL-b-D     GAL      .
+#GLC-b-D     GLC      .
+#FUC-a-L     FUC      .
+#FUC-a-D     FCA      .
+#FUC-b-D     FCB      .
+#GCU-b-D     GCU      .
+#CEG-b-D     CEG      .
 #
 data_comp_synonym_atom_list
 loop_
@@ -12379,7 +12379,7 @@ _chem_link.comp_id_2
 _chem_link.mod_id_2
 _chem_link.group_comp_2
 _chem_link.name
-SS       CYS      CYS-SS        .        CYS      CYS-SS        .
+SS        .       CYS-SS     peptide      .       CYS-SS      peptide
  SS-bridge
 disulf   CYS      CYS-SS        .        CYS      CYS-SS        .
  SS-bridge
@@ -12387,7 +12387,7 @@ MPR-CYS  MPR      .        .        CYS      CYS-SS        .
  SS-bridge
 CYS-MPR  CYS      CYS-SS        .        MPR      .        .
  SS-bridge
-TRANS    .        .        peptide  .        .        peptide
+TRANS    .      .          peptide       .          .        peptide
  default-peptide-link
 PTRANS   .        .        peptide  PRO      .        .
  default-peptide-link_pro
@@ -12512,7 +12512,7 @@ ALASNN      .        ALAmod    peptide  SNN      SNNmod      .      'ALASNN'
 XYPa-XYP   XYP       XYPmod1   .        XYP      XYPmod2     .  XYP-XYP
 TPN-TPN  TPN      TPNmodC  .          TPN      TPNmodN  .
  TPN-TPN
-PEP-ORN  .        DEL-OXT  peptide    ORN      ORN-NE   .      PEP-ORN
+PEP-ORN  .      DEL-OXT    peptide    ORN      ORN-NE   .      PEP-ORN
 
 symmetry .        .        .        .        .        .
  dummy_link
@@ -15852,7 +15852,7 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
- DEL-HN1  delete   H2     .      .    .        .000
+ DEL-HN1  delete   H3     .      .    .        .000
  DEL-HN1  delete   H3     .      .    .        .000
  DEL-HN1  change   H1     H      .    .        .000
  DEL-HN1  change   N      .      .    NH1      .000
@@ -17088,9 +17088,11 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
- ORN-NE   change NE     .      .    NH1       0.000
  ORN-NE   delete HE3    .      .    .             .
  ORN-NE   delete HE2    .      .    .             .
+# ORN-NE   delete HE1    .      .    .             .
+ ORN-NE   change  NE     .      .    NH1       0.000
+# ORN-NE   delete  NE     .      .    NH1       0.000
 
 loop_
 _chem_mod_bond.mod_id
