@@ -1,7 +1,7 @@
 global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
+_lib_name         mon_lib
+_lib_version      5.44
+_lib_update       30/05/14
 # ------------------------------------------------
 #
 # ---   LIST OF MONOMERS ---
@@ -15,7 +15,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SEC      SEC '2-AMINO-3-SELENINO-PROPIONIC ACID   ' peptide            15   9 .
+SEC      SEC 'seleno-cycteine                     ' peptide            14   7 .
 # ------------------------------------------------------
 # ------------------------------------------------------
 #
@@ -32,21 +32,20 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SEC           N      N    NH2       0.000      0.000    0.000    0.000
- SEC           HN1    H    H         0.000      0.825   -0.326    0.490
- SEC           HN2    H    H         0.000      0.069    0.246   -0.981
- SEC           CA     C    CH1       0.000     -1.284    0.115    0.705
- SEC           HA     H    H         0.000     -1.585    1.171    0.750
- SEC           CB     C    CH2       0.000     -2.349   -0.687   -0.044
- SEC           HB2    H    H         0.000     -3.303   -0.603    0.481
- SEC           HB3    H    H         0.000     -2.050   -1.737   -0.088
- SEC           SEG    SE   SE        0.000     -2.539    0.016   -1.863
- SEC           OD1    O    O         0.000     -3.529    1.145   -1.470
- SEC           OD2    O    OH1       0.000     -3.824   -1.158   -2.354
- SEC           HD2    H    H         0.000     -4.238   -1.161   -3.263
- SEC           C      C    C         0.000     -1.138   -0.425    2.103
- SEC           O      O    OC       -0.500     -0.317   -1.340    2.339
- SEC           OXT    O    OC       -0.500     -1.839    0.038    3.029
+ SEC           N      N    NT3      -1.000      0.000    0.000    0.000
+ SEC           H1     H    HNT3      0.000     -0.525    0.077    0.799
+ SEC           H2     H    HNT3      0.000     -0.571    0.073   -0.768
+ SEC           H3     H    HNT3      0.000      0.446   -0.849   -0.011
+ SEC           CA     C    CH1       0.000      1.009    1.086   -0.032
+ SEC           HA     H    H         0.000      1.580    0.999    0.902
+ SEC           CB     C    CH2       0.000      2.015    0.920   -1.159
+ SEC           HB2    H    H         0.000      2.781    1.693   -1.064
+ SEC           HB3    H    H         0.000      1.497    1.038   -2.114
+ SEC           SE     SE   SE        0.000      2.852   -0.842   -1.084
+ SEC           HSE    H    H         0.000      3.578   -0.725   -2.044
+ SEC           C      C    C         0.000      0.392    2.451   -0.018
+ SEC           O      O    OC       -0.500     -0.740    2.718   -0.421
+ SEC           OXT    O    OC       -0.500      0.960    3.362    0.595
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
@@ -54,20 +53,19 @@ _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
  SEC      N      n/a    CA     START
- SEC      HN1    N      .      .
- SEC      HN2    N      .      .
+ SEC      H1     N      .      .
+ SEC      H2     N      .      .
+ SEC      H3     N      .      .
  SEC      CA     N      C      .
  SEC      HA     CA     .      .
- SEC      CB     CA     SEG    .
+ SEC      CB     CA     SE     .
  SEC      HB2    CB     .      .
  SEC      HB3    CB     .      .
- SEC      SEG    CB     OD2    .
- SEC      OD1    SEG    .      .
- SEC      OD2    SEG    HD2    .
- SEC      HD2    OD2    .      .
- SEC      C      CA     .      END
+ SEC      SE     CB     .      .
+ SEC      HSE    SE     .      .
+ SEC      C      CA     OXT    .
  SEC      O      C      .      .
- SEC      OXT    C      .      .
+ SEC      OXT    C      .      END
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
@@ -75,20 +73,19 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- SEC      CA     N         single      1.450    0.020
- SEC      C      CA        single      1.500    0.020
+ SEC      N      CA        single      1.491    0.021
  SEC      CB     CA        single      1.524    0.020
+ SEC      CA     C         single      1.500    0.020
  SEC      HA     CA        single      1.099    0.020
- SEC      O      C         deloc       1.250    0.020
- SEC      OXT    C         deloc       1.250    0.020
- SEC      SEG    CB        single      1.970    0.020
+ SEC      SE     CB        single      1.948    0.020
  SEC      HB2    CB        single      1.092    0.020
  SEC      HB3    CB        single      1.092    0.020
- SEC      OD1    SEG       double      1.597    0.020
- SEC      OD2    SEG       single      1.609    0.020
- SEC      HD2    OD2       single      0.967    0.020
- SEC      HN1    N         single      1.010    0.020
- SEC      HN2    N         single      1.010    0.020
+ SEC      C      O         deloc       1.231    0.020
+ SEC      HSE    SE        single      1.209    0.020
+ SEC      N      H1        single      0.960    0.020
+ SEC      N      H2        single      0.960    0.020
+ SEC      N      H3        single      0.960    0.020
+ SEC      C      OXT       deloc       1.231    0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,28 +93,28 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SEC      HN1    N      HN2     120.000    3.000
- SEC      HN1    N      CA      120.000    3.000
- SEC      HN2    N      CA      120.000    3.000
- SEC      N      CA     HA      109.470    3.000
- SEC      N      CA     CB      109.470    3.000
- SEC      N      CA     C       109.470    3.000
+ SEC      O      C      CA      121.000    3.000
+ SEC      C      CA     HA      108.810    3.000
+ SEC      C      CA     N       109.500    3.000
+ SEC      C      CA     CB      109.470    3.000
+ SEC      HA     CA     N       109.500    3.000
  SEC      HA     CA     CB      108.340    3.000
- SEC      HA     CA     C       108.810    3.000
- SEC      CB     CA     C       109.470    3.000
+ SEC      N      CA     CB      109.500    3.000
  SEC      CA     CB     HB2     109.470    3.000
  SEC      CA     CB     HB3     109.470    3.000
- SEC      CA     CB     SEG     109.500    3.000
+ SEC      CA     CB     SE      109.500    3.000
  SEC      HB2    CB     HB3     107.900    3.000
- SEC      HB2    CB     SEG     109.500    3.000
- SEC      HB3    CB     SEG     109.500    3.000
- SEC      CB     SEG    OD1      98.000    3.000
- SEC      CB     SEG    OD2      98.000    3.000
- SEC      OD1    SEG    OD2      98.000    3.000
- SEC      SEG    OD2    HD2     120.000    3.000
- SEC      CA     C      O       118.500    3.000
- SEC      CA     C      OXT     118.500    3.000
- SEC      O      C      OXT     123.000    3.000
+ SEC      HB2    CB     SE      109.500    3.000
+ SEC      HB3    CB     SE      109.500    3.000
+ SEC      CB     SE     HSE      98.000    3.000
+ SEC      H2     N      H3      109.470    3.000
+ SEC      H3     N      CA      109.470    3.000
+ SEC      H2     N      CA      109.470    3.000
+ SEC      H1     N      H2      109.470    3.000
+ SEC      H1     N      H3      109.470    3.000
+ SEC      H1     N      CA      109.470    3.000
+ SEC      CA     C      OXT     121.000    3.000
+ SEC      O      C      OXT     118.000    3.000
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -128,10 +125,11 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SEC      var_1    HN2    N      CA     C        175.000   20.000   1
- SEC      var_2    N      CA     CB     SEG      -60.034   20.000   3
- SEC      var_3    CA     CB     SEG    OD2     -179.990   20.000   1
- SEC      var_4    CB     SEG    OD2    HD2     -179.966   20.000   1
+ SEC      var_2            O      C      CA     CB               180.000           20.000   3
+ SEC      var_4            C      CA     CB     SE               180.000           20.000   3
+ SEC      var_5            CA     CB     SE     HSE              180.000           20.000   3
+ SEC      psi              N      CA     C      OXT              160.000           30.000   2
+ SEC      var_1            C      CA     N      H3               180.000           20.000   3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -140,19 +138,14 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- SEC      chir_01  CA     N      C      CB        positiv
- SEC      chir_02  SEG    CB     OD1    OD2       positiv
+ SEC      chir_01          CA     N      CB     C         negativ
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SEC      plan-1    N         0.020
- SEC      plan-1    CA        0.020
- SEC      plan-1    HN1       0.020
- SEC      plan-1    HN2       0.020
- SEC      plan-2    C         0.020
- SEC      plan-2    CA        0.020
- SEC      plan-2    O         0.020
- SEC      plan-2    OXT       0.020
+ SEC      oxt               C         0.020
+ SEC      oxt               CA        0.020
+ SEC      oxt               O         0.020
+ SEC      oxt               OXT       0.020
 # ------------------------------------------------------
