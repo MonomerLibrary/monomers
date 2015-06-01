@@ -11939,9 +11939,9 @@ MPR         .        S3     SG
 ADD         .        N      N3
 ADD         .        C      C1
 ACB         .        N      N2
-ILG         .        H      HN1
-ILG-D       .        H      HN1
-ALA         .        H      HN1
+#ILG         .        H      HN1
+#ILG-D       .        H      HN1
+#ALA         .        H      HN1
 HEA         .        NA     N_A
 HEA         .        NB     N_B
 HEA         .        NC     N_C
@@ -15076,6 +15076,9 @@ _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
  NHmod      change   N      N      .    NH1      .000
  NHmod      add      .      H      H    H        .000
+ NHmod      delete   HN1     .      .    .        .000
+ NHmod      delete   HN2     .      .    .        .000
+ NHmod      delete   HN3     .      .    .        .000
  NHmod      delete   H1     .      .    .        .000
  NHmod      delete   H2     .      .    .        .000
  NHmod      delete   H3     .      .    .        .000
@@ -15122,9 +15125,12 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
  NH3      change   N      N      .    NT3    -1.000
- NH3      add      .      H1     H    HNT3     .000
- NH3      add      .      H2     H    HNT3     .000
- NH3      add      .      H3     H    HNT3     .000
+ NH3      add      .      HN1     H    HNT3     .000
+ NH3      add      .      HN2     H    HNT3     .000
+ NH3      add      .      HN3     H    HNT3     .000
+ NH3      delete   H1     .      .    .        .000
+ NH3      delete   H2     .      .    .        .000
+ NH3      delete   H3     .      .    .        .000
  NH3      delete   H      .      .    .        .000
 loop_
 _chem_mod_tree.mod_id
@@ -15135,9 +15141,9 @@ _chem_mod_tree.back_type
 _chem_mod_tree.atom_forward
 _chem_mod_tree.connect_type
  NH3      change   N      n/a    .        CA     START
- NH3      add      H1     N      .        .      .
- NH3      add      H2     N      .        .      .
- NH3      add      H3     N      .        .      .
+ NH3      add      HN1     N      .        .      .
+ NH3      add      HN2     N      .        .      .
+ NH3      add      HN3     N      .        .      .
 loop_
 _chem_mod_bond.mod_id
 _chem_mod_bond.function
@@ -15146,9 +15152,9 @@ _chem_mod_bond.atom_id_2
 _chem_mod_bond.new_type
 _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
- NH3      add      N       H1        single       .960     .020
- NH3      add      N       H2        single       .960     .020
- NH3      add      N       H3        single       .960     .020
+ NH3      add      N       HN1        single       .960     .020
+ NH3      add      N       HN2        single       .960     .020
+ NH3      add      N       HN3        single       .960     .020
  NH3      change   N       CA        single      1.491     .021
 loop_
 _chem_mod_angle.mod_id
@@ -15158,12 +15164,12 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
- NH3      add      H2      N       H3      109.470    3.000
- NH3      add      H3      N       CA      109.470    3.000
- NH3      add      H2      N       CA      109.470    3.000
- NH3      add      H1      N       H2      109.470    3.000
- NH3      add      H1      N       H3      109.470    3.000
- NH3      add      H1      N       CA      109.470    3.000
+ NH3      add      HN2      N       HN3      109.470    3.000
+ NH3      add      HN3      N       CA      109.470    3.000
+ NH3      add      HN2      N       CA      109.470    3.000
+ NH3      add      HN1      N       HN2      109.470    3.000
+ NH3      add      HN1      N       HN3      109.470    3.000
+ NH3      add      HN1      N       CA      109.470    3.000
 #
 data_mod_NH1
 #
@@ -15999,6 +16005,7 @@ _chem_mod_atom.new_partial_charge
  DEL-HN1  delete   H3     .      .    .        .000
  DEL-HN1  delete   H3     .      .    .        .000
  DEL-HN1  change   H1     H      .    .        .000
+ DEL-HN1  change  HN1     H      .    .        .000
  DEL-HN1  change   N      .      .    NH1      .000
 loop_
 _chem_mod_bond.mod_id
