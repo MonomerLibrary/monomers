@@ -75,6 +75,7 @@ loop_
 097      097 '(2S,3R)-N~4~-[(1S)-2,2-dimethyl-1-(m' non-polymer        52  23 .
 098      098 '(3R)-N~2~-(cyclopropylmethyl)-N~1~-h' non-polymer        61  32 .
 099      099 '(2R)-N~4~-hydroxy-2-(3-hydroxybenzyl' non-polymer        49  27 .
+0A       0A  'L-ADENOSINE-5'-MONOPHOSPHATE        ' RNA                37  23 
 0A0      0A0 '2-methyl-L-aspartic acid            ' peptide            17  10 .
 0A1      0A1 'O-methyl-L-tyrosine                 ' peptide            26  14 .
 0A2      0A2 '[(1R)-1,5-diaminopentyl][bis(ethanol' non-polymer        39  15 .
@@ -7487,7 +7488,7 @@ MA6      MA6 '6N-DIMETHYLADENOSINE-5'-MONOPHOSHATE' RNA                41  25 .
 MA7      MA7 '1N-METHYLADENOSINE-5'-MONOPHOSPHATE ' DNA                38  23 .
 MA8      MA8 '"(2S,3R,5S,6S)-2,3,4,5,6-PENTAHYDROX' non-polymer        57  29 .
 MA9      MA9 '(3R,4R)-1-{6-[3-(METHYLSULFONYL)PHEN' non-polymer        53  32 .
-MAA      MAA 'N-methyl-L-alanine                  ' non-polymer        15   7 .
+MAA      MAA 'N-methyl-L-alanine                  ' M-peptide          15   7 .
 MAB      MAB 'MANNOBIOSE                          ' non-polymer        45  23 .
 MAC      MAC 'MERCURY ACETATE ION                 ' non-polymer         8   5 .
 MAD      MAD '6-HYDRO-1-METHYLADENOSINE-5'-MONOPHO' non-polymer        38  24 .
@@ -11048,7 +11049,7 @@ VG1      VG1 'ALPHA-D-GLUCOSE-1-PHOSPHATE-6-VANADA' pyranose           31  20 .
 VG2      VG2 '4-(2-aminoethoxy)-N-(3-chloro-5-pipe' non-polymer        56  28 .
 VG3      VG3 'N-[(1S,2R)-1-benzyl-3-{[(1S)-2-(cycl' non-polymer        85  40 .
 VG4      VG4 'N-[(1S,2R)-1-benzyl-3-{[(1S)-2-(cycl' non-polymer        86  42 .
-VG5      VG5 '?                                   ' N-[(1S,2R)-1-ben   86  41 .
+VG5      VG5 'N-[(1S,2R)-1-benzyl-3-{[(1S)-2-(cycl' non-polymer        86  41 .
 VG6      VG6 'N-[(1S,2R)-1-benzyl-2-hydroxy-3-{[3-' non-polymer        76  41 .
 VG7      VG7 'N-[(1S,2R)-1-benzyl-3-(cyclohexylami' non-polymer        76  36 .
 VG8      VG8 '"4-(1,4'-bipiperidin-1'-yl)-7-({5-ch' non-polymer        76  40 .
@@ -12604,7 +12605,11 @@ XYS-ASN  XYS      XYS-O1   .        ASN      DEL-HD22 .
  bond_XYS-C1_=_ASN-ND2
 ZN-CYS   ZN       .        .        CYS      .        .
  bond_ZN_=_CYS-SG
-FE-CYS   FE       .        .        CYS      .        .
+ZN-HISND ZN       .        .        HIS      DEL-HD1  .
+ bond_ZN_=_HIS-ND1
+ZN-HISNE ZN       .        .        HIS      DEL-HE2  .
+ bond_ZN_=_HIS-NE2 
+ FE-CYS   FE       .        .        CYS      .        .
  bond_FE_=_CYS-SG
 SFN-TYR  SFN      .        .        TYR      .        .
  bond_SFN-S_=_TYR-OH
@@ -12671,6 +12676,8 @@ DEL-HO2  delete_HO2_from_saccharide                       .        pyranose
 DEL-HO3  delete_HO3_from_saccharide                       .        pyranose
 DEL-HO4  delete_HO4_from_saccharide                       .        pyranose
 DEL-HO6  delete_HO6_from_saccharide                       .        pyranose
+DEL-HD1  delete_HD1_from_HIS                              HIS      .
+DEL-HE2  delete_HE2_from_HIS                              HIS      .
 DEL-OXT  delete_OXT_from_peptide                          .        peptide
 DEL-HN1  delete_Hs_from_peptide                           .        peptide
 SUG-b-L  change_sugar_to_beta_L                           .        pyranose
@@ -14673,6 +14680,56 @@ _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
  ZN-CYS   1 ZN      2 SG      2 CB      109.000    3.000
 #
+data_link_ZN-HISND
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ ZN-HISND 1 ZN      2 ND1       single      2.057     .064
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ ZN-HISND 1 ZN      2 ND1     2 CG      125.350    3.000
+ ZN-HISND 1 ZN      2 ND1     2 CE1     125.350    3.000
+# 
+data_link_ZN-HISNE
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ ZN-HISNE 1 ZN      2 NE2       single      2.058     .073
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ ZN-HISNE 1 ZN      2 NE2     2 CD2     125.500    3.000
+ ZN-HISNE 1 ZN      2 NE2     2 CE1     125.500    3.000
+#
 data_link_FE-CYS
 #
 loop_
@@ -15939,6 +15996,48 @@ _chem_mod_tree.back_type
 _chem_mod_tree.atom_forward
 _chem_mod_tree.connect_type
  DEL-HO4  change   O4     n/a    .        .      END
+#
+data_mod_DEL-HD1
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ DEL-HD1  delete   HD1    .      .    .        .000
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ DEL-HD1  change   ND1    n/a    .        .      END
+#
+data_mod_DEL-HE2
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ DEL-HE2  delete   HE2    .      .    .        .000
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ DEL-HE2  change   NE2    n/a    .        .      END
 #
 data_mod_DEL-HO6
 #
