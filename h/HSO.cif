@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-HSO      HSO 'HISTIDINOL                          ' non-polymer        20  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+HSO     HSO     L-histidinol     "L-PEPTIDE LINKING"     23     10     .     
 #
 data_comp_HSO
 #
@@ -32,80 +21,60 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- HSO           O      O    O         0.000      0.000    0.000    0.000
- HSO           C      C    C1        0.000     -0.918   -0.778    0.113
- HSO           H      H    H         0.000     -0.746   -1.834   -0.008
- HSO           CA     C    CH1       0.000     -2.303   -0.270    0.422
- HSO           HA     H    H         0.000     -2.650   -0.705    1.369
- HSO           N      N    NH2       0.000     -2.272    1.194    0.538
- HSO           HN2    H    H         0.000     -2.902    1.764   -0.015
- HSO           HN1    H    H         0.000     -1.621    1.644    1.170
- HSO           CB     C    CH2       0.000     -3.257   -0.673   -0.704
- HSO           HB1    H    H         0.000     -3.211   -1.754   -0.850
- HSO           HB2    H    H         0.000     -2.962   -0.169   -1.628
- HSO           CG     C    CR5       0.000     -4.663   -0.273   -0.339
- HSO           CD2    C    CR15      0.000     -5.218    0.937   -0.538
- HSO           HD2    H    H         0.000     -4.742    1.800   -0.987
- HSO           NE2    N    NR15      0.000     -6.500    0.867   -0.063
- HSO           HE2    H    H         0.000     -7.202    1.635   -0.065
- HSO           CE1    C    CR15      0.000     -6.683   -0.384    0.410
- HSO           HE1    H    H         0.000     -7.594   -0.762    0.858
- HSO           ND1    N    NR15      1.000     -5.582   -1.062    0.238
- HSO           HD1    H    H         0.000     -5.439   -2.056    0.506
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- HSO      O      n/a    C      START
- HSO      C      O      CA     .
- HSO      H      C      .      .
- HSO      CA     C      CB     .
- HSO      HA     CA     .      .
- HSO      N      CA     HN1    .
- HSO      HN2    N      .      .
- HSO      HN1    N      .      .
- HSO      CB     CA     CG     .
- HSO      HB1    CB     .      .
- HSO      HB2    CB     .      .
- HSO      CG     CB     CD2    .
- HSO      CD2    CG     NE2    .
- HSO      HD2    CD2    .      .
- HSO      NE2    CD2    CE1    .
- HSO      HE2    NE2    .      .
- HSO      CE1    NE2    ND1    .
- HSO      HE1    CE1    .      .
- HSO      ND1    CE1    HD1    .
- HSO      HD1    ND1    .      END
- HSO      CG     ND1    .    ADD
+HSO     N       N       NT3     1       -1.119      -1.298      0.843       
+HSO     CA      C       CH1     0.000   -1.271      0.032       0.152       
+HSO     CB      C       CH2     0.000   -0.218      0.115       -0.973      
+HSO     CG      C       CR5     0.000   1.169       0.207       -0.439      
+HSO     ND1     N       NR5     1.000   2.125       -0.758      -0.687      
+HSO     CD2     C       CR15    0.000   1.767       1.141       0.322       
+HSO     CE1     C       CR15    0.000   3.251       -0.411      -0.081      
+HSO     NE2     N       NR5     0.000   3.057       0.732       0.535       
+HSO     C       C       CH2     0.000   -2.705      0.210       -0.386      
+HSO     O       O       OH1     0.000   -2.895      1.518       -0.910      
+HSO     HN3     H       H       0.000   -1.931      -1.666      0.999       
+HSO     HN2     H       H       0.000   -0.611      -1.887      0.377       
+HSO     HN1     H       H       0.000   -0.717      -1.119      1.634       
+HSO     HA      H       H       0.000   -1.082      0.756       0.815       
+HSO     HB3     H       H       0.000   -0.399      0.899       -1.514      
+HSO     HB2     H       H       0.000   -0.283      -0.664      -1.551      
+HSO     HD1     H       H       0.000   2.001       -1.475      -1.165      
+HSO     HD2     H       H       0.000   1.376       1.926       0.646       
+HSO     HE1     H       H       0.000   4.050       -0.900      -0.091      
+HSO     HE2     H       H       0.000   3.653       1.161       1.003       
+HSO     H       H       H       0.000   -2.875      -0.450      -1.092      
+HSO     H2      H       H       0.000   -3.350      0.055       0.336       
+HSO     HO      H       H       0.000   -2.819      2.075       -0.282      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- HSO      N      CA        single      1.450    0.020
- HSO      HN1    N         single      1.010    0.020
- HSO      HN2    N         single      1.010    0.020
- HSO      CB     CA        single      1.524    0.020
- HSO      CA     C         single      1.510    0.020
- HSO      HA     CA        single      1.099    0.020
- HSO      CG     CB        single      1.510    0.020
- HSO      HB1    CB        single      1.092    0.020
- HSO      HB2    CB        single      1.092    0.020
- HSO      CG     ND1       single      1.340    0.020
- HSO      CD2    CG        double      1.387    0.020
- HSO      ND1    CE1       double      1.350    0.020
- HSO      HD1    ND1       single      1.040    0.020
- HSO      NE2    CD2       single      1.350    0.020
- HSO      HD2    CD2       single      1.083    0.020
- HSO      CE1    NE2       single      1.350    0.020
- HSO      HE1    CE1       single      1.083    0.020
- HSO      HE2    NE2       single      1.040    0.020
- HSO      C      O         double      1.220    0.020
- HSO      H      C         single      1.077    0.020
+HSO           N          CA      single       n     1.497   0.010
+HSO         CE1         NE2    aromatic       n     1.314   0.010
+HSO         ND1         CE1    aromatic       n     1.323   0.010
+HSO         CD2         NE2    aromatic       n     1.372   0.010
+HSO          CA           C      single       n     1.524   0.020
+HSO          CA          CB      single       n     1.529   0.015
+HSO          CG         ND1    aromatic       n     1.379   0.010
+HSO          CG         CD2    aromatic       n     1.346   0.010
+HSO           C           O      single       n     1.421   0.014
+HSO          CB          CG      single       n     1.488   0.010
+HSO           N         HN3      single       n     0.905   0.020
+HSO           N         HN2      single       n     0.905   0.020
+HSO           N         HN1      single       n     0.905   0.020
+HSO          CA          HA      single       n     1.000   0.010
+HSO          CB         HB3      single       n     0.971   0.017
+HSO          CB         HB2      single       n     0.971   0.017
+HSO         ND1         HD1      single       n     0.871   0.020
+HSO         CD2         HD2      single       n     0.935   0.013
+HSO         CE1         HE1      single       n     0.936   0.016
+HSO         NE2         HE2      single       n     0.870   0.020
+HSO           C           H      single       n     0.981   0.018
+HSO           C          H2      single       n     0.981   0.018
+HSO           O          HO      single       n     0.843   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,39 +82,46 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- HSO      O      C      H       123.000    3.000
- HSO      O      C      CA      120.500    3.000
- HSO      H      C      CA      120.000    3.000
- HSO      C      CA     HA      108.810    3.000
- HSO      C      CA     N       109.470    3.000
- HSO      C      CA     CB      109.470    3.000
- HSO      HA     CA     N       109.470    3.000
- HSO      HA     CA     CB      108.340    3.000
- HSO      N      CA     CB      109.470    3.000
- HSO      CA     N      HN2     120.000    3.000
- HSO      CA     N      HN1     120.000    3.000
- HSO      HN2    N      HN1     120.000    3.000
- HSO      CA     CB     HB1     109.470    3.000
- HSO      CA     CB     HB2     109.470    3.000
- HSO      CA     CB     CG      109.470    3.000
- HSO      HB1    CB     HB2     107.900    3.000
- HSO      HB1    CB     CG      109.470    3.000
- HSO      HB2    CB     CG      109.470    3.000
- HSO      CB     CG     CD2     126.000    3.000
- HSO      CB     CG     ND1     126.000    3.000
- HSO      CD2    CG     ND1     108.000    3.000
- HSO      CG     CD2    HD2     126.000    3.000
- HSO      CG     CD2    NE2     108.000    3.000
- HSO      HD2    CD2    NE2     126.000    3.000
- HSO      CD2    NE2    HE2     126.000    3.000
- HSO      CD2    NE2    CE1     108.000    3.000
- HSO      HE2    NE2    CE1     126.000    3.000
- HSO      NE2    CE1    HE1     126.000    3.000
- HSO      NE2    CE1    ND1     108.000    3.000
- HSO      HE1    CE1    ND1     126.000    3.000
- HSO      CE1    ND1    HD1     126.000    3.000
- HSO      CE1    ND1    CG      108.000    3.000
- HSO      HD1    ND1    CG      126.000    3.000
+HSO          CA           N         HN3     109.462    3.00
+HSO          CA           N         HN2     109.462    3.00
+HSO          CA           N         HN1     109.462    3.00
+HSO         HN3           N         HN2     109.353    0.58
+HSO         HN3           N         HN1     109.353    0.58
+HSO         HN2           N         HN1     109.353    0.58
+HSO           N          CA           C     109.154    1.27
+HSO           N          CA          CB     108.141    0.22
+HSO           N          CA          HA     108.379    0.26
+HSO           C          CA          CB     110.243    1.80
+HSO           C          CA          HA     108.325    1.39
+HSO          CB          CA          HA     108.391    0.27
+HSO          CA          CB          CG     112.197    0.19
+HSO          CA          CB         HB3     109.166    3.00
+HSO          CA          CB         HB2     109.166    3.00
+HSO          CG          CB         HB3     108.939    0.47
+HSO          CG          CB         HB2     108.939    0.47
+HSO         HB3          CB         HB2     107.705    0.24
+HSO         ND1          CG         CD2     106.122    0.46
+HSO         ND1          CG          CB     122.583    1.01
+HSO         CD2          CG          CB     131.295    1.12
+HSO         CE1         ND1          CG     108.716    0.79
+HSO         CE1         ND1         HD1     126.030    1.50
+HSO          CG         ND1         HD1     125.255    2.16
+HSO         NE2         CD2          CG     107.515    0.60
+HSO         NE2         CD2         HD2     126.155    0.38
+HSO          CG         CD2         HD2     126.330    0.70
+HSO         NE2         CE1         ND1     108.449    0.77
+HSO         NE2         CE1         HE1     125.802    0.29
+HSO         ND1         CE1         HE1     125.750    0.31
+HSO         CE1         NE2         CD2     109.198    0.85
+HSO         CE1         NE2         HE2     125.346    1.50
+HSO         CD2         NE2         HE2     125.456    1.40
+HSO          CA           C           O     110.669    1.76
+HSO          CA           C           H     109.679    1.46
+HSO          CA           C          H2     109.679    1.46
+HSO           O           C           H     109.327    0.76
+HSO           O           C          H2     109.327    0.76
+HSO           H           C          H2     108.047    0.33
+HSO           C           O          HO     108.759    2.14
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -156,15 +132,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HSO      var_1    O      C      CA     CB       119.964   20.000   1
- HSO      var_2    C      CA     N      HN1      -53.770   20.000   1
- HSO      var_3    C      CA     CB     CG       174.992   20.000   3
- HSO      var_4    CA     CB     CG     CD2       85.003   20.000   2
- HSO      CONST_1  CB     CG     ND1    CE1      180.000    0.000   0
- HSO      CONST_2  CB     CG     CD2    NE2      180.000    0.000   0
- HSO      CONST_3  CG     CD2    NE2    CE1        0.000    0.000   0
- HSO      CONST_4  CD2    NE2    CE1    ND1        0.000    0.000   0
- HSO      CONST_5  NE2    CE1    ND1    CG         0.000    0.000   0
+HSO             sp2_sp2_1         CD2          CG         ND1         CE1       0.000   10.00     2
+HSO             sp2_sp2_2         CD2          CG         ND1         HD1     180.000   10.00     2
+HSO             sp2_sp2_3          CB          CG         ND1         CE1     180.000   10.00     2
+HSO             sp2_sp2_4          CB          CG         ND1         HD1       0.000   10.00     2
+HSO             sp2_sp2_5         NE2         CE1         ND1          CG       0.000   10.00     2
+HSO             sp2_sp2_6         NE2         CE1         ND1         HD1     180.000   10.00     2
+HSO             sp2_sp2_7         HE1         CE1         ND1          CG     180.000   10.00     2
+HSO             sp2_sp2_8         HE1         CE1         ND1         HD1       0.000   10.00     2
+HSO             sp2_sp2_9         ND1         CE1         NE2         CD2       0.000   10.00     2
+HSO            sp2_sp2_10         ND1         CE1         NE2         HE2     180.000   10.00     2
+HSO            sp2_sp2_11         HE1         CE1         NE2         CD2     180.000   10.00     2
+HSO            sp2_sp2_12         HE1         CE1         NE2         HE2       0.000   10.00     2
+HSO            sp2_sp2_13          CG         CD2         NE2         CE1       0.000   10.00     2
+HSO            sp2_sp2_14          CG         CD2         NE2         HE2     180.000   10.00     2
+HSO            sp2_sp2_15         HD2         CD2         NE2         CE1     180.000   10.00     2
+HSO            sp2_sp2_16         HD2         CD2         NE2         HE2       0.000   10.00     2
+HSO             sp3_sp3_1          CB          CA           N         HN3     180.000   10.00     3
+HSO             sp3_sp3_2          CB          CA           N         HN2     -60.000   10.00     3
+HSO             sp3_sp3_3          CB          CA           N         HN1      60.000   10.00     3
+HSO             sp3_sp3_4           C          CA           N         HN3      60.000   10.00     3
+HSO             sp3_sp3_5           C          CA           N         HN2     180.000   10.00     3
+HSO             sp3_sp3_6           C          CA           N         HN1     -60.000   10.00     3
+HSO             sp3_sp3_7          HA          CA           N         HN3     -60.000   10.00     3
+HSO             sp3_sp3_8          HA          CA           N         HN2      60.000   10.00     3
+HSO             sp3_sp3_9          HA          CA           N         HN1     180.000   10.00     3
+HSO            sp3_sp3_10           O           C          CA           N     180.000   10.00     3
+HSO            sp3_sp3_11           O           C          CA          CB     -60.000   10.00     3
+HSO            sp3_sp3_12           O           C          CA          HA      60.000   10.00     3
+HSO            sp3_sp3_13           H           C          CA           N      60.000   10.00     3
+HSO            sp3_sp3_14           H           C          CA          CB     180.000   10.00     3
+HSO            sp3_sp3_15           H           C          CA          HA     -60.000   10.00     3
+HSO            sp3_sp3_16          H2           C          CA           N     -60.000   10.00     3
+HSO            sp3_sp3_17          H2           C          CA          CB      60.000   10.00     3
+HSO            sp3_sp3_18          H2           C          CA          HA     180.000   10.00     3
+HSO            sp3_sp3_19           C          CA          CB          CG     180.000   10.00     3
+HSO            sp3_sp3_20           C          CA          CB         HB3     -60.000   10.00     3
+HSO            sp3_sp3_21           C          CA          CB         HB2      60.000   10.00     3
+HSO            sp3_sp3_22           N          CA          CB          CG      60.000   10.00     3
+HSO            sp3_sp3_23           N          CA          CB         HB3     180.000   10.00     3
+HSO            sp3_sp3_24           N          CA          CB         HB2     -60.000   10.00     3
+HSO            sp3_sp3_25          HA          CA          CB          CG     -60.000   10.00     3
+HSO            sp3_sp3_26          HA          CA          CB         HB3      60.000   10.00     3
+HSO            sp3_sp3_27          HA          CA          CB         HB2     180.000   10.00     3
+HSO            sp2_sp2_17         NE2         CD2          CG         ND1       0.000   10.00     2
+HSO            sp2_sp2_18         NE2         CD2          CG          CB     180.000   10.00     2
+HSO            sp2_sp2_19         HD2         CD2          CG         ND1     180.000   10.00     2
+HSO            sp2_sp2_20         HD2         CD2          CG          CB       0.000   10.00     2
+HSO            sp3_sp3_28          CA           C           O          HO     180.000   10.00     3
+HSO            sp3_sp3_29           H           C           O          HO     -60.000   10.00     3
+HSO            sp3_sp3_30          H2           C           O          HO      60.000   10.00     3
+HSO             sp2_sp3_1         ND1          CG          CB         HB3     150.000   10.00     6
+HSO             sp2_sp3_2         ND1          CG          CB          CA     -90.000   10.00     6
+HSO             sp2_sp3_3         ND1          CG          CB         HB2      30.000   10.00     6
+HSO             sp2_sp3_4         CD2          CG          CB         HB3     -30.000   10.00     6
+HSO             sp2_sp3_5         CD2          CG          CB          CA      90.000   10.00     6
+HSO             sp2_sp3_6         CD2          CG          CB         HB2    -150.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -173,28 +196,29 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- HSO      chir_01  CA     N      CB     C         negativ
+HSO    chir_1    CA    N    CB    C    negativ
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- HSO      plan-1    N         0.020
- HSO      plan-1    CA        0.020
- HSO      plan-1    HN1       0.020
- HSO      plan-1    HN2       0.020
- HSO      plan-2    CG        0.020
- HSO      plan-2    CB        0.020
- HSO      plan-2    ND1       0.020
- HSO      plan-2    CD2       0.020
- HSO      plan-2    CE1       0.020
- HSO      plan-2    NE2       0.020
- HSO      plan-2    HD1       0.020
- HSO      plan-2    HD2       0.020
- HSO      plan-2    HE1       0.020
- HSO      plan-2    HE2       0.020
- HSO      plan-3    C         0.020
- HSO      plan-3    CA        0.020
- HSO      plan-3    O         0.020
- HSO      plan-3    H         0.020
-# ------------------------------------------------------
+HSO    plan-1          CB   0.020
+HSO    plan-1         CD2   0.020
+HSO    plan-1          CG   0.020
+HSO    plan-1         ND1   0.020
+HSO    plan-2         CE1   0.020
+HSO    plan-2          CG   0.020
+HSO    plan-2         HD1   0.020
+HSO    plan-2         ND1   0.020
+HSO    plan-3         CD2   0.020
+HSO    plan-3          CG   0.020
+HSO    plan-3         HD2   0.020
+HSO    plan-3         NE2   0.020
+HSO    plan-4         CE1   0.020
+HSO    plan-4         HE1   0.020
+HSO    plan-4         ND1   0.020
+HSO    plan-4         NE2   0.020
+HSO    plan-5         CD2   0.020
+HSO    plan-5         CE1   0.020
+HSO    plan-5         HE2   0.020
+HSO    plan-5         NE2   0.020
