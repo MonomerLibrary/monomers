@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CFH      CFH '1,1,1,3,3,3-hexafluoropropan-2-ol   ' non-polymer        12  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+CFH     CFH     1,1,1,3,3,3-hexafluoropropan-2-ol     NON-POLYMER     12     10     .     
 #
 data_comp_CFH
 #
@@ -28,58 +17,41 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CFH           F9     F    F         0.000      0.000    0.000    0.000
- CFH           C3     C    CT        0.000     -0.714   -0.126   -1.196
- CFH           F10    F    F         0.000     -0.893   -1.480   -1.492
- CFH           F8     F    F         0.000     -0.001    0.488   -2.231
- CFH           C2     C    CH1       0.000     -2.079    0.550   -1.048
- CFH           H2     H    H         0.000     -2.640    0.452   -1.988
- CFH           O4     O    OH1       0.000     -1.895    1.934   -0.745
- CFH           HO4    H    H         0.000     -1.402    2.019    0.082
- CFH           C1     C    CT        0.000     -2.859   -0.122    0.084
- CFH           F7     F    F         0.000     -4.107    0.496    0.219
- CFH           F5     F    F         0.000     -2.145    0.004    1.280
- CFH           F6     F    F         0.000     -3.039   -1.476   -0.212
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- CFH      F9     n/a    C3     START
- CFH      C3     F9     C2     .
- CFH      F10    C3     .      .
- CFH      F8     C3     .      .
- CFH      C2     C3     C1     .
- CFH      H2     C2     .      .
- CFH      O4     C2     HO4    .
- CFH      HO4    O4     .      .
- CFH      C1     C2     F6     .
- CFH      F7     C1     .      .
- CFH      F5     C1     .      .
- CFH      F6     C1     .      END
+CFH     F7      F       F       0       9.358       18.853      58.062      
+CFH     C1      C       CT      0       8.825       18.138      57.078      
+CFH     F5      F       F       0       9.830       17.556      56.432      
+CFH     F6      F       F       0       8.107       17.173      57.643      
+CFH     C2      C       CH1     0       7.990       19.003      56.161      
+CFH     O4      O       OH1     0       8.828       19.987      55.624      
+CFH     C3      C       CT      0       7.329       18.275      55.010      
+CFH     F10     F       F       0       6.503       17.324      55.432      
+CFH     F8      F       F       0       8.220       17.699      54.210      
+CFH     F9      F       F       0       6.614       19.106      54.260      
+CFH     H2      H       H       0       7.289       19.440      56.697      
+CFH     HO4     H       H       0       8.407       20.723      55.560      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- CFH      F7     C1        single      1.320    0.020
- CFH      F5     C1        single      1.320    0.020
- CFH      F6     C1        single      1.320    0.020
- CFH      C1     C2        single      1.524    0.020
- CFH      O4     C2        single      1.432    0.020
- CFH      C2     C3        single      1.524    0.020
- CFH      F10    C3        single      1.320    0.020
- CFH      F8     C3        single      1.320    0.020
- CFH      C3     F9        single      1.320    0.020
- CFH      H2     C2        single      1.099    0.020
- CFH      HO4    O4        single      0.967    0.020
+CFH          F7          C1      SINGLE       n     1.328   0.012
+CFH          C1          F5      SINGLE       n     1.328   0.012
+CFH          C1          F6      SINGLE       n     1.328   0.012
+CFH          C1          C2      SINGLE       n     1.507   0.013
+CFH          C2          O4      SINGLE       n     1.395   0.019
+CFH          C2          C3      SINGLE       n     1.507   0.013
+CFH          C3         F10      SINGLE       n     1.328   0.012
+CFH          C3          F8      SINGLE       n     1.328   0.012
+CFH          C3          F9      SINGLE       n     1.328   0.012
+CFH          C2          H2      SINGLE       n     0.984   0.010
+CFH          O4         HO4      SINGLE       n     0.848   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -87,25 +59,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- CFH      F9     C3     F10     109.470    3.000
- CFH      F9     C3     F8      109.470    3.000
- CFH      F9     C3     C2      109.470    3.000
- CFH      F10    C3     F8      109.470    3.000
- CFH      F10    C3     C2      109.470    3.000
- CFH      F8     C3     C2      109.470    3.000
- CFH      C3     C2     H2      108.340    3.000
- CFH      C3     C2     O4      109.470    3.000
- CFH      C3     C2     C1      109.500    3.000
- CFH      H2     C2     O4      109.470    3.000
- CFH      H2     C2     C1      108.340    3.000
- CFH      O4     C2     C1      109.470    3.000
- CFH      C2     O4     HO4     109.470    3.000
- CFH      C2     C1     F7      109.470    3.000
- CFH      C2     C1     F5      109.470    3.000
- CFH      C2     C1     F6      109.470    3.000
- CFH      F7     C1     F5      109.470    3.000
- CFH      F7     C1     F6      109.470    3.000
- CFH      F5     C1     F6      109.470    3.000
+CFH          F7          C1          F5     107.364    1.50
+CFH          F7          C1          F6     107.364    1.50
+CFH          F7          C1          C2     111.688    1.53
+CFH          F5          C1          F6     107.364    1.50
+CFH          F5          C1          C2     111.688    1.53
+CFH          F6          C1          C2     111.688    1.53
+CFH          C1          C2          O4     108.229    1.86
+CFH          C1          C2          C3     113.726    1.50
+CFH          C1          C2          H2     108.784    1.50
+CFH          O4          C2          C3     108.229    1.86
+CFH          O4          C2          H2     108.788    1.50
+CFH          C3          C2          H2     108.784    1.50
+CFH          C2          O4         HO4     109.459    1.50
+CFH          C2          C3         F10     111.688    1.53
+CFH          C2          C3          F8     111.688    1.53
+CFH          C2          C3          F9     111.688    1.53
+CFH         F10          C3          F8     107.364    1.50
+CFH         F10          C3          F9     107.364    1.50
+CFH          F8          C3          F9     107.364    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -116,18 +88,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CFH      var_1    F9     C3     C2     C1       -60.064   20.000   1
- CFH      var_2    C3     C2     O4     HO4      -59.985   20.000   1
- CFH      var_3    C3     C2     C1     F6       -59.970   20.000   1
+CFH             sp3_sp3_1          F7          C1          C2          O4     180.000   10.00     3
+CFH            sp3_sp3_10          C1          C2          O4         HO4     180.000   10.00     3
+CFH            sp3_sp3_13          C1          C2          C3         F10     180.000   10.00     3
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- CFH      chir_01  C1     F7     F5     F6        negativ
- CFH      chir_02  C2     C1     O4     C3        negativ
- CFH      chir_03  C3     C2     F10    F8        negativ
-# ------------------------------------------------------
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+CFH SMILES           ACDLabs              10.04 "FC(F)(F)C(O)C(F)(F)F"
+CFH SMILES_CANONICAL CACTVS               3.341 "OC(C(F)(F)F)C(F)(F)F"
+CFH SMILES           CACTVS               3.341 "OC(C(F)(F)F)C(F)(F)F"
+CFH SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(C(F)(F)F)(C(F)(F)F)O"
+CFH SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(F)(F)F)(C(F)(F)F)O"
+CFH InChI            InChI                1.03  "InChI=1S/C3H2F6O/c4-2(5,6)1(10)3(7,8)9/h1,10H"
+CFH InChIKey         InChI                1.03  BYEAHWXPCBROCE-UHFFFAOYSA-N
+CFH ?                acedrg               190         "dictionary generator"                  
+CFH ?                acedrg_database      11          "data source"                           
+CFH ?                rdkit                2017.03.2   "Chemoinformatics tool"
+CFH ?                refmac5              5.8.0158    "optimization tool"                     

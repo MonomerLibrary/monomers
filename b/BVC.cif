@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BVC      BVC '1-THIEN-3-YLMETHANAMINE             ' non-polymer        14   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BVC     BVC     1-THIEN-3-YLMETHANAMINE     NON-POLYMER     14     7     .     
 #
 data_comp_BVC
 #
@@ -28,66 +17,46 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BVC           N7     N    NH2       0.000      0.000    0.000    0.000
- BVC           HN71   H    H         0.000     -0.141    0.010   -1.003
- BVC           HN72   H    H         0.000      0.944    0.009    0.369
- BVC           C6     C    CH2       0.000     -1.153   -0.028    0.910
- BVC           H61    H    H         0.000     -1.131    0.856    1.551
- BVC           H62    H    H         0.000     -1.104   -0.926    1.530
- BVC           C4     C    CR5       0.000     -2.428   -0.038    0.107
- BVC           C3     C    CR15      0.000     -2.992   -1.210   -0.274
- BVC           H3     H    H         0.000     -2.657   -2.222   -0.084
- BVC           S2     S    S2        0.000     -4.433   -0.652   -1.170
- BVC           C5     C    CR15      0.000     -3.042    1.148   -0.247
- BVC           H5     H    H         0.000     -2.617    2.098    0.053
- BVC           C1     C    CR15      0.000     -4.185    1.106   -0.975
- BVC           H1     H    H         0.000     -4.790    1.925   -1.343
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BVC      N7     n/a    C6     START
- BVC      HN71   N7     .      .
- BVC      HN72   N7     .      .
- BVC      C6     N7     C4     .
- BVC      H61    C6     .      .
- BVC      H62    C6     .      .
- BVC      C4     C6     C5     .
- BVC      C3     C4     S2     .
- BVC      H3     C3     .      .
- BVC      S2     C3     .      .
- BVC      C5     C4     C1     .
- BVC      H5     C5     .      .
- BVC      C1     C5     H1     .
- BVC      H1     C1     .      END
- BVC      C1     S2     .    ADD
+BVC     C1      C       CR15    0       2.393       -0.348      -0.077      
+BVC     S2      S       S2      0       2.382       1.139       -0.867      
+BVC     C3      C       CR15    0       0.705       1.322       -0.668      
+BVC     C4      C       CR5     0       0.162       0.293       0.097       
+BVC     C5      C       CR15    0       1.187       -0.629      0.464       
+BVC     C6      C       CH2     0       -1.297      0.199       0.466       
+BVC     N7      N       NT2     0       -2.123      -0.481      -0.542      
+BVC     H1      H       H       0       3.142       -0.911      -0.019      
+BVC     H3      H       H       0       0.204       2.037       -1.034      
+BVC     H5      H       H       0       1.045       -1.370      1.030       
+BVC     H61     H       H       0       -1.652      1.102       0.596       
+BVC     H62     H       H       0       -1.381      -0.288      1.311       
+BVC     HN71    H       H       0       -1.754      -1.301      -0.653      
+BVC     HN72    H       H       0       -2.004      -0.019      -1.312      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BVC      C1     S2        single      1.745    0.020
- BVC      C1     C5        double      1.380    0.020
- BVC      H1     C1        single      1.083    0.020
- BVC      S2     C3        single      1.745    0.020
- BVC      C3     C4        double      1.387    0.020
- BVC      H3     C3        single      1.083    0.020
- BVC      C5     C4        single      1.387    0.020
- BVC      C4     C6        single      1.510    0.020
- BVC      H5     C5        single      1.083    0.020
- BVC      C6     N7        single      1.450    0.020
- BVC      H61    C6        single      1.092    0.020
- BVC      H62    C6        single      1.092    0.020
- BVC      HN71   N7        single      1.010    0.020
- BVC      HN72   N7        single      1.010    0.020
+BVC          C1          S2      SINGLE       n     1.677   0.020
+BVC          C1          C5      DOUBLE       n     1.349   0.010
+BVC          S2          C3      SINGLE       n     1.704   0.019
+BVC          C3          C4      DOUBLE       n     1.401   0.020
+BVC          C4          C5      SINGLE       n     1.427   0.011
+BVC          C4          C6      SINGLE       n     1.507   0.010
+BVC          C6          N7      SINGLE       n     1.467   0.015
+BVC          C1          H1      SINGLE       n     0.939   0.018
+BVC          C3          H3      SINGLE       n     0.947   0.020
+BVC          C5          H5      SINGLE       n     0.943   0.010
+BVC          C6         H61      SINGLE       n     0.979   0.015
+BVC          C6         H62      SINGLE       n     0.979   0.015
+BVC          N7        HN71      SINGLE       n     0.905   0.020
+BVC          N7        HN72      SINGLE       n     0.905   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -95,28 +64,28 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BVC      HN71   N7     HN72    120.000    3.000
- BVC      HN71   N7     C6      120.000    3.000
- BVC      HN72   N7     C6      120.000    3.000
- BVC      N7     C6     H61     109.470    3.000
- BVC      N7     C6     H62     109.470    3.000
- BVC      N7     C6     C4      109.500    3.000
- BVC      H61    C6     H62     107.900    3.000
- BVC      H61    C6     C4      109.470    3.000
- BVC      H62    C6     C4      109.470    3.000
- BVC      C6     C4     C3      126.000    3.000
- BVC      C6     C4     C5      126.000    3.000
- BVC      C3     C4     C5      108.000    3.000
- BVC      C4     C3     H3      126.000    3.000
- BVC      C4     C3     S2      108.000    3.000
- BVC      H3     C3     S2      108.000    3.000
- BVC      C3     S2     C1       98.085    3.000
- BVC      C4     C5     H5      126.000    3.000
- BVC      C4     C5     C1      108.000    3.000
- BVC      H5     C5     C1      126.000    3.000
- BVC      C5     C1     H1      126.000    3.000
- BVC      C5     C1     S2      108.000    3.000
- BVC      H1     C1     S2      108.000    3.000
+BVC          S2          C1          C5     110.139    2.39
+BVC          S2          C1          H1     125.013    1.62
+BVC          C5          C1          H1     124.848    1.50
+BVC          C1          S2          C3      92.527    1.64
+BVC          S2          C3          C4     112.408    1.50
+BVC          S2          C3          H3     123.612    1.50
+BVC          C4          C3          H3     123.979    1.50
+BVC          C3          C4          C5     110.443    1.50
+BVC          C3          C4          C6     123.635    3.00
+BVC          C5          C4          C6     125.921    3.00
+BVC          C1          C5          C4     113.343    1.50
+BVC          C1          C5          H5     122.780    1.50
+BVC          C4          C5          H5     123.877    1.64
+BVC          C4          C6          N7     111.849    2.38
+BVC          C4          C6         H61     108.839    1.50
+BVC          C4          C6         H62     108.839    1.50
+BVC          N7          C6         H61     107.542    2.93
+BVC          N7          C6         H62     107.542    2.93
+BVC         H61          C6         H62     108.002    1.50
+BVC          C6          N7        HN71     104.789    3.00
+BVC          C6          N7        HN72     104.789    3.00
+BVC        HN71          N7        HN72     107.163    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -127,29 +96,46 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BVC      var_1    HN72   N7     C6     C4      -179.962   20.000   1
- BVC      var_2    N7     C6     C4     C5       -90.287   20.000   2
- BVC      CONST_1  C6     C4     C3     S2       180.000    0.000   0
- BVC      CONST_2  C4     C3     S2     C1         0.000    0.000   0
- BVC      CONST_3  C6     C4     C5     C1       180.000    0.000   0
- BVC      CONST_4  C4     C5     C1     S2         0.000    0.000   0
- BVC      CONST_5  C5     C1     S2     C3         0.000    0.000   0
+BVC             sp2_sp2_9          S2          C1          C5          C4       0.000   10.00     2
+BVC             sp2_sp2_2          S2          C3          C4          C6     180.000   10.00     2
+BVC             sp2_sp2_7          C6          C4          C5          C1     180.000   10.00     2
+BVC             sp2_sp3_6          C3          C4          C6          N7     -90.000   10.00     6
+BVC             sp3_sp3_1          C4          C6          N7        HN71     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BVC      plan-1    C1        0.020
- BVC      plan-1    S2        0.020
- BVC      plan-1    C5        0.020
- BVC      plan-1    H1        0.020
- BVC      plan-1    C3        0.020
- BVC      plan-1    C4        0.020
- BVC      plan-1    H3        0.020
- BVC      plan-1    C6        0.020
- BVC      plan-1    H5        0.020
- BVC      plan-2    N7        0.020
- BVC      plan-2    C6        0.020
- BVC      plan-2    HN71      0.020
- BVC      plan-2    HN72      0.020
-# ------------------------------------------------------
+BVC    plan-1          C1   0.020
+BVC    plan-1          C5   0.020
+BVC    plan-1          H1   0.020
+BVC    plan-1          S2   0.020
+BVC    plan-2          C3   0.020
+BVC    plan-2          C4   0.020
+BVC    plan-2          H3   0.020
+BVC    plan-2          S2   0.020
+BVC    plan-3          C3   0.020
+BVC    plan-3          C4   0.020
+BVC    plan-3          C5   0.020
+BVC    plan-3          C6   0.020
+BVC    plan-4          C1   0.020
+BVC    plan-4          C4   0.020
+BVC    plan-4          C5   0.020
+BVC    plan-4          H5   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BVC SMILES           ACDLabs              10.04 "s1ccc(c1)CN"
+BVC SMILES_CANONICAL CACTVS               3.341 NCc1cscc1
+BVC SMILES           CACTVS               3.341 NCc1cscc1
+BVC SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 c1cscc1CN
+BVC SMILES           "OpenEye OEToolkits" 1.5.0 c1cscc1CN
+BVC InChI            InChI                1.03  InChI=1S/C5H7NS/c6-3-5-1-2-7-4-5/h1-2,4H,3,6H2
+BVC InChIKey         InChI                1.03  DUDAKCCDHRNMDJ-UHFFFAOYSA-N
+BVC ?                acedrg               190         "dictionary generator"                  
+BVC ?                acedrg_database      11          "data source"                           
+BVC ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BVC ?                refmac5              5.8.0158    "optimization tool"                     

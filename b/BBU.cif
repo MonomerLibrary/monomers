@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BBU      BBU '1-BROMOBUTANE                       ' non-polymer        14   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BBU     BBU     1-BROMOBUTANE     NON-POLYMER     14     5     .     
 #
 data_comp_BBU
 #
@@ -28,64 +17,45 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BBU           C4     C    CH3       0.000      0.000    0.000    0.000
- BBU           H41    H    H         0.000      0.991   -0.001   -0.377
- BBU           H42    H    H         0.000     -0.147    0.865    0.595
- BBU           H43    H    H         0.000     -0.148   -0.864    0.596
- BBU           C3     C    CH2       0.000     -0.994    0.000   -1.163
- BBU           H31    H    H         0.000     -0.837   -0.891   -1.774
- BBU           H32    H    H         0.000     -0.837    0.891   -1.774
- BBU           C2     C    CH2       0.000     -2.422    0.000   -0.615
- BBU           H21    H    H         0.000     -2.576    0.891   -0.003
- BBU           H22    H    H         0.000     -2.576   -0.891   -0.003
- BBU           C1     C    CH2       0.000     -3.416    0.000   -1.778
- BBU           H12    H    H         0.000     -3.259   -0.891   -2.389
- BBU           H11    H    H         0.000     -3.259    0.891   -2.389
- BBU           BR1    BR   BR        0.000     -5.250    0.000   -1.074
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BBU      C4     n/a    C3     START
- BBU      H41    C4     .      .
- BBU      H42    C4     .      .
- BBU      H43    C4     .      .
- BBU      C3     C4     C2     .
- BBU      H31    C3     .      .
- BBU      H32    C3     .      .
- BBU      C2     C3     C1     .
- BBU      H21    C2     .      .
- BBU      H22    C2     .      .
- BBU      C1     C2     BR1    .
- BBU      H12    C1     .      .
- BBU      H11    C1     .      .
- BBU      BR1    C1     .      END
+BBU     BR1     BR      BR      0       -3.355      -0.564      0.922       
+BBU     C1      C       CH2     0       -1.880      0.108       -0.171      
+BBU     C2      C       CH2     0       -0.541      -0.254      0.408       
+BBU     C3      C       CH2     0       0.605       0.276       -0.440      
+BBU     C4      C       CH3     0       1.989       -0.053      0.084       
+BBU     H11     H       H       0       -1.949      1.079       -0.240      
+BBU     H12     H       H       0       -1.954      -0.265      -1.070      
+BBU     H21     H       H       0       -0.468      -1.231      0.469       
+BBU     H22     H       H       0       -0.468      0.117       1.313       
+BBU     H31     H       H       0       0.519       1.252       -0.506      
+BBU     H32     H       H       0       0.518       -0.090      -1.347      
+BBU     H41     H       H       0       2.471       -0.577      -0.579      
+BBU     H42     H       H       0       1.919       -0.564      0.909       
+BBU     H43     H       H       0       2.475       0.772       0.257       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BBU      BR1    C1        single      2.012    0.020
- BBU      C1     C2        single      1.524    0.020
- BBU      H11    C1        single      1.092    0.020
- BBU      H12    C1        single      1.092    0.020
- BBU      C2     C3        single      1.524    0.020
- BBU      H21    C2        single      1.092    0.020
- BBU      H22    C2        single      1.092    0.020
- BBU      C3     C4        single      1.513    0.020
- BBU      H31    C3        single      1.092    0.020
- BBU      H32    C3        single      1.092    0.020
- BBU      H41    C4        single      1.059    0.020
- BBU      H42    C4        single      1.059    0.020
- BBU      H43    C4        single      1.059    0.020
+BBU         BR1          C1      SINGLE       n     1.955   0.014
+BBU          C1          C2      SINGLE       n     1.503   0.017
+BBU          C2          C3      SINGLE       n     1.518   0.020
+BBU          C3          C4      SINGLE       n     1.510   0.020
+BBU          C1         H11      SINGLE       n     0.976   0.013
+BBU          C1         H12      SINGLE       n     0.976   0.013
+BBU          C2         H21      SINGLE       n     0.981   0.016
+BBU          C2         H22      SINGLE       n     0.981   0.016
+BBU          C3         H31      SINGLE       n     0.982   0.015
+BBU          C3         H32      SINGLE       n     0.982   0.015
+BBU          C4         H41      SINGLE       n     0.973   0.016
+BBU          C4         H42      SINGLE       n     0.973   0.016
+BBU          C4         H43      SINGLE       n     0.973   0.016
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,30 +63,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BBU      H41    C4     H42     109.470    3.000
- BBU      H41    C4     H43     109.470    3.000
- BBU      H42    C4     H43     109.470    3.000
- BBU      H41    C4     C3      109.470    3.000
- BBU      H42    C4     C3      109.470    3.000
- BBU      H43    C4     C3      109.470    3.000
- BBU      C4     C3     H31     109.470    3.000
- BBU      C4     C3     H32     109.470    3.000
- BBU      C4     C3     C2      111.000    3.000
- BBU      H31    C3     H32     107.900    3.000
- BBU      H31    C3     C2      109.470    3.000
- BBU      H32    C3     C2      109.470    3.000
- BBU      C3     C2     H21     109.470    3.000
- BBU      C3     C2     H22     109.470    3.000
- BBU      C3     C2     C1      111.000    3.000
- BBU      H21    C2     H22     107.900    3.000
- BBU      H21    C2     C1      109.470    3.000
- BBU      H22    C2     C1      109.470    3.000
- BBU      C2     C1     H12     109.470    3.000
- BBU      C2     C1     H11     109.470    3.000
- BBU      C2     C1     BR1     109.500    3.000
- BBU      H12    C1     H11     107.900    3.000
- BBU      H12    C1     BR1     109.500    3.000
- BBU      H11    C1     BR1     109.500    3.000
+BBU         BR1          C1          C2     111.994    1.50
+BBU         BR1          C1         H11     109.135    1.50
+BBU         BR1          C1         H12     109.135    1.50
+BBU          C2          C1         H11     109.289    1.50
+BBU          C2          C1         H12     109.289    1.50
+BBU         H11          C1         H12     108.034    1.50
+BBU          C1          C2          C3     111.575    1.93
+BBU          C1          C2         H21     109.114    1.50
+BBU          C1          C2         H22     109.114    1.50
+BBU          C3          C2         H21     108.801    1.50
+BBU          C3          C2         H22     108.801    1.50
+BBU         H21          C2         H22     108.130    1.50
+BBU          C2          C3          C4     113.305    3.00
+BBU          C2          C3         H31     108.801    1.50
+BBU          C2          C3         H32     108.801    1.50
+BBU          C4          C3         H31     108.918    1.50
+BBU          C4          C3         H32     108.918    1.50
+BBU         H31          C3         H32     107.763    1.50
+BBU          C3          C4         H41     109.554    1.50
+BBU          C3          C4         H42     109.554    1.50
+BBU          C3          C4         H43     109.554    1.50
+BBU         H41          C4         H42     109.380    1.50
+BBU         H41          C4         H43     109.380    1.50
+BBU         H42          C4         H43     109.380    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -127,7 +97,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BBU      var_1    H43    C4     C3     C2        59.963   20.000   3
- BBU      var_2    C4     C3     C2     C1       180.000   20.000   3
- BBU      var_3    C3     C2     C1     BR1      180.000   20.000   3
-# ------------------------------------------------------
+BBU             sp3_sp3_1         BR1          C1          C2          C3     180.000   10.00     3
+BBU            sp3_sp3_10          C1          C2          C3          C4     180.000   10.00     3
+BBU            sp3_sp3_19          C2          C3          C4         H41     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BBU SMILES           ACDLabs              10.04 BrCCCC
+BBU SMILES_CANONICAL CACTVS               3.341 CCCCBr
+BBU SMILES           CACTVS               3.341 CCCCBr
+BBU SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 CCCCBr
+BBU SMILES           "OpenEye OEToolkits" 1.5.0 CCCCBr
+BBU InChI            InChI                1.03  InChI=1S/C4H9Br/c1-2-3-4-5/h2-4H2,1H3
+BBU InChIKey         InChI                1.03  MPPPKRYCTPRNTB-UHFFFAOYSA-N
+BBU ?                acedrg               190         "dictionary generator"                  
+BBU ?                acedrg_database      11          "data source"                           
+BBU ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BBU ?                refmac5              5.8.0158    "optimization tool"                     

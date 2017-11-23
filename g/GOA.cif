@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-GOA      GOA 'GLYCOLIC ACID                       ' non-polymer         8   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+GOA     GOA     "GLYCOLICACID"     NON-POLYMER     8     5     .     
 #
 data_comp_GOA
 #
@@ -28,46 +17,33 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- GOA           O12    O    OC       -0.500      0.000    0.000    0.000
- GOA           C1     C    C         0.000     -1.203    0.000    0.343
- GOA           O11    O    OC       -0.500     -2.101    0.000   -0.528
- GOA           C2     C    CH2       0.000     -1.570    0.000    1.803
- GOA           H22    H    H         0.000     -1.158    0.891    2.281
- GOA           H21    H    H         0.000     -1.158   -0.891    2.281
- GOA           O2     O    OH1       0.000     -2.992    0.000    1.937
- GOA           H2     H    H         0.000     -3.227    0.000    2.875
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- GOA      O12    n/a    C1     START
- GOA      C1     O12    C2     .
- GOA      O11    C1     .      .
- GOA      C2     C1     O2     .
- GOA      H22    C2     .      .
- GOA      H21    C2     .      .
- GOA      O2     C2     H2     .
- GOA      H2     O2     .      END
+GOA     C1      C       C       0       -0.914      0.452       -0.170      
+GOA     C2      C       CH2     0       0.251       -0.518      -0.075      
+GOA     O11     O       O       0       -0.807      1.396       -0.977      
+GOA     O12     O       OC      -1      -1.898      0.237       0.565       
+GOA     O2      O       OH1     0       1.165       -0.129      0.928       
+GOA     H22     H       H       0       0.709       -0.555      -0.950      
+GOA     H21     H       H       0       -0.099      -1.421      0.122       
+GOA     H2      H       H       0       1.799       -0.691      0.959       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- GOA      C2     C1        single      1.510    0.020
- GOA      O11    C1        deloc       1.250    0.020
- GOA      C1     O12       deloc       1.250    0.020
- GOA      O2     C2        single      1.432    0.020
- GOA      H22    C2        single      1.092    0.020
- GOA      H21    C2        single      1.092    0.020
- GOA      H2     O2        single      0.967    0.020
+GOA          C1          C2      SINGLE       n     1.519   0.010
+GOA          C1         O11      DOUBLE       n     1.247   0.019
+GOA          C1         O12      SINGLE       n     1.247   0.019
+GOA          C2          O2      SINGLE       n     1.412   0.014
+GOA          C2         H22      SINGLE       n     0.988   0.020
+GOA          C2         H21      SINGLE       n     0.988   0.020
+GOA          O2          H2      SINGLE       n     0.848   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -75,16 +51,16 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- GOA      O12    C1     O11     123.000    3.000
- GOA      O12    C1     C2      118.500    3.000
- GOA      O11    C1     C2      118.500    3.000
- GOA      C1     C2     H22     109.470    3.000
- GOA      C1     C2     H21     109.470    3.000
- GOA      C1     C2     O2      109.500    3.000
- GOA      H22    C2     H21     107.900    3.000
- GOA      H22    C2     O2      109.470    3.000
- GOA      H21    C2     O2      109.470    3.000
- GOA      C2     O2     H2      109.470    3.000
+GOA          C2          C1         O11     117.286    2.89
+GOA          C2          C1         O12     117.286    2.89
+GOA         O11          C1         O12     125.428    1.50
+GOA          C1          C2          O2     110.427    2.31
+GOA          C1          C2         H22     108.463    1.50
+GOA          C1          C2         H21     108.463    1.50
+GOA          O2          C2         H22     109.450    1.50
+GOA          O2          C2         H21     109.450    1.50
+GOA         H22          C2         H21     107.469    1.50
+GOA          C2          O2          H2     109.093    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -95,15 +71,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GOA      var_1    O12    C1     C2     O2       180.000   20.000   3
- GOA      var_2    C1     C2     O2     H2       180.000   20.000   1
+GOA             sp2_sp3_2         O11          C1          C2          O2     120.000   10.00     6
+GOA             sp3_sp3_1          C1          C2          O2          H2     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- GOA      plan-1    C1        0.020
- GOA      plan-1    C2        0.000
- GOA      plan-1    O11       0.000
- GOA      plan-1    O12       0.000
-# ------------------------------------------------------
+GOA    plan-1          C1   0.020
+GOA    plan-1          C2   0.020
+GOA    plan-1         O11   0.020
+GOA    plan-1         O12   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+GOA SMILES           ACDLabs              12.01 "O=C(O)CO"
+GOA SMILES_CANONICAL CACTVS               3.370 "OCC(O)=O"
+GOA SMILES           CACTVS               3.370 "OCC(O)=O"
+GOA SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "C(C(=O)O)O"
+GOA SMILES           "OpenEye OEToolkits" 1.7.0 "C(C(=O)O)O"
+GOA InChI            InChI                1.03  "InChI=1S/C2H4O3/c3-1-2(4)5/h3H,1H2,(H,4,5)"
+GOA InChIKey         InChI                1.03  AEMRFAOFKBGASW-UHFFFAOYSA-N
+GOA ?                acedrg               190         "dictionary generator"                  
+GOA ?                acedrg_database      11          "data source"                           
+GOA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+GOA ?                refmac5              5.8.0158    "optimization tool"                     

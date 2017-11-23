@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-JZ6      JZ6 '4-chloro-1H-pyrazole                ' non-polymer         9   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+JZ6     JZ6     4-chloro-1H-pyrazole     NON-POLYMER     9     6     .     
 #
 data_comp_JZ6
 #
@@ -28,51 +17,36 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- JZ6           CLAA   CL   CL        0.000      0.000    0.000    0.000
- JZ6           CAF    C    CR5       0.000     -1.736    0.003    0.000
- JZ6           CAB    C    CR15      0.000     -2.535   -1.090    0.000
- JZ6           HAB    H    H         0.000     -2.205   -2.122    0.000
- JZ6           CAC    C    CR15      0.000     -2.558    1.136    0.000
- JZ6           HAC    H    H         0.000     -2.220    2.165    0.000
- JZ6           NAE    N    NRD5      0.000     -3.804    0.737    0.000
- JZ6           NAD    N    NR15      0.000     -3.816   -0.664    0.000
- JZ6           HNAD   H    H         0.000     -4.663   -1.268    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- JZ6      CLAA   n/a    CAF    START
- JZ6      CAF    CLAA   CAC    .
- JZ6      CAB    CAF    HAB    .
- JZ6      HAB    CAB    .      .
- JZ6      CAC    CAF    NAE    .
- JZ6      HAC    CAC    .      .
- JZ6      NAE    CAC    NAD    .
- JZ6      NAD    NAE    HNAD   .
- JZ6      HNAD   NAD    .      END
- JZ6      CAB    NAD    .    ADD
+JZ6     CLAA    CL      CL      0       34.569      -4.859      4.060       
+JZ6     CAB     C       CR15    0       33.265      -7.087      5.002       
+JZ6     CAC     C       CR15    0       32.747      -6.624      2.918       
+JZ6     NAD     N       NR5     0       32.388      -7.980      4.532       
+JZ6     NAE     N       NRD5    0       32.059      -7.711      3.253       
+JZ6     CAF     C       CR5     0       33.515      -6.209      3.998       
+JZ6     HAB     H       H       0       33.638      -7.074      5.871       
+JZ6     HAC     H       H       0       32.709      -6.210      2.071       
+JZ6     HNAD    H       H       0       32.052      -8.670      4.986       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- JZ6      CAF    CLAA      single      1.845    0.020
- JZ6      CAB    NAD       single      1.350    0.020
- JZ6      CAB    CAF       double      1.387    0.020
- JZ6      NAE    CAC       double      1.350    0.020
- JZ6      CAC    CAF       single      1.387    0.020
- JZ6      NAD    NAE       single      1.402    0.020
- JZ6      HAB    CAB       single      1.083    0.020
- JZ6      HAC    CAC       single      1.083    0.020
- JZ6      HNAD   NAD       single      1.040    0.020
+JZ6        CLAA         CAF      SINGLE       n     1.714   0.014
+JZ6         CAB         NAD      SINGLE       y     1.338   0.010
+JZ6         CAB         CAF      DOUBLE       y     1.361   0.015
+JZ6         CAC         NAE      DOUBLE       y     1.327   0.013
+JZ6         CAC         CAF      SINGLE       y     1.389   0.015
+JZ6         NAD         NAE      SINGLE       y     1.346   0.010
+JZ6         CAB         HAB      SINGLE       n     0.945   0.019
+JZ6         CAC         HAC      SINGLE       n     0.944   0.017
+JZ6         NAD        HNAD      SINGLE       n     0.892   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -80,19 +54,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- JZ6      CLAA   CAF    CAB     108.000    3.000
- JZ6      CLAA   CAF    CAC     108.000    3.000
- JZ6      CAB    CAF    CAC     108.000    3.000
- JZ6      CAF    CAB    HAB     126.000    3.000
- JZ6      CAF    CAB    NAD     108.000    3.000
- JZ6      HAB    CAB    NAD     126.000    3.000
- JZ6      CAF    CAC    HAC     126.000    3.000
- JZ6      CAF    CAC    NAE     108.000    3.000
- JZ6      HAC    CAC    NAE     126.000    3.000
- JZ6      CAC    NAE    NAD     108.000    3.000
- JZ6      NAE    NAD    HNAD    108.000    3.000
- JZ6      NAE    NAD    CAB     108.000    3.000
- JZ6      HNAD   NAD    CAB     126.000    3.000
+JZ6         NAD         CAB         CAF     107.493    1.50
+JZ6         NAD         CAB         HAB     125.941    1.72
+JZ6         CAF         CAB         HAB     126.567    1.50
+JZ6         NAE         CAC         CAF     109.364    1.50
+JZ6         NAE         CAC         HAC     124.399    2.33
+JZ6         CAF         CAC         HAC     126.236    2.40
+JZ6         CAB         NAD         NAE     111.020    1.50
+JZ6         CAB         NAD        HNAD     125.836    2.30
+JZ6         NAE         NAD        HNAD     123.144    2.09
+JZ6         CAC         NAE         NAD     105.264    1.50
+JZ6        CLAA         CAF         CAB     126.306    1.88
+JZ6        CLAA         CAF         CAC     126.835    2.18
+JZ6         CAB         CAF         CAC     106.859    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -103,23 +77,38 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JZ6      CONST_1  CLAA   CAF    CAB    NAD      180.000    0.000   0
- JZ6      CONST_2  CAF    CAB    NAD    NAE        0.000    0.000   0
- JZ6      CONST_3  CLAA   CAF    CAC    NAE      180.000    0.000   0
- JZ6      CONST_4  CAF    CAC    NAE    NAD        0.000    0.000   0
- JZ6      CONST_5  CAC    NAE    NAD    CAB        0.000    0.000   0
+JZ6       const_sp2_sp2_1         CAF         CAB         NAD         NAE       0.000   10.00     2
+JZ6              const_14         NAD         CAB         CAF        CLAA     180.000   10.00     2
+JZ6       const_sp2_sp2_7         CAF         CAC         NAE         NAD       0.000   10.00     2
+JZ6              const_10         NAE         CAC         CAF        CLAA     180.000   10.00     2
+JZ6       const_sp2_sp2_5         CAB         NAD         NAE         CAC       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- JZ6      plan-1    CAB       0.020
- JZ6      plan-1    NAD       0.020
- JZ6      plan-1    CAF       0.020
- JZ6      plan-1    HAB       0.020
- JZ6      plan-1    CAC       0.020
- JZ6      plan-1    NAE       0.020
- JZ6      plan-1    HAC       0.020
- JZ6      plan-1    HNAD      0.020
- JZ6      plan-1    CLAA      0.020
-# ------------------------------------------------------
+JZ6    plan-1         CAB   0.020
+JZ6    plan-1         CAC   0.020
+JZ6    plan-1         CAF   0.020
+JZ6    plan-1        CLAA   0.020
+JZ6    plan-1         HAB   0.020
+JZ6    plan-1         HAC   0.020
+JZ6    plan-1        HNAD   0.020
+JZ6    plan-1         NAD   0.020
+JZ6    plan-1         NAE   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+JZ6 SMILES_CANONICAL CACTVS               3.352 "Clc1c[nH]nc1"
+JZ6 SMILES           CACTVS               3.352 "Clc1c[nH]nc1"
+JZ6 SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "c1c(cn[nH]1)Cl"
+JZ6 SMILES           "OpenEye OEToolkits" 1.7.0 "c1c(cn[nH]1)Cl"
+JZ6 InChI            InChI                1.03  "InChI=1S/C3H3ClN2/c4-3-1-5-6-2-3/h1-2H,(H,5,6)"
+JZ6 InChIKey         InChI                1.03  BADSZRMNXWLUKO-UHFFFAOYSA-N
+JZ6 ?                acedrg               190         "dictionary generator"                  
+JZ6 ?                acedrg_database      11          "data source"                           
+JZ6 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+JZ6 ?                refmac5              5.8.0158    "optimization tool"                     
