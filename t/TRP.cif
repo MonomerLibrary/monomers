@@ -8,7 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-TRP      TRP 'TRYPTOPHAN                          ' L-peptide          24  14 .
+TRP     TRP     TRYPTOPHAN     L-PEPTIDE     27     15     .     
 #
 data_comp_TRP
 #
@@ -17,31 +17,37 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
- TRP           N      N    NH1      -0.204
- TRP           H      H    HNH1      0.204
- TRP           CA     C    CH1       0.058
- TRP           HA     H    HCH1      0.046
- TRP           CB     C    CH2      -0.068
- TRP           HB3    H    HCH2      0.034
- TRP           HB2    H    HCH2      0.034
- TRP           CG     C    CR5      -0.214
- TRP           CD1    C    CR15      0.059
- TRP           HD1    H    HCR5      0.056
- TRP           NE1    N    NR15     -0.080
- TRP           HE1    H    HNR5      0.179
- TRP           CE2    C    CR56      0.109
- TRP           CD2    C    CR56     -0.038
- TRP           CE3    C    CR16     -0.081
- TRP           HE3    H    HCR6      0.058
- TRP           CZ3    C    CR16     -0.094
- TRP           HZ3    H    HCR6      0.052
- TRP           CH2    C    CR16     -0.053
- TRP           HH2    H    HCR6      0.053
- TRP           CZ2    C    CR16     -0.053
- TRP           HZ2    H    HCR6      0.053
- TRP           C      C    C         0.318
- TRP           O      O    O        -0.422
+_chem_comp_atom.charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+TRP     CZ3     C       CR16    0       2.973       1.271       0.524       
+TRP     CH2     C       CR16    0       3.793       0.138       0.406       
+TRP     CZ2     C       CR16    0       3.306       -1.056      -0.093      
+TRP     CE2     C       CR56    0       1.960       -1.095      -0.478      
+TRP     CD2     C       CR56    0       1.112       0.035       -0.369      
+TRP     CE3     C       CR16    0       1.643       1.232       0.143       
+TRP     CG      C       CR5     0       -0.183      -0.367      -0.851      
+TRP     CD1     C       CR15    0       -0.062      -1.677      -1.216      
+TRP     NE1     N       NR5     0       1.214       -2.120      -0.997      
+TRP     CB      C       CH2     0       -1.415      0.482       -0.933      
+TRP     CA      C       CH1     0       -2.130      0.695       0.410       
+TRP     C       C       C       0       -3.230      1.759       0.293       
+TRP     O       O       O       0       -3.338      2.654       1.131       
+TRP     OXT     O       OC      -1      -4.031      1.742       -0.642      
+TRP     N       N       NT3     1       -2.715      -0.590      0.919       
+TRP     HZ3     H       H       0       3.336       2.071       0.868       
+TRP     HH2     H       H       0       4.694       0.192       0.672       
+TRP     HZ2     H       H       0       3.857       -1.816      -0.171      
+TRP     HE3     H       H       0       1.099       1.999       0.225       
+TRP     HD1     H       H       0       -0.758      -2.208      -1.571      
+TRP     HE1     H       H       0       1.505       -2.931      -1.163      
+TRP     HB3     H       H       0       -2.046      0.068       -1.557      
+TRP     HB2     H       H       0       -1.171      1.359       -1.295      
+TRP     HA      H       H       0       -1.460      1.003       1.065       
+TRP     H       H       H       0       -3.233      -1.046      0.181       
+TRP     H2      H       H       0       -3.305      -0.423      1.660       
+TRP     H3      H       H       0       -2.015      -1.173      1.221       
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
@@ -50,6 +56,8 @@ _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
  TRP      N      n/a    CA     START
  TRP      H      N      .      .
+ TRP      H2     N      .      .
+ TRP      H3     N      .      .
  TRP      CA     N      C      .
  TRP      HA     CA     .      .
  TRP      CB     CA     CG     .
@@ -72,6 +80,7 @@ _chem_comp_tree.connect_type
  TRP      HZ2    CZ2    .      .
  TRP      C      CA     .      END
  TRP      O      C      .      .
+ TRP      OXT    C      .      .
  TRP      CD2    CG     .    ADD
  TRP      CZ2    CE2    .    ADD
 loop_
@@ -79,8 +88,39 @@ _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
+<<<<<<< TREE
+TRP         CZ3         CH2      DOUBLE       y     1.395   0.011
+TRP         CH2         CZ2      SINGLE       y     1.376   0.010
+TRP         CZ2         CE2      DOUBLE       y     1.394   0.010
+TRP         CE2         CD2      SINGLE       y     1.411   0.010
+TRP         CD2         CE3      DOUBLE       y     1.399   0.010
+TRP         CD2          CG      SINGLE       y     1.439   0.010
+TRP          CG         CD1      DOUBLE       y     1.365   0.010
+TRP         CD1         NE1      SINGLE       y     1.369   0.010
+TRP          CG          CB      SINGLE       n     1.498   0.010
+TRP          CB          CA      SINGLE       n     1.534   0.012
+TRP          CA           C      SINGLE       n     1.533   0.011
+TRP           C           O      DOUBLE       n     1.247   0.019
+TRP           C         OXT      SINGLE       n     1.247   0.019
+TRP          CA           N      SINGLE       n     1.488   0.010
+TRP         CZ3         CE3      SINGLE       y     1.377   0.010
+TRP         CE2         NE1      SINGLE       y     1.370   0.010
+TRP         CZ3         HZ3      SINGLE       n     0.944   0.018
+TRP         CH2         HH2      SINGLE       n     0.941   0.018
+TRP         CZ2         HZ2      SINGLE       n     0.942   0.019
+TRP         CE3         HE3      SINGLE       n     0.944   0.020
+TRP         CD1         HD1      SINGLE       n     0.945   0.020
+TRP         NE1         HE1      SINGLE       n     0.877   0.020
+TRP          CB         HB3      SINGLE       n     0.979   0.020
+TRP          CB         HB2      SINGLE       n     0.979   0.020
+TRP          CA          HA      SINGLE       n     0.986   0.020
+TRP           N           H      SINGLE       n     0.911   0.020
+TRP           N          H2      SINGLE       n     0.911   0.020
+TRP           N          H3      SINGLE       n     0.911   0.020
+=======
  TRP      N      H         single       0.860    0.020
  TRP      N      CA        single       1.458    0.019
  TRP      CA     HA        single       0.980    0.020
@@ -106,6 +146,7 @@ _chem_comp_bond.value_dist_esd
  TRP      CZ2    HZ2       single       0.930    0.020
  TRP      CA     C         single       1.525    0.021
  TRP      C      O         deloc        1.231    0.020
+>>>>>>> MERGE-SOURCE
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,47 +154,54 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- TRP      H      N      CA      114.000    3.000
- TRP      HA     CA     CB      109.000    3.000
- TRP      CB     CA     C       110.100    1.900
- TRP      HA     CA     C       109.000    3.000
- TRP      N      CA     HA      110.000    3.000
- TRP      N      CA     CB      110.500    1.700
- TRP      HB3    CB     HB2     110.000    3.000
- TRP      HB2    CB     CG      108.000    3.000
- TRP      HB3    CB     CG      108.000    3.000
- TRP      CA     CB     HB3     109.000    3.000
- TRP      CA     CB     HB2     109.000    3.000
- TRP      CA     CB     CG      113.600    1.900
- TRP      CB     CG     CD2     126.800    1.400
- TRP      CD1    CG     CD2     106.300    1.600
- TRP      CB     CG     CD1     126.900    1.500
- TRP      HD1    CD1    NE1     124.900    3.000
- TRP      CG     CD1    HD1     124.900    3.000
- TRP      CG     CD1    NE1     110.200    1.300
- TRP      HE1    NE1    CE2     125.550    3.000
- TRP      CD1    NE1    HE1     125.550    3.000
- TRP      CD1    NE1    CE2     108.900    1.800
- TRP      NE1    CE2    CZ2     130.100    1.500
- TRP      CD2    CE2    CZ2     122.400    1.000
- TRP      NE1    CE2    CD2     107.400    1.300
- TRP      CE2    CD2    CE3     118.800    1.000
- TRP      CE2    CD2    CG      107.200    1.200
- TRP      CG     CD2    CE3     133.900    1.000
- TRP      HE3    CE3    CZ3     120.700    3.000
- TRP      CD2    CE3    HE3     120.700    3.000
- TRP      CD2    CE3    CZ3     118.600    1.300
- TRP      HZ3    CZ3    CH2     119.450    3.000
- TRP      CE3    CZ3    HZ3     119.450    3.000
- TRP      CE3    CZ3    CH2     121.100    1.300
- TRP      HH2    CH2    CZ2     119.250    3.000
- TRP      CZ3    CH2    HH2     119.250    3.000
- TRP      CZ3    CH2    CZ2     121.500    1.300
- TRP      CH2    CZ2    HZ2     121.250    3.000
- TRP      CE2    CZ2    HZ2     121.250    3.000
- TRP      CH2    CZ2    CE2     117.500    1.300
- TRP      N      CA     C       111.200    2.800
- TRP      CA     C      O       120.800    1.700
+TRP         CH2         CZ3         CE3     121.212    1.50
+TRP         CH2         CZ3         HZ3     119.316    1.50
+TRP         CE3         CZ3         HZ3     119.471    1.50
+TRP         CZ3         CH2         CZ2     121.628    1.50
+TRP         CZ3         CH2         HH2     119.240    1.50
+TRP         CZ2         CH2         HH2     119.132    1.50
+TRP         CH2         CZ2         CE2     117.385    1.50
+TRP         CH2         CZ2         HZ2     121.477    1.50
+TRP         CE2         CZ2         HZ2     121.137    1.50
+TRP         CZ2         CE2         CD2     122.250    1.50
+TRP         CZ2         CE2         NE1     130.294    1.50
+TRP         CD2         CE2         NE1     107.455    1.50
+TRP         CE2         CD2         CE3     118.706    1.50
+TRP         CE2         CD2          CG     106.987    1.50
+TRP         CE3         CD2          CG     134.307    1.50
+TRP         CD2         CE3         CZ3     118.817    1.50
+TRP         CD2         CE3         HE3     120.505    1.50
+TRP         CZ3         CE3         HE3     120.678    1.50
+TRP         CD2          CG         CD1     106.112    1.50
+TRP         CD2          CG          CB     126.820    1.50
+TRP         CD1          CG          CB     127.068    1.62
+TRP          CG         CD1         NE1     110.404    1.50
+TRP          CG         CD1         HD1     125.159    1.59
+TRP         NE1         CD1         HD1     124.437    1.50
+TRP         CD1         NE1         CE2     109.042    1.50
+TRP         CD1         NE1         HE1     125.328    1.77
+TRP         CE2         NE1         HE1     125.630    1.60
+TRP          CG          CB          CA     113.843    1.64
+TRP          CG          CB         HB3     109.029    1.50
+TRP          CG          CB         HB2     109.029    1.50
+TRP          CA          CB         HB3     108.266    1.50
+TRP          CA          CB         HB2     108.266    1.50
+TRP         HB3          CB         HB2     107.759    1.50
+TRP          CB          CA           C     111.644    1.50
+TRP          CB          CA           N     110.562    1.50
+TRP          CB          CA          HA     108.128    1.50
+TRP           C          CA           N     109.666    1.50
+TRP           C          CA          HA     108.922    1.50
+TRP           N          CA          HA     108.030    1.50
+TRP          CA           C           O     117.134    1.50
+TRP          CA           C         OXT     117.134    1.50
+TRP           O           C         OXT     125.731    1.50
+TRP          CA           N           H     109.321    1.91
+TRP          CA           N          H2     109.321    1.91
+TRP          CA           N          H3     109.321    1.91
+TRP           H           N          H2     109.028    2.41
+TRP           H           N          H3     109.028    2.41
+TRP          H2           N          H3     109.028    2.41
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -174,6 +222,8 @@ _chem_comp_tor.period
  TRP      CONST_06 CD2    CE3    CZ3    CH2        0.000    0.000   0
  TRP      CONST_07 CE3    CZ3    CH2    CZ2        0.000    0.000   0
  TRP      CONST_08 CZ3    CH2    CZ2    CE2        0.000    0.000   0
+TRP             sp2_sp3_7           O           C          CA          CB       0.000   10.00     6
+TRP            sp3_sp3_10          CB          CA           N           H     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -182,7 +232,7 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- TRP      chir_01  CA     N      CB     C         negativ
+TRP    chir_1    CA    N    C    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
@@ -204,3 +254,25 @@ _chem_comp_plane_atom.dist_esd
  TRP      plan      HE3       0.020
  TRP      plan      HZ3       0.020
  TRP      plan      HZ2       0.020
+
+TRP    plan-2           C   0.020
+TRP    plan-2          CA   0.020
+TRP    plan-2           O   0.020
+TRP    plan-2         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+TRP SMILES           ACDLabs              10.04 "O=C(O)C(N)Cc2c1ccccc1nc2"
+TRP SMILES_CANONICAL CACTVS               3.341 "N[C@@H](Cc1c[nH]c2ccccc12)C(O)=O"
+TRP SMILES           CACTVS               3.341 "N[CH](Cc1c[nH]c2ccccc12)C(O)=O"
+TRP SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1ccc2c(c1)c(c[nH]2)C[C@@H](C(=O)O)N"
+TRP SMILES           "OpenEye OEToolkits" 1.5.0 "c1ccc2c(c1)c(c[nH]2)CC(C(=O)O)N"
+TRP InChI            InChI                1.03  "InChI=1S/C11H12N2O2/c12-9(11(14)15)5-7-6-13-10-4-2-1-3-8(7)10/h1-4,6,9,13H,5,12H2,(H,14,15)/t9-/m0/s1"
+TRP InChIKey         InChI                1.03  QIVBCDIJIAJPQS-VIFPVBQESA-N
+TRP ?                acedrg               195         "dictionary generator"                  
+TRP ?                acedrg_database      11          "data source"                           
+TRP ?                rdkit                2017.03.2   "Chemoinformatics tool"
+TRP ?                refmac5              5.8.0189    "optimization tool"                     
