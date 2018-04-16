@@ -16646,14 +16646,18 @@ MPR-CYS  MPR      .        .        CYS      CYS-SS   .
  SS-bridge
 CYS-MPR  CYS      CYS-SS   .        MPR      .        .
  SS-bridge
-TRANS    .      .          peptide  .        .        peptide
- default-peptide-link
-PTRANS   .        .        peptide  PRO      .        .
- default-peptide-link_pro
+TRANS          .    DEL-OXT     peptide      .     DEL-HN1     peptide     TRANS
+CIS            .    DEL-OXT     peptide      .     DEL-HN1     peptide     CIS
+PTRANS        .     DEL-OXT     peptide    .   DEL-HNP     peptide         PTRANS
+PCIS          .     DEL-OXT     peptide    .   DEL-HNP     peptide         PCIS
+#TRANS    .      .          peptide  .        .        peptide
+# default-peptide-link
+#PTRANS   .        .        peptide  PRO      .        .
+# default-peptide-link_pro
 NMTRANS  .        .        peptide  PRO      .        .
  default-peptide-link_cn
-CIS      .        .        peptide  .        .        peptide
- cis-peptide-link
+#CIS      .        .        peptide  .        .        peptide
+# cis-peptide-link
 PCIS     .        .        peptide  PRO      .        .
  cis-peptide-link_pro
 NMCIS    .        .        peptide  PRO      .        .
@@ -16825,6 +16829,7 @@ DEL-HD1  delete_HD1_from_HIS                              HIS      .
 DEL-HE2  delete_HE2_from_HIS                              HIS      .
 DEL-OXT  delete_OXT_from_peptide                          .        peptide
 DEL-HN1  delete_Hs_from_peptide                           .        peptide
+DEL-HNP  delete_Hs_from_peptide                           .        peptide
 SUG-b-L  change_sugar_to_beta_L                           .        pyranose
 SUG-a-D  change_sugar_to_alpha_D                          .        pyranose
 SUG-b-D  change_sugar_to_beta_D                           .        pyranose
@@ -17022,7 +17027,7 @@ _chem_link_tor.period
  CYS-MPR  ss       1 CB     1 SG     2 SG     2 CB       90.00  10.0 2
 #
 data_link_TRANS
-#
+
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -17032,7 +17037,8 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
- TRANS    1 C       2 N         single      1.329     .014
+TRANS   1         C         2         N         SINGLE    1.337       0.011
+
 loop_
 _chem_link_angle.link_id
 _chem_link_angle.atom_1_comp_id
@@ -17043,10 +17049,11 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
- TRANS    1 O       1 C       2 N       123.000    1.600
- TRANS    1 CA      1 C       2 N       116.200    2.000
- TRANS    1 C       2 N       2 H       124.300    3.000
- TRANS    1 C       2 N       2 CA      121.700    1.800
+TRANS   1         CA        1         C         2         N         115.917        1.50
+TRANS   1         O         1         C         2         N         123.469        1.50
+TRANS   1         C         2         N         2         CA        122.095        1.76
+TRANS   1         C         2         N         2         H         119.176        1.83
+
 loop_
 _chem_link_tor.link_id
 _chem_link_tor.id
@@ -17064,23 +17071,83 @@ _chem_link_tor.period
  TRANS    psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
  TRANS    omega    1 CA     1 C      2 N      2 CA      180.00   5.0 0
  TRANS    phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+
 loop_
 _chem_link_plane.link_id
 _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
-_chem_link_plane.dist_esd
- TRANS      plane1    1 CA         .020
- TRANS      plane1    1 C          .020
- TRANS      plane1    1 O          .020
- TRANS      plane1    2 N          .020
- TRANS      plane2    1 C          .020
- TRANS      plane2    2 N          .020
- TRANS      plane2    2 CA         .020
- TRANS      plane2    2 H          .020
+_chem_link_plane.dist_id
+TRANS   plan-1    1         CA        0.020
+TRANS   plan-1    1         C         0.020
+TRANS   plan-1    2         N         0.020
+TRANS   plan-1    1         O         0.020
+TRANS   plan-2    2         CA        0.020
+TRANS   plan-2    1         C         0.020
+TRANS   plan-2    2         H         0.020
+TRANS   plan-2    2         N         0.020
+
+
+#data_link_TRANS
 #
+#loop_
+#_chem_link_bond.link_id
+#_chem_link_bond.atom_1_comp_id
+#_chem_link_bond.atom_id_1
+#_chem_link_bond.atom_2_comp_id
+#_chem_link_bond.atom_id_2
+#_chem_link_bond.type
+#_chem_link_bond.value_dist
+#_chem_link_bond.value_dist_esd
+# TRANS    1 C       2 N         single      1.329     .014
+#loop_
+#_chem_link_angle.link_id
+#_chem_link_angle.atom_1_comp_id
+#_chem_link_angle.atom_id_1
+#_chem_link_angle.atom_2_comp_id
+#_chem_link_angle.atom_id_2
+#_chem_link_angle.atom_3_comp_id
+#_chem_link_angle.atom_id_3
+#_chem_link_angle.value_angle
+#_chem_link_angle.value_angle_esd
+# TRANS    1 O       1 C       2 N       123.000    1.600
+# TRANS    1 CA      1 C       2 N       116.200    2.000
+# TRANS    1 C       2 N       2 H       124.300    3.000
+# TRANS    1 C       2 N       2 CA      121.700    1.800
+#loop_
+#_chem_link_tor.link_id
+#_chem_link_tor.id
+#_chem_link_tor.atom_1_comp_id
+#_chem_link_tor.atom_id_1
+#_chem_link_tor.atom_2_comp_id
+#_chem_link_tor.atom_id_2
+#_chem_link_tor.atom_3_comp_id
+##_chem_link_tor.atom_id_3
+#_chem_link_tor.atom_4_comp_id
+#_chem_link_tor.atom_id_4
+#_chem_link_tor.value_angle
+#_chem_link_tor.value_angle_esd
+#_chem_link_tor.period
+# TRANS    psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+# TRANS    omega    1 CA     1 C      2 N      2 CA      180.00   5.0 0
+# TRANS    phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+#loop_
+#_chem_link_plane.link_id
+#_chem_link_plane.plane_id
+#_chem_link_plane.atom_comp_id
+#_chem_link_plane.atom_id
+#_chem_link_plane.dist_esd
+# TRANS      plane1    1 CA         .020
+# TRANS      plane1    1 C          .020
+# TRANS      plane1    1 O          .020
+# TRANS      plane1    2 N          .020
+# TRANS      plane2    1 C          .020
+# TRANS      plane2    2 N          .020
+# TRANS      plane2    2 CA         .020
+# TRANS      plane2    2 H          .020
+##
 data_link_PTRANS
-#
+
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -17090,7 +17157,8 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
- PTRANS   1 C       2 N         single      1.341     .016
+PTRANS   1         C         2         N         SINGLE    1.352       0.010
+
 loop_
 _chem_link_angle.link_id
 _chem_link_angle.atom_1_comp_id
@@ -17101,10 +17169,11 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
- PTRANS   1 O       1 C       2 N       123.000    1.600
- PTRANS   1 CA      1 C       2 N       116.900    1.500
- PTRANS   1 C       2 N       2 CD      125.000    4.100
- PTRANS   1 C       2 N       2 CA      122.600    5.000
+PTRANS   1         CA        1         C         2         N         118.415        1.50
+PTRANS   1         O         1         C         2         N         121.016        1.53
+PTRANS   2         CA        2         N         1         C         120.469        1.50
+PTRANS   2         CD        2         N         1         C         124.005        1.50
+
 loop_
 _chem_link_tor.link_id
 _chem_link_tor.id
@@ -17127,16 +17196,76 @@ _chem_link_plane.link_id
 _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
-_chem_link_plane.dist_esd
- PTRANS     plane1    1 CA         .020
- PTRANS     plane1    1 C          .020
- PTRANS     plane1    1 O          .020
- PTRANS     plane1    2 N          .020
- PTRANS     plane2    1 C          .050
- PTRANS     plane2    2 N          .050
- PTRANS     plane2    2 CA         .050
- PTRANS     plane2    2 CD         .050
+_chem_link_plane.dist_id
+PTRANS   plan-1    1         CA        0.020
+PTRANS   plan-1    1         C         0.020
+PTRANS   plan-1    2         N         0.020
+PTRANS   plan-1    1         O         0.020
+PTRANS   plan-2    1         C          .020
+PTRANS   plan-2    2         N          .020
+PTRANS   plan-2    2         CA         .020
+PTRANS   plan-2    2         CD         .020
+
+
+
+#data_link_PTRANS
 #
+#loop_
+#_chem_link_bond.link_id
+#_chem_link_bond.atom_1_comp_id
+#_chem_link_bond.atom_id_1
+#_chem_link_bond.atom_2_comp_id
+#_chem_link_bond.atom_id_2
+#_chem_link_bond.type
+#_chem_link_bond.value_dist
+#_chem_link_bond.value_dist_esd
+# PTRANS   1 C       2 N         single      1.341     .016
+#loop_
+#_chem_link_angle.link_id
+#_chem_link_angle.atom_1_comp_id
+#_chem_link_angle.atom_id_1
+#_chem_link_angle.atom_2_comp_id
+#_chem_link_angle.atom_id_2
+#_chem_link_angle.atom_3_comp_id
+#_chem_link_angle.atom_id_3
+#_chem_link_angle.value_angle
+#_chem_link_angle.value_angle_esd
+# PTRANS   1 O       1 C       2 N       123.000    1.600
+# PTRANS   1 CA      1 C       2 N       116.900    1.500
+# PTRANS   1 C       2 N       2 CD      125.000    4.100
+# PTRANS   1 C       2 N       2 CA      122.600    5.000
+#loop_
+#_chem_link_tor.link_id
+#_chem_link_tor.id
+#_chem_link_tor.atom_1_comp_id
+#_chem_link_tor.atom_id_1
+#_chem_link_tor.atom_2_comp_id
+#_chem_link_tor.atom_id_2
+#_chem_link_tor.atom_3_comp_id
+#_chem_link_tor.atom_id_3
+#_chem_link_tor.atom_4_comp_id
+#_chem_link_tor.atom_id_4
+#_chem_link_tor.value_angle
+#_chem_link_tor.value_angle_esd
+#_chem_link_tor.period
+# PTRANS   psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+# PTRANS   omega    1 CA     1 C      2 N      2 CA      180.00   5.0 0
+# PTRANS   phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+#loop_
+#_chem_link_plane.link_id
+#_chem_link_plane.plane_id
+#_chem_link_plane.atom_comp_id
+#_chem_link_plane.atom_id
+#_chem_link_plane.dist_esd
+# PTRANS     plane1    1 CA         .020
+# PTRANS     plane1    1 C          .020
+# PTRANS     plane1    1 O          .020
+# PTRANS     plane1    2 N          .020
+# PTRANS     plane2    1 C          .050
+# PTRANS     plane2    2 N          .050
+# PTRANS     plane2    2 CA         .050
+# PTRANS     plane2    2 CD         .050
+##
 data_link_NMTRANS
 #
 loop_
@@ -17196,7 +17325,7 @@ _chem_link_plane.dist_esd
  NMTRANS    plane2    2 CN         .050
 #
 data_link_CIS
-#
+
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -17206,7 +17335,8 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
- CIS      1 C       2 N         single      1.329     .014
+CIS   1         C         2         N         SINGLE    1.337       0.011
+
 loop_
 _chem_link_angle.link_id
 _chem_link_angle.atom_1_comp_id
@@ -17217,10 +17347,11 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
- CIS      1 O       1 C       2 N       123.000    1.600
- CIS      1 CA      1 C       2 N       116.200    2.000
- CIS      1 C       2 N       2 H       124.300    3.000
- CIS      1 C       2 N       2 CA      121.700    1.800
+CIS   1         CA        1         C         2         N         115.917        1.50
+CIS   1         O         1         C         2         N         123.469        1.50
+CIS   1         C         2         N         2         CA        122.095        1.76
+CIS   1         C         2         N         2         H         119.176        1.83
+
 loop_
 _chem_link_tor.link_id
 _chem_link_tor.id
@@ -17235,26 +17366,85 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
- CIS      psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
- CIS      omega    1 CA     1 C      2 N      2 CA         .00   5.0 0
- CIS      phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+ CIS    psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+ CIS    omega    1 CA     1 C      2 N      2 CA        0.00   5.0 0
+ CIS    phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+
 loop_
 _chem_link_plane.link_id
 _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
-_chem_link_plane.dist_esd
- CIS        plane1    1 CA         .020
- CIS        plane1    1 C          .020
- CIS        plane1    1 O          .020
- CIS        plane1    2 N          .020
- CIS        plane2    1 C          .020
- CIS        plane2    2 N          .020
- CIS        plane2    2 CA         .020
- CIS        plane2    2 H          .020
+_chem_link_plane.dist_id
+CIS   plan-1    1         CA        0.020
+CIS   plan-1    1         C         0.020
+CIS   plan-1    2         N         0.020
+CIS   plan-1    1         O         0.020
+CIS   plan-2    2         CA        0.020
+CIS   plan-2    1         C         0.020
+CIS   plan-2    2         H         0.020
+CIS   plan-2    2         N         0.020
+
+#data_link_CIS
+#
+#loop_
+#_chem_link_bond.link_id
+#_chem_link_bond.atom_1_comp_id
+#_chem_link_bond.atom_id_1
+#_chem_link_bond.atom_2_comp_id
+#_chem_link_bond.atom_id_2
+#_chem_link_bond.type
+#_chem_link_bond.value_dist
+#_chem_link_bond.value_dist_esd
+# CIS      1 C       2 N         single      1.329     .014
+#loop_
+#_chem_link_angle.link_id
+#_chem_link_angle.atom_1_comp_id
+#_chem_link_angle.atom_id_1
+#_chem_link_angle.atom_2_comp_id
+#_chem_link_angle.atom_id_2
+#_chem_link_angle.atom_3_comp_id
+#_chem_link_angle.atom_id_3
+#_chem_link_angle.value_angle
+#_chem_link_angle.value_angle_esd
+# CIS      1 O       1 C       2 N       123.000    1.600
+# CIS      1 CA      1 C       2 N       116.200    2.000
+# CIS      1 C       2 N       2 H       124.300    3.000
+# CIS      1 C       2 N       2 CA      121.700    1.800
+#loop_
+#_chem_link_tor.link_id
+#_chem_link_tor.id
+#_chem_link_tor.atom_1_comp_id
+#_chem_link_tor.atom_id_1
+#_chem_link_tor.atom_2_comp_id
+#_chem_link_tor.atom_id_2
+#_chem_link_tor.atom_3_comp_id
+#_chem_link_tor.atom_id_3
+#_chem_link_tor.atom_4_comp_id
+#_chem_link_tor.atom_id_4
+#_chem_link_tor.value_angle
+#_chem_link_tor.value_angle_esd
+#_chem_link_tor.period
+# CIS      psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+# CIS      omega    1 CA     1 C      2 N      2 CA         .00   5.0 0
+# CIS      phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+#loop_
+#_chem_link_plane.link_id
+#_chem_link_plane.plane_id
+#_chem_link_plane.atom_comp_id
+#_chem_link_plane.atom_id
+#_chem_link_plane.dist_esd
+# CIS        plane1    1 CA         .020
+# CIS        plane1    1 C          .020
+# CIS        plane1    1 O          .020
+# CIS        plane1    2 N          .020
+# CIS        plane2    1 C          .020
+# CIS        plane2    2 N          .020
+# CIS        plane2    2 CA         .020
+# CIS        plane2    2 H          .020
 #
 data_link_PCIS
-#
+
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -17264,7 +17454,8 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
- PCIS     1 C       2 N         single      1.341     .016
+PCIS   1         C         2         N         SINGLE    1.352       0.010
+
 loop_
 _chem_link_angle.link_id
 _chem_link_angle.atom_1_comp_id
@@ -17275,10 +17466,11 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
- PCIS     1 O       1 C       2 N       123.000    1.600
- PCIS     1 CA      1 C       2 N       116.900    1.500
- PCIS     1 C       2 N       2 CD      125.000    4.100
- PCIS     1 C       2 N       2 CA      122.600    5.000
+PCIS   1         CA        1         C         2         N         118.415        1.50
+PCIS   1         O         1         C         2         N         121.016        1.53
+PCIS   2         CA        2         N         1         C         120.469        1.50
+PCIS   2         CD        2         N         1         C         124.005        1.50
+
 loop_
 _chem_link_tor.link_id
 _chem_link_tor.id
@@ -17293,24 +17485,82 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
- PCIS     psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
- PCIS     omega    1 CA     1 C      2 N      2 CA         .00   5.0 0
- PCIS     phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+ PCIS   psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+ PCIS   omega    1 CA     1 C      2 N      2 CA        0.00   5.0 0
+ PCIS   phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
 loop_
 _chem_link_plane.link_id
 _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
-_chem_link_plane.dist_esd
- PCIS       plane1    1 CA         .020
- PCIS       plane1    1 C          .020
- PCIS       plane1    1 O          .020
- PCIS       plane1    2 N          .020
- PCIS       plane2    1 C          .050
- PCIS       plane2    2 N          .050
- PCIS       plane2    2 CA         .050
- PCIS       plane2    2 CD         .050
+_chem_link_plane.dist_id
+PCIS   plan-1    1         CA        0.020
+PCIS   plan-1    1         C         0.020
+PCIS   plan-1    2         N         0.020
+PCIS   plan-1    1         O         0.020
+PCIS   plan-2    1         C          .020
+PCIS   plan-2    2         N          .020
+PCIS   plan-2    2         CA         .020
+PCIS   plan-2    2         CD         .020
+
+#data_link_PCIS
 #
+#loop_
+#_chem_link_bond.link_id
+#_chem_link_bond.atom_1_comp_id
+#_chem_link_bond.atom_id_1
+#_chem_link_bond.atom_2_comp_id
+#_chem_link_bond.atom_id_2
+#_chem_link_bond.type
+#_chem_link_bond.value_dist
+#_chem_link_bond.value_dist_esd
+# PCIS     1 C       2 N         single      1.341     .016
+#loop_
+#_chem_link_angle.link_id
+#_chem_link_angle.atom_1_comp_id
+#_chem_link_angle.atom_id_1
+#_chem_link_angle.atom_2_comp_id
+#_chem_link_angle.atom_id_2
+#_chem_link_angle.atom_3_comp_id
+#_chem_link_angle.atom_id_3
+#_chem_link_angle.value_angle
+#_chem_link_angle.value_angle_esd
+# PCIS     1 O       1 C       2 N       123.000    1.600
+# PCIS     1 CA      1 C       2 N       116.900    1.500
+# PCIS     1 C       2 N       2 CD      125.000    4.100
+# PCIS     1 C       2 N       2 CA      122.600    5.000
+#loop_
+#_chem_link_tor.link_id
+#_chem_link_tor.id
+#_chem_link_tor.atom_1_comp_id
+#_chem_link_tor.atom_id_1
+#_chem_link_tor.atom_2_comp_id
+#_chem_link_tor.atom_id_2
+#_chem_link_tor.atom_3_comp_id
+#_chem_link_tor.atom_id_3
+#_chem_link_tor.atom_4_comp_id
+#_chem_link_tor.atom_id_4
+#_chem_link_tor.value_angle
+#_chem_link_tor.value_angle_esd
+#_chem_link_tor.period
+# PCIS     psi      1 N      1 CA     1 C      2 N       160.00  30.0 2
+# PCIS     omega    1 CA     1 C      2 N      2 CA         .00   5.0 0
+# PCIS     phi      1 C      2 N      2 CA     2 C        60.00  20.0 3
+#loop_
+#_chem_link_plane.link_id
+#_chem_link_plane.plane_id
+#_chem_link_plane.atom_comp_id
+#_chem_link_plane.atom_id
+#_chem_link_plane.dist_esd
+# PCIS       plane1    1 CA         .020
+# PCIS       plane1    1 C          .020
+# PCIS       plane1    1 O          .020
+# PCIS       plane1    2 N          .020
+# PCIS       plane2    1 C          .050
+# PCIS       plane2    2 N          .050
+# PCIS       plane2    2 CA         .050
+# PCIS       plane2    2 CD         .050
+##
 data_link_NMCIS
 #
 loop_
@@ -20329,7 +20579,7 @@ _chem_mod_tree.connect_type
  DEL-HO6  change   O6     n/a    .        .      END
 #
 data_mod_DEL-OXT
-#
+
 loop_
 _chem_mod_atom.mod_id
 _chem_mod_atom.function
@@ -20337,18 +20587,9 @@ _chem_mod_atom.atom_id
 _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
-_chem_mod_atom.new_partial_charge
- DEL-OXT  delete   OXT    .      .    .        .000
- DEL-OXT  change   O      .      O    .        .000
-loop_
-_chem_mod_tree.mod_id
-_chem_mod_tree.function
-_chem_mod_tree.atom_id
-_chem_mod_tree.atom_back
-_chem_mod_tree.back_type
-_chem_mod_tree.atom_forward
-_chem_mod_tree.connect_type
- DEL-OXT  delete   OXT    n/a    .        .      .
+_chem_mod_atom.new_charge
+DEL-OXT        delete         OXT       .         O         OC        -1
+
 loop_
 _chem_mod_bond.mod_id
 _chem_mod_bond.function
@@ -20357,32 +20598,10 @@ _chem_mod_bond.atom_id_2
 _chem_mod_bond.new_type
 _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
- DEL-OXT  change   C       O         double      1.231     .020
-#
-data_mod_DEL-HN1
-#
-loop_
-_chem_mod_atom.mod_id
-_chem_mod_atom.function
-_chem_mod_atom.atom_id
-_chem_mod_atom.new_atom_id
-_chem_mod_atom.new_type_symbol
-_chem_mod_atom.new_type_energy
-_chem_mod_atom.new_partial_charge
- DEL-HN1  delete   H3     .      .    .        .000
- DEL-HN1  delete   H3     .      .    .        .000
- DEL-HN1  change   H1     H      .    .        .000
- DEL-HN1  change  HN1     H      .    .        .000
- DEL-HN1  change   N      .      .    NH1      .000
-loop_
-_chem_mod_bond.mod_id
-_chem_mod_bond.function
-_chem_mod_bond.atom_id_1
-_chem_mod_bond.atom_id_2
-_chem_mod_bond.new_type
-_chem_mod_bond.new_value_dist
-_chem_mod_bond.new_value_dist_esd
- DEL-HN1  change   N       H         single       .960     .020
+DEL-OXT        delete         C         OXT       single         .              .
+DEL-OXT        change         CA        C         single         1.526          0.010
+DEL-OXT        change         C         O         double         1.229          0.012
+
 loop_
 _chem_mod_angle.mod_id
 _chem_mod_angle.function
@@ -20391,8 +20610,172 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
- DEL-HN1  change   H       N       CA      114.000    3.000
+DEL-OXT        delete         CA        C         OXT       .              .
+DEL-OXT        delete         O         C         OXT       .              .
+DEL-OXT        change         CA        C         O         120.614        1.50
+
+
+loop_
+_chem_mod_plane.mod_id
+_chem_mod_plane.function
+_chem_mod_plane.plane_id
+_chem_mod_plane.atom_id
+_chem_mod_plane.dist_esd
+DEL-OXT        delete         plan-1         C              0.020
+DEL-OXT        delete         plan-1         CA             0.020
+DEL-OXT        delete         plan-1         O              0.020
+DEL-OXT        delete         plan-1         OXT            0.020
+
+#data_mod_DEL-OXT
 #
+#loop_
+#_chem_mod_atom.mod_id
+#_chem_mod_atom.function
+#_chem_mod_atom.atom_id
+#_chem_mod_atom.new_atom_id
+#_chem_mod_atom.new_type_symbol
+#_chem_mod_atom.new_type_energy
+#_chem_mod_atom.new_partial_charge
+# DEL-OXT  delete   OXT    .      .    .        .000
+# DEL-OXT  change   O      .      O    .        .000
+#loop_
+#_chem_mod_tree.mod_id
+#_chem_mod_tree.function
+#_chem_mod_tree.atom_id
+#_chem_mod_tree.atom_back
+#_chem_mod_tree.back_type
+#_chem_mod_tree.atom_forward
+#_chem_mod_tree.connect_type
+# DEL-OXT  delete   OXT    n/a    .        .      .
+#loop_
+#_chem_mod_bond.mod_id
+#_chem_mod_bond.function
+#_chem_mod_bond.atom_id_1
+#_chem_mod_bond.atom_id_2
+#_chem_mod_bond.new_type
+#_chem_mod_bond.new_value_dist
+#_chem_mod_bond.new_value_dist_esd
+# DEL-OXT  change   C       O         double      1.231     .020
+###
+data_mod_DEL-HNP
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+DEL-HNP        delete         H1        .         H         H         0
+DEL-HNP        delete         H2        .         H         H         0
+DEL-HNP        delete         HN        .         H         H         0
+DEL-HNP        delete         HN1       .         H         H         0
+DEL-HNP        delete         HN2       .         H         H         0
+DEL-HNP        delete         H         .         H         H         0
+DEL-HNP        change         N         .         N         NT        0
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+DEL-HNP        delete         N         H         single         .              .
+DEL-HNP        change         CA        N         single         1.464          0.010
+DEL-HNP        change         N         CD        single         1.473          0.011
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+DEL-HNP        delete         CA        N         H         .              .
+DEL-HNP        delete         CD        N         H         .              .
+DEL-HNP        change         CA        N         CD        112.409        1.50
+data_mod_DEL-HN1
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+DEL-HN1        delete         HN1       .         H         H         0
+DEL-HN1        delete         HN2       .         H         H         0
+DEL-HN1        delete         HN3       .         H         H         0
+DEL-HN1        delete         H1        .         H         H         0
+DEL-HN1        delete         H2        .         H         H         0
+DEL-HN1        delete         H3        .         H         H         0
+DEL-HN1        delete         HN        .         H         H         0
+DEL-HN1        change         N         .         N         NH1       0
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+DEL-HN1        delete         N         H2        single         .              .
+DEL-HN1        delete         N         H3        single         .              .
+DEL-HN1        change         CA        N         single         1.453          0.010
+DEL-HN1        change         N         H         single         1.010          0.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+DEL-HN1        delete         CA        N         H2        .              .
+DEL-HN1        delete         CA        N         H3        .              .
+DEL-HN1        delete         H         N         H2        .              .
+DEL-HN1        delete         H         N         H3        .              .
+DEL-HN1        delete         H2        N         H3        .              .
+DEL-HN1        change         CA        N         H         118.729        1.50
+
+#data_mod_DEL-HN1
+#
+#loop_
+#_chem_mod_atom.mod_id
+#_chem_mod_atom.function
+#_chem_mod_atom.atom_id
+#_chem_mod_atom.new_atom_id
+#_chem_mod_atom.new_type_symbol
+#_chem_mod_atom.new_type_energy
+#_chem_mod_atom.new_partial_charge
+# DEL-HN1  delete   H3     .      .    .        .000
+# DEL-HN1  delete   H3     .      .    .        .000
+# DEL-HN1  change   H1     H      .    .        .000
+# DEL-HN1  change  HN1     H      .    .        .000
+# DEL-HN1  change   N      .      .    NH1      .000
+#loop_
+#_chem_mod_bond.mod_id
+#_chem_mod_bond.function
+#_chem_mod_bond.atom_id_1
+#_chem_mod_bond.atom_id_2
+#_chem_mod_bond.new_type
+#_chem_mod_bond.new_value_dist
+#_chem_mod_bond.new_value_dist_esd
+# DEL-HN1  change   N       H         single       .960     .020
+#loop_
+#_chem_mod_angle.mod_id
+#_chem_mod_angle.function
+#_chem_mod_angle.atom_id_1
+#_chem_mod_angle.atom_id_2
+#_chem_mod_angle.atom_id_3
+#_chem_mod_angle.new_value_angle
+#_chem_mod_angle.new_value_angle_esd
+# DEL-HN1  change   H       N       CA      114.000    3.000
+##
 data_mod_SUG-b-L
 #
 loop_
