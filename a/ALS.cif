@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-ALS      ALS '(3S)-3-(sulfooxy)-L-serine          ' peptide            18  12 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+ALS     ALS     "(3S)-3-(sulfooxy)-L-serine"  peptide   18     12     .     
 #
 data_comp_ALS
 #
@@ -28,28 +17,28 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- ALS           N      N    NT3       1.000      1.432   -1.247    0.563
- ALS           H2     H    H         0.000      2.311   -1.310    0.775
- ALS           H3     H    H         0.000      0.955   -1.103    1.320
- ALS           H4     H    H         0.000      1.162   -2.025    0.186
- ALS           CA     C    CH1       0.000      1.220   -0.123   -0.390
- ALS           H1     H    H         0.000      1.733   -0.323   -1.206
- ALS           CB     C    CH1       0.000     -0.244    0.043   -0.793
- ALS           H5     H    H         0.000     -0.343    0.860   -1.349
- ALS           OG     O    OH1       0.000     -0.622   -1.097   -1.556
- ALS           H6     H    H         0.000     -1.482   -1.001   -1.794
- ALS           OS1    O    O2        0.000     -1.015    0.179    0.384
- ALS           S      S    S3        0.000     -2.509    0.740    0.278
- ALS           OS2    O    OS       -1.000     -3.061    0.547    1.593
- ALS           OS3    O    O         0.000     -2.365    2.127   -0.080
- ALS           OS4    O    O         0.000     -3.163   -0.047   -0.735
- ALS           C      C    C         0.000      1.785    1.175    0.207
- ALS           O      O    OC       -1.000      1.557    1.397    1.418
- ALS           OXT    O    O         0.000      2.431    1.924   -0.561
+ALS     C       C       C       0       29.979      11.117      26.859      
+ALS     O       O       O       0       28.958      11.486      26.244      
+ALS     CA      C       CH1     0       29.951      11.216      28.390      
+ALS     N       N       NT3     1       30.295      9.890       28.971      
+ALS     CB      C       CH1     0       30.892      12.312      28.882      
+ALS     OG      O       OH1     0       30.410      13.579      28.451      
+ALS     OS1     O       O2      0       30.981      12.241      30.288      
+ALS     S       S       S3      0       32.104      13.098      31.032      
+ALS     OS2     O       O       0       33.358      12.485      30.654      
+ALS     OS3     O       O       0       31.953      14.451      30.542      
+ALS     OS4     O       OS      -1      31.797      12.959      32.438      
+ALS     OXT     O       OC      -1      31.021      10.673      26.338      
+ALS     HA      H       H       0       29.032      11.440      28.668      
+ALS     H2      H       H       0       30.283      9.939       29.881      
+ALS     H       H       H       0       31.128      9.638       28.699      
+ALS     H3      H       H       0       29.691      9.265       28.700      
+ALS     HB      H       H       0       31.790      12.165      28.489      
+ALS     HG      H       H       0       31.008      14.165      28.585      
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
@@ -58,14 +47,14 @@ _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
  ALS      N      n/a    CA     START
  ALS      H2     N      .      .
+ ALS      H      N      .      .
  ALS      H3     N      .      .
- ALS      H4     N      .      .
  ALS      CA     N      C      .
- ALS      H1     CA     .      .
+ ALS      HA     CA     .      .
  ALS      CB     CA     OS1    .
- ALS      H5     CB     .      .
- ALS      OG     CB     H6     .
- ALS      H6     OG     .      .
+ ALS      HB     CB     .      .
+ ALS      OG     CB     HG     .
+ ALS      HG     OG     .      .
  ALS      OS1    CB     S      .
  ALS      S      OS1    OS4    .
  ALS      OS2    S      .      .
@@ -74,30 +63,32 @@ _chem_comp_tree.connect_type
  ALS      C      CA     .      END
  ALS      O      C      .      .
  ALS      OXT    C      .      .
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- ALS      N      CA        single      1.488    0.010
- ALS      CA     CB        single      1.525    0.015
- ALS      CB     OG        single      1.423    0.018
- ALS      CB     OS1       single      1.408    0.015
- ALS      OS1    S         single      1.591    0.020
- ALS      S      OS2       single      1.439    0.013
- ALS      S      OS3       double      1.439    0.013
- ALS      S      OS4       double      1.439    0.013
- ALS      CA     C         single      1.533    0.011
- ALS      C      O         single      1.252    0.011
- ALS      C      OXT       double      1.252    0.011
- ALS      N      H2        single      0.906    0.020
- ALS      N      H3        single      0.906    0.020
- ALS      N      H4        single      0.906    0.020
- ALS      CA     H1        single      0.984    0.020
- ALS      CB     H5        single      0.993    0.020
- ALS      OG     H6        single      0.897    0.020
+ALS           C           O      DOUBLE       n     1.247   0.019
+ALS           C          CA      SINGLE       n     1.533   0.011
+ALS          CB          OG      SINGLE       n     1.421   0.017
+ALS          CA          CB      SINGLE       n     1.525   0.015
+ALS          CA           N      SINGLE       n     1.488   0.011
+ALS          CB         OS1      SINGLE       n     1.408   0.015
+ALS         OS1           S      SINGLE       n     1.592   0.020
+ALS           S         OS3      DOUBLE       n     1.446   0.016
+ALS           S         OS2      DOUBLE       n     1.446   0.016
+ALS           S         OS4      SINGLE       n     1.446   0.016
+ALS           C         OXT      SINGLE       n     1.247   0.019
+ALS          CA          HA      SINGLE       n     0.985   0.020
+ALS           N          H2      SINGLE       n     0.911   0.020
+ALS           N           H      SINGLE       n     0.911   0.020
+ALS           N          H3      SINGLE       n     0.911   0.020
+ALS          CB          HB      SINGLE       n     0.991   0.020
+ALS          OG          HG      SINGLE       n     0.848   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -105,35 +96,35 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- ALS      CA     N      H2      109.860    1.860
- ALS      CA     N      H3      109.860    1.860
- ALS      CA     N      H4      109.860    1.860
- ALS      H2     N      H3      109.024    2.410
- ALS      H2     N      H4      109.024    2.410
- ALS      H3     N      H4      109.024    2.410
- ALS      N      CA     CB      112.904    3.000
- ALS      N      CA     C       109.413    1.500
- ALS      N      CA     H1      108.422    1.500
- ALS      CB     CA     C       111.482    2.920
- ALS      CB     CA     H1      107.456    1.500
- ALS      C      CA     H1      108.610    1.500
- ALS      CA     CB     OG      108.563    3.000
- ALS      CA     CB     OS1     107.086    2.390
- ALS      CA     CB     H5      109.862    1.500
- ALS      OG     CB     OS1     112.855    3.000
- ALS      OG     CB     H5      109.300    1.500
- ALS      OS1    CB     H5      109.223    1.500
- ALS      CB     OG     H6      108.131    1.500
- ALS      CB     OS1    S       118.000    1.520
- ALS      OS1    S      OS2     105.016    2.690
- ALS      OS1    S      OS3     105.016    2.690
- ALS      OS1    S      OS4     105.016    2.690
- ALS      OS2    S      OS3     113.487    1.500
- ALS      OS2    S      OS4     113.487    1.500
- ALS      OS3    S      OS4     113.487    1.500
- ALS      CA     C      O       117.154    1.500
- ALS      CA     C      OXT     117.154    1.500
- ALS      O      C      OXT     125.691    1.500
+ALS           O           C          CA     117.139    1.50
+ALS           O           C         OXT     125.721    1.50
+ALS          CA           C         OXT     117.139    1.50
+ALS           C          CA          CB     111.511    2.91
+ALS           C          CA           N     109.414    1.50
+ALS           C          CA          HA     108.600    1.50
+ALS          CB          CA           N     112.810    3.00
+ALS          CB          CA          HA     109.155    1.50
+ALS           N          CA          HA     108.444    1.50
+ALS          CA           N          H2     109.853    1.85
+ALS          CA           N           H     109.853    1.85
+ALS          CA           N          H3     109.853    1.85
+ALS          H2           N           H     109.028    2.41
+ALS          H2           N          H3     109.028    2.41
+ALS           H           N          H3     109.028    2.41
+ALS          OG          CB          CA     109.482    3.00
+ALS          OG          CB         OS1     111.904    1.92
+ALS          OG          CB          HB     108.816    1.50
+ALS          CA          CB         OS1     109.482    3.00
+ALS          CA          CB          HB     109.155    1.50
+ALS         OS1          CB          HB     109.255    1.50
+ALS          CB          OG          HG     109.233    2.58
+ALS          CB         OS1           S     118.012    1.52
+ALS         OS1           S         OS3     104.945    2.70
+ALS         OS1           S         OS2     104.945    2.70
+ALS         OS1           S         OS4     104.945    2.70
+ALS         OS3           S         OS2     113.532    1.50
+ALS         OS3           S         OS4     113.532    1.50
+ALS         OS2           S         OS4     113.532    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -144,39 +135,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ALS      sp3_sp3_1        CB     CA     N      H2               180.000           10.000   3
- ALS      sp3_sp3_2        CB     CA     N      H3               -60.000           10.000   3
- ALS      sp3_sp3_3        CB     CA     N      H4                60.000           10.000   3
- ALS      sp3_sp3_4        C      CA     N      H2                60.000           10.000   3
- ALS      sp3_sp3_5        C      CA     N      H3               180.000           10.000   3
- ALS      sp3_sp3_6        C      CA     N      H4               -60.000           10.000   3
- ALS      sp3_sp3_7        H1     CA     N      H2               -60.000           10.000   3
- ALS      sp3_sp3_8        H1     CA     N      H3                60.000           10.000   3
- ALS      sp3_sp3_9        H1     CA     N      H4               180.000           10.000   3
- ALS      sp3_sp3_10       N      CA     CB     OG               180.000           10.000   3
- ALS      sp3_sp3_11       N      CA     CB     OS1              -60.000           10.000   3
- ALS      sp3_sp3_12       N      CA     CB     H5                60.000           10.000   3
- ALS      sp3_sp3_13       C      CA     CB     OG                60.000           10.000   3
- ALS      sp3_sp3_14       C      CA     CB     OS1              180.000           10.000   3
- ALS      sp3_sp3_15       C      CA     CB     H5               -60.000           10.000   3
- ALS      sp3_sp3_16       H1     CA     CB     OG               -60.000           10.000   3
- ALS      sp3_sp3_17       H1     CA     CB     OS1               60.000           10.000   3
- ALS      sp3_sp3_18       H1     CA     CB     H5               180.000           10.000   3
- ALS      sp3_sp3_19       CA     CB     OG     H6               180.000           10.000   3
- ALS      sp3_sp3_20       OS1    CB     OG     H6                60.000           10.000   3
- ALS      sp3_sp3_21       H5     CB     OG     H6               -60.000           10.000   3
- ALS      sp3_sp3_22       CA     CB     OS1    S                180.000           10.000   3
- ALS      sp3_sp3_23       OG     CB     OS1    S                 60.000           10.000   3
- ALS      sp3_sp3_24       H5     CB     OS1    S                -60.000           10.000   3
- ALS      sp3_sp3_25       CB     OS1    S      OS2              180.000           10.000   3
- ALS      sp3_sp3_26       CB     OS1    S      OS3              -60.000           10.000   3
- ALS      sp3_sp3_27       CB     OS1    S      OS4               60.000           10.000   3
- ALS      sp2_sp3_1        O      C      CA     N                  0.000           10.000   6
- ALS      sp2_sp3_2        O      C      CA     CB               120.000           10.000   6
- ALS      sp2_sp3_3        O      C      CA     H1              -120.000           10.000   6
- ALS      sp2_sp3_4        OXT    C      CA     N                180.000           10.000   6
- ALS      sp2_sp3_5        OXT    C      CA     CB               -60.000           10.000   6
- ALS      sp2_sp3_6        OXT    C      CA     H1                60.000           10.000   6
+ALS             sp2_sp3_1           O           C          CA          CB       0.000   10.00     6
+ALS            sp3_sp3_13           C          CA           N          H2     180.000   10.00     3
+ALS             sp3_sp3_4           C          CA          CB          OG     180.000   10.00     3
+ALS             sp3_sp3_1          CA          CB          OG          HG     180.000   10.00     3
+ALS            sp3_sp3_22          OG          CB         OS1           S     180.000   10.00     3
+ALS            sp3_sp3_25          CB         OS1           S         OS3     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -185,15 +149,31 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- ALS      chir_01          CA     N      C      CB        positive
- ALS      chir_02          CB     OS1    OG     CA        positive
+ALS    chir_1    CA    N    C    CB    positive
+ALS    chir_2    CB    OS1    OG    CA    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- ALS      plan-1            C         0.020
- ALS      plan-1            CA        0.020
- ALS      plan-1            O         0.020
- ALS      plan-1            OXT       0.020
-# ------------------------------------------------------
+ALS    plan-1           C   0.020
+ALS    plan-1          CA   0.020
+ALS    plan-1           O   0.020
+ALS    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+ALS SMILES           ACDLabs              12.01 "C(C(C(OS(O)(=O)=O)O)N)(O)=O"
+ALS InChI            InChI                1.03  "InChI=1S/C3H7NO7S/c4-1(2(5)6)3(7)11-12(8,9)10/h1,3,7H,4H2,(H,5,6)(H,8,9,10)/t1-,3+/m1/s1"
+ALS InChIKey         InChI                1.03  MNJOBAOHZQQXIK-GPKNORDASA-N
+ALS SMILES_CANONICAL CACTVS               3.385 "N[C@@H]([C@@H](O)O[S](O)(=O)=O)C(O)=O"
+ALS SMILES           CACTVS               3.385 "N[CH]([CH](O)O[S](O)(=O)=O)C(O)=O"
+ALS SMILES_CANONICAL "OpenEye OEToolkits" 1.7.6 "[C@H]([C@@H](O)OS(=O)(=O)O)(C(=O)O)N"
+ALS SMILES           "OpenEye OEToolkits" 1.7.6 "C(C(O)OS(=O)(=O)O)(C(=O)O)N"
+ALS ?                acedrg               196         "dictionary generator"                  
+ALS ?                acedrg_database      11          "data source"                           
+ALS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+ALS ?                refmac5              5.8.0222    "optimization tool"                     

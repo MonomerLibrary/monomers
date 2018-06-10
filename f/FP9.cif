@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FP9      FP9 '(4R)-4-fluoro-L-proline             ' P-peptide          16   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+FP9     FP9     "(4R)-4-fluoro-L-proline"     P-peptide     16     9     .
 #
 data_comp_FP9
 #
@@ -28,72 +17,73 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- FP9           OXT    O    OC       -0.500      0.000    0.000    0.000
- FP9           C      C    C         0.000     -1.180   -0.367    0.196
- FP9           O      O    OC       -0.500     -1.433   -1.223    1.072
- FP9           CA     C    CH1       0.000     -2.298    0.227   -0.622
- FP9           HA     H    H         0.000     -1.982    0.356   -1.667
- FP9           CB     C    CH2       0.000     -2.745    1.577   -0.024
- FP9           HB     H    H         0.000     -2.295    2.420   -0.552
- FP9           HBA    H    H         0.000     -2.504    1.645    1.039
- FP9           CG     C    CH1       0.000     -4.276    1.610   -0.208
- FP9           HG     H    H         0.000     -4.777    1.675    0.768
- FP9           FD     F    F         0.000     -4.645    2.692   -1.017
- FP9           CD     C    CH2       0.000     -4.626    0.278   -0.903
- FP9           HD     H    H         0.000     -4.678    0.387   -1.988
- FP9           HDA    H    H         0.000     -5.566   -0.138   -0.535
- FP9           N      N    NH1       0.000     -3.508   -0.634   -0.549
- FP9           HN     H    H         0.000     -3.558   -1.614   -0.312
+FP9     C       C       C       0       12.293      7.280       33.337
+FP9     N       N       NT1     0       11.824      8.906       31.505
+FP9     O       O       O       0       11.109      7.052       33.518
+FP9     CA      C       CH1     0       12.660      8.620       32.679
+FP9     CB      C       CH2     0       12.370      9.798       33.619
+FP9     CD      C       CH2     0       11.464      10.331      31.473
+FP9     FD      F       F       0       13.368      11.527      32.315
+FP9     CG      C       CH1     0       12.139      10.964      32.672
+FP9     OXT     O       OC      -1      13.215      6.541       33.632
+FP9     HN      H       H       0       12.284      8.724       30.767
+FP9     HA      H       H       0       13.613      8.617       32.411
+FP9     HB      H       H       0       13.133      9.972       34.210
+FP9     HBA     H       H       0       11.573      9.629       34.166
+FP9     HD      H       H       0       10.490      10.433      31.528
+FP9     HDA     H       H       0       11.778      10.741      30.639
+FP9     HG      H       H       0       11.548      11.637      33.089
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
- FP9      N      n/a    CA     START
- FP9      HN     N      .      .
- FP9      CD     N      CG     .
- FP9      HD     CD     .      .
- FP9      HDA    CD     .      .
- FP9      CG     CD     FD     .
- FP9      HG     CG     .      .
- FP9      CB     CG     HB     .
- FP9      HBA    CB     .      .
- FP9      HB     CB     .      .
- FP9      FD     CG     .      .
- FP9      CA     N      C      .
- FP9      HA     CA     .      .
- FP9      C      CA     OXT    .
- FP9      O      C      .      .
- FP9      OXT    C      .      END
- FP9      CA     CB     .    ADD
+FP9      N      n/a    CD     START
+FP9      HN     N      .      .
+FP9      CD     N      CG     .
+FP9      HD     CD     .      .
+FP9      HDA    CD     .      .
+FP9      CG     CD     CB     .
+FP9      HG     CG     .      .
+FP9      FD     CG     .      .
+FP9      CB     CG     CA     .
+FP9      HB     CB     .      .
+FP9      HBA    CB     .      .
+FP9      CA     CB     C      .
+FP9      HA     CA     .      .
+FP9      C      CA     .      END
+FP9      O      C      .      .
+FP9      OXT    C      .      .
+FP9      N      CA     .    ADD
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- FP9      O      C         deloc       1.250    0.020
- FP9      CA     C         single      1.500    0.020
- FP9      C      OXT       deloc       1.250    0.020
- FP9      N      CA        single      1.450    0.020
- FP9      N      CD        single      1.450    0.020
- FP9      HN     N         single      1.010    0.020
- FP9      CB     CA        single      1.524    0.020
- FP9      HA     CA        single      1.099    0.020
- FP9      CG     CB        single      1.524    0.020
- FP9      HB     CB        single      1.092    0.020
- FP9      HBA    CB        single      1.092    0.020
- FP9      CD     CG        single      1.524    0.020
- FP9      HD     CD        single      1.092    0.020
- FP9      HDA    CD        single      1.092    0.020
- FP9      FD     CG        single      1.370    0.020
- FP9      HG     CG        single      1.099    0.020
+FP9           C           O      DOUBLE       n     1.218   0.020
+FP9           C          CA      SINGLE       n     1.536   0.010
+FP9           C         OXT      SINGLE       n     1.218   0.020
+FP9           N          CA      SINGLE       n     1.468   0.015
+FP9           N          CD      SINGLE       n     1.468   0.016
+FP9          CA          CB      SINGLE       n     1.534   0.013
+FP9          CB          CG      SINGLE       n     1.522   0.020
+FP9          CD          CG      SINGLE       n     1.514   0.020
+FP9          FD          CG      SINGLE       n     1.398   0.011
+FP9           N          HN      SINGLE       n     0.887   0.020
+FP9          CA          HA      SINGLE       n     0.990   0.012
+FP9          CB          HB      SINGLE       n     0.981   0.019
+FP9          CB         HBA      SINGLE       n     0.981   0.019
+FP9          CD          HD      SINGLE       n     0.981   0.019
+FP9          CD         HDA      SINGLE       n     0.981   0.019
+FP9          CG          HG      SINGLE       n     0.988   0.013
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -101,36 +91,36 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- FP9      OXT    C      O       123.000    3.000
- FP9      OXT    C      CA      118.500    3.000
- FP9      O      C      CA      118.500    3.000
- FP9      C      CA     HA      108.810    3.000
- FP9      C      CA     CB      109.470    3.000
- FP9      C      CA     N       111.600    3.000
- FP9      HA     CA     CB      108.340    3.000
- FP9      HA     CA     N       108.550    3.000
- FP9      CB     CA     N       110.000    3.000
- FP9      CA     CB     HB      109.470    3.000
- FP9      CA     CB     HBA     109.470    3.000
- FP9      CA     CB     CG      111.000    3.000
- FP9      HB     CB     HBA     107.900    3.000
- FP9      HB     CB     CG      109.470    3.000
- FP9      HBA    CB     CG      109.470    3.000
- FP9      CB     CG     HG      108.340    3.000
- FP9      CB     CG     FD      109.500    3.000
- FP9      CB     CG     CD      109.470    3.000
- FP9      HG     CG     FD      109.500    3.000
- FP9      HG     CG     CD      108.340    3.000
- FP9      FD     CG     CD      109.500    3.000
- FP9      CG     CD     HD      109.470    3.000
- FP9      CG     CD     HDA     109.470    3.000
- FP9      CG     CD     N       110.000    3.000
- FP9      HD     CD     HDA     107.900    3.000
- FP9      HD     CD     N       109.470    3.000
- FP9      HDA    CD     N       109.470    3.000
- FP9      CD     N      HN      118.500    3.000
- FP9      CD     N      CA      120.000    3.000
- FP9      HN     N      CA      118.500    3.000
+FP9           O           C          CA     117.013    1.95
+FP9           O           C         OXT     125.975    1.50
+FP9          CA           C         OXT     117.013    1.95
+FP9          CA           N          CD     109.056    3.00
+FP9          CA           N          HN     109.307    3.00
+FP9          CD           N          HN     107.738    2.27
+FP9           C          CA           N     111.420    2.45
+FP9           C          CA          CB     110.031    2.42
+FP9           C          CA          HA     110.011    1.50
+FP9           N          CA          CB     103.430    2.23
+FP9           N          CA          HA     109.296    1.50
+FP9          CB          CA          HA     110.393    1.50
+FP9          CA          CB          CG     103.843    1.50
+FP9          CA          CB          HB     110.853    1.50
+FP9          CA          CB         HBA     110.853    1.50
+FP9          CG          CB          HB     110.819    1.50
+FP9          CG          CB         HBA     110.819    1.50
+FP9          HB          CB         HBA     108.877    1.50
+FP9           N          CD          CG     106.098    1.50
+FP9           N          CD          HD     110.393    1.50
+FP9           N          CD         HDA     110.393    1.50
+FP9          CG          CD          HD     111.088    1.50
+FP9          CG          CD         HDA     111.088    1.50
+FP9          HD          CD         HDA     109.055    1.50
+FP9          CB          CG          CD     104.174    2.12
+FP9          CB          CG          FD     109.888    1.96
+FP9          CB          CG          HG     110.819    1.50
+FP9          CD          CG          FD     111.374    2.09
+FP9          CD          CG          HG     110.859    1.50
+FP9          FD          CG          HG     111.335    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -141,12 +131,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FP9      var_1    OXT    C      CA     CB       -83.170   20.000   3
- FP9      var_2    C      CA     CB     CG      -150.000   20.000   3
- FP9      var_3    CA     CB     CG     CD         0.000   20.000   3
- FP9      var_4    CB     CG     CD     N         30.000   20.000   3
- FP9      var_5    CG     CD     N      CA       -30.000   20.000   3
- FP9      var_6    CD     N      CA     C        150.000   20.000   3
+FP9             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+FP9             sp3_sp3_3           C          CA           N          CD     -60.000   10.00     3
+FP9            sp3_sp3_34          CG          CD           N          CA     180.000   10.00     3
+FP9            sp3_sp3_13           C          CA          CB          CG      60.000   10.00     3
+FP9            sp3_sp3_17          CA          CB          CG          FD     180.000   10.00     3
+FP9            sp3_sp3_27           N          CD          CG          FD     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -155,19 +145,32 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- FP9      chir_01  CA     C      N      CB        negativ
- FP9      chir_02  CG     CB     CD     FD        positiv
+FP9    chir_1    N    CA    CD    HN    both
+FP9    chir_2    CA    N    C    CB    both
+FP9    chir_3    CG    FD    CD    CB    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- FP9      plan-1    C         0.020
- FP9      plan-1    O         0.020
- FP9      plan-1    CA        0.020
- FP9      plan-1    OXT       0.020
- FP9      plan-2    N         0.020
- FP9      plan-2    CA        0.020
- FP9      plan-2    CD        0.020
- FP9      plan-2    HN        0.020
-# ------------------------------------------------------
+FP9    plan-1           C   0.020
+FP9    plan-1          CA   0.020
+FP9    plan-1           O   0.020
+FP9    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+FP9 SMILES           ACDLabs              12.01 "O=C(O)C1NCC(F)C1"
+FP9 InChI            InChI                1.03  "InChI=1S/C5H8FNO2/c6-3-1-4(5(8)9)7-2-3/h3-4,7H,1-2H2,(H,8,9)/t3-,4+/m1/s1"
+FP9 InChIKey         InChI                1.03  ZIWHMENIDGOELV-DMTCNVIQSA-N
+FP9 SMILES_CANONICAL CACTVS               3.385 "OC(=O)[C@@H]1C[C@@H](F)CN1"
+FP9 SMILES           CACTVS               3.385 "OC(=O)[CH]1C[CH](F)CN1"
+FP9 SMILES_CANONICAL "OpenEye OEToolkits" 1.7.6 "C1[C@H](CN[C@@H]1C(=O)O)F"
+FP9 SMILES           "OpenEye OEToolkits" 1.7.6 "C1C(CNC1C(=O)O)F"
+FP9 ?                acedrg               196         "dictionary generator"
+FP9 ?                acedrg_database      11          "data source"
+FP9 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+FP9 ?                refmac5              5.8.0222    "optimization tool"

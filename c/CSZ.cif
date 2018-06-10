@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CSZ      CSZ 'S-SELANYL CYSTEINE                  ' peptide            14   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+CSZ     CSZ     "S-SELANYLCYSTEINE"     peptide     15     8     .
 #
 data_comp_CSZ
 #
@@ -28,64 +17,68 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CSZ           N      N    NH2       0.000      0.000    0.000    0.000
- CSZ           HN1    H    H         0.000      0.894    0.075    0.469
- CSZ           HN2    H    H         0.000     -0.516   -0.870    0.048
- CSZ           CA     C    CH1       0.000     -0.543    1.141   -0.742
- CSZ           HA     H    H         0.000     -0.563    0.846   -1.800
- CSZ           CB     C    CH2       0.000     -1.991    1.398   -0.337
- CSZ           HB2    H    H         0.000     -2.495    0.430   -0.368
- CSZ           HB3    H    H         0.000     -2.413    2.052   -1.103
- CSZ           SG     S    S2        0.000     -2.221    2.149    1.296
- CSZ           SE     SE   SE        0.000     -1.157    1.159    2.822
- CSZ           HE     H    H         0.000     -1.931    0.252    3.033
- CSZ           C      C    C         0.000      0.233    2.454   -0.672
- CSZ           O      O    OC       -0.500     -0.030    3.378   -1.473
- CSZ           OXT    O    OC       -0.500      1.090    2.554    0.234
+CSZ     N       N       NT3     1       -1.303      -0.236      -1.206
+CSZ     CA      C       CH1     0       -0.903      0.082       0.193
+CSZ     C       C       C       0       -0.967      -1.201      1.038
+CSZ     O       O       O       0       -1.978      -1.919      0.893
+CSZ     CB      C       CH2     0       0.455       0.770       0.199
+CSZ     SG      S       S2      0       1.785       -0.124      -0.659
+CSZ     SE      SE      SE      0       3.653       1.175       -0.717
+CSZ     OXT     O       OC      -1      -0.020      -1.442      1.817
+CSZ     H       H       H       0       -1.272      0.519       -1.714
+CSZ     H2      H       H       0       -2.151      -0.569      -1.217
+CSZ     H3      H       H       0       -0.733      -0.855      -1.557
+CSZ     HA      H       H       0       -1.565      0.717       0.551
+CSZ     HB2     H       H       0       0.731       0.923       1.127
+CSZ     HB3     H       H       0       0.357       1.649       -0.225
+CSZ     HE      H       H       0       4.595       0.507       -1.022
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
- CSZ      N      n/a    CA     START
- CSZ      HN1    N      .      .
- CSZ      HN2    N      .      .
- CSZ      CA     N      C      .
- CSZ      HA     CA     .      .
- CSZ      CB     CA     SG     .
- CSZ      HB2    CB     .      .
- CSZ      HB3    CB     .      .
- CSZ      SG     CB     SE     .
- CSZ      SE     SG     HE     .
- CSZ      HE     SE     .      .
- CSZ      C      CA     .      END
- CSZ      O      C      .      .
- CSZ      OXT    C      .      .
+CSZ      N      n/a    CA     START
+CSZ      H      N      .      .
+CSZ      H2     N      .      .
+CSZ      H3     N      .      .
+CSZ      CA     N      C      .
+CSZ      HA     CA     .      .
+CSZ      CB     CA     SG     .
+CSZ      HB2    CB     .      .
+CSZ      HB3    CB     .      .
+CSZ      SG     CB     SE     .
+CSZ      SE     SG     HE     .
+CSZ      HE     SE     .      .
+CSZ      C      CA     .      END
+CSZ      O      C      .      .
+CSZ      OXT    C      .      .
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- CSZ      CA     N         single      1.450    0.020
- CSZ      C      CA        single      1.500    0.020
- CSZ      CB     CA        single      1.524    0.020
- CSZ      HA     CA        single      1.099    0.020
- CSZ      O      C         deloc       1.250    0.020
- CSZ      OXT    C         deloc       1.250    0.020
- CSZ      SG     CB        single      1.762    0.020
- CSZ      HB2    CB        single      1.092    0.020
- CSZ      HB3    CB        single      1.092    0.020
- CSZ      SE     SG        single      1.875    0.020
- CSZ      HE     SE        single      1.209    0.020
- CSZ      HN1    N         single      1.010    0.020
- CSZ      HN2    N         single      1.010    0.020
+CSZ           N          CA      SINGLE       n     1.488   0.011
+CSZ          CA           C      SINGLE       n     1.533   0.011
+CSZ          CA          CB      SINGLE       n     1.516   0.017
+CSZ           C           O      DOUBLE       n     1.247   0.019
+CSZ           C         OXT      SINGLE       n     1.247   0.019
+CSZ          CB          SG      SINGLE       n     1.817   0.011
+CSZ          SG          SE      SINGLE       n     2.276   0.020
+CSZ           N           H      SINGLE       n     0.911   0.020
+CSZ           N          H2      SINGLE       n     0.911   0.020
+CSZ           N          H3      SINGLE       n     0.911   0.020
+CSZ          CA          HA      SINGLE       n     0.985   0.020
+CSZ          CB         HB2      SINGLE       n     0.980   0.019
+CSZ          CB         HB3      SINGLE       n     0.980   0.019
+CSZ          SE          HE      SINGLE       n     1.195   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,26 +86,29 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- CSZ      HN1    N      HN2     120.000    3.000
- CSZ      HN1    N      CA      120.000    3.000
- CSZ      HN2    N      CA      120.000    3.000
- CSZ      N      CA     HA      109.470    3.000
- CSZ      N      CA     CB      109.470    3.000
- CSZ      N      CA     C       109.470    3.000
- CSZ      HA     CA     CB      108.340    3.000
- CSZ      HA     CA     C       108.810    3.000
- CSZ      CB     CA     C       109.470    3.000
- CSZ      CA     CB     HB2     109.470    3.000
- CSZ      CA     CB     HB3     109.470    3.000
- CSZ      CA     CB     SG      109.500    3.000
- CSZ      HB2    CB     HB3     107.900    3.000
- CSZ      HB2    CB     SG      109.500    3.000
- CSZ      HB3    CB     SG      109.500    3.000
- CSZ      CB     SG     SE      113.188    3.000
- CSZ      SG     SE     HE       98.000    3.000
- CSZ      CA     C      O       118.500    3.000
- CSZ      CA     C      OXT     118.500    3.000
- CSZ      O      C      OXT     123.000    3.000
+CSZ          CA           N           H     109.671    1.50
+CSZ          CA           N          H2     109.671    1.50
+CSZ          CA           N          H3     109.671    1.50
+CSZ           H           N          H2     109.028    2.41
+CSZ           H           N          H3     109.028    2.41
+CSZ          H2           N          H3     109.028    2.41
+CSZ           N          CA           C     109.494    1.50
+CSZ           N          CA          CB     110.672    1.50
+CSZ           N          CA          HA     107.983    1.50
+CSZ           C          CA          CB     111.067    2.40
+CSZ           C          CA          HA     108.606    1.50
+CSZ          CB          CA          HA     108.432    1.50
+CSZ          CA           C           O     117.134    1.50
+CSZ          CA           C         OXT     117.134    1.50
+CSZ           O           C         OXT     125.732    1.50
+CSZ          CA          CB          SG     115.472    1.77
+CSZ          CA          CB         HB2     108.885    1.50
+CSZ          CA          CB         HB3     108.885    1.50
+CSZ          SG          CB         HB2     108.668    1.50
+CSZ          SG          CB         HB3     108.668    1.50
+CSZ         HB2          CB         HB3     107.922    1.50
+CSZ          CB          SG          SE     109.471    3.00
+CSZ          SG          SE          HE     109.471    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -123,10 +119,11 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CSZ      var_1    HN2    N      CA     C        175.000   20.000   1
- CSZ      var_2    N      CA     CB     SG        73.810   20.000   3
- CSZ      var_3    CA     CB     SG     SE       -49.865   20.000   1
- CSZ      var_4    CB     SG     SE     HE       -81.533   20.000   1
+CSZ             sp3_sp3_1           C          CA           N           H     180.000   10.00     3
+CSZ             sp2_sp3_2           O           C          CA           N     120.000   10.00     6
+CSZ            sp3_sp3_10           N          CA          CB          SG     180.000   10.00     3
+CSZ            sp3_sp3_19          CA          CB          SG          SE     180.000   10.00     3
+CSZ            sp3_sp3_22          HE          SE          SG          CB     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -135,18 +132,30 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- CSZ      chir_01  CA     N      C      CB        positiv
+CSZ    chir_1    CA    N    CB    C    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- CSZ      plan-1    N         0.020
- CSZ      plan-1    CA        0.020
- CSZ      plan-1    HN1       0.020
- CSZ      plan-1    HN2       0.020
- CSZ      plan-2    C         0.020
- CSZ      plan-2    CA        0.020
- CSZ      plan-2    O         0.020
- CSZ      plan-2    OXT       0.020
-# ------------------------------------------------------
+CSZ    plan-1           C   0.020
+CSZ    plan-1          CA   0.020
+CSZ    plan-1           O   0.020
+CSZ    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+CSZ SMILES           ACDLabs              10.04 "O=C(O)C(N)CS[SeH]"
+CSZ SMILES_CANONICAL CACTVS               3.341 "N[C@@H](CS[SeH])C(O)=O"
+CSZ SMILES           CACTVS               3.341 "N[CH](CS[SeH])C(O)=O"
+CSZ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C([C@@H](C(=O)O)N)S[SeH]"
+CSZ SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(C(=O)O)N)S[SeH]"
+CSZ InChI            InChI                1.03  "InChI=1S/C3H7NO2SSe/c4-2(1-7-8)3(5)6/h2,8H,1,4H2,(H,5,6)/t2-/m0/s1"
+CSZ InChIKey         InChI                1.03  KRUPEGHZMWTFPP-REOHCLBHSA-N
+CSZ ?                acedrg               196         "dictionary generator"
+CSZ ?                acedrg_database      11          "data source"
+CSZ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+CSZ ?                refmac5              5.8.0222    "optimization tool"

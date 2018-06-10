@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-DPL      DPL '4-OXOPROLINE                        ' P-peptide          15   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+DPL     DPL     4-OXOPROLINE     P-peptide     15     9     .
 #
 data_comp_DPL
 #
@@ -28,69 +17,70 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- DPL           OXT    O    OC       -0.500      0.000    0.000    0.000
- DPL           C      C    C         0.000     -0.936    0.564    0.609
- DPL           O      O    OC       -0.500     -1.977   -0.014    0.992
- DPL           CA     C    CH1       0.000     -0.633    2.017    0.816
- DPL           HA     H    H         0.000     -0.498    2.509   -0.158
- DPL           CB     C    CH2       0.000      0.599    2.245    1.679
- DPL           HB2    H    H         0.000      1.137    3.163    1.436
- DPL           HB3    H    H         0.000      1.296    1.404    1.674
- DPL           CG     C    C         0.000     -0.023    2.372    3.037
- DPL           OG1    O    O         0.000      0.611    2.412    4.083
- DPL           CD     C    CH2       0.000     -1.521    2.433    2.957
- DPL           HD3    H    H         0.000     -1.937    3.275    3.515
- DPL           HD2    H    H         0.000     -1.997    1.508    3.288
- DPL           N      N    NH1       0.000     -1.768    2.626    1.523
- DPL           H      H    H         0.000     -2.564    3.087    1.105
+DPL     N       N       NT1     0       1.161       2.249       1.030
+DPL     CA      C       CH1     0       1.779       1.328       0.086
+DPL     C       C       C       0       1.046       -0.021      -0.021
+DPL     O       O       O       0       0.216       -0.292      0.831
+DPL     CB      C       CH2     0       3.203       1.190       0.639
+DPL     CG      C       CR5     0       3.108       1.502       2.103
+DPL     CD      C       CH2     0       1.710       2.017       2.372
+DPL     OG1     O       O       0       3.983       1.371       2.929
+DPL     OXT     O       OC      -1      1.353       -0.730      -0.964
+DPL     H       H       H       0       1.248       3.080       0.729
+DPL     HA      H       H       0       1.813       1.755       -0.800
+DPL     HB2     H       H       0       3.793       1.802       0.214
+DPL     HB3     H       H       0       3.537       0.309       0.515
+DPL     HD3     H       H       0       1.177       1.353       2.856
+DPL     HD2     H       H       0       1.735       2.851       2.885
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
- DPL      N      n/a    CA     START
- DPL      H      N      .      .
- DPL      CD     N      CG     .
- DPL      HD3    CD     .      .
- DPL      HD2    CD     .      .
- DPL      CG     CD     OG1    .
- DPL      CB     CG     HB2    .
- DPL      HB3    CB     .      .
- DPL      HB2    CB     .      .
- DPL      OG1    CG     .      .
- DPL      CA     N      C      .
- DPL      HA     CA     .      .
- DPL      C      CA     OXT    .
- DPL      O      C      .      .
- DPL      OXT    C      .      END
- DPL      CA     CB     .    ADD
+DPL      N      n/a    CD     START
+DPL      H      N      .      .
+DPL      CD     N      CG     .
+DPL      HD3    CD     .      .
+DPL      HD2    CD     .      .
+DPL      CG     CD     CB     .
+DPL      OG1    CG     .      .
+DPL      CB     CG     CA     .
+DPL      HB2    CB     .      .
+DPL      HB3    CB     .      .
+DPL      CA     CB     C      .
+DPL      HA     CA     .      .
+DPL      C      CA     .      END
+DPL      O      C      .      .
+DPL      OXT    C      .      .
+DPL      N      CA     .    ADD
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- DPL      N      CA        single      1.450    0.020
- DPL      N      CD        single      1.450    0.020
- DPL      H      N         single      1.010    0.020
- DPL      CA     C         single      1.500    0.020
- DPL      CB     CA        single      1.524    0.020
- DPL      HA     CA        single      1.099    0.020
- DPL      O      C         deloc       1.250    0.020
- DPL      C      OXT       deloc       1.250    0.020
- DPL      CG     CB        single      1.510    0.020
- DPL      HB2    CB        single      1.092    0.020
- DPL      HB3    CB        single      1.092    0.020
- DPL      CD     CG        single      1.510    0.020
- DPL      OG1    CG        double      1.220    0.020
- DPL      HD3    CD        single      1.092    0.020
- DPL      HD2    CD        single      1.092    0.020
+DPL           N          CA      SINGLE       n     1.457   0.010
+DPL           N          CD      SINGLE       n     1.470   0.015
+DPL          CA           C      SINGLE       n     1.536   0.010
+DPL          CA          CB      SINGLE       n     1.533   0.010
+DPL           C           O      DOUBLE       n     1.218   0.020
+DPL           C         OXT      SINGLE       n     1.218   0.020
+DPL          CB          CG      SINGLE       n     1.498   0.011
+DPL          CG          CD      SINGLE       n     1.509   0.019
+DPL          CG         OG1      DOUBLE       n     1.210   0.010
+DPL           N           H      SINGLE       n     0.889   0.020
+DPL          CA          HA      SINGLE       n     0.984   0.010
+DPL          CB         HB2      SINGLE       n     0.950   0.010
+DPL          CB         HB3      SINGLE       n     0.950   0.010
+DPL          CD         HD3      SINGLE       n     0.979   0.019
+DPL          CD         HD2      SINGLE       n     0.979   0.019
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -98,33 +88,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DPL      OXT    C      O       123.000    3.000
- DPL      OXT    C      CA      118.500    3.000
- DPL      O      C      CA      118.500    3.000
- DPL      C      CA     HA      108.810    3.000
- DPL      C      CA     CB      109.470    3.000
- DPL      C      CA     N       111.600    3.000
- DPL      HA     CA     CB      108.340    3.000
- DPL      HA     CA     N       108.550    3.000
- DPL      CB     CA     N       110.000    3.000
- DPL      CA     CB     HB2     109.470    3.000
- DPL      CA     CB     HB3     109.470    3.000
- DPL      CA     CB     CG      109.470    3.000
- DPL      HB2    CB     HB3     107.900    3.000
- DPL      HB2    CB     CG      109.470    3.000
- DPL      HB3    CB     CG      109.470    3.000
- DPL      CB     CG     OG1     120.500    3.000
- DPL      CB     CG     CD      120.000    3.000
- DPL      OG1    CG     CD      120.500    3.000
- DPL      CG     CD     HD3     109.470    3.000
- DPL      CG     CD     HD2     109.470    3.000
- DPL      CG     CD     N       111.600    3.000
- DPL      HD3    CD     HD2     107.900    3.000
- DPL      HD3    CD     N       109.470    3.000
- DPL      HD2    CD     N       109.470    3.000
- DPL      CD     N      H       118.500    3.000
- DPL      CD     N      CA      120.000    3.000
- DPL      H      N      CA      118.500    3.000
+DPL          CA           N          CD     109.056    3.00
+DPL          CA           N           H     109.307    3.00
+DPL          CD           N           H     114.884    3.00
+DPL           N          CA           C     111.420    2.45
+DPL           N          CA          CB     103.104    2.01
+DPL           N          CA          HA     109.296    1.50
+DPL           C          CA          CB     112.424    2.46
+DPL           C          CA          HA     110.011    1.50
+DPL          CB          CA          HA     109.775    1.50
+DPL          CA           C           O     117.013    1.95
+DPL          CA           C         OXT     117.013    1.95
+DPL           O           C         OXT     125.975    1.50
+DPL          CA          CB          CG     104.009    1.83
+DPL          CA          CB         HB2     111.145    1.50
+DPL          CA          CB         HB3     111.145    1.50
+DPL          CG          CB         HB2     110.178    1.83
+DPL          CG          CB         HB3     110.178    1.83
+DPL         HB2          CB         HB3     108.871    1.50
+DPL          CB          CG          CD     106.234    1.59
+DPL          CB          CG         OG1     127.420    1.50
+DPL          CD          CG         OG1     126.346    1.50
+DPL           N          CD          CG     102.310    1.50
+DPL           N          CD         HD3     110.535    1.50
+DPL           N          CD         HD2     110.535    1.50
+DPL          CG          CD         HD3     110.802    1.50
+DPL          CG          CD         HD2     110.802    1.50
+DPL         HD3          CD         HD2     109.201    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -135,12 +125,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DPL      var_1    OXT    C      CA     CB       -62.484   20.000   3
- DPL      var_2    C      CA     CB     CG       -90.000   20.000   3
- DPL      var_3    CA     CB     CG     CD         0.000   20.000   3
- DPL      var_4    CB     CG     CD     N          0.000   20.000   3
- DPL      var_5    CG     CD     N      CA        30.000   20.000   3
- DPL      var_6    CD     N      CA     C         90.000   20.000   3
+DPL             sp3_sp3_3           C          CA           N          CD     -60.000   10.00     3
+DPL            sp3_sp3_16          CG          CD           N          CA     180.000   10.00     3
+DPL            sp2_sp3_13           O           C          CA           N       0.000   10.00     6
+DPL            sp3_sp3_10           C          CA          CB          CG     180.000   10.00     3
+DPL             sp2_sp3_4         OG1          CG          CB          CA     180.000   10.00     6
+DPL            sp2_sp3_10         OG1          CG          CD           N     180.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -149,22 +139,35 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- DPL      chir_01  CA     N      C      CB        positiv
+DPL    chir_1    N    CA    CD    H    both
+DPL    chir_2    CA    N    C    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- DPL      plan-1    N         0.020
- DPL      plan-1    CA        0.020
- DPL      plan-1    CD        0.020
- DPL      plan-1    H         0.020
- DPL      plan-2    C         0.020
- DPL      plan-2    CA        0.020
- DPL      plan-2    O         0.020
- DPL      plan-2    OXT       0.020
- DPL      plan-3    CG        0.020
- DPL      plan-3    CB        0.020
- DPL      plan-3    CD        0.020
- DPL      plan-3    OG1       0.020
-# ------------------------------------------------------
+DPL    plan-1           C   0.020
+DPL    plan-1          CA   0.020
+DPL    plan-1           O   0.020
+DPL    plan-1         OXT   0.020
+DPL    plan-2          CB   0.020
+DPL    plan-2          CD   0.020
+DPL    plan-2          CG   0.020
+DPL    plan-2         OG1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+DPL SMILES           ACDLabs              10.04 "O=C(O)C1NCC(=O)C1"
+DPL SMILES_CANONICAL CACTVS               3.341 "OC(=O)[C@@H]1CC(=O)CN1"
+DPL SMILES           CACTVS               3.341 "OC(=O)[CH]1CC(=O)CN1"
+DPL SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C1[C@H](NCC1=O)C(=O)O"
+DPL SMILES           "OpenEye OEToolkits" 1.5.0 "C1C(NCC1=O)C(=O)O"
+DPL InChI            InChI                1.03  "InChI=1S/C5H7NO3/c7-3-1-4(5(8)9)6-2-3/h4,6H,1-2H2,(H,8,9)/t4-/m0/s1"
+DPL InChIKey         InChI                1.03  HFXAFXVXPMUQCQ-BYPYZUCNSA-N
+DPL ?                acedrg               196         "dictionary generator"
+DPL ?                acedrg_database      11          "data source"
+DPL ?                rdkit                2017.03.2   "Chemoinformatics tool"
+DPL ?                refmac5              5.8.0222    "optimization tool"

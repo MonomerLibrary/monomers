@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CSO      CSO 'S-HYDROXYCYSTEINE                   ' peptide            14   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+CSO     CSO      S-HYDROXYCYSTEINE  peptide    15     8     .     
 #
 data_comp_CSO
 #
@@ -28,24 +17,25 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CSO           N      N    NH2       0.000      0.000    0.000    0.000
- CSO           HN1    H    H         0.000      0.898    0.106   -0.457
- CSO           HN2    H    H         0.000     -0.315    0.712    0.648
- CSO           CA     C    CH1       0.000     -0.837   -1.175   -0.275
- CSO           HA     H    H         0.000     -0.935   -1.776    0.640
- CSO           CB     C    CH2       0.000     -2.222   -0.719   -0.736
- CSO           HB2    H    H         0.000     -2.843   -1.593   -0.940
- CSO           HB3    H    H         0.000     -2.125   -0.122   -1.645
- CSO           SG     S    S2        0.000     -2.993    0.282    0.566
- CSO           OD     O    OH1       0.000     -2.250    1.606    0.466
- CSO           HD     H    H         0.000     -2.503    2.281    1.068
- CSO           C      C    C         0.000     -0.196   -2.007   -1.356
- CSO           O      O    OC       -0.500      0.652   -1.494   -2.119
- CSO           OXT    O    OC       -0.500     -0.513   -3.209   -1.491
+CSO     N       N       NT3     1       -1.135      1.175       -0.057      
+CSO     CA      C       CH1     0       -0.745      -0.259      -0.180      
+CSO     CB      C       CH2     0       0.761       -0.428      -0.075      
+CSO     SG      S       S2      0       1.715       0.373       -1.397      
+CSO     C       C       C       0       -1.465      -1.097      0.886       
+CSO     O       O       O       0       -2.225      -2.001      0.485       
+CSO     OXT     O       OC      -1      -1.237      -0.814      2.079       
+CSO     OD      O       OH1     0       3.322       0.096       -1.162      
+CSO     H       H       H       0       -1.375      1.365       0.802       
+CSO     H2      H       H       0       -1.838      1.350       -0.610      
+CSO     H3      H       H       0       -0.435      1.711       -0.293      
+CSO     HA      H       H       0       -1.029      -0.573      -1.070      
+CSO     HB2     H       H       0       0.970       -1.386      -0.079      
+CSO     HB3     H       H       0       1.057       -0.063      0.785       
+CSO     HD      H       H       0       3.788       0.570       -1.738      
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
@@ -53,8 +43,9 @@ _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
  CSO      N      n/a    CA     START
- CSO      HN1    N      .      .
- CSO      HN2    N      .      .
+ CSO      H      N      .      .
+ CSO      H2     N      .      .
+ CSO      H3     N      .      .
  CSO      CA     N      C      .
  CSO      HA     CA     .      .
  CSO      CB     CA     SG     .
@@ -66,26 +57,29 @@ _chem_comp_tree.connect_type
  CSO      C      CA     .      END
  CSO      O      C      .      .
  CSO      OXT    C      .      .
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- CSO      CA     N         single      1.450    0.020
- CSO      CB     CA        single      1.524    0.020
- CSO      C      CA        single      1.500    0.020
- CSO      HA     CA        single      1.099    0.020
- CSO      SG     CB        single      1.762    0.020
- CSO      HB2    CB        single      1.092    0.020
- CSO      HB3    CB        single      1.092    0.020
- CSO      OD     SG        single      1.734    0.020
- CSO      O      C         deloc       1.250    0.020
- CSO      OXT    C         deloc       1.250    0.020
- CSO      HD     OD        single      0.967    0.020
- CSO      HN1    N         single      1.010    0.020
- CSO      HN2    N         single      1.010    0.020
+CSO           N          CA      SINGLE       n     1.488   0.011
+CSO          CA          CB      SINGLE       n     1.516   0.017
+CSO          CA           C      SINGLE       n     1.533   0.011
+CSO          CB          SG      SINGLE       n     1.817   0.011
+CSO          SG          OD      SINGLE       n     1.647   0.012
+CSO           C           O      DOUBLE       n     1.247   0.019
+CSO           C         OXT      SINGLE       n     1.247   0.019
+CSO           N           H      SINGLE       n     0.911   0.020
+CSO           N          H2      SINGLE       n     0.911   0.020
+CSO           N          H3      SINGLE       n     0.911   0.020
+CSO          CA          HA      SINGLE       n     0.985   0.020
+CSO          CB         HB2      SINGLE       n     0.980   0.019
+CSO          CB         HB3      SINGLE       n     0.980   0.019
+CSO          OD          HD      SINGLE       n     0.880   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,26 +87,29 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- CSO      HN1    N      HN2     120.000    3.000
- CSO      HN1    N      CA      120.000    3.000
- CSO      HN2    N      CA      120.000    3.000
- CSO      N      CA     HA      109.470    3.000
- CSO      N      CA     CB      109.470    3.000
- CSO      N      CA     C       109.470    3.000
- CSO      HA     CA     CB      108.340    3.000
- CSO      HA     CA     C       108.810    3.000
- CSO      CB     CA     C       109.470    3.000
- CSO      CA     CB     HB2     109.470    3.000
- CSO      CA     CB     HB3     109.470    3.000
- CSO      CA     CB     SG      109.500    3.000
- CSO      HB2    CB     HB3     107.900    3.000
- CSO      HB2    CB     SG      109.500    3.000
- CSO      HB3    CB     SG      109.500    3.000
- CSO      CB     SG     OD      103.020    3.000
- CSO      SG     OD     HD      120.000    3.000
- CSO      CA     C      O       118.500    3.000
- CSO      CA     C      OXT     118.500    3.000
- CSO      O      C      OXT     123.000    3.000
+CSO          CA           N           H     109.671    1.50
+CSO          CA           N          H2     109.671    1.50
+CSO          CA           N          H3     109.671    1.50
+CSO           H           N          H2     109.028    2.41
+CSO           H           N          H3     109.028    2.41
+CSO          H2           N          H3     109.028    2.41
+CSO           N          CA          CB     110.672    1.50
+CSO           N          CA           C     109.494    1.50
+CSO           N          CA          HA     107.983    1.50
+CSO          CB          CA           C     111.067    2.40
+CSO          CB          CA          HA     108.432    1.50
+CSO           C          CA          HA     108.606    1.50
+CSO          CA          CB          SG     115.472    1.77
+CSO          CA          CB         HB2     108.885    1.50
+CSO          CA          CB         HB3     108.885    1.50
+CSO          SG          CB         HB2     108.668    1.50
+CSO          SG          CB         HB3     108.668    1.50
+CSO         HB2          CB         HB3     107.922    1.50
+CSO          CB          SG          OD     109.471    3.00
+CSO          CA           C           O     117.134    1.50
+CSO          CA           C         OXT     117.134    1.50
+CSO           O           C         OXT     125.732    1.50
+CSO          SG          OD          HD     109.471    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -123,10 +120,11 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CSO      var_1    HN2    N      CA     C        175.000   20.000   1
- CSO      var_2    N      CA     CB     SG       -59.948   20.000   3
- CSO      var_3    CA     CB     SG     OD        74.954   20.000   1
- CSO      var_4    CB     SG     OD     HD       179.993   20.000   1
+CSO             sp3_sp3_1          CB          CA           N           H     180.000   10.00     3
+CSO            sp3_sp3_10           N          CA          CB          SG     180.000   10.00     3
+CSO             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+CSO            sp3_sp3_19          CA          CB          SG          OD     180.000   10.00     3
+CSO            sp3_sp3_22          HD          OD          SG          CB     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -135,18 +133,30 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- CSO      chir_01  CA     N      CB     C         negativ
+CSO    chir_1    CA    N    CB    C    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- CSO      plan-1    N         0.020
- CSO      plan-1    CA        0.020
- CSO      plan-1    HN1       0.020
- CSO      plan-1    HN2       0.020
- CSO      plan-2    C         0.020
- CSO      plan-2    CA        0.020
- CSO      plan-2    O         0.020
- CSO      plan-2    OXT       0.020
-# ------------------------------------------------------
+CSO    plan-1           C   0.020
+CSO    plan-1          CA   0.020
+CSO    plan-1           O   0.020
+CSO    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+CSO SMILES           ACDLabs              10.04 "O=C(O)C(N)CSO"
+CSO SMILES_CANONICAL CACTVS               3.341 "N[C@@H](CSO)C(O)=O"
+CSO SMILES           CACTVS               3.341 "N[CH](CSO)C(O)=O"
+CSO SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C([C@@H](C(=O)O)N)SO"
+CSO SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(C(=O)O)N)SO"
+CSO InChI            InChI                1.03  "InChI=1S/C3H7NO3S/c4-2(1-8-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m0/s1"
+CSO InChIKey         InChI                1.03  FXIRVRPOOYSARH-REOHCLBHSA-N
+CSO ?                acedrg               202         "dictionary generator"                  
+CSO ?                acedrg_database      11          "data source"                           
+CSO ?                rdkit                2017.03.2   "Chemoinformatics tool"
+CSO ?                refmac5              5.8.0222    "optimization tool"                     

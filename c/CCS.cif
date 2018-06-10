@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CCS      CCS 'CARBOXYMETHYLATED CYSTEINE          ' peptide            18  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+CCS     CCS     "CARBOXYMETHYLATEDCYSTEINE"  peptide   19     11     .     
 #
 data_comp_CCS
 #
@@ -28,28 +17,29 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CCS           N      N    NH2       0.000      0.000    0.000    0.000
- CCS           HN1    H    H         0.000      0.769   -0.460    0.473
- CCS           HN2    H    H         0.000      0.007    0.066   -1.011
- CCS           CA     C    CH1       0.000     -1.114    0.565    0.772
- CCS           HA     H    H         0.000     -1.126    1.658    0.651
- CCS           CB     C    CH2       0.000     -2.434   -0.018    0.267
- CCS           HB2    H    H         0.000     -3.261    0.404    0.842
- CCS           HB3    H    H         0.000     -2.422   -1.103    0.390
- CCS           SG     S    S2        0.000     -2.645    0.391   -1.487
- CCS           CD     C    CH2       0.000     -4.243   -0.403   -1.807
- CCS           HD2    H    H         0.000     -5.003    0.032   -1.154
- CCS           HD3    H    H         0.000     -4.164   -1.473   -1.607
- CCS           CE     C    C         0.000     -4.633   -0.187   -3.246
- CCS           OZ1    O    OC       -0.500     -3.881    0.461   -4.008
- CCS           OZ2    O    OC       -0.500     -5.708   -0.656   -3.680
- CCS           C      C    C         0.000     -0.938    0.226    2.229
- CCS           O      O    OC       -0.500     -0.355   -0.831    2.559
- CCS           OXT    O    OC       -0.500     -1.375    0.999    3.110
+CCS     N       N       NT3     1       -1.716      -0.679      1.248       
+CCS     CA      C       CH1     0       -0.991      0.254       0.339       
+CCS     CB      C       CH2     0       -0.370      -0.524      -0.809      
+CCS     SG      S       S2      0       0.976       -1.631      -0.332      
+CCS     CD      C       CH2     0       2.437       -0.628      -0.731      
+CCS     CE      C       C       0       2.575       0.593       0.163       
+CCS     OZ1     O       O       0       2.448       1.715       -0.367      
+CCS     OZ2     O       OC      -1      2.808       0.385       1.371       
+CCS     C       C       C       0       -1.954      1.329       -0.184      
+CCS     O       O       O       0       -1.662      2.519       0.049       
+CCS     OXT     O       OC      -1      -2.960      0.935       -0.807      
+CCS     H       H       H       0       -2.530      -0.893      0.894       
+CCS     H2      H       H       0       -1.837      -0.284      2.061       
+CCS     H3      H       H       0       -1.231      -1.444      1.361       
+CCS     HA      H       H       0       -0.278      0.692       0.858       
+CCS     HB2     H       H       0       -0.033      0.108       -1.463      
+CCS     HB3     H       H       0       -1.066      -1.048      -1.236      
+CCS     HD2     H       H       0       2.376       -0.337      -1.659      
+CCS     HD3     H       H       0       3.234       -1.180      -0.634      
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
@@ -57,8 +47,9 @@ _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
  CCS      N      n/a    CA     START
- CCS      HN1    N      .      .
- CCS      HN2    N      .      .
+ CCS      H      N      .      .
+ CCS      H2     N      .      .
+ CCS      H3     N      .      .
  CCS      CA     N      C      .
  CCS      HA     CA     .      .
  CCS      CB     CA     SG     .
@@ -79,25 +70,27 @@ _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- CCS      CA     N         single      1.450    0.020
- CCS      CB     CA        single      1.524    0.020
- CCS      C      CA        single      1.500    0.020
- CCS      HA     CA        single      1.099    0.020
- CCS      SG     CB        single      1.762    0.020
- CCS      HB2    CB        single      1.092    0.020
- CCS      HB3    CB        single      1.092    0.020
- CCS      CD     SG        single      1.762    0.020
- CCS      CE     CD        single      1.510    0.020
- CCS      HD2    CD        single      1.092    0.020
- CCS      HD3    CD        single      1.092    0.020
- CCS      OZ1    CE        deloc       1.250    0.020
- CCS      OZ2    CE        deloc       1.250    0.020
- CCS      O      C         deloc       1.250    0.020
- CCS      OXT    C         deloc       1.250    0.020
- CCS      HN1    N         single      1.010    0.020
- CCS      HN2    N         single      1.010    0.020
+CCS           N          CA      SINGLE       n     1.488   0.011
+CCS          CA          CB      SINGLE       n     1.516   0.017
+CCS          CA           C      SINGLE       n     1.533   0.011
+CCS          CB          SG      SINGLE       n     1.807   0.010
+CCS          SG          CD      SINGLE       n     1.816   0.013
+CCS          CD          CE      SINGLE       n     1.519   0.010
+CCS          CE         OZ1      DOUBLE       n     1.247   0.019
+CCS          CE         OZ2      SINGLE       n     1.247   0.019
+CCS           C           O      DOUBLE       n     1.247   0.019
+CCS           C         OXT      SINGLE       n     1.247   0.019
+CCS           N           H      SINGLE       n     0.911   0.020
+CCS           N          H2      SINGLE       n     0.911   0.020
+CCS           N          H3      SINGLE       n     0.911   0.020
+CCS          CA          HA      SINGLE       n     0.985   0.020
+CCS          CB         HB2      SINGLE       n     0.970   0.010
+CCS          CB         HB3      SINGLE       n     0.970   0.010
+CCS          CD         HD2      SINGLE       n     0.974   0.020
+CCS          CD         HD3      SINGLE       n     0.974   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -105,34 +98,37 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- CCS      HN1    N      HN2     120.000    3.000
- CCS      HN1    N      CA      120.000    3.000
- CCS      HN2    N      CA      120.000    3.000
- CCS      N      CA     HA      109.470    3.000
- CCS      N      CA     CB      109.470    3.000
- CCS      N      CA     C       109.470    3.000
- CCS      HA     CA     CB      108.340    3.000
- CCS      HA     CA     C       108.810    3.000
- CCS      CB     CA     C       109.470    3.000
- CCS      CA     CB     HB2     109.470    3.000
- CCS      CA     CB     HB3     109.470    3.000
- CCS      CA     CB     SG      109.500    3.000
- CCS      HB2    CB     HB3     107.900    3.000
- CCS      HB2    CB     SG      109.500    3.000
- CCS      HB3    CB     SG      109.500    3.000
- CCS      CB     SG     CD      100.072    3.000
- CCS      SG     CD     HD2     109.500    3.000
- CCS      SG     CD     HD3     109.500    3.000
- CCS      SG     CD     CE      109.500    3.000
- CCS      HD2    CD     HD3     107.900    3.000
- CCS      HD2    CD     CE      109.470    3.000
- CCS      HD3    CD     CE      109.470    3.000
- CCS      CD     CE     OZ1     118.500    3.000
- CCS      CD     CE     OZ2     118.500    3.000
- CCS      OZ1    CE     OZ2     123.000    3.000
- CCS      CA     C      O       118.500    3.000
- CCS      CA     C      OXT     118.500    3.000
- CCS      O      C      OXT     123.000    3.000
+CCS          CA           N           H     109.671    1.50
+CCS          CA           N          H2     109.671    1.50
+CCS          CA           N          H3     109.671    1.50
+CCS           H           N          H2     109.028    2.41
+CCS           H           N          H3     109.028    2.41
+CCS          H2           N          H3     109.028    2.41
+CCS           N          CA          CB     109.354    1.50
+CCS           N          CA           C     109.494    1.50
+CCS           N          CA          HA     107.983    1.50
+CCS          CB          CA           C     110.419    2.31
+CCS          CB          CA          HA     109.209    1.50
+CCS           C          CA          HA     108.606    1.50
+CCS          CA          CB          SG     114.974    1.55
+CCS          CA          CB         HB2     108.537    1.50
+CCS          CA          CB         HB3     108.537    1.50
+CCS          SG          CB         HB2     108.759    1.50
+CCS          SG          CB         HB3     108.759    1.50
+CCS         HB2          CB         HB3     107.812    1.50
+CCS          CB          SG          CD     101.660    1.50
+CCS          SG          CD          CE     111.968    3.00
+CCS          SG          CD         HD2     108.718    1.65
+CCS          SG          CD         HD3     108.718    1.65
+CCS          CE          CD         HD2     108.575    1.82
+CCS          CE          CD         HD3     108.575    1.82
+CCS         HD2          CD         HD3     108.166    1.80
+CCS          CD          CE         OZ1     117.212    2.93
+CCS          CD          CE         OZ2     117.212    2.93
+CCS         OZ1          CE         OZ2     125.576    1.50
+CCS          CA           C           O     117.134    1.50
+CCS          CA           C         OXT     117.134    1.50
+CCS           O           C         OXT     125.732    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -143,11 +139,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CCS      var_1    HN2    N      CA     C        175.000   20.000   1
- CCS      var_2    N      CA     CB     SG       -59.932   20.000   3
- CCS      var_3    CA     CB     SG     CD       179.993   20.000   1
- CCS      var_4    CB     SG     CD     CE       179.976   20.000   1
- CCS      var_5    SG     CD     CE     OZ2      179.953   20.000   3
+CCS             sp3_sp3_1          CB          CA           N           H     180.000   10.00     3
+CCS            sp3_sp3_10           N          CA          CB          SG     180.000   10.00     3
+CCS             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+CCS            sp3_sp3_19          CA          CB          SG          CD     180.000   10.00     3
+CCS            sp3_sp3_22          CE          CD          SG          CB     180.000   10.00     3
+CCS             sp2_sp3_8         OZ1          CE          CD          SG     120.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -156,22 +153,34 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- CCS      chir_01  CA     N      CB     C         negativ
+CCS    chir_1    CA    N    CB    C    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- CCS      plan-1    N         0.020
- CCS      plan-1    CA        0.020
- CCS      plan-1    HN1       0.020
- CCS      plan-1    HN2       0.020
- CCS      plan-2    CE        0.020
- CCS      plan-2    CD        0.020
- CCS      plan-2    OZ1       0.020
- CCS      plan-2    OZ2       0.020
- CCS      plan-3    C         0.020
- CCS      plan-3    CA        0.020
- CCS      plan-3    O         0.020
- CCS      plan-3    OXT       0.020
-# ------------------------------------------------------
+CCS    plan-1          CD   0.020
+CCS    plan-1          CE   0.020
+CCS    plan-1         OZ1   0.020
+CCS    plan-1         OZ2   0.020
+CCS    plan-2           C   0.020
+CCS    plan-2          CA   0.020
+CCS    plan-2           O   0.020
+CCS    plan-2         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+CCS SMILES           ACDLabs              10.04 "O=C(O)C(N)CSCC(=O)O"
+CCS SMILES_CANONICAL CACTVS               3.341 "N[C@@H](CSCC(O)=O)C(O)=O"
+CCS SMILES           CACTVS               3.341 "N[CH](CSCC(O)=O)C(O)=O"
+CCS SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C([C@@H](C(=O)O)N)SCC(=O)O"
+CCS SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(C(=O)O)N)SCC(=O)O"
+CCS InChI            InChI                1.03  "InChI=1S/C5H9NO4S/c6-3(5(9)10)1-11-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1"
+CCS InChIKey         InChI                1.03  GBFLZEXEOZUWRN-VKHMYHEASA-N
+CCS ?                acedrg               196         "dictionary generator"                  
+CCS ?                acedrg_database      11          "data source"                           
+CCS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+CCS ?                refmac5              5.8.0222    "optimization tool"                     
