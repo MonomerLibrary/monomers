@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MAA      MAA 'N-methyl-L-alanine                  ' M-peptide          15   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MAA     MAA      N-methyl-L-alanine   .   15     7     .     
 #
 data_comp_MAA
 #
@@ -28,64 +17,47 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
- MAA           N      N    NH1      -0.204
- MAA           H      H    HNH1      0.204
- MAA           CA     C    CH1       0.058
- MAA           HA     H    HCH1      0.046
- MAA           CB     C    CH3      -0.120
- MAA           HB1    H    HCH3      0.040
- MAA           HB2    H    HCH3      0.040
- MAA           HB3    H    HCH3      0.040
- MAA           C      C    C         0.318
- MAA           O      O    OC       -0.500
- MAA           CM     C    CH3       0.000    
- MAA           HM3    H    H         0.000    
- MAA           HM2    H    H         0.000   
- MAA           HM1    H    H         0.000   
- MAA           OXT    O    OC       -0.500    
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MAA      N      n/a    CA     START
- MAA      H      N      .      .
- MAA      CM     N      HM1    .
- MAA      HM3    CM     .      .
- MAA      HM2    CM     .      .
- MAA      HM1    CM     .      .
- MAA      CA     N      C      .
- MAA      HA     CA     .      .
- MAA      CB     CA     HB3    .
- MAA      HB1    CB     .      .
- MAA      HB2    CB     .      .
- MAA      HB3    CB     .      .
- MAA      C      CA     OXT    .
- MAA      O      C      .      .
- MAA      OXT    C      .      END
+_chem_comp_atom.charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+MAA     N       N       NT1     0       0.738       -0.591      0.419       
+MAA     CM      C       CH3     0       2.029       0.041       0.131       
+MAA     CA      C       CH1     0       -0.388      -0.057      -0.364      
+MAA     CB      C       CH3     0       -1.591      -0.989      -0.233      
+MAA     C       C       C       0       -0.795      1.369       0.054       
+MAA     O       O       O       0       -0.991      2.200       -0.856      
+MAA     OXT     O       OC      -1      -0.900      1.597       1.275       
+MAA     H       H       H       0       0.818       -1.457      0.224       
+MAA     HM1     H       H       0       2.749       -0.466      0.555       
+MAA     HM2     H       H       0       2.041       0.955       0.476       
+MAA     HM3     H       H       0       2.184       0.063       -0.833      
+MAA     HA      H       H       0       -0.123      -0.030      -1.318      
+MAA     HB1     H       H       0       -2.416      -0.484      -0.332      
+MAA     HB2     H       H       0       -1.578      -1.417      0.639       
+MAA     HB3     H       H       0       -1.549      -1.670      -0.926      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MAA      CM     N         single      1.450    0.020
- MAA      N      CA        single      1.450    0.020
- MAA      H      N         single      1.010    0.020
- MAA      HM1    CM        single      1.059    0.020
- MAA      HM2    CM        single      1.059    0.020
- MAA      HM3    CM        single      1.059    0.020
- MAA      CB     CA        single      1.524    0.020
- MAA      CA     C         single      1.500    0.020
- MAA      HA     CA        single      1.099    0.020
- MAA      HB1    CB        single      1.059    0.020
- MAA      HB2    CB        single      1.059    0.020
- MAA      HB3    CB        single      1.059    0.020
- MAA      O      C         deloc       1.250    0.020
- MAA      C      OXT       deloc       1.250    0.020
+MAA           N          CM      SINGLE       n     1.463   0.015
+MAA           N          CA      SINGLE       n     1.468   0.014
+MAA          CA          CB      SINGLE       n     1.524   0.012
+MAA          CA           C      SINGLE       n     1.539   0.010
+MAA           C           O      DOUBLE       n     1.247   0.019
+MAA           C         OXT      SINGLE       n     1.247   0.019
+MAA           N           H      SINGLE       n     0.890   0.020
+MAA          CM         HM1      SINGLE       n     0.977   0.013
+MAA          CM         HM2      SINGLE       n     0.977   0.013
+MAA          CM         HM3      SINGLE       n     0.977   0.013
+MAA          CA          HA      SINGLE       n     0.990   0.020
+MAA          CB         HB1      SINGLE       n     0.972   0.015
+MAA          CB         HB2      SINGLE       n     0.972   0.015
+MAA          CB         HB3      SINGLE       n     0.972   0.015
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,30 +65,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MAA      OXT    C      O       123.000    3.000
- MAA      OXT    C      CA      118.500    3.000
- MAA      O      C      CA      118.500    3.000
- MAA      C      CA     HA      108.810    3.000
- MAA      C      CA     CB      109.470    3.000
- MAA      C      CA     N       111.600    3.000
- MAA      HA     CA     CB      108.340    3.000
- MAA      HA     CA     N       108.550    3.000
- MAA      CB     CA     N       110.000    3.000
- MAA      CA     CB     HB3     109.470    3.000
- MAA      CA     CB     HB2     109.470    3.000
- MAA      CA     CB     HB1     109.470    3.000
- MAA      HB3    CB     HB2     109.470    3.000
- MAA      HB3    CB     HB1     109.470    3.000
- MAA      HB2    CB     HB1     109.470    3.000
- MAA      CA     N      H       118.500    3.000
- MAA      CA     N      CM      120.000    3.000
- MAA      H      N      CM      118.500    3.000
- MAA      N      CM     HM3     109.470    3.000
- MAA      N      CM     HM2     109.470    3.000
- MAA      N      CM     HM1     109.470    3.000
- MAA      HM3    CM     HM2     109.470    3.000
- MAA      HM3    CM     HM1     109.470    3.000
- MAA      HM2    CM     HM1     109.470    3.000
+MAA          CM           N          CA     112.615    2.70
+MAA          CM           N           H     108.144    3.00
+MAA          CA           N           H     106.958    3.00
+MAA           N          CM         HM1     110.215    1.50
+MAA           N          CM         HM2     110.215    1.50
+MAA           N          CM         HM3     110.215    1.50
+MAA         HM1          CM         HM2     109.279    1.79
+MAA         HM1          CM         HM3     109.279    1.79
+MAA         HM2          CM         HM3     109.279    1.79
+MAA           N          CA          CB     109.546    2.08
+MAA           N          CA           C     113.481    2.07
+MAA           N          CA          HA     108.712    1.50
+MAA          CB          CA           C     109.294    1.70
+MAA          CB          CA          HA     108.430    1.50
+MAA           C          CA          HA     108.101    1.50
+MAA          CA          CB         HB1     109.550    1.50
+MAA          CA          CB         HB2     109.550    1.50
+MAA          CA          CB         HB3     109.550    1.50
+MAA         HB1          CB         HB2     109.386    1.50
+MAA         HB1          CB         HB3     109.386    1.50
+MAA         HB2          CB         HB3     109.386    1.50
+MAA          CA           C           O     117.260    2.00
+MAA          CA           C         OXT     117.260    2.00
+MAA           O           C         OXT     125.481    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -127,10 +99,10 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MAA      var_1    OXT    C      CA     N       -179.953   20.000   3
- MAA      var_2    C      CA     CB     HB1      -60.028   20.000   3
- MAA      var_3    C      CA     N      CM      -154.999   20.000   3
- MAA      var_4    CA     N      CM     HM1      -59.973   20.000   1
+MAA             sp3_sp3_1         HM1          CM           N          CA     180.000   10.00     3
+MAA             sp3_sp3_8          CB          CA           N          CM     -60.000   10.00     3
+MAA            sp3_sp3_13           N          CA          CB         HB1     180.000   10.00     3
+MAA             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -139,18 +111,31 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- MAA      chir_01  CA     N      CB     C         negativ
+MAA    chir_1    N    CA    CM    H    both
+MAA    chir_2    CA    N    C    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- MAA      plan-1    N         0.020
- MAA      plan-1    CM        0.020
- MAA      plan-1    CA        0.020
- MAA      plan-1    H         0.020
- MAA      plan-2    C         0.020
- MAA      plan-2    CA        0.020
- MAA      plan-2    O         0.020
- MAA      plan-2    OXT       0.020
-# ------------------------------------------------------
+MAA    plan-1           C   0.020
+MAA    plan-1          CA   0.020
+MAA    plan-1           O   0.020
+MAA    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MAA SMILES           ACDLabs              12.01 "O=C(O)C(NC)C"
+MAA SMILES_CANONICAL CACTVS               3.370 "CN[C@@H](C)C(O)=O"
+MAA SMILES           CACTVS               3.370 "CN[CH](C)C(O)=O"
+MAA SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "C[C@@H](C(=O)O)NC"
+MAA SMILES           "OpenEye OEToolkits" 1.7.0 "CC(C(=O)O)NC"
+MAA InChI            InChI                1.03  "InChI=1S/C4H9NO2/c1-3(5-2)4(6)7/h3,5H,1-2H3,(H,6,7)/t3-/m0/s1"
+MAA InChIKey         InChI                1.03  GDFAOVXKHJXLEI-VKHMYHEASA-N
+MAA ?                acedrg               202         "dictionary generator"                  
+MAA ?                acedrg_database      11          "data source"                           
+MAA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MAA ?                refmac5              5.8.0222    "optimization tool"                     
