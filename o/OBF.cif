@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-OBF      OBF '(2S)-2-amino-4,4-difluorobutanoic ac' peptide            15   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+OBF     OBF     "(2S)-2-amino-4,4-difluorobutanoic     peptide     "L-peptide     linking"     16     9     .
 #
 data_comp_OBF
 #
@@ -28,67 +17,71 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- OBF           N      N    NH2       0.000      0.000    0.000    0.000
- OBF           HN1    H    H         0.000      0.230   -0.985   -0.059
- OBF           HN2    H    H         0.000      0.727    0.690   -0.150
- OBF           CA     C    CH1       0.000     -1.373    0.424    0.300
- OBF           HA     H    H         0.000     -1.394    0.940    1.270
- OBF           CB     C    CH2       0.000     -1.865    1.375   -0.794
- OBF           H1B    H    H         0.000     -2.915    1.619   -0.620
- OBF           H2B    H    H         0.000     -1.762    0.892   -1.768
- OBF           CG     C    CH1       0.000     -1.030    2.657   -0.767
- OBF           HG     H    H         0.000     -1.063    3.094    0.241
- OBF           FG1    F    F         0.000      0.295    2.358   -1.102
- OBF           FG2    F    F         0.000     -1.550    3.571   -1.690
- OBF           C      C    C         0.000     -2.272   -0.785    0.354
- OBF           O      O    OC       -0.500     -1.918   -1.853   -0.193
- OBF           OXT    O    OC       -0.500     -3.372   -0.720    0.946
+OBF     N       N       NT3     1       9.447       -2.655      -2.422
+OBF     CA      C       CH1     0       9.569       -1.230      -2.840
+OBF     CB      C       CH2     0       9.732       -1.130      -4.361
+OBF     CG      C       CH1     0       11.068      -1.629      -4.873
+OBF     FG1     F       F       0       11.310      -1.151      -6.120
+OBF     FG2     F       F       0       11.062      -2.982      -4.983
+OBF     C       C       C       0       8.327       -0.457      -2.378
+OBF     O       O       O       0       8.508       0.686       -1.914
+OBF     OXT     O       OC      -1      7.224       -1.027      -2.502
+OBF     H2      H       H       0       8.766       -3.056      -2.875
+OBF     H       H       H       0       9.277       -2.707      -1.528
+OBF     H3      H       H       0       10.221      -3.101      -2.597
+OBF     HA      H       H       0       10.363      -0.845      -2.403
+OBF     H1B     H       H       0       9.623       -0.193      -4.627
+OBF     H2B     H       H       0       9.017       -1.647      -4.787
+OBF     HG      H       H       0       11.782      -1.344      -4.258
 loop_
 _chem_comp_tree.comp_id
 _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
- OBF      N      n/a    CA     START
- OBF      HN1    N      .      .
- OBF      HN2    N      .      .
- OBF      CA     N      C      .
- OBF      HA     CA     .      .
- OBF      CB     CA     CG     .
- OBF      H1B    CB     .      .
- OBF      H2B    CB     .      .
- OBF      CG     CB     FG2    .
- OBF      HG     CG     .      .
- OBF      FG1    CG     .      .
- OBF      FG2    CG     .      .
- OBF      C      CA     .      END
- OBF      O      C      .      .
- OBF      OXT    C      .      .
+OBF      N      n/a    CA     START
+OBF      H      N      .      .
+OBF      H2     N      .      .
+OBF      H3     N      .      .
+OBF      CA     N      C      .
+OBF      HA     CA     .      .
+OBF      CB     CA     CG     .
+OBF      H1B    CB     .      .
+OBF      H2B    CB     .      .
+OBF      CG     CB     FG2    .
+OBF      HG     CG     .      .
+OBF      FG1    CG     .      .
+OBF      FG2    CG     .      .
+OBF      C      CA     OXT    .
+OBF      O      C      .      .
+OBF      OXT    C      .      END
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- OBF      CA     N         single      1.450    0.020
- OBF      C      CA        single      1.500    0.020
- OBF      HA     CA        single      1.099    0.020
- OBF      CB     CA        single      1.524    0.020
- OBF      CG     CB        single      1.524    0.020
- OBF      HG     CG        single      1.099    0.020
- OBF      FG1    CG        single      1.370    0.020
- OBF      FG2    CG        single      1.370    0.020
- OBF      OXT    C         deloc       1.250    0.020
- OBF      O      C         deloc       1.250    0.020
- OBF      H1B    CB        single      1.092    0.020
- OBF      H2B    CB        single      1.092    0.020
- OBF      HN1    N         single      1.010    0.020
- OBF      HN2    N         single      1.010    0.020
+OBF           N          CA      SINGLE       n     1.488   0.011
+OBF          CA           C      SINGLE       n     1.533   0.011
+OBF          CA          CB      SINGLE       n     1.532   0.010
+OBF          CB          CG      SINGLE       n     1.514   0.020
+OBF          CG         FG1      SINGLE       n     1.357   0.012
+OBF          CG         FG2      SINGLE       n     1.357   0.012
+OBF           C         OXT      SINGLE       n     1.247   0.019
+OBF           C           O      DOUBLE       n     1.247   0.019
+OBF           N          H2      SINGLE       n     0.911   0.020
+OBF           N           H      SINGLE       n     0.911   0.020
+OBF           N          H3      SINGLE       n     0.911   0.020
+OBF          CA          HA      SINGLE       n     0.985   0.020
+OBF          CB         H1B      SINGLE       n     0.980   0.016
+OBF          CB         H2B      SINGLE       n     0.980   0.016
+OBF          CG          HG      SINGLE       n     0.984   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,30 +89,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- OBF      HN1    N      HN2     120.000    3.000
- OBF      HN1    N      CA      120.000    3.000
- OBF      HN2    N      CA      120.000    3.000
- OBF      N      CA     HA      109.470    3.000
- OBF      N      CA     CB      109.470    3.000
- OBF      N      CA     C       109.470    3.000
- OBF      HA     CA     CB      108.340    3.000
- OBF      HA     CA     C       108.810    3.000
- OBF      CB     CA     C       109.470    3.000
- OBF      CA     CB     H1B     109.470    3.000
- OBF      CA     CB     H2B     109.470    3.000
- OBF      CA     CB     CG      111.000    3.000
- OBF      H1B    CB     H2B     107.900    3.000
- OBF      H1B    CB     CG      109.470    3.000
- OBF      H2B    CB     CG      109.470    3.000
- OBF      CB     CG     HG      108.340    3.000
- OBF      CB     CG     FG1     109.500    3.000
- OBF      CB     CG     FG2     109.500    3.000
- OBF      HG     CG     FG1     109.500    3.000
- OBF      HG     CG     FG2     109.500    3.000
- OBF      FG1    CG     FG2     109.500    3.000
- OBF      CA     C      O       118.500    3.000
- OBF      CA     C      OXT     118.500    3.000
- OBF      O      C      OXT     123.000    3.000
+OBF          CA           N          H2     110.062    1.93
+OBF          CA           N           H     110.062    1.93
+OBF          CA           N          H3     110.062    1.93
+OBF          H2           N           H     109.028    2.41
+OBF          H2           N          H3     109.028    2.41
+OBF           H           N          H3     109.028    2.41
+OBF           N          CA           C     109.241    1.50
+OBF           N          CA          CB     110.245    1.51
+OBF           N          CA          HA     108.487    1.50
+OBF           C          CA          CB     110.728    2.07
+OBF           C          CA          HA     108.824    1.50
+OBF          CB          CA          HA     109.207    1.50
+OBF          CA          CB          CG     113.751    1.51
+OBF          CA          CB         H1B     108.567    1.50
+OBF          CA          CB         H2B     108.567    1.50
+OBF          CG          CB         H1B     108.861    1.50
+OBF          CG          CB         H2B     108.861    1.50
+OBF         H1B          CB         H2B     107.715    1.50
+OBF          CB          CG         FG1     110.693    1.50
+OBF          CB          CG         FG2     110.693    1.50
+OBF          CB          CG          HG     109.545    1.50
+OBF         FG1          CG         FG2     106.200    1.50
+OBF         FG1          CG          HG     110.164    1.50
+OBF         FG2          CG          HG     110.164    1.50
+OBF          CA           C         OXT     117.124    1.50
+OBF          CA           C           O     117.124    1.50
+OBF         OXT           C           O     125.752    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -130,9 +126,10 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OBF      var_1    HN2    N      CA     C        175.000   20.000   1
- OBF      var_2    N      CA     CB     CG       -65.012   20.000   3
- OBF      var_3    CA     CB     CG     FG2     -175.015   20.000   3
+OBF             sp3_sp3_4           C          CA           N          H2      60.000   10.00     3
+OBF            sp3_sp3_13           N          CA          CB          CG      60.000   10.00     3
+OBF             sp2_sp3_1         OXT           C          CA           N       0.000   10.00     6
+OBF            sp3_sp3_19          CA          CB          CG         FG1     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -141,19 +138,30 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- OBF      chir_01  CA     N      CB     C         negativ
- OBF      chir_02  CG     CB     FG1    FG2       negativ
+OBF    chir_1    CA    N    C    CB    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- OBF      plan-1    N         0.020
- OBF      plan-1    CA        0.020
- OBF      plan-1    HN1       0.020
- OBF      plan-1    HN2       0.020
- OBF      plan-2    C         0.020
- OBF      plan-2    CA        0.020
- OBF      plan-2    O         0.020
- OBF      plan-2    OXT       0.020
-# ------------------------------------------------------
+OBF    plan-1           C   0.020
+OBF    plan-1          CA   0.020
+OBF    plan-1           O   0.020
+OBF    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+OBF SMILES           ACDLabs              10.04 "FC(F)CC(N)C(=O)O"
+OBF SMILES_CANONICAL CACTVS               3.341 "N[C@@H](CC(F)F)C(O)=O"
+OBF SMILES           CACTVS               3.341 "N[CH](CC(F)F)C(O)=O"
+OBF SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C([C@@H](C(=O)O)N)C(F)F"
+OBF SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(C(=O)O)N)C(F)F"
+OBF InChI            InChI                1.03  "InChI=1S/C4H7F2NO2/c5-3(6)1-2(7)4(8)9/h2-3H,1,7H2,(H,8,9)/t2-/m0/s1"
+OBF InChIKey         InChI                1.03  VIUCNIMDPZQXAD-REOHCLBHSA-N
+OBF ?                acedrg               202         "dictionary generator"
+OBF ?                acedrg_database      11          "data source"
+OBF ?                rdkit                2017.03.2   "Chemoinformatics tool"
+OBF ?                refmac5              5.8.0222    "optimization tool"
