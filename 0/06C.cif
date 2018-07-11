@@ -1,20 +1,5 @@
-# Created using JLigand 1.0.7
-# and
-# dictionary  5.28    ( 10/04/2011 )
-# libcheck    5.1.14  ( 01/10/2010 )
-# refmac      5.6.116 ( 06/04/2011 )
 #
-# Authors: Andrey Lebedev, Paul Young, Alexei Vagin, Garib Murshudov
-# E-mail: lebedev@ysbl.york.ac.uk
-#
-
-global_
-_lib_name         mon_lib
-_lib_version      5.28
-_lib_update       10/04/2011
-
 data_comp_list
-
 loop_
 _chem_comp.id
 _chem_comp.three_letter_code
@@ -23,37 +8,36 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-06C      06C '.                                   ' .                   5   2 .
-
+06C     06C      Iodomethane     NON-POLYMER     5     2     .     
+#
 data_comp_06C
-
+#
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 06C           I1     I    I         0.000     -0.008    0.036    1.942
- 06C           C1     C    CH3       0.000      0.001    0.003   -0.220
- 06C           HB     H    H         0.000     -0.948   -0.309   -0.573
- 06C           HA     H    H         0.000      0.743   -0.673   -0.560
- 06C           H      H    H         0.000      0.213    0.974   -0.588
-
+06C     C1      C       CH3     0       -0.206      -0.004      -0.004      
+06C     I1      I       I       0       1.947       0.044       0.035       
+06C     H       H       H       0       -0.550      0.907       -0.010      
+06C     HA      H       H       0       -0.534      -0.470      0.785       
+06C     HB      H       H       0       -0.506      -0.470      -0.805      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- 06C      I1     C1        single      2.162    0.020
- 06C      C1     HB        single      1.059    0.020
- 06C      C1     HA        single      1.059    0.020
- 06C      C1     H         single      1.059    0.020
-
+06C          C1          I1      SINGLE       n     2.154   0.020
+06C          C1           H      SINGLE       n     0.974   0.010
+06C          C1          HA      SINGLE       n     0.974   0.010
+06C          C1          HB      SINGLE       n     0.974   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -61,10 +45,26 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 06C      I1     C1     HB      109.500    3.000
- 06C      I1     C1     HA      109.500    3.000
- 06C      I1     C1     H       109.500    3.000
- 06C      HB     C1     HA      109.470    3.000
- 06C      HB     C1     H       109.470    3.000
- 06C      HA     C1     H       109.470    3.000
-
+06C          I1          C1           H     109.465    1.50
+06C          I1          C1          HA     109.465    1.50
+06C          I1          C1          HB     109.465    1.50
+06C           H          C1          HA     109.477    1.50
+06C           H          C1          HB     109.477    1.50
+06C          HA          C1          HB     109.477    1.50
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+06C SMILES           ACDLabs              12.01 IC
+06C SMILES_CANONICAL CACTVS               3.370 CI
+06C SMILES           CACTVS               3.370 CI
+06C SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 CI
+06C SMILES           "OpenEye OEToolkits" 1.7.0 CI
+06C InChI            InChI                1.03  InChI=1S/CH3I/c1-2/h1H3
+06C InChIKey         InChI                1.03  INQOMBQAUSQDDS-UHFFFAOYSA-N
+06C ?                acedrg               202         "dictionary generator"                  
+06C ?                acedrg_database      11          "data source"                           
+06C ?                rdkit                2017.03.2   "Chemoinformatics tool"
+06C ?                refmac5              5.8.0189    "optimization tool"                     

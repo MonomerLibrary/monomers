@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-TCZ      TCZ '1,3,5-TRICHLORO-BENZENE             ' non-polymer        12   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+TCZ     TCZ      1,3,5-TRICHLORO-BENZENE     NON-POLYMER     12     9     .     
 #
 data_comp_TCZ
 #
@@ -28,60 +17,42 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- TCZ           CL5    CL   CL        0.000      0.000    0.000    0.000
- TCZ           C5     C    CR6       0.000     -1.696    0.000   -0.369
- TCZ           C6     C    CR16      0.000     -2.626    0.004    0.654
- TCZ           H6     H    H         0.000     -2.295    0.010    1.686
- TCZ           C1     C    CR6       0.000     -3.977    0.000    0.362
- TCZ           CL1    CL   CL        0.000     -5.145    0.000    1.647
- TCZ           C4     C    CR16      0.000     -2.118    0.000   -1.687
- TCZ           H4     H    H         0.000     -1.390    0.000   -2.489
- TCZ           C3     C    CR6       0.000     -3.469    0.000   -1.979
- TCZ           CL3    CL   CL        0.000     -3.999    0.000   -3.633
- TCZ           C2     C    CR16      0.000     -4.399    0.000   -0.956
- TCZ           H2     H    H         0.000     -5.457    0.000   -1.186
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- TCZ      CL5    n/a    C5     START
- TCZ      C5     CL5    C4     .
- TCZ      C6     C5     C1     .
- TCZ      H6     C6     .      .
- TCZ      C1     C6     CL1    .
- TCZ      CL1    C1     .      .
- TCZ      C4     C5     C3     .
- TCZ      H4     C4     .      .
- TCZ      C3     C4     C2     .
- TCZ      CL3    C3     .      .
- TCZ      C2     C3     H2     .
- TCZ      H2     C2     .      END
- TCZ      C1     C2     .    ADD
+TCZ     C1      C       CR6     0       -1.134      -0.775      -0.041      
+TCZ     C2      C       CR16    0       -1.270      0.607       0.038       
+TCZ     C3      C       CR6     0       -0.109      1.371       0.078       
+TCZ     C4      C       CR16    0       1.157       0.798       0.041       
+TCZ     C5      C       CR6     0       1.240       -0.587      -0.037      
+TCZ     C6      C       CR16    0       0.109       -1.396      -0.080      
+TCZ     CL1     CL      CL      0       -2.566      -1.758      -0.092      
+TCZ     CL3     CL      CL      0       -0.245      3.101       0.176       
+TCZ     CL5     CL      CL      0       2.808       -1.334      -0.084      
+TCZ     H2      H       H       0       -2.120      1.011       0.063       
+TCZ     H4      H       H       0       1.934       1.331       0.069       
+TCZ     H6      H       H       0       0.183       -2.334      -0.133      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- TCZ      C1     C2        double      1.390    0.020
- TCZ      C1     C6        single      1.390    0.020
- TCZ      CL1    C1        single      1.795    0.020
- TCZ      C2     C3        single      1.390    0.020
- TCZ      H2     C2        single      1.083    0.020
- TCZ      C3     C4        double      1.390    0.020
- TCZ      CL3    C3        single      1.795    0.020
- TCZ      C4     C5        single      1.390    0.020
- TCZ      H4     C4        single      1.083    0.020
- TCZ      C6     C5        double      1.390    0.020
- TCZ      C5     CL5       single      1.795    0.020
- TCZ      H6     C6        single      1.083    0.020
+TCZ          C1          C2      DOUBLE       y     1.383   0.010
+TCZ          C1          C6      SINGLE       y     1.383   0.010
+TCZ          C1         CL1      SINGLE       n     1.738   0.010
+TCZ          C2          C3      SINGLE       y     1.383   0.010
+TCZ          C3          C4      DOUBLE       y     1.383   0.010
+TCZ          C3         CL3      SINGLE       n     1.738   0.010
+TCZ          C4          C5      SINGLE       y     1.383   0.010
+TCZ          C5          C6      DOUBLE       y     1.383   0.010
+TCZ          C5         CL5      SINGLE       n     1.738   0.010
+TCZ          C2          H2      SINGLE       n     0.942   0.017
+TCZ          C4          H4      SINGLE       n     0.942   0.017
+TCZ          C6          H6      SINGLE       n     0.942   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -89,24 +60,24 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- TCZ      CL5    C5     C6      120.000    3.000
- TCZ      CL5    C5     C4      120.000    3.000
- TCZ      C6     C5     C4      120.000    3.000
- TCZ      C5     C6     H6      120.000    3.000
- TCZ      C5     C6     C1      120.000    3.000
- TCZ      H6     C6     C1      120.000    3.000
- TCZ      C6     C1     CL1     120.000    3.000
- TCZ      C6     C1     C2      120.000    3.000
- TCZ      CL1    C1     C2      120.000    3.000
- TCZ      C5     C4     H4      120.000    3.000
- TCZ      C5     C4     C3      120.000    3.000
- TCZ      H4     C4     C3      120.000    3.000
- TCZ      C4     C3     CL3     120.000    3.000
- TCZ      C4     C3     C2      120.000    3.000
- TCZ      CL3    C3     C2      120.000    3.000
- TCZ      C3     C2     H2      120.000    3.000
- TCZ      C3     C2     C1      120.000    3.000
- TCZ      H2     C2     C1      120.000    3.000
+TCZ          C2          C1          C6     122.250    1.50
+TCZ          C2          C1         CL1     118.875    1.50
+TCZ          C6          C1         CL1     118.875    1.50
+TCZ          C1          C2          C3     117.750    1.50
+TCZ          C1          C2          H2     121.125    1.50
+TCZ          C3          C2          H2     121.125    1.50
+TCZ          C2          C3          C4     122.250    1.50
+TCZ          C2          C3         CL3     118.875    1.50
+TCZ          C4          C3         CL3     118.875    1.50
+TCZ          C3          C4          C5     117.750    1.50
+TCZ          C3          C4          H4     121.125    1.50
+TCZ          C5          C4          H4     121.125    1.50
+TCZ          C4          C5          C6     122.250    1.50
+TCZ          C4          C5         CL5     118.875    1.50
+TCZ          C6          C5         CL5     118.875    1.50
+TCZ          C1          C6          C5     117.750    1.50
+TCZ          C1          C6          H6     121.125    1.50
+TCZ          C5          C6          H6     121.125    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -117,27 +88,43 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TCZ      CONST_1  CL5    C5     C6     C1       180.000    0.000   0
- TCZ      CONST_2  C5     C6     C1     CL1      180.000    0.000   0
- TCZ      CONST_3  C6     C1     C2     C3         0.000    0.000   0
- TCZ      CONST_4  CL5    C5     C4     C3       180.000    0.000   0
- TCZ      CONST_5  C5     C4     C3     C2         0.000    0.000   0
- TCZ      CONST_6  C4     C3     C2     C1         0.000    0.000   0
+TCZ       const_sp2_sp2_3         CL1          C1          C2          C3     180.000   10.00     2
+TCZ              const_23         CL1          C1          C6          C5     180.000   10.00     2
+TCZ       const_sp2_sp2_6          C1          C2          C3         CL3     180.000   10.00     2
+TCZ              const_11         CL3          C3          C4          C5     180.000   10.00     2
+TCZ              const_14          C3          C4          C5         CL5     180.000   10.00     2
+TCZ              const_19         CL5          C5          C6          C1     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- TCZ      plan-1    C1        0.020
- TCZ      plan-1    C2        0.020
- TCZ      plan-1    C6        0.020
- TCZ      plan-1    CL1       0.020
- TCZ      plan-1    C3        0.020
- TCZ      plan-1    C4        0.020
- TCZ      plan-1    C5        0.020
- TCZ      plan-1    H2        0.020
- TCZ      plan-1    CL3       0.020
- TCZ      plan-1    H4        0.020
- TCZ      plan-1    CL5       0.020
- TCZ      plan-1    H6        0.020
-# ------------------------------------------------------
+TCZ    plan-1          C1   0.020
+TCZ    plan-1          C2   0.020
+TCZ    plan-1          C3   0.020
+TCZ    plan-1          C4   0.020
+TCZ    plan-1          C5   0.020
+TCZ    plan-1          C6   0.020
+TCZ    plan-1         CL1   0.020
+TCZ    plan-1         CL3   0.020
+TCZ    plan-1         CL5   0.020
+TCZ    plan-1          H2   0.020
+TCZ    plan-1          H4   0.020
+TCZ    plan-1          H6   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+TCZ SMILES           ACDLabs              10.04 "Clc1cc(Cl)cc(Cl)c1"
+TCZ SMILES_CANONICAL CACTVS               3.341 "Clc1cc(Cl)cc(Cl)c1"
+TCZ SMILES           CACTVS               3.341 "Clc1cc(Cl)cc(Cl)c1"
+TCZ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1c(cc(cc1Cl)Cl)Cl"
+TCZ SMILES           "OpenEye OEToolkits" 1.5.0 "c1c(cc(cc1Cl)Cl)Cl"
+TCZ InChI            InChI                1.03  "InChI=1S/C6H3Cl3/c7-4-1-5(8)3-6(9)2-4/h1-3H"
+TCZ InChIKey         InChI                1.03  XKEFYDZQGKAQCN-UHFFFAOYSA-N
+TCZ ?                acedrg               202         "dictionary generator"                  
+TCZ ?                acedrg_database      11          "data source"                           
+TCZ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+TCZ ?                refmac5              5.8.0189    "optimization tool"                     

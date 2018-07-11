@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-LJ1      LJ1 '2,6-dimethyl-4-[(E)-2-phenylethenyl]' non-polymer        33  17 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+LJ1     LJ1      "2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol"     NON-POLYMER     33     17     .     
 #
 data_comp_LJ1
 #
@@ -28,125 +17,85 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- LJ1           OAC    O    OH1       0.000      0.000    0.000    0.000
- LJ1           HOAC   H    H         0.000      0.321   -0.026    0.912
- LJ1           CAQ    C    CR6       0.000     -1.355    0.103    0.000
- LJ1           CAM    C    CR6       0.000     -1.954    1.357    0.003
- LJ1           CAA    C    CH3       0.000     -1.100    2.598    0.005
- LJ1           HAAB   H    H         0.000     -0.185    2.399   -0.490
- LJ1           HAAA   H    H         0.000     -1.610    3.379   -0.497
- LJ1           HAA    H    H         0.000     -0.904    2.890    1.004
- LJ1           CAN    C    CR6       0.000     -2.136   -1.045   -0.002
- LJ1           CAB    C    CH3       0.000     -1.480   -2.402   -0.004
- LJ1           HABB   H    H         0.000     -2.105   -3.095   -0.505
- LJ1           HABA   H    H         0.000     -0.548   -2.342   -0.504
- LJ1           HAB    H    H         0.000     -1.326   -2.722    0.993
- LJ1           CAL    C    CR16      0.000     -3.511   -0.946    0.000
- LJ1           HAL    H    H         0.000     -4.120   -1.841    0.004
- LJ1           CAP    C    CR6       0.000     -4.118    0.314   -0.005
- LJ1           CAK    C    CR16      0.000     -3.327    1.466   -0.002
- LJ1           HAK    H    H         0.000     -3.793    2.444   -0.003
- LJ1           CAE    C    C1        0.000     -5.588    0.426   -0.009
- LJ1           HAE    H    H         0.000     -6.054    1.397   -0.010
- LJ1           CAD    C    C1        0.000     -6.345   -0.683   -0.012
- LJ1           HAD    H    H         0.000     -5.879   -1.654   -0.011
- LJ1           CAO    C    CR6       0.000     -7.815   -0.570   -0.016
- LJ1           CAJ    C    CR16      0.000     -8.423    0.687   -0.013
- LJ1           HAJ    H    H         0.000     -7.816    1.584   -0.002
- LJ1           CAH    C    CR16      0.000     -9.799    0.784   -0.024
- LJ1           HAH    H    H         0.000    -10.272    1.759   -0.031
- LJ1           CAF    C    CR16      0.000    -10.576   -0.361   -0.026
- LJ1           HAF    H    H         0.000    -11.656   -0.279   -0.029
- LJ1           CAG    C    CR16      0.000     -9.982   -1.609   -0.023
- LJ1           HAG    H    H         0.000    -10.597   -2.501   -0.023
- LJ1           CAI    C    CR16      0.000     -8.606   -1.722   -0.019
- LJ1           HAI    H    H         0.000     -8.142   -2.700   -0.018
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- LJ1      OAC    n/a    CAQ    START
- LJ1      HOAC   OAC    .      .
- LJ1      CAQ    OAC    CAN    .
- LJ1      CAM    CAQ    CAA    .
- LJ1      CAA    CAM    HAA    .
- LJ1      HAAB   CAA    .      .
- LJ1      HAAA   CAA    .      .
- LJ1      HAA    CAA    .      .
- LJ1      CAN    CAQ    CAL    .
- LJ1      CAB    CAN    HAB    .
- LJ1      HABB   CAB    .      .
- LJ1      HABA   CAB    .      .
- LJ1      HAB    CAB    .      .
- LJ1      CAL    CAN    CAP    .
- LJ1      HAL    CAL    .      .
- LJ1      CAP    CAL    CAE    .
- LJ1      CAK    CAP    HAK    .
- LJ1      HAK    CAK    .      .
- LJ1      CAE    CAP    CAD    .
- LJ1      HAE    CAE    .      .
- LJ1      CAD    CAE    CAO    .
- LJ1      HAD    CAD    .      .
- LJ1      CAO    CAD    CAJ    .
- LJ1      CAJ    CAO    CAH    .
- LJ1      HAJ    CAJ    .      .
- LJ1      CAH    CAJ    CAF    .
- LJ1      HAH    CAH    .      .
- LJ1      CAF    CAH    CAG    .
- LJ1      HAF    CAF    .      .
- LJ1      CAG    CAF    CAI    .
- LJ1      HAG    CAG    .      .
- LJ1      CAI    CAG    HAI    .
- LJ1      HAI    CAI    .      END
- LJ1      CAM    CAK    .    ADD
- LJ1      CAO    CAI    .    ADD
+LJ1     CAA     C       CH3     0       -0.338      -2.796      -21.773     
+LJ1     CAM     C       CR6     0       -0.048      -1.390      -22.239     
+LJ1     CAK     C       CR16    0       0.137       -1.142      -23.591     
+LJ1     CAQ     C       CR6     0       0.046       -0.302      -21.351     
+LJ1     OAC     O       OH1     0       -0.125      -0.475      -20.004     
+LJ1     CAN     C       CR6     0       0.316       1.001       -21.805     
+LJ1     CAB     C       CH3     0       0.414       2.156       -20.840     
+LJ1     CAL     C       CR16    0       0.491       1.195       -23.167     
+LJ1     CAP     C       CR6     0       0.403       0.141       -24.082     
+LJ1     CAE     C       C1      0       0.605       0.421       -25.513     
+LJ1     CAD     C       C1      0       0.110       -0.258      -26.554     
+LJ1     CAO     C       CR6     0       0.328       0.007       -27.984     
+LJ1     CAI     C       CR16    0       -0.634      -0.397      -28.919     
+LJ1     CAG     C       CR16    0       -0.457      -0.166      -30.279     
+LJ1     CAF     C       CR16    0       0.685       0.469       -30.734     
+LJ1     CAH     C       CR16    0       1.653       0.874       -29.830     
+LJ1     CAJ     C       CR16    0       1.480       0.643       -28.470     
+LJ1     HAA     H       H       0       -0.415      -2.832      -20.808     
+LJ1     HAAA    H       H       0       0.382       -3.383      -22.055     
+LJ1     HAAB    H       H       0       -1.170      -3.101      -22.170     
+LJ1     HAK     H       H       0       0.076       -1.865      -24.195     
+LJ1     HOAC    H       H       0       -0.902      -0.196      -19.771     
+LJ1     HAB     H       H       0       0.683       2.962       -21.311     
+LJ1     HABA    H       H       0       1.071       1.952       -20.154     
+LJ1     HABB    H       H       0       -0.450      2.303       -20.422     
+LJ1     HAL     H       H       0       0.673       2.064       -23.486     
+LJ1     HAE     H       H       0       1.138       1.177       -25.713     
+LJ1     HAD     H       H       0       -0.456      -0.990      -26.353     
+LJ1     HAI     H       H       0       -1.414      -0.829      -28.619     
+LJ1     HAG     H       H       0       -1.118      -0.443      -30.892     
+LJ1     HAF     H       H       0       0.805       0.626       -31.657     
+LJ1     HAH     H       H       0       2.432       1.307       -30.137     
+LJ1     HAJ     H       H       0       2.144       0.924       -27.866     
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- LJ1      CAA    CAM       single      1.506    0.020
- LJ1      HAA    CAA       single      1.059    0.020
- LJ1      HAAA   CAA       single      1.059    0.020
- LJ1      HAAB   CAA       single      1.059    0.020
- LJ1      CAM    CAK       double      1.390    0.020
- LJ1      CAM    CAQ       single      1.487    0.020
- LJ1      CAK    CAP       single      1.390    0.020
- LJ1      HAK    CAK       single      1.083    0.020
- LJ1      CAQ    OAC       single      1.362    0.020
- LJ1      CAN    CAQ       double      1.487    0.020
- LJ1      HOAC   OAC       single      0.967    0.020
- LJ1      CAB    CAN       single      1.506    0.020
- LJ1      CAL    CAN       single      1.390    0.020
- LJ1      HAB    CAB       single      1.059    0.020
- LJ1      HABA   CAB       single      1.059    0.020
- LJ1      HABB   CAB       single      1.059    0.020
- LJ1      CAP    CAL       double      1.390    0.020
- LJ1      HAL    CAL       single      1.083    0.020
- LJ1      CAE    CAP       single      1.480    0.020
- LJ1      CAD    CAE       double      1.330    0.020
- LJ1      HAE    CAE       single      1.077    0.020
- LJ1      CAO    CAD       single      1.480    0.020
- LJ1      HAD    CAD       single      1.077    0.020
- LJ1      CAO    CAI       double      1.390    0.020
- LJ1      CAJ    CAO       single      1.390    0.020
- LJ1      CAI    CAG       single      1.390    0.020
- LJ1      HAI    CAI       single      1.083    0.020
- LJ1      CAG    CAF       double      1.390    0.020
- LJ1      HAG    CAG       single      1.083    0.020
- LJ1      CAF    CAH       single      1.390    0.020
- LJ1      HAF    CAF       single      1.083    0.020
- LJ1      CAH    CAJ       double      1.390    0.020
- LJ1      HAH    CAH       single      1.083    0.020
- LJ1      HAJ    CAJ       single      1.083    0.020
+LJ1         CAA         CAM      SINGLE       n     1.505   0.010
+LJ1         CAM         CAK      DOUBLE       y     1.379   0.010
+LJ1         CAM         CAQ      SINGLE       y     1.395   0.010
+LJ1         CAK         CAP      SINGLE       y     1.392   0.010
+LJ1         CAQ         OAC      SINGLE       n     1.364   0.013
+LJ1         CAQ         CAN      DOUBLE       y     1.395   0.010
+LJ1         CAN         CAB      SINGLE       n     1.505   0.010
+LJ1         CAN         CAL      SINGLE       y     1.379   0.010
+LJ1         CAL         CAP      DOUBLE       y     1.392   0.010
+LJ1         CAP         CAE      SINGLE       n     1.468   0.012
+LJ1         CAE         CAD      DOUBLE       n     1.326   0.018
+LJ1         CAD         CAO      SINGLE       n     1.468   0.010
+LJ1         CAO         CAI      DOUBLE       y     1.394   0.010
+LJ1         CAO         CAJ      SINGLE       y     1.394   0.010
+LJ1         CAI         CAG      SINGLE       y     1.384   0.010
+LJ1         CAG         CAF      DOUBLE       y     1.376   0.012
+LJ1         CAF         CAH      SINGLE       y     1.376   0.012
+LJ1         CAH         CAJ      DOUBLE       y     1.384   0.010
+LJ1         CAA         HAA      SINGLE       n     0.971   0.013
+LJ1         CAA        HAAA      SINGLE       n     0.971   0.013
+LJ1         CAA        HAAB      SINGLE       n     0.971   0.013
+LJ1         CAK         HAK      SINGLE       n     0.944   0.015
+LJ1         OAC        HOAC      SINGLE       n     0.858   0.020
+LJ1         CAB         HAB      SINGLE       n     0.971   0.013
+LJ1         CAB        HABA      SINGLE       n     0.971   0.013
+LJ1         CAB        HABB      SINGLE       n     0.971   0.013
+LJ1         CAL         HAL      SINGLE       n     0.944   0.015
+LJ1         CAE         HAE      SINGLE       n     0.948   0.020
+LJ1         CAD         HAD      SINGLE       n     0.948   0.020
+LJ1         CAI         HAI      SINGLE       n     0.941   0.017
+LJ1         CAG         HAG      SINGLE       n     0.943   0.018
+LJ1         CAF         HAF      SINGLE       n     0.944   0.016
+LJ1         CAH         HAH      SINGLE       n     0.943   0.018
+LJ1         CAJ         HAJ      SINGLE       n     0.941   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -154,61 +103,61 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- LJ1      HOAC   OAC    CAQ     109.470    3.000
- LJ1      OAC    CAQ    CAM     120.000    3.000
- LJ1      OAC    CAQ    CAN     120.000    3.000
- LJ1      CAM    CAQ    CAN     120.000    3.000
- LJ1      CAQ    CAM    CAA     120.000    3.000
- LJ1      CAQ    CAM    CAK     120.000    3.000
- LJ1      CAA    CAM    CAK     120.000    3.000
- LJ1      CAM    CAA    HAAB    109.470    3.000
- LJ1      CAM    CAA    HAAA    109.470    3.000
- LJ1      CAM    CAA    HAA     109.470    3.000
- LJ1      HAAB   CAA    HAAA    109.470    3.000
- LJ1      HAAB   CAA    HAA     109.470    3.000
- LJ1      HAAA   CAA    HAA     109.470    3.000
- LJ1      CAQ    CAN    CAB     120.000    3.000
- LJ1      CAQ    CAN    CAL     120.000    3.000
- LJ1      CAB    CAN    CAL     120.000    3.000
- LJ1      CAN    CAB    HABB    109.470    3.000
- LJ1      CAN    CAB    HABA    109.470    3.000
- LJ1      CAN    CAB    HAB     109.470    3.000
- LJ1      HABB   CAB    HABA    109.470    3.000
- LJ1      HABB   CAB    HAB     109.470    3.000
- LJ1      HABA   CAB    HAB     109.470    3.000
- LJ1      CAN    CAL    HAL     120.000    3.000
- LJ1      CAN    CAL    CAP     120.000    3.000
- LJ1      HAL    CAL    CAP     120.000    3.000
- LJ1      CAL    CAP    CAK     120.000    3.000
- LJ1      CAL    CAP    CAE     120.000    3.000
- LJ1      CAK    CAP    CAE     120.000    3.000
- LJ1      CAP    CAK    HAK     120.000    3.000
- LJ1      CAP    CAK    CAM     120.000    3.000
- LJ1      HAK    CAK    CAM     120.000    3.000
- LJ1      CAP    CAE    HAE     120.000    3.000
- LJ1      CAP    CAE    CAD     120.000    3.000
- LJ1      HAE    CAE    CAD     120.000    3.000
- LJ1      CAE    CAD    HAD     120.000    3.000
- LJ1      CAE    CAD    CAO     120.000    3.000
- LJ1      HAD    CAD    CAO     120.000    3.000
- LJ1      CAD    CAO    CAJ     120.000    3.000
- LJ1      CAD    CAO    CAI     120.000    3.000
- LJ1      CAJ    CAO    CAI     120.000    3.000
- LJ1      CAO    CAJ    HAJ     120.000    3.000
- LJ1      CAO    CAJ    CAH     120.000    3.000
- LJ1      HAJ    CAJ    CAH     120.000    3.000
- LJ1      CAJ    CAH    HAH     120.000    3.000
- LJ1      CAJ    CAH    CAF     120.000    3.000
- LJ1      HAH    CAH    CAF     120.000    3.000
- LJ1      CAH    CAF    HAF     120.000    3.000
- LJ1      CAH    CAF    CAG     120.000    3.000
- LJ1      HAF    CAF    CAG     120.000    3.000
- LJ1      CAF    CAG    HAG     120.000    3.000
- LJ1      CAF    CAG    CAI     120.000    3.000
- LJ1      HAG    CAG    CAI     120.000    3.000
- LJ1      CAG    CAI    HAI     120.000    3.000
- LJ1      CAG    CAI    CAO     120.000    3.000
- LJ1      HAI    CAI    CAO     120.000    3.000
+LJ1         CAM         CAA         HAA     109.597    1.50
+LJ1         CAM         CAA        HAAA     109.597    1.50
+LJ1         CAM         CAA        HAAB     109.597    1.50
+LJ1         HAA         CAA        HAAA     109.348    1.50
+LJ1         HAA         CAA        HAAB     109.348    1.50
+LJ1        HAAA         CAA        HAAB     109.348    1.50
+LJ1         CAA         CAM         CAK     121.329    1.50
+LJ1         CAA         CAM         CAQ     120.672    1.50
+LJ1         CAK         CAM         CAQ     117.999    1.50
+LJ1         CAM         CAK         CAP     121.584    1.50
+LJ1         CAM         CAK         HAK     119.023    1.50
+LJ1         CAP         CAK         HAK     119.393    1.50
+LJ1         CAM         CAQ         OAC     118.878    2.80
+LJ1         CAM         CAQ         CAN     122.244    1.50
+LJ1         OAC         CAQ         CAN     118.878    2.80
+LJ1         CAQ         OAC        HOAC     109.810    3.00
+LJ1         CAQ         CAN         CAB     120.672    1.50
+LJ1         CAQ         CAN         CAL     117.999    1.50
+LJ1         CAB         CAN         CAL     121.329    1.50
+LJ1         CAN         CAB         HAB     109.597    1.50
+LJ1         CAN         CAB        HABA     109.597    1.50
+LJ1         CAN         CAB        HABB     109.597    1.50
+LJ1         HAB         CAB        HABA     109.348    1.50
+LJ1         HAB         CAB        HABB     109.348    1.50
+LJ1        HABA         CAB        HABB     109.348    1.50
+LJ1         CAN         CAL         CAP     121.584    1.50
+LJ1         CAN         CAL         HAL     119.023    1.50
+LJ1         CAP         CAL         HAL     119.393    1.50
+LJ1         CAK         CAP         CAL     118.590    1.50
+LJ1         CAK         CAP         CAE     120.705    2.37
+LJ1         CAL         CAP         CAE     120.705    2.37
+LJ1         CAP         CAE         CAD     126.568    1.76
+LJ1         CAP         CAE         HAE     116.565    1.50
+LJ1         CAD         CAE         HAE     116.867    1.50
+LJ1         CAE         CAD         CAO     126.568    1.76
+LJ1         CAE         CAD         HAD     116.867    1.50
+LJ1         CAO         CAD         HAD     116.565    1.50
+LJ1         CAD         CAO         CAI     121.141    2.07
+LJ1         CAD         CAO         CAJ     121.141    2.07
+LJ1         CAI         CAO         CAJ     117.718    1.50
+LJ1         CAO         CAI         CAG     120.956    1.50
+LJ1         CAO         CAI         HAI     119.405    1.50
+LJ1         CAG         CAI         HAI     119.638    1.50
+LJ1         CAI         CAG         CAF     120.217    1.50
+LJ1         CAI         CAG         HAG     119.846    1.50
+LJ1         CAF         CAG         HAG     119.937    1.50
+LJ1         CAG         CAF         CAH     119.935    1.50
+LJ1         CAG         CAF         HAF     120.033    1.50
+LJ1         CAH         CAF         HAF     120.033    1.50
+LJ1         CAF         CAH         CAJ     120.217    1.50
+LJ1         CAF         CAH         HAH     119.937    1.50
+LJ1         CAJ         CAH         HAH     119.846    1.50
+LJ1         CAO         CAJ         CAH     120.956    1.50
+LJ1         CAO         CAJ         HAJ     119.405    1.50
+LJ1         CAH         CAJ         HAJ     119.638    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -219,59 +168,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LJ1      var_1    HOAC   OAC    CAQ    CAN      -90.001   20.000   1
- LJ1      CONST_1  OAC    CAQ    CAM    CAA        0.000    0.000   0
- LJ1      CONST_2  CAQ    CAM    CAK    CAP        0.000    0.000   0
- LJ1      var_2    CAQ    CAM    CAA    HAA      -90.322   20.000   1
- LJ1      CONST_3  OAC    CAQ    CAN    CAL      180.000    0.000   0
- LJ1      var_3    CAQ    CAN    CAB    HAB       90.007   20.000   1
- LJ1      CONST_4  CAQ    CAN    CAL    CAP        0.000    0.000   0
- LJ1      CONST_5  CAN    CAL    CAP    CAE      180.000    0.000   0
- LJ1      CONST_6  CAL    CAP    CAK    CAM        0.000    0.000   0
- LJ1      var_4    CAL    CAP    CAE    CAD       -0.135   20.000   1
- LJ1      CONST_7  CAP    CAE    CAD    CAO      180.000    0.000   0
- LJ1      var_5    CAE    CAD    CAO    CAJ       -0.196   20.000   1
- LJ1      CONST_8  CAD    CAO    CAI    CAG      180.000    0.000   0
- LJ1      CONST_9  CAD    CAO    CAJ    CAH      180.000    0.000   0
- LJ1      CONST_10 CAO    CAJ    CAH    CAF        0.000    0.000   0
- LJ1      CONST_11 CAJ    CAH    CAF    CAG        0.000    0.000   0
- LJ1      CONST_12 CAH    CAF    CAG    CAI        0.000    0.000   0
- LJ1      CONST_13 CAF    CAG    CAI    CAO        0.000    0.000   0
+LJ1             sp2_sp3_1         CAK         CAM         CAA         HAA     150.000   10.00     6
+LJ1             sp2_sp2_9         CAE         CAD         CAO         CAI     180.000   10.00     2
+LJ1       const_sp2_sp2_2         CAG         CAI         CAO         CAD     180.000   10.00     2
+LJ1              const_46         CAH         CAJ         CAO         CAD     180.000   10.00     2
+LJ1       const_sp2_sp2_5         CAF         CAG         CAI         CAO       0.000   10.00     2
+LJ1       const_sp2_sp2_9         CAH         CAF         CAG         CAI       0.000   10.00     2
+LJ1              const_13         CAG         CAF         CAH         CAJ       0.000   10.00     2
+LJ1              const_17         CAF         CAH         CAJ         CAO       0.000   10.00     2
+LJ1              const_22         CAP         CAK         CAM         CAA     180.000   10.00     2
+LJ1              const_44         CAA         CAM         CAQ         OAC       0.000   10.00     2
+LJ1              const_26         CAM         CAK         CAP         CAE     180.000   10.00     2
+LJ1              const_40         CAB         CAN         CAQ         OAC       0.000   10.00     2
+LJ1             sp2_sp3_9         CAQ         CAN         CAB         HAB     150.000   10.00     6
+LJ1              const_34         CAP         CAL         CAN         CAB     180.000   10.00     2
+LJ1              const_30         CAN         CAL         CAP         CAE     180.000   10.00     2
+LJ1             sp2_sp2_1         CAD         CAE         CAP         CAK     180.000   10.00     2
+LJ1             sp2_sp2_5         CAO         CAD         CAE         CAP     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- LJ1      plan-1    CAM       0.020
- LJ1      plan-1    CAA       0.020
- LJ1      plan-1    CAK       0.020
- LJ1      plan-1    CAQ       0.020
- LJ1      plan-1    CAN       0.020
- LJ1      plan-1    CAL       0.020
- LJ1      plan-1    CAP       0.020
- LJ1      plan-1    HAK       0.020
- LJ1      plan-1    OAC       0.020
- LJ1      plan-1    CAB       0.020
- LJ1      plan-1    HAL       0.020
- LJ1      plan-1    CAE       0.020
- LJ1      plan-1    HAE       0.020
- LJ1      plan-2    CAE       0.020
- LJ1      plan-2    CAP       0.020
- LJ1      plan-2    CAD       0.020
- LJ1      plan-2    HAE       0.020
- LJ1      plan-2    CAO       0.020
- LJ1      plan-2    HAD       0.020
- LJ1      plan-3    CAO       0.020
- LJ1      plan-3    CAD       0.020
- LJ1      plan-3    CAI       0.020
- LJ1      plan-3    CAJ       0.020
- LJ1      plan-3    CAG       0.020
- LJ1      plan-3    CAF       0.020
- LJ1      plan-3    CAH       0.020
- LJ1      plan-3    HAI       0.020
- LJ1      plan-3    HAG       0.020
- LJ1      plan-3    HAF       0.020
- LJ1      plan-3    HAH       0.020
- LJ1      plan-3    HAJ       0.020
- LJ1      plan-3    HAD       0.020
-# ------------------------------------------------------
+LJ1    plan-1         CAD   0.020
+LJ1    plan-1         CAF   0.020
+LJ1    plan-1         CAG   0.020
+LJ1    plan-1         CAH   0.020
+LJ1    plan-1         CAI   0.020
+LJ1    plan-1         CAJ   0.020
+LJ1    plan-1         CAO   0.020
+LJ1    plan-1         HAF   0.020
+LJ1    plan-1         HAG   0.020
+LJ1    plan-1         HAH   0.020
+LJ1    plan-1         HAI   0.020
+LJ1    plan-1         HAJ   0.020
+LJ1    plan-2         CAA   0.020
+LJ1    plan-2         CAB   0.020
+LJ1    plan-2         CAE   0.020
+LJ1    plan-2         CAK   0.020
+LJ1    plan-2         CAL   0.020
+LJ1    plan-2         CAM   0.020
+LJ1    plan-2         CAN   0.020
+LJ1    plan-2         CAP   0.020
+LJ1    plan-2         CAQ   0.020
+LJ1    plan-2         HAK   0.020
+LJ1    plan-2         HAL   0.020
+LJ1    plan-2         OAC   0.020
+LJ1    plan-3         CAD   0.020
+LJ1    plan-3         CAE   0.020
+LJ1    plan-3         CAP   0.020
+LJ1    plan-3         HAE   0.020
+LJ1    plan-4         CAD   0.020
+LJ1    plan-4         CAE   0.020
+LJ1    plan-4         CAO   0.020
+LJ1    plan-4         HAD   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+LJ1 SMILES           ACDLabs              10.04 "Oc2c(cc(\C=C\c1ccccc1)cc2C)C"
+LJ1 SMILES_CANONICAL CACTVS               3.341 "Cc1cc(\C=C\c2ccccc2)cc(C)c1O"
+LJ1 SMILES           CACTVS               3.341 "Cc1cc(C=Cc2ccccc2)cc(C)c1O"
+LJ1 SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "Cc1cc(cc(c1O)C)\C=C\c2ccccc2"
+LJ1 SMILES           "OpenEye OEToolkits" 1.5.0 "Cc1cc(cc(c1O)C)C=Cc2ccccc2"
+LJ1 InChI            InChI                1.03  "InChI=1S/C16H16O/c1-12-10-15(11-13(2)16(12)17)9-8-14-6-4-3-5-7-14/h3-11,17H,1-2H3/b9-8+"
+LJ1 InChIKey         InChI                1.03  PAHKYLUYTGBFNW-CMDGGOBGSA-N
+LJ1 ?                acedrg               202         "dictionary generator"                  
+LJ1 ?                acedrg_database      11          "data source"                           
+LJ1 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+LJ1 ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BEN      BEN 'BENZAMIDINE                         ' non-polymer        17   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BEN     BEN      BENZAMIDINE     NON-POLYMER     17     9     .     
 #
 data_comp_BEN
 #
@@ -28,75 +17,52 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BEN           N1     N    N         0.000      0.000    0.000    0.000
- BEN           HN1    H    H         0.000     -0.415    0.000    0.868
- BEN           C      C    C         0.000     -0.721    0.000   -1.084
- BEN           N2     N    NH2       0.000     -0.108   -0.001   -2.318
- BEN           HN22   H    H         0.000     -0.659   -0.001   -3.174
- BEN           HN21   H    H         0.000      0.907   -0.002   -2.396
- BEN           C1     C    CR6       0.000     -2.199    0.000   -0.992
- BEN           C6     C    CR16      0.000     -2.973    0.004   -2.150
- BEN           H6     H    H         0.000     -2.495    0.012   -3.122
- BEN           C5     C    CR16      0.000     -4.349   -0.002   -2.058
- BEN           H5     H    H         0.000     -4.952   -0.008   -2.958
- BEN           C4     C    CR16      0.000     -4.961    0.000   -0.816
- BEN           H4     H    H         0.000     -6.042    0.002   -0.748
- BEN           C3     C    CR16      0.000     -4.199    0.000    0.336
- BEN           H3     H    H         0.000     -4.684    0.000    1.305
- BEN           C2     C    CR16      0.000     -2.821    0.000    0.257
- BEN           H2     H    H         0.000     -2.225    0.000    1.161
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BEN      N1     n/a    C      START
- BEN      HN1    N1     .      .
- BEN      C      N1     C1     .
- BEN      N2     C      HN21   .
- BEN      HN22   N2     .      .
- BEN      HN21   N2     .      .
- BEN      C1     C      C6     .
- BEN      C6     C1     C5     .
- BEN      H6     C6     .      .
- BEN      C5     C6     C4     .
- BEN      H5     C5     .      .
- BEN      C4     C5     C3     .
- BEN      H4     C4     .      .
- BEN      C3     C4     C2     .
- BEN      H3     C3     .      .
- BEN      C2     C3     H2     .
- BEN      H2     C2     .      END
- BEN      C1     C2     .    ADD
+BEN     C1      C       CR6     0       6.752       9.988       20.655      
+BEN     C2      C       CR16    0       6.010       9.174       19.796      
+BEN     C3      C       CR16    0       6.591       8.661       18.641      
+BEN     C4      C       CR16    0       7.908       8.954       18.333      
+BEN     C5      C       CR16    0       8.652       9.760       19.179      
+BEN     C6      C       CR16    0       8.081       10.277      20.336      
+BEN     C       C       C       0       6.137       10.538      21.892      
+BEN     N1      N       NH1     0       6.624       10.320      23.074      
+BEN     N2      N       NH2     0       5.022       11.294      21.759      
+BEN     H2      H       H       0       5.114       8.971       19.998      
+BEN     H3      H       H       0       6.084       8.112       18.065      
+BEN     H4      H       H       0       8.299       8.604       17.548      
+BEN     H5      H       H       0       9.550       9.960       18.969      
+BEN     H6      H       H       0       8.592       10.824      20.906      
+BEN     HN1     H       H       0       7.306       9.859       23.124      
+BEN     HN21    H       H       0       4.617       11.618      22.480      
+BEN     HN22    H       H       0       4.693       11.472      20.952      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BEN      C1     C2        double      1.390    0.020
- BEN      C6     C1        single      1.390    0.020
- BEN      C1     C         single      1.500    0.020
- BEN      C2     C3        single      1.390    0.020
- BEN      H2     C2        single      1.083    0.020
- BEN      C3     C4        double      1.390    0.020
- BEN      H3     C3        single      1.083    0.020
- BEN      C4     C5        single      1.390    0.020
- BEN      H4     C4        single      1.083    0.020
- BEN      C5     C6        double      1.390    0.020
- BEN      H5     C5        single      1.083    0.020
- BEN      H6     C6        single      1.083    0.020
- BEN      C      N1        double      1.260    0.020
- BEN      N2     C         single      1.332    0.020
- BEN      HN1    N1        single      0.954    0.020
- BEN      HN21   N2        single      1.010    0.020
- BEN      HN22   N2        single      1.010    0.020
+BEN          C1          C2      DOUBLE       y     1.390   0.010
+BEN          C1          C6      SINGLE       y     1.390   0.010
+BEN          C1           C      SINGLE       n     1.484   0.011
+BEN          C2          C3      SINGLE       y     1.384   0.010
+BEN          C3          C4      DOUBLE       y     1.376   0.011
+BEN          C4          C5      SINGLE       y     1.376   0.012
+BEN          C5          C6      DOUBLE       y     1.384   0.010
+BEN           C          N1      DOUBLE       n     1.287   0.020
+BEN           C          N2      SINGLE       n     1.347   0.016
+BEN          C2          H2      SINGLE       n     0.941   0.017
+BEN          C3          H3      SINGLE       n     0.943   0.018
+BEN          C4          H4      SINGLE       n     0.944   0.016
+BEN          C5          H5      SINGLE       n     0.943   0.018
+BEN          C6          H6      SINGLE       n     0.941   0.017
+BEN          N1         HN1      SINGLE       n     0.823   0.020
+BEN          N2        HN21      SINGLE       n     0.887   0.020
+BEN          N2        HN22      SINGLE       n     0.887   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -104,31 +70,31 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BEN      HN1    N1     C       120.000    3.000
- BEN      N1     C      N2      120.000    3.000
- BEN      N1     C      C1      120.000    3.000
- BEN      N2     C      C1      120.000    3.000
- BEN      C      N2     HN22    120.000    3.000
- BEN      C      N2     HN21    120.000    3.000
- BEN      HN22   N2     HN21    120.000    3.000
- BEN      C      C1     C6      120.000    3.000
- BEN      C      C1     C2      120.000    3.000
- BEN      C6     C1     C2      120.000    3.000
- BEN      C1     C6     H6      120.000    3.000
- BEN      C1     C6     C5      120.000    3.000
- BEN      H6     C6     C5      120.000    3.000
- BEN      C6     C5     H5      120.000    3.000
- BEN      C6     C5     C4      120.000    3.000
- BEN      H5     C5     C4      120.000    3.000
- BEN      C5     C4     H4      120.000    3.000
- BEN      C5     C4     C3      120.000    3.000
- BEN      H4     C4     C3      120.000    3.000
- BEN      C4     C3     H3      120.000    3.000
- BEN      C4     C3     C2      120.000    3.000
- BEN      H3     C3     C2      120.000    3.000
- BEN      C3     C2     H2      120.000    3.000
- BEN      C3     C2     C1      120.000    3.000
- BEN      H2     C2     C1      120.000    3.000
+BEN          C2          C1          C6     119.132    1.50
+BEN          C2          C1           C     120.434    1.50
+BEN          C6          C1           C     120.434    1.50
+BEN          C1          C2          C3     120.257    1.50
+BEN          C1          C2          H2     119.975    1.50
+BEN          C3          C2          H2     119.768    1.50
+BEN          C2          C3          C4     120.212    1.50
+BEN          C2          C3          H3     119.848    1.50
+BEN          C4          C3          H3     119.939    1.50
+BEN          C3          C4          C5     119.930    1.50
+BEN          C3          C4          H4     120.035    1.50
+BEN          C5          C4          H4     120.035    1.50
+BEN          C4          C5          C6     120.212    1.50
+BEN          C4          C5          H5     119.939    1.50
+BEN          C6          C5          H5     119.848    1.50
+BEN          C1          C6          C5     120.257    1.50
+BEN          C1          C6          H6     119.975    1.50
+BEN          C5          C6          H6     119.768    1.50
+BEN          C1           C          N1     121.847    3.00
+BEN          C1           C          N2     117.501    1.50
+BEN          N1           C          N2     120.652    2.66
+BEN           C          N1         HN1     114.748    3.00
+BEN           C          N2        HN21     119.893    1.50
+BEN           C          N2        HN22     119.893    1.50
+BEN        HN21          N2        HN22     120.214    2.70
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -139,41 +105,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BEN      CONST_1  HN1    N1     C      C1         0.000    0.000   0
- BEN      CONST_2  N1     C      N2     HN21       0.000    0.000   0
- BEN      var_1    N1     C      C1     C6       179.810   20.000   1
- BEN      CONST_3  C      C1     C2     C3       180.000    0.000   0
- BEN      CONST_4  C      C1     C6     C5       180.000    0.000   0
- BEN      CONST_5  C1     C6     C5     C4         0.000    0.000   0
- BEN      CONST_6  C6     C5     C4     C3         0.000    0.000   0
- BEN      CONST_7  C5     C4     C3     C2         0.000    0.000   0
- BEN      CONST_8  C4     C3     C2     C1         0.000    0.000   0
+BEN       const_sp2_sp2_3           C          C1          C2          C3     180.000   10.00     2
+BEN              const_23           C          C1          C6          C5     180.000   10.00     2
+BEN             sp2_sp2_3          N1           C          C1          C2       0.000   10.00     2
+BEN       const_sp2_sp2_5          C1          C2          C3          C4       0.000   10.00     2
+BEN       const_sp2_sp2_9          C2          C3          C4          C5       0.000   10.00     2
+BEN              const_13          C3          C4          C5          C6       0.000   10.00     2
+BEN              const_17          C4          C5          C6          C1       0.000   10.00     2
+BEN             sp2_sp2_6          N2           C          N1         HN1       0.000   10.00     2
+BEN             sp2_sp2_9          N1           C          N2        HN21       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BEN      plan-1    C1        0.020
- BEN      plan-1    C2        0.020
- BEN      plan-1    C6        0.020
- BEN      plan-1    C         0.020
- BEN      plan-1    C3        0.020
- BEN      plan-1    C4        0.020
- BEN      plan-1    C5        0.020
- BEN      plan-1    H2        0.020
- BEN      plan-1    H3        0.020
- BEN      plan-1    H4        0.020
- BEN      plan-1    H5        0.020
- BEN      plan-1    H6        0.020
- BEN      plan-2    C         0.020
- BEN      plan-2    C1        0.020
- BEN      plan-2    N1        0.020
- BEN      plan-2    N2        0.020
- BEN      plan-2    HN1       0.020
- BEN      plan-2    HN22      0.020
- BEN      plan-2    HN21      0.020
- BEN      plan-3    N2        0.020
- BEN      plan-3    C         0.020
- BEN      plan-3    HN21      0.020
- BEN      plan-3    HN22      0.020
-# ------------------------------------------------------
+BEN    plan-1           C   0.020
+BEN    plan-1          C1   0.020
+BEN    plan-1          C2   0.020
+BEN    plan-1          C3   0.020
+BEN    plan-1          C4   0.020
+BEN    plan-1          C5   0.020
+BEN    plan-1          C6   0.020
+BEN    plan-1          H2   0.020
+BEN    plan-1          H3   0.020
+BEN    plan-1          H4   0.020
+BEN    plan-1          H5   0.020
+BEN    plan-1          H6   0.020
+BEN    plan-2           C   0.020
+BEN    plan-2          C1   0.020
+BEN    plan-2          N1   0.020
+BEN    plan-2          N2   0.020
+BEN    plan-3           C   0.020
+BEN    plan-3        HN21   0.020
+BEN    plan-3        HN22   0.020
+BEN    plan-3          N2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BEN SMILES           ACDLabs              10.04 "[N@H]=C(N)c1ccccc1"
+BEN SMILES_CANONICAL CACTVS               3.341 "NC(=N)c1ccccc1"
+BEN SMILES           CACTVS               3.341 "NC(=N)c1ccccc1"
+BEN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[H]/N=C(\c1ccccc1)/N"
+BEN SMILES           "OpenEye OEToolkits" 1.5.0 "[H]N=C(c1ccccc1)N"
+BEN InChI            InChI                1.03  "InChI=1S/C7H8N2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H3,8,9)"
+BEN InChIKey         InChI                1.03  PXXJHWLDUBFPOL-UHFFFAOYSA-N
+BEN ?                acedrg               202         "dictionary generator"                  
+BEN ?                acedrg_database      11          "data source"                           
+BEN ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BEN ?                refmac5              5.8.0189    "optimization tool"                     

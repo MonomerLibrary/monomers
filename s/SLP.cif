@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SLP      SLP '3-selanylpropanoic acid             ' non-polymer        11   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+SLP     SLP      "3-selanylpropanoic acid"     NON-POLYMER     11     6     .     
 #
 data_comp_SLP
 #
@@ -28,55 +17,39 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SLP           O2     O    OC       -0.500      0.000    0.000    0.000
- SLP           C7     C    C         0.000     -1.171    0.439    0.000
- SLP           O1     O    OC       -0.500     -1.376    1.674    0.000
- SLP           C6     C    CH2       0.000     -2.336   -0.517    0.000
- SLP           H6     H    H         0.000     -2.289   -1.146    0.891
- SLP           H6A    H    H         0.000     -2.289   -1.146   -0.891
- SLP           C2     C    CH2       0.000     -3.646    0.273    0.000
- SLP           H2     H    H         0.000     -3.690    0.903   -0.891
- SLP           H2A    H    H         0.000     -3.690    0.903    0.891
- SLP           SE     SE   SE        0.000     -5.160   -0.971    0.000
- SLP           HSE    H    H         0.000     -6.049   -0.152    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- SLP      O2     n/a    C7     START
- SLP      C7     O2     C6     .
- SLP      O1     C7     .      .
- SLP      C6     C7     C2     .
- SLP      H6     C6     .      .
- SLP      H6A    C6     .      .
- SLP      C2     C6     SE     .
- SLP      H2     C2     .      .
- SLP      H2A    C2     .      .
- SLP      SE     C2     HSE    .
- SLP      HSE    SE     .      END
+SLP     SE      SE      SE      0       9.272       58.588      16.519      
+SLP     O1      O       O       0       8.035       60.637      12.340      
+SLP     C2      C       CH2     0       9.144       59.322      14.702      
+SLP     O2      O       OC      -1      8.721       62.518      13.252      
+SLP     C6      C       CH2     0       8.433       60.647      14.691      
+SLP     C7      C       C       0       8.396       61.315      13.325      
+SLP     HSE     H       H       0       9.771       57.504      16.476      
+SLP     H2      H       H       0       8.661       58.687      14.132      
+SLP     H2A     H       H       0       10.047      59.432      14.335      
+SLP     H6      H       H       0       8.873       61.247      15.313      
+SLP     H6A     H       H       0       7.522       60.521      14.996      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- SLP      SE     C2        single      1.970    0.020
- SLP      O1     C7        deloc       1.250    0.020
- SLP      C2     C6        single      1.524    0.020
- SLP      C7     O2        deloc       1.250    0.020
- SLP      C6     C7        single      1.510    0.020
- SLP      HSE    SE        single      1.209    0.020
- SLP      H2     C2        single      1.092    0.020
- SLP      H2A    C2        single      1.092    0.020
- SLP      H6     C6        single      1.092    0.020
- SLP      H6A    C6        single      1.092    0.020
+SLP          SE          C2      SINGLE       n     1.963   0.020
+SLP          O1          C7      DOUBLE       n     1.247   0.019
+SLP          C2          C6      SINGLE       n     1.501   0.020
+SLP          O2          C7      SINGLE       n     1.247   0.019
+SLP          C6          C7      SINGLE       n     1.519   0.012
+SLP          SE         HSE      SINGLE       n     1.195   0.010
+SLP          C2          H2      SINGLE       n     0.981   0.017
+SLP          C2         H2A      SINGLE       n     0.981   0.017
+SLP          C6          H6      SINGLE       n     0.970   0.010
+SLP          C6         H6A      SINGLE       n     0.970   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -84,22 +57,22 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SLP      O2     C7     O1      123.000    3.000
- SLP      O2     C7     C6      118.500    3.000
- SLP      O1     C7     C6      118.500    3.000
- SLP      C7     C6     H6      109.470    3.000
- SLP      C7     C6     H6A     109.470    3.000
- SLP      C7     C6     C2      109.470    3.000
- SLP      H6     C6     H6A     107.900    3.000
- SLP      H6     C6     C2      109.470    3.000
- SLP      H6A    C6     C2      109.470    3.000
- SLP      C6     C2     H2      109.470    3.000
- SLP      C6     C2     H2A     109.470    3.000
- SLP      C6     C2     SE      109.500    3.000
- SLP      H2     C2     H2A     107.900    3.000
- SLP      H2     C2     SE      109.500    3.000
- SLP      H2A    C2     SE      109.500    3.000
- SLP      C2     SE     HSE      98.000    3.000
+SLP          C2          SE         HSE     109.471    3.00
+SLP          SE          C2          C6     111.593    3.00
+SLP          SE          C2          H2     109.134    1.50
+SLP          SE          C2         H2A     109.134    1.50
+SLP          C6          C2          H2     109.359    1.50
+SLP          C6          C2         H2A     109.359    1.50
+SLP          H2          C2         H2A     107.871    1.50
+SLP          C2          C6          C7     111.511    2.91
+SLP          C2          C6          H6     109.055    1.50
+SLP          C2          C6         H6A     109.055    1.50
+SLP          C7          C6          H6     108.416    1.50
+SLP          C7          C6         H6A     108.416    1.50
+SLP          H6          C6         H6A     107.705    1.50
+SLP          O1          C7          O2     123.625    1.50
+SLP          O1          C7          C6     118.187    1.67
+SLP          O2          C7          C6     118.187    1.67
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -110,16 +83,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SLP      var_1    O2     C7     C6     C2       180.000   20.000   3
- SLP      var_2    C7     C6     C2     SE       180.000   20.000   3
- SLP      var_3    C6     C2     SE     HSE      180.000   20.000   1
+SLP             sp3_sp3_1          C6          C2          SE         HSE     180.000   10.00     3
+SLP             sp3_sp3_4          SE          C2          C6          C7     180.000   10.00     3
+SLP             sp2_sp3_2          O1          C7          C6          C2     120.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SLP      plan-1    C7        0.020
- SLP      plan-1    O1        0.020
- SLP      plan-1    O2        0.020
- SLP      plan-1    C6        0.020
-# ------------------------------------------------------
+SLP    plan-1          C6   0.020
+SLP    plan-1          C7   0.020
+SLP    plan-1          O1   0.020
+SLP    plan-1          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+SLP SMILES_CANONICAL CACTVS               3.352 "OC(=O)CC[SeH]"
+SLP SMILES           CACTVS               3.352 "OC(=O)CC[SeH]"
+SLP SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "C(C[SeH])C(=O)O"
+SLP SMILES           "OpenEye OEToolkits" 1.7.0 "C(C[SeH])C(=O)O"
+SLP InChI            InChI                1.03  "InChI=1S/C3H6O2Se/c4-3(5)1-2-6/h6H,1-2H2,(H,4,5)"
+SLP InChIKey         InChI                1.03  DGRAMMLRUJGIJS-UHFFFAOYSA-N
+SLP ?                acedrg               202         "dictionary generator"                  
+SLP ?                acedrg_database      11          "data source"                           
+SLP ?                rdkit                2017.03.2   "Chemoinformatics tool"
+SLP ?                refmac5              5.8.0189    "optimization tool"                     

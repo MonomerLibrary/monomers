@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BRB      BRB 'PARA-BROMOBENZYL ALCOHOL            ' non-polymer        16   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BRB     BRB      "PARA-BROMOBENZYL ALCOHOL"     NON-POLYMER     16     9     .     
 #
 data_comp_BRB
 #
@@ -28,72 +17,50 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BRB           BR4    BR   BR        0.000      0.000    0.000    0.000
- BRB           C4     C    CR6       0.000     -1.744    0.101    0.723
- BRB           C3     C    CR16      0.000     -2.841    0.124   -0.119
- BRB           H3     H    H         0.000     -2.701    0.084   -1.192
- BRB           C2     C    CR16      0.000     -4.116    0.199    0.409
- BRB           H2     H    H         0.000     -4.975    0.216   -0.250
- BRB           C5     C    CR16      0.000     -1.923    0.152    2.093
- BRB           H5     H    H         0.000     -1.065    0.130    2.753
- BRB           C6     C    CR16      0.000     -3.198    0.233    2.620
- BRB           H6     H    H         0.000     -3.338    0.282    3.693
- BRB           C1     C    CR6       0.000     -4.294    0.251    1.779
- BRB           C7     C    CH2       0.000     -5.685    0.332    2.355
- BRB           H71    H    H         0.000     -6.338    0.856    1.654
- BRB           H72    H    H         0.000     -5.655    0.878    3.300
- BRB           O1     O    OH1       0.000     -6.186   -0.987    2.580
- BRB           HO1    H    H         0.000     -7.077   -0.933    2.950
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BRB      BR4    n/a    C4     START
- BRB      C4     BR4    C5     .
- BRB      C3     C4     C2     .
- BRB      H3     C3     .      .
- BRB      C2     C3     H2     .
- BRB      H2     C2     .      .
- BRB      C5     C4     C6     .
- BRB      H5     C5     .      .
- BRB      C6     C5     C1     .
- BRB      H6     C6     .      .
- BRB      C1     C6     C7     .
- BRB      C7     C1     O1     .
- BRB      H71    C7     .      .
- BRB      H72    C7     .      .
- BRB      O1     C7     HO1    .
- BRB      HO1    O1     .      END
- BRB      C1     C2     .    ADD
+BRB     C1      C       CR6     0       0.577       -0.180      0.112       
+BRB     C2      C       CR16    0       -0.262      -1.135      -0.461      
+BRB     C3      C       CR16    0       -1.639      -0.945      -0.511      
+BRB     C4      C       CR6     0       -2.177      0.214       0.020       
+BRB     C5      C       CR16    0       -1.372      1.181       0.595       
+BRB     C6      C       CR16    0       0.004       0.976       0.637       
+BRB     C7      C       CH2     0       2.067       -0.393      0.162       
+BRB     BR4     BR      BR      0       -4.056      0.483       -0.043      
+BRB     O1      O       OH1     0       2.700       0.006       -1.045      
+BRB     H2      H       H       0       0.110       -1.923      -0.821      
+BRB     H3      H       H       0       -2.197      -1.596      -0.899      
+BRB     H5      H       H       0       -1.749      1.965       0.953       
+BRB     H6      H       H       0       0.557       1.632       1.028       
+BRB     H71     H       H       0       2.253       -1.341      0.323       
+BRB     H72     H       H       0       2.442       0.120       0.906       
+BRB     HO1     H       H       0       3.522       -0.205      -1.004      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BRB      C1     C2        double      1.390    0.020
- BRB      C1     C6        single      1.390    0.020
- BRB      C7     C1        single      1.511    0.020
- BRB      C2     C3        single      1.390    0.020
- BRB      H2     C2        single      1.083    0.020
- BRB      C3     C4        double      1.390    0.020
- BRB      H3     C3        single      1.083    0.020
- BRB      C5     C4        single      1.390    0.020
- BRB      C4     BR4       single      1.890    0.020
- BRB      C6     C5        double      1.390    0.020
- BRB      H5     C5        single      1.083    0.020
- BRB      H6     C6        single      1.083    0.020
- BRB      O1     C7        single      1.432    0.020
- BRB      H71    C7        single      1.092    0.020
- BRB      H72    C7        single      1.092    0.020
- BRB      HO1    O1        single      0.967    0.020
+BRB          C1          C2      DOUBLE       y     1.387   0.010
+BRB          C1          C6      SINGLE       y     1.387   0.010
+BRB          C1          C7      SINGLE       n     1.506   0.010
+BRB          C2          C3      SINGLE       y     1.384   0.010
+BRB          C3          C4      DOUBLE       y     1.374   0.012
+BRB          C4          C5      SINGLE       y     1.374   0.012
+BRB          C4         BR4      SINGLE       n     1.899   0.010
+BRB          C5          C6      DOUBLE       y     1.384   0.010
+BRB          C7          O1      SINGLE       n     1.420   0.014
+BRB          C2          H2      SINGLE       n     0.943   0.017
+BRB          C3          H3      SINGLE       n     0.941   0.014
+BRB          C5          H5      SINGLE       n     0.941   0.014
+BRB          C6          H6      SINGLE       n     0.943   0.017
+BRB          C7         H71      SINGLE       n     0.979   0.018
+BRB          C7         H72      SINGLE       n     0.979   0.018
+BRB          O1         HO1      SINGLE       n     0.849   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -101,31 +68,31 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BRB      BR4    C4     C3      120.000    3.000
- BRB      BR4    C4     C5      120.000    3.000
- BRB      C3     C4     C5      120.000    3.000
- BRB      C4     C3     H3      120.000    3.000
- BRB      C4     C3     C2      120.000    3.000
- BRB      H3     C3     C2      120.000    3.000
- BRB      C3     C2     H2      120.000    3.000
- BRB      C3     C2     C1      120.000    3.000
- BRB      H2     C2     C1      120.000    3.000
- BRB      C4     C5     H5      120.000    3.000
- BRB      C4     C5     C6      120.000    3.000
- BRB      H5     C5     C6      120.000    3.000
- BRB      C5     C6     H6      120.000    3.000
- BRB      C5     C6     C1      120.000    3.000
- BRB      H6     C6     C1      120.000    3.000
- BRB      C6     C1     C7      120.000    3.000
- BRB      C6     C1     C2      120.000    3.000
- BRB      C7     C1     C2      120.000    3.000
- BRB      C1     C7     H71     109.470    3.000
- BRB      C1     C7     H72     109.470    3.000
- BRB      C1     C7     O1      109.500    3.000
- BRB      H71    C7     H72     107.900    3.000
- BRB      H71    C7     O1      109.470    3.000
- BRB      H72    C7     O1      109.470    3.000
- BRB      C7     O1     HO1     109.470    3.000
+BRB          C2          C1          C6     118.589    1.50
+BRB          C2          C1          C7     120.705    1.50
+BRB          C6          C1          C7     120.705    1.50
+BRB          C1          C2          C3     121.116    1.50
+BRB          C1          C2          H2     119.487    1.50
+BRB          C3          C2          H2     119.397    1.50
+BRB          C2          C3          C4     118.929    1.50
+BRB          C2          C3          H3     120.563    1.50
+BRB          C4          C3          H3     120.507    1.50
+BRB          C3          C4          C5     121.331    1.50
+BRB          C3          C4         BR4     119.330    1.50
+BRB          C5          C4         BR4     119.330    1.50
+BRB          C4          C5          C6     118.929    1.50
+BRB          C4          C5          H5     120.507    1.50
+BRB          C6          C5          H5     120.563    1.50
+BRB          C1          C6          C5     121.116    1.50
+BRB          C1          C6          H6     119.487    1.50
+BRB          C5          C6          H6     119.397    1.50
+BRB          C1          C7          O1     111.861    1.83
+BRB          C1          C7         H71     109.239    1.50
+BRB          C1          C7         H72     109.239    1.50
+BRB          O1          C7         H71     109.107    1.50
+BRB          O1          C7         H72     109.107    1.50
+BRB         H71          C7         H72     107.986    1.50
+BRB          C7          O1         HO1     108.716    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -136,29 +103,45 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BRB      CONST_1  BR4    C4     C3     C2       180.000    0.000   0
- BRB      CONST_2  C4     C3     C2     C1         0.000    0.000   0
- BRB      CONST_3  BR4    C4     C5     C6       180.000    0.000   0
- BRB      CONST_4  C4     C5     C6     C1         0.000    0.000   0
- BRB      CONST_5  C5     C6     C1     C7       180.000    0.000   0
- BRB      CONST_6  C6     C1     C2     C3         0.000    0.000   0
- BRB      var_1    C6     C1     C7     O1       -90.242   20.000   2
- BRB      var_2    C1     C7     O1     HO1     -179.998   20.000   1
+BRB       const_sp2_sp2_3          C7          C1          C2          C3     180.000   10.00     2
+BRB              const_23          C7          C1          C6          C5     180.000   10.00     2
+BRB             sp2_sp3_2          C2          C1          C7          O1     -90.000   10.00     6
+BRB       const_sp2_sp2_5          C1          C2          C3          C4       0.000   10.00     2
+BRB              const_10          C2          C3          C4         BR4     180.000   10.00     2
+BRB              const_15         BR4          C4          C5          C6     180.000   10.00     2
+BRB              const_17          C4          C5          C6          C1       0.000   10.00     2
+BRB             sp3_sp3_1          C1          C7          O1         HO1     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BRB      plan-1    C1        0.020
- BRB      plan-1    C2        0.020
- BRB      plan-1    C6        0.020
- BRB      plan-1    C7        0.020
- BRB      plan-1    C3        0.020
- BRB      plan-1    C4        0.020
- BRB      plan-1    C5        0.020
- BRB      plan-1    H2        0.020
- BRB      plan-1    H3        0.020
- BRB      plan-1    BR4       0.020
- BRB      plan-1    H5        0.020
- BRB      plan-1    H6        0.020
-# ------------------------------------------------------
+BRB    plan-1         BR4   0.020
+BRB    plan-1          C1   0.020
+BRB    plan-1          C2   0.020
+BRB    plan-1          C3   0.020
+BRB    plan-1          C4   0.020
+BRB    plan-1          C5   0.020
+BRB    plan-1          C6   0.020
+BRB    plan-1          C7   0.020
+BRB    plan-1          H2   0.020
+BRB    plan-1          H3   0.020
+BRB    plan-1          H5   0.020
+BRB    plan-1          H6   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BRB SMILES           ACDLabs              10.04 "Brc1ccc(cc1)CO"
+BRB SMILES_CANONICAL CACTVS               3.341 "OCc1ccc(Br)cc1"
+BRB SMILES           CACTVS               3.341 "OCc1ccc(Br)cc1"
+BRB SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1cc(ccc1CO)Br"
+BRB SMILES           "OpenEye OEToolkits" 1.5.0 "c1cc(ccc1CO)Br"
+BRB InChI            InChI                1.03  "InChI=1S/C7H7BrO/c8-7-3-1-6(5-9)2-4-7/h1-4,9H,5H2"
+BRB InChIKey         InChI                1.03  VEDDBHYQWFOITD-UHFFFAOYSA-N
+BRB ?                acedrg               202         "dictionary generator"                  
+BRB ?                acedrg_database      11          "data source"                           
+BRB ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BRB ?                refmac5              5.8.0189    "optimization tool"                     

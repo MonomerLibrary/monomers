@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CNR      CNR '(2S)-2-CHLOROPROPANOIC ACID         ' non-polymer        10   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+CNR     CNR      "(2S)-2-CHLOROPROPANOIC ACID"     NON-POLYMER     10     6     .     
 #
 data_comp_CNR
 #
@@ -28,52 +17,37 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CNR           O1B    O    OC       -0.500      0.000    0.000    0.000
- CNR           C1     C    C         0.000     -0.884    0.092   -0.880
- CNR           O1A    O    OC       -0.500     -0.814   -0.520   -1.969
- CNR           C2     C    CH1       0.000     -2.010    1.002   -0.444
- CNR           H2     H    H         0.000     -1.590    1.989   -0.206
- CNR           CL     CL   CL        0.000     -3.159    1.183   -1.801
- CNR           C3     C    CH3       0.000     -2.763    0.488    0.775
- CNR           H33    H    H         0.000     -3.551    1.155    1.009
- CNR           H32    H    H         0.000     -3.161   -0.470    0.565
- CNR           H31    H    H         0.000     -2.099    0.423    1.597
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- CNR      O1B    n/a    C1     START
- CNR      C1     O1B    C2     .
- CNR      O1A    C1     .      .
- CNR      C2     C1     C3     .
- CNR      H2     C2     .      .
- CNR      CL     C2     .      .
- CNR      C3     C2     H31    .
- CNR      H33    C3     .      .
- CNR      H32    C3     .      .
- CNR      H31    C3     .      END
+CNR     C1      C       C       0       -17.427     54.355      21.801      
+CNR     C2      C       CH1     0       -18.048     55.184      22.911      
+CNR     C3      C       CH3     0       -19.538     55.336      22.824      
+CNR     CL      CL      CL      0       -17.303     56.820      22.909      
+CNR     O1A     O       O       0       -17.039     53.201      22.081      
+CNR     O1B     O       OC      -1      -17.348     54.880      20.673      
+CNR     H2      H       H       0       -17.834     54.747      23.774      
+CNR     H31     H       H       0       -19.853     55.877      23.563      
+CNR     H32     H       H       0       -19.956     54.464      22.864      
+CNR     H33     H       H       0       -19.773     55.765      21.989      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- CNR      C2     C1        single      1.500    0.020
- CNR      O1A    C1        deloc       1.250    0.020
- CNR      C1     O1B       deloc       1.250    0.020
- CNR      C3     C2        single      1.524    0.020
- CNR      CL     C2        single      1.790    0.020
- CNR      H2     C2        single      1.099    0.020
- CNR      H31    C3        single      1.059    0.020
- CNR      H32    C3        single      1.059    0.020
- CNR      H33    C3        single      1.059    0.020
+CNR          C1          C2      SINGLE       n     1.519   0.012
+CNR          C1         O1A      DOUBLE       n     1.247   0.019
+CNR          C1         O1B      SINGLE       n     1.247   0.019
+CNR          C2          C3      SINGLE       n     1.505   0.020
+CNR          C2          CL      SINGLE       n     1.800   0.018
+CNR          C2          H2      SINGLE       n     0.990   0.016
+CNR          C3         H31      SINGLE       n     0.968   0.020
+CNR          C3         H32      SINGLE       n     0.968   0.020
+CNR          C3         H33      SINGLE       n     0.968   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -81,21 +55,21 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- CNR      O1B    C1     O1A     123.000    3.000
- CNR      O1B    C1     C2      118.500    3.000
- CNR      O1A    C1     C2      118.500    3.000
- CNR      C1     C2     H2      108.810    3.000
- CNR      C1     C2     CL      109.470    3.000
- CNR      C1     C2     C3      109.470    3.000
- CNR      H2     C2     CL      109.470    3.000
- CNR      H2     C2     C3      108.340    3.000
- CNR      CL     C2     C3      109.500    3.000
- CNR      C2     C3     H33     109.470    3.000
- CNR      C2     C3     H32     109.470    3.000
- CNR      C2     C3     H31     109.470    3.000
- CNR      H33    C3     H32     109.470    3.000
- CNR      H33    C3     H31     109.470    3.000
- CNR      H32    C3     H31     109.470    3.000
+CNR          C2          C1         O1A     117.429    2.33
+CNR          C2          C1         O1B     117.429    2.33
+CNR         O1A          C1         O1B     125.142    1.75
+CNR          C1          C2          C3     116.743    3.00
+CNR          C1          C2          CL     110.491    2.68
+CNR          C1          C2          H2     108.627    1.50
+CNR          C3          C2          CL     110.334    2.69
+CNR          C3          C2          H2     109.085    1.50
+CNR          CL          C2          H2     109.286    1.50
+CNR          C2          C3         H31     109.468    1.50
+CNR          C2          C3         H32     109.468    1.50
+CNR          C2          C3         H33     109.468    1.50
+CNR         H31          C3         H32     108.988    2.61
+CNR         H31          C3         H33     108.988    2.61
+CNR         H32          C3         H33     108.988    2.61
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -106,8 +80,8 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CNR      var_1    O1B    C1     C2     C3       -63.246   20.000   3
- CNR      var_2    C1     C2     C3     H31       61.638   20.000   3
+CNR             sp2_sp3_1         O1A          C1          C2          C3       0.000   10.00     6
+CNR             sp3_sp3_1          C1          C2          C3         H31     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -116,14 +90,30 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- CNR      chir_01  C2     C1     C3     CL        positiv
+CNR    chir_1    C2    CL    C1    C3    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- CNR      plan-1    C1        0.020
- CNR      plan-1    C2        0.020
- CNR      plan-1    O1A       0.020
- CNR      plan-1    O1B       0.020
-# ------------------------------------------------------
+CNR    plan-1          C1   0.020
+CNR    plan-1          C2   0.020
+CNR    plan-1         O1A   0.020
+CNR    plan-1         O1B   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+CNR SMILES           ACDLabs              10.04 "ClC(C(=O)O)C"
+CNR SMILES_CANONICAL CACTVS               3.341 "C[C@H](Cl)C(O)=O"
+CNR SMILES           CACTVS               3.341 "C[CH](Cl)C(O)=O"
+CNR SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C[C@@H](C(=O)O)Cl"
+CNR SMILES           "OpenEye OEToolkits" 1.5.0 "CC(C(=O)O)Cl"
+CNR InChI            InChI                1.03  "InChI=1S/C3H5ClO2/c1-2(4)3(5)6/h2H,1H3,(H,5,6)/t2-/m0/s1"
+CNR InChIKey         InChI                1.03  GAWAYYRQGQZKCR-REOHCLBHSA-N
+CNR ?                acedrg               202         "dictionary generator"                  
+CNR ?                acedrg_database      11          "data source"                           
+CNR ?                rdkit                2017.03.2   "Chemoinformatics tool"
+CNR ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SBE      SBE '1,3,2-DIOXABOROLAN-2-OL             ' non-polymer        11   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+SBE     SBE      1,3,2-DIOXABOROLAN-2-OL     NON-POLYMER     11     6     .     
 #
 data_comp_SBE
 #
@@ -28,57 +17,40 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SBE           OE3    O    OH1       0.000      0.000    0.000    0.000
- SBE           HE3    H    H         0.000      0.757    0.083   -0.567
- SBE           BD     B    B         0.000     -1.289    0.075   -0.590
- SBE           OE2    O    O2        0.000     -1.553    0.273   -1.978
- SBE           CZ2    C    CH2       0.000     -2.869   -0.300   -2.188
- SBE           HZ22   H    H         0.000     -2.854   -1.386   -2.302
- SBE           HZ23   H    H         0.000     -3.405    0.146   -3.029
- SBE           CZ1    C    CH2       0.000     -3.582    0.072   -0.865
- SBE           HZ13   H    H         0.000     -4.382   -0.625   -0.609
- SBE           HZ12   H    H         0.000     -3.977    1.090   -0.873
- SBE           OE1    O    O2        0.000     -2.524   -0.027    0.110
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- SBE      OE3    n/a    BD     START
- SBE      HE3    OE3    .      .
- SBE      BD     OE3    OE2    .
- SBE      OE2    BD     CZ2    .
- SBE      CZ2    OE2    CZ1    .
- SBE      HZ22   CZ2    .      .
- SBE      HZ23   CZ2    .      .
- SBE      CZ1    CZ2    OE1    .
- SBE      HZ13   CZ1    .      .
- SBE      HZ12   CZ1    .      .
- SBE      OE1    CZ1    .      END
- SBE      BD     OE1    .    ADD
+SBE     BD      B       B       0       36.131      26.629      7.842       
+SBE     OE1     O       O2      0       37.331      26.053      7.532       
+SBE     OE2     O       O2      0       35.326      26.677      6.738       
+SBE     OE3     O       OH1     0       35.524      25.918      8.815       
+SBE     CZ1     C       CH2     0       37.121      25.229      6.369       
+SBE     CZ2     C       CH2     0       35.774      25.644      5.839       
+SBE     HE3     H       H       0       34.923      26.393      9.180       
+SBE     HZ12    H       H       0       37.120      24.275      6.609       
+SBE     HZ13    H       H       0       37.822      25.385      5.696       
+SBE     HZ22    H       H       0       35.854      25.989      4.920       
+SBE     HZ23    H       H       0       35.151      24.883      5.839       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- SBE      BD     OE1       single      1.434    0.020
- SBE      OE2    BD        single      1.434    0.020
- SBE      BD     OE3       single      1.535    0.020
- SBE      OE1    CZ1       single      1.426    0.020
- SBE      CZ2    OE2       single      1.426    0.020
- SBE      HE3    OE3       single      0.967    0.020
- SBE      CZ1    CZ2       single      1.524    0.020
- SBE      HZ12   CZ1       single      1.092    0.020
- SBE      HZ13   CZ1       single      1.092    0.020
- SBE      HZ22   CZ2       single      1.092    0.020
- SBE      HZ23   CZ2       single      1.092    0.020
+SBE          BD         OE1      SINGLE       n     1.367   0.010
+SBE          BD         OE2      SINGLE       n     1.367   0.010
+SBE          BD         OE3      SINGLE       n     1.349   0.010
+SBE         OE1         CZ1      SINGLE       n     1.441   0.011
+SBE         OE2         CZ2      SINGLE       n     1.441   0.011
+SBE         CZ1         CZ2      SINGLE       n     1.508   0.020
+SBE         OE3         HE3      SINGLE       n     0.849   0.020
+SBE         CZ1        HZ12      SINGLE       n     0.984   0.010
+SBE         CZ1        HZ13      SINGLE       n     0.984   0.010
+SBE         CZ2        HZ22      SINGLE       n     0.984   0.010
+SBE         CZ2        HZ23      SINGLE       n     0.984   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -86,24 +58,24 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SBE      HE3    OE3    BD      120.000    3.000
- SBE      OE3    BD     OE2     120.000    3.000
- SBE      OE3    BD     OE1     120.000    3.000
- SBE      OE2    BD     OE1     120.000    3.000
- SBE      BD     OE2    CZ2     120.000    3.000
- SBE      OE2    CZ2    HZ22    109.470    3.000
- SBE      OE2    CZ2    HZ23    109.470    3.000
- SBE      OE2    CZ2    CZ1     109.470    3.000
- SBE      HZ22   CZ2    HZ23    107.900    3.000
- SBE      HZ22   CZ2    CZ1     109.470    3.000
- SBE      HZ23   CZ2    CZ1     109.470    3.000
- SBE      CZ2    CZ1    HZ13    109.470    3.000
- SBE      CZ2    CZ1    HZ12    109.470    3.000
- SBE      CZ2    CZ1    OE1     109.470    3.000
- SBE      HZ13   CZ1    HZ12    107.900    3.000
- SBE      HZ13   CZ1    OE1     109.470    3.000
- SBE      HZ12   CZ1    OE1     109.470    3.000
- SBE      CZ1    OE1    BD      120.000    3.000
+SBE         OE1          BD         OE2     109.471    3.00
+SBE         OE1          BD         OE3     109.471    3.00
+SBE         OE2          BD         OE3     109.471    3.00
+SBE          BD         OE1         CZ1     107.105    1.50
+SBE          BD         OE2         CZ2     107.105    1.50
+SBE          BD         OE3         HE3     109.471    3.00
+SBE         OE1         CZ1         CZ2     105.156    2.45
+SBE         OE1         CZ1        HZ12     110.920    1.50
+SBE         OE1         CZ1        HZ13     110.920    1.50
+SBE         CZ2         CZ1        HZ12     110.612    1.50
+SBE         CZ2         CZ1        HZ13     110.612    1.50
+SBE        HZ12         CZ1        HZ13     108.757    1.50
+SBE         OE2         CZ2         CZ1     105.156    2.45
+SBE         OE2         CZ2        HZ22     110.920    1.50
+SBE         OE2         CZ2        HZ23     110.920    1.50
+SBE         CZ1         CZ2        HZ22     110.612    1.50
+SBE         CZ1         CZ2        HZ23     110.612    1.50
+SBE        HZ22         CZ2        HZ23     108.757    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -114,10 +86,26 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SBE      var_1    HE3    OE3    BD     OE2       -0.300   20.000   1
- SBE      var_2    OE3    BD     OE1    CZ1      180.000   20.000   1
- SBE      var_3    OE3    BD     OE2    CZ2      150.000   20.000   1
- SBE      var_4    BD     OE2    CZ2    CZ1       30.000   20.000   1
- SBE      var_5    OE2    CZ2    CZ1    OE1      -30.000   20.000   3
- SBE      var_6    CZ2    CZ1    OE1    BD        30.000   20.000   1
-# ------------------------------------------------------
+SBE             sp3_sp3_2         OE3          BD         OE1         CZ1     -60.000   10.00     3
+SBE            sp3_sp3_19         OE3          BD         OE2         CZ2      60.000   10.00     3
+SBE            sp3_sp3_20         OE1          BD         OE3         HE3     180.000   10.00     3
+SBE             sp3_sp3_3         CZ2         CZ1         OE1          BD     -60.000   10.00     3
+SBE            sp3_sp3_15         CZ1         CZ2         OE2          BD     -60.000   10.00     3
+SBE             sp3_sp3_6         OE1         CZ1         CZ2         OE2      60.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+SBE SMILES           ACDLabs              10.04 OB1OCCO1
+SBE SMILES_CANONICAL CACTVS               3.341 OB1OCCO1
+SBE SMILES           CACTVS               3.341 OB1OCCO1
+SBE SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "B1(OCCO1)O"
+SBE SMILES           "OpenEye OEToolkits" 1.5.0 "B1(OCCO1)O"
+SBE InChI            InChI                1.03  InChI=1S/C2H5BO3/c4-3-5-1-2-6-3/h4H,1-2H2
+SBE InChIKey         InChI                1.03  ZBEDLGKSWBORBS-UHFFFAOYSA-N
+SBE ?                acedrg               202         "dictionary generator"                  
+SBE ?                acedrg_database      11          "data source"                           
+SBE ?                rdkit                2017.03.2   "Chemoinformatics tool"
+SBE ?                refmac5              5.8.0189    "optimization tool"                     

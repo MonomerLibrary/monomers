@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NTA      NTA 'NITRILOTRIACETIC ACID               ' non-polymer        19  13 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+NTA     NTA      "NITRILOTRIACETIC ACID"     NON-POLYMER     19     13     .     
 #
 data_comp_NTA
 #
@@ -28,79 +17,55 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- NTA           O5     O    OC       -0.500      0.000    0.000    0.000
- NTA           C3     C    C         0.000     -0.588   -0.873   -0.675
- NTA           O4     O    OC       -0.500      0.022   -1.906   -1.031
- NTA           C2     C    CH2       0.000     -2.031   -0.679   -1.062
- NTA           H21    H    H         0.000     -2.608   -1.559   -0.769
- NTA           H22    H    H         0.000     -2.102   -0.544   -2.144
- NTA           N1     N    NT        0.000     -2.566    0.507   -0.383
- NTA           C6     C    CH2       0.000     -3.787    0.893   -1.103
- NTA           H61    H    H         0.000     -4.283    1.706   -0.568
- NTA           H62    H    H         0.000     -4.459    0.035   -1.164
- NTA           C7     C    C         0.000     -3.426    1.350   -2.492
- NTA           O9     O    OC       -0.500     -2.230    1.355   -2.858
- NTA           O8     O    OC       -0.500     -4.322    1.726   -3.280
- NTA           C10    C    CH2       0.000     -2.986    0.073    0.956
- NTA           H101   H    H         0.000     -2.174   -0.481    1.431
- NTA           H102   H    H         0.000     -3.863   -0.572    0.870
- NTA           C11    C    C         0.000     -3.328    1.279    1.791
- NTA           O12    O    OC       -0.500     -3.664    1.137    2.988
- NTA           O13    O    OC       -0.500     -3.274    2.423    1.289
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- NTA      O5     n/a    C3     START
- NTA      C3     O5     C2     .
- NTA      O4     C3     .      .
- NTA      C2     C3     N1     .
- NTA      H21    C2     .      .
- NTA      H22    C2     .      .
- NTA      N1     C2     C10    .
- NTA      C6     N1     C7     .
- NTA      H61    C6     .      .
- NTA      H62    C6     .      .
- NTA      C7     C6     O8     .
- NTA      O9     C7     .      .
- NTA      O8     C7     .      .
- NTA      C10    N1     C11    .
- NTA      H101   C10    .      .
- NTA      H102   C10    .      .
- NTA      C11    C10    O13    .
- NTA      O12    C11    .      .
- NTA      O13    C11    .      END
+NTA     N1      N       NT      0       -0.001      -0.058      -0.137      
+NTA     C6      C       CH2     0       -0.084      1.131       -1.001      
+NTA     C10     C       CH2     0       -1.163      -0.959      -0.196      
+NTA     C2      C       CH2     0       1.311       -0.724      -0.111      
+NTA     C7      C       C       0       0.502       2.383       -0.348      
+NTA     O8      O       OC      -1      0.029       2.719       0.756       
+NTA     O9      O       O       0       1.410       2.980       -0.961      
+NTA     C3      C       C       0       1.707       -1.201      1.286       
+NTA     C11     C       C       0       -2.345      -0.473      0.644       
+NTA     O12     O       OC      -1      -2.257      -0.615      1.880       
+NTA     O13     O       O       0       -3.311      0.030       0.036       
+NTA     O4      O       OC      -1      1.282       -2.315      1.649       
+NTA     O5      O       O       0       2.429       -0.442      1.963       
+NTA     H61     H       H       0       -1.013      1.308       -1.226      
+NTA     H62     H       H       0       0.390       0.954       -1.831      
+NTA     H101    H       H       0       -0.907      -1.843      0.118       
+NTA     H102    H       H       0       -1.449      -1.047      -1.121      
+NTA     H21     H       H       0       1.997       -0.116      -0.435      
+NTA     H22     H       H       0       1.293       -1.490      -0.709      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- NTA      C6     N1        single      1.469    0.020
- NTA      C10    N1        single      1.469    0.020
- NTA      N1     C2        single      1.469    0.020
- NTA      C7     C6        single      1.510    0.020
- NTA      H61    C6        single      1.092    0.020
- NTA      H62    C6        single      1.092    0.020
- NTA      C11    C10       single      1.510    0.020
- NTA      H101   C10       single      1.092    0.020
- NTA      H102   C10       single      1.092    0.020
- NTA      C2     C3        single      1.510    0.020
- NTA      H21    C2        single      1.092    0.020
- NTA      H22    C2        single      1.092    0.020
- NTA      O8     C7        deloc       1.250    0.020
- NTA      O9     C7        deloc       1.250    0.020
- NTA      O4     C3        deloc       1.250    0.020
- NTA      C3     O5        deloc       1.250    0.020
- NTA      O12    C11       deloc       1.250    0.020
- NTA      O13    C11       deloc       1.250    0.020
+NTA          N1          C6      SINGLE       n     1.459   0.015
+NTA          N1         C10      SINGLE       n     1.459   0.015
+NTA          N1          C2      SINGLE       n     1.459   0.015
+NTA          C6          C7      SINGLE       n     1.527   0.012
+NTA         C10         C11      SINGLE       n     1.527   0.012
+NTA          C2          C3      SINGLE       n     1.527   0.012
+NTA          C7          O8      SINGLE       n     1.247   0.019
+NTA          C7          O9      DOUBLE       n     1.247   0.019
+NTA          C3          O4      SINGLE       n     1.247   0.019
+NTA          C3          O5      DOUBLE       n     1.247   0.019
+NTA         C11         O12      SINGLE       n     1.247   0.019
+NTA         C11         O13      DOUBLE       n     1.247   0.019
+NTA          C6         H61      SINGLE       n     0.971   0.020
+NTA          C6         H62      SINGLE       n     0.971   0.020
+NTA         C10        H101      SINGLE       n     0.971   0.020
+NTA         C10        H102      SINGLE       n     0.971   0.020
+NTA          C2         H21      SINGLE       n     0.971   0.020
+NTA          C2         H22      SINGLE       n     0.971   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -108,36 +73,36 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- NTA      O5     C3     O4      123.000    3.000
- NTA      O5     C3     C2      118.500    3.000
- NTA      O4     C3     C2      118.500    3.000
- NTA      C3     C2     H21     109.470    3.000
- NTA      C3     C2     H22     109.470    3.000
- NTA      C3     C2     N1      109.500    3.000
- NTA      H21    C2     H22     107.900    3.000
- NTA      H21    C2     N1      109.470    3.000
- NTA      H22    C2     N1      109.470    3.000
- NTA      C2     N1     C6      109.470    3.000
- NTA      C2     N1     C10     109.470    3.000
- NTA      C6     N1     C10     109.470    3.000
- NTA      N1     C6     H61     109.470    3.000
- NTA      N1     C6     H62     109.470    3.000
- NTA      N1     C6     C7      109.500    3.000
- NTA      H61    C6     H62     107.900    3.000
- NTA      H61    C6     C7      109.470    3.000
- NTA      H62    C6     C7      109.470    3.000
- NTA      C6     C7     O9      118.500    3.000
- NTA      C6     C7     O8      118.500    3.000
- NTA      O9     C7     O8      123.000    3.000
- NTA      N1     C10    H101    109.470    3.000
- NTA      N1     C10    H102    109.470    3.000
- NTA      N1     C10    C11     109.500    3.000
- NTA      H101   C10    H102    107.900    3.000
- NTA      H101   C10    C11     109.470    3.000
- NTA      H102   C10    C11     109.470    3.000
- NTA      C10    C11    O12     118.500    3.000
- NTA      C10    C11    O13     118.500    3.000
- NTA      O12    C11    O13     123.000    3.000
+NTA          C6          N1         C10     113.464    1.79
+NTA          C6          N1          C2     113.464    1.79
+NTA         C10          N1          C2     113.464    1.79
+NTA          N1          C6          C7     112.134    2.59
+NTA          N1          C6         H61     108.627    1.50
+NTA          N1          C6         H62     108.627    1.50
+NTA          C7          C6         H61     108.544    1.50
+NTA          C7          C6         H62     108.544    1.50
+NTA         H61          C6         H62     107.487    1.50
+NTA          N1         C10         C11     112.134    2.59
+NTA          N1         C10        H101     108.627    1.50
+NTA          N1         C10        H102     108.627    1.50
+NTA         C11         C10        H101     108.544    1.50
+NTA         C11         C10        H102     108.544    1.50
+NTA        H101         C10        H102     107.487    1.50
+NTA          N1          C2          C3     112.134    2.59
+NTA          N1          C2         H21     108.627    1.50
+NTA          N1          C2         H22     108.627    1.50
+NTA          C3          C2         H21     108.544    1.50
+NTA          C3          C2         H22     108.544    1.50
+NTA         H21          C2         H22     107.487    1.50
+NTA          C6          C7          O8     117.146    1.78
+NTA          C6          C7          O9     117.146    1.78
+NTA          O8          C7          O9     125.708    1.50
+NTA          C2          C3          O4     117.146    1.78
+NTA          C2          C3          O5     117.146    1.78
+NTA          O4          C3          O5     125.708    1.50
+NTA         C10         C11         O12     117.146    1.78
+NTA         C10         C11         O13     117.146    1.78
+NTA         O12         C11         O13     125.708    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -148,36 +113,43 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NTA      var_1    O5     C3     C2     N1        -7.599   20.000   3
- NTA      var_2    C3     C2     N1     C10      -84.033   20.000   1
- NTA      var_3    C2     N1     C6     C7       -66.187   20.000   1
- NTA      var_4    N1     C6     C7     O8      -179.977   20.000   3
- NTA      var_5    C2     N1     C10    C11      170.487   20.000   1
- NTA      var_6    N1     C10    C11    O13        2.546   20.000   3
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- NTA      chir_01  N1     C6     C10    C2        negativ
+NTA             sp3_sp3_1          C7          C6          N1         C10     180.000   10.00     3
+NTA             sp3_sp3_7         C11         C10          N1          C6     180.000   10.00     3
+NTA            sp3_sp3_13          C3          C2          N1          C6     180.000   10.00     3
+NTA             sp2_sp3_2          O8          C7          C6          N1     120.000   10.00     6
+NTA             sp2_sp3_8         O12         C11         C10          N1     120.000   10.00     6
+NTA            sp2_sp3_14          O4          C3          C2          N1     120.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- NTA      plan-1    C7        0.020
- NTA      plan-1    C6        0.020
- NTA      plan-1    O8        0.020
- NTA      plan-1    O9        0.020
- NTA      plan-2    C3        0.020
- NTA      plan-2    C2        0.020
- NTA      plan-2    O4        0.020
- NTA      plan-2    O5        0.020
- NTA      plan-3    C11       0.020
- NTA      plan-3    C10       0.020
- NTA      plan-3    O12       0.020
- NTA      plan-3    O13       0.020
-# ------------------------------------------------------
+NTA    plan-1          C6   0.020
+NTA    plan-1          C7   0.020
+NTA    plan-1          O8   0.020
+NTA    plan-1          O9   0.020
+NTA    plan-2          C2   0.020
+NTA    plan-2          C3   0.020
+NTA    plan-2          O4   0.020
+NTA    plan-2          O5   0.020
+NTA    plan-3         C10   0.020
+NTA    plan-3         C11   0.020
+NTA    plan-3         O12   0.020
+NTA    plan-3         O13   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+NTA SMILES           ACDLabs              10.04 "O=C(O)CN(CC(=O)O)CC(=O)O"
+NTA SMILES_CANONICAL CACTVS               3.341 "OC(=O)CN(CC(O)=O)CC(O)=O"
+NTA SMILES           CACTVS               3.341 "OC(=O)CN(CC(O)=O)CC(O)=O"
+NTA SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(C(=O)O)N(CC(=O)O)CC(=O)O"
+NTA SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(=O)O)N(CC(=O)O)CC(=O)O"
+NTA InChI            InChI                1.03  "InChI=1S/C6H9NO6/c8-4(9)1-7(2-5(10)11)3-6(12)13/h1-3H2,(H,8,9)(H,10,11)(H,12,13)"
+NTA InChIKey         InChI                1.03  MGFYIUFZLHCRTH-UHFFFAOYSA-N
+NTA ?                acedrg               202         "dictionary generator"                  
+NTA ?                acedrg_database      11          "data source"                           
+NTA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+NTA ?                refmac5              5.8.0189    "optimization tool"                     

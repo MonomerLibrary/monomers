@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-TMP      TMP 'THYMIDINE-5'-PHOSPHATE              ' non-polymer        34  21 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+TMP     TMP      "THYMIDINE-5'-PHOSPHATE"     NON-POLYMER     34     21     .     
 #
 data_comp_TMP
 #
@@ -28,128 +17,87 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- TMP           O4     O    O         0.000      0.000    0.000    0.000
- TMP           C4     C    CR6       0.000     -1.127   -0.370   -0.275
- TMP           N3     N    NR16      0.000     -2.118   -0.263    0.632
- TMP           HN3    H    H         0.000     -1.920    0.136    1.571
- TMP           C2     C    CR6       0.000     -3.364   -0.672    0.327
- TMP           O2     O    O         0.000     -4.248   -0.573    1.157
- TMP           C5     C    CR6       0.000     -1.410   -0.908   -1.554
- TMP           C5M    C    CH3       0.000     -0.320   -1.034   -2.587
- TMP           H53    H    H         0.000      0.611   -1.178   -2.103
- TMP           H52    H    H         0.000     -0.523   -1.862   -3.215
- TMP           H51    H    H         0.000     -0.282   -0.150   -3.170
- TMP           C6     C    CR16      0.000     -2.668   -1.311   -1.833
- TMP           H6     H    H         0.000     -2.902   -1.728   -2.805
- TMP           N1     N    NR6       0.000     -3.645   -1.189   -0.884
- TMP           "C1'"  C    CH1       0.000     -5.010   -1.627   -1.185
- TMP           "H1'"  H    H         0.000     -5.081   -1.925   -2.241
- TMP           "O4'"  O    O2        0.000     -5.936   -0.561   -0.915
- TMP           "C2'"  C    CH2       0.000     -5.393   -2.813   -0.280
- TMP           "H2'1" H    H         0.000     -4.604   -3.053    0.435
- TMP           "H2'2" H    H         0.000     -5.643   -3.705   -0.858
- TMP           "C3'"  C    CH1       0.000     -6.649   -2.320    0.480
- TMP           "H3'"  H    H         0.000     -6.379   -1.936    1.474
- TMP           "O3'"  O    OH1       0.000     -7.624   -3.359    0.583
- TMP           "HO3'" H    H         0.000     -7.254   -4.100    1.082
- TMP           "C4'"  C    CH1       0.000     -7.154   -1.176   -0.436
- TMP           "H4'"  H    H         0.000     -7.737   -1.582   -1.274
- TMP           "C5'"  C    CH2       0.000     -7.989   -0.174    0.364
- TMP           "H5'1" H    H         0.000     -7.354    0.319    1.103
- TMP           "H5'2" H    H         0.000     -8.798   -0.701    0.874
- TMP           "O5'"  O    O2        0.000     -8.538    0.804   -0.522
- TMP           P      P    P         0.000     -9.399    1.821    0.382
- TMP           O1P    O    OP       -0.666     -8.527    2.378    1.486
- TMP           O2P    O    OP       -0.666     -9.909    2.954   -0.481
- TMP           O3P    O    OP       -0.666    -10.572    1.083    0.991
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- TMP      O4     n/a    C4     START
- TMP      C4     O4     C5     .
- TMP      N3     C4     C2     .
- TMP      HN3    N3     .      .
- TMP      C2     N3     O2     .
- TMP      O2     C2     .      .
- TMP      C5     C4     C6     .
- TMP      C5M    C5     H51    .
- TMP      H53    C5M    .      .
- TMP      H52    C5M    .      .
- TMP      H51    C5M    .      .
- TMP      C6     C5     N1     .
- TMP      H6     C6     .      .
- TMP      N1     C6     "C1'"  .
- TMP      "C1'"  N1     "C2'"  .
- TMP      "H1'"  "C1'"  .      .
- TMP      "O4'"  "C1'"  .      .
- TMP      "C2'"  "C1'"  "C3'"  .
- TMP      "H2'1" "C2'"  .      .
- TMP      "H2'2" "C2'"  .      .
- TMP      "C3'"  "C2'"  "C4'"  .
- TMP      "H3'"  "C3'"  .      .
- TMP      "O3'"  "C3'"  "HO3'" .
- TMP      "HO3'" "O3'"  .      .
- TMP      "C4'"  "C3'"  "C5'"  .
- TMP      "H4'"  "C4'"  .      .
- TMP      "C5'"  "C4'"  "O5'"  .
- TMP      "H5'1" "C5'"  .      .
- TMP      "H5'2" "C5'"  .      .
- TMP      "O5'"  "C5'"  P      .
- TMP      P      "O5'"  O3P    .
- TMP      O1P    P      .      .
- TMP      O2P    P      .      .
- TMP      O3P    P      .      END
- TMP      "C4'"  "O4'"  .    ADD
- TMP      N1     C2     .    ADD
+TMP     P       P       P       0       44.953      4.200       26.821      
+TMP     O1P     O       O       0       46.020      4.077       27.893      
+TMP     O2P     O       OP      -1      45.041      5.503       26.049      
+TMP     O3P     O       OP      -1      43.558      3.916       27.343      
+TMP     "O5'"   O       O2      0       45.269      3.033       25.751      
+TMP     "C5'"   C       CH2     0       45.223      1.652       26.191      
+TMP     "C4'"   C       CH1     0       45.561      0.743       25.034      
+TMP     "O4'"   O       O2      0       44.588      0.927       23.980      
+TMP     "C3'"   C       CH1     0       46.941      0.975       24.410      
+TMP     "O3'"   O       OH1     0       47.658      -0.247      24.253      
+TMP     "C2'"   C       CH2     0       46.630      1.589       23.051      
+TMP     "C1'"   C       CH1     0       45.256      1.020       22.728      
+TMP     N1      N       NR6     0       44.427      1.861       21.805      
+TMP     C2      C       CR6     0       44.096      1.390       20.534      
+TMP     O2      O       O       0       44.436      0.297       20.091      
+TMP     N3      N       NR6     0       43.334      2.255       19.775      
+TMP     C4      C       CR6     0       42.876      3.515       20.135      
+TMP     O4      O       O       0       42.198      4.172       19.336      
+TMP     C5      C       CR6     0       43.254      3.952       21.467      
+TMP     C5M     C       CH3     0       42.805      5.303       21.943      
+TMP     C6      C       CR16    0       43.999      3.118       22.223      
+TMP     "H5'1"  H       H       0       44.319      1.437       26.529      
+TMP     "H5'2"  H       H       0       45.873      1.511       26.924      
+TMP     "H4'"   H       H       0       45.502      -0.189      25.354      
+TMP     "H3'"   H       H       0       47.466      1.608       24.960      
+TMP     "HO3'"  H       H       0       47.204      -0.801      23.795      
+TMP     "H2'1"  H       H       0       47.292      1.317       22.378      
+TMP     "H2'2"  H       H       0       46.614      2.568       23.101      
+TMP     "H1'"   H       H       0       45.366      0.103       22.364      
+TMP     HN3     H       H       0       43.115      1.960       18.958      
+TMP     H51     H       H       0       42.899      5.359       22.908      
+TMP     H52     H       H       0       41.874      5.441       21.704      
+TMP     H53     H       H       0       43.348      5.992       21.527      
+TMP     H6      H       H       0       44.250      3.405       23.094      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- TMP      O1P    P         deloc       1.510    0.020
- TMP      O2P    P         deloc       1.510    0.020
- TMP      O3P    P         deloc       1.510    0.020
- TMP      P      "O5'"     single      1.610    0.020
- TMP      "O5'"  "C5'"     single      1.426    0.020
- TMP      "C5'"  "C4'"     single      1.524    0.020
- TMP      "H5'1" "C5'"     single      1.092    0.020
- TMP      "H5'2" "C5'"     single      1.092    0.020
- TMP      "C4'"  "O4'"     single      1.426    0.020
- TMP      "C4'"  "C3'"     single      1.524    0.020
- TMP      "H4'"  "C4'"     single      1.099    0.020
- TMP      "O4'"  "C1'"     single      1.426    0.020
- TMP      "O3'"  "C3'"     single      1.432    0.020
- TMP      "C3'"  "C2'"     single      1.524    0.020
- TMP      "H3'"  "C3'"     single      1.099    0.020
- TMP      "HO3'" "O3'"     single      0.967    0.020
- TMP      "C2'"  "C1'"     single      1.524    0.020
- TMP      "H2'1" "C2'"     single      1.092    0.020
- TMP      "H2'2" "C2'"     single      1.092    0.020
- TMP      "C1'"  N1        single      1.465    0.020
- TMP      "H1'"  "C1'"     single      1.099    0.020
- TMP      N1     C2        single      1.410    0.020
- TMP      N1     C6        single      1.337    0.020
- TMP      O2     C2        double      1.250    0.020
- TMP      C2     N3        single      1.337    0.020
- TMP      N3     C4        single      1.337    0.020
- TMP      HN3    N3        single      1.040    0.020
- TMP      C4     O4        double      1.250    0.020
- TMP      C5     C4        single      1.487    0.020
- TMP      C5M    C5        single      1.506    0.020
- TMP      C6     C5        double      1.390    0.020
- TMP      H51    C5M       single      1.059    0.020
- TMP      H52    C5M       single      1.059    0.020
- TMP      H53    C5M       single      1.059    0.020
- TMP      H6     C6        single      1.083    0.020
+TMP           P         O1P      DOUBLE       n     1.517   0.019
+TMP           P         O2P      SINGLE       n     1.517   0.019
+TMP           P         O3P      SINGLE       n     1.517   0.019
+TMP           P       "O5'"      SINGLE       n     1.614   0.019
+TMP       "O5'"       "C5'"      SINGLE       n     1.450   0.017
+TMP       "C5'"       "C4'"      SINGLE       n     1.509   0.010
+TMP       "C4'"       "O4'"      SINGLE       n     1.445   0.010
+TMP       "C4'"       "C3'"      SINGLE       n     1.526   0.011
+TMP       "O4'"       "C1'"      SINGLE       n     1.422   0.010
+TMP       "C3'"       "O3'"      SINGLE       n     1.424   0.010
+TMP       "C3'"       "C2'"      SINGLE       n     1.522   0.010
+TMP       "C2'"       "C1'"      SINGLE       n     1.523   0.013
+TMP       "C1'"          N1      SINGLE       n     1.477   0.014
+TMP          N1          C2      SINGLE       y     1.379   0.010
+TMP          N1          C6      SINGLE       y     1.380   0.011
+TMP          C2          O2      DOUBLE       n     1.224   0.011
+TMP          C2          N3      SINGLE       y     1.373   0.010
+TMP          N3          C4      SINGLE       y     1.383   0.010
+TMP          C4          O4      DOUBLE       n     1.234   0.014
+TMP          C4          C5      SINGLE       y     1.446   0.010
+TMP          C5         C5M      SINGLE       n     1.500   0.010
+TMP          C5          C6      DOUBLE       y     1.343   0.011
+TMP       "C5'"      "H5'1"      SINGLE       n     0.989   0.020
+TMP       "C5'"      "H5'2"      SINGLE       n     0.989   0.020
+TMP       "C4'"       "H4'"      SINGLE       n     0.987   0.017
+TMP       "C3'"       "H3'"      SINGLE       n     0.988   0.019
+TMP       "O3'"      "HO3'"      SINGLE       n     0.849   0.020
+TMP       "C2'"      "H2'1"      SINGLE       n     0.982   0.020
+TMP       "C2'"      "H2'2"      SINGLE       n     0.982   0.020
+TMP       "C1'"       "H1'"      SINGLE       n     0.996   0.020
+TMP          N3         HN3      SINGLE       n     0.893   0.020
+TMP         C5M         H51      SINGLE       n     0.971   0.013
+TMP         C5M         H52      SINGLE       n     0.971   0.013
+TMP         C5M         H53      SINGLE       n     0.971   0.013
+TMP          C6          H6      SINGLE       n     0.951   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -157,69 +105,69 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- TMP      O4     C4     N3      120.000    3.000
- TMP      O4     C4     C5      120.000    3.000
- TMP      N3     C4     C5      120.000    3.000
- TMP      C4     N3     HN3     120.000    3.000
- TMP      C4     N3     C2      120.000    3.000
- TMP      HN3    N3     C2      120.000    3.000
- TMP      N3     C2     O2      120.000    3.000
- TMP      N3     C2     N1      120.000    3.000
- TMP      O2     C2     N1      120.000    3.000
- TMP      C4     C5     C5M     120.000    3.000
- TMP      C4     C5     C6      120.000    3.000
- TMP      C5M    C5     C6      120.000    3.000
- TMP      C5     C5M    H53     109.470    3.000
- TMP      C5     C5M    H52     109.470    3.000
- TMP      C5     C5M    H51     109.470    3.000
- TMP      H53    C5M    H52     109.470    3.000
- TMP      H53    C5M    H51     109.470    3.000
- TMP      H52    C5M    H51     109.470    3.000
- TMP      C5     C6     H6      120.000    3.000
- TMP      C5     C6     N1      120.000    3.000
- TMP      H6     C6     N1      120.000    3.000
- TMP      C6     N1     "C1'"   120.000    3.000
- TMP      C6     N1     C2      120.000    3.000
- TMP      "C1'"  N1     C2      120.000    3.000
- TMP      N1     "C1'"  "H1'"   109.470    3.000
- TMP      N1     "C1'"  "O4'"   109.470    3.000
- TMP      N1     "C1'"  "C2'"   109.470    3.000
- TMP      "H1'"  "C1'"  "O4'"   109.470    3.000
- TMP      "H1'"  "C1'"  "C2'"   108.340    3.000
- TMP      "O4'"  "C1'"  "C2'"   109.470    3.000
- TMP      "C1'"  "O4'"  "C4'"   111.800    3.000
- TMP      "C1'"  "C2'"  "H2'1"  109.470    3.000
- TMP      "C1'"  "C2'"  "H2'2"  109.470    3.000
- TMP      "C1'"  "C2'"  "C3'"   111.000    3.000
- TMP      "H2'1" "C2'"  "H2'2"  107.900    3.000
- TMP      "H2'1" "C2'"  "C3'"   109.470    3.000
- TMP      "H2'2" "C2'"  "C3'"   109.470    3.000
- TMP      "C2'"  "C3'"  "H3'"   108.340    3.000
- TMP      "C2'"  "C3'"  "O3'"   109.470    3.000
- TMP      "C2'"  "C3'"  "C4'"   111.000    3.000
- TMP      "H3'"  "C3'"  "O3'"   109.470    3.000
- TMP      "H3'"  "C3'"  "C4'"   108.340    3.000
- TMP      "O3'"  "C3'"  "C4'"   109.470    3.000
- TMP      "C3'"  "O3'"  "HO3'"  109.470    3.000
- TMP      "C3'"  "C4'"  "H4'"   108.340    3.000
- TMP      "C3'"  "C4'"  "C5'"   111.000    3.000
- TMP      "C3'"  "C4'"  "O4'"   109.470    3.000
- TMP      "H4'"  "C4'"  "C5'"   108.340    3.000
- TMP      "H4'"  "C4'"  "O4'"   109.470    3.000
- TMP      "C5'"  "C4'"  "O4'"   109.470    3.000
- TMP      "C4'"  "C5'"  "H5'1"  109.470    3.000
- TMP      "C4'"  "C5'"  "H5'2"  109.470    3.000
- TMP      "C4'"  "C5'"  "O5'"   109.470    3.000
- TMP      "H5'1" "C5'"  "H5'2"  107.900    3.000
- TMP      "H5'1" "C5'"  "O5'"   109.470    3.000
- TMP      "H5'2" "C5'"  "O5'"   109.470    3.000
- TMP      "C5'"  "O5'"  P       120.500    3.000
- TMP      "O5'"  P      O1P     108.200    3.000
- TMP      "O5'"  P      O2P     108.200    3.000
- TMP      "O5'"  P      O3P     108.200    3.000
- TMP      O1P    P      O2P     119.900    3.000
- TMP      O1P    P      O3P     119.900    3.000
- TMP      O2P    P      O3P     119.900    3.000
+TMP         O1P           P         O2P     112.864    1.69
+TMP         O1P           P         O3P     112.864    1.69
+TMP         O1P           P       "O5'"     105.808    2.07
+TMP         O2P           P         O3P     112.864    1.69
+TMP         O2P           P       "O5'"     105.808    2.07
+TMP         O3P           P       "O5'"     105.808    2.07
+TMP           P       "O5'"       "C5'"     118.783    1.50
+TMP       "O5'"       "C5'"       "C4'"     109.342    1.50
+TMP       "O5'"       "C5'"      "H5'1"     109.845    1.50
+TMP       "O5'"       "C5'"      "H5'2"     109.845    1.50
+TMP       "C4'"       "C5'"      "H5'1"     109.624    1.50
+TMP       "C4'"       "C5'"      "H5'2"     109.624    1.50
+TMP      "H5'1"       "C5'"      "H5'2"     108.472    1.50
+TMP       "C5'"       "C4'"       "O4'"     109.615    1.50
+TMP       "C5'"       "C4'"       "C3'"     114.866    1.63
+TMP       "C5'"       "C4'"       "H4'"     108.268    1.50
+TMP       "O4'"       "C4'"       "C3'"     105.770    1.50
+TMP       "O4'"       "C4'"       "H4'"     108.698    1.50
+TMP       "C3'"       "C4'"       "H4'"     109.069    1.50
+TMP       "C4'"       "O4'"       "C1'"     109.692    1.50
+TMP       "C4'"       "C3'"       "O3'"     110.527    2.37
+TMP       "C4'"       "C3'"       "C2'"     102.800    1.50
+TMP       "C4'"       "C3'"       "H3'"     110.775    1.50
+TMP       "O3'"       "C3'"       "C2'"     110.636    2.59
+TMP       "O3'"       "C3'"       "H3'"     110.713    1.50
+TMP       "C2'"       "C3'"       "H3'"     110.862    1.50
+TMP       "C3'"       "O3'"      "HO3'"     109.026    2.38
+TMP       "C3'"       "C2'"       "C1'"     102.834    1.50
+TMP       "C3'"       "C2'"      "H2'1"     111.310    1.50
+TMP       "C3'"       "C2'"      "H2'2"     111.310    1.50
+TMP       "C1'"       "C2'"      "H2'1"     111.187    1.50
+TMP       "C1'"       "C2'"      "H2'2"     111.187    1.50
+TMP      "H2'1"       "C2'"      "H2'2"     108.952    1.50
+TMP       "O4'"       "C1'"       "C2'"     106.308    1.50
+TMP       "O4'"       "C1'"          N1     107.584    1.50
+TMP       "O4'"       "C1'"       "H1'"     109.550    1.50
+TMP       "C2'"       "C1'"          N1     114.268    1.50
+TMP       "C2'"       "C1'"       "H1'"     109.741    1.50
+TMP          N1       "C1'"       "H1'"     109.342    1.50
+TMP       "C1'"          N1          C2     118.265    1.50
+TMP       "C1'"          N1          C6     120.492    1.50
+TMP          C2          N1          C6     121.243    1.50
+TMP          N1          C2          O2     122.872    1.50
+TMP          N1          C2          N3     114.786    1.50
+TMP          O2          C2          N3     122.342    1.50
+TMP          C2          N3          C4     127.106    1.50
+TMP          C2          N3         HN3     115.584    1.79
+TMP          C4          N3         HN3     117.311    1.81
+TMP          N3          C4          O4     119.787    1.50
+TMP          N3          C4          C5     115.265    1.50
+TMP          O4          C4          C5     124.948    1.50
+TMP          C4          C5         C5M     118.650    1.50
+TMP          C4          C5          C6     118.305    1.50
+TMP         C5M          C5          C6     123.045    1.50
+TMP          C5         C5M         H51     109.652    1.50
+TMP          C5         C5M         H52     109.652    1.50
+TMP          C5         C5M         H53     109.652    1.50
+TMP         H51         C5M         H52     109.348    1.50
+TMP         H51         C5M         H53     109.348    1.50
+TMP         H52         C5M         H53     109.348    1.50
+TMP          N1          C6          C5     123.296    1.50
+TMP          N1          C6          H6     117.926    1.56
+TMP          C5          C6          H6     118.779    1.68
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -230,23 +178,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TMP      CONST_1  O4     C4     N3     C2       180.000    0.000   0
- TMP      CONST_2  C4     N3     C2     O2       180.000    0.000   0
- TMP      CONST_3  O4     C4     C5     C6       180.000    0.000   0
- TMP      var_1    C4     C5     C5M    H51      -90.303   20.000   1
- TMP      CONST_4  C4     C5     C6     N1         0.000    0.000   0
- TMP      CONST_5  C5     C6     N1     "C1'"    180.000    0.000   0
- TMP      CONST_6  C6     N1     C2     N3         0.000    0.000   0
- TMP      var_2    C6     N1     "C1'"  "C2'"    115.273   20.000   1
- TMP      var_3    N1     "C1'"  "O4'"  "C4'"   -150.000   20.000   1
- TMP      var_4    N1     "C1'"  "C2'"  "C3'"    120.000   20.000   3
- TMP      var_5    "C1'"  "C2'"  "C3'"  "C4'"     30.000   20.000   3
- TMP      var_6    "C2'"  "C3'"  "O3'"  "HO3'"    61.506   20.000   1
- TMP      var_7    "C2'"  "C3'"  "C4'"  "C5'"   -150.000   20.000   3
- TMP      var_8    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
- TMP      var_9    "C3'"  "C4'"  "C5'"  "O5'"   -174.975   20.000   3
- TMP      var_10   "C4'"  "C5'"  "O5'"  P       -179.986   20.000   1
- TMP      var_11   "C5'"  "O5'"  P      O3P      -65.018   20.000   1
+TMP            sp3_sp3_25       "C5'"       "O5'"           P         O1P     180.000   10.00     3
+TMP             sp3_sp3_7       "O4'"       "C1'"       "C2'"       "C3'"      60.000   10.00     3
+TMP             sp2_sp3_1          C2          N1       "C1'"       "O4'"     150.000   10.00     6
+TMP       const_sp2_sp2_4          O2          C2          N1       "C1'"       0.000   10.00     2
+TMP              const_22          C5          C6          N1       "C1'"     180.000   10.00     2
+TMP       const_sp2_sp2_7          O2          C2          N3          C4     180.000   10.00     2
+TMP              const_11          O4          C4          N3          C2     180.000   10.00     2
+TMP              const_16          O4          C4          C5         C5M       0.000   10.00     2
+TMP             sp2_sp3_7          C4          C5         C5M         H51     150.000   10.00     6
+TMP              const_19         C5M          C5          C6          N1     180.000   10.00     2
+TMP            sp3_sp3_28       "C4'"       "C5'"       "O5'"           P     180.000   10.00     3
+TMP            sp3_sp3_31       "O4'"       "C4'"       "C5'"       "O5'"     180.000   10.00     3
+TMP             sp3_sp3_2       "C5'"       "C4'"       "O4'"       "C1'"     -60.000   10.00     3
+TMP            sp3_sp3_47       "O3'"       "C3'"       "C4'"       "C5'"      60.000   10.00     3
+TMP             sp3_sp3_4       "C2'"       "C1'"       "O4'"       "C4'"     -60.000   10.00     3
+TMP            sp3_sp3_17       "C1'"       "C2'"       "C3'"       "O3'"      60.000   10.00     3
+TMP            sp3_sp3_50       "C4'"       "C3'"       "O3'"      "HO3'"      60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -255,24 +203,40 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- TMP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
- TMP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
- TMP      chir_03  "C1'"  "O4'"  "C2'"  N1        positiv
+TMP    chir_1    "C4'"    "O4'"    "C3'"    "C5'"    negative
+TMP    chir_2    "C3'"    "O3'"    "C4'"    "C2'"    both
+TMP    chir_3    "C1'"    "O4'"    N1    "C2'"    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- TMP      plan-1    N1        0.020
- TMP      plan-1    "C1'"     0.020
- TMP      plan-1    C2        0.020
- TMP      plan-1    C6        0.020
- TMP      plan-1    N3        0.020
- TMP      plan-1    C4        0.020
- TMP      plan-1    C5        0.020
- TMP      plan-1    O2        0.020
- TMP      plan-1    HN3       0.020
- TMP      plan-1    O4        0.020
- TMP      plan-1    C5M       0.020
- TMP      plan-1    H6        0.020
-# ------------------------------------------------------
+TMP    plan-1       "C1'"   0.020
+TMP    plan-1          C2   0.020
+TMP    plan-1          C4   0.020
+TMP    plan-1          C5   0.020
+TMP    plan-1         C5M   0.020
+TMP    plan-1          C6   0.020
+TMP    plan-1          H6   0.020
+TMP    plan-1         HN3   0.020
+TMP    plan-1          N1   0.020
+TMP    plan-1          N3   0.020
+TMP    plan-1          O2   0.020
+TMP    plan-1          O4   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+TMP SMILES           ACDLabs              10.04 "O=C1NC(=O)N(C=C1C)C2OC(C(O)C2)COP(=O)(O)O"
+TMP SMILES_CANONICAL CACTVS               3.341 "CC1=CN([C@H]2C[C@H](O)[C@@H](CO[P](O)(O)=O)O2)C(=O)NC1=O"
+TMP SMILES           CACTVS               3.341 "CC1=CN([CH]2C[CH](O)[CH](CO[P](O)(O)=O)O2)C(=O)NC1=O"
+TMP SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CC1=CN(C(=O)NC1=O)[C@H]2C[C@@H]([C@H](O2)COP(=O)(O)O)O"
+TMP SMILES           "OpenEye OEToolkits" 1.5.0 "CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)O)O"
+TMP InChI            InChI                1.03  "InChI=1S/C10H15N2O8P/c1-5-3-12(10(15)11-9(5)14)8-2-6(13)7(20-8)4-19-21(16,17)18/h3,6-8,13H,2,4H2,1H3,(H,11,14,15)(H2,16,17,18)/t6-,7+,8+/m0/s1"
+TMP InChIKey         InChI                1.03  GYOZYWVXFNDGLU-XLPZGREQSA-N
+TMP ?                acedrg               202         "dictionary generator"                  
+TMP ?                acedrg_database      11          "data source"                           
+TMP ?                rdkit                2017.03.2   "Chemoinformatics tool"
+TMP ?                refmac5              5.8.0189    "optimization tool"                     

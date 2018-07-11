@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BEW      BEW '1-hydroxy-2-sulfanylpyridinium      ' non-polymer        14   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BEW     BEW      1-hydroxy-2-sulfanylpyridinium     NON-POLYMER     14     8     .     
 #
 data_comp_BEW
 #
@@ -28,66 +17,46 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BEW           S7     S    SH1       0.000      0.000    0.000    0.000
- BEW           HS7    H    H         0.000      0.456    0.006   -1.253
- BEW           C1     C    CR6       0.000     -1.759   -0.108   -0.001
- BEW           C6     C    CR16      0.000     -2.373   -1.354    0.020
- BEW           H6     H    H         0.000     -1.778   -2.259    0.036
- BEW           C5     C    CR16      0.000     -3.755   -1.425    0.020
- BEW           H5     H    H         0.000     -4.261   -2.382    0.036
- BEW           N2     N    NR6       1.000     -2.484    1.002   -0.021
- BEW           O8     O    OH1       0.000     -1.828    2.256   -0.042
- BEW           HO8    H    H         0.000     -1.608    2.693    0.788
- BEW           C3     C    CR16      0.000     -3.803    0.965   -0.021
- BEW           H3     H    H         0.000     -4.364    1.891   -0.038
- BEW           C4     C    CR16      0.000     -4.478   -0.241   -0.001
- BEW           H4     H    H         0.000     -5.561   -0.261   -0.002
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BEW      S7     n/a    C1     START
- BEW      HS7    S7     .      .
- BEW      C1     S7     N2     .
- BEW      C6     C1     C5     .
- BEW      H6     C6     .      .
- BEW      C5     C6     H5     .
- BEW      H5     C5     .      .
- BEW      N2     C1     C3     .
- BEW      O8     N2     HO8    .
- BEW      HO8    O8     .      .
- BEW      C3     N2     C4     .
- BEW      H3     C3     .      .
- BEW      C4     C3     H4     .
- BEW      H4     C4     .      END
- BEW      C4     C5     .    ADD
+BEW     C4      C       CR16    0       16.281      5.346       14.255      
+BEW     C5      C       CR16    0       15.308      5.751       15.160      
+BEW     C6      C       CR16    0       14.751      4.831       16.028      
+BEW     N2      N       NR6     1       16.149      3.113       15.076      
+BEW     O8      O       OH1     0       16.597      1.810       15.050      
+BEW     C3      C       CR16    0       16.683      4.012       14.222      
+BEW     C1      C       CR6     0       15.152      3.487       15.977      
+BEW     S7      S       SH1     0       14.425      2.268       17.024      
+BEW     H4      H       H       0       16.671      5.967       13.664      
+BEW     H5      H       H       0       15.027      6.649       15.183      
+BEW     H6      H       H       0       14.106      5.101       16.653      
+BEW     HO8     H       H       0       15.973      1.344       14.668      
+BEW     H3      H       H       0       17.332      3.731       13.602      
+BEW     HS7     H       HSH1    0       15.307      1.711       17.681      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BEW      C4     C5        double      1.390    0.020
- BEW      C4     C3        single      1.390    0.020
- BEW      C5     C6        single      1.390    0.020
- BEW      C6     C1        double      1.390    0.020
- BEW      O8     N2        single      1.434    0.020
- BEW      C3     N2        double      1.337    0.020
- BEW      N2     C1        single      1.410    0.020
- BEW      C1     S7        single      1.720    0.020
- BEW      H4     C4        single      1.083    0.020
- BEW      H5     C5        single      1.083    0.020
- BEW      H6     C6        single      1.083    0.020
- BEW      HO8    O8        single      0.967    0.020
- BEW      H3     C3        single      1.083    0.020
- BEW      HS7    S7        single      1.330    0.020
+BEW          C4          C5      DOUBLE       n     1.380   0.012
+BEW          C4          C3      SINGLE       n     1.378   0.015
+BEW          C5          C6      SINGLE       n     1.374   0.012
+BEW          C6          C1      DOUBLE       n     1.389   0.017
+BEW          N2          O8      SINGLE       n     1.377   0.012
+BEW          N2          C3      DOUBLE       n     1.341   0.011
+BEW          N2          C1      SINGLE       n     1.362   0.020
+BEW          C1          S7      SINGLE       n     1.761   0.016
+BEW          C4          H4      SINGLE       n     0.942   0.017
+BEW          C5          H5      SINGLE       n     0.941   0.015
+BEW          C6          H6      SINGLE       n     0.938   0.010
+BEW          O8         HO8      SINGLE       n     0.867   0.020
+BEW          C3          H3      SINGLE       n     0.941   0.017
+BEW          S7         HS7      SINGLE       n     1.233   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -95,26 +64,26 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BEW      HS7    S7     C1      109.500    3.000
- BEW      S7     C1     C6      120.000    3.000
- BEW      S7     C1     N2      120.000    3.000
- BEW      C6     C1     N2      120.000    3.000
- BEW      C1     C6     H6      120.000    3.000
- BEW      C1     C6     C5      120.000    3.000
- BEW      H6     C6     C5      120.000    3.000
- BEW      C6     C5     H5      120.000    3.000
- BEW      C6     C5     C4      120.000    3.000
- BEW      H5     C5     C4      120.000    3.000
- BEW      C1     N2     O8      120.000    3.000
- BEW      C1     N2     C3      120.000    3.000
- BEW      O8     N2     C3      120.000    3.000
- BEW      N2     O8     HO8     120.000    3.000
- BEW      N2     C3     H3      120.000    3.000
- BEW      N2     C3     C4      120.000    3.000
- BEW      H3     C3     C4      120.000    3.000
- BEW      C3     C4     H4      120.000    3.000
- BEW      C3     C4     C5      120.000    3.000
- BEW      H4     C4     C5      120.000    3.000
+BEW          C5          C4          C3     119.573    1.50
+BEW          C5          C4          H4     120.530    1.50
+BEW          C3          C4          H4     119.896    1.50
+BEW          C4          C5          C6     119.590    1.50
+BEW          C4          C5          H5     120.337    1.50
+BEW          C6          C5          H5     120.073    1.50
+BEW          C5          C6          C1     120.269    1.50
+BEW          C5          C6          H6     120.103    1.50
+BEW          C1          C6          H6     119.628    1.50
+BEW          O8          N2          C3     119.981    1.53
+BEW          O8          N2          C1     119.497    1.53
+BEW          C3          N2          C1     120.522    2.15
+BEW          N2          O8         HO8     106.410    3.00
+BEW          C4          C3          N2     120.110    1.50
+BEW          C4          C3          H3     120.297    1.70
+BEW          N2          C3          H3     119.592    1.50
+BEW          C6          C1          N2     119.935    1.66
+BEW          C6          C1          S7     123.279    3.00
+BEW          N2          C1          S7     116.786    3.00
+BEW          C1          S7         HS7     109.471    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -125,29 +94,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BEW      var_1    HS7    S7     C1     N2       -90.025   20.000   1
- BEW      CONST_1  S7     C1     C6     C5       180.000    0.000   0
- BEW      CONST_2  C1     C6     C5     C4         0.000    0.000   0
- BEW      CONST_3  S7     C1     N2     C3       180.000    0.000   0
- BEW      var_2    C1     N2     O8     HO8      -89.960   20.000   1
- BEW      CONST_4  C1     N2     C3     C4         0.000    0.000   0
- BEW      CONST_5  N2     C3     C4     C5         0.000    0.000   0
- BEW      CONST_6  C3     C4     C5     C6         0.000    0.000   0
+BEW             sp2_sp2_1          C3          C4          C5          C6       0.000   10.00     2
+BEW            sp2_sp2_21          N2          C3          C4          C5       0.000   10.00     2
+BEW             sp2_sp2_5          C4          C5          C6          C1       0.000   10.00     2
+BEW            sp2_sp2_11          S7          C1          C6          C5     180.000   10.00     2
+BEW            sp2_sp2_18          C4          C3          N2          O8     180.000   10.00     2
+BEW            sp2_sp2_16          S7          C1          N2          O8       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BEW      plan-1    C4        0.020
- BEW      plan-1    C5        0.020
- BEW      plan-1    C3        0.020
- BEW      plan-1    H4        0.020
- BEW      plan-1    C6        0.020
- BEW      plan-1    N2        0.020
- BEW      plan-1    C1        0.020
- BEW      plan-1    H5        0.020
- BEW      plan-1    H6        0.020
- BEW      plan-1    O8        0.020
- BEW      plan-1    H3        0.020
- BEW      plan-1    S7        0.020
-# ------------------------------------------------------
+BEW    plan-1          C3   0.020
+BEW    plan-1          C4   0.020
+BEW    plan-1          C5   0.020
+BEW    plan-1          H4   0.020
+BEW    plan-2          C4   0.020
+BEW    plan-2          C5   0.020
+BEW    plan-2          C6   0.020
+BEW    plan-2          H5   0.020
+BEW    plan-3          C1   0.020
+BEW    plan-3          C5   0.020
+BEW    plan-3          C6   0.020
+BEW    plan-3          H6   0.020
+BEW    plan-4          C1   0.020
+BEW    plan-4          C3   0.020
+BEW    plan-4          N2   0.020
+BEW    plan-4          O8   0.020
+BEW    plan-5          C3   0.020
+BEW    plan-5          C4   0.020
+BEW    plan-5          H3   0.020
+BEW    plan-5          N2   0.020
+BEW    plan-6          C1   0.020
+BEW    plan-6          C6   0.020
+BEW    plan-6          N2   0.020
+BEW    plan-6          S7   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BEW SMILES           ACDLabs              12.01 "O[n+]1ccccc1S"
+BEW SMILES_CANONICAL CACTVS               3.370 "O[n+]1ccccc1S"
+BEW SMILES           CACTVS               3.370 "O[n+]1ccccc1S"
+BEW SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "c1cc[n+](c(c1)S)O"
+BEW SMILES           "OpenEye OEToolkits" 1.7.0 "c1cc[n+](c(c1)S)O"
+BEW InChI            InChI                1.03  "InChI=1S/C5H5NOS/c7-6-4-2-1-3-5(6)8/h1-4,7H/p+1"
+BEW InChIKey         InChI                1.03  YBBJKCMMCRQZMA-UHFFFAOYSA-O
+BEW ?                acedrg               202         "dictionary generator"                  
+BEW ?                acedrg_database      11          "data source"                           
+BEW ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BEW ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-OSM      OSM '1-(OXIDOSULFANYL)METHANAMINE        ' non-polymer         9   4 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+OSM     OSM      "1-(OXIDOSULFANYL)METHANAMINE"     NON-POLYMER     9     4     .     
 #
 data_comp_OSM
 #
@@ -28,49 +17,35 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- OSM           N      N    NH2       0.000      0.000    0.000    0.000
- OSM           HN1    H    H         0.000     -0.019    1.013    0.032
- OSM           HN2    H    H         0.000      0.892   -0.480   -0.022
- OSM           C      C    CH2       0.000     -1.254   -0.764   -0.015
- OSM           H1     H    H         0.000     -1.288   -1.422    0.856
- OSM           H2     H    H         0.000     -1.302   -1.365   -0.926
- OSM           S      S    S3        0.000     -2.661    0.380    0.033
- OSM           HS     H    H         0.000     -2.575    1.655    0.073
- OSM           O      O    O         0.000     -3.874   -0.361    0.018
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- OSM      N      n/a    C      START
- OSM      HN1    N      .      .
- OSM      HN2    N      .      .
- OSM      C      N      S      .
- OSM      H1     C      .      .
- OSM      H2     C      .      .
- OSM      S      C      O      .
- OSM      HS     S      .      .
- OSM      O      S      .      END
+OSM     O       O       O       0       7.688       3.127       26.014      
+OSM     S       S       SH1     0       7.343       2.816       27.435      
+OSM     C       C       CH2     0       5.912       3.855       27.843      
+OSM     N       N       NT2     0       5.192       3.328       29.007      
+OSM     HS      H       HSH1    0       6.791       1.693       27.495      
+OSM     H1      H       H       0       5.301       3.891       27.078      
+OSM     H2      H       H       0       6.210       4.767       28.039      
+OSM     HN1     H       H       0       4.684       4.019       29.298      
+OSM     HN2     H       H       0       4.628       2.705       28.670      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- OSM      O      S         double      1.480    0.020
- OSM      S      C         single      1.707    0.020
- OSM      HS     S         single      1.278    0.020
- OSM      C      N         single      1.450    0.020
- OSM      H1     C         single      1.092    0.020
- OSM      H2     C         single      1.092    0.020
- OSM      HN1    N         single      1.010    0.020
- OSM      HN2    N         single      1.010    0.020
+OSM           O           S      DOUBLE       n     1.496   0.019
+OSM           S           C      SINGLE       n     1.815   0.019
+OSM           C           N      SINGLE       n     1.467   0.015
+OSM           S          HS      SINGLE       n     1.253   0.020
+OSM           C          H1      SINGLE       n     0.979   0.015
+OSM           C          H2      SINGLE       n     0.979   0.015
+OSM           N         HN1      SINGLE       n     0.905   0.020
+OSM           N         HN2      SINGLE       n     0.905   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -78,18 +53,18 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- OSM      HN1    N      HN2     120.000    3.000
- OSM      HN1    N      C       120.000    3.000
- OSM      HN2    N      C       120.000    3.000
- OSM      N      C      H1      109.470    3.000
- OSM      N      C      H2      109.470    3.000
- OSM      N      C      S       109.500    3.000
- OSM      H1     C      H2      107.900    3.000
- OSM      H1     C      S       109.500    3.000
- OSM      H2     C      S       109.500    3.000
- OSM      C      S      HS       99.968    3.000
- OSM      C      S      O       109.446    3.000
- OSM      HS     S      O        99.984    3.000
+OSM           O           S           C     106.041    1.50
+OSM           O           S          HS     109.471    3.00
+OSM           C           S          HS      98.935    3.00
+OSM           S           C           N     109.471    3.00
+OSM           S           C          H1     109.362    1.50
+OSM           S           C          H2     109.362    1.50
+OSM           N           C          H1     107.542    2.93
+OSM           N           C          H2     107.542    2.93
+OSM          H1           C          H2     107.863    1.50
+OSM           C           N         HN1     104.789    3.00
+OSM           C           N         HN2     104.789    3.00
+OSM         HN1           N         HN2     107.163    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -100,15 +75,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OSM      var_1    HN2    N      C      S        179.965   20.000   1
- OSM      var_2    N      C      S      O        179.996   20.000   1
+OSM             sp3_sp3_1           N           C           S           O     180.000   10.00     3
+OSM             sp3_sp3_7           S           C           N         HN1     180.000   10.00     3
 loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
- OSM      plan-1    N         0.020
- OSM      plan-1    C         0.020
- OSM      plan-1    HN1       0.020
- OSM      plan-1    HN2       0.020
-# ------------------------------------------------------
+_chem_comp_chir.comp_id
+_chem_comp_chir.id
+_chem_comp_chir.atom_id_centre
+_chem_comp_chir.atom_id_1
+_chem_comp_chir.atom_id_2
+_chem_comp_chir.atom_id_3
+_chem_comp_chir.volume_sign
+OSM    chir_1    S    O    C    HS    negative
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+OSM SMILES           ACDLabs              10.04 O=SCN
+OSM SMILES_CANONICAL CACTVS               3.341 "NC[S@H]=O"
+OSM SMILES           CACTVS               3.341 "NC[SH]=O"
+OSM SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(N)[S@@H]=O"
+OSM SMILES           "OpenEye OEToolkits" 1.5.0 "C(N)S=O"
+OSM InChI            InChI                1.03  InChI=1S/CH5NOS/c2-1-4-3/h4H,1-2H2
+OSM InChIKey         InChI                1.03  KONFWJXIYYGXOO-UHFFFAOYSA-N
+OSM ?                acedrg               202         "dictionary generator"                  
+OSM ?                acedrg_database      11          "data source"                           
+OSM ?                rdkit                2017.03.2   "Chemoinformatics tool"
+OSM ?                refmac5              5.8.0189    "optimization tool"                     

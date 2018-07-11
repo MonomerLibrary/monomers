@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-IMD      IMD 'IMIDAZOLE                           ' non-polymer        10   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+IMD     IMD      IMIDAZOLE     NON-POLYMER     10     5     .     
 #
 data_comp_IMD
 #
@@ -28,54 +17,38 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- IMD           H5     H    H         0.000      0.003    0.001    0.001
- IMD           C5     C    CR15      0.000     -1.041   -0.289    0.000
- IMD           N1     N    NR15      0.000     -1.520   -1.550   -0.004
- IMD           HN1    H    H         0.000     -0.949   -2.419   -0.010
- IMD           C4     C    CR15      0.000     -2.101    0.543    0.001
- IMD           H4     H    H         0.000     -2.067    1.626    0.003
- IMD           N3     N    NR15      1.000     -3.212   -0.221   -0.002
- IMD           HN3    H    H         0.000     -4.192    0.128   -0.006
- IMD           C2     C    CR15      0.000     -2.842   -1.491    0.002
- IMD           H2     H    H         0.000     -3.511   -2.343    0.009
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- IMD      H5     n/a    C5     START
- IMD      C5     H5     C4     .
- IMD      N1     C5     HN1    .
- IMD      HN1    N1     .      .
- IMD      C4     C5     N3     .
- IMD      H4     C4     .      .
- IMD      N3     C4     C2     .
- IMD      HN3    N3     .      .
- IMD      C2     N3     H2     .
- IMD      H2     C2     .      END
- IMD      N1     C2     .    ADD
+IMD     N1      N       NR5     0       -13.562     -13.470     -0.343      
+IMD     C2      C       CR15    0       -14.427     -12.514     -0.698      
+IMD     N3      N       NR5     1       -15.081     -12.133     0.381       
+IMD     C4      C       CR15    0       -14.629     -12.850     1.453       
+IMD     C5      C       CR15    0       -13.682     -13.688     1.002       
+IMD     HN1     H       H       0       -13.012     -13.885     -0.885      
+IMD     H2      H       H       0       -14.548     -12.172     -1.567      
+IMD     HN3     H       H       0       -15.705     -11.519     0.404       
+IMD     H4      H       H       0       -14.929     -12.769     2.343       
+IMD     H5      H       H       0       -13.190     -14.309     1.511       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- IMD      N1     C2        single      1.350    0.020
- IMD      N1     C5        single      1.350    0.020
- IMD      HN1    N1        single      1.040    0.020
- IMD      C2     N3        double      1.350    0.020
- IMD      H2     C2        single      1.083    0.020
- IMD      N3     C4        single      1.350    0.020
- IMD      HN3    N3        single      1.040    0.020
- IMD      C4     C5        double      1.380    0.020
- IMD      H4     C4        single      1.083    0.020
- IMD      C5     H5        single      1.083    0.020
+IMD          N1          C2      SINGLE       n     1.341   0.020
+IMD          N1          C5      SINGLE       n     1.369   0.014
+IMD          C2          N3      DOUBLE       n     1.318   0.013
+IMD          N3          C4      SINGLE       n     1.364   0.015
+IMD          C4          C5      DOUBLE       n     1.341   0.014
+IMD          N1         HN1      SINGLE       n     0.877   0.020
+IMD          C2          H2      SINGLE       n     0.942   0.016
+IMD          N3         HN3      SINGLE       n     0.876   0.020
+IMD          C4          H4      SINGLE       n     0.943   0.017
+IMD          C5          H5      SINGLE       n     0.942   0.016
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -83,21 +56,21 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- IMD      H5     C5     N1      126.000    3.000
- IMD      H5     C5     C4      126.000    3.000
- IMD      N1     C5     C4      108.000    3.000
- IMD      C5     N1     HN1     126.000    3.000
- IMD      C5     N1     C2      108.000    3.000
- IMD      HN1    N1     C2      126.000    3.000
- IMD      C5     C4     H4      126.000    3.000
- IMD      C5     C4     N3      108.000    3.000
- IMD      H4     C4     N3      126.000    3.000
- IMD      C4     N3     HN3     126.000    3.000
- IMD      C4     N3     C2      108.000    3.000
- IMD      HN3    N3     C2      126.000    3.000
- IMD      N3     C2     H2      126.000    3.000
- IMD      N3     C2     N1      108.000    3.000
- IMD      H2     C2     N1      126.000    3.000
+IMD          C2          N1          C5     108.831    1.50
+IMD          C2          N1         HN1     125.368    1.59
+IMD          C5          N1         HN1     125.801    1.58
+IMD          N1          C2          N3     108.289    1.50
+IMD          N1          C2          H2     125.855    1.50
+IMD          N3          C2          H2     125.855    1.50
+IMD          C2          N3          C4     108.831    1.50
+IMD          C2          N3         HN3     125.368    1.59
+IMD          C4          N3         HN3     125.801    1.58
+IMD          N3          C4          C5     107.024    1.50
+IMD          N3          C4          H4     126.261    1.50
+IMD          C5          C4          H4     126.714    1.50
+IMD          N1          C5          C4     107.024    1.50
+IMD          N1          C5          H5     126.261    1.50
+IMD          C4          C5          H5     126.714    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -108,24 +81,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IMD      CONST_1  H5     C5     N1     C2       180.000    0.000   0
- IMD      CONST_2  C5     N1     C2     N3         0.000    0.000   0
- IMD      CONST_3  H5     C5     C4     N3       180.000    0.000   0
- IMD      CONST_4  C5     C4     N3     C2         0.000    0.000   0
- IMD      CONST_5  C4     N3     C2     N1         0.000    0.000   0
+IMD             sp2_sp2_1          N3          C2          N1          C5       0.000   10.00     2
+IMD            sp2_sp2_17          C4          C5          N1          C2       0.000   10.00     2
+IMD             sp2_sp2_5          N1          C2          N3          C4       0.000   10.00     2
+IMD             sp2_sp2_9          C5          C4          N3          C2       0.000   10.00     2
+IMD            sp2_sp2_13          N3          C4          C5          N1       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- IMD      plan-1    N1        0.020
- IMD      plan-1    C2        0.020
- IMD      plan-1    C5        0.020
- IMD      plan-1    HN1       0.020
- IMD      plan-1    N3        0.020
- IMD      plan-1    C4        0.020
- IMD      plan-1    H2        0.020
- IMD      plan-1    HN3       0.020
- IMD      plan-1    H4        0.020
- IMD      plan-1    H5        0.020
-# ------------------------------------------------------
+IMD    plan-1          C2   0.020
+IMD    plan-1          C5   0.020
+IMD    plan-1         HN1   0.020
+IMD    plan-1          N1   0.020
+IMD    plan-2          C2   0.020
+IMD    plan-2          H2   0.020
+IMD    plan-2          N1   0.020
+IMD    plan-2          N3   0.020
+IMD    plan-3          C2   0.020
+IMD    plan-3          C4   0.020
+IMD    plan-3         HN3   0.020
+IMD    plan-3          N3   0.020
+IMD    plan-4          C4   0.020
+IMD    plan-4          C5   0.020
+IMD    plan-4          H4   0.020
+IMD    plan-4          N3   0.020
+IMD    plan-5          C4   0.020
+IMD    plan-5          C5   0.020
+IMD    plan-5          H5   0.020
+IMD    plan-5          N1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+IMD SMILES           ACDLabs              10.04 "c1c[nH+]cn1"
+IMD SMILES_CANONICAL CACTVS               3.341 "[nH]1cc[nH+]c1"
+IMD SMILES           CACTVS               3.341 "[nH]1cc[nH+]c1"
+IMD SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1c[nH+]c[nH]1"
+IMD SMILES           "OpenEye OEToolkits" 1.5.0 "c1c[nH+]c[nH]1"
+IMD InChI            InChI                1.03  "InChI=1S/C3H4N2/c1-2-5-3-4-1/h1-3H,(H,4,5)/p+1"
+IMD InChIKey         InChI                1.03  RAXXELZNTBOGNW-UHFFFAOYSA-O
+IMD ?                acedrg               202         "dictionary generator"                  
+IMD ?                acedrg_database      11          "data source"                           
+IMD ?                rdkit                2017.03.2   "Chemoinformatics tool"
+IMD ?                refmac5              5.8.0189    "optimization tool"                     

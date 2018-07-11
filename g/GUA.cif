@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-GUA      GUA 'GLUTARIC ACID                       ' non-polymer        15   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+GUA     GUA      "GLUTARIC ACID"     NON-POLYMER     15     9     .     
 #
 data_comp_GUA
 #
@@ -28,67 +17,47 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- GUA           O4     O    OC       -0.500      0.000    0.000    0.000
- GUA           C5     C    C         0.000     -1.052    0.000    0.677
- GUA           O3     O    OC       -0.500     -0.990    0.000    1.927
- GUA           C4     C    CH2       0.000     -2.392    0.000   -0.010
- GUA           H41    H    H         0.000     -2.479   -0.891   -0.635
- GUA           H42    H    H         0.000     -2.479    0.891   -0.635
- GUA           C3     C    CH2       0.000     -3.504    0.000    1.040
- GUA           H31    H    H         0.000     -3.414    0.891    1.664
- GUA           H32    H    H         0.000     -3.414   -0.891    1.664
- GUA           C2     C    CH2       0.000     -4.865    0.000    0.342
- GUA           H21    H    H         0.000     -4.953   -0.891   -0.283
- GUA           H22    H    H         0.000     -4.953    0.891   -0.283
- GUA           C1     C    C         0.000     -5.960    0.000    1.376
- GUA           O1     O    OC       -0.500     -5.671    0.000    2.593
- GUA           O2     O    OC       -0.500     -7.159    0.000    1.018
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- GUA      O4     n/a    C5     START
- GUA      C5     O4     C4     .
- GUA      O3     C5     .      .
- GUA      C4     C5     C3     .
- GUA      H41    C4     .      .
- GUA      H42    C4     .      .
- GUA      C3     C4     C2     .
- GUA      H31    C3     .      .
- GUA      H32    C3     .      .
- GUA      C2     C3     C1     .
- GUA      H21    C2     .      .
- GUA      H22    C2     .      .
- GUA      C1     C2     O2     .
- GUA      O1     C1     .      .
- GUA      O2     C1     .      END
+GUA     C1      C       C       0       24.906      10.130      -10.629     
+GUA     C2      C       CH2     0       23.533      10.574      -11.103     
+GUA     C3      C       CH2     0       23.503      11.154      -12.509     
+GUA     C4      C       CH2     0       23.591      10.075      -13.578     
+GUA     C5      C       C       0       23.465      10.585      -15.003     
+GUA     O1      O       O       0       25.748      11.008      -10.356     
+GUA     O2      O       OC      -1      25.130      8.907       -10.534     
+GUA     O3      O       O       0       22.375      11.075      -15.360     
+GUA     O4      O       OC      -1      24.457      10.492      -15.753     
+GUA     H21     H       H       0       23.193      11.247      -10.476     
+GUA     H22     H       H       0       22.928      9.803       -11.064     
+GUA     H31     H       H       0       24.252      11.777      -12.617     
+GUA     H32     H       H       0       22.673      11.662      -12.631     
+GUA     H41     H       H       0       22.882      9.415       -13.422     
+GUA     H42     H       H       0       24.451      9.611       -13.490     
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- GUA      C1     C2        single      1.510    0.020
- GUA      O1     C1        deloc       1.250    0.020
- GUA      O2     C1        deloc       1.250    0.020
- GUA      C2     C3        single      1.524    0.020
- GUA      H21    C2        single      1.092    0.020
- GUA      H22    C2        single      1.092    0.020
- GUA      C3     C4        single      1.524    0.020
- GUA      H31    C3        single      1.092    0.020
- GUA      H32    C3        single      1.092    0.020
- GUA      C4     C5        single      1.510    0.020
- GUA      H41    C4        single      1.092    0.020
- GUA      H42    C4        single      1.092    0.020
- GUA      O3     C5        deloc       1.250    0.020
- GUA      C5     O4        deloc       1.250    0.020
+GUA          C1          C2      SINGLE       n     1.519   0.012
+GUA          C1          O1      DOUBLE       n     1.247   0.019
+GUA          C1          O2      SINGLE       n     1.247   0.019
+GUA          C2          C3      SINGLE       n     1.521   0.016
+GUA          C3          C4      SINGLE       n     1.521   0.016
+GUA          C4          C5      SINGLE       n     1.519   0.012
+GUA          C5          O3      DOUBLE       n     1.247   0.019
+GUA          C5          O4      SINGLE       n     1.247   0.019
+GUA          C2         H21      SINGLE       n     0.981   0.019
+GUA          C2         H22      SINGLE       n     0.981   0.019
+GUA          C3         H31      SINGLE       n     0.980   0.018
+GUA          C3         H32      SINGLE       n     0.980   0.018
+GUA          C4         H41      SINGLE       n     0.981   0.019
+GUA          C4         H42      SINGLE       n     0.981   0.019
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,30 +65,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- GUA      O4     C5     O3      123.000    3.000
- GUA      O4     C5     C4      118.500    3.000
- GUA      O3     C5     C4      118.500    3.000
- GUA      C5     C4     H41     109.470    3.000
- GUA      C5     C4     H42     109.470    3.000
- GUA      C5     C4     C3      109.470    3.000
- GUA      H41    C4     H42     107.900    3.000
- GUA      H41    C4     C3      109.470    3.000
- GUA      H42    C4     C3      109.470    3.000
- GUA      C4     C3     H31     109.470    3.000
- GUA      C4     C3     H32     109.470    3.000
- GUA      C4     C3     C2      111.000    3.000
- GUA      H31    C3     H32     107.900    3.000
- GUA      H31    C3     C2      109.470    3.000
- GUA      H32    C3     C2      109.470    3.000
- GUA      C3     C2     H21     109.470    3.000
- GUA      C3     C2     H22     109.470    3.000
- GUA      C3     C2     C1      109.470    3.000
- GUA      H21    C2     H22     107.900    3.000
- GUA      H21    C2     C1      109.470    3.000
- GUA      H22    C2     C1      109.470    3.000
- GUA      C2     C1     O1      118.500    3.000
- GUA      C2     C1     O2      118.500    3.000
- GUA      O1     C1     O2      123.000    3.000
+GUA          C2          C1          O1     118.214    1.64
+GUA          C2          C1          O2     118.214    1.64
+GUA          O1          C1          O2     123.571    1.50
+GUA          C1          C2          C3     114.612    2.19
+GUA          C1          C2         H21     108.404    1.50
+GUA          C1          C2         H22     108.404    1.50
+GUA          C3          C2         H21     108.815    1.50
+GUA          C3          C2         H22     108.815    1.50
+GUA         H21          C2         H22     107.521    1.50
+GUA          C2          C3          C4     111.940    1.50
+GUA          C2          C3         H31     109.164    1.50
+GUA          C2          C3         H32     109.164    1.50
+GUA          C4          C3         H31     109.164    1.50
+GUA          C4          C3         H32     109.164    1.50
+GUA         H31          C3         H32     107.646    1.50
+GUA          C3          C4          C5     114.612    2.19
+GUA          C3          C4         H41     108.815    1.50
+GUA          C3          C4         H42     108.815    1.50
+GUA          C5          C4         H41     108.404    1.50
+GUA          C5          C4         H42     108.404    1.50
+GUA         H41          C4         H42     107.521    1.50
+GUA          C4          C5          O3     118.214    1.64
+GUA          C4          C5          O4     118.214    1.64
+GUA          O3          C5          O4     123.571    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -130,21 +99,37 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GUA      var_1    O4     C5     C4     C3       180.000   20.000   3
- GUA      var_2    C5     C4     C3     C2       180.000   20.000   3
- GUA      var_3    C4     C3     C2     C1       180.000   20.000   3
- GUA      var_4    C3     C2     C1     O2       180.000   20.000   3
+GUA             sp2_sp3_2          O1          C1          C2          C3     120.000   10.00     6
+GUA             sp3_sp3_1          C1          C2          C3          C4     180.000   10.00     3
+GUA            sp3_sp3_10          C2          C3          C4          C5     180.000   10.00     3
+GUA             sp2_sp3_8          O3          C5          C4          C3     120.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- GUA      plan-1    C1        0.020
- GUA      plan-1    C2        0.020
- GUA      plan-1    O1        0.020
- GUA      plan-1    O2        0.020
- GUA      plan-2    C5        0.020
- GUA      plan-2    C4        0.020
- GUA      plan-2    O3        0.020
- GUA      plan-2    O4        0.020
-# ------------------------------------------------------
+GUA    plan-1          C1   0.020
+GUA    plan-1          C2   0.020
+GUA    plan-1          O1   0.020
+GUA    plan-1          O2   0.020
+GUA    plan-2          C4   0.020
+GUA    plan-2          C5   0.020
+GUA    plan-2          O3   0.020
+GUA    plan-2          O4   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+GUA SMILES           ACDLabs              10.04 "O=C(O)CCCC(=O)O"
+GUA SMILES_CANONICAL CACTVS               3.341 "OC(=O)CCCC(O)=O"
+GUA SMILES           CACTVS               3.341 "OC(=O)CCCC(O)=O"
+GUA SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(CC(=O)O)CC(=O)O"
+GUA SMILES           "OpenEye OEToolkits" 1.5.0 "C(CC(=O)O)CC(=O)O"
+GUA InChI            InChI                1.03  "InChI=1S/C5H8O4/c6-4(7)2-1-3-5(8)9/h1-3H2,(H,6,7)(H,8,9)"
+GUA InChIKey         InChI                1.03  JFCQEDHGNNZCLN-UHFFFAOYSA-N
+GUA ?                acedrg               202         "dictionary generator"                  
+GUA ?                acedrg_database      11          "data source"                           
+GUA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+GUA ?                refmac5              5.8.0189    "optimization tool"                     

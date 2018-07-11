@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MOH      MOH 'METHANOL                            ' non-polymer         6   2 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MOH     MOH      METHANOL     NON-POLYMER     6     2     .     
 #
 data_comp_MOH
 #
@@ -28,40 +17,29 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MOH           O      O    OH1       0.000      0.000    0.000    0.000
- MOH           HO     H    H         0.000     -0.561   -0.789    0.000
- MOH           C      C    CH3       0.000      1.376   -0.387    0.000
- MOH           H3     H    H         0.000      1.585   -0.964   -0.865
- MOH           H2     H    H         0.000      1.990    0.478    0.000
- MOH           H1     H    H         0.000      1.585   -0.964    0.865
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MOH      O      n/a    C      START
- MOH      HO     O      .      .
- MOH      C      O      H1     .
- MOH      H3     C      .      .
- MOH      H2     C      .      .
- MOH      H1     C      .      END
+MOH     C       C       CH3     0       -0.353      0.013       -0.018      
+MOH     O       O       OH1     0       0.936       -0.509      -0.193      
+MOH     H1      H       H       0       -0.305      0.981       0.047       
+MOH     H2      H       H       0       -0.741      -0.346      0.797       
+MOH     H3      H       H       0       -0.909      -0.233      -0.775      
+MOH     HO      H       H       0       1.363       -0.021      -0.742      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MOH      C      O         single      1.413    0.020
- MOH      H1     C         single      1.059    0.020
- MOH      H2     C         single      1.059    0.020
- MOH      H3     C         single      1.059    0.020
- MOH      HO     O         single      0.967    0.020
+MOH           C           O      SINGLE       n     1.402   0.020
+MOH           C          H1      SINGLE       n     0.971   0.015
+MOH           C          H2      SINGLE       n     0.971   0.015
+MOH           C          H3      SINGLE       n     0.971   0.015
+MOH           O          HO      SINGLE       n     0.849   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -69,13 +47,13 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MOH      HO     O      C       109.470    3.000
- MOH      O      C      H3      109.470    3.000
- MOH      O      C      H2      109.470    3.000
- MOH      O      C      H1      109.470    3.000
- MOH      H3     C      H2      109.470    3.000
- MOH      H3     C      H1      109.470    3.000
- MOH      H2     C      H1      109.470    3.000
+MOH           O           C          H1     109.525    1.50
+MOH           O           C          H2     109.525    1.50
+MOH           O           C          H3     109.525    1.50
+MOH          H1           C          H2     109.407    1.50
+MOH          H1           C          H3     109.407    1.50
+MOH          H2           C          H3     109.407    1.50
+MOH           C           O          HO     109.218    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -86,5 +64,21 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MOH      var_1    HO     O      C      H1       -60.004   20.000   1
-# ------------------------------------------------------
+MOH             sp3_sp3_1          H1           C           O          HO     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MOH SMILES           ACDLabs              11.02 OC
+MOH SMILES_CANONICAL CACTVS               3.352 CO
+MOH SMILES           CACTVS               3.352 CO
+MOH SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 CO
+MOH SMILES           "OpenEye OEToolkits" 1.7.0 CO
+MOH InChI            InChI                1.03  InChI=1S/CH4O/c1-2/h2H,1H3
+MOH InChIKey         InChI                1.03  OKKJLVBELUTLKV-UHFFFAOYSA-N
+MOH ?                acedrg               202         "dictionary generator"                  
+MOH ?                acedrg_database      11          "data source"                           
+MOH ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MOH ?                refmac5              5.8.0189    "optimization tool"                     

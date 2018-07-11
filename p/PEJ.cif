@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PEJ      PEJ 'PERIODATE                           ' non-polymer         5   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PEJ     PEJ      PERIODATE     NON-POLYMER     9     5     .     
 #
 data_comp_PEJ
 #
@@ -28,37 +17,35 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PEJ           O4     O    O         0.000      0.000    0.000    0.000
- PEJ           I      I    I         0.000     -1.725    0.000   -0.386
- PEJ           O1     O    O        -1.000     -2.119   -1.443   -1.328
- PEJ           O2     O    O         0.000     -2.119    1.443   -1.328
- PEJ           O3     O    O         0.000     -2.663    0.000    1.113
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PEJ      O4     n/a    I      START
- PEJ      I      O4     O3     .
- PEJ      O1     I      .      .
- PEJ      O2     I      .      .
- PEJ      O3     I      .      END
+PEJ     I       I       I       0       -36.228     27.455      -12.396     
+PEJ     O1      O       OC      -1      -37.917     28.682      -12.073     
+PEJ     O2      O       OH1     0       -37.211     29.001      -11.805     
+PEJ     O3      O       OH1     0       -37.771     28.507      -12.862     
+PEJ     O4      O       OH1     0       -37.957     27.948      -11.710     
+PEJ     H2      H       H       0       -37.615     28.463      -12.131     
+PEJ     H5      H       H       0       -36.572     29.627      -11.399     
+PEJ     H4      H       H       0       -37.866     28.485      -13.839     
+PEJ     H3      H       H       0       -38.297     27.195      -11.179     
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PEJ      O1     I         single      1.940    0.020
- PEJ      O2     I         double      1.940    0.020
- PEJ      O3     I         double      1.940    0.020
- PEJ      I      O4        double      1.940    0.020
+PEJ           I          O1      SINGLE       n     2.076   0.020
+PEJ           I          O2      SINGLE       n     1.913   0.010
+PEJ           I          O3      SINGLE       n     1.913   0.010
+PEJ           I          O4      SINGLE       n     1.913   0.010
+PEJ           I          H2      SINGLE       n     1.733   0.020
+PEJ          O2          H5      SINGLE       n     0.860   0.020
+PEJ          O3          H4      SINGLE       n     0.860   0.020
+PEJ          O4          H3      SINGLE       n     0.860   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -66,19 +53,46 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PEJ      O4     I      O1      109.488    3.000
- PEJ      O4     I      O2      109.488    3.000
- PEJ      O4     I      O3      109.437    3.000
- PEJ      O1     I      O2      109.437    3.000
- PEJ      O1     I      O3      109.488    3.000
- PEJ      O2     I      O3      109.488    3.000
+PEJ          O1           I          O2       0.000    3.00
+PEJ          O1           I          O3       0.000    3.00
+PEJ          O1           I          O4       0.000    3.00
+PEJ          O1           I          H2       0.000    3.00
+PEJ          O2           I          O3       0.000    3.00
+PEJ          O2           I          O4       0.000    3.00
+PEJ          O2           I          H2       0.000    3.00
+PEJ          O3           I          O4       0.000    3.00
+PEJ          O3           I          H2       0.000    3.00
+PEJ          O4           I          H2       0.000    3.00
+PEJ           I          O2          H5     109.471    3.00
+PEJ           I          O3          H4     109.471    3.00
+PEJ           I          O4          H3     109.471    3.00
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- PEJ      chir_01  I      O4     O1     O2        both
-# ------------------------------------------------------
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+PEJ             sp3_sp3_1          O1           I          O2          H5     180.000   10.00     3
+PEJ             sp3_sp3_2          O1           I          O3          H4     180.000   10.00     3
+PEJ             sp3_sp3_3          O1           I          O4          H3     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PEJ SMILES           ACDLabs              10.04 "[O-]I(=O)(=O)=O"
+PEJ InChI            InChI                1.02b "InChI=1/HIO4/c2-1(3,4)5/h(H,2,3,4,5)/p-1/fIO4/q-1"
+PEJ InChIKey         InChI                1.02b KHIWWQKSHDUIBK-RHIFPCSFCE
+PEJ SMILES_CANONICAL CACTVS               3.341 "[O-][I](=O)(=O)=O"
+PEJ SMILES           CACTVS               3.341 "[O-][I](=O)(=O)=O"
+PEJ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[O-]I(=O)(=O)=O"
+PEJ SMILES           "OpenEye OEToolkits" 1.5.0 "[O-]I(=O)(=O)=O"
+PEJ ?                acedrg               202         "dictionary generator"                  
+PEJ ?                acedrg_database      11          "data source"                           
+PEJ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PEJ ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PO3      PO3 'PHOSPHITE ION                       ' non-polymer         4   4 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PO3     PO3      "PHOSPHITE ION"     NON-POLYMER     4     4     .     
 #
 data_comp_PO3
 #
@@ -28,34 +17,25 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PO3           O3     O    OP       -1.000      0.000    0.000    0.000
- PO3           P      P    P1       -1.000     -1.223    0.619   -0.758
- PO3           O1     O    OP        0.000     -2.263    0.291    0.367
- PO3           O2     O    OP       -1.000     -0.956    2.085   -0.273
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PO3      O3     n/a    P      START
- PO3      P      O3     O2     .
- PO3      O1     P      .      .
- PO3      O2     P      .      END
+PO3     P       P       P1      -1      0.012       0.009       0.178       
+PO3     O1      O       O       0       1.498       -0.093      0.061       
+PO3     O2      O       OP      -1      -0.819      -1.231      0.236       
+PO3     O3      O       OP      -1      -0.642      1.351       0.236       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PO3      O1     P         double      1.675    0.020
- PO3      O2     P         single      1.675    0.020
- PO3      P      O3        single      1.675    0.020
+PO3           P          O1      DOUBLE       n     1.494   0.010
+PO3           P          O2      SINGLE       n     1.494   0.010
+PO3           P          O3      SINGLE       n     1.494   0.010
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -63,16 +43,32 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PO3      O3     P      O1      120.000    3.000
- PO3      O3     P      O2      120.000    3.000
- PO3      O1     P      O2      120.000    3.000
+PO3          O1           P          O2     120.000    3.00
+PO3          O1           P          O3     120.000    3.00
+PO3          O2           P          O3     120.000    3.00
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- PO3      chir_01  P      O1     O2     O3        negativ
-# ------------------------------------------------------
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+PO3    plan-1          O1   0.020
+PO3    plan-1          O2   0.020
+PO3    plan-1          O3   0.020
+PO3    plan-1           P   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PO3 SMILES           ACDLabs              10.04 "[O-][PH2-]([O-])=O"
+PO3 SMILES_CANONICAL CACTVS               3.341 "[O-][P-]([O-])=O"
+PO3 SMILES           CACTVS               3.341 "[O-][P-]([O-])=O"
+PO3 SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[O-][P-](=O)[O-]"
+PO3 SMILES           "OpenEye OEToolkits" 1.5.0 "[O-][P-](=O)[O-]"
+PO3 InChI            InChI                1.03  "InChI=1S/O3P/c1-4(2)3/q-3"
+PO3 InChIKey         InChI                1.03  AQSJGOWTSHOLKH-UHFFFAOYSA-N
+PO3 ?                acedrg               202         "dictionary generator"                  
+PO3 ?                acedrg_database      11          "data source"                           
+PO3 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PO3 ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-IBO      IBO '2-METHYLPROPANAMIDE                 ' non-polymer        15   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+IBO     IBO      2-METHYLPROPANAMIDE     NON-POLYMER     15     6     .     
 #
 data_comp_IBO
 #
@@ -28,67 +17,47 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- IBO           O2     O    O         0.000      0.000    0.000    0.000
- IBO           C      C    C         0.000     -1.057    0.620    0.085
- IBO           NA     N    NH2       0.000     -1.647    0.947    1.288
- IBO           HAN2   H    H         0.000     -1.216    0.679    2.171
- IBO           HAN1   H    H         0.000     -2.525    1.463    1.316
- IBO           CA     C    CH1       0.000     -1.851    1.103   -1.124
- IBO           HA     H    H         0.000     -2.394    2.015   -0.839
- IBO           CB1    C    CH3       0.000     -0.923    1.440   -2.289
- IBO           HB13   H    H         0.000     -0.414    0.565   -2.601
- IBO           HB12   H    H         0.000     -1.494    1.822   -3.096
- IBO           HB11   H    H         0.000     -0.218    2.167   -1.981
- IBO           CB2    C    CH3       0.000     -2.872    0.047   -1.542
- IBO           HB23   H    H         0.000     -2.370   -0.854   -1.785
- IBO           HB22   H    H         0.000     -3.546   -0.129   -0.744
- IBO           HB21   H    H         0.000     -3.409    0.390   -2.388
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- IBO      O2     n/a    C      START
- IBO      C      O2     CA     .
- IBO      NA     C      HAN1   .
- IBO      HAN2   NA     .      .
- IBO      HAN1   NA     .      .
- IBO      CA     C      CB2    .
- IBO      HA     CA     .      .
- IBO      CB1    CA     HB11   .
- IBO      HB13   CB1    .      .
- IBO      HB12   CB1    .      .
- IBO      HB11   CB1    .      .
- IBO      CB2    CA     HB21   .
- IBO      HB23   CB2    .      .
- IBO      HB22   CB2    .      .
- IBO      HB21   CB2    .      END
+IBO     CA      C       CH1     0       -0.212      -0.134      0.291       
+IBO     C       C       C       0       1.023       0.174       -0.535      
+IBO     NA      N       NH2     0       2.201       -0.220      -0.066      
+IBO     O2      O       O       0       0.922       0.771       -1.605      
+IBO     CB1     C       CH3     0       -0.892      1.160       0.694       
+IBO     CB2     C       CH3     0       -1.153      -1.016      -0.506      
+IBO     HA      H       H       0       0.053       -0.617      1.111       
+IBO     HAN1    H       H       0       2.935       -0.062      -0.535      
+IBO     HAN2    H       H       0       2.267       -0.637      0.711       
+IBO     HB11    H       H       0       -1.672      0.961       1.240       
+IBO     HB12    H       H       0       -1.170      1.643       -0.104      
+IBO     HB13    H       H       0       -0.271      1.709       1.204       
+IBO     HB21    H       H       0       -1.932      -1.233      0.036       
+IBO     HB22    H       H       0       -0.695      -1.837      -0.757      
+IBO     HB23    H       H       0       -1.438      -0.546      -1.309      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- IBO      CA     C         single      1.500    0.020
- IBO      C      O2        double      1.220    0.020
- IBO      NA     C         single      1.332    0.020
- IBO      CB1    CA        single      1.524    0.020
- IBO      CB2    CA        single      1.524    0.020
- IBO      HAN1   NA        single      1.010    0.020
- IBO      HAN2   NA        single      1.010    0.020
- IBO      HA     CA        single      1.099    0.020
- IBO      HB21   CB2       single      1.059    0.020
- IBO      HB22   CB2       single      1.059    0.020
- IBO      HB23   CB2       single      1.059    0.020
- IBO      HB11   CB1       single      1.059    0.020
- IBO      HB12   CB1       single      1.059    0.020
- IBO      HB13   CB1       single      1.059    0.020
+IBO          CA           C      SINGLE       n     1.512   0.010
+IBO           C          O2      DOUBLE       n     1.229   0.012
+IBO           C          NA      SINGLE       n     1.323   0.011
+IBO          CA         CB1      SINGLE       n     1.516   0.013
+IBO          CA         CB2      SINGLE       n     1.516   0.013
+IBO          CA          HA      SINGLE       n     0.989   0.018
+IBO          NA        HAN1      SINGLE       n     0.884   0.020
+IBO          NA        HAN2      SINGLE       n     0.884   0.020
+IBO         CB1        HB11      SINGLE       n     0.973   0.014
+IBO         CB1        HB12      SINGLE       n     0.973   0.014
+IBO         CB1        HB13      SINGLE       n     0.973   0.014
+IBO         CB2        HB21      SINGLE       n     0.973   0.014
+IBO         CB2        HB22      SINGLE       n     0.973   0.014
+IBO         CB2        HB23      SINGLE       n     0.973   0.014
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,30 +65,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- IBO      O2     C      NA      123.000    3.000
- IBO      O2     C      CA      120.500    3.000
- IBO      NA     C      CA      120.000    3.000
- IBO      C      NA     HAN2    120.000    3.000
- IBO      C      NA     HAN1    120.000    3.000
- IBO      HAN2   NA     HAN1    120.000    3.000
- IBO      C      CA     HA      108.810    3.000
- IBO      C      CA     CB1     109.470    3.000
- IBO      C      CA     CB2     109.470    3.000
- IBO      HA     CA     CB1     108.340    3.000
- IBO      HA     CA     CB2     108.340    3.000
- IBO      CB1    CA     CB2     111.000    3.000
- IBO      CA     CB1    HB13    109.470    3.000
- IBO      CA     CB1    HB12    109.470    3.000
- IBO      CA     CB1    HB11    109.470    3.000
- IBO      HB13   CB1    HB12    109.470    3.000
- IBO      HB13   CB1    HB11    109.470    3.000
- IBO      HB12   CB1    HB11    109.470    3.000
- IBO      CA     CB2    HB23    109.470    3.000
- IBO      CA     CB2    HB22    109.470    3.000
- IBO      CA     CB2    HB21    109.470    3.000
- IBO      HB23   CB2    HB22    109.470    3.000
- IBO      HB23   CB2    HB21    109.470    3.000
- IBO      HB22   CB2    HB21    109.470    3.000
+IBO           C          CA         CB1     109.731    1.50
+IBO           C          CA         CB2     109.731    1.50
+IBO           C          CA          HA     108.369    1.50
+IBO         CB1          CA         CB2     111.110    1.50
+IBO         CB1          CA          HA     108.717    1.50
+IBO         CB2          CA          HA     108.717    1.50
+IBO          CA           C          O2     121.315    1.75
+IBO          CA           C          NA     116.527    1.50
+IBO          O2           C          NA     122.158    1.50
+IBO           C          NA        HAN1     119.871    1.75
+IBO           C          NA        HAN2     119.871    1.75
+IBO        HAN1          NA        HAN2     120.259    2.38
+IBO          CA         CB1        HB11     109.497    1.50
+IBO          CA         CB1        HB12     109.497    1.50
+IBO          CA         CB1        HB13     109.497    1.50
+IBO        HB11         CB1        HB12     109.411    1.50
+IBO        HB11         CB1        HB13     109.411    1.50
+IBO        HB12         CB1        HB13     109.411    1.50
+IBO          CA         CB2        HB21     109.497    1.50
+IBO          CA         CB2        HB22     109.497    1.50
+IBO          CA         CB2        HB23     109.497    1.50
+IBO        HB21         CB2        HB22     109.411    1.50
+IBO        HB21         CB2        HB23     109.411    1.50
+IBO        HB22         CB2        HB23     109.411    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -130,32 +99,37 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IBO      CONST_1  O2     C      NA     HAN1     180.000    0.000   0
- IBO      var_1    O2     C      CA     CB2       91.165   20.000   3
- IBO      var_2    C      CA     CB1    HB11     -56.939   20.000   3
- IBO      var_3    C      CA     CB2    HB21    -179.421   20.000   3
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- IBO      chir_01  CA     C      CB1    CB2       negativ
+IBO             sp2_sp3_2          O2           C          CA         CB1     120.000   10.00     6
+IBO             sp3_sp3_1           C          CA         CB1        HB11     180.000   10.00     3
+IBO            sp3_sp3_10           C          CA         CB2        HB21     180.000   10.00     3
+IBO             sp2_sp2_1          CA           C          NA        HAN1     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- IBO      plan-1    C         0.020
- IBO      plan-1    CA        0.020
- IBO      plan-1    NA        0.020
- IBO      plan-1    O2        0.020
- IBO      plan-1    HAN2      0.020
- IBO      plan-1    HAN1      0.020
- IBO      plan-2    NA        0.020
- IBO      plan-2    C         0.020
- IBO      plan-2    HAN1      0.020
- IBO      plan-2    HAN2      0.020
-# ------------------------------------------------------
+IBO    plan-1           C   0.020
+IBO    plan-1          CA   0.020
+IBO    plan-1          NA   0.020
+IBO    plan-1          O2   0.020
+IBO    plan-2           C   0.020
+IBO    plan-2        HAN1   0.020
+IBO    plan-2        HAN2   0.020
+IBO    plan-2          NA   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+IBO SMILES           ACDLabs              10.04 "O=C(N)C(C)C"
+IBO SMILES_CANONICAL CACTVS               3.341 "CC(C)C(N)=O"
+IBO SMILES           CACTVS               3.341 "CC(C)C(N)=O"
+IBO SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CC(C)C(=O)N"
+IBO SMILES           "OpenEye OEToolkits" 1.5.0 "CC(C)C(=O)N"
+IBO InChI            InChI                1.03  "InChI=1S/C4H9NO/c1-3(2)4(5)6/h3H,1-2H3,(H2,5,6)"
+IBO InChIKey         InChI                1.03  WFKAJVHLWXSISD-UHFFFAOYSA-N
+IBO ?                acedrg               202         "dictionary generator"                  
+IBO ?                acedrg_database      11          "data source"                           
+IBO ?                rdkit                2017.03.2   "Chemoinformatics tool"
+IBO ?                refmac5              5.8.0189    "optimization tool"                     

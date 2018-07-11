@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-GM1      GM1 'AMINOMETHYLAMIDE                    ' non-polymer        11   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+GM1     GM1      AMINOMETHYLAMIDE     NON-POLYMER     11     5     .     
 #
 data_comp_GM1
 #
@@ -28,55 +17,39 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- GM1           O1     O    O         0.000      0.000    0.000    0.000
- GM1           C1     C    C         0.000     -0.533   -0.006    1.091
- GM1           N1     N    NH2       0.000      0.220    0.048    2.207
- GM1           HN12   H    H         0.000     -0.219    0.043    3.119
- GM1           HN11   H    H         0.000      1.230    0.094    2.140
- GM1           C2     C    CH2       0.000     -2.033   -0.075    1.195
- GM1           H21    H    H         0.000     -2.402    0.809    1.719
- GM1           H22    H    H         0.000     -2.317   -0.971    1.751
- GM1           N2     N    NH2       0.000     -2.617   -0.127   -0.152
- GM1           HN22   H    H         0.000     -2.019   -0.113   -0.970
- GM1           HN21   H    H         0.000     -3.622   -0.175   -0.273
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- GM1      O1     n/a    C1     START
- GM1      C1     O1     C2     .
- GM1      N1     C1     HN11   .
- GM1      HN12   N1     .      .
- GM1      HN11   N1     .      .
- GM1      C2     C1     N2     .
- GM1      H21    C2     .      .
- GM1      H22    C2     .      .
- GM1      N2     C2     HN21   .
- GM1      HN22   N2     .      .
- GM1      HN21   N2     .      END
+GM1     C1      C       C       0       0.632       -0.596      -0.181      
+GM1     N1      N       NH2     0       1.504       0.393       -0.317      
+GM1     O1      O       O       0       0.786       -1.706      -0.698      
+GM1     C2      C       CH2     0       -0.598      -0.311      0.660       
+GM1     N2      N       NT2     0       -1.627      0.428       -0.080      
+GM1     HN11    H       H       0       2.244       0.267       -0.785      
+GM1     HN12    H       H       0       1.349       1.181       0.056       
+GM1     H21     H       H       0       -0.334      0.210       1.447       
+GM1     H22     H       H       0       -0.976      -1.160      0.971       
+GM1     HN21    H       H       0       -2.300      0.463       0.520       
+GM1     HN22    H       H       0       -1.268      1.254       -0.127      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- GM1      N1     C1        single      1.332    0.020
- GM1      C1     O1        double      1.220    0.020
- GM1      C2     C1        single      1.510    0.020
- GM1      HN11   N1        single      1.010    0.020
- GM1      HN12   N1        single      1.010    0.020
- GM1      N2     C2        single      1.450    0.020
- GM1      H21    C2        single      1.092    0.020
- GM1      H22    C2        single      1.092    0.020
- GM1      HN21   N2        single      1.010    0.020
- GM1      HN22   N2        single      1.010    0.020
+GM1          C1          N1      SINGLE       n     1.324   0.010
+GM1          C1          O1      DOUBLE       n     1.234   0.010
+GM1          C1          C2      SINGLE       n     1.515   0.010
+GM1          C2          N2      SINGLE       n     1.467   0.015
+GM1          N1        HN11      SINGLE       n     0.884   0.020
+GM1          N1        HN12      SINGLE       n     0.884   0.020
+GM1          C2         H21      SINGLE       n     0.980   0.012
+GM1          C2         H22      SINGLE       n     0.980   0.012
+GM1          N2        HN21      SINGLE       n     0.902   0.020
+GM1          N2        HN22      SINGLE       n     0.902   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -84,21 +57,21 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- GM1      O1     C1     N1      123.000    3.000
- GM1      O1     C1     C2      120.500    3.000
- GM1      N1     C1     C2      116.500    3.000
- GM1      C1     N1     HN12    120.000    3.000
- GM1      C1     N1     HN11    120.000    3.000
- GM1      HN12   N1     HN11    120.000    3.000
- GM1      C1     C2     H21     109.470    3.000
- GM1      C1     C2     H22     109.470    3.000
- GM1      C1     C2     N2      111.600    3.000
- GM1      H21    C2     H22     107.900    3.000
- GM1      H21    C2     N2      109.470    3.000
- GM1      H22    C2     N2      109.470    3.000
- GM1      C2     N2     HN22    120.000    3.000
- GM1      C2     N2     HN21    120.000    3.000
- GM1      HN22   N2     HN21    120.000    3.000
+GM1          N1          C1          O1     123.282    1.50
+GM1          N1          C1          C2     116.160    1.70
+GM1          O1          C1          C2     120.558    1.50
+GM1          C1          N1        HN11     119.954    1.50
+GM1          C1          N1        HN12     119.954    1.50
+GM1        HN11          N1        HN12     120.093    2.38
+GM1          C1          C2          N2     112.134    2.59
+GM1          C1          C2         H21     108.884    1.50
+GM1          C1          C2         H22     108.884    1.50
+GM1          N2          C2         H21     108.833    1.50
+GM1          N2          C2         H22     108.833    1.50
+GM1         H21          C2         H22     107.908    1.50
+GM1          C2          N2        HN21     102.011    3.00
+GM1          C2          N2        HN22     102.011    3.00
+GM1        HN21          N2        HN22     107.243    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -109,26 +82,36 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GM1      CONST_1  O1     C1     N1     HN11       0.000    0.000   0
- GM1      var_1    O1     C1     C2     N2        -0.003   20.000   3
- GM1      var_2    C1     C2     N2     HN21    -179.952   20.000   1
+GM1             sp2_sp2_3          O1          C1          N1        HN11       0.000   10.00     2
+GM1             sp2_sp3_2          N1          C1          C2          N2     120.000   10.00     6
+GM1             sp3_sp3_1          C1          C2          N2        HN21     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- GM1      plan-1    C1        0.020
- GM1      plan-1    N1        0.020
- GM1      plan-1    O1        0.020
- GM1      plan-1    C2        0.020
- GM1      plan-1    HN12      0.020
- GM1      plan-1    HN11      0.020
- GM1      plan-2    N1        0.020
- GM1      plan-2    C1        0.020
- GM1      plan-2    HN11      0.020
- GM1      plan-2    HN12      0.020
- GM1      plan-3    N2        0.020
- GM1      plan-3    C2        0.020
- GM1      plan-3    HN21      0.020
- GM1      plan-3    HN22      0.020
-# ------------------------------------------------------
+GM1    plan-1          C1   0.020
+GM1    plan-1          C2   0.020
+GM1    plan-1          N1   0.020
+GM1    plan-1          O1   0.020
+GM1    plan-2          C1   0.020
+GM1    plan-2        HN11   0.020
+GM1    plan-2        HN12   0.020
+GM1    plan-2          N1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+GM1 SMILES           ACDLabs              10.04 "O=C(N)CN"
+GM1 SMILES_CANONICAL CACTVS               3.341 "NCC(N)=O"
+GM1 SMILES           CACTVS               3.341 "NCC(N)=O"
+GM1 SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(C(=O)N)N"
+GM1 SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(=O)N)N"
+GM1 InChI            InChI                1.03  "InChI=1S/C2H6N2O/c3-1-2(4)5/h1,3H2,(H2,4,5)"
+GM1 InChIKey         InChI                1.03  BEBCJVAWIBVWNZ-UHFFFAOYSA-N
+GM1 ?                acedrg               202         "dictionary generator"                  
+GM1 ?                acedrg_database      11          "data source"                           
+GM1 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+GM1 ?                refmac5              5.8.0189    "optimization tool"                     

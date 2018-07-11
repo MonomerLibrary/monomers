@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FCN      FCN 'FOSFOMYCIN                          ' non-polymer        15   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+FCN     FCN      FOSFOMYCIN     NON-POLYMER     13     8     .     
 #
 data_comp_FCN
 #
@@ -28,69 +17,44 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- FCN           O1P    O    O         0.000      0.000    0.000    0.000
- FCN           P      P    P         0.000     -1.126    0.923   -0.261
- FCN           O2P    O    OH1       0.000     -1.455    0.935   -1.837
- FCN           HOP2   H    H         0.000     -0.777    1.208   -2.470
- FCN           O3P    O    OH1       0.000     -0.724    2.408    0.213
- FCN           HOP3   H    H         0.000     -1.353    3.135    0.112
- FCN           C1     C    CH1       0.000     -2.594    0.366    0.663
- FCN           H1     H    H         0.000     -3.574    0.675    0.271
- FCN           O      O    O2        0.000     -2.530   -0.906    1.312
- FCN           C2     C    CH1       0.000     -2.471    0.226    2.181
- FCN           H2     H    H         0.000     -3.371    0.443    2.774
- FCN           C3     C    CH3       0.000     -1.125    0.565    2.821
- FCN           H33    H    H         0.000     -0.370   -0.052    2.406
- FCN           H32    H    H         0.000     -0.891    1.581    2.636
- FCN           H31    H    H         0.000     -1.178    0.400    3.866
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- FCN      O1P    n/a    P      START
- FCN      P      O1P    C1     .
- FCN      O2P    P      HOP2   .
- FCN      HOP2   O2P    .      .
- FCN      O3P    P      HOP3   .
- FCN      HOP3   O3P    .      .
- FCN      C1     P      O      .
- FCN      H1     C1     .      .
- FCN      O      C1     C2     .
- FCN      C2     O      C3     .
- FCN      H2     C2     .      .
- FCN      C3     C2     H31    .
- FCN      H33    C3     .      .
- FCN      H32    C3     .      .
- FCN      H31    C3     .      END
- FCN      C1     C2     .    ADD
+FCN     C1      C       CH1     0       0.376       -0.438      -0.390      
+FCN     C2      C       CH1     0       -0.629      0.469       0.166       
+FCN     C3      C       CH3     0       -2.027      0.022       0.437       
+FCN     O       O       O2      0       -0.229      0.580       -1.222      
+FCN     P       P       P       0       2.138       -0.188      -0.185      
+FCN     O1P     O       O       0       2.823       -0.890      -1.329      
+FCN     O2P     O       OP      -1      2.381       1.299       -0.218      
+FCN     O3P     O       OP      -1      2.520       -0.785      1.145       
+FCN     H1      H       H       0       0.080       -1.365      -0.564      
+FCN     H2      H       H       0       -0.275      1.177       0.762       
+FCN     H31     H       H       0       -2.470      -0.206      -0.408      
+FCN     H32     H       H       0       -2.523      0.744       0.880       
+FCN     H33     H       H       0       -2.013      -0.767      1.020       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- FCN      C1     C2        single      1.524    0.020
- FCN      O      C1        single      1.426    0.020
- FCN      C1     P         single      1.815    0.020
- FCN      H1     C1        single      1.099    0.020
- FCN      C3     C2        single      1.524    0.020
- FCN      C2     O         single      1.426    0.020
- FCN      H2     C2        single      1.099    0.020
- FCN      H31    C3        single      1.059    0.020
- FCN      H32    C3        single      1.059    0.020
- FCN      H33    C3        single      1.059    0.020
- FCN      P      O1P       double      1.480    0.020
- FCN      O2P    P         single      1.610    0.020
- FCN      O3P    P         single      1.610    0.020
- FCN      HOP2   O2P       single      0.967    0.020
- FCN      HOP3   O3P       single      0.967    0.020
+FCN          C1          C2      SINGLE       n     1.463   0.010
+FCN          C1           O      SINGLE       n     1.446   0.015
+FCN          C1           P      SINGLE       n     1.790   0.020
+FCN          C2          C3      SINGLE       n     1.493   0.013
+FCN          C2           O      SINGLE       n     1.446   0.015
+FCN           P         O1P      DOUBLE       n     1.507   0.020
+FCN           P         O2P      SINGLE       n     1.507   0.020
+FCN           P         O3P      SINGLE       n     1.507   0.020
+FCN          C1          H1      SINGLE       n     0.989   0.020
+FCN          C2          H2      SINGLE       n     0.991   0.020
+FCN          C3         H31      SINGLE       n     0.981   0.020
+FCN          C3         H32      SINGLE       n     0.981   0.020
+FCN          C3         H33      SINGLE       n     0.981   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -98,33 +62,31 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- FCN      O1P    P      O2P     109.500    3.000
- FCN      O1P    P      O3P     109.500    3.000
- FCN      O1P    P      C1      109.500    3.000
- FCN      O2P    P      O3P     109.500    3.000
- FCN      O2P    P      C1      109.500    3.000
- FCN      O3P    P      C1      109.500    3.000
- FCN      P      O2P    HOP2    120.000    3.000
- FCN      P      O3P    HOP3    120.000    3.000
- FCN      P      C1     H1      109.500    3.000
- FCN      P      C1     O       109.500    3.000
- FCN      P      C1     C2      109.500    3.000
- FCN      H1     C1     O       109.470    3.000
- FCN      H1     C1     C2      108.340    3.000
- FCN      O      C1     C2       57.699    3.000
- FCN      C1     O      C2       64.601    3.000
- FCN      O      C2     H2      109.470    3.000
- FCN      O      C2     C3      109.470    3.000
- FCN      O      C2     C1       57.699    3.000
- FCN      H2     C2     C3      108.340    3.000
- FCN      H2     C2     C1      108.340    3.000
- FCN      C3     C2     C1      111.000    3.000
- FCN      C2     C3     H33     109.470    3.000
- FCN      C2     C3     H32     109.470    3.000
- FCN      C2     C3     H31     109.470    3.000
- FCN      H33    C3     H32     109.470    3.000
- FCN      H33    C3     H31     109.470    3.000
- FCN      H32    C3     H31     109.470    3.000
+FCN          C2          C1           O      59.583    1.50
+FCN          C2          C1           P     118.827    3.00
+FCN          C2          C1          H1     114.921    1.50
+FCN           O          C1           P     109.471    3.00
+FCN           O          C1          H1     114.717    1.74
+FCN           P          C1          H1     109.471    3.00
+FCN          C1          C2          C3     120.272    3.00
+FCN          C1          C2           O      59.583    1.50
+FCN          C1          C2          H2     114.921    1.50
+FCN          C3          C2           O     116.889    1.50
+FCN          C3          C2          H2     114.576    2.58
+FCN           O          C2          H2     114.692    1.76
+FCN          C2          C3         H31     109.587    1.50
+FCN          C2          C3         H32     109.587    1.50
+FCN          C2          C3         H33     109.587    1.50
+FCN         H31          C3         H32     109.343    1.50
+FCN         H31          C3         H33     109.343    1.50
+FCN         H32          C3         H33     109.343    1.50
+FCN          C1           O          C2      60.816    1.50
+FCN          C1           P         O1P     109.471    3.00
+FCN          C1           P         O2P     109.471    3.00
+FCN          C1           P         O3P     109.471    3.00
+FCN         O1P           P         O2P     112.897    2.03
+FCN         O1P           P         O3P     112.897    2.03
+FCN         O2P           P         O3P     112.897    2.03
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -135,13 +97,11 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FCN      var_1    O1P    P      O2P    HOP2     -60.025   20.000   1
- FCN      var_2    O1P    P      O3P    HOP3    -179.969   20.000   1
- FCN      var_3    O1P    P      C1     O         -8.586   20.000   1
- FCN      var_4    P      C1     C2     O       -106.810   20.000   3
- FCN      var_5    P      C1     O      C2       106.877   20.000   1
- FCN      var_6    C1     O      C2     C3      -106.832   20.000   1
- FCN      var_7    O      C2     C3     H31     -112.561   20.000   3
+FCN             sp3_sp3_4           P          C1          C2          C3     -60.000   10.00     3
+FCN            sp3_sp3_13           P          C1           O          C2     180.000   10.00     3
+FCN            sp3_sp3_16          C2          C1           P         O1P     180.000   10.00     3
+FCN            sp3_sp3_25          C1          C2          C3         H31     180.000   10.00     3
+FCN            sp3_sp3_11          C3          C2           O          C1     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -150,6 +110,22 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- FCN      chir_01  C1     C2     O      P         positiv
- FCN      chir_02  C2     C1     C3     O         positiv
-# ------------------------------------------------------
+FCN    chir_1    C1    P    O    C2    both
+FCN    chir_2    C2    O    C1    C3    positive
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+FCN SMILES           ACDLabs              10.04 "O=P(O)(O)C1OC1C"
+FCN SMILES_CANONICAL CACTVS               3.341 "C[C@@H]1O[C@@H]1[P](O)(O)=O"
+FCN SMILES           CACTVS               3.341 "C[CH]1O[CH]1[P](O)(O)=O"
+FCN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C[C@H]1[C@H](O1)P(=O)(O)O"
+FCN SMILES           "OpenEye OEToolkits" 1.5.0 "CC1C(O1)P(=O)(O)O"
+FCN InChI            InChI                1.03  "InChI=1S/C3H7O4P/c1-2-3(7-2)8(4,5)6/h2-3H,1H3,(H2,4,5,6)/t2-,3+/m0/s1"
+FCN InChIKey         InChI                1.03  YMDXZJFXQJVXBF-STHAYSLISA-N
+FCN ?                acedrg               202         "dictionary generator"                  
+FCN ?                acedrg_database      11          "data source"                           
+FCN ?                rdkit                2017.03.2   "Chemoinformatics tool"
+FCN ?                refmac5              5.8.0189    "optimization tool"                     

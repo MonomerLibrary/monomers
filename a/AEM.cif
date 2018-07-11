@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-AEM      AEM '2-AMINOETHANIMIDIC ACID             ' non-polymer        10   4 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+AEM     AEM      "2-AMINOETHANIMIDIC ACID"     NON-POLYMER     10     4     .     
 #
 data_comp_AEM
 #
@@ -28,52 +17,37 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- AEM           N1     N    N         0.000      0.000    0.000    0.000
- AEM           H1     H    H         0.000      0.467   -0.378   -0.745
- AEM           C1     C    C1        0.000     -1.002   -0.608    0.511
- AEM           HA     H    H         0.000     -1.325   -1.551    0.103
- AEM           C2     C    CH2       0.000     -1.733   -0.007    1.682
- AEM           H2C1   H    H         0.000     -1.264    0.941    1.954
- AEM           H2C2   H    H         0.000     -1.683   -0.693    2.531
- AEM           N2     N    NH2       0.000     -3.136    0.225    1.319
- AEM           H2N2   H    H         0.000     -3.472   -0.016    0.394
- AEM           H2N1   H    H         0.000     -3.779    0.627    1.991
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- AEM      N1     n/a    C1     START
- AEM      H1     N1     .      .
- AEM      C1     N1     C2     .
- AEM      HA     C1     .      .
- AEM      C2     C1     N2     .
- AEM      H2C1   C2     .      .
- AEM      H2C2   C2     .      .
- AEM      N2     C2     H2N1   .
- AEM      H2N2   N2     .      .
- AEM      H2N1   N2     .      END
+AEM     C1      C       C1      0       1.051       -0.526      -0.047      
+AEM     N1      N       NH1     0       1.923       0.286       0.459       
+AEM     C2      C       CH2     0       -0.307      -0.081      -0.505      
+AEM     N2      N       NT2     0       -1.170      0.342       0.604       
+AEM     HA      H       H       0       1.282       -1.431      -0.129      
+AEM     H1      H       H       0       1.650       1.135       0.513       
+AEM     H2C1    H       H       0       -0.734      -0.813      -0.978      
+AEM     H2C2    H       H       0       -0.202      0.659       -1.125      
+AEM     H2N1    H       H       0       -1.919      0.596       0.171       
+AEM     H2N2    H       H       0       -0.757      1.092       0.887       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- AEM      C1     N1        double      1.260    0.020
- AEM      C2     C1        single      1.510    0.020
- AEM      HA     C1        single      1.077    0.020
- AEM      H1     N1        single      0.954    0.020
- AEM      N2     C2        single      1.450    0.020
- AEM      H2C1   C2        single      1.092    0.020
- AEM      H2C2   C2        single      1.092    0.020
- AEM      H2N1   N2        single      1.010    0.020
- AEM      H2N2   N2        single      1.010    0.020
+AEM          C1          N1      DOUBLE       n     1.288   0.020
+AEM          C1          C2      SINGLE       n     1.499   0.010
+AEM          C2          N2      SINGLE       n     1.467   0.015
+AEM          C1          HA      SINGLE       n     0.938   0.013
+AEM          N1          H1      SINGLE       n     0.892   0.020
+AEM          C2        H2C1      SINGLE       n     0.971   0.020
+AEM          C2        H2C2      SINGLE       n     0.971   0.020
+AEM          N2        H2N1      SINGLE       n     0.902   0.020
+AEM          N2        H2N2      SINGLE       n     0.902   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -81,19 +55,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- AEM      H1     N1     C1      120.000    3.000
- AEM      N1     C1     HA      120.000    3.000
- AEM      N1     C1     C2      120.000    3.000
- AEM      HA     C1     C2      120.000    3.000
- AEM      C1     C2     H2C1    109.470    3.000
- AEM      C1     C2     H2C2    109.470    3.000
- AEM      C1     C2     N2      111.600    3.000
- AEM      H2C1   C2     H2C2    107.900    3.000
- AEM      H2C1   C2     N2      109.470    3.000
- AEM      H2C2   C2     N2      109.470    3.000
- AEM      C2     N2     H2N2    120.000    3.000
- AEM      C2     N2     H2N1    120.000    3.000
- AEM      H2N2   N2     H2N1    120.000    3.000
+AEM          N1          C1          C2     121.923    3.00
+AEM          N1          C1          HA     118.740    1.50
+AEM          C2          C1          HA     119.337    1.50
+AEM          C1          N1          H1     112.238    3.00
+AEM          C1          C2          N2     112.134    2.59
+AEM          C1          C2        H2C1     108.659    1.50
+AEM          C1          C2        H2C2     108.659    1.50
+AEM          N2          C2        H2C1     108.833    1.50
+AEM          N2          C2        H2C2     108.833    1.50
+AEM        H2C1          C2        H2C2     107.908    1.50
+AEM          C2          N2        H2N1     102.011    3.00
+AEM          C2          N2        H2N2     102.011    3.00
+AEM        H2N1          N2        H2N2     107.243    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -104,21 +78,32 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AEM      CONST_1  H1     N1     C1     C2      -179.963    0.000   0
- AEM      var_1    N1     C1     C2     N2       120.013   20.000   1
- AEM      var_2    C1     C2     N2     H2N1    -179.963   20.000   1
+AEM             sp2_sp2_1          C2          C1          N1          H1     180.000   10.00     2
+AEM             sp2_sp3_2          N1          C1          C2          N2     120.000   10.00     6
+AEM             sp3_sp3_1          C1          C2          N2        H2N1     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- AEM      plan-1    C1        0.020
- AEM      plan-1    N1        0.020
- AEM      plan-1    C2        0.020
- AEM      plan-1    HA        0.020
- AEM      plan-1    H1        0.020
- AEM      plan-2    N2        0.020
- AEM      plan-2    C2        0.020
- AEM      plan-2    H2N1      0.020
- AEM      plan-2    H2N2      0.020
-# ------------------------------------------------------
+AEM    plan-1          C1   0.020
+AEM    plan-1          C2   0.020
+AEM    plan-1          HA   0.020
+AEM    plan-1          N1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+AEM SMILES           ACDLabs              10.04 "[N@H]=CCN"
+AEM SMILES_CANONICAL CACTVS               3.341 NCC=N
+AEM SMILES           CACTVS               3.341 NCC=N
+AEM SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[H]/N=C/CN"
+AEM SMILES           "OpenEye OEToolkits" 1.5.0 "[H]N=CCN"
+AEM InChI            InChI                1.03  InChI=1S/C2H6N2/c3-1-2-4/h1,3H,2,4H2/b3-1+
+AEM InChIKey         InChI                1.03  AXQVKDQRBAXYBP-HNQUOIGGSA-N
+AEM ?                acedrg               202         "dictionary generator"                  
+AEM ?                acedrg_database      11          "data source"                           
+AEM ?                rdkit                2017.03.2   "Chemoinformatics tool"
+AEM ?                refmac5              5.8.0189    "optimization tool"                     

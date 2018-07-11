@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PAC      PAC '2-PHENYLACETIC ACID                 ' non-polymer        17  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PAC     PAC      "2-PHENYLACETIC ACID"     NON-POLYMER     17     10     .     
 #
 data_comp_PAC
 #
@@ -28,75 +17,52 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PAC           O2     O    OC       -0.500      0.000    0.000    0.000
- PAC           C1     C    C         0.000     -1.186    0.171   -0.358
- PAC           O1     O    OC       -0.500     -1.637    1.331   -0.492
- PAC           C2     C    CH2       0.000     -2.072   -1.016   -0.629
- PAC           H21    H    H         0.000     -2.155   -1.622    0.276
- PAC           H22    H    H         0.000     -1.638   -1.618   -1.430
- PAC           "C1'"  C    CR6       0.000     -3.441   -0.539   -1.042
- PAC           "C6'"  C    CR16      0.000     -4.416   -0.328   -0.085
- PAC           "H6'"  H    H         0.000     -4.197   -0.508    0.961
- PAC           "C5'"  C    CR16      0.000     -5.670    0.114   -0.464
- PAC           "H5'"  H    H         0.000     -6.433    0.285    0.286
- PAC           "C4'"  C    CR16      0.000     -5.951    0.336   -1.798
- PAC           "H4'"  H    H         0.000     -6.934    0.679   -2.095
- PAC           "C3'"  C    CR16      0.000     -4.977    0.120   -2.754
- PAC           "H3'"  H    H         0.000     -5.197    0.293   -3.800
- PAC           "C2'"  C    CR16      0.000     -3.721   -0.318   -2.376
- PAC           "H2'"  H    H         0.000     -2.958   -0.487   -3.125
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PAC      O2     n/a    C1     START
- PAC      C1     O2     C2     .
- PAC      O1     C1     .      .
- PAC      C2     C1     "C1'"  .
- PAC      H21    C2     .      .
- PAC      H22    C2     .      .
- PAC      "C1'"  C2     "C6'"  .
- PAC      "C6'"  "C1'"  "C5'"  .
- PAC      "H6'"  "C6'"  .      .
- PAC      "C5'"  "C6'"  "C4'"  .
- PAC      "H5'"  "C5'"  .      .
- PAC      "C4'"  "C5'"  "C3'"  .
- PAC      "H4'"  "C4'"  .      .
- PAC      "C3'"  "C4'"  "C2'"  .
- PAC      "H3'"  "C3'"  .      .
- PAC      "C2'"  "C3'"  "H2'"  .
- PAC      "H2'"  "C2'"  .      END
- PAC      "C1'"  "C2'"  .    ADD
+PAC     C1      C       C       0       13.031      38.082      35.392      
+PAC     C2      C       CH2     0       13.220      37.205      34.159      
+PAC     "C1'"   C       CR6     0       11.956      36.501      33.727      
+PAC     "C2'"   C       CR16    0       11.281      36.883      32.568      
+PAC     "C3'"   C       CR16    0       10.115      36.231      32.175      
+PAC     "C4'"   C       CR16    0       9.610       35.190      32.935      
+PAC     "C5'"   C       CR16    0       10.269      34.800      34.088      
+PAC     "C6'"   C       CR16    0       11.435      35.452      34.481      
+PAC     O1      O       O       0       13.319      37.602      36.503      
+PAC     O2      O       OC      -1      12.598      39.237      35.228      
+PAC     H21     H       H       0       13.905      36.538      34.353      
+PAC     H22     H       H       0       13.548      37.759      33.427      
+PAC     "H2'"   H       H       0       11.619      37.592      32.044      
+PAC     "H3'"   H       H       0       9.669       36.500      31.388      
+PAC     "H4'"   H       H       0       8.819       34.748      32.668      
+PAC     "H5'"   H       H       0       9.928       34.091      34.609      
+PAC     "H6'"   H       H       0       11.879      35.181      35.269      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PAC      C2     C1        single      1.510    0.020
- PAC      O1     C1        deloc       1.250    0.020
- PAC      C1     O2        deloc       1.250    0.020
- PAC      "C1'"  C2        single      1.511    0.020
- PAC      H21    C2        single      1.092    0.020
- PAC      H22    C2        single      1.092    0.020
- PAC      "C1'"  "C2'"     double      1.390    0.020
- PAC      "C6'"  "C1'"     single      1.390    0.020
- PAC      "C2'"  "C3'"     single      1.390    0.020
- PAC      "H2'"  "C2'"     single      1.083    0.020
- PAC      "C3'"  "C4'"     double      1.390    0.020
- PAC      "H3'"  "C3'"     single      1.083    0.020
- PAC      "C4'"  "C5'"     single      1.390    0.020
- PAC      "H4'"  "C4'"     single      1.083    0.020
- PAC      "C5'"  "C6'"     double      1.390    0.020
- PAC      "H5'"  "C5'"     single      1.083    0.020
- PAC      "H6'"  "C6'"     single      1.083    0.020
+PAC          C1          C2      SINGLE       n     1.525   0.014
+PAC          C1          O1      DOUBLE       n     1.244   0.020
+PAC          C1          O2      SINGLE       n     1.244   0.020
+PAC          C2       "C1'"      SINGLE       n     1.509   0.010
+PAC       "C1'"       "C2'"      DOUBLE       y     1.386   0.010
+PAC       "C1'"       "C6'"      SINGLE       y     1.386   0.010
+PAC       "C2'"       "C3'"      SINGLE       y     1.386   0.010
+PAC       "C3'"       "C4'"      DOUBLE       y     1.376   0.012
+PAC       "C4'"       "C5'"      SINGLE       y     1.374   0.013
+PAC       "C5'"       "C6'"      DOUBLE       y     1.386   0.010
+PAC          C2         H21      SINGLE       n     0.975   0.011
+PAC          C2         H22      SINGLE       n     0.975   0.011
+PAC       "C2'"       "H2'"      SINGLE       n     0.944   0.017
+PAC       "C3'"       "H3'"      SINGLE       n     0.944   0.018
+PAC       "C4'"       "H4'"      SINGLE       n     0.944   0.016
+PAC       "C5'"       "H5'"      SINGLE       n     0.944   0.018
+PAC       "C6'"       "H6'"      SINGLE       n     0.944   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -104,33 +70,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PAC      O2     C1     O1      123.000    3.000
- PAC      O2     C1     C2      118.500    3.000
- PAC      O1     C1     C2      118.500    3.000
- PAC      C1     C2     H21     109.470    3.000
- PAC      C1     C2     H22     109.470    3.000
- PAC      C1     C2     "C1'"   109.470    3.000
- PAC      H21    C2     H22     107.900    3.000
- PAC      H21    C2     "C1'"   109.470    3.000
- PAC      H22    C2     "C1'"   109.470    3.000
- PAC      C2     "C1'"  "C6'"   120.000    3.000
- PAC      C2     "C1'"  "C2'"   120.000    3.000
- PAC      "C6'"  "C1'"  "C2'"   120.000    3.000
- PAC      "C1'"  "C6'"  "H6'"   120.000    3.000
- PAC      "C1'"  "C6'"  "C5'"   120.000    3.000
- PAC      "H6'"  "C6'"  "C5'"   120.000    3.000
- PAC      "C6'"  "C5'"  "H5'"   120.000    3.000
- PAC      "C6'"  "C5'"  "C4'"   120.000    3.000
- PAC      "H5'"  "C5'"  "C4'"   120.000    3.000
- PAC      "C5'"  "C4'"  "H4'"   120.000    3.000
- PAC      "C5'"  "C4'"  "C3'"   120.000    3.000
- PAC      "H4'"  "C4'"  "C3'"   120.000    3.000
- PAC      "C4'"  "C3'"  "H3'"   120.000    3.000
- PAC      "C4'"  "C3'"  "C2'"   120.000    3.000
- PAC      "H3'"  "C3'"  "C2'"   120.000    3.000
- PAC      "C3'"  "C2'"  "H2'"   120.000    3.000
- PAC      "C3'"  "C2'"  "C1'"   120.000    3.000
- PAC      "H2'"  "C2'"  "C1'"   120.000    3.000
+PAC          C2          C1          O1     118.115    1.50
+PAC          C2          C1          O2     118.115    1.50
+PAC          O1          C1          O2     123.770    1.50
+PAC          C1          C2       "C1'"     113.444    2.96
+PAC          C1          C2         H21     108.710    1.50
+PAC          C1          C2         H22     108.710    1.50
+PAC       "C1'"          C2         H21     109.081    1.50
+PAC       "C1'"          C2         H22     109.081    1.50
+PAC         H21          C2         H22     107.676    1.52
+PAC          C2       "C1'"       "C2'"     120.970    1.50
+PAC          C2       "C1'"       "C6'"     120.970    1.50
+PAC       "C2'"       "C1'"       "C6'"     118.060    1.50
+PAC       "C1'"       "C2'"       "C3'"     120.624    1.50
+PAC       "C1'"       "C2'"       "H2'"     119.591    1.50
+PAC       "C3'"       "C2'"       "H2'"     119.786    1.50
+PAC       "C2'"       "C3'"       "C4'"     120.325    1.50
+PAC       "C2'"       "C3'"       "H3'"     119.792    1.50
+PAC       "C4'"       "C3'"       "H3'"     119.883    1.50
+PAC       "C3'"       "C4'"       "C5'"     120.043    1.50
+PAC       "C3'"       "C4'"       "H4'"     119.979    1.50
+PAC       "C5'"       "C4'"       "H4'"     119.979    1.50
+PAC       "C4'"       "C5'"       "C6'"     120.325    1.50
+PAC       "C4'"       "C5'"       "H5'"     119.883    1.50
+PAC       "C6'"       "C5'"       "H5'"     119.792    1.50
+PAC       "C1'"       "C6'"       "C5'"     120.624    1.50
+PAC       "C1'"       "C6'"       "H6'"     119.591    1.50
+PAC       "C5'"       "C6'"       "H6'"     119.786    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -141,33 +107,49 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PAC      var_1    O2     C1     C2     "C1'"   -179.945   20.000   3
- PAC      var_2    C1     C2     "C1'"  "C6'"    -90.248   20.000   2
- PAC      CONST_1  C2     "C1'"  "C2'"  "C3'"    180.000    0.000   0
- PAC      CONST_2  C2     "C1'"  "C6'"  "C5'"    180.000    0.000   0
- PAC      CONST_3  "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
- PAC      CONST_4  "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
- PAC      CONST_5  "C5'"  "C4'"  "C3'"  "C2'"      0.000    0.000   0
- PAC      CONST_6  "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
+PAC             sp2_sp3_2          O1          C1          C2       "C1'"     120.000   10.00     6
+PAC             sp2_sp3_8       "C2'"       "C1'"          C2          C1     -90.000   10.00     6
+PAC       const_sp2_sp2_3          C2       "C1'"       "C2'"       "C3'"     180.000   10.00     2
+PAC              const_23          C2       "C1'"       "C6'"       "C5'"     180.000   10.00     2
+PAC       const_sp2_sp2_5       "C1'"       "C2'"       "C3'"       "C4'"       0.000   10.00     2
+PAC       const_sp2_sp2_9       "C2'"       "C3'"       "C4'"       "C5'"       0.000   10.00     2
+PAC              const_13       "C3'"       "C4'"       "C5'"       "C6'"       0.000   10.00     2
+PAC              const_17       "C4'"       "C5'"       "C6'"       "C1'"       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- PAC      plan-1    C1        0.020
- PAC      plan-1    C2        0.020
- PAC      plan-1    O1        0.020
- PAC      plan-1    O2        0.020
- PAC      plan-2    "C1'"     0.020
- PAC      plan-2    C2        0.020
- PAC      plan-2    "C2'"     0.020
- PAC      plan-2    "C6'"     0.020
- PAC      plan-2    "C3'"     0.020
- PAC      plan-2    "C4'"     0.020
- PAC      plan-2    "C5'"     0.020
- PAC      plan-2    "H2'"     0.020
- PAC      plan-2    "H3'"     0.020
- PAC      plan-2    "H4'"     0.020
- PAC      plan-2    "H5'"     0.020
- PAC      plan-2    "H6'"     0.020
-# ------------------------------------------------------
+PAC    plan-1       "C1'"   0.020
+PAC    plan-1          C2   0.020
+PAC    plan-1       "C2'"   0.020
+PAC    plan-1       "C3'"   0.020
+PAC    plan-1       "C4'"   0.020
+PAC    plan-1       "C5'"   0.020
+PAC    plan-1       "C6'"   0.020
+PAC    plan-1       "H2'"   0.020
+PAC    plan-1       "H3'"   0.020
+PAC    plan-1       "H4'"   0.020
+PAC    plan-1       "H5'"   0.020
+PAC    plan-1       "H6'"   0.020
+PAC    plan-2          C1   0.020
+PAC    plan-2          C2   0.020
+PAC    plan-2          O1   0.020
+PAC    plan-2          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PAC SMILES           ACDLabs              10.04 "O=C(O)Cc1ccccc1"
+PAC SMILES_CANONICAL CACTVS               3.341 "OC(=O)Cc1ccccc1"
+PAC SMILES           CACTVS               3.341 "OC(=O)Cc1ccccc1"
+PAC SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1ccc(cc1)CC(=O)O"
+PAC SMILES           "OpenEye OEToolkits" 1.5.0 "c1ccc(cc1)CC(=O)O"
+PAC InChI            InChI                1.03  "InChI=1S/C8H8O2/c9-8(10)6-7-4-2-1-3-5-7/h1-5H,6H2,(H,9,10)"
+PAC InChIKey         InChI                1.03  WLJVXDMOQOGPHL-UHFFFAOYSA-N
+PAC ?                acedrg               202         "dictionary generator"                  
+PAC ?                acedrg_database      11          "data source"                           
+PAC ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PAC ?                refmac5              5.8.0189    "optimization tool"                     

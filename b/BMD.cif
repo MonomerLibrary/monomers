@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BMD      BMD 'BUTYRAMIDE                          ' non-polymer        15   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BMD     BMD      BUTYRAMIDE     NON-POLYMER     15     6     .     
 #
 data_comp_BMD
 #
@@ -28,67 +17,47 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BMD           OA     O    O         0.000      0.000    0.000    0.000
- BMD           CA     C    C         0.000     -1.115    0.000   -0.474
- BMD           NA     N    NH2       0.000     -1.278    0.000   -1.812
- BMD           HN2    H    H         0.000     -2.207    0.000   -2.214
- BMD           HN1    H    H         0.000     -0.471    0.000   -2.425
- BMD           C1     C    CH2       0.000     -2.319    0.000    0.431
- BMD           H12    H    H         0.000     -2.919   -0.891    0.236
- BMD           H11    H    H         0.000     -2.919    0.891    0.236
- BMD           C2     C    CH2       0.000     -1.861    0.000    1.890
- BMD           H22    H    H         0.000     -1.259    0.891    2.081
- BMD           H21    H    H         0.000     -1.259   -0.891    2.081
- BMD           C3     C    CH3       0.000     -3.083    0.000    2.809
- BMD           H31    H    H         0.000     -2.768    0.000    3.821
- BMD           H32    H    H         0.000     -3.668    0.865    2.624
- BMD           H33    H    H         0.000     -3.668   -0.865    2.624
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BMD      OA     n/a    CA     START
- BMD      CA     OA     C1     .
- BMD      NA     CA     HN1    .
- BMD      HN2    NA     .      .
- BMD      HN1    NA     .      .
- BMD      C1     CA     C2     .
- BMD      H12    C1     .      .
- BMD      H11    C1     .      .
- BMD      C2     C1     C3     .
- BMD      H22    C2     .      .
- BMD      H21    C2     .      .
- BMD      C3     C2     H33    .
- BMD      H31    C3     .      .
- BMD      H32    C3     .      .
- BMD      H33    C3     .      END
+BMD     C3      C       CH3     0       2.150       0.274       0.064       
+BMD     C2      C       CH2     0       0.663       0.559       0.132       
+BMD     C1      C       CH2     0       -0.163      -0.529      -0.516      
+BMD     CA      C       C       0       -1.643      -0.229      -0.502      
+BMD     OA      O       O       0       -2.247      0.034       -1.540      
+BMD     NA      N       NH2     0       -2.244      -0.266      0.679       
+BMD     H33     H       H       0       2.639       0.993       0.500       
+BMD     H32     H       H       0       2.428       0.212       -0.866      
+BMD     H31     H       H       0       2.341       -0.567      0.515       
+BMD     H22     H       H       0       0.480       1.411       -0.317      
+BMD     H21     H       H       0       0.397       0.650       1.070       
+BMD     H12     H       H       0       -0.004      -1.375      -0.044      
+BMD     H11     H       H       0       0.131       -0.645      -1.444      
+BMD     HN1     H       H       0       -3.111      -0.097      0.740       
+BMD     HN2     H       H       0       -1.784      -0.458      1.411       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- BMD      C3     C2        single      1.513    0.020
- BMD      H33    C3        single      1.059    0.020
- BMD      H32    C3        single      1.059    0.020
- BMD      H31    C3        single      1.059    0.020
- BMD      C2     C1        single      1.524    0.020
- BMD      H22    C2        single      1.092    0.020
- BMD      H21    C2        single      1.092    0.020
- BMD      C1     CA        single      1.510    0.020
- BMD      H12    C1        single      1.092    0.020
- BMD      H11    C1        single      1.092    0.020
- BMD      CA     OA        double      1.220    0.020
- BMD      NA     CA        single      1.332    0.020
- BMD      HN1    NA        single      1.010    0.020
- BMD      HN2    NA        single      1.010    0.020
+BMD          C3          C2      SINGLE       n     1.515   0.020
+BMD          C2          C1      SINGLE       n     1.512   0.017
+BMD          C1          CA      SINGLE       n     1.509   0.010
+BMD          CA          OA      DOUBLE       n     1.229   0.012
+BMD          CA          NA      SINGLE       n     1.323   0.011
+BMD          C3         H33      SINGLE       n     0.973   0.016
+BMD          C3         H32      SINGLE       n     0.973   0.016
+BMD          C3         H31      SINGLE       n     0.973   0.016
+BMD          C2         H22      SINGLE       n     0.980   0.016
+BMD          C2         H21      SINGLE       n     0.980   0.016
+BMD          C1         H12      SINGLE       n     0.981   0.019
+BMD          C1         H11      SINGLE       n     0.981   0.019
+BMD          NA         HN1      SINGLE       n     0.884   0.020
+BMD          NA         HN2      SINGLE       n     0.884   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,30 +65,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BMD      OA     CA     NA      123.000    3.000
- BMD      OA     CA     C1      120.500    3.000
- BMD      NA     CA     C1      116.500    3.000
- BMD      CA     NA     HN2     120.000    3.000
- BMD      CA     NA     HN1     120.000    3.000
- BMD      HN2    NA     HN1     120.000    3.000
- BMD      CA     C1     H12     109.470    3.000
- BMD      CA     C1     H11     109.470    3.000
- BMD      CA     C1     C2      109.470    3.000
- BMD      H12    C1     H11     107.900    3.000
- BMD      H12    C1     C2      109.470    3.000
- BMD      H11    C1     C2      109.470    3.000
- BMD      C1     C2     H22     109.470    3.000
- BMD      C1     C2     H21     109.470    3.000
- BMD      C1     C2     C3      111.000    3.000
- BMD      H22    C2     H21     107.900    3.000
- BMD      H22    C2     C3      109.470    3.000
- BMD      H21    C2     C3      109.470    3.000
- BMD      C2     C3     H31     109.470    3.000
- BMD      C2     C3     H32     109.470    3.000
- BMD      C2     C3     H33     109.470    3.000
- BMD      H31    C3     H32     109.470    3.000
- BMD      H31    C3     H33     109.470    3.000
- BMD      H32    C3     H33     109.470    3.000
+BMD          C2          C3         H33     109.554    1.50
+BMD          C2          C3         H32     109.554    1.50
+BMD          C2          C3         H31     109.554    1.50
+BMD         H33          C3         H32     109.380    1.50
+BMD         H33          C3         H31     109.380    1.50
+BMD         H32          C3         H31     109.380    1.50
+BMD          C3          C2          C1     112.286    1.50
+BMD          C3          C2         H22     108.918    1.50
+BMD          C3          C2         H21     108.918    1.50
+BMD          C1          C2         H22     109.009    1.50
+BMD          C1          C2         H21     109.009    1.50
+BMD         H22          C2         H21     107.763    1.50
+BMD          C2          C1          CA     112.984    1.82
+BMD          C2          C1         H12     109.104    1.50
+BMD          C2          C1         H11     109.104    1.50
+BMD          CA          C1         H12     109.082    1.50
+BMD          CA          C1         H11     109.082    1.50
+BMD         H12          C1         H11     107.846    1.50
+BMD          C1          CA          OA     121.405    1.50
+BMD          C1          CA          NA     116.125    1.50
+BMD          OA          CA          NA     122.470    1.50
+BMD          CA          NA         HN1     120.022    1.65
+BMD          CA          NA         HN2     120.022    1.65
+BMD         HN1          NA         HN2     119.956    2.38
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -130,23 +99,37 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BMD      CONST_1  OA     CA     NA     HN1        0.000    0.000   0
- BMD      var_1    OA     CA     C1     C2         0.000   20.000   3
- BMD      var_2    CA     C1     C2     C3       180.000   20.000   3
- BMD      var_3    C1     C2     C3     H33       60.003   20.000   3
+BMD             sp3_sp3_1          C1          C2          C3         H33     180.000   10.00     3
+BMD            sp3_sp3_10          CA          C1          C2          C3     180.000   10.00     3
+BMD             sp2_sp3_2          OA          CA          C1          C2     120.000   10.00     6
+BMD             sp2_sp2_1          C1          CA          NA         HN1     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BMD      plan-1    CA        0.020
- BMD      plan-1    C1        0.020
- BMD      plan-1    OA        0.020
- BMD      plan-1    NA        0.020
- BMD      plan-1    HN2       0.020
- BMD      plan-1    HN1       0.020
- BMD      plan-2    NA        0.020
- BMD      plan-2    CA        0.020
- BMD      plan-2    HN1       0.020
- BMD      plan-2    HN2       0.020
-# ------------------------------------------------------
+BMD    plan-1          C1   0.020
+BMD    plan-1          CA   0.020
+BMD    plan-1          NA   0.020
+BMD    plan-1          OA   0.020
+BMD    plan-2          CA   0.020
+BMD    plan-2         HN1   0.020
+BMD    plan-2         HN2   0.020
+BMD    plan-2          NA   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BMD SMILES           ACDLabs              10.04 "O=C(N)CCC"
+BMD SMILES_CANONICAL CACTVS               3.341 "CCCC(N)=O"
+BMD SMILES           CACTVS               3.341 "CCCC(N)=O"
+BMD SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CCCC(=O)N"
+BMD SMILES           "OpenEye OEToolkits" 1.5.0 "CCCC(=O)N"
+BMD InChI            InChI                1.03  "InChI=1S/C4H9NO/c1-2-3-4(5)6/h2-3H2,1H3,(H2,5,6)"
+BMD InChIKey         InChI                1.03  DNSISZSEWVHGLH-UHFFFAOYSA-N
+BMD ?                acedrg               202         "dictionary generator"                  
+BMD ?                acedrg_database      11          "data source"                           
+BMD ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BMD ?                refmac5              5.8.0189    "optimization tool"                     

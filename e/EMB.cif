@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-EMB      EMB 'METHYL-CARBAMIC ACID ETHYL ESTER    ' non-polymer        16   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+EMB     EMB      "METHYL-CARBAMIC ACID ETHYL ESTER"     NON-POLYMER     16     7     .     
 #
 data_comp_EMB
 #
@@ -28,70 +17,49 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- EMB           O2     O    O         0.000      0.000    0.000    0.000
- EMB           C3     C    C         0.000     -1.199    0.000   -0.195
- EMB           N1     N    NH1       0.000     -1.677    0.000   -1.454
- EMB           H1     H    H         0.000     -2.674    0.000   -1.616
- EMB           C4     C    CH3       0.000     -0.750    0.000   -2.589
- EMB           H41    H    H         0.000     -0.138    0.865   -2.550
- EMB           H42    H    H         0.000     -0.138   -0.865   -2.550
- EMB           H43    H    H         0.000     -1.298    0.000   -3.497
- EMB           O1     O    O2        0.000     -2.050    0.000    0.848
- EMB           C2     C    CH2       0.000     -1.535    0.000    2.205
- EMB           H22    H    H         0.000     -0.924    0.891    2.361
- EMB           H21    H    H         0.000     -0.924   -0.891    2.361
- EMB           C1     C    CH3       0.000     -2.703    0.000    3.194
- EMB           H11    H    H         0.000     -2.330   -0.001    4.187
- EMB           H12    H    H         0.000     -3.297    0.865    3.044
- EMB           H13    H    H         0.000     -3.298   -0.864    3.044
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- EMB      O2     n/a    C3     START
- EMB      C3     O2     O1     .
- EMB      N1     C3     C4     .
- EMB      H1     N1     .      .
- EMB      C4     N1     H43    .
- EMB      H41    C4     .      .
- EMB      H42    C4     .      .
- EMB      H43    C4     .      .
- EMB      O1     C3     C2     .
- EMB      C2     O1     C1     .
- EMB      H22    C2     .      .
- EMB      H21    C2     .      .
- EMB      C1     C2     H13    .
- EMB      H11    C1     .      .
- EMB      H12    C1     .      .
- EMB      H13    C1     .      END
+EMB     C1      C       CH3     0       -13.551     23.308      -2.419      
+EMB     C2      C       CH2     0       -14.051     21.949      -2.718      
+EMB     O1      O       O2      0       -12.904     21.108      -3.028      
+EMB     C3      C       C       0       -13.126     19.790      -3.208      
+EMB     O2      O       O       0       -14.103     19.319      -3.755      
+EMB     N1      N       NH1     0       -12.100     19.065      -2.706      
+EMB     C4      C       CH3     0       -11.927     17.661      -2.994      
+EMB     H13     H       H       0       -14.294     23.933      -2.413      
+EMB     H12     H       H       0       -12.910     23.575      -3.097      
+EMB     H11     H       H       0       -13.121     23.312      -1.548      
+EMB     H22     H       H       0       -14.663     21.978      -3.482      
+EMB     H21     H       H       0       -14.536     21.593      -1.944      
+EMB     H1      H       H       0       -11.533     19.444      -2.192      
+EMB     H43     H       H       0       -12.742     17.182      -2.773      
+EMB     H42     H       H       0       -11.192     17.309      -2.465      
+EMB     H41     H       H       0       -11.730     17.545      -3.937      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- EMB      C1     C2        single      1.513    0.020
- EMB      H13    C1        single      1.059    0.020
- EMB      H12    C1        single      1.059    0.020
- EMB      H11    C1        single      1.059    0.020
- EMB      C2     O1        single      1.426    0.020
- EMB      H22    C2        single      1.092    0.020
- EMB      H21    C2        single      1.092    0.020
- EMB      O1     C3        single      1.454    0.020
- EMB      C3     O2        double      1.220    0.020
- EMB      N1     C3        single      1.330    0.020
- EMB      C4     N1        single      1.450    0.020
- EMB      H1     N1        single      1.010    0.020
- EMB      H43    C4        single      1.059    0.020
- EMB      H42    C4        single      1.059    0.020
- EMB      H41    C4        single      1.059    0.020
+EMB          C1          C2      SINGLE       n     1.478   0.020
+EMB          C2          O1      SINGLE       n     1.453   0.010
+EMB          O1          C3      SINGLE       n     1.341   0.012
+EMB          C3          O2      DOUBLE       n     1.210   0.012
+EMB          C3          N1      SINGLE       n     1.340   0.015
+EMB          N1          C4      SINGLE       n     1.441   0.010
+EMB          C1         H13      SINGLE       n     0.971   0.016
+EMB          C1         H12      SINGLE       n     0.971   0.016
+EMB          C1         H11      SINGLE       n     0.971   0.016
+EMB          C2         H22      SINGLE       n     0.980   0.015
+EMB          C2         H21      SINGLE       n     0.980   0.015
+EMB          N1          H1      SINGLE       n     0.851   0.017
+EMB          C4         H43      SINGLE       n     0.971   0.020
+EMB          C4         H42      SINGLE       n     0.971   0.020
+EMB          C4         H41      SINGLE       n     0.971   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -99,31 +67,31 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- EMB      O2     C3     N1      123.000    3.000
- EMB      O2     C3     O1      119.000    3.000
- EMB      N1     C3     O1      118.000    3.000
- EMB      C3     N1     H1      120.000    3.000
- EMB      C3     N1     C4      121.500    3.000
- EMB      H1     N1     C4      118.500    3.000
- EMB      N1     C4     H41     109.470    3.000
- EMB      N1     C4     H42     109.470    3.000
- EMB      N1     C4     H43     109.470    3.000
- EMB      H41    C4     H42     109.470    3.000
- EMB      H41    C4     H43     109.470    3.000
- EMB      H42    C4     H43     109.470    3.000
- EMB      C3     O1     C2      120.000    3.000
- EMB      O1     C2     H22     109.470    3.000
- EMB      O1     C2     H21     109.470    3.000
- EMB      O1     C2     C1      109.470    3.000
- EMB      H22    C2     H21     107.900    3.000
- EMB      H22    C2     C1      109.470    3.000
- EMB      H21    C2     C1      109.470    3.000
- EMB      C2     C1     H11     109.470    3.000
- EMB      C2     C1     H12     109.470    3.000
- EMB      C2     C1     H13     109.470    3.000
- EMB      H11    C1     H12     109.470    3.000
- EMB      H11    C1     H13     109.470    3.000
- EMB      H12    C1     H13     109.470    3.000
+EMB          C2          C1         H13     109.517    1.50
+EMB          C2          C1         H12     109.517    1.50
+EMB          C2          C1         H11     109.517    1.50
+EMB         H13          C1         H12     109.410    1.50
+EMB         H13          C1         H11     109.410    1.50
+EMB         H12          C1         H11     109.410    1.50
+EMB          C1          C2          O1     107.885    1.78
+EMB          C1          C2         H22     110.009    1.50
+EMB          C1          C2         H21     110.009    1.50
+EMB          O1          C2         H22     110.095    1.50
+EMB          O1          C2         H21     110.095    1.50
+EMB         H22          C2         H21     108.453    1.50
+EMB          C2          O1          C3     115.973    1.50
+EMB          O1          C3          O2     125.010    1.50
+EMB          O1          C3          N1     110.184    1.50
+EMB          O2          C3          N1     124.806    1.50
+EMB          C3          N1          C4     122.194    1.50
+EMB          C3          N1          H1     118.780    1.99
+EMB          C4          N1          H1     119.026    1.50
+EMB          N1          C4         H43     109.445    1.50
+EMB          N1          C4         H42     109.445    1.50
+EMB          N1          C4         H41     109.445    1.50
+EMB         H43          C4         H42     109.279    1.79
+EMB         H43          C4         H41     109.279    1.79
+EMB         H42          C4         H41     109.279    1.79
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -134,23 +102,38 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EMB      CONST_1  O2     C3     N1     C4         0.000    0.000   0
- EMB      var_1    C3     N1     C4     H43      180.000   20.000   1
- EMB      var_2    O2     C3     O1     C2         0.000   20.000   1
- EMB      var_3    C3     O1     C2     C1       180.000   20.000   1
- EMB      var_4    O1     C2     C1     H13       59.967   20.000   3
+EMB             sp3_sp3_1         H13          C1          C2          O1     180.000   10.00     3
+EMB            sp3_sp3_10          C1          C2          O1          C3     180.000   10.00     3
+EMB             sp2_sp2_1          O2          C3          O1          C2     180.000   10.00     2
+EMB             sp2_sp2_3          O1          C3          N1          C4     180.000   10.00     2
+EMB             sp2_sp3_1          C3          N1          C4         H43       0.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- EMB      plan-1    C3        0.020
- EMB      plan-1    O1        0.020
- EMB      plan-1    O2        0.020
- EMB      plan-1    N1        0.020
- EMB      plan-1    H1        0.020
- EMB      plan-2    N1        0.020
- EMB      plan-2    C3        0.020
- EMB      plan-2    C4        0.020
- EMB      plan-2    H1        0.020
-# ------------------------------------------------------
+EMB    plan-1          C3   0.020
+EMB    plan-1          N1   0.020
+EMB    plan-1          O1   0.020
+EMB    plan-1          O2   0.020
+EMB    plan-2          C3   0.020
+EMB    plan-2          C4   0.020
+EMB    plan-2          H1   0.020
+EMB    plan-2          N1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+EMB SMILES           ACDLabs              10.04 "O=C(OCC)NC"
+EMB SMILES_CANONICAL CACTVS               3.341 "CCOC(=O)NC"
+EMB SMILES           CACTVS               3.341 "CCOC(=O)NC"
+EMB SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CCOC(=O)NC"
+EMB SMILES           "OpenEye OEToolkits" 1.5.0 "CCOC(=O)NC"
+EMB InChI            InChI                1.03  "InChI=1S/C4H9NO2/c1-3-7-4(6)5-2/h3H2,1-2H3,(H,5,6)"
+EMB InChIKey         InChI                1.03  SURZCVYFPAXNGN-UHFFFAOYSA-N
+EMB ?                acedrg               202         "dictionary generator"                  
+EMB ?                acedrg_database      11          "data source"                           
+EMB ?                rdkit                2017.03.2   "Chemoinformatics tool"
+EMB ?                refmac5              5.8.0189    "optimization tool"                     

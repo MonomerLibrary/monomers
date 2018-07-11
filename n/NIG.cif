@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NIG      NIG 'N-(IMINOMETHYL)-L-GLUTAMIC ACID     ' non-polymer        20  12 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+NIG     NIG      "N-(IMINOMETHYL)-L-GLUTAMIC ACID"     NON-POLYMER     20     12     .     
 #
 data_comp_NIG
 #
@@ -28,82 +17,57 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- NIG           O2     O    OC       -0.500      0.000    0.000    0.000
- NIG           C      C    C         0.000     -1.123   -0.071    0.547
- NIG           O1     O    OC       -0.500     -1.207   -0.198    1.789
- NIG           CA     C    CH1       0.000     -2.374   -0.002   -0.290
- NIG           HA     H    H         0.000     -2.378   -0.831   -1.012
- NIG           N      N    NH1       0.000     -3.549   -0.106    0.580
- NIG           HN     H    H         0.000     -4.011    0.730    0.907
- NIG           CF     C    C1        0.000     -4.021   -1.338    0.948
- NIG           HF     H    H         0.000     -4.885   -1.415    1.587
- NIG           NF     N    N         0.000     -3.429   -2.409    0.530
- NIG           HNF    H    H         0.000     -2.659   -2.352   -0.040
- NIG           CB     C    CH2       0.000     -2.413    1.330   -1.042
- NIG           HB1    H    H         0.000     -1.494    1.447   -1.621
- NIG           HB2    H    H         0.000     -2.498    2.149   -0.326
- NIG           CG     C    CH2       0.000     -3.618    1.348   -1.986
- NIG           HG1    H    H         0.000     -4.535    1.229   -1.406
- NIG           HG2    H    H         0.000     -3.531    0.527   -2.701
- NIG           CD     C    C         0.000     -3.655    2.659   -2.726
- NIG           OE1    O    OC       -0.500     -2.776    3.523   -2.514
- NIG           OE2    O    OC       -0.500     -4.565    2.885   -3.554
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- NIG      O2     n/a    C      START
- NIG      C      O2     CA     .
- NIG      O1     C      .      .
- NIG      CA     C      CB     .
- NIG      HA     CA     .      .
- NIG      N      CA     CF     .
- NIG      HN     N      .      .
- NIG      CF     N      NF     .
- NIG      HF     CF     .      .
- NIG      NF     CF     HNF    .
- NIG      HNF    NF     .      .
- NIG      CB     CA     CG     .
- NIG      HB1    CB     .      .
- NIG      HB2    CB     .      .
- NIG      CG     CB     CD     .
- NIG      HG1    CG     .      .
- NIG      HG2    CG     .      .
- NIG      CD     CG     OE2    .
- NIG      OE1    CD     .      .
- NIG      OE2    CD     .      END
+NIG     O1      O       O       0       28.052      15.124      3.779       
+NIG     NF      N       NH1     0       31.851      13.558      6.761       
+NIG     CF      C       C1      0       31.637      14.566      5.943       
+NIG     N       N       NH1     0       30.504      14.674      5.222       
+NIG     CA      C       CH1     0       30.267      15.805      4.338       
+NIG     CB      C       CH2     0       30.943      15.577      2.980       
+NIG     CG      C       CH2     0       31.043      16.835      2.132       
+NIG     CD      C       C       0       31.983      16.719      0.945       
+NIG     OE1     O       O       0       31.733      15.860      0.077       
+NIG     OE2     O       OC      -1      32.963      17.489      0.891       
+NIG     C       C       C       0       28.760      16.072      4.172       
+NIG     O2      O       OC      -1      28.350      17.218      4.443       
+NIG     HNF     H       H       0       32.641      13.618      7.170       
+NIG     HF      H       H       0       32.287      15.240      5.846       
+NIG     HN      H       H       0       29.903      14.042      5.283       
+NIG     HA      H       H       0       30.674      16.610      4.751       
+NIG     HB1     H       H       0       30.434      14.901      2.486       
+NIG     HB2     H       H       0       31.844      15.224      3.132       
+NIG     HG1     H       H       0       31.349      17.577      2.696       
+NIG     HG2     H       H       0       30.151      17.067      1.797       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- NIG      O1     C         deloc       1.250    0.020
- NIG      NF     CF        double      1.260    0.020
- NIG      HNF    NF        single      0.954    0.020
- NIG      CF     N         single      1.330    0.020
- NIG      HF     CF        single      1.077    0.020
- NIG      N      CA        single      1.450    0.020
- NIG      HN     N         single      1.010    0.020
- NIG      CB     CA        single      1.524    0.020
- NIG      CA     C         single      1.500    0.020
- NIG      HA     CA        single      1.099    0.020
- NIG      CG     CB        single      1.524    0.020
- NIG      HB1    CB        single      1.092    0.020
- NIG      HB2    CB        single      1.092    0.020
- NIG      CD     CG        single      1.510    0.020
- NIG      HG1    CG        single      1.092    0.020
- NIG      HG2    CG        single      1.092    0.020
- NIG      OE1    CD        deloc       1.250    0.020
- NIG      OE2    CD        deloc       1.250    0.020
- NIG      C      O2        deloc       1.250    0.020
+NIG          O1           C      DOUBLE       n     1.247   0.019
+NIG          NF          CF      DOUBLE       n     1.316   0.010
+NIG          CF           N      SINGLE       n     1.345   0.011
+NIG           N          CA      SINGLE       n     1.452   0.011
+NIG          CA          CB      SINGLE       n     1.533   0.010
+NIG          CA           C      SINGLE       n     1.539   0.010
+NIG          CB          CG      SINGLE       n     1.518   0.015
+NIG          CG          CD      SINGLE       n     1.519   0.012
+NIG          CD         OE1      DOUBLE       n     1.247   0.019
+NIG          CD         OE2      SINGLE       n     1.247   0.019
+NIG           C          O2      SINGLE       n     1.247   0.019
+NIG          NF         HNF      SINGLE       n     0.892   0.020
+NIG          CF          HF      SINGLE       n     0.941   0.019
+NIG           N          HN      SINGLE       n     0.873   0.020
+NIG          CA          HA      SINGLE       n     0.991   0.020
+NIG          CB         HB1      SINGLE       n     0.980   0.018
+NIG          CB         HB2      SINGLE       n     0.980   0.018
+NIG          CG         HG1      SINGLE       n     0.981   0.019
+NIG          CG         HG2      SINGLE       n     0.981   0.019
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -111,37 +75,37 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- NIG      O2     C      O1      123.000    3.000
- NIG      O2     C      CA      118.500    3.000
- NIG      O1     C      CA      118.500    3.000
- NIG      C      CA     HA      108.810    3.000
- NIG      C      CA     N       111.600    3.000
- NIG      C      CA     CB      109.470    3.000
- NIG      HA     CA     N       108.550    3.000
- NIG      HA     CA     CB      108.340    3.000
- NIG      N      CA     CB      110.000    3.000
- NIG      CA     N      HN      118.500    3.000
- NIG      CA     N      CF      120.000    3.000
- NIG      HN     N      CF      120.000    3.000
- NIG      N      CF     HF      120.000    3.000
- NIG      N      CF     NF      120.000    3.000
- NIG      HF     CF     NF      120.000    3.000
- NIG      CF     NF     HNF     120.000    3.000
- NIG      CA     CB     HB1     109.470    3.000
- NIG      CA     CB     HB2     109.470    3.000
- NIG      CA     CB     CG      111.000    3.000
- NIG      HB1    CB     HB2     107.900    3.000
- NIG      HB1    CB     CG      109.470    3.000
- NIG      HB2    CB     CG      109.470    3.000
- NIG      CB     CG     HG1     109.470    3.000
- NIG      CB     CG     HG2     109.470    3.000
- NIG      CB     CG     CD      109.470    3.000
- NIG      HG1    CG     HG2     107.900    3.000
- NIG      HG1    CG     CD      109.470    3.000
- NIG      HG2    CG     CD      109.470    3.000
- NIG      CG     CD     OE1     118.500    3.000
- NIG      CG     CD     OE2     118.500    3.000
- NIG      OE1    CD     OE2     123.000    3.000
+NIG          CF          NF         HNF     112.238    3.00
+NIG          NF          CF           N     122.267    3.00
+NIG          NF          CF          HF     120.060    1.50
+NIG           N          CF          HF     117.674    2.15
+NIG          CF           N          CA     121.153    1.67
+NIG          CF           N          HN     119.450    1.94
+NIG          CA           N          HN     119.398    1.92
+NIG           N          CA          CB     111.076    1.75
+NIG           N          CA           C     110.939    1.74
+NIG           N          CA          HA     108.161    1.50
+NIG          CB          CA           C     111.638    2.31
+NIG          CB          CA          HA     108.155    1.50
+NIG           C          CA          HA     108.327    1.50
+NIG          CA          CB          CG     112.938    1.50
+NIG          CA          CB         HB1     108.606    1.50
+NIG          CA          CB         HB2     108.606    1.50
+NIG          CG          CB         HB1     108.890    1.50
+NIG          CG          CB         HB2     108.890    1.50
+NIG         HB1          CB         HB2     107.844    1.50
+NIG          CB          CG          CD     114.629    2.24
+NIG          CB          CG         HG1     108.906    1.50
+NIG          CB          CG         HG2     108.906    1.50
+NIG          CD          CG         HG1     108.404    1.50
+NIG          CD          CG         HG2     108.404    1.50
+NIG         HG1          CG         HG2     107.521    1.50
+NIG          CG          CD         OE1     118.214    1.64
+NIG          CG          CD         OE2     118.214    1.64
+NIG         OE1          CD         OE2     123.571    1.50
+NIG          O1           C          CA     117.249    1.61
+NIG          O1           C          O2     125.502    1.50
+NIG          CA           C          O2     117.249    1.61
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -152,13 +116,13 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NIG      var_1    O2     C      CA     CB       -59.985   20.000   3
- NIG      var_2    C      CA     N      CF       -85.006   20.000   3
- NIG      var_3    CA     N      CF     NF         0.041   20.000   1
- NIG      CONST_1  N      CF     NF     HNF       -0.029    0.000   0
- NIG      var_4    C      CA     CB     CG       174.988   20.000   3
- NIG      var_5    CA     CB     CG     CD      -180.000   20.000   3
- NIG      var_6    CB     CG     CD     OE2     -179.998   20.000   3
+NIG             sp2_sp2_1           N          CF          NF         HNF     180.000   10.00     2
+NIG             sp2_sp2_3          NF          CF           N          CA     180.000   10.00     2
+NIG             sp2_sp3_1          CF           N          CA          CB       0.000   10.00     6
+NIG             sp2_sp3_7          O1           C          CA           N       0.000   10.00     6
+NIG             sp3_sp3_1           N          CA          CB          CG     180.000   10.00     3
+NIG            sp3_sp3_10          CA          CB          CG          CD     180.000   10.00     3
+NIG            sp2_sp3_14         OE1          CD          CG          CB     120.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -167,29 +131,42 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- NIG      chir_01  CA     N      CB     C         negativ
+NIG    chir_1    CA    N    C    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- NIG      plan-1    NF        0.020
- NIG      plan-1    CF        0.020
- NIG      plan-1    HNF       0.020
- NIG      plan-1    N         0.020
- NIG      plan-1    HF        0.020
- NIG      plan-1    HN        0.020
- NIG      plan-2    N         0.020
- NIG      plan-2    CF        0.020
- NIG      plan-2    CA        0.020
- NIG      plan-2    HN        0.020
- NIG      plan-2    HF        0.020
- NIG      plan-3    CD        0.020
- NIG      plan-3    CG        0.020
- NIG      plan-3    OE1       0.020
- NIG      plan-3    OE2       0.020
- NIG      plan-4    C         0.020
- NIG      plan-4    O1        0.020
- NIG      plan-4    CA        0.020
- NIG      plan-4    O2        0.020
-# ------------------------------------------------------
+NIG    plan-1          CF   0.020
+NIG    plan-1          HF   0.020
+NIG    plan-1           N   0.020
+NIG    plan-1          NF   0.020
+NIG    plan-2          CA   0.020
+NIG    plan-2          CF   0.020
+NIG    plan-2          HN   0.020
+NIG    plan-2           N   0.020
+NIG    plan-3          CD   0.020
+NIG    plan-3          CG   0.020
+NIG    plan-3         OE1   0.020
+NIG    plan-3         OE2   0.020
+NIG    plan-4           C   0.020
+NIG    plan-4          CA   0.020
+NIG    plan-4          O1   0.020
+NIG    plan-4          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+NIG SMILES           ACDLabs              10.04 "O=C(O)CCC(NC=[N@H])C(=O)O"
+NIG SMILES_CANONICAL CACTVS               3.341 "OC(=O)CC[C@H](NC=N)C(O)=O"
+NIG SMILES           CACTVS               3.341 "OC(=O)CC[CH](NC=N)C(O)=O"
+NIG SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[H]/N=C\N[C@@H](CCC(=O)O)C(=O)O"
+NIG SMILES           "OpenEye OEToolkits" 1.5.0 "[H]N=CNC(CCC(=O)O)C(=O)O"
+NIG InChI            InChI                1.03  "InChI=1S/C6H10N2O4/c7-3-8-4(6(11)12)1-2-5(9)10/h3-4H,1-2H2,(H2,7,8)(H,9,10)(H,11,12)/t4-/m0/s1"
+NIG InChIKey         InChI                1.03  NRXIKWMTVXPVEF-BYPYZUCNSA-N
+NIG ?                acedrg               202         "dictionary generator"                  
+NIG ?                acedrg_database      11          "data source"                           
+NIG ?                rdkit                2017.03.2   "Chemoinformatics tool"
+NIG ?                refmac5              5.8.0189    "optimization tool"                     

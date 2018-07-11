@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PEZ      PEZ '2-(PHOSPHONOOXY)BUTANOIC ACID       ' non-polymer        17  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PEZ     PEZ      "2-(PHOSPHONOOXY)BUTANOIC ACID"     NON-POLYMER     17     11     .     
 #
 data_comp_PEZ
 #
@@ -28,73 +17,51 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PEZ           O3P    O    OP       -0.666      0.000    0.000    0.000
- PEZ           P      P    P         0.000     -0.679    0.687   -1.164
- PEZ           O1P    O    OP       -0.666     -0.236    0.041   -2.459
- PEZ           O2P    O    OP       -0.666     -0.301    2.152   -1.175
- PEZ           O2     O    O2        0.000     -2.275    0.545   -1.012
- PEZ           C2     C    CH1       0.000     -2.568   -0.852   -1.008
- PEZ           H2     H    H         0.000     -1.634   -1.422   -1.108
- PEZ           C1     C    C         0.000     -3.244   -1.221    0.287
- PEZ           "O2'"  O    OC       -0.500     -3.462   -0.343    1.151
- PEZ           O1     O    OC       -0.500     -3.589   -2.405    0.499
- PEZ           C3     C    CH2       0.000     -3.494   -1.184   -2.179
- PEZ           H31    H    H         0.000     -4.423   -0.619   -2.079
- PEZ           H32    H    H         0.000     -3.717   -2.253   -2.174
- PEZ           C4     C    CH3       0.000     -2.807   -0.811   -3.495
- PEZ           H43    H    H         0.000     -2.589    0.227   -3.501
- PEZ           H42    H    H         0.000     -1.904   -1.359   -3.594
- PEZ           H41    H    H         0.000     -3.446   -1.039   -4.309
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PEZ      O3P    n/a    P      START
- PEZ      P      O3P    O2     .
- PEZ      O1P    P      .      .
- PEZ      O2P    P      .      .
- PEZ      O2     P      C2     .
- PEZ      C2     O2     C3     .
- PEZ      H2     C2     .      .
- PEZ      C1     C2     O1     .
- PEZ      "O2'"  C1     .      .
- PEZ      O1     C1     .      .
- PEZ      C3     C2     C4     .
- PEZ      H31    C3     .      .
- PEZ      H32    C3     .      .
- PEZ      C4     C3     H41    .
- PEZ      H43    C4     .      .
- PEZ      H42    C4     .      .
- PEZ      H41    C4     .      END
+PEZ     O1      O       OC      -1      32.448      52.678      21.915      
+PEZ     C1      C       C       0       32.203      51.458      22.003      
+PEZ     "O2'"   O       O       0       31.289      50.948      22.683      
+PEZ     C2      C       CH1     0       33.104      50.505      21.207      
+PEZ     O2      O       O2      0       33.301      50.988      19.875      
+PEZ     P       P       P       0       32.349      50.570      18.636      
+PEZ     O1P     O       O       0       32.505      49.069      18.484      
+PEZ     O2P     O       OP      -1      32.871      51.340      17.438      
+PEZ     O3P     O       OP      -1      30.944      50.980      19.032      
+PEZ     C3      C       CH2     0       34.475      50.358      21.858      
+PEZ     C4      C       CH3     0       35.314      49.277      21.208      
+PEZ     H2      H       H       0       32.670      49.616      21.172      
+PEZ     H31     H       H       0       34.353      50.145      22.810      
+PEZ     H32     H       H       0       34.948      51.217      21.796      
+PEZ     H41     H       H       0       36.108      49.114      21.746      
+PEZ     H42     H       H       0       35.581      49.564      20.317      
+PEZ     H43     H       H       0       34.795      48.458      21.141      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PEZ      O1     C1        deloc       1.250    0.020
- PEZ      "O2'"  C1        deloc       1.250    0.020
- PEZ      C1     C2        single      1.500    0.020
- PEZ      C2     O2        single      1.426    0.020
- PEZ      C3     C2        single      1.524    0.020
- PEZ      H2     C2        single      1.099    0.020
- PEZ      O2     P         single      1.610    0.020
- PEZ      O1P    P         deloc       1.510    0.020
- PEZ      O2P    P         deloc       1.510    0.020
- PEZ      P      O3P       deloc       1.510    0.020
- PEZ      C4     C3        single      1.513    0.020
- PEZ      H31    C3        single      1.092    0.020
- PEZ      H32    C3        single      1.092    0.020
- PEZ      H41    C4        single      1.059    0.020
- PEZ      H42    C4        single      1.059    0.020
- PEZ      H43    C4        single      1.059    0.020
+PEZ          O1          C1      SINGLE       n     1.247   0.019
+PEZ          C1       "O2'"      DOUBLE       n     1.247   0.019
+PEZ          C1          C2      SINGLE       n     1.533   0.010
+PEZ          C2          O2      SINGLE       n     1.427   0.017
+PEZ          C2          C3      SINGLE       n     1.525   0.010
+PEZ          O2           P      SINGLE       n     1.614   0.019
+PEZ           P         O1P      DOUBLE       n     1.517   0.019
+PEZ           P         O2P      SINGLE       n     1.517   0.019
+PEZ           P         O3P      SINGLE       n     1.517   0.019
+PEZ          C3          C4      SINGLE       n     1.514   0.020
+PEZ          C2          H2      SINGLE       n     0.989   0.014
+PEZ          C3         H31      SINGLE       n     0.983   0.011
+PEZ          C3         H32      SINGLE       n     0.983   0.011
+PEZ          C4         H41      SINGLE       n     0.973   0.016
+PEZ          C4         H42      SINGLE       n     0.973   0.016
+PEZ          C4         H43      SINGLE       n     0.973   0.016
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -102,34 +69,34 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PEZ      O3P    P      O1P     119.900    3.000
- PEZ      O3P    P      O2P     119.900    3.000
- PEZ      O3P    P      O2      108.200    3.000
- PEZ      O1P    P      O2P     119.900    3.000
- PEZ      O1P    P      O2      108.200    3.000
- PEZ      O2P    P      O2      108.200    3.000
- PEZ      P      O2     C2      120.500    3.000
- PEZ      O2     C2     H2      109.470    3.000
- PEZ      O2     C2     C1      109.470    3.000
- PEZ      O2     C2     C3      109.470    3.000
- PEZ      H2     C2     C1      108.810    3.000
- PEZ      H2     C2     C3      108.340    3.000
- PEZ      C1     C2     C3      109.470    3.000
- PEZ      C2     C1     "O2'"   118.500    3.000
- PEZ      C2     C1     O1      118.500    3.000
- PEZ      "O2'"  C1     O1      123.000    3.000
- PEZ      C2     C3     H31     109.470    3.000
- PEZ      C2     C3     H32     109.470    3.000
- PEZ      C2     C3     C4      111.000    3.000
- PEZ      H31    C3     H32     107.900    3.000
- PEZ      H31    C3     C4      109.470    3.000
- PEZ      H32    C3     C4      109.470    3.000
- PEZ      C3     C4     H43     109.470    3.000
- PEZ      C3     C4     H42     109.470    3.000
- PEZ      C3     C4     H41     109.470    3.000
- PEZ      H43    C4     H42     109.470    3.000
- PEZ      H43    C4     H41     109.470    3.000
- PEZ      H42    C4     H41     109.470    3.000
+PEZ          O1          C1       "O2'"     125.666    1.50
+PEZ          O1          C1          C2     117.167    1.52
+PEZ       "O2'"          C1          C2     117.167    1.52
+PEZ          C1          C2          O2     110.427    2.31
+PEZ          C1          C2          C3     111.511    2.91
+PEZ          C1          C2          H2     108.330    1.50
+PEZ          O2          C2          C3     107.730    1.77
+PEZ          O2          C2          H2     108.941    1.50
+PEZ          C3          C2          H2     108.868    1.50
+PEZ          C2          O2           P     121.496    2.55
+PEZ          O2           P         O1P     105.808    2.07
+PEZ          O2           P         O2P     105.808    2.07
+PEZ          O2           P         O3P     105.808    2.07
+PEZ         O1P           P         O2P     112.864    1.69
+PEZ         O1P           P         O3P     112.864    1.69
+PEZ         O2P           P         O3P     112.864    1.69
+PEZ          C2          C3          C4     111.094    2.85
+PEZ          C2          C3         H31     108.460    1.50
+PEZ          C2          C3         H32     108.460    1.50
+PEZ          C4          C3         H31     108.955    1.50
+PEZ          C4          C3         H32     108.955    1.50
+PEZ         H31          C3         H32     107.797    1.50
+PEZ          C3          C4         H41     109.517    1.50
+PEZ          C3          C4         H42     109.517    1.50
+PEZ          C3          C4         H43     109.517    1.50
+PEZ         H41          C4         H42     109.380    1.50
+PEZ         H41          C4         H43     109.380    1.50
+PEZ         H42          C4         H43     109.380    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -140,11 +107,11 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PEZ      var_1    O3P    P      O2     C2       -60.063   20.000   1
- PEZ      var_2    P      O2     C2     C3      -119.898   20.000   1
- PEZ      var_3    O2     C2     C1     O1      -179.975   20.000   3
- PEZ      var_4    O2     C2     C3     C4        59.951   20.000   3
- PEZ      var_5    C2     C3     C4     H41     -179.983   20.000   3
+PEZ             sp2_sp3_1          O1          C1          C2          O2       0.000   10.00     6
+PEZ             sp3_sp3_2          C1          C2          O2           P      60.000   10.00     3
+PEZ             sp3_sp3_4          C1          C2          C3          C4     180.000   10.00     3
+PEZ            sp3_sp3_13          C2          O2           P         O1P     180.000   10.00     3
+PEZ            sp3_sp3_16          C2          C3          C4         H41     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -153,14 +120,30 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- PEZ      chir_01  C2     C1     O2     C3        positiv
+PEZ    chir_1    C2    O2    C1    C3    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- PEZ      plan-1    C1        0.020
- PEZ      plan-1    O1        0.020
- PEZ      plan-1    "O2'"     0.020
- PEZ      plan-1    C2        0.020
-# ------------------------------------------------------
+PEZ    plan-1          C1   0.020
+PEZ    plan-1          C2   0.020
+PEZ    plan-1          O1   0.020
+PEZ    plan-1       "O2'"   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PEZ SMILES           ACDLabs              10.04 "O=P(O)(O)OC(C(=O)O)CC"
+PEZ SMILES_CANONICAL CACTVS               3.341 "CC[C@@H](O[P](O)(O)=O)C(O)=O"
+PEZ SMILES           CACTVS               3.341 "CC[CH](O[P](O)(O)=O)C(O)=O"
+PEZ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CCC(C(=O)O)OP(=O)(O)O"
+PEZ SMILES           "OpenEye OEToolkits" 1.5.0 "CCC(C(=O)O)OP(=O)(O)O"
+PEZ InChI            InChI                1.03  "InChI=1S/C4H9O6P/c1-2-3(4(5)6)10-11(7,8)9/h3H,2H2,1H3,(H,5,6)(H2,7,8,9)/t3-/m1/s1"
+PEZ InChIKey         InChI                1.03  OETAGSCBSKODFW-GSVOUGTGSA-N
+PEZ ?                acedrg               202         "dictionary generator"                  
+PEZ ?                acedrg_database      11          "data source"                           
+PEZ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PEZ ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MAS      MAS 'dimethylsulfamic acid               ' non-polymer        14   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MAS     MAS      "dimethylsulfamic acid"     NON-POLYMER     14     7     .     
 #
 data_comp_MAS
 #
@@ -28,64 +17,45 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MAS           O2     O    OS        0.000      0.000    0.000    0.000
- MAS           S      S    ST        0.000     -1.099   -0.796    0.423
- MAS           O1     O    OS        0.000     -1.295   -2.138    0.000
- MAS           O3     O    OH1       0.000     -1.045   -0.829    1.944
- MAS           H3     H    H         0.000     -0.313   -1.272    2.360
- MAS           N      N    N         0.000     -2.468    0.033   -0.001
- MAS           C2     C    CH3       0.000     -3.730   -0.686   -0.189
- MAS           H23    H    H         0.000     -4.455   -0.315    0.490
- MAS           H22    H    H         0.000     -4.075   -0.546   -1.182
- MAS           H21    H    H         0.000     -3.580   -1.720   -0.012
- MAS           C1     C    CH3       0.000     -2.415    1.485   -0.189
- MAS           H13    H    H         0.000     -3.355    1.909    0.056
- MAS           H12    H    H         0.000     -1.669    1.898    0.439
- MAS           H11    H    H         0.000     -2.185    1.705   -1.200
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MAS      O2     n/a    S      START
- MAS      S      O2     N      .
- MAS      O1     S      .      .
- MAS      O3     S      H3     .
- MAS      H3     O3     .      .
- MAS      N      S      C1     .
- MAS      C2     N      H21    .
- MAS      H23    C2     .      .
- MAS      H22    C2     .      .
- MAS      H21    C2     .      .
- MAS      C1     N      H11    .
- MAS      H13    C1     .      .
- MAS      H12    C1     .      .
- MAS      H11    C1     .      END
+MAS     S       S       S3      0       1.368       -0.264      0.226       
+MAS     O1      O       O       0       1.970       -1.132      -0.722      
+MAS     O2      O       O       0       1.275       -0.665      1.584       
+MAS     N       N       NT      0       -0.173      0.000       -0.279      
+MAS     C1      C       CH3     0       -0.911      1.124       0.303       
+MAS     C2      C       CH3     0       -1.050      -1.162      -0.449      
+MAS     O3      O       OH1     0       2.151       1.093       0.158       
+MAS     H11     H       H       0       -1.706      1.311       -0.233      
+MAS     H12     H       H       0       -0.344      1.919       0.321       
+MAS     H13     H       H       0       -1.180      0.898       1.214       
+MAS     H21     H       H       0       -1.826      -0.913      -0.988      
+MAS     H22     H       H       0       -1.350      -1.472      0.428       
+MAS     H23     H       H       0       -0.565      -1.881      -0.898      
+MAS     H3      H       H       0       2.767       1.097       0.741       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MAS      O1     S         double      1.436    0.020
- MAS      S      O2        double      1.436    0.020
- MAS      N      S         single      1.520    0.020
- MAS      C1     N         single      1.455    0.020
- MAS      C2     N         single      1.455    0.020
- MAS      H11    C1        single      1.059    0.020
- MAS      H12    C1        single      1.059    0.020
- MAS      H13    C1        single      1.059    0.020
- MAS      H21    C2        single      1.059    0.020
- MAS      H22    C2        single      1.059    0.020
- MAS      H23    C2        single      1.059    0.020
- MAS      O3     S         single      1.635    0.020
- MAS      H3     O3        single      0.967    0.020
+MAS           S          O1      DOUBLE       n     1.419   0.012
+MAS           S          O2      DOUBLE       n     1.419   0.012
+MAS           S           N      SINGLE       n     1.631   0.020
+MAS           N          C1      SINGLE       n     1.461   0.012
+MAS           N          C2      SINGLE       n     1.461   0.012
+MAS           S          O3      SINGLE       n     1.565   0.020
+MAS          C1         H11      SINGLE       n     0.977   0.013
+MAS          C1         H12      SINGLE       n     0.977   0.013
+MAS          C1         H13      SINGLE       n     0.977   0.013
+MAS          C2         H21      SINGLE       n     0.977   0.013
+MAS          C2         H22      SINGLE       n     0.977   0.013
+MAS          C2         H23      SINGLE       n     0.977   0.013
+MAS          O3          H3      SINGLE       n     0.848   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,28 +63,28 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MAS      O2     S      O1      109.500    3.000
- MAS      O2     S      O3      109.500    3.000
- MAS      O2     S      N       109.500    3.000
- MAS      O1     S      O3      109.500    3.000
- MAS      O1     S      N       109.500    3.000
- MAS      O3     S      N       109.500    3.000
- MAS      S      O3     H3      120.000    3.000
- MAS      S      N      C2      120.000    3.000
- MAS      S      N      C1      120.000    3.000
- MAS      C2     N      C1      120.000    3.000
- MAS      N      C2     H23     109.470    3.000
- MAS      N      C2     H22     109.470    3.000
- MAS      N      C2     H21     109.470    3.000
- MAS      H23    C2     H22     109.470    3.000
- MAS      H23    C2     H21     109.470    3.000
- MAS      H22    C2     H21     109.470    3.000
- MAS      N      C1     H13     109.470    3.000
- MAS      N      C1     H12     109.470    3.000
- MAS      N      C1     H11     109.470    3.000
- MAS      H13    C1     H12     109.470    3.000
- MAS      H13    C1     H11     109.470    3.000
- MAS      H12    C1     H11     109.470    3.000
+MAS          O1           S          O2     120.154    1.50
+MAS          O1           S           N     106.907    1.78
+MAS          O1           S          O3     110.180    2.87
+MAS          O2           S           N     106.907    1.78
+MAS          O2           S          O3     110.180    2.87
+MAS           N           S          O3     107.236    3.00
+MAS           S           N          C1     118.416    2.52
+MAS           S           N          C2     118.416    2.52
+MAS          C1           N          C2     111.079    1.99
+MAS           N          C1         H11     109.536    1.50
+MAS           N          C1         H12     109.536    1.50
+MAS           N          C1         H13     109.536    1.50
+MAS         H11          C1         H12     109.476    1.50
+MAS         H11          C1         H13     109.476    1.50
+MAS         H12          C1         H13     109.476    1.50
+MAS           N          C2         H21     109.536    1.50
+MAS           N          C2         H22     109.536    1.50
+MAS           N          C2         H23     109.536    1.50
+MAS         H21          C2         H22     109.476    1.50
+MAS         H21          C2         H23     109.476    1.50
+MAS         H22          C2         H23     109.476    1.50
+MAS           S          O3          H3     109.576    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -125,26 +95,24 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MAS      var_1    O2     S      O3     H3       -66.460   20.000   1
- MAS      var_2    O2     S      N      C1       -23.460   20.000   1
- MAS      var_3    S      N      C2     H21        0.087   20.000   1
- MAS      var_4    S      N      C1     H11       90.002   20.000   1
+MAS             sp3_sp3_1          C1           N           S          O1     180.000   10.00     3
+MAS            sp3_sp3_19          H3          O3           S          O1     180.000   10.00     3
+MAS             sp3_sp3_7         H11          C1           N           S     180.000   10.00     3
+MAS            sp3_sp3_13         H21          C2           N           S     180.000   10.00     3
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- MAS      chir_01  S      O1     O2     N         negativ
-loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
- MAS      plan-1    N         0.020
- MAS      plan-1    S         0.020
- MAS      plan-1    C1        0.020
- MAS      plan-1    C2        0.020
-# ------------------------------------------------------
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MAS SMILES           ACDLabs              12.01 "O=S(=O)(O)N(C)C"
+MAS SMILES_CANONICAL CACTVS               3.370 "CN(C)[S](O)(=O)=O"
+MAS SMILES           CACTVS               3.370 "CN(C)[S](O)(=O)=O"
+MAS SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0 "CN(C)S(=O)(=O)O"
+MAS SMILES           "OpenEye OEToolkits" 1.7.0 "CN(C)S(=O)(=O)O"
+MAS InChI            InChI                1.03  "InChI=1S/C2H7NO3S/c1-3(2)7(4,5)6/h1-2H3,(H,4,5,6)"
+MAS InChIKey         InChI                1.03  YGNOYUCUPMACDT-UHFFFAOYSA-N
+MAS ?                acedrg               202         "dictionary generator"                  
+MAS ?                acedrg_database      11          "data source"                           
+MAS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MAS ?                refmac5              5.8.0189    "optimization tool"                     

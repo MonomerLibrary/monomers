@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PDT      PDT '1,3-PROPANEDITHIOL                  ' non-polymer        13   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PDT     PDT      1,3-PROPANEDITHIOL     NON-POLYMER     13     5     .     
 #
 data_comp_PDT
 #
@@ -28,61 +17,43 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PDT           S2     S    SH1       0.000      0.000    0.000    0.000
- PDT           HS2    H    H         0.000      1.092    0.000    0.759
- PDT           C3     C    CH2       0.000     -1.185    0.000    1.373
- PDT           H31    H    H         0.000     -1.032    0.891    1.985
- PDT           H32    H    H         0.000     -1.032   -0.891    1.985
- PDT           C2     C    CH2       0.000     -2.610    0.000    0.817
- PDT           H21    H    H         0.000     -2.761   -0.891    0.204
- PDT           H22    H    H         0.000     -2.761    0.891    0.204
- PDT           C1     C    CH2       0.000     -3.609    0.000    1.975
- PDT           H11    H    H         0.000     -3.456    0.891    2.587
- PDT           H12    H    H         0.000     -3.456   -0.891    2.587
- PDT           S1     S    SH1       0.000     -5.299    0.000    1.316
- PDT           HS1    H    H         0.000     -5.910    0.000    2.498
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PDT      S2     n/a    C3     START
- PDT      HS2    S2     .      .
- PDT      C3     S2     C2     .
- PDT      H31    C3     .      .
- PDT      H32    C3     .      .
- PDT      C2     C3     C1     .
- PDT      H21    C2     .      .
- PDT      H22    C2     .      .
- PDT      C1     C2     S1     .
- PDT      H11    C1     .      .
- PDT      H12    C1     .      .
- PDT      S1     C1     HS1    .
- PDT      HS1    S1     .      END
+PDT     C2      C       CH2     0       -0.179      -0.739      0.129       
+PDT     C1      C       CH2     0       1.179       -0.075      -0.008      
+PDT     S1      S       SH1     0       2.569       -1.130      0.472       
+PDT     C3      C       CH2     0       -1.333      0.142       -0.315      
+PDT     S2      S       SH1     0       -1.692      1.512       0.812       
+PDT     H21     H       H       0       -0.315      -0.991      1.067       
+PDT     H22     H       H       0       -0.185      -1.562      -0.406      
+PDT     H11     H       H       0       1.217       0.707       0.576       
+PDT     H12     H       H       0       1.330       0.165       -0.943      
+PDT     HS1     H       HSH1    0       3.462       -0.376      0.187       
+PDT     H31     H       H       0       -2.149      -0.393      -0.362      
+PDT     H32     H       H       0       -1.117      0.548       -1.177      
+PDT     HS2     H       HSH1    0       -0.856      1.274       1.643       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PDT      C1     C2        single      1.524    0.020
- PDT      C2     C3        single      1.524    0.020
- PDT      H21    C2        single      1.092    0.020
- PDT      H22    C2        single      1.092    0.020
- PDT      S1     C1        single      1.810    0.020
- PDT      H11    C1        single      1.092    0.020
- PDT      H12    C1        single      1.092    0.020
- PDT      HS1    S1        single      1.330    0.020
- PDT      C3     S2        single      1.810    0.020
- PDT      H31    C3        single      1.092    0.020
- PDT      H32    C3        single      1.092    0.020
- PDT      HS2    S2        single      1.330    0.020
+PDT          C2          C1      SINGLE       n     1.518   0.012
+PDT          C2          C3      SINGLE       n     1.518   0.012
+PDT          C1          S1      SINGLE       n     1.810   0.010
+PDT          C3          S2      SINGLE       n     1.810   0.010
+PDT          C2         H21      SINGLE       n     0.981   0.020
+PDT          C2         H22      SINGLE       n     0.981   0.020
+PDT          C1         H11      SINGLE       n     0.977   0.017
+PDT          C1         H12      SINGLE       n     0.977   0.017
+PDT          S1         HS1      SINGLE       n     1.203   0.020
+PDT          C3         H31      SINGLE       n     0.977   0.017
+PDT          C3         H32      SINGLE       n     0.977   0.017
+PDT          S2         HS2      SINGLE       n     1.203   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -90,26 +61,26 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PDT      HS2    S2     C3       96.000    3.000
- PDT      S2     C3     H31     109.470    3.000
- PDT      S2     C3     H32     109.470    3.000
- PDT      S2     C3     C2      109.470    3.000
- PDT      H31    C3     H32     107.900    3.000
- PDT      H31    C3     C2      109.470    3.000
- PDT      H32    C3     C2      109.470    3.000
- PDT      C3     C2     H21     109.470    3.000
- PDT      C3     C2     H22     109.470    3.000
- PDT      C3     C2     C1      111.000    3.000
- PDT      H21    C2     H22     107.900    3.000
- PDT      H21    C2     C1      109.470    3.000
- PDT      H22    C2     C1      109.470    3.000
- PDT      C2     C1     H11     109.470    3.000
- PDT      C2     C1     H12     109.470    3.000
- PDT      C2     C1     S1      109.470    3.000
- PDT      H11    C1     H12     107.900    3.000
- PDT      H11    C1     S1      109.470    3.000
- PDT      H12    C1     S1      109.470    3.000
- PDT      C1     S1     HS1      96.000    3.000
+PDT          C1          C2          C3     113.604    2.34
+PDT          C1          C2         H21     108.867    1.50
+PDT          C1          C2         H22     108.867    1.50
+PDT          C3          C2         H21     108.867    1.50
+PDT          C3          C2         H22     108.867    1.50
+PDT         H21          C2         H22     107.683    1.50
+PDT          C2          C1          S1     113.854    1.50
+PDT          C2          C1         H11     109.079    1.50
+PDT          C2          C1         H12     109.079    1.50
+PDT          S1          C1         H11     105.353    2.82
+PDT          S1          C1         H12     105.353    2.82
+PDT         H11          C1         H12     111.425    1.71
+PDT          C1          S1         HS1      98.146    3.00
+PDT          C2          C3          S2     113.854    1.50
+PDT          C2          C3         H31     109.079    1.50
+PDT          C2          C3         H32     109.079    1.50
+PDT          S2          C3         H31     105.353    2.82
+PDT          S2          C3         H32     105.353    2.82
+PDT         H31          C3         H32     111.425    1.71
+PDT          C3          S2         HS2      98.146    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -120,8 +91,24 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PDT      var_1    HS2    S2     C3     C2       180.000   20.000   1
- PDT      var_2    S2     C3     C2     C1       180.000   20.000   3
- PDT      var_3    C3     C2     C1     S1       180.000   20.000   3
- PDT      var_4    C2     C1     S1     HS1      180.000   20.000   1
-# ------------------------------------------------------
+PDT             sp3_sp3_1          S1          C1          C2          C3     180.000   10.00     3
+PDT            sp3_sp3_10          C1          C2          C3          S2     180.000   10.00     3
+PDT            sp3_sp3_19          C2          C1          S1         HS1     180.000   10.00     3
+PDT            sp3_sp3_22          C2          C3          S2         HS2     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PDT SMILES           ACDLabs              10.04 SCCCS
+PDT SMILES_CANONICAL CACTVS               3.341 SCCCS
+PDT SMILES           CACTVS               3.341 SCCCS
+PDT SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(CS)CS"
+PDT SMILES           "OpenEye OEToolkits" 1.5.0 "C(CS)CS"
+PDT InChI            InChI                1.03  InChI=1S/C3H8S2/c4-2-1-3-5/h4-5H,1-3H2
+PDT InChIKey         InChI                1.03  ZJLMKPKYJBQJNH-UHFFFAOYSA-N
+PDT ?                acedrg               202         "dictionary generator"                  
+PDT ?                acedrg_database      11          "data source"                           
+PDT ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PDT ?                refmac5              5.8.0189    "optimization tool"                     

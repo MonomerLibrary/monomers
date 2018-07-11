@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SPV      SPV 'SULFOPYRUVATE                       ' non-polymer        13  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+SPV     SPV      SULFOPYRUVATE     NON-POLYMER     13     10     .     
 #
 data_comp_SPV
 #
@@ -28,61 +17,43 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SPV           O3S    O    OS        0.000      0.000    0.000    0.000
- SPV           S      S    ST        0.000     -0.789   -0.970    0.674
- SPV           O1S    O    OS        0.000     -1.345   -2.091    0.000
- SPV           O2S    O    OH1       0.000      0.207   -1.611    1.629
- SPV           H2SO   H    H         0.000      0.944   -2.085    1.260
- SPV           C3     C    CH2       0.000     -1.993   -0.196    1.788
- SPV           H31    H    H         0.000     -1.485    0.537    2.418
- SPV           H32    H    H         0.000     -2.450   -0.962    2.418
- SPV           C2     C    C         0.000     -3.059    0.490    0.977
- SPV           O2     O    O         0.000     -3.013    0.460   -0.231
- SPV           C1     C    C         0.000     -4.173    1.207    1.661
- SPV           O1     O    OC       -0.500     -4.220    1.237    2.911
- SPV           "O2'"  O    OC       -0.500     -5.060    1.777    0.987
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- SPV      O3S    n/a    S      START
- SPV      S      O3S    C3     .
- SPV      O1S    S      .      .
- SPV      O2S    S      H2SO   .
- SPV      H2SO   O2S    .      .
- SPV      C3     S      C2     .
- SPV      H31    C3     .      .
- SPV      H32    C3     .      .
- SPV      C2     C3     C1     .
- SPV      O2     C2     .      .
- SPV      C1     C2     "O2'"  .
- SPV      O1     C1     .      .
- SPV      "O2'"  C1     .      END
+SPV     C1      C       C       0       53.394      103.642     54.790      
+SPV     O1      O       O       0       53.529      104.618     55.535      
+SPV     "O2'"   O       OC      -1      52.729      102.657     55.139      
+SPV     C2      C       C       0       53.944      103.666     53.583      
+SPV     C3      C       CH2     0       54.194      104.937     52.807      
+SPV     O2      O       O       0       54.304      102.602     53.064      
+SPV     S       S       S3      0       55.801      105.674     53.189      
+SPV     O1S     O       O       0       56.743      104.624     52.984      
+SPV     O2S     O       OH1     0       55.704      106.041     54.690      
+SPV     O3S     O       O       0       55.866      106.848     52.384      
+SPV     H31     H       H       0       53.488      105.585     53.011      
+SPV     H32     H       H       0       54.153      104.741     51.848      
+SPV     H2SO    H       H       0       56.131      106.713     54.845      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- SPV      O1     C1        deloc       1.250    0.020
- SPV      "O2'"  C1        deloc       1.250    0.020
- SPV      C1     C2        single      1.460    0.020
- SPV      C2     C3        single      1.510    0.020
- SPV      O2     C2        double      1.220    0.020
- SPV      C3     S         single      1.662    0.020
- SPV      H31    C3        single      1.092    0.020
- SPV      H32    C3        single      1.092    0.020
- SPV      O1S    S         double      1.436    0.020
- SPV      O2S    S         single      1.635    0.020
- SPV      S      O3S       double      1.436    0.020
- SPV      H2SO   O2S       single      0.967    0.020
+SPV          C1          O1      DOUBLE       n     1.230   0.020
+SPV          C1       "O2'"      SINGLE       n     1.230   0.020
+SPV          C1          C2      SINGLE       n     1.299   0.020
+SPV          C2          C3      SINGLE       n     1.508   0.010
+SPV          C2          O2      DOUBLE       n     1.230   0.019
+SPV          C3           S      SINGLE       n     1.808   0.020
+SPV           S         O1S      DOUBLE       n     1.425   0.016
+SPV           S         O2S      SINGLE       n     1.549   0.020
+SPV           S         O3S      DOUBLE       n     1.425   0.016
+SPV          C3         H31      SINGLE       n     0.979   0.019
+SPV          C3         H32      SINGLE       n     0.979   0.019
+SPV         O2S        H2SO      SINGLE       n     0.811   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -90,25 +61,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SPV      O3S    S      O1S     109.500    3.000
- SPV      O3S    S      O2S     109.500    3.000
- SPV      O3S    S      C3      109.500    3.000
- SPV      O1S    S      O2S     109.500    3.000
- SPV      O1S    S      C3      109.500    3.000
- SPV      O2S    S      C3      109.500    3.000
- SPV      S      O2S    H2SO    120.000    3.000
- SPV      S      C3     H31     109.500    3.000
- SPV      S      C3     H32     109.500    3.000
- SPV      S      C3     C2      109.500    3.000
- SPV      H31    C3     H32     107.900    3.000
- SPV      H31    C3     C2      109.470    3.000
- SPV      H32    C3     C2      109.470    3.000
- SPV      C3     C2     O2      120.500    3.000
- SPV      C3     C2     C1      120.000    3.000
- SPV      O2     C2     C1      120.500    3.000
- SPV      C2     C1     O1      120.000    3.000
- SPV      C2     C1     "O2'"   120.000    3.000
- SPV      O1     C1     "O2'"   123.000    3.000
+SPV          O1          C1       "O2'"     122.692    1.63
+SPV          O1          C1          C2     118.654    3.00
+SPV       "O2'"          C1          C2     118.654    3.00
+SPV          C1          C2          C3     122.614    2.52
+SPV          C1          C2          O2     118.657    3.00
+SPV          C3          C2          O2     118.730    1.52
+SPV          C2          C3           S     111.664    2.75
+SPV          C2          C3         H31     108.973    1.50
+SPV          C2          C3         H32     108.973    1.50
+SPV           S          C3         H31     108.888    1.50
+SPV           S          C3         H32     108.888    1.50
+SPV         H31          C3         H32     107.826    1.50
+SPV          C3           S         O1S     104.582    2.45
+SPV          C3           S         O2S     103.568    2.80
+SPV          C3           S         O3S     104.582    2.45
+SPV         O1S           S         O2S     110.306    2.80
+SPV         O1S           S         O3S     119.289    2.60
+SPV         O2S           S         O3S     110.306    2.80
+SPV           S         O2S        H2SO     110.371    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -119,30 +90,37 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SPV      var_1    O3S    S      O2S    H2SO     -63.804   20.000   1
- SPV      var_2    O3S    S      C3     C2        70.257   20.000   1
- SPV      var_3    S      C3     C2     C1       180.000   20.000   3
- SPV      var_4    C3     C2     C1     "O2'"    180.000   20.000   1
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- SPV      chir_01  S      C3     O1S    O2S       positiv
+SPV             sp2_sp2_1          O1          C1          C2          C3     180.000   10.00     2
+SPV             sp2_sp3_2          C1          C2          C3           S     120.000   10.00     6
+SPV             sp3_sp3_1          C2          C3           S         O1S     180.000   10.00     3
+SPV            sp3_sp3_10        H2SO         O2S           S          C3     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SPV      plan-1    C1        0.020
- SPV      plan-1    O1        0.020
- SPV      plan-1    "O2'"     0.020
- SPV      plan-1    C2        0.020
- SPV      plan-2    C2        0.020
- SPV      plan-2    C1        0.020
- SPV      plan-2    C3        0.020
- SPV      plan-2    O2        0.020
-# ------------------------------------------------------
+SPV    plan-1          C1   0.020
+SPV    plan-1          C2   0.020
+SPV    plan-1          O1   0.020
+SPV    plan-1       "O2'"   0.020
+SPV    plan-2          C1   0.020
+SPV    plan-2          C2   0.020
+SPV    plan-2          C3   0.020
+SPV    plan-2          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+SPV SMILES           ACDLabs              10.04 "O=C(O)C(=O)CS(=O)(=O)O"
+SPV SMILES_CANONICAL CACTVS               3.341 "OC(=O)C(=O)C[S](O)(=O)=O"
+SPV SMILES           CACTVS               3.341 "OC(=O)C(=O)C[S](O)(=O)=O"
+SPV SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(C(=O)C(=O)O)S(=O)(=O)O"
+SPV SMILES           "OpenEye OEToolkits" 1.5.0 "C(C(=O)C(=O)O)S(=O)(=O)O"
+SPV InChI            InChI                1.03  "InChI=1S/C3H4O6S/c4-2(3(5)6)1-10(7,8)9/h1H2,(H,5,6)(H,7,8,9)"
+SPV InChIKey         InChI                1.03  BUTHMSUEBYPMKJ-UHFFFAOYSA-N
+SPV ?                acedrg               202         "dictionary generator"                  
+SPV ?                acedrg_database      11          "data source"                           
+SPV ?                rdkit                2017.03.2   "Chemoinformatics tool"
+SPV ?                refmac5              5.8.0189    "optimization tool"                     

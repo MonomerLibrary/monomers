@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-ATO      ATO 'CHLOROACETONE                       ' non-polymer        10   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+ATO     ATO      CHLOROACETONE     NON-POLYMER     10     5     .     
 #
 data_comp_ATO
 #
@@ -28,52 +17,37 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- ATO           CL     CL   CL        0.000      0.000    0.000    0.000
- ATO           C3     C    CH2       0.000     -1.802    0.000    0.004
- ATO           H32    H    H         0.000     -2.167   -0.891   -0.511
- ATO           H31    H    H         0.000     -2.167    0.891   -0.511
- ATO           C2     C    C         0.000     -2.302    0.000    1.425
- ATO           O4     O    O         0.000     -1.515    0.000    2.341
- ATO           C1     C    CH3       0.000     -3.782    0.000    1.704
- ATO           H11    H    H         0.000     -4.223    0.865    1.279
- ATO           H12    H    H         0.000     -4.223   -0.865    1.279
- ATO           H13    H    H         0.000     -3.946    0.000    2.751
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- ATO      CL     n/a    C3     START
- ATO      C3     CL     C2     .
- ATO      H32    C3     .      .
- ATO      H31    C3     .      .
- ATO      C2     C3     C1     .
- ATO      O4     C2     .      .
- ATO      C1     C2     H13    .
- ATO      H11    C1     .      .
- ATO      H12    C1     .      .
- ATO      H13    C1     .      END
+ATO     C1      C       CH3     0       51.346      45.897      119.025     
+ATO     C2      C       C       0       51.441      45.297      120.385     
+ATO     C3      C       CH2     0       52.225      46.021      121.423     
+ATO     O4      O       O       0       50.896      44.249      120.638     
+ATO     CL      CL      CL      0       53.951      45.645      121.357     
+ATO     H13     H       H       0       51.874      46.711      118.983     
+ATO     H12     H       H       0       50.418      46.105      118.828     
+ATO     H11     H       H       0       51.679      45.264      118.369     
+ATO     H32     H       H       0       51.884      45.784      122.303     
+ATO     H31     H       H       0       52.105      46.980      121.312     
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- ATO      C1     C2        single      1.500    0.020
- ATO      H13    C1        single      1.059    0.020
- ATO      H12    C1        single      1.059    0.020
- ATO      H11    C1        single      1.059    0.020
- ATO      C2     C3        single      1.510    0.020
- ATO      O4     C2        double      1.220    0.020
- ATO      C3     CL        single      1.790    0.020
- ATO      H32    C3        single      1.092    0.020
- ATO      H31    C3        single      1.092    0.020
+ATO          C1          C2      SINGLE       n     1.483   0.020
+ATO          C2          C3      SINGLE       n     1.484   0.020
+ATO          C2          O4      DOUBLE       n     1.209   0.020
+ATO          C3          CL      SINGLE       n     1.767   0.020
+ATO          C1         H13      SINGLE       n     0.971   0.015
+ATO          C1         H12      SINGLE       n     0.971   0.015
+ATO          C1         H11      SINGLE       n     0.971   0.015
+ATO          C3         H32      SINGLE       n     0.973   0.013
+ATO          C3         H31      SINGLE       n     0.973   0.013
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -81,21 +55,21 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- ATO      CL     C3     H32     109.500    3.000
- ATO      CL     C3     H31     109.500    3.000
- ATO      CL     C3     C2      109.500    3.000
- ATO      H32    C3     H31     107.900    3.000
- ATO      H32    C3     C2      109.470    3.000
- ATO      H31    C3     C2      109.470    3.000
- ATO      C3     C2     O4      120.500    3.000
- ATO      C3     C2     C1      120.000    3.000
- ATO      O4     C2     C1      123.000    3.000
- ATO      C2     C1     H11     109.470    3.000
- ATO      C2     C1     H12     109.470    3.000
- ATO      C2     C1     H13     109.470    3.000
- ATO      H11    C1     H12     109.470    3.000
- ATO      H11    C1     H13     109.470    3.000
- ATO      H12    C1     H13     109.470    3.000
+ATO          C2          C1         H13     109.518    1.50
+ATO          C2          C1         H12     109.518    1.50
+ATO          C2          C1         H11     109.518    1.50
+ATO         H13          C1         H12     109.400    1.50
+ATO         H13          C1         H11     109.400    1.50
+ATO         H12          C1         H11     109.400    1.50
+ATO          C1          C2          C3     117.155    2.29
+ATO          C1          C2          O4     121.431    1.81
+ATO          C3          C2          O4     121.414    1.76
+ATO          C2          C3          CL     113.055    1.74
+ATO          C2          C3         H32     109.516    1.50
+ATO          C2          C3         H31     109.516    1.50
+ATO          CL          C3         H32     109.235    1.50
+ATO          CL          C3         H31     109.235    1.50
+ATO         H32          C3         H31     107.852    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -106,15 +80,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ATO      var_1    CL     C3     C2     C1       180.000   20.000   3
- ATO      var_2    C3     C2     C1     H13      180.000   20.000   1
+ATO             sp2_sp3_1          C3          C2          C1         H13       0.000   10.00     6
+ATO             sp2_sp3_8          C1          C2          C3          CL     120.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- ATO      plan-1    C2        0.020
- ATO      plan-1    C1        0.020
- ATO      plan-1    C3        0.020
- ATO      plan-1    O4        0.020
-# ------------------------------------------------------
+ATO    plan-1          C1   0.020
+ATO    plan-1          C2   0.020
+ATO    plan-1          C3   0.020
+ATO    plan-1          O4   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+ATO SMILES           ACDLabs              10.04 "ClCC(=O)C"
+ATO SMILES_CANONICAL CACTVS               3.341 "CC(=O)CCl"
+ATO SMILES           CACTVS               3.341 "CC(=O)CCl"
+ATO SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CC(=O)CCl"
+ATO SMILES           "OpenEye OEToolkits" 1.5.0 "CC(=O)CCl"
+ATO InChI            InChI                1.03  "InChI=1S/C3H5ClO/c1-3(5)2-4/h2H2,1H3"
+ATO InChIKey         InChI                1.03  BULLHNJGPPOUOX-UHFFFAOYSA-N
+ATO ?                acedrg               202         "dictionary generator"                  
+ATO ?                acedrg_database      11          "data source"                           
+ATO ?                rdkit                2017.03.2   "Chemoinformatics tool"
+ATO ?                refmac5              5.8.0189    "optimization tool"                     

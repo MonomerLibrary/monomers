@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-DMI      DMI '2,3-DIMETHYLIMIDAZOLIUM ION         ' non-polymer        16   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+DMI     DMI      "2,3-DIMETHYLIMIDAZOLIUM ION"     NON-POLYMER     16     7     .     
 #
 data_comp_DMI
 #
@@ -28,72 +17,50 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- DMI           CM3    C    CH3       0.000      0.000    0.000    0.000
- DMI           HM31   H    H         0.000      0.301    0.881   -0.501
- DMI           HM32   H    H         0.000      0.348    0.021    0.998
- DMI           HM33   H    H         0.000      0.394   -0.846   -0.498
- DMI           N3     N    NR5       0.000     -1.463   -0.079    0.000
- DMI           C2     C    CR5       0.000     -2.205   -1.207   -0.002
- DMI           CM2    C    CH3       0.000     -1.663   -2.615   -0.002
- DMI           HM23   H    H         0.000     -0.726   -2.632    0.492
- DMI           HM22   H    H         0.000     -2.340   -3.254    0.503
- DMI           HM21   H    H         0.000     -1.542   -2.947   -1.000
- DMI           C4     C    CR15      0.000     -2.334    0.977   -0.002
- DMI           H4     H    H         0.000     -2.073    2.028   -0.005
- DMI           C5     C    CR15      0.000     -3.576    0.458   -0.001
- DMI           H5     H    H         0.000     -4.501    1.021   -0.002
- DMI           N1     N    NR15      1.000     -3.467   -0.879    0.003
- DMI           HN1    H    H         0.000     -4.263   -1.548    0.009
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- DMI      CM3    n/a    N3     START
- DMI      HM31   CM3    .      .
- DMI      HM32   CM3    .      .
- DMI      HM33   CM3    .      .
- DMI      N3     CM3    C4     .
- DMI      C2     N3     CM2    .
- DMI      CM2    C2     HM21   .
- DMI      HM23   CM2    .      .
- DMI      HM22   CM2    .      .
- DMI      HM21   CM2    .      .
- DMI      C4     N3     C5     .
- DMI      H4     C4     .      .
- DMI      C5     C4     N1     .
- DMI      H5     C5     .      .
- DMI      N1     C5     HN1    .
- DMI      HN1    N1     .      END
- DMI      N1     C2     .    ADD
+DMI     N1      N       NR5     1       -10.540     54.185      111.061     
+DMI     C2      C       CR5     0       -10.739     53.014      110.470     
+DMI     CM2     C       CH3     0       -11.859     52.637      109.557     
+DMI     N3      N       NT      0       -9.702      52.179      110.854     
+DMI     CM3     C       CH3     0       -9.440      50.786      110.500     
+DMI     C4      C       CR15    0       -8.938      52.881      111.772     
+DMI     C5      C       CR15    0       -9.337      54.164      111.711     
+DMI     HN1     H       H       0       -11.099     54.858      111.032     
+DMI     HM21    H       H       0       -11.965     51.676      109.547     
+DMI     HM22    H       H       0       -11.664     52.948      108.662     
+DMI     HM23    H       H       0       -12.679     53.046      109.868     
+DMI     HM31    H       H       0       -10.019     50.206      111.018     
+DMI     HM32    H       H       0       -8.513      50.571      110.692     
+DMI     HM33    H       H       0       -9.612      50.655      109.555     
+DMI     H4      H       H       0       -8.267      52.527      112.331     
+DMI     H5      H       H       0       -8.876      54.913      112.051     
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- DMI      N1     C2        double      1.340    0.020
- DMI      N1     C5        single      1.350    0.020
- DMI      HN1    N1        single      1.040    0.020
- DMI      CM2    C2        single      1.506    0.020
- DMI      C2     N3        single      1.337    0.020
- DMI      HM21   CM2       single      1.059    0.020
- DMI      HM22   CM2       single      1.059    0.020
- DMI      HM23   CM2       single      1.059    0.020
- DMI      N3     CM3       single      1.485    0.020
- DMI      C4     N3        single      1.337    0.020
- DMI      HM31   CM3       single      1.059    0.020
- DMI      HM32   CM3       single      1.059    0.020
- DMI      HM33   CM3       single      1.059    0.020
- DMI      C5     C4        double      1.380    0.020
- DMI      H4     C4        single      1.083    0.020
- DMI      H5     C5        single      1.083    0.020
+DMI          N1          C2      DOUBLE       n     1.329   0.012
+DMI          N1          C5      SINGLE       n     1.364   0.015
+DMI          C2         CM2      SINGLE       n     1.492   0.012
+DMI          C2          N3      SINGLE       n     1.390   0.020
+DMI          N3         CM3      SINGLE       n     1.460   0.012
+DMI          N3          C4      SINGLE       n     1.385   0.020
+DMI          C4          C5      DOUBLE       n     1.341   0.014
+DMI          N1         HN1      SINGLE       n     0.876   0.020
+DMI         CM2        HM21      SINGLE       n     0.967   0.012
+DMI         CM2        HM22      SINGLE       n     0.967   0.012
+DMI         CM2        HM23      SINGLE       n     0.967   0.012
+DMI         CM3        HM31      SINGLE       n     0.970   0.015
+DMI         CM3        HM32      SINGLE       n     0.970   0.015
+DMI         CM3        HM33      SINGLE       n     0.970   0.015
+DMI          C4          H4      SINGLE       n     0.942   0.016
+DMI          C5          H5      SINGLE       n     0.943   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -101,33 +68,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DMI      HM31   CM3    HM32    109.470    3.000
- DMI      HM31   CM3    HM33    109.470    3.000
- DMI      HM32   CM3    HM33    109.470    3.000
- DMI      HM31   CM3    N3      109.470    3.000
- DMI      HM32   CM3    N3      109.470    3.000
- DMI      HM33   CM3    N3      109.470    3.000
- DMI      CM3    N3     C2      126.000    3.000
- DMI      CM3    N3     C4      126.000    3.000
- DMI      C2     N3     C4      108.000    3.000
- DMI      N3     C2     CM2     126.000    3.000
- DMI      N3     C2     N1      108.000    3.000
- DMI      CM2    C2     N1      126.000    3.000
- DMI      C2     CM2    HM23    109.470    3.000
- DMI      C2     CM2    HM22    109.470    3.000
- DMI      C2     CM2    HM21    109.470    3.000
- DMI      HM23   CM2    HM22    109.470    3.000
- DMI      HM23   CM2    HM21    109.470    3.000
- DMI      HM22   CM2    HM21    109.470    3.000
- DMI      N3     C4     H4      126.000    3.000
- DMI      N3     C4     C5      108.000    3.000
- DMI      H4     C4     C5      126.000    3.000
- DMI      C4     C5     H5      126.000    3.000
- DMI      C4     C5     N1      108.000    3.000
- DMI      H5     C5     N1      126.000    3.000
- DMI      C5     N1     HN1     126.000    3.000
- DMI      C5     N1     C2      108.000    3.000
- DMI      HN1    N1     C2      126.000    3.000
+DMI          C2          N1          C5     109.522    1.50
+DMI          C2          N1         HN1     124.412    2.63
+DMI          C5          N1         HN1     126.066    1.99
+DMI          N1          C2         CM2     126.936    1.50
+DMI          N1          C2          N3     109.018    2.20
+DMI         CM2          C2          N3     124.046    1.50
+DMI          C2         CM2        HM21     109.529    1.50
+DMI          C2         CM2        HM22     109.529    1.50
+DMI          C2         CM2        HM23     109.529    1.50
+DMI        HM21         CM2        HM22     109.475    1.50
+DMI        HM21         CM2        HM23     109.475    1.50
+DMI        HM22         CM2        HM23     109.475    1.50
+DMI          C2          N3         CM3     126.786    3.00
+DMI          C2          N3          C4     109.935    2.71
+DMI         CM3          N3          C4     121.946    3.00
+DMI          N3         CM3        HM31     109.525    1.50
+DMI          N3         CM3        HM32     109.525    1.50
+DMI          N3         CM3        HM33     109.525    1.50
+DMI        HM31         CM3        HM32     109.462    1.50
+DMI        HM31         CM3        HM33     109.462    1.50
+DMI        HM32         CM3        HM33     109.462    1.50
+DMI          N3          C4          C5     106.423    3.00
+DMI          N3          C4          H4     126.772    1.50
+DMI          C5          C4          H4     126.806    1.94
+DMI          N1          C5          C4     106.789    1.50
+DMI          N1          C5          H5     126.260    1.50
+DMI          C4          C5          H5     126.951    1.78
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -138,26 +105,48 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DMI      var_1    HM33   CM3    N3     C4      -149.976   20.000   1
- DMI      CONST_1  CM3    N3     C2     CM2        0.000    0.000   0
- DMI      var_2    N3     C2     CM2    HM21     -90.555   20.000   1
- DMI      CONST_2  CM3    N3     C4     C5       180.000    0.000   0
- DMI      CONST_3  N3     C4     C5     N1         0.000    0.000   0
- DMI      CONST_4  C4     C5     N1     C2         0.000    0.000   0
- DMI      CONST_5  C5     N1     C2     N3         0.000    0.000   0
+DMI             sp2_sp2_3         CM2          C2          N1          C5     180.000   10.00     2
+DMI            sp2_sp2_17          C4          C5          N1          C2       0.000   10.00     2
+DMI             sp2_sp3_1          N1          C2         CM2        HM21     150.000   10.00     6
+DMI             sp2_sp2_8         CM2          C2          N3         CM3       0.000   10.00     2
+DMI             sp2_sp3_7          C2          N3         CM3        HM31     150.000   10.00     6
+DMI            sp2_sp2_10          C5          C4          N3         CM3     180.000   10.00     2
+DMI            sp2_sp2_13          N3          C4          C5          N1       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- DMI      plan-1    N1        0.020
- DMI      plan-1    C2        0.020
- DMI      plan-1    C5        0.020
- DMI      plan-1    HN1       0.020
- DMI      plan-1    N3        0.020
- DMI      plan-1    C4        0.020
- DMI      plan-1    CM2       0.020
- DMI      plan-1    CM3       0.020
- DMI      plan-1    H4        0.020
- DMI      plan-1    H5        0.020
-# ------------------------------------------------------
+DMI    plan-1          C2   0.020
+DMI    plan-1          C5   0.020
+DMI    plan-1         HN1   0.020
+DMI    plan-1          N1   0.020
+DMI    plan-2          C2   0.020
+DMI    plan-2         CM2   0.020
+DMI    plan-2          N1   0.020
+DMI    plan-2          N3   0.020
+DMI    plan-3          C4   0.020
+DMI    plan-3          C5   0.020
+DMI    plan-3          H4   0.020
+DMI    plan-3          N3   0.020
+DMI    plan-4          C4   0.020
+DMI    plan-4          C5   0.020
+DMI    plan-4          H5   0.020
+DMI    plan-4          N1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+DMI SMILES           ACDLabs              10.04 "c1c[nH+]c(n1C)C"
+DMI SMILES_CANONICAL CACTVS               3.341 "Cn1cc[nH+]c1C"
+DMI SMILES           CACTVS               3.341 "Cn1cc[nH+]c1C"
+DMI SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "Cc1[nH+]ccn1C"
+DMI SMILES           "OpenEye OEToolkits" 1.5.0 "Cc1[nH+]ccn1C"
+DMI InChI            InChI                1.03  "InChI=1S/C5H8N2/c1-5-6-3-4-7(5)2/h3-4H,1-2H3/p+1"
+DMI InChIKey         InChI                1.03  GIWQSPITLQVMSG-UHFFFAOYSA-O
+DMI ?                acedrg               202         "dictionary generator"                  
+DMI ?                acedrg_database      11          "data source"                           
+DMI ?                rdkit                2017.03.2   "Chemoinformatics tool"
+DMI ?                refmac5              5.8.0189    "optimization tool"                     

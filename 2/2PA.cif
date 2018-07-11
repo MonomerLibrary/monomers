@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-2PA      2PA 'DIAMIDOPHOSPHATE                    ' non-polymer        10   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+2PA     2PA      DIAMIDOPHOSPHATE     NON-POLYMER     10     5     .     
 #
 data_comp_2PA
 #
@@ -28,52 +17,37 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 2PA           O1     O    O         0.000      0.000    0.000    0.000
- 2PA           P2     P    P         0.000     -1.265   -0.743    0.201
- 2PA           O3     O    OH1       0.000     -2.485    0.299    0.324
- 2PA           HO31   H    H         0.000     -3.385   -0.025    0.458
- 2PA           N5     N    NH2       0.000     -1.528   -1.764   -1.110
- 2PA           HN52   H    H         0.000     -1.597   -2.749   -0.951
- 2PA           HN51   H    H         0.000     -1.612   -1.368   -2.024
- 2PA           N4     N    NH2       0.000     -1.160   -1.655    1.611
- 2PA           HN42   H    H         0.000     -0.288   -1.694    2.100
- 2PA           HN41   H    H         0.000     -1.971   -2.142    1.935
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- 2PA      O1     n/a    P2     START
- 2PA      P2     O1     N4     .
- 2PA      O3     P2     HO31   .
- 2PA      HO31   O3     .      .
- 2PA      N5     P2     HN51   .
- 2PA      HN52   N5     .      .
- 2PA      HN51   N5     .      .
- 2PA      N4     P2     HN41   .
- 2PA      HN42   N4     .      .
- 2PA      HN41   N4     .      END
+2PA     N4      N       NT2     0       0.958       -0.862      0.060       
+2PA     N5      N       NT2     0       -1.504      0.046       0.309       
+2PA     O1      O       O       0       -0.403      -0.150      -2.043      
+2PA     P2      P       P       0       -0.160      0.117       -0.615      
+2PA     O3      O       OH1     0       0.392       1.559       -0.410      
+2PA     HN41    H       H       0       1.101       -1.590      -0.343      
+2PA     HN42    H       H       0       0.902       -0.964      0.896       
+2PA     HN51    H       H       0       -2.189      -0.277      -0.063      
+2PA     HN52    H       H       0       -1.396      -0.247      1.093       
+2PA     HO31    H       H       0       0.454       1.983       -1.132      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- 2PA      N4     P2        single      1.750    0.020
- 2PA      HN41   N4        single      1.010    0.020
- 2PA      HN42   N4        single      1.010    0.020
- 2PA      N5     P2        single      1.750    0.020
- 2PA      HN51   N5        single      1.010    0.020
- 2PA      HN52   N5        single      1.010    0.020
- 2PA      P2     O1        double      1.480    0.020
- 2PA      O3     P2        single      1.610    0.020
- 2PA      HO31   O3        single      0.967    0.020
+2PA          N4          P2      SINGLE       n     1.632   0.017
+2PA          N5          P2      SINGLE       n     1.632   0.017
+2PA          O1          P2      DOUBLE       n     1.473   0.010
+2PA          P2          O3      SINGLE       n     1.558   0.018
+2PA          N4        HN41      SINGLE       n     0.844   0.020
+2PA          N4        HN42      SINGLE       n     0.844   0.020
+2PA          N5        HN51      SINGLE       n     0.844   0.020
+2PA          N5        HN52      SINGLE       n     0.844   0.020
+2PA          O3        HO31      SINGLE       n     0.839   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -81,19 +55,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 2PA      O1     P2     O3      109.500    3.000
- 2PA      O1     P2     N5      109.500    3.000
- 2PA      O1     P2     N4      109.500    3.000
- 2PA      O3     P2     N5      109.500    3.000
- 2PA      O3     P2     N4      109.500    3.000
- 2PA      N5     P2     N4      109.500    3.000
- 2PA      P2     O3     HO31    120.000    3.000
- 2PA      P2     N5     HN52    120.000    3.000
- 2PA      P2     N5     HN51    120.000    3.000
- 2PA      HN52   N5     HN51    120.000    3.000
- 2PA      P2     N4     HN42    120.000    3.000
- 2PA      P2     N4     HN41    120.000    3.000
- 2PA      HN42   N4     HN41    120.000    3.000
+2PA          P2          N4        HN41     115.833    3.00
+2PA          P2          N4        HN42     115.833    3.00
+2PA        HN41          N4        HN42     112.337    3.00
+2PA          P2          N5        HN51     115.833    3.00
+2PA          P2          N5        HN52     115.833    3.00
+2PA        HN51          N5        HN52     112.337    3.00
+2PA          N4          P2          N5     107.263    3.00
+2PA          N4          P2          O1     113.406    3.00
+2PA          N4          P2          O3     104.521    3.00
+2PA          N5          P2          O1     113.406    3.00
+2PA          N5          P2          O3     104.521    3.00
+2PA          O1          P2          O3     110.226    3.00
+2PA          P2          O3        HO31     112.398    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -104,20 +78,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2PA      var_1    O1     P2     O3     HO31     179.995   20.000   1
- 2PA      var_2    O1     P2     N5     HN51     -59.970   20.000   1
- 2PA      var_3    O1     P2     N4     HN41     173.815   20.000   1
+2PA             sp3_sp3_1        HN41          N4          P2          N5     180.000   10.00     3
+2PA             sp3_sp3_7        HN51          N5          P2          N4     180.000   10.00     3
+2PA            sp3_sp3_13        HO31          O3          P2          N4     180.000   10.00     3
 loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
- 2PA      plan-1    N4        0.020
- 2PA      plan-1    P2        0.020
- 2PA      plan-1    HN41      0.020
- 2PA      plan-1    HN42      0.020
- 2PA      plan-2    N5        0.020
- 2PA      plan-2    P2        0.020
- 2PA      plan-2    HN51      0.020
- 2PA      plan-2    HN52      0.020
-# ------------------------------------------------------
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+2PA SMILES           ACDLabs              10.04 "O=P(O)(N)N"
+2PA SMILES_CANONICAL CACTVS               3.341 "N[P](N)(O)=O"
+2PA SMILES           CACTVS               3.341 "N[P](N)(O)=O"
+2PA SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "NP(=O)(N)O"
+2PA SMILES           "OpenEye OEToolkits" 1.5.0 "NP(=O)(N)O"
+2PA InChI            InChI                1.03  "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)"
+2PA InChIKey         InChI                1.03  ANCLJVISBRWUTR-UHFFFAOYSA-N
+2PA ?                acedrg               202         "dictionary generator"                  
+2PA ?                acedrg_database      11          "data source"                           
+2PA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+2PA ?                refmac5              5.8.0189    "optimization tool"                     

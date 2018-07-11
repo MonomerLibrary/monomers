@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MTB      MTB '.                                   ' non-polymer        39  22 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MTB     MTB      .              NON-POLYMER     39     22     .     
 #
 data_comp_MTB
 #
@@ -28,143 +17,97 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MTB           OXT    O    OC       -0.500      0.000    0.000    0.000
- MTB           C      C    C         0.000     -1.194   -0.006    0.373
- MTB           O      O    OC       -0.500     -2.114   -0.007   -0.475
- MTB           C2     C    CR6       0.000     -1.518   -0.012    1.812
- MTB           C3     C    CR16      0.000     -0.496   -0.010    2.760
- MTB           H3     H    H         0.000      0.539   -0.005    2.442
- MTB           C4     C    CR16      0.000     -0.804   -0.016    4.106
- MTB           H4     H    H         0.000     -0.008   -0.021    4.840
- MTB           C5     C    CR16      0.000     -2.124   -0.015    4.524
- MTB           H5     H    H         0.000     -2.352   -0.020    5.583
- MTB           C6     C    CR16      0.000     -3.151   -0.010    3.603
- MTB           H6     H    H         0.000     -4.180   -0.009    3.939
- MTB           C1     C    CR6       0.000     -2.862   -0.004    2.237
- MTB           N1     N    N         0.000     -3.873    0.000    1.320
- MTB           "N1'"  N    N         0.000     -5.101    0.001    1.715
- MTB           "C1'"  C    CR6       0.000     -6.110    0.007    0.799
- MTB           "C6'"  C    CR16      0.000     -5.818    0.012   -0.569
- MTB           "H6'"  H    H         0.000     -4.788    0.012   -0.903
- MTB           "C5'"  C    CR16      0.000     -6.841    0.018   -1.489
- MTB           "H5'"  H    H         0.000     -6.615    0.027   -2.549
- MTB           "C4'"  C    CR6       0.000     -8.164    0.013   -1.062
- MTB           "O4'"  O    OH1       0.000     -9.170    0.019   -1.973
- MTB           "HO4'" H    H         0.000     -9.406   -0.892   -2.196
- MTB           "C3'"  C    CR6       0.000     -8.460    0.013    0.296
- MTB           "C2'"  C    CR16      0.000     -7.443    0.007    1.224
- MTB           "H2'"  H    H         0.000     -7.675    0.003    2.282
- MTB           CT3    C    CT        0.000     -9.897    0.014    0.752
- MTB           CHX    C    CH3       0.000    -10.598    1.267    0.225
- MTB           H33    H    H         0.000    -10.564    1.273   -0.834
- MTB           H32    H    H         0.000    -11.608    1.269    0.545
- MTB           H31    H    H         0.000    -10.109    2.130    0.598
- MTB           CHW    C    CH3       0.000    -10.603   -1.231    0.214
- MTB           H23    H    H         0.000    -11.613   -1.231    0.534
- MTB           H22    H    H         0.000    -10.569   -1.227   -0.845
- MTB           H21    H    H         0.000    -10.118   -2.099    0.579
- MTB           CHV    C    CH3       0.000     -9.945    0.008    2.282
- MTB           H13    H    H         0.000     -9.459   -0.859    2.649
- MTB           H12    H    H         0.000     -9.455    0.870    2.655
- MTB           H11    H    H         0.000    -10.954    0.009    2.605
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MTB      OXT    n/a    C      START
- MTB      C      OXT    C2     .
- MTB      O      C      .      .
- MTB      C2     C      C3     .
- MTB      C3     C2     C4     .
- MTB      H3     C3     .      .
- MTB      C4     C3     C5     .
- MTB      H4     C4     .      .
- MTB      C5     C4     C6     .
- MTB      H5     C5     .      .
- MTB      C6     C5     C1     .
- MTB      H6     C6     .      .
- MTB      C1     C6     N1     .
- MTB      N1     C1     "N1'"  .
- MTB      "N1'"  N1     "C1'"  .
- MTB      "C1'"  "N1'"  "C6'"  .
- MTB      "C6'"  "C1'"  "C5'"  .
- MTB      "H6'"  "C6'"  .      .
- MTB      "C5'"  "C6'"  "C4'"  .
- MTB      "H5'"  "C5'"  .      .
- MTB      "C4'"  "C5'"  "C3'"  .
- MTB      "O4'"  "C4'"  "HO4'" .
- MTB      "HO4'" "O4'"  .      .
- MTB      "C3'"  "C4'"  CT3    .
- MTB      "C2'"  "C3'"  "H2'"  .
- MTB      "H2'"  "C2'"  .      .
- MTB      CT3    "C3'"  CHV    .
- MTB      CHX    CT3    H31    .
- MTB      H33    CHX    .      .
- MTB      H32    CHX    .      .
- MTB      H31    CHX    .      .
- MTB      CHW    CT3    H21    .
- MTB      H23    CHW    .      .
- MTB      H22    CHW    .      .
- MTB      H21    CHW    .      .
- MTB      CHV    CT3    H11    .
- MTB      H13    CHV    .      .
- MTB      H12    CHV    .      .
- MTB      H11    CHV    .      END
- MTB      C1     C2     .    ADD
- MTB      "C1'"  "C2'"  .    ADD
+MTB     C1      C       CR6     0       3.467       -0.027      0.815       
+MTB     C2      C       CR6     0       4.595       0.596       0.234       
+MTB     C3      C       CR16    0       5.865       0.062       0.491       
+MTB     C4      C       CR16    0       6.027       -1.054      1.298       
+MTB     C5      C       CR16    0       4.914       -1.660      1.865       
+MTB     C6      C       CR16    0       3.646       -1.155      1.630       
+MTB     "C1'"   C       CR6     0       0.193       0.351       -0.562      
+MTB     "C2'"   C       CR16    0       -0.962      -0.317      -0.129      
+MTB     "C3'"   C       CR6     0       -2.257      0.150       -0.415      
+MTB     "C4'"   C       CR6     0       -2.334      1.350       -1.187      
+MTB     "C5'"   C       CR16    0       -1.188      2.013       -1.622      
+MTB     "C6'"   C       CR16    0       0.069       1.517       -1.316      
+MTB     C       C       C       0       4.481       1.814       -0.654      
+MTB     CT3     C       CT      0       -3.534      -0.602      0.074       
+MTB     CHV     C       CH3     0       -4.424      0.319       0.931       
+MTB     CHW     C       CH3     0       -3.238      -1.851      0.930       
+MTB     CHX     C       CH3     0       -4.359      -1.102      -1.124      
+MTB     N1      N       N       0       2.158       0.490       0.574       
+MTB     "N1'"   N       N       0       1.483       -0.188      -0.238      
+MTB     O       O       O       0       3.911       1.680       -1.751      
+MTB     OXT     O       OC      -1      4.965       2.882       -0.236      
+MTB     "O4'"   O       OH1     0       -3.524      1.921       -1.543      
+MTB     H3      H       H       0       6.621       0.471       0.107       
+MTB     H4      H       H       0       6.889       -1.399      1.460       
+MTB     H5      H       H       0       5.020       -2.420      2.415       
+MTB     H6      H       H       0       2.895       -1.570      2.017       
+MTB     "H2'"   H       H       0       -0.845      -1.099      0.371       
+MTB     "H5'"   H       H       0       -1.271      2.804       -2.129      
+MTB     "H6'"   H       H       0       0.840       1.969       -1.612      
+MTB     H11     H       H       0       -3.865      0.847       1.528       
+MTB     H12     H       H       0       -5.047      -0.208      1.462       
+MTB     H13     H       H       0       -4.934      0.917       0.361       
+MTB     H21     H       H       0       -2.732      -1.595      1.720       
+MTB     H22     H       H       0       -2.726      -2.492      0.408       
+MTB     H23     H       H       0       -4.072      -2.269      1.208       
+MTB     H31     H       H       0       -3.791      -1.637      -1.705      
+MTB     H32     H       H       0       -4.712      -0.351      -1.626      
+MTB     H33     H       H       0       -5.101      -1.647      -0.810      
+MTB     "HO4'"  H       H       0       -3.664      1.756       -2.373      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MTB      C1     C2        single      1.487    0.020
- MTB      C1     C6        double      1.390    0.020
- MTB      N1     C1        single      1.400    0.020
- MTB      C3     C2        double      1.390    0.020
- MTB      C2     C         single      1.500    0.020
- MTB      C4     C3        single      1.390    0.020
- MTB      H3     C3        single      1.083    0.020
- MTB      C5     C4        double      1.390    0.020
- MTB      H4     C4        single      1.083    0.020
- MTB      C6     C5        single      1.390    0.020
- MTB      H5     C5        single      1.083    0.020
- MTB      H6     C6        single      1.083    0.020
- MTB      "C1'"  "C2'"     single      1.390    0.020
- MTB      "C6'"  "C1'"     double      1.390    0.020
- MTB      "C1'"  "N1'"     single      1.400    0.020
- MTB      "C2'"  "C3'"     double      1.390    0.020
- MTB      "H2'"  "C2'"     single      1.083    0.020
- MTB      "C3'"  "C4'"     single      1.487    0.020
- MTB      CT3    "C3'"     single      1.500    0.020
- MTB      "C4'"  "C5'"     double      1.390    0.020
- MTB      "O4'"  "C4'"     single      1.362    0.020
- MTB      "C5'"  "C6'"     single      1.390    0.020
- MTB      "H5'"  "C5'"     single      1.083    0.020
- MTB      "H6'"  "C6'"     single      1.083    0.020
- MTB      O      C         deloc       1.250    0.020
- MTB      C      OXT       deloc       1.250    0.020
- MTB      CHV    CT3       single      1.524    0.020
- MTB      CHW    CT3       single      1.524    0.020
- MTB      CHX    CT3       single      1.524    0.020
- MTB      H11    CHV       single      1.059    0.020
- MTB      H12    CHV       single      1.059    0.020
- MTB      H13    CHV       single      1.059    0.020
- MTB      H21    CHW       single      1.059    0.020
- MTB      H22    CHW       single      1.059    0.020
- MTB      H23    CHW       single      1.059    0.020
- MTB      H31    CHX       single      1.059    0.020
- MTB      H32    CHX       single      1.059    0.020
- MTB      H33    CHX       single      1.059    0.020
- MTB      "N1'"  N1        double      1.240    0.020
- MTB      "HO4'" "O4'"     single      0.967    0.020
+MTB          C1          C2      DOUBLE       y     1.403   0.010
+MTB          C1          C6      SINGLE       y     1.395   0.010
+MTB          C1          N1      SINGLE       n     1.425   0.010
+MTB          C2          C3      SINGLE       y     1.394   0.011
+MTB          C2           C      SINGLE       n     1.508   0.013
+MTB          C3          C4      DOUBLE       y     1.380   0.010
+MTB          C4          C5      SINGLE       y     1.382   0.010
+MTB          C5          C6      DOUBLE       y     1.378   0.010
+MTB       "C1'"       "C2'"      DOUBLE       y     1.396   0.010
+MTB       "C1'"       "C6'"      SINGLE       y     1.391   0.010
+MTB       "C1'"       "N1'"      SINGLE       n     1.432   0.015
+MTB       "C2'"       "C3'"      SINGLE       y     1.386   0.010
+MTB       "C3'"       "C4'"      DOUBLE       y     1.407   0.010
+MTB       "C3'"         CT3      SINGLE       n     1.538   0.010
+MTB       "C4'"       "C5'"      SINGLE       y     1.387   0.010
+MTB       "C4'"       "O4'"      SINGLE       n     1.364   0.013
+MTB       "C5'"       "C6'"      DOUBLE       y     1.383   0.012
+MTB           C           O      DOUBLE       n     1.244   0.020
+MTB           C         OXT      SINGLE       n     1.244   0.020
+MTB         CT3         CHV      SINGLE       n     1.532   0.011
+MTB         CT3         CHW      SINGLE       n     1.532   0.011
+MTB         CT3         CHX      SINGLE       n     1.532   0.011
+MTB          N1       "N1'"      DOUBLE       n     1.250   0.019
+MTB          C3          H3      SINGLE       n     0.941   0.017
+MTB          C4          H4      SINGLE       n     0.943   0.018
+MTB          C5          H5      SINGLE       n     0.944   0.020
+MTB          C6          H6      SINGLE       n     0.941   0.020
+MTB       "C2'"       "H2'"      SINGLE       n     0.939   0.013
+MTB       "C5'"       "H5'"      SINGLE       n     0.944   0.010
+MTB       "C6'"       "H6'"      SINGLE       n     0.941   0.020
+MTB         CHV         H11      SINGLE       n     0.973   0.014
+MTB         CHV         H12      SINGLE       n     0.973   0.014
+MTB         CHV         H13      SINGLE       n     0.973   0.014
+MTB         CHW         H21      SINGLE       n     0.973   0.014
+MTB         CHW         H22      SINGLE       n     0.973   0.014
+MTB         CHW         H23      SINGLE       n     0.973   0.014
+MTB         CHX         H31      SINGLE       n     0.973   0.014
+MTB         CHX         H32      SINGLE       n     0.973   0.014
+MTB         CHX         H33      SINGLE       n     0.973   0.014
+MTB       "O4'"      "HO4'"      SINGLE       n     0.858   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -172,72 +115,72 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MTB      OXT    C      O       123.000    3.000
- MTB      OXT    C      C2      120.000    3.000
- MTB      O      C      C2      120.000    3.000
- MTB      C      C2     C3      120.000    3.000
- MTB      C      C2     C1      120.000    3.000
- MTB      C3     C2     C1      120.000    3.000
- MTB      C2     C3     H3      120.000    3.000
- MTB      C2     C3     C4      120.000    3.000
- MTB      H3     C3     C4      120.000    3.000
- MTB      C3     C4     H4      120.000    3.000
- MTB      C3     C4     C5      120.000    3.000
- MTB      H4     C4     C5      120.000    3.000
- MTB      C4     C5     H5      120.000    3.000
- MTB      C4     C5     C6      120.000    3.000
- MTB      H5     C5     C6      120.000    3.000
- MTB      C5     C6     H6      120.000    3.000
- MTB      C5     C6     C1      120.000    3.000
- MTB      H6     C6     C1      120.000    3.000
- MTB      C6     C1     N1      120.000    3.000
- MTB      C6     C1     C2      120.000    3.000
- MTB      N1     C1     C2      120.000    3.000
- MTB      C1     N1     "N1'"   120.000    3.000
- MTB      N1     "N1'"  "C1'"   120.000    3.000
- MTB      "N1'"  "C1'"  "C6'"   120.000    3.000
- MTB      "N1'"  "C1'"  "C2'"   120.000    3.000
- MTB      "C6'"  "C1'"  "C2'"   120.000    3.000
- MTB      "C1'"  "C6'"  "H6'"   120.000    3.000
- MTB      "C1'"  "C6'"  "C5'"   120.000    3.000
- MTB      "H6'"  "C6'"  "C5'"   120.000    3.000
- MTB      "C6'"  "C5'"  "H5'"   120.000    3.000
- MTB      "C6'"  "C5'"  "C4'"   120.000    3.000
- MTB      "H5'"  "C5'"  "C4'"   120.000    3.000
- MTB      "C5'"  "C4'"  "O4'"   120.000    3.000
- MTB      "C5'"  "C4'"  "C3'"   120.000    3.000
- MTB      "O4'"  "C4'"  "C3'"   120.000    3.000
- MTB      "C4'"  "O4'"  "HO4'"  109.470    3.000
- MTB      "C4'"  "C3'"  "C2'"   120.000    3.000
- MTB      "C4'"  "C3'"  CT3     120.000    3.000
- MTB      "C2'"  "C3'"  CT3     120.000    3.000
- MTB      "C3'"  "C2'"  "H2'"   120.000    3.000
- MTB      "C3'"  "C2'"  "C1'"   120.000    3.000
- MTB      "H2'"  "C2'"  "C1'"   120.000    3.000
- MTB      "C3'"  CT3    CHX     109.500    3.000
- MTB      "C3'"  CT3    CHW     109.500    3.000
- MTB      "C3'"  CT3    CHV     109.500    3.000
- MTB      CHX    CT3    CHW     111.000    3.000
- MTB      CHX    CT3    CHV     111.000    3.000
- MTB      CHW    CT3    CHV     111.000    3.000
- MTB      CT3    CHX    H33     109.470    3.000
- MTB      CT3    CHX    H32     109.470    3.000
- MTB      CT3    CHX    H31     109.470    3.000
- MTB      H33    CHX    H32     109.470    3.000
- MTB      H33    CHX    H31     109.470    3.000
- MTB      H32    CHX    H31     109.470    3.000
- MTB      CT3    CHW    H23     109.470    3.000
- MTB      CT3    CHW    H22     109.470    3.000
- MTB      CT3    CHW    H21     109.470    3.000
- MTB      H23    CHW    H22     109.470    3.000
- MTB      H23    CHW    H21     109.470    3.000
- MTB      H22    CHW    H21     109.470    3.000
- MTB      CT3    CHV    H13     109.470    3.000
- MTB      CT3    CHV    H12     109.470    3.000
- MTB      CT3    CHV    H11     109.470    3.000
- MTB      H13    CHV    H12     109.470    3.000
- MTB      H13    CHV    H11     109.470    3.000
- MTB      H12    CHV    H11     109.470    3.000
+MTB          C2          C1          C6     119.624    1.50
+MTB          C2          C1          N1     118.489    2.07
+MTB          C6          C1          N1     121.887    2.02
+MTB          C1          C2          C3     118.998    1.58
+MTB          C1          C2           C     121.508    1.50
+MTB          C3          C2           C     119.494    1.50
+MTB          C2          C3          C4     121.322    1.50
+MTB          C2          C3          H3     119.035    1.50
+MTB          C4          C3          H3     119.644    1.50
+MTB          C3          C4          C5     119.853    1.50
+MTB          C3          C4          H4     120.028    1.50
+MTB          C5          C4          H4     120.119    1.50
+MTB          C4          C5          C6     120.179    1.50
+MTB          C4          C5          H5     120.051    1.50
+MTB          C6          C5          H5     119.769    1.50
+MTB          C1          C6          C5     120.024    1.50
+MTB          C1          C6          H6     119.725    1.50
+MTB          C5          C6          H6     120.251    1.50
+MTB       "C2'"       "C1'"       "C6'"     119.610    1.50
+MTB       "C2'"       "C1'"       "N1'"     119.555    3.00
+MTB       "C6'"       "C1'"       "N1'"     120.834    3.00
+MTB       "C1'"       "C2'"       "C3'"     120.932    1.50
+MTB       "C1'"       "C2'"       "H2'"     119.629    1.50
+MTB       "C3'"       "C2'"       "H2'"     119.439    1.50
+MTB       "C2'"       "C3'"       "C4'"     118.049    1.50
+MTB       "C2'"       "C3'"         CT3     120.524    1.79
+MTB       "C4'"       "C3'"         CT3     121.427    1.50
+MTB       "C3'"       "C4'"       "C5'"     120.885    1.50
+MTB       "C3'"       "C4'"       "O4'"     119.685    1.50
+MTB       "C5'"       "C4'"       "O4'"     119.429    1.65
+MTB       "C4'"       "C5'"       "C6'"     120.030    1.50
+MTB       "C4'"       "C5'"       "H5'"     119.850    1.50
+MTB       "C6'"       "C5'"       "H5'"     120.119    1.50
+MTB       "C1'"       "C6'"       "C5'"     120.493    1.50
+MTB       "C1'"       "C6'"       "H6'"     119.693    1.50
+MTB       "C5'"       "C6'"       "H6'"     119.814    1.50
+MTB          C2           C           O     117.739    1.50
+MTB          C2           C         OXT     117.739    1.50
+MTB           O           C         OXT     124.521    1.50
+MTB       "C3'"         CT3         CHV     110.727    1.50
+MTB       "C3'"         CT3         CHW     110.727    1.50
+MTB       "C3'"         CT3         CHX     110.727    1.50
+MTB         CHV         CT3         CHW     108.339    1.50
+MTB         CHV         CT3         CHX     108.339    1.50
+MTB         CHW         CT3         CHX     108.339    1.50
+MTB         CT3         CHV         H11     109.561    1.50
+MTB         CT3         CHV         H12     109.561    1.50
+MTB         CT3         CHV         H13     109.561    1.50
+MTB         H11         CHV         H12     109.375    1.50
+MTB         H11         CHV         H13     109.375    1.50
+MTB         H12         CHV         H13     109.375    1.50
+MTB         CT3         CHW         H21     109.561    1.50
+MTB         CT3         CHW         H22     109.561    1.50
+MTB         CT3         CHW         H23     109.561    1.50
+MTB         H21         CHW         H22     109.375    1.50
+MTB         H21         CHW         H23     109.375    1.50
+MTB         H22         CHW         H23     109.375    1.50
+MTB         CT3         CHX         H31     109.561    1.50
+MTB         CT3         CHX         H32     109.561    1.50
+MTB         CT3         CHX         H33     109.561    1.50
+MTB         H31         CHX         H32     109.375    1.50
+MTB         H31         CHX         H33     109.375    1.50
+MTB         H32         CHX         H33     109.375    1.50
+MTB          C1          N1       "N1'"     113.859    1.50
+MTB       "C1'"       "N1'"          N1     113.763    2.05
+MTB       "C4'"       "O4'"      "HO4'"     108.378    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -248,71 +191,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MTB      var_1    OXT    C      C2     C3        -0.031   20.000   1
- MTB      CONST_1  C      C2     C3     C4       180.000    0.000   0
- MTB      CONST_2  C2     C3     C4     C5         0.000    0.000   0
- MTB      CONST_3  C3     C4     C5     C6         0.000    0.000   0
- MTB      CONST_4  C4     C5     C6     C1         0.000    0.000   0
- MTB      CONST_5  C5     C6     C1     N1       180.000    0.000   0
- MTB      CONST_6  C6     C1     C2     C        180.000    0.000   0
- MTB      var_2    C6     C1     N1     "N1'"      0.136   20.000   1
- MTB      CONST_7  C1     N1     "N1'"  "C1'"    179.903    0.000   0
- MTB      var_3    N1     "N1'"  "C1'"  "C6'"     -0.038   20.000   1
- MTB      CONST_8  "N1'"  "C1'"  "C2'"  "C3'"    180.000    0.000   0
- MTB      CONST_9  "N1'"  "C1'"  "C6'"  "C5'"    180.000    0.000   0
- MTB      CONST_10 "C1'"  "C6'"  "C5'"  "C4'"      0.000    0.000   0
- MTB      CONST_11 "C6'"  "C5'"  "C4'"  "C3'"      0.000    0.000   0
- MTB      var_4    "C5'"  "C4'"  "O4'"  "HO4'"    90.006   20.000   1
- MTB      CONST_12 "C5'"  "C4'"  "C3'"  CT3      180.000    0.000   0
- MTB      CONST_13 "C4'"  "C3'"  "C2'"  "C1'"      0.000    0.000   0
- MTB      var_5    "C4'"  "C3'"  CT3    CHV      179.745   20.000   1
- MTB      var_6    "C3'"  CT3    CHX    H31      -60.006   20.000   1
- MTB      var_7    "C3'"  CT3    CHW    H21       60.026   20.000   1
- MTB      var_8    "C3'"  CT3    CHV    H11      179.975   20.000   1
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- MTB      chir_01  CT3    "C3'"  CHV    CHW       positiv
+MTB              const_24          N1          C1          C2           C       0.000   10.00     2
+MTB             sp2_sp2_1          C2          C1          N1       "N1'"     180.000   10.00     2
+MTB              const_43          N1          C1          C6          C5     180.000   10.00     2
+MTB              const_17       "C4'"       "C5'"       "C6'"       "C1'"       0.000   10.00     2
+MTB             sp3_sp3_2         H11         CHV         CT3         CHW     -60.000   10.00     3
+MTB            sp3_sp3_11         H21         CHW         CT3         CHV     -60.000   10.00     3
+MTB            sp3_sp3_20         H31         CHX         CT3         CHV     -60.000   10.00     3
+MTB             sp2_sp2_9          C1          N1       "N1'"       "C1'"     180.000   10.00     2
+MTB             sp2_sp2_3           O           C          C2          C1     180.000   10.00     2
+MTB              const_27           C          C2          C3          C4     180.000   10.00     2
+MTB              const_29          C2          C3          C4          C5       0.000   10.00     2
+MTB              const_33          C3          C4          C5          C6       0.000   10.00     2
+MTB              const_37          C4          C5          C6          C1       0.000   10.00     2
+MTB              const_47       "N1'"       "C1'"       "C6'"       "C5'"     180.000   10.00     2
+MTB             sp2_sp2_7       "C2'"       "C1'"       "N1'"          N1     180.000   10.00     2
+MTB       const_sp2_sp2_3       "N1'"       "C1'"       "C2'"       "C3'"     180.000   10.00     2
+MTB       const_sp2_sp2_6       "C1'"       "C2'"       "C3'"         CT3     180.000   10.00     2
+MTB             sp2_sp3_1       "C2'"       "C3'"         CT3         CHV     150.000   10.00     6
+MTB              const_12         CT3       "C3'"       "C4'"       "O4'"       0.000   10.00     2
+MTB              const_15       "O4'"       "C4'"       "C5'"       "C6'"     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- MTB      plan-1    C1        0.020
- MTB      plan-1    C2        0.020
- MTB      plan-1    C6        0.020
- MTB      plan-1    N1        0.020
- MTB      plan-1    C3        0.020
- MTB      plan-1    C4        0.020
- MTB      plan-1    C5        0.020
- MTB      plan-1    C         0.020
- MTB      plan-1    H3        0.020
- MTB      plan-1    H4        0.020
- MTB      plan-1    H5        0.020
- MTB      plan-1    H6        0.020
- MTB      plan-2    "C1'"     0.020
- MTB      plan-2    "C2'"     0.020
- MTB      plan-2    "C6'"     0.020
- MTB      plan-2    "N1'"     0.020
- MTB      plan-2    "C3'"     0.020
- MTB      plan-2    "C4'"     0.020
- MTB      plan-2    "C5'"     0.020
- MTB      plan-2    "H2'"     0.020
- MTB      plan-2    CT3       0.020
- MTB      plan-2    "O4'"     0.020
- MTB      plan-2    "H5'"     0.020
- MTB      plan-2    "H6'"     0.020
- MTB      plan-3    C         0.020
- MTB      plan-3    C2        0.020
- MTB      plan-3    O         0.020
- MTB      plan-3    OXT       0.020
- MTB      plan-4    N1        0.020
- MTB      plan-4    C1        0.020
- MTB      plan-4    "N1'"     0.020
- MTB      plan-4    "C1'"     0.020
-# ------------------------------------------------------
+MTB    plan-1           C   0.020
+MTB    plan-1          C1   0.020
+MTB    plan-1          C2   0.020
+MTB    plan-1          C3   0.020
+MTB    plan-1          C4   0.020
+MTB    plan-1          C5   0.020
+MTB    plan-1          C6   0.020
+MTB    plan-1          H3   0.020
+MTB    plan-1          H4   0.020
+MTB    plan-1          H5   0.020
+MTB    plan-1          H6   0.020
+MTB    plan-1          N1   0.020
+MTB    plan-2       "C1'"   0.020
+MTB    plan-2       "C2'"   0.020
+MTB    plan-2       "C3'"   0.020
+MTB    plan-2       "C4'"   0.020
+MTB    plan-2       "C5'"   0.020
+MTB    plan-2       "C6'"   0.020
+MTB    plan-2         CT3   0.020
+MTB    plan-2       "H2'"   0.020
+MTB    plan-2       "H5'"   0.020
+MTB    plan-2       "H6'"   0.020
+MTB    plan-2       "N1'"   0.020
+MTB    plan-2       "O4'"   0.020
+MTB    plan-3           C   0.020
+MTB    plan-3          C2   0.020
+MTB    plan-3           O   0.020
+MTB    plan-3         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MTB SMILES           ACDLabs              10.04 "O=C(O)c2ccccc2/N=N/c1ccc(O)c(c1)C(C)(C)C"
+MTB SMILES_CANONICAL CACTVS               3.341 "CC(C)(C)c1cc(ccc1O)N=Nc2ccccc2C(O)=O"
+MTB SMILES           CACTVS               3.341 "CC(C)(C)c1cc(ccc1O)N=Nc2ccccc2C(O)=O"
+MTB SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CC(C)(C)c1cc(ccc1O)/N=N/c2ccccc2C(=O)O"
+MTB SMILES           "OpenEye OEToolkits" 1.5.0 "CC(C)(C)c1cc(ccc1O)N=Nc2ccccc2C(=O)O"
+MTB InChI            InChI                1.03  "InChI=1S/C17H18N2O3/c1-17(2,3)13-10-11(8-9-15(13)20)18-19-14-7-5-4-6-12(14)16(21)22/h4-10,20H,1-3H3,(H,21,22)/b19-18+"
+MTB InChIKey         InChI                1.03  RLAQYNIYEMUFPA-VHEBQXMUSA-N
+MTB ?                acedrg               202         "dictionary generator"                  
+MTB ?                acedrg_database      11          "data source"                           
+MTB ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MTB ?                refmac5              5.8.0189    "optimization tool"                     

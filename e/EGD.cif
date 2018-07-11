@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-EGD      EGD 'N-ETHYLGUANIDINE                    ' non-polymer        15   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+EGD     EGD      N-ETHYLGUANIDINE     NON-POLYMER     16     6     .     
 #
 data_comp_EGD
 #
@@ -28,67 +17,49 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- EGD           NH1    N    N         0.000      0.000    0.000    0.000
- EGD           HH1    H    H         0.000      0.502   -0.820    0.000
- EGD           CZ     C    C         0.000     -1.303   -0.014    0.000
- EGD           NH2    N    NH2       0.000     -1.978   -1.213    0.000
- EGD           HH22   H    H         0.000     -1.471   -2.096    0.000
- EGD           HH21   H    H         0.000     -2.996   -1.238    0.000
- EGD           NE     N    NH1       0.000     -2.004    1.169    0.000
- EGD           HNE    H    H         0.000     -3.014    1.158    0.000
- EGD           CD     C    CH2       0.000     -1.285    2.445    0.000
- EGD           HD1    H    H         0.000     -0.657    2.509   -0.891
- EGD           HD2    H    H         0.000     -0.657    2.509    0.891
- EGD           CG     C    CH3       0.000     -2.292    3.598    0.000
- EGD           HG3    H    H         0.000     -2.903    3.538   -0.865
- EGD           HG2    H    H         0.000     -2.903    3.538    0.865
- EGD           HG1    H    H         0.000     -1.776    4.524    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- EGD      NH1    n/a    CZ     START
- EGD      HH1    NH1    .      .
- EGD      CZ     NH1    NE     .
- EGD      NH2    CZ     HH21   .
- EGD      HH22   NH2    .      .
- EGD      HH21   NH2    .      .
- EGD      NE     CZ     CD     .
- EGD      HNE    NE     .      .
- EGD      CD     NE     CG     .
- EGD      HD1    CD     .      .
- EGD      HD2    CD     .      .
- EGD      CG     CD     HG1    .
- EGD      HG3    CG     .      .
- EGD      HG2    CG     .      .
- EGD      HG1    CG     .      END
+EGD     CG      C       CH3     0       2.328       -0.648      0.244       
+EGD     CD      C       CH2     0       1.181       0.207       -0.219      
+EGD     NE      N       NH1     0       -0.111      -0.441      -0.018      
+EGD     CZ      C       C       0       -1.303      0.164       -0.020      
+EGD     NH1     N       NH2     1       -2.322      -0.389      0.623       
+EGD     NH2     N       NH2     0       -1.495      1.285       -0.701      
+EGD     HG1     H       H       0       3.166       -0.245      -0.035      
+EGD     HG2     H       H       0       2.251       -1.535      -0.145      
+EGD     HG3     H       H       0       2.311       -0.718      1.213       
+EGD     HD1     H       H       0       1.294       0.409       -1.172      
+EGD     HD2     H       H       0       1.194       1.057       0.271       
+EGD     HNE     H       H       0       -0.108      -1.306      0.099       
+EGD     HH1     H       H       0       -3.135      -0.065      0.528       
+EGD     HH2     H       H       0       -2.188      -1.075      1.157       
+EGD     HH21    H       H       0       -2.157      1.823       -0.482      
+EGD     HH22    H       H       0       -0.993      1.474       -1.400      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- EGD      CG     CD        single      1.513    0.020
- EGD      HG1    CG        single      1.059    0.020
- EGD      HG2    CG        single      1.059    0.020
- EGD      HG3    CG        single      1.059    0.020
- EGD      CD     NE        single      1.450    0.020
- EGD      HD1    CD        single      1.092    0.020
- EGD      HD2    CD        single      1.092    0.020
- EGD      NE     CZ        single      1.330    0.020
- EGD      HNE    NE        single      1.010    0.020
- EGD      CZ     NH1       double      1.260    0.020
- EGD      NH2    CZ        single      1.332    0.020
- EGD      HH1    NH1       single      0.954    0.020
- EGD      HH21   NH2       single      1.010    0.020
- EGD      HH22   NH2       single      1.010    0.020
+EGD          CG          CD      SINGLE       n     1.499   0.020
+EGD          CD          NE      SINGLE       n     1.454   0.012
+EGD          NE          CZ      SINGLE       n     1.328   0.013
+EGD          CZ         NH1      DOUBLE       n     1.322   0.010
+EGD          CZ         NH2      SINGLE       n     1.321   0.011
+EGD          CG         HG1      SINGLE       n     0.971   0.015
+EGD          CG         HG2      SINGLE       n     0.971   0.015
+EGD          CG         HG3      SINGLE       n     0.971   0.015
+EGD          CD         HD1      SINGLE       n     0.981   0.014
+EGD          CD         HD2      SINGLE       n     0.981   0.014
+EGD          NE         HNE      SINGLE       n     0.872   0.020
+EGD         NH1         HH1      SINGLE       n     0.879   0.020
+EGD         NH1         HH2      SINGLE       n     0.879   0.020
+EGD         NH2        HH21      SINGLE       n     0.881   0.020
+EGD         NH2        HH22      SINGLE       n     0.881   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -96,28 +67,30 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- EGD      HH1    NH1    CZ      120.000    3.000
- EGD      NH1    CZ     NH2     120.000    3.000
- EGD      NH1    CZ     NE      120.000    3.000
- EGD      NH2    CZ     NE      120.000    3.000
- EGD      CZ     NH2    HH22    120.000    3.000
- EGD      CZ     NH2    HH21    120.000    3.000
- EGD      HH22   NH2    HH21    120.000    3.000
- EGD      CZ     NE     HNE     120.000    3.000
- EGD      CZ     NE     CD      121.500    3.000
- EGD      HNE    NE     CD      118.500    3.000
- EGD      NE     CD     HD1     109.470    3.000
- EGD      NE     CD     HD2     109.470    3.000
- EGD      NE     CD     CG      112.000    3.000
- EGD      HD1    CD     HD2     107.900    3.000
- EGD      HD1    CD     CG      109.470    3.000
- EGD      HD2    CD     CG      109.470    3.000
- EGD      CD     CG     HG3     109.470    3.000
- EGD      CD     CG     HG2     109.470    3.000
- EGD      CD     CG     HG1     109.470    3.000
- EGD      HG3    CG     HG2     109.470    3.000
- EGD      HG3    CG     HG1     109.470    3.000
- EGD      HG2    CG     HG1     109.470    3.000
+EGD          CD          CG         HG1     109.548    1.50
+EGD          CD          CG         HG2     109.548    1.50
+EGD          CD          CG         HG3     109.548    1.50
+EGD         HG1          CG         HG2     109.415    1.50
+EGD         HG1          CG         HG3     109.415    1.50
+EGD         HG2          CG         HG3     109.415    1.50
+EGD          CG          CD          NE     111.409    1.63
+EGD          CG          CD         HD1     109.375    1.50
+EGD          CG          CD         HD2     109.375    1.50
+EGD          NE          CD         HD1     109.345    1.50
+EGD          NE          CD         HD2     109.345    1.50
+EGD         HD1          CD         HD2     108.054    1.50
+EGD          CD          NE          CZ     125.059    1.50
+EGD          CD          NE         HNE     117.654    2.91
+EGD          CZ          NE         HNE     117.287    1.50
+EGD          NE          CZ         NH1     120.052    1.50
+EGD          NE          CZ         NH2     120.052    1.50
+EGD         NH1          CZ         NH2     119.896    1.50
+EGD          CZ         NH1         HH1     119.855    2.01
+EGD          CZ         NH1         HH2     119.855    2.01
+EGD         HH1         NH1         HH2     120.290    2.09
+EGD          CZ         NH2        HH21     119.855    2.01
+EGD          CZ         NH2        HH22     119.855    2.01
+EGD        HH21         NH2        HH22     120.290    2.09
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -128,30 +101,46 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EGD      CONST_1  HH1    NH1    CZ     NE       180.000    0.000   0
- EGD      CONST_2  NH1    CZ     NH2    HH21     180.000    0.000   0
- EGD      CONST_3  NH1    CZ     NE     CD         0.000    0.000   0
- EGD      var_1    CZ     NE     CD     CG       180.000   20.000   3
- EGD      var_2    NE     CD     CG     HG1      180.000   20.000   3
+EGD             sp3_sp3_1          NE          CD          CG         HG1     180.000   10.00     3
+EGD             sp2_sp3_2          CZ          NE          CD          CG     120.000   10.00     6
+EGD             sp2_sp2_1         NH1          CZ          NE          CD     180.000   10.00     2
+EGD             sp2_sp2_5          NE          CZ         NH1         HH1     180.000   10.00     2
+EGD             sp2_sp2_9          NE          CZ         NH2        HH21     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- EGD      plan-1    NE        0.020
- EGD      plan-1    CD        0.020
- EGD      plan-1    CZ        0.020
- EGD      plan-1    HNE       0.020
- EGD      plan-2    CZ        0.020
- EGD      plan-2    NE        0.020
- EGD      plan-2    NH1       0.020
- EGD      plan-2    NH2       0.020
- EGD      plan-2    HH1       0.020
- EGD      plan-2    HNE       0.020
- EGD      plan-2    HH22      0.020
- EGD      plan-2    HH21      0.020
- EGD      plan-3    NH2       0.020
- EGD      plan-3    CZ        0.020
- EGD      plan-3    HH21      0.020
- EGD      plan-3    HH22      0.020
-# ------------------------------------------------------
+EGD    plan-1          CD   0.020
+EGD    plan-1          CZ   0.020
+EGD    plan-1         HNE   0.020
+EGD    plan-1          NE   0.020
+EGD    plan-2          CZ   0.020
+EGD    plan-2          NE   0.020
+EGD    plan-2         NH1   0.020
+EGD    plan-2         NH2   0.020
+EGD    plan-3          CZ   0.020
+EGD    plan-3         HH1   0.020
+EGD    plan-3         HH2   0.020
+EGD    plan-3         NH1   0.020
+EGD    plan-4          CZ   0.020
+EGD    plan-4        HH21   0.020
+EGD    plan-4        HH22   0.020
+EGD    plan-4         NH2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+EGD SMILES           ACDLabs              10.04 "[N@H]=C(N)NCC"
+EGD SMILES_CANONICAL CACTVS               3.341 "CCNC(N)=N"
+EGD SMILES           CACTVS               3.341 "CCNC(N)=N"
+EGD SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[H]/N=C(\N)/NCC"
+EGD SMILES           "OpenEye OEToolkits" 1.5.0 "[H]N=C(N)NCC"
+EGD InChI            InChI                1.03  "InChI=1S/C3H9N3/c1-2-6-3(4)5/h2H2,1H3,(H4,4,5,6)"
+EGD InChIKey         InChI                1.03  KEWLVUBYGUZFKX-UHFFFAOYSA-N
+EGD ?                acedrg               202         "dictionary generator"                  
+EGD ?                acedrg_database      11          "data source"                           
+EGD ?                rdkit                2017.03.2   "Chemoinformatics tool"
+EGD ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-OBA      OBA '2-(OXALYL-AMINO)-BENZOIC ACID       ' non-polymer        20  15 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+OBA     OBA      "2-(OXALYL-AMINO)-BENZOIC ACID"     NON-POLYMER     21     15     .     
 #
 data_comp_OBA
 #
@@ -28,84 +17,60 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- OBA           O18    O    OC       -0.500      0.000    0.000    0.000
- OBA           C16    C    C         0.000     -0.971    0.341   -0.711
- OBA           O17    O    OC       -0.500     -0.774    0.876   -1.824
- OBA           C14    C    C         0.000     -2.366    0.110   -0.232
- OBA           O15    O    O         0.000     -2.559   -0.410    0.848
- OBA           N13    N    NH1       0.000     -3.412    0.477   -0.997
- OBA           H13    H    H         0.000     -3.254    0.952   -1.875
- OBA           C3     C    CR6       0.000     -4.710    0.204   -0.580
- OBA           C2     C    CR16      0.000     -5.038    0.270    0.768
- OBA           H2     H    H         0.000     -4.281    0.535    1.496
- OBA           C4     C    CR6       0.000     -5.697   -0.135   -1.518
- OBA           C10    C    C         0.000     -5.362   -0.209   -2.952
- OBA           O12    O    OC       -0.500     -6.264   -0.404   -3.796
- OBA           O11    O    OC       -0.500     -4.175   -0.075   -3.324
- OBA           C5     C    CR16      0.000     -6.995   -0.413   -1.086
- OBA           H5     H    H         0.000     -7.759   -0.683   -1.804
- OBA           C6     C    CR16      0.000     -7.302   -0.342    0.255
- OBA           H6     H    H         0.000     -8.311   -0.552    0.589
- OBA           C1     C    CR16      0.000     -6.327   -0.001    1.180
- OBA           H1     H    H         0.000     -6.578    0.051    2.232
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- OBA      O18    n/a    C16    START
- OBA      C16    O18    C14    .
- OBA      O17    C16    .      .
- OBA      C14    C16    N13    .
- OBA      O15    C14    .      .
- OBA      N13    C14    C3     .
- OBA      H13    N13    .      .
- OBA      C3     N13    C4     .
- OBA      C2     C3     H2     .
- OBA      H2     C2     .      .
- OBA      C4     C3     C5     .
- OBA      C10    C4     O11    .
- OBA      O12    C10    .      .
- OBA      O11    C10    .      .
- OBA      C5     C4     C6     .
- OBA      H5     C5     .      .
- OBA      C6     C5     C1     .
- OBA      H6     C6     .      .
- OBA      C1     C6     H1     .
- OBA      H1     C1     .      END
- OBA      C1     C2     .    ADD
+OBA     C1      C       CR16    0       12.286      44.565      19.144      
+OBA     C2      C       CR16    0       11.307      44.963      20.039      
+OBA     C3      C       CR6     0       10.064      45.423      19.580      
+OBA     C4      C       CR6     0       9.817       45.481      18.180      
+OBA     C5      C       CR16    0       10.831      45.069      17.310      
+OBA     C6      C       CR16    0       12.051      44.617      17.782      
+OBA     C10     C       C       0       8.533       45.954      17.611      
+OBA     O11     O       O       0       7.884       45.304      16.807      
+OBA     O12     O       OH1     0       8.153       47.129      18.043      
+OBA     N13     N       NH1     0       9.062       45.833      20.496      
+OBA     C14     C       C       0       9.124       46.826      21.401      
+OBA     O15     O       O       0       9.974       47.699      21.409      
+OBA     C16     C       C       0       8.071       46.889      22.487      
+OBA     O17     O       O       0       8.204       47.722      23.392      
+OBA     O18     O       OC      -1      7.132       46.095      22.391      
+OBA     H1      H       H       0       13.117      44.257      19.468      
+OBA     H2      H       H       0       11.475      44.925      20.965      
+OBA     H5      H       H       0       10.678      45.101      16.381      
+OBA     H6      H       H       0       12.720      44.344      17.175      
+OBA     H12     H       H       0       8.601       47.760      17.638      
+OBA     H13     H       H       0       8.316       45.371      20.463      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- OBA      C1     C2        double      1.390    0.020
- OBA      C1     C6        single      1.390    0.020
- OBA      H1     C1        single      1.083    0.020
- OBA      C2     C3        single      1.390    0.020
- OBA      H2     C2        single      1.083    0.020
- OBA      C4     C3        double      1.487    0.020
- OBA      C3     N13       single      1.350    0.020
- OBA      C5     C4        single      1.390    0.020
- OBA      C10    C4        single      1.500    0.020
- OBA      C6     C5        double      1.390    0.020
- OBA      H5     C5        single      1.083    0.020
- OBA      H6     C6        single      1.083    0.020
- OBA      O11    C10       deloc       1.250    0.020
- OBA      O12    C10       deloc       1.250    0.020
- OBA      N13    C14       single      1.330    0.020
- OBA      H13    N13       single      1.010    0.020
- OBA      O15    C14       double      1.220    0.020
- OBA      C14    C16       single      1.460    0.020
- OBA      O17    C16       deloc       1.250    0.020
- OBA      C16    O18       deloc       1.250    0.020
+OBA          C1          C2      DOUBLE       y     1.378   0.010
+OBA          C1          C6      SINGLE       y     1.376   0.012
+OBA          C2          C3      SINGLE       y     1.395   0.010
+OBA          C3          C4      DOUBLE       y     1.411   0.010
+OBA          C3         N13      SINGLE       n     1.415   0.012
+OBA          C4          C5      SINGLE       y     1.392   0.010
+OBA          C4         C10      SINGLE       n     1.478   0.013
+OBA          C5          C6      DOUBLE       y     1.378   0.010
+OBA         C10         O11      DOUBLE       n     1.221   0.018
+OBA         C10         O12      SINGLE       n     1.308   0.017
+OBA         N13         C14      SINGLE       n     1.340   0.010
+OBA         C14         O15      DOUBLE       n     1.216   0.010
+OBA         C14         C16      SINGLE       n     1.498   0.015
+OBA         C16         O17      DOUBLE       n     1.230   0.020
+OBA         C16         O18      SINGLE       n     1.230   0.020
+OBA          C1          H1      SINGLE       n     0.943   0.017
+OBA          C2          H2      SINGLE       n     0.942   0.020
+OBA          C5          H5      SINGLE       n     0.941   0.017
+OBA          C6          H6      SINGLE       n     0.943   0.018
+OBA         O12         H12      SINGLE       n     0.873   0.020
+OBA         N13         H13      SINGLE       n     0.876   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,36 +78,37 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- OBA      O18    C16    O17     123.000    3.000
- OBA      O18    C16    C14     120.000    3.000
- OBA      O17    C16    C14     120.000    3.000
- OBA      C16    C14    O15     120.500    3.000
- OBA      C16    C14    N13     120.000    3.000
- OBA      O15    C14    N13     123.000    3.000
- OBA      C14    N13    H13     120.000    3.000
- OBA      C14    N13    C3      120.000    3.000
- OBA      H13    N13    C3      120.000    3.000
- OBA      N13    C3     C2      120.000    3.000
- OBA      N13    C3     C4      120.000    3.000
- OBA      C2     C3     C4      120.000    3.000
- OBA      C3     C2     H2      120.000    3.000
- OBA      C3     C2     C1      120.000    3.000
- OBA      H2     C2     C1      120.000    3.000
- OBA      C3     C4     C10     120.000    3.000
- OBA      C3     C4     C5      120.000    3.000
- OBA      C10    C4     C5      120.000    3.000
- OBA      C4     C10    O12     120.000    3.000
- OBA      C4     C10    O11     120.000    3.000
- OBA      O12    C10    O11     123.000    3.000
- OBA      C4     C5     H5      120.000    3.000
- OBA      C4     C5     C6      120.000    3.000
- OBA      H5     C5     C6      120.000    3.000
- OBA      C5     C6     H6      120.000    3.000
- OBA      C5     C6     C1      120.000    3.000
- OBA      H6     C6     C1      120.000    3.000
- OBA      C6     C1     H1      120.000    3.000
- OBA      C6     C1     C2      120.000    3.000
- OBA      H1     C1     C2      120.000    3.000
+OBA          C2          C1          C6     120.477    1.50
+OBA          C2          C1          H1     119.621    1.50
+OBA          C6          C1          H1     119.903    1.50
+OBA          C1          C2          C3     120.196    1.50
+OBA          C1          C2          H2     120.040    1.50
+OBA          C3          C2          H2     119.764    1.50
+OBA          C2          C3          C4     119.120    1.50
+OBA          C2          C3         N13     121.570    1.70
+OBA          C4          C3         N13     119.311    1.50
+OBA          C3          C4          C5     118.438    1.50
+OBA          C3          C4         C10     122.091    1.50
+OBA          C5          C4         C10     119.471    1.50
+OBA          C4          C5          C6     121.619    1.50
+OBA          C4          C5          H5     118.886    1.50
+OBA          C6          C5          H5     119.495    1.50
+OBA          C1          C6          C5     120.150    1.50
+OBA          C1          C6          H6     119.970    1.50
+OBA          C5          C6          H6     119.879    1.50
+OBA          C4         C10         O11     123.028    1.50
+OBA          C4         C10         O12     114.113    1.50
+OBA         O11         C10         O12     122.859    1.50
+OBA         C10         O12         H12     110.328    3.00
+OBA          C3         N13         C14     127.398    2.72
+OBA          C3         N13         H13     115.919    2.41
+OBA         C14         N13         H13     116.683    1.55
+OBA         N13         C14         O15     125.351    1.50
+OBA         N13         C14         C16     117.629    3.00
+OBA         O15         C14         C16     117.020    3.00
+OBA         C14         C16         O17     117.022    2.67
+OBA         C14         C16         O18     117.022    2.67
+OBA         O17         C16         O18     125.955    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -153,49 +119,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OBA      var_1    O18    C16    C14    N13      179.991   20.000   1
- OBA      CONST_1  C16    C14    N13    C3       180.000    0.000   0
- OBA      var_2    C14    N13    C3     C4      -144.371   20.000   1
- OBA      CONST_2  N13    C3     C2     C1       180.000    0.000   0
- OBA      CONST_3  N13    C3     C4     C5       180.000    0.000   0
- OBA      var_3    C3     C4     C10    O11        5.785   20.000   1
- OBA      CONST_4  C3     C4     C5     C6         0.000    0.000   0
- OBA      CONST_5  C4     C5     C6     C1         0.000    0.000   0
- OBA      CONST_6  C5     C6     C1     C2         0.000    0.000   0
- OBA      CONST_7  C6     C1     C2     C3         0.000    0.000   0
+OBA       const_sp2_sp2_1          C6          C1          C2          C3       0.000   10.00     2
+OBA              const_21          C2          C1          C6          C5       0.000   10.00     2
+OBA            sp2_sp2_13         N13         C14         C16         O17     180.000   10.00     2
+OBA       const_sp2_sp2_6          C1          C2          C3         N13     180.000   10.00     2
+OBA              const_12         N13          C3          C4         C10       0.000   10.00     2
+OBA             sp2_sp2_1          C2          C3         N13         C14     180.000   10.00     2
+OBA              const_15         C10          C4          C5          C6     180.000   10.00     2
+OBA             sp2_sp2_7         O11         C10          C4          C3       0.000   10.00     2
+OBA              const_17          C4          C5          C6          C1       0.000   10.00     2
+OBA            sp2_sp2_11         O15         C14         N13          C3       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- OBA      plan-1    C1        0.020
- OBA      plan-1    C2        0.020
- OBA      plan-1    C6        0.020
- OBA      plan-1    H1        0.020
- OBA      plan-1    C3        0.020
- OBA      plan-1    C4        0.020
- OBA      plan-1    C5        0.020
- OBA      plan-1    H2        0.020
- OBA      plan-1    N13       0.020
- OBA      plan-1    C10       0.020
- OBA      plan-1    H5        0.020
- OBA      plan-1    H6        0.020
- OBA      plan-1    H13       0.020
- OBA      plan-2    C10       0.020
- OBA      plan-2    C4        0.020
- OBA      plan-2    O11       0.020
- OBA      plan-2    O12       0.020
- OBA      plan-3    N13       0.020
- OBA      plan-3    C3        0.020
- OBA      plan-3    C14       0.020
- OBA      plan-3    H13       0.020
- OBA      plan-4    C14       0.020
- OBA      plan-4    N13       0.020
- OBA      plan-4    O15       0.020
- OBA      plan-4    C16       0.020
- OBA      plan-4    H13       0.020
- OBA      plan-5    C16       0.020
- OBA      plan-5    C14       0.020
- OBA      plan-5    O17       0.020
- OBA      plan-5    O18       0.020
-# ------------------------------------------------------
+OBA    plan-1          C1   0.020
+OBA    plan-1         C10   0.020
+OBA    plan-1          C2   0.020
+OBA    plan-1          C3   0.020
+OBA    plan-1          C4   0.020
+OBA    plan-1          C5   0.020
+OBA    plan-1          C6   0.020
+OBA    plan-1          H1   0.020
+OBA    plan-1          H2   0.020
+OBA    plan-1          H5   0.020
+OBA    plan-1          H6   0.020
+OBA    plan-1         N13   0.020
+OBA    plan-2         C10   0.020
+OBA    plan-2          C4   0.020
+OBA    plan-2         O11   0.020
+OBA    plan-2         O12   0.020
+OBA    plan-3         C14   0.020
+OBA    plan-3          C3   0.020
+OBA    plan-3         H13   0.020
+OBA    plan-3         N13   0.020
+OBA    plan-4         C14   0.020
+OBA    plan-4         C16   0.020
+OBA    plan-4         N13   0.020
+OBA    plan-4         O15   0.020
+OBA    plan-5         C14   0.020
+OBA    plan-5         C16   0.020
+OBA    plan-5         O17   0.020
+OBA    plan-5         O18   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+OBA SMILES           ACDLabs              10.04 "O=C(Nc1ccccc1C(=O)O)C(=O)O"
+OBA SMILES_CANONICAL CACTVS               3.341 "OC(=O)C(=O)Nc1ccccc1C(O)=O"
+OBA SMILES           CACTVS               3.341 "OC(=O)C(=O)Nc1ccccc1C(O)=O"
+OBA SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1ccc(c(c1)C(=O)O)NC(=O)C(=O)O"
+OBA SMILES           "OpenEye OEToolkits" 1.5.0 "c1ccc(c(c1)C(=O)O)NC(=O)C(=O)O"
+OBA InChI            InChI                1.03  "InChI=1S/C9H7NO5/c11-7(9(14)15)10-6-4-2-1-3-5(6)8(12)13/h1-4H,(H,10,11)(H,12,13)(H,14,15)"
+OBA InChIKey         InChI                1.03  QBYNNSFEMMNINN-UHFFFAOYSA-N
+OBA ?                acedrg               202         "dictionary generator"                  
+OBA ?                acedrg_database      11          "data source"                           
+OBA ?                rdkit                2017.03.2   "Chemoinformatics tool"
+OBA ?                refmac5              5.8.0189    "optimization tool"                     

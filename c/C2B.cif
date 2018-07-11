@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-C2B      C2B '1-(4-CHLOROPHENYL)METHANAMINE       ' non-polymer        17   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+C2B     C2B      "1-(4-CHLOROPHENYL)METHANAMINE"     NON-POLYMER     17     9     .     
 #
 data_comp_C2B
 #
@@ -28,75 +17,52 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- C2B           CL     CL   CL        0.000      0.000    0.000    0.000
- C2B           CZ     C    CR6       0.000     -1.736    0.002   -0.040
- C2B           CE1    C    CR16      0.000     -2.428   -1.195   -0.075
- C2B           HE1    H    H         0.000     -1.888   -2.133   -0.079
- C2B           CD1    C    CR16      0.000     -3.811   -1.192   -0.106
- C2B           HD1    H    H         0.000     -4.353   -2.129   -0.134
- C2B           CE2    C    CR16      0.000     -2.426    1.200   -0.034
- C2B           HE2    H    H         0.000     -1.884    2.137   -0.002
- C2B           CD2    C    CR16      0.000     -3.807    1.202   -0.070
- C2B           HD2    H    H         0.000     -4.347    2.141   -0.074
- C2B           CG     C    CR6       0.000     -4.500    0.006   -0.101
- C2B           CB     C    CH2       0.000     -6.006    0.008   -0.135
- C2B           HB1    H    H         0.000     -6.359   -0.873   -0.674
- C2B           HB2    H    H         0.000     -6.357    0.909   -0.643
- C2B           N1     N    NH2       0.000     -6.526   -0.015    1.240
- C2B           HN12   H    H         0.000     -5.889   -0.029    2.028
- C2B           HN11   H    H         0.000     -7.525   -0.017    1.409
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- C2B      CL     n/a    CZ     START
- C2B      CZ     CL     CE2    .
- C2B      CE1    CZ     CD1    .
- C2B      HE1    CE1    .      .
- C2B      CD1    CE1    HD1    .
- C2B      HD1    CD1    .      .
- C2B      CE2    CZ     CD2    .
- C2B      HE2    CE2    .      .
- C2B      CD2    CE2    CG     .
- C2B      HD2    CD2    .      .
- C2B      CG     CD2    CB     .
- C2B      CB     CG     N1     .
- C2B      HB1    CB     .      .
- C2B      HB2    CB     .      .
- C2B      N1     CB     HN11   .
- C2B      HN12   N1     .      .
- C2B      HN11   N1     .      END
- C2B      CG     CD1    .    ADD
+C2B     N1      N       NT2     0       20.271      14.239      30.398      
+C2B     CB      C       CH2     0       21.698      14.534      30.561      
+C2B     CG      C       CR6     0       22.205      15.508      29.524      
+C2B     CD1     C       CR16    0       22.848      16.686      29.897      
+C2B     CE1     C       CR16    0       23.320      17.596      28.931      
+C2B     CZ      C       CR6     0       23.141      17.308      27.592      
+C2B     CE2     C       CR16    0       22.508      16.149      27.189      
+C2B     CD2     C       CR16    0       22.040      15.249      28.165      
+C2B     CL      CL      CL      0       23.723      18.427      26.392      
+C2B     HN11    H       H       0       20.058      13.641      31.125      
+C2B     HN12    H       H       0       19.824      15.075      30.577      
+C2B     HB1     H       H       0       22.185      13.680      30.502      
+C2B     HB2     H       H       0       21.823      14.890      31.471      
+C2B     HD1     H       H       0       22.969      16.880      30.812      
+C2B     HE1     H       H       0       23.752      18.387      29.193      
+C2B     HE2     H       H       0       22.391      15.964      26.276      
+C2B     HD2     H       H       0       21.607      14.456      27.894      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- C2B      N1     CB        single      1.450    0.020
- C2B      HN11   N1        single      1.010    0.020
- C2B      HN12   N1        single      1.010    0.020
- C2B      CB     CG        single      1.511    0.020
- C2B      HB1    CB        single      1.092    0.020
- C2B      HB2    CB        single      1.092    0.020
- C2B      CG     CD1       double      1.390    0.020
- C2B      CG     CD2       single      1.390    0.020
- C2B      CD1    CE1       single      1.390    0.020
- C2B      HD1    CD1       single      1.083    0.020
- C2B      CE1    CZ        double      1.390    0.020
- C2B      HE1    CE1       single      1.083    0.020
- C2B      CE2    CZ        single      1.390    0.020
- C2B      CZ     CL        single      1.795    0.020
- C2B      CD2    CE2       double      1.390    0.020
- C2B      HE2    CE2       single      1.083    0.020
- C2B      HD2    CD2       single      1.083    0.020
+C2B          N1          CB      SINGLE       n     1.467   0.015
+C2B          CB          CG      SINGLE       n     1.510   0.010
+C2B          CG         CD1      DOUBLE       y     1.386   0.010
+C2B          CG         CD2      SINGLE       y     1.386   0.010
+C2B         CD1         CE1      SINGLE       y     1.380   0.020
+C2B         CE1          CZ      DOUBLE       y     1.373   0.011
+C2B          CZ         CE2      SINGLE       y     1.373   0.011
+C2B          CZ          CL      SINGLE       n     1.741   0.010
+C2B         CE2         CD2      DOUBLE       y     1.380   0.020
+C2B          N1        HN11      SINGLE       n     0.965   0.020
+C2B          N1        HN12      SINGLE       n     0.965   0.020
+C2B          CB         HB1      SINGLE       n     0.985   0.020
+C2B          CB         HB2      SINGLE       n     0.985   0.020
+C2B         CD1         HD1      SINGLE       n     0.943   0.017
+C2B         CE1         HE1      SINGLE       n     0.939   0.018
+C2B         CE2         HE2      SINGLE       n     0.939   0.018
+C2B         CD2         HD2      SINGLE       n     0.943   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -104,33 +70,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- C2B      CL     CZ     CE1     120.000    3.000
- C2B      CL     CZ     CE2     120.000    3.000
- C2B      CE1    CZ     CE2     120.000    3.000
- C2B      CZ     CE1    HE1     120.000    3.000
- C2B      CZ     CE1    CD1     120.000    3.000
- C2B      HE1    CE1    CD1     120.000    3.000
- C2B      CE1    CD1    HD1     120.000    3.000
- C2B      CE1    CD1    CG      120.000    3.000
- C2B      HD1    CD1    CG      120.000    3.000
- C2B      CZ     CE2    HE2     120.000    3.000
- C2B      CZ     CE2    CD2     120.000    3.000
- C2B      HE2    CE2    CD2     120.000    3.000
- C2B      CE2    CD2    HD2     120.000    3.000
- C2B      CE2    CD2    CG      120.000    3.000
- C2B      HD2    CD2    CG      120.000    3.000
- C2B      CD2    CG     CB      120.000    3.000
- C2B      CD2    CG     CD1     120.000    3.000
- C2B      CB     CG     CD1     120.000    3.000
- C2B      CG     CB     HB1     109.470    3.000
- C2B      CG     CB     HB2     109.470    3.000
- C2B      CG     CB     N1      109.500    3.000
- C2B      HB1    CB     HB2     107.900    3.000
- C2B      HB1    CB     N1      109.470    3.000
- C2B      HB2    CB     N1      109.470    3.000
- C2B      CB     N1     HN12    120.000    3.000
- C2B      CB     N1     HN11    120.000    3.000
- C2B      HN12   N1     HN11    120.000    3.000
+C2B          CB          N1        HN11     104.789    3.00
+C2B          CB          N1        HN12     104.789    3.00
+C2B        HN11          N1        HN12     107.163    3.00
+C2B          N1          CB          CG     112.424    2.20
+C2B          N1          CB         HB1     107.542    2.93
+C2B          N1          CB         HB2     107.542    2.93
+C2B          CG          CB         HB1     110.855    3.00
+C2B          CG          CB         HB2     110.855    3.00
+C2B         HB1          CB         HB2     107.838    1.50
+C2B          CB          CG         CD1     120.782    2.59
+C2B          CB          CG         CD2     120.782    2.59
+C2B         CD1          CG         CD2     118.437    1.50
+C2B          CG         CD1         CE1     121.093    1.50
+C2B          CG         CD1         HD1     119.503    1.50
+C2B         CE1         CD1         HD1     119.404    1.50
+C2B         CD1         CE1          CZ     119.052    1.50
+C2B         CD1         CE1         HE1     120.502    1.50
+C2B          CZ         CE1         HE1     120.446    1.50
+C2B         CE1          CZ         CE2     121.273    1.50
+C2B         CE1          CZ          CL     119.363    1.50
+C2B         CE2          CZ          CL     119.363    1.50
+C2B          CZ         CE2         CD2     119.052    1.50
+C2B          CZ         CE2         HE2     120.446    1.50
+C2B         CD2         CE2         HE2     120.502    1.50
+C2B          CG         CD2         CE2     121.093    1.50
+C2B          CG         CD2         HD2     119.503    1.50
+C2B         CE2         CD2         HD2     119.404    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -141,33 +107,45 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C2B      CONST_1  CL     CZ     CE1    CD1      180.000    0.000   0
- C2B      CONST_2  CZ     CE1    CD1    CG         0.000    0.000   0
- C2B      CONST_3  CL     CZ     CE2    CD2      180.000    0.000   0
- C2B      CONST_4  CZ     CE2    CD2    CG         0.000    0.000   0
- C2B      CONST_5  CE2    CD2    CG     CB       180.000    0.000   0
- C2B      CONST_6  CD2    CG     CD1    CE1        0.000    0.000   0
- C2B      var_1    CD2    CG     CB     N1       -90.273   20.000   2
- C2B      var_2    CG     CB     N1     HN11    -179.966   20.000   1
+C2B             sp3_sp3_1          CG          CB          N1        HN11     180.000   10.00     3
+C2B             sp2_sp3_2         CD1          CG          CB          N1     -90.000   10.00     6
+C2B       const_sp2_sp2_2         CE1         CD1          CG          CB     180.000   10.00     2
+C2B              const_22         CE2         CD2          CG          CB     180.000   10.00     2
+C2B       const_sp2_sp2_5          CG         CD1         CE1          CZ       0.000   10.00     2
+C2B              const_10         CD1         CE1          CZ          CL     180.000   10.00     2
+C2B              const_14         CD2         CE2          CZ          CL     180.000   10.00     2
+C2B              const_17          CG         CD2         CE2          CZ       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- C2B      plan-1    N1        0.020
- C2B      plan-1    CB        0.020
- C2B      plan-1    HN11      0.020
- C2B      plan-1    HN12      0.020
- C2B      plan-2    CG        0.020
- C2B      plan-2    CB        0.020
- C2B      plan-2    CD1       0.020
- C2B      plan-2    CD2       0.020
- C2B      plan-2    CE1       0.020
- C2B      plan-2    CZ        0.020
- C2B      plan-2    CE2       0.020
- C2B      plan-2    HD1       0.020
- C2B      plan-2    HE1       0.020
- C2B      plan-2    CL        0.020
- C2B      plan-2    HE2       0.020
- C2B      plan-2    HD2       0.020
-# ------------------------------------------------------
+C2B    plan-1          CB   0.020
+C2B    plan-1         CD1   0.020
+C2B    plan-1         CD2   0.020
+C2B    plan-1         CE1   0.020
+C2B    plan-1         CE2   0.020
+C2B    plan-1          CG   0.020
+C2B    plan-1          CL   0.020
+C2B    plan-1          CZ   0.020
+C2B    plan-1         HD1   0.020
+C2B    plan-1         HD2   0.020
+C2B    plan-1         HE1   0.020
+C2B    plan-1         HE2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+C2B SMILES           ACDLabs              10.04 "Clc1ccc(cc1)CN"
+C2B SMILES_CANONICAL CACTVS               3.341 "NCc1ccc(Cl)cc1"
+C2B SMILES           CACTVS               3.341 "NCc1ccc(Cl)cc1"
+C2B SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1cc(ccc1CN)Cl"
+C2B SMILES           "OpenEye OEToolkits" 1.5.0 "c1cc(ccc1CN)Cl"
+C2B InChI            InChI                1.03  "InChI=1S/C7H8ClN/c8-7-3-1-6(5-9)2-4-7/h1-4H,5,9H2"
+C2B InChIKey         InChI                1.03  YMVFJGSXZNNUDW-UHFFFAOYSA-N
+C2B ?                acedrg               202         "dictionary generator"                  
+C2B ?                acedrg_database      11          "data source"                           
+C2B ?                rdkit                2017.03.2   "Chemoinformatics tool"
+C2B ?                refmac5              5.8.0189    "optimization tool"                     

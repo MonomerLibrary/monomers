@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-2PC      2PC '3,4-DIHYDRO-2H-PYRROLIUM-5-CARBOXYLA' non-polymer        15   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+2PC     2PC      3,4-DIHYDRO-2H-PYRROLIUM-5-CARBOXYLATE     NON-POLYMER     15     8     .     
 #
 data_comp_2PC
 #
@@ -28,69 +17,48 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 2PC           O8     O    OC       -0.500      0.000    0.000    0.000
- 2PC           C6     C    C         0.000     -0.938   -0.827   -0.016
- 2PC           O7     O    OC       -0.500     -0.692   -2.051   -0.091
- 2PC           C2     C    C         0.000     -2.344   -0.356    0.046
- 2PC           C3     C    CH2       0.000     -2.754    1.095    0.144
- 2PC           H31    H    H         0.000     -2.206    1.728   -0.558
- 2PC           H32    H    H         0.000     -2.639    1.490    1.155
- 2PC           C4     C    CH2       0.000     -4.256    1.079   -0.238
- 2PC           H41    H    H         0.000     -4.440    1.262   -1.298
- 2PC           H42    H    H         0.000     -4.867    1.760    0.359
- 2PC           C5     C    CH2       0.000     -4.625   -0.383    0.107
- 2PC           H51    H    H         0.000     -5.336   -0.798   -0.611
- 2PC           H52    H    H         0.000     -5.037   -0.467    1.115
- 2PC           N1     N    NH1       1.000     -3.360   -1.123    0.030
- 2PC           HN1    H    H         0.000     -3.302   -2.130   -0.029
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- 2PC      O8     n/a    C6     START
- 2PC      C6     O8     C2     .
- 2PC      O7     C6     .      .
- 2PC      C2     C6     C3     .
- 2PC      C3     C2     C4     .
- 2PC      H31    C3     .      .
- 2PC      H32    C3     .      .
- 2PC      C4     C3     C5     .
- 2PC      H41    C4     .      .
- 2PC      H42    C4     .      .
- 2PC      C5     C4     N1     .
- 2PC      H51    C5     .      .
- 2PC      H52    C5     .      .
- 2PC      N1     C5     HN1    .
- 2PC      HN1    N1     .      END
- 2PC      N1     C2     .    ADD
+2PC     N1      N       NR5     1       0.173       1.108       -0.346      
+2PC     C2      C       CR5     0       0.888       0.053       0.007       
+2PC     C3      C       CH2     0       -0.022      -1.122      0.258       
+2PC     C4      C       CH2     0       -1.427      -0.577      0.043       
+2PC     C5      C       CH2     0       -1.265      0.907       -0.229      
+2PC     C6      C       C       0       2.231       0.033       0.111       
+2PC     O7      O       O       0       2.852       -0.856      -0.443      
+2PC     O8      O       OC      -1      2.786       0.903       0.755       
+2PC     HN1     H       H       0       0.519       1.862       -0.625      
+2PC     H31     H       H       0       0.087       -1.455      1.172       
+2PC     H32     H       H       0       0.170       -1.849      -0.368      
+2PC     H41     H       H       0       -1.979      -0.723      0.845       
+2PC     H42     H       H       0       -1.857      -1.025      -0.721      
+2PC     H51     H       H       0       -1.723      1.159       -1.057      
+2PC     H52     H       H       0       -1.635      1.437       0.506       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- 2PC      N1     C2        double      1.330    0.020
- 2PC      N1     C5        single      1.450    0.020
- 2PC      HN1    N1        single      1.010    0.020
- 2PC      C3     C2        single      1.510    0.020
- 2PC      C2     C6        single      1.460    0.020
- 2PC      C4     C3        single      1.524    0.020
- 2PC      H31    C3        single      1.092    0.020
- 2PC      H32    C3        single      1.092    0.020
- 2PC      C5     C4        single      1.524    0.020
- 2PC      H41    C4        single      1.092    0.020
- 2PC      H42    C4        single      1.092    0.020
- 2PC      H51    C5        single      1.092    0.020
- 2PC      H52    C5        single      1.092    0.020
- 2PC      O7     C6        deloc       1.250    0.020
- 2PC      C6     O8        deloc       1.250    0.020
+2PC          N1          C2      DOUBLE       n     1.319   0.017
+2PC          N1          C5      SINGLE       n     1.455   0.013
+2PC          C2          C3      SINGLE       n     1.508   0.013
+2PC          C2          C6      SINGLE       n     1.345   0.020
+2PC          C3          C4      SINGLE       n     1.524   0.012
+2PC          C4          C5      SINGLE       n     1.517   0.018
+2PC          C6          O7      DOUBLE       n     1.217   0.020
+2PC          C6          O8      SINGLE       n     1.217   0.020
+2PC          N1         HN1      SINGLE       n     0.874   0.020
+2PC          C3         H31      SINGLE       n     0.979   0.020
+2PC          C3         H32      SINGLE       n     0.979   0.020
+2PC          C4         H41      SINGLE       n     0.984   0.010
+2PC          C4         H42      SINGLE       n     0.984   0.010
+2PC          C5         H51      SINGLE       n     0.979   0.018
+2PC          C5         H52      SINGLE       n     0.979   0.018
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -98,33 +66,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 2PC      O8     C6     O7      123.000    3.000
- 2PC      O8     C6     C2      120.000    3.000
- 2PC      O7     C6     C2      120.000    3.000
- 2PC      C6     C2     C3      120.000    3.000
- 2PC      C6     C2     N1      120.000    3.000
- 2PC      C3     C2     N1      116.500    3.000
- 2PC      C2     C3     H31     109.470    3.000
- 2PC      C2     C3     H32     109.470    3.000
- 2PC      C2     C3     C4      109.470    3.000
- 2PC      H31    C3     H32     107.900    3.000
- 2PC      H31    C3     C4      109.470    3.000
- 2PC      H32    C3     C4      109.470    3.000
- 2PC      C3     C4     H41     109.470    3.000
- 2PC      C3     C4     H42     109.470    3.000
- 2PC      C3     C4     C5      111.000    3.000
- 2PC      H41    C4     H42     107.900    3.000
- 2PC      H41    C4     C5      109.470    3.000
- 2PC      H42    C4     C5      109.470    3.000
- 2PC      C4     C5     H51     109.470    3.000
- 2PC      C4     C5     H52     109.470    3.000
- 2PC      C4     C5     N1      112.000    3.000
- 2PC      H51    C5     H52     107.900    3.000
- 2PC      H51    C5     N1      109.470    3.000
- 2PC      H52    C5     N1      109.470    3.000
- 2PC      C5     N1     HN1     118.500    3.000
- 2PC      C5     N1     C2      121.500    3.000
- 2PC      HN1    N1     C2      120.000    3.000
+2PC          C2          N1          C5     111.933    2.00
+2PC          C2          N1         HN1     124.621    2.27
+2PC          C5          N1         HN1     123.446    2.13
+2PC          N1          C2          C3     108.764    1.71
+2PC          N1          C2          C6     124.821    2.90
+2PC          C3          C2          C6     126.415    3.00
+2PC          C2          C3          C4     103.907    1.71
+2PC          C2          C3         H31     110.801    1.50
+2PC          C2          C3         H32     110.801    1.50
+2PC          C4          C3         H31     110.918    1.50
+2PC          C4          C3         H32     110.918    1.50
+2PC         H31          C3         H32     108.906    1.50
+2PC          C3          C4          C5     105.290    1.50
+2PC          C3          C4         H41     110.651    1.50
+2PC          C3          C4         H42     110.651    1.50
+2PC          C5          C4         H41     110.804    1.50
+2PC          C5          C4         H42     110.804    1.50
+2PC         H41          C4         H42     108.899    1.50
+2PC          N1          C5          C4     103.346    1.50
+2PC          N1          C5         H51     111.109    1.50
+2PC          N1          C5         H52     111.109    1.50
+2PC          C4          C5         H51     110.867    1.50
+2PC          C4          C5         H52     110.867    1.50
+2PC         H51          C5         H52     108.731    1.50
+2PC          C2          C6          O7     118.984    2.81
+2PC          C2          C6          O8     118.984    2.81
+2PC          O7          C6          O8     122.033    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -135,28 +103,43 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2PC      var_1    O8     C6     C2     C3        -0.612   20.000   1
- 2PC      var_2    C6     C2     C3     C4       150.000   20.000   3
- 2PC      var_3    C2     C3     C4     C5        30.000   20.000   3
- 2PC      var_4    C3     C4     C5     N1       -30.000   20.000   3
- 2PC      var_5    C4     C5     N1     C2        30.000   20.000   3
- 2PC      CONST_1  C5     N1     C2     C6       180.000    0.000   0
+2PC             sp2_sp2_3          C6          C2          N1          C5     180.000   10.00     2
+2PC             sp2_sp3_7          C2          N1          C5          C4       0.000   10.00     6
+2PC             sp2_sp3_4          C6          C2          C3          C4     180.000   10.00     6
+2PC             sp2_sp2_7          N1          C2          C6          O7       0.000   10.00     2
+2PC             sp3_sp3_1          C2          C3          C4          C5      60.000   10.00     3
+2PC            sp3_sp3_10          C3          C4          C5          N1     -60.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 2PC      plan-1    N1        0.020
- 2PC      plan-1    C2        0.020
- 2PC      plan-1    C5        0.020
- 2PC      plan-1    HN1       0.020
- 2PC      plan-2    C2        0.020
- 2PC      plan-2    N1        0.020
- 2PC      plan-2    C3        0.020
- 2PC      plan-2    C6        0.020
- 2PC      plan-2    HN1       0.020
- 2PC      plan-3    C6        0.020
- 2PC      plan-3    C2        0.020
- 2PC      plan-3    O7        0.020
- 2PC      plan-3    O8        0.020
-# ------------------------------------------------------
+2PC    plan-1          C2   0.020
+2PC    plan-1          C5   0.020
+2PC    plan-1         HN1   0.020
+2PC    plan-1          N1   0.020
+2PC    plan-2          C2   0.020
+2PC    plan-2          C3   0.020
+2PC    plan-2          C6   0.020
+2PC    plan-2          N1   0.020
+2PC    plan-3          C2   0.020
+2PC    plan-3          C6   0.020
+2PC    plan-3          O7   0.020
+2PC    plan-3          O8   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+2PC SMILES           ACDLabs              10.04 "[O-]C(=O)C1=[NH+]CCC1"
+2PC SMILES_CANONICAL CACTVS               3.341 "[O-]C(=O)C1=[NH+]CCC1"
+2PC SMILES           CACTVS               3.341 "[O-]C(=O)C1=[NH+]CCC1"
+2PC SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C1CC(=[NH+]C1)C(=O)[O-]"
+2PC SMILES           "OpenEye OEToolkits" 1.5.0 "C1CC(=[NH+]C1)C(=O)[O-]"
+2PC InChI            InChI                1.03  "InChI=1S/C5H7NO2/c7-5(8)4-2-1-3-6-4/h1-3H2,(H,7,8)"
+2PC InChIKey         InChI                1.03  RHTAIKJZSXNELN-UHFFFAOYSA-N
+2PC ?                acedrg               202         "dictionary generator"                  
+2PC ?                acedrg_database      11          "data source"                           
+2PC ?                rdkit                2017.03.2   "Chemoinformatics tool"
+2PC ?                refmac5              5.8.0189    "optimization tool"                     

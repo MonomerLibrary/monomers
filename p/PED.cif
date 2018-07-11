@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PED      PED 'PENTANE-3,4-DIOL-5-PHOSPHATE        ' non-polymer        23  12 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PED     PED      PENTANE-3,4-DIOL-5-PHOSPHATE     NON-POLYMER     23     12     .     
 #
 data_comp_PED
 #
@@ -28,91 +17,63 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PED           O3P    O    OP       -0.666      0.000    0.000    0.000
- PED           P      P    P         0.000     -1.126    0.228    0.984
- PED           O1P    O    OP       -0.666     -1.443    1.706    1.055
- PED           O2P    O    OP       -0.666     -0.707   -0.265    2.352
- PED           "O5'"  O    O2        0.000     -2.433   -0.579    0.501
- PED           "C5'"  C    CH2       0.000     -2.847    0.008   -0.735
- PED           "H5'1" H    H         0.000     -2.042   -0.082   -1.468
- PED           "H5'2" H    H         0.000     -3.077    1.064   -0.577
- PED           "C4'"  C    CH1       0.000     -4.092   -0.716   -1.251
- PED           "H4'1" H    H         0.000     -4.871   -0.703   -0.476
- PED           "O4'"  O    OH1       0.000     -3.759   -2.069   -1.569
- PED           "HO'4" H    H         0.000     -3.073   -2.080   -2.250
- PED           "C3'"  C    CH1       0.000     -4.608   -0.011   -2.506
- PED           "H3'"  H    H         0.000     -3.829   -0.025   -3.281
- PED           "O3'"  O    OH1       0.000     -4.942    1.342   -2.190
- PED           H3T    H    H         0.000     -5.627    1.353   -1.508
- PED           "C2'"  C    CH2       0.000     -5.853   -0.735   -3.023
- PED           "H2'1" H    H         0.000     -6.656   -0.646   -2.288
- PED           "H2'2" H    H         0.000     -5.620   -1.790   -3.180
- PED           "C1'"  C    CH3       0.000     -6.297   -0.106   -4.345
- PED           "H1'3" H    H         0.000     -5.518   -0.192   -5.060
- PED           "H1'2" H    H         0.000     -7.160   -0.605   -4.706
- PED           "H1'1" H    H         0.000     -6.522    0.919   -4.195
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PED      O3P    n/a    P      START
- PED      P      O3P    "O5'"  .
- PED      O1P    P      .      .
- PED      O2P    P      .      .
- PED      "O5'"  P      "C5'"  .
- PED      "C5'"  "O5'"  "C4'"  .
- PED      "H5'1" "C5'"  .      .
- PED      "H5'2" "C5'"  .      .
- PED      "C4'"  "C5'"  "C3'"  .
- PED      "H4'1" "C4'"  .      .
- PED      "O4'"  "C4'"  "HO'4" .
- PED      "HO'4" "O4'"  .      .
- PED      "C3'"  "C4'"  "C2'"  .
- PED      "H3'"  "C3'"  .      .
- PED      "O3'"  "C3'"  H3T    .
- PED      H3T    "O3'"  .      .
- PED      "C2'"  "C3'"  "C1'"  .
- PED      "H2'1" "C2'"  .      .
- PED      "H2'2" "C2'"  .      .
- PED      "C1'"  "C2'"  "H1'1" .
- PED      "H1'3" "C1'"  .      .
- PED      "H1'2" "C1'"  .      .
- PED      "H1'1" "C1'"  .      END
+PED     P       P       P       0       -2.591      -0.281      -0.009      
+PED     O1P     O       O       0       -2.641      -0.706      -1.465      
+PED     O2P     O       OP      -1      -2.769      1.214       0.175       
+PED     O3P     O       OP      -1      -3.512      -1.098      0.876       
+PED     "O5'"   O       O2      0       -1.092      -0.610      0.493       
+PED     "C2'"   C       CH2     0       3.924       -0.195      0.383       
+PED     "C5'"   C       CH2     0       0.027       0.024       -0.187      
+PED     "C4'"   C       CH1     0       1.336       -0.391      0.449       
+PED     "O4'"   O       OH1     0       1.418       -1.818      0.439       
+PED     "C3'"   C       CH1     0       2.588       0.195       -0.245      
+PED     "C1'"   C       CH3     0       5.133       0.345       -0.352      
+PED     "O3'"   O       OH1     0       2.503       1.624       -0.268      
+PED     "H2'1"  H       H       0       3.986       -1.173      0.411       
+PED     "H2'2"  H       H       0       3.941       0.134       1.307       
+PED     "H5'1"  H       H       0       -0.076      0.997       -0.133      
+PED     "H5'2"  H       H       0       0.024       -0.234      -1.132      
+PED     "H4'1"  H       H       0       1.337       -0.081      1.404       
+PED     "HO'4"  H       H       0       1.864       -2.104      1.101       
+PED     "H3'"   H       H       0       2.587       -0.118      -1.186      
+PED     "H1'1"  H       H       0       5.936       -0.092      -0.021      
+PED     "H1'2"  H       H       0       5.202       1.304       -0.204      
+PED     "H1'3"  H       H       0       5.039       0.170       -1.304      
+PED     H3T     H       H       0       2.465       1.913       0.530       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PED      O1P    P         deloc       1.510    0.020
- PED      O2P    P         deloc       1.510    0.020
- PED      P      O3P       deloc       1.510    0.020
- PED      "O5'"  P         single      1.610    0.020
- PED      "C5'"  "O5'"     single      1.426    0.020
- PED      "C2'"  "C3'"     single      1.524    0.020
- PED      "C1'"  "C2'"     single      1.513    0.020
- PED      "H2'1" "C2'"     single      1.092    0.020
- PED      "H2'2" "C2'"     single      1.092    0.020
- PED      "C4'"  "C5'"     single      1.524    0.020
- PED      "H5'1" "C5'"     single      1.092    0.020
- PED      "H5'2" "C5'"     single      1.092    0.020
- PED      "O4'"  "C4'"     single      1.432    0.020
- PED      "C3'"  "C4'"     single      1.524    0.020
- PED      "H4'1" "C4'"     single      1.099    0.020
- PED      "HO'4" "O4'"     single      0.967    0.020
- PED      "O3'"  "C3'"     single      1.432    0.020
- PED      "H3'"  "C3'"     single      1.099    0.020
- PED      "H1'1" "C1'"     single      1.059    0.020
- PED      "H1'2" "C1'"     single      1.059    0.020
- PED      "H1'3" "C1'"     single      1.059    0.020
- PED      H3T    "O3'"     single      0.967    0.020
+PED           P         O1P      DOUBLE       n     1.517   0.019
+PED           P         O2P      SINGLE       n     1.517   0.019
+PED           P         O3P      SINGLE       n     1.517   0.019
+PED           P       "O5'"      SINGLE       n     1.614   0.019
+PED       "O5'"       "C5'"      SINGLE       n     1.454   0.017
+PED       "C2'"       "C3'"      SINGLE       n     1.518   0.020
+PED       "C2'"       "C1'"      SINGLE       n     1.511   0.020
+PED       "C5'"       "C4'"      SINGLE       n     1.511   0.010
+PED       "C4'"       "O4'"      SINGLE       n     1.429   0.010
+PED       "C4'"       "C3'"      SINGLE       n     1.535   0.020
+PED       "C3'"       "O3'"      SINGLE       n     1.424   0.020
+PED       "C2'"      "H2'1"      SINGLE       n     0.981   0.016
+PED       "C2'"      "H2'2"      SINGLE       n     0.981   0.016
+PED       "C5'"      "H5'1"      SINGLE       n     0.980   0.015
+PED       "C5'"      "H5'2"      SINGLE       n     0.980   0.015
+PED       "C4'"      "H4'1"      SINGLE       n     1.004   0.020
+PED       "O4'"      "HO'4"      SINGLE       n     0.848   0.020
+PED       "C3'"       "H3'"      SINGLE       n     0.992   0.019
+PED       "C1'"      "H1'1"      SINGLE       n     0.973   0.016
+PED       "C1'"      "H1'2"      SINGLE       n     0.973   0.016
+PED       "C1'"      "H1'3"      SINGLE       n     0.973   0.016
+PED       "O3'"         H3T      SINGLE       n     0.848   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -120,45 +81,45 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PED      O3P    P      O1P     119.900    3.000
- PED      O3P    P      O2P     119.900    3.000
- PED      O3P    P      "O5'"   108.200    3.000
- PED      O1P    P      O2P     119.900    3.000
- PED      O1P    P      "O5'"   108.200    3.000
- PED      O2P    P      "O5'"   108.200    3.000
- PED      P      "O5'"  "C5'"   120.500    3.000
- PED      "O5'"  "C5'"  "H5'1"  109.470    3.000
- PED      "O5'"  "C5'"  "H5'2"  109.470    3.000
- PED      "O5'"  "C5'"  "C4'"   109.470    3.000
- PED      "H5'1" "C5'"  "H5'2"  107.900    3.000
- PED      "H5'1" "C5'"  "C4'"   109.470    3.000
- PED      "H5'2" "C5'"  "C4'"   109.470    3.000
- PED      "C5'"  "C4'"  "H4'1"  108.340    3.000
- PED      "C5'"  "C4'"  "O4'"   109.470    3.000
- PED      "C5'"  "C4'"  "C3'"   111.000    3.000
- PED      "H4'1" "C4'"  "O4'"   109.470    3.000
- PED      "H4'1" "C4'"  "C3'"   108.340    3.000
- PED      "O4'"  "C4'"  "C3'"   109.470    3.000
- PED      "C4'"  "O4'"  "HO'4"  109.470    3.000
- PED      "C4'"  "C3'"  "H3'"   108.340    3.000
- PED      "C4'"  "C3'"  "O3'"   109.470    3.000
- PED      "C4'"  "C3'"  "C2'"   111.000    3.000
- PED      "H3'"  "C3'"  "O3'"   109.470    3.000
- PED      "H3'"  "C3'"  "C2'"   108.340    3.000
- PED      "O3'"  "C3'"  "C2'"   109.470    3.000
- PED      "C3'"  "O3'"  H3T     109.470    3.000
- PED      "C3'"  "C2'"  "H2'1"  109.470    3.000
- PED      "C3'"  "C2'"  "H2'2"  109.470    3.000
- PED      "C3'"  "C2'"  "C1'"   111.000    3.000
- PED      "H2'1" "C2'"  "H2'2"  107.900    3.000
- PED      "H2'1" "C2'"  "C1'"   109.470    3.000
- PED      "H2'2" "C2'"  "C1'"   109.470    3.000
- PED      "C2'"  "C1'"  "H1'3"  109.470    3.000
- PED      "C2'"  "C1'"  "H1'2"  109.470    3.000
- PED      "C2'"  "C1'"  "H1'1"  109.470    3.000
- PED      "H1'3" "C1'"  "H1'2"  109.470    3.000
- PED      "H1'3" "C1'"  "H1'1"  109.470    3.000
- PED      "H1'2" "C1'"  "H1'1"  109.470    3.000
+PED         O1P           P         O2P     112.864    1.69
+PED         O1P           P         O3P     112.864    1.69
+PED         O1P           P       "O5'"     105.795    2.09
+PED         O2P           P         O3P     112.864    1.69
+PED         O2P           P       "O5'"     105.795    2.09
+PED         O3P           P       "O5'"     105.795    2.09
+PED           P       "O5'"       "C5'"     118.671    1.50
+PED       "C3'"       "C2'"       "C1'"     113.852    1.50
+PED       "C3'"       "C2'"      "H2'1"     108.468    1.50
+PED       "C3'"       "C2'"      "H2'2"     108.468    1.50
+PED       "C1'"       "C2'"      "H2'1"     108.955    1.50
+PED       "C1'"       "C2'"      "H2'2"     108.955    1.50
+PED      "H2'1"       "C2'"      "H2'2"     107.797    1.50
+PED       "O5'"       "C5'"       "C4'"     109.438    2.56
+PED       "O5'"       "C5'"      "H5'1"     109.393    1.91
+PED       "O5'"       "C5'"      "H5'2"     109.393    1.91
+PED       "C4'"       "C5'"      "H5'1"     109.582    1.50
+PED       "C4'"       "C5'"      "H5'2"     109.582    1.50
+PED      "H5'1"       "C5'"      "H5'2"     108.319    1.50
+PED       "C5'"       "C4'"       "O4'"     109.314    1.96
+PED       "C5'"       "C4'"       "C3'"     113.761    1.50
+PED       "C5'"       "C4'"      "H4'1"     108.656    1.50
+PED       "O4'"       "C4'"       "C3'"     109.320    2.01
+PED       "O4'"       "C4'"      "H4'1"     108.591    1.50
+PED       "C3'"       "C4'"      "H4'1"     108.450    1.83
+PED       "C4'"       "O4'"      "HO'4"     111.202    3.00
+PED       "C2'"       "C3'"       "C4'"     115.002    1.95
+PED       "C2'"       "C3'"       "O3'"     109.024    2.32
+PED       "C2'"       "C3'"       "H3'"     108.603    1.50
+PED       "C4'"       "C3'"       "O3'"     109.320    2.01
+PED       "C4'"       "C3'"       "H3'"     108.450    1.83
+PED       "O3'"       "C3'"       "H3'"     107.870    1.50
+PED       "C2'"       "C1'"      "H1'1"     109.517    1.50
+PED       "C2'"       "C1'"      "H1'2"     109.517    1.50
+PED       "C2'"       "C1'"      "H1'3"     109.517    1.50
+PED      "H1'1"       "C1'"      "H1'2"     109.380    1.50
+PED      "H1'1"       "C1'"      "H1'3"     109.380    1.50
+PED      "H1'2"       "C1'"      "H1'3"     109.380    1.50
+PED       "C3'"       "O3'"         H3T     108.815    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -169,14 +130,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PED      var_1    O3P    P      "O5'"  "C5'"    -64.977   20.000   1
- PED      var_2    P      "O5'"  "C5'"  "C4'"   -179.966   20.000   1
- PED      var_3    "O5'"  "C5'"  "C4'"  "C3'"    174.989   20.000   3
- PED      var_4    "C5'"  "C4'"  "O4'"  "HO'4"   -59.944   20.000   1
- PED      var_5    "C5'"  "C4'"  "C3'"  "C2'"    179.969   20.000   3
- PED      var_6    "C4'"  "C3'"  "O3'"  H3T      -59.950   20.000   1
- PED      var_7    "C4'"  "C3'"  "C2'"  "C1'"   -175.046   20.000   3
- PED      var_8    "C3'"  "C2'"  "C1'"  "H1'1"   -59.960   20.000   3
+PED             sp3_sp3_1       "C5'"       "O5'"           P         O1P     180.000   10.00     3
+PED             sp3_sp3_4       "C4'"       "C5'"       "O5'"           P     180.000   10.00     3
+PED            sp3_sp3_16      "H1'1"       "C1'"       "C2'"       "C3'"     180.000   10.00     3
+PED             sp3_sp3_7       "C1'"       "C2'"       "C3'"       "C4'"     180.000   10.00     3
+PED            sp3_sp3_28       "O4'"       "C4'"       "C5'"       "O5'"      60.000   10.00     3
+PED            sp3_sp3_34       "C5'"       "C4'"       "O4'"      "HO'4"     180.000   10.00     3
+PED            sp3_sp3_41       "C2'"       "C3'"       "C4'"       "C5'"     180.000   10.00     3
+PED            sp3_sp3_46       "C2'"       "C3'"       "O3'"         H3T     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -185,6 +146,22 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- PED      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     positiv
- PED      chir_02  "C3'"  "C2'"  "C4'"  "O3'"     positiv
-# ------------------------------------------------------
+PED    chir_1    "C4'"    "O4'"    "C3'"    "C5'"    both
+PED    chir_2    "C3'"    "O3'"    "C4'"    "C2'"    both
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PED SMILES           ACDLabs              10.04 "O=P(O)(O)OCC(O)C(O)CC"
+PED InChI            InChI                1.03  "InChI=1S/C5H13O6P/c1-2-4(6)5(7)3-11-12(8,9)10/h4-7H,2-3H2,1H3,(H2,8,9,10)/t4-,5+/m0/s1"
+PED InChIKey         InChI                1.03  FQKLTSRHTQGSQZ-CRCLSJGQSA-N
+PED SMILES_CANONICAL CACTVS               3.385 "CC[C@H](O)[C@H](O)CO[P](O)(O)=O"
+PED SMILES           CACTVS               3.385 "CC[CH](O)[CH](O)CO[P](O)(O)=O"
+PED SMILES_CANONICAL "OpenEye OEToolkits" 1.7.5 "CC[C@@H]([C@@H](COP(=O)(O)O)O)O"
+PED SMILES           "OpenEye OEToolkits" 1.7.5 "CCC(C(COP(=O)(O)O)O)O"
+PED ?                acedrg               202         "dictionary generator"                  
+PED ?                acedrg_database      11          "data source"                           
+PED ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PED ?                refmac5              5.8.0189    "optimization tool"                     

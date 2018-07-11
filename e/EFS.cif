@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-EFS      EFS 'ETHYL DIHYDROGEN PHOSPHATE          ' non-polymer        12   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+EFS     EFS      "ETHYL DIHYDROGEN PHOSPHATE"     NON-POLYMER     12     7     .     
 #
 data_comp_EFS
 #
@@ -28,58 +17,41 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- EFS           O3     O    OP       -0.666      0.000    0.000    0.000
- EFS           P      P    P         0.000     -1.183    0.925    0.185
- EFS           O4     O    OP       -0.666     -1.603    1.480   -1.158
- EFS           O1     O    OP       -0.666     -0.794    2.063    1.103
- EFS           O2     O    O2        0.000     -2.406    0.107    0.835
- EFS           C11    C    CH2       0.000     -1.950   -0.390    2.094
- EFS           H111   H    H         0.000     -1.661    0.448    2.731
- EFS           H112   H    H         0.000     -1.088   -1.041    1.936
- EFS           C12    C    CH3       0.000     -3.072   -1.181    2.767
- EFS           H123   H    H         0.000     -3.910   -0.551    2.922
- EFS           H122   H    H         0.000     -3.356   -1.995    2.150
- EFS           H121   H    H         0.000     -2.736   -1.552    3.702
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- EFS      O3     n/a    P      START
- EFS      P      O3     O2     .
- EFS      O4     P      .      .
- EFS      O1     P      .      .
- EFS      O2     P      C11    .
- EFS      C11    O2     C12    .
- EFS      H111   C11    .      .
- EFS      H112   C11    .      .
- EFS      C12    C11    H121   .
- EFS      H123   C12    .      .
- EFS      H122   C12    .      .
- EFS      H121   C12    .      END
+EFS     C12     C       CH3     0       55.778      -24.312     9.528       
+EFS     C11     C       CH2     0       55.999      -25.697     9.066       
+EFS     O2      O       O2      0       57.382      -26.084     9.305       
+EFS     P       P       P       0       57.869      -27.549     8.834       
+EFS     O4      O       OP      -1      59.318      -27.662     9.267       
+EFS     O1      O       OP      -1      56.962      -28.535     9.546       
+EFS     O3      O       O       0       57.700      -27.575     7.327       
+EFS     H121    H       H       0       54.851      -24.064     9.377       
+EFS     H122    H       H       0       56.358      -23.709     9.035       
+EFS     H123    H       H       0       55.979      -24.250     10.476      
+EFS     H111    H       H       0       55.802      -25.763     8.108       
+EFS     H112    H       H       0       55.401      -26.307     9.546       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- EFS      C12    C11       single      1.513    0.020
- EFS      H121   C12       single      1.059    0.020
- EFS      H122   C12       single      1.059    0.020
- EFS      H123   C12       single      1.059    0.020
- EFS      C11    O2        single      1.426    0.020
- EFS      H111   C11       single      1.092    0.020
- EFS      H112   C11       single      1.092    0.020
- EFS      O2     P         single      1.610    0.020
- EFS      O4     P         deloc       1.510    0.020
- EFS      O1     P         deloc       1.510    0.020
- EFS      P      O3        deloc       1.510    0.020
+EFS         C12         C11      SINGLE       n     1.477   0.020
+EFS         C11          O2      SINGLE       n     1.456   0.016
+EFS          O2           P      SINGLE       n     1.614   0.019
+EFS           P          O4      SINGLE       n     1.517   0.019
+EFS           P          O1      SINGLE       n     1.517   0.019
+EFS           P          O3      DOUBLE       n     1.517   0.019
+EFS         C12        H121      SINGLE       n     0.971   0.016
+EFS         C12        H122      SINGLE       n     0.971   0.016
+EFS         C12        H123      SINGLE       n     0.971   0.016
+EFS         C11        H111      SINGLE       n     0.980   0.015
+EFS         C11        H112      SINGLE       n     0.980   0.015
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -87,25 +59,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- EFS      O3     P      O4      119.900    3.000
- EFS      O3     P      O1      119.900    3.000
- EFS      O3     P      O2      108.200    3.000
- EFS      O4     P      O1      119.900    3.000
- EFS      O4     P      O2      108.200    3.000
- EFS      O1     P      O2      108.200    3.000
- EFS      P      O2     C11     120.500    3.000
- EFS      O2     C11    H111    109.470    3.000
- EFS      O2     C11    H112    109.470    3.000
- EFS      O2     C11    C12     109.470    3.000
- EFS      H111   C11    H112    107.900    3.000
- EFS      H111   C11    C12     109.470    3.000
- EFS      H112   C11    C12     109.470    3.000
- EFS      C11    C12    H123    109.470    3.000
- EFS      C11    C12    H122    109.470    3.000
- EFS      C11    C12    H121    109.470    3.000
- EFS      H123   C12    H122    109.470    3.000
- EFS      H123   C12    H121    109.470    3.000
- EFS      H122   C12    H121    109.470    3.000
+EFS         C11         C12        H121     109.474    1.50
+EFS         C11         C12        H122     109.474    1.50
+EFS         C11         C12        H123     109.474    1.50
+EFS        H121         C12        H122     109.410    1.50
+EFS        H121         C12        H123     109.410    1.50
+EFS        H122         C12        H123     109.410    1.50
+EFS         C12         C11          O2     109.855    1.50
+EFS         C12         C11        H111     109.788    1.50
+EFS         C12         C11        H112     109.788    1.50
+EFS          O2         C11        H111     109.502    1.50
+EFS          O2         C11        H112     109.502    1.50
+EFS        H111         C11        H112     108.343    1.50
+EFS         C11          O2           P     118.671    1.50
+EFS          O2           P          O4     105.795    2.09
+EFS          O2           P          O1     105.795    2.09
+EFS          O2           P          O3     105.795    2.09
+EFS          O4           P          O1     112.864    1.69
+EFS          O4           P          O3     112.864    1.69
+EFS          O1           P          O3     112.864    1.69
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -116,7 +88,23 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EFS      var_1    O3     P      O2     C11       59.996   20.000   1
- EFS      var_2    P      O2     C11    C12      179.985   20.000   1
- EFS      var_3    O2     C11    C12    H121     179.963   20.000   3
-# ------------------------------------------------------
+EFS             sp3_sp3_1          O2         C11         C12        H121     180.000   10.00     3
+EFS            sp3_sp3_10         C12         C11          O2           P     180.000   10.00     3
+EFS            sp3_sp3_13         C11          O2           P          O4     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+EFS SMILES           ACDLabs              10.04 "O=P(O)(O)OCC"
+EFS SMILES_CANONICAL CACTVS               3.341 "CCO[P](O)(O)=O"
+EFS SMILES           CACTVS               3.341 "CCO[P](O)(O)=O"
+EFS SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CCOP(=O)(O)O"
+EFS SMILES           "OpenEye OEToolkits" 1.5.0 "CCOP(=O)(O)O"
+EFS InChI            InChI                1.03  "InChI=1S/C2H7O4P/c1-2-6-7(3,4)5/h2H2,1H3,(H2,3,4,5)"
+EFS InChIKey         InChI                1.03  ZJXZSIYSNXKHEA-UHFFFAOYSA-N
+EFS ?                acedrg               202         "dictionary generator"                  
+EFS ?                acedrg_database      11          "data source"                           
+EFS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+EFS ?                refmac5              5.8.0189    "optimization tool"                     

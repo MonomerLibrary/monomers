@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-DO4      DO4 '2,5-DIOXOPENTANOIC ACID             ' non-polymer        14   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+DO4     DO4      "2,5-DIOXOPENTANOIC ACID"     NON-POLYMER     14     9     .     
 #
 data_comp_DO4
 #
@@ -28,64 +17,45 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- DO4           O2     O    OC       -0.500      0.000    0.000    0.000
- DO4           C1     C    C         0.000     -1.104   -0.585   -0.055
- DO4           O1     O    OC       -0.500     -1.150   -1.835   -0.075
- DO4           C2     C    C         0.000     -2.367    0.207   -0.095
- DO4           O5     O    O         0.000     -2.324    1.414   -0.075
- DO4           C3     C    CH2       0.000     -3.698   -0.498   -0.161
- DO4           H31    H    H         0.000     -3.814   -1.137    0.717
- DO4           H32    H    H         0.000     -3.740   -1.111   -1.064
- DO4           C4     C    CH2       0.000     -4.822    0.538   -0.192
- DO4           H41    H    H         0.000     -4.704    1.177   -1.070
- DO4           H42    H    H         0.000     -4.777    1.151    0.711
- DO4           C5     C    C1        0.000     -6.153   -0.166   -0.256
- DO4           H5     H    H         0.000     -6.347   -0.879   -1.040
- DO4           O3     O    O         0.000     -7.002    0.069    0.569
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- DO4      O2     n/a    C1     START
- DO4      C1     O2     C2     .
- DO4      O1     C1     .      .
- DO4      C2     C1     C3     .
- DO4      O5     C2     .      .
- DO4      C3     C2     C4     .
- DO4      H31    C3     .      .
- DO4      H32    C3     .      .
- DO4      C4     C3     C5     .
- DO4      H41    C4     .      .
- DO4      H42    C4     .      .
- DO4      C5     C4     O3     .
- DO4      H5     C5     .      .
- DO4      O3     C5     .      END
+DO4     O3      O       O       0       -2.813      -1.150      -0.837      
+DO4     C5      C       C1      0       -2.292      -0.120      -0.539      
+DO4     C4      C       CH2     0       -1.030      0.026       0.239       
+DO4     C3      C       CH2     0       0.200       -0.499      -0.478      
+DO4     C2      C       C       0       1.468       -0.337      0.330       
+DO4     O5      O       O       0       1.922       -1.363      0.860       
+DO4     C1      C       C       0       2.101       0.826       0.505       
+DO4     O1      O       O       0       1.620       1.863       0.034       
+DO4     O2      O       OC      -1      3.167       0.853       1.135       
+DO4     H5      H       H       0       -2.717      0.674       -0.821      
+DO4     H41     H       H       0       -1.129      -0.450      1.088       
+DO4     H42     H       H       0       -0.898      0.973       0.446       
+DO4     H31     H       H       0       0.304       -0.026      -1.329      
+DO4     H32     H       H       0       0.071       -1.449      -0.682      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- DO4      O3     C5        double      1.220    0.020
- DO4      C5     C4        single      1.510    0.020
- DO4      H5     C5        single      1.077    0.020
- DO4      C4     C3        single      1.524    0.020
- DO4      H41    C4        single      1.092    0.020
- DO4      H42    C4        single      1.092    0.020
- DO4      C3     C2        single      1.510    0.020
- DO4      H31    C3        single      1.092    0.020
- DO4      H32    C3        single      1.092    0.020
- DO4      O5     C2        double      1.220    0.020
- DO4      C2     C1        single      1.460    0.020
- DO4      O1     C1        deloc       1.250    0.020
- DO4      C1     O2        deloc       1.250    0.020
+DO4          O3          C5      DOUBLE       n     1.192   0.020
+DO4          C5          C4      SINGLE       n     1.490   0.012
+DO4          C4          C3      SINGLE       n     1.517   0.013
+DO4          C3          C2      SINGLE       n     1.507   0.011
+DO4          C2          O5      DOUBLE       n     1.230   0.019
+DO4          C2          C1      SINGLE       n     1.299   0.020
+DO4          C1          O1      DOUBLE       n     1.230   0.020
+DO4          C1          O2      SINGLE       n     1.230   0.020
+DO4          C5          H5      SINGLE       n     0.943   0.011
+DO4          C4         H41      SINGLE       n     0.979   0.016
+DO4          C4         H42      SINGLE       n     0.979   0.016
+DO4          C3         H31      SINGLE       n     0.979   0.015
+DO4          C3         H32      SINGLE       n     0.979   0.015
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -93,27 +63,27 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DO4      O2     C1     O1      123.000    3.000
- DO4      O2     C1     C2      120.000    3.000
- DO4      O1     C1     C2      120.000    3.000
- DO4      C1     C2     O5      120.500    3.000
- DO4      C1     C2     C3      120.000    3.000
- DO4      O5     C2     C3      120.500    3.000
- DO4      C2     C3     H31     109.470    3.000
- DO4      C2     C3     H32     109.470    3.000
- DO4      C2     C3     C4      109.470    3.000
- DO4      H31    C3     H32     107.900    3.000
- DO4      H31    C3     C4      109.470    3.000
- DO4      H32    C3     C4      109.470    3.000
- DO4      C3     C4     H41     109.470    3.000
- DO4      C3     C4     H42     109.470    3.000
- DO4      C3     C4     C5      109.470    3.000
- DO4      H41    C4     H42     107.900    3.000
- DO4      H41    C4     C5      109.470    3.000
- DO4      H42    C4     C5      109.470    3.000
- DO4      C4     C5     H5      120.000    3.000
- DO4      C4     C5     O3      120.500    3.000
- DO4      H5     C5     O3      123.000    3.000
+DO4          O3          C5          C4     125.770    1.96
+DO4          O3          C5          H5     117.130    1.50
+DO4          C4          C5          H5     117.100    1.50
+DO4          C5          C4          C3     114.481    1.97
+DO4          C5          C4         H41     108.942    1.50
+DO4          C5          C4         H42     108.942    1.50
+DO4          C3          C4         H41     109.197    1.50
+DO4          C3          C4         H42     109.197    1.50
+DO4         H41          C4         H42     107.705    1.50
+DO4          C4          C3          C2     112.829    2.66
+DO4          C4          C3         H31     109.197    1.50
+DO4          C4          C3         H32     109.197    1.50
+DO4          C2          C3         H31     108.680    1.71
+DO4          C2          C3         H32     108.680    1.71
+DO4         H31          C3         H32     107.764    1.50
+DO4          C3          C2          O5     117.958    1.51
+DO4          C3          C2          C1     122.999    2.52
+DO4          O5          C2          C1     119.042    3.00
+DO4          C2          C1          O1     118.654    3.00
+DO4          C2          C1          O2     118.654    3.00
+DO4          O1          C1          O2     122.692    1.63
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -124,25 +94,41 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DO4      var_1    O2     C1     C2     C3      -179.987   20.000   1
- DO4      var_2    C1     C2     C3     C4       179.998   20.000   3
- DO4      var_3    C2     C3     C4     C5      -179.961   20.000   3
- DO4      var_4    C3     C4     C5     O3       124.973   20.000   1
+DO4             sp2_sp3_2          O3          C5          C4          C3     120.000   10.00     6
+DO4             sp3_sp3_1          C2          C3          C4          C5     180.000   10.00     3
+DO4             sp2_sp3_8          O5          C2          C3          C4     120.000   10.00     6
+DO4             sp2_sp2_1          O1          C1          C2          C3     180.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- DO4      plan-1    C5        0.020
- DO4      plan-1    O3        0.020
- DO4      plan-1    C4        0.020
- DO4      plan-1    H5        0.020
- DO4      plan-2    C2        0.020
- DO4      plan-2    C3        0.020
- DO4      plan-2    O5        0.020
- DO4      plan-2    C1        0.020
- DO4      plan-3    C1        0.020
- DO4      plan-3    C2        0.020
- DO4      plan-3    O1        0.020
- DO4      plan-3    O2        0.020
-# ------------------------------------------------------
+DO4    plan-1          C4   0.020
+DO4    plan-1          C5   0.020
+DO4    plan-1          H5   0.020
+DO4    plan-1          O3   0.020
+DO4    plan-2          C1   0.020
+DO4    plan-2          C2   0.020
+DO4    plan-2          C3   0.020
+DO4    plan-2          O5   0.020
+DO4    plan-3          C1   0.020
+DO4    plan-3          C2   0.020
+DO4    plan-3          O1   0.020
+DO4    plan-3          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+DO4 SMILES           ACDLabs              10.04 "O=CCCC(=O)C(=O)O"
+DO4 SMILES_CANONICAL CACTVS               3.341 "OC(=O)C(=O)CCC=O"
+DO4 SMILES           CACTVS               3.341 "OC(=O)C(=O)CCC=O"
+DO4 SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(CC(=O)C(=O)O)C=O"
+DO4 SMILES           "OpenEye OEToolkits" 1.5.0 "C(CC(=O)C(=O)O)C=O"
+DO4 InChI            InChI                1.03  "InChI=1S/C5H6O4/c6-3-1-2-4(7)5(8)9/h3H,1-2H2,(H,8,9)"
+DO4 InChIKey         InChI                1.03  VHKNBDIQDAXGBL-UHFFFAOYSA-N
+DO4 ?                acedrg               202         "dictionary generator"                  
+DO4 ?                acedrg_database      11          "data source"                           
+DO4 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+DO4 ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NHY      NHY 'N-HYDROXYUREA                       ' non-polymer         9   5 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+NHY     NHY      N-HYDROXYUREA     NON-POLYMER     9     5     .     
 #
 data_comp_NHY
 #
@@ -28,49 +17,35 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- NHY           O1     O    OH1       0.000      0.000    0.000    0.000
- NHY           HO1    H    H         0.000      0.811   -0.535    0.000
- NHY           N1     N    NH1       0.000     -1.271   -0.625    0.000
- NHY           HN1    H    H         0.000     -1.338   -1.632    0.000
- NHY           C      C    C         0.000     -2.390    0.126    0.000
- NHY           O2     O    O         0.000     -2.309    1.338    0.000
- NHY           N2     N    NH2       0.000     -3.600   -0.469    0.000
- NHY           HN22   H    H         0.000     -3.673   -1.479    0.000
- NHY           HN21   H    H         0.000     -4.444    0.091    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- NHY      O1     n/a    N1     START
- NHY      HO1    O1     .      .
- NHY      N1     O1     C      .
- NHY      HN1    N1     .      .
- NHY      C      N1     N2     .
- NHY      O2     C      .      .
- NHY      N2     C      HN21   .
- NHY      HN22   N2     .      .
- NHY      HN21   N2     .      END
+NHY     O2      O       O       0       -5.110      1.088       18.056      
+NHY     C       C       C       0       -6.112      0.992       17.324      
+NHY     N2      N       NH2     0       -7.211      1.706       17.541      
+NHY     N1      N       NH1     0       -6.125      0.163       16.278      
+NHY     O1      O       OH1     0       -4.981      -0.524      15.883      
+NHY     HN21    H       H       0       -7.902      1.653       16.993      
+NHY     HN22    H       H       0       -7.256      2.241       18.241      
+NHY     HN1     H       H       0       -6.843      0.005       15.801      
+NHY     HO1     H       H       0       -4.853      -1.169      16.448      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- NHY      O2     C         double      1.220    0.020
- NHY      N2     C         single      1.332    0.020
- NHY      C      N1        single      1.330    0.020
- NHY      HN21   N2        single      1.010    0.020
- NHY      HN22   N2        single      1.010    0.020
- NHY      N1     O1        single      1.392    0.020
- NHY      HN1    N1        single      1.010    0.020
- NHY      HO1    O1        single      0.967    0.020
+NHY          O2           C      DOUBLE       n     1.242   0.013
+NHY           C          N2      SINGLE       n     1.324   0.010
+NHY           C          N1      SINGLE       n     1.310   0.020
+NHY          N1          O1      SINGLE       n     1.389   0.013
+NHY          N2        HN21      SINGLE       n     0.881   0.020
+NHY          N2        HN22      SINGLE       n     0.881   0.020
+NHY          N1         HN1      SINGLE       n     0.875   0.020
+NHY          O1         HO1      SINGLE       n     0.867   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -78,16 +53,16 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- NHY      HO1    O1     N1      120.000    3.000
- NHY      O1     N1     HN1     120.200    3.000
- NHY      O1     N1     C       120.000    3.000
- NHY      HN1    N1     C       120.000    3.000
- NHY      N1     C      O2      123.000    3.000
- NHY      N1     C      N2      120.000    3.000
- NHY      O2     C      N2      123.000    3.000
- NHY      C      N2     HN22    120.000    3.000
- NHY      C      N2     HN21    120.000    3.000
- NHY      HN22   N2     HN21    120.000    3.000
+NHY          O2           C          N2     123.321    2.04
+NHY          O2           C          N1     120.960    1.53
+NHY          N2           C          N1     115.719    1.50
+NHY           C          N2        HN21     119.938    1.50
+NHY           C          N2        HN22     119.938    1.50
+NHY        HN21          N2        HN22     120.124    2.62
+NHY           C          N1          O1     120.688    1.50
+NHY           C          N1         HN1     121.929    2.28
+NHY          O1          N1         HN1     117.383    3.00
+NHY          N1          O1         HO1     107.689    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -98,27 +73,39 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NHY      var_1    HO1    O1     N1     C        180.000   20.000   1
- NHY      CONST_1  O1     N1     C      N2       180.000    0.000   0
- NHY      CONST_2  N1     C      N2     HN21     180.000    0.000   0
+NHY             sp2_sp2_3          O2           C          N2        HN21       0.000   10.00     2
+NHY             sp2_sp2_7          O2           C          N1          O1       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- NHY      plan-1    C         0.020
- NHY      plan-1    O2        0.020
- NHY      plan-1    N2        0.020
- NHY      plan-1    N1        0.020
- NHY      plan-1    HN22      0.020
- NHY      plan-1    HN21      0.020
- NHY      plan-1    HN1       0.020
- NHY      plan-2    N2        0.020
- NHY      plan-2    C         0.020
- NHY      plan-2    HN21      0.020
- NHY      plan-2    HN22      0.020
- NHY      plan-3    N1        0.020
- NHY      plan-3    C         0.020
- NHY      plan-3    O1        0.020
- NHY      plan-3    HN1       0.020
-# ------------------------------------------------------
+NHY    plan-1           C   0.020
+NHY    plan-1          N1   0.020
+NHY    plan-1          N2   0.020
+NHY    plan-1          O2   0.020
+NHY    plan-2           C   0.020
+NHY    plan-2        HN21   0.020
+NHY    plan-2        HN22   0.020
+NHY    plan-2          N2   0.020
+NHY    plan-3           C   0.020
+NHY    plan-3         HN1   0.020
+NHY    plan-3          N1   0.020
+NHY    plan-3          O1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+NHY SMILES           ACDLabs              10.04 "O=C(N)NO"
+NHY SMILES_CANONICAL CACTVS               3.341 "NC(=O)NO"
+NHY SMILES           CACTVS               3.341 "NC(=O)NO"
+NHY SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(=O)(N)NO"
+NHY SMILES           "OpenEye OEToolkits" 1.5.0 "C(=O)(N)NO"
+NHY InChI            InChI                1.03  "InChI=1S/CH4N2O2/c2-1(4)3-5/h5H,(H3,2,3,4)"
+NHY InChIKey         InChI                1.03  VSNHCAURESNICA-UHFFFAOYSA-N
+NHY ?                acedrg               202         "dictionary generator"                  
+NHY ?                acedrg_database      11          "data source"                           
+NHY ?                rdkit                2017.03.2   "Chemoinformatics tool"
+NHY ?                refmac5              5.8.0189    "optimization tool"                     

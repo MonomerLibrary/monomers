@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-AMP      AMP 'ADENOSINE MONOPHOSPHATE             ' non-polymer        35  23 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+AMP     AMP      "ADENOSINE MONOPHOSPHATE"     NON-POLYMER     35     23     .     
 #
 data_comp_AMP
 #
@@ -28,133 +17,90 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- AMP           O3P    O    OP       -0.666      0.000    0.000    0.000
- AMP           P      P    P         0.000     -1.182   -0.449   -0.831
- AMP           O1P    O    OP       -0.666     -0.884   -1.801   -1.442
- AMP           O2P    O    OP       -0.666     -1.435    0.557   -1.932
- AMP           "O5'"  O    O2        0.000     -2.486   -0.560    0.107
- AMP           "C5'"  C    CH2       0.000     -3.533   -1.098   -0.703
- AMP           "H5'1" H    H         0.000     -3.236   -2.081   -1.074
- AMP           "H5'2" H    H         0.000     -3.716   -0.432   -1.549
- AMP           "C4'"  C    CH1       0.000     -4.808   -1.228    0.131
- AMP           "H4'"  H    H         0.000     -4.618   -1.836    1.027
- AMP           "C3'"  C    CH1       0.000     -5.943   -1.853   -0.710
- AMP           "H3'"  H    H         0.000     -5.770   -1.678   -1.781
- AMP           "O3'"  O    OH1       0.000     -6.053   -3.253   -0.442
- AMP           "HO3'" H    H         0.000     -6.766   -3.627   -0.976
- AMP           "C2'"  C    CH1       0.000     -7.214   -1.109   -0.238
- AMP           "H2'"  H    H         0.000     -7.673   -0.563   -1.075
- AMP           "O2'"  O    OH1       0.000     -8.149   -2.027    0.333
- AMP           "HO2'" H    H         0.000     -8.416   -2.672   -0.337
- AMP           "C1'"  C    CH1       0.000     -6.694   -0.121    0.830
- AMP           "H1'"  H    H         0.000     -6.795   -0.556    1.834
- AMP           "O4'"  O    O2        0.000     -5.301    0.077    0.505
- AMP           N9     N    NR5       0.000     -7.422    1.148    0.749
- AMP           C4     C    CR56      0.000     -8.607    1.445    1.371
- AMP           C5     C    CR56      0.000     -8.921    2.763    0.999
- AMP           N7     N    NRD5      0.000     -7.924    3.198    0.192
- AMP           C8     C    CR15      0.000     -7.044    2.251    0.041
- AMP           H8     H    H         0.000     -6.145    2.327   -0.558
- AMP           N3     N    NRD6      0.000     -9.436    0.786    2.174
- AMP           C2     C    CR16      0.000    -10.534    1.359    2.622
- AMP           H2     H    H         0.000    -11.188    0.794    3.274
- AMP           N1     N    NRD6      0.000    -10.867    2.597    2.306
- AMP           C6     C    CR6       0.000    -10.100    3.334    1.508
- AMP           N6     N    NH2       0.000    -10.457    4.631    1.182
- AMP           HN62   H    H         0.000     -9.869    5.190    0.572
- AMP           HN61   H    H         0.000    -11.312    5.038    1.549
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- AMP      O3P    n/a    P      START
- AMP      P      O3P    "O5'"  .
- AMP      O1P    P      .      .
- AMP      O2P    P      .      .
- AMP      "O5'"  P      "C5'"  .
- AMP      "C5'"  "O5'"  "C4'"  .
- AMP      "H5'1" "C5'"  .      .
- AMP      "H5'2" "C5'"  .      .
- AMP      "C4'"  "C5'"  "C3'"  .
- AMP      "H4'"  "C4'"  .      .
- AMP      "C3'"  "C4'"  "C2'"  .
- AMP      "H3'"  "C3'"  .      .
- AMP      "O3'"  "C3'"  "HO3'" .
- AMP      "HO3'" "O3'"  .      .
- AMP      "C2'"  "C3'"  "C1'"  .
- AMP      "H2'"  "C2'"  .      .
- AMP      "O2'"  "C2'"  "HO2'" .
- AMP      "HO2'" "O2'"  .      .
- AMP      "C1'"  "C2'"  N9     .
- AMP      "H1'"  "C1'"  .      .
- AMP      "O4'"  "C1'"  .      .
- AMP      N9     "C1'"  C4     .
- AMP      C4     N9     N3     .
- AMP      C5     C4     N7     .
- AMP      N7     C5     C8     .
- AMP      C8     N7     H8     .
- AMP      H8     C8     .      .
- AMP      N3     C4     C2     .
- AMP      C2     N3     N1     .
- AMP      H2     C2     .      .
- AMP      N1     C2     C6     .
- AMP      C6     N1     N6     .
- AMP      N6     C6     HN61   .
- AMP      HN62   N6     .      .
- AMP      HN61   N6     .      END
- AMP      "C4'"  "O4'"  .    ADD
- AMP      N9     C8     .    ADD
- AMP      C5     C6     .    ADD
+AMP     P       P       P       0       7.775       40.214      19.085      
+AMP     O1P     O       O       0       7.134       41.547      19.422      
+AMP     O2P     O       OP      -1      6.757       39.117      18.836      
+AMP     O3P     O       OP      -1      8.847       39.808      20.079      
+AMP     "O5'"   O       O2      0       8.537       40.435      17.679      
+AMP     "C5'"   C       CH2     0       9.605       41.414      17.609      
+AMP     "C4'"   C       CH1     0       10.177      41.442      16.213      
+AMP     "O4'"   O       O2      0       10.690      40.125      15.882      
+AMP     "C3'"   C       CH1     0       9.194       41.804      15.087      
+AMP     "O3'"   O       OH1     0       9.799       42.681      14.144      
+AMP     "C2'"   C       CH1     0       8.843       40.438      14.485      
+AMP     "O2'"   O       OH1     0       8.447       40.495      13.131      
+AMP     "C1'"   C       CH1     0       10.171      39.705      14.642      
+AMP     N9      N       NR5     0       10.058      38.249      14.658      
+AMP     C8      C       CR15    0       9.364       37.496      15.573      
+AMP     N7      N       NRD5    0       9.431       36.207      15.352      
+AMP     C5      C       CR56    0       10.226      36.095      14.221      
+AMP     C6      C       CR6     0       10.677      34.976      13.480      
+AMP     N6      N       NH2     0       10.372      33.718      13.791      
+AMP     N1      N       NRD6    0       11.465      35.209      12.393      
+AMP     C2      C       CR16    0       11.769      36.483      12.084      
+AMP     N3      N       NRD6    0       11.401      37.607      12.708      
+AMP     C4      C       CR56    0       10.622      37.350      13.781      
+AMP     "H5'1"  H       H       0       10.318      41.178      18.254      
+AMP     "H5'2"  H       H       0       9.256       42.309      17.843      
+AMP     "H4'"   H       H       0       10.924      42.080      16.207      
+AMP     "H3'"   H       H       0       8.382       42.226      15.472      
+AMP     "HO3'"  H       H       0       9.189       43.030      13.667      
+AMP     "H2'"   H       H       0       8.134       39.999      15.024      
+AMP     "HO2'"  H       H       0       8.282       39.709      12.857      
+AMP     "H1'"   H       H       0       10.776      39.985      13.920      
+AMP     H8      H       H       0       8.880       37.872      16.288      
+AMP     HN61    H       H       0       10.933      33.071      13.596      
+AMP     HN62    H       H       0       9.612       33.541      14.191      
+AMP     H2      H       H       0       12.317      36.599      11.323      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- AMP      O1P    P         deloc       1.510    0.020
- AMP      O2P    P         deloc       1.510    0.020
- AMP      P      O3P       deloc       1.510    0.020
- AMP      "O5'"  P         single      1.610    0.020
- AMP      "C5'"  "O5'"     single      1.426    0.020
- AMP      "C4'"  "C5'"     single      1.524    0.020
- AMP      "H5'1" "C5'"     single      1.092    0.020
- AMP      "H5'2" "C5'"     single      1.092    0.020
- AMP      "C4'"  "O4'"     single      1.426    0.020
- AMP      "C3'"  "C4'"     single      1.524    0.020
- AMP      "H4'"  "C4'"     single      1.099    0.020
- AMP      "O4'"  "C1'"     single      1.426    0.020
- AMP      "O3'"  "C3'"     single      1.432    0.020
- AMP      "C2'"  "C3'"     single      1.524    0.020
- AMP      "H3'"  "C3'"     single      1.099    0.020
- AMP      "HO3'" "O3'"     single      0.967    0.020
- AMP      "O2'"  "C2'"     single      1.432    0.020
- AMP      "C1'"  "C2'"     single      1.524    0.020
- AMP      "H2'"  "C2'"     single      1.099    0.020
- AMP      "HO2'" "O2'"     single      0.967    0.020
- AMP      N9     "C1'"     single      1.485    0.020
- AMP      "H1'"  "C1'"     single      1.099    0.020
- AMP      N9     C8        single      1.337    0.020
- AMP      C4     N9        single      1.337    0.020
- AMP      C8     N7        double      1.350    0.020
- AMP      H8     C8        single      1.083    0.020
- AMP      N7     C5        single      1.350    0.020
- AMP      C5     C6        single      1.490    0.020
- AMP      C5     C4        double      1.490    0.020
- AMP      N6     C6        single      1.355    0.020
- AMP      C6     N1        double      1.350    0.020
- AMP      HN61   N6        single      1.010    0.020
- AMP      HN62   N6        single      1.010    0.020
- AMP      N1     C2        single      1.337    0.020
- AMP      C2     N3        double      1.337    0.020
- AMP      H2     C2        single      1.083    0.020
- AMP      N3     C4        single      1.355    0.020
+AMP           P         O1P      DOUBLE       n     1.517   0.019
+AMP           P         O2P      SINGLE       n     1.517   0.019
+AMP           P         O3P      SINGLE       n     1.517   0.019
+AMP           P       "O5'"      SINGLE       n     1.614   0.019
+AMP       "O5'"       "C5'"      SINGLE       n     1.450   0.017
+AMP       "C5'"       "C4'"      SINGLE       n     1.509   0.010
+AMP       "C4'"       "O4'"      SINGLE       n     1.451   0.010
+AMP       "C4'"       "C3'"      SINGLE       n     1.535   0.010
+AMP       "O4'"       "C1'"      SINGLE       n     1.409   0.010
+AMP       "C3'"       "O3'"      SINGLE       n     1.422   0.010
+AMP       "C3'"       "C2'"      SINGLE       n     1.531   0.010
+AMP       "C2'"       "O2'"      SINGLE       n     1.411   0.010
+AMP       "C2'"       "C1'"      SINGLE       n     1.525   0.010
+AMP       "C1'"          N9      SINGLE       n     1.458   0.010
+AMP          N9          C8      SINGLE       y     1.372   0.010
+AMP          N9          C4      SINGLE       y     1.374   0.010
+AMP          C8          N7      DOUBLE       y     1.310   0.010
+AMP          N7          C5      SINGLE       y     1.388   0.010
+AMP          C5          C6      SINGLE       y     1.408   0.010
+AMP          C5          C4      DOUBLE       y     1.381   0.010
+AMP          C6          N6      SINGLE       n     1.330   0.010
+AMP          C6          N1      DOUBLE       y     1.354   0.010
+AMP          N1          C2      SINGLE       y     1.339   0.010
+AMP          C2          N3      DOUBLE       y     1.330   0.010
+AMP          N3          C4      SINGLE       y     1.343   0.010
+AMP       "C5'"      "H5'1"      SINGLE       n     0.989   0.020
+AMP       "C5'"      "H5'2"      SINGLE       n     0.989   0.020
+AMP       "C4'"       "H4'"      SINGLE       n     0.981   0.020
+AMP       "C3'"       "H3'"      SINGLE       n     0.992   0.020
+AMP       "O3'"      "HO3'"      SINGLE       n     0.849   0.020
+AMP       "C2'"       "H2'"      SINGLE       n     0.994   0.020
+AMP       "O2'"      "HO2'"      SINGLE       n     0.849   0.020
+AMP       "C1'"       "H1'"      SINGLE       n     0.984   0.020
+AMP          C8          H8      SINGLE       n     0.942   0.017
+AMP          N6        HN61      SINGLE       n     0.877   0.020
+AMP          N6        HN62      SINGLE       n     0.877   0.020
+AMP          C2          H2      SINGLE       n     0.945   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -162,70 +108,70 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- AMP      O3P    P      O1P     119.900    3.000
- AMP      O3P    P      O2P     119.900    3.000
- AMP      O3P    P      "O5'"   108.200    3.000
- AMP      O1P    P      O2P     119.900    3.000
- AMP      O1P    P      "O5'"   108.200    3.000
- AMP      O2P    P      "O5'"   108.200    3.000
- AMP      P      "O5'"  "C5'"   120.500    3.000
- AMP      "O5'"  "C5'"  "H5'1"  109.470    3.000
- AMP      "O5'"  "C5'"  "H5'2"  109.470    3.000
- AMP      "O5'"  "C5'"  "C4'"   109.470    3.000
- AMP      "H5'1" "C5'"  "H5'2"  107.900    3.000
- AMP      "H5'1" "C5'"  "C4'"   109.470    3.000
- AMP      "H5'2" "C5'"  "C4'"   109.470    3.000
- AMP      "C5'"  "C4'"  "H4'"   108.340    3.000
- AMP      "C5'"  "C4'"  "C3'"   111.000    3.000
- AMP      "C5'"  "C4'"  "O4'"   109.470    3.000
- AMP      "H4'"  "C4'"  "C3'"   108.340    3.000
- AMP      "H4'"  "C4'"  "O4'"   109.470    3.000
- AMP      "C3'"  "C4'"  "O4'"   109.470    3.000
- AMP      "C4'"  "C3'"  "H3'"   108.340    3.000
- AMP      "C4'"  "C3'"  "O3'"   109.470    3.000
- AMP      "C4'"  "C3'"  "C2'"   111.000    3.000
- AMP      "H3'"  "C3'"  "O3'"   109.470    3.000
- AMP      "H3'"  "C3'"  "C2'"   108.340    3.000
- AMP      "O3'"  "C3'"  "C2'"   109.470    3.000
- AMP      "C3'"  "O3'"  "HO3'"  109.470    3.000
- AMP      "C3'"  "C2'"  "H2'"   108.340    3.000
- AMP      "C3'"  "C2'"  "O2'"   109.470    3.000
- AMP      "C3'"  "C2'"  "C1'"   111.000    3.000
- AMP      "H2'"  "C2'"  "O2'"   109.470    3.000
- AMP      "H2'"  "C2'"  "C1'"   108.340    3.000
- AMP      "O2'"  "C2'"  "C1'"   109.470    3.000
- AMP      "C2'"  "O2'"  "HO2'"  109.470    3.000
- AMP      "C2'"  "C1'"  "H1'"   108.340    3.000
- AMP      "C2'"  "C1'"  "O4'"   109.470    3.000
- AMP      "C2'"  "C1'"  N9      109.470    3.000
- AMP      "H1'"  "C1'"  "O4'"   109.470    3.000
- AMP      "H1'"  "C1'"  N9      109.470    3.000
- AMP      "O4'"  "C1'"  N9      109.470    3.000
- AMP      "C1'"  "O4'"  "C4'"   111.800    3.000
- AMP      "C1'"  N9     C4      126.000    3.000
- AMP      "C1'"  N9     C8      126.000    3.000
- AMP      C4     N9     C8      108.000    3.000
- AMP      N9     C4     C5      108.000    3.000
- AMP      N9     C4     N3      132.000    3.000
- AMP      C5     C4     N3      120.000    3.000
- AMP      C4     C5     N7      108.000    3.000
- AMP      C4     C5     C6      120.000    3.000
- AMP      N7     C5     C6      132.000    3.000
- AMP      C5     N7     C8      108.000    3.000
- AMP      N7     C8     H8      126.000    3.000
- AMP      N7     C8     N9      108.000    3.000
- AMP      H8     C8     N9      126.000    3.000
- AMP      C4     N3     C2      120.000    3.000
- AMP      N3     C2     H2      120.000    3.000
- AMP      N3     C2     N1      120.000    3.000
- AMP      H2     C2     N1      120.000    3.000
- AMP      C2     N1     C6      120.000    3.000
- AMP      N1     C6     N6      120.000    3.000
- AMP      N1     C6     C5      120.000    3.000
- AMP      N6     C6     C5      120.000    3.000
- AMP      C6     N6     HN62    120.000    3.000
- AMP      C6     N6     HN61    120.000    3.000
- AMP      HN62   N6     HN61    120.000    3.000
+AMP         O1P           P         O2P     112.864    1.69
+AMP         O1P           P         O3P     112.864    1.69
+AMP         O1P           P       "O5'"     105.808    2.07
+AMP         O2P           P         O3P     112.864    1.69
+AMP         O2P           P       "O5'"     105.808    2.07
+AMP         O3P           P       "O5'"     105.808    2.07
+AMP           P       "O5'"       "C5'"     118.783    1.50
+AMP       "O5'"       "C5'"       "C4'"     109.342    1.50
+AMP       "O5'"       "C5'"      "H5'1"     109.845    1.50
+AMP       "O5'"       "C5'"      "H5'2"     109.845    1.50
+AMP       "C4'"       "C5'"      "H5'1"     109.624    1.50
+AMP       "C4'"       "C5'"      "H5'2"     109.624    1.50
+AMP      "H5'1"       "C5'"      "H5'2"     108.472    1.50
+AMP       "C5'"       "C4'"       "O4'"     109.123    1.50
+AMP       "C5'"       "C4'"       "C3'"     116.008    1.52
+AMP       "C5'"       "C4'"       "H4'"     108.268    1.50
+AMP       "O4'"       "C4'"       "C3'"     105.388    1.50
+AMP       "O4'"       "C4'"       "H4'"     108.947    1.50
+AMP       "C3'"       "C4'"       "H4'"     109.363    1.86
+AMP       "C4'"       "O4'"       "C1'"     109.903    1.50
+AMP       "C4'"       "C3'"       "O3'"     111.281    2.46
+AMP       "C4'"       "C3'"       "C2'"     102.602    1.50
+AMP       "C4'"       "C3'"       "H3'"     110.452    2.54
+AMP       "O3'"       "C3'"       "C2'"     111.581    2.83
+AMP       "O3'"       "C3'"       "H3'"     110.380    1.67
+AMP       "C2'"       "C3'"       "H3'"     110.504    1.75
+AMP       "C3'"       "O3'"      "HO3'"     108.744    3.00
+AMP       "C3'"       "C2'"       "O2'"     112.782    2.45
+AMP       "C3'"       "C2'"       "C1'"     101.239    1.50
+AMP       "C3'"       "C2'"       "H2'"     110.596    1.51
+AMP       "O2'"       "C2'"       "C1'"     111.715    2.69
+AMP       "O2'"       "C2'"       "H2'"     110.448    1.97
+AMP       "C1'"       "C2'"       "H2'"     110.636    1.70
+AMP       "C2'"       "O2'"      "HO2'"     109.103    2.13
+AMP       "O4'"       "C1'"       "C2'"     106.047    1.50
+AMP       "O4'"       "C1'"          N9     108.477    1.50
+AMP       "O4'"       "C1'"       "H1'"     109.807    1.50
+AMP       "C2'"       "C1'"          N9     113.824    1.50
+AMP       "C2'"       "C1'"       "H1'"     109.015    1.50
+AMP          N9       "C1'"       "H1'"     109.561    1.50
+AMP       "C1'"          N9          C8     126.848    1.91
+AMP       "C1'"          N9          C4     127.459    1.80
+AMP          C8          N9          C4     105.693    1.50
+AMP          N9          C8          N7     113.469    1.50
+AMP          N9          C8          H8     123.206    1.50
+AMP          N7          C8          H8     123.326    1.50
+AMP          C8          N7          C5     104.739    1.50
+AMP          N7          C5          C6     132.250    1.50
+AMP          N7          C5          C4     110.483    1.50
+AMP          C6          C5          C4     117.267    1.50
+AMP          C5          C6          N6     123.792    1.50
+AMP          C5          C6          N1     117.409    1.50
+AMP          N6          C6          N1     118.799    1.50
+AMP          C6          N6        HN61     119.723    1.50
+AMP          C6          N6        HN62     119.723    1.50
+AMP        HN61          N6        HN62     120.554    1.88
+AMP          C6          N1          C2     118.521    1.50
+AMP          N1          C2          N3     129.332    1.50
+AMP          N1          C2          H2     115.313    1.50
+AMP          N3          C2          H2     115.355    1.50
+AMP          C2          N3          C4     110.982    1.50
+AMP          N9          C4          C5     105.616    1.50
+AMP          N9          C4          N3     127.895    1.50
+AMP          C5          C4          N3     126.489    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -236,28 +182,28 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AMP      var_1    O3P    P      "O5'"  "C5'"   -175.001   20.000   1
- AMP      var_2    P      "O5'"  "C5'"  "C4'"   -179.958   20.000   1
- AMP      var_3    "O5'"  "C5'"  "C4'"  "C3'"   -178.105   20.000   3
- AMP      var_4    "C5'"  "C4'"  "O4'"  "C1'"    150.000   20.000   1
- AMP      var_5    "C5'"  "C4'"  "C3'"  "C2'"   -150.000   20.000   3
- AMP      var_6    "C4'"  "C3'"  "O3'"  "HO3'"  -179.951   20.000   1
- AMP      var_7    "C4'"  "C3'"  "C2'"  "C1'"      0.000   20.000   3
- AMP      var_8    "C3'"  "C2'"  "O2'"  "HO2'"   -61.481   20.000   1
- AMP      var_9    "C3'"  "C2'"  "C1'"  N9       150.000   20.000   3
- AMP      var_10   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
- AMP      var_11   "C2'"  "C1'"  N9     C4        86.574   20.000   1
- AMP      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
- AMP      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
- AMP      CONST_3  N9     C4     C5     N7         0.000    0.000   0
- AMP      CONST_4  C4     C5     C6     N1         0.000    0.000   0
- AMP      CONST_5  C4     C5     N7     C8         0.000    0.000   0
- AMP      CONST_6  C5     N7     C8     N9         0.000    0.000   0
- AMP      CONST_7  N9     C4     N3     C2       180.000    0.000   0
- AMP      CONST_8  C4     N3     C2     N1         0.000    0.000   0
- AMP      CONST_9  N3     C2     N1     C6         0.000    0.000   0
- AMP      CONST_10 C2     N1     C6     N6       180.000    0.000   0
- AMP      CONST_11 N1     C6     N6     HN61       0.041    0.000   0
+AMP            sp3_sp3_25       "C5'"       "O5'"           P         O1P     180.000   10.00     3
+AMP            sp3_sp3_52       "C3'"       "C2'"       "O2'"      "HO2'"     180.000   10.00     3
+AMP             sp3_sp3_9       "O4'"       "C1'"       "C2'"       "O2'"     -60.000   10.00     3
+AMP             sp2_sp3_1          C8          N9       "C1'"       "O4'"     150.000   10.00     6
+AMP              const_14          N7          C8          N9       "C1'"     180.000   10.00     2
+AMP              const_26          C5          C4          N9       "C1'"     180.000   10.00     2
+AMP              const_17          N9          C8          N7          C5       0.000   10.00     2
+AMP              const_20          C6          C5          N7          C8     180.000   10.00     2
+AMP       const_sp2_sp2_4          N7          C5          C6          N6       0.000   10.00     2
+AMP              const_21          N9          C4          C5          N7       0.000   10.00     2
+AMP             sp2_sp2_1          C5          C6          N6        HN61     180.000   10.00     2
+AMP       const_sp2_sp2_6          N6          C6          N1          C2     180.000   10.00     2
+AMP       const_sp2_sp2_7          N3          C2          N1          C6       0.000   10.00     2
+AMP       const_sp2_sp2_9          N1          C2          N3          C4       0.000   10.00     2
+AMP              const_12          N9          C4          N3          C2     180.000   10.00     2
+AMP            sp3_sp3_28       "C4'"       "C5'"       "O5'"           P     180.000   10.00     3
+AMP            sp3_sp3_34       "O4'"       "C4'"       "C5'"       "O5'"      60.000   10.00     3
+AMP             sp3_sp3_3       "C5'"       "C4'"       "O4'"       "C1'"     180.000   10.00     3
+AMP            sp3_sp3_44       "O3'"       "C3'"       "C4'"       "C5'"     180.000   10.00     3
+AMP             sp3_sp3_4       "C2'"       "C1'"       "O4'"       "C4'"     -60.000   10.00     3
+AMP            sp3_sp3_20       "O2'"       "C2'"       "C3'"       "O3'"     -60.000   10.00     3
+AMP            sp3_sp3_49       "C4'"       "C3'"       "O3'"      "HO3'"     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -266,32 +212,52 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- AMP      chir_01  "C4'"  "C5'"  "O4'"  "C3'"     negativ
- AMP      chir_02  "C3'"  "C4'"  "O3'"  "C2'"     negativ
- AMP      chir_03  "C2'"  "C3'"  "O2'"  "C1'"     negativ
- AMP      chir_04  "C1'"  "O4'"  "C2'"  N9        positiv
+AMP    chir_1    "C4'"    "O4'"    "C3'"    "C5'"    both
+AMP    chir_2    "C3'"    "O3'"    "C4'"    "C2'"    positive
+AMP    chir_3    "C2'"    "O2'"    "C1'"    "C3'"    both
+AMP    chir_4    "C1'"    "O4'"    N9    "C2'"    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- AMP      plan-1    N9        0.020
- AMP      plan-1    "C1'"     0.020
- AMP      plan-1    C8        0.020
- AMP      plan-1    C4        0.020
- AMP      plan-1    N7        0.020
- AMP      plan-1    H8        0.020
- AMP      plan-1    C5        0.020
- AMP      plan-1    C6        0.020
- AMP      plan-1    N1        0.020
- AMP      plan-1    C2        0.020
- AMP      plan-1    N3        0.020
- AMP      plan-1    N6        0.020
- AMP      plan-1    H2        0.020
- AMP      plan-1    HN62      0.020
- AMP      plan-1    HN61      0.020
- AMP      plan-2    N6        0.020
- AMP      plan-2    C6        0.020
- AMP      plan-2    HN61      0.020
- AMP      plan-2    HN62      0.020
-# ------------------------------------------------------
+AMP    plan-1       "C1'"   0.020
+AMP    plan-1          C4   0.020
+AMP    plan-1          C5   0.020
+AMP    plan-1          C6   0.020
+AMP    plan-1          C8   0.020
+AMP    plan-1          H8   0.020
+AMP    plan-1          N3   0.020
+AMP    plan-1          N7   0.020
+AMP    plan-1          N9   0.020
+AMP    plan-2          C2   0.020
+AMP    plan-2          C4   0.020
+AMP    plan-2          C5   0.020
+AMP    plan-2          C6   0.020
+AMP    plan-2          H2   0.020
+AMP    plan-2          N1   0.020
+AMP    plan-2          N3   0.020
+AMP    plan-2          N6   0.020
+AMP    plan-2          N7   0.020
+AMP    plan-2          N9   0.020
+AMP    plan-3          C6   0.020
+AMP    plan-3        HN61   0.020
+AMP    plan-3        HN62   0.020
+AMP    plan-3          N6   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+AMP SMILES           ACDLabs              12.01 "O=P(O)(O)OCC3OC(n2cnc1c(ncnc12)N)C(O)C3O"
+AMP InChI            InChI                1.03  "InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/t4-,6-,7-,10-/m1/s1"
+AMP InChIKey         InChI                1.03  UDMBCSSLTHHNCD-KQYNXXCUSA-N
+AMP SMILES_CANONICAL CACTVS               3.370 "Nc1ncnc2n(cnc12)[C@@H]3O[C@H](CO[P](O)(O)=O)[C@@H](O)[C@H]3O"
+AMP SMILES           CACTVS               3.370 "Nc1ncnc2n(cnc12)[CH]3O[CH](CO[P](O)(O)=O)[CH](O)[CH]3O"
+AMP SMILES_CANONICAL "OpenEye OEToolkits" 1.7.6 "c1nc(c2c(n1)n(cn2)[C@H]3[C@@H]([C@@H]([C@H](O3)COP(=O)(O)O)O)O)N"
+AMP SMILES           "OpenEye OEToolkits" 1.7.6 "c1nc(c2c(n1)n(cn2)C3C(C(C(O3)COP(=O)(O)O)O)O)N"
+AMP ?                acedrg               202         "dictionary generator"                  
+AMP ?                acedrg_database      11          "data source"                           
+AMP ?                rdkit                2017.03.2   "Chemoinformatics tool"
+AMP ?                refmac5              5.8.0189    "optimization tool"                     

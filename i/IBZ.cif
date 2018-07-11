@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-IBZ      IBZ '2-IODOBENZYLTHIO GROUP              ' non-polymer        16   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+IBZ     IBZ      "2-IODOBENZYLTHIO GROUP"     NON-POLYMER     16     9     .     
 #
 data_comp_IBZ
 #
@@ -28,72 +17,50 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- IBZ           I      I    I         0.000      0.000    0.000    0.000
- IBZ           C2     C    CR6       0.000     -1.725   -0.348   -1.131
- IBZ           C3     C    CR16      0.000     -2.954    0.018   -0.581
- IBZ           H3     H    H         0.000     -2.995    0.464    0.406
- IBZ           C4     C    CR16      0.000     -4.130   -0.191   -1.301
- IBZ           H4     H    H         0.000     -5.084    0.093   -0.874
- IBZ           C5     C    CR16      0.000     -4.078   -0.764   -2.570
- IBZ           H5     H    H         0.000     -4.991   -0.926   -3.129
- IBZ           C6     C    CR16      0.000     -2.850   -1.130   -3.121
- IBZ           H6     H    H         0.000     -2.809   -1.576   -4.107
- IBZ           C1     C    CR6       0.000     -1.674   -0.921   -2.401
- IBZ           C      C    CH2       0.000     -0.387   -1.335   -3.040
- IBZ           H1     H    H         0.000     -0.591   -2.193   -3.684
- IBZ           H2     H    H         0.000      0.302   -1.633   -2.247
- IBZ           S      S    SH1       0.000      0.359   -0.001   -4.023
- IBZ           HS1    H    H         0.000     -0.610    0.061   -4.932
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- IBZ      I      n/a    C2     START
- IBZ      C2     I      C3     .
- IBZ      C3     C2     C4     .
- IBZ      H3     C3     .      .
- IBZ      C4     C3     C5     .
- IBZ      H4     C4     .      .
- IBZ      C5     C4     C6     .
- IBZ      H5     C5     .      .
- IBZ      C6     C5     C1     .
- IBZ      H6     C6     .      .
- IBZ      C1     C6     C      .
- IBZ      C      C1     S      .
- IBZ      H1     C      .      .
- IBZ      H2     C      .      .
- IBZ      S      C      HS1    .
- IBZ      HS1    S      .      END
- IBZ      C1     C2     .    ADD
+IBZ     S       S       SH1     0       -16.514     12.617      9.124       
+IBZ     C       C       CH2     0       -17.950     12.398      10.215      
+IBZ     C1      C       CR6     0       -18.611     11.060      9.988       
+IBZ     C2      C       CR6     0       -19.142     10.716      8.732       
+IBZ     C3      C       CR16    0       -19.754     9.469       8.532       
+IBZ     C4      C       CR16    0       -19.837     8.564       9.579       
+IBZ     C5      C       CR16    0       -19.319     8.887       10.819      
+IBZ     C6      C       CR16    0       -18.712     10.120      11.024      
+IBZ     I       I       I       0       -19.058     12.027      7.097       
+IBZ     HS1     H       HSH1    0       -16.014     13.558      9.695       
+IBZ     H1      H       H       0       -18.592     13.110      10.043      
+IBZ     H2      H       H       0       -17.660     12.470      11.142      
+IBZ     H3      H       H       0       -20.106     9.250       7.689       
+IBZ     H4      H       H       0       -20.248     7.726       9.442       
+IBZ     H5      H       H       0       -19.378     8.268       11.530      
+IBZ     H6      H       H       0       -18.362     10.330      11.874      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- IBZ      S      C         single      1.810    0.020
- IBZ      C      C1        single      1.511    0.020
- IBZ      H1     C         single      1.092    0.020
- IBZ      H2     C         single      1.092    0.020
- IBZ      C1     C2        double      1.487    0.020
- IBZ      C1     C6        single      1.390    0.020
- IBZ      C3     C2        single      1.390    0.020
- IBZ      C2     I         single      2.090    0.020
- IBZ      C4     C3        double      1.390    0.020
- IBZ      H3     C3        single      1.083    0.020
- IBZ      C5     C4        single      1.390    0.020
- IBZ      H4     C4        single      1.083    0.020
- IBZ      C6     C5        double      1.390    0.020
- IBZ      H5     C5        single      1.083    0.020
- IBZ      H6     C6        single      1.083    0.020
- IBZ      HS1    S         single      1.330    0.020
+IBZ           S           C      SINGLE       n     1.817   0.015
+IBZ           C          C1      SINGLE       n     1.508   0.011
+IBZ          C1          C2      DOUBLE       y     1.398   0.010
+IBZ          C1          C6      SINGLE       y     1.392   0.011
+IBZ          C2          C3      SINGLE       y     1.388   0.015
+IBZ          C2           I      SINGLE       n     2.096   0.013
+IBZ          C3          C4      DOUBLE       y     1.372   0.015
+IBZ          C4          C5      SINGLE       y     1.376   0.010
+IBZ          C5          C6      DOUBLE       y     1.382   0.011
+IBZ           S         HS1      SINGLE       n     1.209   0.020
+IBZ           C          H1      SINGLE       n     0.974   0.020
+IBZ           C          H2      SINGLE       n     0.974   0.020
+IBZ          C3          H3      SINGLE       n     0.940   0.011
+IBZ          C4          H4      SINGLE       n     0.943   0.015
+IBZ          C5          H5      SINGLE       n     0.944   0.018
+IBZ          C6          H6      SINGLE       n     0.943   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -101,31 +68,31 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- IBZ      I      C2     C3      120.000    3.000
- IBZ      I      C2     C1      120.000    3.000
- IBZ      C3     C2     C1      120.000    3.000
- IBZ      C2     C3     H3      120.000    3.000
- IBZ      C2     C3     C4      120.000    3.000
- IBZ      H3     C3     C4      120.000    3.000
- IBZ      C3     C4     H4      120.000    3.000
- IBZ      C3     C4     C5      120.000    3.000
- IBZ      H4     C4     C5      120.000    3.000
- IBZ      C4     C5     H5      120.000    3.000
- IBZ      C4     C5     C6      120.000    3.000
- IBZ      H5     C5     C6      120.000    3.000
- IBZ      C5     C6     H6      120.000    3.000
- IBZ      C5     C6     C1      120.000    3.000
- IBZ      H6     C6     C1      120.000    3.000
- IBZ      C6     C1     C       120.000    3.000
- IBZ      C6     C1     C2      120.000    3.000
- IBZ      C      C1     C2      120.000    3.000
- IBZ      C1     C      H1      109.470    3.000
- IBZ      C1     C      H2      109.470    3.000
- IBZ      C1     C      S       109.500    3.000
- IBZ      H1     C      H2      107.900    3.000
- IBZ      H1     C      S       109.470    3.000
- IBZ      H2     C      S       109.470    3.000
- IBZ      C      S      HS1      96.000    3.000
+IBZ           C           S         HS1      97.885    3.00
+IBZ           S           C          C1     111.115    3.00
+IBZ           S           C          H1     109.066    1.50
+IBZ           S           C          H2     109.066    1.50
+IBZ          C1           C          H1     109.420    1.50
+IBZ          C1           C          H2     109.420    1.50
+IBZ          H1           C          H2     108.105    1.50
+IBZ           C          C1          C2     121.054    1.50
+IBZ           C          C1          C6     120.982    1.50
+IBZ          C2          C1          C6     117.964    1.50
+IBZ          C1          C2          C3     120.848    1.50
+IBZ          C1          C2           I     121.218    2.37
+IBZ          C3          C2           I     117.934    1.50
+IBZ          C2          C3          C4     119.848    1.50
+IBZ          C2          C3          H3     119.937    1.50
+IBZ          C4          C3          H3     120.215    1.50
+IBZ          C3          C4          C5     120.174    1.50
+IBZ          C3          C4          H4     119.800    1.50
+IBZ          C5          C4          H4     120.026    1.50
+IBZ          C4          C5          C6     120.204    1.50
+IBZ          C4          C5          H5     119.943    1.50
+IBZ          C6          C5          H5     119.852    1.50
+IBZ          C1          C6          C5     120.962    1.50
+IBZ          C1          C6          H6     119.343    1.50
+IBZ          C5          C6          H6     119.696    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -136,29 +103,45 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IBZ      CONST_1  I      C2     C3     C4       180.000    0.000   0
- IBZ      CONST_2  C2     C3     C4     C5         0.000    0.000   0
- IBZ      CONST_3  C3     C4     C5     C6         0.000    0.000   0
- IBZ      CONST_4  C4     C5     C6     C1         0.000    0.000   0
- IBZ      CONST_5  C5     C6     C1     C        180.000    0.000   0
- IBZ      CONST_6  C6     C1     C2     I        180.000    0.000   0
- IBZ      var_1    C6     C1     C      S         89.980   20.000   2
- IBZ      var_2    C1     C      S      HS1      -65.067   20.000   1
+IBZ             sp3_sp3_1          C1           C           S         HS1     180.000   10.00     3
+IBZ             sp2_sp3_2          C2          C1           C           S     -90.000   10.00     6
+IBZ       const_sp2_sp2_4           C          C1          C2           I       0.000   10.00     2
+IBZ              const_23           C          C1          C6          C5     180.000   10.00     2
+IBZ       const_sp2_sp2_7           I          C2          C3          C4     180.000   10.00     2
+IBZ       const_sp2_sp2_9          C2          C3          C4          C5       0.000   10.00     2
+IBZ              const_13          C3          C4          C5          C6       0.000   10.00     2
+IBZ              const_17          C4          C5          C6          C1       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- IBZ      plan-1    C1        0.020
- IBZ      plan-1    C         0.020
- IBZ      plan-1    C2        0.020
- IBZ      plan-1    C6        0.020
- IBZ      plan-1    C3        0.020
- IBZ      plan-1    C4        0.020
- IBZ      plan-1    C5        0.020
- IBZ      plan-1    I         0.020
- IBZ      plan-1    H3        0.020
- IBZ      plan-1    H4        0.020
- IBZ      plan-1    H5        0.020
- IBZ      plan-1    H6        0.020
-# ------------------------------------------------------
+IBZ    plan-1           C   0.020
+IBZ    plan-1          C1   0.020
+IBZ    plan-1          C2   0.020
+IBZ    plan-1          C3   0.020
+IBZ    plan-1          C4   0.020
+IBZ    plan-1          C5   0.020
+IBZ    plan-1          C6   0.020
+IBZ    plan-1          H3   0.020
+IBZ    plan-1          H4   0.020
+IBZ    plan-1          H5   0.020
+IBZ    plan-1          H6   0.020
+IBZ    plan-1           I   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+IBZ SMILES           ACDLabs              10.04 Ic1ccccc1CS
+IBZ SMILES_CANONICAL CACTVS               3.341 SCc1ccccc1I
+IBZ SMILES           CACTVS               3.341 SCc1ccccc1I
+IBZ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "c1ccc(c(c1)CS)I"
+IBZ SMILES           "OpenEye OEToolkits" 1.5.0 "c1ccc(c(c1)CS)I"
+IBZ InChI            InChI                1.03  "InChI=1S/C7H7IS/c8-7-4-2-1-3-6(7)5-9/h1-4,9H,5H2"
+IBZ InChIKey         InChI                1.03  KVYARXTXGITUCU-UHFFFAOYSA-N
+IBZ ?                acedrg               202         "dictionary generator"                  
+IBZ ?                acedrg_database      11          "data source"                           
+IBZ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+IBZ ?                refmac5              5.8.0189    "optimization tool"                     

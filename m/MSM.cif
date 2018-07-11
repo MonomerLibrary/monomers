@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MSM      MSM '(METHYLSULFANYL)METHANE             ' non-polymer         9   3 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MSM     MSM      "(METHYLSULFANYL)METHANE"     NON-POLYMER     9     3     .     
 #
 data_comp_MSM
 #
@@ -28,49 +17,35 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MSM           CD1    C    CH3       0.000      0.000    0.000    0.000
- MSM           HD11   H    H         0.000      0.488   -0.379    0.865
- MSM           HD12   H    H         0.000      0.488   -0.379   -0.865
- MSM           HD13   H    H         0.000      0.074    1.060    0.000
- MSM           SG1    S    S2        0.000     -1.744   -0.501    0.000
- MSM           CB1    C    CH3       0.000     -1.553   -2.306    0.000
- MSM           HB13   H    H         0.000     -1.018   -2.615    0.864
- MSM           HB12   H    H         0.000     -2.508   -2.773    0.000
- MSM           HB11   H    H         0.000     -1.019   -2.615   -0.865
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MSM      CD1    n/a    SG1    START
- MSM      HD11   CD1    .      .
- MSM      HD12   CD1    .      .
- MSM      HD13   CD1    .      .
- MSM      SG1    CD1    CB1    .
- MSM      CB1    SG1    HB11   .
- MSM      HB13   CB1    .      .
- MSM      HB12   CB1    .      .
- MSM      HB11   CB1    .      END
+MSM     CB1     C       CH3     0       -4.158      12.912      11.763      
+MSM     SG1     S       S2      0       -3.050      13.264      10.399      
+MSM     CD1     C       CH3     0       -1.868      11.924      10.530      
+MSM     HB11    H       H       0       -4.854      13.579      11.792      
+MSM     HB12    H       H       0       -3.663      12.926      12.591      
+MSM     HB13    H       H       0       -4.553      12.040      11.639      
+MSM     HD11    H       H       0       -1.880      11.403      9.717       
+MSM     HD12    H       H       0       -2.103      11.360      11.277      
+MSM     HD13    H       H       0       -0.984      12.287      10.667      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MSM      CB1    SG1       single      1.762    0.020
- MSM      HB11   CB1       single      1.059    0.020
- MSM      HB12   CB1       single      1.059    0.020
- MSM      HB13   CB1       single      1.059    0.020
- MSM      SG1    CD1       single      1.762    0.020
- MSM      HD11   CD1       single      1.059    0.020
- MSM      HD12   CD1       single      1.059    0.020
- MSM      HD13   CD1       single      1.059    0.020
+MSM         CB1         SG1      SINGLE       n     1.792   0.010
+MSM         SG1         CD1      SINGLE       n     1.792   0.010
+MSM         CB1        HB11      SINGLE       n     0.965   0.017
+MSM         CB1        HB12      SINGLE       n     0.965   0.017
+MSM         CB1        HB13      SINGLE       n     0.965   0.017
+MSM         CD1        HD11      SINGLE       n     0.965   0.017
+MSM         CD1        HD12      SINGLE       n     0.965   0.017
+MSM         CD1        HD13      SINGLE       n     0.965   0.017
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -78,19 +53,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MSM      HD11   CD1    HD12    109.470    3.000
- MSM      HD11   CD1    HD13    109.470    3.000
- MSM      HD12   CD1    HD13    109.470    3.000
- MSM      HD11   CD1    SG1     109.500    3.000
- MSM      HD12   CD1    SG1     109.500    3.000
- MSM      HD13   CD1    SG1     109.500    3.000
- MSM      CD1    SG1    CB1     100.017    3.000
- MSM      SG1    CB1    HB13    109.500    3.000
- MSM      SG1    CB1    HB12    109.500    3.000
- MSM      SG1    CB1    HB11    109.500    3.000
- MSM      HB13   CB1    HB12    109.470    3.000
- MSM      HB13   CB1    HB11    109.470    3.000
- MSM      HB12   CB1    HB11    109.470    3.000
+MSM         SG1         CB1        HB11     109.465    1.50
+MSM         SG1         CB1        HB12     109.465    1.50
+MSM         SG1         CB1        HB13     109.465    1.50
+MSM        HB11         CB1        HB12     109.509    1.50
+MSM        HB11         CB1        HB13     109.509    1.50
+MSM        HB12         CB1        HB13     109.509    1.50
+MSM         CB1         SG1         CD1     101.840    1.86
+MSM         SG1         CD1        HD11     109.465    1.50
+MSM         SG1         CD1        HD12     109.465    1.50
+MSM         SG1         CD1        HD13     109.465    1.50
+MSM        HD11         CD1        HD12     109.509    1.50
+MSM        HD11         CD1        HD13     109.509    1.50
+MSM        HD12         CD1        HD13     109.509    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -101,6 +76,22 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MSM      var_1    HD13   CD1    SG1    CB1      180.000   20.000   1
- MSM      var_2    CD1    SG1    CB1    HB11     -60.003   20.000   1
-# ------------------------------------------------------
+MSM             sp3_sp3_1        HB11         CB1         SG1         CD1     180.000   10.00     3
+MSM             sp3_sp3_4        HD11         CD1         SG1         CB1     180.000   10.00     3
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MSM SMILES           ACDLabs              10.04 sulfanediyldimethane
+MSM SMILES_CANONICAL CACTVS               3.341 CSC
+MSM SMILES           CACTVS               3.341 CSC
+MSM SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 CSC
+MSM SMILES           "OpenEye OEToolkits" 1.5.0 CSC
+MSM InChI            InChI                1.03  InChI=1S/C2H6S/c1-3-2/h1-2H3
+MSM InChIKey         InChI                1.03  QMMFVYPAHWMCMS-UHFFFAOYSA-N
+MSM ?                acedrg               202         "dictionary generator"                  
+MSM ?                acedrg_database      11          "data source"                           
+MSM ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MSM ?                refmac5              5.8.0189    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PO2      PO2 'HYPOPHOSPHITE                       ' non-polymer         3   3 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PO2     PO2      HYPOPHOSPHITE     NON-POLYMER     3     3     .     
 #
 data_comp_PO2
 #
@@ -28,31 +17,23 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PO2           O2     O    OP        0.000      0.000    0.000    0.000
- PO2           P      P    P1        0.000     -1.531    0.437    0.000
- PO2           O1     O    OP       -1.000     -1.920    1.980    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PO2      O2     n/a    P      START
- PO2      P      O2     O1     .
- PO2      O1     P      .      END
+PO2     P       P       P1      0       23.213      19.919      22.063      
+PO2     O1      O       OP      -1      22.670      18.751      23.164      
+PO2     O2      O       O       0       22.670      18.748      23.160      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- PO2      O1     P         single      1.675    0.020
- PO2      P      O2        double      1.675    0.020
+PO2           P          O1      SINGLE       n     1.694   0.020
+PO2           P          O2      DOUBLE       n     1.694   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -60,5 +41,20 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PO2      O2     P      O1      120.000    3.000
-# ------------------------------------------------------
+PO2          O1           P          O2       0.000    3.00
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PO2 SMILES_CANONICAL CACTVS               3.341 "[O-]P=O"
+PO2 SMILES           CACTVS               3.341 "[O-]P=O"
+PO2 SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "[O-]P=O"
+PO2 SMILES           "OpenEye OEToolkits" 1.5.0 "[O-]P=O"
+PO2 InChI            InChI                1.03  "InChI=1S/HO2P/c1-3-2/h(H,1,2)/p-1"
+PO2 InChIKey         InChI                1.03  GQZXNSPRSGFJLY-UHFFFAOYSA-M
+PO2 ?                acedrg               202         "dictionary generator"                  
+PO2 ?                acedrg_database      11          "data source"                           
+PO2 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PO2 ?                refmac5              5.8.0189    "optimization tool"                     

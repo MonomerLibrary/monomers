@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-TFS      TFS 'trifluoromethanesulfonic acid       ' non-polymer         9   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+TFS     TFS      "trifluoromethanesulfonic acid"     NON-POLYMER     9     8     .     
 #
 data_comp_TFS
 #
@@ -28,49 +17,35 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- TFS           OAB    O    OS        0.000      0.000    0.000    0.000
- TFS           SAE    S    ST        0.000     -1.087    0.831   -0.382
- TFS           OAF    O    OS        0.000     -1.134    2.199    0.000
- TFS           OAH    O    OH1       0.000     -1.016    0.868   -1.901
- TFS           HOAH   H    H         0.000     -0.251    1.262   -2.307
- TFS           CAD    C    CT        0.000     -2.668    0.016   -0.022
- TFS           FAC    F    F         0.000     -2.666   -1.268   -0.577
- TFS           FAG    F    F         0.000     -3.713    0.762   -0.576
- TFS           FAA    F    F         0.000     -2.842   -0.074    1.363
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- TFS      OAB    n/a    SAE    START
- TFS      SAE    OAB    CAD    .
- TFS      OAF    SAE    .      .
- TFS      OAH    SAE    HOAH   .
- TFS      HOAH   OAH    .      .
- TFS      CAD    SAE    FAA    .
- TFS      FAC    CAD    .      .
- TFS      FAG    CAD    .      .
- TFS      FAA    CAD    .      END
+TFS     FAC     F       F       0       1.589       0.770       -0.803      
+TFS     CAD     C       CT      0       1.041       -0.177      -0.060      
+TFS     FAG     F       F       0       1.580       -1.331      -0.420      
+TFS     FAA     F       F       0       1.383       0.050       1.197       
+TFS     SAE     S       S3      0       -0.753      -0.205      -0.255      
+TFS     OAH     O       OH1     0       -1.176      1.228       0.155       
+TFS     OAF     O       O       0       -1.238      -1.160      0.691       
+TFS     OAB     O       O       0       -0.996      -0.422      -1.646      
+TFS     HOAH    H       H       0       -1.806      1.476       -0.292      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- TFS      FAC    CAD       single      1.320    0.020
- TFS      FAG    CAD       single      1.320    0.020
- TFS      FAA    CAD       single      1.320    0.020
- TFS      CAD    SAE       single      1.662    0.020
- TFS      OAF    SAE       double      1.436    0.020
- TFS      SAE    OAB       double      1.436    0.020
- TFS      OAH    SAE       single      1.635    0.020
- TFS      HOAH   OAH       single      0.967    0.020
+TFS         FAC         CAD      SINGLE       n     1.323   0.011
+TFS         CAD         FAG      SINGLE       n     1.323   0.011
+TFS         CAD         FAA      SINGLE       n     1.323   0.011
+TFS         CAD         SAE      SINGLE       n     1.804   0.020
+TFS         SAE         OAF      DOUBLE       n     1.429   0.020
+TFS         SAE         OAB      DOUBLE       n     1.429   0.020
+TFS         SAE         OAH      SINGLE       n     1.549   0.020
+TFS         OAH        HOAH      SINGLE       n     0.811   0.020
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -78,19 +53,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- TFS      OAB    SAE    OAF     109.500    3.000
- TFS      OAB    SAE    OAH     109.500    3.000
- TFS      OAB    SAE    CAD     109.500    3.000
- TFS      OAF    SAE    OAH     109.500    3.000
- TFS      OAF    SAE    CAD     109.500    3.000
- TFS      OAH    SAE    CAD     109.500    3.000
- TFS      SAE    OAH    HOAH    120.000    3.000
- TFS      SAE    CAD    FAC     109.500    3.000
- TFS      SAE    CAD    FAG     109.500    3.000
- TFS      SAE    CAD    FAA     109.500    3.000
- TFS      FAC    CAD    FAG     109.470    3.000
- TFS      FAC    CAD    FAA     109.470    3.000
- TFS      FAG    CAD    FAA     109.470    3.000
+TFS         FAC         CAD         FAG     107.491    1.50
+TFS         FAC         CAD         FAA     107.491    1.50
+TFS         FAC         CAD         SAE     111.072    1.50
+TFS         FAG         CAD         FAA     107.491    1.50
+TFS         FAG         CAD         SAE     111.072    1.50
+TFS         FAA         CAD         SAE     111.072    1.50
+TFS         CAD         SAE         OAF     106.183    1.64
+TFS         CAD         SAE         OAB     106.183    1.64
+TFS         CAD         SAE         OAH     103.568    2.80
+TFS         OAF         SAE         OAB     119.289    2.60
+TFS         OAF         SAE         OAH     110.831    2.65
+TFS         OAB         SAE         OAH     110.831    2.65
+TFS         SAE         OAH        HOAH     110.371    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -101,16 +76,22 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TFS      var_1    OAB    SAE    OAH    HOAH     -63.943   20.000   1
- TFS      var_2    OAB    SAE    CAD    FAA       68.380   20.000   1
+TFS             sp3_sp3_1         FAC         CAD         SAE         OAF     180.000   10.00     3
+TFS            sp3_sp3_10        HOAH         OAH         SAE         CAD     180.000   10.00     3
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- TFS      chir_01  CAD    FAC    FAG    FAA       negativ
- TFS      chir_02  SAE    CAD    OAH    OAF       negativ
-# ------------------------------------------------------
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+TFS SMILES           ACDLabs              10.04 "FC(F)(F)S(=O)(=O)O"
+TFS SMILES_CANONICAL CACTVS               3.341 "O[S](=O)(=O)C(F)(F)F"
+TFS SMILES           CACTVS               3.341 "O[S](=O)(=O)C(F)(F)F"
+TFS SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(F)(F)(F)S(=O)(=O)O"
+TFS SMILES           "OpenEye OEToolkits" 1.5.0 "C(F)(F)(F)S(=O)(=O)O"
+TFS InChI            InChI                1.03  "InChI=1S/CHF3O3S/c2-1(3,4)8(5,6)7/h(H,5,6,7)"
+TFS InChIKey         InChI                1.03  ITMCEJHCFYSIIV-UHFFFAOYSA-N
+TFS ?                acedrg               202         "dictionary generator"                  
+TFS ?                acedrg_database      11          "data source"                           
+TFS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+TFS ?                refmac5              5.8.0189    "optimization tool"                     
