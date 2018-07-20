@@ -25606,8 +25606,8 @@ ILG_CD-p ILG      .        .        .        .        peptide
 ACYSNN      ACY      ACYmod      .      SNN      SNNmod      .      'ACYSNN'
 ALASNN      .        ALAmod    peptide  SNN      SNNmod      .      'ALASNN'
 XYPa-XYP   XYP       XYPmod1   .        XYP      XYPmod2     .  XYP-XYP
-TPN-TPN  TPN      TPNmodC  .          TPN      TPNmodN  .
- TPN-TPN
+XYP-BMA     XYP      XYPmol1  .         BMA      DEL-HO2    .  bond_XYP-C1B=_BMA-O2
+TPN-TPN  TPN      TPNmodC  .          TPN      TPNmodN  . TPN-TPN
 PEP-ORN  .      DEL-OXT    peptide    ORN      ORN-NE   .      PEP-ORN
 symmetry .        .        .        .        .        .
  dummy_link
@@ -27880,6 +27880,48 @@ _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
  XYPa-XYP chir_08  1 C1B    2 O4B    1 C2B    1 O5B       both
+#
+data_link_XYP-BMA
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ XYP-BMA 1 C1B    2 O2        single      1.426    0.020
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ XYP-BMA 2 C2     2 O2     1 C1B     111.800    3.000
+ XYP-BMA 2 O2     1 C1B    1 H1B     109.470    3.000
+ XYP-BMA 2 O2     1 C1B    1 C2B     109.470    3.000
+ XYP-BMA 2 O2     1 C1B    1 O5B     109.470    3.000
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+ XYP-BMA chir_08  1 C1B    2 O2     1 C2B    1 O5B       both
 #
 data_link_ZN-CYS
 #
