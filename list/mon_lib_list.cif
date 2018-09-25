@@ -25491,6 +25491,7 @@ _chem_link.comp_id_2
 _chem_link.mod_id_2
 _chem_link.group_comp_2
 _chem_link.name
+DG9-SER        DG9       DG9mod1     .                   SER       DEL-HG     .                   DG9-SER
 SS        .       CYS-SS   peptide  .        CYS-SS   peptide
  SS-bridge
 disulf   CYS      CYS-SS   .        CYS      CYS-SS   .
@@ -25649,6 +25650,7 @@ _chem_mod.id
 _chem_mod.name
 _chem_mod.comp_id
 _chem_mod.group_id
+DG9mod1   DG9                                            DG9       .
 CYS-SS   HG-deletete                                     CYS       .
 CYSmod1  CYS-HG-delete_with_atom_type                    CYS      .
 NH3      NH3-terminus                                     .        peptide
@@ -26528,6 +26530,63 @@ _chem_link_tor.period
  p        alpha    1 'O3''    2 P        2 'O5''  2 'C5''      80.00  20.0 2
  p        beta     2  P       2 'O5''    2 'C5''  2 'C4''     183.00  15.0 1
 #
+data_link_DG9-SER
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+DG9-SER   1         P2A       2         OG        SINGLE    1.606       0.011       
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+DG9-SER   1         O3        1         P2A       2         OG        107.777        3.00      
+DG9-SER   1         O4A       1         P2A       2         OG        107.777        3.00      
+DG9-SER   1         O6A       1         P2A       2         OG        102.789        2.10      
+DG9-SER   2         CB        2         OG        1         P2A       119.251        1.51      
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+DG9-SER   sp3_sp3_1       2         CB        2         OG        1         P2A       1         O3        180.000        10.00     3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+DG9-SER   1         P2A       1         O3        1         O4A       1         O6A       both      
+
 data_link_FOR_C-N
 #
 loop_
@@ -30621,6 +30680,57 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
  DEL-HD22 delete   HD22   .      .    .        .000
+#
+data_mod_DG9mod1
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+DG9mod1        delete         O5A       .         O         OP        -1
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+DG9mod1        delete         P2A       O5A       single         .              .
+DG9mod1        change         O3        P2A       single         1.504          0.011
+DG9mod1        change         P2A       O4A       double         1.504          0.011
+DG9mod1        change         P2A       O6A       single         1.606          0.011
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+DG9mod1        delete         O3        P2A       O5A       .              .
+DG9mod1        delete         O4A       P2A       O5A       .              .
+DG9mod1        delete         O5A       P2A       O6A       .              .
+DG9mod1        change         O3        P2A       O4A       119.782        1.83
+DG9mod1        change         O3        P2A       O6A       107.777        3.00
+DG9mod1        change         O4A       P2A       O6A       107.777        3.00
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+DG9mod1        change         CCP       O6A       P2A       O3        -60.000        10.00
 #
 data_mod_DEL-HG
 #
