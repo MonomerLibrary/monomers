@@ -15359,7 +15359,7 @@ GYM     GYM     "(2R)-2,3-dihydroxypropyltetradecanoate"     non-polymer     55 
 GYN     GYN      "GYMNODIMINE A"     non-polymer     84     37     .     
 GYP      GYP 'METHYL-ALPHA-D-GLUCOPYRANOSIDE      ' pyranose           27  13 .
 GYR     GYR      "{(2R)-1-[4-({3-METHYL-5-[(PHENYLSULFONYL)METHYL]PHENOXY}METHYL)BENZYL]PYRROLIDIN-2-YL}METHANOL"     NON-POLYMER     64     33     .     
-GYS      GYS '"[(4Z)-2-(1-AMINO-2-HYDROXYETHYL)-4-' non-polymer        36  22 .
+GYS     GYS      "[(4Z)-2-(1-AMINO-2-HYDROXYETHYL)-4-(4-HYDROXYBENZYLIDENE)-5-OXO-4,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETIC ACID"     .     36     22     .
 GYT     GYT      "BIS-(2-ACETAMIDO-2-DEOXY-ALPHA-D-GLUCOPYRANOSYLOXYCARBONYL)-4,7,10-TRIOXA-1,13-TRIDECANEDIAMINE"     NON-POLYMER     99     49     .     
 GYU     GYU     "2-(ACETYLAMINO)-2-DEOXY-1-O-(PROPYLCARBAMOYL)-ALPHA-D-GLUCOPYRANOSE"     NON-POLYMER     43     21     .     
 GYV      GYV '2-(ACETYLAMINO)-1-O-CARBAMOYL-2-DEOX' non-polymer        34  18 .
@@ -19601,7 +19601,7 @@ ORE     ORE     "4-(2,7-DIFLUORO-6-HYDROXY-3-OXO-3H-XANTHEN-9-YL)ISOPHTHALICACID
 ORG     ORG      "4-(cyclohexylamino)-6-piperazin-1-yl-1,3,5-triazine-2-carbonitrile"     NON-POLYMER     42     21     .     
 ORH     ORH      "3,5-dioxo-4-(3-piperidin-1-ylpropyl)-2-[3-(trifluoromethyl)phenyl]-2,3,4,5-tetrahydro-1,2,4-triazine-6-carbonitrile"     NON-POLYMER     49     29     .     
 ORI     ORI      "4-[(E)-(4-hydroxynaphthalen-1-yl)diazenyl]benzenesulfonic acid"     NON-POLYMER     35     23     .     
-ORN     ORN     L-ornithine     non-polymer     21     9     .
+ORN     ORN     L-ornithine     peptide     21     9     .
 ORO     ORO      "OROTIC ACID"     NON-POLYMER     14     11     .     
 ORP      ORP '2-DEOXY-5-PHOSPHONO-RIBOSE          ' non-polymer        22  13 .
 ORQ     ORQ     N~5~-ACETYL-L-ORNITHINE     peptide     26     12     .
@@ -25521,19 +25521,10 @@ CYS-MPR  CYS      CYS-SS   .        MPR      .        .
  SS-bridge
 TRANS          .    DEL-OXT     peptide      .     DEL-HN1     peptide     TRANS
 CIS            .    DEL-OXT     peptide      .     DEL-HN1     peptide     CIS
-PTRANS        .     DEL-OXT     peptide    .   DEL-HNP     peptide         PTRANS
-PCIS          .     DEL-OXT     peptide    .   DEL-HNP     peptide         PCIS
-#TRANS    .      .          peptide  .        .        peptide
-# default-peptide-link
-#PTRANS   .        .        peptide  PRO      .        .
-# default-peptide-link_pro
+PTRANS        .     DEL-OXT     peptide      .  DEL-HNP      peptide        PTRANS
+PCIS          .     DEL-OXT     peptide      .   DEL-HNP     peptide         PCIS
 NMTRANS  .    DEL-OXT1     peptide   .    DEL-NMH     peptide      NMTRANS
-#CIS      .        .        peptide  .        .        peptide
-# cis-peptide-link
-#PCIS     .        .        peptide  PRO      .        .
-# cis-peptide-link_pro
-NMCIS    .        .        peptide  PRO      .        .
- cis-peptide-link_cn
+NMCIS    .    DEL-OXT1     peptide   .    DEL-NMH     peptide      NMCIS
 gap      .        .        .        .        .        .
  gap-link
 p        .       DEL_HO3p  DNA/RNA  .      DEL_OP3    DNA/RNA
@@ -25620,7 +25611,7 @@ XYS-SER  XYS      XYS-O1   .        SER      DEL-HG   .
  bond_XYS-C1_=_SER-OG
 XYS-ASN  XYS      XYS-O1   .        ASN      DEL-HD22 .
  bond_XYS-C1_=_ASN-ND2
-ZN-CYS   ZN       .        .        CYS      .        .
+ZN-CYS   ZN       .        .        CYS      CYSmod1  .
  bond_ZN_=_CYS-SG
 ZN-HISND ZN       .        .        HIS      DEL-HD1  .
  bond_ZN_=_HIS-ND1
@@ -25630,8 +25621,28 @@ HEC-CYS1  HEC      HECmod1  .          CYS      CYSmod1  .
  HEC_CAC-CYS1
 HEC-CYS2  HEC      HECmod2  .          CYS      CYSmod1  .
  HEC_CAB-CYS2
-FE-CYS   FE       .        .        CYS      .        .
+FE-CYS   FE       .        .        CYS     CYSmod1   .
  bond_FE_=_CYS-SG
+FE-HISND FE       .        .        HIS      DEL-HD1  .
+ bond_FE_=_HIS-ND1
+FE-HISNE FE       .        .        HIS      DEL-HE2  .
+ bond_FE_=_HIS-NE2
+SF41-CYS   FE1     SF4       .        CYS      CYSmod1        .
+ bond_SF41_CYS-SG
+SF42-CYS   FE2     SF4       .        CYS      CYSmod1        .
+ bond_SF42_CYS-SG
+SF43-CYS   FE3     SF4       .        CYS      CYSmod1        .
+ bond_SF43_CYS-SG
+SF44-CYS   FE4     SF4       .        CYS      CYSmod1        .
+ bond_SF44_CYS-SG
+SF31-CYS   FE1     .         .        CYS      CYSmod1        .
+ bond_SF31_CYS-SG
+SF32-CYS   FE2     .         .        CYS      CYSmod1        .
+ bond_SF32_CYS-SG
+SF33-CYS   FE3    .         .        CYS      CYSmod1        .
+ bond_SF33_CYS-SG
+SF34-CYS   FE4    .         .        CYS      CYSmod1        .
+ bond_SF34_CYS-SG
 SFN-TYR  SFN      .        .        TYR      .        .
  bond_SFN-S_=_TYR-OH
 CH2-N2   CH2      .        .        .        .        DNA/RNA
@@ -28212,6 +28223,248 @@ _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
  FE-CYS   1 FE      2 SG      2 CB      109.470    3.000
 #
+data_link_FE-HISND
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ FE-HISND 1 FE      2 ND1       single      2.057     .064
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ FE-HISND 1 FE      2 ND1     2 CG      125.350    3.000
+ FE-HISND 1 FE      2 ND1     2 CE1     125.350    3.000
+#
+data_link_FE-HISNE
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ FE-HISNE 1 FE      2 NE2       single      2.058     .073
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ FE-HISNE 1 FE      2 NE2     2 CD2     125.500    3.000
+ FE-HISNE 1 FE      2 NE2     2 CE1     125.500    3.000
+#
+data_link_SF41-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF41-CYS 1 FE1     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF41-CYS 1 FE1     2 SG      2 CB      113.470    3.000
+#
+data_link_SF42-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF42-CYS 1 FE2     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF42-CYS 1 FE2     2 SG      2 CB      113.470    3.000
+#
+data_link_SF43-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF43-CYS 1 FE3     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF43-CYS 1 FE3     2 SG      2 CB      113.470    3.000
+#
+data_link_SF44-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF44-CYS 1 FE4     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF44-CYS 1 FE4     2 SG      2 CB      113.470    3.000
+#
+data_link_SF31-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF31-CYS 1 FE1     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF31-CYS 1 FE1     2 SG      2 CB      113.470    3.000
+#
+data_link_SF32-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF32-CYS 1 FE2     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF32-CYS 1 FE2     2 SG      2 CB      113.470    3.000
+#
+data_link_SF33-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF33-CYS 1 FE3     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF33-CYS 1 FE3     2 SG      2 CB      113.470    3.000
+#
+data_link_SF34-CYS
+#
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ SF34-CYS 1 FE4     2 SG        single      2.260     .020
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ SF34-CYS 1 FE4     2 SG      2 CB      113.470    3.000
+
 data_link_SFN-TYR
 #
 loop_
@@ -29689,11 +29942,6 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
-DEL-HNP        delete         H1        .         H         H         0
-DEL-HNP        delete         H2        .         H         H         0
-DEL-HNP        delete         HN        .         H         H         0
-DEL-HNP        delete         HN1       .         H         H         0
-DEL-HNP        delete         HN2       .         H         H         0
 DEL-HNP        delete         H         .         H         H         0
 DEL-HNP        change         N         .         N         NT        0
 loop_
@@ -29729,12 +29977,6 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
-DEL-HN1        delete         HN1       .         H         H         0
-DEL-HN1        delete         HN2       .         H         H         0
-DEL-HN1        delete         HN3       .         H         H         0
-DEL-HN1        delete         H1        .         H         H         0
-DEL-HN1        delete         H2        .         H         H         0
-DEL-HN1        delete         H3        .         H         H         0
 DEL-HN1        delete         HN        .         H         H         0
 DEL-HN1        change         N         .         N         NH1       0
 loop_
