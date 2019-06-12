@@ -25521,10 +25521,12 @@ CYS-MPR  CYS      CYS-SS   .        MPR      .        .
  SS-bridge
 TRANS          .    DEL-OXT     peptide      .     DEL-HN1     peptide     TRANS
 CIS            .    DEL-OXT     peptide      .     DEL-HN1     peptide     CIS
-PTRANS        .     DEL-OXT     peptide      .  DEL-HNP      peptide        PTRANS
-PCIS          .     DEL-OXT     peptide      .   DEL-HNP     peptide         PCIS
-NMTRANS  .    DEL-OXT1     peptide   .    DEL-NMH     peptide      NMTRANS
-NMCIS    .    DEL-OXT1     peptide   .    DEL-NMH     peptide      NMCIS
+PTRANS        .     DEL-OXT     peptide      .  DEL-HNP      P-peptide        PTRANS
+PCIS          .     DEL-OXT     peptide      .   DEL-HNP     P-peptide         PCIS
+NMTRANS  .    DEL-OXT1     peptide   .    DEL-NMH     M-peptide      NMTRANS
+NMCIS    .    DEL-OXT1     peptide   .    DEL-NMH     M-peptide      NMCIS
+VAL-SUI        VAL       DEL-OXT     .                   SUI       SUImod1     .                   VAL-SUI
+SUI-GLN        SUI       DEL-OXT     .                   GLN       DEL-HN1     .                   SUI-GLN
 gap      .        .        .        .        .        .
  gap-link
 p        .       DEL_HO3p  DNA/RNA  .      DEL_OP3    DNA/RNA
@@ -25716,6 +25718,7 @@ DEL-OXT1 delete_OXT_from_peptide                          .        peptide
 DEL-HN1  delete_Hs_from_peptide                           .        peptide
 DEL-NMH  delete_Hs_from_NMpeptide                         .        peptide
 DEL-HNP  delete_Hs_from_peptide                           .        peptide
+SUImod1   "(3-AMINO-2,5-DIOXO-1-PYRROLIDINYL)ACETIC ACID"      SUI       .
 SUG-b-L  change_sugar_to_beta_L                           .        pyranose
 SUG-a-D  change_sugar_to_alpha_D                          .        pyranose
 SUG-b-D  change_sugar_to_beta_D                           .        pyranose
@@ -26507,6 +26510,118 @@ _chem_link_plane.dist_esd
  NMCIS      plane2    2 CA         .050
  NMCIS      plane2    2 CN         .050
 #
+data_link_VAL-SUI
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+VAL-SUI   1         C         2         N         SINGLE    1.339       0.010       
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+VAL-SUI   1         CA        1         C         2         N         115.812        1.98      
+VAL-SUI   1         O         1         C         2         N         123.296        1.50      
+VAL-SUI   2         C1A       2         N         1         C         122.429        1.92      
+VAL-SUI   1         C         2         N         2         H         118.411        1.50      
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+VAL-SUI   sp2_sp2_1       1         CA        1         C         2         N         2         C1A       180.000        10.00     2
+loop_
+_chem_link_plane.link_id
+_chem_link_plane.plane_id
+_chem_link_plane.atom_comp_id
+_chem_link_plane.atom_id
+_chem_link_plane.dist_esd
+VAL-SUI   plan-1    1         CA        0.020     
+VAL-SUI   plan-1    1         C         0.020     
+VAL-SUI   plan-1    2         N         0.020     
+VAL-SUI   plan-1    1         O         0.020     
+VAL-SUI   plan-2    2         C1A       0.020     
+VAL-SUI   plan-2    1         C         0.020     
+VAL-SUI   plan-2    2         H         0.020     
+VAL-SUI   plan-2    2         N         0.020     
+#
+data_link_SUI-GLN
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+SUI-GLN   1         C         2         N         SINGLE    1.334       0.010       
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+SUI-GLN   1         C2A       1         C         2         N         114.639        1.99      
+SUI-GLN   1         O         1         C         2         N         123.577        1.50      
+SUI-GLN   2         CA        2         N         1         C         122.394        1.76      
+SUI-GLN   1         C         2         N         2         H         119.284        1.94      
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+SUI-GLN   sp2_sp2_1       1         C2A       1         C         2         N         2         CA        180.000        10.00     2
+loop_
+_chem_link_plane.link_id
+_chem_link_plane.plane_id
+_chem_link_plane.atom_comp_id
+_chem_link_plane.atom_id
+_chem_link_plane.dist_esd
+SUI-GLN   plan-4    1         C         0.020     
+SUI-GLN   plan-4    1         C2A       0.020     
+SUI-GLN   plan-4    2         N         0.020     
+SUI-GLN   plan-4    1         O         0.020     
+SUI-GLN   plan-8    1         C         0.020     
+SUI-GLN   plan-8    2         CA        0.020     
+SUI-GLN   plan-8    2         H         0.020     
+SUI-GLN   plan-8    2         N         0.020     
+
 data_link_gap
 #
 #
@@ -29967,6 +30082,7 @@ _chem_mod_angle.new_value_angle_esd
 DEL-HNP        delete         CA        N         H         .              .
 DEL-HNP        delete         CD        N         H         .              .
 DEL-HNP        change         CA        N         CD        112.409        1.50
+#
 data_mod_DEL-HN1
 
 loop_
@@ -29977,7 +30093,8 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
-DEL-HN1        delete         HN        .         H         H         0
+DEL-HN1        delete         H2        .         H         H         0
+DEL-HN1        delete         H3        .         H         H         0
 DEL-HN1        change         N         .         N         NH1       0
 loop_
 _chem_mod_bond.mod_id
@@ -30053,6 +30170,60 @@ _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 DEL-NMH        change         CN        N         CA        C         0.000          10.00
 DEL-NMH        change         CA        N         CN        HN1C      0.000          10.00
+#
+data_mod_SUImod1
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+SUImod1        delete         HN        .         H         H         0         
+SUImod1        delete         H1        .         H         H         0         
+SUImod1        change         N         .         N         NH1       0         
+SUImod1        change         N2        .         N         NT        0         
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+SUImod1        delete         N         HN        single         .              .         
+SUImod1        delete         N         H1        single         .              .         
+SUImod1        change         N         C1A       single         1.437          0.013     
+SUImod1        change         N         H         single         0.876          0.011     
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+SUImod1        delete         C1A       N         HN        .              .              
+SUImod1        delete         C1A       N         H1        .              .              
+SUImod1        delete         HN        N         H         .              .              
+SUImod1        delete         HN        N         H1        .              .              
+SUImod1        delete         H         N         H1        .              .              
+SUImod1        change         C1A       N         H         119.160        1.50           
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+SUImod1        delete         CB        C1A       N         HN        .              .              
 
 #data_mod_DEL-HN1
 #
