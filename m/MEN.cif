@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MEN      MEN 'N-METHYL ASPARAGINE                 ' peptide            19  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MEN     MEN      "N-METHYL ASPARAGINE"     "L-PEPTIDE LINKING"     20     10     .     
 #
 data_comp_MEN
 #
@@ -28,79 +17,57 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MEN           N      N    NH2       0.000      0.000    0.000    0.000
- MEN           HN1    H    H         0.000      0.944   -0.334    0.155
- MEN           HN2    H    H         0.000     -0.352    0.071   -0.948
- MEN           CA     C    CH1       0.000     -0.850    0.378    1.138
- MEN           HA     H    H         0.000     -1.064    1.454    1.093
- MEN           CB     C    CH2       0.000     -2.161   -0.406    1.078
- MEN           HB2    H    H         0.000     -2.791   -0.124    1.924
- MEN           HB3    H    H         0.000     -1.947   -1.476    1.125
- MEN           CG     C    C         0.000     -2.875   -0.091   -0.210
- MEN           OD1    O    O         0.000     -2.385    0.685   -1.002
- MEN           ND2    N    NH1       0.000     -4.062   -0.670   -0.482
- MEN           HND2   H    H         0.000     -4.472   -1.316    0.178
- MEN           CE2    C    CH3       0.000     -4.757   -0.363   -1.734
- MEN           HE23   H    H         0.000     -4.965    0.675   -1.781
- MEN           HE22   H    H         0.000     -4.147   -0.636   -2.557
- MEN           HE21   H    H         0.000     -5.668   -0.905   -1.779
- MEN           C      C    C         0.000     -0.132    0.062    2.425
- MEN           O      O    OC       -0.500      0.677   -0.890    2.474
- MEN           OXT    O    OC       -0.500     -0.349    0.752    3.446
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MEN      N      n/a    CA     START
- MEN      HN1    N      .      .
- MEN      HN2    N      .      .
- MEN      CA     N      C      .
- MEN      HA     CA     .      .
- MEN      CB     CA     CG     .
- MEN      HB2    CB     .      .
- MEN      HB3    CB     .      .
- MEN      CG     CB     ND2    .
- MEN      OD1    CG     .      .
- MEN      ND2    CG     CE2    .
- MEN      HND2   ND2    .      .
- MEN      CE2    ND2    HE21   .
- MEN      HE23   CE2    .      .
- MEN      HE22   CE2    .      .
- MEN      HE21   CE2    .      .
- MEN      C      CA     .      END
- MEN      O      C      .      .
- MEN      OXT    C      .      .
+MEN     N       N       NT3     1       -15.654     -22.232     22.719      
+MEN     CA      C       CH1     0       -15.001     -21.347     21.717      
+MEN     C       C       C       0       -15.233     -21.920     20.313      
+MEN     O       O       O       0       -15.540     -21.113     19.412      
+MEN     CB      C       CH2     0       -13.508     -21.172     22.013      
+MEN     CG      C       C       0       -12.861     -20.077     21.199      
+MEN     OD1     O       O       0       -12.004     -20.347     20.359      
+MEN     ND2     N       NH1     0       -13.267     -18.831     21.453      
+MEN     CE2     C       CH3     0       -12.784     -17.658     20.745      
+MEN     OXT     O       OC      -1      -15.099     -23.151     20.173      
+MEN     H       H       H       0       -15.301     -23.071     22.673      
+MEN     H2      H       H       0       -16.550     -22.278     22.559      
+MEN     H3      H       H       0       -15.521     -21.903     23.558      
+MEN     HA      H       H       0       -15.425     -20.459     21.769      
+MEN     HB2     H       H       0       -13.048     -22.017     21.831      
+MEN     HB3     H       H       0       -13.396     -20.967     22.964      
+MEN     HD2     H       H       0       -13.854     -18.708     22.087      
+MEN     HE21    H       H       0       -12.452     -17.906     19.868      
+MEN     HE22    H       H       0       -12.069     -17.243     21.255      
+MEN     HE23    H       H       0       -13.512     -17.023     20.641      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- MEN      CA     N         single      1.450    0.020
- MEN      C      CA        single      1.500    0.020
- MEN      CB     CA        single      1.524    0.020
- MEN      HA     CA        single      1.099    0.020
- MEN      O      C         deloc       1.250    0.020
- MEN      OXT    C         deloc       1.250    0.020
- MEN      CG     CB        single      1.510    0.020
- MEN      HB2    CB        single      1.092    0.020
- MEN      HB3    CB        single      1.092    0.020
- MEN      OD1    CG        double      1.220    0.020
- MEN      ND2    CG        single      1.330    0.020
- MEN      CE2    ND2       single      1.450    0.020
- MEN      HE21   CE2       single      1.059    0.020
- MEN      HE22   CE2       single      1.059    0.020
- MEN      HE23   CE2       single      1.059    0.020
- MEN      HN1    N         single      1.010    0.020
- MEN      HN2    N         single      1.010    0.020
- MEN      HND2   ND2       single      1.010    0.020
+MEN           N          CA      SINGLE       n     1.488  0.0100
+MEN          CA           C      SINGLE       n     1.533  0.0100
+MEN          CA          CB      SINGLE       n     1.531  0.0107
+MEN           C           O      DOUBLE       n     1.247  0.0187
+MEN           C         OXT      SINGLE       n     1.247  0.0187
+MEN          CB          CG      SINGLE       n     1.508  0.0116
+MEN          CG         OD1      DOUBLE       n     1.229  0.0102
+MEN          CG         ND2      SINGLE       n     1.329  0.0100
+MEN         ND2         CE2      SINGLE       n     1.450  0.0100
+MEN           N           H      SINGLE       n     0.911  0.0200
+MEN           N          H2      SINGLE       n     0.911  0.0200
+MEN           N          H3      SINGLE       n     0.911  0.0200
+MEN          CA          HA      SINGLE       n     0.986  0.0200
+MEN          CB         HB2      SINGLE       n     0.979  0.0159
+MEN          CB         HB3      SINGLE       n     0.979  0.0159
+MEN         ND2         HD2      SINGLE       n     0.872  0.0200
+MEN         CE2        HE21      SINGLE       n     0.971  0.0198
+MEN         CE2        HE22      SINGLE       n     0.971  0.0198
+MEN         CE2        HE23      SINGLE       n     0.971  0.0198
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -108,36 +75,39 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MEN      HN1    N      HN2     120.000    3.000
- MEN      HN1    N      CA      120.000    3.000
- MEN      HN2    N      CA      120.000    3.000
- MEN      N      CA     HA      109.470    3.000
- MEN      N      CA     CB      109.470    3.000
- MEN      N      CA     C       109.470    3.000
- MEN      HA     CA     CB      108.340    3.000
- MEN      HA     CA     C       108.810    3.000
- MEN      CB     CA     C       109.470    3.000
- MEN      CA     CB     HB2     109.470    3.000
- MEN      CA     CB     HB3     109.470    3.000
- MEN      CA     CB     CG      109.470    3.000
- MEN      HB2    CB     HB3     107.900    3.000
- MEN      HB2    CB     CG      109.470    3.000
- MEN      HB3    CB     CG      109.470    3.000
- MEN      CB     CG     OD1     120.500    3.000
- MEN      CB     CG     ND2     116.500    3.000
- MEN      OD1    CG     ND2     123.000    3.000
- MEN      CG     ND2    HND2    120.000    3.000
- MEN      CG     ND2    CE2     121.500    3.000
- MEN      HND2   ND2    CE2     118.500    3.000
- MEN      ND2    CE2    HE23    109.470    3.000
- MEN      ND2    CE2    HE22    109.470    3.000
- MEN      ND2    CE2    HE21    109.470    3.000
- MEN      HE23   CE2    HE22    109.470    3.000
- MEN      HE23   CE2    HE21    109.470    3.000
- MEN      HE22   CE2    HE21    109.470    3.000
- MEN      CA     C      O       118.500    3.000
- MEN      CA     C      OXT     118.500    3.000
- MEN      O      C      OXT     123.000    3.000
+MEN          CA           N           H     110.062    1.93
+MEN          CA           N          H2     110.062    1.93
+MEN          CA           N          H3     110.062    1.93
+MEN           H           N          H2     109.028    2.41
+MEN           H           N          H3     109.028    2.41
+MEN          H2           N          H3     109.028    2.41
+MEN           N          CA           C     109.241    1.50
+MEN           N          CA          CB     111.766    1.50
+MEN           N          CA          HA     108.487    1.50
+MEN           C          CA          CB     111.540    2.60
+MEN           C          CA          HA     108.824    1.50
+MEN          CB          CA          HA     107.983    1.50
+MEN          CA           C           O     117.124    1.50
+MEN          CA           C         OXT     117.124    1.50
+MEN           O           C         OXT     125.752    1.50
+MEN          CA          CB          CG     112.799    1.50
+MEN          CA          CB         HB2     108.904    1.50
+MEN          CA          CB         HB3     108.904    1.50
+MEN          CG          CB         HB2     108.972    1.50
+MEN          CG          CB         HB3     108.972    1.50
+MEN         HB2          CB         HB3     108.069    1.50
+MEN          CB          CG         OD1     121.187    1.50
+MEN          CB          CG         ND2     116.390    1.50
+MEN         OD1          CG         ND2     122.423    1.50
+MEN          CG         ND2         CE2     122.714    1.50
+MEN          CG         ND2         HD2     118.811    1.50
+MEN         CE2         ND2         HD2     118.475    1.58
+MEN         ND2         CE2        HE21     109.480    1.50
+MEN         ND2         CE2        HE22     109.480    1.50
+MEN         ND2         CE2        HE23     109.480    1.50
+MEN        HE21         CE2        HE22     109.279    1.79
+MEN        HE21         CE2        HE23     109.279    1.79
+MEN        HE22         CE2        HE23     109.279    1.79
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -148,11 +118,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MEN      var_1    HN2    N      CA     C        175.000   20.000   1
- MEN      var_2    N      CA     CB     CG       -59.926   20.000   3
- MEN      var_3    CA     CB     CG     ND2     -179.942   20.000   3
- MEN      CONST_1  CB     CG     ND2    CE2      180.000    0.000   0
- MEN      var_4    CG     ND2    CE2    HE21     179.976   20.000   1
+MEN             sp3_sp3_4           C          CA           N           H      60.000   10.00     3
+MEN             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+MEN            sp3_sp3_13           N          CA          CB          CG      60.000   10.00     3
+MEN             sp2_sp3_8         OD1          CG          CB          CA     120.000   10.00     6
+MEN             sp2_sp2_1          CB          CG         ND2         CE2     180.000   10.00     2
+MEN            sp2_sp3_13          CG         ND2         CE2        HE21       0.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -161,27 +132,38 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- MEN      chir_01  CA     N      C      CB        positiv
+MEN    chir_1    CA    N    C    CB    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- MEN      plan-1    N         0.020
- MEN      plan-1    CA        0.020
- MEN      plan-1    HN1       0.020
- MEN      plan-1    HN2       0.020
- MEN      plan-2    C         0.020
- MEN      plan-2    CA        0.020
- MEN      plan-2    O         0.020
- MEN      plan-2    OXT       0.020
- MEN      plan-3    CG        0.020
- MEN      plan-3    CB        0.020
- MEN      plan-3    OD1       0.020
- MEN      plan-3    ND2       0.020
- MEN      plan-3    HND2      0.020
- MEN      plan-4    ND2       0.020
- MEN      plan-4    CG        0.020
- MEN      plan-4    CE2       0.020
- MEN      plan-4    HND2      0.020
-# ------------------------------------------------------
+MEN    plan-1           C   0.020
+MEN    plan-1          CA   0.020
+MEN    plan-1           O   0.020
+MEN    plan-1         OXT   0.020
+MEN    plan-2          CB   0.020
+MEN    plan-2          CG   0.020
+MEN    plan-2         ND2   0.020
+MEN    plan-2         OD1   0.020
+MEN    plan-3         CE2   0.020
+MEN    plan-3          CG   0.020
+MEN    plan-3         HD2   0.020
+MEN    plan-3         ND2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MEN SMILES           ACDLabs              10.04 "O=C(NC)CC(N)C(=O)O"
+MEN SMILES_CANONICAL CACTVS               3.341 "CNC(=O)C[C@H](N)C(O)=O"
+MEN SMILES           CACTVS               3.341 "CNC(=O)C[CH](N)C(O)=O"
+MEN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "CNC(=O)C[C@@H](C(=O)O)N"
+MEN SMILES           "OpenEye OEToolkits" 1.5.0 "CNC(=O)CC(C(=O)O)N"
+MEN InChI            InChI                1.03  "InChI=1S/C5H10N2O3/c1-7-4(8)2-3(6)5(9)10/h3H,2,6H2,1H3,(H,7,8)(H,9,10)/t3-/m0/s1"
+MEN InChIKey         InChI                1.03  CFRMVEKWKKDNAH-VKHMYHEASA-N
+MEN ?                acedrg               212         "dictionary generator"                  
+MEN ?                acedrg_database      11          "data source"                           
+MEN ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MEN ?                refmac5              5.8.0254    "optimization tool"                     
