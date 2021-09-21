@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SUI      SUI '(3-AMINO-2,5-DIOXO-1-PYRROLIDINYL)AC' non-polymer        19  12 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+SUI     SUI      "(3-AMINO-2,5-DIOXO-1-PYRROLIDINYL)ACETIC ACID"     "L-PEPTIDE LINKING"     20     12     .     
 #
 data_comp_SUI
 #
@@ -28,83 +17,60 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SUI           OXT    O    OC       -0.500      0.000    0.000    0.000
- SUI           C      C    C         0.000     -1.197    0.162    0.325
- SUI           O      O    OC       -0.500     -1.607    1.296    0.658
- SUI           C2A    C    CH2       0.000     -2.145   -1.009    0.316
- SUI           H2A    H    H         0.000     -1.784   -1.774    1.008
- SUI           H2B    H    H         0.000     -2.198   -1.427   -0.691
- SUI           N2     N    N         0.000     -3.476   -0.562    0.732
- SUI           CG     C    C         0.000     -4.395   -0.121   -0.135
- SUI           OD     O    O         0.000     -4.246   -0.037   -1.336
- SUI           CB     C    CH2       0.000     -5.651    0.257    0.620
- SUI           HB2    H    H         0.000     -6.512   -0.346    0.322
- SUI           HB1    H    H         0.000     -5.896    1.316    0.513
- SUI           C1     C    C         0.000     -3.875   -0.564    2.013
- SUI           O1     O    O         0.000     -3.203   -0.923    2.956
- SUI           C1A    C    CH1       0.000     -5.293   -0.044    2.089
- SUI           H1A    H    H         0.000     -5.964   -0.811    2.500
- SUI           N      N    NH2       0.000     -5.352    1.180    2.898
- SUI           H      H    H         0.000     -6.031    1.266    3.645
- SUI           HN     H    H         0.000     -4.715    1.946    2.714
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- SUI      OXT    n/a    C      START
- SUI      C      OXT    C2A    .
- SUI      O      C      .      .
- SUI      C2A    C      N2     .
- SUI      H2A    C2A    .      .
- SUI      H2B    C2A    .      .
- SUI      N2     C2A    C1     .
- SUI      CG     N2     CB     .
- SUI      OD     CG     .      .
- SUI      CB     CG     HB1    .
- SUI      HB2    CB     .      .
- SUI      HB1    CB     .      .
- SUI      C1     N2     C1A    .
- SUI      O1     C1     .      .
- SUI      C1A    C1     N      .
- SUI      H1A    C1A    .      .
- SUI      N      C1A    HN     .
- SUI      H      N      .      .
- SUI      HN     N      .      END
- SUI      C1A    CB     .    ADD
+SUI     CB      C       CH2     0       -1.526      -0.348      -0.959      
+SUI     C1A     C       CH1     0       -1.435      -0.464      0.563       
+SUI     C1      C       CR5     0       0.044       -0.654      0.833       
+SUI     O1      O       O       0       0.535       -0.928      1.915       
+SUI     N2      N       NR5     0       0.740       -0.448      -0.345      
+SUI     CG      C       CR5     0       -0.104      -0.205      -1.418      
+SUI     OD      O       O       0       0.279       0.084       -2.553      
+SUI     C2A     C       CH2     0       2.193       -0.462      -0.443      
+SUI     C       C       C       0       2.824       0.914       -0.244      
+SUI     O       O       O       0       2.584       1.771       -1.117      
+SUI     OXT     O       OC      -1      3.527       1.067       0.775       
+SUI     N       N       NT3     1       -1.985      0.729       1.276       
+SUI     HB1     H       H       0       -1.935      -1.146      -1.347      
+SUI     HB2     H       H       0       -2.051      0.435       -1.219      
+SUI     H1A     H       H       0       -1.928      -1.273      0.838       
+SUI     H2A     H       H       0       2.456       -0.804      -1.327      
+SUI     H2B     H       H       0       2.561       -1.078      0.230       
+SUI     HN      H       H       0       -1.480      1.458       1.098       
+SUI     H       H       H       0       -1.985      0.582       2.168       
+SUI     H1      H       H       0       -2.833      0.886       1.005       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-SUI       N         C1A       single    1.450     0.020     1.450     0.020     
-SUI       HN        N         single    1.036     0.016     0.914     0.007     
-SUI       H         N         single    1.036     0.016     0.914     0.007     
-SUI       C1A       CB        single    1.524     0.020     1.524     0.020     
-SUI       C1A       C1        single    1.500     0.020     1.500     0.020     
-SUI       H1A       C1A       single    1.089     0.010     0.989     0.005     
-SUI       CB        CG        single    1.510     0.020     1.510     0.020     
-SUI       HB1       CB        single    1.089     0.010     0.989     0.005     
-SUI       HB2       CB        single    1.089     0.010     0.989     0.005     
-SUI       OD        CG        double    1.220     0.020     1.220     0.020     
-SUI       CG        N2        single    1.330     0.020     1.330     0.020     
-SUI       O1        C1        double    1.220     0.020     1.220     0.020     
-SUI       C1        N2        single    1.330     0.020     1.330     0.020     
-SUI       N2        C2A       single    1.455     0.020     1.455     0.020     
-SUI       C2A       C         single    1.510     0.020     1.510     0.020     
-SUI       H2A       C2A       single    1.089     0.010     0.989     0.005     
-SUI       H2B       C2A       single    1.089     0.010     0.989     0.005     
-SUI       O         C         deloc     1.250     0.020     1.250     0.020     
-SUI       C         OXT       deloc     1.250     0.020     1.250     0.020     
+SUI          CB         C1A      SINGLE       n     1.530  0.0119     1.530  0.0119
+SUI         C1A          C1      SINGLE       n     1.517  0.0160     1.517  0.0160
+SUI          C1          O1      DOUBLE       n     1.217  0.0149     1.217  0.0149
+SUI          C1          N2      SINGLE       n     1.381  0.0103     1.381  0.0103
+SUI          N2          CG      SINGLE       n     1.382  0.0100     1.382  0.0100
+SUI          CG          OD      DOUBLE       n     1.230  0.0140     1.230  0.0140
+SUI          N2         C2A      SINGLE       n     1.452  0.0100     1.452  0.0100
+SUI         C2A           C      SINGLE       n     1.527  0.0103     1.527  0.0103
+SUI           C           O      DOUBLE       n     1.247  0.0187     1.247  0.0187
+SUI           C         OXT      SINGLE       n     1.247  0.0187     1.247  0.0187
+SUI         C1A           N      SINGLE       n     1.494  0.0100     1.494  0.0100
+SUI          CB          CG      SINGLE       n     1.501  0.0100     1.501  0.0100
+SUI          CB         HB1      SINGLE       n     1.089  0.0100     0.978  0.0150
+SUI          CB         HB2      SINGLE       n     1.089  0.0100     0.978  0.0150
+SUI         C1A         H1A      SINGLE       n     1.089  0.0100     0.987  0.0153
+SUI         C2A         H2A      SINGLE       n     1.089  0.0100     0.984  0.0200
+SUI         C2A         H2B      SINGLE       n     1.089  0.0100     0.984  0.0200
+SUI           N          HN      SINGLE       n     1.036  0.0160     0.904  0.0200
+SUI           N           H      SINGLE       n     1.036  0.0160     0.904  0.0200
+SUI           N          H1      SINGLE       n     1.036  0.0160     0.904  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -112,39 +78,42 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SUI      OXT    C      O       123.000    3.000
- SUI      OXT    C      C2A     118.500    3.000
- SUI      O      C      C2A     118.500    3.000
- SUI      C      C2A    H2A     109.470    3.000
- SUI      C      C2A    H2B     109.470    3.000
- SUI      C      C2A    N2      109.500    3.000
- SUI      H2A    C2A    H2B     107.900    3.000
- SUI      H2A    C2A    N2      109.470    3.000
- SUI      H2B    C2A    N2      109.470    3.000
- SUI      C2A    N2     CG      127.000    3.000
- SUI      C2A    N2     C1      127.000    3.000
- SUI      CG     N2     C1      120.000    3.000
- SUI      N2     CG     OD      123.000    3.000
- SUI      N2     CG     CB      116.500    3.000
- SUI      OD     CG     CB      120.500    3.000
- SUI      CG     CB     HB2     109.470    3.000
- SUI      CG     CB     HB1     109.470    3.000
- SUI      CG     CB     C1A     109.470    3.000
- SUI      HB2    CB     HB1     107.900    3.000
- SUI      HB2    CB     C1A     109.470    3.000
- SUI      HB1    CB     C1A     109.470    3.000
- SUI      N2     C1     O1      123.000    3.000
- SUI      N2     C1     C1A     116.500    3.000
- SUI      O1     C1     C1A     120.500    3.000
- SUI      C1     C1A    H1A     108.810    3.000
- SUI      C1     C1A    N       109.470    3.000
- SUI      C1     C1A    CB      109.470    3.000
- SUI      H1A    C1A    N       109.470    3.000
- SUI      H1A    C1A    CB      108.340    3.000
- SUI      N      C1A    CB      109.470    3.000
- SUI      C1A    N      H       120.000    3.000
- SUI      C1A    N      HN      120.000    3.000
- SUI      H      N      HN      120.000    3.000
+SUI         C1A          CB          CG     104.457    1.50
+SUI         C1A          CB         HB1     110.979    1.50
+SUI         C1A          CB         HB2     110.979    1.50
+SUI          CG          CB         HB1     110.576    1.50
+SUI          CG          CB         HB2     110.576    1.50
+SUI         HB1          CB         HB2     108.871    1.50
+SUI          CB         C1A          C1     104.009    1.83
+SUI          CB         C1A           N     111.770    2.16
+SUI          CB         C1A         H1A     107.363    1.50
+SUI          C1         C1A           N     109.471    3.00
+SUI          C1         C1A         H1A     108.578    1.87
+SUI           N         C1A         H1A     108.979    1.50
+SUI         C1A          C1          O1     125.908    1.50
+SUI         C1A          C1          N2     108.881    1.71
+SUI          O1          C1          N2     125.210    1.50
+SUI          C1          N2          CG     112.485    1.50
+SUI          C1          N2         C2A     123.758    1.71
+SUI          CG          N2         C2A     123.758    1.71
+SUI          N2          CG          OD     123.995    1.50
+SUI          N2          CG          CB     108.335    1.50
+SUI          OD          CG          CB     127.670    1.56
+SUI          N2         C2A           C     113.573    1.50
+SUI          N2         C2A         H2A     109.129    1.50
+SUI          N2         C2A         H2B     109.129    1.50
+SUI           C         C2A         H2A     108.833    1.50
+SUI           C         C2A         H2B     108.833    1.50
+SUI         H2A         C2A         H2B     107.842    1.50
+SUI         C2A           C           O     116.671    2.08
+SUI         C2A           C         OXT     116.671    2.08
+SUI           O           C         OXT     126.658    1.50
+SUI         C1A           N          HN     110.280    1.84
+SUI         C1A           N           H     110.280    1.84
+SUI         C1A           N          H1     110.280    1.84
+SUI          HN           N           H     109.223    1.63
+SUI          HN           N          H1     109.223    1.63
+SUI           H           N          H1     109.223    1.63
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -155,14 +124,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SUI      var_1    OXT    C      C2A    N2      -179.996   20.000   3
- SUI      var_2    C      C2A    N2     C1       -90.177   20.000   1
- SUI      CONST_1  C2A    N2     CG     CB       180.000    0.000   0
- SUI      var_3    N2     CG     CB     C1A        0.000   20.000   3
- SUI      CONST_2  C2A    N2     C1     C1A      180.000    0.000   0
- SUI      var_4    N2     C1     C1A    N       -120.000   20.000   3
- SUI      var_5    C1     C1A    CB     CG         0.000   20.000   3
- SUI      var_6    C1     C1A    N      HN        50.262   20.000   1
+SUI             sp3_sp3_4           N         C1A          CB          CG     -60.000   10.00     3
+SUI            sp2_sp3_22          OD          CG          CB         C1A     180.000   10.00     6
+SUI            sp3_sp3_10          CB         C1A           N          HN     180.000   10.00     3
+SUI             sp2_sp3_5          O1          C1         C1A           N     -60.000   10.00     6
+SUI             sp2_sp2_4          O1          C1          N2         C2A       0.000   10.00     2
+SUI             sp2_sp2_8          OD          CG          N2         C2A       0.000   10.00     2
+SUI             sp2_sp3_8          C1          N2         C2A           C     -90.000   10.00     6
+SUI            sp2_sp3_14           O           C         C2A          N2     120.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -171,30 +140,42 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- SUI      chir_01  C1A    N      CB     C1        negativ
+SUI    chir_1    C1A    N    C1    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SUI      plan-1    N         0.020
- SUI      plan-1    C1A       0.020
- SUI      plan-1    HN        0.020
- SUI      plan-1    H         0.020
- SUI      plan-2    CG        0.020
- SUI      plan-2    CB        0.020
- SUI      plan-2    OD        0.020
- SUI      plan-2    N2        0.020
- SUI      plan-3    C1        0.020
- SUI      plan-3    C1A       0.020
- SUI      plan-3    O1        0.020
- SUI      plan-3    N2        0.020
- SUI      plan-4    N2        0.020
- SUI      plan-4    CG        0.020
- SUI      plan-4    C1        0.020
- SUI      plan-4    C2A       0.020
- SUI      plan-5    C         0.020
- SUI      plan-5    C2A       0.020
- SUI      plan-5    O         0.020
- SUI      plan-5    OXT       0.020
-# ------------------------------------------------------
+SUI    plan-1          C1   0.020
+SUI    plan-1         C1A   0.020
+SUI    plan-1          N2   0.020
+SUI    plan-1          O1   0.020
+SUI    plan-2          C1   0.020
+SUI    plan-2         C2A   0.020
+SUI    plan-2          CG   0.020
+SUI    plan-2          N2   0.020
+SUI    plan-3          CB   0.020
+SUI    plan-3          CG   0.020
+SUI    plan-3          N2   0.020
+SUI    plan-3          OD   0.020
+SUI    plan-4           C   0.020
+SUI    plan-4         C2A   0.020
+SUI    plan-4           O   0.020
+SUI    plan-4         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+SUI SMILES           ACDLabs              10.04 "O=C1N(C(=O)CC1N)CC(=O)O"
+SUI SMILES_CANONICAL CACTVS               3.341 "N[C@H]1CC(=O)N(CC(O)=O)C1=O"
+SUI SMILES           CACTVS               3.341 "N[CH]1CC(=O)N(CC(O)=O)C1=O"
+SUI SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C1[C@@H](C(=O)N(C1=O)CC(=O)O)N"
+SUI SMILES           "OpenEye OEToolkits" 1.5.0 "C1C(C(=O)N(C1=O)CC(=O)O)N"
+SUI InChI            InChI                1.03  "InChI=1S/C6H8N2O4/c7-3-1-4(9)8(6(3)12)2-5(10)11/h3H,1-2,7H2,(H,10,11)/t3-/m0/s1"
+SUI InChIKey         InChI                1.03  DXYLVSIXCGPUHP-VKHMYHEASA-N
+SUI ?                acedrg               229         "dictionary generator"                  
+SUI ?                acedrg_database      11          "data source"                           
+SUI ?                rdkit                2017.03.2   "Chemoinformatics tool"
+SUI ?                refmac5              5.8.0291    "optimization tool"                     
