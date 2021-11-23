@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-HSY      HSY 'alpha-L-xylopyranose                ' pyranose           20  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+HSY     HSY      alpha-L-xylopyranose     "L-saccharide, alpha linking"     20     10     .     
 #
 data_comp_HSY
 #
@@ -28,86 +17,60 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- HSY           C1     C    CH2       0.000      0.000    0.000    0.000
- HSY           H1     H    H         0.000     -0.036    0.249   -1.063
- HSY           H1A    H    H         0.000      1.019    0.131    0.369
- HSY           C2     C    CH1       0.000     -0.431   -1.455    0.197
- HSY           H2     H    H         0.000     -0.355   -1.720    1.261
- HSY           O2     O    OH1       0.000      0.415   -2.313   -0.571
- HSY           HO2    H    H         0.000      1.330   -2.210   -0.277
- HSY           C3     C    CH1       0.000     -1.882   -1.617   -0.268
- HSY           H3     H    H         0.000     -1.950   -1.402   -1.344
- HSY           O3     O    OH1       0.000     -2.318   -2.955   -0.020
- HSY           HO3    H    H         0.000     -1.757   -3.572   -0.510
- HSY           C4     C    CH1       0.000     -2.768   -0.638    0.508
- HSY           H4     H    H         0.000     -2.741   -0.886    1.578
- HSY           O4     O    OH1       0.000     -4.112   -0.729    0.031
- HSY           HO4    H    H         0.000     -4.668   -0.107    0.519
- HSY           O5     O    O2        0.000     -0.884    0.860    0.723
- HSY           C5     C    CH1       0.000     -2.246    0.786    0.299
- HSY           H5     H    H         0.000     -2.852    1.489    0.888
- HSY           O51    O    OH1       0.000     -2.333    1.127   -1.086
- HSY           H10    H    H         0.000     -2.019    2.018   -1.292
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- HSY      C1     n/a    O5     START
- HSY      H1     C1     .      .
- HSY      H1A    C1     .      .
- HSY      C2     C1     C3     .
- HSY      H2     C2     .      .
- HSY      O2     C2     HO2    .
- HSY      HO2    O2     .      .
- HSY      C3     C2     C4     .
- HSY      H3     C3     .      .
- HSY      O3     C3     HO3    .
- HSY      HO3    O3     .      .
- HSY      C4     C3     O4     .
- HSY      H4     C4     .      .
- HSY      O4     C4     HO4    .
- HSY      HO4    O4     .      .
- HSY      O5     C1     .      END
- HSY      C5     O5     O51    .
- HSY      H5     C5     .      .
- HSY      O51    C5     .      .
- HSY      H10    O51    .      .
- HSY      C5     C4     .    ADD
+HSY     C1      C       CH1     0       1.521       -0.064      -0.301      
+HSY     C2      C       CH1     0       0.718       0.551       0.838       
+HSY     C3      C       CH1     0       -0.764      0.634       0.490       
+HSY     C4      C       CH1     0       -1.277      -0.724      0.021       
+HSY     C5      C       CH2     0       -0.390      -1.254      -1.092      
+HSY     O2      O       OH1     0       1.246       1.832       1.171       
+HSY     O3      O       OH1     0       -0.966      1.621       -0.520      
+HSY     O4      O       OH1     0       -2.621      -0.619      -0.457      
+HSY     O5      O       O2      0       0.976       -1.342      -0.663      
+HSY     O1      O       OH1     0       2.847       -0.221      0.094       
+HSY     H1      H       H       0       1.490       0.539       -1.086      
+HSY     H2      H       H       0       0.821       -0.042      1.621       
+HSY     H3      H       H       0       -1.265      0.900       1.298       
+HSY     H4      H       H       0       -1.253      -1.360      0.784       
+HSY     H51     H       H       0       -0.450      -0.660      -1.864      
+HSY     H52     H       H       0       -0.703      -2.140      -1.358      
+HSY     HO2     H       H       0       0.870       2.112       1.870       
+HSY     HO3     H       H       0       -1.792      1.744       -0.620      
+HSY     HO4     H       H       0       -2.930      -1.395      -0.555      
+HSY     HO1     H       H       0       3.317       -0.369      -0.593      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-HSY       C5        C4        single    1.524     0.020     1.524     0.020     
-HSY       C5        O5        single    1.426     0.020     1.426     0.020     
-HSY       O51       C5        single    1.432     0.020     1.432     0.020     
-HSY       H5        C5        single    1.089     0.010     0.989     0.005     
-HSY       C4        C3        single    1.524     0.020     1.524     0.020     
-HSY       O4        C4        single    1.432     0.020     1.432     0.020     
-HSY       H4        C4        single    1.089     0.010     0.989     0.005     
-HSY       C3        C2        single    1.524     0.020     1.524     0.020     
-HSY       O3        C3        single    1.432     0.020     1.432     0.020     
-HSY       H3        C3        single    1.089     0.010     0.989     0.005     
-HSY       C2        C1        single    1.524     0.020     1.524     0.020     
-HSY       O2        C2        single    1.432     0.020     1.432     0.020     
-HSY       H2        C2        single    1.089     0.010     0.989     0.005     
-HSY       O5        C1        single    1.426     0.020     1.426     0.020     
-HSY       H1        C1        single    1.089     0.010     0.989     0.005     
-HSY       H1A       C1        single    1.089     0.010     0.989     0.005     
-HSY       HO4       O4        single    0.970     0.012     0.839     0.014     
-HSY       HO3       O3        single    0.970     0.012     0.839     0.014     
-HSY       HO2       O2        single    0.970     0.012     0.839     0.014     
-HSY       H10       O51       single    0.970     0.012     0.839     0.014     
+HSY          C1          C2      SINGLE       n     1.517  0.0200     1.517  0.0200
+HSY          C1          O5      SINGLE       n     1.428  0.0186     1.428  0.0186
+HSY          C1          O1      SINGLE       n     1.392  0.0200     1.392  0.0200
+HSY          C2          C3      SINGLE       n     1.523  0.0100     1.523  0.0100
+HSY          C2          O2      SINGLE       n     1.425  0.0112     1.425  0.0112
+HSY          C3          C4      SINGLE       n     1.523  0.0100     1.523  0.0100
+HSY          C3          O3      SINGLE       n     1.426  0.0100     1.426  0.0100
+HSY          C4          C5      SINGLE       n     1.517  0.0100     1.517  0.0100
+HSY          C4          O4      SINGLE       n     1.430  0.0100     1.430  0.0100
+HSY          C5          O5      SINGLE       n     1.432  0.0100     1.432  0.0100
+HSY          C1          H1      SINGLE       n     1.089  0.0100     0.991  0.0200
+HSY          C2          H2      SINGLE       n     1.089  0.0100     0.987  0.0140
+HSY          C3          H3      SINGLE       n     1.089  0.0100     0.988  0.0166
+HSY          C4          H4      SINGLE       n     1.089  0.0100     0.993  0.0111
+HSY          C5         H51      SINGLE       n     1.089  0.0100     0.976  0.0186
+HSY          C5         H52      SINGLE       n     1.089  0.0100     0.976  0.0186
+HSY          O2         HO2      SINGLE       n     0.970  0.0120     0.841  0.0200
+HSY          O3         HO3      SINGLE       n     0.970  0.0120     0.841  0.0200
+HSY          O4         HO4      SINGLE       n     0.970  0.0120     0.841  0.0200
+HSY          O1         HO1      SINGLE       n     0.970  0.0120     0.846  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -115,41 +78,41 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- HSY      H1     C1     H1A     107.900    3.000
- HSY      H1     C1     C2      109.470    3.000
- HSY      H1A    C1     C2      109.470    3.000
- HSY      H1     C1     O5      109.470    3.000
- HSY      H1A    C1     O5      109.470    3.000
- HSY      C2     C1     O5      109.470    3.000
- HSY      C1     C2     H2      108.340    3.000
- HSY      C1     C2     O2      109.470    3.000
- HSY      C1     C2     C3      111.000    3.000
- HSY      H2     C2     O2      109.470    3.000
- HSY      H2     C2     C3      108.340    3.000
- HSY      O2     C2     C3      109.470    3.000
- HSY      C2     O2     HO2     109.470    3.000
- HSY      C2     C3     H3      108.340    3.000
- HSY      C2     C3     O3      109.470    3.000
- HSY      C2     C3     C4      111.000    3.000
- HSY      H3     C3     O3      109.470    3.000
- HSY      H3     C3     C4      108.340    3.000
- HSY      O3     C3     C4      109.470    3.000
- HSY      C3     O3     HO3     109.470    3.000
- HSY      C3     C4     H4      108.340    3.000
- HSY      C3     C4     O4      109.470    3.000
- HSY      C3     C4     C5      111.000    3.000
- HSY      H4     C4     O4      109.470    3.000
- HSY      H4     C4     C5      108.340    3.000
- HSY      O4     C4     C5      109.470    3.000
- HSY      C4     O4     HO4     109.470    3.000
- HSY      C1     O5     C5      111.800    3.000
- HSY      O5     C5     H5      109.470    3.000
- HSY      O5     C5     O51     109.470    3.000
- HSY      O5     C5     C4      109.470    3.000
- HSY      H5     C5     O51     109.470    3.000
- HSY      H5     C5     C4      108.340    3.000
- HSY      O51    C5     C4      109.470    3.000
- HSY      C5     O51    H10     109.470    3.000
+HSY          C2          C1          O5     110.164    1.50
+HSY          C2          C1          O1     109.304    2.75
+HSY          C2          C1          H1     109.287    1.97
+HSY          O5          C1          O1     109.600    2.81
+HSY          O5          C1          H1     109.272    1.61
+HSY          O1          C1          H1     108.897    1.73
+HSY          C1          C2          C3     111.543    1.84
+HSY          C1          C2          O2     109.956    1.70
+HSY          C1          C2          H2     107.431    2.02
+HSY          C3          C2          O2     111.053    2.62
+HSY          C3          C2          H2     108.505    1.50
+HSY          O2          C2          H2     108.551    1.50
+HSY          C2          C3          C4     110.186    1.50
+HSY          C2          C3          O3     109.587    2.09
+HSY          C2          C3          H3     108.712    1.50
+HSY          C4          C3          O3     110.343    1.72
+HSY          C4          C3          H3     108.724    1.50
+HSY          O3          C3          H3     108.767    1.50
+HSY          C3          C4          C5     109.602    1.50
+HSY          C3          C4          O4     110.286    1.81
+HSY          C3          C4          H4     109.054    1.50
+HSY          C5          C4          O4     109.124    1.50
+HSY          C5          C4          H4     108.994    1.50
+HSY          O4          C4          H4     109.069    1.50
+HSY          C4          C5          O5     110.778    1.50
+HSY          C4          C5         H51     109.325    1.50
+HSY          C4          C5         H52     109.325    1.50
+HSY          O5          C5         H51     109.418    1.50
+HSY          O5          C5         H52     109.418    1.50
+HSY         H51          C5         H52     108.602    1.50
+HSY          C2          O2         HO2     109.126    2.06
+HSY          C3          O3         HO3     108.895    2.41
+HSY          C4          O4         HO4     108.463    3.00
+HSY          C1          O5          C5     111.784    1.50
+HSY          C1          O1         HO1     108.606    2.51
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -160,15 +123,16 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HSY      var_1    O5     C1     C2     C3        60.000   20.000   3
- HSY      var_2    C1     C2     O2     HO2       60.343   20.000   1
- HSY      var_3    C1     C2     C3     C4       -60.000   20.000   3
- HSY      var_4    C2     C3     O3     HO3      -60.435   20.000   1
- HSY      var_5    C2     C3     C4     O4       180.000   20.000   3
- HSY      var_6    C3     C4     O4     HO4     -179.679   20.000   1
- HSY      var_7    C1     O5     C5     O51      -60.000   20.000   1
- HSY      var_8    O5     C5     C4     C3       -60.000   20.000   3
- HSY      var_1    C2     C1     O5     C5       -60.000   20.000   1
+HSY             sp3_sp3_5          O1          C1          C2          O2     180.000   10.00     3
+HSY            sp3_sp3_41          O1          C1          O5          C5      60.000   10.00     3
+HSY            sp3_sp3_43          C2          C1          O1         HO1     180.000   10.00     3
+HSY            sp3_sp3_14          O2          C2          C3          O3     -60.000   10.00     3
+HSY            sp3_sp3_46          C1          C2          O2         HO2     180.000   10.00     3
+HSY            sp3_sp3_23          O3          C3          C4          O4     180.000   10.00     3
+HSY            sp3_sp3_49          C2          C3          O3         HO3     180.000   10.00     3
+HSY            sp3_sp3_31          O4          C4          C5          O5     180.000   10.00     3
+HSY            sp3_sp3_52          C3          C4          O4         HO4     180.000   10.00     3
+HSY            sp3_sp3_37          C4          C5          O5          C1     -60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -177,8 +141,24 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- HSY      chir_01  C5     C4     O5     O51       negativ
- HSY      chir_02  C4     C5     C3     O4        positiv
- HSY      chir_03  C3     C4     C2     O3        negativ
- HSY      chir_04  C2     C3     C1     O2        positiv
-# ------------------------------------------------------
+HSY    chir_1    C1    O5    O1    C2    positive
+HSY    chir_2    C2    O2    C1    C3    positive
+HSY    chir_3    C3    O3    C2    C4    positive
+HSY    chir_4    C4    O4    C3    C5    positive
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+HSY           SMILES              ACDLabs 12.01                                                      OC1C(O)COC(O)C1O
+HSY SMILES_CANONICAL               CACTVS 3.370                                   O[C@H]1CO[C@@H](O)[C@@H](O)[C@@H]1O
+HSY           SMILES               CACTVS 3.370                                          O[CH]1CO[CH](O)[CH](O)[CH]1O
+HSY SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0                               C1[C@@H]([C@H]([C@@H]([C@@H](O1)O)O)O)O
+HSY           SMILES "OpenEye OEToolkits" 1.7.0                                                  C1C(C(C(C(O1)O)O)O)O
+HSY            InChI                InChI  1.03 InChI=1S/C5H10O5/c6-2-1-10-5(9)4(8)3(2)7/h2-9H,1H2/t2-,3+,4-,5+/m0/s1
+HSY         InChIKey                InChI  1.03                                           SRBFZHDQGSBBOR-SKNVOMKLSA-N
+HSY ?                acedrg               231         "dictionary generator"                  
+HSY ?                acedrg_database      11          "data source"                           
+HSY ?                rdkit                2017.03.2   "Chemoinformatics tool"
+HSY ?                refmac5              5.8.0238    "optimization tool"                     

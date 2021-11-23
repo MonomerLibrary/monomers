@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-AVN      AVN '(2S)-AMINO[(5S)-3-CHLORO-4,5-DIHYDRO' non-polymer        17  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+AVN     AVN      "(2S)-AMINO[(5S)-3-CHLORO-4,5-DIHYDROISOXAZOL-5-YL]ACETIC ACID"     "L-PEPTIDE LINKING"     18     11     .     
 #
 data_comp_AVN
 #
@@ -28,77 +17,56 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- AVN           CL1    CL   CL        0.000      0.000    0.000    0.000
- AVN           C4     C    C         0.000     -1.726   -0.187    0.013
- AVN           N2     N    N         0.000     -2.356   -1.292    0.118
- AVN           O3     O    O2        0.000     -3.760   -1.136    0.092
- AVN           C5     C    CH2       0.000     -2.740    0.937   -0.096
- AVN           H51    H    H         0.000     -2.860    1.302   -1.118
- AVN           H52    H    H         0.000     -2.515    1.777    0.565
- AVN           C3     C    CH1       0.000     -4.048    0.251    0.366
- AVN           H3     H    H         0.000     -4.220    0.412    1.439
- AVN           C2     C    CH1       0.000     -5.242    0.736   -0.459
- AVN           H2     H    H         0.000     -5.050    0.551   -1.525
- AVN           N1     N    NH2       0.000     -5.437    2.175   -0.239
- AVN           HN12   H    H         0.000     -4.860    2.674    0.429
- AVN           HN11   H    H         0.000     -6.149    2.680   -0.753
- AVN           C1     C    C         0.000     -6.481   -0.010   -0.035
- AVN           O1     O    OC       -0.500     -6.694   -1.165   -0.465
- AVN           O2     O    OC       -0.500     -7.295    0.525    0.750
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- AVN      CL1    n/a    C4     START
- AVN      C4     CL1    C5     .
- AVN      N2     C4     O3     .
- AVN      O3     N2     .      .
- AVN      C5     C4     C3     .
- AVN      H51    C5     .      .
- AVN      H52    C5     .      .
- AVN      C3     C5     C2     .
- AVN      H3     C3     .      .
- AVN      C2     C3     C1     .
- AVN      H2     C2     .      .
- AVN      N1     C2     HN11   .
- AVN      HN12   N1     .      .
- AVN      HN11   N1     .      .
- AVN      C1     C2     O2     .
- AVN      O1     C1     .      .
- AVN      O2     C1     .      END
- AVN      C3     O3     .    ADD
+AVN     C1      C       C       0       -1.239      1.499       -0.697      
+AVN     O1      O       OC      -1      -1.036      2.654       -0.272      
+AVN     O2      O       O       0       -1.720      1.210       -1.811      
+AVN     C2      C       CH1     0       -0.866      0.334       0.230       
+AVN     N1      N       NT3     1       -2.081      -0.471      0.545       
+AVN     C3      C       CH1     0       0.271       -0.502      -0.362      
+AVN     O3      O       O2      0       0.496       -1.640      0.525       
+AVN     N2      N       NRD5    0       1.878       -1.710      0.870       
+AVN     C4      C       CR5     0       2.479       -0.697      0.381       
+AVN     C5      C       CH2     0       1.607       0.216       -0.413      
+AVN     CL1     CL      CL      0       4.149       -0.462      0.646       
+AVN     H2      H       H       0       -0.533      0.716       1.076       
+AVN     HN11    H       H       0       -1.894      -1.357      0.455       
+AVN     HN12    H       H       0       -2.759      -0.249      -0.020      
+AVN     H13     H       H       0       -2.338      -0.305      1.403       
+AVN     H3      H       H       0       -0.003      -0.820      -1.256      
+AVN     H51     H       H       0       1.576       1.103       -0.001      
+AVN     H52     H       H       0       1.946       0.306       -1.325      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-AVN       O1        C1        deloc     1.250     0.020     1.250     0.020     
-AVN       O2        C1        deloc     1.250     0.020     1.250     0.020     
-AVN       C1        C2        single    1.500     0.020     1.500     0.020     
-AVN       H2        C2        single    1.089     0.010     0.989     0.005     
-AVN       N1        C2        single    1.450     0.020     1.450     0.020     
-AVN       C2        C3        single    1.524     0.020     1.524     0.020     
-AVN       HN11      N1        single    1.036     0.016     0.914     0.007     
-AVN       HN12      N1        single    1.036     0.016     0.914     0.007     
-AVN       H3        C3        single    1.089     0.010     0.989     0.005     
-AVN       C3        O3        single    1.426     0.020     1.426     0.020     
-AVN       C3        C5        single    1.524     0.020     1.524     0.020     
-AVN       O3        N2        single    1.255     0.020     1.255     0.020     
-AVN       N2        C4        double    1.260     0.020     1.260     0.020     
-AVN       C4        CL1       single    1.765     0.020     1.765     0.020     
-AVN       C5        C4        single    1.510     0.020     1.510     0.020     
-AVN       H51       C5        single    1.089     0.010     0.989     0.005     
-AVN       H52       C5        single    1.089     0.010     0.989     0.005     
+AVN          C1          O1      SINGLE       n     1.247  0.0187     1.247  0.0187
+AVN          C1          O2      DOUBLE       n     1.247  0.0187     1.247  0.0187
+AVN          C1          C2      SINGLE       n     1.533  0.0100     1.533  0.0100
+AVN          C2          N1      SINGLE       n     1.488  0.0100     1.488  0.0100
+AVN          C2          C3      SINGLE       n     1.529  0.0117     1.529  0.0117
+AVN          C3          O3      SINGLE       n     1.458  0.0100     1.458  0.0100
+AVN          C3          C5      SINGLE       n     1.521  0.0200     1.521  0.0200
+AVN          O3          N2      SINGLE       n     1.420  0.0161     1.420  0.0161
+AVN          N2          C4      DOUBLE       n     1.276  0.0179     1.276  0.0179
+AVN          C4         CL1      SINGLE       n     1.707  0.0142     1.707  0.0142
+AVN          C4          C5      SINGLE       n     1.494  0.0110     1.494  0.0110
+AVN          C2          H2      SINGLE       n     1.089  0.0100     0.986  0.0200
+AVN          N1        HN11      SINGLE       n     1.036  0.0160     0.910  0.0100
+AVN          N1        HN12      SINGLE       n     1.036  0.0160     0.910  0.0100
+AVN          N1         H13      SINGLE       n     1.036  0.0160     0.910  0.0100
+AVN          C3          H3      SINGLE       n     1.089  0.0100     0.988  0.0181
+AVN          C5         H51      SINGLE       n     1.089  0.0100     0.978  0.0179
+AVN          C5         H52      SINGLE       n     1.089  0.0100     0.978  0.0179
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -106,35 +74,38 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- AVN      CL1    C4     N2      120.000    3.000
- AVN      CL1    C4     C5      120.000    3.000
- AVN      N2     C4     C5      116.500    3.000
- AVN      C4     N2     O3      120.000    3.000
- AVN      N2     O3     C3      120.000    3.000
- AVN      C4     C5     H51     109.470    3.000
- AVN      C4     C5     H52     109.470    3.000
- AVN      C4     C5     C3      109.470    3.000
- AVN      H51    C5     H52     107.900    3.000
- AVN      H51    C5     C3      109.470    3.000
- AVN      H52    C5     C3      109.470    3.000
- AVN      C5     C3     H3      108.340    3.000
- AVN      C5     C3     C2      111.000    3.000
- AVN      C5     C3     O3      109.470    3.000
- AVN      H3     C3     C2      108.340    3.000
- AVN      H3     C3     O3      109.470    3.000
- AVN      C2     C3     O3      109.470    3.000
- AVN      C3     C2     H2      108.340    3.000
- AVN      C3     C2     N1      109.470    3.000
- AVN      C3     C2     C1      109.470    3.000
- AVN      H2     C2     N1      109.470    3.000
- AVN      H2     C2     C1      108.810    3.000
- AVN      N1     C2     C1      109.470    3.000
- AVN      C2     N1     HN12    120.000    3.000
- AVN      C2     N1     HN11    120.000    3.000
- AVN      HN12   N1     HN11    120.000    3.000
- AVN      C2     C1     O1      118.500    3.000
- AVN      C2     C1     O2      118.500    3.000
- AVN      O1     C1     O2      123.000    3.000
+AVN          O1          C1          O2     125.559    1.75
+AVN          O1          C1          C2     117.220    1.50
+AVN          O2          C1          C2     117.220    1.50
+AVN          C1          C2          N1     109.415    1.50
+AVN          C1          C2          C3     112.778    2.78
+AVN          C1          C2          H2     108.585    1.50
+AVN          N1          C2          C3     113.223    3.00
+AVN          N1          C2          H2     108.441    1.50
+AVN          C3          C2          H2     107.749    1.50
+AVN          C2          N1        HN11     109.460    1.50
+AVN          C2          N1        HN12     109.460    1.50
+AVN          C2          N1         H13     109.460    1.50
+AVN        HN11          N1        HN12     109.480    1.50
+AVN        HN11          N1         H13     109.480    1.50
+AVN        HN12          N1         H13     109.480    1.50
+AVN          C2          C3          O3     108.001    1.52
+AVN          C2          C3          C5     113.745    2.48
+AVN          C2          C3          H3     108.890    1.93
+AVN          O3          C3          C5     104.870    1.50
+AVN          O3          C3          H3     110.605    3.00
+AVN          C5          C3          H3     111.783    2.08
+AVN          C3          O3          N2     108.413    1.50
+AVN          O3          N2          C4     108.185    1.65
+AVN          N2          C4         CL1     120.272    2.52
+AVN          N2          C4          C5     115.099    1.55
+AVN         CL1          C4          C5     124.630    1.53
+AVN          C3          C5          C4     104.009    1.83
+AVN          C3          C5         H51     112.682    2.33
+AVN          C3          C5         H52     112.682    2.33
+AVN          C4          C5         H51     110.597    1.50
+AVN          C4          C5         H52     110.597    1.50
+AVN         H51          C5         H52     108.871    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -145,14 +116,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AVN      CONST_1  CL1    C4     N2     O3       180.000    0.000   0
- AVN      var_1    C4     N2     O3     C3       -30.000   20.000   1
- AVN      var_2    CL1    C4     C5     C3      -150.000   20.000   3
- AVN      var_3    C4     C5     C3     C2      -150.000   20.000   3
- AVN      var_4    C5     C3     O3     N2        30.000   20.000   1
- AVN      var_5    C5     C3     C2     C1       176.806   20.000   3
- AVN      var_6    C3     C2     N1     HN11     176.074   20.000   1
- AVN      var_7    C3     C2     C1     O2        99.719   20.000   3
+AVN             sp2_sp3_7          O1          C1          C2          N1       0.000   10.00     6
+AVN             sp3_sp3_4          C1          C2          N1        HN11     180.000   10.00     3
+AVN            sp3_sp3_13          C1          C2          C3          O3     180.000   10.00     3
+AVN             sp3_sp3_2          C2          C3          O3          N2     180.000   10.00     3
+AVN            sp3_sp3_25          C2          C3          C5          C4      60.000   10.00     3
+AVN             sp2_sp2_1          C4          N2          O3          C3       0.000   10.00     2
+AVN             sp2_sp2_3         CL1          C4          N2          O3     180.000   10.00     2
+AVN             sp2_sp3_4         CL1          C4          C5          C3     180.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -161,26 +132,35 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- AVN      chir_01  C2     C1     N1     C3        negativ
- AVN      chir_02  C3     C2     O3     C5        negativ
+AVN    chir_1    C2    N1    C1    C3    positive
+AVN    chir_2    C3    O3    C2    C5    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- AVN      plan-1    C1        0.020
- AVN      plan-1    O1        0.020
- AVN      plan-1    O2        0.020
- AVN      plan-1    C2        0.020
- AVN      plan-2    N1        0.020
- AVN      plan-2    C2        0.020
- AVN      plan-2    HN11      0.020
- AVN      plan-2    HN12      0.020
- AVN      plan-3    N2        0.020
- AVN      plan-3    O3        0.020
- AVN      plan-3    C4        0.020
- AVN      plan-4    C4        0.020
- AVN      plan-4    N2        0.020
- AVN      plan-4    C5        0.020
- AVN      plan-4    CL1       0.020
-# ------------------------------------------------------
+AVN    plan-1          C1   0.020
+AVN    plan-1          C2   0.020
+AVN    plan-1          O1   0.020
+AVN    plan-1          O2   0.020
+AVN    plan-2          C4   0.020
+AVN    plan-2          C5   0.020
+AVN    plan-2         CL1   0.020
+AVN    plan-2          N2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+AVN           SMILES              ACDLabs 10.04                                                           ClC1=NOC(C(C(=O)O)N)C1
+AVN SMILES_CANONICAL               CACTVS 3.341                                                 N[C@@H]([C@@H]1CC(=NO1)Cl)C(O)=O
+AVN           SMILES               CACTVS 3.341                                                     N[CH]([CH]1CC(=NO1)Cl)C(O)=O
+AVN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                  C1[C@H](ON=C1Cl)[C@@H](C(=O)O)N
+AVN           SMILES "OpenEye OEToolkits" 1.5.0                                                           C1C(ON=C1Cl)C(C(=O)O)N
+AVN            InChI                InChI  1.03 InChI=1S/C5H7ClN2O3/c6-3-1-2(11-8-3)4(7)5(9)10/h2,4H,1,7H2,(H,9,10)/t2-,4-/m0/s1
+AVN         InChIKey                InChI  1.03                                                      QAWIHIJWNYOLBE-OKKQSCSOSA-N
+AVN ?                acedrg               231         "dictionary generator"                  
+AVN ?                acedrg_database      11          "data source"                           
+AVN ?                rdkit                2017.03.2   "Chemoinformatics tool"
+AVN ?                refmac5              5.8.0238    "optimization tool"                     

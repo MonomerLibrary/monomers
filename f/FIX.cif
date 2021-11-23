@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FIX      FIX 'D-fructuronic acid                  ' non-polymer        20  13 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+FIX     FIX      "D-fructuronic acid"     D-SACCHARIDE     20     13     .     
 #
 data_comp_FIX
 #
@@ -28,84 +17,59 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- FIX           O6     O    O         0.000      0.000    0.000    0.000
- FIX           C6     C    C1        0.000     -1.117    0.307    0.339
- FIX           H6     H    H         0.000     -1.439    0.135    1.352
- FIX           C5     C    C         0.000     -2.048    0.924   -0.642
- FIX           O5     O    O         0.000     -1.687    1.119   -1.777
- FIX           C4     C    CH1       0.000     -3.444    1.307   -0.218
- FIX           H4     H    H         0.000     -3.404    1.821    0.752
- FIX           O4     O    OH1       0.000     -4.016    2.178   -1.196
- FIX           HO4    H    H         0.000     -4.051    1.725   -2.049
- FIX           C3     C    CH1       0.000     -4.303    0.047   -0.092
- FIX           H3     H    H         0.000     -3.914   -0.581    0.721
- FIX           O3     O    OH1       0.000     -4.260   -0.683   -1.320
- FIX           HO3    H    H         0.000     -4.602   -0.130   -2.035
- FIX           C2     C    CH1       0.000     -5.747    0.444    0.216
- FIX           H2     H    H         0.000     -6.136    1.072   -0.598
- FIX           O2     O    OH1       0.000     -5.790    1.174    1.443
- FIX           HO2    H    H         0.000     -5.448    0.621    2.158
- FIX           C1     C    C         0.000     -6.593   -0.797    0.340
- FIX           O1A    O    OC       -0.500     -6.771   -1.535   -0.654
- FIX           O1B    O    OC       -0.500     -7.118   -1.090    1.438
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- FIX      O6     n/a    C6     START
- FIX      C6     O6     C5     .
- FIX      H6     C6     .      .
- FIX      C5     C6     C4     .
- FIX      O5     C5     .      .
- FIX      C4     C5     C3     .
- FIX      H4     C4     .      .
- FIX      O4     C4     HO4    .
- FIX      HO4    O4     .      .
- FIX      C3     C4     C2     .
- FIX      H3     C3     .      .
- FIX      O3     C3     HO3    .
- FIX      HO3    O3     .      .
- FIX      C2     C3     C1     .
- FIX      H2     C2     .      .
- FIX      O2     C2     HO2    .
- FIX      HO2    O2     .      .
- FIX      C1     C2     O1B    .
- FIX      O1A    C1     .      .
- FIX      O1B    C1     .      END
+FIX     O1A     O       OC      -1      18.118      38.564      11.630      
+FIX     C1      C       C       0       18.742      37.524      11.339      
+FIX     O1B     O       O       0       19.707      37.452      10.552      
+FIX     C2      C       CH1     0       18.280      36.222      12.008      
+FIX     O2      O       OH1     0       18.200      36.390      13.417      
+FIX     C3      C       CH1     0       16.934      35.735      11.458      
+FIX     O3      O       OH1     0       16.924      35.871      10.027      
+FIX     C4      C       CH1     0       16.611      34.284      11.828      
+FIX     O4      O       OH1     0       15.597      33.774      10.963      
+FIX     C5      C       C       0       16.131      34.135      13.258      
+FIX     O5      O       O       0       15.030      34.613      13.540      
+FIX     C6      C       C1      0       16.814      33.537      14.210      
+FIX     O6      O       O       0       17.926      33.073      14.050      
+FIX     H2      H       H       0       18.958      35.528      11.820      
+FIX     HO2     H       H       0       17.622      36.982      13.610      
+FIX     H3      H       H       0       16.223      36.314      11.824      
+FIX     HO3     H       H       0       17.535      35.384      9.696       
+FIX     H4      H       H       0       17.433      33.735      11.698      
+FIX     HO4     H       H       0       15.646      32.927      10.951      
+FIX     H6      H       H       0       16.427      33.455      15.086      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-FIX       O1A       C1        deloc     1.250     0.020     1.250     0.020     
-FIX       C1        C2        single    1.500     0.020     1.500     0.020     
-FIX       O1B       C1        deloc     1.250     0.020     1.250     0.020     
-FIX       O2        C2        single    1.432     0.020     1.432     0.020     
-FIX       H2        C2        single    1.089     0.010     0.989     0.005     
-FIX       HO2       O2        single    0.970     0.012     0.839     0.014     
-FIX       C2        C3        single    1.524     0.020     1.524     0.020     
-FIX       C3        C4        single    1.524     0.020     1.524     0.020     
-FIX       H3        C3        single    1.089     0.010     0.989     0.005     
-FIX       O3        C3        single    1.432     0.020     1.432     0.020     
-FIX       HO3       O3        single    0.970     0.012     0.839     0.014     
-FIX       C4        C5        single    1.500     0.020     1.500     0.020     
-FIX       H4        C4        single    1.089     0.010     0.989     0.005     
-FIX       O4        C4        single    1.432     0.020     1.432     0.020     
-FIX       HO4       O4        single    0.970     0.012     0.839     0.014     
-FIX       O5        C5        double    1.220     0.020     1.220     0.020     
-FIX       C5        C6        single    1.475     0.020     1.475     0.020     
-FIX       C6        O6        double    1.220     0.020     1.220     0.020     
-FIX       H6        C6        single    1.082     0.013     0.975     0.010     
+FIX         O1A          C1      SINGLE       n     1.247  0.0187     1.247  0.0187
+FIX          C1          C2      SINGLE       n     1.533  0.0100     1.533  0.0100
+FIX          C1         O1B      DOUBLE       n     1.247  0.0187     1.247  0.0187
+FIX          C2          O2      SINGLE       n     1.419  0.0162     1.419  0.0162
+FIX          C2          C3      SINGLE       n     1.526  0.0122     1.526  0.0122
+FIX          C3          C4      SINGLE       n     1.523  0.0139     1.523  0.0139
+FIX          C3          O3      SINGLE       n     1.435  0.0105     1.435  0.0105
+FIX          C4          C5      SINGLE       n     1.505  0.0162     1.505  0.0162
+FIX          C4          O4      SINGLE       n     1.424  0.0153     1.424  0.0153
+FIX          C5          O5      DOUBLE       n     1.230  0.0184     1.230  0.0184
+FIX          C5          C6      SINGLE       n     1.299  0.0200     1.299  0.0200
+FIX          C6          O6      DOUBLE       n     1.215  0.0108     1.215  0.0108
+FIX          C2          H2      SINGLE       n     1.089  0.0100     0.988  0.0129
+FIX          O2         HO2      SINGLE       n     0.970  0.0120     0.848  0.0200
+FIX          C3          H3      SINGLE       n     1.089  0.0100     0.987  0.0151
+FIX          O3         HO3      SINGLE       n     0.970  0.0120     0.848  0.0200
+FIX          C4          H4      SINGLE       n     1.089  0.0100     0.997  0.0100
+FIX          O4         HO4      SINGLE       n     0.970  0.0120     0.848  0.0200
+FIX          C6          H6      SINGLE       n     1.082  0.0130     0.959  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,36 +77,36 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- FIX      O6     C6     H6      123.000    3.000
- FIX      O6     C6     C5      120.000    3.000
- FIX      H6     C6     C5      120.000    3.000
- FIX      C6     C5     O5      120.500    3.000
- FIX      C6     C5     C4      120.000    3.000
- FIX      O5     C5     C4      120.500    3.000
- FIX      C5     C4     H4      108.810    3.000
- FIX      C5     C4     O4      109.470    3.000
- FIX      C5     C4     C3      109.470    3.000
- FIX      H4     C4     O4      109.470    3.000
- FIX      H4     C4     C3      108.340    3.000
- FIX      O4     C4     C3      109.470    3.000
- FIX      C4     O4     HO4     109.470    3.000
- FIX      C4     C3     H3      108.340    3.000
- FIX      C4     C3     O3      109.470    3.000
- FIX      C4     C3     C2      111.000    3.000
- FIX      H3     C3     O3      109.470    3.000
- FIX      H3     C3     C2      108.340    3.000
- FIX      O3     C3     C2      109.470    3.000
- FIX      C3     O3     HO3     109.470    3.000
- FIX      C3     C2     H2      108.340    3.000
- FIX      C3     C2     O2      109.470    3.000
- FIX      C3     C2     C1      109.470    3.000
- FIX      H2     C2     O2      109.470    3.000
- FIX      H2     C2     C1      108.810    3.000
- FIX      O2     C2     C1      109.470    3.000
- FIX      C2     O2     HO2     109.470    3.000
- FIX      C2     C1     O1A     118.500    3.000
- FIX      C2     C1     O1B     118.500    3.000
- FIX      O1A    C1     O1B     123.000    3.000
+FIX         O1A          C1          C2     117.159    1.50
+FIX         O1A          C1         O1B     125.683    1.50
+FIX          C2          C1         O1B     117.159    1.50
+FIX          C1          C2          O2     111.490    1.56
+FIX          C1          C2          C3     111.511    2.91
+FIX          C1          C2          H2     108.467    1.50
+FIX          O2          C2          C3     109.434    2.40
+FIX          O2          C2          H2     108.747    1.50
+FIX          C3          C2          H2     108.687    1.50
+FIX          C2          O2         HO2     108.941    3.00
+FIX          C2          C3          C4     111.094    2.85
+FIX          C2          C3          O3     109.317    1.50
+FIX          C2          C3          H3     108.238    1.72
+FIX          C4          C3          O3     109.317    1.50
+FIX          C4          C3          H3     108.238    1.72
+FIX          O3          C3          H3     108.243    1.50
+FIX          C3          O3         HO3     108.564    3.00
+FIX          C3          C4          C5     111.873    1.69
+FIX          C3          C4          O4     109.434    2.40
+FIX          C3          C4          H4     108.687    1.50
+FIX          C5          C4          O4     109.726    2.42
+FIX          C5          C4          H4     108.874    1.53
+FIX          O4          C4          H4     108.675    1.50
+FIX          C4          O4         HO4     108.894    3.00
+FIX          C4          C5          O5     117.841    1.84
+FIX          C4          C5          C6     122.812    1.50
+FIX          O5          C5          C6     119.348    3.00
+FIX          C5          C6          O6     121.563    3.00
+FIX          C5          C6          H6     120.284    1.71
+FIX          O6          C6          H6     118.153    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -153,14 +117,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FIX      var_1    O6     C6     C5     C4       179.993   20.000   1
- FIX      var_2    C6     C5     C4     C3       -75.042   20.000   3
- FIX      var_3    C5     C4     O4     HO4       60.001   20.000   1
- FIX      var_4    C5     C4     C3     C2      -175.012   20.000   3
- FIX      var_5    C4     C3     O3     HO3      -60.052   20.000   1
- FIX      var_6    C4     C3     C2     C1      -179.974   20.000   3
- FIX      var_7    C3     C2     O2     HO2      -59.976   20.000   1
- FIX      var_8    C3     C2     C1     O1B      115.048   20.000   3
+FIX             sp2_sp3_1         O1A          C1          C2          O2       0.000   10.00     6
+FIX             sp3_sp3_1          C1          C2          O2         HO2     180.000   10.00     3
+FIX             sp3_sp3_4          C1          C2          C3          C4     180.000   10.00     3
+FIX            sp3_sp3_22          C2          C3          O3         HO3     180.000   10.00     3
+FIX            sp3_sp3_13          C2          C3          C4          C5     180.000   10.00     3
+FIX            sp3_sp3_25          C3          C4          O4         HO4     180.000   10.00     3
+FIX             sp2_sp3_7          O5          C5          C4          C3       0.000   10.00     6
+FIX             sp2_sp2_1          C4          C5          C6          O6     180.000   10.00     2
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -169,25 +133,40 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- FIX      chir_01  C2     C1     O2     C3        negativ
- FIX      chir_02  C3     C2     O3     C4        negativ
- FIX      chir_03  C4     C3     O4     C5        positiv
+FIX    chir_1    C2    O2    C1    C3    positive
+FIX    chir_2    C3    O3    C2    C4    positive
+FIX    chir_3    C4    O4    C5    C3    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- FIX      plan-1    C1        0.020
- FIX      plan-1    O1A       0.020
- FIX      plan-1    O1B       0.020
- FIX      plan-1    C2        0.020
- FIX      plan-2    C5        0.020
- FIX      plan-2    C4        0.020
- FIX      plan-2    O5        0.020
- FIX      plan-2    C6        0.020
- FIX      plan-2    H6        0.020
- FIX      plan-3    C6        0.020
- FIX      plan-3    C5        0.020
- FIX      plan-3    O6        0.020
- FIX      plan-3    H6        0.020
-# ------------------------------------------------------
+FIX    plan-1          C1   0.020
+FIX    plan-1          C2   0.020
+FIX    plan-1         O1A   0.020
+FIX    plan-1         O1B   0.020
+FIX    plan-2          C4   0.020
+FIX    plan-2          C5   0.020
+FIX    plan-2          C6   0.020
+FIX    plan-2          O5   0.020
+FIX    plan-3          C5   0.020
+FIX    plan-3          C6   0.020
+FIX    plan-3          H6   0.020
+FIX    plan-3          O6   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+FIX           SMILES              ACDLabs 10.04                                                            O=C(O)C(O)C(O)C(O)C(=O)C=O
+FIX SMILES_CANONICAL               CACTVS 3.341                                                O[C@H]([C@H](O)C(O)=O)[C@H](O)C(=O)C=O
+FIX           SMILES               CACTVS 3.341                                                   O[CH]([CH](O)C(O)=O)[CH](O)C(=O)C=O
+FIX SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                            C(=O)C(=O)[C@H]([C@@H]([C@@H](C(=O)O)O)O)O
+FIX           SMILES "OpenEye OEToolkits" 1.5.0                                                          C(=O)C(=O)C(C(C(C(=O)O)O)O)O
+FIX            InChI                InChI  1.03 InChI=1S/C6H8O7/c7-1-2(8)3(9)4(10)5(11)6(12)13/h1,3-5,9-11H,(H,12,13)/t3-,4+,5+/m1/s1
+FIX         InChIKey                InChI  1.03                                                           VLFFNIKCNGLGIG-WISUUJSJSA-N
+FIX ?                acedrg               231         "dictionary generator"                  
+FIX ?                acedrg_database      11          "data source"                           
+FIX ?                rdkit                2017.03.2   "Chemoinformatics tool"
+FIX ?                refmac5              5.8.0238    "optimization tool"                     

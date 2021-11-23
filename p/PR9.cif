@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PR9      PR9 'D-PROLINAMIDE                       ' non-polymer        18   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PR9     PR9      D-PROLINAMIDE     "D-PEPTIDE LINKING"     18     8     .     
 #
 data_comp_PR9
 #
@@ -28,80 +17,56 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PR9           O      O    O         0.000      0.000    0.000    0.000
- PR9           C      C    C         0.000     -0.678    0.743    0.677
- PR9           NXT    N    NH2       0.000     -0.120    1.826    1.253
- PR9           HXT2   H    H         0.000     -0.683    2.450    1.819
- PR9           HXT1   H    H         0.000      0.864    2.024    1.122
- PR9           CA     C    CH1       0.000     -2.142    0.451    0.880
- PR9           HA     H    H         0.000     -2.423    0.648    1.924
- PR9           CB     C    CH2       0.000     -2.988    1.325   -0.065
- PR9           HB1C   H    H         0.000     -2.360    1.947   -0.706
- PR9           HB2C   H    H         0.000     -3.681    1.961    0.490
- PR9           CG     C    CH2       0.000     -3.785    0.326   -0.934
- PR9           HG1C   H    H         0.000     -3.302    0.126   -1.892
- PR9           HG2C   H    H         0.000     -4.814    0.648   -1.106
- PR9           CD     C    CH2       0.000     -3.782   -0.962   -0.073
- PR9           HD1C   H    H         0.000     -3.911   -1.865   -0.673
- PR9           HD2C   H    H         0.000     -4.538   -0.939    0.715
- PR9           N      N    NH1       0.000     -2.427   -0.960    0.537
- PR9           H      H    H         0.000     -1.825   -1.757    0.688
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PR9      O      n/a    C      START
- PR9      C      O      CA     .
- PR9      NXT    C      HXT1   .
- PR9      HXT2   NXT    .      .
- PR9      HXT1   NXT    .      .
- PR9      CA     C      CB     .
- PR9      HA     CA     .      .
- PR9      CB     CA     CG     .
- PR9      HB1C   CB     .      .
- PR9      HB2C   CB     .      .
- PR9      CG     CB     CD     .
- PR9      HG1C   CG     .      .
- PR9      HG2C   CG     .      .
- PR9      CD     CG     N      .
- PR9      HD1C   CD     .      .
- PR9      HD2C   CD     .      .
- PR9      N      CD     H      .
- PR9      H      N      .      END
- PR9      CA     N      .    ADD
+PR9     O       O       O       0       2.040       0.936       -1.316      
+PR9     C       C       C       0       1.837       0.275       -0.298      
+PR9     CA      C       CH1     0       0.443       0.183       0.319       
+PR9     NXT     N       NH2     0       2.800       -0.391      0.322       
+PR9     N       N       NT1     0       -0.399      1.355       0.019       
+PR9     CD      C       CH2     0       -1.777      0.934       -0.271      
+PR9     CG      C       CH2     0       -1.790      -0.567      -0.062      
+PR9     CB      C       CH2     0       -0.358      -0.983      -0.274      
+PR9     HA      H       H       0       0.515       0.083       1.301       
+PR9     HXT1    H       H       0       3.629       -0.343      0.025       
+PR9     HXT2    H       H       0       2.616       -0.888      1.026       
+PR9     H       H       H       0       -0.112      1.777       -0.710      
+PR9     HD1C    H       H       0       -2.021      1.157       -1.188      
+PR9     HD2C    H       H       0       -2.405      1.372       0.333       
+PR9     HG1C    H       H       0       -2.380      -1.004      -0.709      
+PR9     HG2C    H       H       0       -2.088      -0.790      0.843       
+PR9     HB1C    H       H       0       -0.162      -1.821      0.196       
+PR9     HB2C    H       H       0       -0.164      -1.098      -1.230      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-PR9       CA        N         single    1.450     0.020     1.450     0.020     
-PR9       N         CD        single    1.450     0.020     1.450     0.020     
-PR9       CB        CA        single    1.524     0.020     1.524     0.020     
-PR9       CA        C         single    1.500     0.020     1.500     0.020     
-PR9       CG        CB        single    1.524     0.020     1.524     0.020     
-PR9       CD        CG        single    1.524     0.020     1.524     0.020     
-PR9       C         O         double    1.220     0.020     1.220     0.020     
-PR9       NXT       C         single    1.332     0.020     1.332     0.020     
-PR9       H         N         single    1.036     0.016     0.914     0.007     
-PR9       HA        CA        single    1.089     0.010     0.989     0.005     
-PR9       HD1C      CD        single    1.089     0.010     0.989     0.005     
-PR9       HD2C      CD        single    1.089     0.010     0.989     0.005     
-PR9       HB1C      CB        single    1.089     0.010     0.989     0.005     
-PR9       HB2C      CB        single    1.089     0.010     0.989     0.005     
-PR9       HG1C      CG        single    1.089     0.010     0.989     0.005     
-PR9       HG2C      CG        single    1.089     0.010     0.989     0.005     
-PR9       HXT1      NXT       single    1.016     0.010     0.899     0.007     
-PR9       HXT2      NXT       single    1.016     0.010     0.899     0.007     
+PR9          CA           N      SINGLE       n     1.468  0.0148     1.468  0.0148
+PR9           N          CD      SINGLE       n     1.468  0.0152     1.468  0.0152
+PR9          CA          CB      SINGLE       n     1.534  0.0126     1.534  0.0126
+PR9           C          CA      SINGLE       n     1.523  0.0117     1.523  0.0117
+PR9          CG          CB      SINGLE       n     1.508  0.0200     1.508  0.0200
+PR9          CD          CG      SINGLE       n     1.515  0.0118     1.515  0.0118
+PR9           O           C      DOUBLE       n     1.229  0.0140     1.229  0.0140
+PR9           C         NXT      SINGLE       n     1.323  0.0100     1.323  0.0100
+PR9          CA          HA      SINGLE       n     1.089  0.0100     0.990  0.0121
+PR9         NXT        HXT1      SINGLE       n     1.016  0.0100     0.881  0.0200
+PR9         NXT        HXT2      SINGLE       n     1.016  0.0100     0.881  0.0200
+PR9           N           H      SINGLE       n     1.036  0.0160     0.887  0.0200
+PR9          CD        HD1C      SINGLE       n     1.089  0.0100     0.975  0.0100
+PR9          CD        HD2C      SINGLE       n     1.089  0.0100     0.975  0.0100
+PR9          CG        HG1C      SINGLE       n     1.089  0.0100     0.979  0.0132
+PR9          CG        HG2C      SINGLE       n     1.089  0.0100     0.979  0.0132
+PR9          CB        HB1C      SINGLE       n     1.089  0.0100     0.981  0.0193
+PR9          CB        HB2C      SINGLE       n     1.089  0.0100     0.981  0.0193
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -109,39 +74,39 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PR9      O      C      NXT     123.000    3.000
- PR9      O      C      CA      120.500    3.000
- PR9      NXT    C      CA      120.000    3.000
- PR9      C      NXT    HXT2    120.000    3.000
- PR9      C      NXT    HXT1    120.000    3.000
- PR9      HXT2   NXT    HXT1    120.000    3.000
- PR9      C      CA     HA      108.810    3.000
- PR9      C      CA     CB      109.470    3.000
- PR9      C      CA     N       111.600    3.000
- PR9      HA     CA     CB      108.340    3.000
- PR9      HA     CA     N       108.550    3.000
- PR9      CB     CA     N       110.000    3.000
- PR9      CA     CB     HB1C    109.470    3.000
- PR9      CA     CB     HB2C    109.470    3.000
- PR9      CA     CB     CG      111.000    3.000
- PR9      HB1C   CB     HB2C    107.900    3.000
- PR9      HB1C   CB     CG      109.470    3.000
- PR9      HB2C   CB     CG      109.470    3.000
- PR9      CB     CG     HG1C    109.470    3.000
- PR9      CB     CG     HG2C    109.470    3.000
- PR9      CB     CG     CD      111.000    3.000
- PR9      HG1C   CG     HG2C    107.900    3.000
- PR9      HG1C   CG     CD      109.470    3.000
- PR9      HG2C   CG     CD      109.470    3.000
- PR9      CG     CD     HD1C    109.470    3.000
- PR9      CG     CD     HD2C    109.470    3.000
- PR9      CG     CD     N       112.000    3.000
- PR9      HD1C   CD     HD2C    107.900    3.000
- PR9      HD1C   CD     N       109.470    3.000
- PR9      HD2C   CD     N       109.470    3.000
- PR9      CD     N      H       118.500    3.000
- PR9      CD     N      CA      120.000    3.000
- PR9      H      N      CA      118.500    3.000
+PR9          CA           C           O     121.308    1.50
+PR9          CA           C         NXT     115.870    1.65
+PR9           O           C         NXT     122.822    1.50
+PR9           N          CA          CB     103.430    2.23
+PR9           N          CA           C     111.420    2.45
+PR9           N          CA          HA     109.296    1.50
+PR9          CB          CA           C     111.469    1.50
+PR9          CB          CA          HA     110.393    1.50
+PR9           C          CA          HA     109.935    1.50
+PR9           C         NXT        HXT1     120.023    1.53
+PR9           C         NXT        HXT2     120.023    1.53
+PR9        HXT1         NXT        HXT2     119.955    1.93
+PR9          CA           N          CD     109.056    3.00
+PR9          CA           N           H     109.307    3.00
+PR9          CD           N           H     106.136    2.25
+PR9           N          CD          CG     105.071    2.33
+PR9           N          CD        HD1C     110.738    1.50
+PR9           N          CD        HD2C     110.738    1.50
+PR9          CG          CD        HD1C     110.867    1.50
+PR9          CG          CD        HD2C     110.867    1.50
+PR9        HD1C          CD        HD2C     108.731    1.50
+PR9          CB          CG          CD     104.503    1.95
+PR9          CB          CG        HG1C     110.864    1.50
+PR9          CB          CG        HG2C     110.864    1.50
+PR9          CD          CG        HG1C     110.804    1.50
+PR9          CD          CG        HG2C     110.804    1.50
+PR9        HG1C          CG        HG2C     108.899    1.50
+PR9          CA          CB          CG     103.507    1.50
+PR9          CA          CB        HB1C     110.895    1.50
+PR9          CA          CB        HB2C     110.895    1.50
+PR9          CG          CB        HB1C     110.886    1.50
+PR9          CG          CB        HB2C     110.886    1.50
+PR9        HB1C          CB        HB2C     108.922    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -152,13 +117,13 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PR9      CONST_1  O      C      NXT    HXT1       0.000    0.000   0
- PR9      var_1    O      C      CA     CB      -100.009   20.000   3
- PR9      var_2    C      CA     N      CD      -150.000   20.000   3
- PR9      var_3    C      CA     CB     CG       120.000   20.000   3
- PR9      var_4    CA     CB     CG     CD        30.000   20.000   3
- PR9      var_5    CB     CG     CD     N        -30.000   20.000   3
- PR9      var_6    CG     CD     N      CA        30.000   20.000   3
+PR9             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+PR9             sp2_sp2_3           O           C         NXT        HXT1       0.000   10.00     2
+PR9             sp3_sp3_3           C          CA           N          CD     -60.000   10.00     3
+PR9            sp3_sp3_34           C          CA          CB          CG      60.000   10.00     3
+PR9             sp3_sp3_7          CG          CD           N          CA     -60.000   10.00     3
+PR9            sp3_sp3_13           N          CD          CG          CB      60.000   10.00     3
+PR9            sp3_sp3_22          CA          CB          CG          CD     -60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -167,24 +132,35 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- PR9      chir_01  CA     C      N      CB        positiv
+PR9    chir_1    CA    N    C    CB    positive
+PR9    chir_2    N    CA    CD    H    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- PR9      plan-1    C         0.020
- PR9      plan-1    O         0.020
- PR9      plan-1    CA        0.020
- PR9      plan-1    NXT       0.020
- PR9      plan-1    HXT2      0.020
- PR9      plan-1    HXT1      0.020
- PR9      plan-2    NXT       0.020
- PR9      plan-2    C         0.020
- PR9      plan-2    HXT1      0.020
- PR9      plan-2    HXT2      0.020
- PR9      plan-3    N         0.020
- PR9      plan-3    CA        0.020
- PR9      plan-3    CD        0.020
- PR9      plan-3    H         0.020
-# ------------------------------------------------------
+PR9    plan-1           C   0.020
+PR9    plan-1          CA   0.020
+PR9    plan-1         NXT   0.020
+PR9    plan-1           O   0.020
+PR9    plan-2           C   0.020
+PR9    plan-2        HXT1   0.020
+PR9    plan-2        HXT2   0.020
+PR9    plan-2         NXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PR9           SMILES              ACDLabs 10.04                                                       O=C(N)C1NCCC1
+PR9 SMILES_CANONICAL               CACTVS 3.352                                                   NC(=O)[C@H]1CCCN1
+PR9           SMILES               CACTVS 3.352                                                    NC(=O)[CH]1CCCN1
+PR9 SMILES_CANONICAL "OpenEye OEToolkits" 1.6.1                                                C1C[C@@H](NC1)C(=O)N
+PR9           SMILES "OpenEye OEToolkits" 1.6.1                                                     C1CC(NC1)C(=O)N
+PR9            InChI                InChI  1.03 InChI=1S/C5H10N2O/c6-5(8)4-2-1-3-7-4/h4,7H,1-3H2,(H2,6,8)/t4-/m1/s1
+PR9         InChIKey                InChI  1.03                                         VLJNHYLEOZPXFW-SCSAIBSYSA-N
+PR9 ?                acedrg               231         "dictionary generator"                  
+PR9 ?                acedrg_database      11          "data source"                           
+PR9 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PR9 ?                refmac5              5.8.0238    "optimization tool"                     

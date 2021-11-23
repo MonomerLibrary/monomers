@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FC0      FC0 'N-CARBOXY-L-PHENYLALANINE           ' non-polymer        25  15 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+FC0     FC0      N-CARBOXY-L-PHENYLALANINE     "L-peptide COOH carboxy terminus"     25     15     .     
 #
 data_comp_FC0
 #
@@ -28,101 +17,70 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- FC0           O1     O    O         0.000      0.000    0.000    0.000
- FC0           C1     C    C         0.000     -0.670    0.571   -0.838
- FC0           OX0    O    OH1       0.000     -0.275    1.764   -1.319
- FC0           HX0    H    H         0.000      0.557    2.026   -0.898
- FC0           N      N    NH1       0.000     -1.811    0.009   -1.286
- FC0           H      H    H         0.000     -2.368    0.483   -1.982
- FC0           CA     C    CH1       0.000     -2.242   -1.290   -0.762
- FC0           HA     H    H         0.000     -1.968   -1.366    0.299
- FC0           C      C    C         0.000     -1.565   -2.392   -1.535
- FC0           OXT    O    OC       -0.500     -1.794   -3.589   -1.249
- FC0           O      O    OC       -0.500     -0.774   -2.112   -2.463
- FC0           CB     C    CH2       0.000     -3.759   -1.421   -0.908
- FC0           HB1    H    H         0.000     -4.068   -2.422   -0.602
- FC0           HB2    H    H         0.000     -4.039   -1.258   -1.951
- FC0           CG     C    CR6       0.000     -4.438   -0.396   -0.038
- FC0           CD1    C    CR16      0.000     -4.730    0.857   -0.545
- FC0           HD1    H    H         0.000     -4.470    1.101   -1.568
- FC0           CD2    C    CR16      0.000     -4.771   -0.708    1.266
- FC0           HD2    H    H         0.000     -4.544   -1.690    1.663
- FC0           CE2    C    CR16      0.000     -5.394    0.233    2.065
- FC0           HE2    H    H         0.000     -5.654   -0.012    3.087
- FC0           CZ     C    CR16      0.000     -5.686    1.486    1.558
- FC0           HZ     H    H         0.000     -6.175    2.223    2.183
- FC0           CE1    C    CR16      0.000     -5.353    1.798    0.253
- FC0           HE1    H    H         0.000     -5.581    2.779   -0.144
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- FC0      O1     n/a    C1     START
- FC0      C1     O1     N      .
- FC0      OX0    C1     HX0    .
- FC0      HX0    OX0    .      .
- FC0      N      C1     CA     .
- FC0      H      N      .      .
- FC0      CA     N      CB     .
- FC0      HA     CA     .      .
- FC0      C      CA     O      .
- FC0      OXT    C      .      .
- FC0      O      C      .      .
- FC0      CB     CA     CG     .
- FC0      HB1    CB     .      .
- FC0      HB2    CB     .      .
- FC0      CG     CB     CD2    .
- FC0      CD1    CG     HD1    .
- FC0      HD1    CD1    .      .
- FC0      CD2    CG     CE2    .
- FC0      HD2    CD2    .      .
- FC0      CE2    CD2    CZ     .
- FC0      HE2    CE2    .      .
- FC0      CZ     CE2    CE1    .
- FC0      HZ     CZ     .      .
- FC0      CE1    CZ     HE1    .
- FC0      HE1    CE1    .      END
- FC0      CD1    CE1    .    ADD
+FC0     CD1     C       CR16    0       -1.355      0.950       0.491       
+FC0     CE1     C       CR16    0       -2.241      1.623       -0.341      
+FC0     CZ      C       CR16    0       -2.828      0.967       -1.404      
+FC0     CE2     C       CR16    0       -2.533      -0.361      -1.636      
+FC0     CD2     C       CR16    0       -1.648      -1.035      -0.804      
+FC0     CG      C       CR6     0       -1.049      -0.388      0.271       
+FC0     CB      C       CH2     0       -0.086      -1.118      1.174       
+FC0     CA      C       CH1     0       1.359       -1.149      0.647       
+FC0     C       C       C       0       2.209       -2.003      1.606       
+FC0     O       O       O       0       2.378       -1.566      2.762       
+FC0     OXT     O       OC      -1      2.671       -3.072      1.160       
+FC0     N       N       NH1     0       1.910       0.187       0.520       
+FC0     C1      C       C       0       1.991       0.835       -0.664      
+FC0     O1      O       O       0       1.664       0.365       -1.732      
+FC0     OX0     O       OH1     0       2.460       2.080       -0.554      
+FC0     HD1     H       H       0       -0.957      1.404       1.216       
+FC0     HE1     H       H       0       -2.440      2.531       -0.179      
+FC0     HZ      H       H       0       -3.430      1.425       -1.969      
+FC0     HE2     H       H       0       -2.933      -0.813      -2.362      
+FC0     HD2     H       H       0       -1.451      -1.943      -0.969      
+FC0     HB1     H       H       0       -0.399      -2.040      1.289       
+FC0     HB2     H       H       0       -0.091      -0.689      2.054       
+FC0     HA      H       H       0       1.359       -1.586      -0.239      
+FC0     H       H       H       0       2.203       0.597       1.237       
+FC0     HX0     H       H       0       3.106       2.222       -1.131      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-FC0       CD1       CE1       single    1.390     0.020     1.390     0.020     
-FC0       CD1       CG        double    1.390     0.020     1.390     0.020     
-FC0       CE1       CZ        double    1.390     0.020     1.390     0.020     
-FC0       CZ        CE2       single    1.390     0.020     1.390     0.020     
-FC0       CE2       CD2       double    1.390     0.020     1.390     0.020     
-FC0       CD2       CG        single    1.390     0.020     1.390     0.020     
-FC0       CG        CB        single    1.511     0.020     1.511     0.020     
-FC0       CB        CA        single    1.524     0.020     1.524     0.020     
-FC0       C         CA        single    1.500     0.020     1.500     0.020     
-FC0       CA        N         single    1.450     0.020     1.450     0.020     
-FC0       O         C         deloc     1.250     0.020     1.250     0.020     
-FC0       OXT       C         deloc     1.250     0.020     1.250     0.020     
-FC0       N         C1        single    1.330     0.020     1.330     0.020     
-FC0       C1        O1        double    1.220     0.020     1.220     0.020     
-FC0       OX0       C1        single    1.330     0.020     1.330     0.020     
-FC0       HD1       CD1       single    1.082     0.013     0.975     0.010     
-FC0       HE1       CE1       single    1.082     0.013     0.975     0.010     
-FC0       HZ        CZ        single    1.082     0.013     0.975     0.010     
-FC0       HE2       CE2       single    1.082     0.013     0.975     0.010     
-FC0       HD2       CD2       single    1.082     0.013     0.975     0.010     
-FC0       HB1       CB        single    1.089     0.010     0.989     0.005     
-FC0       HB2       CB        single    1.089     0.010     0.989     0.005     
-FC0       HA        CA        single    1.089     0.010     0.989     0.005     
-FC0       H         N         single    1.016     0.010     0.899     0.007     
-FC0       HX0       OX0       single    0.970     0.012     0.839     0.014     
+FC0         CD1         CE1      DOUBLE       y     1.386  0.0100     1.386  0.0100
+FC0         CD1          CG      SINGLE       y     1.385  0.0111     1.385  0.0111
+FC0         CE1          CZ      SINGLE       y     1.376  0.0124     1.376  0.0124
+FC0          CZ         CE2      DOUBLE       y     1.376  0.0124     1.376  0.0124
+FC0         CE2         CD2      SINGLE       y     1.386  0.0100     1.386  0.0100
+FC0         CD2          CG      DOUBLE       y     1.385  0.0111     1.385  0.0111
+FC0          CG          CB      SINGLE       n     1.508  0.0100     1.508  0.0100
+FC0          CB          CA      SINGLE       n     1.538  0.0100     1.538  0.0100
+FC0          CA           C      SINGLE       n     1.539  0.0100     1.539  0.0100
+FC0          CA           N      SINGLE       n     1.445  0.0106     1.445  0.0106
+FC0           C           O      DOUBLE       n     1.247  0.0187     1.247  0.0187
+FC0           C         OXT      SINGLE       n     1.247  0.0187     1.247  0.0187
+FC0           N          C1      SINGLE       n     1.345  0.0108     1.345  0.0108
+FC0          C1          O1      DOUBLE       n     1.210  0.0102     1.210  0.0102
+FC0          C1         OX0      SINGLE       n     1.331  0.0200     1.331  0.0200
+FC0         CD1         HD1      SINGLE       n     1.082  0.0130     0.944  0.0174
+FC0         CE1         HE1      SINGLE       n     1.082  0.0130     0.944  0.0175
+FC0          CZ          HZ      SINGLE       n     1.082  0.0130     0.944  0.0161
+FC0         CE2         HE2      SINGLE       n     1.082  0.0130     0.944  0.0175
+FC0         CD2         HD2      SINGLE       n     1.082  0.0130     0.944  0.0174
+FC0          CB         HB1      SINGLE       n     1.089  0.0100     0.980  0.0164
+FC0          CB         HB2      SINGLE       n     1.089  0.0100     0.980  0.0164
+FC0          CA          HA      SINGLE       n     1.089  0.0100     0.988  0.0135
+FC0           N           H      SINGLE       n     1.016  0.0100     0.875  0.0200
+FC0         OX0         HX0      SINGLE       n     0.970  0.0120     0.877  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -130,46 +88,46 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- FC0      O1     C1     OX0     119.000    3.000
- FC0      O1     C1     N       123.000    3.000
- FC0      OX0    C1     N       120.000    3.000
- FC0      C1     OX0    HX0     109.470    3.000
- FC0      C1     N      H       120.000    3.000
- FC0      C1     N      CA      121.500    3.000
- FC0      H      N      CA      118.500    3.000
- FC0      N      CA     HA      108.550    3.000
- FC0      N      CA     C       111.600    3.000
- FC0      N      CA     CB      110.000    3.000
- FC0      HA     CA     C       108.810    3.000
- FC0      HA     CA     CB      108.340    3.000
- FC0      C      CA     CB      109.470    3.000
- FC0      CA     C      OXT     118.500    3.000
- FC0      CA     C      O       118.500    3.000
- FC0      OXT    C      O       123.000    3.000
- FC0      CA     CB     HB1     109.470    3.000
- FC0      CA     CB     HB2     109.470    3.000
- FC0      CA     CB     CG      109.470    3.000
- FC0      HB1    CB     HB2     107.900    3.000
- FC0      HB1    CB     CG      109.470    3.000
- FC0      HB2    CB     CG      109.470    3.000
- FC0      CB     CG     CD1     120.000    3.000
- FC0      CB     CG     CD2     120.000    3.000
- FC0      CD1    CG     CD2     120.000    3.000
- FC0      CG     CD1    HD1     120.000    3.000
- FC0      CG     CD1    CE1     120.000    3.000
- FC0      HD1    CD1    CE1     120.000    3.000
- FC0      CG     CD2    HD2     120.000    3.000
- FC0      CG     CD2    CE2     120.000    3.000
- FC0      HD2    CD2    CE2     120.000    3.000
- FC0      CD2    CE2    HE2     120.000    3.000
- FC0      CD2    CE2    CZ      120.000    3.000
- FC0      HE2    CE2    CZ      120.000    3.000
- FC0      CE2    CZ     HZ      120.000    3.000
- FC0      CE2    CZ     CE1     120.000    3.000
- FC0      HZ     CZ     CE1     120.000    3.000
- FC0      CZ     CE1    HE1     120.000    3.000
- FC0      CZ     CE1    CD1     120.000    3.000
- FC0      HE1    CE1    CD1     120.000    3.000
+FC0         CE1         CD1          CG     120.624    1.50
+FC0         CE1         CD1         HD1     119.786    1.50
+FC0          CG         CD1         HD1     119.591    1.50
+FC0         CD1         CE1          CZ     120.325    1.50
+FC0         CD1         CE1         HE1     119.792    1.50
+FC0          CZ         CE1         HE1     119.883    1.50
+FC0         CE1          CZ         CE2     120.043    1.50
+FC0         CE1          CZ          HZ     119.979    1.50
+FC0         CE2          CZ          HZ     119.979    1.50
+FC0          CZ         CE2         CD2     120.325    1.50
+FC0          CZ         CE2         HE2     119.883    1.50
+FC0         CD2         CE2         HE2     119.792    1.50
+FC0         CE2         CD2          CG     120.624    1.50
+FC0         CE2         CD2         HD2     119.786    1.50
+FC0          CG         CD2         HD2     119.591    1.50
+FC0         CD1          CG         CD2     118.059    1.50
+FC0         CD1          CG          CB     120.970    1.50
+FC0         CD2          CG          CB     120.970    1.50
+FC0          CG          CB          CA     113.563    1.55
+FC0          CG          CB         HB1     108.862    1.50
+FC0          CG          CB         HB2     108.862    1.50
+FC0          CA          CB         HB1     108.745    1.50
+FC0          CA          CB         HB2     108.745    1.50
+FC0         HB1          CB         HB2     107.782    1.50
+FC0          CB          CA           C     108.347    3.00
+FC0          CB          CA           N     111.191    1.54
+FC0          CB          CA          HA     108.204    1.50
+FC0           C          CA           N     110.939    1.74
+FC0           C          CA          HA     108.456    1.50
+FC0           N          CA          HA     107.907    1.50
+FC0          CA           C           O     117.245    1.50
+FC0          CA           C         OXT     117.245    1.50
+FC0           O           C         OXT     125.509    1.50
+FC0          CA           N          C1     120.653    1.63
+FC0          CA           N           H     120.073    1.50
+FC0          C1           N           H     119.274    1.99
+FC0           N          C1          O1     123.802    1.50
+FC0           N          C1         OX0     113.719    3.00
+FC0          O1          C1         OX0     122.478    1.50
+FC0          C1         OX0         HX0     110.339    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -180,18 +138,17 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FC0      var_1    O1     C1     OX0    HX0        0.009   20.000   1
- FC0      CONST_1  O1     C1     N      CA         0.000    0.000   0
- FC0      var_2    C1     N      CA     CB       154.944   20.000   3
- FC0      var_3    N      CA     C      O         -0.071   20.000   3
- FC0      var_4    N      CA     CB     CG       -65.002   20.000   3
- FC0      var_5    CA     CB     CG     CD2      -90.081   20.000   2
- FC0      CONST_2  CB     CG     CD1    CE1      180.000    0.000   0
- FC0      CONST_3  CG     CD1    CE1    CZ         0.000    0.000   0
- FC0      CONST_4  CB     CG     CD2    CE2      180.000    0.000   0
- FC0      CONST_5  CG     CD2    CE2    CZ         0.000    0.000   0
- FC0      CONST_6  CD2    CE2    CZ     CE1        0.000    0.000   0
- FC0      CONST_7  CE2    CZ     CE1    CD1        0.000    0.000   0
+FC0       const_sp2_sp2_1          CG         CD1         CE1          CZ       0.000   10.00     2
+FC0              const_22         CE1         CD1          CG          CB     180.000   10.00     2
+FC0             sp2_sp2_3          O1          C1           N          CA       0.000   10.00     2
+FC0       const_sp2_sp2_5         CD1         CE1          CZ         CE2       0.000   10.00     2
+FC0       const_sp2_sp2_9         CD2         CE2          CZ         CE1       0.000   10.00     2
+FC0              const_13          CG         CD2         CE2          CZ       0.000   10.00     2
+FC0              const_18         CE2         CD2          CG          CB     180.000   10.00     2
+FC0             sp2_sp3_2         CD1          CG          CB          CA     -90.000   10.00     6
+FC0             sp3_sp3_1           C          CA          CB          CG     180.000   10.00     3
+FC0            sp2_sp3_13          C1           N          CA          CB       0.000   10.00     6
+FC0             sp2_sp3_7           O           C          CA          CB       0.000   10.00     6
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -200,35 +157,50 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- FC0      chir_01  CA     CB     C      N         negativ
+FC0    chir_1    CA    N    C    CB    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- FC0      plan-1    CD1       0.020
- FC0      plan-1    CE1       0.020
- FC0      plan-1    CG        0.020
- FC0      plan-1    HD1       0.020
- FC0      plan-1    CZ        0.020
- FC0      plan-1    CE2       0.020
- FC0      plan-1    CD2       0.020
- FC0      plan-1    HE1       0.020
- FC0      plan-1    HZ        0.020
- FC0      plan-1    HE2       0.020
- FC0      plan-1    HD2       0.020
- FC0      plan-1    CB        0.020
- FC0      plan-2    C         0.020
- FC0      plan-2    CA        0.020
- FC0      plan-2    O         0.020
- FC0      plan-2    OXT       0.020
- FC0      plan-3    N         0.020
- FC0      plan-3    CA        0.020
- FC0      plan-3    C1        0.020
- FC0      plan-3    H         0.020
- FC0      plan-4    C1        0.020
- FC0      plan-4    N         0.020
- FC0      plan-4    O1        0.020
- FC0      plan-4    OX0       0.020
- FC0      plan-4    H         0.020
-# ------------------------------------------------------
+FC0    plan-1          CB   0.020
+FC0    plan-1         CD1   0.020
+FC0    plan-1         CD2   0.020
+FC0    plan-1         CE1   0.020
+FC0    plan-1         CE2   0.020
+FC0    plan-1          CG   0.020
+FC0    plan-1          CZ   0.020
+FC0    plan-1         HD1   0.020
+FC0    plan-1         HD2   0.020
+FC0    plan-1         HE1   0.020
+FC0    plan-1         HE2   0.020
+FC0    plan-1          HZ   0.020
+FC0    plan-2           C   0.020
+FC0    plan-2          CA   0.020
+FC0    plan-2           O   0.020
+FC0    plan-2         OXT   0.020
+FC0    plan-3          C1   0.020
+FC0    plan-3          CA   0.020
+FC0    plan-3           H   0.020
+FC0    plan-3           N   0.020
+FC0    plan-4          C1   0.020
+FC0    plan-4           N   0.020
+FC0    plan-4          O1   0.020
+FC0    plan-4         OX0   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+FC0           SMILES              ACDLabs 10.04                                                                             O=C(O)C(NC(=O)O)Cc1ccccc1
+FC0 SMILES_CANONICAL               CACTVS 3.352                                                                        OC(=O)N[C@@H](Cc1ccccc1)C(O)=O
+FC0           SMILES               CACTVS 3.352                                                                          OC(=O)N[CH](Cc1ccccc1)C(O)=O
+FC0 SMILES_CANONICAL "OpenEye OEToolkits" 1.6.1                                                                      c1ccc(cc1)C[C@@H](C(=O)O)NC(=O)O
+FC0           SMILES "OpenEye OEToolkits" 1.6.1                                                                           c1ccc(cc1)CC(C(=O)O)NC(=O)O
+FC0            InChI                InChI  1.03 InChI=1S/C10H11NO4/c12-9(13)8(11-10(14)15)6-7-4-2-1-3-5-7/h1-5,8,11H,6H2,(H,12,13)(H,14,15)/t8-/m0/s1
+FC0         InChIKey                InChI  1.03                                                                           XXGPNEDZNRZWPK-QMMMGPOBSA-N
+FC0 ?                acedrg               231         "dictionary generator"                  
+FC0 ?                acedrg_database      11          "data source"                           
+FC0 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+FC0 ?                refmac5              5.8.0238    "optimization tool"                     

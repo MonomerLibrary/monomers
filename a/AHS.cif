@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-AHS      AHS '(3-AMINO-4-CYCLOHEXYL-2-HYDROXY-BUTY' non-polymer        50  20 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+AHS     AHS      "(3-AMINO-4-CYCLOHEXYL-2-HYDROXY-BUTYL)-ISOBUTYL-CARBAMIC ACID"     peptide-like     51     20     .     
 #
 data_comp_AHS
 #
@@ -28,176 +17,122 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- AHS           O      O    O         0.000      0.000    0.000    0.000
- AHS           C      C    C         0.000     -1.141   -0.205    0.366
- AHS           OXT    O    OH1       0.000     -1.558   -1.466    0.590
- AHS           HXT    H    H         0.000     -2.484   -1.457    0.874
- AHS           N1     N    N         0.000     -1.986    0.827    0.548
- AHS           CB2    C    CH2       0.000     -1.531    2.199    0.304
- AHS           HB21   H    H         0.000     -2.375    2.809   -0.024
- AHS           HB22   H    H         0.000     -0.763    2.195   -0.472
- AHS           CG2    C    CH1       0.000     -0.950    2.780    1.595
- AHS           HG2    H    H         0.000     -1.695    2.701    2.400
- AHS           CD4    C    CH3       0.000     -0.590    4.250    1.376
- AHS           HD43   H    H         0.000     -0.188    4.654    2.269
- AHS           HD42   H    H         0.000      0.129    4.327    0.601
- AHS           HD41   H    H         0.000     -1.459    4.792    1.104
- AHS           CD3    C    CH3       0.000      0.307    1.999    1.985
- AHS           HD33   H    H         0.000      0.059    0.980    2.137
- AHS           HD32   H    H         0.000      1.026    2.074    1.210
- AHS           HD31   H    H         0.000      0.711    2.400    2.879
- AHS           CM     C    CH2       0.000     -3.361    0.579    0.989
- AHS           HM1    H    H         0.000     -3.714    1.431    1.575
- AHS           HM2    H    H         0.000     -3.388   -0.321    1.607
- AHS           CH     C    CH1       0.000     -4.263    0.389   -0.233
- AHS           HH     H    H         0.000     -3.907   -0.468   -0.821
- AHS           OH     O    OH1       0.000     -4.227    1.568   -1.039
- AHS           HO     H    H         0.000     -4.540    2.321   -0.521
- AHS           CA     C    CH1       0.000     -5.698    0.130    0.229
- AHS           HA     H    H         0.000     -5.725   -0.777    0.849
- AHS           N      N    NH2       0.000     -6.174    1.276    1.015
- AHS           H2     H    H         0.000     -6.372    1.172    2.004
- AHS           H      H    H         0.000     -6.308    2.179    0.574
- AHS           CB     C    CH2       0.000     -6.599   -0.060   -0.993
- AHS           HB2    H    H         0.000     -6.190   -0.849   -1.628
- AHS           HB3    H    H         0.000     -6.646    0.873   -1.559
- AHS           CG     C    CH1       0.000     -8.006   -0.451   -0.533
- AHS           HG     H    H         0.000     -8.376    0.292    0.186
- AHS           CD2    C    CH2       0.000     -8.942   -0.501   -1.743
- AHS           HD23   H    H         0.000     -8.574   -1.239   -2.458
- AHS           HD22   H    H         0.000     -8.973    0.481   -2.219
- AHS           CE2    C    CH2       0.000    -10.348   -0.890   -1.283
- AHS           HE23   H    H         0.000    -11.016   -0.924   -2.146
- AHS           HE22   H    H         0.000    -10.714   -0.151   -0.568
- AHS           CZ     C    CH2       0.000    -10.303   -2.267   -0.616
- AHS           HZ2    H    H         0.000     -9.937   -3.006   -1.332
- AHS           HZ3    H    H         0.000    -11.307   -2.546   -0.289
- AHS           CE1    C    CH2       0.000     -9.366   -2.218    0.592
- AHS           HE12   H    H         0.000     -9.336   -3.200    1.068
- AHS           HE13   H    H         0.000     -9.735   -1.479    1.307
- AHS           CD1    C    CH2       0.000     -7.960   -1.828    0.133
- AHS           HD13   H    H         0.000     -7.592   -2.567   -0.581
- AHS           HD12   H    H         0.000     -7.292   -1.793    0.997
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- AHS      O      n/a    C      START
- AHS      C      O      N1     .
- AHS      OXT    C      HXT    .
- AHS      HXT    OXT    .      .
- AHS      N1     C      CM     .
- AHS      CB2    N1     CG2    .
- AHS      HB21   CB2    .      .
- AHS      HB22   CB2    .      .
- AHS      CG2    CB2    CD3    .
- AHS      HG2    CG2    .      .
- AHS      CD4    CG2    HD41   .
- AHS      HD43   CD4    .      .
- AHS      HD42   CD4    .      .
- AHS      HD41   CD4    .      .
- AHS      CD3    CG2    HD31   .
- AHS      HD33   CD3    .      .
- AHS      HD32   CD3    .      .
- AHS      HD31   CD3    .      .
- AHS      CM     N1     CH     .
- AHS      HM1    CM     .      .
- AHS      HM2    CM     .      .
- AHS      CH     CM     CA     .
- AHS      HH     CH     .      .
- AHS      OH     CH     HO     .
- AHS      HO     OH     .      .
- AHS      CA     CH     CB     .
- AHS      HA     CA     .      .
- AHS      N      CA     H      .
- AHS      H2     N      .      .
- AHS      H      N      .      .
- AHS      CB     CA     CG     .
- AHS      HB2    CB     .      .
- AHS      HB3    CB     .      .
- AHS      CG     CB     CD2    .
- AHS      HG     CG     .      .
- AHS      CD2    CG     CE2    .
- AHS      HD23   CD2    .      .
- AHS      HD22   CD2    .      .
- AHS      CE2    CD2    CZ     .
- AHS      HE23   CE2    .      .
- AHS      HE22   CE2    .      .
- AHS      CZ     CE2    CE1    .
- AHS      HZ2    CZ     .      .
- AHS      HZ3    CZ     .      .
- AHS      CE1    CZ     CD1    .
- AHS      HE12   CE1    .      .
- AHS      HE13   CE1    .      .
- AHS      CD1    CE1    HD12   .
- AHS      HD13   CD1    .      .
- AHS      HD12   CD1    .      END
- AHS      CG     CD1    .    ADD
+AHS     N       N       NT3     1       4.455       31.624      14.904      
+AHS     CA      C       CH1     0       4.924       33.047      14.923      
+AHS     CB      C       CH2     0       6.391       33.125      15.346      
+AHS     CG      C       CH1     0       6.781       32.468      16.670      
+AHS     CD1     C       CH2     0       6.109       33.132      17.870      
+AHS     CD2     C       CH2     0       8.295       32.467      16.861      
+AHS     CE1     C       CH2     0       6.528       32.501      19.198      
+AHS     CE2     C       CH2     0       8.718       31.830      18.184      
+AHS     CZ      C       CH2     0       8.037       32.502      19.364      
+AHS     CH      C       CH1     0       4.657       33.774      13.593      
+AHS     OH      O       OH1     0       5.092       32.958      12.502      
+AHS     CM      C       CH2     0       3.206       34.197      13.375      
+AHS     N1      N       N       0       3.020       35.086      12.218      
+AHS     CB2     C       CH2     0       2.468       34.453      11.008      
+AHS     CG2     C       CH1     0       0.947       34.317      11.002      
+AHS     CD3     C       CH3     0       0.269       35.677      11.039      
+AHS     CD4     C       CH3     0       0.492       33.522      9.789       
+AHS     C       C       C       0       3.354       36.394      12.305      
+AHS     O       O       O       0       3.899       36.883      13.269      
+AHS     OXT     O       OH1     0       3.037       37.153      11.251      
+AHS     H       H       H       0       3.689       31.555      14.424      
+AHS     H2      H       H       0       4.294       31.340      15.750      
+AHS     H3      H       H       0       5.086       31.092      14.528      
+AHS     HA      H       H       0       4.398       33.514      15.607      
+AHS     HB2     H       H       0       6.643       34.072      15.394      
+AHS     HB3     H       H       0       6.932       32.719      14.636      
+AHS     HG      H       H       0       6.484       31.532      16.636      
+AHS     HD12    H       H       0       6.337       34.083      17.880      
+AHS     HD13    H       H       0       5.138       33.058      17.777      
+AHS     HD23    H       H       0       8.623       33.388      16.830      
+AHS     HD22    H       H       0       8.711       31.978      16.123      
+AHS     HE12    H       H       0       6.197       31.578      19.237      
+AHS     HE13    H       H       0       6.119       33.001      19.938      
+AHS     HE23    H       H       0       9.692       31.905      18.285      
+AHS     HE22    H       H       0       8.486       30.876      18.175      
+AHS     HZ2     H       H       0       8.274       32.028      20.190      
+AHS     HZ3     H       H       0       8.356       33.426      19.441      
+AHS     HH      H       H       0       5.218       34.590      13.583      
+AHS     HO      H       H       0       4.535       32.342      12.328      
+AHS     HM1     H       H       0       2.884       34.653      14.182      
+AHS     HM2     H       H       0       2.655       33.394      13.256      
+AHS     HB21    H       H       0       2.856       33.557      10.919      
+AHS     HB22    H       H       0       2.739       34.963      10.216      
+AHS     HG2     H       H       0       0.681       33.819      11.813      
+AHS     HD31    H       H       0       -0.688      35.567      10.900      
+AHS     HD32    H       H       0       0.635       36.242      10.336      
+AHS     HD33    H       H       0       0.425       36.094      11.904      
+AHS     HD41    H       H       0       0.895       32.636      9.811       
+AHS     HD42    H       H       0       0.767       33.982      8.977       
+AHS     HD43    H       H       0       -0.477      33.437      9.801       
+AHS     HXT     H       H       0       2.443       37.757      11.477      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-AHS       N         CA        single    1.450     0.020     1.450     0.020     
-AHS       H         N         single    1.036     0.016     0.914     0.007     
-AHS       H2        N         single    1.036     0.016     0.914     0.007     
-AHS       CB        CA        single    1.524     0.020     1.524     0.020     
-AHS       CA        CH        single    1.524     0.020     1.524     0.020     
-AHS       HA        CA        single    1.089     0.010     0.989     0.005     
-AHS       CG        CB        single    1.524     0.020     1.524     0.020     
-AHS       HB2       CB        single    1.089     0.010     0.989     0.005     
-AHS       HB3       CB        single    1.089     0.010     0.989     0.005     
-AHS       CG        CD1       single    1.524     0.020     1.524     0.020     
-AHS       CD2       CG        single    1.524     0.020     1.524     0.020     
-AHS       HG        CG        single    1.089     0.010     0.989     0.005     
-AHS       CD1       CE1       single    1.524     0.020     1.524     0.020     
-AHS       HD12      CD1       single    1.089     0.010     0.989     0.005     
-AHS       HD13      CD1       single    1.089     0.010     0.989     0.005     
-AHS       CE2       CD2       single    1.524     0.020     1.524     0.020     
-AHS       HD23      CD2       single    1.089     0.010     0.989     0.005     
-AHS       HD22      CD2       single    1.089     0.010     0.989     0.005     
-AHS       CE1       CZ        single    1.524     0.020     1.524     0.020     
-AHS       HE12      CE1       single    1.089     0.010     0.989     0.005     
-AHS       HE13      CE1       single    1.089     0.010     0.989     0.005     
-AHS       CZ        CE2       single    1.524     0.020     1.524     0.020     
-AHS       HE23      CE2       single    1.089     0.010     0.989     0.005     
-AHS       HE22      CE2       single    1.089     0.010     0.989     0.005     
-AHS       HZ2       CZ        single    1.089     0.010     0.989     0.005     
-AHS       HZ3       CZ        single    1.089     0.010     0.989     0.005     
-AHS       OH        CH        single    1.432     0.020     1.432     0.020     
-AHS       CH        CM        single    1.524     0.020     1.524     0.020     
-AHS       HH        CH        single    1.089     0.010     0.989     0.005     
-AHS       HO        OH        single    0.970     0.012     0.839     0.014     
-AHS       CM        N1        single    1.455     0.020     1.455     0.020     
-AHS       HM1       CM        single    1.089     0.010     0.989     0.005     
-AHS       HM2       CM        single    1.089     0.010     0.989     0.005     
-AHS       CB2       N1        single    1.455     0.020     1.455     0.020     
-AHS       N1        C         single    1.330     0.020     1.330     0.020     
-AHS       CG2       CB2       single    1.524     0.020     1.524     0.020     
-AHS       HB21      CB2       single    1.089     0.010     0.989     0.005     
-AHS       HB22      CB2       single    1.089     0.010     0.989     0.005     
-AHS       CD3       CG2       single    1.524     0.020     1.524     0.020     
-AHS       CD4       CG2       single    1.524     0.020     1.524     0.020     
-AHS       HG2       CG2       single    1.089     0.010     0.989     0.005     
-AHS       HD31      CD3       single    1.089     0.010     0.989     0.005     
-AHS       HD32      CD3       single    1.089     0.010     0.989     0.005     
-AHS       HD33      CD3       single    1.089     0.010     0.989     0.005     
-AHS       HD41      CD4       single    1.089     0.010     0.989     0.005     
-AHS       HD42      CD4       single    1.089     0.010     0.989     0.005     
-AHS       HD43      CD4       single    1.089     0.010     0.989     0.005     
-AHS       C         O         double    1.220     0.020     1.220     0.020     
-AHS       OXT       C         single    1.330     0.020     1.330     0.020     
-AHS       HXT       OXT       single    0.970     0.012     0.839     0.014     
+AHS           N          CA      SINGLE       n     1.497  0.0100     1.497  0.0100
+AHS          CA          CB      SINGLE       n     1.517  0.0200     1.517  0.0200
+AHS          CA          CH      SINGLE       n     1.536  0.0128     1.536  0.0128
+AHS          CB          CG      SINGLE       n     1.526  0.0115     1.526  0.0115
+AHS          CG         CD1      SINGLE       n     1.524  0.0100     1.524  0.0100
+AHS          CG         CD2      SINGLE       n     1.524  0.0100     1.524  0.0100
+AHS         CD1         CE1      SINGLE       n     1.527  0.0100     1.527  0.0100
+AHS         CD2         CE2      SINGLE       n     1.527  0.0100     1.527  0.0100
+AHS         CE1          CZ      SINGLE       n     1.517  0.0112     1.517  0.0112
+AHS         CE2          CZ      SINGLE       n     1.517  0.0112     1.517  0.0112
+AHS          CH          OH      SINGLE       n     1.424  0.0199     1.424  0.0199
+AHS          CH          CM      SINGLE       n     1.524  0.0100     1.524  0.0100
+AHS          CM          N1      SINGLE       n     1.466  0.0100     1.466  0.0100
+AHS          N1         CB2      SINGLE       n     1.466  0.0100     1.466  0.0100
+AHS          N1           C      SINGLE       n     1.343  0.0105     1.343  0.0105
+AHS         CB2         CG2      SINGLE       n     1.525  0.0130     1.525  0.0130
+AHS         CG2         CD3      SINGLE       n     1.520  0.0129     1.520  0.0129
+AHS         CG2         CD4      SINGLE       n     1.520  0.0129     1.520  0.0129
+AHS           C           O      DOUBLE       n     1.210  0.0102     1.210  0.0102
+AHS           C         OXT      SINGLE       n     1.331  0.0200     1.331  0.0200
+AHS           N           H      SINGLE       n     1.036  0.0160     0.907  0.0200
+AHS           N          H2      SINGLE       n     1.036  0.0160     0.907  0.0200
+AHS           N          H3      SINGLE       n     1.036  0.0160     0.907  0.0200
+AHS          CA          HA      SINGLE       n     1.089  0.0100     0.982  0.0200
+AHS          CB         HB2      SINGLE       n     1.089  0.0100     0.981  0.0140
+AHS          CB         HB3      SINGLE       n     1.089  0.0100     0.981  0.0140
+AHS          CG          HG      SINGLE       n     1.089  0.0100     0.983  0.0100
+AHS         CD1        HD12      SINGLE       n     1.089  0.0100     0.978  0.0143
+AHS         CD1        HD13      SINGLE       n     1.089  0.0100     0.978  0.0143
+AHS         CD2        HD23      SINGLE       n     1.089  0.0100     0.978  0.0143
+AHS         CD2        HD22      SINGLE       n     1.089  0.0100     0.978  0.0143
+AHS         CE1        HE12      SINGLE       n     1.089  0.0100     0.982  0.0142
+AHS         CE1        HE13      SINGLE       n     1.089  0.0100     0.982  0.0142
+AHS         CE2        HE23      SINGLE       n     1.089  0.0100     0.982  0.0142
+AHS         CE2        HE22      SINGLE       n     1.089  0.0100     0.982  0.0142
+AHS          CZ         HZ2      SINGLE       n     1.089  0.0100     0.981  0.0138
+AHS          CZ         HZ3      SINGLE       n     1.089  0.0100     0.981  0.0138
+AHS          CH          HH      SINGLE       n     1.089  0.0100     0.992  0.0184
+AHS          OH          HO      SINGLE       n     0.970  0.0120     0.848  0.0200
+AHS          CM         HM1      SINGLE       n     1.089  0.0100     0.981  0.0152
+AHS          CM         HM2      SINGLE       n     1.089  0.0100     0.981  0.0152
+AHS         CB2        HB21      SINGLE       n     1.089  0.0100     0.981  0.0152
+AHS         CB2        HB22      SINGLE       n     1.089  0.0100     0.981  0.0152
+AHS         CG2         HG2      SINGLE       n     1.089  0.0100     0.988  0.0114
+AHS         CD3        HD31      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         CD3        HD32      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         CD3        HD33      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         CD4        HD41      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         CD4        HD42      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         CD4        HD43      SINGLE       n     1.089  0.0100     0.973  0.0146
+AHS         OXT         HXT      SINGLE       n     0.970  0.0120     0.877  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -205,101 +140,104 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- AHS      O      C      OXT     119.000    3.000
- AHS      O      C      N1      123.000    3.000
- AHS      OXT    C      N1      120.000    3.000
- AHS      C      OXT    HXT     109.470    3.000
- AHS      C      N1     CB2     127.000    3.000
- AHS      C      N1     CM      127.000    3.000
- AHS      CB2    N1     CM      120.000    3.000
- AHS      N1     CB2    HB21    109.470    3.000
- AHS      N1     CB2    HB22    109.470    3.000
- AHS      N1     CB2    CG2     105.000    3.000
- AHS      HB21   CB2    HB22    107.900    3.000
- AHS      HB21   CB2    CG2     109.470    3.000
- AHS      HB22   CB2    CG2     109.470    3.000
- AHS      CB2    CG2    HG2     108.340    3.000
- AHS      CB2    CG2    CD4     111.000    3.000
- AHS      CB2    CG2    CD3     111.000    3.000
- AHS      HG2    CG2    CD4     108.340    3.000
- AHS      HG2    CG2    CD3     108.340    3.000
- AHS      CD4    CG2    CD3     111.000    3.000
- AHS      CG2    CD4    HD43    109.470    3.000
- AHS      CG2    CD4    HD42    109.470    3.000
- AHS      CG2    CD4    HD41    109.470    3.000
- AHS      HD43   CD4    HD42    109.470    3.000
- AHS      HD43   CD4    HD41    109.470    3.000
- AHS      HD42   CD4    HD41    109.470    3.000
- AHS      CG2    CD3    HD33    109.470    3.000
- AHS      CG2    CD3    HD32    109.470    3.000
- AHS      CG2    CD3    HD31    109.470    3.000
- AHS      HD33   CD3    HD32    109.470    3.000
- AHS      HD33   CD3    HD31    109.470    3.000
- AHS      HD32   CD3    HD31    109.470    3.000
- AHS      N1     CM     HM1     109.470    3.000
- AHS      N1     CM     HM2     109.470    3.000
- AHS      N1     CM     CH      105.000    3.000
- AHS      HM1    CM     HM2     107.900    3.000
- AHS      HM1    CM     CH      109.470    3.000
- AHS      HM2    CM     CH      109.470    3.000
- AHS      CM     CH     HH      108.340    3.000
- AHS      CM     CH     OH      109.470    3.000
- AHS      CM     CH     CA      111.000    3.000
- AHS      HH     CH     OH      109.470    3.000
- AHS      HH     CH     CA      108.340    3.000
- AHS      OH     CH     CA      109.470    3.000
- AHS      CH     OH     HO      109.470    3.000
- AHS      CH     CA     HA      108.340    3.000
- AHS      CH     CA     N       109.470    3.000
- AHS      CH     CA     CB      111.000    3.000
- AHS      HA     CA     N       109.470    3.000
- AHS      HA     CA     CB      108.340    3.000
- AHS      N      CA     CB      109.470    3.000
- AHS      CA     N      H2      120.000    3.000
- AHS      CA     N      H       120.000    3.000
- AHS      H2     N      H       120.000    3.000
- AHS      CA     CB     HB2     109.470    3.000
- AHS      CA     CB     HB3     109.470    3.000
- AHS      CA     CB     CG      111.000    3.000
- AHS      HB2    CB     HB3     107.900    3.000
- AHS      HB2    CB     CG      109.470    3.000
- AHS      HB3    CB     CG      109.470    3.000
- AHS      CB     CG     HG      108.340    3.000
- AHS      CB     CG     CD2     109.470    3.000
- AHS      CB     CG     CD1     109.470    3.000
- AHS      HG     CG     CD2     108.340    3.000
- AHS      HG     CG     CD1     108.340    3.000
- AHS      CD2    CG     CD1     109.470    3.000
- AHS      CG     CD2    HD23    109.470    3.000
- AHS      CG     CD2    HD22    109.470    3.000
- AHS      CG     CD2    CE2     111.000    3.000
- AHS      HD23   CD2    HD22    107.900    3.000
- AHS      HD23   CD2    CE2     109.470    3.000
- AHS      HD22   CD2    CE2     109.470    3.000
- AHS      CD2    CE2    HE23    109.470    3.000
- AHS      CD2    CE2    HE22    109.470    3.000
- AHS      CD2    CE2    CZ      111.000    3.000
- AHS      HE23   CE2    HE22    107.900    3.000
- AHS      HE23   CE2    CZ      109.470    3.000
- AHS      HE22   CE2    CZ      109.470    3.000
- AHS      CE2    CZ     HZ2     109.470    3.000
- AHS      CE2    CZ     HZ3     109.470    3.000
- AHS      CE2    CZ     CE1     111.000    3.000
- AHS      HZ2    CZ     HZ3     107.900    3.000
- AHS      HZ2    CZ     CE1     109.470    3.000
- AHS      HZ3    CZ     CE1     109.470    3.000
- AHS      CZ     CE1    HE12    109.470    3.000
- AHS      CZ     CE1    HE13    109.470    3.000
- AHS      CZ     CE1    CD1     111.000    3.000
- AHS      HE12   CE1    HE13    107.900    3.000
- AHS      HE12   CE1    CD1     109.470    3.000
- AHS      HE13   CE1    CD1     109.470    3.000
- AHS      CE1    CD1    HD13    109.470    3.000
- AHS      CE1    CD1    HD12    109.470    3.000
- AHS      CE1    CD1    CG      111.000    3.000
- AHS      HD13   CD1    HD12    107.900    3.000
- AHS      HD13   CD1    CG      109.470    3.000
- AHS      HD12   CD1    CG      109.470    3.000
+AHS          CA           N           H     109.950    1.71
+AHS          CA           N          H2     109.950    1.71
+AHS          CA           N          H3     109.950    1.71
+AHS           H           N          H2     109.028    2.41
+AHS           H           N          H3     109.028    2.41
+AHS          H2           N          H3     109.028    2.41
+AHS           N          CA          CB     109.471    3.00
+AHS           N          CA          CH     112.810    3.00
+AHS           N          CA          HA     108.026    2.07
+AHS          CB          CA          CH     113.128    1.50
+AHS          CB          CA          HA     107.680    1.50
+AHS          CH          CA          HA     107.235    1.50
+AHS          CA          CB          CG     113.198    2.74
+AHS          CA          CB         HB2     108.394    1.50
+AHS          CA          CB         HB3     108.394    1.50
+AHS          CG          CB         HB2     108.361    1.50
+AHS          CG          CB         HB3     108.361    1.50
+AHS         HB2          CB         HB3     107.474    1.50
+AHS          CB          CG         CD1     111.907    1.50
+AHS          CB          CG         CD2     111.907    1.50
+AHS          CB          CG          HG     107.292    1.50
+AHS         CD1          CG         CD2     109.635    1.50
+AHS         CD1          CG          HG     107.897    1.50
+AHS         CD2          CG          HG     107.897    1.50
+AHS          CG         CD1         CE1     112.229    1.50
+AHS          CG         CD1        HD12     109.293    1.50
+AHS          CG         CD1        HD13     109.293    1.50
+AHS         CE1         CD1        HD12     109.267    1.50
+AHS         CE1         CD1        HD13     109.267    1.50
+AHS        HD12         CD1        HD13     107.919    1.50
+AHS          CG         CD2         CE2     112.229    1.50
+AHS          CG         CD2        HD23     109.293    1.50
+AHS          CG         CD2        HD22     109.293    1.50
+AHS         CE2         CD2        HD23     109.267    1.50
+AHS         CE2         CD2        HD22     109.267    1.50
+AHS        HD23         CD2        HD22     107.919    1.50
+AHS         CD1         CE1          CZ     111.360    1.50
+AHS         CD1         CE1        HE12     109.388    1.50
+AHS         CD1         CE1        HE13     109.388    1.50
+AHS          CZ         CE1        HE12     109.386    1.50
+AHS          CZ         CE1        HE13     109.386    1.50
+AHS        HE12         CE1        HE13     108.036    1.50
+AHS         CD2         CE2          CZ     111.360    1.50
+AHS         CD2         CE2        HE23     109.388    1.50
+AHS         CD2         CE2        HE22     109.388    1.50
+AHS          CZ         CE2        HE23     109.386    1.50
+AHS          CZ         CE2        HE22     109.386    1.50
+AHS        HE23         CE2        HE22     108.036    1.50
+AHS         CE1          CZ         CE2     111.038    1.50
+AHS         CE1          CZ         HZ2     109.386    1.50
+AHS         CE1          CZ         HZ3     109.386    1.50
+AHS         CE2          CZ         HZ2     109.386    1.50
+AHS         CE2          CZ         HZ3     109.386    1.50
+AHS         HZ2          CZ         HZ3     108.036    1.50
+AHS          CA          CH          OH     109.668    2.07
+AHS          CA          CH          CM     115.263    3.00
+AHS          CA          CH          HH     108.159    1.50
+AHS          OH          CH          CM     109.290    2.07
+AHS          OH          CH          HH     108.183    1.96
+AHS          CM          CH          HH     108.552    1.50
+AHS          CH          OH          HO     109.265    3.00
+AHS          CH          CM          N1     113.500    1.50
+AHS          CH          CM         HM1     109.093    1.50
+AHS          CH          CM         HM2     109.093    1.50
+AHS          N1          CM         HM1     108.976    1.50
+AHS          N1          CM         HM2     108.976    1.50
+AHS         HM1          CM         HM2     107.873    1.50
+AHS          CM          N1         CB2     117.078    1.50
+AHS          CM          N1           C     121.461    2.67
+AHS         CB2          N1           C     121.461    2.67
+AHS          N1         CB2         CG2     114.429    1.50
+AHS          N1         CB2        HB21     108.976    1.50
+AHS          N1         CB2        HB22     108.976    1.50
+AHS         CG2         CB2        HB21     108.704    1.50
+AHS         CG2         CB2        HB22     108.704    1.50
+AHS        HB21         CB2        HB22     107.614    1.50
+AHS         CB2         CG2         CD3     110.490    2.10
+AHS         CB2         CG2         CD4     110.490    2.10
+AHS         CB2         CG2         HG2     108.101    1.50
+AHS         CD3         CG2         CD4     110.933    1.50
+AHS         CD3         CG2         HG2     108.132    1.50
+AHS         CD4         CG2         HG2     108.132    1.50
+AHS         CG2         CD3        HD31     109.450    1.50
+AHS         CG2         CD3        HD32     109.450    1.50
+AHS         CG2         CD3        HD33     109.450    1.50
+AHS        HD31         CD3        HD32     109.411    1.50
+AHS        HD31         CD3        HD33     109.411    1.50
+AHS        HD32         CD3        HD33     109.411    1.50
+AHS         CG2         CD4        HD41     109.450    1.50
+AHS         CG2         CD4        HD42     109.450    1.50
+AHS         CG2         CD4        HD43     109.450    1.50
+AHS        HD41         CD4        HD42     109.411    1.50
+AHS        HD41         CD4        HD43     109.411    1.50
+AHS        HD42         CD4        HD43     109.411    1.50
+AHS          N1           C           O     124.047    1.50
+AHS          N1           C         OXT     113.597    3.00
+AHS           O           C         OXT     122.356    1.50
+AHS           C         OXT         HXT     110.339    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -310,25 +248,24 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AHS      var_1    O      C      OXT    HXT     -179.979   20.000   1
- AHS      CONST_1  O      C      N1     CM       180.000    0.000   0
- AHS      var_2    C      N1     CB2    CG2      -90.021   20.000   1
- AHS      var_3    N1     CB2    CG2    CD3       65.021   20.000   3
- AHS      var_4    CB2    CG2    CD4    HD41      59.968   20.000   3
- AHS      var_5    CB2    CG2    CD3    HD31    -179.996   20.000   3
- AHS      var_6    C      N1     CM     CH       -90.013   20.000   1
- AHS      var_7    N1     CM     CH     CA       179.979   20.000   3
- AHS      var_8    CM     CH     OH     HO       -60.009   20.000   1
- AHS      var_9    CM     CH     CA     CB       180.000   20.000   3
- AHS      var_10   CH     CA     N      H         66.346   20.000   1
- AHS      var_11   CH     CA     CB     CG       174.638   20.000   3
- AHS      var_12   CA     CB     CG     CD2      174.235   20.000   3
- AHS      var_13   CB     CG     CD1    CE1      180.000   20.000   3
- AHS      var_14   CB     CG     CD2    CE2      180.000   20.000   3
- AHS      var_15   CG     CD2    CE2    CZ       -60.000   20.000   3
- AHS      var_16   CD2    CE2    CZ     CE1       60.000   20.000   3
- AHS      var_17   CE2    CZ     CE1    CD1      -60.000   20.000   3
- AHS      var_18   CZ     CE1    CD1    CG        60.000   20.000   3
+AHS            sp3_sp3_46          CB          CA           N           H     180.000   10.00     3
+AHS             sp2_sp3_2         CB2          N1          CM          CH     120.000   10.00     6
+AHS             sp2_sp3_8          CM          N1         CB2         CG2     120.000   10.00     6
+AHS             sp2_sp2_3           O           C          N1          CM       0.000   10.00     2
+AHS           sp3_sp3_104          N1         CB2         CG2         CD3     -60.000   10.00     3
+AHS           sp3_sp3_112        HD31         CD3         CG2         CB2     180.000   10.00     3
+AHS           sp3_sp3_122        HD41         CD4         CG2         CB2     -60.000   10.00     3
+AHS            sp3_sp3_55           N          CA          CB          CG     180.000   10.00     3
+AHS            sp3_sp3_64           N          CA          CH          OH     180.000   10.00     3
+AHS            sp3_sp3_74          CA          CB          CG         CD1     -60.000   10.00     3
+AHS             sp3_sp3_3         CE1         CD1          CG          CB     -60.000   10.00     3
+AHS            sp3_sp3_83         CE2         CD2          CG          CB     -60.000   10.00     3
+AHS            sp3_sp3_10          CG         CD1         CE1          CZ     -60.000   10.00     3
+AHS            sp3_sp3_37          CG         CD2         CE2          CZ      60.000   10.00     3
+AHS            sp3_sp3_19         CD1         CE1          CZ         CE2      60.000   10.00     3
+AHS            sp3_sp3_28         CD2         CE2          CZ         CE1     -60.000   10.00     3
+AHS            sp3_sp3_91          CA          CH          OH          HO     180.000   10.00     3
+AHS            sp3_sp3_94          CA          CH          CM          N1     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -337,25 +274,37 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- AHS      chir_01  CA     N      CB     CH        negativ
- AHS      chir_02  CG     CB     CD1    CD2       positiv
- AHS      chir_03  CH     CA     OH     CM        negativ
- AHS      chir_04  CG2    CB2    CD3    CD4       negativ
+AHS    chir_1    CA    N    CH    CB    positive
+AHS    chir_2    CG    CB    CD1    CD2    both
+AHS    chir_3    CH    OH    CA    CM    positive
+AHS    chir_4    CG2    CB2    CD3    CD4    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- AHS      plan-1    N         0.020
- AHS      plan-1    CA        0.020
- AHS      plan-1    H         0.020
- AHS      plan-1    H2        0.020
- AHS      plan-2    N1        0.020
- AHS      plan-2    CM        0.020
- AHS      plan-2    CB2       0.020
- AHS      plan-2    C         0.020
- AHS      plan-3    C         0.020
- AHS      plan-3    N1        0.020
- AHS      plan-3    O         0.020
- AHS      plan-3    OXT       0.020
-# ------------------------------------------------------
+AHS    plan-1           C   0.020
+AHS    plan-1         CB2   0.020
+AHS    plan-1          CM   0.020
+AHS    plan-1          N1   0.020
+AHS    plan-2           C   0.020
+AHS    plan-2          N1   0.020
+AHS    plan-2           O   0.020
+AHS    plan-2         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+AHS           SMILES              ACDLabs 12.01                                                                                              O=C(O)N(CC(C)C)CC(O)C(N)CC1CCCCC1
+AHS SMILES_CANONICAL               CACTVS 3.370                                                                                     CC(C)CN(C[C@H](O)[C@@H](N)CC1CCCCC1)C(O)=O
+AHS           SMILES               CACTVS 3.370                                                                                        CC(C)CN(C[CH](O)[CH](N)CC1CCCCC1)C(O)=O
+AHS SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0                                                                                     CC(C)CN(C[C@@H]([C@H](CC1CCCCC1)N)O)C(=O)O
+AHS           SMILES "OpenEye OEToolkits" 1.7.0                                                                                              CC(C)CN(CC(C(CC1CCCCC1)N)O)C(=O)O
+AHS            InChI                InChI  1.03 InChI=1S/C15H30N2O3/c1-11(2)9-17(15(19)20)10-14(18)13(16)8-12-6-4-3-5-7-12/h11-14,18H,3-10,16H2,1-2H3,(H,19,20)/t13-,14-/m0/s1
+AHS         InChIKey                InChI  1.03                                                                                                    AXBVZKHUXGSFMA-KBPBESRZSA-N
+AHS ?                acedrg               231         "dictionary generator"                  
+AHS ?                acedrg_database      11          "data source"                           
+AHS ?                rdkit                2017.03.2   "Chemoinformatics tool"
+AHS ?                refmac5              5.8.0238    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BB9      BB9 '(2Z)-2-amino-3-sulfanylprop-2-enoic ' non-polymer        11   7 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BB9     BB9      "(2Z)-2-amino-3-sulfanylprop-2-enoic acid"     "PEPTIDE LINKING"     11     7     .     
 #
 data_comp_BB9
 #
@@ -28,57 +17,41 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BB9           OXT    O    OC       -0.500      0.000    0.000    0.000
- BB9           C      C    C         0.000     -1.066   -0.654    0.000
- BB9           O      O    OC       -0.500     -1.032   -1.905    0.000
- BB9           CA     C    C         0.000     -2.310    0.020    0.000
- BB9           N      N    NH2       0.000     -2.348    1.430    0.000
- BB9           HN2    H    H         0.000     -3.237    1.941    0.000
- BB9           HN1    H    H         0.000     -1.489    1.989    0.000
- BB9           CB     C    C1        0.000     -3.464   -0.689    0.000
- BB9           HB     H    H         0.000     -3.434   -1.765    0.000
- BB9           SG     S    SH1       0.000     -5.013    0.150    0.000
- BB9           HG     H    H         0.000     -6.017   -0.732    0.000
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BB9      OXT    n/a    C      START
- BB9      C      OXT    CA     .
- BB9      O      C      .      .
- BB9      CA     C      CB     .
- BB9      N      CA     HN1    .
- BB9      HN2    N      .      .
- BB9      HN1    N      .      .
- BB9      CB     CA     SG     .
- BB9      HB     CB     .      .
- BB9      SG     CB     HG     .
- BB9      HG     SG     .      END
+BB9     N       N       NH2     0       11.599      -4.830      26.587      
+BB9     CA      C       C       0       12.217      -5.694      27.433      
+BB9     C       C       C       0       11.615      -6.010      28.640      
+BB9     O       O       O       0       12.156      -6.748      29.469      
+BB9     CB      C       C1      0       13.455      -6.238      27.046      
+BB9     SG      S       SH1     0       14.281      -5.763      25.562      
+BB9     OXT     O       OC      -1      10.503      -5.539      28.890      
+BB9     HN1     H       H       0       11.975      -4.619      25.811      
+BB9     HN2     H       H       0       10.816      -4.471      26.805      
+BB9     HB      H       H       0       13.862      -6.880      27.587      
+BB9     HG      H       HSH1    0       13.462      -6.181      24.740      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-BB9       N         CA        single    1.332     0.020     1.332     0.020     
-BB9       CA        C         single    1.460     0.020     1.460     0.020     
-BB9       CB        CA        double    1.340     0.020     1.340     0.020     
-BB9       O         C         deloc     1.250     0.020     1.250     0.020     
-BB9       C         OXT       deloc     1.250     0.020     1.250     0.020     
-BB9       SG        CB        single    1.690     0.020     1.690     0.020     
-BB9       HN1       N         single    1.016     0.010     0.899     0.007     
-BB9       HN2       N         single    1.016     0.010     0.899     0.007     
-BB9       HB        CB        single    1.082     0.013     0.975     0.010     
-BB9       HG        SG        single    1.338     0.010     1.171     0.208     
+BB9           N          CA      SINGLE       n     1.345  0.0200     1.345  0.0200
+BB9          CA           C      SINGLE       n     1.361  0.0200     1.361  0.0200
+BB9          CA          CB      DOUBLE       n     1.391  0.0200     1.391  0.0200
+BB9           C           O      DOUBLE       n     1.230  0.0200     1.230  0.0200
+BB9           C         OXT      SINGLE       n     1.230  0.0200     1.230  0.0200
+BB9          CB          SG      SINGLE       n     1.761  0.0200     1.761  0.0200
+BB9           N         HN1      SINGLE       n     1.016  0.0100     0.887  0.0200
+BB9           N         HN2      SINGLE       n     1.016  0.0100     0.887  0.0200
+BB9          CB          HB      SINGLE       n     1.082  0.0130     0.933  0.0100
+BB9          SG          HG      SINGLE       n     1.338  0.0100     1.233  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -86,19 +59,19 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BB9      OXT    C      O       123.000    3.000
- BB9      OXT    C      CA      120.000    3.000
- BB9      O      C      CA      120.000    3.000
- BB9      C      CA     N       120.000    3.000
- BB9      C      CA     CB      120.000    3.000
- BB9      N      CA     CB      120.000    3.000
- BB9      CA     N      HN2     120.000    3.000
- BB9      CA     N      HN1     120.000    3.000
- BB9      HN2    N      HN1     120.000    3.000
- BB9      CA     CB     HB      120.000    3.000
- BB9      CA     CB     SG      120.000    3.000
- BB9      HB     CB     SG      120.000    3.000
- BB9      CB     SG     HG      109.500    3.000
+BB9          CA           N         HN1     120.090    1.76
+BB9          CA           N         HN2     120.090    1.76
+BB9         HN1           N         HN2     119.819    2.06
+BB9           N          CA           C     120.458    3.00
+BB9           N          CA          CB     119.191    1.50
+BB9           C          CA          CB     120.351    3.00
+BB9          CA           C           O     119.840    3.00
+BB9          CA           C         OXT     119.840    3.00
+BB9           O           C         OXT     120.320    1.63
+BB9          CA          CB          SG     122.396    3.00
+BB9          CA          CB          HB     119.011    1.50
+BB9          SG          CB          HB     118.593    1.83
+BB9          CB          SG          HG      99.111    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -109,29 +82,44 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BB9      var_1    OXT    C      CA     CB       180.000   20.000   1
- BB9      CONST_1  C      CA     N      HN1        0.000    0.000   0
- BB9      CONST_2  C      CA     CB     SG       180.000    0.000   0
- BB9      var_2    CA     CB     SG     HG       180.000   20.000   1
+BB9             sp2_sp2_1           C          CA           N         HN1     180.000   10.00     2
+BB9             sp2_sp2_6           O           C          CA           N       0.000   10.00     2
+BB9            sp2_sp2_11           N          CA          CB          SG       0.000   10.00     2
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BB9      plan-1    N         0.020
- BB9      plan-1    CA        0.020
- BB9      plan-1    HN1       0.020
- BB9      plan-1    HN2       0.020
- BB9      plan-2    CA        0.020
- BB9      plan-2    N         0.020
- BB9      plan-2    C         0.020
- BB9      plan-2    CB        0.020
- BB9      plan-2    SG        0.020
- BB9      plan-2    HB        0.020
- BB9      plan-2    HN2       0.020
- BB9      plan-2    HN1       0.020
- BB9      plan-3    C         0.020
- BB9      plan-3    CA        0.020
- BB9      plan-3    O         0.020
- BB9      plan-3    OXT       0.020
-# ------------------------------------------------------
+BB9    plan-1          CA   0.020
+BB9    plan-1         HN1   0.020
+BB9    plan-1         HN2   0.020
+BB9    plan-1           N   0.020
+BB9    plan-2           C   0.020
+BB9    plan-2          CA   0.020
+BB9    plan-2          CB   0.020
+BB9    plan-2           N   0.020
+BB9    plan-3           C   0.020
+BB9    plan-3          CA   0.020
+BB9    plan-3           O   0.020
+BB9    plan-3         OXT   0.020
+BB9    plan-4          CA   0.020
+BB9    plan-4          CB   0.020
+BB9    plan-4          HB   0.020
+BB9    plan-4          SG   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BB9           SMILES              ACDLabs 10.04                                          O=C(O)/C(N)=C/S
+BB9 SMILES_CANONICAL               CACTVS 3.352                                          N\C(=C/S)C(O)=O
+BB9           SMILES               CACTVS 3.352                                            NC(=CS)C(O)=O
+BB9 SMILES_CANONICAL "OpenEye OEToolkits" 1.6.1                                       C(=C(\C(=O)O)/N)/S
+BB9           SMILES "OpenEye OEToolkits" 1.6.1                                          C(=C(C(=O)O)N)S
+BB9            InChI                InChI  1.03 InChI=1S/C3H5NO2S/c4-2(1-7)3(5)6/h1,7H,4H2,(H,5,6)/b2-1-
+BB9         InChIKey                InChI  1.03                              SJJZZRKMMDXVIJ-UPHRSURJSA-N
+BB9 ?                acedrg               231         "dictionary generator"                  
+BB9 ?                acedrg_database      11          "data source"                           
+BB9 ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BB9 ?                refmac5              5.8.0238    "optimization tool"                     

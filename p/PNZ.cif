@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PNZ      PNZ 'P-NITRO-BENZYLAMINE                 ' non-polymer        19  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+PNZ     PNZ      P-NITRO-BENZYLAMINE     "L-peptide COOH carboxy terminus"     19     11     .     
 #
 data_comp_PNZ
 #
@@ -28,83 +17,58 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PNZ           O12    O    O        -1.000      0.000    0.000    0.000
- PNZ           N10    N    N         1.000     -1.015    0.673   -0.004
- PNZ           O11    O    O         0.000     -0.939    1.888    0.024
- PNZ           C6     C    CR6       0.000     -2.340    0.013   -0.045
- PNZ           C5     C    CR16      0.000     -3.492    0.778   -0.050
- PNZ           H5     H    H         0.000     -3.425    1.858   -0.021
- PNZ           C4     C    CR16      0.000     -4.729    0.161   -0.091
- PNZ           H4     H    H         0.000     -5.631    0.760   -0.102
- PNZ           C9     C    CR6       0.000     -4.814   -1.218   -0.118
- PNZ           C3     C    CH2       0.000     -6.163   -1.889   -0.159
- PNZ           H3C1   H    H         0.000     -6.081   -2.837   -0.695
- PNZ           H3C2   H    H         0.000     -6.876   -1.242   -0.673
- PNZ           N2     N    NH2       0.000     -6.626   -2.139    1.213
- PNZ           H2N2   H    H         0.000     -6.055   -1.865    2.004
- PNZ           H2N1   H    H         0.000     -7.520   -2.587    1.378
- PNZ           C8     C    CR16      0.000     -3.662   -1.982   -0.114
- PNZ           H8     H    H         0.000     -3.728   -3.062   -0.140
- PNZ           C7     C    CR16      0.000     -2.425   -1.366   -0.078
- PNZ           H7     H    H         0.000     -1.522   -1.964   -0.075
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- PNZ      O12    n/a    N10    START
- PNZ      N10    O12    C6     .
- PNZ      O11    N10    .      .
- PNZ      C6     N10    C5     .
- PNZ      C5     C6     C4     .
- PNZ      H5     C5     .      .
- PNZ      C4     C5     C9     .
- PNZ      H4     C4     .      .
- PNZ      C9     C4     C8     .
- PNZ      C3     C9     N2     .
- PNZ      H3C1   C3     .      .
- PNZ      H3C2   C3     .      .
- PNZ      N2     C3     H2N1   .
- PNZ      H2N2   N2     .      .
- PNZ      H2N1   N2     .      .
- PNZ      C8     C9     C7     .
- PNZ      H8     C8     .      .
- PNZ      C7     C8     H7     .
- PNZ      H7     C7     .      END
- PNZ      C6     C7     .    ADD
+PNZ     C6      C       CR6     0       1.946       -0.188      0.104       
+PNZ     C7      C       CR16    0       1.179       -1.177      0.720       
+PNZ     C8      C       CR16    0       -0.190      -0.982      0.814       
+PNZ     C9      C       CR6     0       -0.795      0.165       0.312       
+PNZ     C4      C       CR16    0       -0.002      1.131       -0.296      
+PNZ     C5      C       CR16    0       1.370       0.974       -0.410      
+PNZ     N2      N       NT2     0       -3.008      -0.152      -0.749      
+PNZ     C3      C       CH2     0       -2.289      0.357       0.424       
+PNZ     N10     N       N       1       3.387       -0.373      -0.005      
+PNZ     O11     O       O       0       4.118       0.425       0.561       
+PNZ     O12     O       OC      -1      3.801       -1.319      -0.656      
+PNZ     H7      H       H       0       1.576       -1.958      1.064       
+PNZ     H8      H       H       0       -0.721      -1.642      1.227       
+PNZ     H4      H       H       0       -0.405      1.912       -0.639      
+PNZ     H5      H       H       0       1.895       1.636       -0.824      
+PNZ     H2N1    H       H       0       -3.940      -0.005      -0.549      
+PNZ     H2N2    H       H       0       -2.860      -1.106      -0.733      
+PNZ     H3C1    H       H       0       -2.512      1.312       0.517       
+PNZ     H3C2    H       H       0       -2.643      -0.113      1.215       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-PNZ       C6        C7        double    1.390     0.020     1.390     0.020     
-PNZ       C5        C6        single    1.390     0.020     1.390     0.020     
-PNZ       C6        N10       single    1.400     0.020     1.400     0.020     
-PNZ       C7        C8        single    1.390     0.020     1.390     0.020     
-PNZ       H7        C7        single    1.082     0.013     0.975     0.010     
-PNZ       C8        C9        double    1.390     0.020     1.390     0.020     
-PNZ       H8        C8        single    1.082     0.013     0.975     0.010     
-PNZ       C9        C4        single    1.390     0.020     1.390     0.020     
-PNZ       C3        C9        single    1.511     0.020     1.511     0.020     
-PNZ       C4        C5        double    1.390     0.020     1.390     0.020     
-PNZ       H4        C4        single    1.082     0.013     0.975     0.010     
-PNZ       H5        C5        single    1.082     0.013     0.975     0.010     
-PNZ       N2        C3        single    1.450     0.020     1.450     0.020     
-PNZ       H2N1      N2        single    1.036     0.016     0.914     0.007     
-PNZ       H2N2      N2        single    1.036     0.016     0.914     0.007     
-PNZ       H3C1      C3        single    1.089     0.010     0.989     0.005     
-PNZ       H3C2      C3        single    1.089     0.010     0.989     0.005     
-PNZ       O11       N10       double    1.220     0.020     1.220     0.020     
-PNZ       N10       O12       single    1.400     0.020     1.400     0.020     
+PNZ          C6          C7      DOUBLE       y     1.393  0.0100     1.393  0.0100
+PNZ          C6          C5      SINGLE       y     1.393  0.0100     1.393  0.0100
+PNZ          C6         N10      SINGLE       n     1.457  0.0200     1.457  0.0200
+PNZ          C7          C8      SINGLE       y     1.382  0.0100     1.382  0.0100
+PNZ          C8          C9      DOUBLE       y     1.386  0.0100     1.386  0.0100
+PNZ          C9          C4      SINGLE       y     1.386  0.0100     1.386  0.0100
+PNZ          C9          C3      SINGLE       n     1.510  0.0100     1.510  0.0100
+PNZ          C4          C5      DOUBLE       y     1.382  0.0100     1.382  0.0100
+PNZ          N2          C3      SINGLE       n     1.467  0.0144     1.467  0.0144
+PNZ         N10         O11      DOUBLE       n     1.221  0.0162     1.221  0.0162
+PNZ         N10         O12      SINGLE       n     1.221  0.0162     1.221  0.0162
+PNZ          C7          H7      SINGLE       n     1.082  0.0130     0.941  0.0200
+PNZ          C8          H8      SINGLE       n     1.082  0.0130     0.943  0.0173
+PNZ          C4          H4      SINGLE       n     1.082  0.0130     0.943  0.0173
+PNZ          C5          H5      SINGLE       n     1.082  0.0130     0.941  0.0200
+PNZ          N2        H2N1      SINGLE       n     1.036  0.0160     0.965  0.0200
+PNZ          N2        H2N2      SINGLE       n     1.036  0.0160     0.965  0.0200
+PNZ          C3        H3C1      SINGLE       n     1.089  0.0100     0.985  0.0198
+PNZ          C3        H3C2      SINGLE       n     1.089  0.0100     0.985  0.0198
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -112,36 +76,36 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PNZ      O12    N10    O11     120.000    3.000
- PNZ      O12    N10    C6      120.000    3.000
- PNZ      O11    N10    C6      120.000    3.000
- PNZ      N10    C6     C5      120.000    3.000
- PNZ      N10    C6     C7      120.000    3.000
- PNZ      C5     C6     C7      120.000    3.000
- PNZ      C6     C5     H5      120.000    3.000
- PNZ      C6     C5     C4      120.000    3.000
- PNZ      H5     C5     C4      120.000    3.000
- PNZ      C5     C4     H4      120.000    3.000
- PNZ      C5     C4     C9      120.000    3.000
- PNZ      H4     C4     C9      120.000    3.000
- PNZ      C4     C9     C3      120.000    3.000
- PNZ      C4     C9     C8      120.000    3.000
- PNZ      C3     C9     C8      120.000    3.000
- PNZ      C9     C3     H3C1    109.470    3.000
- PNZ      C9     C3     H3C2    109.470    3.000
- PNZ      C9     C3     N2      109.500    3.000
- PNZ      H3C1   C3     H3C2    107.900    3.000
- PNZ      H3C1   C3     N2      109.470    3.000
- PNZ      H3C2   C3     N2      109.470    3.000
- PNZ      C3     N2     H2N2    120.000    3.000
- PNZ      C3     N2     H2N1    120.000    3.000
- PNZ      H2N2   N2     H2N1    120.000    3.000
- PNZ      C9     C8     H8      120.000    3.000
- PNZ      C9     C8     C7      120.000    3.000
- PNZ      H8     C8     C7      120.000    3.000
- PNZ      C8     C7     H7      120.000    3.000
- PNZ      C8     C7     C6      120.000    3.000
- PNZ      H7     C7     C6      120.000    3.000
+PNZ          C7          C6          C5     122.287    1.50
+PNZ          C7          C6         N10     118.856    1.50
+PNZ          C5          C6         N10     118.856    1.50
+PNZ          C6          C7          C8     118.392    1.50
+PNZ          C6          C7          H7     121.073    1.50
+PNZ          C8          C7          H7     120.535    1.50
+PNZ          C7          C8          C9     121.248    1.50
+PNZ          C7          C8          H8     119.271    1.50
+PNZ          C9          C8          H8     119.480    1.50
+PNZ          C8          C9          C4     118.432    1.50
+PNZ          C8          C9          C3     120.784    2.59
+PNZ          C4          C9          C3     120.784    2.59
+PNZ          C9          C4          C5     121.248    1.50
+PNZ          C9          C4          H4     119.480    1.50
+PNZ          C5          C4          H4     119.271    1.50
+PNZ          C6          C5          C4     118.392    1.50
+PNZ          C6          C5          H5     121.073    1.50
+PNZ          C4          C5          H5     120.535    1.50
+PNZ          C3          N2        H2N1     104.789    3.00
+PNZ          C3          N2        H2N2     104.789    3.00
+PNZ        H2N1          N2        H2N2     107.163    3.00
+PNZ          C9          C3          N2     112.424    2.20
+PNZ          C9          C3        H3C1     110.855    3.00
+PNZ          C9          C3        H3C2     110.855    3.00
+PNZ          N2          C3        H3C1     107.542    2.93
+PNZ          N2          C3        H3C2     107.542    2.93
+PNZ        H3C1          C3        H3C2     107.838    1.50
+PNZ          C6         N10         O11     118.257    1.50
+PNZ          C6         N10         O12     118.257    1.50
+PNZ         O11         N10         O12     123.486    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -152,38 +116,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PNZ      var_1    O12    N10    C6     C5       179.991   20.000   1
- PNZ      CONST_1  N10    C6     C7     C8       180.000    0.000   0
- PNZ      CONST_2  N10    C6     C5     C4       180.000    0.000   0
- PNZ      CONST_3  C6     C5     C4     C9         0.000    0.000   0
- PNZ      CONST_4  C5     C4     C9     C8         0.000    0.000   0
- PNZ      var_2    C4     C9     C3     N2       -90.309   20.000   2
- PNZ      var_3    C9     C3     N2     H2N1     179.996   20.000   1
- PNZ      CONST_5  C4     C9     C8     C7         0.000    0.000   0
- PNZ      CONST_6  C9     C8     C7     C6         0.000    0.000   0
+PNZ       const_sp2_sp2_3         N10          C6          C7          C8     180.000   10.00     2
+PNZ              const_22          C4          C5          C6         N10     180.000   10.00     2
+PNZ             sp2_sp2_1          C7          C6         N10         O11     180.000   10.00     2
+PNZ       const_sp2_sp2_5          C6          C7          C8          C9       0.000   10.00     2
+PNZ              const_10          C7          C8          C9          C3     180.000   10.00     2
+PNZ              const_14          C5          C4          C9          C3     180.000   10.00     2
+PNZ             sp2_sp3_2          C8          C9          C3          N2     -90.000   10.00     6
+PNZ              const_17          C9          C4          C5          C6       0.000   10.00     2
+PNZ             sp3_sp3_1          C9          C3          N2        H2N1     180.000   10.00     3
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- PNZ      plan-1    C6        0.020
- PNZ      plan-1    C7        0.020
- PNZ      plan-1    C5        0.020
- PNZ      plan-1    N10       0.020
- PNZ      plan-1    C8        0.020
- PNZ      plan-1    C9        0.020
- PNZ      plan-1    C4        0.020
- PNZ      plan-1    H7        0.020
- PNZ      plan-1    H8        0.020
- PNZ      plan-1    C3        0.020
- PNZ      plan-1    H4        0.020
- PNZ      plan-1    H5        0.020
- PNZ      plan-2    N2        0.020
- PNZ      plan-2    C3        0.020
- PNZ      plan-2    H2N1      0.020
- PNZ      plan-2    H2N2      0.020
- PNZ      plan-3    N10       0.020
- PNZ      plan-3    C6        0.020
- PNZ      plan-3    O11       0.020
- PNZ      plan-3    O12       0.020
-# ------------------------------------------------------
+PNZ    plan-1          C3   0.020
+PNZ    plan-1          C4   0.020
+PNZ    plan-1          C5   0.020
+PNZ    plan-1          C6   0.020
+PNZ    plan-1          C7   0.020
+PNZ    plan-1          C8   0.020
+PNZ    plan-1          C9   0.020
+PNZ    plan-1          H4   0.020
+PNZ    plan-1          H5   0.020
+PNZ    plan-1          H7   0.020
+PNZ    plan-1          H8   0.020
+PNZ    plan-1         N10   0.020
+PNZ    plan-2          C6   0.020
+PNZ    plan-2         N10   0.020
+PNZ    plan-2         O11   0.020
+PNZ    plan-2         O12   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+PNZ           SMILES              ACDLabs 10.04                               "[O-][N+](=O)c1ccc(cc1)CN"
+PNZ SMILES_CANONICAL               CACTVS 3.341                                 NCc1ccc(cc1)[N+]([O-])=O
+PNZ           SMILES               CACTVS 3.341                                 NCc1ccc(cc1)[N+]([O-])=O
+PNZ SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                 c1cc(ccc1CN)[N+](=O)[O-]
+PNZ           SMILES "OpenEye OEToolkits" 1.5.0                                 c1cc(ccc1CN)[N+](=O)[O-]
+PNZ            InChI                InChI  1.03 InChI=1S/C7H8N2O2/c8-5-6-1-3-7(4-2-6)9(10)11/h1-4H,5,8H2
+PNZ         InChIKey                InChI  1.03                              ODVBBZFQPGORMJ-UHFFFAOYSA-N
+PNZ ?                acedrg               231         "dictionary generator"                  
+PNZ ?                acedrg_database      11          "data source"                           
+PNZ ?                rdkit                2017.03.2   "Chemoinformatics tool"
+PNZ ?                refmac5              5.8.0238    "optimization tool"                     

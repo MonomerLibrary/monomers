@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BAL      BAL 'BETA-ALANINE                        ' non-polymer        12   6 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+BAL     BAL      BETA-ALANINE     peptide-like     12     6     .     
 #
 data_comp_BAL
 #
@@ -28,60 +17,43 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- BAL           OXT    O    OC       -0.500      0.000    0.000    0.000
- BAL           C      C    C         0.000     -1.251    0.032    0.000
- BAL           O      O    OC       -0.500     -1.848    1.131   -0.021
- BAL           CA     C    CH2       0.000     -2.037   -1.252    0.025
- BAL           HA1    H    H         0.000     -1.787   -1.814    0.927
- BAL           HA2    H    H         0.000     -1.788   -1.849   -0.855
- BAL           CB     C    CH2       0.000     -3.534   -0.934    0.020
- BAL           HB3    H    H         0.000     -3.783   -0.371   -0.882
- BAL           HB2    H    H         0.000     -3.782   -0.337    0.900
- BAL           N      N    NH2       0.000     -4.302   -2.187    0.045
- BAL           H2     H    H         0.000     -3.823   -3.080    0.061
- BAL           H      H    H         0.000     -5.315   -2.166    0.046
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- BAL      OXT    n/a    C      START
- BAL      C      OXT    CA     .
- BAL      O      C      .      .
- BAL      CA     C      CB     .
- BAL      HA1    CA     .      .
- BAL      HA2    CA     .      .
- BAL      CB     CA     N      .
- BAL      HB3    CB     .      .
- BAL      HB2    CB     .      .
- BAL      N      CB     H      .
- BAL      H2     N      .      .
- BAL      H      N      .      END
+BAL     N       N       NT2     0       26.024      -29.001     82.052      
+BAL     CB      C       CH2     0       26.033      -30.403     81.628      
+BAL     CA      C       CH2     0       24.645      -30.981     81.419      
+BAL     C       C       C       0       23.854      -30.321     80.303      
+BAL     O       O       O       0       23.518      -29.129     80.444      
+BAL     OXT     O       OC      -1      23.577      -31.002     79.295      
+BAL     H       H       H       0       26.816      -28.764     82.375      
+BAL     H2      H       H       0       25.427      -28.868     82.695      
+BAL     HB3     H       H       0       26.502      -30.935     82.308      
+BAL     HB2     H       H       0       26.539      -30.476     80.790      
+BAL     HA1     H       H       0       24.137      -30.896     82.248      
+BAL     HA2     H       H       0       24.724      -31.932     81.220      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-BAL       N         CB        single    1.450     0.020     1.450     0.020     
-BAL       H         N         single    1.036     0.016     0.914     0.007     
-BAL       H2        N         single    1.036     0.016     0.914     0.007     
-BAL       CB        CA        single    1.524     0.020     1.524     0.020     
-BAL       HB3       CB        single    1.089     0.010     0.989     0.005     
-BAL       HB2       CB        single    1.089     0.010     0.989     0.005     
-BAL       CA        C         single    1.510     0.020     1.510     0.020     
-BAL       HA1       CA        single    1.089     0.010     0.989     0.005     
-BAL       HA2       CA        single    1.089     0.010     0.989     0.005     
-BAL       O         C         deloc     1.250     0.020     1.250     0.020     
-BAL       C         OXT       deloc     1.250     0.020     1.250     0.020     
+BAL           N          CB      SINGLE       n     1.464  0.0200     1.464  0.0200
+BAL          CB          CA      SINGLE       n     1.518  0.0129     1.518  0.0129
+BAL          CA           C      SINGLE       n     1.519  0.0109     1.519  0.0109
+BAL           C           O      DOUBLE       n     1.247  0.0187     1.247  0.0187
+BAL           C         OXT      SINGLE       n     1.247  0.0187     1.247  0.0187
+BAL           N           H      SINGLE       n     1.036  0.0160     0.888  0.0200
+BAL           N          H2      SINGLE       n     1.036  0.0160     0.888  0.0200
+BAL          CB         HB3      SINGLE       n     1.089  0.0100     0.982  0.0143
+BAL          CB         HB2      SINGLE       n     1.089  0.0100     0.982  0.0143
+BAL          CA         HA1      SINGLE       n     1.089  0.0100     0.975  0.0162
+BAL          CA         HA2      SINGLE       n     1.089  0.0100     0.975  0.0162
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -89,24 +61,24 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BAL      OXT    C      O       123.000    3.000
- BAL      OXT    C      CA      118.500    3.000
- BAL      O      C      CA      118.500    3.000
- BAL      C      CA     HA1     109.470    3.000
- BAL      C      CA     HA2     109.470    3.000
- BAL      C      CA     CB      109.470    3.000
- BAL      HA1    CA     HA2     107.900    3.000
- BAL      HA1    CA     CB      109.470    3.000
- BAL      HA2    CA     CB      109.470    3.000
- BAL      CA     CB     HB3     109.470    3.000
- BAL      CA     CB     HB2     109.470    3.000
- BAL      CA     CB     N       109.470    3.000
- BAL      HB3    CB     HB2     107.900    3.000
- BAL      HB3    CB     N       109.470    3.000
- BAL      HB2    CB     N       109.470    3.000
- BAL      CB     N      H2      120.000    3.000
- BAL      CB     N      H       120.000    3.000
- BAL      H2     N      H       120.000    3.000
+BAL          CB           N           H     110.839    3.00
+BAL          CB           N          H2     110.839    3.00
+BAL           H           N          H2     107.243    3.00
+BAL           N          CB          CA     113.573    3.00
+BAL           N          CB         HB3     108.763    1.50
+BAL           N          CB         HB2     108.763    1.50
+BAL          CA          CB         HB3     109.053    1.50
+BAL          CA          CB         HB2     109.053    1.50
+BAL         HB3          CB         HB2     107.806    1.50
+BAL          CB          CA           C     114.481    1.97
+BAL          CB          CA         HA1     109.090    1.50
+BAL          CB          CA         HA2     109.090    1.50
+BAL           C          CA         HA1     108.506    1.50
+BAL           C          CA         HA2     108.506    1.50
+BAL         HA1          CA         HA2     107.647    1.50
+BAL          CA           C           O     118.187    1.50
+BAL          CA           C         OXT     118.187    1.50
+BAL           O           C         OXT     123.626    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -117,20 +89,32 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BAL      var_1    OXT    C      CA     CB       179.983   20.000   3
- BAL      var_2    C      CA     CB     N        179.982   20.000   3
- BAL      var_3    CA     CB     N      H        179.950   20.000   1
+BAL             sp3_sp3_1          CA          CB           N           H     180.000   10.00     3
+BAL             sp3_sp3_7           C          CA          CB           N     180.000   10.00     3
+BAL             sp2_sp3_2           O           C          CA          CB     120.000   10.00     6
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BAL      plan-1    N         0.020
- BAL      plan-1    CB        0.020
- BAL      plan-1    H         0.020
- BAL      plan-1    H2        0.020
- BAL      plan-2    C         0.020
- BAL      plan-2    CA        0.020
- BAL      plan-2    O         0.020
- BAL      plan-2    OXT       0.020
-# ------------------------------------------------------
+BAL    plan-1           C   0.020
+BAL    plan-1          CA   0.020
+BAL    plan-1           O   0.020
+BAL    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+BAL           SMILES              ACDLabs 12.01                                      O=C(O)CCN
+BAL SMILES_CANONICAL               CACTVS 3.370                                      NCCC(O)=O
+BAL           SMILES               CACTVS 3.370                                      NCCC(O)=O
+BAL SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0                                    C(CN)C(=O)O
+BAL           SMILES "OpenEye OEToolkits" 1.7.0                                    C(CN)C(=O)O
+BAL            InChI                InChI  1.03 InChI=1S/C3H7NO2/c4-2-1-3(5)6/h1-2,4H2,(H,5,6)
+BAL         InChIKey                InChI  1.03                    UCMIRNVEIXFBKS-UHFFFAOYSA-N
+BAL ?                acedrg               231         "dictionary generator"                  
+BAL ?                acedrg_database      11          "data source"                           
+BAL ?                rdkit                2017.03.2   "Chemoinformatics tool"
+BAL ?                refmac5              5.8.0238    "optimization tool"                     

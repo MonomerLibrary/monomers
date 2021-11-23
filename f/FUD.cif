@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FUD      FUD 'D-fructose                          ' non-polymer        24  12 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+FUD     FUD      D-fructose     D-saccharide     24     12     .     
 #
 data_comp_FUD
 #
@@ -28,96 +17,67 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- FUD           O2     O    O         0.000      0.000    0.000    0.000
- FUD           C2     C    C         0.000     -0.880    0.498   -0.660
- FUD           C1     C    CH2       0.000     -0.661    1.836   -1.320
- FUD           H11    H    H         0.000     -1.399    2.549   -0.948
- FUD           H12    H    H         0.000     -0.771    1.730   -2.401
- FUD           O1     O    OH1       0.000      0.654    2.306   -1.017
- FUD           HO1    H    H         0.000      0.793    3.164   -1.440
- FUD           C3     C    CH1       0.000     -2.195   -0.217   -0.825
- FUD           H3     H    H         0.000     -2.504   -0.177   -1.879
- FUD           O3     O    OH1       0.000     -2.051   -1.580   -0.422
- FUD           HO3    H    H         0.000     -1.779   -1.615    0.505
- FUD           C4     C    CH1       0.000     -3.257    0.461    0.044
- FUD           H4     H    H         0.000     -3.433    1.482   -0.323
- FUD           O4     O    OH1       0.000     -2.802    0.514    1.398
- FUD           HO4    H    H         0.000     -2.648   -0.385    1.720
- FUD           C5     C    CH1       0.000     -4.561   -0.337   -0.027
- FUD           H5     H    H         0.000     -4.385   -1.358    0.340
- FUD           O5     O    OH1       0.000     -5.014   -0.390   -1.380
- FUD           HO5    H    H         0.000     -5.169    0.508   -1.702
- FUD           C6     C    CH2       0.000     -5.621    0.341    0.842
- FUD           H61    H    H         0.000     -5.860    1.321    0.425
- FUD           H62    H    H         0.000     -5.237    0.462    1.857
- FUD           O6     O    OH1       0.000     -6.801   -0.466    0.871
- FUD           HO6    H    H         0.000     -7.471   -0.036    1.419
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- FUD      O2     n/a    C2     START
- FUD      C2     O2     C3     .
- FUD      C1     C2     O1     .
- FUD      H11    C1     .      .
- FUD      H12    C1     .      .
- FUD      O1     C1     HO1    .
- FUD      HO1    O1     .      .
- FUD      C3     C2     C4     .
- FUD      H3     C3     .      .
- FUD      O3     C3     HO3    .
- FUD      HO3    O3     .      .
- FUD      C4     C3     C5     .
- FUD      H4     C4     .      .
- FUD      O4     C4     HO4    .
- FUD      HO4    O4     .      .
- FUD      C5     C4     C6     .
- FUD      H5     C5     .      .
- FUD      O5     C5     HO5    .
- FUD      HO5    O5     .      .
- FUD      C6     C5     O6     .
- FUD      H61    C6     .      .
- FUD      H62    C6     .      .
- FUD      O6     C6     HO6    .
- FUD      HO6    O6     .      END
+FUD     C1      C       CH2     0       2.348       -0.840      -1.101      
+FUD     C2      C       C       0       1.314       0.171       -1.490      
+FUD     C3      C       CH1     0       0.740       1.070       -0.400      
+FUD     C4      C       CH1     0       -0.189      0.324       0.563       
+FUD     C5      C       CH1     0       -1.456      -0.262      -0.089      
+FUD     C6      C       CH2     0       -2.282      -1.070      0.889       
+FUD     O1      O       OH1     0       3.539       -0.246      -0.639      
+FUD     O2      O       O       0       0.939       0.277       -2.635      
+FUD     O3      O       OH1     0       1.785       1.665       0.337       
+FUD     O4      O       OH1     0       -0.585      1.211       1.612       
+FUD     O5      O       OH1     0       -2.252      0.792       -0.635      
+FUD     O6      O       OH1     0       -2.862      -0.243      1.895       
+FUD     H11     H       H       0       2.550       -1.404      -1.875      
+FUD     H12     H       H       0       1.984       -1.417      -0.401      
+FUD     H3      H       H       0       0.225       1.786       -0.836      
+FUD     H4      H       H       0       0.326       -0.425      0.969       
+FUD     H5      H       H       0       -1.186      -0.875      -0.836      
+FUD     H61     H       H       0       -1.707      -1.749      1.318       
+FUD     H62     H       H       0       -3.001      -1.538      0.399       
+FUD     HO1     H       H       0       4.137       -0.839      -0.537      
+FUD     HO3     H       H       0       1.471       2.313       0.785       
+FUD     HO4     H       H       0       -0.610      0.783       2.345       
+FUD     HO5     H       H       0       -2.877      0.485       -1.119      
+FUD     HO6     H       H       0       -3.352      -0.727      2.386       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-FUD       C1        C2        single    1.510     0.020     1.510     0.020     
-FUD       O1        C1        single    1.432     0.020     1.432     0.020     
-FUD       C3        C2        single    1.500     0.020     1.500     0.020     
-FUD       C2        O2        double    1.220     0.020     1.220     0.020     
-FUD       C4        C3        single    1.524     0.020     1.524     0.020     
-FUD       O3        C3        single    1.432     0.020     1.432     0.020     
-FUD       C5        C4        single    1.524     0.020     1.524     0.020     
-FUD       O4        C4        single    1.432     0.020     1.432     0.020     
-FUD       C6        C5        single    1.524     0.020     1.524     0.020     
-FUD       O5        C5        single    1.432     0.020     1.432     0.020     
-FUD       O6        C6        single    1.432     0.020     1.432     0.020     
-FUD       H11       C1        single    1.089     0.010     0.989     0.005     
-FUD       H12       C1        single    1.089     0.010     0.989     0.005     
-FUD       H3        C3        single    1.089     0.010     0.989     0.005     
-FUD       H4        C4        single    1.089     0.010     0.989     0.005     
-FUD       H5        C5        single    1.089     0.010     0.989     0.005     
-FUD       H61       C6        single    1.089     0.010     0.989     0.005     
-FUD       H62       C6        single    1.089     0.010     0.989     0.005     
-FUD       HO1       O1        single    0.970     0.012     0.839     0.014     
-FUD       HO3       O3        single    0.970     0.012     0.839     0.014     
-FUD       HO4       O4        single    0.970     0.012     0.839     0.014     
-FUD       HO5       O5        single    0.970     0.012     0.839     0.014     
-FUD       HO6       O6        single    0.970     0.012     0.839     0.014     
+FUD          C1          C2      SINGLE       n     1.497  0.0112     1.497  0.0112
+FUD          C1          O1      SINGLE       n     1.409  0.0100     1.409  0.0100
+FUD          C2          C3      SINGLE       n     1.523  0.0100     1.523  0.0100
+FUD          C2          O2      DOUBLE       n     1.209  0.0200     1.209  0.0200
+FUD          C3          C4      SINGLE       n     1.526  0.0133     1.526  0.0133
+FUD          C3          O3      SINGLE       n     1.410  0.0100     1.410  0.0100
+FUD          C4          C5      SINGLE       n     1.534  0.0163     1.534  0.0163
+FUD          C4          O4      SINGLE       n     1.429  0.0100     1.429  0.0100
+FUD          C5          C6      SINGLE       n     1.514  0.0100     1.514  0.0100
+FUD          C5          O5      SINGLE       n     1.429  0.0100     1.429  0.0100
+FUD          C6          O6      SINGLE       n     1.425  0.0100     1.425  0.0100
+FUD          C1         H11      SINGLE       n     1.089  0.0100     0.978  0.0200
+FUD          C1         H12      SINGLE       n     1.089  0.0100     0.978  0.0200
+FUD          C3          H3      SINGLE       n     1.089  0.0100     0.984  0.0100
+FUD          C4          H4      SINGLE       n     1.089  0.0100     0.996  0.0200
+FUD          C5          H5      SINGLE       n     1.089  0.0100     1.004  0.0200
+FUD          C6         H61      SINGLE       n     1.089  0.0100     0.988  0.0200
+FUD          C6         H62      SINGLE       n     1.089  0.0100     0.988  0.0200
+FUD          O1         HO1      SINGLE       n     0.970  0.0120     0.848  0.0200
+FUD          O3         HO3      SINGLE       n     0.970  0.0120     0.848  0.0200
+FUD          O4         HO4      SINGLE       n     0.970  0.0120     0.848  0.0200
+FUD          O5         HO5      SINGLE       n     0.970  0.0120     0.848  0.0200
+FUD          O6         HO6      SINGLE       n     0.970  0.0120     0.846  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -125,44 +85,44 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- FUD      O2     C2     C1      120.500    3.000
- FUD      O2     C2     C3      120.500    3.000
- FUD      C1     C2     C3      120.000    3.000
- FUD      C2     C1     H11     109.470    3.000
- FUD      C2     C1     H12     109.470    3.000
- FUD      C2     C1     O1      109.500    3.000
- FUD      H11    C1     H12     107.900    3.000
- FUD      H11    C1     O1      109.470    3.000
- FUD      H12    C1     O1      109.470    3.000
- FUD      C1     O1     HO1     109.470    3.000
- FUD      C2     C3     H3      108.810    3.000
- FUD      C2     C3     O3      109.470    3.000
- FUD      C2     C3     C4      109.470    3.000
- FUD      H3     C3     O3      109.470    3.000
- FUD      H3     C3     C4      108.340    3.000
- FUD      O3     C3     C4      109.470    3.000
- FUD      C3     O3     HO3     109.470    3.000
- FUD      C3     C4     H4      108.340    3.000
- FUD      C3     C4     O4      109.470    3.000
- FUD      C3     C4     C5      111.000    3.000
- FUD      H4     C4     O4      109.470    3.000
- FUD      H4     C4     C5      108.340    3.000
- FUD      O4     C4     C5      109.470    3.000
- FUD      C4     O4     HO4     109.470    3.000
- FUD      C4     C5     H5      108.340    3.000
- FUD      C4     C5     O5      109.470    3.000
- FUD      C4     C5     C6      111.000    3.000
- FUD      H5     C5     O5      109.470    3.000
- FUD      H5     C5     C6      108.340    3.000
- FUD      O5     C5     C6      109.470    3.000
- FUD      C5     O5     HO5     109.470    3.000
- FUD      C5     C6     H61     109.470    3.000
- FUD      C5     C6     H62     109.470    3.000
- FUD      C5     C6     O6      109.470    3.000
- FUD      H61    C6     H62     107.900    3.000
- FUD      H61    C6     O6      109.470    3.000
- FUD      H62    C6     O6      109.470    3.000
- FUD      C6     O6     HO6     109.470    3.000
+FUD          C2          C1          O1     112.684    2.02
+FUD          C2          C1         H11     109.084    1.50
+FUD          C2          C1         H12     109.084    1.50
+FUD          O1          C1         H11     109.225    1.50
+FUD          O1          C1         H12     109.225    1.50
+FUD         H11          C1         H12     107.716    1.50
+FUD          C1          C2          C3     117.768    2.45
+FUD          C1          C2          O2     121.403    1.86
+FUD          C3          C2          O2     120.828    1.88
+FUD          C2          C3          C4     111.511    2.91
+FUD          C2          C3          O3     111.032    1.80
+FUD          C2          C3          H3     108.449    1.57
+FUD          C4          C3          O3     109.434    2.40
+FUD          C4          C3          H3     108.687    1.50
+FUD          O3          C3          H3     108.675    1.50
+FUD          C3          C4          C5     113.756    1.69
+FUD          C3          C4          O4     109.317    1.50
+FUD          C3          C4          H4     108.238    1.72
+FUD          C5          C4          O4     109.164    1.97
+FUD          C5          C4          H4     108.336    1.50
+FUD          O4          C4          H4     108.243    1.50
+FUD          C4          C5          C6     112.159    1.50
+FUD          C4          C5          O5     109.549    1.85
+FUD          C4          C5          H5     108.777    1.50
+FUD          C6          C5          O5     109.623    1.60
+FUD          C6          C5          H5     107.986    1.50
+FUD          O5          C5          H5     108.591    1.50
+FUD          C5          C6          O6     111.364    1.50
+FUD          C5          C6         H61     109.234    1.50
+FUD          C5          C6         H62     109.234    1.50
+FUD          O6          C6         H61     109.268    1.50
+FUD          O6          C6         H62     109.268    1.50
+FUD         H61          C6         H62     108.313    1.50
+FUD          C1          O1         HO1     109.906    1.50
+FUD          C3          O3         HO3     108.894    3.00
+FUD          C4          O4         HO4     108.564    3.00
+FUD          C5          O5         HO5     111.202    3.00
+FUD          C6          O6         HO6     108.280    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -173,16 +133,16 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FUD      var_1    O2     C2     C1     O1        -0.026   20.000   3
- FUD      var_2    C2     C1     O1     HO1     -179.971   20.000   1
- FUD      var_3    O2     C2     C3     C4       104.972   20.000   3
- FUD      var_4    C2     C3     O3     HO3       60.035   20.000   1
- FUD      var_5    C2     C3     C4     C5      -175.012   20.000   3
- FUD      var_6    C3     C4     O4     HO4      -60.040   20.000   1
- FUD      var_7    C3     C4     C5     C6      -180.000   20.000   3
- FUD      var_8    C4     C5     O5     HO5      -60.031   20.000   1
- FUD      var_9    C4     C5     C6     O6      -174.955   20.000   3
- FUD      var_10   C5     C6     O6     HO6     -179.964   20.000   1
+FUD             sp2_sp3_2          C3          C2          C1          O1     120.000   10.00     6
+FUD             sp3_sp3_1          C2          C1          O1         HO1     180.000   10.00     3
+FUD             sp2_sp3_7          C1          C2          C3          C4       0.000   10.00     6
+FUD             sp3_sp3_4          C2          C3          C4          C5     180.000   10.00     3
+FUD            sp3_sp3_13          C2          C3          O3         HO3     180.000   10.00     3
+FUD            sp3_sp3_16          C3          C4          C5          C6     180.000   10.00     3
+FUD            sp3_sp3_25          C3          C4          O4         HO4     180.000   10.00     3
+FUD            sp3_sp3_37          C4          C5          O5         HO5     180.000   10.00     3
+FUD            sp3_sp3_28          C4          C5          C6          O6     180.000   10.00     3
+FUD            sp3_sp3_40          C5          C6          O6         HO6     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -191,16 +151,32 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- FUD      chir_01  C3     C2     C4     O3        positiv
- FUD      chir_02  C4     C3     C5     O4        negativ
- FUD      chir_03  C5     C4     C6     O5        negativ
+FUD    chir_1    C3    O3    C2    C4    negative
+FUD    chir_2    C4    O4    C3    C5    positive
+FUD    chir_3    C5    O5    C4    C6    negative
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- FUD      plan-1    C2        0.020
- FUD      plan-1    C1        0.020
- FUD      plan-1    C3        0.020
- FUD      plan-1    O2        0.020
-# ------------------------------------------------------
+FUD    plan-1          C1   0.020
+FUD    plan-1          C2   0.020
+FUD    plan-1          C3   0.020
+FUD    plan-1          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+FUD           SMILES              ACDLabs 10.04                                                            O=C(C(O)C(O)C(O)CO)CO
+FUD SMILES_CANONICAL               CACTVS 3.341                                              OC[C@@H](O)[C@@H](O)[C@H](O)C(=O)CO
+FUD           SMILES               CACTVS 3.341                                                   OC[CH](O)[CH](O)[CH](O)C(=O)CO
+FUD SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                             C([C@H]([C@H]([C@@H](C(=O)CO)O)O)O)O
+FUD           SMILES "OpenEye OEToolkits" 1.5.0                                                          C(C(C(C(C(=O)CO)O)O)O)O
+FUD            InChI                InChI  1.03 InChI=1S/C6H12O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3,5-9,11-12H,1-2H2/t3-,5-,6-/m1/s1
+FUD         InChIKey                InChI  1.03                                                      BJHIKXHVCXFQLS-UYFOZJQFSA-N
+FUD ?                acedrg               231         "dictionary generator"                  
+FUD ?                acedrg_database      11          "data source"                           
+FUD ?                rdkit                2017.03.2   "Chemoinformatics tool"
+FUD ?                refmac5              5.8.0238    "optimization tool"                     

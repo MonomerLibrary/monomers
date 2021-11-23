@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-B2V      B2V 'VALINE BORONIC ACID                 ' non-polymer        20   8 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+B2V     B2V      "VALINE BORONIC ACID"     peptide-like     20     8     .     
 #
 data_comp_B2V
 #
@@ -28,84 +17,59 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- B2V           O2     O    OH1       0.000      0.000    0.000    0.000
- B2V           HO2    H    H         0.000      0.570   -0.650    0.392
- B2V           B      B    B         0.000     -1.397   -0.111    0.227
- B2V           O1     O    OH1       0.000     -1.906   -1.173    1.019
- B2V           HO1    H    H         0.000     -1.287   -1.794    1.385
- B2V           CA     C    CH1       0.000     -2.380    0.941   -0.401
- B2V           HA     H    H         0.000     -3.260    1.053    0.249
- B2V           N      N    NH2       0.000     -1.697    2.235   -0.526
- B2V           HN2    H    H         0.000     -1.532    2.640   -1.440
- B2V           HN1    H    H         0.000     -1.387    2.732    0.300
- B2V           CB     C    CH1       0.000     -2.826    0.462   -1.783
- B2V           HB     H    H         0.000     -1.941    0.265   -2.405
- B2V           CG2    C    CH3       0.000     -3.683    1.543   -2.446
- B2V           HG23   H    H         0.000     -3.991    1.212   -3.403
- B2V           HG22   H    H         0.000     -4.536    1.734   -1.847
- B2V           HG21   H    H         0.000     -3.116    2.432   -2.546
- B2V           CG1    C    CH3       0.000     -3.645   -0.822   -1.639
- B2V           HG13   H    H         0.000     -3.954   -1.155   -2.597
- B2V           HG12   H    H         0.000     -3.052   -1.571   -1.181
- B2V           HG11   H    H         0.000     -4.498   -0.633   -1.040
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- B2V      O2     n/a    B      START
- B2V      HO2    O2     .      .
- B2V      B      O2     CA     .
- B2V      O1     B      HO1    .
- B2V      HO1    O1     .      .
- B2V      CA     B      CB     .
- B2V      HA     CA     .      .
- B2V      N      CA     HN1    .
- B2V      HN2    N      .      .
- B2V      HN1    N      .      .
- B2V      CB     CA     CG1    .
- B2V      HB     CB     .      .
- B2V      CG2    CB     HG21   .
- B2V      HG23   CG2    .      .
- B2V      HG22   CG2    .      .
- B2V      HG21   CG2    .      .
- B2V      CG1    CB     HG11   .
- B2V      HG13   CG1    .      .
- B2V      HG12   CG1    .      .
- B2V      HG11   CG1    .      END
+B2V     N       N       NT2     0       0.500       1.775       -0.806      
+B2V     CA      C       CH1     0       0.492       0.548       -0.008      
+B2V     CB      C       CH1     0       -0.839      -0.223      -0.127      
+B2V     CG1     C       CH3     0       -0.808      -1.504      0.693       
+B2V     CG2     C       CH3     0       -2.023      0.643       0.278       
+B2V     B       B       B       0       1.676       -0.379      -0.471      
+B2V     O1      O       OH1     0       1.760       -0.774      -1.767      
+B2V     O2      O       OH1     0       2.612       -0.785      0.425       
+B2V     HN1     H       H       0       1.334       1.968       -1.043      
+B2V     HN2     H       H       0       0.206       2.451       -0.311      
+B2V     HA      H       H       0       0.617       0.790       0.936       
+B2V     HB      H       H       0       -0.955      -0.472      -1.077      
+B2V     HG11    H       H       0       -1.646      -1.985      0.577       
+B2V     HG12    H       H       0       -0.688      -1.286      1.633       
+B2V     HG13    H       H       0       -0.070      -2.064      0.394       
+B2V     HG21    H       H       0       -2.169      1.330       -0.396      
+B2V     HG22    H       H       0       -1.840      1.065       1.136       
+B2V     HG23    H       H       0       -2.820      0.090       0.353       
+B2V     HO1     H       H       0       2.529       -0.628      -2.092      
+B2V     HO2     H       H       0       2.817       -0.168      0.968       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-B2V       N         CA        single    1.450     0.020     1.450     0.020     
-B2V       HN1       N         single    1.036     0.016     0.914     0.007     
-B2V       HN2       N         single    1.036     0.016     0.914     0.007     
-B2V       CB        CA        single    1.524     0.020     1.524     0.020     
-B2V       CA        B         single    1.600     0.020     1.600     0.020     
-B2V       HA        CA        single    1.089     0.010     0.989     0.005     
-B2V       CG1       CB        single    1.524     0.020     1.524     0.020     
-B2V       CG2       CB        single    1.524     0.020     1.524     0.020     
-B2V       HB        CB        single    1.089     0.010     0.989     0.005     
-B2V       HG11      CG1       single    1.089     0.010     0.989     0.005     
-B2V       HG12      CG1       single    1.089     0.010     0.989     0.005     
-B2V       HG13      CG1       single    1.089     0.010     0.989     0.005     
-B2V       HG21      CG2       single    1.089     0.010     0.989     0.005     
-B2V       HG22      CG2       single    1.089     0.010     0.989     0.005     
-B2V       HG23      CG2       single    1.089     0.010     0.989     0.005     
-B2V       O1        B         single    1.535     0.020     1.535     0.020     
-B2V       B         O2        single    1.535     0.020     1.535     0.020     
-B2V       HO1       O1        single    0.970     0.012     0.839     0.014     
-B2V       HO2       O2        single    0.970     0.012     0.839     0.014     
+B2V           N          CA      SINGLE       n     1.463  0.0141     1.463  0.0141
+B2V          CA          CB      SINGLE       n     1.542  0.0110     1.542  0.0110
+B2V          CA           B      SINGLE       n     1.573  0.0200     1.573  0.0200
+B2V          CB         CG1      SINGLE       n     1.521  0.0151     1.521  0.0151
+B2V          CB         CG2      SINGLE       n     1.521  0.0151     1.521  0.0151
+B2V           B          O1      SINGLE       n     1.358  0.0116     1.358  0.0116
+B2V           B          O2      SINGLE       n     1.358  0.0116     1.358  0.0116
+B2V           N         HN1      SINGLE       n     1.036  0.0160     0.888  0.0200
+B2V           N         HN2      SINGLE       n     1.036  0.0160     0.888  0.0200
+B2V          CA          HA      SINGLE       n     1.089  0.0100     0.983  0.0100
+B2V          CB          HB      SINGLE       n     1.089  0.0100     0.989  0.0162
+B2V         CG1        HG11      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V         CG1        HG12      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V         CG1        HG13      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V         CG2        HG21      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V         CG2        HG22      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V         CG2        HG23      SINGLE       n     1.089  0.0100     0.973  0.0146
+B2V          O1         HO1      SINGLE       n     0.970  0.0120     0.847  0.0200
+B2V          O2         HO2      SINGLE       n     0.970  0.0120     0.847  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -113,38 +77,38 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- B2V      HO2    O2     B       120.000    3.000
- B2V      O2     B      O1      120.000    3.000
- B2V      O2     B      CA      120.000    3.000
- B2V      O1     B      CA      120.000    3.000
- B2V      B      O1     HO1     120.000    3.000
- B2V      B      CA     HA      109.470    3.000
- B2V      B      CA     N       109.500    3.000
- B2V      B      CA     CB      109.500    3.000
- B2V      HA     CA     N       109.470    3.000
- B2V      HA     CA     CB      108.340    3.000
- B2V      N      CA     CB      109.470    3.000
- B2V      CA     N      HN2     120.000    3.000
- B2V      CA     N      HN1     120.000    3.000
- B2V      HN2    N      HN1     120.000    3.000
- B2V      CA     CB     HB      108.340    3.000
- B2V      CA     CB     CG2     111.000    3.000
- B2V      CA     CB     CG1     111.000    3.000
- B2V      HB     CB     CG2     108.340    3.000
- B2V      HB     CB     CG1     108.340    3.000
- B2V      CG2    CB     CG1     111.000    3.000
- B2V      CB     CG2    HG23    109.470    3.000
- B2V      CB     CG2    HG22    109.470    3.000
- B2V      CB     CG2    HG21    109.470    3.000
- B2V      HG23   CG2    HG22    109.470    3.000
- B2V      HG23   CG2    HG21    109.470    3.000
- B2V      HG22   CG2    HG21    109.470    3.000
- B2V      CB     CG1    HG13    109.470    3.000
- B2V      CB     CG1    HG12    109.470    3.000
- B2V      CB     CG1    HG11    109.470    3.000
- B2V      HG13   CG1    HG12    109.470    3.000
- B2V      HG13   CG1    HG11    109.470    3.000
- B2V      HG12   CG1    HG11    109.470    3.000
+B2V          CA           N         HN1     109.453    3.00
+B2V          CA           N         HN2     109.453    3.00
+B2V         HN1           N         HN2     107.163    3.00
+B2V           N          CA          CB     111.883    2.59
+B2V           N          CA           B     109.471    3.00
+B2V           N          CA          HA     108.372    1.54
+B2V          CB          CA           B     109.534    3.00
+B2V          CB          CA          HA     107.824    1.50
+B2V           B          CA          HA     109.347    1.86
+B2V          CA          CB         CG1     111.276    1.50
+B2V          CA          CB         CG2     111.276    1.50
+B2V          CA          CB          HB     107.490    1.50
+B2V         CG1          CB         CG2     110.594    1.50
+B2V         CG1          CB          HB     107.863    1.50
+B2V         CG2          CB          HB     107.863    1.50
+B2V          CB         CG1        HG11     109.513    1.50
+B2V          CB         CG1        HG12     109.513    1.50
+B2V          CB         CG1        HG13     109.513    1.50
+B2V        HG11         CG1        HG12     109.411    1.50
+B2V        HG11         CG1        HG13     109.411    1.50
+B2V        HG12         CG1        HG13     109.411    1.50
+B2V          CB         CG2        HG21     109.513    1.50
+B2V          CB         CG2        HG22     109.513    1.50
+B2V          CB         CG2        HG23     109.513    1.50
+B2V        HG21         CG2        HG22     109.411    1.50
+B2V        HG21         CG2        HG23     109.411    1.50
+B2V        HG22         CG2        HG23     109.411    1.50
+B2V          CA           B          O1     120.001    3.00
+B2V          CA           B          O2     120.000    3.00
+B2V          O1           B          O2     119.998    3.00
+B2V           B          O1         HO1     111.858    3.00
+B2V           B          O2         HO2     111.858    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -155,13 +119,13 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B2V      var_1    HO2    O2     B      CA      -179.990   20.000   1
- B2V      var_2    O2     B      O1     HO1        0.025   20.000   1
- B2V      var_3    O2     B      CA     CB        90.003   20.000   1
- B2V      var_4    B      CA     N      HN1      -63.940   20.000   1
- B2V      var_5    B      CA     CB     CG1       64.943   20.000   3
- B2V      var_6    CA     CB     CG2    HG21      59.980   20.000   3
- B2V      var_7    CA     CB     CG1    HG11      60.021   20.000   3
+B2V             sp3_sp3_1          CB          CA           N         HN1     180.000   10.00     3
+B2V             sp3_sp3_8           N          CA          CB         CG1     -60.000   10.00     3
+B2V            sp3_sp3_16          O1           B          CA           N     180.000   10.00     3
+B2V            sp3_sp3_22          CA          CB         CG1        HG11     180.000   10.00     3
+B2V            sp3_sp3_34          CA          CB         CG2        HG21      60.000   10.00     3
+B2V            sp3_sp3_40          CA           B          O1         HO1     180.000   10.00     3
+B2V            sp3_sp3_42          CA           B          O2         HO2     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -170,15 +134,31 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- B2V      chir_01  CA     N      CB     B         negativ
- B2V      chir_02  CB     CA     CG1    CG2       negativ
+B2V    chir_1    CA    N    CB    B    negative
+B2V    chir_2    CB    CA    CG1    CG2    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- B2V      plan-1    N         0.020
- B2V      plan-1    CA        0.020
- B2V      plan-1    HN1       0.020
- B2V      plan-1    HN2       0.020
-# ------------------------------------------------------
+B2V    plan-1           B   0.020
+B2V    plan-1          CA   0.020
+B2V    plan-1          O1   0.020
+B2V    plan-1          O2   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+B2V           SMILES              ACDLabs 12.01                                                    OB(O)C(N)C(C)C
+B2V SMILES_CANONICAL               CACTVS 3.370                                                CC(C)[C@H](N)B(O)O
+B2V           SMILES               CACTVS 3.370                                                 CC(C)[CH](N)B(O)O
+B2V SMILES_CANONICAL "OpenEye OEToolkits" 1.7.0                                              B([C@H](C(C)C)N)(O)O
+B2V           SMILES "OpenEye OEToolkits" 1.7.0                                                  B(C(C(C)C)N)(O)O
+B2V            InChI                InChI  1.03 InChI=1S/C4H12BNO2/c1-3(2)4(6)5(7)8/h3-4,7-8H,6H2,1-2H3/t4-/m0/s1
+B2V         InChIKey                InChI  1.03                                       AIUDHUUVWREDAS-BYPYZUCNSA-N
+B2V ?                acedrg               231         "dictionary generator"                  
+B2V ?                acedrg_database      11          "data source"                           
+B2V ?                rdkit                2017.03.2   "Chemoinformatics tool"
+B2V ?                refmac5              5.8.0238    "optimization tool"                     

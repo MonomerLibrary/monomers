@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MPH      MPH '(1-AMINO-3-METHYLSULFANYL-PROPYL)-PH' non-polymer        22  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+MPH     MPH      "(1-AMINO-3-METHYLSULFANYL-PROPYL)-PHOSPHONIC ACID"     "L-PEPTIDE LINKING"     20     10     .     
 #
 data_comp_MPH
 #
@@ -28,90 +17,59 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- MPH           O1     O    O         0.000      0.000    0.000    0.000
- MPH           P      P    P         0.000     -0.857    1.199    0.127
- MPH           O2     O    OH1       0.000     -0.156    2.441   -0.621
- MPH           HO2    H    H         0.000      0.716    2.746   -0.337
- MPH           O3     O    OH1       0.000     -1.057    1.554    1.684
- MPH           HO3    H    H         0.000     -1.595    2.315    1.942
- MPH           CA     C    CH1       0.000     -2.480    0.868   -0.633
- MPH           HA     H    H         0.000     -3.117    1.759   -0.539
- MPH           N      N    NH2       0.000     -2.297    0.544   -2.055
- MPH           HN2    H    H         0.000     -1.383    0.623   -2.485
- MPH           H      H    H         0.000     -3.085    0.240   -2.616
- MPH           CB     C    CH2       0.000     -3.144   -0.312    0.077
- MPH           HB1    H    H         0.000     -2.511   -1.197   -0.018
- MPH           HB2    H    H         0.000     -4.116   -0.511   -0.380
- MPH           CG     C    CH2       0.000     -3.334    0.025    1.557
- MPH           HG1    H    H         0.000     -3.965    0.911    1.649
- MPH           HG2    H    H         0.000     -2.361    0.224    2.012
- MPH           SD     S    S2        0.000     -4.123   -1.373    2.400
- MPH           CE     C    CH3       0.000     -4.221   -0.712    4.086
- MPH           HE3    H    H         0.000     -3.246   -0.491    4.446
- MPH           HE2    H    H         0.000     -4.802    0.177    4.095
- MPH           HE1    H    H         0.000     -4.672   -1.426    4.730
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- MPH      O1     n/a    P      START
- MPH      P      O1     CA     .
- MPH      O2     P      HO2    .
- MPH      HO2    O2     .      .
- MPH      O3     P      HO3    .
- MPH      HO3    O3     .      .
- MPH      CA     P      CB     .
- MPH      HA     CA     .      .
- MPH      N      CA     H      .
- MPH      HN2    N      .      .
- MPH      H      N      .      .
- MPH      CB     CA     CG     .
- MPH      HB1    CB     .      .
- MPH      HB2    CB     .      .
- MPH      CG     CB     SD     .
- MPH      HG1    CG     .      .
- MPH      HG2    CG     .      .
- MPH      SD     CG     CE     .
- MPH      CE     SD     HE1    .
- MPH      HE3    CE     .      .
- MPH      HE2    CE     .      .
- MPH      HE1    CE     .      END
+MPH     N       N       NT2     0       20.198      -15.009     9.407       
+MPH     CA      C       CH1     0       20.801      -13.827     8.765       
+MPH     CB      C       CH2     0       22.204      -14.145     8.238       
+MPH     CG      C       CH2     0       23.247      -14.336     9.327       
+MPH     SD      S       S2      0       24.939      -14.413     8.686       
+MPH     CE      C       CH3     0       25.844      -14.773     10.190      
+MPH     O1      O       O       0       18.357      -13.095     7.984       
+MPH     O2      O       OP      -1      19.819      -14.165     6.307       
+MPH     O3      O       OP      -1      20.274      -11.853     7.045       
+MPH     P       P       P       0       19.739      -13.190     7.432       
+MPH     H       H       H       0       20.239      -15.723     8.853       
+MPH     HN2     H       H       0       20.652      -15.222     10.160      
+MPH     HA      H       H       0       20.886      -13.126     9.453       
+MPH     HB1     H       H       0       22.489      -13.413     7.652       
+MPH     HB2     H       H       0       22.158      -14.960     7.696       
+MPH     HG1     H       H       0       23.054      -15.166     9.812       
+MPH     HG2     H       H       0       23.183      -13.593     9.964       
+MPH     HE1     H       H       0       26.779      -14.893     9.982       
+MPH     HE2     H       H       0       25.497      -15.581     10.588      
+MPH     HE3     H       H       0       25.744      -14.040     10.809      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-MPH       N         CA        single    1.450     0.020     1.450     0.020     
-MPH       H         N         single    1.036     0.016     0.914     0.007     
-MPH       HN2       N         single    1.036     0.016     0.914     0.007     
-MPH       CB        CA        single    1.524     0.020     1.524     0.020     
-MPH       CA        P         single    1.815     0.020     1.815     0.020     
-MPH       HA        CA        single    1.089     0.010     0.989     0.005     
-MPH       CG        CB        single    1.524     0.020     1.524     0.020     
-MPH       HB1       CB        single    1.089     0.010     0.989     0.005     
-MPH       HB2       CB        single    1.089     0.010     0.989     0.005     
-MPH       SD        CG        single    1.762     0.020     1.762     0.020     
-MPH       HG1       CG        single    1.089     0.010     0.989     0.005     
-MPH       HG2       CG        single    1.089     0.010     0.989     0.005     
-MPH       CE        SD        single    1.762     0.020     1.762     0.020     
-MPH       HE1       CE        single    1.089     0.010     0.989     0.005     
-MPH       HE2       CE        single    1.089     0.010     0.989     0.005     
-MPH       HE3       CE        single    1.089     0.010     0.989     0.005     
-MPH       P         O1        double    1.480     0.020     1.480     0.020     
-MPH       O2        P         single    1.610     0.020     1.610     0.020     
-MPH       HO2       O2        single    0.970     0.012     0.839     0.014     
-MPH       O3        P         single    1.610     0.020     1.610     0.020     
-MPH       HO3       O3        single    0.970     0.012     0.839     0.014     
+MPH           N          CA      SINGLE       n     1.473  0.0130     1.473  0.0130
+MPH          CA          CB      SINGLE       n     1.532  0.0129     1.532  0.0129
+MPH          CA           P      SINGLE       n     1.820  0.0200     1.820  0.0200
+MPH          CB          CG      SINGLE       n     1.519  0.0200     1.519  0.0200
+MPH          CG          SD      SINGLE       n     1.811  0.0200     1.811  0.0200
+MPH          SD          CE      SINGLE       n     1.792  0.0100     1.792  0.0100
+MPH          O1           P      DOUBLE       n     1.492  0.0200     1.492  0.0200
+MPH          O2           P      SINGLE       n     1.492  0.0200     1.492  0.0200
+MPH          O3           P      SINGLE       n     1.492  0.0200     1.492  0.0200
+MPH           N           H      SINGLE       n     1.036  0.0160     0.905  0.0200
+MPH           N         HN2      SINGLE       n     1.036  0.0160     0.905  0.0200
+MPH          CA          HA      SINGLE       n     1.089  0.0100     0.986  0.0200
+MPH          CB         HB1      SINGLE       n     1.089  0.0100     0.980  0.0160
+MPH          CB         HB2      SINGLE       n     1.089  0.0100     0.980  0.0160
+MPH          CG         HG1      SINGLE       n     1.089  0.0100     0.981  0.0122
+MPH          CG         HG2      SINGLE       n     1.089  0.0100     0.981  0.0122
+MPH          CE         HE1      SINGLE       n     1.089  0.0100     0.965  0.0170
+MPH          CE         HE2      SINGLE       n     1.089  0.0100     0.965  0.0170
+MPH          CE         HE3      SINGLE       n     1.089  0.0100     0.965  0.0170
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -119,42 +77,40 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- MPH      O1     P      O2      109.500    3.000
- MPH      O1     P      O3      109.500    3.000
- MPH      O1     P      CA      109.500    3.000
- MPH      O2     P      O3      109.500    3.000
- MPH      O2     P      CA      109.500    3.000
- MPH      O3     P      CA      109.500    3.000
- MPH      P      O2     HO2     120.000    3.000
- MPH      P      O3     HO3     120.000    3.000
- MPH      P      CA     HA      109.500    3.000
- MPH      P      CA     N       109.500    3.000
- MPH      P      CA     CB      109.500    3.000
- MPH      HA     CA     N       109.470    3.000
- MPH      HA     CA     CB      108.340    3.000
- MPH      N      CA     CB      109.470    3.000
- MPH      CA     N      HN2     120.000    3.000
- MPH      CA     N      H       120.000    3.000
- MPH      HN2    N      H       120.000    3.000
- MPH      CA     CB     HB1     109.470    3.000
- MPH      CA     CB     HB2     109.470    3.000
- MPH      CA     CB     CG      111.000    3.000
- MPH      HB1    CB     HB2     107.900    3.000
- MPH      HB1    CB     CG      109.470    3.000
- MPH      HB2    CB     CG      109.470    3.000
- MPH      CB     CG     HG1     109.470    3.000
- MPH      CB     CG     HG2     109.470    3.000
- MPH      CB     CG     SD      109.500    3.000
- MPH      HG1    CG     HG2     107.900    3.000
- MPH      HG1    CG     SD      109.500    3.000
- MPH      HG2    CG     SD      109.500    3.000
- MPH      CG     SD     CE      100.063    3.000
- MPH      SD     CE     HE3     109.500    3.000
- MPH      SD     CE     HE2     109.500    3.000
- MPH      SD     CE     HE1     109.500    3.000
- MPH      HE3    CE     HE2     109.470    3.000
- MPH      HE3    CE     HE1     109.470    3.000
- MPH      HE2    CE     HE1     109.470    3.000
+MPH          CA           N           H     109.715    3.00
+MPH          CA           N         HN2     109.715    3.00
+MPH           H           N         HN2     107.163    3.00
+MPH           N          CA          CB     110.463    2.65
+MPH           N          CA           P     112.238    3.00
+MPH           N          CA          HA     107.944    1.55
+MPH          CB          CA           P     111.410    2.87
+MPH          CB          CA          HA     108.236    1.50
+MPH           P          CA          HA     108.528    1.50
+MPH          CA          CB          CG     113.897    1.50
+MPH          CA          CB         HB1     108.507    1.50
+MPH          CA          CB         HB2     108.507    1.50
+MPH          CG          CB         HB1     108.867    1.50
+MPH          CG          CB         HB2     108.867    1.50
+MPH         HB1          CB         HB2     107.715    1.50
+MPH          CB          CG          SD     113.263    2.33
+MPH          CB          CG         HG1     109.079    1.50
+MPH          CB          CG         HG2     109.079    1.50
+MPH          SD          CG         HG1     108.861    1.50
+MPH          SD          CG         HG2     108.861    1.50
+MPH         HG1          CG         HG2     107.939    1.50
+MPH          CG          SD          CE     100.595    1.50
+MPH          SD          CE         HE1     109.425    1.50
+MPH          SD          CE         HE2     109.425    1.50
+MPH          SD          CE         HE3     109.425    1.50
+MPH         HE1          CE         HE2     109.509    1.50
+MPH         HE1          CE         HE3     109.509    1.50
+MPH         HE2          CE         HE3     109.509    1.50
+MPH          CA           P          O1     110.326    3.00
+MPH          CA           P          O2     110.326    3.00
+MPH          CA           P          O3     110.326    3.00
+MPH          O1           P          O2     112.502    1.50
+MPH          O1           P          O3     112.502    1.50
+MPH          O2           P          O3     112.502    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -165,14 +121,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MPH      var_1    O1     P      O2     HO2      -60.026   20.000   1
- MPH      var_2    O1     P      O3     HO3      179.959   20.000   1
- MPH      var_3    O1     P      CA     CB        59.957   20.000   1
- MPH      var_4    P      CA     N      H        173.775   20.000   1
- MPH      var_5    P      CA     CB     CG        60.025   20.000   3
- MPH      var_6    CA     CB     CG     SD       179.943   20.000   3
- MPH      var_7    CB     CG     SD     CE       179.985   20.000   1
- MPH      var_8    CG     SD     CE     HE1      179.981   20.000   1
+MPH             sp3_sp3_1          CB          CA           N           H     180.000   10.00     3
+MPH             sp3_sp3_7           N          CA          CB          CG     180.000   10.00     3
+MPH            sp3_sp3_18           N          CA           P          O1      60.000   10.00     3
+MPH            sp3_sp3_25          CA          CB          CG          SD     180.000   10.00     3
+MPH            sp3_sp3_34          CB          CG          SD          CE     180.000   10.00     3
+MPH            sp3_sp3_37         HE1          CE          SD          CG     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -181,14 +135,22 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- MPH      chir_01  CA     N      CB     P         negativ
+MPH    chir_1    CA    P    N    CB    negative
+MPH    chir_2    P    O2    O3    O1    both
 loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
- MPH      plan-1    N         0.020
- MPH      plan-1    CA        0.020
- MPH      plan-1    H         0.020
- MPH      plan-1    HN2       0.020
-# ------------------------------------------------------
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+MPH           SMILES              ACDLabs 10.04                                                              O=P(O)(O)C(N)CCSC
+MPH SMILES_CANONICAL               CACTVS 3.341                                                        CSCC[C@H](N)[P](O)(O)=O
+MPH           SMILES               CACTVS 3.341                                                         CSCC[CH](N)[P](O)(O)=O
+MPH SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                          CSCC[C@H](N)P(=O)(O)O
+MPH           SMILES "OpenEye OEToolkits" 1.5.0                                                              CSCCC(N)P(=O)(O)O
+MPH            InChI                InChI  1.03 InChI=1S/C4H12NO3PS/c1-10-3-2-4(5)9(6,7)8/h4H,2-3,5H2,1H3,(H2,6,7,8)/t4-/m1/s1
+MPH         InChIKey                InChI  1.03                                                    XKCSXHUCPYVQIW-SCSAIBSYSA-N
+MPH ?                acedrg               231         "dictionary generator"                  
+MPH ?                acedrg_database      11          "data source"                           
+MPH ?                rdkit                2017.03.2   "Chemoinformatics tool"
+MPH ?                refmac5              5.8.0238    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-TAL      TAL '9-(6-DEOXY-ALPHA-L-TALOFURANOSYL)-6-' non-polymer        36  20 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+TAL     TAL      9-(6-DEOXY-ALPHA-L-TALOFURANOSYL)-6-METHYLPURINE     RNA     36     20     .     
 #
 data_comp_TAL
 #
@@ -28,138 +17,94 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- TAL           "O3'"  O    OH1       0.000      0.000    0.000    0.000
- TAL           H4     H    H         0.000      0.103   -0.666    0.693
- TAL           "C3'"  C    CH1       0.000     -0.852   -0.512   -1.027
- TAL           "H3'"  H    H         0.000     -0.411   -1.411   -1.479
- TAL           "C4'"  C    CH1       0.000     -1.114    0.558   -2.104
- TAL           "H4'"  H    H         0.000     -0.603    1.493   -1.834
- TAL           "C5'"  C    CH1       0.000     -0.613    0.064   -3.461
- TAL           H1     H    H         0.000      0.467   -0.130   -3.404
- TAL           "C6'"  C    CH3       0.000     -0.886    1.130   -4.524
- TAL           "H6'3" H    H         0.000     -1.927    1.318   -4.579
- TAL           "H6'2" H    H         0.000     -0.380    2.025   -4.267
- TAL           "H6'1" H    H         0.000     -0.539    0.788   -5.465
- TAL           "O5'"  O    OH1       0.000     -1.295   -1.141   -3.810
- TAL           "H5'"  H    H         0.000     -2.245   -0.970   -3.860
- TAL           "C2'"  C    CH1       0.000     -2.260   -0.826   -0.456
- TAL           "H2'"  H    H         0.000     -2.683   -1.723   -0.930
- TAL           "O2'"  O    OH1       0.000     -2.213   -0.975    0.963
- TAL           H3     H    H         0.000     -1.709   -1.769    1.187
- TAL           "C1'"  C    CH1       0.000     -3.061    0.439   -0.855
- TAL           "H1'"  H    H         0.000     -2.877    1.253   -0.141
- TAL           "O4'"  O    O2        0.000     -2.534    0.776   -2.155
- TAL           N9     N    NR5       0.000     -4.492    0.141   -0.938
- TAL           C4     C    CR56      0.000     -5.417    0.314    0.061
- TAL           N3     N    NRD6      0.000     -5.379    0.763    1.307
- TAL           C2     C    CR16      0.000     -6.476    0.812    2.033
- TAL           H2     H    H         0.000     -6.413    1.181    3.049
- TAL           N1     N    NRD6      0.000     -7.650    0.429    1.567
- TAL           C6     C    CR6       0.000     -7.784   -0.028    0.334
- TAL           C7     C    CH3       0.000     -9.131   -0.462   -0.184
- TAL           H73    H    H         0.000     -9.891    0.100    0.294
- TAL           H72    H    H         0.000     -9.176   -0.300   -1.229
- TAL           H71    H    H         0.000     -9.272   -1.491    0.021
- TAL           C5     C    CR56      0.000     -6.652   -0.100   -0.478
- TAL           N7     N    NRD5      0.000     -6.413   -0.503   -1.751
- TAL           C8     C    CR15      0.000     -5.148   -0.360   -2.021
- TAL           H8     H    H         0.000     -4.685   -0.604   -2.969
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- TAL      "O3'"  n/a    "C3'"  START
- TAL      H4     "O3'"  .      .
- TAL      "C3'"  "O3'"  "C2'"  .
- TAL      "H3'"  "C3'"  .      .
- TAL      "C4'"  "C3'"  "C5'"  .
- TAL      "H4'"  "C4'"  .      .
- TAL      "C5'"  "C4'"  "O5'"  .
- TAL      H1     "C5'"  .      .
- TAL      "C6'"  "C5'"  "H6'1" .
- TAL      "H6'3" "C6'"  .      .
- TAL      "H6'2" "C6'"  .      .
- TAL      "H6'1" "C6'"  .      .
- TAL      "O5'"  "C5'"  "H5'"  .
- TAL      "H5'"  "O5'"  .      .
- TAL      "C2'"  "C3'"  "C1'"  .
- TAL      "H2'"  "C2'"  .      .
- TAL      "O2'"  "C2'"  H3     .
- TAL      H3     "O2'"  .      .
- TAL      "C1'"  "C2'"  N9     .
- TAL      "H1'"  "C1'"  .      .
- TAL      "O4'"  "C1'"  .      .
- TAL      N9     "C1'"  C4     .
- TAL      C4     N9     N3     .
- TAL      N3     C4     C2     .
- TAL      C2     N3     N1     .
- TAL      H2     C2     .      .
- TAL      N1     C2     C6     .
- TAL      C6     N1     C5     .
- TAL      C7     C6     H71    .
- TAL      H73    C7     .      .
- TAL      H72    C7     .      .
- TAL      H71    C7     .      .
- TAL      C5     C6     N7     .
- TAL      N7     C5     C8     .
- TAL      C8     N7     H8     .
- TAL      H8     C8     .      END
- TAL      "C4'"  "O4'"  .    ADD
- TAL      N9     C8     .    ADD
- TAL      C5     C4     .    ADD
+TAL     "O5'"   O       OH1     0       93.125      64.704      17.181      
+TAL     "C5'"   C       CH1     0       93.113      63.932      18.377      
+TAL     "C6'"   C       CH3     0       94.117      62.802      18.252      
+TAL     "C4'"   C       CH1     0       93.388      64.829      19.572      
+TAL     "O4'"   O       O2      0       92.557      66.010      19.478      
+TAL     "C1'"   C       CH1     0       91.725      66.117      20.610      
+TAL     N9      N       NR5     0       90.424      66.618      20.181      
+TAL     C8      C       CR15    0       89.775      67.728      20.663      
+TAL     N7      N       NRD5    0       88.617      67.949      20.091      
+TAL     C5      C       CR56    0       88.487      66.922      19.166      
+TAL     C4      C       CR56    0       89.599      66.095      19.211      
+TAL     N3      N       NRD6    0       89.780      65.007      18.440      
+TAL     C2      C       CR16    0       88.759      64.796      17.603      
+TAL     N1      N       NRD6    0       87.635      65.535      17.477      
+TAL     C6      C       CR6     0       87.483      66.620      18.266      
+TAL     C7      C       CH3     0       86.245      67.445      18.136      
+TAL     "C2'"   C       CH1     0       91.682      64.729      21.243      
+TAL     "O2'"   O       OH1     0       91.398      64.807      22.623      
+TAL     "C3'"   C       CH1     0       93.094      64.216      20.944      
+TAL     "O3'"   O       OH1     0       94.051      64.630      21.914      
+TAL     "H5'"   H       H       0       92.442      65.207      17.173      
+TAL     H1      H       H       0       92.215      63.540      18.485      
+TAL     "H6'1"  H       H       0       94.717      62.796      19.019      
+TAL     "H6'2"  H       H       0       94.640      62.906      17.437      
+TAL     "H6'3"  H       H       0       93.634      61.958      18.217      
+TAL     "H4'"   H       H       0       94.337      65.106      19.544      
+TAL     "H1'"   H       H       0       92.121      66.747      21.254      
+TAL     H8      H       H       0       90.129      68.277      21.342      
+TAL     H2      H       H       0       88.835      64.037      17.032      
+TAL     H71     H       H       0       85.751      67.182      17.344      
+TAL     H72     H       H       0       86.478      68.382      18.064      
+TAL     H73     H       H       0       85.681      67.320      18.914      
+TAL     "H2'"   H       H       0       91.006      64.159      20.790      
+TAL     H3      H       H       0       91.470      64.033      22.965      
+TAL     "H3'"   H       H       0       93.086      63.227      20.882      
+TAL     H4      H       H       0       94.138      65.475      21.907      
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-TAL       "O5'"     "C5'"     single    1.432     0.020     1.432     0.020     
-TAL       "H5'"     "O5'"     single    0.970     0.012     0.839     0.014     
-TAL       "C6'"     "C5'"     single    1.524     0.020     1.524     0.020     
-TAL       "C5'"     "C4'"     single    1.524     0.020     1.524     0.020     
-TAL       H1        "C5'"     single    1.089     0.010     0.989     0.005     
-TAL       "H6'1"    "C6'"     single    1.089     0.010     0.989     0.005     
-TAL       "H6'2"    "C6'"     single    1.089     0.010     0.989     0.005     
-TAL       "H6'3"    "C6'"     single    1.089     0.010     0.989     0.005     
-TAL       "C4'"     "O4'"     single    1.426     0.020     1.426     0.020     
-TAL       "C4'"     "C3'"     single    1.524     0.020     1.524     0.020     
-TAL       "H4'"     "C4'"     single    1.089     0.010     0.989     0.005     
-TAL       "O4'"     "C1'"     single    1.426     0.020     1.426     0.020     
-TAL       N9        "C1'"     single    1.485     0.020     1.485     0.020     
-TAL       "C1'"     "C2'"     single    1.524     0.020     1.524     0.020     
-TAL       "H1'"     "C1'"     single    1.089     0.010     0.989     0.005     
-TAL       N9        C8        single    1.337     0.020     1.337     0.020     
-TAL       C4        N9        single    1.337     0.020     1.337     0.020     
-TAL       C8        N7        double    1.350     0.020     1.350     0.020     
-TAL       H8        C8        single    1.082     0.013     0.975     0.010     
-TAL       N7        C5        single    1.350     0.020     1.350     0.020     
-TAL       C5        C4        double    1.490     0.020     1.490     0.020     
-TAL       C5        C6        single    1.490     0.020     1.490     0.020     
-TAL       N3        C4        single    1.355     0.020     1.355     0.020     
-TAL       C2        N3        double    1.337     0.020     1.337     0.020     
-TAL       N1        C2        single    1.337     0.020     1.337     0.020     
-TAL       H2        C2        single    1.082     0.013     0.975     0.010     
-TAL       C6        N1        double    1.350     0.020     1.350     0.020     
-TAL       C7        C6        single    1.506     0.020     1.506     0.020     
-TAL       H71       C7        single    1.089     0.010     0.989     0.005     
-TAL       H72       C7        single    1.089     0.010     0.989     0.005     
-TAL       H73       C7        single    1.089     0.010     0.989     0.005     
-TAL       "O2'"     "C2'"     single    1.432     0.020     1.432     0.020     
-TAL       "C2'"     "C3'"     single    1.524     0.020     1.524     0.020     
-TAL       "H2'"     "C2'"     single    1.089     0.010     0.989     0.005     
-TAL       H3        "O2'"     single    0.970     0.012     0.839     0.014     
-TAL       "C3'"     "O3'"     single    1.432     0.020     1.432     0.020     
-TAL       "H3'"     "C3'"     single    1.089     0.010     0.989     0.005     
-TAL       H4        "O3'"     single    0.970     0.012     0.839     0.014     
+TAL       "O5'"       "C5'"      SINGLE       n     1.423  0.0103     1.423  0.0103
+TAL       "C5'"       "C6'"      SINGLE       n     1.514  0.0115     1.514  0.0115
+TAL       "C5'"       "C4'"      SINGLE       n     1.517  0.0100     1.517  0.0100
+TAL       "C4'"       "O4'"      SINGLE       n     1.446  0.0100     1.446  0.0100
+TAL       "C4'"       "C3'"      SINGLE       n     1.528  0.0117     1.528  0.0117
+TAL       "O4'"       "C1'"      SINGLE       n     1.409  0.0100     1.409  0.0100
+TAL       "C1'"          N9      SINGLE       n     1.458  0.0100     1.458  0.0100
+TAL       "C1'"       "C2'"      SINGLE       n     1.525  0.0100     1.525  0.0100
+TAL          N9          C8      SINGLE       y     1.372  0.0100     1.372  0.0100
+TAL          N9          C4      SINGLE       y     1.375  0.0100     1.375  0.0100
+TAL          C8          N7      DOUBLE       y     1.311  0.0100     1.311  0.0100
+TAL          N7          C5      SINGLE       y     1.389  0.0100     1.389  0.0100
+TAL          C5          C4      DOUBLE       y     1.385  0.0116     1.385  0.0116
+TAL          C5          C6      SINGLE       y     1.382  0.0100     1.382  0.0100
+TAL          C4          N3      SINGLE       y     1.341  0.0100     1.341  0.0100
+TAL          N3          C2      DOUBLE       y     1.330  0.0100     1.330  0.0100
+TAL          C2          N1      SINGLE       y     1.345  0.0100     1.345  0.0100
+TAL          N1          C6      DOUBLE       y     1.347  0.0100     1.347  0.0100
+TAL          C6          C7      SINGLE       n     1.493  0.0100     1.493  0.0100
+TAL       "C2'"       "O2'"      SINGLE       n     1.411  0.0100     1.411  0.0100
+TAL       "C2'"       "C3'"      SINGLE       n     1.531  0.0100     1.531  0.0100
+TAL       "C3'"       "O3'"      SINGLE       n     1.422  0.0100     1.422  0.0100
+TAL       "O5'"       "H5'"      SINGLE       n     0.970  0.0120     0.848  0.0200
+TAL       "C5'"          H1      SINGLE       n     1.089  0.0100     0.985  0.0200
+TAL       "C6'"      "H6'1"      SINGLE       n     1.089  0.0100     0.973  0.0146
+TAL       "C6'"      "H6'2"      SINGLE       n     1.089  0.0100     0.973  0.0146
+TAL       "C6'"      "H6'3"      SINGLE       n     1.089  0.0100     0.973  0.0146
+TAL       "C4'"       "H4'"      SINGLE       n     1.089  0.0100     0.989  0.0197
+TAL       "C1'"       "H1'"      SINGLE       n     1.089  0.0100     0.984  0.0200
+TAL          C8          H8      SINGLE       n     1.082  0.0130     0.942  0.0170
+TAL          C2          H2      SINGLE       n     1.082  0.0130     0.953  0.0114
+TAL          C7         H71      SINGLE       n     1.089  0.0100     0.969  0.0100
+TAL          C7         H72      SINGLE       n     1.089  0.0100     0.969  0.0100
+TAL          C7         H73      SINGLE       n     1.089  0.0100     0.969  0.0100
+TAL       "C2'"       "H2'"      SINGLE       n     1.089  0.0100     0.994  0.0200
+TAL       "O2'"          H3      SINGLE       n     0.970  0.0120     0.849  0.0200
+TAL       "C3'"       "H3'"      SINGLE       n     1.089  0.0100     0.992  0.0200
+TAL       "O3'"          H4      SINGLE       n     0.970  0.0120     0.849  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -167,73 +112,73 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- TAL      H4     "O3'"  "C3'"   109.470    3.000
- TAL      "O3'"  "C3'"  "H3'"   109.470    3.000
- TAL      "O3'"  "C3'"  "C4'"   109.470    3.000
- TAL      "O3'"  "C3'"  "C2'"   109.470    3.000
- TAL      "H3'"  "C3'"  "C4'"   108.340    3.000
- TAL      "H3'"  "C3'"  "C2'"   108.340    3.000
- TAL      "C4'"  "C3'"  "C2'"   111.000    3.000
- TAL      "C3'"  "C4'"  "H4'"   108.340    3.000
- TAL      "C3'"  "C4'"  "C5'"   111.000    3.000
- TAL      "C3'"  "C4'"  "O4'"   109.470    3.000
- TAL      "H4'"  "C4'"  "C5'"   108.340    3.000
- TAL      "H4'"  "C4'"  "O4'"   109.470    3.000
- TAL      "C5'"  "C4'"  "O4'"   109.470    3.000
- TAL      "C4'"  "C5'"  H1      108.340    3.000
- TAL      "C4'"  "C5'"  "C6'"   111.000    3.000
- TAL      "C4'"  "C5'"  "O5'"   109.470    3.000
- TAL      H1     "C5'"  "C6'"   108.340    3.000
- TAL      H1     "C5'"  "O5'"   109.470    3.000
- TAL      "C6'"  "C5'"  "O5'"   109.470    3.000
- TAL      "C5'"  "C6'"  "H6'3"  109.470    3.000
- TAL      "C5'"  "C6'"  "H6'2"  109.470    3.000
- TAL      "C5'"  "C6'"  "H6'1"  109.470    3.000
- TAL      "H6'3" "C6'"  "H6'2"  109.470    3.000
- TAL      "H6'3" "C6'"  "H6'1"  109.470    3.000
- TAL      "H6'2" "C6'"  "H6'1"  109.470    3.000
- TAL      "C5'"  "O5'"  "H5'"   109.470    3.000
- TAL      "C3'"  "C2'"  "H2'"   108.340    3.000
- TAL      "C3'"  "C2'"  "O2'"   109.470    3.000
- TAL      "C3'"  "C2'"  "C1'"   111.000    3.000
- TAL      "H2'"  "C2'"  "O2'"   109.470    3.000
- TAL      "H2'"  "C2'"  "C1'"   108.340    3.000
- TAL      "O2'"  "C2'"  "C1'"   109.470    3.000
- TAL      "C2'"  "O2'"  H3      109.470    3.000
- TAL      "C2'"  "C1'"  "H1'"   108.340    3.000
- TAL      "C2'"  "C1'"  "O4'"   109.470    3.000
- TAL      "C2'"  "C1'"  N9      109.470    3.000
- TAL      "H1'"  "C1'"  "O4'"   109.470    3.000
- TAL      "H1'"  "C1'"  N9      109.470    3.000
- TAL      "O4'"  "C1'"  N9      109.470    3.000
- TAL      "C1'"  "O4'"  "C4'"   111.800    3.000
- TAL      "C1'"  N9     C4      126.000    3.000
- TAL      "C1'"  N9     C8      126.000    3.000
- TAL      C4     N9     C8      108.000    3.000
- TAL      N9     C4     N3      132.000    3.000
- TAL      N9     C4     C5      108.000    3.000
- TAL      N3     C4     C5      120.000    3.000
- TAL      C4     N3     C2      120.000    3.000
- TAL      N3     C2     H2      120.000    3.000
- TAL      N3     C2     N1      120.000    3.000
- TAL      H2     C2     N1      120.000    3.000
- TAL      C2     N1     C6      120.000    3.000
- TAL      N1     C6     C7      120.000    3.000
- TAL      N1     C6     C5      120.000    3.000
- TAL      C7     C6     C5      120.000    3.000
- TAL      C6     C7     H73     109.470    3.000
- TAL      C6     C7     H72     109.470    3.000
- TAL      C6     C7     H71     109.470    3.000
- TAL      H73    C7     H72     109.470    3.000
- TAL      H73    C7     H71     109.470    3.000
- TAL      H72    C7     H71     109.470    3.000
- TAL      C6     C5     N7      132.000    3.000
- TAL      C6     C5     C4      120.000    3.000
- TAL      N7     C5     C4      108.000    3.000
- TAL      C5     N7     C8      108.000    3.000
- TAL      N7     C8     H8      126.000    3.000
- TAL      N7     C8     N9      108.000    3.000
- TAL      H8     C8     N9      126.000    3.000
+TAL       "C5'"       "O5'"       "H5'"     108.778    3.00
+TAL       "O5'"       "C5'"       "C6'"     109.285    1.79
+TAL       "O5'"       "C5'"       "C4'"     109.352    2.11
+TAL       "O5'"       "C5'"          H1     108.596    1.50
+TAL       "C6'"       "C5'"       "C4'"     112.218    1.50
+TAL       "C6'"       "C5'"          H1     108.734    1.73
+TAL       "C4'"       "C5'"          H1     108.472    1.50
+TAL       "C5'"       "C6'"      "H6'1"     108.963    3.00
+TAL       "C5'"       "C6'"      "H6'2"     108.963    3.00
+TAL       "C5'"       "C6'"      "H6'3"     108.963    3.00
+TAL      "H6'1"       "C6'"      "H6'2"     109.308    1.50
+TAL      "H6'1"       "C6'"      "H6'3"     109.308    1.50
+TAL      "H6'2"       "C6'"      "H6'3"     109.308    1.50
+TAL       "C5'"       "C4'"       "O4'"     109.128    1.50
+TAL       "C5'"       "C4'"       "C3'"     115.967    1.50
+TAL       "C5'"       "C4'"       "H4'"     109.136    1.58
+TAL       "O4'"       "C4'"       "C3'"     105.508    1.50
+TAL       "O4'"       "C4'"       "H4'"     109.115    1.50
+TAL       "C3'"       "C4'"       "H4'"     109.143    1.50
+TAL       "C4'"       "O4'"       "C1'"     109.426    1.50
+TAL       "O4'"       "C1'"          N9     108.477    1.50
+TAL       "O4'"       "C1'"       "C2'"     106.047    1.50
+TAL       "O4'"       "C1'"       "H1'"     109.807    1.50
+TAL          N9       "C1'"       "C2'"     113.824    1.50
+TAL          N9       "C1'"       "H1'"     109.561    1.50
+TAL       "C2'"       "C1'"       "H1'"     109.015    1.50
+TAL       "C1'"          N9          C8     126.821    1.91
+TAL       "C1'"          N9          C4     127.432    1.80
+TAL          C8          N9          C4     105.747    1.50
+TAL          N9          C8          N7     113.523    1.50
+TAL          N9          C8          H8     123.179    1.50
+TAL          N7          C8          H8     123.298    1.50
+TAL          C8          N7          C5     104.794    1.50
+TAL          N7          C5          C4     109.758    1.50
+TAL          N7          C5          C6     130.302    1.54
+TAL          C4          C5          C6     119.940    2.02
+TAL          N9          C4          C5     106.178    1.50
+TAL          N9          C4          N3     128.801    1.50
+TAL          C5          C4          N3     125.021    1.50
+TAL          C4          N3          C2     110.751    1.50
+TAL          N3          C2          N1     126.557    1.50
+TAL          N3          C2          H2     116.497    1.50
+TAL          N1          C2          H2     116.947    1.50
+TAL          C2          N1          C6     118.465    1.50
+TAL          C5          C6          N1     119.266    1.50
+TAL          C5          C6          C7     122.131    1.83
+TAL          N1          C6          C7     118.603    1.50
+TAL          C6          C7         H71     110.194    1.50
+TAL          C6          C7         H72     110.194    1.50
+TAL          C6          C7         H73     110.194    1.50
+TAL         H71          C7         H72     109.177    1.50
+TAL         H71          C7         H73     109.177    1.50
+TAL         H72          C7         H73     109.177    1.50
+TAL       "C1'"       "C2'"       "O2'"     111.715    2.69
+TAL       "C1'"       "C2'"       "C3'"     101.239    1.50
+TAL       "C1'"       "C2'"       "H2'"     110.636    1.70
+TAL       "O2'"       "C2'"       "C3'"     112.782    2.45
+TAL       "O2'"       "C2'"       "H2'"     110.448    1.97
+TAL       "C3'"       "C2'"       "H2'"     110.596    1.51
+TAL       "C2'"       "O2'"          H3     109.103    2.13
+TAL       "C4'"       "C3'"       "C2'"     102.352    1.50
+TAL       "C4'"       "C3'"       "O3'"     110.985    2.41
+TAL       "C4'"       "C3'"       "H3'"     110.624    1.81
+TAL       "C2'"       "C3'"       "O3'"     111.581    2.83
+TAL       "C2'"       "C3'"       "H3'"     110.504    1.75
+TAL       "O3'"       "C3'"       "H3'"     110.380    1.67
+TAL       "C3'"       "O3'"          H4     108.744    3.00
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -244,28 +189,34 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TAL      var_1    H4     "O3'"  "C3'"  "C2'"     61.448   20.000   1
- TAL      var_2    "O3'"  "C3'"  "C4'"  "C5'"    120.000   20.000   3
- TAL      var_3    "C3'"  "C4'"  "O4'"  "C1'"     30.000   20.000   1
- TAL      var_4    "C3'"  "C4'"  "C5'"  "O5'"     59.729   20.000   3
- TAL      var_5    "C4'"  "C5'"  "C6'"  "H6'1"  -179.966   20.000   3
- TAL      var_6    "C4'"  "C5'"  "O5'"  "H5'"     59.953   20.000   1
- TAL      var_7    "O3'"  "C3'"  "C2'"  "C1'"     90.000   20.000   3
- TAL      var_8    "C3'"  "C2'"  "O2'"  H3       -67.314   20.000   1
- TAL      var_9    "C3'"  "C2'"  "C1'"  N9       150.000   20.000   3
- TAL      var_10   "C2'"  "C1'"  "O4'"  "C4'"    -30.000   20.000   1
- TAL      var_11   "C2'"  "C1'"  N9     C4        94.126   20.000   1
- TAL      CONST_1  "C1'"  N9     C8     N7       180.000    0.000   0
- TAL      CONST_2  "C1'"  N9     C4     N3         0.000    0.000   0
- TAL      CONST_3  N9     C4     N3     C2       180.000    0.000   0
- TAL      CONST_4  C4     N3     C2     N1         0.000    0.000   0
- TAL      CONST_5  N3     C2     N1     C6         0.000    0.000   0
- TAL      CONST_6  C2     N1     C6     C5         0.000    0.000   0
- TAL      var_12   N1     C6     C7     H71      -89.926   20.000   1
- TAL      CONST_7  N1     C6     C5     N7       180.000    0.000   0
- TAL      CONST_8  C6     C5     C4     N9       180.000    0.000   0
- TAL      CONST_9  C6     C5     N7     C8       180.000    0.000   0
- TAL      CONST_10 C5     N7     C8     N9         0.000    0.000   0
+TAL     C2e-chi         "O4'"     "C1'"     N9        C4        210.000       10.000    6     
+TAL     C2e-nyu0        "C4'"     "O4'"     "C1'"     "C2'"     340.700       6.300     1     
+TAL     C2e-nyu1        "O4'"     "C1'"     "C2'"     "C3'"     32.800        4.900     1     
+TAL     C2e-nyu2        "C1'"     "C2'"     "C3'"     "C4'"     326.9         3.600     1     
+TAL     C2e-nyu3        "C2'"     "C3'"     "C4'"     "O4'"     22.600        4.500     1     
+TAL     C2e-nyu4        "C3'"     "C4'"     "O4'"     "C1'"     357.700       6.100     1     
+TAL     C3e-chi         "O4'"     "C1'"     N9        C4        210.000       10.000    6     
+TAL     C3e-nyu0        "C4'"     "O4'"     "C1'"     "C2'"     2.8           6.100     1     
+TAL     C3e-nyu1        "O4'"     "C1'"     "C2'"     "C3'"     335.00        4.900     1     
+TAL     C3e-nyu2        "C1'"     "C2'"     "C3'"     "C4'"     35.9          2.800     1     
+TAL     C3e-nyu3        "C2'"     "C3'"     "C4'"     "O4'"     324.700       3.100     1     
+TAL     C3e-nyu4        "C3'"     "C4'"     "O4'"     "C1'"     20.500        5.100     1     
+TAL     gamma           "O5'"     "C5'"     "C4'"     "C3'"     180.000       10.00     3     
+TAL            sp3_sp3_25       "C6'"       "C5'"       "O5'"       "H5'"     180.000   10.00     3
+TAL       const_sp2_sp2_6          N9          C4          N3          C2     180.000   10.00     2
+TAL       const_sp2_sp2_7          N1          C2          N3          C4       0.000   10.00     2
+TAL       const_sp2_sp2_9          N3          C2          N1          C6       0.000   10.00     2
+TAL              const_12          C7          C6          N1          C2     180.000   10.00     2
+TAL             sp2_sp3_7          C5          C6          C7         H71     150.000   10.00     6
+TAL            sp3_sp3_55       "C1'"       "C2'"       "O2'"          H3     180.000   10.00     3
+TAL            sp3_sp3_58       "C4'"       "C3'"       "O3'"          H4     180.000   10.00     3
+TAL            sp3_sp3_28       "O5'"       "C5'"       "C6'"      "H6'1"     180.000   10.00     3
+TAL              const_22          C5          C4          N9       "C1'"     180.000   10.00     2
+TAL              const_14          N7          C8          N9       "C1'"     180.000   10.00     2
+TAL              const_17          N9          C8          N7          C5       0.000   10.00     2
+TAL              const_19          C4          C5          N7          C8       0.000   10.00     2
+TAL       const_sp2_sp2_1          N9          C4          C5          N7       0.000   10.00     2
+TAL              const_28          N7          C5          C6          C7       0.000   10.00     2
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -274,27 +225,43 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- TAL      chir_01  "C5'"  "O5'"  "C6'"  "C4'"     negativ
- TAL      chir_02  "C4'"  "C5'"  "O4'"  "C3'"     negativ
- TAL      chir_03  "C1'"  "O4'"  N9     "C2'"     negativ
- TAL      chir_04  "C2'"  "C1'"  "O2'"  "C3'"     positiv
- TAL      chir_05  "C3'"  "C4'"  "C2'"  "O3'"     positiv
+TAL    chir_1    "C5'"    "O5'"    "C4'"    "C6'"    positive
+TAL    chir_2    "C4'"    "O4'"    "C3'"    "C5'"    negative
+TAL    chir_3    "C1'"    "O4'"    N9    "C2'"    negative
+TAL    chir_4    "C2'"    "O2'"    "C1'"    "C3'"    negative
+TAL    chir_5    "C3'"    "O3'"    "C4'"    "C2'"    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- TAL      plan-1    N9        0.020
- TAL      plan-1    "C1'"     0.020
- TAL      plan-1    C8        0.020
- TAL      plan-1    C4        0.020
- TAL      plan-1    N7        0.020
- TAL      plan-1    H8        0.020
- TAL      plan-1    C5        0.020
- TAL      plan-1    C6        0.020
- TAL      plan-1    N3        0.020
- TAL      plan-1    C2        0.020
- TAL      plan-1    N1        0.020
- TAL      plan-1    H2        0.020
- TAL      plan-1    C7        0.020
-# ------------------------------------------------------
+TAL    plan-1       "C1'"   0.020
+TAL    plan-1          C2   0.020
+TAL    plan-1          C4   0.020
+TAL    plan-1          C5   0.020
+TAL    plan-1          C6   0.020
+TAL    plan-1          C7   0.020
+TAL    plan-1          C8   0.020
+TAL    plan-1          H2   0.020
+TAL    plan-1          H8   0.020
+TAL    plan-1          N1   0.020
+TAL    plan-1          N3   0.020
+TAL    plan-1          N7   0.020
+TAL    plan-1          N9   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+TAL           SMILES              ACDLabs 10.04                                                                                               n2c1c(ncnc1n(c2)C3OC(C(O)C3O)C(O)C)C
+TAL SMILES_CANONICAL               CACTVS 3.341                                                                            C[C@H](O)[C@H]1O[C@H]([C@H](O)[C@@H]1O)n2cnc3c(C)ncnc23
+TAL           SMILES               CACTVS 3.341                                                                                  C[CH](O)[CH]1O[CH]([CH](O)[CH]1O)n2cnc3c(C)ncnc23
+TAL SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                                       Cc1c2c(ncn1)n(cn2)[C@H]3[C@@H]([C@@H]([C@H](O3)[C@H](C)O)O)O
+TAL           SMILES "OpenEye OEToolkits" 1.5.0                                                                                             Cc1c2c(ncn1)n(cn2)C3C(C(C(O3)C(C)O)O)O
+TAL            InChI                InChI  1.03 InChI=1S/C12H16N4O4/c1-5-7-11(14-3-13-5)16(4-15-7)12-9(19)8(18)10(20-12)6(2)17/h3-4,6,8-10,12,17-19H,1-2H3/t6-,8-,9+,10+,12+/m0/s1
+TAL         InChIKey                InChI  1.03                                                                                                        XJZDIUOABWMPLZ-DSBXBFMBSA-N
+TAL ?                acedrg               231         "dictionary generator"                  
+TAL ?                acedrg_database      11          "data source"                           
+TAL ?                rdkit                2017.03.2   "Chemoinformatics tool"
+TAL ?                refmac5              5.8.0238    "optimization tool"                     

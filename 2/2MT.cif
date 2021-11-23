@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-2MT      2MT '(4R)-2,2-DIMETHYL-1,3-THIAZOLIDINE-4' non-polymer        20  10 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+2MT     2MT      "(4R)-2,2-DIMETHYL-1,3-THIAZOLIDINE-4-CARBOXYLIC ACID"     "L-PEPTIDE LINKING"     20     10     .     
 #
 data_comp_2MT
 #
@@ -28,86 +17,60 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 2MT           OXT    O    OC       -0.500      0.000    0.000    0.000
- 2MT           C      C    C         0.000     -0.761   -0.317   -0.941
- 2MT           O      O    OC       -0.500     -1.800   -1.000   -0.808
- 2MT           CA     C    CH1       0.000     -0.256    0.236   -2.235
- 2MT           HA     H    H         0.000      0.748   -0.159   -2.445
- 2MT           CB     C    CH2       0.000     -0.223    1.755   -2.218
- 2MT           HB2    H    H         0.000      0.675    2.144   -1.734
- 2MT           HB3    H    H         0.000     -1.107    2.183   -1.741
- 2MT           SG     S    S2        0.000     -0.206    2.199   -3.969
- 2MT           CD1    C    CT        0.000     -0.866    0.577   -4.502
- 2MT           CD3    C    CH3       0.000      0.194   -0.161   -5.325
- 2MT           HD33   H    H         0.000     -0.215   -1.063   -5.702
- 2MT           HD32   H    H         0.000      0.503    0.450   -6.134
- 2MT           HD31   H    H         0.000      1.029   -0.382   -4.711
- 2MT           CD2    C    CH3       0.000     -2.130    0.795   -5.337
- 2MT           HD23   H    H         0.000     -1.980    1.607   -6.001
- 2MT           HD22   H    H         0.000     -2.342   -0.081   -5.894
- 2MT           HD21   H    H         0.000     -2.946    1.011   -4.696
- 2MT           N      N    NH1       0.000     -1.192   -0.193   -3.285
- 2MT           H      H    H         0.000     -1.922   -0.885   -3.191
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- 2MT      OXT    n/a    C      START
- 2MT      C      OXT    CA     .
- 2MT      O      C      .      .
- 2MT      CA     C      CB     .
- 2MT      HA     CA     .      .
- 2MT      CB     CA     SG     .
- 2MT      HB2    CB     .      .
- 2MT      HB3    CB     .      .
- 2MT      SG     CB     CD1    .
- 2MT      CD1    SG     N      .
- 2MT      CD3    CD1    HD31   .
- 2MT      HD33   CD3    .      .
- 2MT      HD32   CD3    .      .
- 2MT      HD31   CD3    .      .
- 2MT      CD2    CD1    HD21   .
- 2MT      HD23   CD2    .      .
- 2MT      HD22   CD2    .      .
- 2MT      HD21   CD2    .      .
- 2MT      N      CD1    H      .
- 2MT      H      N      .      END
- 2MT      N      CA     .    ADD
+2MT     N       N       NT1     0       0.158       -0.741      -0.039      
+2MT     CA      C       CH1     0       1.297       -0.057      0.589       
+2MT     C       C       C       0       2.535       -0.965      0.654       
+2MT     O       O       O       0       3.132       -1.016      1.715       
+2MT     CB      C       CH2     0       1.511       1.146       -0.301      
+2MT     SG      S       S2      0       -0.149      1.794       -0.591      
+2MT     CD1     C       CT      0       -0.958      0.187       -0.298      
+2MT     CD2     C       CH3     0       -1.722      -0.259      -1.532      
+2MT     CD3     C       CH3     0       -1.847      0.288       0.928       
+2MT     OXT     O       OC      -1      2.831       -1.569      -0.362      
+2MT     H       H       H       0       -0.052      -1.464      0.438       
+2MT     HA      H       H       0       1.045       0.240       1.499       
+2MT     HB2     H       H       0       1.926       0.895       -1.146      
+2MT     HB3     H       H       0       2.063       1.818       0.137       
+2MT     HD21    H       H       0       -1.384      0.205       -2.310      
+2MT     HD22    H       H       0       -2.662      -0.059      -1.426      
+2MT     HD23    H       H       0       -1.609      -1.212      -1.655      
+2MT     HD31    H       H       0       -2.236      1.172       0.975       
+2MT     HD32    H       H       0       -1.323      0.126       1.724       
+2MT     HD33    H       H       0       -2.555      -0.370      0.874       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-2MT       N         CA        single    1.450     0.020     1.450     0.020     
-2MT       N         CD1       single    1.450     0.020     1.450     0.020     
-2MT       H         N         single    1.036     0.016     0.914     0.007     
-2MT       CA        C         single    1.500     0.020     1.500     0.020     
-2MT       CB        CA        single    1.524     0.020     1.524     0.020     
-2MT       HA        CA        single    1.089     0.010     0.989     0.005     
-2MT       O         C         deloc     1.250     0.020     1.250     0.020     
-2MT       C         OXT       deloc     1.250     0.020     1.250     0.020     
-2MT       SG        CB        single    1.762     0.020     1.762     0.020     
-2MT       HB2       CB        single    1.089     0.010     0.989     0.005     
-2MT       HB3       CB        single    1.089     0.010     0.989     0.005     
-2MT       CD1       SG        single    1.762     0.020     1.762     0.020     
-2MT       CD2       CD1       single    1.524     0.020     1.524     0.020     
-2MT       CD3       CD1       single    1.524     0.020     1.524     0.020     
-2MT       HD21      CD2       single    1.089     0.010     0.989     0.005     
-2MT       HD22      CD2       single    1.089     0.010     0.989     0.005     
-2MT       HD23      CD2       single    1.089     0.010     0.989     0.005     
-2MT       HD31      CD3       single    1.089     0.010     0.989     0.005     
-2MT       HD32      CD3       single    1.089     0.010     0.989     0.005     
-2MT       HD33      CD3       single    1.089     0.010     0.989     0.005     
+2MT           N          CA      SINGLE       n     1.468  0.0148     1.468  0.0148
+2MT           N         CD1      SINGLE       n     1.470  0.0150     1.470  0.0150
+2MT          CA           C      SINGLE       n     1.536  0.0100     1.536  0.0100
+2MT          CA          CB      SINGLE       n     1.514  0.0200     1.514  0.0200
+2MT           C           O      DOUBLE       n     1.218  0.0200     1.218  0.0200
+2MT           C         OXT      SINGLE       n     1.218  0.0200     1.218  0.0200
+2MT          CB          SG      SINGLE       n     1.806  0.0170     1.806  0.0170
+2MT          SG         CD1      SINGLE       n     1.818  0.0200     1.818  0.0200
+2MT         CD1         CD2      SINGLE       n     1.515  0.0100     1.515  0.0100
+2MT         CD1         CD3      SINGLE       n     1.515  0.0100     1.515  0.0100
+2MT           N           H      SINGLE       n     1.036  0.0160     0.890  0.0200
+2MT          CA          HA      SINGLE       n     1.089  0.0100     0.990  0.0121
+2MT          CB         HB2      SINGLE       n     1.089  0.0100     0.974  0.0200
+2MT          CB         HB3      SINGLE       n     1.089  0.0100     0.974  0.0200
+2MT         CD2        HD21      SINGLE       n     1.089  0.0100     0.967  0.0100
+2MT         CD2        HD22      SINGLE       n     1.089  0.0100     0.967  0.0100
+2MT         CD2        HD23      SINGLE       n     1.089  0.0100     0.967  0.0100
+2MT         CD3        HD31      SINGLE       n     1.089  0.0100     0.967  0.0100
+2MT         CD3        HD32      SINGLE       n     1.089  0.0100     0.967  0.0100
+2MT         CD3        HD33      SINGLE       n     1.089  0.0100     0.967  0.0100
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -115,43 +78,43 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 2MT      OXT    C      O       123.000    3.000
- 2MT      OXT    C      CA      118.500    3.000
- 2MT      O      C      CA      118.500    3.000
- 2MT      C      CA     HA      108.810    3.000
- 2MT      C      CA     CB      109.470    3.000
- 2MT      C      CA     N       111.600    3.000
- 2MT      HA     CA     CB      108.340    3.000
- 2MT      HA     CA     N       108.550    3.000
- 2MT      CB     CA     N       110.000    3.000
- 2MT      CA     CB     HB2     109.470    3.000
- 2MT      CA     CB     HB3     109.470    3.000
- 2MT      CA     CB     SG      109.500    3.000
- 2MT      HB2    CB     HB3     107.900    3.000
- 2MT      HB2    CB     SG      109.500    3.000
- 2MT      HB3    CB     SG      109.500    3.000
- 2MT      CB     SG     CD1      93.480    3.000
- 2MT      SG     CD1    CD3     109.500    3.000
- 2MT      SG     CD1    CD2     109.500    3.000
- 2MT      SG     CD1    N       109.500    3.000
- 2MT      CD3    CD1    CD2     111.000    3.000
- 2MT      CD3    CD1    N       110.000    3.000
- 2MT      CD2    CD1    N       110.000    3.000
- 2MT      CD1    CD3    HD33    109.470    3.000
- 2MT      CD1    CD3    HD32    109.470    3.000
- 2MT      CD1    CD3    HD31    109.470    3.000
- 2MT      HD33   CD3    HD32    109.470    3.000
- 2MT      HD33   CD3    HD31    109.470    3.000
- 2MT      HD32   CD3    HD31    109.470    3.000
- 2MT      CD1    CD2    HD23    109.470    3.000
- 2MT      CD1    CD2    HD22    109.470    3.000
- 2MT      CD1    CD2    HD21    109.470    3.000
- 2MT      HD23   CD2    HD22    109.470    3.000
- 2MT      HD23   CD2    HD21    109.470    3.000
- 2MT      HD22   CD2    HD21    109.470    3.000
- 2MT      CD1    N      H       118.500    3.000
- 2MT      CD1    N      CA      120.000    3.000
- 2MT      H      N      CA      118.500    3.000
+2MT          CA           N         CD1     109.056    3.00
+2MT          CA           N           H     109.307    3.00
+2MT         CD1           N           H     114.884    3.00
+2MT           N          CA           C     111.420    2.45
+2MT           N          CA          CB     103.104    2.01
+2MT           N          CA          HA     109.296    1.50
+2MT           C          CA          CB     112.424    2.46
+2MT           C          CA          HA     110.011    1.50
+2MT          CB          CA          HA     109.476    2.47
+2MT          CA           C           O     117.013    1.95
+2MT          CA           C         OXT     117.013    1.95
+2MT           O           C         OXT     125.975    1.50
+2MT          CA          CB          SG     104.492    1.50
+2MT          CA          CB         HB2     111.325    3.00
+2MT          CA          CB         HB3     111.325    3.00
+2MT          SG          CB         HB2     110.175    1.50
+2MT          SG          CB         HB3     110.175    1.50
+2MT         HB2          CB         HB3     109.038    1.50
+2MT          CB          SG         CD1      92.264    3.00
+2MT           N         CD1          SG     104.726    1.50
+2MT           N         CD1         CD2     111.633    2.37
+2MT           N         CD1         CD3     111.633    2.37
+2MT          SG         CD1         CD2     111.156    2.31
+2MT          SG         CD1         CD3     111.156    2.31
+2MT         CD2         CD1         CD3     112.647    1.50
+2MT         CD1         CD2        HD21     109.474    1.50
+2MT         CD1         CD2        HD22     109.474    1.50
+2MT         CD1         CD2        HD23     109.474    1.50
+2MT        HD21         CD2        HD22     109.471    1.50
+2MT        HD21         CD2        HD23     109.471    1.50
+2MT        HD22         CD2        HD23     109.471    1.50
+2MT         CD1         CD3        HD31     109.474    1.50
+2MT         CD1         CD3        HD32     109.474    1.50
+2MT         CD1         CD3        HD33     109.474    1.50
+2MT        HD31         CD3        HD32     109.471    1.50
+2MT        HD31         CD3        HD33     109.471    1.50
+2MT        HD32         CD3        HD33     109.471    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -162,14 +125,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2MT      var_1    OXT    C      CA     CB       -62.318   20.000   3
- 2MT      var_2    C      CA     CB     SG      -150.000   20.000   3
- 2MT      var_3    CA     CB     SG     CD1       30.000   20.000   1
- 2MT      var_4    CB     SG     CD1    N          0.000   20.000   1
- 2MT      var_5    SG     CD1    CD3    HD31      64.714   20.000   1
- 2MT      var_6    SG     CD1    CD2    HD21     -77.701   20.000   1
- 2MT      var_7    SG     CD1    N      CA       -30.000   20.000   1
- 2MT      var_8    CD1    N      CA     C        180.000   20.000   3
+2MT             sp3_sp3_3           C          CA           N         CD1     -60.000   10.00     3
+2MT            sp3_sp3_24         CD2         CD1           N          CA      60.000   10.00     3
+2MT             sp2_sp3_1           O           C          CA           N       0.000   10.00     6
+2MT            sp3_sp3_10           C          CA          CB          SG     180.000   10.00     3
+2MT            sp3_sp3_16          CA          CB          SG         CD1      60.000   10.00     3
+2MT            sp3_sp3_21         CD2         CD1          SG          CB      60.000   10.00     3
+2MT            sp3_sp3_34         CD3         CD1         CD2        HD21     -60.000   10.00     3
+2MT            sp3_sp3_43         CD2         CD1         CD3        HD31     -60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -178,19 +141,32 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- 2MT      chir_01  CA     N      C      CB        positiv
- 2MT      chir_02  CD1    N      SG     CD2       positiv
+2MT    chir_1    CA    N    CB    C    positive
+2MT    chir_2    CD1    SG    N    CD2    both
+2MT    chir_3    N    CD1    CA    H    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 2MT      plan-1    N         0.020
- 2MT      plan-1    CA        0.020
- 2MT      plan-1    CD1       0.020
- 2MT      plan-1    H         0.020
- 2MT      plan-2    C         0.020
- 2MT      plan-2    CA        0.020
- 2MT      plan-2    O         0.020
- 2MT      plan-2    OXT       0.020
-# ------------------------------------------------------
+2MT    plan-1           C   0.020
+2MT    plan-1          CA   0.020
+2MT    plan-1           O   0.020
+2MT    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+2MT           SMILES              ACDLabs 10.04                                                          O=C(O)C1NC(SC1)(C)C
+2MT SMILES_CANONICAL               CACTVS 3.341                                                     CC1(C)N[C@@H](CS1)C(O)=O
+2MT           SMILES               CACTVS 3.341                                                       CC1(C)N[CH](CS1)C(O)=O
+2MT SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                     CC1(N[C@@H](CS1)C(=O)O)C
+2MT           SMILES "OpenEye OEToolkits" 1.5.0                                                          CC1(NC(CS1)C(=O)O)C
+2MT            InChI                InChI  1.03 InChI=1S/C6H11NO2S/c1-6(2)7-4(3-10-6)5(8)9/h4,7H,3H2,1-2H3,(H,8,9)/t4-/m0/s1
+2MT         InChIKey                InChI  1.03                                                  OCQICQZUUHJWGZ-BYPYZUCNSA-N
+2MT ?                acedrg               231         "dictionary generator"                  
+2MT ?                acedrg_database      11          "data source"                           
+2MT ?                rdkit                2017.03.2   "Chemoinformatics tool"
+2MT ?                refmac5              5.8.0238    "optimization tool"                     

@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-N7P      N7P '1-ACETYL-D-PROLINE                  ' non-polymer        21  11 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+N7P     N7P      1-ACETYL-L-PROLINE     "L-peptide linking"     21     11     .     
 #
 data_comp_N7P
 #
@@ -28,89 +17,62 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- N7P           O1     O    O         0.000      0.000    0.000    0.000
- N7P           C1     C    C         0.000     -0.883    0.310    0.773
- N7P           C2     C    CH3       0.000     -0.536    0.911    2.110
- N7P           H5     H    H         0.000     -0.967    1.875    2.189
- N7P           H4     H    H         0.000     -0.912    0.293    2.885
- N7P           H3     H    H         0.000      0.517    0.988    2.202
- N7P           N      N    N         0.000     -2.172    0.117    0.434
- N7P           CD     C    CH2       0.000     -3.339    0.446    1.272
- N7P           HD2    H    H         0.000     -3.641    1.488    1.151
- N7P           HD3    H    H         0.000     -3.146    0.245    2.328
- N7P           CG     C    CH2       0.000     -4.468   -0.484    0.765
- N7P           HG2    H    H         0.000     -5.469   -0.085    0.947
- N7P           HG3    H    H         0.000     -4.403   -1.498    1.164
- N7P           CB     C    CH2       0.000     -4.189   -0.508   -0.761
- N7P           HB2    H    H         0.000     -4.611    0.357   -1.277
- N7P           HB3    H    H         0.000     -4.545   -1.424   -1.237
- N7P           CA     C    CH1       0.000     -2.649   -0.453   -0.834
- N7P           HA     H    H         0.000     -2.245   -1.466   -0.963
- N7P           C      C    C         0.000     -2.222    0.418   -1.987
- N7P           OXT    O    OC       -0.500     -2.045   -0.085   -3.118
- N7P           O      O    OC       -0.500     -2.045    1.644   -1.814
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- N7P      O1     n/a    C1     START
- N7P      C1     O1     N      .
- N7P      C2     C1     H3     .
- N7P      H5     C2     .      .
- N7P      H4     C2     .      .
- N7P      H3     C2     .      .
- N7P      N      C1     CD     .
- N7P      CD     N      CG     .
- N7P      HD2    CD     .      .
- N7P      HD3    CD     .      .
- N7P      CG     CD     CB     .
- N7P      HG2    CG     .      .
- N7P      HG3    CG     .      .
- N7P      CB     CG     CA     .
- N7P      HB2    CB     .      .
- N7P      HB3    CB     .      .
- N7P      CA     CB     C      .
- N7P      HA     CA     .      .
- N7P      C      CA     O      .
- N7P      OXT    C      .      .
- N7P      O      C      .      END
- N7P      CA     N      .    ADD
+N7P     OXT     O       OC      -1      -1.651      2.811       -0.853      
+N7P     C       C       C       0       -1.188      1.999       -0.072      
+N7P     O       O       O       0       -0.893      2.217       1.091       
+N7P     CA      C       CH1     0       -0.959      0.578       -0.609      
+N7P     N       N       NR5     0       0.357       0.036       -0.231      
+N7P     C1      C       C       0       1.513       0.607       -0.631      
+N7P     O1      O       O       0       1.536       1.324       -1.629      
+N7P     C2      C       CH3     0       2.761       0.323       0.153       
+N7P     CD      C       CH2     0       0.215       -1.169      0.604       
+N7P     CG      C       CH2     0       -1.157      -1.666      0.229       
+N7P     CB      C       CH2     0       -1.954      -0.402      0.032       
+N7P     HA      H       H       0       -1.057      0.573       -1.583      
+N7P     H3      H       H       0       2.545       0.212       1.088       
+N7P     H4      H       H       0       3.378       1.062       0.054       
+N7P     H5      H       H       0       3.175       -0.485      -0.180      
+N7P     HD2     H       H       0       0.266       -0.948      1.557       
+N7P     HD3     H       H       0       0.903       -1.833      0.390       
+N7P     HG2     H       H       0       -1.539      -2.214      0.946       
+N7P     HG3     H       H       0       -1.126      -2.194      -0.596      
+N7P     HB2     H       H       0       -2.718      -0.561      -0.562      
+N7P     HB3     H       H       0       -2.286      -0.064      0.892       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-N7P       OXT       C         deloc     1.250     0.020     1.250     0.020     
-N7P       O         C         deloc     1.250     0.020     1.250     0.020     
-N7P       C         CA        single    1.500     0.020     1.500     0.020     
-N7P       CA        N         single    1.455     0.020     1.455     0.020     
-N7P       CA        CB        single    1.524     0.020     1.524     0.020     
-N7P       HA        CA        single    1.089     0.010     0.989     0.005     
-N7P       N         C1        single    1.330     0.020     1.330     0.020     
-N7P       CD        N         single    1.455     0.020     1.455     0.020     
-N7P       C1        O1        double    1.220     0.020     1.220     0.020     
-N7P       C2        C1        single    1.500     0.020     1.500     0.020     
-N7P       H3        C2        single    1.089     0.010     0.989     0.005     
-N7P       H4        C2        single    1.089     0.010     0.989     0.005     
-N7P       H5        C2        single    1.089     0.010     0.989     0.005     
-N7P       CG        CD        single    1.524     0.020     1.524     0.020     
-N7P       HD2       CD        single    1.089     0.010     0.989     0.005     
-N7P       HD3       CD        single    1.089     0.010     0.989     0.005     
-N7P       CB        CG        single    1.524     0.020     1.524     0.020     
-N7P       HG2       CG        single    1.089     0.010     0.989     0.005     
-N7P       HG3       CG        single    1.089     0.010     0.989     0.005     
-N7P       HB2       CB        single    1.089     0.010     0.989     0.005     
-N7P       HB3       CB        single    1.089     0.010     0.989     0.005     
+N7P          CG          CB      SINGLE       n     1.508  0.0200     1.508  0.0200
+N7P          CD          CG      SINGLE       n     1.512  0.0163     1.512  0.0163
+N7P          CA          CB      SINGLE       n     1.533  0.0100     1.533  0.0100
+N7P           N          CD      SINGLE       n     1.472  0.0100     1.472  0.0100
+N7P          CA           N      SINGLE       n     1.468  0.0100     1.468  0.0100
+N7P           N          C1      SINGLE       n     1.344  0.0100     1.344  0.0100
+N7P           C          CA      SINGLE       n     1.527  0.0175     1.527  0.0175
+N7P          C1          C2      SINGLE       n     1.498  0.0126     1.498  0.0126
+N7P          C1          O1      DOUBLE       n     1.227  0.0149     1.227  0.0149
+N7P           C           O      DOUBLE       n     1.218  0.0200     1.218  0.0200
+N7P         OXT           C      SINGLE       n     1.218  0.0200     1.218  0.0200
+N7P          CA          HA      SINGLE       n     1.089  0.0100     0.979  0.0200
+N7P          C2          H3      SINGLE       n     1.089  0.0100     0.967  0.0166
+N7P          C2          H4      SINGLE       n     1.089  0.0100     0.967  0.0166
+N7P          C2          H5      SINGLE       n     1.089  0.0100     0.967  0.0166
+N7P          CD         HD2      SINGLE       n     1.089  0.0100     0.980  0.0200
+N7P          CD         HD3      SINGLE       n     1.089  0.0100     0.980  0.0200
+N7P          CG         HG2      SINGLE       n     1.089  0.0100     0.980  0.0200
+N7P          CG         HG3      SINGLE       n     1.089  0.0100     0.980  0.0200
+N7P          CB         HB2      SINGLE       n     1.089  0.0100     0.981  0.0200
+N7P          CB         HB3      SINGLE       n     1.089  0.0100     0.981  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -118,45 +80,45 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- N7P      O1     C1     C2      123.000    3.000
- N7P      O1     C1     N       123.000    3.000
- N7P      C2     C1     N       116.500    3.000
- N7P      C1     C2     H5      109.470    3.000
- N7P      C1     C2     H4      109.470    3.000
- N7P      C1     C2     H3      109.470    3.000
- N7P      H5     C2     H4      109.470    3.000
- N7P      H5     C2     H3      109.470    3.000
- N7P      H4     C2     H3      109.470    3.000
- N7P      C1     N      CD      127.000    3.000
- N7P      C1     N      CA      121.000    3.000
- N7P      CD     N      CA      112.000    3.000
- N7P      N      CD     HD2     109.470    3.000
- N7P      N      CD     HD3     109.470    3.000
- N7P      N      CD     CG      105.000    3.000
- N7P      HD2    CD     HD3     107.900    3.000
- N7P      HD2    CD     CG      109.470    3.000
- N7P      HD3    CD     CG      109.470    3.000
- N7P      CD     CG     HG2     109.470    3.000
- N7P      CD     CG     HG3     109.470    3.000
- N7P      CD     CG     CB      111.000    3.000
- N7P      HG2    CG     HG3     107.900    3.000
- N7P      HG2    CG     CB      109.470    3.000
- N7P      HG3    CG     CB      109.470    3.000
- N7P      CG     CB     HB2     109.470    3.000
- N7P      CG     CB     HB3     109.470    3.000
- N7P      CG     CB     CA      111.000    3.000
- N7P      HB2    CB     HB3     107.900    3.000
- N7P      HB2    CB     CA      109.470    3.000
- N7P      HB3    CB     CA      109.470    3.000
- N7P      CB     CA     HA      108.340    3.000
- N7P      CB     CA     C       109.470    3.000
- N7P      CB     CA     N       105.000    3.000
- N7P      HA     CA     C       108.810    3.000
- N7P      HA     CA     N       109.470    3.000
- N7P      C      CA     N       111.600    3.000
- N7P      CA     C      OXT     118.500    3.000
- N7P      CA     C      O       118.500    3.000
- N7P      OXT    C      O       123.000    3.000
+N7P          CA           C           O     117.066    2.02
+N7P          CA           C         OXT     117.066    2.02
+N7P           O           C         OXT     125.868    1.50
+N7P          CB          CA           N     102.601    1.50
+N7P          CB          CA           C     110.031    2.42
+N7P          CB          CA          HA     110.662    1.50
+N7P           N          CA           C     111.417    2.02
+N7P           N          CA          HA     110.316    1.50
+N7P           C          CA          HA     110.011    1.50
+N7P          CD           N          CA     112.180    1.50
+N7P          CD           N          C1     125.990    3.00
+N7P          CA           N          C1     121.831    3.00
+N7P           N          C1          C2     117.595    1.50
+N7P           N          C1          O1     120.129    1.50
+N7P          C2          C1          O1     122.275    1.50
+N7P          C1          C2          H3     109.572    1.50
+N7P          C1          C2          H4     109.572    1.50
+N7P          C1          C2          H5     109.572    1.50
+N7P          H3          C2          H4     109.423    1.50
+N7P          H3          C2          H5     109.423    1.50
+N7P          H4          C2          H5     109.423    1.50
+N7P          CG          CD           N     103.293    1.50
+N7P          CG          CD         HD2     111.171    1.50
+N7P          CG          CD         HD3     111.171    1.50
+N7P           N          CD         HD2     111.063    1.50
+N7P           N          CD         HD3     111.063    1.50
+N7P         HD2          CD         HD3     108.998    1.50
+N7P          CB          CG          CD     104.327    2.00
+N7P          CB          CG         HG2     110.864    1.50
+N7P          CB          CG         HG3     110.864    1.50
+N7P          CD          CG         HG2     110.793    1.50
+N7P          CD          CG         HG3     110.793    1.50
+N7P         HG2          CG         HG3     108.899    1.50
+N7P          CG          CB          CA     103.507    1.50
+N7P          CG          CB         HB2     110.886    1.50
+N7P          CG          CB         HB3     110.886    1.50
+N7P          CA          CB         HB2     110.902    1.50
+N7P          CA          CB         HB3     110.902    1.50
+N7P         HB2          CB         HB3     108.922    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -167,14 +129,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- N7P      var_1    O1     C1     C2     H3         0.053   20.000   1
- N7P      CONST_1  O1     C1     N      CD       180.000    0.000   0
- N7P      var_2    C1     N      CD     CG      -150.000   20.000   1
- N7P      var_3    N      CD     CG     CB       -30.000   20.000   3
- N7P      var_4    CD     CG     CB     CA        30.000   20.000   3
- N7P      var_5    CG     CB     CA     C       -150.000   20.000   3
- N7P      var_6    CB     CA     N      C1       180.000   20.000   3
- N7P      var_7    CB     CA     C      O         90.016   20.000   3
+N7P            sp2_sp3_13           O           C          CA          CB       0.000   10.00     6
+N7P             sp3_sp3_4           C          CA          CB          CG     -60.000   10.00     3
+N7P            sp2_sp3_11          C1           N          CA           C     -60.000   10.00     6
+N7P             sp2_sp2_1          C2          C1           N          CD     180.000   10.00     2
+N7P             sp2_sp3_4          C1           N          CD          CG     180.000   10.00     6
+N7P            sp2_sp3_22          O1          C1          C2          H3     180.000   10.00     6
+N7P            sp3_sp3_19           N          CD          CG          CB      60.000   10.00     3
+N7P            sp3_sp3_10          CA          CB          CG          CD     -60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -183,22 +145,38 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- N7P      chir_01  CA     C      N      CB        negativ
+N7P    chir_1    CA    N    C    CB    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- N7P      plan-1    C         0.020
- N7P      plan-1    OXT       0.020
- N7P      plan-1    O         0.020
- N7P      plan-1    CA        0.020
- N7P      plan-2    N         0.020
- N7P      plan-2    CA        0.020
- N7P      plan-2    C1        0.020
- N7P      plan-2    CD        0.020
- N7P      plan-3    C1        0.020
- N7P      plan-3    N         0.020
- N7P      plan-3    O1        0.020
- N7P      plan-3    C2        0.020
-# ------------------------------------------------------
+N7P    plan-1           C   0.020
+N7P    plan-1          CA   0.020
+N7P    plan-1           O   0.020
+N7P    plan-1         OXT   0.020
+N7P    plan-2          C1   0.020
+N7P    plan-2          CA   0.020
+N7P    plan-2          CD   0.020
+N7P    plan-2           N   0.020
+N7P    plan-3          C1   0.020
+N7P    plan-3          C2   0.020
+N7P    plan-3           N   0.020
+N7P    plan-3          O1   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+N7P           SMILES              ACDLabs 12.01                                                          OC(=O)C1N(C(=O)C)CCC1
+N7P            InChI                InChI  1.03 InChI=1S/C7H11NO3/c1-5(9)8-4-2-3-6(8)7(10)11/h6H,2-4H2,1H3,(H,10,11)/t6-/m0/s1
+N7P         InChIKey                InChI  1.03                                                    GNMSLDIYJOSUSW-LURJTMIESA-N
+N7P SMILES_CANONICAL               CACTVS 3.385                                                        CC(=O)N1CCC[C@H]1C(O)=O
+N7P           SMILES               CACTVS 3.385                                                         CC(=O)N1CCC[CH]1C(O)=O
+N7P SMILES_CANONICAL "OpenEye OEToolkits" 2.0.5                                                        CC(=O)N1CCC[C@H]1C(=O)O
+N7P           SMILES "OpenEye OEToolkits" 2.0.5                                                            CC(=O)N1CCCC1C(=O)O
+N7P ?                acedrg               231         "dictionary generator"                  
+N7P ?                acedrg_database      11          "data source"                           
+N7P ?                rdkit                2017.03.2   "Chemoinformatics tool"
+N7P ?                refmac5              5.8.0238    "optimization tool"                     

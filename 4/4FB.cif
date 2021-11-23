@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-4FB      4FB '(4S)-4-FLUORO-L-PROLINE             ' non-polymer        16   9 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+4FB     4FB      (4S)-4-FLUORO-L-PROLINE     "L-PEPTIDE LINKING"     16     9     .     
 #
 data_comp_4FB
 #
@@ -28,74 +17,52 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 4FB           OXT    O    OC       -0.500      0.000    0.000    0.000
- 4FB           C      C    C         0.000     -1.189    0.277   -0.275
- 4FB           O      O    OC       -0.500     -1.480    0.731   -1.404
- 4FB           CA     C    CH1       0.000     -2.270    0.059    0.752
- 4FB           HA     H    H         0.000     -1.932    0.396    1.742
- 4FB           N      N    NH1       0.000     -3.511    0.773    0.356
- 4FB           HT1    H    H         0.000     -3.601    1.557   -0.274
- 4FB           CDX    C    CH2       0.000     -4.588    0.071    1.098
- 4FB           HDX1   H    H         0.000     -5.565    0.218    0.632
- 4FB           HDX2   H    H         0.000     -4.634    0.387    2.143
- 4FB           CGX    C    CH1       0.000     -4.202   -1.422    1.027
- 4FB           HGX    H    H         0.000     -4.450   -1.927    1.971
- 4FB           FGX    F    F         0.000     -4.856   -2.043   -0.043
- 4FB           CBX    C    CH2       0.000     -2.676   -1.430    0.799
- 4FB           HBX2   H    H         0.000     -2.413   -1.910   -0.147
- 4FB           HBX1   H    H         0.000     -2.150   -1.927    1.616
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- 4FB      OXT    n/a    C      START
- 4FB      C      OXT    CA     .
- 4FB      O      C      .      .
- 4FB      CA     C      N      .
- 4FB      HA     CA     .      .
- 4FB      N      CA     CDX    .
- 4FB      HT1    N      .      .
- 4FB      CDX    N      CGX    .
- 4FB      HDX1   CDX    .      .
- 4FB      HDX2   CDX    .      .
- 4FB      CGX    CDX    CBX    .
- 4FB      HGX    CGX    .      .
- 4FB      FGX    CGX    .      .
- 4FB      CBX    CGX    HBX1   .
- 4FB      HBX2   CBX    .      .
- 4FB      HBX1   CBX    .      END
- 4FB      CA     CBX    .    ADD
+4FB     O       O       O       0       2.966       0.180       -1.269      
+4FB     C       C       C       0       2.198       0.360       -0.340      
+4FB     CA      C       CH1     0       0.813       -0.301      -0.437      
+4FB     CBX     C       CH2     0       -0.263      0.749       -0.755      
+4FB     CGX     C       CH1     0       -1.515      0.207       -0.086      
+4FB     FGX     F       F       0       -2.119      -0.744      -0.914      
+4FB     CDX     C       CH2     0       -0.979      -0.429      1.174       
+4FB     N       N       NT1     0       0.371       -0.896      0.838       
+4FB     OXT     O       OC      -1      2.428       1.018       0.660       
+4FB     HA      H       H       0       0.823       -1.002      -1.136      
+4FB     HBX1    H       H       0       -0.023      1.627       -0.387      
+4FB     HBX2    H       H       0       -0.393      0.835       -1.724      
+4FB     HGX     H       H       0       -2.140      0.940       0.131       
+4FB     HDX1    H       H       0       -1.541      -1.184      1.451       
+4FB     HDX2    H       H       0       -0.941      0.223       1.906       
+4FB     HT1     H       H       0       0.910       -0.675      1.509       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-4FB       O         C         deloc     1.250     0.020     1.250     0.020     
-4FB       CA        C         single    1.500     0.020     1.500     0.020     
-4FB       C         OXT       deloc     1.250     0.020     1.250     0.020     
-4FB       CA        CBX       single    1.524     0.020     1.524     0.020     
-4FB       N         CA        single    1.450     0.020     1.450     0.020     
-4FB       HA        CA        single    1.089     0.010     0.989     0.005     
-4FB       CBX       CGX       single    1.524     0.020     1.524     0.020     
-4FB       HBX1      CBX       single    1.089     0.010     0.989     0.005     
-4FB       HBX2      CBX       single    1.089     0.010     0.989     0.005     
-4FB       FGX       CGX       single    1.370     0.020     1.370     0.020     
-4FB       CGX       CDX       single    1.524     0.020     1.524     0.020     
-4FB       HGX       CGX       single    1.089     0.010     0.989     0.005     
-4FB       CDX       N         single    1.450     0.020     1.450     0.020     
-4FB       HDX1      CDX       single    1.089     0.010     0.989     0.005     
-4FB       HDX2      CDX       single    1.089     0.010     0.989     0.005     
-4FB       HT1       N         single    1.036     0.016     0.914     0.007     
+4FB           O           C      DOUBLE       n     1.218  0.0200     1.218  0.0200
+4FB           C          CA      SINGLE       n     1.536  0.0100     1.536  0.0100
+4FB           C         OXT      SINGLE       n     1.218  0.0200     1.218  0.0200
+4FB          CA         CBX      SINGLE       n     1.534  0.0126     1.534  0.0126
+4FB          CA           N      SINGLE       n     1.468  0.0148     1.468  0.0148
+4FB         CBX         CGX      SINGLE       n     1.522  0.0200     1.522  0.0200
+4FB         CGX         FGX      SINGLE       n     1.398  0.0100     1.398  0.0100
+4FB         CGX         CDX      SINGLE       n     1.514  0.0200     1.514  0.0200
+4FB         CDX           N      SINGLE       n     1.468  0.0152     1.468  0.0152
+4FB          CA          HA      SINGLE       n     1.089  0.0100     0.990  0.0121
+4FB         CBX        HBX1      SINGLE       n     1.089  0.0100     0.981  0.0186
+4FB         CBX        HBX2      SINGLE       n     1.089  0.0100     0.981  0.0186
+4FB         CGX         HGX      SINGLE       n     1.089  0.0100     0.988  0.0103
+4FB         CDX        HDX1      SINGLE       n     1.089  0.0100     0.981  0.0178
+4FB         CDX        HDX2      SINGLE       n     1.089  0.0100     0.981  0.0178
+4FB           N         HT1      SINGLE       n     1.036  0.0160     0.887  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -103,36 +70,36 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 4FB      OXT    C      O       123.000    3.000
- 4FB      OXT    C      CA      118.500    3.000
- 4FB      O      C      CA      118.500    3.000
- 4FB      C      CA     HA      108.810    3.000
- 4FB      C      CA     N       111.600    3.000
- 4FB      C      CA     CBX     109.470    3.000
- 4FB      HA     CA     N       108.550    3.000
- 4FB      HA     CA     CBX     108.340    3.000
- 4FB      N      CA     CBX     110.000    3.000
- 4FB      CA     N      HT1     118.500    3.000
- 4FB      CA     N      CDX     120.000    3.000
- 4FB      HT1    N      CDX     118.500    3.000
- 4FB      N      CDX    HDX1    109.470    3.000
- 4FB      N      CDX    HDX2    109.470    3.000
- 4FB      N      CDX    CGX     110.000    3.000
- 4FB      HDX1   CDX    HDX2    107.900    3.000
- 4FB      HDX1   CDX    CGX     109.470    3.000
- 4FB      HDX2   CDX    CGX     109.470    3.000
- 4FB      CDX    CGX    HGX     108.340    3.000
- 4FB      CDX    CGX    FGX     109.500    3.000
- 4FB      CDX    CGX    CBX     109.470    3.000
- 4FB      HGX    CGX    FGX     109.500    3.000
- 4FB      HGX    CGX    CBX     108.340    3.000
- 4FB      FGX    CGX    CBX     109.500    3.000
- 4FB      CGX    CBX    HBX2    109.470    3.000
- 4FB      CGX    CBX    HBX1    109.470    3.000
- 4FB      CGX    CBX    CA      111.000    3.000
- 4FB      HBX2   CBX    HBX1    107.900    3.000
- 4FB      HBX2   CBX    CA      109.470    3.000
- 4FB      HBX1   CBX    CA      109.470    3.000
+4FB           O           C          CA     117.013    1.95
+4FB           O           C         OXT     125.975    1.50
+4FB          CA           C         OXT     117.013    1.95
+4FB           C          CA         CBX     110.031    2.42
+4FB           C          CA           N     111.420    2.45
+4FB           C          CA          HA     110.011    1.50
+4FB         CBX          CA           N     103.430    2.23
+4FB         CBX          CA          HA     110.393    1.50
+4FB           N          CA          HA     109.296    1.50
+4FB          CA         CBX         CGX     103.843    1.50
+4FB          CA         CBX        HBX1     110.853    1.50
+4FB          CA         CBX        HBX2     110.853    1.50
+4FB         CGX         CBX        HBX1     110.819    1.50
+4FB         CGX         CBX        HBX2     110.819    1.50
+4FB        HBX1         CBX        HBX2     108.877    1.50
+4FB         CBX         CGX         FGX     109.888    1.96
+4FB         CBX         CGX         CDX     104.174    2.12
+4FB         CBX         CGX         HGX     110.819    1.50
+4FB         FGX         CGX         CDX     111.374    2.09
+4FB         FGX         CGX         HGX     111.335    1.50
+4FB         CDX         CGX         HGX     110.859    1.50
+4FB         CGX         CDX           N     106.098    1.50
+4FB         CGX         CDX        HDX1     111.088    1.50
+4FB         CGX         CDX        HDX2     111.088    1.50
+4FB           N         CDX        HDX1     110.393    1.50
+4FB           N         CDX        HDX2     110.393    1.50
+4FB        HDX1         CDX        HDX2     109.055    1.50
+4FB          CA           N         CDX     109.056    3.00
+4FB          CA           N         HT1     109.307    3.00
+4FB         CDX           N         HT1     107.738    2.27
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -143,12 +110,12 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4FB      var_1    OXT    C      CA     N        165.139   20.000   3
- 4FB      var_2    C      CA     CBX    CGX     -150.000   20.000   3
- 4FB      var_3    C      CA     N      CDX      150.000   20.000   3
- 4FB      var_4    CA     N      CDX    CGX      -30.000   20.000   3
- 4FB      var_5    N      CDX    CGX    CBX       30.000   20.000   3
- 4FB      var_6    CDX    CGX    CBX    CA         0.000   20.000   3
+4FB             sp2_sp3_1           O           C          CA         CBX       0.000   10.00     6
+4FB             sp3_sp3_4           C          CA         CBX         CGX     -60.000   10.00     3
+4FB            sp3_sp3_36           C          CA           N         CDX      60.000   10.00     3
+4FB            sp3_sp3_11          CA         CBX         CGX         FGX      60.000   10.00     3
+4FB            sp3_sp3_20           N         CDX         CGX         FGX     180.000   10.00     3
+4FB            sp3_sp3_28         CGX         CDX           N          CA     -60.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -157,19 +124,32 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- 4FB      chir_01  CA     C      CBX    N         positiv
- 4FB      chir_02  CGX    CBX    FGX    CDX       positiv
+4FB    chir_1    CA    N    C    CBX    positive
+4FB    chir_2    CGX    FGX    CDX    CBX    negative
+4FB    chir_3    N    CA    CDX    HT1    both
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 4FB      plan-1    C         0.020
- 4FB      plan-1    O         0.020
- 4FB      plan-1    CA        0.020
- 4FB      plan-1    OXT       0.020
- 4FB      plan-2    N         0.020
- 4FB      plan-2    CA        0.020
- 4FB      plan-2    CDX       0.020
- 4FB      plan-2    HT1       0.020
-# ------------------------------------------------------
+4FB    plan-1           C   0.020
+4FB    plan-1          CA   0.020
+4FB    plan-1           O   0.020
+4FB    plan-1         OXT   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+4FB           SMILES              ACDLabs 10.04                                                          O=C(O)C1NCC(F)C1
+4FB SMILES_CANONICAL               CACTVS 3.341                                                 OC(=O)[C@@H]1C[C@H](F)CN1
+4FB           SMILES               CACTVS 3.341                                                    OC(=O)[CH]1C[CH](F)CN1
+4FB SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                C1[C@@H](CN[C@@H]1C(=O)O)F
+4FB           SMILES "OpenEye OEToolkits" 1.5.0                                                          C1C(CNC1C(=O)O)F
+4FB            InChI                InChI  1.03 InChI=1S/C5H8FNO2/c6-3-1-4(5(8)9)7-2-3/h3-4,7H,1-2H2,(H,8,9)/t3-,4-/m0/s1
+4FB         InChIKey                InChI  1.03                                               ZIWHMENIDGOELV-IMJSIDKUSA-N
+4FB ?                acedrg               231         "dictionary generator"                  
+4FB ?                acedrg_database      11          "data source"                           
+4FB ?                rdkit                2017.03.2   "Chemoinformatics tool"
+4FB ?                refmac5              5.8.0238    "optimization tool"                     

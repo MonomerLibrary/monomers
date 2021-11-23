@@ -1,10 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
 #
 data_comp_list
 loop_
@@ -15,11 +8,7 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SSU      SSU 'URIDINE-5'-PHOSPHOROTHIOATE         ' RNA        34  21 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
+SSU     SSU      "URIDINE-5'-PHOSPHOROTHIOATE"     RNA     32     21     .     
 #
 data_comp_SSU
 #
@@ -28,130 +17,85 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SSU           O2     O    O         0.000      0.000    0.000    0.000
- SSU           C2     C    CR6       0.000     -0.651    0.996   -0.323
- SSU           N3     N    NR16      0.000     -0.430    2.236    0.291
- SSU           H3     H    H         0.000      0.305    2.268    1.026
- SSU           C4     C    CR6       0.000     -1.089    3.426    0.021
- SSU           O4     O    O         0.000     -0.862    4.490    0.586
- SSU           C5     C    CR16      0.000     -2.123    3.331   -1.029
- SSU           H5     H    H         0.000     -2.695    4.205   -1.314
- SSU           C6     C    CR16      0.000     -2.344    2.157   -1.624
- SSU           H6     H    H         0.000     -3.107    2.112   -2.391
- SSU           N1     N    NR6       0.000     -1.656    0.988   -1.318
- SSU           "C1'"  C    CH1       0.000     -1.991   -0.212   -2.031
- SSU           "H1'"  H    H         0.000     -1.113   -0.873   -2.072
- SSU           "O4'"  O    O2        0.000     -2.397    0.135   -3.365
- SSU           "C4'"  C    CH1       0.000     -3.616   -0.569   -3.688
- SSU           "H4'"  H    H         0.000     -3.517   -1.054   -4.669
- SSU           "C3'"  C    CH1       0.000     -3.786   -1.627   -2.605
- SSU           "H3'"  H    H         0.000     -4.844   -1.873   -2.433
- SSU           "O3'"  O    OH1       0.000     -3.025   -2.772   -2.986
- SSU           "HO3'" H    H         0.000     -2.409   -2.529   -3.690
- SSU           "C2'"  C    CH1       0.000     -3.158   -0.954   -1.403
- SSU           "H2'"  H    H         0.000     -3.865   -0.236   -0.965
- SSU           "O2'"  O    OH1       0.000     -2.747   -1.884   -0.422
- SSU           "HO2'" H    H         0.000     -2.201   -1.433    0.235
- SSU           "C5'"  C    CH2       0.000     -4.753    0.443   -3.725
- SSU           "H5'"  H    H         0.000     -4.820    0.961   -2.766
- SSU           "H5''" H    H         0.000     -5.697   -0.067   -3.928
- SSU           "O5'"  O    O2        0.000     -4.491    1.382   -4.753
- SSU           P      P    P         0.000     -5.541    2.588   -5.028
- SSU           S1P    S    S1        0.000     -5.693    3.955   -3.659
- SSU           OP3    O    OH1       0.000     -5.077    3.137   -6.482
- SSU           H3P    H    H         0.000     -5.453    3.956   -6.837
- SSU           OP2    O    OH1       0.000     -6.912    1.804   -5.398
- SSU           H2P    H    H         0.000     -6.914    1.126   -6.091
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- SSU      O2     n/a    C2     START
- SSU      C2     O2     N1     .
- SSU      N3     C2     C4     .
- SSU      H3     N3     .      .
- SSU      C4     N3     C5     .
- SSU      O4     C4     .      .
- SSU      C5     C4     C6     .
- SSU      H5     C5     .      .
- SSU      C6     C5     H6     .
- SSU      H6     C6     .      .
- SSU      N1     C2     "C1'"  .
- SSU      "C1'"  N1     "O4'"  .
- SSU      "H1'"  "C1'"  .      .
- SSU      "O4'"  "C1'"  "C4'"  .
- SSU      "C4'"  "O4'"  "C5'"  .
- SSU      "H4'"  "C4'"  .      .
- SSU      "C3'"  "C4'"  "C2'"  .
- SSU      "H3'"  "C3'"  .      .
- SSU      "O3'"  "C3'"  "HO3'" .
- SSU      "HO3'" "O3'"  .      .
- SSU      "C2'"  "C3'"  "O2'"  .
- SSU      "H2'"  "C2'"  .      .
- SSU      "O2'"  "C2'"  "HO2'" .
- SSU      "HO2'" "O2'"  .      .
- SSU      "C5'"  "C4'"  "O5'"  .
- SSU      "H5'"  "C5'"  .      .
- SSU      "H5''" "C5'"  .      .
- SSU      "O5'"  "C5'"  P      .
- SSU      P      "O5'"  OP2    .
- SSU      S1P    P      .      .
- SSU      OP3    P      H3P    .
- SSU      H3P    OP3    .      .
- SSU      OP2    P      H2P    .
- SSU      H2P    OP2    .      END
- SSU      "C2'"  "C1'"  .    ADD
- SSU      N1     C6     .    ADD
+SSU     "O2'"   O       OH1     0       1.450       0.577       2.522       
+SSU     "C2'"   C       CH1     0       0.838       0.578       1.249       
+SSU     "C1'"   C       CH1     0       1.064       1.936       0.574       
+SSU     "O4'"   O       O2      0       2.064       1.773       -0.411      
+SSU     "C4'"   C       CH1     0       2.638       0.447       -0.312      
+SSU     "C5'"   C       CH2     0       3.167       0.016       -1.658      
+SSU     "O5'"   O       O2      0       4.246       0.897       -2.062      
+SSU     P       P       P       0       4.780       0.827       -3.578      
+SSU     S1P     S       S1      0       3.516       1.654       -4.802      
+SSU     OP2     O       OP      -1      5.042       -0.638      -3.802      
+SSU     OP3     O       OP      -1      6.104       1.540       -3.453      
+SSU     "C3'"   C       CH1     0       1.499       -0.400      0.267       
+SSU     "O3'"   O       OH1     0       2.001       -1.569      0.902       
+SSU     N1      N       NR6     0       -0.168      2.472       -0.068      
+SSU     C6      C       CR16    0       -0.650      1.922       -1.239      
+SSU     C5      C       CR16    0       -1.759      2.370       -1.854      
+SSU     C4      C       CR6     0       -2.495      3.462       -1.282      
+SSU     O4      O       O       0       -3.521      3.961       -1.745      
+SSU     N3      N       NR6     0       -1.963      3.964       -0.107      
+SSU     C2      C       CR6     0       -0.832      3.531       0.547       
+SSU     O2      O       O       0       -0.458      4.058       1.589       
+SSU     "HO2'"  H       H       0       1.357       -0.187      2.880       
+SSU     "H2'"   H       H       0       -0.118      0.387       1.327       
+SSU     "H1'"   H       H       0       1.394       2.575       1.241       
+SSU     "H4'"   H       H       0       3.386       0.471       0.323       
+SSU     "H5'"   H       H       0       2.439       0.049       -2.326      
+SSU     "H5''"  H       H       0       3.498       -0.915      -1.601      
+SSU     "H3'"   H       H       0       0.858       -0.647      -0.449      
+SSU     "HO3'"  H       H       0       2.383       -2.056      0.320       
+SSU     H6      H       H       0       -0.181      1.207       -1.625      
+SSU     H5      H       H       0       -2.051      1.973       -2.648      
+SSU     H3      H       H       0       -2.394      4.643       0.276       
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.aromatic
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-SSU       "O2'"     "C2'"     single    1.432     0.020     1.432     0.020     
-SSU       "HO2'"    "O2'"     single    0.970     0.012     0.839     0.014     
-SSU       "C2'"     "C1'"     single    1.524     0.020     1.524     0.020     
-SSU       "C2'"     "C3'"     single    1.524     0.020     1.524     0.020     
-SSU       "H2'"     "C2'"     single    1.089     0.010     0.989     0.005     
-SSU       "O4'"     "C1'"     single    1.426     0.020     1.426     0.020     
-SSU       "C1'"     N1        single    1.465     0.020     1.465     0.020     
-SSU       "H1'"     "C1'"     single    1.089     0.010     0.989     0.005     
-SSU       "C4'"     "O4'"     single    1.426     0.020     1.426     0.020     
-SSU       "C5'"     "C4'"     single    1.524     0.020     1.524     0.020     
-SSU       "C3'"     "C4'"     single    1.524     0.020     1.524     0.020     
-SSU       "H4'"     "C4'"     single    1.089     0.010     0.989     0.005     
-SSU       "O5'"     "C5'"     single    1.426     0.020     1.426     0.020     
-SSU       "H5'"     "C5'"     single    1.089     0.010     0.989     0.005     
-SSU       "H5''"    "C5'"     single    1.089     0.010     0.989     0.005     
-SSU       P         "O5'"     single    1.610     0.020     1.610     0.020     
-SSU       S1P       P         double    1.950     0.020     1.950     0.020     
-SSU       OP2       P         single    1.610     0.020     1.610     0.020     
-SSU       OP3       P         single    1.610     0.020     1.610     0.020     
-SSU       H2P       OP2       single    0.970     0.012     0.839     0.014     
-SSU       H3P       OP3       single    0.970     0.012     0.839     0.014     
-SSU       "O3'"     "C3'"     single    1.432     0.020     1.432     0.020     
-SSU       "H3'"     "C3'"     single    1.089     0.010     0.989     0.005     
-SSU       "HO3'"    "O3'"     single    0.970     0.012     0.839     0.014     
-SSU       N1        C6        single    1.337     0.020     1.337     0.020     
-SSU       N1        C2        single    1.410     0.020     1.410     0.020     
-SSU       C6        C5        double    1.390     0.020     1.390     0.020     
-SSU       H6        C6        single    1.082     0.013     0.975     0.010     
-SSU       C5        C4        single    1.390     0.020     1.390     0.020     
-SSU       H5        C5        single    1.082     0.013     0.975     0.010     
-SSU       O4        C4        double    1.250     0.020     1.250     0.020     
-SSU       C4        N3        single    1.337     0.020     1.337     0.020     
-SSU       N3        C2        single    1.337     0.020     1.337     0.020     
-SSU       H3        N3        single    1.016     0.010     0.899     0.007     
-SSU       C2        O2        double    1.250     0.020     1.250     0.020     
+SSU       "O2'"       "C2'"      SINGLE       n     1.412  0.0100     1.412  0.0100
+SSU       "C2'"       "C1'"      SINGLE       n     1.529  0.0100     1.529  0.0100
+SSU       "C2'"       "C3'"      SINGLE       n     1.533  0.0109     1.533  0.0109
+SSU       "C1'"       "O4'"      SINGLE       n     1.412  0.0100     1.412  0.0100
+SSU       "C1'"          N1      SINGLE       n     1.476  0.0133     1.476  0.0133
+SSU       "O4'"       "C4'"      SINGLE       n     1.451  0.0111     1.451  0.0111
+SSU       "C4'"       "C5'"      SINGLE       n     1.509  0.0100     1.509  0.0100
+SSU       "C4'"       "C3'"      SINGLE       n     1.535  0.0100     1.535  0.0100
+SSU       "C5'"       "O5'"      SINGLE       n     1.450  0.0166     1.450  0.0166
+SSU       "O5'"           P      SINGLE       n     1.614  0.0178     1.614  0.0178
+SSU           P         S1P      DOUBLE       n     1.949  0.0200     1.949  0.0200
+SSU           P         OP2      SINGLE       n     1.509  0.0200     1.509  0.0200
+SSU           P         OP3      SINGLE       n     1.509  0.0200     1.509  0.0200
+SSU       "C3'"       "O3'"      SINGLE       n     1.422  0.0100     1.422  0.0100
+SSU          N1          C6      SINGLE       y     1.375  0.0106     1.375  0.0106
+SSU          N1          C2      SINGLE       y     1.383  0.0100     1.383  0.0100
+SSU          C6          C5      DOUBLE       y     1.342  0.0100     1.342  0.0100
+SSU          C5          C4      SINGLE       y     1.434  0.0100     1.434  0.0100
+SSU          C4          O4      DOUBLE       n     1.231  0.0100     1.231  0.0100
+SSU          C4          N3      SINGLE       y     1.381  0.0100     1.381  0.0100
+SSU          N3          C2      SINGLE       y     1.372  0.0112     1.372  0.0112
+SSU          C2          O2      DOUBLE       n     1.224  0.0111     1.224  0.0111
+SSU       "O2'"      "HO2'"      SINGLE       n     0.970  0.0120     0.849  0.0200
+SSU       "C2'"       "H2'"      SINGLE       n     1.089  0.0100     0.978  0.0200
+SSU       "C1'"       "H1'"      SINGLE       n     1.089  0.0100     0.981  0.0118
+SSU       "C4'"       "H4'"      SINGLE       n     1.089  0.0100     0.981  0.0200
+SSU       "C5'"       "H5'"      SINGLE       n     1.089  0.0100     0.989  0.0200
+SSU       "C5'"      "H5''"      SINGLE       n     1.089  0.0100     0.989  0.0200
+SSU       "C3'"       "H3'"      SINGLE       n     1.089  0.0100     0.992  0.0200
+SSU       "O3'"      "HO3'"      SINGLE       n     0.970  0.0120     0.849  0.0200
+SSU          C6          H6      SINGLE       n     1.082  0.0130     0.938  0.0107
+SSU          C5          H5      SINGLE       n     1.082  0.0130     0.935  0.0100
+SSU          N3          H3      SINGLE       n     1.016  0.0100     0.889  0.0200
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -159,66 +103,64 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SSU      O2     C2     N3      120.000    3.000
- SSU      O2     C2     N1      120.000    3.000
- SSU      N3     C2     N1      120.000    3.000
- SSU      C2     N3     H3      120.000    3.000
- SSU      C2     N3     C4      120.000    3.000
- SSU      H3     N3     C4      120.000    3.000
- SSU      N3     C4     O4      120.000    3.000
- SSU      N3     C4     C5      120.000    3.000
- SSU      O4     C4     C5      120.000    3.000
- SSU      C4     C5     H5      120.000    3.000
- SSU      C4     C5     C6      120.000    3.000
- SSU      H5     C5     C6      120.000    3.000
- SSU      C5     C6     H6      120.000    3.000
- SSU      C5     C6     N1      120.000    3.000
- SSU      H6     C6     N1      120.000    3.000
- SSU      C2     N1     "C1'"   120.000    3.000
- SSU      C2     N1     C6      120.000    3.000
- SSU      "C1'"  N1     C6      120.000    3.000
- SSU      N1     "C1'"  "H1'"   109.470    3.000
- SSU      N1     "C1'"  "O4'"   109.470    3.000
- SSU      N1     "C1'"  "C2'"   109.470    3.000
- SSU      "H1'"  "C1'"  "O4'"   109.470    3.000
- SSU      "H1'"  "C1'"  "C2'"   108.340    3.000
- SSU      "O4'"  "C1'"  "C2'"   109.470    3.000
- SSU      "C1'"  "O4'"  "C4'"   111.800    3.000
- SSU      "O4'"  "C4'"  "H4'"   109.470    3.000
- SSU      "O4'"  "C4'"  "C3'"   109.470    3.000
- SSU      "O4'"  "C4'"  "C5'"   109.470    3.000
- SSU      "H4'"  "C4'"  "C3'"   108.340    3.000
- SSU      "H4'"  "C4'"  "C5'"   108.340    3.000
- SSU      "C3'"  "C4'"  "C5'"   111.000    3.000
- SSU      "C4'"  "C3'"  "H3'"   108.340    3.000
- SSU      "C4'"  "C3'"  "O3'"   109.470    3.000
- SSU      "C4'"  "C3'"  "C2'"   111.000    3.000
- SSU      "H3'"  "C3'"  "O3'"   109.470    3.000
- SSU      "H3'"  "C3'"  "C2'"   108.340    3.000
- SSU      "O3'"  "C3'"  "C2'"   109.470    3.000
- SSU      "C3'"  "O3'"  "HO3'"  109.470    3.000
- SSU      "C3'"  "C2'"  "H2'"   108.340    3.000
- SSU      "C3'"  "C2'"  "O2'"   109.470    3.000
- SSU      "C3'"  "C2'"  "C1'"   111.000    3.000
- SSU      "H2'"  "C2'"  "O2'"   109.470    3.000
- SSU      "H2'"  "C2'"  "C1'"   108.340    3.000
- SSU      "O2'"  "C2'"  "C1'"   109.470    3.000
- SSU      "C2'"  "O2'"  "HO2'"  109.470    3.000
- SSU      "C4'"  "C5'"  "H5'"   109.470    3.000
- SSU      "C4'"  "C5'"  "H5''"  109.470    3.000
- SSU      "C4'"  "C5'"  "O5'"   109.470    3.000
- SSU      "H5'"  "C5'"  "H5''"  107.900    3.000
- SSU      "H5'"  "C5'"  "O5'"   109.470    3.000
- SSU      "H5''" "C5'"  "O5'"   109.470    3.000
- SSU      "C5'"  "O5'"  P       120.500    3.000
- SSU      "O5'"  P      S1P     109.500    3.000
- SSU      "O5'"  P      OP3     109.500    3.000
- SSU      "O5'"  P      OP2     109.500    3.000
- SSU      S1P    P      OP3     109.500    3.000
- SSU      S1P    P      OP2     109.500    3.000
- SSU      OP3    P      OP2     109.500    3.000
- SSU      P      OP3    H3P     120.000    3.000
- SSU      P      OP2    H2P     120.000    3.000
+SSU       "C2'"       "O2'"      "HO2'"     109.449    1.85
+SSU       "O2'"       "C2'"       "C1'"     109.476    3.00
+SSU       "O2'"       "C2'"       "C3'"     112.861    2.52
+SSU       "O2'"       "C2'"       "H2'"     111.022    1.77
+SSU       "C1'"       "C2'"       "C3'"     101.269    1.50
+SSU       "C1'"       "C2'"       "H2'"     110.760    1.63
+SSU       "C3'"       "C2'"       "H2'"     110.799    1.82
+SSU       "C2'"       "C1'"       "O4'"     106.825    1.50
+SSU       "C2'"       "C1'"          N1     112.859    1.50
+SSU       "C2'"       "C1'"       "H1'"     109.776    1.83
+SSU       "O4'"       "C1'"          N1     108.667    1.50
+SSU       "O4'"       "C1'"       "H1'"     109.327    1.50
+SSU          N1       "C1'"       "H1'"     109.166    1.50
+SSU       "C1'"       "O4'"       "C4'"     109.578    1.50
+SSU       "O4'"       "C4'"       "C5'"     109.615    1.50
+SSU       "O4'"       "C4'"       "C3'"     104.439    1.50
+SSU       "O4'"       "C4'"       "H4'"     108.698    1.50
+SSU       "C5'"       "C4'"       "C3'"     116.008    1.52
+SSU       "C5'"       "C4'"       "H4'"     108.268    1.50
+SSU       "C3'"       "C4'"       "H4'"     109.363    1.86
+SSU       "C4'"       "C5'"       "O5'"     109.510    1.50
+SSU       "C4'"       "C5'"       "H5'"     109.624    1.50
+SSU       "C4'"       "C5'"      "H5''"     109.624    1.50
+SSU       "O5'"       "C5'"       "H5'"     109.821    1.50
+SSU       "O5'"       "C5'"      "H5''"     109.821    1.50
+SSU       "H5'"       "C5'"      "H5''"     108.472    1.50
+SSU       "C5'"       "O5'"           P     118.783    1.50
+SSU       "O5'"           P         S1P     113.924    3.00
+SSU       "O5'"           P         OP2     106.518    3.00
+SSU       "O5'"           P         OP3     106.518    3.00
+SSU         S1P           P         OP2     116.650    1.50
+SSU         S1P           P         OP3     116.650    1.50
+SSU         OP2           P         OP3     113.206    2.54
+SSU       "C2'"       "C3'"       "C4'"     102.071    1.50
+SSU       "C2'"       "C3'"       "O3'"     111.993    3.00
+SSU       "C2'"       "C3'"       "H3'"     110.108    1.66
+SSU       "C4'"       "C3'"       "O3'"     111.281    2.46
+SSU       "C4'"       "C3'"       "H3'"     110.452    2.54
+SSU       "O3'"       "C3'"       "H3'"     110.380    1.67
+SSU       "C3'"       "O3'"      "HO3'"     108.744    3.00
+SSU       "C1'"          N1          C6     121.471    1.52
+SSU       "C1'"          N1          C2     117.109    1.50
+SSU          C6          N1          C2     121.419    1.50
+SSU          N1          C6          C5     122.557    1.50
+SSU          N1          C6          H6     118.477    1.50
+SSU          C5          C6          H6     118.966    1.50
+SSU          C6          C5          C4     119.525    1.50
+SSU          C6          C5          H5     120.325    1.50
+SSU          C4          C5          H5     120.151    1.50
+SSU          C5          C4          O4     125.940    1.50
+SSU          C5          C4          N3     114.659    1.50
+SSU          O4          C4          N3     119.401    1.50
+SSU          C4          N3          C2     126.992    1.50
+SSU          C4          N3          H3     117.236    1.73
+SSU          C2          N3          H3     115.772    1.79
+SSU          N1          C2          N3     114.848    1.50
+SSU          N1          C2          O2     122.841    1.50
+SSU          N3          C2          O2     122.311    1.50
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -229,25 +171,29 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SSU      CONST_1  O2     C2     N3     C4       180.000    0.000   0
- SSU      CONST_2  C2     N3     C4     C5         0.000    0.000   0
- SSU      CONST_3  N3     C4     C5     C6         0.000    0.000   0
- SSU      CONST_4  C4     C5     C6     N1         0.000    0.000   0
- SSU      CONST_5  O2     C2     N1     "C1'"      0.000    0.000   0
- SSU      CONST_6  C2     N1     C6     C5         0.000    0.000   0
- SSU      var_1    C2     N1     "C1'"  "O4'"   -147.782   20.000   1
- SSU      var_2    N1     "C1'"  "O4'"  "C4'"   -120.000   20.000   1
- SSU      var_3    "C1'"  "O4'"  "C4'"  "C5'"    120.000   20.000   1
- SSU      var_4    "O4'"  "C4'"  "C3'"  "C2'"     30.000   20.000   3
- SSU      var_5    "C4'"  "C3'"  "O3'"  "HO3'"    15.182   20.000   1
- SSU      var_6    "C4'"  "C3'"  "C2'"  "O2'"   -150.000   20.000   3
- SSU      var_7    "C3'"  "C2'"  "C1'"  N1       150.000   20.000   3
- SSU      var_8    "C3'"  "C2'"  "O2'"  "HO2'"   168.831   20.000   1
- SSU      var_9    "O4'"  "C4'"  "C5'"  "O5'"     62.403   20.000   3
- SSU      var_10   "C4'"  "C5'"  "O5'"  P       -179.998   20.000   1
- SSU      var_11   "C5'"  "O5'"  P      OP2      -59.969   20.000   1
- SSU      var_12   "O5'"  P      OP3    H3P     -170.667   20.000   1
- SSU      var_13   "O5'"  P      OP2    H2P      -52.653   20.000   1
+SSU     C2e-chi         "O4'"     "C1'"     N1        C2        210.000       10.000    6     
+SSU     C2e-nyu0        "C4'"     "O4'"     "C1'"     "C2'"     340.700       6.300     1     
+SSU     C2e-nyu1        "O4'"     "C1'"     "C2'"     "C3'"     32.800        4.900     1     
+SSU     C2e-nyu2        "C1'"     "C2'"     "C3'"     "C4'"     326.9         3.600     1     
+SSU     C2e-nyu3        "C2'"     "C3'"     "C4'"     "O4'"     22.600        4.500     1     
+SSU     C2e-nyu4        "C3'"     "C4'"     "O4'"     "C1'"     357.700       6.100     1     
+SSU     C3e-chi         "O4'"     "C1'"     N1        C2        210.000       10.000    6     
+SSU     C3e-nyu0        "C4'"     "O4'"     "C1'"     "C2'"     2.8           6.100     1     
+SSU     C3e-nyu1        "O4'"     "C1'"     "C2'"     "C3'"     335.00        4.900     1     
+SSU     C3e-nyu2        "C1'"     "C2'"     "C3'"     "C4'"     35.9          2.800     1     
+SSU     C3e-nyu3        "C2'"     "C3'"     "C4'"     "O4'"     324.700       3.100     1     
+SSU     C3e-nyu4        "C3'"     "C4'"     "O4'"     "C1'"     20.500        5.100     1     
+SSU     beta            P         "O5'"     "C5'"     "C4'"     180.000       10.00     3     
+SSU     epsi            "C4'"     "C3'"     "O3'"     "HO3'"    180.000       10.00     3     
+SSU     gamma           "O5'"     "C5'"     "C4'"     "C3'"     180.000       10.00     3     
+SSU            sp3_sp3_25       "C1'"       "C2'"       "O2'"      "HO2'"     180.000   10.00     3
+SSU       const_sp2_sp2_2          C5          C6          N1       "C1'"     180.000   10.00     2
+SSU              const_24          O2          C2          N1       "C1'"       0.000   10.00     2
+SSU       const_sp2_sp2_5          C4          C5          C6          N1       0.000   10.00     2
+SSU              const_11          O4          C4          C5          C6     180.000   10.00     2
+SSU              const_15          O4          C4          N3          C2     180.000   10.00     2
+SSU              const_19          O2          C2          N3          C4     180.000   10.00     2
+SSU            sp3_sp3_49       "C5'"       "O5'"           P         S1P     180.000   10.00     3
 loop_
 _chem_comp_chir.comp_id
 _chem_comp_chir.id
@@ -256,25 +202,42 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- SSU      chir_01  "C2'"  "C1'"  "O2'"  "C3'"     positiv
- SSU      chir_02  "C1'"  "C2'"  "O4'"  N1        negativ
- SSU      chir_03  "C4'"  "O4'"  "C5'"  "C3'"     positiv
- SSU      chir_04  "C3'"  "C2'"  "C4'"  "O3'"     negativ
+SSU    chir_1    "C2'"    "O2'"    "C1'"    "C3'"    negative
+SSU    chir_2    "C1'"    "O4'"    N1    "C2'"    negative
+SSU    chir_3    "C4'"    "O4'"    "C3'"    "C5'"    negative
+SSU    chir_4    P    S1P    "O5'"    OP2    both
+SSU    chir_5    "C3'"    "O3'"    "C4'"    "C2'"    positive
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SSU      plan-1    N1        0.020
- SSU      plan-1    "C1'"     0.020
- SSU      plan-1    C6        0.020
- SSU      plan-1    C2        0.020
- SSU      plan-1    C5        0.020
- SSU      plan-1    C4        0.020
- SSU      plan-1    N3        0.020
- SSU      plan-1    H6        0.020
- SSU      plan-1    H5        0.020
- SSU      plan-1    O4        0.020
- SSU      plan-1    H3        0.020
- SSU      plan-1    O2        0.020
-# ------------------------------------------------------
+SSU    plan-1       "C1'"   0.020
+SSU    plan-1          C2   0.020
+SSU    plan-1          C4   0.020
+SSU    plan-1          C5   0.020
+SSU    plan-1          C6   0.020
+SSU    plan-1          H3   0.020
+SSU    plan-1          H5   0.020
+SSU    plan-1          H6   0.020
+SSU    plan-1          N1   0.020
+SSU    plan-1          N3   0.020
+SSU    plan-1          O2   0.020
+SSU    plan-1          O4   0.020
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+SSU           SMILES              ACDLabs 10.04                                                                                                          O=C1NC(=O)N(C=C1)C2OC(C(O)C2O)COP(=S)(O)O
+SSU SMILES_CANONICAL               CACTVS 3.341                                                                                       O[C@H]1[C@@H](O)[C@@H](O[C@@H]1CO[P](O)(O)=S)N2C=CC(=O)NC2=O
+SSU           SMILES               CACTVS 3.341                                                                                              O[CH]1[CH](O)[CH](O[CH]1CO[P](O)(O)=S)N2C=CC(=O)NC2=O
+SSU SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                                                                                      C1=CN(C(=O)NC1=O)[C@H]2[C@@H]([C@@H]([C@H](O2)COP(=S)(O)O)O)O
+SSU           SMILES "OpenEye OEToolkits" 1.5.0                                                                                                        C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=S)(O)O)O)O
+SSU            InChI                InChI  1.03 InChI=1S/C9H13N2O8PS/c12-5-1-2-11(9(15)10-5)8-7(14)6(13)4(19-8)3-18-20(16,17)21/h1-2,4,6-8,13-14H,3H2,(H,10,12,15)(H2,16,17,21)/t4-,6-,7-,8-/m1/s1
+SSU         InChIKey                InChI  1.03                                                                                                                        NSEBKRRODBXALJ-XVFCMESISA-N
+SSU ?                acedrg               231         "dictionary generator"                  
+SSU ?                acedrg_database      11          "data source"                           
+SSU ?                rdkit                2017.03.2   "Chemoinformatics tool"
+SSU ?                refmac5              5.8.0238    "optimization tool"                     
