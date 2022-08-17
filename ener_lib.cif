@@ -10,9 +10,9 @@ data_energy
 # ---------------------------------------------------
 #   -----------   Description of atom's type --------     
 #HEADER        C Carbon PI
-#ATOMTYPE CSP  = with triple bond
+#ATOMTYPE CSP  = with triple bond or two double bonds
 #ATOMTYPE CSP1 = with triple bond and 1 hydrogen
-#HEADER        C Carbon SP2
+#HEADER       C  Carbon SP2
 #ATOMTYPE C    = without hydrogen ( carbonyl C )
 #ATOMTYPE C1   = connected to 1 hydrogen  
 #ATOMTYPE C2   = connected to 2 hydrogens 
@@ -30,9 +30,10 @@ data_energy
 #ATOMTYPE CH2  = connected to 2 hydrogens ( CB of most amono acids)
 #ATOMTYPE CH3  = connected to 3 hydrogens ( CD1 CD2 of LEUCINE)
 #ATOMTYPE CT   = without hydrogen
+#HEADER       SI silicon
 #ATOMTYPE SI   = tetragonal silicon
 #ATOMTYPE SI1  = other silicons
-#HEADER        H Hydrogen
+#HEADER        H Hydrogen   # Now we have only one H atom type. these are here for historical reasons
 #ATOMTYPE HCH  = hydrogen of aliphatic group
 #ATOMTYPE HCR  = hydrogen of aromatic group
 #ATOMTYPE HNC1 = hydrogen connected to NC1
@@ -45,11 +46,10 @@ data_energy
 #ATOMTYPE HOH1 = hydrogen connected to OH1
 #ATOMTYPE HOH2 = hydrogen of water
 #ATOMTYPE HSH1 = hydrogen of sulphur
-#HEADER        N Nitrogen PI
+#HEADER        N Nitrogen SP1
 #ATOMTYPE NS   = without hydrogen ( triple bond )
 #ATOMTYPE NS1  = connected to 1 hydrogen
 #HEADER        N Nitrogen SP2
-#ATOMTYPE N    = without hydrogen ( N  of PRO )
 #ATOMTYPE NC1  = connected to 1 hyd. in a charged group ( NE of ARG )
 #ATOMTYPE NC2  = connected to 2 hyd. in a charged group ( NH2 of ARG )
 #ATOMTYPE NH1  = connected to 1 hydrogen ( N of main chain )
@@ -60,15 +60,17 @@ data_energy
 #ATOMTYPE NRD6 = without hydrogen but with electronic doublet in 6 atoms ring 
 #ATOMTYPE NR15 = connected to 1 hyd. in 5 atoms ring ( ND1 of HIS )
 #ATOMTYPE NR16 = connected to 1 hyd. in 6  atoms ring 
-#ATOMTYPE NR5  = connected to 3 atoms in 5 atoms ring ( N9 of ADE )
-#ATOMTYPE NR6  = connected to 3 atoms in 6 atoms ring ( N1 of CYT )
+#ATOMTYPE NR5  = connected to 3 non-hydrogen atoms in 5 atoms ring
+#ATOMTYPE NR6  = connected to 3 non-hydrogen atoms in 6 atoms ring
 #HEADER        N Nitrogen SP3
+#ATOMTYPE N    = without hydrogen ( N  of PRO )
 #ATOMTYPE NT   = without hydrogen
 #ATOMTYPE NT1  = connected to 1 hydrogen
 #ATOMTYPE NT2  = connected to 2 hydrogens
 #ATOMTYPE NT3  = connected to 3 hydrogens
+#HEADER        P Phosphor
 #ATOMTYPE P    = tetragonal P with four bonds
-#ATOMTYPE P1   = with three bonds. Planar? 
+#ATOMTYPE P1   = with three bonds.
 #HEADER        O Oxygen SP2
 #ATOMTYPE O    = without  NET charge ( O of main chain )
 #ATOMTYPE OC   = with a NET charge   ( OE1 OE2 of GLU )
@@ -77,7 +79,7 @@ data_energy
 #ATOMTYPE OB   = with a NET charge connected to B
 #HEADER        O Oxygen SP3
 #ATOMTYPE O2   = connected to 2 atoms ( O4' of ribose )
-#ATOMTYPE OC2  = with a NET charge connected to 2 ATOMS ( O3' of ribose )
+#ATOMTYPE OC2  = connected to 2 ATOMS ( O3' of ribose )
 #ATOMTYPE OH1  = oxygen of alcohol groups ( OG1 of THR )
 #ATOMTYPE OH2  = oxygen of water
 #ATOMTYPE OHA  = oxygen of water in MO6
@@ -150,8 +152,8 @@ _lib_atom.sp
  CT      12.01150  N     1.700     1.850     .     C   4  3
 #
  NS      14.00670  N     1.550     1.600    1.32   N   3  1
- NS1     14.00670  N     1.550     1.600    1.32   N   3  1
- N       14.00670  N     1.550     1.600    1.32   N   3  2
+ NS1     14.00670  D     1.550     1.600    1.32   N   3  1
+ N       14.00670  B     1.550     1.600    1.32   N   3  2
  NC1     14.00670  D     1.550     1.600    1.32   N   3  2
  NH1     14.00670  D     1.550     1.600    1.32   N   3  2
  NC2     14.00670  D     1.550     1.600    1.32   N   3  2
@@ -168,7 +170,7 @@ _lib_atom.sp
  NRD5    14.00670  A     1.550     1.600    1.32   N   3  2
  NR56    14.00670  A     1.550     1.600    1.32   N   3  2
  NR55    14.00670  A     1.550     1.600    1.32   N   3  2
- NR6     14.00670  N     1.550     1.600    1.32   N   3  2
+ NR6     14.00670  A     1.550     1.600    1.32   N   3  2
  NR66    14.00670  N     1.550     1.600    1.32   N   3  2
  NR16    14.00670  D     1.550     1.600    1.32   N   3  2
  NRD6    14.00670  A     1.550     1.600    1.32   N   3  2
