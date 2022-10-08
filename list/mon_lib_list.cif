@@ -36015,14 +36015,20 @@ BOC_C-N BOC . NON-POLYMER . . peptide bond_BOC-C_=_N-peptide
 NME_N-C . . peptide NME . NON-POLYMER bond_NME-N_=_C-peptide
 ALPHA1-2 . DEL-HO2 pyranose . DEL-O1 pyranose glycosidic_bond_alpha1-2
 ALPHA1-3 . DEL-HO3 pyranose . DEL-O1 pyranose glycosidic_bond_alpha1-3
-ALPHA2-3 . DEL-O2 ketopyranose . DEL-HO3 pyranose glycosidic_bond_alpha2-3
+ALPHA2-3 . DEL-HO3 pyranose . DEL-O2  ketopyranose glycosidic_bond_alpha2-3
+ALPHA2-4 . DEL-HO4 pyranose    .  DEL-O2  ketopyranose        ALPHA2-4
+ALPHA1-5 . DEL-HO5 ketopyranose .  DEL-O1 pyranose            ALPHA1-5
 ALPHA1-4 . DEL-HO4 pyranose . DEL-O1 pyranose glycosidic_bond_alpha1-4
 ALPHA1-6 . DEL-HO6 pyranose . DEL-O1 pyranose glycosidic_bond_alpha1-6
+ALPHA1-7 . DEL-HO7 pyranose . DEL-O1 pyranose glycosidic_bond_alpha1-7
 BETA1-2 . DEL-HO2 pyranose . DEL-O1 pyranose glycosidic_bond_beta1-2
 BETA1-3 . DEL-HO3 pyranose . DEL-O1 pyranose glycosidic_bond_beta1-3
-BETA2-3 . DEL-O2 ketopyranose . DEL-HO3 pyranose glycosidic_bond_beta2-3
+BETA2-3 . DEL-HO3 pyranose . DEL-O2  ketopyranose glycosidic_bond_beta2-3
+BETA2-4 . DEL-HO4 pyranose    .  DEL-O2  ketopyranose        ALPHA2-4
+BETA1-5 . DEL-HO5 ketopyranose .  DEL-O1 pyranose            ALPHA1-5
 BETA1-4 . DEL-HO4 pyranose . DEL-O1 pyranose glycosidic_bond_beta1-4
 BETA1-6 . DEL-HO6 pyranose . DEL-O1 pyranose glycosidic_bond_beta1-6
+BETA1-7 . DEL-HO7 pyranose . DEL-O1 pyranose glycosidic_bond_beta1-7
 pyr-SER . DEL-O1 pyranose SER DEL-HG peptide bond_pyr-C1_=_SER-OG
 pyr-THR . DEL-O1 pyranose THR DEL-HG1 peptide bond_pyr-C1_=_THR-OG1
 pyr-ASN . DEL-O1 pyranose ASN DEL-HD22 peptide bond_pyr-C1_=_ASN-ND2
@@ -36048,8 +36054,10 @@ TPN-TPN TPN TPNmodC NON-POLYMER TPN TPNmodN NON-POLYMER TPN-TPN
 PEP-ORN . DEL-OXT peptide ORN ORN-NE peptide PEP-ORN
 symmetry . . . . . . dummy_link
 02J-ALA 02J 02Jmod1 NON-POLYMER ALA ALAmod1 peptide 02J-ALA
-ALPHA2-6 . DEL-O2 ketopyranose . DEL-HO6 pyranose ALPHA2-6
-BETA2-6 . DEL-O2 ketopyranose . DEL-HO6 pyranose ALPHA2-6
+ALPHA2-6 . DEL-HO6 pyranose . DEL-O2  ketopyranose ALPHA2-6
+ALPHA2-8 . DEL-HO8 ketopyranose . DEL-O2 ketopyranose ALPHA2-8
+BETA2-6 . DEL-HO6 pyranose . DEL-O2  ketopyranose BETA2-6
+BETA2-8 . DEL-HO8 ketopyranose . DEL-O2 ketopyranose ALPHA2-8
 CYS-BME CYS CYSmod1 peptide BME BMEmod1 NON-POLYMER CYS-BME
 CR8-pept CR8 CR8mod1 NON-POLYMER . DEL-HN1 peptide CR8-pept
 CRO-pept CRO CROmod1 NON-POLYMER . DEL-HN1 peptide CRO-pept
@@ -36124,7 +36132,10 @@ DEL-O2 delete_O2_from_saccharide . ketopyranose
 DEL-HO2 delete_HO2_from_saccharide . pyranose
 DEL-HO3 delete_HO3_from_saccharide . pyranose
 DEL-HO4 delete_HO4_from_saccharide . pyranose
+DEL-HO5  delete_HO4_from_saccharide . ketopyranose  
 DEL-HO6 delete_HO6_from_saccharide . pyranose
+DEL-HO7 delete_HO7_from_sacharide  .  pyranose
+DEL-HO8  delete_HO4_from_saccharide  .       ketopyranose
 DEL-HD1 delete_HD1_from_HIS HIS peptide
 DEL-HE2 delete_HE2_from_HIS HIS peptide
 DEL-OXT delete_OXT_from_peptide . peptide
@@ -37372,7 +37383,8 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-ALPHA1-3 2 C1 1 O3 2 O5 2 C2 negativ
+ALPHA1-3 2 C1 2 O5 1 O3 2 C2 positive
+
 
 data_link_ALPHA2-3
 
@@ -37385,7 +37397,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-ALPHA2-3   1         C2        2         O3        SINGLE    1.424       0.0200
+ALPHA2-3   1         O3        2         C2        SINGLE    1.424       0.0200
 
 loop_
 _chem_link_angle.link_id
@@ -37397,10 +37409,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-ALPHA2-3   1         C3        1         C2        2         O3        109.292        3.00
-ALPHA2-3   1         O6        1         C2        2         O3        110.235        3.00
-ALPHA2-3   1         C1        1         C2        2         O3        108.549        3.00
-ALPHA2-3   2         C3        2         O3        1         C2        116.671        3.00
+ALPHA2-3   1         C3        1         O3        2         C2        116.671        3.00
+ALPHA2-3   2         C1        2         C2        1         O3        108.549        3.00
+ALPHA2-3   2         C3        2         C2        1         O3        109.292        3.00
+ALPHA2-3   2         O6        2         C2        1         O3        110.235        3.00
 
 loop_
 _chem_link_tor.link_id
@@ -37416,9 +37428,9 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-ALPHA2-3   sp3_sp3_1       1         C3        1         C2        2         O3        2         C3        180.000        10.0      3
-ALPHA2-3   sp3_sp3_2       1         O6        1         C2        2         O3        2         C3        60.000         10.0      3
-ALPHA2-3   sp3_sp3_3       1         C1        1         C2        2         O3        2         C3        -60.000        10.0      3
+ALPHA2-3   sp3_sp3_1       2         C1        2         C2        1         O3        1         C3        180.000        10.0      3
+ALPHA2-3   sp3_sp3_7       1         C4        1         C3        1         O3        2         C2        60.000         10.0      3
+ALPHA2-3   sp2_sp3_1       2         O1A       2         C1        2         C2        1         O3        -120.000       10.0      6
 
 loop_
 _chem_link_chir.link_id
@@ -37431,7 +37443,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-ALPHA2-3   1         C2        2         O3        1         O6        1         C1        positive
+ALPHA2-3   2         C2        2         O6        1         O3        2         C1        negative
 
 data_link_BETA2-3
 
@@ -37444,7 +37456,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-BETA2-3   1         C2        2         O3        SINGLE    1.424       0.0200
+BETA2-3   1         O3        2         C2        SINGLE    1.424       0.0200 
 
 loop_
 _chem_link_angle.link_id
@@ -37456,10 +37468,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-BETA2-3   1         C3        1         C2        2         O3        109.292        3.00
-BETA2-3   1         O6        1         C2        2         O3        110.235        3.00
-BETA2-3   1         C1        1         C2        2         O3        108.549        3.00
-BETA2-3   2         C3        2         O3        1         C2        116.671        3.00
+BETA2-3   1         C3        1         O3        2         C2        116.671        3.00 
+BETA2-3   2         C1        2         C2        1         O3        108.549        3.00 
+BETA2-3   2         C3        2         C2        1         O3        109.292        3.00 
+BETA2-3   2         O6        2         C2        1         O3        110.235        3.00 
 
 loop_
 _chem_link_tor.link_id
@@ -37475,9 +37487,9 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-BETA2-3   sp3_sp3_1       1         C3        1         C2        2         O3        2         C3        180.000        10.0      3
-BETA2-3   sp3_sp3_2       1         O6        1         C2        2         O3        2         C3        60.000         10.0      3
-BETA2-3   sp3_sp3_3       1         C1        1         C2        2         O3        2         C3        -60.000        10.0      3
+BETA2-3   sp3_sp3_1       2         C1        2         C2        1         O3        1         C3        180.000        10.0      3
+BETA2-3   sp3_sp3_7       1         C4        1         C3        1         O3        2         C2        60.000         10.0      3
+BETA2-3   sp2_sp3_1       2         O1A       2         C1        2         C2        1         O3        -120.000       10.0      6
 
 loop_
 _chem_link_chir.link_id
@@ -37490,8 +37502,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-BETA2-3   1         C2        2         O3        1         O6        1         C1        negative
-
+BETA2-3   2         C2        2         O6        1         O3        2         C1        positive
 
 data_link_ALPHA1-4
 
@@ -37551,7 +37562,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-ALPHA1-4 2 C1 1 O4 2 O5 2 C2 negativ
+ALPHA1-4 2 C1 2 O5 1 O4 2 C2 positive
 
 data_link_ALPHA1-6
 
@@ -37610,7 +37621,66 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-ALPHA1-6 2 C1 1 O6 2 O5 2 C2 negativ
+ALPHA1-6 2 C1 1 O6 2 O5 2 C2 negative
+
+data_link_ALPHA1-7
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ALPHA1-7   1         O7        2         C1        SINGLE    1.405       0.0100
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ALPHA1-7   1         C7        1         O7        2         C1        113.155        1.50
+ALPHA1-7   2         C2        2         C1        1         O7        108.405        3.00
+ALPHA1-7   2         O5        2         C1        1         O7        109.266        3.00
+ALPHA1-7   1         O7        2         C1        2         H1        109.587        1.50
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+ALPHA1-7   sp3_sp3_1       2         C2        2         C1        1         O7        1         C7        180.000        10.0      3
+ALPHA1-7   sp3_sp3_2       2         O5        2         C1        1         O7        1         C7        60.000         10.0      3
+ALPHA1-7   sp3_sp3_3       1         C6        1         C7        1         O7        2         C1        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+ALPHA1-7   2         C1        2         O5        1         O7        2         C2        positive
 
 data_link_BETA1-2
 
@@ -37731,7 +37801,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-BETA1-3 2 C1 1 O3 2 O5 2 C2 positiv
+BETA1-3 2 C1 2 O5 1 O3 2 C2 negative
 
 data_link_BETA1-4
 
@@ -37791,7 +37861,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-BETA1-4 2 C1 1 O4 2 O5 2 C2 positiv
+BETA1-4 2 C1 2 O5 1 O4 2 C2 negative
 
 data_link_BETA1-6
 
@@ -37851,7 +37921,66 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-BETA1-6 2 C1 1 O6 2 O5 2 C2 positiv
+BETA1-6 2 C1 1 O6 2 O5 2 C2 positive
+
+data_link_BETA1-7
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+BETA1-7   1         O7        2         C1        SINGLE    1.405       0.0100 
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+BETA1-7   1         C7        1         O7        2         C1        113.155        1.50 
+BETA1-7   2         C2        2         C1        1         O7        108.405        3.00 
+BETA1-7   2         O5        2         C1        1         O7        109.266        3.00 
+BETA1-7   1         O7        2         C1        2         H1        109.587        1.50 
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+BETA1-7   sp3_sp3_1       2         C2        2         C1        1         O7        1         C7        180.000        10.0      3
+BETA1-7   sp3_sp3_2       2         O5        2         C1        1         O7        1         C7        60.000         10.0      3
+BETA1-7   sp3_sp3_3       1         C6        1         C7        1         O7        2         C1        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+BETA1-7   2         C1        2         O5        1         O7        2         C2        negative 
 
 data_link_pyr-SER
 loop_
@@ -38639,7 +38768,7 @@ _chem_link_plane.dist_esd
 02J-ALA plan-4 2 H 0.020
 02J-ALA plan-4 2 N 0.020
 
-data_link_ALPHA2-6
+data_link_ALPHA2-4
 
 loop_
 _chem_link_bond.link_id
@@ -38650,7 +38779,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-ALPHA2-6   1         C2        2         O6        SINGLE    1.411       0.0100
+ALPHA2-4   1         O4        2         C2        SINGLE    1.424       0.0200
 
 loop_
 _chem_link_angle.link_id
@@ -38662,10 +38791,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-ALPHA2-6   1         C3        1         C2        2         O6        104.665        1.50
-ALPHA2-6   1         O6        1         C2        2         O6        110.760        3.00
-ALPHA2-6   1         C1        1         C2        2         O6        108.549        3.00
-ALPHA2-6   2         C6        2         O6        1         C2        114.624        2.88
+ALPHA2-4   1         C4        1         O4        2         C2        116.671        3.00
+ALPHA2-4   2         C1        2         C2        1         O4        108.549        3.00
+ALPHA2-4   2         C3        2         C2        1         O4        109.292        3.00
+ALPHA2-4   2         O6        2         C2        1         O4        110.235        3.00
 
 loop_
 _chem_link_tor.link_id
@@ -38681,9 +38810,9 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-ALPHA2-6   sp3_sp3_1       1         C3        1         C2        2         O6        2         C6        180.000        10.0      3
-ALPHA2-6   sp3_sp3_2       1         O6        1         C2        2         O6        2         C6        60.000         10.0      3
-ALPHA2-6   sp3_sp3_3       1         C1        1         C2        2         O6        2         C6        -60.000        10.0      3
+ALPHA2-4   sp3_sp3_1       2         C1        2         C2        1         O4        1         C4        180.000        10.0      3
+ALPHA2-4   sp3_sp3_7       1         C5        1         C4        1         O4        2         C2        60.000         10.0      3
+ALPHA2-4   sp3_sp3_5       1         O4        2         C2        2         O6        2         C6        -60.000        10.0      3
 
 loop_
 _chem_link_chir.link_id
@@ -38696,7 +38825,361 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-ALPHA2-6   1         C2        1         O6        2         O6        1         C1        negative
+ALPHA2-4   2         C2        2         O6        1         O4        2         C1        negative
+
+data_link_ALPHA1-5
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ALPHA1-5   1         O5        2         C1        SINGLE    1.393       0.0100
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ALPHA1-5   1         C5        1         O5        2         C1        117.674        3.00
+ALPHA1-5   2         C2        2         C1        1         O5        108.448        3.00
+ALPHA1-5   2         O5        2         C1        1         O5        110.493        3.00
+ALPHA1-5   1         O5        2         C1        2         H1        109.294        1.50
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+ALPHA1-5   sp3_sp3_1       2         C2        2         C1        1         O5        1         C5        180.000        10.0      3
+ALPHA1-5   sp3_sp3_2       2         O5        2         C1        1         O5        1         C5        60.000         10.0      3
+ALPHA1-5   sp3_sp3_3       1         C4        1         C5        1         O5        2         C1        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+ALPHA1-5   2         C1        2         O5        1         O5        2         C2        positive
+
+data_link_BETA2-4
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+BETA2-4   1         O4        2         C2        SINGLE    1.424       0.0200
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+BETA2-4   1         C4        1         O4        2         C2        116.671        3.00
+BETA2-4   2         C1        2         C2        1         O4        108.549        3.00
+BETA2-4   2         C3        2         C2        1         O4        109.292        3.00
+BETA2-4   2         O6        2         C2        1         O4        110.235        3.00
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd 
+_chem_link_tor.period
+BETA2-4   sp3_sp3_1       2         C1        2         C2        1         O4        1         C4        180.000        10.0      3
+BETA2-4   sp3_sp3_7       1         C5        1         C4        1         O4        2         C2        60.000         10.0      3
+BETA2-4   sp3_sp3_5       1         O4        2         C2        2         O6        2         C6        -60.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+BETA2-4   2         C2        2         O6        1         O4        2         C1        positive
+
+data_link_BETA1-5
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+BETA1-5   1         O5        2         C1        SINGLE    1.393       0.0100 
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+BETA1-5   1         C5        1         O5        2         C1        117.674        3.00 
+BETA1-5   2         C2        2         C1        1         O5        108.448        3.00 
+BETA1-5   2         O5        2         C1        1         O5        110.493        3.00 
+BETA1-5   1         O5        2         C1        2         H1        109.294        1.50 
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+BETA1-5   sp3_sp3_1       2         C2        2         C1        1         O5        1         C5        180.000        10.0      3
+BETA1-5   sp3_sp3_2       2         O5        2         C1        1         O5        1         C5        60.000         10.0      3
+BETA1-5   sp3_sp3_3       1         C4        1         C5        1         O5        2         C1        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+BETA1-5   2         C1        2         O5        1         O5        2         C2        negative
+
+data_link_ALPHA2-6
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ALPHA2-6   1         O6        2         C2        SINGLE    1.411       0.0100
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ALPHA2-6   1         C6        1         O6        2         C2        114.624        2.88
+ALPHA2-6   2         C1        2         C2        1         O6        108.549        3.00
+ALPHA2-6   2         C3        2         C2        1         O6        104.665        1.50
+ALPHA2-6   2         O6        2         C2        1         O6        110.760        3.00
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+ALPHA2-6   sp3_sp3_1       2         C1        2         C2        1         O6        1         C6        180.000        10.0      3
+ALPHA2-6   sp3_sp3_6       1         C5        1         C6        1         O6        2         C2        180.000        10.0      3
+ALPHA2-6   sp2_sp3_2       2         O1B       2         C1        2         C2        1         O6        60.000         10.0      6
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+ALPHA2-6   2         C2        2         O6        1         O6        2         C1        negative
+
+data_link_ALPHA2-8
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+ALPHA2-8   1         O8        2         C2        SINGLE    1.411       0.0100
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+ALPHA2-8   1         C8        1         O8        2         C2        114.624        2.88
+ALPHA2-8   2         C1        2         C2        1         O8        108.549        3.00
+ALPHA2-8   2         C3        2         C2        1         O8        104.665        1.50
+ALPHA2-8   2         O6        2         C2        1         O8        110.760        3.00
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+ALPHA2-8   sp3_sp3_1       2         C1        2         C2        1         O8        1         C8        180.000        10.0      3
+ALPHA2-8   sp2_sp3_1       2         O1A       2         C1        2         C2        1         O8        -120.000       10.0      6
+ALPHA2-8   sp3_sp3_2       1         C7        1         C8        1         O8        2         C2        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+ALPHA2-8   2         C2        2         O6        1         O8        2         C1        negative
+
+data_link_BETA2-8
+
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+BETA2-8   1         O8        2         C2        SINGLE    1.411       0.0100 
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+BETA2-8   1         C8        1         O8        2         C2        114.624        2.88 
+BETA2-8   2         C1        2         C2        1         O8        108.549        3.00 
+BETA2-8   2         C3        2         C2        1         O8        104.665        1.50 
+BETA2-8   2         O6        2         C2        1         O8        110.760        3.00 
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+BETA2-8   sp3_sp3_1       2         C1        2         C2        1         O8        1         C8        180.000        10.0      3
+BETA2-8   sp2_sp3_1       2         O1A       2         C1        2         C2        1         O8        -120.000       10.0      6
+BETA2-8   sp3_sp3_2       1         C7        1         C8        1         O8        2         C2        180.000        10.0      3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+BETA2-8   2         C2        2         O6        1         O8        2         C1        positive
 
 data_link_BETA2-6
 
@@ -38709,7 +39192,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-BETA2-6   1         C2        2         O6        SINGLE    1.411       0.0100
+BETA2-6   1         O6        2         C2        SINGLE    1.411       0.0100
 
 loop_
 _chem_link_angle.link_id
@@ -38721,10 +39204,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-BETA2-6   1         C3        1         C2        2         O6        104.665        1.50
-BETA2-6   1         O6        1         C2        2         O6        110.760        3.00
-BETA2-6   1         C1        1         C2        2         O6        108.549        3.00
-BETA2-6   2         C6        2         O6        1         C2        114.624        2.88
+BETA2-6   1         C6        1         O6        2         C2        114.624        2.88
+BETA2-6   2         C1        2         C2        1         O6        108.549        3.00
+BETA2-6   2         C3        2         C2        1         O6        104.665        1.50
+BETA2-6   2         O6        2         C2        1         O6        110.760        3.00
 
 loop_
 _chem_link_tor.link_id
@@ -38732,7 +39215,7 @@ _chem_link_tor.id
 _chem_link_tor.atom_1_comp_id
 _chem_link_tor.atom_id_1
 _chem_link_tor.atom_2_comp_id
-_chem_link_tor.atom_id_2
+_chem_link_tor.atom_id_2  
 _chem_link_tor.atom_3_comp_id
 _chem_link_tor.atom_id_3
 _chem_link_tor.atom_4_comp_id
@@ -38740,9 +39223,9 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-BETA2-6   sp3_sp3_1       1         C3        1         C2        2         O6        2         C6        180.000        10.0      3
-BETA2-6   sp3_sp3_2       1         O6        1         C2        2         O6        2         C6        60.000         10.0      3
-BETA2-6   sp3_sp3_3       1         C1        1         C2        2         O6        2         C6        -60.000        10.0      3
+BETA2-6   sp3_sp3_1       2         C1        2         C2        1         O6        1         C6        180.000        10.0      3
+BETA2-6   sp3_sp3_6       1         C5        1         C6        1         O6        2         C2        180.000        10.0      3
+BETA2-6   sp2_sp3_2       2         O1B       2         C1        2         C2        1         O6        60.000         10.0      6
 
 loop_
 _chem_link_chir.link_id
@@ -38755,7 +39238,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-BETA2-6   1         C2        1         O6        2         O6        1         C1        positive
+BETA2-6   2         C2        2         O6        1         O6        2         C1        positive
 
 data_link_CYS-BME
 loop_
@@ -42155,6 +42638,66 @@ _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
 DEL-HO4          delete         C4        O4        HO4       .              .
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+DEL-HO4          delete         C3        C4        O4        HO4       .              .
+DEL-HO4          delete         C5        C4        O4        HO4       .              .
+DEL-HO4          delete         H4        C4        O4        HO4       .              .
+
+data_mod_DEL-HO5
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+DEL-HO5          delete         HO5       .         H         H         0
+DEL-HO5          change         O5        .         O         O2        0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+DEL-HO5          delete         O5        HO5       single         .              .         .         .
+DEL-HO5          change         C5        O5        single         1.433          0.0151    1.433          0.0151
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+DEL-HO5          delete         C5        O5        HO5       .              .
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+DEL-HO5          delete         C4        C5        O5        HO5       .              .
 
 data_mod_DEL-HD1
 loop_
