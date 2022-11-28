@@ -36008,7 +36008,7 @@ RNA-F86 . DEL_HO3p DNA/RNA F86 F86m1 NON-POLYMER RNA-F86
 FOR_C-N FOR . NON-POLYMER . . peptide bond_FOR-C_=_N-peptide
 FOR_C-C . . peptide FOR . NON-POLYMER bond_FOR-C_=_C-peptide
 FOR-LYZ LYZ . peptide FOR . NON-POLYMER bond_FOR-C_=_NZ-LYZ
-ACE_C-N ACE ACEmod NON-POLYMER . NHmod peptide bond_ACE-C_=_N_peptide
+ACE_C-N ACE ACEmod NON-POLYMER . DEL-HN1 peptide bond_ACE-C_=_N_peptide
 AHT-ALA AHT . NON-POLYMER ALA . peptide bond_AHT-N2_=_CB-ALA
 IVA_C-N IVA . NON-POLYMER . . peptide bond_IVA-C_=_N-peptide
 BOC_C-N BOC . NON-POLYMER . . peptide bond_BOC-C_=_N-peptide
@@ -41127,7 +41127,7 @@ _chem_mod_angle.new_value_angle_esd
 NH1 add H N CA 109.307 3.000
 NH1 add H N CD 106.136 2.250
 
-data_mod_NHmod
+data_mod_ACEmod
 loop_
 _chem_mod_atom.mod_id
 _chem_mod_atom.function
@@ -41136,26 +41136,7 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
-NHmod change N N . NH1 .000
-NHmod add . H H H .000
-NHmod delete HN1 . . . .000
-NHmod delete HN2 . . . .000
-NHmod delete HN3 . . . .000
-NHmod delete H1 . . . .000
-NHmod delete H2 . . . .000
-NHmod delete H3 . . . .000
-NHmod delete HN . . . .000
-
-loop_
-_chem_mod_tree.mod_id
-_chem_mod_tree.function
-_chem_mod_tree.atom_id
-_chem_mod_tree.atom_back
-_chem_mod_tree.back_type
-_chem_mod_tree.atom_forward
-_chem_mod_tree.connect_type
-NHmod change N n/a . CA START
-NHmod add H N . . .
+ACEmod delete H . . . .000
 
 loop_
 _chem_mod_bond.mod_id
@@ -41167,7 +41148,7 @@ _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
-NHmod add N H single 0.914 0.010 1.036 0.016
+ACEmod delete C H single . . . .
 
 loop_
 _chem_mod_angle.mod_id
@@ -41177,19 +41158,20 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-NHmod add H N CA 120.000 3.000
-NHmod add H N CD 120.000 3.000
+ACEmod delete O C H . .
+ACEmod delete CH3 C H . .
 
-data_mod_ACEmod
 loop_
-_chem_mod_atom.mod_id
-_chem_mod_atom.function
-_chem_mod_atom.atom_id
-_chem_mod_atom.new_atom_id
-_chem_mod_atom.new_type_symbol
-_chem_mod_atom.new_type_energy
-_chem_mod_atom.new_partial_charge
-ACEmod delete H . . . .000
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+ACEmod delete plan-1 C 0.020
+ACEmod delete plan-1 CH3 0.020
+ACEmod delete plan-1 H 0.020
+ACEmod delete plan-1 O 0.020
+
 
 data_mod_NH2N
 loop_
