@@ -1,0 +1,28 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  ubuntu2204:
+    name: "Ubuntu 22.04"
+    runs-on: ubuntu-22.04
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      with:
+        path: monomers
+    - name: checkout test
+      uses: actions/checkout@v3
+      with:
+        repository: MRC-LMB-ComputationalStructuralBiology/monomers-test
+        path: monomers-test
+    - name: apt-get
+      run: |
+        sudo apt-get update
+        sudo apt-get install python3-pip
+    - name: run test
+      run: |
+        sudo python3 -m pip install gemmi
+        export CLIBD_MON=monomers
+        python3 -m unittest discover monomers-test/
