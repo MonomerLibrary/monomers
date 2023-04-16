@@ -36028,7 +36028,7 @@ AA-RNA . DEL-OXT peptide . DEL_HO3p DNA/RNA aminoacyl-RNA
 RNA-F86 . DEL_HO3p DNA/RNA F86 F86m1 NON-POLYMER RNA-F86
 FOR_C-N FOR FORm1 NON-POLYMER . DEL-HN1 peptide bond_FOR-C_=_N-peptide
 FOR_C-C . . peptide FOR . NON-POLYMER bond_FOR-C_=_C-peptide
-FOR-LYZ LYZ . peptide FOR . NON-POLYMER bond_FOR-C_=_NZ-LYZ
+FOR-LYZ    LYZ  LYZm1 peptide FOR FORm1  NON-POLYMER   FOR-LYZ
 ACE_C-N ACE ACEmod NON-POLYMER . DEL-HN1 peptide bond_ACE-C_=_N_peptide
 AHT-ALA AHT . NON-POLYMER ALA . peptide bond_AHT-N2_=_CB-ALA
 IVA_C-N IVA IVAm1 NON-POLYMER . DEL-HN1 peptide bond_IVA-C_=_N-peptide
@@ -36069,7 +36069,7 @@ SF42-CYS SF4 . NON-POLYMER CYS CYSmod1 peptide bond_SF42_CYS-SG
 SF43-CYS SF4 . NON-POLYMER CYS CYSmod1 peptide bond_SF43_CYS-SG
 SF44-CYS SF4 . NON-POLYMER CYS CYSmod1 peptide bond_SF44_CYS-SG
 SF31-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF31_CYS-SG
-SF32-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF32_CYS-SG
+SF37-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF37_CYS-SG
 SF33-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF33_CYS-SG
 SF34-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF34_CYS-SG
 ACYSNN ACY ACYmod NON-POLYMER SNN SNNmod1 NON-POLYMER 'ACYSNN'
@@ -36133,6 +36133,7 @@ SERm1 SERINE SER peptide
 CYS-SS HG-deletete CYS peptide
 CYSmod1 CYS-HG-delete_with_atom_type CYS peptide
 MPRm1 MPR-HS3-delete_with_atom_type MPR NON-POLYMER
+LYZm1     5-HYDROXYLYSINE      LYZ       peptide
 FORm1 FOR-H2-delete FOR NON-POLYMER
 NH3 NH3-terminus . peptide
 NH1 NH1-terminus . peptide
@@ -37283,6 +37284,7 @@ FOR_C-C 1 C 2 C 2 O 124.100 3.000
 FOR_C-C 1 O 1 C 2 C 129.100 3.000
 
 data_link_FOR-LYZ
+
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -37292,7 +37294,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-FOR-LYZ 1 NZ 2 C single 1.329 .020
+FOR-LYZ   1         NZ        2         C         SINGLE    1.366       0.0200                
 
 loop_
 _chem_link_angle.link_id
@@ -37304,10 +37306,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-FOR-LYZ 2 C 1 NE 1 CE 111.000 3.000
-FOR-LYZ 2 O 2 C 1 NZ 120.000 3.000
-FOR-LYZ 2 OXT 2 C 1 NZ 120.000 3.000
-FOR-LYZ 2 O 2 C 2 OXT 120.000 3.000
+FOR-LYZ   1         CE        1         NZ        2         C         119.166        3.00
+FOR-LYZ   2         C         1         NZ        1         HZ1       116.316        3.00
+FOR-LYZ   2         O         2         C         1         NZ        123.801        3.00
+FOR-LYZ   1         NZ        2         C         2         H1        117.093        3.00
 
 loop_
 _chem_link_tor.link_id
@@ -37318,13 +37320,25 @@ _chem_link_tor.atom_2_comp_id
 _chem_link_tor.atom_id_2
 _chem_link_tor.atom_3_comp_id
 _chem_link_tor.atom_id_3
-_chem_link_tor.atom_4_comp_id
-_chem_link_tor.atom_id_4
-_chem_link_tor.value_angle
+_chem_link_tor.atom_4_comp_id 
+_chem_link_tor.atom_id_4      
+_chem_link_tor.value_angle    
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-FOR-LYZ var1 1 CD 1 CE 1 NZ 2 C 180.00 30.0 2
-FOR-LYZ var2 1 CE 1 NZ 2 C 2 OXT 180.00 30.0 2
+FOR-LYZ   sp2_sp2_1       2         O         2         C         1         NZ        1         CE        180.000        0         2
+FOR-LYZ   sp2_sp3_2       2         C         1         NZ        1         CE        1         CD        120.000        10.0      6
+FOR-LYZ   sp2_sp3_2       2         C         1         NZ        1         CE        1         CD        120.000        10.0      6
+
+loop_
+_chem_link_plane.link_id
+_chem_link_plane.plane_id
+_chem_link_plane.atom_comp_id 
+_chem_link_plane.atom_id      
+_chem_link_plane.dist_esd     
+FOR-LYZ   plan-2    2         C         0.020
+FOR-LYZ   plan-2    2         H1        0.020
+FOR-LYZ   plan-2    1         NZ        0.020
+FOR-LYZ   plan-2    2         O         0.020
 
 data_link_ACE_C-N
 loop_
@@ -38876,7 +38890,7 @@ _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
 SF31-CYS 1 FE1 2 SG 2 CB 113.470 3.000
 
-data_link_SF32-CYS
+data_link_SF37-CYS
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -38886,7 +38900,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-SF32-CYS 1 FE2 2 SG single 2.260 .020
+SF37-CYS 1 FE7 2 SG single 2.260 .020
 
 loop_
 _chem_link_angle.link_id
@@ -38898,7 +38912,7 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-SF32-CYS 1 FE2 2 SG 2 CB 113.470 3.000
+SF37-CYS 1 FE7 2 SG 2 CB 113.470 3.000
 
 data_link_SF33-CYS
 loop_
@@ -42103,6 +42117,69 @@ _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 MPRm1 delete C2 C3 S3 HS3 . .
 
+data_mod_LYZm1
+
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+LYZm1          delete         HZ2       .         H         H         0
+LYZm1          delete         HZ3       .         H         H         0
+LYZm1          change         NZ        .         N         N31       0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+LYZm1          delete         NZ        HZ2       single         .              .         .         .
+LYZm1          delete         NZ        HZ3       single         .              .         .         .
+LYZm1          change         CD        CE        single         1.519          0.0197    1.519          0.0197
+LYZm1          change         CE        NZ        single         1.451          0.0100    1.451          0.0100
+LYZm1          change         NZ        HZ1       single         0.868          0.0200    1.016          0.0100
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+LYZm1          delete         CE        NZ        HZ2       .              .
+LYZm1          delete         CE        NZ        HZ3       .              .
+LYZm1          delete         HZ1       NZ        HZ2       .              .
+LYZm1          delete         HZ1       NZ        HZ3       .              .
+LYZm1          delete         HZ2       NZ        HZ3       .              .
+LYZm1          change         CG        CD        CE        110.882        1.50
+LYZm1          change         CE        CD        OH        110.735        1.50
+LYZm1          change         CD        CE        NZ        111.845        3.00
+LYZm1          change         CD        CE        HE3       108.828        1.50
+LYZm1          change         CD        CE        HE2       108.828        1.50
+LYZm1          change         CE        NZ        HZ1       115.193        3.00
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+LYZm1          delete         CD        CE        NZ        HZ3       .           .           .           .
+
 data_mod_FORm1
 loop_
 _chem_mod_atom.mod_id
@@ -44974,10 +45051,10 @@ _chem_mod_plane_atom.function
 _chem_mod_plane_atom.plane_id
 _chem_mod_plane_atom.atom_id
 _chem_mod_plane_atom.new_dist_esd
-TPNmodC delete plan-4 "C5'" .
-TPNmodC delete plan-4 "C'" .
-TPNmodC delete plan-4 OXT .
-TPNmodC delete plan-4 "O1'" .
+TPNmodC delete plan-3 "C5'" .
+TPNmodC delete plan-3 "C'" .
+TPNmodC delete plan-3 OXT .
+TPNmodC delete plan-3 "O1'" .
 
 data_mod_TPNmodN
 loop_
