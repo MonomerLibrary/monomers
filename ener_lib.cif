@@ -47,8 +47,10 @@ data_energy
 #ATOMTYPE HOH2 = hydrogen of water
 #ATOMTYPE HSH1 = hydrogen of sulphur
 #HEADER        N Nitrogen SP1
-#ATOMTYPE NS   = without hydrogen ( triple bond )
-#ATOMTYPE NS1  = connected to 1 hydrogen
+#ATOMTYPE NSP   = without hydrogen ( triple bond )
+#ATOMTYPE NSP1   = with one hydrogen ( triple bond )
+#ATOMTYPE NS1  = connected to 1 hydrogen = NSP1
+#ATOMTYPE NS   = without hydrogen ( triple bond ) = NSP
 #HEADER        N Nitrogen SP2
 #ATOMTYPE NC1  = connected to 1 hyd. in a charged group ( NE of ARG )
 #ATOMTYPE NC2  = connected to 2 hyd. in a charged group ( NH2 of ARG )
@@ -159,7 +161,9 @@ _lib_atom.sp
  CH3     12.01150  N     1.700     1.940     .     C   4  3
  CT      12.01150  N     1.700     1.850     .     C   4  3
 #
- NS      14.00670  N     1.550     1.600    1.32   N   3  1
+ NSP     14.00670  A     1.550     1.600    1.32   N   3  1
+ NSP1    14.00670  D     1.550     1.600    1.32   N   3  1
+ NS      14.00670  A     1.550     1.600    1.32   N   3  1
  NS1     14.00670  D     1.550     1.600    1.32   N   3  1
  N       14.00670  B     1.550     1.600    1.32   N   3  2
  NC1     14.00670  D     1.550     1.600    1.32   N   3  2
@@ -524,6 +528,10 @@ _lib_bond.value_esd
  CT   CH3  single    200.000    1.524   0.020
  CT   CT   single    200.000    1.524   0.020
  CT   CSP  single    200.000    1.470   0.020
+ 
+ NSP  .    triple       .       1.170    .
+ NSP1 .    triple       .       1.170    .
+ NSP1 .    single       .       1.350    .      # ?
  NS1  .    triple       .       1.170    .
  NS1  .    single       .       1.350    .      # ?
  NS   .    triple       .       1.170    .
