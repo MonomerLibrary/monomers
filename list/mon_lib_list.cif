@@ -40383,7 +40383,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-HIS_TYR1 1 ND1 2 CB SINGLE 1.487 0.0143
+HIS_TYR1 1 ND1 2 CB SINGLE 1.479 0.0100
 
 loop_
 _chem_link_angle.link_id
@@ -40395,11 +40395,11 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-HIS_TYR1 1 CG 1 ND1 2 CB 125.808 2.04
-HIS_TYR1 1 CE1 1 ND1 2 CB 125.678 1.60
-HIS_TYR1 2 CG 2 CB 1 ND1 110.632 1.50
-HIS_TYR1 2 CA 2 CB 1 ND1 110.974 2.01
-HIS_TYR1 1 ND1 2 CB 2 HB2 106.903 1.50
+HIS_TYR1 1 CG 1 ND1 2 CB 126.908 3.00
+HIS_TYR1 1 CE1 1 ND1 2 CB 124.367 2.36
+HIS_TYR1 2 CA 2 CB 1 ND1 111.116 3.00
+HIS_TYR1 2 CG 2 CB 1 ND1 110.829 1.95
+HIS_TYR1 1 ND1 2 CB 2 HB2 106.371 1.50
 
 loop_
 _chem_link_tor.link_id
@@ -40415,7 +40415,8 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-HIS_TYR1 sp2_sp3_1 1 CG 1 ND1 2 CB 2 CA -90.000 10.00 6
+HIS_TYR1 sp2_sp3_1 1 CG 1 ND1 2 CB 2 CA 150.000 10.0 6
+HIS_TYR1 const_2   1 CB 1 CG 1 ND1 2 CB 0.000 0.0 1
 
 loop_
 _chem_link_chir.link_id
@@ -40436,10 +40437,16 @@ _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
 _chem_link_plane.dist_esd
-HIS_TYR1 plan-3 1 CG 0.020
-HIS_TYR1 plan-3 1 CE1 0.020
-HIS_TYR1 plan-3 2 CB 0.020
-HIS_TYR1 plan-3 1 ND1 0.020
+HIS_TYR1 plan-2 2 CB 0.020
+HIS_TYR1 plan-2 1 CB 0.020
+HIS_TYR1 plan-2 1 CG 0.020
+HIS_TYR1 plan-2 1 CD2 0.020
+HIS_TYR1 plan-2 1 CE1 0.020
+HIS_TYR1 plan-2 1 HD2 0.020
+HIS_TYR1 plan-2 1 HE1 0.020
+HIS_TYR1 plan-2 1 HE2 0.020
+HIS_TYR1 plan-2 1 NE2 0.020
+HIS_TYR1 plan-2 1 ND1 0.020
 
 data_link_HIS_TYR2
 loop_
@@ -45606,6 +45613,7 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
 HISmod1 delete HD1 . H H 0
+HISmod1 change NE2 . N NR15 0
 
 loop_
 _chem_mod_bond.mod_id
@@ -45618,8 +45626,11 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 HISmod1 delete ND1 HD1 single . . . .
-HISmod1 change CG ND1 single 1.393 0.0100 1.393 0.0100
-HISmod1 change ND1 CE1 double 1.327 0.0106 1.327 0.0106
+HISmod1 change CB CG single 1.491 0.0100 1.491 0.0100
+HISmod1 change CG ND1 single 1.369 0.0179 1.369 0.0179
+HISmod1 change CG CD2 double 1.357 0.0100 1.357 0.0100
+HISmod1 change ND1 CE1 double 1.336 0.0200 1.336 0.0200
+HISmod1 change CE1 HE1 single 0.939 0.0134 1.082 0.0130
 
 loop_
 _chem_mod_angle.mod_id
@@ -45631,7 +45642,22 @@ _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
 HISmod1 delete CG ND1 HD1 . .
 HISmod1 delete CE1 ND1 HD1 . .
-HISmod1 change CG ND1 CE1 108.514 1.50
+HISmod1 change CB CG ND1 123.044 1.50
+HISmod1 change CG CD2 HD2 126.231 1.50
+HISmod1 change ND1 CE1 HE1 125.433 1.50
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+HISmod1 change ND1 CE1 NE2 CD2 const_29 0.000 0.0 2
 
 loop_
 _chem_mod_plane_atom.mod_id
@@ -45639,16 +45665,16 @@ _chem_mod_plane_atom.function
 _chem_mod_plane_atom.plane_id
 _chem_mod_plane_atom.atom_id
 _chem_mod_plane_atom.new_dist_esd
-HISmod1 delete plan CB 0.020
-HISmod1 delete plan CG 0.020
-HISmod1 delete plan ND1 0.020
-HISmod1 delete plan CE1 0.020
-HISmod1 delete plan CD2 0.020
-HISmod1 delete plan NE2 0.020
-HISmod1 delete plan HD1 0.020
-HISmod1 delete plan HD2 0.020
-HISmod1 delete plan HE1 0.020
-HISmod1 delete plan HE2 0.020
+HISmod1 delete plan-1 CB 0.020
+HISmod1 delete plan-1 CG 0.020
+HISmod1 delete plan-1 ND1 0.020
+HISmod1 delete plan-1 CE1 0.020
+HISmod1 delete plan-1 CD2 0.020
+HISmod1 delete plan-1 NE2 0.020
+HISmod1 delete plan-1 HD1 0.020
+HISmod1 delete plan-1 HD2 0.020
+HISmod1 delete plan-1 HE1 0.020
+HISmod1 delete plan-1 HE2 0.020
 
 data_mod_FADmod2
 loop_
@@ -46140,9 +46166,7 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 TYRmod1 delete CB HB3 single . . . .
-TYRmod1 change CG CB single 1.525 0.0100 1.525 0.0100
-TYRmod1 change CB CA single 1.540 0.0128 1.540 0.0128
-TYRmod1 change CB HB2 single 0.988 0.010 1.089 0.010
+TYRmod1 change CB CG single 1.521 0.0100 1.521 0.0100
 
 loop_
 _chem_mod_angle.mod_id
@@ -46152,12 +46176,18 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-TYRmod1 delete CG CB HB3 . .
 TYRmod1 delete CA CB HB3 . .
+TYRmod1 delete CG CB HB3 . .
 TYRmod1 delete HB3 CB HB2 . .
-TYRmod1 change CG CB CA 114.257 1.50
-TYRmod1 change CG CB HB2 106.956 1.50
-TYRmod1 change CA CB HB2 106.586 1.50
+TYRmod1 change CA N H 109.887 3.00
+TYRmod1 change CA N H2 109.887 3.00
+TYRmod1 change CA N H3 109.887 3.00
+TYRmod1 change N CA CB 113.399 3.00
+TYRmod1 change CA CB CG 113.308 3.00
+TYRmod1 change CA CB HB2 106.713 1.50
+TYRmod1 change CG CB HB2 107.067 3.00
+TYRmod1 change CB CG CD1 120.731 3.00
+TYRmod1 change CB CG CD2 120.731 3.00
 
 loop_
 _chem_mod_tor.mod_id
@@ -46166,29 +46196,12 @@ _chem_mod_tor.atom_id_1
 _chem_mod_tor.atom_id_2
 _chem_mod_tor.atom_id_3
 _chem_mod_tor.atom_id_4
+_chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
-TYRmod1 change CD2 CG CB CA 150.000 10.00
-TYRmod1 change CG CB CA C 60.000 10.00
-
-loop_
-_chem_mod_plane_atom.mod_id
-_chem_mod_plane_atom.function
-_chem_mod_plane_atom.plane_id
-_chem_mod_plane_atom.atom_id
-_chem_mod_plane_atom.new_dist_esd
-TYRmod1 delete plan-1 CB 0.020
-TYRmod1 delete plan-1 CD1 0.020
-TYRmod1 delete plan-1 CD2 0.020
-TYRmod1 delete plan-1 CE1 0.020
-TYRmod1 delete plan-1 CE2 0.020
-TYRmod1 delete plan-1 CG 0.020
-TYRmod1 delete plan-1 CZ 0.020
-TYRmod1 delete plan-1 HD1 0.020
-TYRmod1 delete plan-1 HD2 0.020
-TYRmod1 delete plan-1 HE1 0.020
-TYRmod1 delete plan-1 HE2 0.020
-TYRmod1 delete plan-1 OH 0.020
+_chem_mod_tor.new_period
+TYRmod1 change N CA CB CG sp3_sp3_28 180.000 10.0 3
+TYRmod1 change CD1 CG CB CA sp2_sp3_19 150.000 10.0 6
 
 data_mod_HISmod3
 loop_
