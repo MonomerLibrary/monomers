@@ -40158,7 +40158,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-GTP-p 1 "O3'" 2 P SINGLE 1.606 0.0100
+GTP-p 1 "O3'" 2 P SINGLE 1.607 0.0100
 
 loop_
 _chem_link_angle.link_id
@@ -40170,10 +40170,10 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-GTP-p 1 "C3'" 1 "O3'" 2 P 109.471 3.00
-GTP-p 2 OP1 2 P 1 "O3'" 108.530 2.45
-GTP-p 2 OP2 2 P 1 "O3'" 108.530 2.45
-GTP-p 2 "O5'" 2 P 1 "O3'" 101.077 2.30
+GTP-p 1 "C3'" 1 "O3'" 2 P 121.082 1.50
+GTP-p 2 OP1 2 P 1 "O3'" 109.493 3.00
+GTP-p 2 OP2 2 P 1 "O3'" 109.493 3.00
+GTP-p 2 "O5'" 2 P 1 "O3'" 100.661 3.00
 
 loop_
 _chem_link_tor.link_id
@@ -40189,7 +40189,8 @@ _chem_link_tor.atom_id_4
 _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
-GTP-p sp3_sp3_1 1 "C3'" 1 "O3'" 2 P 2 OP1 60.000 10.00 3
+GTP-p sp3_sp3_1 1 "C3'" 1 "O3'" 2 P 2 OP1 60.000 10.0 3
+GTP-p sp3_sp3_2 1 "C4'" 1 "C3'" 1 "O3'" 2 P 180.000 10.0 3
 
 loop_
 _chem_link_chir.link_id
@@ -40202,7 +40203,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-GTP-p 2 P 1 "O3'" 2 "O5'" 2 OP2 both
+GTP-p 2 P 2 "O5'" 1 "O3'" 2 OP2 both
 
 data_link_GYC-pept
 loop_
@@ -45837,7 +45838,6 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 GTPmod1 delete "O3'" "HO3'" single . . . .
-GTPmod1 change "C3'" "O3'" single 1.425 0.0152 1.425 0.0152
 
 loop_
 _chem_mod_angle.mod_id
@@ -45848,6 +45848,10 @@ _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
 GTPmod1 delete "C3'" "O3'" "HO3'" . .
+GTPmod1 change "C5'" "C4'" "C3'" 114.817 2.32
+GTPmod1 change "C3'" "C4'" "H4'" 109.150 1.50
+GTPmod1 change "C2'" "C3'" "H3'" 110.368 2.92
+GTPmod1 change "C3'" "C2'" "H2'" 110.368 2.92
 
 loop_
 _chem_mod_tor.mod_id
@@ -45856,29 +45860,11 @@ _chem_mod_tor.atom_id_1
 _chem_mod_tor.atom_id_2
 _chem_mod_tor.atom_id_3
 _chem_mod_tor.atom_id_4
+_chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
-GTPmod1 delete "C4'" "C3'" "O3'" "HO3'" . .
-
-loop_
-_chem_mod_plane_atom.mod_id
-_chem_mod_plane_atom.function
-_chem_mod_plane_atom.plane_id
-_chem_mod_plane_atom.atom_id
-_chem_mod_plane_atom.new_dist_esd
-GTPmod1 delete plan-1 "C1'" 0.020
-GTPmod1 delete plan-1 C4 0.020
-GTPmod1 delete plan-1 C5 0.020
-GTPmod1 delete plan-1 C6 0.020
-GTPmod1 delete plan-1 C8 0.020
-GTPmod1 delete plan-1 H8 0.020
-GTPmod1 delete plan-1 N3 0.020
-GTPmod1 delete plan-1 N7 0.020
-GTPmod1 delete plan-1 N9 0.020
-GTPmod1 delete plan-3 C2 0.020
-GTPmod1 delete plan-3 HN21 0.020
-GTPmod1 delete plan-3 HN22 0.020
-GTPmod1 delete plan-3 N2 0.020
+_chem_mod_tor.new_period
+GTPmod1 delete "C4'" "C3'" "O3'" "HO3'" . . . 0
 
 data_mod_GYCmod1
 loop_
