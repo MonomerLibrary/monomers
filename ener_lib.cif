@@ -49,8 +49,8 @@ data_energy
 #HEADER        N Nitrogen SP1
 #ATOMTYPE NSP   = without hydrogen ( triple bond )
 #ATOMTYPE NSP1   = with one hydrogen ( triple bond )
-#ATOMTYPE NS1  = connected to 1 hydrogen = NSP1
 #ATOMTYPE NS   = without hydrogen ( triple bond ) = NSP
+#ATOMTYPE NS1  = connected to 1 hydrogen = NSP1
 #HEADER        N Nitrogen SP2
 #ATOMTYPE NC1  = connected to 1 hyd. in a charged group ( NE of ARG )
 #ATOMTYPE NC2  = connected to 2 hyd. in a charged group ( NH2 of ARG )
@@ -78,7 +78,6 @@ data_energy
 #ATOMTYPE N31  = connected to 1 hydrogen
 #ATOMTYPE N32  = connected to 2 hydrogens
 #ATOMTYPE N33  = connected to 3 hydrogens
-
 #HEADER        P Phosphor
 #ATOMTYPE P    = tetragonal P with four bonds
 #ATOMTYPE P1   = with three bonds.
@@ -162,10 +161,10 @@ _lib_atom.sp
  CH3     12.01150  N     1.700     1.940     .     C   4  3
  CT      12.01150  N     1.700     1.850     .     C   4  3
 #
- NSP     14.00670  A     1.550     1.600    1.32   N   3  1
- NSP1    14.00670  D     1.550     1.600    1.32   N   3  1
  NS      14.00670  A     1.550     1.600    1.32   N   3  1
+ NSP     14.00670  A     1.550     1.600    1.32   N   3  1
  NS1     14.00670  D     1.550     1.600    1.32   N   3  1
+ NSP1    14.00670  D     1.550     1.600    1.32   N   3  1
  N       14.00670  B     1.550     1.600    1.32   N   3  2
  NC1     14.00670  D     1.550     1.600    1.32   N   3  2
  NH0     14.00670  N     1.550     1.600    1.32   N   3  2
@@ -530,17 +529,20 @@ _lib_bond.value_esd
  CT   CH3  single    200.000    1.524   0.020
  CT   CT   single    200.000    1.524   0.020
  CT   CSP  single    200.000    1.470   0.020
- 
- NSP  .    triple       .       1.170    .
- NSP1 .    triple       .       1.170    .
- NSP1 .    single       .       1.350    .      # ?
  NS1  .    triple       .       1.170    .
  NS1  .    single       .       1.350    .      # ?
+ NSP1 .    triple       .       1.170    .
+ NSP1 .    single       .       1.350    .      # ?
  NS   .    triple       .       1.170    .
  NS   .    single       .       1.350    .      # ?
  NS   CSP  triple       .       1.158    .
  NS   CSP1 triple       .       1.158    .
  NS   NS   triple       .       1.158    .      # ?
+ NSP  .    triple       .       1.170    .
+ NSP  .    single       .       1.350    .      # ?
+ NSP  CSP  triple       .       1.158    .
+ NSP  CSP1 triple       .       1.158    .
+ NSP  NSP  triple       .       1.158    .      # ?
  N    .    single       .       1.410    .      # ?
  N    N    single       .       1.410    .      # ?
  N    .    deloc        .       1.30    0.020
@@ -2050,6 +2052,7 @@ _lib_angle.value
  F    CT   F      50.000  109.470
  F    CT   F      50.000  109.470
  NS   NS   NS     60.     180.000
+ NSP  NSP  NSP    60.     180.000
  CH1  N    C      80.000  121.000
  CH2  N    C      80.000  127.000
  CH3  N    C      80.000  127.000
@@ -2422,6 +2425,7 @@ _lib_angle.value
  .     CT       .       .    109.5
 #
  .     NS        .       .    180.0
+ .     NSP       .       .    180.0
  .     N         .       .    120.0
  .     NC1       .       .    120.0
  .     NH1       .       .    120.0
