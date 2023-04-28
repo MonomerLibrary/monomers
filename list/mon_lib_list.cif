@@ -36073,7 +36073,7 @@ SF34-CYS SF3 . NON-POLYMER CYS CYSmod1 peptide bond_SF34_CYS-SG
 ACYSNN ACY ACYmod NON-POLYMER SNN SNNmod1 NON-POLYMER 'ACYSNN'
 pept-SNN . DEL-OXT peptide SNN SNNmod NON-POLYMER 'pept-SNN'
 TPN-TPN TPN TPNmodC NON-POLYMER TPN TPNmodN NON-POLYMER TPN-TPN
-PEP-ORN . DEL-OXT peptide ORN ORN-NE peptide PEP-ORN
+pept-ORN . DEL-OXT peptide ORN ORN-NE peptide pept-ORN
 symmetry . . . . . . dummy_link
 02J-pept 02J 02Jmod1 NON-POLYMER . DEL-HN1 peptide 02J-pept
 ALPHA2-6 . DEL-HO6 pyranose . DELk-O2 ketopyranose ALPHA2-6
@@ -39067,7 +39067,7 @@ TPN-TPN plan-9 2 "C2'" 0.020
 TPN-TPN plan-9 2 "N1'" 0.020
 TPN-TPN plan-9 2 "H1'1" 0.020
 
-data_link_PEP-ORN
+data_link_pept-ORN
 loop_
 _chem_link_bond.link_id
 _chem_link_bond.atom_1_comp_id
@@ -39077,7 +39077,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-PEP-ORN 1 C 2 NE single 1.330 0.020
+pept-ORN 1 C 2 NE SINGLE 1.329 0.0100
 
 loop_
 _chem_link_angle.link_id
@@ -39089,10 +39089,27 @@ _chem_link_angle.atom_3_comp_id
 _chem_link_angle.atom_id_3
 _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
-PEP-ORN 1 C 2 NE 2 CD 121.500 3.000
-PEP-ORN 1 C 2 NE 2 HE1 124.300 3.000
-PEP-ORN 1 O 1 C 2 NE 123.000 3.000
-PEP-ORN 1 CA 1 C 2 NE 116.200 3.000
+pept-ORN 1 CA 1 C 2 NE 116.218 3.00
+pept-ORN 1 O 1 C 2 NE 123.265 1.50
+pept-ORN 2 CD 2 NE 1 C 123.642 3.00
+pept-ORN 1 C 2 NE 2 HE1 118.237 3.00
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+pept-ORN sp2_sp2_1 1 CA 1 C 2 NE 2 CD 180.000 5 2
+pept-ORN sp2_sp3_1 1 C 2 NE 2 CD 2 CG 120.000 10.0 6
 
 loop_
 _chem_link_plane.link_id
@@ -39100,15 +39117,14 @@ _chem_link_plane.plane_id
 _chem_link_plane.atom_comp_id
 _chem_link_plane.atom_id
 _chem_link_plane.dist_esd
-PEP-ORN plan-1 1 CA 0.020
-PEP-ORN plan-1 1 C 0.020
-PEP-ORN plan-1 1 O 0.020
-PEP-ORN plan-1 2 NE 0.020
-PEP-ORN plan-1 2 HE1 0.020
-PEP-ORN plan-2 1 C 0.020
-PEP-ORN plan-2 2 CD 0.020
-PEP-ORN plan-2 2 NE 0.020
-PEP-ORN plan-2 2 HE1 0.020
+pept-ORN plan-1 1 CA 0.020
+pept-ORN plan-1 1 C 0.020
+pept-ORN plan-1 2 NE 0.020
+pept-ORN plan-1 1 O 0.020
+pept-ORN plan-2 2 CD 0.020
+pept-ORN plan-2 1 C 0.020
+pept-ORN plan-2 2 HE1 0.020
+pept-ORN plan-2 2 NE 0.020
 
 data_link_symmetry
 loop_
@@ -45010,10 +45026,9 @@ _chem_mod_atom.atom_id
 _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
-_chem_mod_atom.new_partial_charge
-ORN-NE delete HE3 . . . .
-ORN-NE delete HE2 . . . .
-ORN-NE change NE . . NH1 0.000
+_chem_mod_atom.new_charge
+ORN-NE delete HE2 . H H 0
+ORN-NE change NE . N NH1 0
 
 loop_
 _chem_mod_bond.mod_id
@@ -45025,8 +45040,10 @@ _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
-ORN-NE change CD NE . 1.450 0.020 1.450 0.020
-ORN-NE change NE HE1 . 0.914 0.010 1.036 0.016
+ORN-NE delete NE HE2 single . . . .
+ORN-NE change CG CD single 1.521 0.0200 1.521 0.0200
+ORN-NE change CD HD3 single 0.979 0.0175 1.089 0.0100
+ORN-NE change CD HD2 single 0.979 0.0175 1.089 0.0100
 
 loop_
 _chem_mod_angle.mod_id
@@ -45036,7 +45053,13 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-ORN-NE change CD NE HE1 118.500 3.000
+ORN-NE delete CD NE HE2 . .
+ORN-NE delete HE1 NE HE2 . .
+ORN-NE change CB CG CD 112.025 3.00
+ORN-NE change CG CD NE 112.594 1.78
+ORN-NE change CG CD HD3 109.172 2.35
+ORN-NE change CG CD HD2 109.172 2.35
+ORN-NE change CD NE HE1 118.122 3.00
 
 data_mod_HECmod1
 loop_
