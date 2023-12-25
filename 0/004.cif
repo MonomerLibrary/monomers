@@ -13,32 +13,33 @@ data_comp_004
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-004 C   C C    0  30.941 2.397  52.879
-004 N   N NT3  1  32.369 0.407  53.309
-004 O   O O    0  31.014 2.727  54.077
-004 CA  C CH1  0  31.195 0.919  52.538
-004 CB  C CR6  0  29.951 0.081  52.772
-004 CE  C CR16 0  27.664 -1.462 53.207
-004 CD1 C CR16 0  28.279 -0.822 54.264
-004 CD2 C CR16 0  28.183 -1.336 51.934
-004 CG1 C CR16 0  29.418 -0.055 54.048
-004 CG2 C CR16 0  29.321 -0.569 51.717
-004 OXT O OC   -1 30.680 3.161  51.933
-004 HN  H H    0  32.487 -0.487 53.135
-004 HNA H H    0  32.228 0.525  54.208
-004 H1  H H    0  33.124 0.865  53.060
-004 HA  H H    0  31.421 0.887  51.591
-004 HE  H H    0  26.891 -1.983 53.354
-004 HD1 H H    0  27.927 -0.905 55.136
-004 HD2 H H    0  27.765 -1.773 51.209
-004 HG1 H H    0  29.833 0.380  54.776
-004 HG2 H H    0  29.669 -0.489 50.843
+004 C   C   C C    0  30.941 2.397  52.879
+004 N   N   N NT3  1  32.369 0.407  53.309
+004 O   O   O O    0  31.014 2.727  54.077
+004 CA  CA  C CH1  0  31.195 0.919  52.538
+004 CB  CB  C CR6  0  29.951 0.081  52.772
+004 CE  CE  C CR16 0  27.664 -1.462 53.207
+004 CD1 CD1 C CR16 0  28.279 -0.822 54.264
+004 CD2 CD2 C CR16 0  28.183 -1.336 51.934
+004 CG1 CG1 C CR16 0  29.418 -0.055 54.048
+004 CG2 CG2 C CR16 0  29.321 -0.569 51.717
+004 OXT OXT O OC   -1 30.680 3.161  51.933
+004 H   HN  H H    0  32.487 -0.487 53.135
+004 H2  HNA H H    0  32.228 0.525  54.208
+004 H1  H1  H H    0  33.124 0.865  53.060
+004 HA  HA  H H    0  31.421 0.887  51.591
+004 HE  HE  H H    0  26.891 -1.983 53.354
+004 HD1 HD1 H H    0  27.927 -0.905 55.136
+004 HD2 HD2 H H    0  27.765 -1.773 51.209
+004 HG1 HG1 H H    0  29.833 0.380  54.776
+004 HG2 HG2 H H    0  29.669 -0.489 50.843
 
 loop_
 _chem_comp_bond.comp_id
@@ -61,8 +62,8 @@ _chem_comp_bond.value_dist_esd
 004 CD1 CG1 SINGLE y 1.386 0.0100 1.386 0.0100
 004 CB  CG2 SINGLE y 1.386 0.0100 1.386 0.0100
 004 CD2 CG2 DOUBLE y 1.386 0.0100 1.386 0.0100
-004 N   HN  SINGLE n 1.036 0.0160 0.918 0.0200
-004 N   HNA SINGLE n 1.036 0.0160 0.918 0.0200
+004 N   H   SINGLE n 1.036 0.0160 0.918 0.0200
+004 N   H2  SINGLE n 1.036 0.0160 0.918 0.0200
 004 N   H1  SINGLE n 1.036 0.0160 0.918 0.0200
 004 CA  HA  SINGLE n 1.089 0.0100 0.974 0.0200
 004 CE  HE  SINGLE n 1.082 0.0130 0.944 0.0161
@@ -81,12 +82,12 @@ _chem_comp_angle.value_angle_esd
 004 O   C   OXT 125.577 1.50
 004 O   C   CA  117.211 1.75
 004 OXT C   CA  117.211 1.75
-004 CA  N   HN  109.561 2.23
-004 CA  N   HNA 109.561 2.23
+004 CA  N   H   109.561 2.23
+004 CA  N   H2  109.561 2.23
 004 CA  N   H1  109.561 2.23
-004 HN  N   HNA 109.073 2.83
-004 HN  N   H1  109.073 2.83
-004 HNA N   H1  109.073 2.83
+004 H   N   H2  109.073 2.83
+004 H   N   H1  109.073 2.83
+004 H2  N   H1  109.073 2.83
 004 C   CA  N   109.935 2.65
 004 C   CA  CB  110.945 2.64
 004 C   CA  HA  106.938 1.92
@@ -123,7 +124,7 @@ _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
 004 sp2_sp3_1       O   C   CA  N   0.000   10.0 6
-004 sp3_sp3_1       C   CA  N   HN  180.000 10.0 3
+004 sp3_sp3_1       C   CA  N   H   180.000 10.0 3
 004 sp2_sp3_7       CG1 CB  CA  C   150.000 10.0 6
 004 const_sp2_sp2_3 CA  CB  CG1 CD1 180.000 5.0  2
 004 const_23        CA  CB  CG2 CD2 180.000 10.0 2
@@ -193,6 +194,4 @@ _chem_comp_alias.comp_id
 _chem_comp_alias.group
 _chem_comp_alias.atom_id
 _chem_comp_alias.atom_id_standard
-004 peptide H1  H
-004 peptide HN  H2
-004 peptide HNA H3
+004 peptide H1 H3

@@ -13,27 +13,28 @@ data_comp_XCN
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-XCN C   C C   0  -12.181 -41.428 -3.027
-XCN N   N NT3 1  -10.236 -42.845 -2.464
-XCN O   O O   0  -11.529 -40.694 -3.796
-XCN CA  C CH1 0  -11.408 -42.122 -1.899
-XCN CB  C CH2 0  -10.936 -41.112 -0.865
-XCN NC  N NSP 0  -12.494 -37.884 -1.356
-XCN SG  S S2  0  -12.255 -40.320 0.103
-XCN CS  C CSP 0  -12.395 -38.854 -0.749
-XCN OXT O OC  -1 -13.407 -41.647 -3.095
-XCN HN  H H   0  -9.795  -43.284 -1.798
-XCN HNX H H   0  -9.669  -42.251 -2.859
-XCN H1  H H   0  -10.517 -43.451 -3.084
-XCN HA  H H   0  -11.999 -42.781 -1.468
-XCN HB  H H   0  -10.424 -40.414 -1.327
-XCN HBA H H   0  -10.326 -41.566 -0.246
+XCN C   C   C C   0  -12.181 -41.428 -3.027
+XCN N   N   N NT3 1  -10.236 -42.845 -2.464
+XCN O   O   O O   0  -11.529 -40.694 -3.796
+XCN CA  CA  C CH1 0  -11.408 -42.122 -1.899
+XCN CB  CB  C CH2 0  -10.936 -41.112 -0.865
+XCN NC  NC  N NSP 0  -12.494 -37.884 -1.356
+XCN SG  SG  S S2  0  -12.255 -40.320 0.103
+XCN CS  CS  C CSP 0  -12.395 -38.854 -0.749
+XCN OXT OXT O OC  -1 -13.407 -41.647 -3.095
+XCN H   HN  H H   0  -9.795  -43.284 -1.798
+XCN H2  HNX H H   0  -9.669  -42.251 -2.859
+XCN H1  H1  H H   0  -10.517 -43.451 -3.084
+XCN HA  HA  H H   0  -11.999 -42.781 -1.468
+XCN HB  HB  H H   0  -10.424 -40.414 -1.327
+XCN HBA HBA H H   0  -10.326 -41.566 -0.246
 
 loop_
 _chem_comp_bond.comp_id
@@ -53,8 +54,8 @@ XCN CA CB  SINGLE n 1.520 0.0145 1.520 0.0145
 XCN CB SG  SINGLE n 1.817 0.0100 1.817 0.0100
 XCN NC CS  TRIPLE n 1.149 0.0200 1.149 0.0200
 XCN SG CS  SINGLE n 1.701 0.0200 1.701 0.0200
-XCN N  HN  SINGLE n 1.036 0.0160 0.911 0.0200
-XCN N  HNX SINGLE n 1.036 0.0160 0.911 0.0200
+XCN N  H   SINGLE n 1.036 0.0160 0.911 0.0200
+XCN N  H2  SINGLE n 1.036 0.0160 0.911 0.0200
 XCN N  H1  SINGLE n 1.036 0.0160 0.911 0.0200
 XCN CA HA  SINGLE n 1.089 0.0100 0.985 0.0200
 XCN CB HB  SINGLE n 1.089 0.0100 0.981 0.0167
@@ -70,12 +71,12 @@ _chem_comp_angle.value_angle_esd
 XCN CA  C  OXT 117.134 1.50
 XCN CA  C  O   117.134 1.50
 XCN OXT C  O   125.732 1.50
-XCN CA  N  HN  109.671 1.50
-XCN CA  N  HNX 109.671 1.50
+XCN CA  N  H   109.671 1.50
+XCN CA  N  H2  109.671 1.50
 XCN CA  N  H1  109.671 1.50
-XCN HN  N  HNX 109.028 2.41
-XCN HN  N  H1  109.028 2.41
-XCN HNX N  H1  109.028 2.41
+XCN H   N  H2  109.028 2.41
+XCN H   N  H1  109.028 2.41
+XCN H2  N  H1  109.028 2.41
 XCN C   CA N   109.494 1.50
 XCN C   CA CB  110.419 2.31
 XCN C   CA HA  108.606 1.50
@@ -102,7 +103,7 @@ _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
 XCN sp2_sp3_1  OXT C  CA N  0.000   10.0 6
-XCN sp3_sp3_1  C   CA N  HN 180.000 10.0 3
+XCN sp3_sp3_1  C   CA N  H  180.000 10.0 3
 XCN sp3_sp3_10 C   CA CB SG 180.000 10.0 3
 XCN sp3_sp3_19 CA  CB SG CS 180.000 10.0 3
 
@@ -155,6 +156,4 @@ _chem_comp_alias.comp_id
 _chem_comp_alias.group
 _chem_comp_alias.atom_id
 _chem_comp_alias.atom_id_standard
-XCN peptide H1  H
-XCN peptide HN  H2
-XCN peptide HNX H3
+XCN peptide H1 H3
