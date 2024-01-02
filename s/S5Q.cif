@@ -1,11 +1,3 @@
-global_
-_lib_name         ?
-_lib_version      ?
-_lib_update       ?
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
-#
 data_comp_list
 loop_
 _chem_comp.id
@@ -15,115 +7,81 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-S5Q      S5Q 'FeFe cofactor                       ' NON-POLYMER        18  18 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
-#
+S5Q S5Q s5q '.' 1 1 '.'
+
 data_comp_S5Q
-#
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
-_chem_comp_atom.x
-_chem_comp_atom.y
-_chem_comp_atom.z
- S5Q           S3A    S    S2        0.000     -0.087    0.220   -0.041
- S5Q           FE4    FE   FE        0.000     -1.247    0.174   -1.867
- S5Q           S4A    S    S3       -1.000     -1.374    2.037   -3.100
- S5Q           FE3    FE   FE        0.000     -3.391    1.584   -2.324
- S5Q           S5A    S    S2        0.000     -4.512    3.129   -1.178
- S5Q           S2A    S    S3       -1.000     -4.281    0.400   -3.958
- S5Q           FE1    FE   FE        0.000     -2.352    0.534   -3.885
- S5Q           FE2    FE   FE        0.000     -3.310   -1.036   -2.633
- S5Q           S2B    S    S2        0.000     -4.021   -2.946   -1.771
- S5Q           S1A    S    S3       -1.000     -1.304   -1.099   -3.635
- S5Q           CX     C    C         2.000     -3.040    0.117   -0.994
- S5Q           FE5    FE   FE        0.000     -2.124    0.095    0.789
- S5Q           FE7    FE   FE        0.000     -4.410    1.258   -0.027
- S5Q           S4B    S    S3       -1.000     -3.520    1.266    1.976
- S5Q           FE6    FE   FE        0.000     -4.190   -1.395   -0.225
- S5Q           S3B    S    S3       -1.000     -5.809   -0.233    0.670
- S5Q           S1B    S    S3       -1.000     -3.336   -1.503    1.774
- S5Q           FE8    FE   FE        0.000     -4.895   -0.292    2.684
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- S5Q      S3A    n/a    FE4    START
- S5Q      FE4    S3A    S4A    .
- S5Q      S4A    FE4    FE3    .
- S5Q      FE3    S4A    S2A    .
- S5Q      S5A    FE3    .      .
- S5Q      S2A    FE3    FE2    .
- S5Q      FE1    S2A    .      .
- S5Q      FE2    S2A    CX     .
- S5Q      S2B    FE2    .      .
- S5Q      S1A    FE2    .      .
- S5Q      CX     FE2    FE6    .
- S5Q      FE5    CX     .      .
- S5Q      FE7    CX     S4B    .
- S5Q      S4B    FE7    .      .
- S5Q      FE6    CX     S1B    .
- S5Q      S3B    FE6    .      .
- S5Q      S1B    FE6    FE8    .
- S5Q      FE8    S1B    .      END
- S5Q      S4B    FE8    .    ADD
- S5Q      S4B    FE5    .    ADD
- S5Q      FE8    S3B    .    ADD
- S5Q      FE5    S3A    .    ADD
- S5Q      FE5    S1B    .    ADD
- S5Q      FE7    S5A    .    ADD
- S5Q      FE7    S3B    .    ADD
- S5Q      FE6    S2B    .    ADD
- S5Q      CX     FE4    .    ADD
- S5Q      CX     FE3    .    ADD
- S5Q      FE4    S1A    .    ADD
- S5Q      S1A    FE1    .    ADD
- S5Q      S4A    FE1    .    ADD
+_chem_comp_atom.charge
+_chem_comp_atom.pdbx_model_Cartn_x_ideal
+_chem_comp_atom.pdbx_model_Cartn_y_ideal
+_chem_comp_atom.pdbx_model_Cartn_z_ideal
+S5Q S4B S1  S  S  -1 -2.713 1.138  1.230
+S5Q FE8 FE1 FE FE 0  -3.969 0.050  -0.218
+S5Q FE5 FE2 FE FE 0  -1.178 -0.322 1.519
+S5Q S3A S2  S  S  0  0.187  -1.068 3.064
+S5Q FE7 FE3 FE FE 0  -1.186 1.391  -0.343
+S5Q S5A S3  S  S  0  0.036  3.229  -0.403
+S5Q S3B S4  S  S  -1 -2.475 0.451  -1.763
+S5Q FE6 FE4 FE FE 0  -1.203 -1.095 -0.962
+S5Q S2B S5  S  S  0  0.090  -2.599 -1.915
+S5Q S1B S6  S  S  -1 -2.711 -1.566 0.548
+S5Q CX  C1  C  C  2  0.154  -0.034 0.096
+S5Q FE4 FE5 FE FE 0  1.540  -0.542 1.407
+S5Q S1A S7  S  S  -1 3.021  -1.699 0.298
+S5Q S4A S8  S  S  -1 2.809  1.301  1.383
+S5Q FE1 FE6 FE FE 0  2.746  0.164  -0.213
+S5Q FE3 FE7 FE FE 0  1.398  1.466  -0.316
+S5Q S2A S9  S  S  -1 2.465  0.651  -2.063
+S5Q FE2 FE8 FE FE 0  1.412  -1.013 -1.113
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
+_chem_comp_bond.pdbx_stereo_config
+_chem_comp_bond.pdbx_ordinal
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- S5Q      S4B    FE8       single      2.204    0.020
- S5Q      S4B    FE5       single      2.138    0.020
- S5Q      S4B    FE7       single      2.207    0.020
- S5Q      FE8    S3B       single      2.186    0.020
- S5Q      FE8    S1B       single      2.186    0.020
- S5Q      FE5    S3A       single      2.192    0.020
- S5Q      FE5    S1B       single      2.200    0.020
- S5Q      FE5    CX        single      1.970    0.020
- S5Q      FE4    S3A       single      2.203    0.020
- S5Q      FE7    S5A       single      2.208    0.020
- S5Q      FE7    S3B       single      2.136    0.020
- S5Q      FE7    CX        single      2.005    0.020
- S5Q      S5A    FE3       single      2.230    0.020
- S5Q      S3B    FE6       single      2.156    0.020
- S5Q      FE6    S2B       single      2.200    0.020
- S5Q      S1B    FE6       single      2.185    0.020
- S5Q      FE6    CX        single      2.022    0.020
- S5Q      S2B    FE2       single      2.215    0.020
- S5Q      CX     FE4       single      1.974    0.020
- S5Q      CX     FE3       single      1.992    0.020
- S5Q      CX     FE2       single      2.001    0.020
- S5Q      FE4    S1A       single      2.182    0.020
- S5Q      S4A    FE4       single      2.238    0.020
- S5Q      S1A    FE1       single      1.951    0.020
- S5Q      S1A    FE2       single      2.247    0.020
- S5Q      S4A    FE1       single      1.961    0.020
- S5Q      FE3    S4A       single      2.215    0.020
- S5Q      FE1    S2A       single      1.934    0.020
- S5Q      S2A    FE3       single      2.203    0.020
- S5Q      FE2    S2A       single      2.186    0.020
+_chem_comp_bond.value_dist_nucleus
+_chem_comp_bond.value_dist_nucleus_esd
+S5Q S4B FE8 SING N N 1  2.359 0.124 2.359 0.124
+S5Q S4B FE5 SING N N 2  2.409 0.05  2.409 0.05
+S5Q S4B FE7 SING N N 3  2.409 0.05  2.409 0.05
+S5Q FE8 S3B SING N N 4  2.359 0.124 2.359 0.124
+S5Q FE8 S1B SING N N 5  2.359 0.124 2.359 0.124
+S5Q FE5 S3A SING N N 6  2.409 0.05  2.409 0.05
+S5Q FE5 S1B SING N N 7  2.409 0.05  2.409 0.05
+S5Q FE5 CX  SING N N 8  2.034 0.05  2.034 0.05
+S5Q S3A FE4 SING N N 9  2.409 0.05  2.409 0.05
+S5Q FE7 S5A SING N N 10 2.409 0.05  2.409 0.05
+S5Q FE7 S3B SING N N 11 2.409 0.05  2.409 0.05
+S5Q FE7 CX  SING N N 12 2.034 0.05  2.034 0.05
+S5Q S5A FE3 SING N N 13 2.409 0.05  2.409 0.05
+S5Q S3B FE6 SING N N 14 2.409 0.05  2.409 0.05
+S5Q FE6 S2B SING N N 15 2.409 0.05  2.409 0.05
+S5Q FE6 S1B SING N N 16 2.409 0.05  2.409 0.05
+S5Q FE6 CX  SING N N 17 2.034 0.05  2.034 0.05
+S5Q S2B FE2 SING N N 18 2.409 0.05  2.409 0.05
+S5Q CX  FE4 SING N N 19 2.034 0.05  2.034 0.05
+S5Q CX  FE3 SING N N 20 2.034 0.05  2.034 0.05
+S5Q CX  FE2 SING N N 21 2.034 0.05  2.034 0.05
+S5Q FE4 S1A SING N N 22 2.409 0.05  2.409 0.05
+S5Q FE4 S4A SING N N 23 2.409 0.05  2.409 0.05
+S5Q S1A FE1 SING N N 24 2.322 0.044 2.322 0.044
+S5Q S1A FE2 SING N N 25 2.409 0.05  2.409 0.05
+S5Q S4A FE1 SING N N 26 2.322 0.044 2.322 0.044
+S5Q S4A FE3 SING N N 27 2.409 0.05  2.409 0.05
+S5Q FE1 S2A SING N N 28 2.322 0.044 2.322 0.044
+S5Q FE3 S2A SING N N 29 2.409 0.05  2.409 0.05
+S5Q S2A FE2 SING N N 30 2.409 0.05  2.409 0.05
+
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -131,152 +89,75 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- S5Q      FE4    S3A    FE5      76.767    3.000
- S5Q      S3A    FE4    S4A     123.574    3.000
- S5Q      S3A    FE4    CX       97.455    3.000
- S5Q      S3A    FE4    S1A     132.260    3.000
- S5Q      CX     FE4    S1A     105.986    3.000
- S5Q      S4A    FE4    CX      100.316    3.000
- S5Q      S4A    FE4    S1A      92.657    3.000
- S5Q      FE4    S4A    FE3      73.040    3.000
- S5Q      FE4    S4A    FE1      60.849    3.000
- S5Q      FE3    S4A    FE1      53.004    3.000
- S5Q      S4A    FE3    S5A     118.559    3.000
- S5Q      S4A    FE3    S2A     105.794    3.000
- S5Q      S4A    FE3    CX      100.552    3.000
- S5Q      S5A    FE3    S2A     123.875    3.000
- S5Q      S5A    FE3    CX      102.829    3.000
- S5Q      S2A    FE3    CX      100.830    3.000
- S5Q      FE3    S5A    FE7      71.264    3.000
- S5Q      FE3    S2A    FE1      53.482    3.000
- S5Q      FE3    S2A    FE2      72.769    3.000
- S5Q      FE1    S2A    FE2      57.491    3.000
- S5Q      S2A    FE1    S1A     120.765    3.000
- S5Q      S2A    FE1    S4A     129.603    3.000
- S5Q      S1A    FE1    S4A     109.632    3.000
- S5Q      S2A    FE2    S2B     132.460    3.000
- S5Q      S2A    FE2    S1A      99.225    3.000
- S5Q      S2A    FE2    CX      101.127    3.000
- S5Q      S2B    FE2    S1A     115.854    3.000
- S5Q      S2B    FE2    CX      101.180    3.000
- S5Q      S1A    FE2    CX      102.718    3.000
- S5Q      FE2    S2B    FE6      72.812    3.000
- S5Q      FE2    S1A    FE4      70.812    3.000
- S5Q      FE2    S1A    FE1      56.167    3.000
- S5Q      FE4    S1A    FE1      62.045    3.000
- S5Q      FE2    CX     FE5     142.185    3.000
- S5Q      FE2    CX     FE7     129.479    3.000
- S5Q      FE2    CX     FE6      81.315    3.000
- S5Q      FE2    CX     FE4      80.441    3.000
- S5Q      FE2    CX     FE3      81.419    3.000
- S5Q      FE5    CX     FE7      79.058    3.000
- S5Q      FE5    CX     FE6      81.226    3.000
- S5Q      FE7    CX     FE6      79.034    3.000
- S5Q      FE4    CX     FE3      83.839    3.000
- S5Q      FE5    CX     FE4      87.559    3.000
- S5Q      FE7    CX     FE4     142.898    3.000
- S5Q      FE6    CX     FE4     133.137    3.000
- S5Q      FE5    CX     FE3     132.976    3.000
- S5Q      FE7    CX     FE3      80.611    3.000
- S5Q      FE6    CX     FE3     134.931    3.000
- S5Q      CX     FE5    S4B      90.000    3.000
- S5Q      CX     FE5    S3A      90.000    3.000
- S5Q      CX     FE5    S1B      90.000    3.000
- S5Q      S4B    FE5    S3A     144.000    3.000
- S5Q      S4B    FE5    S1B      72.000    3.000
- S5Q      S3A    FE5    S1B     144.000    3.000
- S5Q      CX     FE7    S4B     102.999    3.000
- S5Q      CX     FE7    S5A     103.163    3.000
- S5Q      CX     FE7    S3B     103.660    3.000
- S5Q      S5A    FE7    S3B     133.026    3.000
- S5Q      S4B    FE7    S5A     119.852    3.000
- S5Q      S4B    FE7    S3B      90.335    3.000
- S5Q      FE7    S4B    FE8      89.004    3.000
- S5Q      FE7    S4B    FE5      71.208    3.000
- S5Q      FE8    S4B    FE5      99.256    3.000
- S5Q      CX     FE6    S3B     102.363    3.000
- S5Q      CX     FE6    S1B     102.398    3.000
- S5Q      CX     FE6    S2B     101.008    3.000
- S5Q      S3B    FE6    S1B      90.237    3.000
- S5Q      S3B    FE6    S2B     132.515    3.000
- S5Q      S1B    FE6    S2B     123.876    3.000
- S5Q      FE6    S3B    FE8      90.521    3.000
- S5Q      FE6    S3B    FE7      73.295    3.000
- S5Q      FE8    S3B    FE7      91.335    3.000
- S5Q      FE6    S1B    FE8      89.751    3.000
- S5Q      FE6    S1B    FE5      72.679    3.000
- S5Q      FE8    S1B    FE5      97.910    3.000
- S5Q      S1B    FE8    S4B      90.000    3.000
- S5Q      S1B    FE8    S3B      90.000    3.000
- S5Q      S4B    FE8    S3B      90.000    3.000
-loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
- S5Q      var_1            S3A    FE4    S1A    FE2              117.842           20.000   3
- S5Q      var_2            S3A    FE4    S4A    FE3             -117.246           20.000   3
- S5Q      var_3            FE4    S4A    FE1    S2A              131.492           20.000   3
- S5Q      var_4            FE4    S4A    FE3    S2A              -93.605           20.000   3
- S5Q      var_5            S4A    FE3    S5A    FE7             -120.591           20.000   3
- S5Q      var_6            S4A    FE3    S2A    FE2               89.840           20.000   3
- S5Q      var_7            FE3    S2A    FE1    S1A              138.620           20.000   3
- S5Q      var_8            FE3    S2A    FE2    CX                14.461           20.000   3
- S5Q      var_9            S2A    FE2    S2B    FE6             -102.328           20.000   3
- S5Q      var_10           S2A    FE2    S1A    FE4              102.190           20.000   3
- S5Q      var_11           FE2    S1A    FE1    S2A              -45.884           20.000   3
- S5Q      var_12           S2A    FE2    CX     FE6              122.734           20.000   3
- S5Q      var_13           FE2    CX     FE4    S3A             -139.674           20.000   3
- S5Q      var_14           FE2    CX     FE3    S4A              -93.175           20.000   3
- S5Q      var_15           FE6    CX     FE5    S4B                0.000           20.000   3
- S5Q      var_16           FE4    S3A    FE5    CX                 0.000           20.000   3
- S5Q      var_17           FE6    S1B    FE5    CX                 0.000           20.000   3
- S5Q      var_18           FE2    CX     FE7    S4B              152.436           20.000   3
- S5Q      var_19           CX     FE7    S5A    FE3               10.794           20.000   3
- S5Q      var_20           CX     FE7    S3B    FE6                9.704           20.000   3
- S5Q      var_21           CX     FE7    S4B    FE8             -100.515           20.000   3
- S5Q      var_22           FE5    S4B    FE8    S1B                0.000           20.000   3
- S5Q      var_23           FE8    S4B    FE5    CX                 0.000           20.000   3
- S5Q      var_24           FE2    CX     FE6    S1B              143.727           20.000   3
- S5Q      var_25           CX     FE6    S2B    FE2              -14.097           20.000   3
- S5Q      var_26           CX     FE6    S3B    FE8             -100.809           20.000   3
- S5Q      var_27           CX     FE6    S1B    FE8              100.775           20.000   3
- S5Q      var_28           FE6    S1B    FE8    S4B                0.000           20.000   3
- S5Q      var_29           FE7    S3B    FE8    S4B                0.000           20.000   3
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
- S5Q      chir_01          S4B    FE8    FE5    FE7       negativ
-                   .      .      .      .      .
- S5Q      chir_02          S3B    FE8    FE7    FE6       negativ
-                   .      .      .      .      .
- S5Q      chir_03          S1B    FE8    FE5    FE6       positiv
-                   .      .      .      .      .
- S5Q      chir_04          CX     FE5    FE7    FE6       positiv
-                   .      .      .      .      .
- S5Q      chir_05          S1A    FE4    FE1    FE2       positiv
-                   .      .      .      .      .
- S5Q      chir_06          S4A    FE4    FE1    FE3       negativ
-                   .      .      .      .      .
- S5Q      chir_07          S2A    FE1    FE3    FE2       positiv
-                   .      .      .      .      .
- S5Q      chir_08          FE8    S1B    .      S4B       cross4
-                   S3B    .      .      .      .
- S5Q      chir_09          FE5    CX     .      S4B       cross5
-                   S1B    .      S3A    .      .
-# ------------------------------------------------------
+S5Q S2A FE1 S1A 109.494 7.651
+S5Q S2A FE1 S4A 109.494 7.651
+S5Q S1A FE1 S4A 109.494 7.651
+S5Q S2B FE2 S2A 109.471 5.0
+S5Q S2B FE2 CX  109.471 5.0
+S5Q S2B FE2 S1A 109.471 5.0
+S5Q S2A FE2 CX  109.471 5.0
+S5Q S2A FE2 S1A 109.471 5.0
+S5Q CX  FE2 S1A 109.471 5.0
+S5Q S2A FE3 S5A 109.471 5.0
+S5Q S2A FE3 CX  109.471 5.0
+S5Q S2A FE3 S4A 109.471 5.0
+S5Q S5A FE3 CX  109.471 5.0
+S5Q S5A FE3 S4A 109.471 5.0
+S5Q CX  FE3 S4A 109.471 5.0
+S5Q S3A FE4 S1A 109.471 5.0
+S5Q S3A FE4 S4A 109.471 5.0
+S5Q S3A FE4 CX  109.471 5.0
+S5Q S1A FE4 S4A 109.471 5.0
+S5Q S1A FE4 CX  109.471 5.0
+S5Q S4A FE4 CX  109.471 5.0
+S5Q S1B FE5 S3A 109.471 5.0
+S5Q S1B FE5 CX  109.471 5.0
+S5Q S1B FE5 S4B 109.471 5.0
+S5Q S3A FE5 CX  109.471 5.0
+S5Q S3A FE5 S4B 109.471 5.0
+S5Q CX  FE5 S4B 109.471 5.0
+S5Q S3B FE6 S2B 109.471 5.0
+S5Q S3B FE6 S1B 109.471 5.0
+S5Q S3B FE6 CX  109.471 5.0
+S5Q S2B FE6 S1B 109.471 5.0
+S5Q S2B FE6 CX  109.471 5.0
+S5Q S1B FE6 CX  109.471 5.0
+S5Q S4B FE7 S5A 109.471 5.0
+S5Q S4B FE7 CX  109.471 5.0
+S5Q S4B FE7 S3B 109.471 5.0
+S5Q S5A FE7 CX  109.471 5.0
+S5Q S5A FE7 S3B 109.471 5.0
+S5Q CX  FE7 S3B 109.471 5.0
+S5Q S3B FE8 S1B 90.0    5.0
+S5Q S3B FE8 S4B 90.0    5.0
+S5Q S1B FE8 S4B 90.0    5.0
+S5Q FE8 S1B FE5 80.264  5.0
+S5Q FE8 S4B FE5 80.264  5.0
+S5Q FE8 S1B FE6 80.264  5.0
+S5Q FE8 S3B FE6 80.264  5.0
+S5Q FE8 S4B FE7 80.264  5.0
+S5Q FE8 S3B FE7 80.264  5.0
+S5Q FE5 S1B FE6 70.529  5.0
+S5Q FE5 CX  FE6 70.529  5.0
+S5Q FE5 S4B FE7 70.529  5.0
+S5Q FE5 CX  FE7 70.529  5.0
+S5Q FE7 S3B FE6 70.529  5.0
+S5Q FE7 CX  FE6 70.529  5.0
+S5Q FE5 S3A FE4 70.529  5.0
+S5Q FE5 CX  FE4 70.529  5.0
+S5Q FE6 CX  FE2 70.529  5.0
+S5Q FE6 S2B FE2 70.529  5.0
+S5Q FE4 CX  FE3 70.529  5.0
+S5Q FE4 S4A FE3 70.529  5.0
+S5Q FE4 CX  FE2 70.529  5.0
+S5Q FE4 S1A FE2 70.529  5.0
+S5Q FE4 S1A FE1 70.518  5.0
+S5Q FE4 S4A FE1 70.518  5.0
+S5Q FE1 S1A FE2 70.518  5.0
+S5Q FE1 S2A FE2 70.518  5.0
+S5Q FE1 S4A FE3 70.518  5.0
+S5Q FE1 S2A FE3 70.518  5.0
+S5Q FE7 CX  FE3 70.529  5.0
+S5Q FE7 S5A FE3 70.529  5.0
+S5Q FE3 CX  FE2 70.529  5.0
+S5Q FE3 S2A FE2 70.529  5.0
