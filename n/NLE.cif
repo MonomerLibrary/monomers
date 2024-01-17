@@ -7,40 +7,41 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NLE NLE NORLEUCINE NON-POLYMER 22 9 .
+NLE NLE NORLEUCINE peptide 22 9 .
 
 data_comp_NLE
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-NLE N   N NT3 1  16.528 39.516 17.542
-NLE CA  C CH1 0  15.775 40.769 17.260
-NLE C   C C   0  16.767 41.889 16.924
-NLE O   O O   0  16.666 42.424 15.801
-NLE OXT O OC  -1 17.605 42.186 17.798
-NLE CB  C CH2 0  14.903 41.151 18.461
-NLE CG  C CH2 0  13.695 40.254 18.700
-NLE CD  C CH2 0  12.762 40.781 19.759
-NLE CE  C CH3 0  11.601 39.861 20.055
-NLE H   H H   0  15.949 38.825 17.674
-NLE HN2 H H   0  17.038 39.620 18.290
-NLE H3  H H   0  17.072 39.311 16.840
-NLE HA  H H   0  15.193 40.613 16.480
-NLE HB2 H H   0  14.585 42.070 18.334
-NLE HB3 H H   0  15.462 41.139 19.266
-NLE HG2 H H   0  14.009 39.364 18.967
-NLE HG3 H H   0  13.200 40.159 17.859
-NLE HD2 H H   0  12.412 41.651 19.467
-NLE HD3 H H   0  13.272 40.925 20.586
-NLE HE1 H H   0  11.041 40.255 20.746
-NLE HE2 H H   0  11.938 39.001 20.363
-NLE HE3 H H   0  11.074 39.731 19.248
+NLE N   N   N NT3 1  16.528 39.516 17.542
+NLE CA  CA  C CH1 0  15.775 40.769 17.260
+NLE C   C   C C   0  16.767 41.889 16.924
+NLE O   O   O O   0  16.666 42.424 15.801
+NLE OXT OXT O OC  -1 17.605 42.186 17.798
+NLE CB  CB  C CH2 0  14.903 41.151 18.461
+NLE CG  CG  C CH2 0  13.695 40.254 18.700
+NLE CD  CD  C CH2 0  12.762 40.781 19.759
+NLE CE  CE  C CH3 0  11.601 39.861 20.055
+NLE H   H   H H   0  15.949 38.825 17.674
+NLE H2  HN2 H H   0  17.038 39.620 18.290
+NLE H3  H3  H H   0  17.072 39.311 16.840
+NLE HA  HA  H H   0  15.193 40.613 16.480
+NLE HB2 HB2 H H   0  14.585 42.070 18.334
+NLE HB3 HB3 H H   0  15.462 41.139 19.266
+NLE HG2 HG2 H H   0  14.009 39.364 18.967
+NLE HG3 HG3 H H   0  13.200 40.159 17.859
+NLE HD2 HD2 H H   0  12.412 41.651 19.467
+NLE HD3 HD3 H H   0  13.272 40.925 20.586
+NLE HE1 HE1 H H   0  11.041 40.255 20.746
+NLE HE2 HE2 H H   0  11.938 39.001 20.363
+NLE HE3 HE3 H H   0  11.074 39.731 19.248
 
 loop_
 _chem_comp_bond.comp_id
@@ -61,7 +62,7 @@ NLE CB CG  SINGLE n 1.523 0.0114 1.523 0.0114
 NLE CG CD  SINGLE n 1.507 0.0200 1.507 0.0200
 NLE CD CE  SINGLE n 1.510 0.0200 1.510 0.0200
 NLE N  H   SINGLE n 1.036 0.0160 0.911 0.0200
-NLE N  HN2 SINGLE n 1.036 0.0160 0.911 0.0200
+NLE N  H2  SINGLE n 1.036 0.0160 0.911 0.0200
 NLE N  H3  SINGLE n 1.036 0.0160 0.911 0.0200
 NLE CA HA  SINGLE n 1.089 0.0100 0.985 0.0200
 NLE CB HB2 SINGLE n 1.089 0.0100 0.980 0.0160
@@ -82,11 +83,11 @@ _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
 NLE CA  N  H   110.062 1.93
-NLE CA  N  HN2 110.062 1.93
+NLE CA  N  H2  110.062 1.93
 NLE CA  N  H3  110.062 1.93
-NLE H   N  HN2 109.028 2.41
+NLE H   N  H2  109.028 2.41
 NLE H   N  H3  109.028 2.41
-NLE HN2 N  H3  109.028 2.41
+NLE H2  N  H3  109.028 2.41
 NLE N   CA C   109.241 1.50
 NLE N   CA CB  110.374 1.62
 NLE N   CA HA  108.487 1.50
@@ -181,10 +182,3 @@ NLE acedrg          243       "dictionary generator"
 NLE acedrg_database 11        "data source"
 NLE rdkit           2017.03.2 "Chemoinformatics tool"
 NLE refmac5         5.8.0238  "optimization tool"
-
-loop_
-_chem_comp_alias.comp_id
-_chem_comp_alias.group
-_chem_comp_alias.atom_id
-_chem_comp_alias.atom_id_standard
-NLE peptide HN2 H2
