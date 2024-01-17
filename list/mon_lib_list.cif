@@ -43559,7 +43559,7 @@ _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
 DEL-HNP delete H . H H 0
 DEL-HNP delete H2 . H H 0
-DEL-HNP change N . N NT 0
+DEL-HNP change N . N NH0 0
 
 loop_
 _chem_mod_bond.mod_id
@@ -43572,8 +43572,9 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 DEL-HNP delete N H single . . . .
-DEL-HNP change CA N single 1.464 0.010 1.464 0.010
-DEL-HNP change N CD single 1.473 0.011 1.473 0.011
+DEL-HNP delete N H2 single . . . .
+DEL-HNP change N CA single 1.459 0.0100 1.459 0.0100
+DEL-HNP change N CD single 1.472 0.0100 1.472 0.0100
 
 loop_
 _chem_mod_angle.mod_id
@@ -43584,8 +43585,13 @@ _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
 DEL-HNP delete CA N H . .
+DEL-HNP delete CA N H2 . .
 DEL-HNP delete CD N H . .
-DEL-HNP change CA N CD 112.409 1.50
+DEL-HNP delete CD N H2 . .
+DEL-HNP delete H N H2 . .
+DEL-HNP change CA N CD 112.597 1.50
+DEL-HNP change N CA C 113.251 1.50
+DEL-HNP change N CD CG 102.887 1.50
 
 data_mod_SUImod1
 loop_
