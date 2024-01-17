@@ -36161,7 +36161,7 @@ _chem_link_bond.atom_id_2
 _chem_link_bond.type
 _chem_link_bond.value_dist
 _chem_link_bond.value_dist_esd
-DG9-SER 1 P2A 2 OG SINGLE 1.606 0.0100
+DG9-SER 1 P2A 2 OG SINGLE 1.607 0.0108
 
 loop_
 _chem_link_angle.link_id
@@ -36175,8 +36175,8 @@ _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
 DG9-SER 1 O3 1 P2A 2 OG 107.777 3.00
 DG9-SER 1 O4A 1 P2A 2 OG 107.777 3.00
-DG9-SER 1 O6A 1 P2A 2 OG 102.789 2.10
-DG9-SER 2 CB 2 OG 1 P2A 119.251 1.51
+DG9-SER 1 O6A 1 P2A 2 OG 103.482 3.00
+DG9-SER 2 CB 2 OG 1 P2A 119.008 2.40
 
 loop_
 _chem_link_tor.link_id
@@ -36193,6 +36193,7 @@ _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
 DG9-SER sp3_sp3_1 2 CB 2 OG 1 P2A 1 O3 180.000 10.0 3
+DG9-SER sp3_sp3_2 2 CA 2 CB 2 OG 1 P2A 180.000 10.0 3
 
 loop_
 _chem_link_chir.link_id
@@ -36205,7 +36206,7 @@ _chem_link_chir.atom_id_2
 _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
-DG9-SER 1 P2A 2 OG 1 O6A 1 O3 both
+DG9-SER 1 P2A 1 O6A 1 O3 2 OG both
 
 data_link_DNA-SER
 loop_
@@ -41722,7 +41723,7 @@ _chem_mod_atom.new_atom_id
 _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
-DG9m1 delete O5A . O OP -1
+DG9m1 delete O4 . O OP -1
 
 loop_
 _chem_mod_bond.mod_id
@@ -41734,10 +41735,9 @@ _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
-DG9m1 delete P2A O5A single . . . .
-DG9m1 change O3 P2A single 1.504 0.0115 1.504 0.0115
-DG9m1 change P2A O4A double 1.504 0.0115 1.504 0.0115
-DG9m1 change P2A O6A single 1.606 0.0100 1.606 0.0100
+DG9m1 delete P2A O4 single . . . .
+DG9m1 change O3 P2A single 1.485 0.0108 1.485 0.0108
+DG9m1 change P2A O4A double 1.485 0.0108 1.485 0.0108
 
 loop_
 _chem_mod_angle.mod_id
@@ -41747,12 +41747,11 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-DG9m1 delete O3 P2A O5A . .
-DG9m1 delete O5A P2A O4A . .
-DG9m1 delete O5A P2A O6A . .
-DG9m1 change O3 P2A O4A 119.782 1.83
-DG9m1 change O3 P2A O6A 107.777 3.00
-DG9m1 change O4A P2A O6A 107.777 3.00
+DG9m1 delete O3 P2A O4 . .
+DG9m1 delete O4A P2A O4 . .
+DG9m1 delete O6A P2A O4 . .
+DG9m1 change O3 P2A O4A 119.403 3.00
+DG9m1 change P2A O6A CCP 119.008 2.40
 
 loop_
 _chem_mod_chir.mod_id
@@ -41762,7 +41761,7 @@ _chem_mod_chir.atom_id_1
 _chem_mod_chir.atom_id_2
 _chem_mod_chir.atom_id_3
 _chem_mod_chir.new_volume_sign
-DG9m1 delete P2A O6A O3 O5A .
+DG9m1 delete P2A O6A O3 O4 .
 
 data_mod_SERm1
 loop_
@@ -41787,7 +41786,8 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 SERm1 delete OG HG single . . . .
-SERm1 change CB OG single 1.447 0.0162 1.447 0.0162
+SERm1 change CA CB single 1.516 0.0100 1.516 0.0100
+SERm1 change CB OG single 1.438 0.0200 1.438 0.0200
 
 loop_
 _chem_mod_angle.mod_id
@@ -41798,6 +41798,7 @@ _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
 SERm1 delete CB OG HG . .
+SERm1 change CA CB OG 108.381 1.50
 
 loop_
 _chem_mod_tor.mod_id
@@ -41806,9 +41807,12 @@ _chem_mod_tor.atom_id_1
 _chem_mod_tor.atom_id_2
 _chem_mod_tor.atom_id_3
 _chem_mod_tor.atom_id_4
+_chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
-SERm1 delete CA CB OG HG . .
+_chem_mod_tor.new_period
+SERm1 delete CA CB OG HG . . . 3
+SERm1 change OG CB CA N sp3_sp3_199 180.000 10.0 3
 
 data_mod_CYS-SS
 loop_
