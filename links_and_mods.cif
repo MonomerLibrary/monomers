@@ -24,6 +24,7 @@ pept-SUI . DEL-OXT peptide SUI SUImod1 NON-POLYMER pept-SUI
 SUI-pept SUI SUImod2 NON-POLYMER . DEL-HN1 peptide SUI-pept
 gap . . . . . . gap-link
 p . DEL_HO3p DNA/RNA . DEL_OP3 DNA/RNA default-DNA/RNA-link
+p-S . DEL_HO3p DNA/RNA . DEL_OP3S S-NA DNA/RNA-S-NA-link
 AA-RNA . DEL-OXT peptide . DEL_HO3p DNA/RNA aminoacyl-RNA
 RNA-F86 . DEL_HO3p DNA/RNA F86 F86m1 NON-POLYMER RNA-F86
 FOR_C-N FOR FORm1 NON-POLYMER . DEL-HN1 peptide bond_FOR-C_=_N-peptide
@@ -145,6 +146,7 @@ p5*END DNA/RNA-p5*-terminus . DNA/RNA
 p3*END DNA/RNA-p3*-terminus . DNA/RNA
 DEL_OP3 DN/RNA-OP3-delete . DNA/RNA
 DEL_HO3p DNA/RNA-OP3-delete . DNA/RNA
+DEL_OP3S S-NA-OP3-delete . S-NA
 F86m1 "[(2~{R},3~{S},4~{R},5~{R})-5-(4-azanylpyrrolo[2,1-f][1,2,4]triazin-7-yl)-5-cyano-3,4-bis(oxidanyl)oxolan-2-yl]methyl dihydrogen phosphate" F86 NON-POLYMER
 FOR-N N-terminus_of_formyl . .
 FOR-C C-terminus_of_formyl . .
@@ -1085,6 +1087,64 @@ _chem_link_chir.atom_3_comp_id
 _chem_link_chir.atom_id_3
 _chem_link_chir.volume_sign
 p 2 P 2 "O5'" 1 "O3'" 2 OP2 both
+
+data_link_p-S
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+p-S 1 "O3'" 2 P SINGLE 1.602 0.0155
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+p-S 1 "C3'" 1 "O3'" 2 P 120.945 1.50
+p-S 2 OP1 2 P 1 "O3'" 108.260 3.00
+p-S 2 S2P 2 P 1 "O3'" 109.083 3.00
+p-S 2 "O5'" 2 P 1 "O3'" 101.205 3.00
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+p-S zeta 1 "C3'" 1 "O3'" 2 P 2 "O5'" 60.000 10.0 3
+p-S epsilon 1 "C4'" 1 "C3'" 1 "O3'" 2 P 180.000 10.0 3
+p-S alpha 1 "O3'" 2 "P" 2 "O5'" 2 "C5'" 180.000 10.00 3
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+p-S 2 P 2 S2P 2 "O5'" 2 OP1 both
 
 data_link_AA-RNA
 loop_
@@ -6602,6 +6662,43 @@ _chem_mod_tor.atom_id_4
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 DEL_OP3 delete "C5'" "O5'" P OP3 . .
+
+data_mod_DEL_OP3S
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+DEL_OP3S delete OP3 . O OP -1
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+DEL_OP3S delete P OP3 single . . . .
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+DEL_OP3S delete OP1 P OP3 . .
+DEL_OP3S delete S2P P OP3 . .
+DEL_OP3S delete OP3 P "O5'" . .
+DEL_OP3S change S2P P "O5'" 109.083 3.00
+DEL_OP3S change P "O5'" "C5'" 118.610 3.00
 
 data_mod_DEL_HO3p
 loop_
