@@ -1,4 +1,3 @@
-#
 data_comp_list
 loop_
 _chem_comp.id
@@ -8,34 +7,44 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NO    NO        "NITRIC OXIDE"     NON-POLYMER     3     2     .     
-#
+NO NO "NITRIC OXIDE" NON-POLYMER 3 2 .
+
 data_comp_NO
-#
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-NO      N       N       NH1     0       -1.706      17.228      81.396      
-NO      O       O       O       0       -1.406      18.023      80.478      
-NO      H2      H       H       0       -2.535      17.215      81.721      
+NO N N N NH1 0 -1.716 17.243 81.399
+NO O O O O   0 -1.385 18.025 80.485
+NO H H H H   0 -2.583 17.129 81.521
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+NO N N(H)(O)
+NO O O(NH)
+NO H H(NO)
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
-_chem_comp_bond.aromatic
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-NO          N           O      DOUBLE       n     1.251  0.0200     1.251  0.0200
-NO          N          H2      SINGLE       n     1.016  0.0100     0.891  0.0200
+NO N O DOUBLE n 1.248 0.0200 1.248 0.0200
+NO N H SINGLE n 1.013 0.0120 0.883 0.0200
+
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -43,25 +52,27 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-NO          O           N          H2     120.000    3.00
+NO O N H 116.229 3.00
+
 loop_
 _pdbx_chem_comp_descriptor.comp_id
 _pdbx_chem_comp_descriptor.type
 _pdbx_chem_comp_descriptor.program
 _pdbx_chem_comp_descriptor.program_version
 _pdbx_chem_comp_descriptor.descriptor
-NO            InChI                InChI 1.02b      InChI=1/HNO/c1-2/h1H
-NO         InChIKey                InChI 1.02b ODUCDPQEXGNKDN-UHFFFAOYAM
-NO SMILES_CANONICAL               CACTVS 3.341                   "[N]=O"
-NO           SMILES               CACTVS 3.341                   "[N]=O"
-NO SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                   "[N]=O"
-NO           SMILES "OpenEye OEToolkits" 1.5.0                   "[N]=O"
+NO InChI            InChI                1.06  InChI=1S/HNO/c1-2/h1H
+NO InChIKey         InChI                1.06  ODUCDPQEXGNKDN-UHFFFAOYSA-N
+NO SMILES_CANONICAL CACTVS               3.385 "[N]=O"
+NO SMILES           CACTVS               3.385 "[N]=O"
+NO SMILES_CANONICAL "OpenEye OEToolkits" 2.0.7 "[N]=O"
+NO SMILES           "OpenEye OEToolkits" 2.0.7 "[N]=O"
+
 loop_
-_pdbx_chem_comp_description_generator.comp_id
-_pdbx_chem_comp_description_generator.program_name
-_pdbx_chem_comp_description_generator.program_version
-_pdbx_chem_comp_description_generator.descriptor
-NO  acedrg               243         "dictionary generator"                  
-NO  acedrg_database      11          "data source"                           
-NO  rdkit                2017.03.2   "Chemoinformatics tool"
-NO  refmac5              5.8.0238    "optimization tool"                     
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+NO acedrg          290       "dictionary generator"
+NO acedrg_database 12        "data source"
+NO rdkit           2019.09.1 "Chemoinformatics tool"
+NO servalcat       0.4.57    'optimization tool'
