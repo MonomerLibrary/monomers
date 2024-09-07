@@ -7,32 +7,34 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MBO MBO 'MERCURIBENZOIC ACID                 ' NON-POLYMER 14 10 .
+MBO MBO "MERCURIBENZOIC ACID" NON-POLYMER 13 9 .
 
 data_comp_MBO
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-MBO OZ2 O OC -0.500 0.000 0.000 0.000
-MBO CZ C C 0.000 -0.983 0.001 0.773
-MBO OZ1 O OC -0.500 -0.805 0.001 2.012
-MBO CE4 C CR6 0.000 -2.354 0.001 0.224
-MBO CE3 C CR16 0.000 -3.455 0.000 1.084
-MBO HE3 H H 0.000 -3.305 0.000 2.157
-MBO CE2 C CR16 0.000 -4.732 0.000 0.565
-MBO HE2 H H 0.000 -5.586 0.000 1.231
-MBO CE5 C CR16 0.000 -2.558 0.004 -1.157
-MBO HE5 H H 0.000 -1.710 0.011 -1.830
-MBO CE6 C CR16 0.000 -3.841 0.000 -1.662
-MBO HE6 H H 0.000 -3.999 -0.003 -2.734
-MBO CE1 C CR6 0.000 -4.926 0.000 -0.805
-MBO HG HG HG 0.000 -6.875 0.000 -1.585
+MBO HG  HG  HG HG   1.00 29.185 -0.776 2.032
+MBO CE1 CE1 C  CSP  -1   30.718 -2.083 1.514
+MBO CE2 CE2 C  CR16 0    30.581 -2.992 0.481
+MBO CE3 CE3 C  CR16 0    31.617 -3.876 0.192
+MBO CE4 CE4 C  CR6  0    32.804 -3.848 0.945
+MBO CE5 CE5 C  CR16 0    32.921 -2.914 1.990
+MBO CE6 CE6 C  CR16 0    31.876 -2.037 2.268
+MBO CZ  CZ  C  C    0    33.933 -4.803 0.637
+MBO OZ1 OZ1 O  O    0    33.740 -6.010 0.885
+MBO OZ2 OZ2 O  OC   -1   34.976 -4.317 0.157
+MBO HE2 HE2 H  H    0    29.793 -3.021 -0.030
+MBO HE3 HE3 H  H    0    31.518 -4.497 -0.516
+MBO HE5 HE5 H  H    0    33.712 -2.880 2.510
+MBO HE6 HE6 H  H    0    31.967 -1.419 2.969
 
 loop_
 _chem_comp_tree.comp_id
@@ -40,45 +42,64 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-MBO OZ2 n/a CZ START
-MBO CZ OZ2 CE4 .
-MBO OZ1 CZ . .
-MBO CE4 CZ CE5 .
+MBO OZ2 n/a CZ  START
+MBO CZ  OZ2 CE4 .
+MBO OZ1 CZ  .   .
+MBO CE4 CZ  CE5 .
 MBO CE3 CE4 CE2 .
-MBO HE3 CE3 . .
+MBO HE3 CE3 .   .
 MBO CE2 CE3 HE2 .
-MBO HE2 CE2 . .
+MBO HE2 CE2 .   .
 MBO CE5 CE4 CE6 .
-MBO HE5 CE5 . .
+MBO HE5 CE5 .   .
 MBO CE6 CE5 CE1 .
-MBO HE6 CE6 . .
-MBO CE1 CE6 HG .
-MBO HG CE1 . END
-MBO CE1 CE2 . ADD
+MBO HE6 CE6 .   .
+MBO CE1 CE6 HG  .
+MBO HG  CE1 .   END
+MBO CE1 CE2 .   ADD
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+MBO CE1 C[6](C[6]C[6]H)2{1|C<3>,2|H<1>}
+MBO CE2 C[6](C[6]C[6]H)(C[6]C[6])(H){1|H<1>,2|C<3>}
+MBO CE3 C[6](C[6]C[6]C)(C[6]C[6]H)(H){1|C<3>,1|H<1>}
+MBO CE4 C[6](C[6]C[6]H)2(COO){1|C<2>,2|H<1>}
+MBO CE5 C[6](C[6]C[6]C)(C[6]C[6]H)(H){1|C<3>,1|H<1>}
+MBO CE6 C[6](C[6]C[6]H)(C[6]C[6])(H){1|H<1>,2|C<3>}
+MBO CZ  C(C[6]C[6]2)(O)2
+MBO OZ1 O(CC[6]O)
+MBO OZ2 O(CC[6]O)
+MBO HE2 H(C[6]C[6]2)
+MBO HE3 H(C[6]C[6]2)
+MBO HE5 H(C[6]C[6]2)
+MBO HE6 H(C[6]C[6]2)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-MBO HG CE1 single 2.295 0.020 2.295 0.020
-MBO CE1 CE2 single 1.390 0.020 1.390 0.020
-MBO CE1 CE6 double 1.390 0.020 1.390 0.020
-MBO CE2 CE3 double 1.390 0.020 1.390 0.020
-MBO HE2 CE2 single 1.082 0.013 0.975 0.010
-MBO CE3 CE4 single 1.390 0.020 1.390 0.020
-MBO HE3 CE3 single 1.082 0.013 0.975 0.010
-MBO CE5 CE4 double 1.390 0.020 1.390 0.020
-MBO CE4 CZ single 1.500 0.020 1.500 0.020
-MBO CE6 CE5 single 1.390 0.020 1.390 0.020
-MBO HE5 CE5 single 1.082 0.013 0.975 0.010
-MBO HE6 CE6 single 1.082 0.013 0.975 0.010
-MBO OZ1 CZ deloc 1.250 0.020 1.250 0.020
-MBO CZ OZ2 deloc 1.250 0.020 1.250 0.020
+MBO HG  CE1 SING   n 2.08  0.03   2.08  0.03
+MBO CE1 CE2 DOUBLE n 1.376 0.0116 1.376 0.0116
+MBO CE1 CE6 SINGLE n 1.376 0.0116 1.376 0.0116
+MBO CE2 CE3 SINGLE n 1.377 0.0182 1.377 0.0182
+MBO CE3 CE4 DOUBLE n 1.390 0.0184 1.390 0.0184
+MBO CE4 CE5 SINGLE n 1.390 0.0184 1.390 0.0184
+MBO CE4 CZ  SINGLE n 1.510 0.0127 1.510 0.0127
+MBO CE5 CE6 DOUBLE n 1.377 0.0182 1.377 0.0182
+MBO CZ  OZ1 DOUBLE n 1.247 0.0168 1.247 0.0168
+MBO CZ  OZ2 SINGLE n 1.247 0.0168 1.247 0.0168
+MBO CE2 HE2 SINGLE n 1.085 0.0150 0.939 0.0200
+MBO CE3 HE3 SINGLE n 1.085 0.0150 0.947 0.0200
+MBO CE5 HE5 SINGLE n 1.085 0.0150 0.947 0.0200
+MBO CE6 HE6 SINGLE n 1.085 0.0150 0.939 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -87,27 +108,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-MBO OZ2 CZ OZ1 123.000 3.000
-MBO OZ2 CZ CE4 120.000 3.000
-MBO OZ1 CZ CE4 120.000 3.000
-MBO CZ CE4 CE3 120.000 3.000
-MBO CZ CE4 CE5 120.000 3.000
-MBO CE3 CE4 CE5 120.000 3.000
-MBO CE4 CE3 HE3 120.000 3.000
-MBO CE4 CE3 CE2 120.000 3.000
-MBO HE3 CE3 CE2 120.000 3.000
-MBO CE3 CE2 HE2 120.000 3.000
-MBO CE3 CE2 CE1 120.000 3.000
-MBO HE2 CE2 CE1 120.000 3.000
-MBO CE4 CE5 HE5 120.000 3.000
-MBO CE4 CE5 CE6 120.000 3.000
-MBO HE5 CE5 CE6 120.000 3.000
-MBO CE5 CE6 HE6 120.000 3.000
-MBO CE5 CE6 CE1 120.000 3.000
-MBO HE6 CE6 CE1 120.000 3.000
-MBO CE6 CE1 HG 120.000 3.000
-MBO CE6 CE1 CE2 120.000 3.000
-MBO HG CE1 CE2 120.000 3.000
+MBO CE2 CE1 CE6 119.635 3.00
+MBO CE1 CE2 CE3 120.427 2.99
+MBO CE1 CE2 HE2 120.416 3.00
+MBO CE3 CE2 HE2 119.156 3.00
+MBO CE2 CE3 CE4 120.564 1.74
+MBO CE2 CE3 HE3 119.418 3.00
+MBO CE4 CE3 HE3 120.018 1.50
+MBO CE3 CE4 CE5 118.382 2.26
+MBO CE3 CE4 CZ  120.809 2.27
+MBO CE5 CE4 CZ  120.809 2.27
+MBO CE4 CE5 CE6 120.564 1.74
+MBO CE4 CE5 HE5 120.018 1.50
+MBO CE6 CE5 HE5 119.418 3.00
+MBO CE1 CE6 CE5 120.427 2.99
+MBO CE1 CE6 HE6 120.416 3.00
+MBO CE5 CE6 HE6 119.156 3.00
+MBO CE4 CZ  OZ1 117.162 3.00
+MBO CE4 CZ  OZ2 117.162 3.00
+MBO OZ1 CZ  OZ2 125.677 2.04
 
 loop_
 _chem_comp_tor.comp_id
@@ -119,13 +138,18 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-MBO var_1 OZ2 CZ CE4 CE5 -0.238 20.000 1
-MBO CONST_1 CZ CE4 CE3 CE2 180.000 0.000 0
-MBO CONST_2 CE4 CE3 CE2 CE1 0.000 0.000 0
-MBO CONST_3 CZ CE4 CE5 CE6 180.000 0.000 0
-MBO CONST_4 CE4 CE5 CE6 CE1 0.000 0.000 0
-MBO CONST_5 CE5 CE6 CE1 HG 180.000 0.000 0
-MBO CONST_6 CE6 CE1 CE2 CE3 0.000 0.000 0
+MBO other_tor_1 CE6 CE1 CE2 CE3 0.000   20.0 1
+MBO other_tor_3 CE2 CE1 CE6 CE5 0.000   20.0 1
+MBO sp2_sp2_1   CE1 CE2 CE3 CE4 0.000   5.0  1
+MBO sp2_sp2_4   HE2 CE2 CE3 HE3 0.000   5.0  1
+MBO sp2_sp2_5   CE2 CE3 CE4 CE5 0.000   5.0  1
+MBO sp2_sp2_8   HE3 CE3 CE4 CZ  0.000   5.0  1
+MBO sp2_sp2_9   CE3 CE4 CE5 CE6 0.000   5.0  1
+MBO sp2_sp2_12  CZ  CE4 CE5 HE5 0.000   5.0  1
+MBO sp2_sp2_17  CE3 CE4 CZ  OZ1 180.000 5.0  2
+MBO sp2_sp2_20  CE5 CE4 CZ  OZ2 180.000 5.0  2
+MBO sp2_sp2_13  CE4 CE5 CE6 CE1 0.000   5.0  1
+MBO sp2_sp2_16  HE5 CE5 CE6 HE6 0.000   5.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -133,18 +157,55 @@ _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
 MBO plan-1 CE1 0.020
-MBO plan-1 HG 0.020
 MBO plan-1 CE2 0.020
-MBO plan-1 CE6 0.020
 MBO plan-1 CE3 0.020
-MBO plan-1 CE4 0.020
-MBO plan-1 CE5 0.020
 MBO plan-1 HE2 0.020
-MBO plan-1 HE3 0.020
-MBO plan-1 CZ 0.020
-MBO plan-1 HE5 0.020
-MBO plan-1 HE6 0.020
-MBO plan-2 CZ 0.020
+MBO plan-2 CE2 0.020
+MBO plan-2 CE3 0.020
 MBO plan-2 CE4 0.020
-MBO plan-2 OZ1 0.020
-MBO plan-2 OZ2 0.020
+MBO plan-2 HE3 0.020
+MBO plan-3 CE3 0.020
+MBO plan-3 CE4 0.020
+MBO plan-3 CE5 0.020
+MBO plan-3 CZ  0.020
+MBO plan-4 CE4 0.020
+MBO plan-4 CE5 0.020
+MBO plan-4 CE6 0.020
+MBO plan-4 HE5 0.020
+MBO plan-5 CE1 0.020
+MBO plan-5 CE5 0.020
+MBO plan-5 CE6 0.020
+MBO plan-5 HE6 0.020
+MBO plan-6 CE4 0.020
+MBO plan-6 CZ  0.020
+MBO plan-6 OZ1 0.020
+MBO plan-6 OZ2 0.020
+
+loop_
+_chem_comp_ring_atom.comp_id
+_chem_comp_ring_atom.ring_serial_number
+_chem_comp_ring_atom.atom_id
+_chem_comp_ring_atom.is_aromatic_ring
+MBO ring-1 CE1 NO
+MBO ring-1 CE2 NO
+MBO ring-1 CE3 NO
+MBO ring-1 CE4 NO
+MBO ring-1 CE5 NO
+MBO ring-1 CE6 NO
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+MBO acedrg          287       "dictionary generator"
+MBO acedrg_database 12        "data source"
+MBO rdkit           2019.09.1 "Chemoinformatics tool"
+MBO servalcat       0.4.62    'optimization tool'
+
+loop_
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+MBO servalcat 0.4.62 'optimization tool'

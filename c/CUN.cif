@@ -7,24 +7,26 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-CUN CUN 'CU(I)-S-MO(IV)(=O)OH CLUSTER        ' NON-POLYMER 6 5 .
+CUN CUN "CU(I)-S-MO(IV)(=O)OH CLUSTER" NON-POLYMER 4 3 .
 
 data_comp_CUN
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-CUN OM1 O O 0.000 0.000 0.000 0.000
-CUN MO MO MO 4.000 -1.343 -0.872 0.639
-CUN OM2 O OH1 0.000 -0.951 -2.842 0.632
-CUN HO2 H H 0.000 -1.369 -3.404 -0.025
-CUN S S S2 0.000 -2.719 -1.381 -1.189
-CUN CU CU CU 1.000 -3.142 -3.408 -1.757
+CUN CU  CU  CU CU 2.00 99.057 141.137 147.262
+CUN MO  MO  MO MO 5.00 96.747 143.922 147.968
+CUN S   S   S  S  -2   98.406 143.046 146.519
+CUN OM2 OM2 O  O  -1   97.253 142.893 149.169
+CUN OM1 OM1 O  O  -2   97.820 145.071 148.501
+CUN HO2 HO2 H  H  0    96.563 142.552 149.566
 
 loop_
 _chem_comp_tree.comp_id
@@ -32,27 +34,37 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-CUN OM1 n/a MO START
-CUN MO OM1 S .
-CUN OM2 MO HO2 .
-CUN HO2 OM2 . .
-CUN S MO CU .
-CUN CU S . END
+CUN OM1 n/a MO  START
+CUN MO  OM1 S   .
+CUN OM2 MO  HO2 .
+CUN HO2 OM2 .   .
+CUN S   MO  CU  .
+CUN CU  S   .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+CUN S   S
+CUN OM2 O(H)
+CUN OM1 O
+CUN HO2 H(O)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-CUN CU S single 2.375 0.020 2.375 0.020
-CUN S MO single 2.325 0.020 2.325 0.020
-CUN OM2 MO single 2.059 0.020 2.059 0.020
-CUN MO OM1 double 1.865 0.020 1.865 0.020
-CUN HO2 OM2 single 0.970 0.012 0.967 0.020
+CUN CU  S   SING   n 2.15  0.01   2.15  0.01
+CUN S   MO  SING   n 2.37  0.1    2.37  0.1
+CUN MO  OM2 SING   n 1.66  0.02   1.66  0.02
+CUN MO  OM1 DOUB   n 1.66  0.02   1.66  0.02
+CUN OM2 HO2 SINGLE n 0.972 0.0180 0.866 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -61,36 +73,24 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-CUN OM1 MO OM2 120.000 3.000
-CUN OM1 MO S 90.000 3.000
-CUN OM2 MO S 90.000 3.000
-CUN MO OM2 HO2 120.000 3.000
-CUN MO S CU 121.791 3.000
+CUN MO  OM2 HO2 109.47 5.0
+CUN S   MO  OM1 90.0   5.0
+CUN S   MO  OM2 90.0   5.0
+CUN OM1 MO  OM2 90.0   5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-CUN var_1 HO2 OM2 MO S 0.000 20.000 1
-CUN var_2 CU S MO OM1 0.000 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+CUN acedrg          289       "dictionary generator"
+CUN acedrg_database 12        "data source"
+CUN rdkit           2019.09.1 "Chemoinformatics tool"
+CUN servalcat       0.4.62    'optimization tool'
 
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
-CUN chir_01 MO S . OM1 cross3 OM2 . . . .
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+CUN servalcat 0.4.62 'optimization tool'

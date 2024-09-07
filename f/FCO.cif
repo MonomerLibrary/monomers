@@ -7,25 +7,27 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FCO FCO 'CARBONMONOXIDE-(DICYANO) IRON       ' NON-POLYMER 7 7 .
+FCO FCO "CARBONMONOXIDE-(DICYANO) IRON" NON-POLYMER 6 6 .
 
 data_comp_FCO
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-FCO O3 O O 0.000 0.000 0.000 0.000
-FCO C3 C CSP 0.000 -1.190 0.000 0.210
-FCO FE FE FE 0.000 -2.847 0.000 0.504
-FCO C1 C CSP 0.000 -4.757 0.000 0.843
-FCO N1 N NS 0.000 -5.875 0.000 1.041
-FCO C2 C CSP 0.000 -3.186 0.000 -1.405
-FCO N2 N NS 0.000 -3.384 0.000 -2.524
+FCO FE FE FE FE  4.00 38.018 8.905 46.745
+FCO C1 C1 C  C   -1   37.394 8.001 48.132
+FCO N1 N1 N  NSP 0    36.955 7.365 49.115
+FCO C2 C2 C  C   -1   39.502 7.941 46.783
+FCO N2 N2 N  NSP 0    40.557 7.270 46.818
+FCO C3 C3 C  C   -2   37.279 7.730 45.646
+FCO O3 O3 O  O   0    36.762 6.926 44.889
 
 loop_
 _chem_comp_tree.comp_id
@@ -34,28 +36,40 @@ _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
 FCO O3 n/a C3 START
-FCO C3 O3 FE .
-FCO FE C3 C2 .
-FCO C1 FE N1 .
-FCO N1 C1 . .
-FCO C2 FE N2 .
-FCO N2 C2 . END
+FCO C3 O3  FE .
+FCO FE C3  C2 .
+FCO C1 FE  N1 .
+FCO N1 C1  .  .
+FCO C2 FE  N2 .
+FCO N2 C2  .  END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+FCO C1 C(N)
+FCO N1 N(C)
+FCO C2 C(N)
+FCO N2 N(C)
+FCO C3 C(O)
+FCO O3 O(C)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-FCO C1 FE single 1.825 0.020 1.825 0.020
-FCO C2 FE single 1.825 0.020 1.825 0.020
-FCO FE C3 double 1.825 0.020 1.825 0.020
-FCO N1 C1 triple 1.158 0.020 1.158 0.020
-FCO N2 C2 triple 1.158 0.020 1.158 0.020
-FCO C3 O3 double 1.130 0.020 1.130 0.020
+FCO FE C1 SING   n 1.77  0.03   1.77  0.03
+FCO FE C2 SING   n 1.77  0.03   1.77  0.03
+FCO FE C3 DOUB   n 1.77  0.03   1.77  0.03
+FCO C1 N1 TRIPLE n 1.250 0.0200 1.250 0.0200
+FCO C2 N2 TRIPLE n 1.250 0.0200 1.250 0.0200
+FCO C3 O3 DOUBLE n 1.220 0.0200 1.220 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -64,33 +78,26 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-FCO O3 C3 FE 180.000 3.000
-FCO C3 FE C1 180.000 3.000
-FCO C3 FE C2 90.000 3.000
-FCO C1 FE C2 90.000 3.000
-FCO FE C1 N1 180.000 3.000
-FCO FE C2 N2 180.000 3.000
+FCO FE C1 N1 180.00 5.0
+FCO FE C2 N2 180.00 5.0
+FCO FE C3 O3 180.00 5.0
+FCO C1 FE C2 90.0   5.0
+FCO C1 FE C3 90.0   5.0
+FCO C2 FE C3 90.0   5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-FCO var_1 O3 C3 FE C1 180.000 20.000 1
-FCO var_2 N1 C1 FE C3 180.000 20.000 1
-FCO var_3 N2 C2 FE C3 180.000 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+FCO acedrg          286       "dictionary generator"
+FCO acedrg_database 12        "data source"
+FCO rdkit           2019.09.1 "Chemoinformatics tool"
+FCO servalcat       0.4.62    'optimization tool'
 
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-FCO chir_01 FE C3 C1 C2 cross1
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+FCO servalcat 0.4.62 'optimization tool'

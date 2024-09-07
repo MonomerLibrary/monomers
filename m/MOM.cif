@@ -7,23 +7,25 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MOM MOM 'HYDROXY(DIOXO)MOLYBDENUM            ' NON-POLYMER 5 4 .
+MOM MOM HYDROXY(DIOXO)MOLYBDENUM NON-POLYMER 4 3 .
 
 data_comp_MOM
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-MOM OM2 O O 0.000 0.000 0.000 0.000
-MOM MO1 MO MO 0.000 0.909 1.094 -1.145
-MOM OM1 O O 0.000 2.941 1.013 -0.682
-MOM OM3 O OH1 0.000 0.709 2.933 -0.416
-MOM HM3 H H 0.000 0.205 3.063 0.389
+MOM MO1 MO1 MO MO 5.00 149.064 46.006 32.441
+MOM OM3 OM3 O  OC -1   148.454 47.455 32.976
+MOM OM1 OM1 O  O  -2   150.407 46.220 33.393
+MOM OM2 OM2 O  O  -2   148.303 45.224 33.692
+MOM HM3 HM3 H  H  0    147.441 47.417 32.949
 
 loop_
 _chem_comp_tree.comp_id
@@ -33,23 +35,33 @@ _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
 MOM OM2 n/a MO1 START
 MOM MO1 OM2 OM3 .
-MOM OM1 MO1 . .
+MOM OM1 MO1 .   .
 MOM OM3 MO1 HM3 .
-MOM HM3 OM3 . END
+MOM HM3 OM3 .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+MOM OM3 O(H)
+MOM OM1 O
+MOM OM2 O
+MOM HM3 H(O)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-MOM OM3 MO1 single 2.059 0.020 2.059 0.020
-MOM OM1 MO1 double 1.865 0.020 1.865 0.020
-MOM MO1 OM2 double 1.865 0.020 1.865 0.020
-MOM HM3 OM3 single 0.970 0.012 0.967 0.020
+MOM MO1 OM3 SING   n 1.66  0.02   1.66  0.02
+MOM MO1 OM1 DOUB   n 1.66  0.02   1.66  0.02
+MOM MO1 OM2 DOUB   n 1.66  0.02   1.66  0.02
+MOM OM3 HM3 SINGLE n 0.966 0.0059 1.014 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -58,34 +70,24 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-MOM OM2 MO1 OM1 90.000 3.000
-MOM OM2 MO1 OM3 90.000 3.000
-MOM OM1 MO1 OM3 90.000 3.000
-MOM MO1 OM3 HM3 120.000 3.000
+MOM MO1 OM3 HM3 109.00 5.0
+MOM OM3 MO1 OM1 90.0   5.0
+MOM OM3 MO1 OM2 90.0   5.0
+MOM OM1 MO1 OM2 90.0   5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-MOM var_1 HM3 OM3 MO1 OM2 0.000 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+MOM acedrg          287       "dictionary generator"
+MOM acedrg_database 12        "data source"
+MOM rdkit           2019.09.1 "Chemoinformatics tool"
+MOM servalcat       0.4.62    'optimization tool'
 
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
-MOM chir_01 MO1 OM3 . OM2 cross4 OM1 . . . .
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+MOM servalcat 0.4.62 'optimization tool'

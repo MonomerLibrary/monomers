@@ -7,34 +7,36 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-HGB HGB '4-(HYDROXYMERCURY)BENZOIC ACID      ' NON-POLYMER 16 11 .
+HGB HGB "4-(HYDROXYMERCURY)BENZOIC ACID" NON-POLYMER 15 10 .
 
 data_comp_HGB
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-HGB O2 O OC -0.500 0.000 0.000 0.000
-HGB C1 C C 0.000 -0.644 0.000 1.072
-HGB O1 O OC -0.500 -0.038 -0.001 2.166
-HGB C2 C CR6 0.000 -2.121 0.000 1.046
-HGB C3 C CR16 0.000 -2.802 0.000 -0.173
-HGB HC3 H H 0.000 -2.247 0.000 -1.103
-HGB C4 C CR16 0.000 -2.844 -0.001 2.241
-HGB HC4 H H 0.000 -2.323 -0.006 3.190
-HGB C6 C CR16 0.000 -4.223 0.004 2.209
-HGB HC6 H H 0.000 -4.785 0.011 3.135
-HGB C7 C CR6 0.000 -4.891 0.000 0.997
-HGB C5 C CR16 0.000 -4.181 0.000 -0.191
-HGB HC5 H H 0.000 -4.709 0.000 -1.136
-HGB HG HG HG 0.000 -6.990 0.000 0.961
-HGB O3 O OH1 0.000 -8.939 0.000 0.925
-HGB HO31 H H 0.000 -9.343 0.837 0.918
+HGB HG   HG   HG HG   2.00 -1.929 9.446  20.150
+HGB C1   C1   C  C    0    -0.987 10.966 26.276
+HGB C3   C3   C  CR16 0    -2.091 9.748  24.309
+HGB C5   C5   C  CR16 0    -2.214 9.488  22.948
+HGB C7   C7   C  CSP  -1   -1.398 10.134 22.040
+HGB C6   C6   C  CR16 0    -0.451 11.043 22.471
+HGB C4   C4   C  CR16 0    -0.311 11.317 23.828
+HGB O1   O1   O  OC   -1   -0.122 11.793 26.639
+HGB O2   O2   O  O    0    -1.739 10.367 27.076
+HGB O3   O3   O  OC   -1   -2.437 8.789  18.330
+HGB C2   C2   C  CR6  0    -1.131 10.674 24.789
+HGB HC3  HC3  H  H    0    -2.661 9.294  24.913
+HGB HC5  HC5  H  H    0    -2.858 8.870  22.655
+HGB HC6  HC6  H  H    0    0.104  11.482 21.855
+HGB HC4  HC4  H  H    0    0.344  11.943 24.101
+HGB HO31 HO31 H  H    0    -3.446 8.805  18.235
 
 loop_
 _chem_comp_tree.comp_id
@@ -42,49 +44,70 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-HGB O2 n/a C1 START
-HGB C1 O2 C2 .
-HGB O1 C1 . .
-HGB C2 C1 C4 .
-HGB C3 C2 HC3 .
-HGB HC3 C3 . .
-HGB C4 C2 C6 .
-HGB HC4 C4 . .
-HGB C6 C4 C7 .
-HGB HC6 C6 . .
-HGB C7 C6 HG .
-HGB C5 C7 HC5 .
-HGB HC5 C5 . .
-HGB HG C7 O3 .
-HGB O3 HG HO31 .
-HGB HO31 O3 . END
-HGB C3 C5 . ADD
+HGB O2   n/a C1   START
+HGB C1   O2  C2   .
+HGB O1   C1  .    .
+HGB C2   C1  C4   .
+HGB C3   C2  HC3  .
+HGB HC3  C3  .    .
+HGB C4   C2  C6   .
+HGB HC4  C4  .    .
+HGB C6   C4  C7   .
+HGB HC6  C6  .    .
+HGB C7   C6  HG   .
+HGB C5   C7  HC5  .
+HGB HC5  C5  .    .
+HGB HG   C7  O3   .
+HGB O3   HG  HO31 .
+HGB HO31 O3  .    END
+HGB C3   C5  .    ADD
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+HGB C1   C(C[6]C[6]2)(O)2
+HGB C3   C[6](C[6]C[6]C)(C[6]C[6]H)(H){1|C<3>,1|H<1>}
+HGB C5   C[6](C[6]C[6]H)(C[6]C[6])(H){1|H<1>,2|C<3>}
+HGB C7   C[6](C[6]C[6]H)2{1|C<3>,2|H<1>}
+HGB C6   C[6](C[6]C[6]H)(C[6]C[6])(H){1|H<1>,2|C<3>}
+HGB C4   C[6](C[6]C[6]C)(C[6]C[6]H)(H){1|C<3>,1|H<1>}
+HGB O1   O(CC[6]O)
+HGB O2   O(CC[6]O)
+HGB O3   O(H)
+HGB C2   C[6](C[6]C[6]H)2(COO){1|C<2>,2|H<1>}
+HGB HC3  H(C[6]C[6]2)
+HGB HC5  H(C[6]C[6]2)
+HGB HC6  H(C[6]C[6]2)
+HGB HC4  H(C[6]C[6]2)
+HGB HO31 H(O)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-HGB O1 C1 deloc 1.250 0.020 1.250 0.020
-HGB C1 O2 deloc 1.250 0.020 1.250 0.020
-HGB C2 C1 single 1.500 0.020 1.500 0.020
-HGB C3 C5 double 1.390 0.020 1.390 0.020
-HGB C3 C2 single 1.390 0.020 1.390 0.020
-HGB HC3 C3 single 1.082 0.013 0.975 0.010
-HGB C5 C7 single 1.390 0.020 1.390 0.020
-HGB HC5 C5 single 1.082 0.013 0.975 0.010
-HGB HG C7 single 2.295 0.020 2.295 0.020
-HGB C7 C6 double 1.390 0.020 1.390 0.020
-HGB O3 HG single 2.335 0.020 2.335 0.020
-HGB C6 C4 single 1.390 0.020 1.390 0.020
-HGB HC6 C6 single 1.082 0.013 0.975 0.010
-HGB C4 C2 double 1.390 0.020 1.390 0.020
-HGB HC4 C4 single 1.082 0.013 0.975 0.010
-HGB HO31 O3 single 0.970 0.012 0.839 0.014
+HGB C7 HG   SING   n 2.08  0.03   2.08  0.03
+HGB HG O3   SING   n 2.0   0.01   2.0   0.01
+HGB C1 O1   SINGLE n 1.247 0.0168 1.247 0.0168
+HGB C1 O2   DOUBLE n 1.247 0.0168 1.247 0.0168
+HGB C1 C2   SINGLE n 1.510 0.0127 1.510 0.0127
+HGB C3 C5   DOUBLE n 1.377 0.0182 1.377 0.0182
+HGB C3 C2   SINGLE n 1.390 0.0184 1.390 0.0184
+HGB C5 C7   SINGLE n 1.376 0.0116 1.376 0.0116
+HGB C7 C6   DOUBLE n 1.376 0.0116 1.376 0.0116
+HGB C6 C4   SINGLE n 1.377 0.0182 1.377 0.0182
+HGB C4 C2   DOUBLE n 1.390 0.0184 1.390 0.0184
+HGB C3 HC3  SINGLE n 1.085 0.0150 0.947 0.0200
+HGB C5 HC5  SINGLE n 1.085 0.0150 0.939 0.0200
+HGB C6 HC6  SINGLE n 1.085 0.0150 0.939 0.0200
+HGB C4 HC4  SINGLE n 1.085 0.0150 0.947 0.0200
+HGB O3 HO31 SINGLE n 0.966 0.0059 1.014 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -93,29 +116,27 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-HGB O2 C1 O1 123.000 3.000
-HGB O2 C1 C2 120.000 3.000
-HGB O1 C1 C2 120.000 3.000
-HGB C1 C2 C3 120.000 3.000
-HGB C1 C2 C4 120.000 3.000
-HGB C3 C2 C4 120.000 3.000
-HGB C2 C3 HC3 120.000 3.000
-HGB C2 C3 C5 120.000 3.000
-HGB HC3 C3 C5 120.000 3.000
-HGB C2 C4 HC4 120.000 3.000
-HGB C2 C4 C6 120.000 3.000
-HGB HC4 C4 C6 120.000 3.000
-HGB C4 C6 HC6 120.000 3.000
-HGB C4 C6 C7 120.000 3.000
-HGB HC6 C6 C7 120.000 3.000
-HGB C6 C7 C5 120.000 3.000
-HGB C6 C7 HG 120.000 3.000
-HGB C5 C7 HG 120.000 3.000
-HGB C7 C5 HC5 120.000 3.000
-HGB C7 C5 C3 120.000 3.000
-HGB HC5 C5 C3 120.000 3.000
-HGB C7 HG O3 180.000 3.000
-HGB HG O3 HO31 120.000 3.000
+HGB HG O3 HO31 109.47  5.0
+HGB C7 HG O3   180.00  5.0
+HGB O1 C1 O2   125.677 2.04
+HGB O1 C1 C2   117.162 3.00
+HGB O2 C1 C2   117.162 3.00
+HGB C5 C3 C2   120.564 1.74
+HGB C5 C3 HC3  119.418 3.00
+HGB C2 C3 HC3  120.018 1.50
+HGB C3 C5 C7   120.427 2.99
+HGB C3 C5 HC5  119.156 3.00
+HGB C7 C5 HC5  120.416 3.00
+HGB C5 C7 C6   119.635 3.00
+HGB C7 C6 C4   120.427 2.99
+HGB C7 C6 HC6  120.416 3.00
+HGB C4 C6 HC6  119.156 3.00
+HGB C6 C4 C2   120.564 1.74
+HGB C6 C4 HC4  119.418 3.00
+HGB C2 C4 HC4  120.018 1.50
+HGB C1 C2 C3   120.809 2.27
+HGB C1 C2 C4   120.809 2.27
+HGB C3 C2 C4   118.382 2.26
 
 loop_
 _chem_comp_tor.comp_id
@@ -127,44 +148,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-HGB var_1 O2 C1 C2 C4 179.953 20.000 1
-HGB CONST_1 C1 C2 C3 C5 180.000 0.000 0
-HGB CONST_2 C2 C3 C5 C7 0.000 0.000 0
-HGB CONST_3 C1 C2 C4 C6 180.000 0.000 0
-HGB CONST_4 C2 C4 C6 C7 0.000 0.000 0
-HGB CONST_5 C4 C6 C7 HG 180.000 0.000 0
-HGB CONST_6 C6 C7 C5 C3 0.000 0.000 0
-HGB var_2 C6 C7 HG O3 180.000 20.000 1
-HGB var_3 HO31 O3 HG C7 180.000 20.000 1
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-HGB chir_01 HG C7 O3 . cross0
+HGB sp2_sp2_13  O1  C1 C2 C3  180.000 5.0  2
+HGB sp2_sp2_16  O2  C1 C2 C4  180.000 5.0  2
+HGB sp2_sp2_1   C2  C3 C5 C7  0.000   5.0  1
+HGB sp2_sp2_4   HC3 C3 C5 HC5 0.000   5.0  1
+HGB sp2_sp2_17  C4  C2 C3 C5  0.000   5.0  1
+HGB sp2_sp2_20  C1  C2 C3 HC3 0.000   5.0  1
+HGB other_tor_1 C6  C7 C5 C3  0.000   20.0 1
+HGB other_tor_3 C5  C7 C6 C4  0.000   20.0 1
+HGB sp2_sp2_5   C2  C4 C6 C7  0.000   5.0  1
+HGB sp2_sp2_8   HC4 C4 C6 HC6 0.000   5.0  1
+HGB sp2_sp2_9   C3  C2 C4 C6  0.000   5.0  1
+HGB sp2_sp2_12  C1  C2 C4 HC4 0.000   5.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
-HGB plan-1 C1 0.020
-HGB plan-1 O1 0.020
-HGB plan-1 O2 0.020
-HGB plan-1 C2 0.020
-HGB plan-2 C3 0.020
-HGB plan-2 C5 0.020
-HGB plan-2 C2 0.020
+HGB plan-1 C1  0.020
+HGB plan-1 C2  0.020
+HGB plan-1 O1  0.020
+HGB plan-1 O2  0.020
+HGB plan-2 C2  0.020
+HGB plan-2 C3  0.020
+HGB plan-2 C5  0.020
 HGB plan-2 HC3 0.020
-HGB plan-2 C7 0.020
-HGB plan-2 C6 0.020
-HGB plan-2 C4 0.020
-HGB plan-2 HC5 0.020
-HGB plan-2 HG 0.020
-HGB plan-2 HC6 0.020
-HGB plan-2 HC4 0.020
-HGB plan-2 C1 0.020
+HGB plan-3 C3  0.020
+HGB plan-3 C5  0.020
+HGB plan-3 C7  0.020
+HGB plan-3 HC5 0.020
+HGB plan-3 HG  0.020
+HGB plan-4 C4  0.020
+HGB plan-4 C6  0.020
+HGB plan-4 C7  0.020
+HGB plan-4 HC6 0.020
+HGB plan-5 C2  0.020
+HGB plan-5 C4  0.020
+HGB plan-5 C6  0.020
+HGB plan-5 HC4 0.020
+HGB plan-6 C1  0.020
+HGB plan-6 C2  0.020
+HGB plan-6 C3  0.020
+HGB plan-6 C4  0.020
+
+loop_
+_chem_comp_ring_atom.comp_id
+_chem_comp_ring_atom.ring_serial_number
+_chem_comp_ring_atom.atom_id
+_chem_comp_ring_atom.is_aromatic_ring
+HGB ring-1 C3 NO
+HGB ring-1 C5 NO
+HGB ring-1 C7 NO
+HGB ring-1 C6 NO
+HGB ring-1 C4 NO
+HGB ring-1 C2 NO
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+HGB acedrg          287       "dictionary generator"
+HGB acedrg_database 12        "data source"
+HGB rdkit           2019.09.1 "Chemoinformatics tool"
+HGB servalcat       0.4.69    'optimization tool'
