@@ -13,30 +13,40 @@ data_comp_D3O
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-D3O O  O OH2 1 1.489 37.691 -2.079
-D3O D1 H H   0 1.558 37.731 -1.092
-D3O D2 H H   0 1.558 38.635 -2.371
-D3O D3 H H   0 2.341 37.279 -2.371
+D3O O  O  O O 1 1.511 37.691 -2.079
+D3O D1 D1 H H 0 2.440 37.691 -2.079
+D3O D2 D2 H H 0 1.047 38.496 -2.079
+D3O D3 D3 H H 0 1.047 36.886 -2.079
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+D3O O  O(H)3
+D3O D1 H(OHH)
+D3O D2 H(OHH)
+D3O D3 H(OHH)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
-_chem_comp_bond.aromatic
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-D3O O D1 SINGLE n 0.970 0.0120 0.929 0.0200
-D3O O D2 SINGLE n 0.970 0.0120 0.929 0.0200
-D3O O D3 SINGLE n 0.970 0.0120 0.929 0.0200
+D3O O D1 SINGLE n 0.972 0.0180 0.929 0.0200
+D3O O D2 SINGLE n 0.972 0.0180 0.929 0.0200
+D3O O D3 SINGLE n 0.972 0.0180 0.929 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -48,3 +58,27 @@ _chem_comp_angle.value_angle_esd
 D3O D1 O D2 112.905 3.00
 D3O D1 O D3 112.905 3.00
 D3O D2 O D3 112.905 3.00
+
+loop_
+_pdbx_chem_comp_descriptor.comp_id
+_pdbx_chem_comp_descriptor.type
+_pdbx_chem_comp_descriptor.program
+_pdbx_chem_comp_descriptor.program_version
+_pdbx_chem_comp_descriptor.descriptor
+D3O SMILES           ACDLabs              12.01 "[2H][O+]([2H])[2H]"
+D3O InChI            InChI                1.03  InChI=1S/H2O/h1H2/p+1/i/hD3
+D3O InChIKey         InChI                1.03  XLYOFNOQVPJJNP-ZRLBSURWSA-O
+D3O SMILES_CANONICAL CACTVS               3.385 "[O+]([2H])([2H])[2H]"
+D3O SMILES           CACTVS               3.385 "[O+]([2H])([2H])[2H]"
+D3O SMILES_CANONICAL "OpenEye OEToolkits" 1.9.2 "[2H][O+]([2H])[2H]"
+D3O SMILES           "OpenEye OEToolkits" 1.9.2 "[2H][O+]([2H])[2H]"
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+D3O acedrg          285       "dictionary generator"
+D3O acedrg_database 12        "data source"
+D3O rdkit           2019.09.1 "Chemoinformatics tool"
+D3O servalcat       0.4.57    'optimization tool'
