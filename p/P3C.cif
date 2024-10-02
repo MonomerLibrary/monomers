@@ -1,7 +1,3 @@
-# ------------------------------------------------
-#
-# ---   LIST OF MONOMERS ---
-#
 data_comp_list
 loop_
 _chem_comp.id
@@ -11,64 +7,42 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-P3C      P3C 'TRICHLOROPLATINATE                  ' NON-POLYMER         4   4 .
-# ------------------------------------------------------
-# ------------------------------------------------------
-#
-# --- DESCRIPTION OF MONOMERS ---
-#
+P3C P3C TRICHLOROPLATINATE NON-POLYMER 3 0 .
+
 data_comp_P3C
-#
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
-_chem_comp_atom.x
-_chem_comp_atom.y
-_chem_comp_atom.z
- P3C           CL3    CL   CL        0.000      0.054    0.160    0.292
- P3C           PT     PT   PT       -1.000      2.104   -0.726   -0.652
- P3C           CL1    CL   CL        0.000      4.154   -1.614   -1.596
- P3C           CL2    CL   CL        0.000      1.020   -0.933   -2.812
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
- P3C      CL3    n/a    PT     START
- P3C      PT     CL3    CL2    .
- P3C      CL1    PT     .      .
- P3C      CL2    PT     .      END
+_chem_comp_atom.charge
+_chem_comp_atom.model_Cartn_x
+_chem_comp_atom.model_Cartn_y
+_chem_comp_atom.model_Cartn_z
+P3C PT  PT PT -1.00 52.3960 16.5280 23.2470
+P3C CL1 CL CL -1.00 54.5320 16.1840 23.2000
+P3C CL2 CL CL -1.00 52.3420 16.1270 21.3430
+P3C CL3 CL CL -1.00 50.0590 16.6680 23.0800
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
+_chem_comp_bond.value_dist_nucleus
+_chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- P3C      CL1    PT        single      2.425    0.020
- P3C      CL2    PT        single      2.425    0.020
- P3C      PT     CL3       single      2.425    0.020
+P3C PT CL1 SING 2.590 0.04 2.590 0.04
+P3C PT CL2 SING 2.590 0.04 2.590 0.04
+P3C PT CL3 SING 2.590 0.04 2.590 0.04
+
 loop_
-_chem_comp_angle.comp_id
-_chem_comp_angle.atom_id_1
-_chem_comp_angle.atom_id_2
-_chem_comp_angle.atom_id_3
-_chem_comp_angle.value_angle
-_chem_comp_angle.value_angle_esd
- P3C      CL3    PT     CL1     180.000    3.000
- P3C      CL3    PT     CL2      90.000    3.000
- P3C      CL1    PT     CL2      90.000    3.000
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
- P3C      chir_01          PT     CL3    CL1    CL2       cross1
-# ------------------------------------------------------
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+P3C acedrg          300       "dictionary generator"
+P3C acedrg_database 12        "data source"
+P3C rdkit           2019.09.1 "Chemoinformatics tool"
+P3C servalcat       0.4.92    'optimization tool'
