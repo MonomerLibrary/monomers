@@ -7,24 +7,26 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-OMO OMO 'MO(VI)(=O)(OH)2 CLUSTER             ' NON-POLYMER 6 4 .
+OMO OMO "MO(VI)(=O)(OH)2 CLUSTER" NON-POLYMER 5 3 .
 
 data_comp_OMO
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-OMO OM2 O OH1 0.000 97.169 142.526 147.265
-OMO HO2 H H 0.000 96.897 141.631 147.305
-OMO MO MO MO 6.000 96.336 143.565 146.070
-OMO OM1 O O 0.000 96.975 145.139 146.158
-OMO OR1 O OH1 0.000 96.962 142.786 144.565
-OMO HO1 H H 0.000 96.682 141.906 144.395
+OMO MO  MO  MO MO 4.00 96.415 143.542 146.187
+OMO OM1 OM1 O  O  -2   97.089 145.053 146.318
+OMO OR1 OR1 O  O  -1   96.929 143.449 144.612
+OMO OM2 OM2 O  O  -1   97.842 142.862 146.693
+OMO HO1 HO1 H  H  0    96.242 143.418 144.085
+OMO HO2 HO2 H  H  0    97.673 142.180 147.200
 
 loop_
 _chem_comp_tree.comp_id
@@ -32,27 +34,38 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-OMO OM2 n/a MO START
-OMO HO2 OM2 . .
-OMO MO OM2 OR1 .
-OMO OM1 MO . .
-OMO OR1 MO HO1 .
-OMO HO1 OR1 . END
+OMO OM2 n/a MO  START
+OMO HO2 OM2 .   .
+OMO MO  OM2 OR1 .
+OMO OM1 MO  .   .
+OMO OR1 MO  HO1 .
+OMO HO1 OR1 .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+OMO OM1 O
+OMO OR1 O(H)
+OMO OM2 O(H)
+OMO HO1 H(O)
+OMO HO2 H(O)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-OMO OM1 MO double 1.865 0.020 1.865 0.020
-OMO OR1 MO single 2.059 0.020 2.059 0.020
-OMO MO OM2 single 2.059 0.020 2.059 0.020
-OMO HO1 OR1 single 0.970 0.012 0.967 0.020
-OMO HO2 OM2 single 0.970 0.012 0.967 0.020
+OMO OM1 MO  DOUB   n 1.66  0.02   1.66  0.02
+OMO MO  OR1 SING   n 1.66  0.02   1.66  0.02
+OMO MO  OM2 SING   n 1.66  0.02   1.66  0.02
+OMO OR1 HO1 SINGLE n 0.972 0.0180 0.866 0.0200
+OMO OM2 HO2 SINGLE n 0.972 0.0180 0.866 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -61,21 +74,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-OMO HO2 OM2 MO 120.000 3.000
-OMO OM2 MO OM1 90.000 3.000
-OMO OM2 MO OR1 90.000 3.000
-OMO OM1 MO OR1 90.000 3.000
-OMO MO OR1 HO1 120.000 3.000
+OMO MO  OR1 HO1 109.47 5.0
+OMO MO  OM2 HO2 109.47 5.0
+OMO OM1 MO  OR1 90.0   5.0
+OMO OM1 MO  OM2 90.0   5.0
+OMO OR1 MO  OM2 90.0   5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-OMO var_1 HO2 OM2 MO OR1 -67.360 20.000 1
-OMO var_2 OM2 MO OR1 HO1 66.659 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+OMO acedrg          289       "dictionary generator"
+OMO acedrg_database 12        "data source"
+OMO rdkit           2019.09.1 "Chemoinformatics tool"
+OMO servalcat       0.4.62    'optimization tool'
+
+loop_
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+OMO servalcat 0.4.62 'optimization tool'

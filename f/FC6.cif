@@ -7,31 +7,33 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-FC6 FC6 'HEXACYANOFERRATE(3-)                ' NON-POLYMER 13 13 .
+FC6 FC6 HEXACYANOFERRATE(3-) NON-POLYMER 12 12 .
 
 data_comp_FC6
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-FC6 N11 N NS 0.000 0.000 0.000 0.000
-FC6 C11 C CSP 0.000 -0.022 0.612 0.991
-FC6 FE2 FE FE 0.000 0.096 1.633 2.504
-FC6 C24 C CSP 0.000 0.244 2.638 4.028
-FC6 N24 N NS 0.000 0.455 3.256 5.011
-FC6 C21 C CSP 0.000 0.239 0.097 3.485
-FC6 N25 N NS 0.000 0.485 -0.842 4.143
-FC6 C22 C CSP 0.000 -1.728 1.579 2.681
-FC6 N22 N NS 0.000 -2.883 1.427 2.803
-FC6 C26 C CSP 0.000 1.916 1.640 2.387
-FC6 N21 N NS 0.000 3.062 1.515 2.393
-FC6 C23 C CSP 0.000 -0.081 3.078 1.392
-FC6 N23 N NS 0.000 -0.130 4.041 0.701
+FC6 FE2 FE2 FE FE  6.00 31.040 -3.575 38.135
+FC6 N24 N24 N  NSP 0    29.455 -1.675 40.132
+FC6 C24 C24 C  C   -1   30.077 -2.422 39.347
+FC6 C21 C21 C  C   -1   30.090 -5.103 38.835
+FC6 N25 N25 N  NSP 0    29.475 -6.092 39.288
+FC6 C22 C22 C  C   -1   29.663 -3.328 36.806
+FC6 N22 N22 N  NSP 0    28.772 -3.168 35.943
+FC6 C26 C26 C  C   -1   32.417 -3.823 39.465
+FC6 N21 N21 N  NSP 0    33.310 -3.983 40.325
+FC6 C23 C23 C  C   -1   31.990 -2.048 37.435
+FC6 N23 N23 N  NSP 0    32.604 -1.058 36.983
+FC6 C11 C11 C  C   -1   32.002 -4.729 36.924
+FC6 N11 N11 N  NSP 0    32.625 -5.478 36.140
 
 loop_
 _chem_comp_tree.comp_id
@@ -43,37 +45,55 @@ FC6 N11 n/a C11 START
 FC6 C11 N11 FE2 .
 FC6 FE2 C11 C23 .
 FC6 C24 FE2 N24 .
-FC6 N24 C24 . .
+FC6 N24 C24 .   .
 FC6 C21 FE2 N25 .
-FC6 N25 C21 . .
+FC6 N25 C21 .   .
 FC6 C22 FE2 N22 .
-FC6 N22 C22 . .
+FC6 N22 C22 .   .
 FC6 C26 FE2 N21 .
-FC6 N21 C26 . .
+FC6 N21 C26 .   .
 FC6 C23 FE2 N23 .
-FC6 N23 C23 . END
+FC6 N23 C23 .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+FC6 N24 N(C)
+FC6 C24 C(N)
+FC6 C21 C(N)
+FC6 N25 N(C)
+FC6 C22 C(N)
+FC6 N22 N(C)
+FC6 C26 C(N)
+FC6 N21 N(C)
+FC6 C23 C(N)
+FC6 N23 N(C)
+FC6 C11 C(N)
+FC6 N11 N(C)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-FC6 N24 C24 triple 1.158 0.020 1.158 0.020
-FC6 C24 FE2 single 1.825 0.020 1.825 0.020
-FC6 C21 FE2 single 1.825 0.020 1.825 0.020
-FC6 C22 FE2 single 1.825 0.020 1.825 0.020
-FC6 C26 FE2 single 1.825 0.020 1.825 0.020
-FC6 C23 FE2 single 1.825 0.020 1.825 0.020
-FC6 FE2 C11 single 1.825 0.020 1.825 0.020
-FC6 N25 C21 triple 1.158 0.020 1.158 0.020
-FC6 N22 C22 triple 1.158 0.020 1.158 0.020
-FC6 N21 C26 triple 1.158 0.020 1.158 0.020
-FC6 N23 C23 triple 1.158 0.020 1.158 0.020
-FC6 C11 N11 triple 1.158 0.020 1.158 0.020
+FC6 C24 FE2 SING   n 1.93  0.03   1.93  0.03
+FC6 FE2 C21 SING   n 1.93  0.03   1.93  0.03
+FC6 FE2 C22 SING   n 1.93  0.03   1.93  0.03
+FC6 FE2 C26 SING   n 1.93  0.03   1.93  0.03
+FC6 FE2 C23 SING   n 1.93  0.03   1.93  0.03
+FC6 FE2 C11 SING   n 1.93  0.03   1.93  0.03
+FC6 N24 C24 TRIPLE n 1.250 0.0200 1.250 0.0200
+FC6 C21 N25 TRIPLE n 1.250 0.0200 1.250 0.0200
+FC6 C22 N22 TRIPLE n 1.250 0.0200 1.250 0.0200
+FC6 C26 N21 TRIPLE n 1.250 0.0200 1.250 0.0200
+FC6 C23 N23 TRIPLE n 1.250 0.0200 1.250 0.0200
+FC6 C11 N11 TRIPLE n 1.250 0.0200 1.250 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -82,56 +102,41 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-FC6 N11 C11 FE2 180.000 3.000
-FC6 C11 FE2 C24 180.000 3.000
-FC6 C11 FE2 C21 90.000 3.000
-FC6 C11 FE2 C22 90.000 3.000
-FC6 C11 FE2 C26 90.000 3.000
-FC6 C11 FE2 C23 90.000 3.000
-FC6 C24 FE2 C21 90.000 3.000
-FC6 C24 FE2 C22 90.000 3.000
-FC6 C21 FE2 C22 90.000 3.000
-FC6 C24 FE2 C26 90.000 3.000
-FC6 C21 FE2 C26 90.000 3.000
-FC6 C22 FE2 C26 180.000 3.000
-FC6 C24 FE2 C23 90.000 3.000
-FC6 C21 FE2 C23 180.000 3.000
-FC6 C22 FE2 C23 90.000 3.000
-FC6 C26 FE2 C23 90.000 3.000
-FC6 FE2 C24 N24 180.000 3.000
-FC6 FE2 C21 N25 180.000 3.000
-FC6 FE2 C22 N22 180.000 3.000
-FC6 FE2 C26 N21 180.000 3.000
-FC6 FE2 C23 N23 180.000 3.000
+FC6 FE2 C24 N24 180.00 5.0
+FC6 FE2 C21 N25 180.00 5.0
+FC6 FE2 C22 N22 180.00 5.0
+FC6 FE2 C26 N21 180.00 5.0
+FC6 FE2 C23 N23 180.00 5.0
+FC6 FE2 C11 N11 180.00 5.0
+FC6 C22 FE2 C11 90.003 2.219
+FC6 C22 FE2 C24 90.003 2.219
+FC6 C22 FE2 C21 90.003 2.219
+FC6 C22 FE2 C26 180.0  2.725
+FC6 C22 FE2 C23 90.003 2.219
+FC6 C11 FE2 C24 180.0  2.725
+FC6 C11 FE2 C21 90.003 2.219
+FC6 C11 FE2 C26 90.003 2.219
+FC6 C11 FE2 C23 90.003 2.219
+FC6 C24 FE2 C21 90.003 2.219
+FC6 C24 FE2 C26 90.003 2.219
+FC6 C24 FE2 C23 90.003 2.219
+FC6 C21 FE2 C26 90.003 2.219
+FC6 C21 FE2 C23 180.0  2.725
+FC6 C26 FE2 C23 90.003 2.219
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-FC6 var_1 N11 C11 FE2 C24 180.000 20.000 1
-FC6 var_2 N24 C24 FE2 C11 180.000 20.000 1
-FC6 var_3 N25 C21 FE2 C11 180.000 20.000 1
-FC6 var_4 N22 C22 FE2 C11 180.000 20.000 1
-FC6 var_5 N21 C26 FE2 C11 180.000 20.000 1
-FC6 var_6 N23 C23 FE2 C11 180.000 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+FC6 acedrg          287       "dictionary generator"
+FC6 acedrg_database 12        "data source"
+FC6 rdkit           2019.09.1 "Chemoinformatics tool"
+FC6 servalcat       0.4.62    'optimization tool'
 
 loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
-FC6 chir_01 FE2 C11 C24 C21 cross4 C22 C23 C26 . .
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+FC6 servalcat 0.4.62 'optimization tool'

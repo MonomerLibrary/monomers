@@ -7,40 +7,42 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-EMT EMT '2-(ETHYLMERCURI-THIO)-BENZOIC ACID  ' NON-POLYMER 22 13 .
+EMT EMT "2-(ETHYLMERCURI-THIO)-BENZOIC ACID" NON-POLYMER 21 12 .
 
 data_comp_EMT
+
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-EMT OD1 O OC -0.500 0.000 0.000 0.000
-EMT CG C C 0.000 0.277 -0.771 0.945
-EMT OD2 O OC -0.500 1.196 -0.478 1.743
-EMT CZ C CR6 0.000 -0.476 -2.025 1.119
-EMT CE2 C CR16 0.000 -0.172 -2.887 2.177
-EMT HE2 H H 0.000 0.616 -2.633 2.875
-EMT CD2 C CR16 0.000 -0.876 -4.061 2.330
-EMT HD2 H H 0.000 -0.637 -4.730 3.147
-EMT CG1 C CR16 0.000 -1.889 -4.391 1.443
-EMT HG1 H H 0.000 -2.437 -5.316 1.573
-EMT CD1 C CR16 0.000 -2.206 -3.549 0.398
-EMT HD1 H H 0.000 -3.000 -3.814 -0.289
-EMT CE1 C CR6 0.000 -1.507 -2.359 0.226
-EMT SD S S2 0.000 -1.909 -1.281 -1.108
-EMT HG HG HG 0.000 -3.534 0.064 -0.072
-EMT C1 C CH2 0.000 -4.986 1.265 0.855
-EMT H11 H H 0.000 -4.585 1.663 1.790
-EMT H12 H H 0.000 -5.873 0.665 1.067
-EMT C2 C CH3 0.000 -5.360 2.422 -0.074
-EMT H23 H H 0.000 -4.500 3.007 -0.281
-EMT H22 H H 0.000 -5.749 2.038 -0.983
-EMT H21 H H 0.000 -6.093 3.030 0.390
+EMT HG  HG  HG HG   2.00 1.485  0.004  9.928
+EMT SD  SD  S  S1   -1   1.670  0.879  12.318
+EMT C1  C1  C  CH2  -1   1.266  -0.605 8.036
+EMT C2  C2  C  CH3  0    -0.192 -0.850 7.747
+EMT CE1 CE1 C  CR6  0    3.273  1.083  12.768
+EMT CD1 CD1 C  CR16 0    3.805  0.312  13.786
+EMT CG1 CG1 C  CR16 0    5.126  0.471  14.169
+EMT CD2 CD2 C  CR16 0    5.919  1.401  13.537
+EMT CE2 CE2 C  CR16 0    5.394  2.176  12.520
+EMT CZ  CZ  C  CR6  0    4.069  2.030  12.121
+EMT CG  CG  C  C    0    3.520  2.888  11.009
+EMT OD2 OD2 O  OC   -1   2.878  3.919  11.325
+EMT OD1 OD1 O  O    0    3.735  2.524  9.827
+EMT H11 H11 H  H    0    1.754  -1.400 7.887
+EMT H12 H12 H  H    0    1.588  0.070  7.460
+EMT H21 H21 H  H    0    -0.705 -0.059 7.983
+EMT H22 H22 H  H    0    -0.503 -1.607 8.270
+EMT H23 H23 H  H    0    -0.306 -1.039 6.802
+EMT HD1 HD1 H  H    0    3.263  -0.321 14.215
+EMT HG1 HG1 H  H    0    5.482  -0.062 14.867
+EMT HD2 HD2 H  H    0    6.819  1.511  13.797
+EMT HE2 HE2 H  H    0    5.938  2.812  12.088
 
 loop_
 _chem_comp_tree.comp_id
@@ -48,61 +50,88 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-EMT OD1 n/a CG START
-EMT CG OD1 CZ .
-EMT OD2 CG . .
-EMT CZ CG CE1 .
-EMT CE2 CZ CD2 .
-EMT HE2 CE2 . .
+EMT OD1 n/a CG  START
+EMT CG  OD1 CZ  .
+EMT OD2 CG  .   .
+EMT CZ  CG  CE1 .
+EMT CE2 CZ  CD2 .
+EMT HE2 CE2 .   .
 EMT CD2 CE2 CG1 .
-EMT HD2 CD2 . .
+EMT HD2 CD2 .   .
 EMT CG1 CD2 CD1 .
-EMT HG1 CG1 . .
+EMT HG1 CG1 .   .
 EMT CD1 CG1 HD1 .
-EMT HD1 CD1 . .
-EMT CE1 CZ SD .
-EMT SD CE1 HG .
-EMT HG SD C1 .
-EMT C1 HG C2 .
-EMT H11 C1 . .
-EMT H12 C1 . .
-EMT C2 C1 H21 .
-EMT H23 C2 . .
-EMT H22 C2 . .
-EMT H21 C2 . END
-EMT CE1 CD1 . ADD
+EMT HD1 CD1 .   .
+EMT CE1 CZ  SD  .
+EMT SD  CE1 HG  .
+EMT HG  SD  C1  .
+EMT C1  HG  C2  .
+EMT H11 C1  .   .
+EMT H12 C1  .   .
+EMT C2  C1  H21 .
+EMT H23 C2  .   .
+EMT H22 C2  .   .
+EMT H21 C2  .   END
+EMT CE1 CD1 .   ADD
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+EMT SD  S(C[6a]C[6a]2)
+EMT C1  C(CH3)(H)2
+EMT C2  C(CHH)(H)3
+EMT CE1 C[6a](C[6a]C[6a]C)(C[6a]C[6a]H)(S){1|C<3>,2|H<1>}
+EMT CD1 C[6a](C[6a]C[6a]H)(C[6a]C[6a]S)(H){1|H<1>,2|C<3>}
+EMT CG1 C[6a](C[6a]C[6a]H)2(H){1|C<3>,1|H<1>,1|S<1>}
+EMT CD2 C[6a](C[6a]C[6a]H)2(H){1|H<1>,2|C<3>}
+EMT CE2 C[6a](C[6a]C[6a]C)(C[6a]C[6a]H)(H){1|C<3>,1|H<1>,1|S<1>}
+EMT CZ  C[6a](C[6a]C[6a]H)(C[6a]C[6a]S)(COO){1|C<3>,2|H<1>}
+EMT CG  C(C[6a]C[6a]2)(O)2
+EMT OD2 O(CC[6a]O)
+EMT OD1 O(CC[6a]O)
+EMT H11 H(CCH)
+EMT H12 H(CCH)
+EMT H21 H(CCHH)
+EMT H22 H(CCHH)
+EMT H23 H(CCHH)
+EMT HD1 H(C[6a]C[6a]2)
+EMT HG1 H(C[6a]C[6a]2)
+EMT HD2 H(C[6a]C[6a]2)
+EMT HE2 H(C[6a]C[6a]2)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-EMT HG SD single 2.600 0.020 2.600 0.020
-EMT SD CE1 single 1.695 0.020 1.695 0.020
-EMT C1 HG single 2.362 0.020 2.362 0.020
-EMT C2 C1 single 1.513 0.020 1.513 0.020
-EMT H11 C1 single 1.089 0.010 0.989 0.005
-EMT H12 C1 single 1.089 0.010 0.989 0.005
-EMT H21 C2 single 1.089 0.010 0.989 0.005
-EMT H22 C2 single 1.089 0.010 0.989 0.005
-EMT H23 C2 single 1.089 0.010 0.989 0.005
-EMT CE1 CD1 double 1.390 0.020 1.390 0.020
-EMT CE1 CZ single 1.487 0.020 1.487 0.020
-EMT CD1 CG1 single 1.390 0.020 1.390 0.020
-EMT HD1 CD1 single 1.082 0.013 0.975 0.010
-EMT CG1 CD2 double 1.390 0.020 1.390 0.020
-EMT HG1 CG1 single 1.082 0.013 0.975 0.010
-EMT CD2 CE2 single 1.390 0.020 1.390 0.020
-EMT HD2 CD2 single 1.082 0.013 0.975 0.010
-EMT CE2 CZ double 1.390 0.020 1.390 0.020
-EMT HE2 CE2 single 1.082 0.013 0.975 0.010
-EMT CZ CG single 1.500 0.020 1.500 0.020
-EMT OD2 CG deloc 1.250 0.020 1.250 0.020
-EMT CG OD1 deloc 1.250 0.020 1.250 0.020
+EMT SD  HG  SING   n 2.54  0.13   2.54  0.13
+EMT HG  C1  SING   n 2.0   0.01   2.0   0.01
+EMT SD  CE1 SINGLE n 1.677 0.0200 1.677 0.0200
+EMT C1  C2  SINGLE n 1.506 0.0200 1.506 0.0200
+EMT CE1 CD1 DOUBLE y 1.383 0.0118 1.383 0.0118
+EMT CE1 CZ  SINGLE y 1.396 0.0108 1.396 0.0108
+EMT CD1 CG1 SINGLE y 1.384 0.0100 1.384 0.0100
+EMT CG1 CD2 DOUBLE y 1.376 0.0151 1.376 0.0151
+EMT CD2 CE2 SINGLE y 1.382 0.0111 1.382 0.0111
+EMT CE2 CZ  DOUBLE y 1.391 0.0100 1.391 0.0100
+EMT CZ  CG  SINGLE n 1.508 0.0101 1.508 0.0101
+EMT CG  OD2 SINGLE n 1.255 0.0175 1.255 0.0175
+EMT CG  OD1 DOUBLE n 1.255 0.0175 1.255 0.0175
+EMT C1  H11 SINGLE n 1.092 0.0100 0.945 0.0129
+EMT C1  H12 SINGLE n 1.092 0.0100 0.945 0.0129
+EMT C2  H21 SINGLE n 1.092 0.0100 0.971 0.0161
+EMT C2  H22 SINGLE n 1.092 0.0100 0.971 0.0161
+EMT C2  H23 SINGLE n 1.092 0.0100 0.971 0.0161
+EMT CD1 HD1 SINGLE n 1.085 0.0150 0.937 0.0168
+EMT CG1 HG1 SINGLE n 1.085 0.0150 0.948 0.0100
+EMT CD2 HD2 SINGLE n 1.085 0.0150 0.943 0.0175
+EMT CE2 HE2 SINGLE n 1.085 0.0150 0.942 0.0169
 
 loop_
 _chem_comp_angle.comp_id
@@ -111,41 +140,41 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-EMT OD1 CG OD2 123.000 3.000
-EMT OD1 CG CZ 120.000 3.000
-EMT OD2 CG CZ 120.000 3.000
-EMT CG CZ CE2 120.000 3.000
-EMT CG CZ CE1 120.000 3.000
-EMT CE2 CZ CE1 120.000 3.000
-EMT CZ CE2 HE2 120.000 3.000
-EMT CZ CE2 CD2 120.000 3.000
-EMT HE2 CE2 CD2 120.000 3.000
-EMT CE2 CD2 HD2 120.000 3.000
-EMT CE2 CD2 CG1 120.000 3.000
-EMT HD2 CD2 CG1 120.000 3.000
-EMT CD2 CG1 HG1 120.000 3.000
-EMT CD2 CG1 CD1 120.000 3.000
-EMT HG1 CG1 CD1 120.000 3.000
-EMT CG1 CD1 HD1 120.000 3.000
-EMT CG1 CD1 CE1 120.000 3.000
-EMT HD1 CD1 CE1 120.000 3.000
-EMT CZ CE1 SD 120.000 3.000
-EMT CZ CE1 CD1 120.000 3.000
-EMT SD CE1 CD1 120.000 3.000
-EMT CE1 SD HG 100.021 3.000
-EMT SD HG C1 180.000 3.000
-EMT HG C1 H11 109.500 3.000
-EMT HG C1 H12 109.500 3.000
-EMT HG C1 C2 109.500 3.000
-EMT H11 C1 H12 107.900 3.000
-EMT H11 C1 C2 109.470 3.000
-EMT H12 C1 C2 109.470 3.000
-EMT C1 C2 H23 109.470 3.000
-EMT C1 C2 H22 109.470 3.000
-EMT C1 C2 H21 109.470 3.000
-EMT H23 C2 H22 109.470 3.000
-EMT H23 C2 H21 109.470 3.000
-EMT H22 C2 H21 109.470 3.000
+EMT HG  SD  CE1 109.47  5.0
+EMT HG  C1  C2  109.47  5.0
+EMT HG  C1  H11 109.47  5.0
+EMT HG  C1  H12 109.47  5.0
+EMT C2  C1  H11 109.471 3.00
+EMT C2  C1  H12 109.471 3.00
+EMT H11 C1  H12 109.471 3.00
+EMT C1  C2  H21 109.211 1.50
+EMT C1  C2  H22 109.211 1.50
+EMT C1  C2  H23 109.211 1.50
+EMT H21 C2  H22 109.363 1.50
+EMT H21 C2  H23 109.363 1.50
+EMT H22 C2  H23 109.363 1.50
+EMT SD  CE1 CD1 120.018 3.00
+EMT SD  CE1 CZ  120.018 3.00
+EMT CD1 CE1 CZ  119.965 1.50
+EMT CE1 CD1 CG1 120.194 3.00
+EMT CE1 CD1 HD1 119.528 1.50
+EMT CG1 CD1 HD1 120.278 1.50
+EMT CD1 CG1 CD2 119.916 1.50
+EMT CD1 CG1 HG1 119.941 1.50
+EMT CD2 CG1 HG1 120.143 1.50
+EMT CG1 CD2 CE2 119.809 1.50
+EMT CG1 CD2 HD2 120.151 1.50
+EMT CE2 CD2 HD2 120.040 1.50
+EMT CD2 CE2 CZ  121.037 1.50
+EMT CD2 CE2 HE2 119.714 1.50
+EMT CZ  CE2 HE2 119.250 1.50
+EMT CE1 CZ  CE2 119.079 2.74
+EMT CE1 CZ  CG  121.037 3.00
+EMT CE2 CZ  CG  119.884 1.50
+EMT CZ  CG  OD2 117.869 2.81
+EMT CZ  CG  OD1 117.869 2.81
+EMT OD2 CG  OD1 124.263 2.43
+EMT C1  HG  SD  180.000 6.00
 
 loop_
 _chem_comp_tor.comp_id
@@ -157,46 +186,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-EMT var_1 OD1 CG CZ CE1 0.018 20.000 1
-EMT CONST_1 CG CZ CE2 CD2 180.000 0.000 0
-EMT CONST_2 CZ CE2 CD2 CG1 0.000 0.000 0
-EMT CONST_3 CE2 CD2 CG1 CD1 0.000 0.000 0
-EMT CONST_4 CD2 CG1 CD1 CE1 0.000 0.000 0
-EMT CONST_5 CG CZ CE1 SD 0.000 0.000 0
-EMT CONST_6 CZ CE1 CD1 CG1 0.000 0.000 0
-EMT var_2 CZ CE1 SD HG -90.231 20.000 1
-EMT var_3 CE1 SD HG C1 180.000 20.000 1
-EMT var_4 H11 C1 HG SD 180.000 20.000 1
-EMT var_5 HG C1 C2 H21 179.988 20.000 3
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-EMT chir_01 HG SD C1 . cross0
+EMT sp3_sp3_1       H11 C1  C2  H21 180.000 10.0 3
+EMT const_sp2_sp2_1 CG1 CD1 CE1 CZ  0.000   0.0  1
+EMT const_sp2_sp2_4 HD1 CD1 CE1 SD  0.000   0.0  1
+EMT const_21        CD1 CE1 CZ  CE2 0.000   0.0  1
+EMT const_24        SD  CE1 CZ  CG  0.000   0.0  1
+EMT const_sp2_sp2_5 CE1 CD1 CG1 CD2 0.000   0.0  1
+EMT const_sp2_sp2_8 HD1 CD1 CG1 HG1 0.000   0.0  1
+EMT const_sp2_sp2_9 CE2 CD2 CG1 CD1 0.000   0.0  1
+EMT const_12        HD2 CD2 CG1 HG1 0.000   0.0  1
+EMT const_13        CG1 CD2 CE2 CZ  0.000   0.0  1
+EMT const_16        HD2 CD2 CE2 HE2 0.000   0.0  1
+EMT const_17        CD2 CE2 CZ  CE1 0.000   0.0  1
+EMT const_20        HE2 CE2 CZ  CG  0.000   0.0  1
+EMT sp2_sp2_25      OD2 CG  CZ  CE1 180.000 5.0  2
+EMT sp2_sp2_28      OD1 CG  CZ  CE2 180.000 5.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
-EMT plan-1 CE1 0.020
-EMT plan-1 SD 0.020
 EMT plan-1 CD1 0.020
-EMT plan-1 CZ 0.020
-EMT plan-1 CG1 0.020
 EMT plan-1 CD2 0.020
+EMT plan-1 CE1 0.020
 EMT plan-1 CE2 0.020
+EMT plan-1 CG  0.020
+EMT plan-1 CG1 0.020
+EMT plan-1 CZ  0.020
 EMT plan-1 HD1 0.020
-EMT plan-1 HG1 0.020
 EMT plan-1 HD2 0.020
 EMT plan-1 HE2 0.020
-EMT plan-1 CG 0.020
-EMT plan-2 CG 0.020
-EMT plan-2 CZ 0.020
-EMT plan-2 OD2 0.020
+EMT plan-1 HG1 0.020
+EMT plan-1 SD  0.020
+EMT plan-2 CG  0.020
+EMT plan-2 CZ  0.020
 EMT plan-2 OD1 0.020
+EMT plan-2 OD2 0.020
+
+loop_
+_chem_comp_ring_atom.comp_id
+_chem_comp_ring_atom.ring_serial_number
+_chem_comp_ring_atom.atom_id
+_chem_comp_ring_atom.is_aromatic_ring
+EMT ring-1 CE1 YES
+EMT ring-1 CD1 YES
+EMT ring-1 CG1 YES
+EMT ring-1 CD2 YES
+EMT ring-1 CE2 YES
+EMT ring-1 CZ  YES
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+EMT acedrg          289       "dictionary generator"
+EMT acedrg_database 12        "data source"
+EMT rdkit           2019.09.1 "Chemoinformatics tool"
+EMT servalcat       0.4.62    'optimization tool'
+
+loop_
+_pdbx_chem_comp_description_generator.comp_id
+_pdbx_chem_comp_description_generator.program_name
+_pdbx_chem_comp_description_generator.program_version
+_pdbx_chem_comp_description_generator.descriptor
+EMT servalcat 0.4.62 'optimization tool'
