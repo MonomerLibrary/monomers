@@ -13,15 +13,16 @@ data_comp_IUM
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-IUM U  U U 4.00  -18.102 27.912 15.132
-IUM O1 O O -2.00 -19.355 26.494 13.291
-IUM O2 O O -2.00 -16.816 28.916 17.208
+IUM U  U  U U 4.00 -18.131 27.689 15.196
+IUM O1 O1 O O -1   -18.674 27.279 13.188
+IUM O2 O2 O O -1   -17.588 28.100 17.203
 
 loop_
 _chem_comp_bond.comp_id
@@ -32,15 +33,25 @@ _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-IUM U O1 SING 2.640 0.04 2.640 0.04
-IUM U O2 SING 2.640 0.04 2.640 0.04
+IUM U O1 SING 2.12 0.25 2.12 0.25
+IUM U O2 SING 2.12 0.25 2.12 0.25
 
 loop_
 _acedrg_chem_comp_descriptor.comp_id
 _acedrg_chem_comp_descriptor.program_name
 _acedrg_chem_comp_descriptor.program_version
 _acedrg_chem_comp_descriptor.type
-IUM acedrg          302       "dictionary generator"
-IUM acedrg_database 12        "data source"
-IUM rdkit           2019.09.1 "Chemoinformatics tool"
-IUM servalcat       0.4.92    'optimization tool'
+IUM acedrg            311       'dictionary generator'
+IUM 'acedrg_database' 12        'data source'
+IUM rdkit             2019.09.1 'Chemoinformatics tool'
+IUM metalCoord        0.1.63    'metal coordination analysis'
+IUM servalcat         0.4.93    'optimization tool'
+
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+IUM O1 U O2 180.0 5.0
