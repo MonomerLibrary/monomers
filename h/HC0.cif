@@ -7,42 +7,38 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-HC0 HC0 '2 IRON/2 SULFUR/6 CARBONYL/1 WATER I' NON-POLYMER 24 17 .
+HC0 HC0 "2 IRON/2 SULFUR/6 CARBONYL/1 WATER INORGANIC CLUSTER" NON-POLYMER 17 15 .
 
 data_comp_HC0
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-HC0 O7 O O 0.000 47.296 20.401 18.084
-HC0 C7 C C1 0.000 48.140 20.994 18.493
-HC0 H77 H H 0.000 47.606 21.910 18.302
-HC0 FE2 FE FE 0.000 49.549 21.931 19.173
-HC0 S1 S S2 0.000 49.707 23.348 17.350
-HC0 S2 S S2 0.000 51.311 23.213 19.876
-HC0 C6 C C1 0.000 49.578 20.903 20.706
-HC0 H66 H H 0.000 48.840 21.532 21.175
-HC0 O6 O O 0.000 49.636 20.238 21.621
-HC0 C8 C C1 0.000 48.465 23.169 19.909
-HC0 H88 H H 0.000 48.889 22.983 20.881
-HC0 O8 O O 0.000 47.780 23.943 20.339
-HC0 C5 C C 0.000 50.795 20.399 18.390
-HC0 O5 O O 0.000 50.612 19.395 17.923
-HC0 FE1 FE FE 0.000 51.683 22.203 17.717
-HC0 O1 O O 0.000 50.076 25.405 19.007
-HC0 HO12 H H 0.000 49.029 25.736 19.747
-HC0 HO11 H H 0.000 50.304 26.707 18.924
-HC0 C3 C C1 0.000 53.233 21.372 18.209
-HC0 H33 H H 0.000 53.753 21.829 17.384
-HC0 O3 O O 0.000 54.172 20.853 18.528
-HC0 C4 C C1 0.000 51.649 21.479 16.035
-HC0 H44 H H 0.000 52.559 20.936 16.229
-HC0 O4 O O 0.000 51.592 21.050 14.981
+HC0 FE1  FE1  FE FE  10.00 51.643 22.307 17.700
+HC0 FE2  FE2  FE FE  12.00 49.430 21.855 19.258
+HC0 S1   S1   S  S   -2    49.611 23.171 17.335
+HC0 S2   S2   S  S   -2    51.312 23.150 19.748
+HC0 O1   O1   O  OH2 0     51.884 24.136 16.918
+HC0 O8   O8   O  O   0     47.375 23.744 20.718
+HC0 O3   O3   O  O   0     54.308 21.144 18.395
+HC0 O4   O4   O  O   0     51.935 21.315 14.890
+HC0 O5   O5   O  O   0     50.647 19.742 17.802
+HC0 O6   O6   O  O   0     49.769 20.214 21.771
+HC0 O7   O7   O  O   0     47.163 20.245 18.070
+HC0 C3   C3   C  C   -2    53.221 21.619 18.111
+HC0 C4   C4   C  C   -2    51.816 21.721 16.034
+HC0 C5   C5   C  C   -2    50.777 20.835 18.337
+HC0 C6   C6   C  C   -2    49.632 20.877 20.756
+HC0 C7   C7   C  C   -2    48.078 20.894 18.550
+HC0 C8   C8   C  C   -2    48.170 23.012 20.153
+HC0 HO11 HO11 H  H   0     51.900 24.725 17.549
+HC0 HO12 HO12 H  H   0     52.642 24.180 16.507
 
 loop_
 _chem_comp_tree.comp_id
@@ -50,69 +46,86 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-HC0 O7 n/a C7 START
-HC0 C7 O7 FE2 .
-HC0 H77 C7 . .
-HC0 FE2 C7 C5 .
-HC0 S1 FE2 . .
-HC0 S2 FE2 . .
-HC0 C6 FE2 O6 .
-HC0 H66 C6 . .
-HC0 O6 C6 . .
-HC0 C8 FE2 O8 .
-HC0 H88 C8 . .
-HC0 O8 C8 . .
-HC0 C5 FE2 FE1 .
-HC0 O5 C5 . .
-HC0 FE1 C5 C4 .
-HC0 O1 FE1 HO11 .
-HC0 HO12 O1 . .
-HC0 HO11 O1 . .
-HC0 C3 FE1 O3 .
-HC0 H33 C3 . .
-HC0 O3 C3 . .
-HC0 C4 FE1 O4 .
-HC0 H44 C4 . .
-HC0 O4 C4 . END
-HC0 FE1 FE2 . ADD
-HC0 FE1 S1 . ADD
-HC0 FE1 S2 . ADD
+HC0 O7   n/a C7   START
+HC0 C7   O7  FE2  .
+HC0 H77  C7  .    .
+HC0 FE2  C7  C5   .
+HC0 S1   FE2 .    .
+HC0 S2   FE2 .    .
+HC0 C6   FE2 O6   .
+HC0 H66  C6  .    .
+HC0 O6   C6  .    .
+HC0 C8   FE2 O8   .
+HC0 H88  C8  .    .
+HC0 O8   C8  .    .
+HC0 C5   FE2 FE1  .
+HC0 O5   C5  .    .
+HC0 FE1  C5  C4   .
+HC0 O1   FE1 HO11 .
+HC0 HO12 O1  .    .
+HC0 HO11 O1  .    .
+HC0 C3   FE1 O3   .
+HC0 H33  C3  .    .
+HC0 O3   C3  .    .
+HC0 C4   FE1 O4   .
+HC0 H44  C4  .    .
+HC0 O4   C4  .    END
+HC0 FE1  FE2 .    ADD
+HC0 FE1  S1  .    ADD
+HC0 FE1  S2  .    ADD
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+HC0 S1   S
+HC0 S2   S
+HC0 O1   O(H)2
+HC0 O8   O(C)
+HC0 O3   O(C)
+HC0 O4   O(C)
+HC0 O5   O(C)
+HC0 O6   O(C)
+HC0 O7   O(C)
+HC0 C3   C(O)
+HC0 C4   C(O)
+HC0 C5   C(O)
+HC0 C6   C(O)
+HC0 C7   C(O)
+HC0 C8   C(O)
+HC0 HO11 H(OH)
+HC0 HO12 H(OH)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-HC0 FE1 FE2 single 2.470 0.020 2.470 0.020
-HC0 FE1 S1 single 2.235 0.020 2.235 0.020
-HC0 FE1 S2 single 2.235 0.020 2.235 0.020
-HC0 O1 FE1 single 2.040 0.020 2.040 0.020
-HC0 C3 FE1 single 1.900 0.020 1.900 0.020
-HC0 C4 FE1 single 1.900 0.020 1.900 0.020
-HC0 FE1 C5 single 1.900 0.020 1.900 0.020
-HC0 S1 FE2 single 2.235 0.020 2.235 0.020
-HC0 S2 FE2 single 2.235 0.020 2.235 0.020
-HC0 C5 FE2 single 1.900 0.020 1.900 0.020
-HC0 C6 FE2 single 1.900 0.020 1.900 0.020
-HC0 FE2 C7 single 1.900 0.020 1.900 0.020
-HC0 C8 FE2 single 1.900 0.020 1.900 0.020
-HC0 HO11 O1 single 0.970 0.012 0.839 0.014
-HC0 HO12 O1 single 0.970 0.012 0.839 0.014
-HC0 O8 C8 double 1.220 0.020 1.220 0.020
-HC0 O3 C3 double 1.220 0.020 1.220 0.020
-HC0 O4 C4 double 1.220 0.020 1.220 0.020
-HC0 O5 C5 double 1.220 0.020 1.220 0.020
-HC0 O6 C6 double 1.220 0.020 1.220 0.020
-HC0 C7 O7 double 1.220 0.020 1.220 0.020
-HC0 H33 C3 single 1.082 0.013 0.975 0.010
-HC0 H44 C4 single 1.082 0.013 0.975 0.010
-HC0 H66 C6 single 1.082 0.013 0.975 0.010
-HC0 H77 C7 single 1.082 0.013 0.975 0.010
-HC0 H88 C8 single 1.082 0.013 0.975 0.010
+HC0 FE1 S1   SINGLE n 2.23  0.02   2.23  0.02
+HC0 FE1 S2   SINGLE n 2.23  0.02   2.23  0.02
+HC0 FE1 O1   SINGLE n 2.000 0.04   2.000 0.04
+HC0 FE1 C3   SINGLE n 1.77  0.03   1.77  0.03
+HC0 FE1 C4   SINGLE n 1.77  0.03   1.77  0.03
+HC0 FE1 C5   SINGLE n 1.77  0.03   1.77  0.03
+HC0 FE2 S1   SINGLE n 2.34  0.01   2.34  0.01
+HC0 FE2 S2   SINGLE n 2.34  0.01   2.34  0.01
+HC0 FE2 C5   SINGLE n 1.93  0.02   1.93  0.02
+HC0 FE2 C6   SINGLE n 1.8   0.03   1.8   0.03
+HC0 FE2 C7   SINGLE n 1.8   0.03   1.8   0.03
+HC0 FE2 C8   SINGLE n 1.93  0.02   1.93  0.02
+HC0 O8  C8   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O3  C3   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O4  C4   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O5  C5   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O6  C6   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O7  C7   DOUBLE n 1.220 0.0200 1.220 0.0200
+HC0 O1  HO11 SINGLE n 0.972 0.0180 0.863 0.0200
+HC0 O1  HO12 SINGLE n 0.972 0.0180 0.863 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -121,122 +134,52 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-HC0 O7 C7 H77 123.000 3.000
-HC0 O7 C7 FE2 120.000 3.000
-HC0 H77 C7 FE2 120.000 3.000
-HC0 C7 FE2 S1 90.000 3.000
-HC0 C7 FE2 S2 180.000 3.000
-HC0 C7 FE2 C6 90.000 3.000
-HC0 C7 FE2 C8 90.000 3.000
-HC0 C7 FE2 C5 90.000 3.000
-HC0 C7 FE2 FE1 90.000 3.000
-HC0 S1 FE2 S2 90.000 3.000
-HC0 S1 FE2 C6 180.000 3.000
-HC0 S2 FE2 C6 90.000 3.000
-HC0 S1 FE2 C8 90.000 3.000
-HC0 S2 FE2 C8 90.000 3.000
-HC0 C6 FE2 C8 90.000 3.000
-HC0 S1 FE2 C5 90.000 3.000
-HC0 S2 FE2 C5 90.000 3.000
-HC0 C6 FE2 C5 90.000 3.000
-HC0 C8 FE2 C5 180.000 3.000
-HC0 S1 FE2 FE1 56.456 3.000
-HC0 S2 FE2 FE1 56.456 3.000
-HC0 C6 FE2 FE1 90.000 3.000
-HC0 C8 FE2 FE1 90.000 3.000
-HC0 C5 FE2 FE1 49.458 3.000
-HC0 FE2 S1 FE1 67.087 3.000
-HC0 FE2 S2 FE1 67.087 3.000
-HC0 FE2 C6 H66 120.000 3.000
-HC0 FE2 C6 O6 120.000 3.000
-HC0 H66 C6 O6 123.000 3.000
-HC0 FE2 C8 H88 120.000 3.000
-HC0 FE2 C8 O8 120.000 3.000
-HC0 H88 C8 O8 123.000 3.000
-HC0 FE2 C5 O5 120.000 3.000
-HC0 FE2 C5 FE1 81.083 3.000
-HC0 O5 C5 FE1 120.000 3.000
-HC0 C5 FE1 O1 90.000 3.000
-HC0 C5 FE1 C3 90.000 3.000
-HC0 C5 FE1 C4 90.000 3.000
-HC0 C5 FE1 FE2 49.458 3.000
-HC0 C5 FE1 S1 90.000 3.000
-HC0 C5 FE1 S2 90.000 3.000
-HC0 O1 FE1 C3 90.000 3.000
-HC0 O1 FE1 C4 90.000 3.000
-HC0 C3 FE1 C4 90.000 3.000
-HC0 FE2 FE1 S1 56.456 3.000
-HC0 FE2 FE1 S2 56.456 3.000
-HC0 S1 FE1 S2 90.000 3.000
-HC0 O1 FE1 FE2 90.000 3.000
-HC0 C3 FE1 FE2 90.000 3.000
-HC0 C4 FE1 FE2 90.000 3.000
-HC0 O1 FE1 S1 90.000 3.000
-HC0 C3 FE1 S1 180.000 3.000
-HC0 C4 FE1 S1 90.000 3.000
-HC0 O1 FE1 S2 90.000 3.000
-HC0 C3 FE1 S2 90.000 3.000
-HC0 C4 FE1 S2 180.000 3.000
-HC0 FE1 O1 HO12 120.000 3.000
-HC0 FE1 O1 HO11 120.000 3.000
-HC0 HO12 O1 HO11 120.000 3.000
-HC0 FE1 C3 H33 120.000 3.000
-HC0 FE1 C3 O3 120.000 3.000
-HC0 H33 C3 O3 123.000 3.000
-HC0 FE1 C4 H44 120.000 3.000
-HC0 FE1 C4 O4 120.000 3.000
-HC0 H44 C4 O4 123.000 3.000
+HC0 FE1  S1  FE2  109.47  5.0
+HC0 FE1  S2  FE2  109.47  5.0
+HC0 FE1  O1  HO11 109.47  5.0
+HC0 FE1  O1  HO12 109.47  5.0
+HC0 FE1  C3  O3   180.00  5.0
+HC0 FE1  C4  O4   180.00  5.0
+HC0 FE1  C5  FE2  120.00  5.0
+HC0 FE1  C5  O5   120.00  5.0
+HC0 FE2  C5  O5   120.00  5.0
+HC0 FE2  C6  O6   180.00  5.0
+HC0 FE2  C7  O7   180.00  5.0
+HC0 FE2  C8  O8   180.00  5.0
+HC0 HO11 O1  HO12 107.391 3.00
+HC0 S1   FE1 S2   90.0    5.0
+HC0 S1   FE1 C3   180.0   5.0
+HC0 S1   FE1 C4   90.0    5.0
+HC0 S1   FE1 C5   90.0    5.0
+HC0 S2   FE1 C3   90.0    5.0
+HC0 S2   FE1 C4   180.0   5.0
+HC0 S2   FE1 C5   90.0    5.0
+HC0 C3   FE1 C4   90.0    5.0
+HC0 C3   FE1 C5   90.0    5.0
+HC0 C4   FE1 C5   90.0    5.0
+HC0 S1   FE2 S2   82.25   4.7
+HC0 S1   FE2 C5   91.32   3.03
+HC0 S1   FE2 C6   171.97  2.56
+HC0 S1   FE2 C7   90.27   2.87
+HC0 S1   FE2 C8   91.32   3.03
+HC0 S2   FE2 C5   91.32   3.03
+HC0 S2   FE2 C6   90.27   2.87
+HC0 S2   FE2 C7   171.97  2.56
+HC0 S2   FE2 C8   91.32   3.03
+HC0 C5   FE2 C6   88.87   2.09
+HC0 C5   FE2 C7   88.87   2.09
+HC0 C5   FE2 C8   176.33  2.98
+HC0 C6   FE2 C7   97.19   1.31
+HC0 C6   FE2 C8   88.87   2.09
+HC0 C7   FE2 C8   88.87   2.09
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-HC0 var_1 O7 C7 FE2 C5 -170.750 20.000 1
-HC0 var_2 C7 FE2 S1 FE1 -122.077 20.000 1
-HC0 var_3 C7 FE2 S2 FE1 -121.501 20.000 1
-HC0 var_4 C7 FE2 C6 O6 93.891 20.000 1
-HC0 var_5 C7 FE2 C8 O8 -56.473 20.000 1
-HC0 var_6 C7 FE2 C5 FE1 130.570 20.000 1
-HC0 var_7 FE2 C5 FE1 C4 -128.329 20.000 1
-HC0 var_8 C5 FE1 FE2 C7 -59.805 20.000 1
-HC0 var_9 C5 FE1 S1 FE2 34.858 20.000 1
-HC0 var_10 C5 FE1 S2 FE2 -40.666 20.000 1
-HC0 var_11 C5 FE1 O1 HO11 175.969 20.000 1
-HC0 var_12 C5 FE1 C3 O3 -35.566 20.000 1
-HC0 var_13 C5 FE1 C4 O4 97.558 20.000 1
-
-loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
-HC0 plan-1 C3 0.020
-HC0 plan-1 FE1 0.020
-HC0 plan-1 O3 0.020
-HC0 plan-1 H33 0.020
-HC0 plan-2 C4 0.020
-HC0 plan-2 FE1 0.020
-HC0 plan-2 O4 0.020
-HC0 plan-2 H44 0.020
-HC0 plan-3 C5 0.020
-HC0 plan-3 FE1 0.020
-HC0 plan-3 FE2 0.020
-HC0 plan-3 O5 0.020
-HC0 plan-4 C6 0.020
-HC0 plan-4 FE2 0.020
-HC0 plan-4 O6 0.020
-HC0 plan-4 H66 0.020
-HC0 plan-5 C7 0.020
-HC0 plan-5 FE2 0.020
-HC0 plan-5 O7 0.020
-HC0 plan-5 H77 0.020
-HC0 plan-6 C8 0.020
-HC0 plan-6 FE2 0.020
-HC0 plan-6 O8 0.020
-HC0 plan-6 H88 0.020
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+HC0 acedrg            311       'dictionary generator'
+HC0 'acedrg_database' 12        'data source'
+HC0 rdkit             2019.09.1 'Chemoinformatics tool'
+HC0 servalcat         0.4.93    'optimization tool'
+HC0 metalCoord        0.1.63    'metal coordination analysis'

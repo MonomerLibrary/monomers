@@ -7,31 +7,32 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MYQ MYQ '(S)-(1,2-DICARBOXYETHYLTHIO)GOLD    ' NON-POLYMER 13 10 .
+MYQ MYQ (S)-(1,2-DICARBOXYETHYLTHIO)GOLD NON-POLYMER 12 9 .
 
 data_comp_MYQ
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-MYQ AU AU AU 0.000 0.000 0.000 0.000
-MYQ S S S2 0.000 -1.493 -1.635 1.163
-MYQ C2 C CH1 0.000 -1.764 -3.143 0.219
-MYQ H2 H H 0.000 -1.099 -3.832 0.759
-MYQ C1 C C 0.000 -1.370 -3.440 -1.184
-MYQ O2 O OC -0.500 -1.553 -4.557 -1.715
-MYQ O1 O OC -0.500 -0.781 -2.590 -1.888
-MYQ C3 C CH2 0.000 -3.131 -3.718 0.613
-MYQ H32 H H 0.000 -3.544 -2.952 1.273
-MYQ H31 H H 0.000 -2.871 -4.601 1.201
-MYQ C4 C C 0.000 -4.164 -4.093 -0.442
-MYQ O3 O OC -0.500 -4.813 -5.149 -0.270
-MYQ O4 O OC -0.500 -4.401 -3.371 -1.436
+MYQ AU  AU  AU AU  1.00 30.647 57.823 64.023
+MYQ S   S   S  S1  -1   29.844 55.757 63.448
+MYQ O1  O1  O  O   0    32.562 54.533 63.778
+MYQ O2  O2  O  OC  -1   32.342 54.548 65.974
+MYQ O3  O3  O  OC  -1   31.212 51.935 62.992
+MYQ O4  O4  O  O   0    29.344 52.700 62.116
+MYQ C1  C1  C  C   0    31.861 54.544 64.817
+MYQ C2  C2  C  CH1 0    30.346 54.548 64.695
+MYQ C3  C3  C  CH2 0    29.760 53.176 64.413
+MYQ C4  C4  C  C   0    30.134 52.560 63.074
+MYQ H2  H2  H  H   0    30.011 54.853 65.565
+MYQ H31 H31 H  H   0    28.787 53.235 64.455
+MYQ H32 H32 H  H   0    30.044 52.562 65.115
 
 loop_
 _chem_comp_tree.comp_id
@@ -39,41 +40,59 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-MYQ AU n/a S START
-MYQ S AU C2 .
-MYQ C2 S C3 .
-MYQ H2 C2 . .
-MYQ C1 C2 O1 .
-MYQ O2 C1 . .
-MYQ O1 C1 . .
-MYQ C3 C2 C4 .
-MYQ H32 C3 . .
-MYQ H31 C3 . .
-MYQ C4 C3 O4 .
-MYQ O3 C4 . .
-MYQ O4 C4 . END
+MYQ AU  n/a S  START
+MYQ S   AU  C2 .
+MYQ C2  S   C3 .
+MYQ H2  C2  .  .
+MYQ C1  C2  O1 .
+MYQ O2  C1  .  .
+MYQ O1  C1  .  .
+MYQ C3  C2  C4 .
+MYQ H32 C3  .  .
+MYQ H31 C3  .  .
+MYQ C4  C3  O4 .
+MYQ O3  C4  .  .
+MYQ O4  C4  .  END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+MYQ S   S(CCCH)
+MYQ O1  O(CCO)
+MYQ O2  O(CCO)
+MYQ O3  O(CCO)
+MYQ O4  O(CCO)
+MYQ C1  C(CCHS)(O)2
+MYQ C2  C(CCHH)(COO)(H)(S)
+MYQ C3  C(CCHS)(COO)(H)2
+MYQ C4  C(CCHH)(O)2
+MYQ H2  H(CCCS)
+MYQ H31 H(CCCH)
+MYQ H32 H(CCCH)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-MYQ C2 S single 1.765 0.020 1.765 0.020
-MYQ S AU single 1.800 0.020 1.800 0.020
-MYQ O1 C1 deloc 1.250 0.020 1.250 0.020
-MYQ O2 C1 deloc 1.250 0.020 1.250 0.020
-MYQ O3 C4 deloc 1.250 0.020 1.250 0.020
-MYQ O4 C4 deloc 1.250 0.020 1.250 0.020
-MYQ C1 C2 single 1.500 0.020 1.500 0.020
-MYQ C3 C2 single 1.524 0.020 1.524 0.020
-MYQ H2 C2 single 1.089 0.010 0.989 0.005
-MYQ C4 C3 single 1.510 0.020 1.510 0.020
-MYQ H31 C3 single 1.089 0.010 0.989 0.005
-MYQ H32 C3 single 1.089 0.010 0.989 0.005
+MYQ S  AU  SINGLE n 2.29  0.05   2.29  0.05
+MYQ S  C2  SINGLE n 1.804 0.0166 1.804 0.0166
+MYQ O1 C1  DOUBLE n 1.251 0.0183 1.251 0.0183
+MYQ O2 C1  SINGLE n 1.251 0.0183 1.251 0.0183
+MYQ O3 C4  SINGLE n 1.249 0.0161 1.249 0.0161
+MYQ O4 C4  DOUBLE n 1.249 0.0161 1.249 0.0161
+MYQ C1 C2  SINGLE n 1.507 0.0200 1.507 0.0200
+MYQ C2 C3  SINGLE n 1.509 0.0200 1.509 0.0200
+MYQ C3 C4  SINGLE n 1.519 0.0112 1.519 0.0112
+MYQ C2 H2  SINGLE n 1.092 0.0100 0.980 0.0180
+MYQ C3 H31 SINGLE n 1.092 0.0100 0.975 0.0100
+MYQ C3 H32 SINGLE n 1.092 0.0100 0.975 0.0100
 
 loop_
 _chem_comp_angle.comp_id
@@ -82,25 +101,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-MYQ AU S C2 113.194 3.000
-MYQ S C2 H2 109.500 3.000
-MYQ S C2 C1 109.500 3.000
-MYQ S C2 C3 109.500 3.000
-MYQ H2 C2 C1 108.810 3.000
-MYQ H2 C2 C3 108.340 3.000
-MYQ C1 C2 C3 109.470 3.000
-MYQ C2 C1 O2 118.500 3.000
-MYQ C2 C1 O1 118.500 3.000
-MYQ O2 C1 O1 123.000 3.000
-MYQ C2 C3 H32 109.470 3.000
-MYQ C2 C3 H31 109.470 3.000
-MYQ C2 C3 C4 109.470 3.000
-MYQ H32 C3 H31 107.900 3.000
-MYQ H32 C3 C4 109.470 3.000
-MYQ H31 C3 C4 109.470 3.000
-MYQ C3 C4 O3 118.500 3.000
-MYQ C3 C4 O4 118.500 3.000
-MYQ O3 C4 O4 123.000 3.000
+MYQ AU  S  C2  109.47  5.0
+MYQ O1  C1 O2  125.072 3.00
+MYQ O1  C1 C2  117.464 3.00
+MYQ O2  C1 C2  117.464 3.00
+MYQ S   C2 C1  109.237 1.50
+MYQ S   C2 C3  111.526 2.43
+MYQ S   C2 H2  109.084 1.50
+MYQ C1  C2 C3  113.349 3.00
+MYQ C1  C2 H2  108.866 3.00
+MYQ C3  C2 H2  109.439 1.50
+MYQ C2  C3 C4  113.349 3.00
+MYQ C2  C3 H31 109.439 1.50
+MYQ C2  C3 H32 109.439 1.50
+MYQ C4  C3 H31 108.531 1.50
+MYQ C4  C3 H32 108.531 1.50
+MYQ H31 C3 H32 107.937 1.50
+MYQ O3  C4 O4  123.612 1.82
+MYQ O3  C4 C3  118.194 3.00
+MYQ O4  C4 C3  118.194 3.00
 
 loop_
 _chem_comp_tor.comp_id
@@ -112,10 +131,9 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-MYQ var_1 AU S C2 C3 -152.318 20.000 1
-MYQ var_2 S C2 C1 O1 -0.847 20.000 3
-MYQ var_3 S C2 C3 C4 128.815 20.000 3
-MYQ var_4 C2 C3 C4 O4 -42.787 20.000 3
+MYQ sp2_sp3_1 O1 C1 C2 S  0.000   20.0 6
+MYQ sp3_sp3_1 S  C2 C3 C4 180.000 10.0 3
+MYQ sp2_sp3_2 O3 C4 C3 C2 120.000 20.0 6
 
 loop_
 _chem_comp_chir.comp_id
@@ -125,7 +143,7 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
-MYQ chir_01 C2 S C1 C3 positiv
+MYQ chir_1 C2 S C1 C3 positive
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -133,10 +151,21 @@ _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
 MYQ plan-1 C1 0.020
+MYQ plan-1 C2 0.020
 MYQ plan-1 O1 0.020
 MYQ plan-1 O2 0.020
-MYQ plan-1 C2 0.020
+MYQ plan-2 C3 0.020
 MYQ plan-2 C4 0.020
 MYQ plan-2 O3 0.020
 MYQ plan-2 O4 0.020
-MYQ plan-2 C3 0.020
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+MYQ acedrg            311       'dictionary generator'
+MYQ 'acedrg_database' 12        'data source'
+MYQ rdkit             2019.09.1 'Chemoinformatics tool'
+MYQ servalcat         0.4.93    'optimization tool'
+MYQ metalCoord        0.1.63    'metal coordination analysis'

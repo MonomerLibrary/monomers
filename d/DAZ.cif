@@ -7,25 +7,26 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-DAZ DAZ 'diaminozinc                         ' NON-POLYMER 7 3 .
+DAZ DAZ diaminozinc NON-POLYMER 6 2 .
 
 data_comp_DAZ
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-DAZ N2 N NH2 0.000 0.000 0.000 0.000
-DAZ H21 H H 0.000 0.341 -0.949 -0.008
-DAZ H22 H H 0.000 0.356 0.520 -0.788
-DAZ ZN ZN ZN 0.000 -1.789 0.038 0.036
-DAZ N1 N NH2 0.000 -3.579 0.076 0.072
-DAZ H12 H H 0.000 -3.967 -0.443 -0.701
-DAZ H11 H H 0.000 -3.920 1.024 0.080
+DAZ ZN  ZN  ZN ZN 2.00 33.589 -26.637 -8.014
+DAZ N1  N1  N  N  -1   34.767 -25.044 -8.290
+DAZ N2  N2  N  N  -1   33.973 -27.446 -6.226
+DAZ H11 H11 H  H  0    34.321 -24.421 -8.747
+DAZ H12 H12 H  H  0    35.483 -25.283 -8.765
+DAZ H21 H21 H  H  0    33.307 -27.994 -5.998
+DAZ H22 H22 H  H  0    34.726 -27.922 -6.271
 
 loop_
 _chem_comp_tree.comp_id
@@ -33,29 +34,41 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-DAZ N2 n/a ZN START
-DAZ H21 N2 . .
-DAZ H22 N2 . .
-DAZ ZN N2 N1 .
-DAZ N1 ZN H11 .
-DAZ H12 N1 . .
-DAZ H11 N1 . END
+DAZ N2  n/a ZN  START
+DAZ H21 N2  .   .
+DAZ H22 N2  .   .
+DAZ ZN  N2  N1  .
+DAZ N1  ZN  H11 .
+DAZ H12 N1  .   .
+DAZ H11 N1  .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+DAZ N1  N(H)2
+DAZ N2  N(H)2
+DAZ H11 H(NH)
+DAZ H12 H(NH)
+DAZ H21 H(NH)
+DAZ H22 H(NH)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-DAZ N1 ZN single 2.150 0.020 2.150 0.020
-DAZ ZN N2 single 2.150 0.020 2.150 0.020
-DAZ H11 N1 single 1.036 0.016 0.914 0.007
-DAZ H12 N1 single 1.036 0.016 0.914 0.007
-DAZ H21 N2 single 1.036 0.016 0.914 0.007
-DAZ H22 N2 single 1.036 0.016 0.914 0.007
+DAZ ZN N1  SINGLE n 2.0   0.04   2.0   0.04
+DAZ ZN N2  SINGLE n 2.0   0.04   2.0   0.04
+DAZ N1 H11 SINGLE n 1.013 0.0120 0.892 0.0200
+DAZ N1 H12 SINGLE n 1.013 0.0120 0.892 0.0200
+DAZ N2 H21 SINGLE n 1.013 0.0120 0.892 0.0200
+DAZ N2 H22 SINGLE n 1.013 0.0120 0.892 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -64,47 +77,21 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-DAZ H21 N2 H22 120.000 3.000
-DAZ H21 N2 ZN 120.000 3.000
-DAZ H22 N2 ZN 120.000 3.000
-DAZ N2 ZN N1 180.000 3.000
-DAZ ZN N1 H12 120.000 3.000
-DAZ ZN N1 H11 120.000 3.000
-DAZ H12 N1 H11 120.000 3.000
+DAZ ZN  N1 H11 109.47  5.0
+DAZ ZN  N1 H12 109.47  5.0
+DAZ ZN  N2 H21 109.47  5.0
+DAZ ZN  N2 H22 109.47  5.0
+DAZ H11 N1 H12 108.363 3.00
+DAZ H21 N2 H22 108.363 3.00
+DAZ N2  ZN N1  109.4   3.75
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-DAZ var_1 H21 N2 ZN N1 180.000 20.000 1
-DAZ var_2 H12 N1 ZN N2 180.000 20.000 1
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-DAZ chir_01 ZN N2 N1 . cross0
-
-loop_
-_chem_comp_plane_atom.comp_id
-_chem_comp_plane_atom.plane_id
-_chem_comp_plane_atom.atom_id
-_chem_comp_plane_atom.dist_esd
-DAZ plan-1 N1 0.020
-DAZ plan-1 ZN 0.020
-DAZ plan-1 H11 0.020
-DAZ plan-1 H12 0.020
-DAZ plan-2 N2 0.020
-DAZ plan-2 ZN 0.020
-DAZ plan-2 H21 0.020
-DAZ plan-2 H22 0.020
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+DAZ acedrg            311       'dictionary generator'
+DAZ 'acedrg_database' 12        'data source'
+DAZ rdkit             2019.09.1 'Chemoinformatics tool'
+DAZ servalcat         0.4.93    'optimization tool'
+DAZ metalCoord        0.1.63    'metal coordination analysis'

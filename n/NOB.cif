@@ -7,29 +7,30 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NOB NOB '(dihydroxyboranyloxy-hydroxy-boranyl' NON-POLYMER 11 8 .
+NOB NOB (dihydroxyboranyloxy-hydroxy-boranyl)oxylithium NON-POLYMER 10 7 .
 
 data_comp_NOB
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-NOB LI LI LI 0.000 0.000 0.000 0.000
-NOB OB5 O O2 0.000 -1.318 0.959 0.001
-NOB B2 B B 0.000 -2.549 0.249 0.001
-NOB OB4 O OH1 0.000 -2.549 -1.171 0.000
-NOB HOB4 H H 0.000 -1.712 -1.619 -0.001
-NOB OB2 O O2 0.000 -3.778 0.960 0.002
-NOB B1 B B 0.000 -4.927 0.125 0.002
-NOB OB3 O OH1 0.000 -6.224 0.703 -0.003
-NOB HOB3 H H 0.000 -6.974 0.121 -0.007
-NOB OB1 O OH1 0.000 -4.778 -1.287 0.001
-NOB HOB1 H H 0.000 -5.565 -1.820 0.000
+NOB LI   LI   LI LI  1.00 29.214 85.543 -61.779
+NOB B1   B1   B  B   0    29.732 88.895 -58.458
+NOB B2   B2   B  B   0    29.145 86.546 -59.256
+NOB OB1  OB1  O  OH1 0    30.719 88.549 -57.590
+NOB OB2  OB2  O  O   0    29.082 87.916 -59.162
+NOB OB3  OB3  O  OH1 0    29.392 90.200 -58.626
+NOB OB4  OB4  O  OH1 0    30.048 85.865 -58.502
+NOB OB5  OB5  O  OB  -1   28.306 85.884 -60.099
+NOB HOB1 HOB1 H  H   0    31.067 89.216 -57.196
+NOB HOB3 HOB3 H  H   0    28.765 90.313 -59.188
+NOB HOB4 HOB4 H  H   0    30.020 85.024 -58.621
 
 loop_
 _chem_comp_tree.comp_id
@@ -37,37 +38,53 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-NOB LI n/a OB5 START
-NOB OB5 LI B2 .
-NOB B2 OB5 OB2 .
-NOB OB4 B2 HOB4 .
-NOB HOB4 OB4 . .
-NOB OB2 B2 B1 .
-NOB B1 OB2 OB1 .
-NOB OB3 B1 HOB3 .
-NOB HOB3 OB3 . .
-NOB OB1 B1 HOB1 .
-NOB HOB1 OB1 . END
+NOB LI   n/a OB5  START
+NOB OB5  LI  B2   .
+NOB B2   OB5 OB2  .
+NOB OB4  B2  HOB4 .
+NOB HOB4 OB4 .    .
+NOB OB2  B2  B1   .
+NOB B1   OB2 OB1  .
+NOB OB3  B1  HOB3 .
+NOB HOB3 OB3 .    .
+NOB OB1  B1  HOB1 .
+NOB HOB1 OB1 .    END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+NOB B1   B(OB)(OH)2
+NOB B2   B(OB)(OH)(O)
+NOB OB1  O(BOO)(H)
+NOB OB2  O(BOO)2
+NOB OB3  O(BOO)(H)
+NOB OB4  O(BOO)(H)
+NOB OB5  O(BOO)
+NOB HOB1 H(OB)
+NOB HOB3 H(OB)
+NOB HOB4 H(OB)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-NOB OB1 B1 single 1.535 0.020 1.535 0.020
-NOB B1 OB2 single 1.434 0.020 1.434 0.020
-NOB OB3 B1 single 1.535 0.020 1.535 0.020
-NOB OB2 B2 single 1.434 0.020 1.434 0.020
-NOB OB4 B2 single 1.535 0.020 1.535 0.020
-NOB B2 OB5 single 1.434 0.020 1.434 0.020
-NOB OB5 LI single 1.835 0.020 1.835 0.020
-NOB HOB1 OB1 single 0.970 0.012 0.967 0.020
-NOB HOB3 OB3 single 0.970 0.012 0.967 0.020
-NOB HOB4 OB4 single 0.970 0.012 0.967 0.020
+NOB OB5 LI   SINGLE n 1.94  0.2    1.94  0.2
+NOB B1  OB1  SINGLE n 1.358 0.0125 1.358 0.0125
+NOB B1  OB2  SINGLE n 1.369 0.0191 1.369 0.0191
+NOB B1  OB3  SINGLE n 1.358 0.0125 1.358 0.0125
+NOB B2  OB2  SINGLE n 1.375 0.0200 1.375 0.0200
+NOB B2  OB4  SINGLE n 1.358 0.0125 1.358 0.0125
+NOB B2  OB5  SINGLE n 1.360 0.0200 1.360 0.0200
+NOB OB1 HOB1 SINGLE n 0.966 0.0059 0.849 0.0200
+NOB OB3 HOB3 SINGLE n 0.966 0.0059 0.849 0.0200
+NOB OB4 HOB4 SINGLE n 0.966 0.0059 0.849 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -76,17 +93,17 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-NOB LI OB5 B2 120.000 3.000
-NOB OB5 B2 OB4 120.000 3.000
-NOB OB5 B2 OB2 120.000 3.000
-NOB OB4 B2 OB2 120.000 3.000
-NOB B2 OB4 HOB4 120.000 3.000
-NOB B2 OB2 B1 120.000 3.000
-NOB OB2 B1 OB3 120.000 3.000
-NOB OB2 B1 OB1 120.000 3.000
-NOB OB3 B1 OB1 120.000 3.000
-NOB B1 OB3 HOB3 120.000 3.000
-NOB B1 OB1 HOB1 120.000 3.000
+NOB LI  OB5 B2   109.47  5.0
+NOB OB1 B1  OB2  120.003 3.00
+NOB OB1 B1  OB3  119.995 3.00
+NOB OB2 B1  OB3  120.005 3.00
+NOB OB2 B2  OB4  119.732 3.00
+NOB OB2 B2  OB5  120.134 3.00
+NOB OB4 B2  OB5  120.134 3.00
+NOB B1  OB1 HOB1 112.489 3.00
+NOB B1  OB2 B2   136.493 3.00
+NOB B1  OB3 HOB3 112.489 3.00
+NOB B2  OB4 HOB4 112.710 3.00
 
 loop_
 _chem_comp_tor.comp_id
@@ -98,9 +115,33 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-NOB var_1 LI OB5 B2 OB2 179.984 20.000 1
-NOB var_2 OB5 B2 OB4 HOB4 -0.024 20.000 1
-NOB var_3 OB5 B2 OB2 B1 -179.989 20.000 1
-NOB var_4 B2 OB2 B1 OB1 0.042 20.000 1
-NOB var_5 OB2 B1 OB3 HOB3 179.719 20.000 1
-NOB var_6 OB2 B1 OB1 HOB1 -179.995 20.000 1
+NOB sp2_sp2_1 OB2 B1 OB1 HOB1 180.000 5.0 2
+NOB sp2_sp2_2 OB1 B1 OB2 B2   180.000 5.0 2
+NOB sp2_sp2_3 OB1 B1 OB3 HOB3 180.000 5.0 2
+NOB sp2_sp2_4 OB4 B2 OB2 B1   180.000 5.0 2
+NOB sp2_sp2_5 OB2 B2 OB4 HOB4 180.000 5.0 2
+
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+NOB plan-1 B1  0.020
+NOB plan-1 OB1 0.020
+NOB plan-1 OB2 0.020
+NOB plan-1 OB3 0.020
+NOB plan-2 B2  0.020
+NOB plan-2 OB2 0.020
+NOB plan-2 OB4 0.020
+NOB plan-2 OB5 0.020
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+NOB acedrg            311       'dictionary generator'
+NOB 'acedrg_database' 12        'data source'
+NOB rdkit             2019.09.1 'Chemoinformatics tool'
+NOB servalcat         0.4.93    'optimization tool'
+NOB metalCoord        0.1.63    'metal coordination analysis'

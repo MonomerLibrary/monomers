@@ -7,28 +7,29 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-NFE NFE 'NI-FE ACTIVE CENTER                 ' NON-POLYMER 10 9 .
+NFE NFE "NI-FE ACTIVE CENTER" NON-POLYMER 8 7 .
 
 data_comp_NFE
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-NFE O2 O O 0.000 0.000 0.000 0.000
-NFE C2 C CSP 0.000 -1.146 -0.251 0.289
-NFE FE FE FE 0.000 -2.741 -0.601 0.694
-NFE S4 S S2 0.000 -2.058 -1.622 2.507
-NFE NI NI NI 0.000 -0.893 0.254 3.644
-NFE C1 C CSP 0.000 -3.451 -2.031 0.158
-NFE O1 O O 0.000 -3.960 -3.056 -0.228
-NFE S3 S S2 0.000 -3.424 0.417 -1.119
-NFE O3 O OH1 0.000 -2.876 1.813 -0.861
-NFE HO3 H H 0.000 -3.042 2.463 -1.518
+NFE NI  NI  NI NI  2.00 58.750 45.804 84.197
+NFE FE  FE  FE FE  7.00 57.768 49.003 85.939
+NFE C1  C1  C  C   -2   58.212 50.969 86.184
+NFE C2  C2  C  C   -2   55.996 49.947 86.481
+NFE S3  S3  S  S1  -1   57.236 48.841 88.202
+NFE S4  S4  S  S   -2   57.259 46.747 85.658
+NFE O1  O1  O  O   0    58.478 52.150 86.331
+NFE O2  O2  O  O   0    54.957 50.501 86.798
+NFE O3  O3  O  OH1 0    58.510 48.378 89.010
+NFE HO3 HO3 H  H   0    58.264 47.970 89.723
 
 loop_
 _chem_comp_tree.comp_id
@@ -36,35 +37,49 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-NFE O2 n/a C2 START
-NFE C2 O2 FE .
-NFE FE C2 S3 .
-NFE S4 FE NI .
-NFE NI S4 . .
-NFE C1 FE O1 .
-NFE O1 C1 . .
-NFE S3 FE O3 .
-NFE O3 S3 HO3 .
-NFE HO3 O3 . END
+NFE O2  n/a C2  START
+NFE C2  O2  FE  .
+NFE FE  C2  S3  .
+NFE S4  FE  NI  .
+NFE NI  S4  .   .
+NFE C1  FE  O1  .
+NFE O1  C1  .   .
+NFE S3  FE  O3  .
+NFE O3  S3  HO3 .
+NFE HO3 O3  .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+NFE C1  C(O)
+NFE C2  C(O)
+NFE S3  S(OH)
+NFE S4  S
+NFE O1  O(C)
+NFE O2  O(C)
+NFE O3  O(H)(S)
+NFE HO3 H(OS)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-NFE NI S4 single 2.400 0.020 2.400 0.020
-NFE C1 FE double 1.825 0.020 1.825 0.020
-NFE FE C2 double 1.825 0.020 1.825 0.020
-NFE S3 FE single 2.235 0.020 2.235 0.020
-NFE S4 FE single 2.235 0.020 2.235 0.020
-NFE O1 C1 double 1.130 0.020 1.130 0.020
-NFE C2 O2 double 1.130 0.020 1.130 0.020
-NFE O3 S3 single 1.734 0.020 1.734 0.020
-NFE HO3 O3 single 0.970 0.012 0.967 0.020
+NFE NI S4  SINGLE n 2.29  0.2    2.29  0.2
+NFE FE C1  SINGLE n 2.03  0.06   2.03  0.06
+NFE FE C2  SINGLE n 2.080 0.04   2.080 0.04
+NFE FE S3  SINGLE n 2.33  0.1    2.33  0.1
+NFE FE S4  SINGLE n 2.33  0.1    2.33  0.1
+NFE C1 O1  DOUBLE n 1.220 0.0200 1.220 0.0200
+NFE C2 O2  DOUBLE n 1.220 0.0200 1.220 0.0200
+NFE S3 O3  SINGLE n 1.578 0.0200 1.578 0.0200
+NFE O3 HO3 SINGLE n 0.972 0.0180 0.858 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -73,45 +88,22 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-NFE O2 C2 FE 180.000 3.000
-NFE C2 FE S4 90.000 3.000
-NFE C2 FE C1 120.000 3.000
-NFE C2 FE S3 90.000 3.000
-NFE S4 FE C1 90.000 3.000
-NFE S4 FE S3 180.000 3.000
-NFE C1 FE S3 90.000 3.000
-NFE FE S4 NI 99.996 3.000
-NFE FE C1 O1 180.000 3.000
-NFE FE S3 O3 99.987 3.000
-NFE S3 O3 HO3 120.000 3.000
+NFE NI S4 FE  109.47  5.0
+NFE FE C1 O1  180.00  5.0
+NFE FE C2 O2  180.00  5.0
+NFE FE S3 O3  109.47  5.0
+NFE S3 O3 HO3 109.471 3.00
+NFE C1 FE S3  90.0    5.0
+NFE C1 FE S4  180.0   5.0
+NFE S3 FE S4  90.0    5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-NFE var_1 O2 C2 FE S4 180.000 20.000 1
-NFE var_2 NI S4 FE C2 0.000 20.000 1
-NFE var_3 O1 C1 FE S4 180.000 20.000 1
-NFE var_4 O3 S3 FE C2 0.000 20.000 1
-NFE var_5 FE S3 O3 HO3 -179.960 20.000 1
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
-NFE chir_01 FE S4 S3 C2 cross3 C1 . . . .
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+NFE acedrg            311       'dictionary generator'
+NFE 'acedrg_database' 12        'data source'
+NFE rdkit             2019.09.1 'Chemoinformatics tool'
+NFE servalcat         0.4.93    'optimization tool'
+NFE metalCoord        0.1.63    'metal coordination analysis'

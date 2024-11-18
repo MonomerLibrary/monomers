@@ -7,31 +7,32 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PTN PTN 'PLATINUM TRIAMINE ION               ' NON-POLYMER 13 4 .
+PTN PTN "PLATINUM TRIAMINE ION" NON-POLYMER 12 3 .
 
 data_comp_PTN
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-PTN N3 N NT3 0.000 -8.791 -14.283 33.410
-PTN H31 H H 0.000 -8.492 -13.329 33.146
-PTN H32 H H 0.000 -8.955 -14.320 34.430
-PTN H33 H H 0.000 -8.049 -14.957 33.158
-PTN PT PT PT 2.000 -10.515 -14.760 32.420
-PTN N2 N NT3 0.000 -11.530 -14.835 34.141
-PTN H23 H H 0.000 -12.349 -14.212 34.078
-PTN H22 H H 0.000 -11.840 -15.804 34.309
-PTN H21 H H 0.000 -10.916 -14.527 34.910
-PTN N1 N NT3 0.000 -9.512 -14.695 30.662
-PTN H13 H H 0.000 -8.588 -14.259 30.810
-PTN H12 H H 0.000 -9.387 -15.655 30.303
-PTN H11 H H 0.000 -10.051 -14.138 29.980
+PTN PT  PT  PT PT  0.00 -10.514 -14.736 32.411
+PTN N1  N1  N  N33 1    -9.503  -14.708 30.663
+PTN N2  N2  N  N33 1    -11.527 -14.764 34.159
+PTN N3  N3  N  N33 1    -8.804  -14.326 33.405
+PTN H11 H11 H  H   0    -10.069 -14.697 29.966
+PTN H12 H12 H  H   0    -8.980  -15.434 30.584
+PTN H13 H13 H  H   0    -8.979  -13.981 30.607
+PTN H21 H21 H  H   0    -12.413 -14.781 34.015
+PTN H22 H22 H  H   0    -11.339 -14.037 34.650
+PTN H23 H23 H  H   0    -11.310 -15.489 34.643
+PTN H31 H31 H  H   0    -8.980  -13.986 34.218
+PTN H32 H32 H  H   0    -8.308  -13.728 32.956
+PTN H33 H33 H  H   0    -8.312  -15.069 33.516
 
 loop_
 _chem_comp_tree.comp_id
@@ -39,41 +40,59 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-PTN N3 n/a PT START
-PTN H31 N3 . .
-PTN H32 N3 . .
-PTN H33 N3 . .
-PTN PT N3 N1 .
-PTN N2 PT H21 .
-PTN H23 N2 . .
-PTN H22 N2 . .
-PTN H21 N2 . .
-PTN N1 PT H11 .
-PTN H13 N1 . .
-PTN H12 N1 . .
-PTN H11 N1 . END
+PTN N3  n/a PT  START
+PTN H31 N3  .   .
+PTN H32 N3  .   .
+PTN H33 N3  .   .
+PTN PT  N3  N1  .
+PTN N2  PT  H21 .
+PTN H23 N2  .   .
+PTN H22 N2  .   .
+PTN H21 N2  .   .
+PTN N1  PT  H11 .
+PTN H13 N1  .   .
+PTN H12 N1  .   .
+PTN H11 N1  .   END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+PTN N1  N(H)3
+PTN N2  N(H)3
+PTN N3  N(H)3
+PTN H11 H(NHH)
+PTN H12 H(NHH)
+PTN H13 H(NHH)
+PTN H21 H(NHH)
+PTN H22 H(NHH)
+PTN H23 H(NHH)
+PTN H31 H(NHH)
+PTN H32 H(NHH)
+PTN H33 H(NHH)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-PTN N1 PT single 2.035 0.020 2.035 0.020
-PTN N2 PT single 2.035 0.020 2.035 0.020
-PTN PT N3 single 2.035 0.020 2.035 0.020
-PTN H11 N1 single 1.036 0.016 0.914 0.007
-PTN H12 N1 single 1.036 0.016 0.914 0.007
-PTN H13 N1 single 1.036 0.016 0.914 0.007
-PTN H21 N2 single 1.036 0.016 0.914 0.007
-PTN H22 N2 single 1.036 0.016 0.914 0.007
-PTN H23 N2 single 1.036 0.016 0.914 0.007
-PTN H31 N3 single 1.036 0.016 0.914 0.007
-PTN H32 N3 single 1.036 0.016 0.914 0.007
-PTN H33 N3 single 1.036 0.016 0.914 0.007
+PTN PT N1  SINGLE n 2.02  0.03   2.02  0.03
+PTN PT N2  SINGLE n 2.02  0.03   2.02  0.03
+PTN PT N3  SINGLE n 2.02  0.03   2.02  0.03
+PTN N1 H11 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N1 H12 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N1 H13 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N2 H21 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N2 H22 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N2 H23 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N3 H31 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N3 H32 SINGLE n 1.018 0.0520 0.898 0.0200
+PTN N3 H33 SINGLE n 1.018 0.0520 0.898 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -82,38 +101,35 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-PTN H31 N3 H32 109.470 3.000
-PTN H31 N3 H33 109.470 3.000
-PTN H32 N3 H33 109.470 3.000
-PTN H31 N3 PT 109.500 3.000
-PTN H32 N3 PT 109.500 3.000
-PTN H33 N3 PT 109.500 3.000
-PTN N3 PT N2 90.000 3.000
-PTN N3 PT N1 90.000 3.000
-PTN N2 PT N1 180.000 3.000
-PTN PT N2 H23 109.500 3.000
-PTN PT N2 H22 109.500 3.000
-PTN PT N2 H21 109.500 3.000
-PTN H23 N2 H22 109.470 3.000
-PTN H23 N2 H21 109.470 3.000
-PTN H22 N2 H21 109.470 3.000
-PTN PT N1 H13 109.500 3.000
-PTN PT N1 H12 109.500 3.000
-PTN PT N1 H11 109.500 3.000
-PTN H13 N1 H12 109.470 3.000
-PTN H13 N1 H11 109.470 3.000
-PTN H12 N1 H11 109.470 3.000
+PTN PT  N1 H11 109.47  5.0
+PTN PT  N1 H12 109.47  5.0
+PTN PT  N1 H13 109.47  5.0
+PTN PT  N2 H21 109.47  5.0
+PTN PT  N2 H22 109.47  5.0
+PTN PT  N2 H23 109.47  5.0
+PTN PT  N3 H31 109.47  5.0
+PTN PT  N3 H32 109.47  5.0
+PTN PT  N3 H33 109.47  5.0
+PTN H11 N1 H12 107.512 3.00
+PTN H11 N1 H13 107.512 3.00
+PTN H12 N1 H13 107.512 3.00
+PTN H21 N2 H22 107.512 3.00
+PTN H21 N2 H23 107.512 3.00
+PTN H22 N2 H23 107.512 3.00
+PTN H31 N3 H32 107.512 3.00
+PTN H31 N3 H33 107.512 3.00
+PTN H32 N3 H33 107.512 3.00
+PTN N1  PT N2  180.0   5.03
+PTN N1  PT N3  90.01   6.28
+PTN N2  PT N3  90.01   6.28
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-PTN var_1 H33 N3 PT N1 -54.653 20.000 1
-PTN var_2 N3 PT N2 H21 5.780 20.000 1
-PTN var_3 N3 PT N1 H11 -132.418 20.000 1
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+PTN acedrg            311       'dictionary generator'
+PTN 'acedrg_database' 12        'data source'
+PTN rdkit             2019.09.1 'Chemoinformatics tool'
+PTN servalcat         0.4.93    'optimization tool'
+PTN metalCoord        0.1.63    'metal coordination analysis'

@@ -7,33 +7,23 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-BEF BEF 'BERYLLIUM TRIFLUORIDE ION           ' NON-POLYMER 4 4 .
+BEF BEF "BERYLLIUM TRIFLUORIDE ION" NON-POLYMER 3 0 .
 
 data_comp_BEF
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-BEF F3 F F 0.000 0.000 0.000 0.000
-BEF BE BE BE -1.000 -0.473 -1.284 0.719
-BEF F1 F F 0.000 -1.675 -0.973 1.618
-BEF F2 F F 0.000 0.745 -1.845 1.520
-
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
-BEF F3 n/a BE START
-BEF BE F3 F2 .
-BEF F1 BE . .
-BEF F2 BE . END
+BEF BE BE BE BE -1.00 32.602 58.195 22.988
+BEF F1 F1 F  F  -1.00 31.322 57.368 23.275
+BEF F2 F2 F  F  -1.00 33.092 58.860 24.300
+BEF F3 F3 F  F  -1.00 32.284 59.292 21.940
 
 loop_
 _chem_comp_bond.comp_id
@@ -44,9 +34,20 @@ _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-BEF F1 BE single 1.765 0.020 1.765 0.020
-BEF F2 BE single 1.765 0.020 1.765 0.020
-BEF BE F3 single 1.765 0.020 1.765 0.020
+BEF BE F1 SING 1.55 0.03 1.55 0.03
+BEF BE F2 SING 1.55 0.03 1.55 0.03
+BEF BE F3 SING 1.55 0.03 1.55 0.03
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+BEF acedrg            311       'dictionary generator'
+BEF 'acedrg_database' 12        'data source'
+BEF rdkit             2019.09.1 'Chemoinformatics tool'
+BEF metalCoord        0.1.63    'metal coordination analysis'
+BEF servalcat         0.4.93    'optimization tool'
 
 loop_
 _chem_comp_angle.comp_id
@@ -55,16 +56,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-BEF F3 BE F1 120.000 3.000
-BEF F3 BE F2 120.000 3.000
-BEF F1 BE F2 120.000 3.000
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-BEF chir_01 BE F3 F1 F2 both
+BEF F3 BE F1 109.47 5.0
+BEF F3 BE F2 109.47 5.0
+BEF F1 BE F2 109.47 5.0

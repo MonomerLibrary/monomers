@@ -7,35 +7,24 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PC4 PC4 'TETRACHLOROPLATINATE(II)            ' NON-POLYMER 5 5 .
+PC4 PC4 TETRACHLOROPLATINATE(II) NON-POLYMER 4 0 .
 
 data_comp_PC4
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-PC4 CL4 CL CL 0.000 0.000 0.000 0.000
-PC4 PT PT PT -2.000 1.965 0.340 1.158
-PC4 CL1 CL CL 0.000 0.550 1.109 2.483
-PC4 CL2 CL CL 0.000 3.525 0.887 2.677
-PC4 CL3 CL CL 0.000 3.509 -0.051 -0.423
-
-loop_
-_chem_comp_tree.comp_id
-_chem_comp_tree.atom_id
-_chem_comp_tree.atom_back
-_chem_comp_tree.atom_forward
-_chem_comp_tree.connect_type
-PC4 CL4 n/a PT START
-PC4 PT CL4 CL3 .
-PC4 CL1 PT . .
-PC4 CL2 PT . .
-PC4 CL3 PT . END
+PC4 PT  PT  PT PT -2.00 42.318 47.444 24.375
+PC4 CL1 CL1 CL CL -1.00 40.230 46.825 25.146
+PC4 CL2 CL2 CL CL -1.00 42.484 48.999 26.075
+PC4 CL3 CL3 CL CL -1.00 44.399 48.074 23.595
+PC4 CL4 CL4 CL CL -1.00 42.158 45.878 22.684
 
 loop_
 _chem_comp_bond.comp_id
@@ -46,10 +35,21 @@ _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-PC4 CL1 PT single 2.425 0.020 2.425 0.020
-PC4 CL2 PT single 2.425 0.020 2.425 0.020
-PC4 CL3 PT single 2.425 0.020 2.425 0.020
-PC4 PT CL4 single 2.425 0.020 2.425 0.020
+PC4 PT CL1 SING 2.31 0.01 2.31 0.01
+PC4 PT CL2 SING 2.31 0.01 2.31 0.01
+PC4 PT CL3 SING 2.31 0.01 2.31 0.01
+PC4 PT CL4 SING 2.31 0.01 2.31 0.01
+
+loop_
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+PC4 acedrg            311       'dictionary generator'
+PC4 'acedrg_database' 12        'data source'
+PC4 rdkit             2019.09.1 'Chemoinformatics tool'
+PC4 metalCoord        0.1.63    'metal coordination analysis'
+PC4 servalcat         0.4.93    'optimization tool'
 
 loop_
 _chem_comp_angle.comp_id
@@ -58,19 +58,9 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-PC4 CL4 PT CL1 90.000 3.000
-PC4 CL4 PT CL2 180.000 3.000
-PC4 CL4 PT CL3 90.000 3.000
-PC4 CL1 PT CL2 90.000 3.000
-PC4 CL1 PT CL3 180.000 3.000
-PC4 CL2 PT CL3 90.000 3.000
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-PC4 chir_01 PT CL4 CL2 CL1 cross2
+PC4 CL3 PT CL1 179.62 0.9
+PC4 CL3 PT CL2 90.0   0.71
+PC4 CL3 PT CL4 90.0   0.71
+PC4 CL1 PT CL2 90.0   0.71
+PC4 CL1 PT CL4 90.0   0.71
+PC4 CL2 PT CL4 179.62 0.9

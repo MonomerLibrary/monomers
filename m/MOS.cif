@@ -7,23 +7,24 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-MOS MOS 'DIOXOTHIOMOLYBDENUM(VI) ION         ' NON-POLYMER 5 4 .
+MOS MOS "DIOXOTHIOMOLYBDENUM(VI) ION" NON-POLYMER 4 3 .
 
 data_comp_MOS
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-MOS O2 O O 0.000 0.000 0.000 0.000
-MOS MO MO MO 0.000 -1.691 -0.416 0.067
-MOS O1 O O 0.000 -2.556 0.470 -1.160
-MOS S S SH1 0.000 -2.569 0.143 2.227
-MOS H1 H H 0.000 -1.912 -0.531 3.171
+MOS MO MO MO MO   5.00 66.709 -4.510 43.621
+MOS S  S  S  S1   -1   65.785 -2.792 42.257
+MOS O1 O1 O  O    -1   68.523 -4.656 42.892
+MOS O2 O2 O  O    -1   65.856 -6.107 42.872
+MOS H1 H1 H  HSH1 0    64.562 -2.848 42.302
 
 loop_
 _chem_comp_tree.comp_id
@@ -32,24 +33,34 @@ _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
 MOS O2 n/a MO START
-MOS MO O2 S .
-MOS O1 MO . .
-MOS S MO H1 .
-MOS H1 S . END
+MOS MO O2  S  .
+MOS O1 MO  .  .
+MOS S  MO  H1 .
+MOS H1 S   .  END
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+MOS S  S(H)
+MOS O1 O
+MOS O2 O
+MOS H1 H(S)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-MOS S MO single 2.350 0.020 2.350 0.020
-MOS O1 MO double 1.865 0.020 1.865 0.020
-MOS MO O2 double 1.865 0.020 1.865 0.020
-MOS H1 S single 1.338 0.010 1.171 0.208
+MOS MO S  SINGLE n 2.38  0.13   2.38  0.13
+MOS MO O1 SINGLE n 1.96  0.23   1.96  0.23
+MOS MO O2 SINGLE n 1.96  0.23   1.96  0.23
+MOS S  H1 SINGLE n 1.338 0.0100 1.225 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -58,29 +69,18 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-MOS O2 MO O1 90.000 3.000
-MOS O2 MO S 90.000 3.000
-MOS O1 MO S 90.000 3.000
-MOS MO S H1 109.500 3.000
+MOS MO S  H1 109.47 5.0
+MOS S  MO O1 101.54 5.0
+MOS S  MO O2 101.54 5.0
+MOS O1 MO O2 101.53 5.0
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-MOS var_1 O2 MO S H1 -59.947 20.000 1
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-MOS chir_01 MO O2 O1 S both
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+MOS acedrg            311       'dictionary generator'
+MOS 'acedrg_database' 12        'data source'
+MOS rdkit             2019.09.1 'Chemoinformatics tool'
+MOS servalcat         0.4.93    'optimization tool'
+MOS metalCoord        0.1.63    'metal coordination analysis'

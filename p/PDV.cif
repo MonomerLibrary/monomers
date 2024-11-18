@@ -7,28 +7,29 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-PDV PDV 'Divanadate ion                      ' NON-POLYMER 10 9 .
+PDV PDV "Divanadate ion" NON-POLYMER 8 7 .
 
 data_comp_PDV
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
-_chem_comp_atom.partial_charge
+_chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-PDV O2 O O -1.000 0.000 0.000 0.000
-PDV V1 V V 0.000 -1.326 1.264 -0.130
-PDV O3 O O2 0.000 -2.647 0.831 -1.338
-PDV O1 O O -1.000 -0.683 2.973 -0.316
-PDV O4 O O2 0.000 -2.636 1.098 1.154
-PDV V2 V V 0.000 -3.543 -0.037 0.019
-PDV O7 O O -1.000 -2.779 -1.500 0.833
-PDV O5 O O -1.000 -4.393 -1.123 -1.197
-PDV O6 O OH1 0.000 -5.157 0.609 0.616
-PDV HO6 H H 0.000 -5.128 1.278 1.273
+PDV V2  V2  V V 9.00 9.672  -2.892 9.558
+PDV V1  V1  V V 8.00 8.853  -2.802 7.106
+PDV O7  O7  O O -1   8.477  -2.981 11.070
+PDV O3  O3  O O -2   10.129 -2.177 7.903
+PDV O6  O6  O O -1   10.648 -4.161 9.735
+PDV O5  O5  O O -1   10.604 -1.437 10.417
+PDV O4  O4  O O -2   8.298  -3.507 8.466
+PDV O1  O1  O O -1   8.972  -4.256 6.402
+PDV O2  O2  O O -1   7.479  -1.953 6.985
+PDV HO6 HO6 H H 0    10.173 -4.878 9.834
 
 loop_
 _chem_comp_tree.comp_id
@@ -36,37 +37,51 @@ _chem_comp_tree.atom_id
 _chem_comp_tree.atom_back
 _chem_comp_tree.atom_forward
 _chem_comp_tree.connect_type
-PDV O2 n/a V1 START
-PDV V1 O2 O4 .
-PDV O3 V1 . .
-PDV O1 V1 . .
-PDV O4 V1 V2 .
-PDV V2 O4 O6 .
-PDV O7 V2 . .
-PDV O5 V2 . .
-PDV O6 V2 HO6 .
-PDV HO6 O6 . END
-PDV V2 O3 . ADD
+PDV O2  n/a V1  START
+PDV V1  O2  O4  .
+PDV O3  V1  .   .
+PDV O1  V1  .   .
+PDV O4  V1  V2  .
+PDV V2  O4  O6  .
+PDV O7  V2  .   .
+PDV O5  V2  .   .
+PDV O6  V2  HO6 .
+PDV HO6 O6  .   END
+PDV V2  O3  .   ADD
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+PDV O7  O
+PDV O3  O
+PDV O6  O(H)
+PDV O5  O
+PDV O4  O
+PDV O1  O
+PDV O2  O
+PDV HO6 H(O)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-PDV O7 V2 single 1.910 0.020 1.910 0.020
-PDV O5 V2 single 1.910 0.020 1.910 0.020
-PDV O6 V2 single 2.105 0.020 2.105 0.020
-PDV V2 O3 single 2.004 0.020 2.004 0.020
-PDV V2 O4 single 2.004 0.020 2.004 0.020
-PDV O3 V1 single 2.004 0.020 2.004 0.020
-PDV O4 V1 single 2.004 0.020 2.004 0.020
-PDV O1 V1 single 1.910 0.020 1.910 0.020
-PDV V1 O2 single 1.910 0.020 1.910 0.020
-PDV HO6 O6 single 0.970 0.012 0.967 0.020
+PDV V2 O7  SINGLE n 1.93  0.06   1.93  0.06
+PDV V2 O5  SINGLE n 1.93  0.06   1.93  0.06
+PDV V2 O6  SINGLE n 1.61  0.03   1.61  0.03
+PDV O3 V2  SINGLE n 1.93  0.06   1.93  0.06
+PDV O4 V2  SINGLE n 1.93  0.06   1.93  0.06
+PDV V1 O3  SINGLE n 1.62  0.02   1.62  0.02
+PDV V1 O4  SINGLE n 1.62  0.02   1.62  0.02
+PDV O1 V1  SINGLE n 1.62  0.02   1.62  0.02
+PDV O2 V1  SINGLE n 1.62  0.02   1.62  0.02
+PDV O6 HO6 SINGLE n 0.972 0.0180 0.866 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -75,53 +90,33 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-PDV O2 V1 O3 113.748 3.000
-PDV O2 V1 O1 113.265 3.000
-PDV O2 V1 O4 113.736 3.000
-PDV O3 V1 O1 113.790 3.000
-PDV O3 V1 O4 85.773 3.000
-PDV O1 V1 O4 113.787 3.000
-PDV V1 O3 V2 120.000 3.000
-PDV V1 O4 V2 120.000 3.000
-PDV O4 V2 O7 90.000 3.000
-PDV O4 V2 O5 180.000 3.000
-PDV O4 V2 O6 90.000 3.000
-PDV O4 V2 O3 90.000 3.000
-PDV O7 V2 O5 90.000 3.000
-PDV O7 V2 O6 120.000 3.000
-PDV O5 V2 O6 90.000 3.000
-PDV O7 V2 O3 120.000 3.000
-PDV O5 V2 O3 90.000 3.000
-PDV O6 V2 O3 120.000 3.000
-PDV V2 O6 HO6 120.000 3.000
+PDV V2 O6 HO6 109.47 5.0
+PDV V2 O3 V1  109.47 5.0
+PDV V2 O4 V1  109.47 5.0
+PDV O3 V1 O4  90.0   5.0
+PDV O3 V1 O1  120.0  5.0
+PDV O3 V1 O2  120.0  5.0
+PDV O4 V1 O1  90.0   5.0
+PDV O4 V1 O2  90.0   5.0
+PDV O1 V1 O2  120.0  5.0
+PDV O3 V2 O4  86.69  2.95
+PDV O3 V2 O5  86.69  2.95
+PDV O3 V2 O7  152.13 5.66
+PDV O3 V2 O6  103.81 3.11
+PDV O4 V2 O5  152.13 5.66
+PDV O4 V2 O7  86.69  2.95
+PDV O4 V2 O6  103.81 3.11
+PDV O5 V2 O7  86.69  2.95
+PDV O5 V2 O6  103.81 3.11
+PDV O7 V2 O6  103.81 3.11
 
 loop_
-_chem_comp_tor.comp_id
-_chem_comp_tor.id
-_chem_comp_tor.atom_id_1
-_chem_comp_tor.atom_id_2
-_chem_comp_tor.atom_id_3
-_chem_comp_tor.atom_id_4
-_chem_comp_tor.value_angle
-_chem_comp_tor.value_angle_esd
-_chem_comp_tor.period
-PDV var_1 O2 V1 O3 V2 89.015 20.000 1
-PDV var_2 O2 V1 O4 V2 -89.037 20.000 1
-PDV var_3 V1 O4 V2 O3 0.000 20.000 1
-PDV var_4 V1 O3 V2 O4 0.000 20.000 1
-PDV var_5 HO6 O6 V2 O4 0.000 20.000 1
-
-loop_
-_chem_comp_chir.comp_id
-_chem_comp_chir.id
-_chem_comp_chir.atom_id_centre
-_chem_comp_chir.atom_id_1
-_chem_comp_chir.atom_id_2
-_chem_comp_chir.atom_id_3
-_chem_comp_chir.volume_sign
-_chem_comp_chir.atom_id_4
-_chem_comp_chir.atom_id_5
-_chem_comp_chir.atom_id_6
-_chem_comp_chir.atom_id_7
-_chem_comp_chir.atom_id_8
-PDV chir_01 V2 O4 O5 O7 cross3 O3 O6 . . .
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+PDV acedrg            311       'dictionary generator'
+PDV 'acedrg_database' 12        'data source'
+PDV rdkit             2019.09.1 'Chemoinformatics tool'
+PDV servalcat         0.4.93    'optimization tool'
+PDV metalCoord        0.1.63    'metal coordination analysis'
