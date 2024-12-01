@@ -2609,7 +2609,7 @@ _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
 HEC-CYS1 sp3_sp3_1 2 CBC 2 CAC 1 SG 1 CB 60.000 10.0 3
-HEC-CYS1 sp3_sp3_2 1 SG 2 CAC 2 CBC 2 HBC 60.000 10.0 3
+HEC-CYS1 sp3_sp3_2 1 SG 2 CAC 2 CBC 2 HBC1 60.000 10.0 3
 HEC-CYS1 sp3_sp3_3 1 CA 1 CB 1 SG 2 CAC 180.000 10.0 3
 
 loop_
@@ -2667,7 +2667,7 @@ _chem_link_tor.value_angle
 _chem_link_tor.value_angle_esd
 _chem_link_tor.period
 HEC-CYS2 sp3_sp3_1 2 CBB 2 CAB 1 SG 1 CB 60.000 10.0 3
-HEC-CYS2 sp3_sp3_2 1 SG 2 CAB 2 CBB 2 HBB 60.000 10.0 3
+HEC-CYS2 sp3_sp3_2 1 SG 2 CAB 2 CBB 2 HBB1 60.000 10.0 3
 HEC-CYS2 sp3_sp3_3 1 CA 1 CB 1 SG 2 CAB 180.000 10.0 3
 
 loop_
@@ -9368,12 +9368,12 @@ HECmod1 change C3C C4C NC 108.743 1.50
 HECmod1 change C3C CAC CBC 112.400 1.50
 HECmod1 change C3C CAC HAC 108.177 1.50
 HECmod1 change CBC CAC HAC 108.549 2.04
-HECmod1 change CAC CBC HBC 109.518 1.50
-HECmod1 change CAC CBC HBCA 109.518 1.50
-HECmod1 change HBC CBC HBCA 109.460 1.50
+HECmod1 change CAC CBC HBC1 109.518 1.50
+HECmod1 change CAC CBC HBC2 109.518 1.50
+HECmod1 change HBC1 CBC HBC2 109.460 1.50
 HECmod1 add CAC CBC HBC3 109.518 1.50
-HECmod1 add HBC CBC HBC3 109.460 1.50
-HECmod1 add HBCA CBC HBC3 109.460 1.50
+HECmod1 add HBC1 CBC HBC3 109.460 1.50
+HECmod1 add HBC2 CBC HBC3 109.460 1.50
 
 loop_
 _chem_mod_tor.mod_id
@@ -9386,7 +9386,7 @@ _chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 _chem_mod_tor.new_period
-HECmod1 delete C3C CAC CBC HBC . . . 2
+HECmod1 delete C3C CAC CBC HBC1 . . . 2
 HECmod1 change C2C C3C CAC CBC sp2_sp3_9 150.000 20.0 6
 
 loop_
@@ -9401,8 +9401,8 @@ HECmod1 delete plan-12 CBC 0.020
 HECmod1 delete plan-12 HAC 0.020
 HECmod1 delete plan-13 CAC 0.020
 HECmod1 delete plan-13 CBC 0.020
-HECmod1 delete plan-13 HBC 0.020
-HECmod1 delete plan-13 HBCA 0.020
+HECmod1 delete plan-13 HBC1 0.020
+HECmod1 delete plan-13 HBC2 0.020
 
 data_mod_HECmod2
 loop_
@@ -9446,12 +9446,12 @@ HECmod2 change C3B C4B NB 108.743 1.50
 HECmod2 change C3B CAB CBB 112.400 1.50
 HECmod2 change C3B CAB HAB 108.177 1.50
 HECmod2 change CBB CAB HAB 108.549 2.04
-HECmod2 change CAB CBB HBB 109.518 1.50
-HECmod2 change CAB CBB HBBA 109.518 1.50
-HECmod2 change HBB CBB HBBA 109.460 1.50
+HECmod2 change CAB CBB HBB1 109.518 1.50
+HECmod2 change CAB CBB HBB2 109.518 1.50
+HECmod2 change HBB1 CBB HBB2 109.460 1.50
 HECmod2 add CAB CBB HBB3 109.518 1.50
-HECmod2 add HBB CBB HBB3 109.460 1.50
-HECmod2 add HBBA CBB HBB3 109.460 1.50
+HECmod2 add HBB1 CBB HBB3 109.460 1.50
+HECmod2 add HBB2 CBB HBB3 109.460 1.50
 
 loop_
 _chem_mod_tor.mod_id
@@ -9464,7 +9464,7 @@ _chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 _chem_mod_tor.new_period
-HECmod2 delete C3B CAB CBB HBB . . . 2
+HECmod2 delete C3B CAB CBB HBB1 . . . 2
 HECmod2 change C2B C3B CAB CBB sp2_sp3_9 150.000 20.0 6
 
 loop_
@@ -9479,8 +9479,8 @@ HECmod2 delete plan-10 CBB 0.020
 HECmod2 delete plan-10 HAB 0.020
 HECmod2 delete plan-11 CAB 0.020
 HECmod2 delete plan-11 CBB 0.020
-HECmod2 delete plan-11 HBB 0.020
-HECmod2 delete plan-11 HBBA 0.020
+HECmod2 delete plan-11 HBB1 0.020
+HECmod2 delete plan-11 HBB2 0.020
 
 data_mod_02Jmod1
 loop_
