@@ -45682,8 +45682,6 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
 HECmod1 change CAC . C CH1 0
-HECmod1 change CBC . C CH3 0
-HECmod1 add . HBC3 H H 0
 
 loop_
 _chem_mod_bond.mod_id
@@ -45696,11 +45694,9 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 HECmod1 change C2C C3C single 1.375 0.0200 1.375 0.0200
-HECmod1 change C3C C4C double 1.381 0.0200 1.381 0.0200
 HECmod1 change C3C CAC single 1.503 0.0100 1.503 0.0100
 HECmod1 change CAC CBC single 1.513 0.0121 1.513 0.0121
 HECmod1 change CAC HAC single 0.990 0.0200 1.092 0.0100
-HECmod1 add CBC HBC3 single 0.960 0.0100 1.092 0.0100
 
 loop_
 _chem_mod_angle.mod_id
@@ -45710,16 +45706,13 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-HECmod1 change C3C C4C NC 108.743 1.50
+HECmod1 change NC C4C C3C 108.743 1.50
 HECmod1 change C3C CAC CBC 112.400 1.50
 HECmod1 change C3C CAC HAC 108.177 1.50
 HECmod1 change CBC CAC HAC 108.549 2.04
-HECmod1 change CAC CBC HBC1 109.518 1.50
-HECmod1 change CAC CBC HBC2 109.518 1.50
 HECmod1 change HBC1 CBC HBC2 109.460 1.50
-HECmod1 add CAC CBC HBC3 109.518 1.50
-HECmod1 add HBC1 CBC HBC3 109.460 1.50
-HECmod1 add HBC2 CBC HBC3 109.460 1.50
+HECmod1 change HBC1 CBC HBC3 109.460 1.50
+HECmod1 change HBC2 CBC HBC3 109.460 1.50
 
 loop_
 _chem_mod_tor.mod_id
@@ -45732,23 +45725,8 @@ _chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 _chem_mod_tor.new_period
-HECmod1 delete C3C CAC CBC HBC1 . . . 2
-HECmod1 change C2C C3C CAC CBC sp2_sp3_9 150.000 20.0 6
-
-loop_
-_chem_mod_plane_atom.mod_id
-_chem_mod_plane_atom.function
-_chem_mod_plane_atom.plane_id
-_chem_mod_plane_atom.atom_id
-_chem_mod_plane_atom.new_dist_esd
-HECmod1 delete plan-12 C3C 0.020
-HECmod1 delete plan-12 CAC 0.020
-HECmod1 delete plan-12 CBC 0.020
-HECmod1 delete plan-12 HAC 0.020
-HECmod1 delete plan-13 CAC 0.020
-HECmod1 delete plan-13 CBC 0.020
-HECmod1 delete plan-13 HBC1 0.020
-HECmod1 delete plan-13 HBC2 0.020
+HECmod1 delete C3C CAC CBC HBC1 . . . 3
+HECmod1 change C2C C3C CAC CBC sp2_sp3_8 150.000 20.0 6
 
 data_mod_HECmod2
 loop_
@@ -45760,8 +45738,6 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_charge
 HECmod2 change CAB . C CH1 0
-HECmod2 change CBB . C CH3 0
-HECmod2 add . HBB3 H H 0
 
 loop_
 _chem_mod_bond.mod_id
@@ -45774,11 +45750,9 @@ _chem_mod_bond.new_value_dist_esd
 _chem_mod_bond.new_value_dist_nucleus
 _chem_mod_bond.new_value_dist_nucleus_esd
 HECmod2 change C2B C3B double 1.375 0.0200 1.375 0.0200
-HECmod2 change C3B C4B single 1.381 0.0200 1.381 0.0200
 HECmod2 change C3B CAB single 1.503 0.0100 1.503 0.0100
 HECmod2 change CAB CBB single 1.513 0.0121 1.513 0.0121
 HECmod2 change CAB HAB single 0.990 0.0200 1.092 0.0100
-HECmod2 add CBB HBB3 single 0.960 0.0100 1.092 0.0100
 
 loop_
 _chem_mod_angle.mod_id
@@ -45788,16 +45762,13 @@ _chem_mod_angle.atom_id_2
 _chem_mod_angle.atom_id_3
 _chem_mod_angle.new_value_angle
 _chem_mod_angle.new_value_angle_esd
-HECmod2 change C3B C4B NB 108.743 1.50
+HECmod2 change NB C4B C3B 108.743 1.50
 HECmod2 change C3B CAB CBB 112.400 1.50
 HECmod2 change C3B CAB HAB 108.177 1.50
 HECmod2 change CBB CAB HAB 108.549 2.04
-HECmod2 change CAB CBB HBB1 109.518 1.50
-HECmod2 change CAB CBB HBB2 109.518 1.50
 HECmod2 change HBB1 CBB HBB2 109.460 1.50
-HECmod2 add CAB CBB HBB3 109.518 1.50
-HECmod2 add HBB1 CBB HBB3 109.460 1.50
-HECmod2 add HBB2 CBB HBB3 109.460 1.50
+HECmod2 change HBB1 CBB HBB3 109.460 1.50
+HECmod2 change HBB2 CBB HBB3 109.460 1.50
 
 loop_
 _chem_mod_tor.mod_id
@@ -45810,23 +45781,8 @@ _chem_mod_tor.id
 _chem_mod_tor.new_value_angle
 _chem_mod_tor.new_value_angle_esd
 _chem_mod_tor.new_period
-HECmod2 delete C3B CAB CBB HBB1 . . . 2
-HECmod2 change C2B C3B CAB CBB sp2_sp3_9 150.000 20.0 6
-
-loop_
-_chem_mod_plane_atom.mod_id
-_chem_mod_plane_atom.function
-_chem_mod_plane_atom.plane_id
-_chem_mod_plane_atom.atom_id
-_chem_mod_plane_atom.new_dist_esd
-HECmod2 delete plan-10 C3B 0.020
-HECmod2 delete plan-10 CAB 0.020
-HECmod2 delete plan-10 CBB 0.020
-HECmod2 delete plan-10 HAB 0.020
-HECmod2 delete plan-11 CAB 0.020
-HECmod2 delete plan-11 CBB 0.020
-HECmod2 delete plan-11 HBB1 0.020
-HECmod2 delete plan-11 HBB2 0.020
+HECmod2 delete C3B CAB CBB HBB1 . . . 3
+HECmod2 change C2B C3B CAB CBB sp2_sp3_6 150.000 20.0 6
 
 data_mod_02Jmod1
 loop_
