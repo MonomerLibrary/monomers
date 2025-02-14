@@ -251,6 +251,10 @@ MDOmod2 "{2-[(1S)-1-aminoethyl]-4-methylidene-5-oxo-4,5-dihydro-1H-imidazol-1-yl
 MS6mod1 DEL-OXT_equiv_for_MS6-pept MS6 NON-POLYMER
 MS6mod2 DEL-HN1_equiv_for_MS6-pept . peptide
 MS6delNH MS6_for_pept MS6 NON-POLYMER
+ASPprot "Protonation of ASP" ASP peptide
+GLUprot "Protonation of GLU" GLU peptide
+HISprot1 HISTIDINE HIS peptide
+HISprot2 HISTIDINE HIS peptide
 
 data_link_DG9-SER
 loop_
@@ -12213,3 +12217,279 @@ MS6delNH delete H N H2 . .
 MS6delNH change C CA CB 110.944 2.88
 MS6delNH change CB CA HA 107.855 2.00
 MS6delNH change CA N H 117.539 3.00
+
+data_mod_ASPprot
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+ASPprot change OD2 . O OH1 0
+ASPprot add . HD2 H H 0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+ASPprot change CB CG single 1.505 0.0100 1.505 0.0100
+ASPprot change CG OD1 double 1.217 0.0198 1.217 0.0198
+ASPprot change CG OD2 single 1.308 0.0191 1.308 0.0191
+ASPprot add OD2 HD2 single 0.876 0.0200 0.966 0.0059
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ASPprot change CA CB CG 113.488 1.82
+ASPprot change CG CB HB3 108.725 1.50
+ASPprot change CG CB HB2 108.725 1.50
+ASPprot change CB CG OD1 123.540 1.50
+ASPprot change CB CG OD2 113.234 2.02
+ASPprot add CG OD2 HD2 110.209 3.00
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+ASPprot add CB CG OD2 HD2 sp2_sp2_1 180.000 5.0 2
+
+data_mod_GLUprot
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+GLUprot change OE2 . O OH1 0
+GLUprot add . HE2 H H 0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+GLUprot change CG CD single 1.504 0.0100 1.504 0.0100
+GLUprot change CD OE1 double 1.217 0.0198 1.217 0.0198
+GLUprot change CD OE2 single 1.308 0.0191 1.308 0.0191
+GLUprot add OE2 HE2 single 0.876 0.0200 0.966 0.0059
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+GLUprot change CG CD OE1 123.741 1.99
+GLUprot change CG CD OE2 113.306 2.95
+GLUprot add CD OE2 HE2 110.209 3.00
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+GLUprot add CG CD OE2 HE2 sp2_sp2_1 180.000 5.0 2
+
+data_mod_HISprot1
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+HISprot1 delete HD1 . H H 0
+HISprot1 change ND1 . N NRD5 0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+HISprot1 delete ND1 HD1 single . . . .
+HISprot1 change CB CG single 1.491 0.0100 1.491 0.0100
+HISprot1 change CG CD2 double 1.359 0.0100 1.359 0.0100
+HISprot1 change CD2 NE2 single 1.373 0.0100 1.373 0.0100
+HISprot1 change CE1 NE2 single 1.335 0.0127 1.335 0.0127
+HISprot1 change CB HB3 single 0.981 0.0100 1.092 0.0100
+HISprot1 change CB HB2 single 0.981 0.0100 1.092 0.0100
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+HISprot1 delete CG ND1 HD1 . .
+HISprot1 delete CE1 ND1 HD1 . .
+HISprot1 change CA N H 109.786 3.00
+HISprot1 change CA N H2 109.786 3.00
+HISprot1 change CA N H3 109.786 3.00
+HISprot1 change N CA HA 108.404 1.50
+HISprot1 change CB CA HA 109.001 1.50
+HISprot1 change CA C O 117.155 2.01
+HISprot1 change CA C OXT 117.155 2.01
+HISprot1 change HB3 CB HB2 107.622 1.50
+HISprot1 change CB CG ND1 121.338 1.81
+HISprot1 change ND1 CG CD2 108.617 1.58
+HISprot1 change CG ND1 CE1 105.858 1.50
+HISprot1 change ND1 CE1 NE2 111.595 1.50
+HISprot1 change ND1 CE1 HE1 124.330 1.50
+HISprot1 change NE2 CE1 HE1 124.075 2.88
+HISprot1 change CD2 NE2 CE1 107.204 3.00
+
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+HISprot1 delete plan-1 CB 0.020
+HISprot1 delete plan-1 CD2 0.020
+HISprot1 delete plan-1 CE1 0.020
+HISprot1 delete plan-1 CG 0.020
+HISprot1 delete plan-1 HD1 0.020
+HISprot1 delete plan-1 HD2 0.020
+HISprot1 delete plan-1 HE1 0.020
+HISprot1 delete plan-1 HE2 0.020
+HISprot1 delete plan-1 ND1 0.020
+HISprot1 delete plan-1 NE2 0.020
+HISprot1 add plan-1 CB 0.020
+HISprot1 add plan-1 CD2 0.020
+HISprot1 add plan-1 CE1 0.020
+HISprot1 add plan-1 CG 0.020
+HISprot1 add plan-1 HD2 0.020
+HISprot1 add plan-1 HE1 0.020
+HISprot1 add plan-1 HE2 0.020
+HISprot1 add plan-1 ND1 0.020
+HISprot1 add plan-1 NE2 0.020
+
+data_mod_HISprot2
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+HISprot2 delete HE2 . H H 0
+HISprot2 change ND1 . N NR15 0
+HISprot2 change NE2 . N NRD5 0
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+HISprot2 delete NE2 HE2 single . . . .
+HISprot2 change CB CG single 1.494 0.0100 1.494 0.0100
+HISprot2 change CG CD2 double 1.356 0.0100 1.356 0.0100
+HISprot2 change ND1 CE1 single 1.346 0.0100 1.346 0.0100
+HISprot2 change CD2 NE2 single 1.380 0.0100 1.380 0.0100
+HISprot2 change CE1 NE2 double 1.308 0.0100 1.308 0.0100
+HISprot2 change CB HB3 single 0.981 0.0100 1.092 0.0100
+HISprot2 change CB HB2 single 0.981 0.0100 1.092 0.0100
+HISprot2 change ND1 HD1 single 0.919 0.0200 1.013 0.0120
+HISprot2 change CD2 HD2 single 0.929 0.0143 1.085 0.0150
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+HISprot2 delete CD2 NE2 HE2 . .
+HISprot2 delete CE1 NE2 HE2 . .
+HISprot2 change CA N H 109.786 3.00
+HISprot2 change CA N H2 109.786 3.00
+HISprot2 change CA N H3 109.786 3.00
+HISprot2 change N CA HA 108.404 1.50
+HISprot2 change CB CA HA 109.001 1.50
+HISprot2 change CA C O 117.155 2.01
+HISprot2 change CA C OXT 117.155 2.01
+HISprot2 change HB3 CB HB2 107.622 1.50
+HISprot2 change CB CG CD2 132.429 1.50
+HISprot2 change CG ND1 CE1 107.807 1.50
+HISprot2 change CG CD2 NE2 110.147 1.50
+HISprot2 change CG CD2 HD2 124.943 1.50
+HISprot2 change ND1 CE1 NE2 111.530 1.50
+HISprot2 change ND1 CE1 HE1 123.708 1.50
+HISprot2 change NE2 CE1 HE1 124.763 3.00
+HISprot2 change CD2 NE2 CE1 105.756 3.00
+
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+HISprot2 delete plan-1 CB 0.020
+HISprot2 delete plan-1 CD2 0.020
+HISprot2 delete plan-1 CE1 0.020
+HISprot2 delete plan-1 CG 0.020
+HISprot2 delete plan-1 HD1 0.020
+HISprot2 delete plan-1 HD2 0.020
+HISprot2 delete plan-1 HE1 0.020
+HISprot2 delete plan-1 HE2 0.020
+HISprot2 delete plan-1 ND1 0.020
+HISprot2 delete plan-1 NE2 0.020
+HISprot2 add plan-1 CB 0.020
+HISprot2 add plan-1 CD2 0.020
+HISprot2 add plan-1 CE1 0.020
+HISprot2 add plan-1 CG 0.020
+HISprot2 add plan-1 HD1 0.020
+HISprot2 add plan-1 HD2 0.020
+HISprot2 add plan-1 HE1 0.020
+HISprot2 add plan-1 ND1 0.020
+HISprot2 add plan-1 NE2 0.020
