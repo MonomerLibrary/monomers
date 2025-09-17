@@ -1,4 +1,3 @@
-#
 data_comp_list
 loop_
 _chem_comp.id
@@ -8,34 +7,44 @@ _chem_comp.group
 _chem_comp.number_atoms_all
 _chem_comp.number_atoms_nh
 _chem_comp.desc_level
-SCN     SCN      "THIOCYANATE ION"     NON-POLYMER     3     3     .     
-#
+SCN SCN "THIOCYANATE ION" NON-POLYMER 3 3 .
+
 data_comp_SCN
-#
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-SCN     S       S       S1      -1      -27.714     47.013      47.013      
-SCN     C       C       CSP     0       -27.673     47.833      48.356      
-SCN     N       N       NSP     0       -27.671     48.444      49.329      
+SCN S S S S1  -1 1.407  -0.706 -0.498
+SCN C C C CSP 0  -0.139 -0.435 -0.075
+SCN N N N NSP 0  -1.245 -0.242 0.228
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+SCN S S(CN)
+SCN C C(N)(S)
+SCN N N(CS)
+
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
-_chem_comp_bond.aromatic
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-SCN           S           C      SINGLE       n     1.574  0.0200     1.574  0.0200
-SCN           C           N      TRIPLE       n     1.149  0.0200     1.149  0.0200
+SCN S C SINGLE n 1.625 0.0200 1.625 0.0200
+SCN C N TRIPLE n 1.163 0.0200 1.163 0.0200
+
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -43,26 +52,28 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-SCN           S           C           N     178.404    1.50
+SCN S C N 180.000 3.00
+
 loop_
 _pdbx_chem_comp_descriptor.comp_id
 _pdbx_chem_comp_descriptor.type
 _pdbx_chem_comp_descriptor.program
 _pdbx_chem_comp_descriptor.program_version
 _pdbx_chem_comp_descriptor.descriptor
-SCN           SMILES              ACDLabs 10.04                    "[S-]C#N"
-SCN SMILES_CANONICAL               CACTVS 3.341                    "[S-]C#N"
-SCN           SMILES               CACTVS 3.341                    "[S-]C#N"
-SCN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0                    C(#N)[S-]
-SCN           SMILES "OpenEye OEToolkits" 1.5.0                    C(#N)[S-]
-SCN            InChI                InChI  1.03 InChI=1S/CHNS/c2-1-3/h3H/p-1
-SCN         InChIKey                InChI  1.03  ZMZDMBWJUHKJPS-UHFFFAOYSA-M
+SCN SMILES           ACDLabs              10.04 "[S-]C#N"
+SCN SMILES_CANONICAL CACTVS               3.341 "[S-]C#N"
+SCN SMILES           CACTVS               3.341 "[S-]C#N"
+SCN SMILES_CANONICAL "OpenEye OEToolkits" 1.5.0 "C(#N)[S-]"
+SCN SMILES           "OpenEye OEToolkits" 1.5.0 "C(#N)[S-]"
+SCN InChI            InChI                1.03  InChI=1S/CHNS/c2-1-3/h3H/p-1
+SCN InChIKey         InChI                1.03  ZMZDMBWJUHKJPS-UHFFFAOYSA-M
+
 loop_
-_pdbx_chem_comp_description_generator.comp_id
-_pdbx_chem_comp_description_generator.program_name
-_pdbx_chem_comp_description_generator.program_version
-_pdbx_chem_comp_description_generator.descriptor
-SCN acedrg               243         "dictionary generator"                  
-SCN acedrg_database      11          "data source"                           
-SCN rdkit                2017.03.2   "Chemoinformatics tool"
-SCN refmac5              5.8.0238    "optimization tool"                     
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+SCN acedrg          326       "dictionary generator"
+SCN acedrg_database 12        "data source"
+SCN rdkit           2023.03.3 "Chemoinformatics tool"
+SCN servalcat       0.4.120   'optimization tool'
