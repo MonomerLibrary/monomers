@@ -13,43 +13,59 @@ data_comp_W3M
 loop_
 _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
+_chem_comp_atom.alt_atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
 _chem_comp_atom.charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
-W3M N1 N NR5 0 -3.376 15.100 1.343
-W3M N N NSP 0 -2.178 14.982 -1.953
-W3M C C CSP 0 -2.895 14.983 -1.055
-W3M C1 C CR5 0 -3.783 15.027 0.048
-W3M C3 C CR15 0 -5.150 15.009 0.072
-W3M N2 N NRD5 0 -5.572 15.069 1.349
-W3M C2 C CR15 0 -4.489 15.123 2.097
-W3M H1 H H 0 -2.557 15.126 1.630
-W3M H2 H H 0 -5.722 14.963 -0.676
-W3M H4 H H 0 -4.489 15.171 3.040
+W3M N1 N1 N NH1  0 -3.358 15.079 1.327
+W3M N  N2 N NSP  0 -2.246 14.824 -2.007
+W3M C  C1 C CSP  0 -2.933 14.898 -1.099
+W3M C1 C2 C CR5  0 -3.789 14.991 0.031
+W3M C3 C3 C CR15 0 -5.150 15.011 0.081
+W3M N2 N3 N N20  0 -5.553 15.108 1.357
+W3M C2 C4 C CR15 0 -4.458 15.148 2.095
+W3M H1 H1 H H    0 -2.462 15.090 1.624
+W3M H2 H2 H H    0 -5.722 14.964 -0.671
+W3M H4 H4 H H    0 -4.439 15.216 3.037
+
+loop_
+_chem_comp_acedrg.comp_id
+_chem_comp_acedrg.atom_id
+_chem_comp_acedrg.atom_type
+W3M N1 N[5a](C[5a]C[5a]C)(C[5a]N[5a]H)(H){1|H<1>}
+W3M N  N(CC[5a])
+W3M C  C(C[5a]C[5a]N[5a])(N)
+W3M C1 C[5a](C[5a]N[5a]H)(N[5a]C[5a]H)(CN){1|H<1>}
+W3M C3 C[5a](C[5a]N[5a]C)(N[5a]C[5a])(H){2|H<1>}
+W3M N2 N[5a](C[5a]C[5a]H)(C[5a]N[5a]H){1|C<2>,1|H<1>}
+W3M C2 C[5a](N[5a]C[5a]H)(N[5a]C[5a])(H){1|C<2>,1|H<1>}
+W3M H1 H(N[5a]C[5a]2)
+W3M H2 H(C[5a]C[5a]N[5a])
+W3M H4 H(C[5a]N[5a]2)
 
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
 _chem_comp_bond.atom_id_2
-_chem_comp_bond.type
-_chem_comp_bond.aromatic
+_chem_comp_bond.value_order
+_chem_comp_bond.pdbx_aromatic_flag
 _chem_comp_bond.value_dist_nucleus
 _chem_comp_bond.value_dist_nucleus_esd
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
-W3M N C TRIPLE n 1.149 0.0200 1.149 0.0200
-W3M C C1 SINGLE n 1.417 0.0100 1.417 0.0100
-W3M C1 C3 DOUBLE y 1.371 0.0200 1.371 0.0200
+W3M N  C  TRIPLE n 1.141 0.0100 1.141 0.0100
+W3M C  C1 SINGLE n 1.421 0.0100 1.421 0.0100
+W3M C1 C3 DOUBLE y 1.361 0.0187 1.361 0.0187
 W3M C3 N2 SINGLE y 1.338 0.0200 1.338 0.0200
-W3M N1 C1 SINGLE y 1.365 0.0151 1.365 0.0151
-W3M N2 C2 DOUBLE y 1.314 0.0129 1.314 0.0129
-W3M N1 C2 SINGLE y 1.345 0.0141 1.345 0.0141
-W3M N1 H1 SINGLE n 1.016 0.0100 0.868 0.0100
-W3M C3 H2 SINGLE n 1.082 0.0130 0.943 0.0179
-W3M C2 H4 SINGLE n 1.082 0.0130 0.945 0.0200
+W3M N1 C1 SINGLE y 1.372 0.0200 1.372 0.0200
+W3M N2 C2 DOUBLE y 1.319 0.0200 1.319 0.0200
+W3M N1 C2 SINGLE y 1.345 0.0186 1.345 0.0186
+W3M N1 H1 SINGLE n 1.013 0.0120 0.944 0.0200
+W3M C3 H2 SINGLE n 1.085 0.0150 0.946 0.0200
+W3M C2 H4 SINGLE n 1.085 0.0150 0.945 0.0200
 
 loop_
 _chem_comp_angle.comp_id
@@ -58,20 +74,20 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
-W3M C1 N1 C2 107.683 2.04
-W3M C1 N1 H1 126.326 2.28
-W3M C2 N1 H1 125.991 2.69
-W3M N C C1 178.257 1.50
-W3M C C1 C3 129.194 1.90
-W3M C C1 N1 123.393 1.50
-W3M C3 C1 N1 107.413 2.30
-W3M C1 C3 N2 108.884 1.50
-W3M C1 C3 H2 126.506 2.15
-W3M N2 C3 H2 124.610 2.11
-W3M C3 N2 C2 105.152 1.50
-W3M N2 C2 N1 110.869 1.50
-W3M N2 C2 H4 124.818 1.50
-W3M N1 C2 H4 124.313 1.50
+W3M C1 N1 C2 107.225 1.50
+W3M C1 N1 H1 126.404 3.00
+W3M C2 N1 H1 126.370 3.00
+W3M N  C  C1 180.000 3.00
+W3M C  C1 C3 128.584 3.00
+W3M C  C1 N1 124.319 2.05
+W3M C3 C1 N1 107.097 3.00
+W3M C1 C3 N2 109.147 3.00
+W3M C1 C3 H2 125.313 3.00
+W3M N2 C3 H2 125.540 3.00
+W3M C3 N2 C2 105.378 3.00
+W3M N2 C2 N1 111.152 1.50
+W3M N2 C2 H4 124.951 3.00
+W3M N1 C2 H4 123.896 1.50
 
 loop_
 _chem_comp_tor.comp_id
@@ -83,19 +99,18 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
-W3M const_sp2_sp2_3 C C1 N1 C2 180.000 5.0 2
-W3M const_13 N2 C2 N1 C1 0.000 10.0 2
-W3M other_tor_1 N C C1 C3 90.000 10.0 1
-W3M const_sp2_sp2_7 C C1 C3 N2 180.000 5.0 2
-W3M const_sp2_sp2_9 C1 C3 N2 C2 0.000 5.0 2
-W3M const_11 N1 C2 N2 C3 0.000 10.0 2
+W3M const_0 C  C1 N1 C2 180.000 0.0 1
+W3M const_1 N2 C2 N1 C1 0.000   0.0 1
+W3M const_2 C  C1 C3 N2 180.000 0.0 1
+W3M const_3 C1 C3 N2 C2 0.000   0.0 1
+W3M const_4 N1 C2 N2 C3 0.000   0.0 1
 
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
-W3M plan-1 C 0.020
+W3M plan-1 C  0.020
 W3M plan-1 C1 0.020
 W3M plan-1 C2 0.020
 W3M plan-1 C3 0.020
@@ -106,25 +121,36 @@ W3M plan-1 N1 0.020
 W3M plan-1 N2 0.020
 
 loop_
+_chem_comp_ring_atom.comp_id
+_chem_comp_ring_atom.ring_serial_number
+_chem_comp_ring_atom.atom_id
+_chem_comp_ring_atom.is_aromatic_ring
+W3M ring-1 N1 YES
+W3M ring-1 C1 YES
+W3M ring-1 C3 YES
+W3M ring-1 N2 YES
+W3M ring-1 C2 YES
+
+loop_
 _pdbx_chem_comp_descriptor.comp_id
 _pdbx_chem_comp_descriptor.type
 _pdbx_chem_comp_descriptor.program
 _pdbx_chem_comp_descriptor.program_version
 _pdbx_chem_comp_descriptor.descriptor
-W3M SMILES ACDLabs 12.01 n1cncc1C#N
-W3M InChI InChI 1.03 InChI=1S/C4H3N3/c5-1-4-2-6-3-7-4/h2-3H,(H,6,7)
-W3M InChIKey InChI 1.03 NWVGXXPWOYZODV-UHFFFAOYSA-N
-W3M SMILES_CANONICAL CACTVS 3.385 N#Cc1[nH]cnc1
-W3M SMILES CACTVS 3.385 N#Cc1[nH]cnc1
-W3M SMILES_CANONICAL "OpenEye OEToolkits" 2.0.7 c1c([nH]cn1)C#N
-W3M SMILES "OpenEye OEToolkits" 2.0.7 c1c([nH]cn1)C#N
+W3M SMILES           ACDLabs              12.01 "n1cncc1C#N"
+W3M InChI            InChI                1.03  "InChI=1S/C4H3N3/c5-1-4-2-6-3-7-4/h2-3H,(H,6,7)"
+W3M InChIKey         InChI                1.03  NWVGXXPWOYZODV-UHFFFAOYSA-N
+W3M SMILES_CANONICAL CACTVS               3.385 "N#Cc1[nH]cnc1"
+W3M SMILES           CACTVS               3.385 "N#Cc1[nH]cnc1"
+W3M SMILES_CANONICAL "OpenEye OEToolkits" 2.0.7 "c1c([nH]cn1)C#N"
+W3M SMILES           "OpenEye OEToolkits" 2.0.7 "c1c([nH]cn1)C#N"
 
 loop_
-_pdbx_chem_comp_description_generator.comp_id
-_pdbx_chem_comp_description_generator.program_name
-_pdbx_chem_comp_description_generator.program_version
-_pdbx_chem_comp_description_generator.descriptor
-W3M acedrg 243 "dictionary generator"
-W3M acedrg_database 11 "data source"
-W3M rdkit 2017.03.2 "Chemoinformatics tool"
-W3M refmac5 5.8.0238 "optimization tool"
+_acedrg_chem_comp_descriptor.comp_id
+_acedrg_chem_comp_descriptor.program_name
+_acedrg_chem_comp_descriptor.program_version
+_acedrg_chem_comp_descriptor.type
+W3M acedrg          326       "dictionary generator"
+W3M acedrg_database 12        "data source"
+W3M rdkit           2023.03.3 "Chemoinformatics tool"
+W3M servalcat       0.4.120   'optimization tool'
