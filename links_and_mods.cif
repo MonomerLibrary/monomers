@@ -116,6 +116,7 @@ pept-LYS . DEL-OXT pept LYS LYSmod5 peptide pept-LYS
 pept-MDO . DEL-OXT peptide MDO MDOmod2 NON-POLYMER pept-MDO
 MS6-pept MS6 MS6mod1 NON-POLYMER . MS6mod2 peptide MS6-pept
 pept-MS6 . DEL-OXT peptide MS6 MS6delNH NON-POLYMER pept-MS6
+TRP-MAN TRP TRPm1 peptide MAN MANm1 pyranose TRP-MAN    
 
 data_mod_list
 loop_
@@ -254,6 +255,8 @@ ASPprot "Protonation of ASP" ASP peptide
 GLUprot "Protonation of GLU" GLU peptide
 HISprot1 HISTIDINE HIS peptide
 HISprot2 HISTIDINE HIS peptide
+TRPm1 TRYPTOPHAN TRP peptide             
+MANm1 'ALPHA-D-MANNOSE' MAN pyranose    
 
 data_link_DG9-SER
 loop_
@@ -6000,6 +6003,82 @@ _chem_mod_atom.new_type_symbol
 _chem_mod_atom.new_type_energy
 _chem_mod_atom.new_partial_charge
 CYS-SS delete HG . . . .000
+
+data_link_TRP-MAN
+loop_
+_chem_link_bond.link_id
+_chem_link_bond.atom_1_comp_id
+_chem_link_bond.atom_id_1
+_chem_link_bond.atom_2_comp_id
+_chem_link_bond.atom_id_2
+_chem_link_bond.type
+_chem_link_bond.value_dist
+_chem_link_bond.value_dist_esd
+TRP-MAN 1 CD1 2 C1 SINGLE 1.506 0.0104      
+
+loop_
+_chem_link_angle.link_id
+_chem_link_angle.atom_1_comp_id
+_chem_link_angle.atom_id_1
+_chem_link_angle.atom_2_comp_id
+_chem_link_angle.atom_id_2
+_chem_link_angle.atom_3_comp_id
+_chem_link_angle.atom_id_3
+_chem_link_angle.value_angle
+_chem_link_angle.value_angle_esd
+TRP-MAN 1 CG 1 CD1 2 C1 127.900 3.00      
+TRP-MAN 1 NE1 1 CD1 2 C1 123.091 3.00      
+TRP-MAN 2 C2 2 C1 1 CD1 111.368 3.00      
+TRP-MAN 2 O5 2 C1 1 CD1 108.025 2.86      
+TRP-MAN 1 CD1 2 C1 2 H1 107.960 1.50      
+
+loop_
+_chem_link_tor.link_id
+_chem_link_tor.id
+_chem_link_tor.atom_1_comp_id
+_chem_link_tor.atom_id_1
+_chem_link_tor.atom_2_comp_id
+_chem_link_tor.atom_id_2
+_chem_link_tor.atom_3_comp_id
+_chem_link_tor.atom_id_3
+_chem_link_tor.atom_4_comp_id
+_chem_link_tor.atom_id_4
+_chem_link_tor.value_angle
+_chem_link_tor.value_angle_esd
+_chem_link_tor.period
+TRP-MAN sp2_sp3_1 1 CG 1 CD1 2 C1 2 C2 150.000 10.0 6
+TRP-MAN const_22_1 1 CD2 1 CG 1 CD1 2 C1 180.000 0.0 1
+TRP-MAN const_27_1 2 C1 1 CD1 1 NE1 1 CE2 180.000 0.0 1
+
+loop_
+_chem_link_chir.link_id
+_chem_link_chir.atom_centre_comp_id
+_chem_link_chir.atom_id_centre
+_chem_link_chir.atom_1_comp_id
+_chem_link_chir.atom_id_1
+_chem_link_chir.atom_2_comp_id
+_chem_link_chir.atom_id_2
+_chem_link_chir.atom_3_comp_id
+_chem_link_chir.atom_id_3
+_chem_link_chir.volume_sign
+TRP-MAN 2 C1 2 O5 1 CD1 2 C2 positive  
+
+loop_
+_chem_link_plane.link_id
+_chem_link_plane.plane_id
+_chem_link_plane.atom_comp_id
+_chem_link_plane.atom_id
+_chem_link_plane.dist_esd
+TRP-MAN plan-2 1 CE2 0.020     
+TRP-MAN plan-2 1 CE3 0.020     
+TRP-MAN plan-2 1 CZ2 0.020     
+TRP-MAN plan-2 2 C1 0.020     
+TRP-MAN plan-2 1 CB 0.020     
+TRP-MAN plan-2 1 CG 0.020     
+TRP-MAN plan-2 1 CD1 0.020     
+TRP-MAN plan-2 1 CD2 0.020     
+TRP-MAN plan-2 1 HE1 0.020     
+TRP-MAN plan-2 1 NE1 0.020  
 
 data_mod_CYSmod1
 loop_
@@ -12451,3 +12530,147 @@ HISprot2 add plan-1 HD2 0.020
 HISprot2 add plan-1 HE1 0.020
 HISprot2 add plan-1 ND1 0.020
 HISprot2 add plan-1 NE2 0.020
+
+data_mod_TRPm1
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+TRPm1 delete HD1 . H H 0         
+TRPm1 change CD1 . C CR5 0         
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+TRPm1 delete CD1 HD1 single . . . .         
+TRPm1 change CG CD2 single 1.433  0.0100 1.433 0.0100    
+TRPm1 change NE1 HE1 single 0.871 0.0100 1.013 0.0120    
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+TRPm1 delete CG CD1 HD1 . .              
+TRPm1 delete NE1 CD1 HD1 . .              
+TRPm1 change CB CG  CD2 125.104 2.39           
+TRPm1 change CD1 CG  CD2 107.894 1.77           
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+TRPm1 change CB CG CD1 NE1 const_23 180.000 0.0 1     
+TRPm1 change CD1 CG CB CA sp2_sp3_8 -90.000 10.0 6     
+
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+TRPm1 delete plan-2 CB 0.020
+TRPm1 delete plan-2 CD1 0.020
+TRPm1 delete plan-2 CD2 0.020
+TRPm1 delete plan-2 CE2 0.020
+TRPm1 delete plan-2 CE3 0.020
+TRPm1 delete plan-2 CG 0.020
+TRPm1 delete plan-2 CZ2 0.020
+TRPm1 delete plan-2 HD1 0.020
+TRPm1 delete plan-2 HE1 0.020
+TRPm1 delete plan-2 NE1 0.020
+
+data_mod_MANm1
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_charge
+MANm1 delete O1 . O OH1 0         
+MANm1 delete HO1 . H H 0         
+
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_nucleus
+_chem_mod_bond.new_value_dist_nucleus_esd
+MANm1 delete C1 O1 single . . . .         
+MANm1 delete O1 HO1 single . . . .         
+MANm1 change C1 C2 single 1.530 0.0100 1.530 0.0100    
+
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+MANm1 delete C2 C1 O1 . .              
+MANm1 delete O1 C1 O5 . .              
+MANm1 delete O1 C1 H1 . .              
+MANm1 delete C1 O1 HO1 . .              
+MANm1 change C2 C1 O5 110.891 3.00           
+MANm1 change C1 C2 C3 110.082 3.00           
+MANm1 change C1 C2 O2 108.927 3.00           
+MANm1 change C1 O5 C5 112.972 2.62           
+
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.id
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+MANm1 delete C2 C1 O1 HO1 . . . 3              
+MANm1 delete O5 C1 O1 HO1 . . . 3              
+MANm1 delete H1 C1 O1 HO1 . . . 3   
+MANm1 change C5 O5 C1 C2 var_ring_1 53.681667 3.0 1             
+MANm1 change O5 C1 C2 C3 var_ring_2 -48.384090 3.0 1
+MANm1 change C1 C2 C3 C4 var_ring_3 50.224220 3.0 1
+MANm1 change C2 C3 C4 C5 var_ring_4 -54.215084 3.0 1
+MANm1 change C3 C4 C5 O5 var_ring_5 56.747200 3.0 1
+MANm1 change C4 C5 O5 C1 var_ring_6 -58.120335 3.0 1
+
+loop_
+_chem_mod_chir.mod_id
+_chem_mod_chir.function
+_chem_mod_chir.atom_id_centre
+_chem_mod_chir.atom_id_1
+_chem_mod_chir.atom_id_2
+_chem_mod_chir.atom_id_3
+_chem_mod_chir.new_volume_sign
+MANm1 delete C1 O5 O1 C2 . 
